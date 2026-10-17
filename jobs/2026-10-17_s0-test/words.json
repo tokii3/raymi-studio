@@ -1,0 +1,262 @@
+{
+ "voice": {
+  "name": "en-US-AnaNeural",
+  "rate": "+17%",
+  "pitch": "-7Hz"
+ },
+ "text": "I can predict rain. Officially. My record is three out of ten, which is basically a talent. Today my tail is tingling, and that means rain at exactly four o'clock. If it does not rain, the sky is wrong, not me. Tell me, when does it rain where you are?",
+ "duration": 19.032,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "I",
+   "start": 0.093,
+   "end": 0.242
+  },
+  {
+   "w": "can",
+   "start": 0.253,
+   "end": 0.413
+  },
+  {
+   "w": "predict",
+   "start": 0.424,
+   "end": 0.819
+  },
+  {
+   "w": "rain.",
+   "start": 0.83,
+   "end": 1.193
+  },
+  {
+   "w": "Officially.",
+   "start": 1.927,
+   "end": 2.61
+  },
+  {
+   "w": "My",
+   "start": 3.333,
+   "end": 3.526
+  },
+  {
+   "w": "record",
+   "start": 3.536,
+   "end": 3.921
+  },
+  {
+   "w": "is",
+   "start": 3.932,
+   "end": 4.113
+  },
+  {
+   "w": "three",
+   "start": 4.124,
+   "end": 4.423
+  },
+  {
+   "w": "out",
+   "start": 4.434,
+   "end": 4.594
+  },
+  {
+   "w": "of",
+   "start": 4.605,
+   "end": 4.712
+  },
+  {
+   "w": "ten,",
+   "start": 4.722,
+   "end": 5.043
+  },
+  {
+   "w": "which",
+   "start": 5.299,
+   "end": 5.47
+  },
+  {
+   "w": "is",
+   "start": 5.481,
+   "end": 5.609
+  },
+  {
+   "w": "basically",
+   "start": 5.62,
+   "end": 6.122
+  },
+  {
+   "w": "a",
+   "start": 6.132,
+   "end": 6.197
+  },
+  {
+   "w": "talent.",
+   "start": 6.207,
+   "end": 6.752
+  },
+  {
+   "w": "Today",
+   "start": 7.489,
+   "end": 7.842
+  },
+  {
+   "w": "my",
+   "start": 7.853,
+   "end": 8.024
+  },
+  {
+   "w": "tail",
+   "start": 8.034,
+   "end": 8.376
+  },
+  {
+   "w": "is",
+   "start": 8.387,
+   "end": 8.558
+  },
+  {
+   "w": "tingling,",
+   "start": 8.568,
+   "end": 9.06
+  },
+  {
+   "w": "and",
+   "start": 9.327,
+   "end": 9.444
+  },
+  {
+   "w": "that",
+   "start": 9.455,
+   "end": 9.658
+  },
+  {
+   "w": "means",
+   "start": 9.669,
+   "end": 9.989
+  },
+  {
+   "w": "rain",
+   "start": 10.0,
+   "end": 10.32
+  },
+  {
+   "w": "at",
+   "start": 10.331,
+   "end": 10.481
+  },
+  {
+   "w": "exactly",
+   "start": 10.491,
+   "end": 11.004
+  },
+  {
+   "w": "four",
+   "start": 11.015,
+   "end": 11.271
+  },
+  {
+   "w": "o'clock.",
+   "start": 11.282,
+   "end": 11.763
+  },
+  {
+   "w": "If",
+   "start": 12.5,
+   "end": 12.66
+  },
+  {
+   "w": "it",
+   "start": 12.671,
+   "end": 12.799
+  },
+  {
+   "w": "does",
+   "start": 12.81,
+   "end": 12.991
+  },
+  {
+   "w": "not",
+   "start": 13.002,
+   "end": 13.269
+  },
+  {
+   "w": "rain,",
+   "start": 13.28,
+   "end": 13.579
+  },
+  {
+   "w": "the",
+   "start": 13.814,
+   "end": 13.91
+  },
+  {
+   "w": "sky",
+   "start": 13.921,
+   "end": 14.274
+  },
+  {
+   "w": "is",
+   "start": 14.284,
+   "end": 14.466
+  },
+  {
+   "w": "wrong,",
+   "start": 14.476,
+   "end": 14.808
+  },
+  {
+   "w": "not",
+   "start": 15.0,
+   "end": 15.224
+  },
+  {
+   "w": "me.",
+   "start": 15.235,
+   "end": 15.481
+  },
+  {
+   "w": "Tell",
+   "start": 16.218,
+   "end": 16.464
+  },
+  {
+   "w": "me,",
+   "start": 16.474,
+   "end": 16.645
+  },
+  {
+   "w": "when",
+   "start": 16.923,
+   "end": 17.073
+  },
+  {
+   "w": "does",
+   "start": 17.083,
+   "end": 17.244
+  },
+  {
+   "w": "it",
+   "start": 17.254,
+   "end": 17.382
+  },
+  {
+   "w": "rain",
+   "start": 17.393,
+   "end": 17.682
+  },
+  {
+   "w": "where",
+   "start": 17.692,
+   "end": 17.853
+  },
+  {
+   "w": "you",
+   "start": 17.863,
+   "end": 18.002
+  },
+  {
+   "w": "are?",
+   "start": 18.013,
+   "end": 18.291
+  }
+ ]
+}
