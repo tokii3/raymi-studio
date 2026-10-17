@@ -108,8 +108,55 @@ no guillotine on screen; the "execution" becomes an ending of the SHOW (lights o
 | 127.7-133.0 | tail | story | -7.5 dB, then out at ~133 |
 Three stops (38, 64, 113) are the song's signature - the original uses all three for its empty throne.
 Energy class: dance almost all the way (picture change on most loud beats, ~80 % target as a hint).
-Lyric line times: TODO measure from the vocal stem (Demucs + alignment = phase 2 tool; section starts above are from
-the full mix and the original MV's lyric cards, good to about +-0.5 s).
+Lyric line times (MEASURED 2026-10-18 by `python -m raymi analyze` in the cloud: Demucs vocal stem -> faster-whisper
+large-v3 word times -> official words matched by sound (romaji) -> snapped to vocal onsets; `lyrics_timed.json` has
+every WORD with its time and `cut` frame = one frame before the syllable). 85/112 words measured,
+27 interpolated between measured neighbours on vocal onsets (marked ~, check by ear in the pilot).
+Findings: "You are KING" is sung TWICE per chorus, before and after the stop (62.9 / 65.8 and 112.1 / 114.8 s) - the
+official text writes it once, lyrics.txt now has the repeat. Verse 1 (15-26 s) is the weakest: GUMI's English voicebank
+sings Japanese there and whisper hears English, so those words are spread between anchors. Song map from the same run
+(`song_map.json`, 161.5 BPM): stops 38.3-39.4, 40.4-40.8, 64.3-65.4, 113.4-114.6 s (the three signature stops +
+a short gap before the pre-chorus); 65.4-78 and 115-134 are instrumental after the last word.
+Font: 27 kanji of these lyrics are missing in Raymi-Regular.ttf (歯, 幽, 閉, 照, 邪, 魔, 突, 詰, 込 ...) - the studio
+refuses them loudly; extending her font is a decision for toki (BACKLOG).
+
+| t0 (s) | cut frame | line | timing |
+|---|---|---|---|
+| 15.11 | 452 | 幽閉 利口 逝く前に | interpolated ~ |
+| 18.81 | 563 | ユーヘイじゃ利口に難儀ダーリン | 1/5 measured |
+| 22.55 | 675 | 幽閉 ストップ 知ってないし | 1/3 measured |
+| 24.24 | 726 | 勘弁にしといてなんて惨忍 | 1/2 measured |
+| 26.04 | 780 | 人様願う欠片のアイロニ | 2/3 measured |
+| 29.12 | 872 | だれもが願う無機質なような | measured |
+| 32.31 | 968 | 一足先に始めてたいような | measured |
+| 34.90 | 1046 | 先が見えないヴァージンハッピーショー | measured |
+| 40.78 | 1222 | 無いの新たにお願い1つ | measured |
+| 43.63 | 1307 | 愛も変わらずおまけにワーニング ワーニング | measured |
+| 46.60 | 1397 | 無いのあなたにお願い1つ | measured |
+| 49.61 | 1487 | 張り詰めた思い込め | measured |
+| 51.69 | 1549 | レフトサイド ライトサイド | interpolated ~ |
+| 53.62 | 1607 | 歯をむき出して パッパッパ | 2/3 measured |
+| 56.76 | 1701 | 照れくさいね | measured |
+| 57.70 | 1730 | レフトサイド ライトサイド | interpolated ~ |
+| 59.58 | 1786 | 歯を突き出して パッパッパッハハ | measured |
+| 62.89 | 1885 | You are KING | measured |
+| 65.78 | 1972 | You are KING | measured |
+| 77.96 | 2337 | 無邪気に遊ぶ 期待期待のダーリン | 3/4 measured |
+| 81.17 | 2434 | 健気に笑う 痛い痛いの消える | measured |
+| 83.86 | 2514 | 無様に〇ねる 苦い思いも無くなって | 2/5 measured |
+| 86.94 | 2607 | ラララブウ ラッタッタ | measured |
+| 88.18 | 2644 | 嫌い嫌いの最低泣いてダウン | 3/4 measured |
+| 90.05 | 2700 | 毎度新たにお願い1つ | measured |
+| 92.73 | 2780 | 愛も変わらずピックアップのワーニング ワーニング | measured |
+| 96.09 | 2881 | 無いのあなたにお願い1つ | measured |
+| 98.57 | 2956 | 張り詰めた思い込め | 3/4 measured |
+| 100.85 | 3024 | レフトサイド　ライトサイド | interpolated ~ |
+| 102.73 | 3080 | 歯をむき出して パッパッパ | measured |
+| 105.73 | 3170 | 邪魔くさいね | measured |
+| 106.65 | 3198 | レフトサイド　ライトサイド | interpolated ~ |
+| 108.56 | 3255 | 歯を突き出して パッパッパッハハ | measured |
+| 112.07 | 3361 | You are KING | measured |
+| 114.80 | 3443 | You are KING | measured |
 
 ## 6. Where Raymi meets this song
 1. **Confined + on display = an aquarium.** Raymi in a glass tank as the star exhibit; "the show" is the aquarium

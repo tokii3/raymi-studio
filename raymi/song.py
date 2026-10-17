@@ -423,38 +423,89 @@ def beats(song: Path) -> dict:
             "hits": hits, "beat_features": F}
 
 
-def song_map(song: Path, vocals: Path, lines: list[dict] | None = None) -> dict:
+def sections(dur: float, novelty_bounds: list[float], stop_list: list[dict], spans: list[list[float]], loud: list[float],
+             lines: list[dict]) -> list[dict]:
+    """Song sections from MEASURED evidence, strongest first: the stops, the starts of the official text's paragraphs
+    (timed from the vocal), vocal entries after >= 2 s of silence, then timbre changes (novelty). Paragraphs with the
+    same text get the same letter, so the chorus shows up as a repeat (A B C C ...)."""
+    cand: list[tuple[float, int]] = [(0.0, 9), (round(dur, 2), 9)]
+    for s in stop_list:
+        cand += [(s["t0"], 4), (s["t1"], 4)]
+    paras: dict[int, list[dict]] = {}
+    for ln in lines:
+        paras.setdefault(ln["para"], []).append(ln)
+    for pl in paras.values():
+        cand.append((round(pl[0]["t0"], 2), 3))
+    prev_end = None
+    for a, b in spans:
+        if prev_end is not None and a - prev_end >= 2.0:
+            cand.append((a, 2))
+        prev_end = b
+    if spans and spans[-1][1] < dur - 2:
+        cand.append((spans[-1][1], 2))
+    cand += [(t, 1) for t in novelty_bounds]
+    keep: list[tuple[float, int]] = []
+    for t, pr in sorted(cand, key=lambda x: -x[1]):
+        if all(abs(t - k) >= 1.2 or (pr == 4 and kp == 4) for k, kp in keep):
+            keep.append((t, pr))
+    bounds = sorted(t for t, _ in keep)
+    letters: dict[str, str] = {}
+    def letter(pl: list[dict]) -> str:
+        key = "|".join(ln["text"] for ln in pl)
+        if key not in letters:
+            letters[key] = chr(ord("A") + len(letters))
+        return letters[key]
+    out = []
+    top = max(loud) if loud else 0.0
+    for a, z in zip(bounds[:-1], bounds[1:]):
+        seg = loud[int(a * 10):max(int(a * 10) + 1, int(z * 10))] or [top]
+        lvl = float(np.percentile(seg, 90))
+        sung = sum(max(0, min(z, y1) - max(a, y0)) for y0, y1 in spans) / max(z - a, 1e-6)
+        inside = [ln for ln in lines if a - 0.3 <= ln["t0"] < z - 0.3]
+        stop = any(min(z, s["t1"]) - max(a, s["t0"]) >= 0.7 * (z - a) for s in stop_list)
+        para = paras.get(inside[0]["para"]) if inside else None
+        if stop:
+            kind = "stop"
+        elif not inside and a < (lines[0]["t0"] if lines else dur):
+            kind = "intro"
+        elif not inside and lines and a >= lines[-1]["t1"]:
+            kind = "outro"
+        else:
+            kind = "peak" if lvl >= top - 1.5 else "high" if lvl >= top - 5 else "calm"
+        out.append({"t0": round(a, 2), "t1": round(z, 2), "kind": kind, "loud_db": round(lvl, 1), "sung": round(sung, 2),
+                    "part": letter(para) if para and not stop else None,
+                    "first_line": inside[0]["text"] if inside else None})
+    return out
+
+
+def song_map(song: Path, vocals: Path, lines: list[dict]) -> dict:
     full = load_audio(song, SR)
     dur = len(full) / SR
     db = loudness_db(full, SR)
     b = beats(song)
     bt = b.pop("beat_features")
     nov = novelty(bt, k=8)
-    bounds = [0.0] + [b["beats"][i] for i in peaks(nov, 16, 0.25) if 0 < i < len(b["beats"])] + [round(dur, 2)]
+    nb = [b["beats"][i] for i in peaks(nov, 16, 0.25) if 0 < i < len(b["beats"])]
     st = stops(db)
-    for s in st:                              # a stop is always a boundary (the song's signature moments)
-        for t in (s["t0"], s["t1"]):
-            if all(abs(t - x) > 1.5 for x in bounds):
-                bounds.append(t)
-    bounds = sorted(bounds)
-    vdb = loudness_db(load_audio(vocals, SR), SR)
-    spans = vocal_spans(vdb)
-    secs = []
-    for a, z in zip(bounds[:-1], bounds[1:]):
-        seg = db[int(a * 10):max(int(a * 10) + 1, int(z * 10))]
-        sung = sum(max(0, min(z, y1) - max(a, y0)) for y0, y1 in spans) / max(z - a, 1e-6)
-        first = next((ln["text"] for ln in lines or [] if a - 0.3 <= ln.get("t0", -1) < z), None)
-        is_stop = any(abs(s["t0"] - a) < 0.2 for s in st)
-        secs.append({"t0": round(a, 2), "t1": round(z, 2), "loud_db": round(float(np.percentile(seg, 90)), 1),
-                     "sung": round(sung, 2), "first_line": first, "stop": is_stop})
-    top = max(s["loud_db"] for s in secs)
-    for s in secs:
-        s["energy"] = "stop" if s["stop"] else ("peak" if s["loud_db"] >= top - 1.5 else
-                                                "high" if s["loud_db"] >= top - 5 else "calm")
     vx = load_audio(vocals, SR)
-    return {"duration": round(dur, 2), "bpm": b["bpm"], "beats": b["beats"], "hits": b["hits"], "sections": secs,
-            "stops": st, "vocal_spans": spans, "vocal_onsets": pick_onsets(onset_env(vx)),
-            "loudness_db_10hz": [round(float(v), 1) for v in db]}
+    spans = vocal_spans(loudness_db(vx, SR))
+    loud = [round(float(v), 1) for v in db]
+    return {"duration": round(dur, 2), "bpm": b["bpm"], "beats": b["beats"], "hits": b["hits"],
+            "sections": sections(dur, nb, st, spans, loud, lines), "stops": st, "vocal_spans": spans,
+            "vocal_onsets": pick_onsets(onset_env(vx)), "novelty_bounds": nb, "loudness_db_10hz": loud}
+
+
+def resection(job_dir: Path) -> None:
+    """Recompute song_map sections from the stored measurements + the current lyric times (light, local)."""
+    f = job_dir / "song_map.json"
+    if not f.is_file():
+        return
+    sm = json.loads(f.read_text(encoding="utf-8"))
+    lines = json.loads((job_dir / "lyrics_timed.json").read_text(encoding="utf-8"))["lines"]
+    nb = sm.get("novelty_bounds") or [s["t0"] for s in sm["sections"][1:]]
+    sm["novelty_bounds"] = nb
+    sm["sections"] = sections(sm["duration"], nb, sm["stops"], sm["vocal_spans"], sm["loudness_db_10hz"], lines)
+    f.write_text(json.dumps(sm, indent=1, ensure_ascii=False), encoding="utf-8")
 
 
 def analyze(job_dir: Path) -> dict:

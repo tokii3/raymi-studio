@@ -46,6 +46,7 @@ def main(argv: list[str]) -> int:
             cfg = json.loads((d / "analyze.json").read_text(encoding="utf-8"))
             res = song.time_lyrics(d, (d / cfg.get("lyrics", "lyrics.txt")).read_text(encoding="utf-8"),
                                    json.loads((d / "whisper_words.json").read_text(encoding="utf-8")), d / "vocals.ogg")
+            song.resection(d)
             print(json.dumps(res["stats"]))
         return 0
     if cmd in ("new", "next"):

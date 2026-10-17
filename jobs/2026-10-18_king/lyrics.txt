@@ -23,6 +23,8 @@
 レフトサイド ライトサイド
 歯を突き出して パッパッパッハハ
 You are KING
+# sung a second time after the stop (measured: whisper hears it at 62.9 + 65.8 and 112.0 + 114.8 s; the official text writes it once)
+You are KING
 
 
 無邪気に遊ぶ 期待期待のダーリン
@@ -43,4 +45,6 @@ You are KING
 
 レフトサイド　ライトサイド
 歯を突き出して パッパッパッハハ
+You are KING
+# sung a second time after the stop (measured: whisper hears it at 62.9 + 65.8 and 112.0 + 114.8 s; the official text writes it once)
 You are KING

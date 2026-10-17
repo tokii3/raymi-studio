@@ -15,3 +15,8 @@
 - yt-dlp needs a JS runtime for YouTube now: `--js-runtimes node --remote-components ejs:github` (2026-10-18).
 - Loudness after assemble lands at -14.7 LUFS (-14.06 single render): the apad silence tail lowers the integrated
   value slightly; still inside the QC tolerance. Watch it on music videos.
+- Raymi font lacks 27 kanji of KING (歯 幽 閉 照 邪 魔 突 詰 込 惨 嫌 泣 低 ... and 〇) (2026-10-18). The studio refuses them
+  (timeline compile fails loudly). Fix = extend her font the way the old engine did (marker-style glyphs grown from an
+  OFL skeleton font, M PLUS Rounded 1c Thin) as a tested `raymi font` tool. Needs toki's OK (adds the skeleton font).
+- KING verse 1 (15-26 s) lyric times are interpolated: GUMI's English voicebank sings Japanese, whisper hears English.
+  If the pilot shows drift there: CTC forced alignment (MMS, romanised) on the vocal stem for weak lines.

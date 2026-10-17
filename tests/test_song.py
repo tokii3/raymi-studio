@@ -112,3 +112,16 @@ def test_vocal_spans_bridge_short_gaps():
     db[33:50] = -10                        # 0.3 s gap -> bridged
     db[70:80] = -10
     assert S.vocal_spans(db) == [[1.0, 5.0], [7.0, 8.0]]
+
+
+def test_sections_from_stops_paragraphs_and_repeats():
+    lines = [{"para": 0, "text": "verse", "t0": 10.0, "t1": 18.0}, {"para": 1, "text": "chorus", "t0": 20.0, "t1": 28.0},
+             {"para": 2, "text": "verse two", "t0": 32.0, "t1": 40.0}, {"para": 3, "text": "chorus", "t0": 44.0, "t1": 52.0}]
+    loud = [-6.0] * 600
+    stop_list = [{"t0": 29.0, "t1": 31.0, "depth_db": 10}]
+    secs = S.sections(60.0, [20.4, 45.0], stop_list, [[10, 28.5], [32, 52]], loud, lines)
+    starts = [s["t0"] for s in secs]
+    assert starts[:2] == [0.0, 10.0] and 29.0 in starts and 44.0 in starts and 20.4 not in starts
+    by = {s["t0"]: s for s in secs}
+    assert by[0.0]["kind"] == "intro" and by[29.0]["kind"] == "stop"
+    assert by[20.0]["part"] == by[44.0]["part"] != by[10.0]["part"]      # the chorus repeats
