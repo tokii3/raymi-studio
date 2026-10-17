@@ -120,7 +120,9 @@ jobs:
             cp "$O/qc.json" "$O/sheet.jpg" "$O/preview.mp4" "$O/props.json" "/tmp/reports/$J/"
           done
           git fetch -q origin renders || true
-          if git rev-parse -q --verify origin/renders > /dev/null; then git worktree add -q /tmp/rb origin/renders && cd /tmp/rb && git checkout -q -B renders;
-          else git worktree add -q --detach /tmp/rb && cd /tmp/rb && git checkout -q --orphan renders && git rm -rq . ; fi
+          # renders = an orphan branch with reports only (first run: an empty orphan worktree, no sprite checkout)
+          if git rev-parse -q --verify origin/renders > /dev/null; then git worktree add -q -B renders /tmp/rb origin/renders;
+          else git worktree add -q --orphan -b renders /tmp/rb; fi
+          cd /tmp/rb
           mkdir -p reports && cp -r /tmp/reports/* reports/
           git add reports && git commit -qm "reports run ${{ github.run_number }}" && git push -q origin renders
