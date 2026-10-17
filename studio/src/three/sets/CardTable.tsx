@@ -4,7 +4,7 @@
 // lamp (0..1), dealt (cards lying face down on the felt), swing (lamp swing amplitude).
 import React from 'react';
 import {Bubbles, Beam, Kelp, RBox, Rock} from '../parts';
-import {Card, CARD_H, Chips} from '../cards';
+import {Card, CARD_H, Chips, RaySwarm} from '../cards';
 import {SetLight, canvasTexture, rnd, toon} from '../look';
 import type {SetProps} from './index';
 
@@ -80,6 +80,13 @@ export const CardTable: React.FC<SetProps> = ({f, opts}) => {
       <Chips pos={[-4.6, 0, 2.6]} n={3} c="#c2416f" seed={4} />
       {/* the deck, squared */}
       {Array.from({length: 7}, (_, i) => <Card key={`d${i}`} pos={[-2.6, 0.02 + i * 0.032, 0.8]} rot={[-Math.PI / 2, 0, 0.3 + i * 0.01]} back />)}
+      {opts.pair ? (                                   // left side / right side: two Kings facing each other
+        <group>
+          <Card pos={[-1.7, CARD_H / 2 + 0.01, 0.6]} rot={[0, 0.5, 0]} rank="K" sprite={king} crop={[0.02, 0.46]} />
+          <Card pos={[1.7, CARD_H / 2 + 0.01, 0.6]} rot={[0, -0.5, 0]} rank="K" sprite={king} crop={[0.02, 0.46]} />
+        </group>
+      ) : null}
+      {opts.swarm ? <RaySwarm center={[2.2, levels * (CARD_H * 0.95 + 0.03) + 0.9, -1.8]} r={1.1} n={9} f={f} /> : null}
       {opts.dealt ? Array.from({length: 5}, (_, i) => <Card key={`x${i}`} pos={[-3 + i * 1.5, 0.02, 3.0]} rot={[-Math.PI / 2, 0, (rnd(i) - 0.5) * 0.3]} back />) : null}
     </group>
   );

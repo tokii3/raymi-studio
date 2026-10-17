@@ -19,7 +19,9 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
   const led = String(opts.led ?? 'STAR EXHIBIT');
   const on = 1 - dim;
   // pa pa pa: on each hit 3 seeded phones flash for 4 frames
+  const forced = Number(opts.flash ?? 0);            // a held flash moment (key frames): that share of phones fires
   const flashOf = (i: number) => {
+    if (forced > 0 && rnd(i * 7 + 3) < forced) return 1;
     if (!flashes) return 0;
     for (const h of hits) {
       const d = f - h;

@@ -132,3 +132,35 @@ export const Chips: React.FC<{pos: P3; n: number; c: string; seed?: number}> = (
     </group>
   );
 };
+
+/** A living spade: the suit's stingray, flat, flapping its wings - a swarm of them circles like a crown. */
+export const RaySwarm: React.FC<{center: P3; r: number; n: number; f: number; c?: string; size?: number}> = ({center, r, n, f, c = '#8b5cf6', size = 0.32}) => {
+  const geo = useMemo(() => {
+    const s = new THREE.Shape();
+    s.moveTo(0, 0.55);
+    s.bezierCurveTo(0.18, 0.42, 0.62, 0.12, 0.6, -0.12);
+    s.bezierCurveTo(0.58, -0.32, 0.25, -0.34, 0.06, -0.22);
+    s.lineTo(0.02, -0.95);
+    s.lineTo(-0.02, -0.95);
+    s.lineTo(-0.06, -0.22);
+    s.bezierCurveTo(-0.25, -0.34, -0.58, -0.32, -0.6, -0.12);
+    s.bezierCurveTo(-0.62, 0.12, -0.18, 0.42, 0, 0.55);
+    const g = new THREE.ExtrudeGeometry(s, {depth: 0.04, bevelEnabled: true, bevelThickness: 0.02, bevelSize: 0.02, bevelSegments: 2});
+    g.rotateX(-Math.PI / 2);
+    return g;
+  }, []);
+  return (
+    <group position={center}>
+      {Array.from({length: n}, (_, i) => {
+        const a = (i / n) * Math.PI * 2 + f * 0.025;
+        const y = 0.12 * Math.sin(f / 8 + i * 1.3);
+        const flap = 0.35 * Math.sin(f / 4 + i);
+        return (
+          <group key={i} position={[Math.cos(a) * r, y, Math.sin(a) * r]} rotation={[0, -a, 0]}>
+            <mesh geometry={geo} material={toon(c, '#5b2ad6', 0.35)} scale={[size * (1 - 0.25 * Math.abs(flap)), size, size]} rotation={[flap * 0.4, 0, 0.25]} castShadow />
+          </group>
+        );
+      })}
+    </group>
+  );
+};

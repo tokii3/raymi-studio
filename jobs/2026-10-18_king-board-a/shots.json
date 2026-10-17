@@ -1,0 +1,175 @@
+{
+ "title": "KING idea boards A",
+ "audio": {
+  "file": "../2026-10-18_king/song.webm",
+  "from": 38.2,
+  "to": 117.0
+ },
+ "lyrics": "../2026-10-18_king/lyrics_timed.json",
+ "song_map": "../2026-10-18_king/song_map.json",
+ "grain": 0.05,
+ "shots": [
+  {
+   "id": "A2",
+   "at": 38.2,
+   "set": "aquarium",
+   "opts": {
+    "cap": "seat",
+    "dim": 0.45,
+    "crowd": 18,
+    "flash": 0.25
+   },
+   "why": "the first stop: the throne is empty, the crowd presses at the glass, she peeks from the sand",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.7,
+      0.55,
+      -2.6
+     ],
+     "look": [
+      0.3,
+      0.75,
+      2.5
+     ],
+     "fov": 40
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_PRONE_UV_194",
+     "pos": [
+      -1.15,
+      -0.18,
+      -1.45
+     ],
+     "height": 0.55,
+     "icon": "?"
+    }
+   ]
+  },
+  {
+   "id": "A1",
+   "at": "line:17",
+   "set": "aquarium",
+   "opts": {
+    "crowd": 20,
+    "flash": 0.55,
+    "led": "STAR EXHIBIT"
+   },
+   "why": "the crowd crowns her through their phones; she performs on cue",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      -0.1,
+      6.6
+     ],
+     "look": [
+      -0.1,
+      1.3,
+      0.0
+     ],
+     "fov": 36
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_UV_050",
+     "pos": [
+      -0.6,
+      0.42,
+      -1.0
+     ],
+     "act": "pop",
+     "icon": "music"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.11,
+     1.97,
+     1.97
+    ],
+    "size": 0.24,
+    "width": 4.5,
+    "color": "#ffcf6b",
+    "accent": "#ffffff",
+    "lines": [
+     17
+    ],
+    "key": [
+     "KING"
+    ]
+   }
+  },
+  {
+   "id": "A3",
+   "at": "line:34",
+   "set": "aquarium",
+   "opts": {
+    "dim": 0.93,
+    "spot": false,
+    "flashes": false,
+    "crowd": 20,
+    "crown": "head",
+    "glow": "#b56bff",
+    "cap": false,
+    "led": "KING"
+   },
+   "why": "lights out: in the dark only she glows, and she crowns herself",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.5,
+      0.7,
+      2.4
+     ],
+     "look": [
+      -0.55,
+      1.35,
+      -1.0
+     ],
+     "fov": 36
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": [
+      -0.6,
+      0.42,
+      -1.0
+     ],
+     "act": "idle",
+     "icon": "heart"
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "anchor": [
+     0.49,
+     1.49,
+     0.13
+    ],
+    "size": 0.12,
+    "width": 1.8,
+    "color": "#e9d8ff",
+    "accent": "#ffffff",
+    "lines": [
+     34
+    ],
+    "key": [
+     "KING"
+    ]
+   }
+  }
+ ]
+}

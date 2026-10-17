@@ -90,6 +90,7 @@ export const Weather: React.FC<SetProps> = ({f, opts, hits}) => {
   const flood = Number(opts.flood ?? 0);
   const onair = opts.onair !== false;
   const tally = Number(opts.tally ?? 1);
+  const power = Number(opts.power ?? 1);          // 0 = power cut: only screens on battery and her glow
   const ticker = String(opts.ticker ?? 'WEATHER WITH RAYMI');
   let flash = 0;
   if (opts.lightning) for (const h of hits) { const d = f - h; if (d >= 0 && d < 4) flash = Math.max(flash, 1 - d / 4); }
@@ -105,10 +106,10 @@ export const Weather: React.FC<SetProps> = ({f, opts, hits}) => {
   tick.offset.x = (f * 0.0025) % 1;
   return (
     <group>
-      <SetLight sky={mode === 'storm' ? '#5f6fb8' : '#9fc7ff'} ground="#2b1660" fill={0.9} key="#fff2e0" keyI={1.6 + flash * 3} keyPos={[3, 8, 6]}
+      <SetLight sky={mode === 'storm' ? '#5f6fb8' : '#9fc7ff'} ground="#2b1660" fill={0.25 + 0.65 * power} key="#fff2e0" keyI={(1.6 + flash * 3) * power + 0.1} keyPos={[3, 8, 6]}
         target={[0.3, 0, -1.2]} shadowSize={7} fog="#0f1230" fogNear={12} fogFar={32} bg="#0b0d24" />
-      <pointLight position={[0, 2.4, -2.2]} color={mode === 'storm' ? '#6f7cff' : '#58b8ff'} intensity={10} distance={7} decay={1.5} />
-      <pointLight position={[-3, 2.5, 2]} color="#ffb3e6" intensity={6} distance={8} decay={1.5} />
+      <pointLight position={[0, 2.4, -2.2]} color={mode === 'storm' ? '#6f7cff' : '#58b8ff'} intensity={10 * power + 1} distance={7} decay={1.5} />
+      <pointLight position={[-3, 2.5, 2]} color="#ffb3e6" intensity={6 * power} distance={8} decay={1.5} />
       {/* floor with a presenter mark */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 1]} material={toon(FLOOR)} receiveShadow><planeGeometry args={[18, 14]} /></mesh>
       <mesh rotation={[-Math.PI / 2, 0, 0.4]} position={[0.6, 0.005, -1.2]}><planeGeometry args={[0.5, 0.06]} /><meshBasicMaterial color="#ffd34d" toneMapped={false} /></mesh>
@@ -146,7 +147,7 @@ export const Weather: React.FC<SetProps> = ({f, opts, hits}) => {
           <mesh position={[0, -0.21, 0]} rotation={[Math.PI / 2, 0, 0]}><circleGeometry args={[0.19, 16]} /><meshBasicMaterial color="#fff6dd" toneMapped={false} side={THREE.DoubleSide} /></mesh>
         </group>
       ))}
-      <Beam pos={[1, 3.2, -0.6]} rot={[0.5, 0, 0]} len={4.6} r={1.2} c="#fff2d6" opacity={0.07} />
+      <Beam pos={[1, 3.2, -0.6]} rot={[0.5, 0, 0]} len={4.6} r={1.2} c="#fff2d6" opacity={0.07 * power} />
       {/* her sea floods the studio */}
       {flood > 0 ? (
         <group>
