@@ -1,0 +1,14 @@
+# Song tools in the cloud (analyze.yml) - heavy, never needed for tests or renders. CPU wheels:
+#   pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-analyze.txt
+#   pip install --no-deps demucs==4.0.1   (its metadata pins an old torchaudio; we only use its model code)
+torch==2.5.1
+torchaudio==2.5.1
+librosa==0.10.2.post1
+soundfile==0.12.1
+dora-search==0.1.12
+einops==0.8.0
+julius==0.2.7
+lameenc==1.7.0
+openunmix==1.3.0
+pyyaml==6.0.2
+tqdm==4.67.1

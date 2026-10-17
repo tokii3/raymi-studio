@@ -1,0 +1,114 @@
+"""Song tools: lyric words, matching by sound, onset snapping, one-frame-early cuts, stops and sections."""
+import numpy as np
+
+from raymi import song as S
+
+KING = """幽閉 利口 逝く前に
+ユーヘイじゃ利口に難儀ダーリン
+
+レフトサイド ライトサイド
+歯をむき出して パッパッパ
+You are KING
+"""
+
+
+def test_words_split_by_script():
+    assert S.words_of("ユーヘイじゃ利口に難儀ダーリン") == ["ユーヘイ", "じゃ", "利口に", "難儀", "ダーリン"]
+    assert S.words_of("お願い1つ") == ["お", "願い", "1つ"]
+    assert S.words_of("思い込め") == ["思い", "込め"]
+    assert S.words_of("KING!") == ["KING!"]
+
+
+def test_parse_lyrics_lines_and_paragraphs():
+    lines = S.parse_lyrics(KING)
+    assert [ln["para"] for ln in lines] == [0, 0, 1, 1, 1]
+    assert lines[0]["words"] == ["幽閉", "利口", "逝く", "前に"]
+    assert lines[2]["words"] == ["レフトサイド", "ライトサイド"]
+    assert lines[4]["words"] == ["You", "are", "KING"]
+
+
+def test_roma_matches_by_sound_across_scripts():
+    assert S.roma("ユーヘイ") == S.roma("幽閉") == "yuhei"
+    assert S.roma("You are KING") == "yoareking"
+    assert S.roma("パッパッパ") == S.roma("ぱっぱっぱ")
+
+
+def _asr_for(lines, t0=10.0, per_word=0.5, skip=()):
+    """Fake recognition: every official word sung in order, one every per_word s, some words missed."""
+    out, t = [], t0
+    for ln in lines:
+        for w in ln["words"]:
+            if w not in skip:
+                out.append({"w": w, "t0": t, "t1": t + per_word * 0.8})
+            t += per_word
+    return out
+
+
+def test_align_gives_each_word_its_recognised_time():
+    lines = S.parse_lyrics(KING)
+    m = S.align(lines, _asr_for(lines))
+    flat = [w for row in m for w in row]
+    assert abs(flat[0]["t0"] - 10.0) < 0.01
+    assert all(w["t0"] is not None for w in flat)
+    ts = [w["t0"] for w in flat]
+    assert ts == sorted(ts)
+
+
+def test_missed_words_are_interpolated_and_marked():
+    lines = S.parse_lyrics(KING)
+    asr = _asr_for(lines, skip={"難儀", "ライトサイド"})
+    out = S.time_words(lines, S.align(lines, asr), onsets=[], duration=30.0)
+    flat = [w for ln in out for w in ln["words"]]
+    by = {w["w"]: w for w in flat}
+    assert by["難儀"]["how"] == "interpolated" and by["ライトサイド"]["how"] == "interpolated"
+    assert by["利口に"]["t0"] < by["難儀"]["t0"] < by["ダーリン"]["t0"]
+    ts = [w["t0"] for w in flat]
+    assert all(b > a for a, b in zip(ts, ts[1:]))
+
+
+def test_measured_words_snap_to_vocal_onsets():
+    lines = S.parse_lyrics("レフトサイド ライトサイド")
+    asr = [{"w": "レフトサイド", "t0": 5.10, "t1": 5.6}, {"w": "ライトサイド", "t0": 5.90, "t1": 6.4}]
+    out = S.time_words(lines, S.align(lines, asr), onsets=[5.02, 5.97, 9.0], duration=10)
+    w = out[0]["words"]
+    assert (w[0]["t0"], w[0]["how"]) == (5.02, "snapped")
+    assert (w[1]["t0"], w[1]["how"]) == (5.97, "snapped")
+
+
+def test_out_of_order_match_is_dropped():
+    assert S._lis_keep([1.0, 2.0, 0.5, 3.0, 4.0]) == [1.0, 2.0, None, 3.0, 4.0]
+
+
+def test_cut_lands_one_frame_before_the_syllable():
+    assert S.cut_frame(1.0) == 29          # syllable at frame 30 -> cut at 29
+    assert S.cut_frame(0.0) == 0
+
+
+def test_pick_onsets_on_clicks():
+    env = np.zeros(300)
+    for i in (50, 120, 200):
+        env[i] = 1.0
+    assert S.pick_onsets(env, fps=100) == [0.5, 1.2, 2.0]
+
+
+def test_stops_found_in_a_loud_song():
+    db = np.full(400, -6.0)                # 40 s at 10 Hz
+    db[150:180] = -18.0                    # a 3 s break at 15 s
+    st = S.stops(db)
+    assert len(st) == 1 and st[0]["t0"] == 15.0 and st[0]["t1"] == 18.0
+
+
+def test_novelty_peaks_at_a_section_change():
+    rng = np.random.default_rng(1)
+    a = rng.normal(0, 0.1, (12, 40)) + np.r_[np.ones(6), np.zeros(6)][:, None]
+    b = rng.normal(0, 0.1, (12, 40)) + np.r_[np.zeros(6), np.ones(6)][:, None]
+    nov = S.novelty(np.hstack([a, b]), k=6)
+    assert abs(int(np.argmax(nov)) - 40) <= 2
+
+
+def test_vocal_spans_bridge_short_gaps():
+    db = np.full(100, -60.0)
+    db[10:30] = -10
+    db[33:50] = -10                        # 0.3 s gap -> bridged
+    db[70:80] = -10
+    assert S.vocal_spans(db) == [[1.0, 5.0], [7.0, 8.0]]

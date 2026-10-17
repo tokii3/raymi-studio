@@ -8,6 +8,8 @@
   check  <job>          plan + words against every hard rule (exit 1 on errors)
   props  <job>          write jobs/<job>/out/props.json for the renderer
   finish <job>          loudness-normalise out/raw.mp4 -> out/final.mp4, then QC + contact sheet
+  analyze <job>         song tools (cloud, heavy): vocal stem, word-timed lyrics, song map (raymi/song.py)
+  lyrics <job>          re-align lyrics_timed.json locally from the cached whisper_words.json + vocals.ogg
 """
 from __future__ import annotations
 
@@ -33,6 +35,18 @@ def main(argv: list[str]) -> int:
         from . import parts
 
         print("raw ->", parts.assemble(P.job_dir(job), Path(argv[2])))
+        return 0
+    if cmd in ("analyze", "lyrics"):
+        from . import song
+
+        d = P.job_dir(job)
+        if cmd == "analyze":
+            print(json.dumps(song.analyze(d), indent=1))
+        else:
+            cfg = json.loads((d / "analyze.json").read_text(encoding="utf-8"))
+            res = song.time_lyrics(d, (d / cfg.get("lyrics", "lyrics.txt")).read_text(encoding="utf-8"),
+                                   json.loads((d / "whisper_words.json").read_text(encoding="utf-8")), d / "vocals.ogg")
+            print(json.dumps(res["stats"]))
         return 0
     if cmd in ("new", "next"):
         from . import room

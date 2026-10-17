@@ -1,0 +1,86 @@
+name: analyze
+
+# Song tools in the cloud (heavy: Demucs + Whisper on CPU) so toki's PC stays free.
+# Start: push jobs/<job>/analyze.json  ({"song": "song.webm", "lyrics": "lyrics.txt", "language": "ja"})
+#        or Actions -> analyze -> Run workflow -> job.
+# Result (committed back to main): jobs/<job>/lyrics_timed.json (every official word timed from the vocal stem,
+# `cut` = one frame before the syllable), song_map.json (beats, sections, stops, hits, vocal spans + onsets),
+# vocals.ogg (small vocal stem) and whisper_words.json (raw recognition; `python -m raymi lyrics <job>` re-aligns
+# locally from it).
+
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "job folder under jobs/"
+        required: true
+  push:
+    branches: [main]
+    paths: ["jobs/*/analyze.json"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: analyze-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q -r requirements.txt
+          pip install -q --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-analyze.txt
+          pip install -q --no-deps demucs==4.0.1
+      - name: Models (cached between runs)
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/torch
+          key: models-htdemucs-whisper-large-v3-v1
+      - name: Tests
+        run: python -m pytest -q tests
+      - name: Which jobs
+        id: which
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            JOBS="${{ github.event.inputs.job }}"
+          else
+            BEFORE="${{ github.event.before }}"
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
+              BEFORE=$(git rev-parse -q --verify HEAD~1 || git hash-object -t tree /dev/null)
+            fi
+            JOBS=$(git diff --name-only "$BEFORE" HEAD -- 'jobs/*/analyze.json' | cut -d/ -f2 | sort -u | tr '\n' ' ')
+          fi
+          echo "jobs=$JOBS" >> "$GITHUB_OUTPUT"
+          echo "Analyzing: $JOBS" >> "$GITHUB_STEP_SUMMARY"
+      - name: Analyze
+        if: steps.which.outputs.jobs != ''
+        run: |
+          set -e
+          for J in ${{ steps.which.outputs.jobs }}; do
+            START=$(date +%s)
+            python -m raymi analyze "$J" | tee -a "$GITHUB_STEP_SUMMARY"
+            echo "$J: $(( $(date +%s) - START )) s" >> "$GITHUB_STEP_SUMMARY"
+          done
+      - name: Commit results
+        if: steps.which.outputs.jobs != ''
+        run: |
+          git config user.name "raymi-analyze-bot"
+          git config user.email "actions@users.noreply.github.com"
+          for J in ${{ steps.which.outputs.jobs }}; do
+            git add "jobs/$J/lyrics_timed.json" "jobs/$J/song_map.json" "jobs/$J/vocals.ogg" "jobs/$J/whisper_words.json"
+          done
+          git diff --cached --quiet || (git commit -qm "song analysis for ${{ steps.which.outputs.jobs }} [skip ci]" && git pull --rebase -q && git push -q)
