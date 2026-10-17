@@ -13,8 +13,8 @@
   "no_frozen_picture_>1.2s": true
  },
  "full_res": false,
- "lufs": -14.06,
- "true_peak": -1.5,
+ "lufs": -14.71,
+ "true_peak": -1.49,
  "frozen_spans": [],
  "pass": true
 }
