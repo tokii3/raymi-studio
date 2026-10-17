@@ -39,10 +39,21 @@ def norm(w: str) -> str:
     return re.sub(r"[^a-z0-9']", "", w.lower())
 
 
+def communicate_kwargs(edge_tts) -> dict:
+    """Voice settings for edge_tts.Communicate. Newer versions (>= 7.1) default to SentenceBoundary events and need
+    boundary="WordBoundary"; 7.0.x always sends word boundaries and has no such argument (first cloud run failed on it)."""
+    import inspect
+
+    kw = {"rate": RATE, "pitch": PITCH, "volume": VOLUME}
+    if "boundary" in inspect.signature(edge_tts.Communicate.__init__).parameters:
+        kw["boundary"] = "WordBoundary"
+    return kw
+
+
 async def _synth(text: str, mp3: Path) -> list[dict]:
     import edge_tts
 
-    comm = edge_tts.Communicate(text, VOICE, rate=RATE, pitch=PITCH, volume=VOLUME, boundary="WordBoundary")
+    comm = edge_tts.Communicate(text, VOICE, **communicate_kwargs(edge_tts))
     words = []
     with open(mp3, "wb") as f:
         async for chunk in comm.stream():

@@ -143,6 +143,13 @@ def test_fuzzy_alignment_survives_one_misheard_word():
     assert out and [w["w"] for w in out] == script and out[3]["start"] < out[4]["start"]
 
 
+def test_edge_tts_call_matches_installed_version():
+    # the first cloud render died on an argument the pinned edge-tts does not know; build the object offline
+    import edge_tts
+    from raymi.tts import VOICE, communicate_kwargs
+    edge_tts.Communicate("hi chat", VOICE, **communicate_kwargs(edge_tts))
+
+
 # --- channel rules ----------------------------------------------------------------------------------------------
 def test_channel_rules_block_ai_vtuber_tag():
     issues = channel_rules.tag_issues(["ai vtuber", "stingray vtuber"], ["#rain", "#vtuber", "#envtuber"])
