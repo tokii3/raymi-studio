@@ -54,9 +54,11 @@ Before planning a video also: `knowledge/CASEBOOK.md`, `canon/07_video_catalog.m
 - `raymi/` - Python: writers' room steps (`room.py`), plan checks + props (`plan.py`), voice (`tts.py`), parallel
   render split / join (`parts.py`), QC (`qc.py`), upload text rules (`channel_rules.py`).
   CLI: `python -m raymi new|next|voice|check|props|parts|assemble|finish <job>`.
-- `studio/` - Remotion 4.0.532 (React). Today: the `Short` composition (lore Shorts). Phase 2 (planned 2026-10-18):
-  built 3D sets with a real camera (three.js), Raymi puppet in the space, lyrics as objects, transitions, the MV
-  composition, a component catalog with stills.
+- `studio/` - Remotion 4.0.532 (React) + @remotion/three. `Short` (lore Shorts, 2D) and the film compositions `MV` /
+  `MVShort` (built 3D sets with a real camera, Raymi's sprites in the space, lyrics as objects, transitions through
+  things) driven by one timeline (`raymi/timeline.py` <- `jobs/<job>/shots.json`). Catalog: `studio/catalog/`.
+- Song tools: `raymi/song.py` + `.github/workflows/analyze.yml` (vocal stem, word-timed lyrics, song map).
+  Screening: `raymi/screen.py` (critic kit) + critic agents in `.claude/agents`. Stills: `.github/workflows/stills.yml`.
 - `.github/workflows/render.yml` - parallel cloud render (see PRODUCTION.md "Render").
 - `assets/` - 172 checked Raymi sprites (`catalog.json`, MIGRATION.md), the brand font.
 
