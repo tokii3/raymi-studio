@@ -52,8 +52,9 @@ Read at session start: this file -> `PRODUCTION.md` (how a video is made) -> `ca
   Layout check without a full render: `cd studio && node render.mjs <job> --draft` once, then `node stills.mjs <job> 20,200,500`.
 - `assets/sprites` + `assets/catalog.json`: 172 Raymi sprites that passed the migration check of 2026-10-17
   (see MIGRATION.md for what was excluded and why).
-- Free quota: 2,000 Actions minutes per month (private repo). A draft Short is a few minutes; check
-  `$GITHUB_STEP_SUMMARY` render times and keep finals for what toki approved.
+- Free quota: 2,000 Actions minutes per month (private repo). The S0 draft run (20 s Short, half size) took about
+  15 minutes including setup, so roughly 130 draft runs a month; a final at full size costs more. Check render times
+  in the run summary and keep finals for what toki approved.
 
 ## 4. Content strategy (from real analytics, details in canon/)
 - Lore Shorts (Raymi talking: one absurd personal claim, 15-35 s) bring the most subscribers per view.
