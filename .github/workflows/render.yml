@@ -65,7 +65,9 @@ jobs:
             QUALITY="${{ github.event.inputs.quality }}"
           else
             BEFORE="${{ github.event.before }}"
-            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then BEFORE="HEAD~1"; fi
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
+              BEFORE=$(git rev-parse -q --verify HEAD~1 || git hash-object -t tree /dev/null)   # first commit: diff against empty tree
+            fi
             JOBS=$(git diff --name-only "$BEFORE" HEAD -- 'jobs/*/plan.json' | cut -d/ -f2 | sort -u | tr '\n' ' ')
             QUALITY=draft
           fi
