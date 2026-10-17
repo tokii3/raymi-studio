@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-17_s0-test",
+  "test": true,
+  "note": "S0 cloud render test - not for upload",
+  "kind": "lore",
+  "series": "rain-record",
+  "script": "I can predict rain. Officially. My record is three out of ten, which is basically a talent. Today my tail is tingling, and that means rain at exactly four o'clock. If it does not rain, the sky is wrong, not me. Tell me, when does it rain where you are?",
+  "look": {"world": "deep_sea", "accent": "#b56bff"},
+  "hook": {"text": "i can predict rain. kind of.", "until": 1.8},
+  "cta": {"text": "when does it rain where you are?"},
+  "beats": [
+    {"at_word": 0, "sprite": "WS_F_SMUG_WINK_UV_141", "shot": "medium", "act": "pop", "icon": "sparkle", "key": ["rain."]},
+    {"at_word": 4, "sprite": "CU_F_HAPPY_UV_001", "shot": "close", "act": "tilt", "key": ["officially."]},
+    {"at_word": 5, "sprite": "WS_F_EMBARRASSED_DRAMA_UV_033", "shot": "close", "act": "shrink", "icon": "sweat", "key": ["three", "ten,"]},
+    {"at_word": 12, "sprite": "WS_F_SMUG_SWAT_UV_157", "shot": "medium", "side": "right", "act": "lean", "icon": "sparkle", "key": ["talent."]},
+    {"at_word": 17, "sprite": "WS_F_SURPRISED_JUMP_UV_133", "shot": "wide", "act": "hop", "icon": "!", "key": ["tingling,"]},
+    {"at_word": 22, "sprite": "WS_F_THINK_CALM_UV_036", "shot": "close", "act": "tilt", "icon": "bulb", "key": ["exactly"]},
+    {"at_word": 30, "sprite": "WS_F_ANGRY_KICK_UV_198", "shot": "wide", "side": "left", "act": "shake", "icon": "anger", "key": ["wrong,"]},
+    {"at_word": 39, "sprite": "CU_F_HAPPY_UV_002", "shot": "close", "act": "pop", "key": ["me."]},
+    {"at_word": 41, "sprite": "WS_F_PEACE_WINK_UV_131", "shot": "medium", "act": "bounce", "icon": "?"}
+  ]
+}

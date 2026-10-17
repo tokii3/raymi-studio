@@ -1,0 +1,38 @@
+{
+  "_doc": "Raymi's running series (brain/08_Kanal-Analyse-2026-09.md: series + counters give the feed a reason to show her again). One playlist per series on the channel. 'counter' series must state the new tally in script.json ('series_counter': [right, total]); `raymi package` stores it here.",
+  "series": {
+    "raymis-rules": {
+      "name": "Raymi's Rules",
+      "about": "everyday debate with one clear rule (rice last, boba, onigiri) - a claim viewers can disagree with",
+      "hook_types": ["callout", "debate"],
+      "line": "more of raymi's rules in the playlist on my channel"
+    },
+    "rain-record": {
+      "name": "Rain Prediction Record",
+      "about": "running gag: Raymi predicts rain, is wrong more often than right, keeps a public tally",
+      "hook_types": ["running_gag", "personal_fact"],
+      "counter": {"right": 3, "total": 10, "label": "right predictions"},
+      "line": "the official rain record is in the playlist on my channel (still confident)"
+    },
+    "raymi-lore": {
+      "name": "Raymi Lore",
+      "about": "salmon best friend, Sumi, karaoke, her sea-floor life - story arc allowed up to ~45 s",
+      "hook_types": ["personal_fact", "lore", "running_gag"],
+      "line": "more raymi lore in the playlist on my channel"
+    },
+    "stingray-explains": {
+      "name": "A Stingray Explains",
+      "about": "Raymi's view of humans and the ocean; facts only wrapped in her opinion (longform home)",
+      "hook_types": ["personal_fact", "callout", "ranking", "debate"],
+      "related_longform": ["2026-09-30_things-humans-do-that-make-no", "2026-09-30_ocean-facts-that-sound-fake-but",
+                           "2026-09-30_the-deep-sea-is-weirder-than"],
+      "line": "the full stingray report is a long video on my channel"
+    },
+    "raymi-rates": {
+      "name": "Raymi Rates",
+      "about": "Raymi judges things that swim past / exist, one score each, twist at the end",
+      "hook_types": ["ranking", "running_gag"],
+      "line": "more ratings in the playlist on my channel"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+name: render
+
+# Renders Raymi videos in the cloud so toki's PC stays free.
+# - push a jobs/<job>/plan.json  -> that job renders as a draft
+# - Actions tab -> "render" -> Run workflow -> job + draft/final
+# Results: a pre-release "render-<job>-<run>" with final.mp4 + sheet.jpg + qc.json (downloadable on the phone),
+# plus reports/<job>/ on the branch `renders` (qc.json, sheet.jpg, preview) for Claude sessions to read.
+
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "job folder under jobs/ (e.g. 2026-10-17_s0-test)"
+        required: true
+      quality:
+        description: "draft = half size, fast / final = 1080x1920"
+        type: choice
+        options: [draft, final]
+        default: draft
+  push:
+    branches: [main]
+    paths: ["jobs/*/plan.json"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: studio/package-lock.json
+
+      - name: Tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q -r requirements.txt
+          cd studio && npm ci --no-audit --no-fund && npx remotion browser ensure
+
+      - name: Tests (nothing renders when a guard is broken)
+        run: python -m pytest -q tests
+
+      - name: Which jobs
+        id: jobs
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            JOBS="${{ github.event.inputs.job }}"
+            QUALITY="${{ github.event.inputs.quality }}"
+          else
+            BEFORE="${{ github.event.before }}"
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then BEFORE="HEAD~1"; fi
+            JOBS=$(git diff --name-only "$BEFORE" HEAD -- 'jobs/*/plan.json' | cut -d/ -f2 | sort -u | tr '\n' ' ')
+            QUALITY=draft
+          fi
+          echo "jobs=$JOBS" >> "$GITHUB_OUTPUT"
+          echo "quality=$QUALITY" >> "$GITHUB_OUTPUT"
+          echo "Rendering: $JOBS ($QUALITY)" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Render
+        if: steps.jobs.outputs.jobs != ''
+        env:
+          QUALITY: ${{ steps.jobs.outputs.quality }}
+        run: |
+          set -e
+          for J in ${{ steps.jobs.outputs.jobs }}; do
+            echo "::group::$J"
+            if [ ! -f "jobs/$J/voice.mp3" ] || [ ! -f "jobs/$J/words.json" ] || grep -q PLATZHALTER "jobs/$J/words.json"; then
+              python -m raymi voice "$J"
+            fi
+            python -m raymi check "$J"
+            python -m raymi props "$J"
+            FLAG=""; [ "$QUALITY" = "draft" ] && FLAG="--draft"
+            START=$(date +%s)
+            (cd studio && node render.mjs "$J" $FLAG)
+            echo "$J: render $(( $(date +%s) - START )) s" >> "$GITHUB_STEP_SUMMARY"
+            python -m raymi finish "$J" || echo "$J: QC FAILED - see qc.json" >> "$GITHUB_STEP_SUMMARY"
+            echo "::endgroup::"
+          done
+
+      - name: Keep the voice take (re-renders reuse the same take)
+        if: steps.jobs.outputs.jobs != ''
+        run: |
+          git config user.name "raymi-render-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add jobs/*/voice.mp3 jobs/*/words.json
+          git diff --cached --quiet || (git commit -m "voice take for ${{ steps.jobs.outputs.jobs }} [skip ci]" && git pull --rebase -q && git push -q)
+
+      - name: Publish (release + renders branch)
+        if: steps.jobs.outputs.jobs != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for J in ${{ steps.jobs.outputs.jobs }}; do
+            O="jobs/$J/out"
+            [ -f "$O/final.mp4" ] || continue
+            ffmpeg -y -loglevel error -i "$O/final.mp4" -vf scale=360:-2 -c:v libx264 -crf 30 -c:a aac -b:a 64k "$O/preview.mp4"
+            gh release create "render-$J-${{ github.run_number }}" "$O/final.mp4" "$O/sheet.jpg" "$O/qc.json" \
+              --prerelease --title "$J (${{ steps.jobs.outputs.quality }}, run ${{ github.run_number }})" \
+              --notes "QC: $(python -c "import json;print('PASS' if json.load(open('$O/qc.json'))['pass'] else 'FAIL')")"
+            mkdir -p "/tmp/reports/$J"
+            cp "$O/qc.json" "$O/sheet.jpg" "$O/preview.mp4" "$O/props.json" "/tmp/reports/$J/"
+          done
+          git fetch -q origin renders || true
+          if git rev-parse -q --verify origin/renders > /dev/null; then git worktree add -q /tmp/rb origin/renders && cd /tmp/rb && git checkout -q -B renders;
+          else git worktree add -q --detach /tmp/rb && cd /tmp/rb && git checkout -q --orphan renders && git rm -rq . ; fi
+          mkdir -p reports && cp -r /tmp/reports/* reports/
+          git add reports && git commit -qm "reports run ${{ github.run_number }}" && git push -q origin renders

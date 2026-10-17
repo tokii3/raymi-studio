@@ -1,0 +1,9937 @@
+{
+ "_why": "Raymi sprites that passed the migration check 2026-10-17. Boxes are fractions (x0, y0, x1, y1) of the trimmed sprite. status 'limited' = usable with the limits in notes. cut_sides = the source image edge cuts the figure (opaque run > 2 % of that edge; agrees with the old eye-checked data on 99 of 105 sprites).",
+ "sprites": {
+  "CU_BK_NA_UV_001": {
+   "file": "assets/sprites/CU_BK_NA_UV_001.png",
+   "shot": "CU",
+   "view": "back",
+   "tags": [
+    "na"
+   ],
+   "status": "ok",
+   "notes": [
+    "back view, looks away over her shoulder - mystery / leaving / turning away"
+   ],
+   "size": [
+    1044,
+    1773
+   ],
+   "cut_sides": [
+    "bottom",
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.12,
+     0.05,
+     0.88,
+     0.52
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_BK_NA_UV_001.png"
+  },
+  "CU_F_BLUSH_UV_068": {
+   "file": "assets/sprites/CU_F_BLUSH_UV_068.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "blush"
+   ],
+   "status": "ok",
+   "notes": [
+    "eating an ONIGIRI, eyes closed (not a blush close-up)",
+    "eating an ONIGIRI, eyes closed (not a blush close-up) eating an ONIGIRI, eyes closed, sitting (not a blush close-up)"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.22,
+     0.04,
+     0.78,
+     0.42
+    ],
+    "eyes": [
+     [
+      0.36,
+      0.23
+     ],
+     [
+      0.6,
+      0.25
+     ]
+    ],
+    "hands": [
+     [
+      0.33,
+      0.4
+     ],
+     [
+      0.5,
+      0.4
+     ]
+    ],
+    "tail": [
+     [
+      0.97,
+      0.38
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_BLUSH_UV_068.png"
+  },
+  "CU_F_CALM_UV_001": {
+   "file": "assets/sprites/CU_F_CALM_UV_001.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "open happy smile, finger at chin (not calm)"
+   ],
+   "size": [
+    1076,
+    1782
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.12,
+     0.06,
+     0.88,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.36,
+      0.42
+     ],
+     [
+      0.62,
+      0.41
+     ]
+    ],
+    "hands": [
+     [
+      0.5,
+      0.57
+     ]
+    ],
+    "tail": [
+     [
+      0.98,
+      0.5
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_CALM_UV_001.png"
+  },
+  "CU_F_CALM_UV_003": {
+   "file": "assets/sprites/CU_F_CALM_UV_003.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "CRYING with tears, open mouth (not calm)",
+    "CRYING with tears, open mouth (not calm) CRYING with tears, open mouth (not calm)"
+   ],
+   "size": [
+    1076,
+    1854
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.08,
+     0.05,
+     0.92,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.28,
+      0.4
+     ],
+     [
+      0.66,
+      0.4
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_CALM_UV_003.png"
+  },
+  "CU_F_CALM_UV_085": {
+   "file": "assets/sprites/CU_F_CALM_UV_085.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "big face low in the sprite, half-lidded calm stare; top of the head cut"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.0,
+     1.0,
+     0.72
+    ],
+    "eyes": [
+     [
+      0.36,
+      0.55
+     ],
+     [
+      0.82,
+      0.55
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_CALM_UV_085.png"
+  },
+  "CU_F_CALM_UV_090": {
+   "file": "assets/sprites/CU_F_CALM_UV_090.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "three-quarter face turned left, soft smile, face cut on the right",
+    "three-quarter face turned left, soft smile, face cut on the right three-quarter face turned left, soft smile, face cut on the right"
+   ],
+   "size": [
+    1024,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.02,
+     1.0,
+     0.62
+    ],
+    "eyes": [
+     [
+      0.45,
+      0.4
+     ],
+     [
+      0.82,
+      0.4
+     ]
+    ]
+   },
+   "face_box": [
+    0.28,
+    0.1,
+    0.98,
+    0.62
+   ],
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_CALM_UV_090.png"
+  },
+  "CU_F_CALM_UV_091": {
+   "file": "assets/sprites/CU_F_CALM_UV_091.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "head tilted, eyes closed, gentle smile - sleepy / content"
+   ],
+   "size": [
+    1083,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.0,
+     0.95,
+     0.62
+    ],
+    "eyes": [
+     [
+      0.38,
+      0.43
+     ],
+     [
+      0.73,
+      0.43
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_CALM_UV_091.png"
+  },
+  "CU_F_CRY_UV_001": {
+   "file": "assets/sprites/CU_F_CRY_UV_001.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "cry"
+   ],
+   "status": "ok",
+   "notes": [
+    "crying, fists at the chin, mouth open"
+   ],
+   "size": [
+    1076,
+    1757
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.12,
+     0.04,
+     0.88,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.36,
+      0.42
+     ],
+     [
+      0.65,
+      0.4
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.6
+     ],
+     [
+      0.66,
+      0.6
+     ]
+    ]
+   },
+   "face_box": [
+    0.18,
+    0.06,
+    0.8,
+    0.52
+   ],
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_CRY_UV_001.png"
+  },
+  "CU_F_CRY_UV_002": {
+   "file": "assets/sprites/CU_F_CRY_UV_002.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "cry"
+   ],
+   "status": "ok",
+   "notes": [
+    "crying with eyes closed, small pout"
+   ],
+   "size": [
+    1076,
+    1872
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.05,
+     0.92,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.27,
+      0.42
+     ],
+     [
+      0.68,
+      0.42
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_CRY_UV_002.png"
+  },
+  "CU_F_CRY_UV_003": {
+   "file": "assets/sprites/CU_F_CRY_UV_003.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "cry"
+   ],
+   "status": "ok",
+   "notes": [
+    "crying, eyes squeezed shut, hands on cheeks, mouth open"
+   ],
+   "size": [
+    1076,
+    1872
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.05,
+     0.98,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.47,
+      0.4
+     ],
+     [
+      0.8,
+      0.39
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.45
+     ],
+     [
+      0.85,
+      0.47
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_CRY_UV_003.png"
+  },
+  "CU_F_HAPPY_PLUSH_UV_112": {
+   "file": "assets/sprites/CU_F_HAPPY_PLUSH_UV_112.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "happy",
+    "plush"
+   ],
+   "status": "ok",
+   "notes": [
+    "hugging the shark plush (plush on the left), happy"
+   ],
+   "size": [
+    1076,
+    1711
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.05,
+     0.92,
+     0.53
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.4
+     ],
+     [
+      0.72,
+      0.38
+     ]
+    ],
+    "hands": [
+     [
+      0.45,
+      0.8
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_HAPPY_PLUSH_UV_112.png"
+  },
+  "CU_F_HAPPY_UV_001": {
+   "file": "assets/sprites/CU_F_HAPPY_UV_001.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "happy"
+   ],
+   "status": "ok",
+   "notes": [
+    "happy, hands clasped at the chin"
+   ],
+   "size": [
+    1076,
+    1872
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.04,
+     0.72,
+     0.5
+    ],
+    "eyes": [
+     [
+      0.22,
+      0.33
+     ],
+     [
+      0.53,
+      0.33
+     ]
+    ],
+    "hands": [
+     [
+      0.35,
+      0.58
+     ]
+    ]
+   },
+   "face_box": [
+    0.12,
+    0.05,
+    0.74,
+    0.5
+   ],
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_HAPPY_UV_001.png"
+  },
+  "CU_F_HAPPY_UV_002": {
+   "file": "assets/sprites/CU_F_HAPPY_UV_002.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "happy"
+   ],
+   "status": "ok",
+   "notes": [
+    "winking, laughing, finger up ('tee-hee'), face cut on the left",
+    "winking, laughing, finger up ('tee-hee'), face cut on the left winking, laughing, finger up ('tee-hee'), face cut on the left"
+   ],
+   "size": [
+    1076,
+    1872
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.0,
+     0.0,
+     0.95,
+     0.68
+    ],
+    "eyes": [
+     [
+      0.08,
+      0.42
+     ],
+     [
+      0.58,
+      0.42
+     ]
+    ],
+    "hands": [
+     [
+      0.55,
+      0.68
+     ]
+    ]
+   },
+   "face_box": [
+    0.0,
+    0.1,
+    0.75,
+    0.62
+   ],
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_HAPPY_UV_002.png"
+  },
+  "CU_F_HAPPY_UV_092": {
+   "file": "assets/sprites/CU_F_HAPPY_UV_092.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "happy"
+   ],
+   "status": "limited",
+   "notes": [
+    "holds a JELLYFISH, head tilted (not a plain happy close-up)",
+    "holds a JELLYFISH, head tilted (not a plain happy close-up) holds a JELLYFISH, head strongly tilted, tail across the frame - a diagonal composition"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.2,
+     0.02,
+     0.88,
+     0.48
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.36
+     ],
+     [
+      0.62,
+      0.22
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_HAPPY_UV_092.png"
+  },
+  "CU_F_HAPPY_UV_120": {
+   "file": "assets/sprites/CU_F_HAPPY_UV_120.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "happy"
+   ],
+   "status": "ok",
+   "notes": [
+    "extreme close-up: face fills the sprite, eyes cut at the edges - only as ECU fill",
+    "extreme close-up: face fills the sprite, eyes cut at the edges - only as ECU fill extreme close-up: face fills the sprite, eyes cut at the edges - only as ECU fill"
+   ],
+   "size": [
+    1076,
+    1872
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.0,
+     0.0,
+     1.0,
+     0.74
+    ],
+    "eyes": [
+     [
+      0.15,
+      0.47
+     ],
+     [
+      0.75,
+      0.38
+     ]
+    ]
+   },
+   "face_box": [
+    0.0,
+    0.12,
+    1.0,
+    0.66
+   ],
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_HAPPY_UV_120.png"
+  },
+  "CU_F_JELLYFISH_UV_067": {
+   "file": "assets/sprites/CU_F_JELLYFISH_UV_067.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "jellyfish"
+   ],
+   "status": "limited",
+   "notes": [
+    "lying / tilted landscape, one eye, arm across - floating"
+   ],
+   "size": [
+    1704,
+    1152
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.15,
+     0.5,
+     0.85
+    ],
+    "eyes": [
+     [
+      0.23,
+      0.53
+     ]
+    ],
+    "hands": [
+     [
+      0.65,
+      0.55
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_JELLYFISH_UV_067.png"
+  },
+  "CU_F_JELLYFISH_UV_077": {
+   "file": "assets/sprites/CU_F_JELLYFISH_UV_077.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "jellyfish"
+   ],
+   "status": "ok",
+   "notes": [
+    "lying/tilted pose, landscape-shaped - covering a 9:16 width blows it up and shows the top cut",
+    "lying/tilted pose, landscape-shaped - covering a 9:16 width blows it up and shows the top cut lying/tilted pose, landscape-shaped - covering a 9:16 width blows it up and shows the top cut"
+   ],
+   "size": [
+    1704,
+    1152
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.1,
+     0.55,
+     0.95
+    ],
+    "eyes": [
+     [
+      0.33,
+      0.47
+     ],
+     [
+      0.16,
+      0.66
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_JELLYFISH_UV_077.png"
+  },
+  "CU_F_JELLYFISH_UV_114": {
+   "file": "assets/sprites/CU_F_JELLYFISH_UV_114.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "jellyfish"
+   ],
+   "status": "ok",
+   "notes": [
+    "big face, a jellyfish at her collar (lower right), soft smile"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.0,
+     0.0,
+     0.9,
+     0.62
+    ],
+    "eyes": [
+     [
+      0.22,
+      0.42
+     ],
+     [
+      0.62,
+      0.37
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_JELLYFISH_UV_114.png"
+  },
+  "CU_F_MIC_UV_062": {
+   "file": "assets/sprites/CU_F_MIC_UV_062.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "mic"
+   ],
+   "status": "ok",
+   "notes": [
+    "singing into the mic, head tilted, one eye winking"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.02,
+     0.85,
+     0.7
+    ],
+    "eyes": [
+     [
+      0.25,
+      0.52
+     ],
+     [
+      0.62,
+      0.38
+     ]
+    ],
+    "hands": [
+     [
+      0.15,
+      0.75
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_MIC_UV_062.png"
+  },
+  "CU_F_MIC_UV_070": {
+   "file": "assets/sprites/CU_F_MIC_UV_070.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "mic"
+   ],
+   "status": "ok",
+   "notes": [
+    "singing with eyes closed, tilted, hand in her hair, mic low"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.0,
+     0.0,
+     0.85,
+     0.68
+    ],
+    "eyes": [
+     [
+      0.22,
+      0.51
+     ],
+     [
+      0.58,
+      0.3
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.88
+     ],
+     [
+      0.75,
+      0.32
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_MIC_UV_070.png"
+  },
+  "CU_F_MIC_UV_088": {
+   "file": "assets/sprites/CU_F_MIC_UV_088.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "mic"
+   ],
+   "status": "ok",
+   "notes": [
+    "holds onigiri (the deliberate food gag)",
+    "holds onigiri (the deliberate food gag) holds onigiri (the deliberate food gag), eyes closed, smiling"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.12,
+     0.02,
+     0.88,
+     0.48
+    ],
+    "eyes": [
+     [
+      0.36,
+      0.32
+     ],
+     [
+      0.68,
+      0.32
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.7
+     ],
+     [
+      0.62,
+      0.7
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_MIC_UV_088.png"
+  },
+  "CU_F_MIC_UV_089": {
+   "file": "assets/sprites/CU_F_MIC_UV_089.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "mic"
+   ],
+   "status": "ok",
+   "notes": [
+    "singing with passion, eyes closed, tilted"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.0,
+     0.0,
+     0.8,
+     0.45
+    ],
+    "eyes": [
+     [
+      0.18,
+      0.25
+     ],
+     [
+      0.58,
+      0.12
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.4
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_MIC_UV_089.png"
+  },
+  "CU_F_MIC_UV_094": {
+   "file": "assets/sprites/CU_F_MIC_UV_094.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "mic"
+   ],
+   "status": "ok",
+   "notes": [
+    "singing, eyes closed, mic at the chin - calm song moment"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.2,
+     0.02,
+     0.82,
+     0.5
+    ],
+    "eyes": [
+     [
+      0.4,
+      0.36
+     ],
+     [
+      0.62,
+      0.36
+     ]
+    ],
+    "hands": [
+     [
+      0.45,
+      0.66
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_MIC_UV_094.png"
+  },
+  "CU_F_ONIGIRI_UV_056": {
+   "file": "assets/sprites/CU_F_ONIGIRI_UV_056.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "onigiri"
+   ],
+   "status": "ok",
+   "notes": [
+    "ECU biting an onigiri, eyes closed"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.0,
+     0.0,
+     1.0,
+     0.68
+    ],
+    "eyes": [
+     [
+      0.25,
+      0.38
+     ],
+     [
+      0.82,
+      0.38
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.75
+     ],
+     [
+      0.82,
+      0.75
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_ONIGIRI_UV_056.png"
+  },
+  "CU_F_ONIGIRI_UV_078": {
+   "file": "assets/sprites/CU_F_ONIGIRI_UV_078.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "onigiri"
+   ],
+   "status": "limited",
+   "notes": [
+    "extreme close-up of her MOUTH + onigiri, no eyes - only for a food gag insert",
+    "mouth + hands macro, eyes not visible - only as an insert"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.0,
+     0.0,
+     1.0,
+     0.3
+    ],
+    "hands": [
+     [
+      0.25,
+      0.7
+     ],
+     [
+      0.75,
+      0.7
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_ONIGIRI_UV_078.png"
+  },
+  "CU_F_ONIGIRI_UV_079": {
+   "file": "assets/sprites/CU_F_ONIGIRI_UV_079.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "onigiri"
+   ],
+   "status": "ok",
+   "notes": [
+    "ECU, eyes closed, content"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.0,
+     0.98,
+     0.8
+    ],
+    "eyes": [
+     [
+      0.37,
+      0.58
+     ],
+     [
+      0.7,
+      0.58
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_ONIGIRI_UV_079.png"
+  },
+  "CU_F_ONIGIRI_UV_087": {
+   "file": "assets/sprites/CU_F_ONIGIRI_UV_087.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "onigiri"
+   ],
+   "status": "ok",
+   "notes": [
+    "eating an onigiri, eyes open looking at you"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.2,
+     0.02,
+     0.88,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.26,
+      0.37
+     ],
+     [
+      0.6,
+      0.37
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.65
+     ],
+     [
+      0.62,
+      0.65
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_ONIGIRI_UV_087.png"
+  },
+  "CU_F_ONIGIRI_UV_093": {
+   "file": "assets/sprites/CU_F_ONIGIRI_UV_093.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "onigiri"
+   ],
+   "status": "ok",
+   "notes": [
+    "eating an onigiri, looking at you"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.0,
+     0.85,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.27,
+      0.38
+     ],
+     [
+      0.63,
+      0.35
+     ]
+    ],
+    "hands": [
+     [
+      0.3,
+      0.62
+     ],
+     [
+      0.55,
+      0.65
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_ONIGIRI_UV_093.png"
+  },
+  "CU_F_ONIGIRI_UV_113": {
+   "file": "assets/sprites/CU_F_ONIGIRI_UV_113.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "onigiri"
+   ],
+   "status": "ok",
+   "notes": [
+    "holding an onigiri, soft smile"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.12,
+     0.0,
+     0.9,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.35,
+      0.32
+     ],
+     [
+      0.68,
+      0.32
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.72
+     ],
+     [
+      0.55,
+      0.72
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_ONIGIRI_UV_113.png"
+  },
+  "CU_F_RAMEN_UV_118": {
+   "file": "assets/sprites/CU_F_RAMEN_UV_118.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "ramen"
+   ],
+   "status": "ok",
+   "notes": [
+    "anatomy boxes approximate (source size differed by ~1 %)",
+    "eating ramen (red bowl, chopsticks)"
+   ],
+   "size": [
+    1076,
+    1849
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.02,
+     0.92,
+     0.58
+    ],
+    "eyes": [
+     [
+      0.32,
+      0.43
+     ],
+     [
+      0.75,
+      0.43
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.57
+     ],
+     [
+      0.65,
+      0.88
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_RAMEN_UV_118.png"
+  },
+  "CU_F_SURP_UV_003": {
+   "file": "assets/sprites/CU_F_SURP_UV_003.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "surp"
+   ],
+   "status": "ok",
+   "notes": [
+    "surprised, hand at the mouth"
+   ],
+   "size": [
+    1076,
+    1811
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.2,
+     0.03,
+     0.9,
+     0.52
+    ],
+    "eyes": [
+     [
+      0.4,
+      0.4
+     ],
+     [
+      0.72,
+      0.38
+     ]
+    ],
+    "hands": [
+     [
+      0.45,
+      0.55
+     ]
+    ]
+   },
+   "face_box": [
+    0.13,
+    0.07,
+    0.77,
+    0.56
+   ],
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_SURP_UV_003.png"
+  },
+  "CU_F_SURP_UV_004": {
+   "file": "assets/sprites/CU_F_SURP_UV_004.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "surp"
+   ],
+   "status": "ok",
+   "notes": [
+    "squinting, embarrassed / pained, fists up (not surprised)"
+   ],
+   "size": [
+    1076,
+    1831
+   ],
+   "cut_sides": [
+    "bottom",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.15,
+     0.03,
+     0.9,
+     0.52
+    ],
+    "eyes": [
+     [
+      0.35,
+      0.4
+     ],
+     [
+      0.65,
+      0.4
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.62
+     ],
+     [
+      0.5,
+      0.58
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_SURP_UV_004.png"
+  },
+  "CU_F_SUSHI_UV_083": {
+   "file": "assets/sprites/CU_F_SUSHI_UV_083.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "sushi"
+   ],
+   "status": "ok",
+   "notes": [
+    "chin + sushi on chopsticks, face mostly cut - detail insert ('the bite')"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.0,
+     0.0,
+     1.0,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.32,
+      0.03
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_SUSHI_UV_083.png"
+  },
+  "CU_F_SUSHI_UV_084": {
+   "file": "assets/sprites/CU_F_SUSHI_UV_084.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "sushi"
+   ],
+   "status": "ok",
+   "notes": [
+    "chin + chopsticks detail, face cut - insert only",
+    "chin / neck crop, eyes not visible - only as an insert, never as a reaction"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.0,
+     0.0,
+     1.0,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.22,
+      0.03
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_SUSHI_UV_084.png"
+  },
+  "CU_F_SWIM_UV_115": {
+   "file": "assets/sprites/CU_F_SWIM_UV_115.png",
+   "shot": "CU",
+   "view": "front",
+   "tags": [
+    "swim"
+   ],
+   "status": "ok",
+   "notes": [
+    "lying / swimming, tilted landscape"
+   ],
+   "size": [
+    1704,
+    1152
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.02,
+     0.05,
+     0.48,
+     0.95
+    ],
+    "eyes": [
+     [
+      0.35,
+      0.47
+     ],
+     [
+      0.17,
+      0.67
+     ]
+    ],
+    "hands": [
+     [
+      0.8,
+      0.75
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_CU_F_SWIM_UV_115.png"
+  },
+  "MS_F_CALM_UV_002": {
+   "file": "assets/sprites/MS_F_CALM_UV_002.png",
+   "shot": "MS",
+   "view": "front",
+   "tags": [
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "looks sideways, pouty / upset (not calm)"
+   ],
+   "size": [
+    1076,
+    1872
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.04,
+     0.8,
+     0.62
+    ],
+    "eyes": [
+     [
+      0.3,
+      0.48
+     ],
+     [
+      0.58,
+      0.48
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_MS_F_CALM_UV_002.png"
+  },
+  "MS_F_HAPPY_UV_005": {
+   "file": "assets/sprites/MS_F_HAPPY_UV_005.png",
+   "shot": "MS",
+   "view": "front",
+   "tags": [
+    "happy"
+   ],
+   "status": "ok",
+   "notes": [
+    "smug little smile at the camera, waist up"
+   ],
+   "size": [
+    1076,
+    1872
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.03,
+     0.78,
+     0.52
+    ],
+    "eyes": [
+     [
+      0.25,
+      0.36
+     ],
+     [
+      0.55,
+      0.36
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_MS_F_HAPPY_UV_005.png"
+  },
+  "MS_F_HAPPY_UV_006": {
+   "file": "assets/sprites/MS_F_HAPPY_UV_006.png",
+   "shot": "MS",
+   "view": "front",
+   "tags": [
+    "happy"
+   ],
+   "status": "ok",
+   "notes": [
+    "POINTING AT THE VIEWER, laughing - the 'you' shot"
+   ],
+   "size": [
+    1076,
+    1872
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.12,
+     0.03,
+     0.9,
+     0.52
+    ],
+    "eyes": [
+     [
+      0.37,
+      0.37
+     ],
+     [
+      0.66,
+      0.37
+     ]
+    ],
+    "hands": [
+     [
+      0.6,
+      0.68
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_MS_F_HAPPY_UV_006.png"
+  },
+  "WS_BK_CALM_SURF_UV_153": {
+   "file": "assets/sprites/WS_BK_CALM_SURF_UV_153.png",
+   "shot": "WS",
+   "view": "back",
+   "tags": [
+    "calm",
+    "surf"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "from behind, looking back over her shoulder (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    856,
+    1534
+   ],
+   "cut_sides": [
+    "top",
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.0,
+     0.75,
+     0.27
+    ],
+    "eyes": [
+     [
+      0.45,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.05,
+      0.43
+     ],
+     [
+      0.92,
+      0.43
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.62,
+     0.75,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.99
+     ],
+     [
+      0.6,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.3,
+      0.88
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_BK_CALM_SURF_UV_153.png"
+  },
+  "WS_BK_NA_SURF_UV_152": {
+   "file": "assets/sprites/WS_BK_NA_SURF_UV_152.png",
+   "shot": "WS",
+   "view": "back",
+   "tags": [
+    "na",
+    "surf"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "back view surf stance, arms out, glance back (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    859,
+    1533
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.0,
+     0.75,
+     0.25
+    ],
+    "eyes": [
+     [
+      0.62,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.05,
+      0.38
+     ],
+     [
+      0.95,
+      0.45
+     ]
+    ],
+    "legs": [
+     0.2,
+     0.6,
+     0.85,
+     1.0
+    ],
+    "feet": [
+     [
+      0.3,
+      0.97
+     ],
+     [
+      0.82,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.55,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_BK_NA_SURF_UV_152.png"
+  },
+  "WS_BK_NA_SURF_UV_154": {
+   "file": "assets/sprites/WS_BK_NA_SURF_UV_154.png",
+   "shot": "WS",
+   "view": "back",
+   "tags": [
+    "na",
+    "surf"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "three-quarter back stance, arms out (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1530
+   ],
+   "cut_sides": [
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.35,
+     0.02,
+     0.75,
+     0.25
+    ],
+    "eyes": [
+     [
+      0.45,
+      0.17
+     ],
+     [
+      0.58,
+      0.17
+     ]
+    ],
+    "hands": [
+     [
+      0.08,
+      0.43
+     ],
+     [
+      0.95,
+      0.4
+     ]
+    ],
+    "legs": [
+     0.25,
+     0.6,
+     0.8,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.99
+     ],
+     [
+      0.75,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.95,
+      0.75
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_BK_NA_SURF_UV_154.png"
+  },
+  "WS_BK_NA_SURF_UV_167": {
+   "file": "assets/sprites/WS_BK_NA_SURF_UV_167.png",
+   "shot": "WS",
+   "view": "back",
+   "tags": [
+    "na",
+    "surf"
+   ],
+   "status": "ok",
+   "notes": [
+    "back view, surf stance, arms out (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1293,
+    1520
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.4,
+     0.0,
+     0.65,
+     0.25
+    ],
+    "hands": [
+     [
+      0.13,
+      0.42
+     ],
+     [
+      0.9,
+      0.42
+     ]
+    ],
+    "legs": [
+     0.35,
+     0.58,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.97
+     ],
+     [
+      0.62,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.25,
+      0.88
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_BK_NA_SURF_UV_167.png"
+  },
+  "WS_BK_NA_WADE_UV_150": {
+   "file": "assets/sprites/WS_BK_NA_WADE_UV_150.png",
+   "shot": "WS",
+   "view": "back",
+   "tags": [
+    "na",
+    "wade"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "clean back view, standing (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    852,
+    1535
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.0,
+     0.75,
+     0.25
+    ],
+    "legs": [
+     0.32,
+     0.6,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.99
+     ],
+     [
+      0.6,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.25,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_BK_NA_WADE_UV_150.png"
+  },
+  "WS_BK_NA_WADE_UV_151": {
+   "file": "assets/sprites/WS_BK_NA_WADE_UV_151.png",
+   "shot": "WS",
+   "view": "back",
+   "tags": [
+    "na",
+    "wade"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "clean back view, walking away (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1531
+   ],
+   "cut_sides": [
+    "top",
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.02,
+     0.75,
+     0.25
+    ],
+    "legs": [
+     0.3,
+     0.6,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.55,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.25,
+      0.86
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_BK_NA_WADE_UV_151.png"
+  },
+  "WS_BK_NA_WADE_UV_181": {
+   "file": "assets/sprites/WS_BK_NA_WADE_UV_181.png",
+   "shot": "WS",
+   "view": "back",
+   "tags": [
+    "na",
+    "wade"
+   ],
+   "status": "ok",
+   "notes": [
+    "clean back view, walking away (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1167,
+    1528
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.35,
+     0.0,
+     0.65,
+     0.25
+    ],
+    "legs": [
+     0.38,
+     0.6,
+     0.62,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.99
+     ],
+     [
+      0.55,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.75,
+      0.85
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_BK_NA_WADE_UV_181.png"
+  },
+  "WS_BK_NA_WADE_UV_182": {
+   "file": "assets/sprites/WS_BK_NA_WADE_UV_182.png",
+   "shot": "WS",
+   "view": "back",
+   "tags": [
+    "na",
+    "wade"
+   ],
+   "status": "ok",
+   "notes": [
+    "clean back view, standing (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1241,
+    1521
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.38,
+     0.0,
+     0.65,
+     0.25
+    ],
+    "legs": [
+     0.38,
+     0.6,
+     0.65,
+     1.0
+    ],
+    "feet": [
+     [
+      0.5,
+      0.99
+     ],
+     [
+      0.58,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.15,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_BK_NA_WADE_UV_182.png"
+  },
+  "WS_BK_NA_WADE_UV_183": {
+   "file": "assets/sprites/WS_BK_NA_WADE_UV_183.png",
+   "shot": "WS",
+   "view": "back",
+   "tags": [
+    "na",
+    "wade"
+   ],
+   "status": "ok",
+   "notes": [
+    "clean back view, standing (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1231,
+    1517
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.38,
+     0.0,
+     0.65,
+     0.25
+    ],
+    "legs": [
+     0.4,
+     0.6,
+     0.65,
+     1.0
+    ],
+    "feet": [
+     [
+      0.5,
+      0.99
+     ],
+     [
+      0.58,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.68,
+      0.88
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_BK_NA_WADE_UV_183.png"
+  },
+  "WS_F_ANGRY_KICK_UV_198": {
+   "file": "assets/sprites/WS_F_ANGRY_KICK_UV_198.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "angry",
+    "kick"
+   ],
+   "status": "ok",
+   "notes": [
+    "high side kick to the right, profile facing right, fist at her chin, standing leg down, tail tip bottom left (measured by eye 2026-10-16, grid sheet)"
+   ],
+   "size": [
+    1460,
+    1536
+   ],
+   "cut_sides": [
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.38,
+     0.02,
+     0.56,
+     0.2
+    ],
+    "eyes": [
+     [
+      0.5,
+      0.15
+     ]
+    ],
+    "hands": [
+     [
+      0.49,
+      0.27
+     ],
+     [
+      0.1,
+      0.42
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.25,
+     1.0,
+     1.0
+    ],
+    "feet": [
+     [
+      0.98,
+      0.24
+     ],
+     [
+      0.38,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.06,
+      0.98
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_ANGRY_KICK_UV_198.png"
+  },
+  "WS_F_ANGRY_KICK_UV_199": {
+   "file": "assets/sprites/WS_F_ANGRY_KICK_UV_199.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "angry",
+    "kick"
+   ],
+   "status": "ok",
+   "notes": [
+    "side kick to the right at hip height, arms spread for balance, tail curls left to a tip at the bottom (measured by eye 2026-10-16, grid sheet)"
+   ],
+   "size": [
+    1534,
+    1533
+   ],
+   "cut_sides": [
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.37,
+     0.01,
+     0.54,
+     0.17
+    ],
+    "eyes": [
+     [
+      0.52,
+      0.13
+     ]
+    ],
+    "hands": [
+     [
+      0.12,
+      0.28
+     ],
+     [
+      0.56,
+      0.3
+     ]
+    ],
+    "legs": [
+     0.35,
+     0.3,
+     1.0,
+     1.0
+    ],
+    "feet": [
+     [
+      0.98,
+      0.33
+     ],
+     [
+      0.43,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.66,
+      0.82
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_ANGRY_KICK_UV_199.png"
+  },
+  "WS_F_CALM_FLOAT_UV_139": {
+   "file": "assets/sprites/WS_F_CALM_FLOAT_UV_139.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "calm",
+    "float"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "eyes closed, relaxed standing - rotate 90 deg for floating / lying (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1525
+   ],
+   "cut_sides": [
+    "top",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.05,
+     0.68,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.45,
+      0.2
+     ],
+     [
+      0.58,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.82,
+      0.45
+     ]
+    ],
+    "legs": [
+     0.25,
+     0.6,
+     0.75,
+     1.0
+    ],
+    "feet": [
+     [
+      0.4,
+      0.97
+     ],
+     [
+      0.6,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.25,
+      0.86
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CALM_FLOAT_UV_139.png"
+  },
+  "WS_F_CALM_PRONE_UV_184": {
+   "file": "assets/sprites/WS_F_CALM_PRONE_UV_184.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "calm",
+    "prone"
+   ],
+   "status": "ok",
+   "notes": [
+    "lying on her stomach, head to camera-left, feet up (landscape) (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1404,
+    801
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.08,
+     0.05,
+     0.45,
+     0.75
+    ],
+    "eyes": [
+     [
+      0.2,
+      0.58
+     ],
+     [
+      0.38,
+      0.58
+     ]
+    ],
+    "hands": [
+     [
+      0.05,
+      0.85
+     ],
+     [
+      0.92,
+      0.8
+     ]
+    ],
+    "legs": [
+     0.55,
+     0.0,
+     1.0,
+     0.9
+    ],
+    "feet": [
+     [
+      0.92,
+      0.15
+     ]
+    ],
+    "tail": [
+     [
+      0.95,
+      0.1
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CALM_PRONE_UV_184.png"
+  },
+  "WS_F_CALM_PRONE_UV_185": {
+   "file": "assets/sprites/WS_F_CALM_PRONE_UV_185.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "calm",
+    "prone"
+   ],
+   "status": "ok",
+   "notes": [
+    "lying on her stomach, chin on hands, feet up (landscape) (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1526,
+    855
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.15,
+     0.45,
+     0.85
+    ],
+    "eyes": [
+     [
+      0.2,
+      0.62
+     ],
+     [
+      0.37,
+      0.62
+     ]
+    ],
+    "hands": [
+     [
+      0.08,
+      0.88
+     ]
+    ],
+    "legs": [
+     0.55,
+     0.05,
+     0.95,
+     0.75
+    ],
+    "feet": [
+     [
+      0.85,
+      0.4
+     ],
+     [
+      0.7,
+      0.1
+     ]
+    ],
+    "tail": [
+     [
+      0.58,
+      0.15
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CALM_PRONE_UV_185.png"
+  },
+  "WS_F_CALM_PRONE_UV_186": {
+   "file": "assets/sprites/WS_F_CALM_PRONE_UV_186.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "calm",
+    "prone"
+   ],
+   "status": "ok",
+   "notes": [
+    "prone, arms reaching forward like paddling, side view (landscape) (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1527,
+    863
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.55,
+     0.0,
+     0.85,
+     0.7
+    ],
+    "eyes": [
+     [
+      0.62,
+      0.38
+     ],
+     [
+      0.76,
+      0.38
+     ]
+    ],
+    "hands": [
+     [
+      0.85,
+      0.92
+     ],
+     [
+      0.98,
+      0.92
+     ]
+    ],
+    "legs": [
+     0.0,
+     0.3,
+     0.45,
+     0.85
+    ],
+    "feet": [
+     [
+      0.0,
+      0.8
+     ]
+    ],
+    "tail": [
+     [
+      0.02,
+      0.45
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CALM_PRONE_UV_186.png"
+  },
+  "WS_F_CALM_PRONE_UV_194": {
+   "file": "assets/sprites/WS_F_CALM_PRONE_UV_194.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "calm",
+    "prone"
+   ],
+   "status": "ok",
+   "notes": [
+    "prone, head right, feet up (landscape) (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1480,
+    799
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.7,
+     0.05,
+     0.98,
+     0.8
+    ],
+    "eyes": [
+     [
+      0.78,
+      0.55
+     ],
+     [
+      0.9,
+      0.55
+     ]
+    ],
+    "hands": [
+     [
+      0.85,
+      0.95
+     ],
+     [
+      0.95,
+      0.95
+     ]
+    ],
+    "legs": [
+     0.0,
+     0.05,
+     0.5,
+     0.75
+    ],
+    "feet": [
+     [
+      0.1,
+      0.05
+     ],
+     [
+      0.25,
+      0.1
+     ]
+    ],
+    "tail": [
+     [
+      0.15,
+      0.7
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CALM_PRONE_UV_194.png"
+  },
+  "WS_F_CALM_PRONE_UV_195": {
+   "file": "assets/sprites/WS_F_CALM_PRONE_UV_195.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "calm",
+    "prone"
+   ],
+   "status": "ok",
+   "notes": [
+    "prone, head left, feet up (landscape) (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1531,
+    856
+   ],
+   "cut_sides": [
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.08,
+     0.1,
+     0.42,
+     0.85
+    ],
+    "eyes": [
+     [
+      0.2,
+      0.6
+     ],
+     [
+      0.35,
+      0.6
+     ]
+    ],
+    "hands": [
+     [
+      0.1,
+      0.92
+     ]
+    ],
+    "legs": [
+     0.5,
+     0.2,
+     0.95,
+     0.8
+    ],
+    "feet": [
+     [
+      0.82,
+      0.25
+     ],
+     [
+      0.68,
+      0.3
+     ]
+    ],
+    "tail": [
+     [
+      0.55,
+      0.25
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CALM_PRONE_UV_195.png"
+  },
+  "WS_F_CALM_PRONE_UV_196": {
+   "file": "assets/sprites/WS_F_CALM_PRONE_UV_196.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "calm",
+    "prone"
+   ],
+   "status": "ok",
+   "notes": [
+    "prone, head right, feet up crossed (landscape) (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1507,
+    842
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.5,
+     0.05,
+     0.85,
+     0.8
+    ],
+    "eyes": [
+     [
+      0.62,
+      0.55
+     ],
+     [
+      0.78,
+      0.55
+     ]
+    ],
+    "hands": [
+     [
+      0.95,
+      0.95
+     ]
+    ],
+    "legs": [
+     0.05,
+     0.0,
+     0.4,
+     0.7
+    ],
+    "feet": [
+     [
+      0.15,
+      0.08
+     ],
+     [
+      0.25,
+      0.1
+     ]
+    ],
+    "tail": [
+     [
+      0.05,
+      0.45
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CALM_PRONE_UV_196.png"
+  },
+  "WS_F_CALM_PRONE_UV_197": {
+   "file": "assets/sprites/WS_F_CALM_PRONE_UV_197.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "calm",
+    "prone"
+   ],
+   "status": "ok",
+   "notes": [
+    "prone, head right, feet up (landscape) (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1514,
+    843
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.55,
+     0.05,
+     0.88,
+     0.8
+    ],
+    "eyes": [
+     [
+      0.65,
+      0.55
+     ],
+     [
+      0.8,
+      0.55
+     ]
+    ],
+    "hands": [
+     [
+      0.95,
+      0.95
+     ]
+    ],
+    "legs": [
+     0.05,
+     0.0,
+     0.4,
+     0.7
+    ],
+    "feet": [
+     [
+      0.15,
+      0.08
+     ],
+     [
+      0.25,
+      0.1
+     ]
+    ],
+    "tail": [
+     [
+      0.05,
+      0.45
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CALM_PRONE_UV_197.png"
+  },
+  "WS_F_CALM_REST_UV_164": {
+   "file": "assets/sprites/WS_F_CALM_REST_UV_164.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "calm",
+    "rest"
+   ],
+   "status": "ok",
+   "notes": [
+    "eyes closed, relaxed standing (rotate for floating / lying) (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    906,
+    1526
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.33,
+     0.03,
+     0.68,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.43,
+      0.17
+     ],
+     [
+      0.56,
+      0.17
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.5
+     ],
+     [
+      0.72,
+      0.5
+     ]
+    ],
+    "legs": [
+     0.35,
+     0.6,
+     0.65,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.99
+     ],
+     [
+      0.56,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.12,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CALM_REST_UV_164.png"
+  },
+  "WS_F_CALM_REST_UV_165": {
+   "file": "assets/sprites/WS_F_CALM_REST_UV_165.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "calm",
+    "rest"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: head complete, but comp.unify.cut_sides flags the crown after the crop -> keep the top out of frame / headroom crop",
+    "eyes closed, relaxed, slight turn (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1185,
+    1534
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.38,
+     0.03,
+     0.75,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.52,
+      0.15
+     ],
+     [
+      0.66,
+      0.15
+     ]
+    ],
+    "hands": [
+     [
+      0.3,
+      0.42
+     ],
+     [
+      0.7,
+      0.42
+     ]
+    ],
+    "legs": [
+     0.38,
+     0.55,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.5,
+      0.98
+     ],
+     [
+      0.65,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.45,
+      0.93
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CALM_REST_UV_165.png"
+  },
+  "WS_F_CALM_REST_UV_166": {
+   "file": "assets/sprites/WS_F_CALM_REST_UV_166.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "calm",
+    "rest"
+   ],
+   "status": "ok",
+   "notes": [
+    "one eye closed, relaxed standing (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1217,
+    1529
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.35,
+     0.03,
+     0.7,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.45,
+      0.2
+     ],
+     [
+      0.58,
+      0.2
+     ]
+    ],
+    "hands": [
+     [
+      0.3,
+      0.52
+     ],
+     [
+      0.72,
+      0.52
+     ]
+    ],
+    "legs": [
+     0.38,
+     0.58,
+     0.68,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.99
+     ],
+     [
+      0.55,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.32,
+      0.88
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CALM_REST_UV_166.png"
+  },
+  "WS_F_CALM_UV_050": {
+   "file": "assets/sprites/WS_F_CALM_UV_050.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "singing into a MIC, happy, free-standing (not calm)",
+    "singing into a MIC, happy, free-standing (not calm) singing into a MIC, happy, free-standing, wide stance (not calm)"
+   ],
+   "size": [
+    1052,
+    1680
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.37,
+     0.02,
+     0.63,
+     0.18
+    ],
+    "eyes": [
+     [
+      0.46,
+      0.11
+     ],
+     [
+      0.55,
+      0.11
+     ]
+    ],
+    "hands": [
+     [
+      0.33,
+      0.21
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.58,
+     0.82,
+     1.0
+    ],
+    "feet": [
+     [
+      0.4,
+      0.95
+     ],
+     [
+      0.78,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.4,
+      0.8
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CALM_UV_050.png"
+  },
+  "WS_F_CRY_DRAMA_UV_041": {
+   "file": "assets/sprites/WS_F_CRY_DRAMA_UV_041.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "cry",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "crying bust (not a wide shot)"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.2,
+     0.03,
+     0.95,
+     0.58
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.44
+     ],
+     [
+      0.82,
+      0.42
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CRY_DRAMA_UV_041.png"
+  },
+  "WS_F_CRY_DRAMA_UV_042": {
+   "file": "assets/sprites/WS_F_CRY_DRAMA_UV_042.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "cry",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "crying bust, fists at the chest"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.12,
+     0.03,
+     0.88,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.4,
+      0.42
+     ],
+     [
+      0.7,
+      0.42
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.66
+     ],
+     [
+      0.68,
+      0.66
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CRY_DRAMA_UV_042.png"
+  },
+  "WS_F_CRY_DRAMA_UV_043": {
+   "file": "assets/sprites/WS_F_CRY_DRAMA_UV_043.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "cry",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "crying bust, mouth open"
+   ],
+   "size": [
+    1184,
+    1729
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.03,
+     0.85,
+     0.58
+    ],
+    "eyes": [
+     [
+      0.3,
+      0.42
+     ],
+     [
+      0.58,
+      0.42
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_CRY_DRAMA_UV_043.png"
+  },
+  "WS_F_DIZZY_LIE_UV_193": {
+   "file": "assets/sprites/WS_F_DIZZY_LIE_UV_193.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "dizzy",
+    "lie"
+   ],
+   "status": "ok",
+   "notes": [
+    "lying on her back, arm over head, dizzy smile (landscape) (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1522,
+    846
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.05,
+     0.4,
+     0.8
+    ],
+    "eyes": [
+     [
+      0.25,
+      0.3
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.05
+     ],
+     [
+      0.3,
+      0.85
+     ]
+    ],
+    "legs": [
+     0.45,
+     0.3,
+     1.0,
+     0.95
+    ],
+    "feet": [
+     [
+      0.95,
+      0.95
+     ]
+    ],
+    "tail": [
+     [
+      0.5,
+      0.98
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_DIZZY_LIE_UV_193.png"
+  },
+  "WS_F_DIZZY_UV_132": {
+   "file": "assets/sprites/WS_F_DIZZY_UV_132.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "dizzy"
+   ],
+   "status": "limited",
+   "notes": [
+    "DIZZY: swirly eyes, hand on her head - bonked"
+   ],
+   "size": [
+    864,
+    1536
+   ],
+   "cut_sides": [
+    "top",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.06,
+     0.68,
+     0.31
+    ],
+    "eyes": [
+     [
+      0.46,
+      0.17
+     ],
+     [
+      0.64,
+      0.17
+     ]
+    ],
+    "hands": [
+     [
+      0.17,
+      0.17
+     ],
+     [
+      0.8,
+      0.45
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.65,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.42,
+      0.98
+     ],
+     [
+      0.6,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.25,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_DIZZY_UV_132.png"
+  },
+  "WS_F_EMBARRASSED_DRAMA_UV_033": {
+   "file": "assets/sprites/WS_F_EMBARRASSED_DRAMA_UV_033.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "embarrassed",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "embarrassed bust, hand at the mouth, sweat mark"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.03,
+     0.88,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.33,
+      0.4
+     ],
+     [
+      0.65,
+      0.4
+     ]
+    ],
+    "hands": [
+     [
+      0.48,
+      0.58
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_EMBARRASSED_DRAMA_UV_033.png"
+  },
+  "WS_F_FISH_UV_058": {
+   "file": "assets/sprites/WS_F_FISH_UV_058.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "fish"
+   ],
+   "status": "ok",
+   "notes": [
+    "kneeling, hugging a SHARK plush (not a fish)"
+   ],
+   "size": [
+    1039,
+    1591
+   ],
+   "cut_sides": [
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.18,
+     0.02,
+     0.65,
+     0.33
+    ],
+    "eyes": [
+     [
+      0.38,
+      0.26
+     ],
+     [
+      0.5,
+      0.24
+     ]
+    ],
+    "hands": [
+     [
+      0.33,
+      0.42
+     ],
+     [
+      0.62,
+      0.4
+     ]
+    ],
+    "legs": [
+     0.15,
+     0.75,
+     0.82,
+     1.0
+    ],
+    "feet": [
+     [
+      0.75,
+      0.88
+     ]
+    ],
+    "tail": [
+     [
+      0.95,
+      0.43
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FISH_UV_058.png"
+  },
+  "WS_F_FISH_UV_065": {
+   "file": "assets/sprites/WS_F_FISH_UV_065.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "fish"
+   ],
+   "status": "ok",
+   "notes": [
+    "seen FROM BEHIND, kneeling, eating sushi - long hair fills the frame"
+   ],
+   "size": [
+    1115,
+    1577
+   ],
+   "cut_sides": [
+    "bottom",
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.15,
+     0.05,
+     0.65,
+     0.35
+    ],
+    "hands": [
+     [
+      0.8,
+      0.33
+     ],
+     [
+      0.65,
+      0.48
+     ]
+    ],
+    "legs": [
+     0.62,
+     0.6,
+     0.95,
+     1.0
+    ],
+    "tail": [
+     [
+      0.15,
+      0.7
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FISH_UV_065.png"
+  },
+  "WS_F_FLY_UV_054": {
+   "file": "assets/sprites/WS_F_FLY_UV_054.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "fly"
+   ],
+   "status": "ok",
+   "notes": [
+    "swimming / flying horizontally to the left"
+   ],
+   "size": [
+    1655,
+    976
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.03,
+     0.1,
+     0.3,
+     0.7
+    ],
+    "eyes": [
+     [
+      0.13,
+      0.48
+     ],
+     [
+      0.22,
+      0.44
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.5
+     ]
+    ],
+    "legs": [
+     0.55,
+     0.4,
+     0.95,
+     0.95
+    ],
+    "feet": [
+     [
+      0.88,
+      0.85
+     ]
+    ],
+    "tail": [
+     [
+      0.95,
+      0.3
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FLY_UV_054.png"
+  },
+  "WS_F_FLY_UV_059": {
+   "file": "assets/sprites/WS_F_FLY_UV_059.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "fly"
+   ],
+   "status": "ok",
+   "notes": [
+    "lying / gliding horizontally, head on the left"
+   ],
+   "size": [
+    1704,
+    1006
+   ],
+   "cut_sides": [
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.02,
+     0.25,
+     0.3,
+     0.95
+    ],
+    "eyes": [
+     [
+      0.13,
+      0.64
+     ],
+     [
+      0.22,
+      0.6
+     ]
+    ],
+    "hands": [
+     [
+      0.05,
+      0.9
+     ]
+    ],
+    "legs": [
+     0.55,
+     0.45,
+     0.98,
+     0.75
+    ],
+    "feet": [
+     [
+      0.95,
+      0.55
+     ]
+    ],
+    "tail": [
+     [
+      0.97,
+      0.3
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FLY_UV_059.png"
+  },
+  "WS_F_FLY_UV_081": {
+   "file": "assets/sprites/WS_F_FLY_UV_081.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "fly"
+   ],
+   "status": "limited",
+   "notes": [
+    "flying AWAY, seen from behind/above, face hidden"
+   ],
+   "size": [
+    1407,
+    963
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.02,
+     0.05,
+     0.32,
+     0.55
+    ],
+    "legs": [
+     0.4,
+     0.35,
+     0.85,
+     0.95
+    ],
+    "feet": [
+     [
+      0.82,
+      0.88
+     ]
+    ],
+    "tail": [
+     [
+      0.92,
+      0.32
+     ]
+    ]
+   },
+   "face_box": [
+    0.02,
+    0.05,
+    0.32,
+    0.55
+   ],
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FLY_UV_081.png"
+  },
+  "WS_F_FOCUS_CROUCH_UV_155": {
+   "file": "assets/sprites/WS_F_FOCUS_CROUCH_UV_155.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "focus",
+    "crouch"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "side profile crouch (surf in the barrel) (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1530
+   ],
+   "cut_sides": [
+    "top",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.4,
+     0.03,
+     0.95,
+     0.32
+    ],
+    "eyes": [
+     [
+      0.76,
+      0.2
+     ]
+    ],
+    "hands": [
+     [
+      0.85,
+      0.78
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.6,
+     0.95,
+     1.0
+    ],
+    "feet": [
+     [
+      0.3,
+      0.95
+     ],
+     [
+      0.65,
+      0.95
+     ]
+    ],
+    "tail": [
+     [
+      0.4,
+      0.97
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FOCUS_CROUCH_UV_155.png"
+  },
+  "WS_F_FOCUS_CROUCH_UV_156": {
+   "file": "assets/sprites/WS_F_FOCUS_CROUCH_UV_156.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "focus",
+    "crouch"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "side profile crouch, low, hand trailing (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    859,
+    1529
+   ],
+   "cut_sides": [
+    "top",
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.35,
+     0.03,
+     0.95,
+     0.35
+    ],
+    "eyes": [
+     [
+      0.73,
+      0.2
+     ]
+    ],
+    "hands": [
+     [
+      0.8,
+      0.97
+     ]
+    ],
+    "legs": [
+     0.4,
+     0.6,
+     1.0,
+     1.0
+    ],
+    "feet": [
+     [
+      0.75,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.25,
+      0.99
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FOCUS_CROUCH_UV_156.png"
+  },
+  "WS_F_FOCUS_CROUCH_UV_191": {
+   "file": "assets/sprites/WS_F_FOCUS_CROUCH_UV_191.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "focus",
+    "crouch"
+   ],
+   "status": "ok",
+   "notes": [
+    "side profile crouch, hand down (surf in the barrel) (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1521,
+    1522
+   ],
+   "cut_sides": [
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.65,
+     0.03,
+     0.98,
+     0.35
+    ],
+    "eyes": [
+     [
+      0.85,
+      0.25
+     ]
+    ],
+    "hands": [
+     [
+      0.95,
+      0.88
+     ]
+    ],
+    "legs": [
+     0.35,
+     0.55,
+     0.95,
+     1.0
+    ],
+    "feet": [
+     [
+      0.55,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.05,
+      0.97
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FOCUS_CROUCH_UV_191.png"
+  },
+  "WS_F_FOCUS_CROUCH_UV_192": {
+   "file": "assets/sprites/WS_F_FOCUS_CROUCH_UV_192.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "focus",
+    "crouch"
+   ],
+   "status": "ok",
+   "notes": [
+    "side crouch, tail up behind (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1426,
+    1516
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.4,
+     0.03,
+     0.75,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.58,
+      0.2
+     ]
+    ],
+    "hands": [
+     [
+      0.95,
+      0.7
+     ],
+     [
+      0.7,
+      0.9
+     ]
+    ],
+    "legs": [
+     0.15,
+     0.55,
+     0.75,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.05,
+      0.38
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FOCUS_CROUCH_UV_192.png"
+  },
+  "WS_F_FOCUS_PULL_UV_140": {
+   "file": "assets/sprites/WS_F_FOCUS_PULL_UV_140.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "focus",
+    "pull"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "side view, both arms reaching up-forward (pulling) (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    850,
+    1536
+   ],
+   "cut_sides": [
+    "top",
+    "bottom"
+   ],
+   "anatomy": {
+    "head": [
+     0.4,
+     0.05,
+     0.85,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.62,
+      0.2
+     ]
+    ],
+    "hands": [
+     [
+      0.85,
+      0.02
+     ],
+     [
+      0.95,
+      0.02
+     ]
+    ],
+    "legs": [
+     0.35,
+     0.62,
+     0.75,
+     1.0
+    ],
+    "tail": [
+     [
+      0.4,
+      0.96
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FOCUS_PULL_UV_140.png"
+  },
+  "WS_F_FOCUS_PULL_UV_187": {
+   "file": "assets/sprites/WS_F_FOCUS_PULL_UV_187.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "focus",
+    "pull"
+   ],
+   "status": "ok",
+   "notes": [
+    "both arms stretched forward-up, pulling (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1297,
+    1527
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.35,
+     0.03,
+     0.7,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.55,
+      0.17
+     ]
+    ],
+    "hands": [
+     [
+      0.95,
+      0.08
+     ]
+    ],
+    "legs": [
+     0.4,
+     0.55,
+     0.75,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.97
+     ],
+     [
+      0.7,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.9,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FOCUS_PULL_UV_187.png"
+  },
+  "WS_F_FOCUS_PULL_UV_188": {
+   "file": "assets/sprites/WS_F_FOCUS_PULL_UV_188.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "focus",
+    "pull"
+   ],
+   "status": "ok",
+   "notes": [
+    "both arms stretched forward-up, pulling, wide stance (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1321,
+    1520
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.38,
+     0.02,
+     0.72,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.55,
+      0.17
+     ],
+     [
+      0.65,
+      0.17
+     ]
+    ],
+    "hands": [
+     [
+      0.95,
+      0.08
+     ]
+    ],
+    "legs": [
+     0.35,
+     0.58,
+     0.85,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.97
+     ],
+     [
+      0.85,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.55,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FOCUS_PULL_UV_188.png"
+  },
+  "WS_F_FOCUS_PUSH_UV_143": {
+   "file": "assets/sprites/WS_F_FOCUS_PUSH_UV_143.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "focus",
+    "push"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "side lean, both palms pushing forward (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    840,
+    1491
+   ],
+   "cut_sides": [
+    "bottom",
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.45,
+     0.02,
+     0.85,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.62,
+      0.18
+     ],
+     [
+      0.73,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.82,
+      0.25
+     ],
+     [
+      0.75,
+      0.35
+     ]
+    ],
+    "legs": [
+     0.2,
+     0.58,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.6,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.4,
+      0.88
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FOCUS_PUSH_UV_143.png"
+  },
+  "WS_F_FOCUS_PUSH_UV_171": {
+   "file": "assets/sprites/WS_F_FOCUS_PUSH_UV_171.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "focus",
+    "push"
+   ],
+   "status": "ok",
+   "notes": [
+    "side lean, palms pushing forward (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1434,
+    1505
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.55,
+     0.03,
+     0.95,
+     0.32
+    ],
+    "eyes": [
+     [
+      0.75,
+      0.18
+     ],
+     [
+      0.87,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.95,
+      0.28
+     ]
+    ],
+    "legs": [
+     0.1,
+     0.45,
+     0.55,
+     1.0
+    ],
+    "feet": [
+     [
+      0.15,
+      0.97
+     ],
+     [
+      0.45,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.1,
+      0.65
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FOCUS_PUSH_UV_171.png"
+  },
+  "WS_F_FOCUS_PUSH_UV_172": {
+   "file": "assets/sprites/WS_F_FOCUS_PUSH_UV_172.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "focus",
+    "push"
+   ],
+   "status": "ok",
+   "notes": [
+    "side lean, palms pushing forward, gritted teeth (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1535,
+    1524
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.55,
+     0.03,
+     0.9,
+     0.33
+    ],
+    "eyes": [
+     [
+      0.75,
+      0.17
+     ],
+     [
+      0.87,
+      0.17
+     ]
+    ],
+    "hands": [
+     [
+      0.92,
+      0.15
+     ],
+     [
+      0.9,
+      0.25
+     ]
+    ],
+    "legs": [
+     0.1,
+     0.45,
+     0.55,
+     1.0
+    ],
+    "feet": [
+     [
+      0.1,
+      0.92
+     ],
+     [
+      0.35,
+      0.95
+     ]
+    ],
+    "tail": [
+     [
+      0.3,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FOCUS_PUSH_UV_172.png"
+  },
+  "WS_F_FOCUS_PUSH_UV_173": {
+   "file": "assets/sprites/WS_F_FOCUS_PUSH_UV_173.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "focus",
+    "push"
+   ],
+   "status": "ok",
+   "notes": [
+    "pushing forward, determined (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1517,
+    1503
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.55,
+     0.03,
+     0.9,
+     0.33
+    ],
+    "eyes": [
+     [
+      0.75,
+      0.18
+     ],
+     [
+      0.87,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.8,
+      0.25
+     ],
+     [
+      0.93,
+      0.25
+     ]
+    ],
+    "legs": [
+     0.15,
+     0.5,
+     0.65,
+     1.0
+    ],
+    "feet": [
+     [
+      0.25,
+      0.93
+     ],
+     [
+      0.6,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.15,
+      0.78
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_FOCUS_PUSH_UV_173.png"
+  },
+  "WS_F_HAPPY_ENERG_UV_047": {
+   "file": "assets/sprites/WS_F_HAPPY_ENERG_UV_047.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "energ"
+   ],
+   "status": "limited",
+   "notes": [
+    "happy bust, open laugh"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.03,
+     0.85,
+     0.58
+    ],
+    "eyes": [
+     [
+      0.25,
+      0.42
+     ],
+     [
+      0.62,
+      0.42
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_ENERG_UV_047.png"
+  },
+  "WS_F_HAPPY_JUMP_UV_134": {
+   "file": "assets/sprites/WS_F_HAPPY_JUMP_UV_134.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "jump"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "jump, arms up, knees together in the air, happy open mouth (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1498
+   ],
+   "cut_sides": [
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.32,
+     0.1,
+     0.7,
+     0.32
+    ],
+    "eyes": [
+     [
+      0.44,
+      0.23
+     ],
+     [
+      0.58,
+      0.23
+     ]
+    ],
+    "hands": [
+     [
+      0.03,
+      0.04
+     ],
+     [
+      0.95,
+      0.02
+     ]
+    ],
+    "legs": [
+     0.38,
+     0.72,
+     0.72,
+     0.97
+    ],
+    "tail": [
+     [
+      0.66,
+      0.97
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_JUMP_UV_134.png"
+  },
+  "WS_F_HAPPY_JUMP_UV_160": {
+   "file": "assets/sprites/WS_F_HAPPY_JUMP_UV_160.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "jump"
+   ],
+   "status": "ok",
+   "notes": [
+    "jump, kneeling in the air, both arms up, surprised (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1442,
+    1509
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.32,
+     0.07,
+     0.62,
+     0.38
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.27
+     ],
+     [
+      0.55,
+      0.27
+     ]
+    ],
+    "hands": [
+     [
+      0.18,
+      0.04
+     ],
+     [
+      0.85,
+      0.04
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.72,
+     0.7,
+     0.97
+    ],
+    "feet": [
+     [
+      0.65,
+      0.8
+     ]
+    ],
+    "tail": [
+     [
+      0.22,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_JUMP_UV_160.png"
+  },
+  "WS_F_HAPPY_JUMP_UV_161": {
+   "file": "assets/sprites/WS_F_HAPPY_JUMP_UV_161.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "jump"
+   ],
+   "status": "ok",
+   "notes": [
+    "jump, arms up wide, kneeling in the air, shout (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1474,
+    1513
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.38,
+     0.06,
+     0.68,
+     0.4
+    ],
+    "eyes": [
+     [
+      0.45,
+      0.28
+     ],
+     [
+      0.58,
+      0.28
+     ]
+    ],
+    "hands": [
+     [
+      0.05,
+      0.12
+     ],
+     [
+      0.95,
+      0.05
+     ]
+    ],
+    "legs": [
+     0.32,
+     0.72,
+     0.68,
+     0.97
+    ],
+    "feet": [
+     [
+      0.68,
+      0.8
+     ]
+    ],
+    "tail": [
+     [
+      0.25,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_JUMP_UV_161.png"
+  },
+  "WS_F_HAPPY_PLAY_UV_044": {
+   "file": "assets/sprites/WS_F_HAPPY_PLAY_UV_044.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "play"
+   ],
+   "status": "ok",
+   "notes": [
+    "happy bust, finger at the cheek"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.02,
+     0.85,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.25,
+      0.38
+     ],
+     [
+      0.65,
+      0.38
+     ]
+    ],
+    "hands": [
+     [
+      0.32,
+      0.55
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_PLAY_UV_044.png"
+  },
+  "WS_F_HAPPY_PLAY_UV_046": {
+   "file": "assets/sprites/WS_F_HAPPY_PLAY_UV_046.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "play"
+   ],
+   "status": "ok",
+   "notes": [
+    "happy bust, finger at the chin"
+   ],
+   "size": [
+    1184,
+    1747
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.03,
+     0.88,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.3,
+      0.42
+     ],
+     [
+      0.66,
+      0.4
+     ]
+    ],
+    "hands": [
+     [
+      0.38,
+      0.6
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_PLAY_UV_046.png"
+  },
+  "WS_F_HAPPY_PLUSH_UV_111": {
+   "file": "assets/sprites/WS_F_HAPPY_PLUSH_UV_111.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "plush"
+   ],
+   "status": "ok",
+   "notes": [
+    "hugging the shark plush, one leg raised"
+   ],
+   "size": [
+    971,
+    1744
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.15,
+     0.03,
+     0.48,
+     0.24
+    ],
+    "eyes": [
+     [
+      0.24,
+      0.16
+     ],
+     [
+      0.35,
+      0.16
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.3
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.62,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.65,
+      0.8
+     ],
+     [
+      0.45,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.12,
+      0.81
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_PLUSH_UV_111.png"
+  },
+  "WS_F_HAPPY_SALMON_UV_117": {
+   "file": "assets/sprites/WS_F_HAPPY_SALMON_UV_117.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "salmon"
+   ],
+   "status": "ok",
+   "notes": [
+    "hugging a SALMON plush (her best friend!), legs cut at the bottom"
+   ],
+   "size": [
+    1076,
+    1797
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.03,
+     0.68,
+     0.32
+    ],
+    "eyes": [
+     [
+      0.38,
+      0.24
+     ],
+     [
+      0.52,
+      0.24
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.55
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.92,
+     0.6,
+     1.0
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_SALMON_UV_117.png"
+  },
+  "WS_F_HAPPY_SPIN_UV_146": {
+   "file": "assets/sprites/WS_F_HAPPY_SPIN_UV_146.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "spin"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "horizontal barrel roll in the air, head on the right (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    852,
+    1429
+   ],
+   "cut_sides": [
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.65,
+     0.35,
+     1.0,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.78,
+      0.42
+     ],
+     [
+      0.76,
+      0.5
+     ]
+    ],
+    "hands": [
+     [
+      0.55,
+      0.55
+     ]
+    ],
+    "legs": [
+     0.0,
+     0.0,
+     0.4,
+     0.4
+    ],
+    "tail": [
+     [
+      0.58,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_SPIN_UV_146.png"
+  },
+  "WS_F_HAPPY_SPIN_UV_178": {
+   "file": "assets/sprites/WS_F_HAPPY_SPIN_UV_178.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "spin"
+   ],
+   "status": "ok",
+   "notes": [
+    "tumbling in the air, kneeling, laughing (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1528,
+    1484
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.0,
+     0.05,
+     0.4,
+     0.4
+    ],
+    "eyes": [
+     [
+      0.15,
+      0.25
+     ],
+     [
+      0.25,
+      0.28
+     ]
+    ],
+    "hands": [
+     [
+      0.7,
+      0.45
+     ]
+    ],
+    "legs": [
+     0.25,
+     0.6,
+     0.85,
+     0.98
+    ],
+    "feet": [
+     [
+      0.8,
+      0.8
+     ]
+    ],
+    "tail": [
+     [
+      0.25,
+      0.97
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_SPIN_UV_178.png"
+  },
+  "WS_F_HAPPY_SPIN_UV_189": {
+   "file": "assets/sprites/WS_F_HAPPY_SPIN_UV_189.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "spin"
+   ],
+   "status": "ok",
+   "notes": [
+    "tumbling in the air, kneeling, happy (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1522,
+    1483
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.0,
+     0.0,
+     0.4,
+     0.4
+    ],
+    "eyes": [
+     [
+      0.17,
+      0.28
+     ],
+     [
+      0.28,
+      0.28
+     ]
+    ],
+    "hands": [
+     [
+      0.7,
+      0.45
+     ]
+    ],
+    "legs": [
+     0.25,
+     0.55,
+     0.85,
+     1.0
+    ],
+    "feet": [
+     [
+      0.8,
+      0.7
+     ]
+    ],
+    "tail": [
+     [
+      0.25,
+      0.98
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_SPIN_UV_189.png"
+  },
+  "WS_F_HAPPY_SPIN_UV_190": {
+   "file": "assets/sprites/WS_F_HAPPY_SPIN_UV_190.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "spin"
+   ],
+   "status": "ok",
+   "notes": [
+    "spinning in the air, legs swept back (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1505,
+    1516
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.55,
+     0.03,
+     0.95,
+     0.35
+    ],
+    "eyes": [
+     [
+      0.7,
+      0.22
+     ],
+     [
+      0.82,
+      0.22
+     ]
+    ],
+    "hands": [
+     [
+      0.3,
+      0.3
+     ],
+     [
+      0.9,
+      0.65
+     ]
+    ],
+    "legs": [
+     0.05,
+     0.5,
+     0.75,
+     0.85
+    ],
+    "feet": [
+     [
+      0.05,
+      0.6
+     ],
+     [
+      0.35,
+      0.85
+     ]
+    ],
+    "tail": [
+     [
+      0.1,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_SPIN_UV_190.png"
+  },
+  "WS_F_HAPPY_SURF_UV_147": {
+   "file": "assets/sprites/WS_F_HAPPY_SURF_UV_147.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "surf"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "surf stance without a board, crouched, happy (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1501
+   ],
+   "cut_sides": [
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.4,
+     0.03,
+     0.85,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.55,
+      0.18
+     ],
+     [
+      0.7,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.05,
+      0.45
+     ],
+     [
+      0.95,
+      0.65
+     ]
+    ],
+    "legs": [
+     0.15,
+     0.6,
+     0.85,
+     0.95
+    ],
+    "feet": [
+     [
+      0.2,
+      0.9
+     ],
+     [
+      0.5,
+      0.88
+     ]
+    ],
+    "tail": [
+     [
+      0.88,
+      0.88
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_SURF_UV_147.png"
+  },
+  "WS_F_HAPPY_SURF_UV_148": {
+   "file": "assets/sprites/WS_F_HAPPY_SURF_UV_148.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "surf"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "surf stance without a board, wide legs (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1525
+   ],
+   "cut_sides": [
+    "top",
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.4,
+     0.03,
+     0.85,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.62,
+      0.18
+     ],
+     [
+      0.78,
+      0.16
+     ]
+    ],
+    "hands": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      0.95,
+      0.5
+     ]
+    ],
+    "legs": [
+     0.15,
+     0.6,
+     0.85,
+     1.0
+    ],
+    "feet": [
+     [
+      0.15,
+      0.95
+     ],
+     [
+      0.82,
+      0.95
+     ]
+    ],
+    "tail": [
+     [
+      0.6,
+      0.85
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_SURF_UV_148.png"
+  },
+  "WS_F_HAPPY_SURF_UV_149": {
+   "file": "assets/sprites/WS_F_HAPPY_SURF_UV_149.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "surf"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "surf stance without a board, open smile (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1536
+   ],
+   "cut_sides": [
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.35,
+     0.03,
+     0.85,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.55,
+      0.2
+     ],
+     [
+      0.72,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.92,
+      0.48
+     ]
+    ],
+    "legs": [
+     0.15,
+     0.6,
+     0.85,
+     1.0
+    ],
+    "feet": [
+     [
+      0.1,
+      0.95
+     ],
+     [
+      0.82,
+      0.95
+     ]
+    ],
+    "tail": [
+     [
+      0.75,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_SURF_UV_149.png"
+  },
+  "WS_F_HAPPY_SURF_UV_179": {
+   "file": "assets/sprites/WS_F_HAPPY_SURF_UV_179.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "surf"
+   ],
+   "status": "ok",
+   "notes": [
+    "three-quarter surf crouch, glance at camera (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1449,
+    1514
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.5,
+     0.03,
+     0.82,
+     0.32
+    ],
+    "eyes": [
+     [
+      0.62,
+      0.18
+     ],
+     [
+      0.75,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.1,
+      0.45
+     ],
+     [
+      0.9,
+      0.62
+     ]
+    ],
+    "legs": [
+     0.25,
+     0.55,
+     0.85,
+     1.0
+    ],
+    "feet": [
+     [
+      0.4,
+      0.97
+     ],
+     [
+      0.75,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.32,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_SURF_UV_179.png"
+  },
+  "WS_F_HAPPY_SURF_UV_180": {
+   "file": "assets/sprites/WS_F_HAPPY_SURF_UV_180.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "happy",
+    "surf"
+   ],
+   "status": "ok",
+   "notes": [
+    "surf stance without a board, open smile (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1392,
+    1529
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.03,
+     0.45,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.21,
+      0.18
+     ],
+     [
+      0.3,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.07,
+      0.47
+     ],
+     [
+      0.7,
+      0.35
+     ]
+    ],
+    "legs": [
+     0.15,
+     0.55,
+     0.8,
+     1.0
+    ],
+    "feet": [
+     [
+      0.25,
+      0.95
+     ],
+     [
+      0.75,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.03,
+      0.75
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HAPPY_SURF_UV_180.png"
+  },
+  "WS_F_HURT_BONK_UV_135": {
+   "file": "assets/sprites/WS_F_HURT_BONK_UV_135.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "hurt",
+    "bonk"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "anatomy boxes approximate (source size differed by ~5 %)",
+    "both hands on top of her head (bonk), pout, close framing (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1492
+   ],
+   "cut_sides": [
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.05,
+     0.75,
+     0.42
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.34
+     ],
+     [
+      0.6,
+      0.34
+     ]
+    ],
+    "hands": [
+     [
+      0.38,
+      0.08
+     ],
+     [
+      0.65,
+      0.08
+     ]
+    ],
+    "legs": [
+     0.4,
+     0.78,
+     0.6,
+     1.0
+    ],
+    "feet": [
+     [
+      0.5,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.35,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HURT_BONK_UV_135.png"
+  },
+  "WS_F_HURT_BONK_UV_136": {
+   "file": "assets/sprites/WS_F_HURT_BONK_UV_136.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "hurt",
+    "bonk"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "hands on head, hurt, standing (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1536
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.05,
+     0.7,
+     0.35
+    ],
+    "eyes": [
+     [
+      0.43,
+      0.28
+     ],
+     [
+      0.6,
+      0.28
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.12
+     ],
+     [
+      0.72,
+      0.12
+     ]
+    ],
+    "legs": [
+     0.35,
+     0.72,
+     0.72,
+     1.0
+    ],
+    "feet": [
+     [
+      0.62,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.4,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HURT_BONK_UV_136.png"
+  },
+  "WS_F_HURT_BONK_UV_162": {
+   "file": "assets/sprites/WS_F_HURT_BONK_UV_162.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "hurt",
+    "bonk"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: head complete, but comp.unify.cut_sides flags the crown after the crop -> keep the top out of frame / headroom crop",
+    "hands on her head after a bonk, sweat drops, pout (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1032,
+    1527
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.03,
+     0.7,
+     0.32
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.22
+     ],
+     [
+      0.58,
+      0.22
+     ]
+    ],
+    "hands": [
+     [
+      0.35,
+      0.06
+     ],
+     [
+      0.62,
+      0.06
+     ]
+    ],
+    "legs": [
+     0.38,
+     0.62,
+     0.65,
+     1.0
+    ],
+    "feet": [
+     [
+      0.48,
+      0.98
+     ],
+     [
+      0.62,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.12,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_HURT_BONK_UV_162.png"
+  },
+  "WS_F_JELLYFISH_UV_057": {
+   "file": "assets/sprites/WS_F_JELLYFISH_UV_057.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "jellyfish"
+   ],
+   "status": "ok",
+   "notes": [
+    "standing among JELLYFISH (part of the PNG)"
+   ],
+   "size": [
+    1121,
+    1661
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.38,
+     0.02,
+     0.65,
+     0.22
+    ],
+    "eyes": [
+     [
+      0.47,
+      0.15
+     ],
+     [
+      0.55,
+      0.15
+     ]
+    ],
+    "hands": [
+     [
+      0.12,
+      0.42
+     ],
+     [
+      0.92,
+      0.42
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.55,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.4,
+      0.98
+     ],
+     [
+      0.62,
+      0.92
+     ]
+    ],
+    "tail": [
+     [
+      0.85,
+      0.75
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_JELLYFISH_UV_057.png"
+  },
+  "WS_F_JELLYFISH_UV_060": {
+   "file": "assets/sprites/WS_F_JELLYFISH_UV_060.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "jellyfish"
+   ],
+   "status": "ok",
+   "notes": [
+    "holds an ONIGIRI in both hands (not a jellyfish) - only for food jokes",
+    "holds an ONIGIRI in both hands (not a jellyfish) - only for food jokes holds an ONIGIRI in both hands (not a jellyfish), kneeling - only for food jokes"
+   ],
+   "size": [
+    1095,
+    1637
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.22,
+     0.03,
+     0.8,
+     0.33
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.24
+     ],
+     [
+      0.6,
+      0.24
+     ]
+    ],
+    "hands": [
+     [
+      0.45,
+      0.42
+     ]
+    ],
+    "legs": [
+     0.0,
+     0.7,
+     0.85,
+     0.98
+    ],
+    "feet": [
+     [
+      0.8,
+      0.9
+     ]
+    ],
+    "tail": [
+     [
+      0.85,
+      0.3
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_JELLYFISH_UV_060.png"
+  },
+  "WS_F_JELLYFISH_UV_073": {
+   "file": "assets/sprites/WS_F_JELLYFISH_UV_073.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "jellyfish"
+   ],
+   "status": "ok",
+   "notes": [
+    "side view, looking back over her shoulder, jellyfish around"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.15,
+     0.05,
+     0.42,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.25,
+      0.2
+     ]
+    ],
+    "hands": [
+     [
+      0.55,
+      0.68
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.65,
+     0.65,
+     1.0
+    ],
+    "tail": [
+     [
+      0.85,
+      0.97
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_JELLYFISH_UV_073.png"
+  },
+  "WS_F_JELLYFISH_UV_075": {
+   "file": "assets/sprites/WS_F_JELLYFISH_UV_075.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "jellyfish"
+   ],
+   "status": "ok",
+   "notes": [
+    "kneeling, holding an onigiri, seen slightly from above, tail arched over her head"
+   ],
+   "size": [
+    1151,
+    1400
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.12,
+     0.75,
+     0.48
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.37
+     ],
+     [
+      0.58,
+      0.37
+     ]
+    ],
+    "hands": [
+     [
+      0.5,
+      0.62
+     ]
+    ],
+    "legs": [
+     0.25,
+     0.75,
+     0.7,
+     1.0
+    ],
+    "tail": [
+     [
+      0.1,
+      0.11
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_JELLYFISH_UV_075.png"
+  },
+  "WS_F_JELLYFISH_UV_095": {
+   "file": "assets/sprites/WS_F_JELLYFISH_UV_095.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "jellyfish"
+   ],
+   "status": "ok",
+   "notes": [
+    "smiling bust with a MIC (not a jellyfish)"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.03,
+     0.85,
+     0.5
+    ],
+    "eyes": [
+     [
+      0.32,
+      0.36
+     ],
+     [
+      0.65,
+      0.37
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.62
+     ]
+    ],
+    "tail": [
+     [
+      0.98,
+      0.22
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_JELLYFISH_UV_095.png"
+  },
+  "WS_F_LONGING_GLASS_UV_200": {
+   "file": "assets/sprites/WS_F_LONGING_GLASS_UV_200.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "longing",
+    "glass"
+   ],
+   "status": "ok",
+   "notes": [
+    "frontal, both palms pressed against glass beside her cheeks, longing look, crouching (measured by eye 2026-10-16, grid sheet)"
+   ],
+   "size": [
+    1253,
+    1498
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.07,
+     0.73,
+     0.44
+    ],
+    "eyes": [
+     [
+      0.43,
+      0.31
+     ],
+     [
+      0.58,
+      0.31
+     ]
+    ],
+    "hands": [
+     [
+      0.28,
+      0.33
+     ],
+     [
+      0.67,
+      0.33
+     ]
+    ],
+    "legs": [
+     0.4,
+     0.8,
+     0.58,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.98
+     ],
+     [
+      0.55,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.33,
+      0.97
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_LONGING_GLASS_UV_200.png"
+  },
+  "WS_F_LONGING_GLASS_UV_201": {
+   "file": "assets/sprites/WS_F_LONGING_GLASS_UV_201.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "longing",
+    "glass"
+   ],
+   "status": "ok",
+   "notes": [
+    "frontal, both hands flat up on glass at shoulder height, pouting, standing (measured by eye 2026-10-16, grid sheet)"
+   ],
+   "size": [
+    1329,
+    1536
+   ],
+   "cut_sides": [
+    "top",
+    "bottom"
+   ],
+   "anatomy": {
+    "head": [
+     0.27,
+     0.08,
+     0.67,
+     0.4
+    ],
+    "eyes": [
+     [
+      0.39,
+      0.27
+     ],
+     [
+      0.54,
+      0.27
+     ]
+    ],
+    "hands": [
+     [
+      0.19,
+      0.3
+     ],
+     [
+      0.67,
+      0.3
+     ]
+    ],
+    "legs": [
+     0.38,
+     0.8,
+     0.55,
+     1.0
+    ],
+    "feet": [
+     [
+      0.42,
+      0.99
+     ],
+     [
+      0.5,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.71,
+      0.96
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_LONGING_GLASS_UV_201.png"
+  },
+  "WS_F_MIC_CONDUCT_UV_123": {
+   "file": "assets/sprites/WS_F_MIC_CONDUCT_UV_123.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "mic",
+    "conduct"
+   ],
+   "status": "ok",
+   "notes": [
+    "mic raised high to the crowd (left), fist up - conducting the fans"
+   ],
+   "size": [
+    864,
+    1528
+   ],
+   "cut_sides": [
+    "top",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.33,
+     0.05,
+     0.67,
+     0.29
+    ],
+    "eyes": [
+     [
+      0.44,
+      0.18
+     ],
+     [
+      0.61,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.05,
+      0.08
+     ],
+     [
+      0.82,
+      0.3
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.63,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.42,
+      0.98
+     ],
+     [
+      0.6,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.2,
+      0.97
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_MIC_CONDUCT_UV_123.png"
+  },
+  "WS_F_MIC_CONDUCT_UV_124": {
+   "file": "assets/sprites/WS_F_MIC_CONDUCT_UV_124.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "mic",
+    "conduct"
+   ],
+   "status": "ok",
+   "notes": [
+    "mic raised high (right), other fist up - conducting"
+   ],
+   "size": [
+    858,
+    1536
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.33,
+     0.05,
+     0.67,
+     0.29
+    ],
+    "eyes": [
+     [
+      0.44,
+      0.18
+     ],
+     [
+      0.61,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.9,
+      0.05
+     ],
+     [
+      0.24,
+      0.25
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.66,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.42,
+      0.98
+     ],
+     [
+      0.6,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.32,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_MIC_CONDUCT_UV_124.png"
+  },
+  "WS_F_MIC_HAPPY_UV_119": {
+   "file": "assets/sprites/WS_F_MIC_HAPPY_UV_119.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "mic",
+    "happy"
+   ],
+   "status": "ok",
+   "notes": [
+    "winking and singing with the mic, bust"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.15,
+     0.03,
+     0.88,
+     0.52
+    ],
+    "eyes": [
+     [
+      0.4,
+      0.38
+     ],
+     [
+      0.7,
+      0.36
+     ]
+    ],
+    "hands": [
+     [
+      0.45,
+      0.62
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_MIC_HAPPY_UV_119.png"
+  },
+  "WS_F_MIC_UV_080": {
+   "file": "assets/sprites/WS_F_MIC_UV_080.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "mic"
+   ],
+   "status": "ok",
+   "notes": [
+    "singing bust, mic held out to the side, turned"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.02,
+     0.85,
+     0.45
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.31
+     ],
+     [
+      0.63,
+      0.31
+     ]
+    ],
+    "hands": [
+     [
+      0.15,
+      0.38
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_MIC_UV_080.png"
+  },
+  "WS_F_NEUTRAL_CALM_UV_021": {
+   "file": "assets/sprites/WS_F_NEUTRAL_CALM_UV_021.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "neutral",
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "calm / slight pout bust"
+   ],
+   "size": [
+    1184,
+    1735
+   ],
+   "cut_sides": [
+    "bottom",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.12,
+     0.03,
+     0.88,
+     0.57
+    ],
+    "eyes": [
+     [
+      0.32,
+      0.43
+     ],
+     [
+      0.62,
+      0.43
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_NEUTRAL_CALM_UV_021.png"
+  },
+  "WS_F_NEUTRAL_CALM_UV_023": {
+   "file": "assets/sprites/WS_F_NEUTRAL_CALM_UV_023.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "neutral",
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "shy side glance bust"
+   ],
+   "size": [
+    1184,
+    1743
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.03,
+     0.8,
+     0.57
+    ],
+    "eyes": [
+     [
+      0.25,
+      0.42
+     ],
+     [
+      0.58,
+      0.42
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_NEUTRAL_CALM_UV_023.png"
+  },
+  "WS_F_NEUTRAL_CALM_UV_025": {
+   "file": "assets/sprites/WS_F_NEUTRAL_CALM_UV_025.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "neutral",
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "neutral bust (family 021-040: near-identical)"
+   ],
+   "size": [
+    1184,
+    1773
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.08,
+     0.03,
+     0.85,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.3,
+      0.42
+     ],
+     [
+      0.62,
+      0.42
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_NEUTRAL_CALM_UV_025.png"
+  },
+  "WS_F_NEUTRAL_CALM_UV_026": {
+   "file": "assets/sprites/WS_F_NEUTRAL_CALM_UV_026.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "neutral",
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "pout bust, puffed cheek"
+   ],
+   "size": [
+    1184,
+    1707
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.08,
+     0.03,
+     0.9,
+     0.57
+    ],
+    "eyes": [
+     [
+      0.3,
+      0.42
+     ],
+     [
+      0.65,
+      0.42
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_NEUTRAL_CALM_UV_026.png"
+  },
+  "WS_F_NEUTRAL_CALM_UV_027": {
+   "file": "assets/sprites/WS_F_NEUTRAL_CALM_UV_027.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "neutral",
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "pout bust"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.08,
+     0.03,
+     0.85,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.3,
+      0.41
+     ],
+     [
+      0.62,
+      0.41
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_NEUTRAL_CALM_UV_027.png"
+  },
+  "WS_F_NEUTRAL_CALM_UV_037": {
+   "file": "assets/sprites/WS_F_NEUTRAL_CALM_UV_037.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "neutral",
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "neutral bust, faint frown"
+   ],
+   "size": [
+    1142,
+    1712
+   ],
+   "cut_sides": [
+    "bottom",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.03,
+     0.85,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.32,
+      0.42
+     ],
+     [
+      0.62,
+      0.42
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_NEUTRAL_CALM_UV_037.png"
+  },
+  "WS_F_NEUTRAL_CALM_UV_038": {
+   "file": "assets/sprites/WS_F_NEUTRAL_CALM_UV_038.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "neutral",
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "neutral bust, slight smile"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.03,
+     0.85,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.33,
+      0.38
+     ],
+     [
+      0.62,
+      0.38
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_NEUTRAL_CALM_UV_038.png"
+  },
+  "WS_F_NEUTRAL_CALM_UV_040": {
+   "file": "assets/sprites/WS_F_NEUTRAL_CALM_UV_040.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "neutral",
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "side glance bust"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.03,
+     0.82,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.25,
+      0.42
+     ],
+     [
+      0.55,
+      0.42
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_NEUTRAL_CALM_UV_040.png"
+  },
+  "WS_F_NEUTRAL_UV_055": {
+   "file": "assets/sprites/WS_F_NEUTRAL_UV_055.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "neutral"
+   ],
+   "status": "ok",
+   "notes": [
+    "kneeling, eating an ONIGIRI with both hands (good for food wins / 'I got it')",
+    "kneeling, eating an ONIGIRI with both hands (good for food wins / 'I got it') kneeling, eating an ONIGIRI with both hands (good for food wins / 'I got it')"
+   ],
+   "size": [
+    1087,
+    1621
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.22,
+     0.03,
+     0.68,
+     0.32
+    ],
+    "eyes": [
+     [
+      0.38,
+      0.24
+     ],
+     [
+      0.52,
+      0.24
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.32
+     ],
+     [
+      0.62,
+      0.38
+     ]
+    ],
+    "legs": [
+     0.0,
+     0.72,
+     0.9,
+     0.98
+    ],
+    "feet": [
+     [
+      0.85,
+      0.88
+     ]
+    ],
+    "tail": [
+     [
+      0.12,
+      0.38
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_NEUTRAL_UV_055.png"
+  },
+  "WS_F_ONIGIRI_UV_066": {
+   "file": "assets/sprites/WS_F_ONIGIRI_UV_066.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "onigiri"
+   ],
+   "status": "limited",
+   "notes": [
+    "PROFILE, sitting seiza, eating an onigiri with eyes closed"
+   ],
+   "size": [
+    1152,
+    1469
+   ],
+   "cut_sides": [
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.02,
+     0.58,
+     0.34
+    ],
+    "eyes": [
+     [
+      0.38,
+      0.28
+     ]
+    ],
+    "hands": [
+     [
+      0.38,
+      0.38
+     ]
+    ],
+    "legs": [
+     0.0,
+     0.78,
+     0.8,
+     0.98
+    ],
+    "feet": [
+     [
+      0.75,
+      0.95
+     ]
+    ],
+    "tail": [
+     [
+      0.98,
+      0.2
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_ONIGIRI_UV_066.png"
+  },
+  "WS_F_ONIGIRI_UV_122": {
+   "file": "assets/sprites/WS_F_ONIGIRI_UV_122.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "onigiri"
+   ],
+   "status": "ok",
+   "notes": [
+    "bust, holds an onigiri out to the side"
+   ],
+   "size": [
+    1076,
+    1791
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.03,
+     0.85,
+     0.48
+    ],
+    "eyes": [
+     [
+      0.43,
+      0.33
+     ],
+     [
+      0.61,
+      0.33
+     ]
+    ],
+    "hands": [
+     [
+      0.07,
+      0.65
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_ONIGIRI_UV_122.png"
+  },
+  "WS_F_PAIN_CLUTCH_UV_137": {
+   "file": "assets/sprites/WS_F_PAIN_CLUTCH_UV_137.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "pain",
+    "clutch"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "eyes shut, hands at her temples (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    779,
+    1533
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.03,
+     0.7,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.4,
+      0.21
+     ],
+     [
+      0.6,
+      0.21
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.15
+     ],
+     [
+      0.68,
+      0.17
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.7,
+     0.65,
+     1.0
+    ],
+    "feet": [
+     [
+      0.4,
+      0.99
+     ],
+     [
+      0.6,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.2,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_PAIN_CLUTCH_UV_137.png"
+  },
+  "WS_F_PAIN_CLUTCH_UV_138": {
+   "file": "assets/sprites/WS_F_PAIN_CLUTCH_UV_138.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "pain",
+    "clutch"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "clutching her head, eyes squeezed, leaning in (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1449
+   ],
+   "cut_sides": [
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.2,
+     0.05,
+     0.75,
+     0.42
+    ],
+    "eyes": [
+     [
+      0.38,
+      0.32
+     ],
+     [
+      0.6,
+      0.32
+     ]
+    ],
+    "hands": [
+     [
+      0.2,
+      0.25
+     ],
+     [
+      0.72,
+      0.22
+     ]
+    ],
+    "legs": [
+     0.45,
+     0.82,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.55,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.35,
+      0.93
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_PAIN_CLUTCH_UV_138.png"
+  },
+  "WS_F_PAIN_CLUTCH_UV_163": {
+   "file": "assets/sprites/WS_F_PAIN_CLUTCH_UV_163.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "pain",
+    "clutch"
+   ],
+   "status": "ok",
+   "notes": [
+    "eyes shut, hands at her temples, standing (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    924,
+    1507
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.03,
+     0.65,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.4,
+      0.19
+     ],
+     [
+      0.55,
+      0.19
+     ]
+    ],
+    "hands": [
+     [
+      0.33,
+      0.17
+     ],
+     [
+      0.65,
+      0.17
+     ]
+    ],
+    "legs": [
+     0.32,
+     0.6,
+     0.62,
+     1.0
+    ],
+    "feet": [
+     [
+      0.42,
+      0.99
+     ],
+     [
+      0.55,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.12,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_PAIN_CLUTCH_UV_163.png"
+  },
+  "WS_F_PANIC_LUNGE_UV_202": {
+   "file": "assets/sprites/WS_F_PANIC_LUNGE_UV_202.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "panic",
+    "lunge"
+   ],
+   "status": "ok",
+   "notes": [
+    "panic lunge to the right, wide stride, one arm thrown back, profile facing right (measured by eye 2026-10-16, grid sheet)"
+   ],
+   "size": [
+    1435,
+    1481
+   ],
+   "cut_sides": [
+    "bottom"
+   ],
+   "anatomy": {
+    "head": [
+     0.68,
+     0.09,
+     0.93,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.85,
+      0.2
+     ]
+    ],
+    "hands": [
+     [
+      0.29,
+      0.25
+     ],
+     [
+      0.78,
+      0.3
+     ]
+    ],
+    "legs": [
+     0.05,
+     0.62,
+     0.97,
+     1.0
+    ],
+    "feet": [
+     [
+      0.07,
+      0.92
+     ],
+     [
+      0.95,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.05,
+      0.72
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_PANIC_LUNGE_UV_202.png"
+  },
+  "WS_F_PANIC_LUNGE_UV_203": {
+   "file": "assets/sprites/WS_F_PANIC_LUNGE_UV_203.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "panic",
+    "lunge"
+   ],
+   "status": "ok",
+   "notes": [
+    "panic lunge, reaching far to the left with one arm, mouth open, legs wide, tail tip bottom left (measured by eye 2026-10-16, grid sheet)"
+   ],
+   "size": [
+    1470,
+    1528
+   ],
+   "cut_sides": [
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.22,
+     0.04,
+     0.47,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.31,
+      0.18
+     ],
+     [
+      0.42,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.02,
+      0.22
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.58,
+     0.92,
+     1.0
+    ],
+    "feet": [
+     [
+      0.38,
+      0.98
+     ],
+     [
+      0.88,
+      0.92
+     ]
+    ],
+    "tail": [
+     [
+      0.12,
+      0.82
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_PANIC_LUNGE_UV_203.png"
+  },
+  "WS_F_PEACE_WINK_UV_131": {
+   "file": "assets/sprites/WS_F_PEACE_WINK_UV_131.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "peace",
+    "wink"
+   ],
+   "status": "ok",
+   "notes": [
+    "peace sign next to her face, winking - posing for the paparazzi"
+   ],
+   "size": [
+    863,
+    1536
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.04,
+     0.68,
+     0.29
+    ],
+    "eyes": [
+     [
+      0.43,
+      0.18
+     ],
+     [
+      0.6,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.2
+     ],
+     [
+      0.95,
+      0.58
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.62,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.98
+     ],
+     [
+      0.68,
+      0.95
+     ]
+    ],
+    "tail": [
+     [
+      0.18,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_PEACE_WINK_UV_131.png"
+  },
+  "WS_F_SCARED_RUN_UV_144": {
+   "file": "assets/sprites/WS_F_SCARED_RUN_UV_144.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "scared",
+    "run"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "cut on the left edge",
+    "running, scared (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1518
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.4,
+     0.03,
+     0.78,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.52,
+      0.17
+     ],
+     [
+      0.68,
+      0.17
+     ]
+    ],
+    "hands": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      0.92,
+      0.5
+     ]
+    ],
+    "legs": [
+     0.15,
+     0.6,
+     0.85,
+     1.0
+    ],
+    "feet": [
+     [
+      0.2,
+      0.73
+     ],
+     [
+      0.75,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.35,
+      0.96
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SCARED_RUN_UV_144.png"
+  },
+  "WS_F_SCARED_RUN_UV_145": {
+   "file": "assets/sprites/WS_F_SCARED_RUN_UV_145.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "scared",
+    "run"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "running, worried (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1536
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.03,
+     0.85,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.55,
+      0.2
+     ],
+     [
+      0.68,
+      0.2
+     ]
+    ],
+    "hands": [
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.98,
+      0.6
+     ]
+    ],
+    "legs": [
+     0.15,
+     0.65,
+     0.85,
+     1.0
+    ],
+    "feet": [
+     [
+      0.2,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.1,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SCARED_RUN_UV_145.png"
+  },
+  "WS_F_SCARED_RUN_UV_174": {
+   "file": "assets/sprites/WS_F_SCARED_RUN_UV_174.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "scared",
+    "run"
+   ],
+   "status": "ok",
+   "notes": [
+    "running, worried glance (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1407,
+    1536
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.2,
+     0.0,
+     0.55,
+     0.25
+    ],
+    "eyes": [
+     [
+      0.27,
+      0.17
+     ],
+     [
+      0.4,
+      0.17
+     ]
+    ],
+    "hands": [
+     [
+      0.02,
+      0.32
+     ],
+     [
+      0.62,
+      0.4
+     ]
+    ],
+    "legs": [
+     0.05,
+     0.55,
+     0.85,
+     1.0
+    ],
+    "feet": [
+     [
+      0.05,
+      0.95
+     ],
+     [
+      0.8,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.05,
+      0.58
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SCARED_RUN_UV_174.png"
+  },
+  "WS_F_SCARED_RUN_UV_175": {
+   "file": "assets/sprites/WS_F_SCARED_RUN_UV_175.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "scared",
+    "run"
+   ],
+   "status": "ok",
+   "notes": [
+    "running, scared, mid stride (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1394,
+    1510
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.55,
+     0.05,
+     0.9,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.68,
+      0.2
+     ],
+     [
+      0.8,
+      0.2
+     ]
+    ],
+    "hands": [
+     [
+      0.35,
+      0.33
+     ],
+     [
+      0.9,
+      0.3
+     ]
+    ],
+    "legs": [
+     0.15,
+     0.55,
+     0.9,
+     1.0
+    ],
+    "feet": [
+     [
+      0.2,
+      0.9
+     ],
+     [
+      0.85,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.07,
+      0.8
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SCARED_RUN_UV_175.png"
+  },
+  "WS_F_SCARED_RUN_UV_176": {
+   "file": "assets/sprites/WS_F_SCARED_RUN_UV_176.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "scared",
+    "run"
+   ],
+   "status": "ok",
+   "notes": [
+    "running hard, knee up (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1500,
+    1499
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.65,
+     0.05,
+     0.98,
+     0.32
+    ],
+    "eyes": [
+     [
+      0.8,
+      0.22
+     ],
+     [
+      0.9,
+      0.22
+     ]
+    ],
+    "hands": [
+     [
+      0.95,
+      0.3
+     ]
+    ],
+    "legs": [
+     0.25,
+     0.55,
+     0.85,
+     1.0
+    ],
+    "feet": [
+     [
+      0.3,
+      0.95
+     ],
+     [
+      0.4,
+      0.75
+     ]
+    ],
+    "tail": [
+     [
+      0.02,
+      0.62
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SCARED_RUN_UV_176.png"
+  },
+  "WS_F_SHARK_UV_049": {
+   "file": "assets/sprites/WS_F_SHARK_UV_049.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "shark"
+   ],
+   "status": "ok",
+   "notes": [
+    "kneeling, hugging a SHARK plush",
+    "kneeling, hugging a SHARK plush kneeling, hugging a SHARK plush"
+   ],
+   "size": [
+    1035,
+    1653
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.03,
+     0.72,
+     0.33
+    ],
+    "eyes": [
+     [
+      0.45,
+      0.24
+     ],
+     [
+      0.58,
+      0.24
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.68
+     ],
+     [
+      0.55,
+      0.48
+     ]
+    ],
+    "legs": [
+     0.15,
+     0.78,
+     0.8,
+     1.0
+    ],
+    "tail": [
+     [
+      0.92,
+      0.32
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SHARK_UV_049.png"
+  },
+  "WS_F_SHARK_UV_061": {
+   "file": "assets/sprites/WS_F_SHARK_UV_061.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "shark"
+   ],
+   "status": "ok",
+   "notes": [
+    "shark plush beside her face, cut at the thighs (really a medium shot)"
+   ],
+   "size": [
+    1152,
+    1704
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.02,
+     0.82,
+     0.33
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.22
+     ],
+     [
+      0.65,
+      0.22
+     ]
+    ],
+    "hands": [
+     [
+      0.42,
+      0.36
+     ],
+     [
+      0.48,
+      0.58
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SHARK_UV_061.png"
+  },
+  "WS_F_SHOUT_WET_UV_159": {
+   "file": "assets/sprites/WS_F_SHOUT_WET_UV_159.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "shout",
+    "wet"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "wet, fist up, eyes shut, screaming (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    860,
+    1531
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.05,
+     0.75,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.45,
+      0.18
+     ],
+     [
+      0.62,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.08,
+      0.43
+     ],
+     [
+      0.92,
+      0.04
+     ]
+    ],
+    "legs": [
+     0.35,
+     0.6,
+     0.75,
+     1.0
+    ],
+    "feet": [
+     [
+      0.55,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.35,
+      0.86
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SHOUT_WET_UV_159.png"
+  },
+  "WS_F_SHOUT_WET_UV_177": {
+   "file": "assets/sprites/WS_F_SHOUT_WET_UV_177.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "shout",
+    "wet"
+   ],
+   "status": "ok",
+   "notes": [
+    "wet, fist up, eyes shut, screaming (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1231,
+    1531
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.38,
+     0.05,
+     0.72,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.47,
+      0.17
+     ],
+     [
+      0.62,
+      0.17
+     ]
+    ],
+    "hands": [
+     [
+      0.2,
+      0.03
+     ]
+    ],
+    "legs": [
+     0.35,
+     0.55,
+     0.68,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.85
+     ],
+     [
+      0.55,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.45,
+      0.88
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SHOUT_WET_UV_177.png"
+  },
+  "WS_F_SHY_DRAMA_UV_039": {
+   "file": "assets/sprites/WS_F_SHY_DRAMA_UV_039.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "shy",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "shy bust, fingers together"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.02,
+     0.82,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.3,
+      0.4
+     ],
+     [
+      0.62,
+      0.4
+     ]
+    ],
+    "hands": [
+     [
+      0.45,
+      0.58
+     ],
+     [
+      0.55,
+      0.58
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SHY_DRAMA_UV_039.png"
+  },
+  "WS_F_SLEEP_UV_129": {
+   "file": "assets/sprites/WS_F_SLEEP_UV_129.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "sleep"
+   ],
+   "status": "ok",
+   "notes": [
+    "asleep standing, head tilted, eyes closed, sleepy smile"
+   ],
+   "size": [
+    853,
+    1536
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.03,
+     0.68,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.18
+     ],
+     [
+      0.57,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.73,
+      0.55
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.62,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.98
+     ],
+     [
+      0.6,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.18,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SLEEP_UV_129.png"
+  },
+  "WS_F_SLEEP_UV_130": {
+   "file": "assets/sprites/WS_F_SLEEP_UV_130.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "sleep"
+   ],
+   "status": "ok",
+   "notes": [
+    "asleep standing, eyes closed, arms loose"
+   ],
+   "size": [
+    858,
+    1530
+   ],
+   "cut_sides": [
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.33,
+     0.03,
+     0.67,
+     0.27
+    ],
+    "eyes": [
+     [
+      0.43,
+      0.18
+     ],
+     [
+      0.59,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.55
+     ],
+     [
+      0.78,
+      0.55
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.6,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.98
+     ],
+     [
+      0.6,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.15,
+      0.95
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SLEEP_UV_130.png"
+  },
+  "WS_F_SMUG_PLAY_UV_045": {
+   "file": "assets/sprites/WS_F_SMUG_PLAY_UV_045.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "smug",
+    "play"
+   ],
+   "status": "ok",
+   "notes": [
+    "smug smile bust, hand at the collar"
+   ],
+   "size": [
+    1184,
+    1763
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.03,
+     0.85,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.33,
+      0.43
+     ],
+     [
+      0.6,
+      0.4
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.58
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SMUG_PLAY_UV_045.png"
+  },
+  "WS_F_SMUG_SWAT_UV_157": {
+   "file": "assets/sprites/WS_F_SMUG_SWAT_UV_157.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "smug",
+    "swat"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "side, arms crossed, tail up (swat); CUT at the thighs - MS / knee crop only (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    812,
+    1535
+   ],
+   "cut_sides": [
+    "bottom",
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.03,
+     0.8,
+     0.32
+    ],
+    "eyes": [
+     [
+      0.65,
+      0.2
+     ]
+    ],
+    "hands": [
+     [
+      0.75,
+      0.5
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.9,
+     0.9,
+     1.0
+    ],
+    "tail": [
+     [
+      0.05,
+      0.35
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SMUG_SWAT_UV_157.png"
+  },
+  "WS_F_SMUG_SWAT_UV_158": {
+   "file": "assets/sprites/WS_F_SMUG_SWAT_UV_158.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "smug",
+    "swat"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "arms crossed, smug, standing (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    855,
+    1535
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.35,
+     0.0,
+     0.8,
+     0.25
+    ],
+    "eyes": [
+     [
+      0.55,
+      0.15
+     ],
+     [
+      0.68,
+      0.15
+     ]
+    ],
+    "hands": [
+     [
+      0.5,
+      0.33
+     ],
+     [
+      0.7,
+      0.35
+     ]
+    ],
+    "legs": [
+     0.4,
+     0.62,
+     0.75,
+     1.0
+    ],
+    "feet": [
+     [
+      0.5,
+      0.99
+     ],
+     [
+      0.65,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.4,
+      0.97
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SMUG_SWAT_UV_158.png"
+  },
+  "WS_F_SMUG_SWAT_UV_168": {
+   "file": "assets/sprites/WS_F_SMUG_SWAT_UV_168.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "smug",
+    "swat"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: head complete, but comp.unify.cut_sides flags the crown after the crop -> keep the top out of frame / headroom crop",
+    "side, arms crossed, smug, tail swung out (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1258,
+    1531
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.02,
+     0.6,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.38,
+      0.15
+     ],
+     [
+      0.48,
+      0.15
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.28
+     ]
+    ],
+    "legs": [
+     0.28,
+     0.55,
+     0.55,
+     1.0
+    ],
+    "feet": [
+     [
+      0.4,
+      0.97
+     ],
+     [
+      0.52,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.05,
+      0.78
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SMUG_SWAT_UV_168.png"
+  },
+  "WS_F_SMUG_WINK_UV_141": {
+   "file": "assets/sprites/WS_F_SMUG_WINK_UV_141.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "smug",
+    "wink"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "hands on hips, wink (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    850,
+    1533
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.33,
+     0.04,
+     0.7,
+     0.27
+    ],
+    "eyes": [
+     [
+      0.47,
+      0.19
+     ],
+     [
+      0.6,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.1,
+      0.4
+     ],
+     [
+      0.78,
+      0.4
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.62,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.38,
+      0.98
+     ],
+     [
+      0.6,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.35,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SMUG_WINK_UV_141.png"
+  },
+  "WS_F_SMUG_WINK_UV_142": {
+   "file": "assets/sprites/WS_F_SMUG_WINK_UV_142.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "smug",
+    "wink"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "hand on hip, other arm out, wink (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1536
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.03,
+     0.65,
+     0.27
+    ],
+    "eyes": [
+     [
+      0.33,
+      0.19
+     ],
+     [
+      0.5,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.1,
+      0.33
+     ],
+     [
+      0.95,
+      0.45
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.63,
+     0.75,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.98
+     ],
+     [
+      0.68,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.3,
+      0.82
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SMUG_WINK_UV_142.png"
+  },
+  "WS_F_SMUG_WINK_UV_169": {
+   "file": "assets/sprites/WS_F_SMUG_WINK_UV_169.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "smug",
+    "wink"
+   ],
+   "status": "ok",
+   "notes": [
+    "arms out wide, wink (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1059,
+    1513
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.38,
+     0.05,
+     0.72,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.47,
+      0.2
+     ],
+     [
+      0.6,
+      0.2
+     ]
+    ],
+    "hands": [
+     [
+      0.02,
+      0.3
+     ],
+     [
+      0.95,
+      0.42
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.55,
+     0.75,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.99
+     ],
+     [
+      0.65,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.15,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SMUG_WINK_UV_169.png"
+  },
+  "WS_F_SMUG_WINK_UV_170": {
+   "file": "assets/sprites/WS_F_SMUG_WINK_UV_170.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "smug",
+    "wink"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: head complete, but comp.unify.cut_sides flags the crown after the crop -> keep the top out of frame / headroom crop",
+    "hand on hip, other arm out, wink (measured by eye 2026-10-14, grid sheet)"
+   ],
+   "size": [
+    1221,
+    1533
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.38,
+     0.03,
+     0.72,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.47,
+      0.17
+     ],
+     [
+      0.6,
+      0.17
+     ]
+    ],
+    "hands": [
+     [
+      0.03,
+      0.2
+     ],
+     [
+      0.62,
+      0.4
+     ]
+    ],
+    "legs": [
+     0.35,
+     0.58,
+     0.72,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.97
+     ],
+     [
+      0.65,
+      0.97
+     ]
+    ],
+    "tail": [
+     [
+      0.38,
+      0.88
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SMUG_WINK_UV_170.png"
+  },
+  "WS_F_SURF_UV_125": {
+   "file": "assets/sprites/WS_F_SURF_UV_125.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "surf"
+   ],
+   "status": "ok",
+   "notes": [
+    "surfing on a violet board, arms spread"
+   ],
+   "size": [
+    855,
+    1445
+   ],
+   "cut_sides": [
+    "left"
+   ],
+   "anatomy": {
+    "head": [
+     0.4,
+     0.04,
+     0.7,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.53,
+      0.16
+     ],
+     [
+      0.66,
+      0.16
+     ]
+    ],
+    "hands": [
+     [
+      0.05,
+      0.33
+     ],
+     [
+      0.9,
+      0.18
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.55,
+     0.75,
+     0.9
+    ],
+    "feet": [
+     [
+      0.45,
+      0.88
+     ],
+     [
+      0.6,
+      0.88
+     ]
+    ],
+    "tail": [
+     [
+      0.2,
+      0.88
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SURF_UV_125.png"
+  },
+  "WS_F_SURF_UV_126": {
+   "file": "assets/sprites/WS_F_SURF_UV_126.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "surf"
+   ],
+   "status": "ok",
+   "notes": [
+    "surfing on a cyan board, arms spread, laughing"
+   ],
+   "size": [
+    856,
+    1534
+   ],
+   "cut_sides": [
+    "bottom"
+   ],
+   "anatomy": {
+    "head": [
+     0.33,
+     0.05,
+     0.67,
+     0.28
+    ],
+    "eyes": [
+     [
+      0.44,
+      0.16
+     ],
+     [
+      0.6,
+      0.16
+     ]
+    ],
+    "hands": [
+     [
+      0.1,
+      0.38
+     ],
+     [
+      0.88,
+      0.4
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.6,
+     0.7,
+     0.95
+    ],
+    "feet": [
+     [
+      0.45,
+      0.92
+     ],
+     [
+      0.6,
+      0.92
+     ]
+    ],
+    "tail": [
+     [
+      0.08,
+      0.75
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SURF_UV_126.png"
+  },
+  "WS_F_SURPRISED_JUMP_UV_133": {
+   "file": "assets/sprites/WS_F_SURPRISED_JUMP_UV_133.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "surprised",
+    "jump"
+   ],
+   "status": "limited",
+   "notes": [
+    "FAULT cut_edge: PixAI framing: only with that side out of frame / behind fg (STRICT refuses it in frame)",
+    "jump, knees tucked, both arms up, surprised open mouth (measured by eye 2026-10-13, grid sheet)"
+   ],
+   "size": [
+    864,
+    1536
+   ],
+   "cut_sides": [
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.09,
+     0.68,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.22
+     ],
+     [
+      0.58,
+      0.22
+     ]
+    ],
+    "hands": [
+     [
+      0.04,
+      0.08
+     ],
+     [
+      0.92,
+      0.04
+     ]
+    ],
+    "legs": [
+     0.25,
+     0.68,
+     0.75,
+     0.9
+    ],
+    "feet": [
+     [
+      0.35,
+      0.75
+     ]
+    ],
+    "tail": [
+     [
+      0.34,
+      0.97
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SURPRISED_JUMP_UV_133.png"
+  },
+  "WS_F_SURPRISE_DRAMA_UV_022": {
+   "file": "assets/sprites/WS_F_SURPRISE_DRAMA_UV_022.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "surprise",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "surprised bust"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.02,
+     0.82,
+     0.53
+    ],
+    "eyes": [
+     [
+      0.32,
+      0.38
+     ],
+     [
+      0.58,
+      0.4
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SURPRISE_DRAMA_UV_022.png"
+  },
+  "WS_F_SURPRISE_DRAMA_UV_028": {
+   "file": "assets/sprites/WS_F_SURPRISE_DRAMA_UV_028.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "surprise",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "surprised bust, small 'o' mouth"
+   ],
+   "size": [
+    1184,
+    1765
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.15,
+     0.03,
+     0.9,
+     0.57
+    ],
+    "eyes": [
+     [
+      0.35,
+      0.42
+     ],
+     [
+      0.68,
+      0.4
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SURPRISE_DRAMA_UV_028.png"
+  },
+  "WS_F_SURPRISE_DRAMA_UV_029": {
+   "file": "assets/sprites/WS_F_SURPRISE_DRAMA_UV_029.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "surprise",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "surprised bust"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.03,
+     0.85,
+     0.5
+    ],
+    "eyes": [
+     [
+      0.33,
+      0.37
+     ],
+     [
+      0.6,
+      0.35
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SURPRISE_DRAMA_UV_029.png"
+  },
+  "WS_F_SURPRISE_DRAMA_UV_031": {
+   "file": "assets/sprites/WS_F_SURPRISE_DRAMA_UV_031.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "surprise",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "surprised bust, hand at the cheek"
+   ],
+   "size": [
+    1181,
+    1776
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.15,
+     0.03,
+     0.85,
+     0.52
+    ],
+    "eyes": [
+     [
+      0.38,
+      0.36
+     ],
+     [
+      0.62,
+      0.36
+     ]
+    ],
+    "hands": [
+     [
+      0.38,
+      0.48
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SURPRISE_DRAMA_UV_031.png"
+  },
+  "WS_F_SURPRISE_DRAMA_UV_035": {
+   "file": "assets/sprites/WS_F_SURPRISE_DRAMA_UV_035.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "surprise",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "shocked bust, mouth open"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.03,
+     0.8,
+     0.58
+    ],
+    "eyes": [
+     [
+      0.25,
+      0.4
+     ],
+     [
+      0.55,
+      0.4
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SURPRISE_DRAMA_UV_035.png"
+  },
+  "WS_F_SURP_UV_001": {
+   "file": "assets/sprites/WS_F_SURP_UV_001.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "surp"
+   ],
+   "status": "limited",
+   "notes": [
+    "surprised, turned, bare shoulder in front"
+   ],
+   "size": [
+    1076,
+    1791
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.25,
+     0.03,
+     0.9,
+     0.52
+    ],
+    "eyes": [
+     [
+      0.45,
+      0.36
+     ],
+     [
+      0.78,
+      0.36
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SURP_UV_001.png"
+  },
+  "WS_F_SUSHI_UV_072": {
+   "file": "assets/sprites/WS_F_SUSHI_UV_072.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "sushi"
+   ],
+   "status": "ok",
+   "notes": [
+    "holds an ONIGIRI (not sushi), eyes closed winking smile, medium shot"
+   ],
+   "size": [
+    1152,
+    1701
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.2,
+     0.03,
+     0.8,
+     0.4
+    ],
+    "eyes": [
+     [
+      0.35,
+      0.28
+     ],
+     [
+      0.58,
+      0.26
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.48
+     ],
+     [
+      0.55,
+      0.5
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SUSHI_UV_072.png"
+  },
+  "WS_F_SUSHI_UV_076": {
+   "file": "assets/sprites/WS_F_SUSHI_UV_076.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "sushi"
+   ],
+   "status": "limited",
+   "notes": [
+    "PROFILE, sushi plate and chopsticks held out"
+   ],
+   "size": [
+    1152,
+    1623
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.4,
+     0.03,
+     0.9,
+     0.42
+    ],
+    "eyes": [
+     [
+      0.62,
+      0.3
+     ]
+    ],
+    "hands": [
+     [
+      0.1,
+      0.52
+     ],
+     [
+      0.4,
+      0.72
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SUSHI_UV_076.png"
+  },
+  "WS_F_SUSHI_UV_082": {
+   "file": "assets/sprites/WS_F_SUSHI_UV_082.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "sushi"
+   ],
+   "status": "limited",
+   "notes": [
+    "WALKING AWAY seen from behind, looking back over her shoulder, jellyfish (no sushi) - legs + back shots"
+   ],
+   "size": [
+    1126,
+    1695
+   ],
+   "cut_sides": [
+    "top"
+   ],
+   "anatomy": {
+    "head": [
+     0.48,
+     0.05,
+     0.7,
+     0.24
+    ],
+    "eyes": [
+     [
+      0.62,
+      0.2
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.55,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.42,
+      0.98
+     ],
+     [
+      0.6,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.1,
+      0.75
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SUSHI_UV_082.png"
+  },
+  "WS_F_SWIM_UV_116": {
+   "file": "assets/sprites/WS_F_SWIM_UV_116.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "swim"
+   ],
+   "status": "ok",
+   "notes": [
+    "swimming horizontally to the left"
+   ],
+   "size": [
+    1704,
+    998
+   ],
+   "cut_sides": [
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.02,
+     0.15,
+     0.3,
+     0.85
+    ],
+    "eyes": [
+     [
+      0.12,
+      0.55
+     ],
+     [
+      0.22,
+      0.52
+     ]
+    ],
+    "legs": [
+     0.55,
+     0.35,
+     0.95,
+     0.7
+    ],
+    "feet": [
+     [
+      0.92,
+      0.55
+     ]
+    ],
+    "tail": [
+     [
+      0.95,
+      0.3
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_SWIM_UV_116.png"
+  },
+  "WS_F_THINK_CALM_UV_036": {
+   "file": "assets/sprites/WS_F_THINK_CALM_UV_036.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "think",
+    "calm"
+   ],
+   "status": "ok",
+   "notes": [
+    "thinking bust, hand at the chin"
+   ],
+   "size": [
+    1184,
+    1767
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.15,
+     0.03,
+     0.88,
+     0.57
+    ],
+    "eyes": [
+     [
+      0.38,
+      0.42
+     ],
+     [
+      0.65,
+      0.42
+     ]
+    ],
+    "hands": [
+     [
+      0.5,
+      0.62
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_THINK_CALM_UV_036.png"
+  },
+  "WS_F_THRONE_SMUG_UV_127": {
+   "file": "assets/sprites/WS_F_THRONE_SMUG_UV_127.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "throne",
+    "smug"
+   ],
+   "status": "limited",
+   "notes": [
+    "standing in front of a pink shell throne, crown, hands on hips, smug queen"
+   ],
+   "size": [
+    864,
+    1533
+   ],
+   "cut_sides": [
+    "top",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.33,
+     0.04,
+     0.67,
+     0.29
+    ],
+    "eyes": [
+     [
+      0.47,
+      0.17
+     ],
+     [
+      0.63,
+      0.17
+     ]
+    ],
+    "hands": [
+     [
+      0.4,
+      0.42
+     ],
+     [
+      0.62,
+      0.42
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.6,
+     0.7,
+     0.95
+    ],
+    "feet": [
+     [
+      0.42,
+      0.95
+     ],
+     [
+      0.6,
+      0.95
+     ]
+    ],
+    "tail": [
+     [
+      0.22,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_THRONE_SMUG_UV_127.png"
+  },
+  "WS_F_THRONE_SMUG_UV_128": {
+   "file": "assets/sprites/WS_F_THRONE_SMUG_UV_128.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "throne",
+    "smug"
+   ],
+   "status": "limited",
+   "notes": [
+    "in front of a shell throne, crown, hand on hip, smug"
+   ],
+   "size": [
+    852,
+    1532
+   ],
+   "cut_sides": [],
+   "anatomy": {
+    "head": [
+     0.33,
+     0.05,
+     0.67,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.45,
+      0.18
+     ],
+     [
+      0.61,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.36,
+      0.43
+     ],
+     [
+      0.6,
+      0.45
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.62,
+     0.7,
+     0.95
+    ],
+    "feet": [
+     [
+      0.42,
+      0.95
+     ],
+     [
+      0.6,
+      0.95
+     ]
+    ],
+    "tail": [
+     [
+      0.25,
+      0.92
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_THRONE_SMUG_UV_128.png"
+  },
+  "WS_F_UPSET_DRAMA_UV_032": {
+   "file": "assets/sprites/WS_F_UPSET_DRAMA_UV_032.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "upset",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "upset bust, mouth open"
+   ],
+   "size": [
+    1184,
+    1769
+   ],
+   "cut_sides": [
+    "bottom",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.08,
+     0.03,
+     0.85,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.3,
+      0.4
+     ],
+     [
+      0.6,
+      0.4
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_UPSET_DRAMA_UV_032.png"
+  },
+  "WS_F_UPSET_DRAMA_UV_034": {
+   "file": "assets/sprites/WS_F_UPSET_DRAMA_UV_034.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "upset",
+    "drama"
+   ],
+   "status": "limited",
+   "notes": [
+    "upset bust, hand at the mouth"
+   ],
+   "size": [
+    1184,
+    1754
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.03,
+     0.88,
+     0.58
+    ],
+    "eyes": [
+     [
+      0.35,
+      0.47
+     ],
+     [
+      0.6,
+      0.42
+     ]
+    ],
+    "hands": [
+     [
+      0.48,
+      0.56
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_UPSET_DRAMA_UV_034.png"
+  },
+  "WS_F_UPSET_DRAMA_UV_048": {
+   "file": "assets/sprites/WS_F_UPSET_DRAMA_UV_048.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "upset",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "teary bust"
+   ],
+   "size": [
+    1184,
+    1755
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.15,
+     0.03,
+     0.88,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.36,
+      0.4
+     ],
+     [
+      0.62,
+      0.42
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_UPSET_DRAMA_UV_048.png"
+  },
+  "WS_F_WORRIED_DRAMA_UV_024": {
+   "file": "assets/sprites/WS_F_WORRIED_DRAMA_UV_024.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "worried",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "worried bust"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.08,
+     0.03,
+     0.8,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.3,
+      0.4
+     ],
+     [
+      0.58,
+      0.42
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_WORRIED_DRAMA_UV_024.png"
+  },
+  "WS_F_WORRIED_DRAMA_UV_030": {
+   "file": "assets/sprites/WS_F_WORRIED_DRAMA_UV_030.png",
+   "shot": "WS",
+   "view": "front",
+   "tags": [
+    "worried",
+    "drama"
+   ],
+   "status": "ok",
+   "notes": [
+    "worried bust, hand at the chest"
+   ],
+   "size": [
+    1184,
+    1776
+   ],
+   "cut_sides": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.03,
+     0.85,
+     0.55
+    ],
+    "eyes": [
+     [
+      0.32,
+      0.4
+     ],
+     [
+      0.62,
+      0.35
+     ]
+    ],
+    "hands": [
+     [
+      0.55,
+      0.65
+     ]
+    ]
+   },
+   "face_box": null,
+   "source": "C:/raymi/assets/PNG/RAY_WS_F_WORRIED_DRAMA_UV_030.png"
+  }
+ }
+}

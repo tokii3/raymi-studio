@@ -1,0 +1,9 @@
+# renders and caches never go into git (release assets + the renders branch carry them)
+jobs/*/out/
+studio/node_modules/
+studio/public/
+studio/out/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
