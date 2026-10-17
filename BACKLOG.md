@@ -10,3 +10,8 @@
 - Extreme close-ups (CU_F_HAPPY_UV_002 in S0): the head box spans almost the whole sprite, so the cut-side push
   crops the left eye. Prefer `close` over `extreme` for such sprites, or use the face box for close framing.
 - S0 cloud draft: about 15 min per run incl. setup (2026-10-17). Setup (npm ci, browser) could be cached.
+- Claude cloud render worker (render/CLOUD_WORKER.md) untested: no cloud environment in toki's account (2026-10-18).
+  Needs her to add one (New session -> Cloud) - only worth it if Actions minutes run out.
+- yt-dlp needs a JS runtime for YouTube now: `--js-runtimes node --remote-components ejs:github` (2026-10-18).
+- Loudness after assemble lands at -14.7 LUFS (-14.06 single render): the apad silence tail lowers the integrated
+  value slightly; still inside the QC tolerance. Watch it on music videos.
