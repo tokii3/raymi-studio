@@ -47,6 +47,9 @@ Read at session start: this file -> `PRODUCTION.md` (how a video is made) -> `ca
   captions in her font + hook / CTA stamps + grade. Local preview: `cd studio && npm run studio`.
 - `.github/workflows/render.yml`: push a plan.json (draft) or run it by hand (draft/final). Results: a GitHub
   pre-release with final.mp4 + sheet.jpg + qc.json, and `reports/<job>/` on branch `renders` (read it with git).
+  From a Claude session: `gh run list` works, GraphQL does not - start a render with
+  `gh api -X POST repos/tokii3/raymi-studio/actions/workflows/render.yml/dispatches -f ref=main -f 'inputs[job]=<job>' -f 'inputs[quality]=draft'`.
+  Layout check without a full render: `cd studio && node render.mjs <job> --draft` once, then `node stills.mjs <job> 20,200,500`.
 - `assets/sprites` + `assets/catalog.json`: 172 Raymi sprites that passed the migration check of 2026-10-17
   (see MIGRATION.md for what was excluded and why).
 - Free quota: 2,000 Actions minutes per month (private repo). A draft Short is a few minutes; check
