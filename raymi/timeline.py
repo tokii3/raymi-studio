@@ -231,14 +231,18 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                         words.append({"w": w["w"], "from": w["cut"] - f0, "to": round(w["t1"] * FPS) - f0,
                                       "key": w["w"].lower() in keys or w["roma"] in keys, "line": li, "idx": wi})
                         screen_texts.append(w["w"])
-        for k, v in (s.get("opts") or {}).items():
-            if isinstance(v, str) and (k.startswith("text") or k in ("led", "title")):
+        opts = dict(s.get("opts") or {})
+        for k, v in opts.items():
+            if isinstance(v, str) and v in cat:            # a sprite printed on a prop (a card, a poster, a screen)
+                opts[k] = "sprites/" + Path(cat[v]["file"]).name
+                sprites.add(opts[k])
+            elif isinstance(v, str) and (k.startswith("text") or k in ("led", "title")):
                 screen_texts.append(v)
         tr = s.get("transition", {"kind": "cut", "frames": 0})
         if tr.get("kind") not in TRANSITIONS:
             errors.append(f"{tag}: transition.kind must be one of {sorted(TRANSITIONS)}")
         shots.append({"id": s.get("id", f"s{i + 1}"), "from": max(0, fr(a)), "to": min(total, fr(b)), "set": st,
-                      "opts": s.get("opts", {}), "camera": ckeys, "kick": float(s.get("kick", 1.0)), "puppets": pkeys,
+                      "opts": opts, "camera": ckeys, "kick": float(s.get("kick", 1.0)), "puppets": pkeys,
                       "lyrics": L, "words": words,
                       "transition": {"kind": tr.get("kind", "cut"), "frames": int(tr.get("frames", 0)),
                                      **({"obj": tr["obj"]} if "obj" in tr else {}), **({"dir": tr["dir"]} if "dir" in tr else {})},

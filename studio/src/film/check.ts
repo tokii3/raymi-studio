@@ -78,3 +78,42 @@ export function checkFilm(props: FilmProps, frames?: [number, number]): EdgeFaul
   }
   return faults;
 }
+
+/** Where things land in the frame (x, y in 0..1 from top-left; null = behind the lens) - authoring aid, no render. */
+export function framingReport(props: FilmProps): string[] {
+  const aspect = props.width / props.height;
+  const out: string[] = [];
+  const at = (cam: THREE.PerspectiveCamera, v: THREE.Vector3) => {
+    const n = v.clone().project(cam);
+    if (n.z >= 1 || n.z <= -1) return 'behind';
+    const x = (n.x + 1) / 2, y = (1 - n.y) / 2;
+    const tag = x < 0 || x > 1 || y < 0 || y > 1 ? ' OUT' : '';
+    return `(${x.toFixed(2)}, ${y.toFixed(2)})${tag}`;
+  };
+  for (const s of props.shots) {
+    for (const f of [s.from, Math.round((s.from + s.to) / 2), s.to - 1]) {
+      const cam = makeCamera(s, f, aspect, [], props.fps);
+      const parts = [`${s.id} f${f}`];
+      const p = puppetAt(s.puppets, f, props.fps);
+      if (p) {
+        const m = puppetMatrix(p, [cam.position.x, cam.position.y, cam.position.z]);
+        const {h} = planeSize(p.key);
+        parts.push(`head ${at(cam, new THREE.Vector3(0, (p.key.feet - p.key.top - 0.08) * h, 0).applyMatrix4(m))}`);
+        parts.push(`feet ${at(cam, new THREE.Vector3(0, 0, 0).applyMatrix4(m))}`);
+      }
+      if (s.lyrics) parts.push(`lyrics ${at(cam, new THREE.Vector3(...s.lyrics.anchor))}`);
+      out.push(parts.join('  '));
+    }
+  }
+  return out;
+}
+
+/** The world point that appears at screen (sx, sy in 0..1 from top-left) at `dist` metres from the lens in a shot's
+ *  frame f - for placing lyric anchors and props where the picture needs them (authoring aid). */
+export function placeAt(props: FilmProps, shot: number, f: number, sx: number, sy: number, dist: number): V3 {
+  const s = props.shots[shot];
+  const cam = makeCamera(s, f, props.width / props.height, [], props.fps);
+  const v = new THREE.Vector3(sx * 2 - 1, 1 - sy * 2, 0.5).unproject(cam).sub(cam.position).normalize();
+  const p = cam.position.clone().addScaledVector(v, dist);
+  return [Number(p.x.toFixed(2)), Number(p.y.toFixed(2)), Number(p.z.toFixed(2))];
+}

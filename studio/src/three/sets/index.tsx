@@ -2,9 +2,13 @@
 // + a still in studio/catalog/.
 import React from 'react';
 import {Aquarium} from './Aquarium';
+import {CardTable} from './CardTable';
+import {Weather} from './Weather';
 
 export type SetProps = {f: number; fps: number; opts: Record<string, unknown>; hits: number[]; beats: number[]};
 
 export const SETS: Record<string, React.FC<SetProps>> = {
   aquarium: Aquarium,
+  cardtable: CardTable,
+  weather: Weather,
 };

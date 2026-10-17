@@ -45,7 +45,7 @@ export const Puppet3D: React.FC<{keys: PuppetKey[]; f: number; fps: number; camP
   const s = 1 / (1 + Math.max(0, p.lift) * 2.5);
   return (
     <group>
-      <mesh position={[p.pos[0], p.pos[1] + 0.006, p.pos[2]]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2}>
+      <mesh position={[p.pos[0], p.pos[1] + 0.035, p.pos[2]]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2}>
         <planeGeometry args={[w * 0.62 * s, w * 0.24 * s]} />
         <meshBasicMaterial map={blobTexture(shadow)} transparent depthWrite={false} opacity={Math.max(0, 0.85 - lift * 1.6)} toneMapped={false} />
       </mesh>

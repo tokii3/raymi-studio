@@ -13,6 +13,7 @@ import {SETS} from '../three/sets';
 import {Puppet3D} from '../three/Puppet3D';
 import {Words3D} from '../three/Words3D';
 import {BottleCap} from '../three/props';
+import {useTexturesReady} from '../three/look';
 import {makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
 import {Transitions, whipStyle} from './Transitions';
@@ -45,7 +46,9 @@ function figurePoint(shot: Shot, f: number, fps: number, camPos: [number, number
 }
 
 export const Film: React.FC<FilmProps> = (props) => {
-  const ready = useRaymiFont();
+  const fontReady = useRaymiFont();
+  const texReady = useTexturesReady(props.sprites.map((s) => staticFile(s)));
+  const ready = fontReady && texReady;
   const f = useCurrentFrame();
   const {width: W, height: H, fps} = useVideoConfig();
   const i = shotAt(props.shots, f);

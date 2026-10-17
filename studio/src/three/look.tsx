@@ -1,6 +1,6 @@
 // The studio look: stylised and MATTE next to Raymi's painting (PRINCIPLES 10). Toon shading in 3 soft steps, shadows
 // take the set's ambient colour (never grey), fog gives depth, nothing is glossy plastic.
-import React, {useMemo} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import * as THREE from 'three';
 import {cancelRender, continueRender, delayRender} from 'remotion';
 
@@ -63,22 +63,33 @@ export const SetLight: React.FC<{
   );
 };
 
-// ---------------------------------------------------------------- textures (loaded once, render waits for them)
+// ---------------------------------------------------------------- textures (loaded BEFORE the scene renders)
+// The 3D canvas draws a frame once per frame change; an image that finishes loading later never reaches that frame
+// (style test v1: Raymi was invisible). So every image is preloaded and the canvas only mounts when all are ready.
 const texCache = new Map<string, THREE.Texture>();
+
+export function useTexturesReady(urls: string[]): boolean {
+  const key = urls.join('|');
+  const [ready, setReady] = useState(() => urls.every((u) => texCache.has(u)));
+  useEffect(() => {
+    const todo = urls.filter((u) => !texCache.has(u));
+    if (!todo.length) { setReady(true); return; }
+    const handle = delayRender(`textures ${todo.length}`);
+    Promise.all(todo.map((u) => new Promise<void>((res, rej) => {
+      const t = new THREE.TextureLoader().load(u, () => res(), undefined, () => rej(new Error(`texture failed: ${u}`)));
+      t.colorSpace = THREE.SRGBColorSpace;
+      t.anisotropy = 4;
+      texCache.set(u, t);
+    }))).then(() => { setReady(true); continueRender(handle); }).catch((e) => cancelRender(e));
+  }, [key]);   // eslint-disable-line react-hooks/exhaustive-deps
+  return ready;
+}
+
+/** A preloaded image texture (useTexturesReady must have loaded it - a missing one fails the render loudly). */
 export function useImageTexture(url: string): THREE.Texture {
-  const cached = texCache.get(url);
-  const tex = useMemo(() => {
-    if (cached) return cached;
-    const handle = delayRender(`texture ${url}`);
-    const t = new THREE.TextureLoader().load(url, () => continueRender(handle), undefined, (e) => {
-      cancelRender(new Error(`texture failed: ${url} ${String(e)}`));
-    });
-    t.colorSpace = THREE.SRGBColorSpace;
-    t.anisotropy = 4;
-    texCache.set(url, t);
-    return t;
-  }, [url, cached]);
-  return tex;
+  const t = texCache.get(url);
+  if (!t) cancelRender(new Error(`texture not preloaded: ${url}`));
+  return t as THREE.Texture;
 }
 
 const canvasCache = new Map<string, THREE.CanvasTexture>();
