@@ -1,0 +1,845 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 592,
+ "world": "deep_sea",
+ "accent": "#b56bff",
+ "hook": {
+  "text": "i can predict rain. kind of.",
+  "to": 54
+ },
+ "cta": {
+  "text": "when does it rain where you are?",
+  "from": 508
+ },
+ "words": [
+  {
+   "w": "I",
+   "from": 3,
+   "to": 7,
+   "key": false
+  },
+  {
+   "w": "can",
+   "from": 8,
+   "to": 12,
+   "key": false
+  },
+  {
+   "w": "predict",
+   "from": 13,
+   "to": 25,
+   "key": false
+  },
+  {
+   "w": "rain.",
+   "from": 25,
+   "to": 36,
+   "key": true
+  },
+  {
+   "w": "Officially.",
+   "from": 58,
+   "to": 78,
+   "key": true
+  },
+  {
+   "w": "My",
+   "from": 100,
+   "to": 106,
+   "key": false
+  },
+  {
+   "w": "record",
+   "from": 106,
+   "to": 118,
+   "key": false
+  },
+  {
+   "w": "is",
+   "from": 118,
+   "to": 123,
+   "key": false
+  },
+  {
+   "w": "three",
+   "from": 124,
+   "to": 133,
+   "key": true
+  },
+  {
+   "w": "out",
+   "from": 133,
+   "to": 138,
+   "key": false
+  },
+  {
+   "w": "of",
+   "from": 138,
+   "to": 141,
+   "key": false
+  },
+  {
+   "w": "ten,",
+   "from": 142,
+   "to": 151,
+   "key": true
+  },
+  {
+   "w": "which",
+   "from": 159,
+   "to": 164,
+   "key": false
+  },
+  {
+   "w": "is",
+   "from": 164,
+   "to": 168,
+   "key": false
+  },
+  {
+   "w": "basically",
+   "from": 169,
+   "to": 184,
+   "key": false
+  },
+  {
+   "w": "a",
+   "from": 184,
+   "to": 186,
+   "key": false
+  },
+  {
+   "w": "talent.",
+   "from": 186,
+   "to": 203,
+   "key": true
+  },
+  {
+   "w": "Today",
+   "from": 225,
+   "to": 235,
+   "key": false
+  },
+  {
+   "w": "my",
+   "from": 236,
+   "to": 241,
+   "key": false
+  },
+  {
+   "w": "tail",
+   "from": 241,
+   "to": 251,
+   "key": false
+  },
+  {
+   "w": "is",
+   "from": 252,
+   "to": 257,
+   "key": false
+  },
+  {
+   "w": "tingling,",
+   "from": 257,
+   "to": 272,
+   "key": true
+  },
+  {
+   "w": "and",
+   "from": 280,
+   "to": 283,
+   "key": false
+  },
+  {
+   "w": "that",
+   "from": 284,
+   "to": 290,
+   "key": false
+  },
+  {
+   "w": "means",
+   "from": 290,
+   "to": 300,
+   "key": false
+  },
+  {
+   "w": "rain",
+   "from": 300,
+   "to": 310,
+   "key": true
+  },
+  {
+   "w": "at",
+   "from": 310,
+   "to": 314,
+   "key": false
+  },
+  {
+   "w": "exactly",
+   "from": 315,
+   "to": 330,
+   "key": true
+  },
+  {
+   "w": "four",
+   "from": 330,
+   "to": 338,
+   "key": false
+  },
+  {
+   "w": "o'clock.",
+   "from": 338,
+   "to": 353,
+   "key": false
+  },
+  {
+   "w": "If",
+   "from": 375,
+   "to": 380,
+   "key": false
+  },
+  {
+   "w": "it",
+   "from": 380,
+   "to": 384,
+   "key": false
+  },
+  {
+   "w": "does",
+   "from": 384,
+   "to": 390,
+   "key": false
+  },
+  {
+   "w": "not",
+   "from": 390,
+   "to": 398,
+   "key": false
+  },
+  {
+   "w": "rain,",
+   "from": 398,
+   "to": 407,
+   "key": true
+  },
+  {
+   "w": "the",
+   "from": 414,
+   "to": 417,
+   "key": false
+  },
+  {
+   "w": "sky",
+   "from": 418,
+   "to": 428,
+   "key": false
+  },
+  {
+   "w": "is",
+   "from": 429,
+   "to": 434,
+   "key": false
+  },
+  {
+   "w": "wrong,",
+   "from": 434,
+   "to": 444,
+   "key": true
+  },
+  {
+   "w": "not",
+   "from": 450,
+   "to": 457,
+   "key": false
+  },
+  {
+   "w": "me.",
+   "from": 457,
+   "to": 464,
+   "key": true
+  },
+  {
+   "w": "Tell",
+   "from": 487,
+   "to": 494,
+   "key": false
+  },
+  {
+   "w": "me,",
+   "from": 494,
+   "to": 499,
+   "key": true
+  },
+  {
+   "w": "when",
+   "from": 508,
+   "to": 512,
+   "key": false
+  },
+  {
+   "w": "does",
+   "from": 512,
+   "to": 517,
+   "key": false
+  },
+  {
+   "w": "it",
+   "from": 518,
+   "to": 521,
+   "key": false
+  },
+  {
+   "w": "rain",
+   "from": 522,
+   "to": 530,
+   "key": true
+  },
+  {
+   "w": "where",
+   "from": 531,
+   "to": 536,
+   "key": false
+  },
+  {
+   "w": "you",
+   "from": 536,
+   "to": 540,
+   "key": false
+  },
+  {
+   "w": "are?",
+   "from": 540,
+   "to": 549,
+   "key": false
+  }
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 58,
+   "sprite": "sprites/WS_F_SMUG_WINK_UV_141.png",
+   "size": [
+    850,
+    1533
+   ],
+   "anatomy": {
+    "head": [
+     0.33,
+     0.04,
+     0.7,
+     0.27
+    ],
+    "eyes": [
+     [
+      0.47,
+      0.19
+     ],
+     [
+      0.6,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.1,
+      0.4
+     ],
+     [
+      0.78,
+      0.4
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.62,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.38,
+      0.98
+     ],
+     [
+      0.6,
+      0.99
+     ]
+    ],
+    "tail": [
+     [
+      0.35,
+      0.92
+     ]
+    ]
+   },
+   "faceBox": null,
+   "cuts": [
+    "top"
+   ],
+   "act": "pop",
+   "shot": "medium",
+   "side": "center",
+   "icon": "sparkle",
+   "key": [
+    "rain."
+   ]
+  },
+  {
+   "from": 58,
+   "to": 100,
+   "sprite": "sprites/CU_F_HAPPY_UV_001.png",
+   "size": [
+    1076,
+    1872
+   ],
+   "anatomy": {
+    "head": [
+     0.05,
+     0.04,
+     0.72,
+     0.5
+    ],
+    "eyes": [
+     [
+      0.22,
+      0.33
+     ],
+     [
+      0.53,
+      0.33
+     ]
+    ],
+    "hands": [
+     [
+      0.35,
+      0.58
+     ]
+    ]
+   },
+   "faceBox": [
+    0.12,
+    0.05,
+    0.74,
+    0.5
+   ],
+   "cuts": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "act": "tilt",
+   "shot": "close",
+   "side": "center",
+   "icon": null,
+   "key": [
+    "officially."
+   ]
+  },
+  {
+   "from": 100,
+   "to": 159,
+   "sprite": "sprites/WS_F_EMBARRASSED_DRAMA_UV_033.png",
+   "size": [
+    1184,
+    1776
+   ],
+   "anatomy": {
+    "head": [
+     0.1,
+     0.03,
+     0.88,
+     0.56
+    ],
+    "eyes": [
+     [
+      0.33,
+      0.4
+     ],
+     [
+      0.65,
+      0.4
+     ]
+    ],
+    "hands": [
+     [
+      0.48,
+      0.58
+     ]
+    ]
+   },
+   "faceBox": null,
+   "cuts": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "act": "shrink",
+   "shot": "close",
+   "side": "center",
+   "icon": "sweat",
+   "key": [
+    "three",
+    "ten,"
+   ]
+  },
+  {
+   "from": 159,
+   "to": 225,
+   "sprite": "sprites/WS_F_SMUG_SWAT_UV_157.png",
+   "size": [
+    812,
+    1535
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.03,
+     0.8,
+     0.32
+    ],
+    "eyes": [
+     [
+      0.65,
+      0.2
+     ]
+    ],
+    "hands": [
+     [
+      0.75,
+      0.5
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.9,
+     0.9,
+     1.0
+    ],
+    "tail": [
+     [
+      0.05,
+      0.35
+     ]
+    ]
+   },
+   "faceBox": null,
+   "cuts": [
+    "bottom",
+    "left"
+   ],
+   "act": "lean",
+   "shot": "medium",
+   "side": "right",
+   "icon": "sparkle",
+   "key": [
+    "talent."
+   ]
+  },
+  {
+   "from": 225,
+   "to": 280,
+   "sprite": "sprites/WS_F_SURPRISED_JUMP_UV_133.png",
+   "size": [
+    864,
+    1536
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.09,
+     0.68,
+     0.3
+    ],
+    "eyes": [
+     [
+      0.42,
+      0.22
+     ],
+     [
+      0.58,
+      0.22
+     ]
+    ],
+    "hands": [
+     [
+      0.04,
+      0.08
+     ],
+     [
+      0.92,
+      0.04
+     ]
+    ],
+    "legs": [
+     0.25,
+     0.68,
+     0.75,
+     0.9
+    ],
+    "feet": [
+     [
+      0.35,
+      0.75
+     ]
+    ],
+    "tail": [
+     [
+      0.34,
+      0.97
+     ]
+    ]
+   },
+   "faceBox": null,
+   "cuts": [
+    "left",
+    "right"
+   ],
+   "act": "hop",
+   "shot": "wide",
+   "side": "center",
+   "icon": "!",
+   "key": [
+    "tingling,"
+   ]
+  },
+  {
+   "from": 280,
+   "to": 375,
+   "sprite": "sprites/WS_F_THINK_CALM_UV_036.png",
+   "size": [
+    1184,
+    1767
+   ],
+   "anatomy": {
+    "head": [
+     0.15,
+     0.03,
+     0.88,
+     0.57
+    ],
+    "eyes": [
+     [
+      0.38,
+      0.42
+     ],
+     [
+      0.65,
+      0.42
+     ]
+    ],
+    "hands": [
+     [
+      0.5,
+      0.62
+     ]
+    ]
+   },
+   "faceBox": null,
+   "cuts": [
+    "bottom",
+    "left",
+    "right"
+   ],
+   "act": "tilt",
+   "shot": "close",
+   "side": "center",
+   "icon": "bulb",
+   "key": [
+    "exactly"
+   ]
+  },
+  {
+   "from": 375,
+   "to": 450,
+   "sprite": "sprites/WS_F_ANGRY_KICK_UV_198.png",
+   "size": [
+    1460,
+    1536
+   ],
+   "anatomy": {
+    "head": [
+     0.38,
+     0.02,
+     0.56,
+     0.2
+    ],
+    "eyes": [
+     [
+      0.5,
+      0.15
+     ]
+    ],
+    "hands": [
+     [
+      0.49,
+      0.27
+     ],
+     [
+      0.1,
+      0.42
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.25,
+     1.0,
+     1.0
+    ],
+    "feet": [
+     [
+      0.98,
+      0.24
+     ],
+     [
+      0.38,
+      0.98
+     ]
+    ],
+    "tail": [
+     [
+      0.06,
+      0.98
+     ]
+    ]
+   },
+   "faceBox": null,
+   "cuts": [
+    "left"
+   ],
+   "act": "shake",
+   "shot": "wide",
+   "side": "left",
+   "icon": "anger",
+   "key": [
+    "wrong,"
+   ]
+  },
+  {
+   "from": 450,
+   "to": 487,
+   "sprite": "sprites/CU_F_HAPPY_UV_002.png",
+   "size": [
+    1076,
+    1872
+   ],
+   "anatomy": {
+    "head": [
+     0.0,
+     0.0,
+     0.95,
+     0.68
+    ],
+    "eyes": [
+     [
+      0.08,
+      0.42
+     ],
+     [
+      0.58,
+      0.42
+     ]
+    ],
+    "hands": [
+     [
+      0.55,
+      0.68
+     ]
+    ]
+   },
+   "faceBox": [
+    0.0,
+    0.1,
+    0.75,
+    0.62
+   ],
+   "cuts": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+   ],
+   "act": "pop",
+   "shot": "close",
+   "side": "center",
+   "icon": null,
+   "key": [
+    "me."
+   ]
+  },
+  {
+   "from": 487,
+   "to": 592,
+   "sprite": "sprites/WS_F_PEACE_WINK_UV_131.png",
+   "size": [
+    863,
+    1536
+   ],
+   "anatomy": {
+    "head": [
+     0.3,
+     0.04,
+     0.68,
+     0.29
+    ],
+    "eyes": [
+     [
+      0.43,
+      0.18
+     ],
+     [
+      0.6,
+      0.18
+     ]
+    ],
+    "hands": [
+     [
+      0.25,
+      0.2
+     ],
+     [
+      0.95,
+      0.58
+     ]
+    ],
+    "legs": [
+     0.3,
+     0.62,
+     0.7,
+     1.0
+    ],
+    "feet": [
+     [
+      0.45,
+      0.98
+     ],
+     [
+      0.68,
+      0.95
+     ]
+    ],
+    "tail": [
+     [
+      0.18,
+      0.95
+     ]
+    ]
+   },
+   "faceBox": null,
+   "cuts": [
+    "top",
+    "bottom",
+    "right"
+   ],
+   "act": "bounce",
+   "shot": "medium",
+   "side": "center",
+   "icon": "?",
+   "key": []
+  }
+ ],
+ "voice": "voice.mp3"
+}
