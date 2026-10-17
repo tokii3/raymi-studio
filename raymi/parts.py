@@ -35,6 +35,19 @@ def _run(cmd: list[str]) -> None:
         raise RuntimeError(p.stderr[-2000:])
 
 
+def audio_source(job_dir: Path, props: dict) -> tuple[Path | None, list[str]]:
+    """Which sound goes under the picture: a lore Short's voice, or a music video's song window (props.audio)."""
+    a = props.get("audio")
+    if a:
+        src = job_dir / a["file"]                    # staged copy (cloud workers) ...
+        if not src.is_file():
+            src = Path(__file__).resolve().parents[1] / a["src"]   # ... or the song in its own job folder
+        return src, ["-ss", f"{a['from']:.3f}", "-t", f"{a['to'] - a['from']:.3f}"]
+    if props.get("voice"):
+        return job_dir / props["voice"], []
+    return None, []
+
+
 def assemble(job_dir: Path, parts_dir: Path) -> Path:
     """part_<k>.mp4 (k = 0..n-1, no gaps) -> out/raw.mp4 with the job's audio under it."""
     parts = sorted(parts_dir.glob("part_*.mp4"), key=lambda p: int(re.sub(r"\D", "", p.stem)))
@@ -49,10 +62,11 @@ def assemble(job_dir: Path, parts_dir: Path) -> Path:
     _run(["ffmpeg", "-y", "-hide_banner", "-f", "concat", "-safe", "0", "-i", str(listing), "-c", "copy", str(video)])
     props = json.loads((out / "props.json").read_text(encoding="utf-8"))
     raw = out / "raw.mp4"
-    audio = job_dir / props["voice"] if props.get("voice") else None
+    audio, trim = audio_source(job_dir, props)
     if audio and audio.is_file():
-        # audio padded with silence to the picture's length (the plan's tail after the last word)
-        _run(["ffmpeg", "-y", "-hide_banner", "-i", str(video), "-i", str(audio), "-map", "0:v", "-map", "1:a",
+        # audio padded with silence to the picture's length (the plan's tail after the last word); a music video
+        # takes its window of the song (-ss / -t before the input = sample exact)
+        _run(["ffmpeg", "-y", "-hide_banner", "-i", str(video), *trim, "-i", str(audio), "-map", "0:v", "-map", "1:a",
               "-c:v", "copy", "-af", "apad", "-shortest", "-c:a", "aac", "-b:a", "192k", str(raw)])
     else:
         video.replace(raw)

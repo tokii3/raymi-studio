@@ -6,7 +6,9 @@
   "scripts": {
     "studio": "remotion studio src/index.ts --public-dir public",
     "render": "node render.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/check.test.mjs",
+    "guard": "node guard.mjs"
   },
   "dependencies": {
     "@react-three/fiber": "8.17.10",
@@ -22,6 +24,7 @@
   "devDependencies": {
     "@types/react": "18.3.12",
     "@types/three": "0.169.0",
+    "esbuild": "0.28.1",
     "typescript": "5.6.3"
   }
 }

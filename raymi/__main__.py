@@ -8,6 +8,7 @@
   check  <job>          plan + words against every hard rule (exit 1 on errors)
   props  <job>          write jobs/<job>/out/props.json for the renderer
   finish <job>          loudness-normalise out/raw.mp4 -> out/final.mp4, then QC + contact sheet
+  timeline <job> [mv|short]  shots.json (shooting script data) -> out/props.json for the MV / MVShort film
   analyze <job>         song tools (cloud, heavy): vocal stem, word-timed lyrics, song map (raymi/song.py)
   lyrics <job>          re-align lyrics_timed.json locally from the cached whisper_words.json + vocals.ogg
 """
@@ -67,6 +68,30 @@ def main(argv: list[str]) -> int:
         res = make_voice(plan["script"], d)
         print(f"voice: {res['duration']} s, timing from {res['timing_source']}")
         return 0
+    if cmd == "timeline":    # timeline <job> [mv|short] -> out/props.json for the film compositions
+        from . import timeline as T
+
+        fmt = argv[2] if len(argv) > 2 else "mv"
+        props, errors, warns = T.compile_job(job, fmt)
+        for w in warns:
+            print("WARN ", w)
+        for e in errors:
+            print("ERROR", e)
+        if errors:
+            print("timeline: FAIL")
+            return 1
+        (out / "props.json").write_text(json.dumps(props, indent=1, ensure_ascii=False), encoding="utf-8")
+        print(f"timeline ({fmt}): {len(props['shots'])} shots, {props['durationInFrames']} frames -> {out / 'props.json'}")
+        return 0
+    if cmd == "finish" and not (d / "plan.json").is_file():   # a film job: expected length from its props
+        props = json.loads((out / "props.json").read_text(encoding="utf-8"))
+        raw, final = out / "raw.mp4", out / "final.mp4"
+        qc.normalize(raw, final)
+        res = qc.run(final, props["durationInFrames"] / props["fps"], landscape=props["width"] > props["height"])
+        qc.sheet(final, out / "sheet.jpg")
+        (out / "qc.json").write_text(json.dumps(res, indent=1), encoding="utf-8")
+        print(json.dumps(res, indent=1))
+        return 0 if res["pass"] else 1
     plan, words = P.load(job)
     if cmd == "check":
         errors, warns = P.check(plan, words)

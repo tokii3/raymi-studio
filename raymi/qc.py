@@ -47,7 +47,7 @@ def sheet(path: Path, dst: Path, fps: float = 2.0) -> None:
           f"fps={fps},scale=270:-1,tile=8x5:padding=4:color=0x14141a", "-frames:v", "1", str(dst)])
 
 
-def run(video: Path, expect_s: float | None = None) -> dict:
+def run(video: Path, expect_s: float | None = None, landscape: bool = False) -> dict:
     info = probe(video)
     v = next(s for s in info["streams"] if s["codec_type"] == "video")
     a = [s for s in info["streams"] if s["codec_type"] == "audio"]
@@ -55,8 +55,13 @@ def run(video: Path, expect_s: float | None = None) -> dict:
     res = {"file": video.name, "width": v["width"], "height": v["height"], "duration": round(dur, 2),
            "fps": v.get("r_frame_rate"), "checks": {}}
     c = res["checks"]
-    c["portrait_9x16"] = abs(v["width"] / v["height"] - 9 / 16) < 0.01
-    res["full_res"] = v["width"] == 1080 and v["height"] == 1920   # drafts render at half size
+    ar = v["width"] / v["height"]
+    if landscape:
+        c["landscape_16x9"] = abs(ar - 16 / 9) < 0.01
+        res["full_res"] = v["width"] == 1920 and v["height"] == 1080
+    else:
+        c["portrait_9x16"] = abs(ar - 9 / 16) < 0.01
+        res["full_res"] = v["width"] == 1080 and v["height"] == 1920   # drafts render at half size
     c["has_audio"] = bool(a)
     if a:
         m = loudness(video)

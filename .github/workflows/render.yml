@@ -3,7 +3,8 @@ name: render
 # Renders Raymi videos in the cloud, in parallel, so toki's PC stays free.
 # Start a render (any of these):
 # - push jobs/<job>/plan.json             -> that job renders as a draft
-# - push jobs/<job>/render.json           -> {"quality": "draft" | "final"} (works from any Claude session, no gh needed)
+# - push jobs/<job>/render.json           -> {"quality": "draft" | "final", "format": "mv" | "short"} (works from any
+#                                            Claude session, no gh needed; a job with shots.json renders the film)
 # - Actions tab -> "render" -> Run workflow -> job + draft/final
 # Flow: prepare (tests, voice, check, props, frame ranges) -> render (one worker per frame range, up to 20 at once)
 #       -> assemble (join parts, audio once, loudness, QC, sheet) -> a pre-release with final.mp4 + sheet + qc.json
@@ -57,7 +58,8 @@ jobs:
         id: which
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            JOBS="${{ github.event.inputs.job }}"; QUALITY="${{ github.event.inputs.quality }}"
+            JOBS="${{ github.event.inputs.job }}"; QUALITY="${{ github.event.inputs.quality }}"; FORMAT=mv
+            [ -f "jobs/$JOBS/render.json" ] && FORMAT=$(python -c "import json,sys;print(json.load(open(sys.argv[1])).get('format','mv'))" "jobs/$JOBS/render.json")
           else
             BEFORE="${{ github.event.before }}"
             if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
@@ -70,9 +72,11 @@ jobs:
               Q=$(python -c "import json,sys;print(json.load(open(sys.argv[1])).get('quality','draft'))" "$F")
               [ "$Q" = "final" ] && QUALITY=final
             done
+            FORMAT=$(for F in $(echo "$CHANGED" | grep render.json || true); do python -c "import json,sys;print(json.load(open(sys.argv[1])).get('format','mv'))" "$F"; done | head -1)
           fi
           echo "jobs=$JOBS" >> "$GITHUB_OUTPUT"
           echo "quality=$QUALITY" >> "$GITHUB_OUTPUT"
+          echo "format=${FORMAT:-mv}" >> "$GITHUB_OUTPUT"
           echo "Rendering: $JOBS ($QUALITY)" >> "$GITHUB_STEP_SUMMARY"
       - name: Voice, check, props, frame ranges
         id: split
@@ -87,6 +91,8 @@ jobs:
               fi
               python -m raymi check "$J"
               python -m raymi props "$J"
+            elif [ -f "jobs/$J/shots.json" ]; then
+              python -m raymi timeline "$J" "${{ steps.which.outputs.format }}"   # a film job (MV / its Short)
             fi
             [ -f "jobs/$J/out/props.json" ] || { echo "::error::$J has no props.json"; exit 1; }
             M=$(python -c "import json,sys;m=json.loads(sys.argv[1]);p=json.loads(sys.argv[3]);m+=[dict(x,job=sys.argv[2]) for x in p];print(json.dumps(m))" \
@@ -106,8 +112,10 @@ jobs:
         run: |
           for J in ${{ steps.which.outputs.jobs }}; do
             mkdir -p "prep/$J/out" && cp "jobs/$J/out/props.json" "prep/$J/out/"
-            V=$(python -c "import json,sys;print(json.load(open(sys.argv[1])).get('voice',''))" "jobs/$J/out/props.json")
+            V=$(python -c "import json,sys;print(json.load(open(sys.argv[1])).get('voice') or '')" "jobs/$J/out/props.json")
             [ -n "$V" ] && cp "jobs/$J/$V" "prep/$J/"
+            A=$(python -c "import json,sys;a=json.load(open(sys.argv[1])).get('audio');print(a['src']+' '+a['file'] if a else '')" "jobs/$J/out/props.json")
+            [ -n "$A" ] && cp $(echo $A | cut -d' ' -f1) "prep/$J/$(echo $A | cut -d' ' -f2)"
           done
       - uses: actions/upload-artifact@v4
         if: steps.which.outputs.jobs != ''
