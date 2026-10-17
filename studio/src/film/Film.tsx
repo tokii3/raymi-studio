@@ -80,7 +80,7 @@ export const Film: React.FC<FilmProps> = (props) => {
               glow={shot.opts.glow ? String(shot.opts.glow) : undefined} />
             {crownAt ? (
               <group position={[crownAt.x, crownAt.y, crownAt.z]} rotation={[0, Math.atan2(camPos[0] - crownAt.x, camPos[2] - crownAt.z), 0]}>
-                <BottleCap pos={[0, 0, 0]} rot={[0.5, 0, -0.2]} scale={1.6} />
+                <BottleCap pos={[0, 0.02, 0]} rot={[0.75, 0, -0.22]} scale={0.95} c="#d9a63a" top="#5b2a91" />
               </group>
             ) : null}
             {shot.lyrics ? <Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} /> : null}

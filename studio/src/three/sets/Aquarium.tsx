@@ -109,7 +109,7 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
         drawText(ctx, led, w / 2, h / 2, h * 0.62, '#ffcf6b', {maxW: w * 0.92});
       }} />
       {opts.warning !== false ? (
-        <Sign id="warn" pos={[3.6, 0.55, 1.62]} size={[0.9, 0.5]} frame="#1b1430" paint={(ctx, w, h) => {
+        <Sign id="warn" pos={[2.7, 0.55, 1.62]} size={[0.9, 0.5]} frame="#1b1430" paint={(ctx, w, h) => {
           ctx.fillStyle = '#ffd34d'; ctx.fillRect(0, 0, w, h);
           ctx.fillStyle = '#1b1430'; ctx.fillRect(0, 0, w, h * 0.08); ctx.fillRect(0, h * 0.92, w, h * 0.08);
           drawText(ctx, 'DO NOT TAP', w / 2, h * 0.36, h * 0.27, '#1b1430', {maxW: w * 0.9});

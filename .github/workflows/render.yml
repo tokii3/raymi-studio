@@ -201,6 +201,7 @@ jobs:
             mkdir -p "p/$J" && cp allparts/part-"$J"-*/part_*.mp4 "p/$J/"
             python -m raymi assemble "$J" "p/$J"
             python -m raymi finish "$J" || echo "$J: QC FAILED - see qc.json" >> "$GITHUB_STEP_SUMMARY"
+            python -m raymi screen "$J" || echo "$J: critic kit failed" >> "$GITHUB_STEP_SUMMARY"
           done
       - name: Publish (release + renders branch + status)
         env:
@@ -217,6 +218,7 @@ jobs:
                 --prerelease --title "$J (${{ needs.prepare.outputs.quality }}, run ${{ github.run_number }})" \
                 --notes "QC: $(python -c "import json;print('PASS' if json.load(open('$O/qc.json'))['pass'] else 'FAIL')")"
               cp "$O/qc.json" "$O/sheet.jpg" "$O/preview.mp4" "$O/props.json" "/tmp/reports/$J/"
+              [ -d "$O/kit" ] && cp -r "$O/kit" "/tmp/reports/$J/kit"
             fi
             python -c "import json,sys;json.dump({'run':int(sys.argv[1]),'quality':sys.argv[2],'state':sys.argv[3],'release':'render-'+sys.argv[4]+'-'+sys.argv[1],'commit':sys.argv[5]},open(sys.argv[6],'w'),indent=1)" \
               "${{ github.run_number }}" "${{ needs.prepare.outputs.quality }}" "$STATE" "$J" "${{ github.sha }}" "/tmp/reports/$J/status.json"
@@ -227,5 +229,6 @@ jobs:
           if git rev-parse -q --verify origin/renders > /dev/null; then git worktree add -q -B renders /tmp/rb origin/renders;
           else git worktree add -q --orphan -b renders /tmp/rb; fi
           cd /tmp/rb
+          for J in ${{ needs.prepare.outputs.jobs }}; do rm -rf "reports/$J/kit"; done
           mkdir -p reports && cp -r /tmp/reports/* reports/
           git add reports && git commit -qm "reports run ${{ github.run_number }}" && git push -q origin renders
