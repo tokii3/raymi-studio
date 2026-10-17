@@ -1,0 +1,33 @@
+{
+ "format": "mv",
+ "frames": [
+  86,
+  254,
+  345,
+  504,
+  672,
+  795,
+  869,
+  274,
+  417,
+  591,
+  754,
+  836
+ ],
+ "names": [
+  "set_aquarium__lyrics_glass",
+  "set_cardtable__lyrics_card",
+  "set_weather__lyrics_ticker",
+  "raymi_in_space__crown__lyrics_sign",
+  "lyrics_float",
+  "lyrics_stamp",
+  "raymi_glow__weather_flood",
+  "transition_whip",
+  "transition_bubbles",
+  "transition_ink",
+  "transition_pass",
+  "transition_flash"
+ ],
+ "scale": 0.5,
+ "to": "catalog"
+}
