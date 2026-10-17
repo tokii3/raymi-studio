@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import {AbsoluteFill, Audio, cancelRender, continueRender, delayRender, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import React from 'react';
+import {AbsoluteFill, Audio, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {useRaymiFont} from './font';
 import {World} from './World';
 import {Raymi} from './Raymi';
 import {ReactionIcon} from './Icons';
@@ -7,15 +8,6 @@ import {Captions, Stamp} from './Text';
 import {headOnScreen, place} from './framing';
 import {grainTile} from './textures';
 import type {ShortProps} from './types';
-
-// The brand font must load or the render fails loudly - never a silent fallback font.
-const useRaymiFont = () => {
-  const [handle] = useState(() => delayRender('Raymi font'));
-  useEffect(() => {
-    const face = new FontFace('Raymi', `url(${staticFile('fonts/Raymi-Regular.ttf')})`);
-    face.load().then((f) => { (document.fonts as unknown as {add: (x: FontFace) => void}).add(f); continueRender(handle); }).catch((e) => cancelRender(e));
-  }, [handle]);
-};
 
 /** Top of a text block of height h: the preferred top unless it overlaps the head box (with camera-zoom margin). */
 function freeTop(hb: number[], pref: number, h: number, H: number): number {
