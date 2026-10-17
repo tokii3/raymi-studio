@@ -1,5 +1,9 @@
 """python -m raymi <command> <job>
 
+  new    <job> --kind mv|lore   writers' room: job folder with the step templates
+  next   <job>          writers' room: which step is open, what to read first
+  parts  <job> draft|final   JSON frame ranges for the parallel render
+  assemble <job> <dir>  join part_<k>.mp4 + lay the audio under them -> out/raw.mp4
   voice  <job>          edge-tts -> jobs/<job>/voice.mp3 + words.json (needs internet)
   check  <job>          plan + words against every hard rule (exit 1 on errors)
   props  <job>          write jobs/<job>/out/props.json for the renderer
@@ -20,6 +24,24 @@ def main(argv: list[str]) -> int:
         print(__doc__)
         return 2
     cmd, job = argv[0], argv[1]
+    if cmd == "parts":       # parts <job> draft|final -> JSON matrix for the parallel render
+        from . import parts
+
+        print(json.dumps(parts.matrix(P.job_dir(job) / "out" / "props.json", argv[2] if len(argv) > 2 else "draft")))
+        return 0
+    if cmd == "assemble":    # assemble <job> <parts_dir> -> out/raw.mp4
+        from . import parts
+
+        print("raw ->", parts.assemble(P.job_dir(job), Path(argv[2])))
+        return 0
+    if cmd in ("new", "next"):
+        from . import room
+
+        if cmd == "new":
+            kind = argv[argv.index("--kind") + 1] if "--kind" in argv else "mv"
+            print("created", room.new(job, kind))
+        print(room.next_step(job))
+        return 0
     d = P.job_dir(job)
     out = d / "out"
     out.mkdir(exist_ok=True)

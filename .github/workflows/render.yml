@@ -1,10 +1,13 @@
 name: render
 
-# Renders Raymi videos in the cloud so toki's PC stays free.
-# - push a jobs/<job>/plan.json  -> that job renders as a draft
+# Renders Raymi videos in the cloud, in parallel, so toki's PC stays free.
+# Start a render (any of these):
+# - push jobs/<job>/plan.json             -> that job renders as a draft
+# - push jobs/<job>/render.json           -> {"quality": "draft" | "final"} (works from any Claude session, no gh needed)
 # - Actions tab -> "render" -> Run workflow -> job + draft/final
-# Results: a pre-release "render-<job>-<run>" with final.mp4 + sheet.jpg + qc.json (downloadable on the phone),
-# plus reports/<job>/ on the branch `renders` (qc.json, sheet.jpg, preview) for Claude sessions to read.
+# Flow: prepare (tests, voice, check, props, frame ranges) -> render (one worker per frame range, up to 20 at once)
+#       -> assemble (join parts, audio once, loudness, QC, sheet) -> a pre-release with final.mp4 + sheet + qc.json
+#       and reports/<job>/ on branch `renders` (+ status.json) for Claude sessions to read with git.
 
 on:
   workflow_dispatch:
@@ -19,7 +22,7 @@ on:
         default: draft
   push:
     branches: [main]
-    paths: ["jobs/*/plan.json"]
+    paths: ["jobs/*/plan.json", "jobs/*/render.json"]
 
 permissions:
   contents: write
@@ -29,98 +32,190 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  render:
+  prepare:
     runs-on: ubuntu-24.04
-    timeout-minutes: 90
+    timeout-minutes: 30
+    outputs:
+      matrix: ${{ steps.split.outputs.matrix }}
+      jobs: ${{ steps.which.outputs.jobs }}
+      quality: ${{ steps.which.outputs.quality }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-          cache: npm
-          cache-dependency-path: studio/package-lock.json
-
       - name: Tools
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
           pip install -q -r requirements.txt
-          cd studio && npm ci --no-audit --no-fund && npx remotion browser ensure
-
       - name: Tests (nothing renders when a guard is broken)
         run: python -m pytest -q tests
-
       - name: Which jobs
-        id: jobs
+        id: which
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            JOBS="${{ github.event.inputs.job }}"
-            QUALITY="${{ github.event.inputs.quality }}"
+            JOBS="${{ github.event.inputs.job }}"; QUALITY="${{ github.event.inputs.quality }}"
           else
             BEFORE="${{ github.event.before }}"
             if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
-              BEFORE=$(git rev-parse -q --verify HEAD~1 || git hash-object -t tree /dev/null)   # first commit: diff against empty tree
+              BEFORE=$(git rev-parse -q --verify HEAD~1 || git hash-object -t tree /dev/null)
             fi
-            JOBS=$(git diff --name-only "$BEFORE" HEAD -- 'jobs/*/plan.json' | cut -d/ -f2 | sort -u | tr '\n' ' ')
+            CHANGED=$(git diff --name-only "$BEFORE" HEAD -- 'jobs/*/plan.json' 'jobs/*/render.json')
+            JOBS=$(echo "$CHANGED" | cut -d/ -f2 | sort -u | tr '\n' ' ')
             QUALITY=draft
+            for F in $(echo "$CHANGED" | grep render.json || true); do
+              Q=$(python -c "import json,sys;print(json.load(open(sys.argv[1])).get('quality','draft'))" "$F")
+              [ "$Q" = "final" ] && QUALITY=final
+            done
           fi
           echo "jobs=$JOBS" >> "$GITHUB_OUTPUT"
           echo "quality=$QUALITY" >> "$GITHUB_OUTPUT"
           echo "Rendering: $JOBS ($QUALITY)" >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Render
-        if: steps.jobs.outputs.jobs != ''
-        env:
-          QUALITY: ${{ steps.jobs.outputs.quality }}
+      - name: Voice, check, props, frame ranges
+        id: split
+        if: steps.which.outputs.jobs != ''
         run: |
           set -e
-          for J in ${{ steps.jobs.outputs.jobs }}; do
-            echo "::group::$J"
-            if [ ! -f "jobs/$J/voice.mp3" ] || [ ! -f "jobs/$J/words.json" ] || grep -q PLATZHALTER "jobs/$J/words.json"; then
-              python -m raymi voice "$J"
+          M="[]"
+          for J in ${{ steps.which.outputs.jobs }}; do
+            if [ -f "jobs/$J/plan.json" ]; then
+              if [ ! -f "jobs/$J/voice.mp3" ] || [ ! -f "jobs/$J/words.json" ] || grep -q PLATZHALTER "jobs/$J/words.json"; then
+                python -m raymi voice "$J"
+              fi
+              python -m raymi check "$J"
+              python -m raymi props "$J"
             fi
-            python -m raymi check "$J"
-            python -m raymi props "$J"
-            FLAG=""; [ "$QUALITY" = "draft" ] && FLAG="--draft"
-            START=$(date +%s)
-            (cd studio && node render.mjs "$J" $FLAG)
-            echo "$J: render $(( $(date +%s) - START )) s" >> "$GITHUB_STEP_SUMMARY"
-            python -m raymi finish "$J" || echo "$J: QC FAILED - see qc.json" >> "$GITHUB_STEP_SUMMARY"
-            echo "::endgroup::"
+            [ -f "jobs/$J/out/props.json" ] || { echo "::error::$J has no props.json"; exit 1; }
+            M=$(python -c "import json,sys;m=json.loads(sys.argv[1]);p=json.loads(sys.argv[3]);m+=[dict(x,job=sys.argv[2]) for x in p];print(json.dumps(m))" \
+                "$M" "$J" "$(python -m raymi parts "$J" ${{ steps.which.outputs.quality }})")
           done
-
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+          echo "Parts: $(python -c "import json,sys;print(len(json.loads(sys.argv[1])))" "$M")" >> "$GITHUB_STEP_SUMMARY"
       - name: Keep the voice take (re-renders reuse the same take)
-        if: steps.jobs.outputs.jobs != ''
+        if: steps.which.outputs.jobs != ''
         run: |
           git config user.name "raymi-render-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add jobs/*/voice.mp3 jobs/*/words.json
-          git diff --cached --quiet || (git commit -m "voice take for ${{ steps.jobs.outputs.jobs }} [skip ci]" && git pull --rebase -q && git push -q)
+          git add jobs/*/voice.mp3 jobs/*/words.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "voice take for ${{ steps.which.outputs.jobs }} [skip ci]" && git pull --rebase -q && git push -q)
+      - name: Stage what the workers need (prep/<job>/... so the artifact keeps the job folder level)
+        if: steps.which.outputs.jobs != ''
+        run: |
+          for J in ${{ steps.which.outputs.jobs }}; do
+            mkdir -p "prep/$J/out" && cp "jobs/$J/out/props.json" "prep/$J/out/"
+            V=$(python -c "import json,sys;print(json.load(open(sys.argv[1])).get('voice',''))" "jobs/$J/out/props.json")
+            [ -n "$V" ] && cp "jobs/$J/$V" "prep/$J/"
+          done
+      - uses: actions/upload-artifact@v4
+        if: steps.which.outputs.jobs != ''
+        with:
+          name: prep
+          path: prep/
+          if-no-files-found: error
+          retention-days: 3
 
-      - name: Publish (release + renders branch)
-        if: steps.jobs.outputs.jobs != ''
+  render:
+    needs: prepare
+    if: needs.prepare.outputs.jobs != ''
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    strategy:
+      fail-fast: true
+      max-parallel: 20
+      matrix:
+        include: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Node modules + render browser (cached)
+        id: nm
+        uses: actions/cache@v4
+        with:
+          path: studio/node_modules
+          key: nm-${{ runner.os }}-${{ hashFiles('studio/package-lock.json') }}-v1
+      - name: Install
+        if: steps.nm.outputs.cache-hit != 'true'
+        run: cd studio && npm ci --no-audit --no-fund
+      - name: Browser
+        run: cd studio && npx remotion browser ensure
+      - uses: actions/download-artifact@v4
+        with:
+          name: prep
+          path: jobs
+      - name: Render frames ${{ matrix.frames }} of ${{ matrix.job }}
+        run: |
+          FLAG=""; [ "${{ needs.prepare.outputs.quality }}" = "draft" ] && FLAG="--draft"
+          mkdir -p parts
+          START=$(date +%s)
+          (cd studio && node render.mjs "${{ matrix.job }}" $FLAG --frames ${{ matrix.frames }} --muted --out ../parts/part_${{ matrix.part }}.mp4)
+          echo "${{ matrix.job }} part ${{ matrix.part }} (${{ matrix.frames }}): $(( $(date +%s) - START )) s" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: part-${{ matrix.job }}-${{ matrix.part }}
+          path: parts/part_${{ matrix.part }}.mp4
+          if-no-files-found: error
+          retention-days: 3
+
+  assemble:
+    needs: [prepare, render]
+    if: always() && needs.prepare.outputs.jobs != ''
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: prep
+          path: jobs
+      - uses: actions/download-artifact@v4
+        if: needs.render.result == 'success'
+        with:
+          pattern: part-*
+          path: allparts
+      - name: Join, loudness, QC
+        if: needs.render.result == 'success'
+        run: |
+          set -e
+          for J in ${{ needs.prepare.outputs.jobs }}; do
+            mkdir -p "p/$J" && cp allparts/part-"$J"-*/part_*.mp4 "p/$J/"
+            python -m raymi assemble "$J" "p/$J"
+            python -m raymi finish "$J" || echo "$J: QC FAILED - see qc.json" >> "$GITHUB_STEP_SUMMARY"
+          done
+      - name: Publish (release + renders branch + status)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          for J in ${{ steps.jobs.outputs.jobs }}; do
-            O="jobs/$J/out"
-            [ -f "$O/final.mp4" ] || continue
-            ffmpeg -y -loglevel error -i "$O/final.mp4" -vf scale=360:-2 -c:v libx264 -crf 30 -c:a aac -b:a 64k "$O/preview.mp4"
-            gh release create "render-$J-${{ github.run_number }}" "$O/final.mp4" "$O/sheet.jpg" "$O/qc.json" \
-              --prerelease --title "$J (${{ steps.jobs.outputs.quality }}, run ${{ github.run_number }})" \
-              --notes "QC: $(python -c "import json;print('PASS' if json.load(open('$O/qc.json'))['pass'] else 'FAIL')")"
-            mkdir -p "/tmp/reports/$J"
-            cp "$O/qc.json" "$O/sheet.jpg" "$O/preview.mp4" "$O/props.json" "/tmp/reports/$J/"
+          mkdir -p /tmp/reports
+          for J in ${{ needs.prepare.outputs.jobs }}; do
+            O="jobs/$J/out"; mkdir -p "/tmp/reports/$J"
+            STATE=failed
+            if [ -f "$O/final.mp4" ]; then
+              STATE=done
+              ffmpeg -y -loglevel error -i "$O/final.mp4" -vf scale=360:-2 -c:v libx264 -crf 30 -c:a aac -b:a 64k "$O/preview.mp4"
+              gh release create "render-$J-${{ github.run_number }}" "$O/final.mp4" "$O/sheet.jpg" "$O/qc.json" \
+                --prerelease --title "$J (${{ needs.prepare.outputs.quality }}, run ${{ github.run_number }})" \
+                --notes "QC: $(python -c "import json;print('PASS' if json.load(open('$O/qc.json'))['pass'] else 'FAIL')")"
+              cp "$O/qc.json" "$O/sheet.jpg" "$O/preview.mp4" "$O/props.json" "/tmp/reports/$J/"
+            fi
+            python -c "import json,sys;json.dump({'run':int(sys.argv[1]),'quality':sys.argv[2],'state':sys.argv[3],'release':'render-'+sys.argv[4]+'-'+sys.argv[1],'commit':sys.argv[5]},open(sys.argv[6],'w'),indent=1)" \
+              "${{ github.run_number }}" "${{ needs.prepare.outputs.quality }}" "$STATE" "$J" "${{ github.sha }}" "/tmp/reports/$J/status.json"
           done
+          git config user.name "raymi-render-bot"
+          git config user.email "actions@users.noreply.github.com"
           git fetch -q origin renders || true
-          # renders = an orphan branch with reports only (first run: an empty orphan worktree, no sprite checkout)
           if git rev-parse -q --verify origin/renders > /dev/null; then git worktree add -q -B renders /tmp/rb origin/renders;
           else git worktree add -q --orphan -b renders /tmp/rb; fi
           cd /tmp/rb

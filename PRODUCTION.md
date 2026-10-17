@@ -1,21 +1,39 @@
-# PRODUCTION - how a Raymi Short is made (one page)
+# PRODUCTION - how a Raymi video is made (one page)
 
-1. **Idea** (Claude): read `canon/10_kanal_puls*` (what works now), `canon/07_video_catalog.md` (no repeats),
-   `canon/series.json`. Pick a series and ONE claim viewers can disagree with.
-2. **Script** (Claude): spoken text only, in Raymi's voice (`canon/01_character.md`), numbers spelled out,
-   15-35 s for lore. Hook in the first sentence, a twist by second 4-5, payoff that loops into the start,
-   comment question at the end.
-3. **Plan** (Claude): `jobs/<date>_<slug>/plan.json` (copy the S0 test job as the format reference):
-   - `beats`: one per 2-4 s, keyed to a word index (`at_word`), each with a sprite whose expression fits THIS
-     line (`assets/catalog.json`, read the notes), `shot` (wide/medium/close/extreme), `side`, `act`
-     (pop/hop/tilt/lean/shake/slide_in/bounce/shrink/idle), optional `icon` and `key` words (drawn big in the
-     accent colour, the camera kicks on them).
-   - `look.world`: deep_sea / night_sky / sunset_reef / paper / screen - the place that fits the story.
-   - `hook.text` (<= 8 words, readable in under a second) and `cta.text` (a question).
-4. **Check locally if possible**: `python -m raymi check <job>` (the cloud runs it anyway).
-5. **Push** -> GitHub Actions renders a draft (voice, check, render, loudness, QC). Look at `reports/<job>/` on the
-   `renders` branch (sheet.jpg, qc.json) BEFORE telling toki; fix what fails.
-6. **toki watches the draft** (release on GitHub, phone is fine). Her notes -> plan changes -> re-render.
-7. **Final**: Actions -> render -> job + `final`. Upload texts follow `canon/12_titles_descriptions.md` and
-   `raymi/channel_rules.py`. toki uploads (API uploads of an unverified project stay private).
-8. **Learn**: one line in `canon/07_video_catalog.md`; a new reusable trick becomes a studio component.
+## Music video package (MV + Short)
+1. `python -m raymi new <date>_<slug> --kind mv` - creates `jobs/<job>/` with the writers' room templates.
+2. **Dossier** (`1_DOSSIER.md`): research the song (meaning of every line, what exists, the gap, who loves it),
+   download the official audio into the job, measure the song map. Nothing guessed.
+3. **Ideas** (`2_IDEAS.md` + `boards/`): three really different worlds with 3 key frames each -> toki picks one and
+   writes `approved: toki <date> <idea>`.
+4. **Treatment** (`3_TREATMENT.md`) at the depth of `knowledge/exemplars/lets-get-weird_TREATMENT.md` ->
+   script-critic (`.claude/agents/script-critic.md`) -> its answer verbatim in `reviews/treatment_<n>.md` until PASS.
+5. **Shooting script** (`4_SCRIPT.md`): every shot decided (time, set, camera, what Raymi does, lyric treatment,
+   transition, why) + the build list -> script-critic -> `reviews/script_<n>.md` until PASS.
+6. **Build** what the build list needs as reusable studio components (phase 2).
+7. **Pilot** with sound (a 20-40 s section) rendered in the cloud -> screening -> toki watches it.
+8. **Final** MV + Short (cut from the MV) in the cloud -> screening -> toki. Upload texts follow
+   `canon/12_titles_descriptions.md` + `raymi/channel_rules.py`; toki uploads.
+9. **Learn**: one line in `canon/07_video_catalog.md`, a section in `knowledge/CASEBOOK.md` (idea, verdict, why);
+   a new reusable trick is already a studio component.
+`python -m raymi next <job>` shows where a job stands at any time.
+
+## Lore Short
+`python -m raymi new <job> --kind lore` -> dossier (light: what works now, `canon/10_kanal_puls*`, catalog) -> 3 claims
+in `2_IDEAS.md` (toki picks) -> `plan.json` (format: `jobs/2026-10-17_s0-test`; beats keyed to word indexes, a sprite
+per beat whose expression fits the line, shot / side / act / icon / key words, `look.world`, `hook.text` <= 8 words,
+`cta.text` a question) -> `python -m raymi check <job>` -> push -> cloud draft.
+
+## Render (cloud, parallel - toki's PC stays free)
+- Start: push `jobs/<job>/plan.json` (draft), or push `jobs/<job>/render.json` = `{"quality": "draft"}` / `"final"`
+  (works from any Claude session, no gh needed), or Actions -> render -> Run workflow.
+- What happens: prepare (tests, voice, check, props, frame ranges: 240 frames per worker for drafts, 150 for finals,
+  max 20 workers) -> one worker per range renders muted -> assemble joins the parts, lays the audio under them once,
+  loudness -14 LUFS, QC, contact sheet.
+- Results: a pre-release `render-<job>-<run>` (final.mp4, sheet.jpg, qc.json - toki can open it on her phone) and
+  `reports/<job>/` on branch `renders` (status.json, qc.json, sheet.jpg, preview.mp4):
+  `git fetch origin renders && git show origin/renders:reports/<job>/status.json`.
+- Look at sheet + qc BEFORE telling toki; fix what fails. Free quota: 2,000 Actions minutes / month (private repo);
+  every worker pays its own setup (~2-3 min), so do not split short drafts finer than needed.
+- Layout check without a full render: `cd studio && node render.mjs <job> --draft` once, then
+  `node stills.mjs <job> 20,200,500`.

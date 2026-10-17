@@ -1,5 +1,7 @@
-// node render.mjs <job> [--draft]
+// node render.mjs <job> [--draft] [--frames a-b] [--muted] [--out file.mp4]
 // Builds a minimal public dir (font + only the sprites this job uses + its voice) and renders out/raw.mp4.
+// Parallel render: each worker renders one frame range --muted into its own file; `python -m raymi assemble`
+// joins the parts and lays the audio under them once (no AAC seams between parts).
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -10,6 +12,9 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const repo = path.resolve(here, '..');
 const job = process.argv[2];
 const draft = process.argv.includes('--draft');
+const muted = process.argv.includes('--muted');
+const arg = (k) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : null; };
+const frames = arg('--frames') || process.env.RAYMI_FRAMES || null;
 if (!job) throw new Error('usage: node render.mjs <job> [--draft]');
 const jobDir = fs.existsSync(job) ? path.resolve(job) : path.join(repo, 'jobs', job);
 const props = JSON.parse(fs.readFileSync(path.join(jobDir, 'out', 'props.json'), 'utf8'));
@@ -32,10 +37,10 @@ const composition = await selectComposition({serveUrl, id: 'Short', inputProps: 
 const t0 = Date.now();
 await renderMedia({
   serveUrl, composition, inputProps: props, codec: 'h264',
-  outputLocation: path.join(jobDir, 'out', 'raw.mp4'),
+  outputLocation: arg('--out') ? path.resolve(arg('--out')) : path.join(jobDir, 'out', 'raw.mp4'), muted,
   crf: draft ? 26 : 16, imageFormat: 'jpeg', jpegQuality: draft ? 80 : 95,
   scale: draft ? 0.5 : 1,
-  frameRange: process.env.RAYMI_FRAMES ? process.env.RAYMI_FRAMES.split('-').map(Number) : null,
+  frameRange: frames ? frames.split('-').map(Number) : null,
   concurrency: process.env.RAYMI_CONCURRENCY ? Number(process.env.RAYMI_CONCURRENCY) : null,
   browserExecutable: process.env.RAYMI_CHROME || null,
   chromiumOptions: {gl: 'swangle'},
