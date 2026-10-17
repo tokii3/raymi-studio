@@ -1,0 +1,1299 @@
+{
+ "fps": 30,
+ "source": {
+  "lyrics": "official text (YouTube description)",
+  "timing": "vocal stem: demucs htdemucs + faster-whisper word times, romaji letter match, snapped to vocal onsets"
+ },
+ "stats": {
+  "snapped": 75,
+  "measured": 4,
+  "interpolated": 27,
+  "words": 106
+ },
+ "lines": [
+  {
+   "i": 0,
+   "para": 0,
+   "text": "幽閉 利口 逝く前に",
+   "words": [
+    {
+     "w": "幽閉",
+     "roma": "yuhei",
+     "t0": 15.11,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 16.1,
+     "cut": 452
+    },
+    {
+     "w": "利口",
+     "roma": "riko",
+     "t0": 16.1,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 17.0,
+     "cut": 482
+    },
+    {
+     "w": "逝く",
+     "roma": "iku",
+     "t0": 17.0,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 17.68,
+     "cut": 509
+    },
+    {
+     "w": "前に",
+     "roma": "maeni",
+     "t0": 17.68,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 18.82,
+     "cut": 529
+    }
+   ],
+   "t0": 15.11,
+   "t1": 18.82,
+   "cut": 452
+  },
+  {
+   "i": 1,
+   "para": 0,
+   "text": "ユーヘイじゃ利口に難儀ダーリン",
+   "words": [
+    {
+     "w": "ユーヘイ",
+     "roma": "yuhei",
+     "t0": 18.82,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 19.9,
+     "cut": 563
+    },
+    {
+     "w": "じゃ",
+     "roma": "ja",
+     "t0": 19.9,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 20.39,
+     "cut": 596
+    },
+    {
+     "w": "利口に",
+     "roma": "rikoni",
+     "t0": 20.39,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 21.67,
+     "cut": 610
+    },
+    {
+     "w": "難儀",
+     "roma": "nangi",
+     "t0": 21.67,
+     "how": "snapped",
+     "conf": 0.6,
+     "t1": 22.06,
+     "cut": 649
+    },
+    {
+     "w": "ダーリン",
+     "roma": "darin",
+     "t0": 22.06,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 22.64,
+     "cut": 660
+    }
+   ],
+   "t0": 18.82,
+   "t1": 22.64,
+   "cut": 563
+  },
+  {
+   "i": 2,
+   "para": 1,
+   "text": "幽閉 ストップ 知ってないし",
+   "words": [
+    {
+     "w": "幽閉",
+     "roma": "yuhei",
+     "t0": 22.64,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 23.11,
+     "cut": 678
+    },
+    {
+     "w": "ストップ",
+     "roma": "sutoppu",
+     "t0": 23.11,
+     "how": "interpolated",
+     "conf": 0.14,
+     "t1": 23.71,
+     "cut": 692
+    },
+    {
+     "w": "知ってないし",
+     "roma": "shittenaishi",
+     "t0": 23.71,
+     "how": "snapped",
+     "conf": 0.33,
+     "t1": 24.24,
+     "cut": 710
+    }
+   ],
+   "t0": 22.64,
+   "t1": 24.24,
+   "cut": 678
+  },
+  {
+   "i": 3,
+   "para": 1,
+   "text": "勘弁にしといてなんて惨忍",
+   "words": [
+    {
+     "w": "勘弁にしといてなんて",
+     "roma": "kanbennishitoitenante",
+     "t0": 24.24,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 25.32,
+     "cut": 726
+    },
+    {
+     "w": "惨忍",
+     "roma": "zannin",
+     "t0": 25.32,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 26.04,
+     "cut": 758
+    }
+   ],
+   "t0": 24.24,
+   "t1": 26.04,
+   "cut": 726
+  },
+  {
+   "i": 4,
+   "para": 2,
+   "text": "人様願う欠片のアイロニ",
+   "words": [
+    {
+     "w": "人様願う",
+     "roma": "hitosamanegau",
+     "t0": 26.04,
+     "how": "snapped",
+     "conf": 0.54,
+     "t1": 27.52,
+     "cut": 780
+    },
+    {
+     "w": "欠片の",
+     "roma": "kakerano",
+     "t0": 27.52,
+     "how": "interpolated",
+     "conf": 0.25,
+     "t1": 28.39,
+     "cut": 824
+    },
+    {
+     "w": "アイロニ",
+     "roma": "aironi",
+     "t0": 28.39,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 29.11,
+     "cut": 850
+    }
+   ],
+   "t0": 26.04,
+   "t1": 29.11,
+   "cut": 780
+  },
+  {
+   "i": 5,
+   "para": 2,
+   "text": "だれもが願う無機質なような",
+   "words": [
+    {
+     "w": "だれもが",
+     "roma": "daremoga",
+     "t0": 29.11,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 30.05,
+     "cut": 872
+    },
+    {
+     "w": "願う",
+     "roma": "negau",
+     "t0": 30.05,
+     "how": "snapped",
+     "conf": 0.6,
+     "t1": 30.55,
+     "cut": 900
+    },
+    {
+     "w": "無機質なような",
+     "roma": "mukishitsunayona",
+     "t0": 30.55,
+     "how": "snapped",
+     "conf": 0.31,
+     "t1": 32.05,
+     "cut": 915
+    }
+   ],
+   "t0": 29.11,
+   "t1": 32.05,
+   "cut": 872
+  },
+  {
+   "i": 6,
+   "para": 2,
+   "text": "一足先に始めてたいような",
+   "words": [
+    {
+     "w": "一足先に",
+     "roma": "issokusakini",
+     "t0": 32.31,
+     "how": "snapped",
+     "conf": 0.33,
+     "t1": 33.46,
+     "cut": 968
+    },
+    {
+     "w": "始めてたいような",
+     "roma": "hajimetetaiyona",
+     "t0": 33.46,
+     "how": "snapped",
+     "conf": 0.53,
+     "t1": 34.9,
+     "cut": 1002
+    }
+   ],
+   "t0": 32.31,
+   "t1": 34.9,
+   "cut": 968
+  },
+  {
+   "i": 7,
+   "para": 2,
+   "text": "先が見えないヴァージンハッピーショー",
+   "words": [
+    {
+     "w": "先が",
+     "roma": "sakiga",
+     "t0": 34.9,
+     "how": "snapped",
+     "conf": 0.67,
+     "t1": 35.64,
+     "cut": 1046
+    },
+    {
+     "w": "見えない",
+     "roma": "mienai",
+     "t0": 35.64,
+     "how": "snapped",
+     "conf": 0.67,
+     "t1": 36.37,
+     "cut": 1068
+    },
+    {
+     "w": "ヴァージンハッピーショー",
+     "roma": "vajinhappisho",
+     "t0": 36.37,
+     "how": "snapped",
+     "conf": 0.85,
+     "t1": 37.87,
+     "cut": 1090
+    }
+   ],
+   "t0": 34.9,
+   "t1": 37.87,
+   "cut": 1046
+  },
+  {
+   "i": 8,
+   "para": 3,
+   "text": "無いの新たにお願い1つ",
+   "words": [
+    {
+     "w": "無いの",
+     "roma": "naino",
+     "t0": 40.78,
+     "how": "measured",
+     "conf": 0.8,
+     "t1": 41.42,
+     "cut": 1222
+    },
+    {
+     "w": "新たにお",
+     "roma": "aratanio",
+     "t0": 41.42,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 42.23,
+     "cut": 1241
+    },
+    {
+     "w": "願い",
+     "roma": "negai",
+     "t0": 42.23,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 43.19,
+     "cut": 1265
+    },
+    {
+     "w": "1つ",
+     "roma": "tsu",
+     "t0": 43.19,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 43.63,
+     "cut": 1294
+    }
+   ],
+   "t0": 40.78,
+   "t1": 43.63,
+   "cut": 1222
+  },
+  {
+   "i": 9,
+   "para": 3,
+   "text": "愛も変わらずおまけにワーニング ワーニング",
+   "words": [
+    {
+     "w": "愛も",
+     "roma": "aimo",
+     "t0": 43.63,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 44.32,
+     "cut": 1307
+    },
+    {
+     "w": "変わらずおまけに",
+     "roma": "kawarazuomakeni",
+     "t0": 44.32,
+     "how": "snapped",
+     "conf": 0.87,
+     "t1": 45.76,
+     "cut": 1328
+    },
+    {
+     "w": "ワーニング",
+     "roma": "waningu",
+     "t0": 45.76,
+     "how": "snapped",
+     "conf": 0.86,
+     "t1": 46.13,
+     "cut": 1371
+    },
+    {
+     "w": "ワーニング",
+     "roma": "waningu",
+     "t0": 46.13,
+     "how": "snapped",
+     "conf": 0.57,
+     "t1": 46.63,
+     "cut": 1382
+    }
+   ],
+   "t0": 43.63,
+   "t1": 46.63,
+   "cut": 1307
+  },
+  {
+   "i": 10,
+   "para": 4,
+   "text": "無いのあなたにお願い1つ",
+   "words": [
+    {
+     "w": "無いのあなたにお",
+     "roma": "nainoanatanio",
+     "t0": 46.63,
+     "how": "snapped",
+     "conf": 0.92,
+     "t1": 48.11,
+     "cut": 1397
+    },
+    {
+     "w": "願い",
+     "roma": "negai",
+     "t0": 48.11,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 49.08,
+     "cut": 1442
+    },
+    {
+     "w": "1つ",
+     "roma": "tsu",
+     "t0": 49.08,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 49.62,
+     "cut": 1471
+    }
+   ],
+   "t0": 46.63,
+   "t1": 49.62,
+   "cut": 1397
+  },
+  {
+   "i": 11,
+   "para": 4,
+   "text": "張り詰めた思い込め",
+   "words": [
+    {
+     "w": "張り",
+     "roma": "hari",
+     "t0": 49.62,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 50.1,
+     "cut": 1487
+    },
+    {
+     "w": "詰めた",
+     "roma": "tsumeta",
+     "t0": 50.1,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 50.62,
+     "cut": 1502
+    },
+    {
+     "w": "思い",
+     "roma": "omoi",
+     "t0": 50.62,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 51.33,
+     "cut": 1517
+    },
+    {
+     "w": "込め",
+     "roma": "kome",
+     "t0": 51.33,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 51.69,
+     "cut": 1538
+    }
+   ],
+   "t0": 49.62,
+   "t1": 51.69,
+   "cut": 1487
+  },
+  {
+   "i": 12,
+   "para": 5,
+   "text": "レフトサイド ライトサイド",
+   "words": [
+    {
+     "w": "レフトサイド",
+     "roma": "refutosaido",
+     "t0": 51.69,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 52.63,
+     "cut": 1549
+    },
+    {
+     "w": "ライトサイド",
+     "roma": "raitosaido",
+     "t0": 52.63,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 53.62,
+     "cut": 1577
+    }
+   ],
+   "t0": 51.69,
+   "t1": 53.62,
+   "cut": 1549
+  },
+  {
+   "i": 13,
+   "para": 5,
+   "text": "歯をむき出して パッパッパ",
+   "words": [
+    {
+     "w": "歯をむき",
+     "roma": "hawomuki",
+     "t0": 53.62,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 54.76,
+     "cut": 1607
+    },
+    {
+     "w": "出して",
+     "roma": "dashite",
+     "t0": 54.76,
+     "how": "snapped",
+     "conf": 0.71,
+     "t1": 55.74,
+     "cut": 1641
+    },
+    {
+     "w": "パッパッパ",
+     "roma": "pappappa",
+     "t0": 55.74,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 56.76,
+     "cut": 1671
+    }
+   ],
+   "t0": 53.62,
+   "t1": 56.76,
+   "cut": 1607
+  },
+  {
+   "i": 14,
+   "para": 5,
+   "text": "照れくさいね",
+   "words": [
+    {
+     "w": "照れくさいね",
+     "roma": "terekusaine",
+     "t0": 56.76,
+     "how": "measured",
+     "conf": 0.82,
+     "t1": 57.7,
+     "cut": 1701
+    }
+   ],
+   "t0": 56.76,
+   "t1": 57.7,
+   "cut": 1701
+  },
+  {
+   "i": 15,
+   "para": 6,
+   "text": "レフトサイド ライトサイド",
+   "words": [
+    {
+     "w": "レフトサイド",
+     "roma": "refutosaido",
+     "t0": 57.7,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 58.69,
+     "cut": 1730
+    },
+    {
+     "w": "ライトサイド",
+     "roma": "raitosaido",
+     "t0": 58.69,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 59.58,
+     "cut": 1759
+    }
+   ],
+   "t0": 57.7,
+   "t1": 59.58,
+   "cut": 1730
+  },
+  {
+   "i": 16,
+   "para": 6,
+   "text": "歯を突き出して パッパッパッハハ",
+   "words": [
+    {
+     "w": "歯を",
+     "roma": "hawo",
+     "t0": 59.58,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 60.28,
+     "cut": 1786
+    },
+    {
+     "w": "突き",
+     "roma": "tsuki",
+     "t0": 60.28,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 60.55,
+     "cut": 1807
+    },
+    {
+     "w": "出して",
+     "roma": "dashite",
+     "t0": 60.55,
+     "how": "snapped",
+     "conf": 0.71,
+     "t1": 60.88,
+     "cut": 1815
+    },
+    {
+     "w": "パッパッパッハハ",
+     "roma": "pappappahhaha",
+     "t0": 60.88,
+     "how": "snapped",
+     "conf": 0.31,
+     "t1": 62.38,
+     "cut": 1825
+    }
+   ],
+   "t0": 59.58,
+   "t1": 62.38,
+   "cut": 1786
+  },
+  {
+   "i": 17,
+   "para": 6,
+   "text": "You are KING",
+   "words": [
+    {
+     "w": "You",
+     "roma": "yo",
+     "t0": 65.78,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 66.11,
+     "cut": 1972
+    },
+    {
+     "w": "are",
+     "roma": "are",
+     "t0": 66.11,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 66.65,
+     "cut": 1982
+    },
+    {
+     "w": "KING",
+     "roma": "king",
+     "t0": 66.65,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 67.2,
+     "cut": 1998
+    }
+   ],
+   "t0": 65.78,
+   "t1": 67.2,
+   "cut": 1972
+  },
+  {
+   "i": 18,
+   "para": 7,
+   "text": "無邪気に遊ぶ 期待期待のダーリン",
+   "words": [
+    {
+     "w": "無邪気に",
+     "roma": "mujakini",
+     "t0": 77.96,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 79.0,
+     "cut": 2337
+    },
+    {
+     "w": "遊ぶ",
+     "roma": "asobu",
+     "t0": 79.0,
+     "how": "interpolated",
+     "conf": 0.2,
+     "t1": 79.57,
+     "cut": 2369
+    },
+    {
+     "w": "期待期待の",
+     "roma": "kitaikitaino",
+     "t0": 79.57,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 80.44,
+     "cut": 2386
+    },
+    {
+     "w": "ダーリン",
+     "roma": "darin",
+     "t0": 80.44,
+     "how": "snapped",
+     "conf": 0.6,
+     "t1": 81.17,
+     "cut": 2412
+    }
+   ],
+   "t0": 77.96,
+   "t1": 81.17,
+   "cut": 2337
+  },
+  {
+   "i": 19,
+   "para": 7,
+   "text": "健気に笑う 痛い痛いの消える",
+   "words": [
+    {
+     "w": "健気に",
+     "roma": "kenageni",
+     "t0": 81.17,
+     "how": "snapped",
+     "conf": 0.62,
+     "t1": 81.89,
+     "cut": 2434
+    },
+    {
+     "w": "笑う",
+     "roma": "warau",
+     "t0": 81.89,
+     "how": "snapped",
+     "conf": 0.8,
+     "t1": 82.58,
+     "cut": 2455
+    },
+    {
+     "w": "痛い",
+     "roma": "itai",
+     "t0": 82.58,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 83.15,
+     "cut": 2476
+    },
+    {
+     "w": "痛いの",
+     "roma": "itaino",
+     "t0": 83.15,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 83.34,
+     "cut": 2493
+    },
+    {
+     "w": "消える",
+     "roma": "kieru",
+     "t0": 83.34,
+     "how": "snapped",
+     "conf": 0.6,
+     "t1": 83.86,
+     "cut": 2499
+    }
+   ],
+   "t0": 81.17,
+   "t1": 83.86,
+   "cut": 2434
+  },
+  {
+   "i": 20,
+   "para": 7,
+   "text": "無様に〇ねる 苦い思いも無くなって",
+   "words": [
+    {
+     "w": "無様に",
+     "roma": "buzamani",
+     "t0": 83.86,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 84.59,
+     "cut": 2514
+    },
+    {
+     "w": "〇ねる",
+     "roma": "maruneru",
+     "t0": 84.59,
+     "how": "interpolated",
+     "conf": 0.38,
+     "t1": 85.31,
+     "cut": 2536
+    },
+    {
+     "w": "苦い",
+     "roma": "nigai",
+     "t0": 85.31,
+     "how": "interpolated",
+     "conf": 0.2,
+     "t1": 85.92,
+     "cut": 2558
+    },
+    {
+     "w": "思いも",
+     "roma": "omoimo",
+     "t0": 85.92,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 86.23,
+     "cut": 2576
+    },
+    {
+     "w": "無くなって",
+     "roma": "nakunatte",
+     "t0": 86.23,
+     "how": "snapped",
+     "conf": 0.44,
+     "t1": 86.94,
+     "cut": 2585
+    }
+   ],
+   "t0": 83.86,
+   "t1": 86.94,
+   "cut": 2514
+  },
+  {
+   "i": 21,
+   "para": 7,
+   "text": "ラララブウ ラッタッタ",
+   "words": [
+    {
+     "w": "ラララブウ",
+     "roma": "rararabu",
+     "t0": 86.94,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 87.68,
+     "cut": 2607
+    },
+    {
+     "w": "ラッタッタ",
+     "roma": "rattatta",
+     "t0": 87.68,
+     "how": "snapped",
+     "conf": 0.62,
+     "t1": 88.37,
+     "cut": 2629
+    }
+   ],
+   "t0": 86.94,
+   "t1": 88.37,
+   "cut": 2607
+  },
+  {
+   "i": 22,
+   "para": 7,
+   "text": "嫌い嫌いの最低泣いてダウン",
+   "words": [
+    {
+     "w": "嫌い",
+     "roma": "kirai",
+     "t0": 88.37,
+     "how": "snapped",
+     "conf": 0.8,
+     "t1": 88.63,
+     "cut": 2650
+    },
+    {
+     "w": "嫌いの",
+     "roma": "kiraino",
+     "t0": 88.63,
+     "how": "snapped",
+     "conf": 0.86,
+     "t1": 89.12,
+     "cut": 2657
+    },
+    {
+     "w": "最低泣いて",
+     "roma": "saiteinaite",
+     "t0": 89.12,
+     "how": "snapped",
+     "conf": 0.73,
+     "t1": 89.85,
+     "cut": 2672
+    },
+    {
+     "w": "ダウン",
+     "roma": "daun",
+     "t0": 89.85,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 90.05,
+     "cut": 2694
+    }
+   ],
+   "t0": 88.37,
+   "t1": 90.05,
+   "cut": 2650
+  },
+  {
+   "i": 23,
+   "para": 8,
+   "text": "毎度新たにお願い1つ",
+   "words": [
+    {
+     "w": "毎度新たにお",
+     "roma": "maidoaratanio",
+     "t0": 90.05,
+     "how": "snapped",
+     "conf": 0.92,
+     "t1": 91.39,
+     "cut": 2700
+    },
+    {
+     "w": "願い",
+     "roma": "negai",
+     "t0": 91.39,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 92.47,
+     "cut": 2740
+    },
+    {
+     "w": "1つ",
+     "roma": "tsu",
+     "t0": 92.47,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 92.73,
+     "cut": 2773
+    }
+   ],
+   "t0": 90.05,
+   "t1": 92.73,
+   "cut": 2700
+  },
+  {
+   "i": 24,
+   "para": 8,
+   "text": "愛も変わらずピックアップのワーニング ワーニング",
+   "words": [
+    {
+     "w": "愛も",
+     "roma": "aimo",
+     "t0": 92.73,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 93.46,
+     "cut": 2780
+    },
+    {
+     "w": "変わらず",
+     "roma": "kawarazu",
+     "t0": 93.46,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 94.0,
+     "cut": 2802
+    },
+    {
+     "w": "ピックアップ",
+     "roma": "pikkuappu",
+     "t0": 94.0,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 94.72,
+     "cut": 2819
+    },
+    {
+     "w": "の",
+     "roma": "no",
+     "t0": 94.72,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 94.89,
+     "cut": 2840
+    },
+    {
+     "w": "ワーニング",
+     "roma": "waningu",
+     "t0": 94.89,
+     "how": "snapped",
+     "conf": 0.86,
+     "t1": 95.28,
+     "cut": 2845
+    },
+    {
+     "w": "ワーニング",
+     "roma": "waningu",
+     "t0": 95.28,
+     "how": "snapped",
+     "conf": 0.57,
+     "t1": 96.09,
+     "cut": 2857
+    }
+   ],
+   "t0": 92.73,
+   "t1": 96.09,
+   "cut": 2780
+  },
+  {
+   "i": 25,
+   "para": 8,
+   "text": "無いのあなたにお願い1つ",
+   "words": [
+    {
+     "w": "無いのあなたにお",
+     "roma": "nainoanatanio",
+     "t0": 96.09,
+     "how": "snapped",
+     "conf": 0.69,
+     "t1": 97.07,
+     "cut": 2881
+    },
+    {
+     "w": "願い",
+     "roma": "negai",
+     "t0": 97.07,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 98.24,
+     "cut": 2911
+    },
+    {
+     "w": "1つ",
+     "roma": "tsu",
+     "t0": 98.24,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 98.57,
+     "cut": 2946
+    }
+   ],
+   "t0": 96.09,
+   "t1": 98.57,
+   "cut": 2881
+  },
+  {
+   "i": 26,
+   "para": 8,
+   "text": "張り詰めた思い込め",
+   "words": [
+    {
+     "w": "張り",
+     "roma": "hari",
+     "t0": 98.57,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 99.24,
+     "cut": 2956
+    },
+    {
+     "w": "詰めた",
+     "roma": "tsumeta",
+     "t0": 99.24,
+     "how": "snapped",
+     "conf": 0.86,
+     "t1": 99.78,
+     "cut": 2976
+    },
+    {
+     "w": "思い",
+     "roma": "omoi",
+     "t0": 99.78,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 100.48,
+     "cut": 2992
+    },
+    {
+     "w": "込め",
+     "roma": "kome",
+     "t0": 100.48,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 100.85,
+     "cut": 3013
+    }
+   ],
+   "t0": 98.57,
+   "t1": 100.85,
+   "cut": 2956
+  },
+  {
+   "i": 27,
+   "para": 9,
+   "text": "レフトサイド　ライトサイド",
+   "words": [
+    {
+     "w": "レフトサイド",
+     "roma": "refutosaido",
+     "t0": 100.85,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 101.81,
+     "cut": 3024
+    },
+    {
+     "w": "ライトサイド",
+     "roma": "raitosaido",
+     "t0": 101.81,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 102.71,
+     "cut": 3053
+    }
+   ],
+   "t0": 100.85,
+   "t1": 102.71,
+   "cut": 3024
+  },
+  {
+   "i": 28,
+   "para": 9,
+   "text": "歯をむき出して パッパッパ",
+   "words": [
+    {
+     "w": "歯をむき",
+     "roma": "hawomuki",
+     "t0": 102.71,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 103.92,
+     "cut": 3080
+    },
+    {
+     "w": "出して",
+     "roma": "dashite",
+     "t0": 103.92,
+     "how": "snapped",
+     "conf": 0.71,
+     "t1": 104.47,
+     "cut": 3116
+    },
+    {
+     "w": "パッパッパ",
+     "roma": "pappappa",
+     "t0": 104.47,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 105.86,
+     "cut": 3133
+    }
+   ],
+   "t0": 102.71,
+   "t1": 105.86,
+   "cut": 3080
+  },
+  {
+   "i": 29,
+   "para": 9,
+   "text": "邪魔くさいね",
+   "words": [
+    {
+     "w": "邪魔くさいね",
+     "roma": "jamakusaine",
+     "t0": 105.86,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 106.86,
+     "cut": 3174
+    }
+   ],
+   "t0": 105.86,
+   "t1": 106.86,
+   "cut": 3174
+  },
+  {
+   "i": 30,
+   "para": 10,
+   "text": "レフトサイド　ライトサイド",
+   "words": [
+    {
+     "w": "レフトサイド",
+     "roma": "refutosaido",
+     "t0": 106.86,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 107.74,
+     "cut": 3204
+    },
+    {
+     "w": "ライトサイド",
+     "roma": "raitosaido",
+     "t0": 107.74,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 108.56,
+     "cut": 3231
+    }
+   ],
+   "t0": 106.86,
+   "t1": 108.56,
+   "cut": 3204
+  },
+  {
+   "i": 31,
+   "para": 10,
+   "text": "歯を突き出して パッパッパッハハ",
+   "words": [
+    {
+     "w": "歯を",
+     "roma": "hawo",
+     "t0": 108.56,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 109.44,
+     "cut": 3255
+    },
+    {
+     "w": "突き",
+     "roma": "tsuki",
+     "t0": 109.44,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 109.7,
+     "cut": 3282
+    },
+    {
+     "w": "出して",
+     "roma": "dashite",
+     "t0": 109.7,
+     "how": "snapped",
+     "conf": 0.71,
+     "t1": 110.26,
+     "cut": 3290
+    },
+    {
+     "w": "パッパッパッハハ",
+     "roma": "pappappahhaha",
+     "t0": 110.26,
+     "how": "snapped",
+     "conf": 0.46,
+     "t1": 111.76,
+     "cut": 3306
+    }
+   ],
+   "t0": 108.56,
+   "t1": 111.76,
+   "cut": 3255
+  },
+  {
+   "i": 32,
+   "para": 10,
+   "text": "You are KING",
+   "words": [
+    {
+     "w": "You",
+     "roma": "yo",
+     "t0": 112.06,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 112.38,
+     "cut": 3360
+    },
+    {
+     "w": "are",
+     "roma": "are",
+     "t0": 112.38,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 112.83,
+     "cut": 3370
+    },
+    {
+     "w": "KING",
+     "roma": "king",
+     "t0": 112.83,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 113.5,
+     "cut": 3383
+    }
+   ],
+   "t0": 112.06,
+   "t1": 113.5,
+   "cut": 3360
+  }
+ ]
+}
