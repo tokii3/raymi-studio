@@ -199,10 +199,16 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             an = info.get("anatomy", {})
             head = an.get("head") or info.get("face_box") or [0.3, 0.02, 0.7, 0.3]
             feet = max([p[1] for p in an.get("feet", [])] or [0.98 if "bottom" not in info["cut_sides"] else 1.0])
+            top = float(head[1])
+            if info["size"][0] > info["size"][1] or feet - top < 0.5:
+                # lying / flying / swimming (landscape) sprites: her body rests on the image's lower edge, and
+                # `height` is the height of the whole image content (raised feet are not the floor line)
+                feet, top = 0.97, 0.03
+            feet = float(r.get("ground", feet))
             fname = "sprites/" + Path(info["file"]).name
             sprites.add(fname)
             pkeys.append({"f": fr(_key_time(r.get("at", 0), a, b)), "sprite": fname, "size": info["size"],
-                          "cuts": info["cut_sides"], "top": float(head[1]), "feet": float(min(1.0, feet)),
+                          "cuts": info["cut_sides"], "top": top, "feet": float(min(1.0, feet)),
                           "pos": pos, "height": float(r.get("height", DEFAULT_HEIGHT)), "act": r.get("act", "idle"),
                           "icon": r.get("icon"), "flip": bool(r.get("flip", False)),
                           "move": round(float(r.get("move", 0.0)) * FPS), "arc": float(r.get("arc", 0.0)),

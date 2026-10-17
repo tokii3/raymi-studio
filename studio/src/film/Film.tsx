@@ -76,8 +76,13 @@ export const Film: React.FC<FilmProps> = (props) => {
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>
             <CameraRig cam={cam} />
             {Set ? <Set f={f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} /> : null}
-            <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')} />
-            {crownAt ? <BottleCap pos={[crownAt.x, crownAt.y, crownAt.z]} rot={[0.15, 0.3, -0.18]} scale={1.1} /> : null}
+            <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
+              glow={shot.opts.glow ? String(shot.opts.glow) : undefined} />
+            {crownAt ? (
+              <group position={[crownAt.x, crownAt.y, crownAt.z]} rotation={[0, Math.atan2(camPos[0] - crownAt.x, camPos[2] - crownAt.z), 0]}>
+                <BottleCap pos={[0, 0, 0]} rot={[0.5, 0, -0.2]} scale={1.6} />
+              </group>
+            ) : null}
             {shot.lyrics ? <Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} /> : null}
           </ThreeCanvas>
         ) : null}

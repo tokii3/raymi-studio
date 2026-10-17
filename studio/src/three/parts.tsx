@@ -126,8 +126,8 @@ export const Caustics: React.FC<{size: [number, number]; pos: P3; f: number; c?:
       ctx.strokeStyle = c; ctx.lineCap = 'round';
       for (let i = 0; i < 70; i++) {
         const x = rnd(i) * w, y = rnd(i + 100) * h, r = 20 + rnd(i + 200) * 46;
-        ctx.lineWidth = 2 + rnd(i + 300) * 5;
-        ctx.globalAlpha = 0.35 + rnd(i + 400) * 0.5;
+        ctx.lineWidth = 1.2 + rnd(i + 300) * 2.2;
+        ctx.globalAlpha = 0.25 + rnd(i + 400) * 0.4;
         ctx.beginPath();
         for (let k = 0; k <= 7; k++) {
           const a = (k / 7) * Math.PI * 2, rr = r * (0.7 + 0.5 * rnd(i * 9 + k));
@@ -138,7 +138,7 @@ export const Caustics: React.FC<{size: [number, number]; pos: P3; f: number; c?:
       }
     }).clone();
     t.wrapS = t.wrapT = THREE.RepeatWrapping;
-    t.repeat.set(size[0] / 3, size[1] / 3);
+    t.repeat.set(size[0] / 1.6, size[1] / 1.6);
     t.needsUpdate = true;
     return t;
   }, [c, size]);

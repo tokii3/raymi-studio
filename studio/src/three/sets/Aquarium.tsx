@@ -5,7 +5,7 @@
 import React from 'react';
 import * as THREE from 'three';
 import {Beam, Bubbles, Caustics, Coral, Ground, Kelp, RBox, Rock, Sign, Visitor, drawText} from '../parts';
-import {BottleCap, Clam, Fish, Stanchions, ToyCastle} from '../props';
+import {BottleCap, Fish, ShellThrone, Stanchions, ToyCastle} from '../props';
 import {SetLight, canvasTexture, rnd, toon} from '../look';
 import type {SetProps} from './index';
 
@@ -32,6 +32,14 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
     g.addColorStop(0, '#53d6e0'); g.addColorStop(0.45, '#2a7fae'); g.addColorStop(1, '#2c1f6b');
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
   });
+  const surface = canvasTexture('aq_surface', 256, 256, (ctx, w, h) => {
+    ctx.fillStyle = '#7fe6ee'; ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = 'rgba(255,255,255,0.55)'; ctx.lineWidth = 3;
+    for (let i = 0; i < 26; i++) {
+      const x = rnd(i) * w, y = rnd(i + 50) * h, r = 10 + rnd(i + 90) * 24;
+      ctx.beginPath(); ctx.ellipse(x, y, r, r * 0.6, rnd(i + 7) * 3, 0, Math.PI * 2); ctx.stroke();
+    }
+  });
   const glassTex = canvasTexture('aq_glass', 512, 256, (ctx, w, h) => {
     ctx.clearRect(0, 0, w, h);
     ctx.fillStyle = 'rgba(190,240,255,0.06)'; ctx.fillRect(0, 0, w, h);
@@ -50,16 +58,23 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
 
       {/* ---- the tank: sand, back wall, rocks, life */}
       <Ground size={[11, 6.4]} pos={[0, 0, -1.2]} c={SAND} dunes={0.06} />
-      <mesh position={[0, 2.2, -4.3]}><planeGeometry args={[14, 6]} /><meshBasicMaterial map={backdrop} toneMapped={false} fog={false} /></mesh>
+      <mesh position={[0, 3.0, -4.3]}><planeGeometry args={[16, 9]} /><meshBasicMaterial map={backdrop} toneMapped={false} fog={false} /></mesh>
+      {/* the water surface seen from below + the tank's side walls (a low camera never looks into a void) */}
+      <mesh position={[0, 4.3, -1.3]} rotation={[Math.PI / 2, 0, 0]}>
+        <planeGeometry args={[11, 6.2]} />
+        <meshBasicMaterial map={surface} toneMapped={false} side={THREE.DoubleSide} />
+      </mesh>
+      {[-5.35, 5.35].map((x) => <RBox key={x} size={[0.3, 4.6, 6.2]} pos={[x, 2.1, -1.3]} r={0.05} c="#2a2357" cast={false} />)}
       {[[-4.2, 0.6, -3.6, 1.6, 1.4, 1.1, 1], [-2.6, 0.4, -3.9, 1.3, 1.0, 0.9, 2], [3.6, 0.7, -3.6, 1.7, 1.6, 1.2, 3], [1.4, 0.35, -3.9, 1.2, 0.8, 0.8, 4],
         [4.6, 0.3, -1.0, 0.9, 0.7, 0.9, 5], [-4.7, 0.3, -0.8, 0.8, 0.6, 0.8, 6], [-0.1, 0.25, -3.6, 0.9, 0.55, 0.7, 7]].map(([x, y, z, sx, sy, sz, s]) => (
         <Rock key={s} pos={[x, y, z]} size={[sx, sy, sz]} seed={s} c={s % 2 ? ROCK : ROCK2} rotY={s} />
       ))}
       {/* throne: a flat rock base, the open clam as backrest, a sea-glass gem */}
       <Rock pos={[-0.6, 0.16, -1.15]} size={[0.95, 0.32, 0.62]} seed={11} c={ROCK} />
-      <Clam pos={[-0.6, 0.25, -1.55]} scale={1.15} />
-      <mesh position={[-0.6, 1.62, -1.62]} material={toon('#9ff2ff', '#53e0ff', 0.6)}><octahedronGeometry args={[0.09, 0]} /></mesh>
-      <BottleCap pos={[0.25, 0.42, -1.25]} rot={[0.1, 0.4, -0.25]} scale={1.2} />
+      <ShellThrone pos={[-0.6, 0.0, -1.3]} scale={1.15} />
+      {opts.cap === 'seat'
+        ? <BottleCap pos={[-0.6, 0.48, -1.08]} rot={[0.25, 0.5, -0.1]} scale={1.5} />
+        : opts.cap === false ? null : <BottleCap pos={[0.25, 0.42, -1.25]} rot={[0.1, 0.4, -0.25]} scale={1.2} />}
       <Rock pos={[0.25, 0.18, -1.25]} size={[0.28, 0.26, 0.26]} seed={12} c={ROCK2} />
       <ToyCastle pos={[2.6, 0, -1.7]} scale={1.15} rotY={-0.35} />
       {[[-3.6, 2.6, 1, KELP], [-3.2, 3.2, 2, KELP2], [-4.3, 2.2, 3, KELP], [3.3, 2.9, 4, KELP2], [4.1, 2.4, 5, KELP], [-1.9, 1.9, 6, KELP2], [1.2, 2.1, 7, KELP]].map(([x, h, s, c]) => (
@@ -73,7 +88,7 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
       <Fish f={f} path={{c: [0.5, 2.6, -2.2], r: [3.2, 0.9], speed: 0.012, phase: 0}} c="#ff9f5a" />
       <Fish f={f} path={{c: [-0.8, 3.1, -1.6], r: [2.6, 1.1], speed: -0.016, phase: 2}} c="#ffd36b" scale={0.18} />
       <Fish f={f} path={{c: [1.2, 1.9, -2.9], r: [2.0, 0.6], speed: 0.02, phase: 4}} c="#7fe0ff" scale={0.16} />
-      <Caustics size={[11, 6]} pos={[0, 0.02, -1.2]} f={f} opacity={0.32 * on} />
+      <Caustics size={[11, 6]} pos={[0, 0.03, -1.2]} f={f} opacity={0.2 * on} />
       <Beam pos={[-0.6, 2.6, -1.0]} len={4.2} r={1.25} c="#ffe1f6" opacity={0.14 * on * (opts.spot === false ? 0 : 1)} />
 
       {/* ---- glass front + frame + plinth (the frame is an object of the world, not a box around her) */}

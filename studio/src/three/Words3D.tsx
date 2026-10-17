@@ -44,9 +44,11 @@ const layouts = new Map<string, Placed[]>();
 /** Lay out a whole line once (words never jump when the next one appears); wraps at width, centred on the anchor. */
 function layout(words: Word3[], L: Lyrics, card: boolean): Placed[] {
   const items = words.map((w) => {
-    const size = L.size * (w.key ? 2.2 : 1);
+    let size = L.size * (w.key ? 2.2 : 1);
     const tex = wordTexture(w.w, w.key ? L.accent : L.color, L.outline, card);
-    return {w, size, tex, width: size * tex.hScale * tex.aspect};
+    let width = size * tex.hScale * tex.aspect;
+    if (width > L.width) { size *= L.width / width; width = L.width; }   // a word never runs past its surface
+    return {w, size, tex, width};
   });
   const gap = L.size * 0.35;
   const rows: typeof items[] = [[]];

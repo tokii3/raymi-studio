@@ -21,31 +21,44 @@ export const BottleCap: React.FC<{pos: P3; rot?: P3; scale?: number; c?: string;
     <group position={pos} rotation={rot} scale={scale}>
       <mesh material={toon(c)} castShadow position={[0, 0.03, 0]}><cylinderGeometry args={[0.1, 0.112, 0.075, 42, 1, true]} /></mesh>
       <mesh material={toon(top)} castShadow position={[0, 0.07, 0]}><cylinderGeometry args={[0.1, 0.1, 0.012, 42]} /></mesh>
-      <mesh material={toon('#ffe9a8')} position={[0, 0.078, 0]}><torusGeometry args={[0.07, 0.006, 6, 32]} /></mesh>
+      <mesh material={toon('#ffe9a8')} position={[0, 0.0775, 0]} rotation={[-Math.PI / 2, 0, 0]}><ringGeometry args={[0.055, 0.07, 32]} /></mesh>
       {teeth}
     </group>
   );
 };
 
-/** Giant clam shell: two ribbed half-shells, the upper one open = a throne back. */
-export const Clam: React.FC<{pos: P3; rotY?: number; scale?: number; c?: string; inner?: string; open?: number}> = ({pos, rotY = 0, scale = 1, c = '#d9c7f0', inner = '#ff9fcf', open = 1.1}) => {
-  const ribs = 9;
-  const half = (upper: boolean) => (
-    <group rotation={[upper ? -open : 0, 0, 0]}>
-      {Array.from({length: ribs}, (_, i) => {
-        const a = ((i + 0.5) / ribs - 0.5) * Math.PI * 0.9;
+/** A shell throne: a scalloped fan as the backrest (ribs, pink), a padded seat on a rock, a pearl on top. */
+export const ShellThrone: React.FC<{pos: P3; rotY?: number; scale?: number; c?: string; rib?: string; seat?: string}> = ({
+  pos, rotY = 0, scale = 1, c = '#ff9cc8', rib = '#e0679f', seat = '#7a4fd0',
+}) => {
+  const shellGeo = React.useMemo(() => {
+    const s = new THREE.Shape();
+    const R = 1.0, n = 9;
+    s.moveTo(0, 0);
+    for (let i = 0; i <= 64; i++) {
+      const a = Math.PI * 0.12 + (Math.PI * 0.76 * i) / 64;
+      const bump = 1 + 0.07 * Math.abs(Math.sin((i / 64) * Math.PI * n));
+      s.lineTo(Math.cos(a) * R * bump, Math.sin(a) * R * bump);
+    }
+    s.lineTo(0, 0);
+    const g = new THREE.ExtrudeGeometry(s, {depth: 0.1, bevelEnabled: true, bevelThickness: 0.04, bevelSize: 0.04, bevelSegments: 3, curveSegments: 8});
+    g.translate(0, 0, -0.05);
+    return g;
+  }, []);
+  return (
+    <group position={pos} rotation={[0, rotY, 0]} scale={scale}>
+      <mesh geometry={shellGeo} material={toon(c)} position={[0, 0.35, -0.12]} rotation={[-0.12, 0, 0]} castShadow receiveShadow />
+      {Array.from({length: 9}, (_, i) => {
+        const a = Math.PI * 0.16 + (Math.PI * 0.68 * i) / 8;
         return (
-          <mesh key={i} position={[Math.sin(a) * 0.55, 0, -Math.cos(a) * 0.08 - 0.05]} rotation={[0, 0, -a]} material={toon(c)} castShadow receiveShadow>
-            <cylinderGeometry args={[0.07, 0.11, 1.0, 10, 1, false, 0, Math.PI]} />
+          <mesh key={i} material={toon(rib)} position={[Math.cos(a) * 0.5, 0.35 + Math.sin(a) * 0.5, -0.0]} rotation={[-0.12, 0, a - Math.PI / 2]} castShadow>
+            <boxGeometry args={[0.035, 0.95, 0.04]} />
           </mesh>
         );
       })}
-      <mesh position={[0, 0.0, -0.02]} scale={[0.62, 0.5, 0.12]} material={toon(inner)} receiveShadow><sphereGeometry args={[1, 24, 16, 0, Math.PI * 2, 0, Math.PI / 2]} /></mesh>
-    </group>
-  );
-  return (
-    <group position={pos} rotation={[0, rotY, 0]} scale={scale}>
-      <group position={[0, 0.5, 0]}>{half(true)}</group>
+      <mesh material={toon('#fff4fb', '#ffd9ef', 0.35)} position={[0, 1.42, -0.05]} castShadow><sphereGeometry args={[0.1, 20, 16]} /></mesh>
+      <RBox size={[0.95, 0.16, 0.62]} pos={[0, 0.34, 0.12]} r={0.07} c={seat} />
+      <mesh material={toon('#d4ab4f')} position={[0, 0.34, 0.44]}><boxGeometry args={[0.9, 0.03, 0.03]} /></mesh>
     </group>
   );
 };
