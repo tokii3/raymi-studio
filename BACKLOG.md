@@ -34,3 +34,7 @@
   guard: her figure >= ~25 % of frame height unless the script says "tiny on purpose"), the LED "You are KING" unreadable
   at phone size (bring the words down to her: a lyric object near her, not only on the far board), no hook at 0 s.
   Waiting for toki's decision (PROGRESS 2026-10-18).
+- KING final STOP (2026-10-18, final renders 16 + 18, all 7 critics FAIL on final 2): the fixes that guards cannot make
+  are studio / script work - a crowd look pass (varied silhouettes, rim light, phones with her face), richer set
+  props (texture, wear, detail), an ambient backdrop for the night, a figure-size rule for wides, longer / bigger story
+  beats for the setup and the scale payoff, more acting in holds, lyric colour per set. Waiting for toki's call.

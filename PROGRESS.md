@@ -1,5 +1,30 @@
 # PROGRESS - Raymi Studio (newest first, kept short)
 
+## 2026-10-18 (late) - KING full package rendered; final screening FAIL x2 -> STOP, toki decides
+- toki on the pilot: camera / lyrics / effects good, "fehler sehe ich keine"; asked for a real crown (built: the cap
+  worn upside down) and a deeper grade (built: per-act grade + deeper toon steps). Then "gerne jetzt das mv bzw volles
+  paket".
+- Built for the full MV (all reusable set options + catalog stills): night card table (pool + aim + gust, deal on beats,
+  house keys / collapse, pile, coin towers + topple, PICK UP, king card float / held / bend / rot / kick, warning cards
+  + slash, slaps, flick, coin flick / roll / spin, bulb pop + live black, spade glow, peeling rays), aquarium story props
+  (hero phone, knuckle taps, glass hands, screen crops, coins drop / rain / pile, ledge deck, card rain + felt mat,
+  scattered deck, dead work lamp, salmon, child, cap lift), film props (crown drop-in, ray ring + beam, glow pulse / out,
+  ride card, cards / rays passing the lens), puppet height tween, plane tilts to a high lens, Short overrides + hook /
+  CTA overlay. script-critic round 3 PASS (+ its fixes); upload texts in jobs/2026-10-18_king/upload.md.
+- New guards from every screening round: lyric safe area + real font widths + camera kick + floats, readable minimum
+  size (4.4 % of the frame height), stamp slam, text over her figure, text over a readable sign, readable set props
+  never held cut, lens never in sand / floor / inside or right against a solid prop, face never hidden behind a prop,
+  Short hook / CTA never on her face. Authoring aids: guard --summary / --fit / --fit-lyrics / --fit-lens.
+- Renders: MV run 16 (final 1) and run 18 (final 2), Short run 17 and round 2. Final 1 faults (clipped LED strip, coin
+  tower in the lens, text on the sign) are gone in final 2.
+- Final 2 screened by all 7 critics (reviews/final_*_2.md): all FAIL. The recurring roots, the same as the pilot STOP:
+  1. the crowd reads as placeholder primitives (studio component; toki did not mind it in the pilot);
+  2. Raymi tiny / still in the opening wide (shot 2) - the swipe point at 0:04;
+  3. story beats too short / too small to read muted (cap, grin practice, deck, shrink, coin in the lamp, rays);
+  4. props primitive and flat next to her painting, black voids in the night (look);
+  5. long held poses (motion), flat outlined lyrics (type), uniform cuts in the night (cut).
+- STOP (anti-loop, 2 final FAILs): no round 3 without toki. She judges the final MV + Short herself and decides.
+
 ## 2026-10-18 - KING build + pilot: STOP after 3 blind-viewer FAILs (anti-loop, toki decides)
 - Built (reusable, catalog stills in studio/catalog): frame camera (`camera[].frame`: head in, cut edges out, checked
   by projection), pilot / Short window, set times in song seconds, lyric materials (fog, engraved, screen, print,
