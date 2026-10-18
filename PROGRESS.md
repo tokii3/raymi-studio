@@ -22,9 +22,13 @@
   (`jobs/2026-10-18_king-board-*`) into `jobs/2026-10-18_king/boards/` (+ `overview.jpg`). Waiting for toki's pick.
 - toki 2026-10-18: NEVER render on her PC, not even single stills (memory saved; brief's "local stills" overruled).
 
+- KING: toki picked A+B mixed (day aquarium / night card game); treatment done with script-critic PASS (own session).
+- Her font grows (toki OK 2026-10-18): `raymi/font.py` builds any missing glyph in her marker style (port of the old
+  builder, rebuilds existing glyphs 1:1 in tests), automatic in the cloud before stills / renders. Built: 27 KING
+  kanji + 〇 + @ (log: assets/fonts/glyphs_built.txt).
+
 ## NEXT
-- toki picks a KING idea (`approved:` line) -> treatment -> script-critic.
-- Font: 27 KING kanji missing in Raymi-Regular (BACKLOG) - needs toki's OK for the glyph tool.
+- KING shooting script (4_SCRIPT.md + shots.json) -> script-critic -> build list -> pilot (cloud).
 
 
 ## 2026-10-18 - phase 1 done: writers' room studio + parallel cloud render; KING dossier started
