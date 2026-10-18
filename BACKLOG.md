@@ -20,3 +20,9 @@
   OFL skeleton font, M PLUS Rounded 1c Thin) as a tested `raymi font` tool. Needs toki's OK (adds the skeleton font).
 - KING verse 1 (15-26 s) lyric times are interpolated: GUMI's English voicebank sings Japanese, whisper hears English.
   If the pilot shows drift there: CTC forced alignment (MMS, romanised) on the vocal stem for weak lines.
+- Studio look (blind viewer, style test 2026-10-18): the aquarium crowd reads as "identical round-headed silhouettes"
+  and the set as "low-poly toy-like" - next look pass: varied silhouettes (hair, hats, kids on shoulders, coats),
+  rim light from the tank, softer bevels / texture on rocks. The 3D film renders ~2.5 s per 1080p frame on Actions
+  (12 s = 8.5 min with 3 workers); a full MV fits in 20 workers.
+- The MVShort (9:16) of the style test is compiled + guarded but not rendered yet (one cloud run, render.json
+  `"format": "short"`).
