@@ -537,3 +537,92 @@ export function fitLens(props: FilmProps, index: number): Shot['camera'] | null 
   }
   return null;
 }
+
+// ---------------------------------------------------------------- the hero element (toki 2026-10-19)
+// "fehler wie schlecht erkennbare krone müssen selber erkannt werden, das ist das main element". The treatment names
+// the video's main element(s) (shots.json "heroes"), every shot marks the ones it must show ("hero"). Here: its box on
+// screen, frame by frame, and whether it is big enough at phone size. A principle with a default (min share of the
+// frame height), broken only with a written reason (hero "why_small"). Its VALUE contrast needs the real pixels: the
+// boxes go to raymi/hero.py after a render / stills run (--hero-boxes).
+export type HeroBox = {shot: string; frame: number; name: string; box: [number, number, number, number] | null};   // x0,y0,x1,y1 in 0..1, y down
+
+function screenBox(pts: THREE.Vector3[], cam: THREE.Camera): [number, number, number, number] | null {
+  const q = pts.map((p) => p.clone().project(cam));
+  if (q.some((p) => p.z >= 1 || p.z <= -1)) return null;
+  const xs = q.map((p) => (p.x + 1) / 2), ys = q.map((p) => (1 - p.y) / 2);
+  return [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)];
+}
+
+export function heroBox(props: FilmProps, s: Shot, f: number, h: NonNullable<Shot['hero']>[number]): [number, number, number, number] | null {
+  const aspect = props.width / props.height;
+  const cam = makeCamera(s, f, aspect, props.hits, props.fps);
+  const right = new THREE.Vector3(1, 0, 0).applyQuaternion(cam.quaternion), up = new THREE.Vector3(0, 1, 0);
+  const quad = (c: THREE.Vector3, w: number, hh: number) => [[-1, -1], [1, -1], [-1, 1], [1, 1]].map(([a, b]) =>
+    c.clone().addScaledVector(right, (a * w) / 2).addScaledVector(up, (b * hh) / 2));
+  if (h.kind === 'worn' || h.kind === 'face') {          // something she wears on her head / her face itself
+    const p = puppetAt(s.puppets, f, props.fps);
+    if (!p || !p.key.head) return null;
+    const m = puppetMatrix(p, [cam.position.x, cam.position.y, cam.position.z]);
+    const {w, h: ph} = planeSize(p.key);
+    const [x0, y0, x1, y1] = p.key.head;
+    if (h.kind === 'face') {
+      const pts = [[x0, y0], [x1, y0], [x0, y1], [x1, y1]].map(([u, v]) => new THREE.Vector3((u - 0.5) * w, (p.key.feet - v) * ph, 0).applyMatrix4(m));
+      return screenBox(pts, cam);
+    }
+    const top = new THREE.Vector3(((x0 + x1) / 2 - 0.5) * w, (p.key.feet - y0) * ph, 0).applyMatrix4(m);
+    const [bw, bh] = h.size ?? [0.13, 0.07];
+    return screenBox(quad(top.add(new THREE.Vector3(0, bh / 2, 0)), bw, bh), cam);
+  }
+  if (h.kind === 'prop' && h.center) {
+    const [bw, bh] = h.size ?? [0.3, 0.3];
+    return screenBox(quad(new THREE.Vector3(...h.center), bw, bh), cam);
+  }
+  if (h.kind === 'word' && s.lyrics) {                    // a key lyric word: its glyph height at the block's anchor
+    const w = s.words.find((x) => x.w.toLowerCase() === (h.word ?? h.name).toLowerCase());
+    if (!w || f < w.from) return null;
+    const L = s.lyrics;
+    const size = L.size * (w.key ? (L.style === 'v2' ? (L.keyScale ?? 2.8) : 2.2) : 1);
+    const upL = L.style === 'v2' ? new THREE.Vector3(0, 1, 0).applyEuler(blockRotation(L)) : up;
+    const a = new THREE.Vector3(...L.anchor);
+    const ww = size * Math.max(1, (w.em ?? w.w.length * 0.7));
+    const rt = L.style === 'v2' ? new THREE.Vector3(1, 0, 0).applyEuler(blockRotation(L)) : right;
+    const pts = [[-1, -1], [1, -1], [-1, 1], [1, 1]].map(([x, y]) => a.clone().addScaledVector(rt, (x * ww) / 2).addScaledVector(upL, (y * size) / 2));
+    return screenBox(pts, cam);
+  }
+  return null;
+}
+
+/** A hero marked for a shot must be on screen and at least `min` of the frame height tall in most of the shot
+ *  (>= 60 % of its sampled frames - a transition or a fast move may hide it briefly). */
+export function heroFaults(props: FilmProps): {shot: string; frame: number; name: string; why: string}[] {
+  const out: {shot: string; frame: number; name: string; why: string}[] = [];
+  for (const s of props.shots) {
+    for (const h of s.hero ?? []) {
+      if (h.why_small) continue;                           // the script wrote why it is small here
+      let ok = 0, n = 0, worst = Infinity, wf = s.from;
+      for (let f = s.from; f < s.to; f += 3) {
+        const b = heroBox(props, s, f, h);
+        if (h.kind === 'word' && b === null && !s.words.some((x) => x.w.toLowerCase() === (h.word ?? h.name).toLowerCase() && x.from <= f)) continue;   // not sung yet
+        n++;
+        const inside = b && b[0] >= 0 && b[2] <= 1 && b[1] >= 0 && b[3] <= 1;
+        const share = b ? b[3] - b[1] : 0;
+        if (inside && share >= h.min) ok++;
+        if (share < worst) { worst = share; wf = f; }
+      }
+      if (n && ok / n < 0.6) out.push({shot: s.id, frame: wf, name: h.name,
+        why: `${h.name} readable in ${Math.round((100 * ok) / n)} % of the shot (smallest ${(100 * Math.max(0, worst)).toFixed(1)} % of the frame height, wants ${(100 * h.min).toFixed(0)} %)`});
+    }
+  }
+  return out;
+}
+
+/** Boxes of every hero at given frames (for the value-contrast check on the real pixels, raymi/hero.py). */
+export function heroBoxes(props: FilmProps, frames: number[]): HeroBox[] {
+  const out: HeroBox[] = [];
+  for (const f of frames) {
+    const s = props.shots.find((x) => f >= x.from && f < x.to);
+    if (!s) continue;
+    for (const h of s.hero ?? []) out.push({shot: s.id, frame: f, name: h.name, box: heroBox(props, s, f, h)});
+  }
+  return out;
+}

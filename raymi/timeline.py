@@ -19,7 +19,7 @@ jobs/<job>/shots.json is the machine part of the shooting script (4_SCRIPT.md sa
        "transition": {"kind": "bubbles", "frames": 12},
        "hero": ["crown"],                          # the video's main element(s) this shot must show readably
        "why": "the feeling this shot serves"}],
-     "heroes": {"crown": {"what": "the crown on her head", "min": 0.05}},   # the main element(s) (3_TREATMENT)
+     "heroes": {"crown": {"kind": "worn", "size": [0.13, 0.07], "min": 0.05}},   # the main element(s) (3_TREATMENT)
      "acts": [{"at": 0, "grade": "day"}, {"at": 77.9, "grade": "night"}],  # the look step: one grade per act (grade.ts)
      "lyric_style": "v2",                          # v2 = heavy weight, scene colour, lit, romaji + English under JP lines
      "translation": "lyrics_en.json"}              # per line {"roma", "en"}: default <lyrics folder>/lyrics_en.json
@@ -55,6 +55,8 @@ LYRIC_MATERIALS = {None, "fog", "engraved", "screen", "print", "felt", "light"}
 TRANSITIONS = {"cut", "bubbles", "ink", "whip", "flash", "pass"}
 GRADES = {"day", "closing", "night", "own", "warm", "clean"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
 LYRIC_STYLES = {"v1", "v2"}
+# a main element: worn on her head (crown, hat), her face, a lyric word, a prop box in the set (check.ts heroBox)
+HERO_KINDS = {"worn", "face", "word", "prop"}
 ICONS = {None, "!", "?", "heart", "sweat", "anger", "zz", "bulb", "sparkle", "music"}
 DEFAULT_HEIGHT = 1.55   # Raymi's figure height in metres (ears to feet)
 # set options written in SONG seconds (the script's measured times); the compiler turns them into film frames so a
@@ -571,9 +573,14 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             if name not in heroes:
                 errors.append(f"{tag}: hero {name!r} is not named in shots.json 'heroes' (the treatment's main elements)")
                 continue
-            hero.append({"name": name, "kind": spec_h.get("kind", "crown" if name == "crown" else "word"),
-                         "word": spec_h.get("word", name), "min": float(spec_h.get("min", 0.05)),
-                         "why_small": spec_h.get("why_small")})
+            kind = spec_h.get("kind", "word")
+            if kind not in HERO_KINDS:
+                errors.append(f"{tag}: hero {name!r} kind must be one of {sorted(HERO_KINDS)}")
+                continue
+            hero.append({"name": name, "kind": kind, "word": spec_h.get("word", name), "min": float(spec_h.get("min", 0.05)),
+                         "why_small": spec_h.get("why_small"),
+                         **({"size": spec_h["size"]} if "size" in spec_h else {}),
+                         **({"center": _v3(spec_h["center"], marks, errors, tag)} if "center" in spec_h else {})})
         shots.append({"id": s.get("id", f"s{i + 1}"), "from": max(0, fr(a)), "to": min(total, fr(b)), "set": st, "hero": hero,
                       "opts": opts, "camera": ckeys, "kick": float(s.get("kick", 1.0)), "puppets": pkeys,
                       "lyrics": L, "words": words,

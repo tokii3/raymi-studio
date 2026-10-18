@@ -136,3 +136,17 @@ test('lyrics v2: a small line is refused at phone size, its subs too - unless th
   const flat = lineCorners(mk(0.26, {tilt: -90}).shots[0], 0);
   assert.ok(flat.every((c) => Math.abs(c.y - 1) < 1e-6) && Math.abs(flat[0].z - flat[2].z) > 0.3);
 });
+
+test('hero: the crown on her head is refused when it is a speck at phone size, unless the script writes why', async () => {
+  const o6 = out.replace('.mjs', '-h.mjs');
+  await build({entryPoints: [path.join(here, '../src/film/check.ts')], bundle: true, format: 'esm', platform: 'node', outfile: o6, logLevel: 'error'});
+  const {heroFaults, heroBoxes} = await import(pathToFileURL(o6).href);
+  const crown = {name: 'crown', kind: 'worn', size: [0.13, 0.07], min: 0.05};
+  const mk = (cam, h = crown) => ({width: 1920, height: 1080, fps: 30, durationInFrames: 30, hits: [], shots: [{id: 's', from: 0, to: 30,
+    camera: [{f: 0, ...cam}], kick: 0, puppets: [{...key([], [0, 0, 0]), head: [0.3, 0.04, 0.7, 0.3]}], words: [], hero: [h]}]});
+  assert.equal(heroFaults(mk(wide)).length, 1);                                   // a 1.55 m girl in a wide: crown ~2 %
+  assert.equal(heroFaults(mk({pos: [0, 1.5, 1.6], look: [0, 1.45, 0], fov: 35})).length, 0);   // a close-up: it reads
+  assert.equal(heroFaults(mk(wide, {...crown, why_small: 'the hall swallows her - the point of the shot'})).length, 0);
+  const b = heroBoxes(mk(wide), [0])[0];
+  assert.ok(b.box[1] < 0.5 && b.box[3] - b.box[1] < 0.05);
+});

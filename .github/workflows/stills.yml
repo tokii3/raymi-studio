@@ -98,6 +98,10 @@ jobs:
             START=$(date +%s)
             (cd studio && node stills.mjs "$J" "$FR" --scale "$SC" --out "$OUT" ${NAMES:+--names "$NAMES"})
             echo "$J: $(echo $FR | tr ',' ' ' | wc -w) stills in $(( $(date +%s) - START )) s -> $TO" >> "$GITHUB_STEP_SUMMARY"
+            if [ -f "jobs/$J/shots.json" ] && grep -q '"hero"' "jobs/$J/shots.json"; then   # main element readable at phone size?
+              (cd studio && node guard.mjs "$J" --hero-boxes "$FR" > "../jobs/$J/out/hero_boxes.json")
+              python -m raymi hero "$J" "$OUT" >> "$GITHUB_STEP_SUMMARY" || true
+            fi
             echo "$TO" > "/tmp/stills/$J.to"
           done
       - name: Publish

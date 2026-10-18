@@ -183,10 +183,10 @@ def test_grade_library_matches_the_studio():
 
 def test_heroes_are_named_once_and_marked_per_shot(tmp_path):
     shot = {**SHOT, "at": "line:0", "hero": ["crown", {"name": "KING", "min": 0.08}]}
-    spec = job(tmp_path, [shot], heroes={"crown": {"what": "the crown on her head"}, "KING": {"kind": "word"}})
+    spec = job(tmp_path, [shot], heroes={"crown": {"kind": "worn", "size": [0.13, 0.07]}, "KING": {"kind": "word"}})
     p, errors, _ = T.compile_shots(tmp_path, spec, "mv", cmap=EVERY)
     assert errors == []
     h = {x["name"]: x for x in p["shots"][0]["hero"]}
-    assert h["crown"]["kind"] == "crown" and h["crown"]["min"] == 0.05 and h["KING"]["min"] == 0.08
+    assert h["crown"]["kind"] == "worn" and h["crown"]["size"] == [0.13, 0.07] and h["crown"]["min"] == 0.05 and h["KING"]["min"] == 0.08
     _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [{**SHOT, "at": "line:0", "hero": ["cape"]}]), "mv", cmap=EVERY)
     assert any("hero 'cape'" in e for e in errors)

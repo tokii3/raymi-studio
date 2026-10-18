@@ -8,6 +8,8 @@
     kit/view/seq_NN.jpg         2 s windows at 12 fps (real motion: smears, holds, pops - module 04)
     kit/view/full_NN.jpg        one full-resolution frame per shot (detail, edges, faces, text - module 12)
     kit/facts/facts.json        measured HINTS for the craft critics, never a verdict
+    kit/facts/hero.json         is the main element readable at phone size? (raymi/hero.py, after the kit)
+    kit/script/heroes.json      the video's main element(s) named by the treatment (shot critics only)
     kit/script/shots.json       the shooting script's shots (time, what + why) - only for the shot-by-shot critics,
                                 NEVER for the blind viewer
 
@@ -166,8 +168,12 @@ def build(video: Path, out: Path, props: dict | None = None, spec: dict | None =
             s_in = by_id.get(s["id"], {})
             rows.append({"id": s["id"], "from_s": round(s["from"] / fps, 2), "to_s": round(s["to"] / fps, 2),
                          "set": s["set"], "why": s_in.get("why", ""),
-                         "words": " ".join(w["w"] for w in s["words"]), "transition_out": s["transition"]["kind"]})
+                         "words": " ".join(w["w"] for w in s["words"]), "transition_out": s["transition"]["kind"],
+                         "hero": [h["name"] for h in s.get("hero", [])]})
         (script_dir / "shots.json").write_text(json.dumps(rows, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
+        if spec.get("heroes"):          # the video's main element(s): every shot critic checks them FIRST at phone size
+            (script_dir / "heroes.json").write_text(json.dumps(spec["heroes"], indent=1, ensure_ascii=False),
+                                                    encoding="utf-8", newline="\n")
     return out
 
 

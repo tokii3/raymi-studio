@@ -13,6 +13,7 @@
   font add <chars>      the same for given characters
   font heavy            build / update her heavy weight (Raymi-Heavy.ttf, lyrics v2) from Raymi-Regular.ttf
   screen <job> [video] critic kit (phone sheets, gray, motion strips, one frame per shot, facts) -> out/kit
+  hero   <job> <video|stills dir>  is the main element readable at phone size? (value contrast, after a render)
   analyze <job>         song tools (cloud, heavy): vocal stem, word-timed lyrics, song map (raymi/song.py)
   lyrics <job>          re-align lyrics_timed.json locally from the cached whisper_words.json + vocals.ogg
 """
@@ -72,6 +73,15 @@ def main(argv: list[str]) -> int:
 
         print("kit ->", screen.screen_job(P.job_dir(job), Path(argv[2]) if len(argv) > 2 else None))
         return 0
+    if cmd == "hero":        # hero <job> <final.mp4 | stills dir> -> out/hero.json (needs out/hero_boxes.json)
+        from . import hero
+
+        res = hero.run(P.job_dir(job), Path(argv[2]))
+        print(f"hero: {res['verdict']}")
+        for r in res["rows"]:
+            if not r["readable"]:
+                print(f"  {r['shot']} f{r['frame']} {r['name']}: {r['why']}")
+        return 0 if not res["unreadable"] else 1
     if cmd in ("analyze", "lyrics"):
         from . import song
 

@@ -4,6 +4,7 @@
 // --summary lists every guard fault per shot (cut edges by sprite:side in frames, sliced-face, lyric faults);
 // --fit [shot#...] proposes the smallest camera change (tighter fov, aim toward her head) that passes every guard;
 // --fit-lens [shot#...] proposes the smallest move of the whole camera path that passes every guard (JSON keys);
+// --hero-boxes <f,f,...|every:N> prints the main element's screen box per frame (JSON, for raymi/hero.py);
 // --fit-lyrics [shot#...] proposes the nearest lyric anchor (+ size) inside the frame and off her face (JSON per shot).
 import os from 'node:os';
 import path from 'node:path';
@@ -13,7 +14,7 @@ import {guardCutEdges, here, loadJob} from './lib.mjs';
 
 const {props} = loadJob(process.argv[2]);
 const flag = (n) => process.argv.indexOf(n);
-const aid = ['--report', '--place', '--summary', '--fit', '--fit-lyrics', '--fit-lens'].some((n) => flag(n) > 0);
+const aid = ['--report', '--place', '--summary', '--fit', '--fit-lyrics', '--fit-lens', '--hero-boxes'].some((n) => flag(n) > 0);
 if (!aid || process.argv.includes('--report')) {
   try {
     await guardCutEdges(props, null);
@@ -25,12 +26,17 @@ if (!aid || process.argv.includes('--report')) {
 if (aid) {
   const out = path.join(os.tmpdir(), `raymi-report-${process.pid}.mjs`);
   await build({entryPoints: [path.join(here, 'src/film/check.ts')], bundle: true, format: 'esm', platform: 'node', outfile: out, logLevel: 'error'});
-  const {framingReport, placeAt, shotSummary, fitShot, fitLyrics, fitLens} = await import(pathToFileURL(out).href);
+  const {framingReport, placeAt, shotSummary, fitShot, fitLyrics, fitLens, heroBoxes, heroFaults} = await import(pathToFileURL(out).href);
   const pi = flag('--place');
   if (pi > 0) {
     const [s, f, x, y, d] = process.argv.slice(pi + 1, pi + 6).map(Number);
     console.log(JSON.stringify(placeAt(props, s, f, x, y, d)));
+  } else if (flag('--hero-boxes') > 0) {
+    const arg = process.argv[flag('--hero-boxes') + 1] ?? 'every:15';
+    const frames = arg.startsWith('every:') ? Array.from({length: Math.ceil(props.durationInFrames / Number(arg.slice(6)))}, (_, i) => i * Number(arg.slice(6))) : arg.split(',').map(Number);
+    console.log(JSON.stringify({width: props.width, height: props.height, fps: props.fps, boxes: heroBoxes(props, frames)}));
   } else if (flag('--summary') > 0) {
+    for (const h of heroFaults(props)) console.log(`HERO ${h.shot} f${h.frame}: ${h.why}`);
     let bad = 0;
     for (const s of shotSummary(props)) {
       const cut = Object.entries(s.cut);

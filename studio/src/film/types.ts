@@ -62,6 +62,9 @@ export type Transition = {kind: TransitionKind; frames: number; obj?: string; di
 
 export type SetEvent = {f: number; kind: string; arg?: number | string};
 
+/** A main element: worn on her head (crown, hat), her face, a lyric word, or a prop box in the set. */
+export type Hero = {name: string; kind: 'worn' | 'face' | 'word' | 'prop'; word?: string; min: number; size?: [number, number]; center?: V3; why_small?: string | null};
+
 export type Shot = {
   id: string;
   from: number;
@@ -78,6 +81,7 @@ export type Shot = {
   texts?: {name: string; center: V3; size: [number, number]; rot: number}[];   // readable props: never cut by the frame
   noLens?: {name: string; min: V3; max: V3}[];                                // the camera may never be inside these
   solids?: {name: string; center: V3; size: V3}[];                            // props: lens never inside, face never hidden
+  hero?: Hero[];           // the video's main element(s) this shot must show readably (treatment -> shots.json heroes)
 };
 
 export type FilmProps = {

@@ -103,6 +103,7 @@ jobs:
               python -m raymi props "$J"
             elif [ -f "jobs/$J/shots.json" ]; then
               python -m raymi timeline "$J" "${{ steps.which.outputs.format }}"   # a film job (MV / its Short)
+              (cd studio && node guard.mjs "$J" --hero-boxes every:15 > "../jobs/$J/out/hero_boxes.json")   # main element boxes
             fi
             [ -f "jobs/$J/out/props.json" ] || { echo "::error::$J has no props.json"; exit 1; }
             M=$(python -c "import json,sys;m=json.loads(sys.argv[1]);p=json.loads(sys.argv[3]);m+=[dict(x,job=sys.argv[2]) for x in p];print(json.dumps(m))" \
@@ -123,6 +124,7 @@ jobs:
           mkdir -p prep/_font && cp assets/fonts/Raymi-Regular.ttf assets/fonts/Raymi-Heavy.ttf prep/_font/   # the font as grown above
           for J in ${{ steps.which.outputs.jobs }}; do
             mkdir -p "prep/$J/out" && cp "jobs/$J/out/props.json" "prep/$J/out/"
+            [ -f "jobs/$J/out/hero_boxes.json" ] && cp "jobs/$J/out/hero_boxes.json" "prep/$J/out/"
             V=$(python -c "import json,sys;print(json.load(open(sys.argv[1])).get('voice') or '')" "jobs/$J/out/props.json")
             [ -n "$V" ] && cp "jobs/$J/$V" "prep/$J/"
             A=$(python -c "import json,sys;a=json.load(open(sys.argv[1])).get('audio');print(a['src']+' '+a['file'] if a else '')" "jobs/$J/out/props.json")
@@ -215,6 +217,9 @@ jobs:
             python -m raymi assemble "$J" "p/$J"
             python -m raymi finish "$J" || echo "$J: QC FAILED - see qc.json" >> "$GITHUB_STEP_SUMMARY"
             python -m raymi screen "$J" || echo "$J: critic kit failed" >> "$GITHUB_STEP_SUMMARY"
+            if [ -f "jobs/$J/out/hero_boxes.json" ]; then   # the main element's value contrast at phone size (raymi/hero.py)
+              python -m raymi hero "$J" "jobs/$J/out/final.mp4" >> "$GITHUB_STEP_SUMMARY" || echo "$J: MAIN ELEMENT UNREADABLE - kit/facts/hero.json" >> "$GITHUB_STEP_SUMMARY"
+            fi
           done
       - name: Publish (release + renders branch + status)
         env:
