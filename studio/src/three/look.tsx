@@ -8,7 +8,7 @@ let gradient: THREE.DataTexture | null = null;
 /** 4-step ramp: deep shade, shade, light, a narrow highlight band (painted, not plastic). */
 export function toonRamp(): THREE.DataTexture {
   if (gradient) return gradient;
-  const steps = [70, 140, 215, 255];
+  const steps = [46, 122, 208, 255];      // deeper shadow steps: depth (toki 2026-10-18: "blass, ohne Tiefe")
   const data = new Uint8Array(steps.length * 4);
   steps.forEach((v, i) => data.set([v, v, v, 255], i * 4));
   gradient = new THREE.DataTexture(data, steps.length, 1, THREE.RGBAFormat);

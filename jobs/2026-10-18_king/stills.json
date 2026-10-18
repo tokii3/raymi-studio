@@ -1,41 +1,26 @@
 {
  "format": "pilot",
  "frames": [
-  31,
-  76,
-  105,
   152,
   199,
   228,
-  271,
   316,
   366,
   420,
-  451,
-  472,
-  497,
   528,
-  554,
   590
  ],
  "names": [
-  "pilot_23_palms-glass",
-  "pilot_24_left-side",
-  "pilot_25_right-side",
-  "pilot_26_teeth-grin",
-  "pilot_27_pa-pa-pa",
-  "pilot_28_embarrassing",
-  "pilot_29_zigzag",
-  "pilot_30_laugh",
-  "pilot_31_haha",
-  "pilot_32_crowned-by-them",
-  "pilot_33_phone-wall",
-  "pilot_34_lit-by-screens",
-  "pilot_35_king-again",
-  "pilot_36_lights-bang",
-  "pilot_37_leaving",
-  "pilot_38_grin-drops"
+  "grade_teeth-grin",
+  "grade_pa-pa-pa",
+  "grade_embarrassing",
+  "grade_laugh",
+  "grade_haha",
+  "grade_crowned-by-them",
+  "grade_lights-bang",
+  "grade_grin-drops"
  ],
  "scale": 0.5,
- "to": "renders"
+ "to": "renders",
+ "round": 4
 }

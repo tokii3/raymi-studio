@@ -12,7 +12,7 @@ import {ReactionIcon} from '../Icons';
 import {SETS} from '../three/sets';
 import {Puppet3D} from '../three/Puppet3D';
 import {Words3D} from '../three/Words3D';
-import {BottleCap} from '../three/props';
+import {CapCrown} from '../three/props';
 import {useTexturesReady} from '../three/look';
 import {makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
@@ -80,7 +80,7 @@ export const Film: React.FC<FilmProps> = (props) => {
   }
   return (
     <AbsoluteFill style={{backgroundColor: '#0b0818', overflow: 'hidden'}}>
-      <AbsoluteFill style={whipStyle(props.shots, f, W)}>
+      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: [whipStyle(props.shots, f, W).filter, gradeOf(shot).filter].filter(Boolean).join(' ')}}>
         {ready ? (
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>
@@ -90,7 +90,7 @@ export const Film: React.FC<FilmProps> = (props) => {
               glow={shot.opts.glow ? String(shot.opts.glow) : undefined} />
             {crownAt ? (
               <group position={[crownAt.x, crownAt.y, crownAt.z]} rotation={[0, Math.atan2(camPos[0] - crownAt.x, camPos[2] - crownAt.z), 0]}>
-                <BottleCap pos={[0, 0.02, 0]} rot={[0.75, 0, -0.22]} scale={0.95} c="#d9a63a" top="#5b2a91" />
+                <CapCrown pos={[0, 0.0, 0]} rot={[0.12, 0, -0.18]} scale={0.62} />
               </group>
             ) : null}
             {shot.lyrics ? <Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} /> : null}
@@ -99,17 +99,35 @@ export const Film: React.FC<FilmProps> = (props) => {
       </AbsoluteFill>
       {icon}
       <Transitions shots={props.shots} f={f} />
-      <Grade grain={props.grain} />
+      <Grade grain={props.grain} tone={gradeOf(shot)} />
       {props.audio ? <Audio src={staticFile(props.audio.file)} trimBefore={Math.round(props.audio.from * fps)} /> : null}
     </AbsoluteFill>
   );
 };
 
-const Grade: React.FC<{grain: number}> = ({grain}) => {
+// The colour grade (toki 2026-10-18: "sehr blass und ohne Tiefe" - like a mix in After Effects): contrast + saturation
+// on the picture, a split tone (cool light from the water above, deep violet in the shadows below) and a heavier
+// vignette. Per act: day (the show), night (the lamp: amber over wine), own (her violet light). Her skin keeps its
+// pale grey-blue (hard rule 9): the grade is moderate and her sprite is unlit by the set.
+export type Tone = {filter: string; top: string; bottom: string; split: number; vignette: number};
+const TONES: Record<string, Tone> = {
+  day: {filter: 'contrast(1.16) saturate(1.2) brightness(0.96)', top: '#36d6ff', bottom: '#3a0f6e', split: 0.34, vignette: 0.62},
+  closing: {filter: 'contrast(1.2) saturate(1.1) brightness(0.92)', top: '#2a7fae', bottom: '#1a0638', split: 0.4, vignette: 0.7},
+  night: {filter: 'contrast(1.2) saturate(1.18) brightness(0.95)', top: '#ffb35c', bottom: '#3b0a3a', split: 0.32, vignette: 0.72},
+  own: {filter: 'contrast(1.18) saturate(1.22) brightness(0.95)', top: '#b98cff', bottom: '#14062e', split: 0.36, vignette: 0.7},
+};
+export function gradeOf(shot: Shot): Tone {
+  const g = String(shot.opts.grade ?? (shot.opts.glow ? 'own' : shot.set === 'cardtable' ? 'night' : Number(shot.opts.dim ?? 0) >= 0.5 ? 'closing' : 'day'));
+  return TONES[g] ?? TONES.day;
+}
+
+const Grade: React.FC<{grain: number; tone: Tone}> = ({grain, tone}) => {
   const f = useCurrentFrame();
   return (
     <>
-      <AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 48%, rgba(0,0,0,0) 58%, rgba(10,2,30,0.5) 100%)'}} />
+      <AbsoluteFill style={{background: `linear-gradient(180deg, ${tone.top} 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 55%, ${tone.bottom} 100%)`,
+        mixBlendMode: 'soft-light', opacity: tone.split}} />
+      <AbsoluteFill style={{background: `radial-gradient(ellipse at 50% 46%, rgba(0,0,0,0) 52%, rgba(8,2,24,${tone.vignette}) 100%)`}} />
       <AbsoluteFill style={{opacity: grain, mixBlendMode: 'overlay', backgroundImage: grainTile,
         backgroundPosition: `${Math.floor(random(`gx${f % 24}`) * 256)}px ${Math.floor(random(`gy${f % 24}`) * 256)}px`}} />
     </>

@@ -198,3 +198,26 @@ export const SandMound: React.FC<{pos: P3; h: number; r?: number; c?: string; f:
     </group>
   );
 };
+
+/** Her crown: the SAME bottle cap that lies on the sand, worn upside down - the crimp teeth point up as crown points,
+ *  a purple glass bead in the middle (toki 2026-10-18: the flat cap on her head "sieht komisch aus"). Small and
+ *  tilted like a real crown on a head, gold that catches the light. */
+export const CapCrown: React.FC<{pos: P3; rot?: P3; scale?: number; c?: string; gem?: string}> = ({pos, rot = [0, 0, 0], scale = 1, c = '#e8b94a', gem = '#9b5cff'}) => {
+  const n = 14;
+  return (
+    <group position={pos} rotation={rot} scale={scale}>
+      {/* the cap's flat top is now the crown's base band */}
+      <mesh material={toon(c, '#6b4a10', 0.25)} castShadow position={[0, 0.02, 0]}><cylinderGeometry args={[0.105, 0.1, 0.04, 40]} /></mesh>
+      <mesh material={toon('#fff1b8')} position={[0, 0.041, 0]} rotation={[-Math.PI / 2, 0, 0]}><ringGeometry args={[0.07, 0.085, 32]} /></mesh>
+      {Array.from({length: n}, (_, i) => {
+        const a = (i / n) * Math.PI * 2;
+        return (
+          <mesh key={i} position={[Math.cos(a) * 0.098, 0.075, Math.sin(a) * 0.098]} rotation={[0, -a, 0]} material={toon(c, '#6b4a10', 0.25)} castShadow>
+            <coneGeometry args={[0.016, 0.07, 4]} />
+          </mesh>
+        );
+      })}
+      <mesh position={[0, 0.06, 0]} material={toon(gem, '#5b2ad6', 0.6)}><sphereGeometry args={[0.03, 16, 12]} /></mesh>
+    </group>
+  );
+};

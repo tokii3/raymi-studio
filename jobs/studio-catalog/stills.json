@@ -1,1 +1,12 @@
-{"format":"mv","frames":[267],"names":["lyrics_screen"],"scale":0.5,"to":"catalog","round":9}
+{
+ "format": "mv",
+ "frames": [
+  2658
+ ],
+ "names": [
+  "raymi_in_space__crown__lyrics_sign"
+ ],
+ "scale": 0.5,
+ "to": "catalog",
+ "round": 10
+}
