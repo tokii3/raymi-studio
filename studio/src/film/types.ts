@@ -27,7 +27,7 @@ export type PuppetKey = {
   ease?: Ease;
 };
 
-export type Word3 = {w: string; from: number; to: number; key: boolean; line: number; idx: number};
+export type Word3 = {w: string; from: number; to: number; key: boolean; line: number; idx: number; em?: number | null};
 
 export type LyricKind = 'sign' | 'float' | 'stamp' | 'glass' | 'card' | 'ticker';
 export type LyricMaterial = 'fog' | 'engraved' | 'screen' | 'print' | 'felt' | 'light';

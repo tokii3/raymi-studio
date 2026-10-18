@@ -170,14 +170,19 @@ export const Visitor: React.FC<{pos: P3; h?: number; c: string; seed: number; ph
         <group position={[0.16 * (seed % 2 ? 1 : -1) + 0.1 * look, h * (1.02 + 0.16 * raise) + 0.06 * rnd(seed + 4), -0.12]} rotation={[0.12, 0, (rnd(seed + 6) - 0.5) * 0.3]}>
           {/* the arm holding it up */}
           <mesh position={[-0.03 * (seed % 2 ? 1 : -1), -0.25, 0.08]} rotation={[0.25, 0, 0.2 * (seed % 2 ? 1 : -1)]} material={toon(c)}><cylinderGeometry args={[0.045, 0.05, 0.5, 8]} /></mesh>
-          <RBox size={[0.15, 0.27, 0.014]} r={0.012} c="#16121f" e={flash > 0 ? '#ffffff' : '#000000'} ei={flash > 0 ? 2.5 : 0} cast={false} />
+          <RBox size={[0.15, 0.27, 0.014]} r={0.012} c="#4a4560" e={flash > 0 ? '#ffffff' : '#000000'} ei={flash > 0 ? 2.5 : 0} cast={false} />
           <mesh position={[0, 0, 0.009]}>
             <planeGeometry args={[0.13, 0.24]} />
             {screen ? <meshBasicMaterial map={screen} toneMapped={false} /> : <meshBasicMaterial color="#7fd8ff" toneMapped={false} />}
           </mesh>
+          {/* the camera app over the picture (REC dot, frame corners): reads as a phone filming, not a photo card */}
+          <mesh position={[0, 0, 0.011]}>
+            <planeGeometry args={[0.13, 0.24]} />
+            <meshBasicMaterial map={phoneUI()} transparent depthWrite={false} toneMapped={false} />
+          </mesh>
           {flash > 0 ? (
             <mesh position={[0, 0, -0.05]}>
-              <planeGeometry args={[1.4 * flash, 1.4 * flash]} />
+              <planeGeometry args={[0.7 * flash, 0.7 * flash]} />
               <meshBasicMaterial map={blobTexture('#ffffff')} transparent opacity={0.9 * flash} depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} />
             </mesh>
           ) : null}
@@ -229,4 +234,18 @@ export function drawText(ctx: CanvasRenderingContext2D, text: string, x: number,
   if (opts.outline) { ctx.lineJoin = 'round'; ctx.strokeStyle = opts.outline; ctx.lineWidth = opts.ow ?? px * 0.12; ctx.strokeText(text, x, y); }
   ctx.fillStyle = color;
   ctx.fillText(text, x, y);
+}
+
+/** A phone camera app overlay: REC dot, frame corners, a shutter ring (transparent elsewhere). */
+export function phoneUI(): THREE.CanvasTexture {
+  return canvasTexture('phone_ui', 130, 240, (ctx, w, h) => {
+    ctx.clearRect(0, 0, w, h);
+    ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.lineWidth = 4;
+    for (const [x, y, dx, dy] of [[10, 18, 1, 1], [w - 10, 18, -1, 1], [10, h - 40, 1, -1], [w - 10, h - 40, -1, -1]]) {
+      ctx.beginPath(); ctx.moveTo(x, y + dy * 18); ctx.lineTo(x, y); ctx.lineTo(x + dx * 18, y); ctx.stroke();
+    }
+    ctx.fillStyle = '#ff3b4e'; ctx.beginPath(); ctx.arc(20, 10, 5, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = 'rgba(0,0,0,0.55)'; ctx.fillRect(0, h - 30, w, 30);
+    ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(w / 2, h - 15, 10, 0, Math.PI * 2); ctx.stroke();
+  });
 }

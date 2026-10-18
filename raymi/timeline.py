@@ -465,7 +465,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                         continue
                     if round(a * FPS) <= w["cut"] < round(b * FPS) and t_from <= w["t0"] < t_to:   # frames, not floats
                         words.append({"w": w["w"], "from": w["cut"] - f0, "to": round(w["t1"] * FPS) - f0,
-                                      "key": w["w"].lower() in keys or w["roma"] in keys, "line": li, "idx": wi})
+                                      "key": w["w"].lower() in keys or w["roma"] in keys, "line": li, "idx": wi,
+                                      "em": P.text_em(w["w"])})          # exact width in her font (guards)
                         screen_texts.append(w["w"])
         opts = dict(s.get("opts") or {})
         for k in TIME_OPTS & opts.keys():

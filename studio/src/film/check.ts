@@ -122,12 +122,14 @@ export function placeAt(props: FilmProps, shot: number, f: number, sx: number, s
 // The renderer measures words with the real font; here (node, no font) a word's width is estimated from its characters:
 // kana / kanji ~1 em, Latin ~0.62 em, plus the texture padding. Slightly generous, so a pass here is a real pass.
 const em = (ch: string) => (/[　-鿿＀-￯]/.test(ch) ? 1.18 : ch === ' ' ? 0.35 : 0.7);   // her marker font is wide
-export function wordBox(w: {w: string; key: boolean}, L: {size: number; width: number; kind?: string; material?: string | null}): {width: number; height: number} {
+export function wordBox(w: {w: string; key: boolean; em?: number | null}, L: {size: number; width: number; kind?: string; material?: string | null}): {width: number; height: number} {
   let size = L.size * (w.key ? 2.2 : 1);
   const screen = L.material === 'screen', card = L.kind === 'card';      // Words3D pads a UI bar / a card face
   const pad = card ? 140 : screen ? 180 : 80, extra = card ? 80 / 180 : screen ? 60 / 180 : 0;
   const hScale = (1.35 + extra) / 0.72;
-  const aspect = ([...w.w].reduce((a, c) => a + em(c), 0) + pad / 180) / (1.35 + extra);
+  // the word's real advance in her font (timeline.py measures it) + 4 % - the estimate only for old props
+  const text = w.em != null ? w.em * 1.04 : [...w.w].reduce((a, c) => a + em(c), 0);
+  const aspect = (text + pad / 180) / (1.35 + extra);
   let width = size * hScale * aspect;
   if (width > L.width) { size *= L.width / width; width = L.width; }
   return {width, height: size * hScale};
@@ -163,7 +165,8 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
   const aspect = props.width / props.height;
   const out: TextFault[] = [];
   for (const s of props.shots) {
-    if (!s.lyrics || s.lyrics.kind === 'ticker' || s.lyrics.kind === 'float') continue;   // tickers scroll, bubbles rise out
+    if (!s.lyrics || s.lyrics.kind === 'ticker') continue;   // tickers scroll through the frame on purpose
+    const float = s.lyrics.kind === 'float';                  // bubbles rise out - but must be read whole first (pilot 1)
     const lines = [...new Set(s.words.map((w) => w.line))];
     for (const line of lines) {
       const ws = s.words.filter((w) => w.line === line);
@@ -171,11 +174,17 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
       const z = Math.min(s.to, next ? next.from : Math.max(...ws.map((w) => w.to)) + props.fps);
       // settled 6 frames after the last word - but a word landing at the very end of a shot is still checked (KING
       // on the LED in king-again was never tested because its last word fell inside the shot's final 6 frames)
-      const a = Math.max(Math.min(...ws.map((w) => w.from)), Math.min(Math.max(...ws.map((w) => w.from)) + 6, z - 1));
-      const corners = lineCorners(s, line);
-      for (let f = a; f < z; f += 3) {
-        const cam = makeCamera(s, f, aspect, [], props.fps);
-        const bad = corners.some((c) => { const n = c.clone().project(cam); return n.z >= 1 || Math.abs(n.x) > 0.985 || Math.abs(n.y) > 0.985; });
+      const last = Math.max(...ws.map((w) => w.from));
+      const a = Math.max(Math.min(...ws.map((w) => w.from)), Math.min(last + 6, z - 1));
+      const zz = float ? Math.min(z, a + 18) : z;
+      const corners0 = lineCorners(s, line);
+      // every frame, with the real camera kick on the music hits (pilot 1: a stamp clipped by the punch on a hit)
+      for (let f = a; f < zz; f++) {
+        const rise = float ? ((f - last) / props.fps) * 0.12 + 0.04 : 0;     // Words3D float: rises 0.12 m/s
+        const corners = rise ? corners0.map((c) => c.clone().add(new THREE.Vector3(0, rise, 0))) : corners0;
+        const cam = makeCamera(s, f, aspect, props.hits, props.fps);
+        // inside the typographic safe area (4 % margin): a word touching the frame edge reads as clipped (pilot 1)
+        const bad = corners.some((c) => { const n = c.clone().project(cam); return n.z >= 1 || Math.abs(n.x) > 0.92 || Math.abs(n.y) > 0.92; });
         if (bad) { out.push({shot: s.id, frame: f, line, text: ws.map((w) => w.w).join(' '), why: 'leaves the frame'}); break; }
         // text on her face hides the one thing the viewer looks at (blind viewer, style test 2) - unless the script wants it
         const p = s.lyrics.over ? null : puppetAt(s.puppets, f, props.fps);
@@ -206,7 +215,7 @@ export function faceCrops(props: FilmProps): {shot: string; frame: number}[] {
     for (let f = s.from; f < s.to; f += 3) {
       const p = puppetAt(s.puppets, f, props.fps);
       if (!p || !p.key.head || p.lift < -0.3) continue;
-      const cam = makeCamera(s, f, aspect, [], props.fps);
+      const cam = makeCamera(s, f, aspect, props.hits, props.fps);
       const m = puppetMatrix(p, [cam.position.x, cam.position.y, cam.position.z]);
       const {w, h} = planeSize(p.key);
       const [x0, y0, x1, y1] = p.key.head;

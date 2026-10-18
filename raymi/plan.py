@@ -39,6 +39,25 @@ def font_cmap() -> set[int]:
     return set(TTFont(str(FONT)).getBestCmap())
 
 
+_ADV: dict | None = None
+
+
+def text_em(text: str) -> float | None:
+    """Exact advance width of `text` in her font, in em (the guards measure words with this, never a guess)."""
+    global _ADV
+    if _ADV is None:
+        from fontTools.ttLib import TTFont
+
+        f = TTFont(str(FONT))
+        upm = f["head"].unitsPerEm
+        hm, cmap = f["hmtx"].metrics, f.getBestCmap()
+        _ADV = {cp: hm[g][0] / upm for cp, g in cmap.items() if g in hm}
+    try:
+        return round(sum(_ADV[ord(c)] for c in text), 4)
+    except KeyError:
+        return None
+
+
 def job_dir(job: str) -> Path:
     p = Path(job)
     return p if p.is_dir() else REPO / "jobs" / job
