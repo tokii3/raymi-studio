@@ -30,6 +30,7 @@ export type PuppetKey = {
 export type Word3 = {w: string; from: number; to: number; key: boolean; line: number; idx: number};
 
 export type LyricKind = 'sign' | 'float' | 'stamp' | 'glass' | 'card' | 'ticker';
+export type LyricMaterial = 'fog' | 'engraved' | 'screen' | 'print' | 'felt' | 'light';
 export type Lyrics = {
   kind: LyricKind;
   anchor: V3;
@@ -41,6 +42,7 @@ export type Lyrics = {
   outline: string;
   lit: boolean;            // true = painted on a surface (takes the set light), false = emits (neon, screen)
   over?: boolean;          // true = the words cross her face on purpose (the script says why)
+  material?: LyricMaterial | null;   // what the words are made of on their object (default: painted ink)
 };
 
 export type TransitionKind = 'cut' | 'bubbles' | 'ink' | 'whip' | 'flash' | 'pass';

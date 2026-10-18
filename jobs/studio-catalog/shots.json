@@ -2,13 +2,400 @@
  "title": "studio component catalog",
  "audio": {
   "file": "../2026-10-18_king/song.webm",
-  "from": 86.9,
+  "from": 15.11,
   "to": 117.0
  },
  "lyrics": "../2026-10-18_king/lyrics_timed.json",
  "song_map": "../2026-10-18_king/song_map.json",
  "grain": 0.05,
  "shots": [
+  {
+   "id": "lyr-fog",
+   "at": "line:0",
+   "set": "aquarium",
+   "opts": {
+    "crowd": 10
+   },
+   "why": "catalog: lyrics written by a finger in breath-fog on the glass (material fog)",
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "cam": "glass_close"
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_LONGING_GLASS_UV_200",
+     "pos": "glass"
+    }
+   ],
+   "lyrics": {
+    "kind": "glass",
+    "material": "fog",
+    "anchor": [
+     0.1,
+     1.25,
+     1.57
+    ],
+    "size": 0.07,
+    "width": 0.7,
+    "lines": [
+     0
+    ],
+    "words": [
+     "幽閉"
+    ]
+   }
+  },
+  {
+   "id": "lyr-engraved",
+   "at": "line:1",
+   "set": "aquarium",
+   "opts": {
+    "crowd": 0
+   },
+   "why": "catalog: lyrics engraved in brass (material engraved)",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      -0.2,
+      3.4
+     ],
+     "look": [
+      0.0,
+      -0.3,
+      1.6
+     ],
+     "fov": 30
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "center"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "engraved",
+    "anchor": [
+     0.0,
+     -0.42,
+     1.69
+    ],
+    "size": 0.1,
+    "width": 1.6,
+    "lines": [
+     1
+    ],
+    "words": [
+     "利口に"
+    ],
+    "color": "#e7c46a",
+    "lit": true
+   }
+  },
+  {
+   "id": "lyr-screen",
+   "at": "line:2",
+   "set": "aquarium",
+   "opts": {
+    "crowd": 16,
+    "phones_up": true
+   },
+   "why": "catalog: lyrics as a phone's camera caption (material screen)",
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "cam": "glass_close"
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": "glass"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "screen",
+    "anchor": [
+     0.42,
+     1.23,
+     3.33
+    ],
+    "size": 0.035,
+    "width": 0.24,
+    "lines": [
+     2
+    ]
+   }
+  },
+  {
+   "id": "lyr-light",
+   "at": "line:3",
+   "set": "aquarium",
+   "opts": {
+    "crowd": 0,
+    "dim": 0.9,
+    "spot": false,
+    "glow": "#9b5cff",
+    "banks_off": "all"
+   },
+   "why": "catalog: words drawn in her violet light (material light)",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "tank_front"
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": "center"
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "anchor": [
+     0.9,
+     1.7,
+     -0.1
+    ],
+    "size": 0.12,
+    "width": 1.6,
+    "lines": [
+     3
+    ],
+    "color": "#c9a2ff",
+    "accent": "#e6d4ff"
+   }
+  },
+  {
+   "id": "lyr-print",
+   "at": "line:4",
+   "set": "cardtable",
+   "opts": {
+    "king": "WS_F_SMUG_WINK_UV_169"
+   },
+   "why": "catalog: lyrics as a card's own print (material print)",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "card_ms"
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
+     "pos": [
+      0.4,
+      0,
+      -0.4
+     ]
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "print",
+    "anchor": [
+     -1.6,
+     1.0,
+     -1.05
+    ],
+    "rot": 10,
+    "size": 0.07,
+    "width": 0.6,
+    "lines": [
+     4
+    ],
+    "words": [
+     "欠片の"
+    ],
+    "color": "#2a1240",
+    "lit": true
+   }
+  },
+  {
+   "id": "frame-close",
+   "at": "line:5",
+   "set": "aquarium",
+   "opts": {
+    "crowd": 16,
+    "flash_beats": "beats",
+    "crown": "head"
+   },
+   "why": "catalog: the frame camera - a close-up solved from her sprite (head in, cut edges out)",
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "cam": "tank_front",
+     "side": "left"
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "center"
+    }
+   ]
+  },
+  {
+   "id": "crowd-look",
+   "at": "line:6",
+   "set": "aquarium",
+   "opts": {
+    "crowd": 22,
+    "phones_up": true,
+    "flash_beats": "beats",
+    "crowd_look": [
+     [
+      32.4,
+      "left"
+     ]
+    ]
+   },
+   "why": "catalog: crowd heads turn in a wave, phones up, flares on the beat",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.4,
+      0.9,
+      6.0
+     ],
+     "look": [
+      -1.4,
+      1.0,
+      0.0
+     ],
+     "fov": 36
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SCARED_RUN_UV_176",
+     "pos": "left",
+     "flip": true
+    }
+   ]
+  },
+  {
+   "id": "light-banks",
+   "at": "line:7",
+   "set": "aquarium",
+   "opts": {
+    "crowd": 16,
+    "banks_off": [
+     35.0
+    ],
+    "crowd_out": [
+     35.0,
+     35.3
+    ]
+   },
+   "why": "catalog: the hall's light banks bang off one by one, the crowd leaves in waves",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "inside_out"
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_BK_NA_WADE_UV_183",
+     "pos": [
+      0.0,
+      0,
+      -0.6
+     ]
+    }
+   ]
+  },
+  {
+   "id": "led-chute",
+   "at": "line:8",
+   "set": "aquarium",
+   "opts": {
+    "crowd": 8,
+    "chute": true,
+    "led_flip": [
+     40.8,
+     41.2,
+     41.6,
+     42.0,
+     43.0,
+     44.0
+    ]
+   },
+   "why": "catalog: LED letters light one by one; the wish chute",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.5,
+      1.6,
+      8.5
+     ],
+     "look": [
+      -1.6,
+      3.3,
+      1.5
+     ],
+     "fov": 40
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "center"
+    }
+   ]
+  },
+  {
+   "id": "cap-off",
+   "at": "line:10",
+   "set": "aquarium",
+   "opts": {
+    "crowd": 0,
+    "crown": "head",
+    "cap_off": 47.0
+   },
+   "why": "catalog: cap_off - the crown leaves her head and lands on its pebble",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "throne_ms",
+     "offset": [
+      0.4,
+      0.3,
+      1.2
+     ]
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_164",
+     "pos": "throne"
+    }
+   ]
+  },
   {
    "id": "aquarium",
    "at": 86.9,

@@ -152,10 +152,10 @@ export const Caustics: React.FC<{size: [number, number]; pos: P3; f: number; c?:
 };
 
 /** A visitor / audience member: a built silhouette (no faces, no generated people), optionally holding a phone. */
-export const Visitor: React.FC<{pos: P3; h?: number; c: string; seed: number; phone?: number; f: number; flash?: number; screen?: THREE.Texture}> = ({
-  pos, h = 1.7, c, seed, phone = 0, f, flash = 0, screen,
-}) => {
-  const lean = (rnd(seed) - 0.5) * 0.08 + 0.02 * Math.sin(f / 40 + seed);
+export const Visitor: React.FC<{pos: P3; h?: number; c: string; seed: number; phone?: number; f: number; flash?: number; screen?: THREE.Texture;
+  look?: number; raise?: number}> = ({pos, h = 1.7, c, seed, phone = 0, f, flash = 0, screen, look = 0, raise = 0}) => {
+  // look: -1 (her left side of the tank) .. 1 - the head turns and the body leans after it; raise: phone held higher
+  const lean = (rnd(seed) - 0.5) * 0.08 + 0.02 * Math.sin(f / 40 + seed) - 0.06 * look;
   const w = 0.42 + rnd(seed + 1) * 0.12;
   const headR = 0.12 + rnd(seed + 2) * 0.02;
   const hair = rnd(seed + 3) > 0.5;
@@ -164,10 +164,10 @@ export const Visitor: React.FC<{pos: P3; h?: number; c: string; seed: number; ph
     <group position={pos} rotation={[0, 0, lean]}>
       <RBox size={[w, h * 0.5, 0.26]} pos={[0, h * 0.5, 0]} r={0.12} c={c} />
       <RBox size={[w * 0.75, h * 0.32, 0.22]} pos={[0, h * 0.16, 0]} r={0.08} c={c} />
-      <mesh position={[0, h * 0.84, 0]} material={toon(c)} castShadow><sphereGeometry args={[headR, 14, 12]} /></mesh>
-      {hair ? <mesh position={[0, h * 0.86, -0.02]} material={toon(c)} castShadow><sphereGeometry args={[headR * 1.15, 12, 10, 0, Math.PI * 2, 0, Math.PI / 1.8]} /></mesh> : null}
+      <mesh position={[0.07 * look, h * 0.84, 0]} material={toon(c)} castShadow><sphereGeometry args={[headR, 14, 12]} /></mesh>
+      {hair ? <mesh position={[0.07 * look, h * 0.86, -0.02]} material={toon(c)} castShadow><sphereGeometry args={[headR * 1.15, 12, 10, 0, Math.PI * 2, 0, Math.PI / 1.8]} /></mesh> : null}
       {ph ? (
-        <group position={[0.16 * (seed % 2 ? 1 : -1), h * 1.02 + 0.06 * rnd(seed + 4), -0.12]} rotation={[0.12, 0, (rnd(seed + 6) - 0.5) * 0.3]}>
+        <group position={[0.16 * (seed % 2 ? 1 : -1) + 0.1 * look, h * (1.02 + 0.16 * raise) + 0.06 * rnd(seed + 4), -0.12]} rotation={[0.12, 0, (rnd(seed + 6) - 0.5) * 0.3]}>
           {/* the arm holding it up */}
           <mesh position={[-0.03 * (seed % 2 ? 1 : -1), -0.25, 0.08]} rotation={[0.25, 0, 0.2 * (seed % 2 ? 1 : -1)]} material={toon(c)}><cylinderGeometry args={[0.045, 0.05, 0.5, 8]} /></mesh>
           <RBox size={[0.15, 0.27, 0.014]} r={0.012} c="#16121f" e={flash > 0 ? '#ffffff' : '#000000'} ei={flash > 0 ? 2.5 : 0} cast={false} />

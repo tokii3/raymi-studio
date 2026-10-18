@@ -6,20 +6,21 @@ import React, {useMemo} from 'react';
 import * as THREE from 'three';
 import {canvasTexture, rnd, toonRamp} from './look';
 import {ease} from '../film/motion';
-import type {Lyrics, Word3} from '../film/types';
+import type {LyricMaterial, Lyrics, Word3} from '../film/types';
 
 const PX = 180;                    // font px on the texture
 const CAP = 0.72;                  // cap height share of the font size (Raymi-Regular)
 
 type Tex = {tex: THREE.CanvasTexture; aspect: number; hScale: number};
 
-function wordTexture(w: string, color: string, outline: string, card: boolean): Tex {
-  const key = `w|${w}|${color}|${outline}|${card}`;
+function wordTexture(w: string, color: string, outline: string, card: boolean, material?: LyricMaterial | null): Tex {
+  const key = `w|${w}|${color}|${outline}|${card}|${material ?? ''}`;
   const meas = document.createElement('canvas').getContext('2d')!;
   meas.font = `${PX}px Raymi`;
   const tw = Math.ceil(meas.measureText(w).width);
-  const pad = card ? 70 : 40;
-  const cw = tw + pad * 2, ch = Math.ceil(PX * 1.35) + (card ? 80 : 0);
+  const screen = material === 'screen';
+  const pad = card ? 70 : screen ? 90 : 40;
+  const cw = tw + pad * 2, ch = Math.ceil(PX * 1.35) + (card ? 80 : screen ? 60 : 0);
   const tex = canvasTexture(key, cw, ch, (ctx, W, H) => {
     if (card) {                                   // a playing card's face: ivory, rounded, a thin inner line
       ctx.fillStyle = '#f4ecdc';
@@ -27,13 +28,44 @@ function wordTexture(w: string, color: string, outline: string, card: boolean): 
       ctx.strokeStyle = '#c9b78f'; ctx.lineWidth = 5;
       ctx.beginPath(); ctx.roundRect(18, 18, W - 36, H - 36, 24); ctx.stroke();
     }
+    if (screen) {                                 // a phone's camera UI: dark caption bar, REC dot, corner brackets
+      ctx.fillStyle = 'rgba(8,6,18,0.78)';
+      ctx.beginPath(); ctx.roundRect(4, 4, W - 8, H - 8, 26); ctx.fill();
+      ctx.fillStyle = '#ff3b4e';
+      ctx.beginPath(); ctx.arc(46, 46, 16, 0, Math.PI * 2); ctx.fill();
+      ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 6;
+      for (const [x, y, dx, dy] of [[20, 20, 1, 1], [W - 20, 20, -1, 1], [20, H - 20, 1, -1], [W - 20, H - 20, -1, -1]]) {
+        ctx.beginPath(); ctx.moveTo(x, y + dy * 34); ctx.lineTo(x, y); ctx.lineTo(x + dx * 34, y); ctx.stroke();
+      }
+    }
     ctx.font = `${PX}px Raymi`;
     ctx.textBaseline = 'middle';
     ctx.textAlign = 'center';
     ctx.lineJoin = 'round';
-    if (!card) { ctx.strokeStyle = outline; ctx.lineWidth = 22; ctx.strokeText(w, W / 2, H / 2 + PX * 0.04); }
+    const x = W / 2, y = H / 2 + PX * 0.04;
+    switch (material) {
+      case 'fog':                                 // a finger through breath on cold glass: soft, pale, no outline
+        ctx.shadowColor = 'rgba(230,245,255,0.9)'; ctx.shadowBlur = 26;
+        ctx.fillStyle = 'rgba(232,246,255,0.72)'; ctx.fillText(w, x, y);
+        ctx.shadowBlur = 0; return;
+      case 'engraved':                            // cut into brass / a coin: dark groove, light lip below
+        ctx.fillStyle = 'rgba(255,240,190,0.75)'; ctx.fillText(w, x + 3, y + 5);
+        ctx.fillStyle = '#3a2410'; ctx.fillText(w, x, y);
+        ctx.fillStyle = color; ctx.globalAlpha = 0.35; ctx.fillText(w, x - 2, y - 2); ctx.globalAlpha = 1; return;
+      case 'print':                               // a card's own printed ink: flat, no outline
+      case 'felt':                                // the felt's gold print: flat, slightly worn
+        ctx.fillStyle = color; ctx.globalAlpha = material === 'felt' ? 0.85 : 1; ctx.fillText(w, x, y); ctx.globalAlpha = 1; return;
+      case 'light':                               // words drawn in light: a glow around a hot core
+        ctx.shadowColor = color; ctx.shadowBlur = 40; ctx.fillStyle = color; ctx.fillText(w, x, y);
+        ctx.shadowBlur = 10; ctx.fillStyle = '#ffffff'; ctx.globalAlpha = 0.7; ctx.fillText(w, x, y);
+        ctx.globalAlpha = 1; ctx.shadowBlur = 0; return;
+      case 'screen':
+        ctx.fillStyle = '#ffffff'; ctx.fillText(w, x, y + 6); return;
+      default: break;
+    }
+    if (!card) { ctx.strokeStyle = outline; ctx.lineWidth = 22; ctx.strokeText(w, x, y); }
     ctx.fillStyle = color;
-    ctx.fillText(w, W / 2, H / 2 + PX * 0.04);
+    ctx.fillText(w, x, y);
   });
   return {tex, aspect: cw / ch, hScale: ch / (PX * CAP)};
 }
@@ -45,7 +77,7 @@ const layouts = new Map<string, Placed[]>();
 function layout(words: Word3[], L: Lyrics, card: boolean): Placed[] {
   const items = words.map((w) => {
     let size = L.size * (w.key ? 2.2 : 1);
-    const tex = wordTexture(w.w, w.key ? L.accent : L.color, L.outline, card);
+    const tex = wordTexture(w.w, w.key ? L.accent : L.color, L.outline, card, L.material);
     let width = size * tex.hScale * tex.aspect;
     if (width > L.width) { size *= L.width / width; width = L.width; }   // a word never runs past its surface
     return {w, size, tex, width};
@@ -77,9 +109,11 @@ function layout(words: Word3[], L: Lyrics, card: boolean): Placed[] {
 const WordMesh: React.FC<{p: Placed; L: Lyrics; f: number; fps: number; out: number; card: boolean}> = ({p, L, f, fps, out, card}) => {
   const d = f - p.w.from;                                   // frames since the syllable (word appears on its cut frame)
   const h = p.size * p.tex.hScale, w = h * p.tex.aspect;
-  const mat = useMemo(() => (L.lit || card
+  const painted = L.lit || card || L.material === 'engraved' || L.material === 'print' || L.material === 'felt';
+  const mat = useMemo(() => (painted
     ? new THREE.MeshToonMaterial({map: p.tex.tex, gradientMap: toonRamp(), transparent: true, alphaTest: 0.05, side: THREE.DoubleSide, fog: false})
-    : new THREE.MeshBasicMaterial({map: p.tex.tex, transparent: true, alphaTest: 0.02, toneMapped: false, side: THREE.DoubleSide, fog: false})), [p.tex.tex, L.lit, card]);
+    : new THREE.MeshBasicMaterial({map: p.tex.tex, transparent: true, alphaTest: 0.02, toneMapped: false, side: THREE.DoubleSide, fog: false,
+      blending: L.material === 'light' ? THREE.AdditiveBlending : THREE.NormalBlending, depthWrite: L.material !== 'light' && L.material !== 'fog'})), [p.tex.tex, painted, L.material]);
   let x = p.x, y = p.y, z = 0, s = 1, rz = 0, sx = 1, op = 1;
   const seed = p.w.line * 31 + p.w.idx * 7;
   switch (L.kind) {

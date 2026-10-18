@@ -122,10 +122,12 @@ export function placeAt(props: FilmProps, shot: number, f: number, sx: number, s
 // The renderer measures words with the real font; here (node, no font) a word's width is estimated from its characters:
 // kana / kanji ~1 em, Latin ~0.62 em, plus the texture padding. Slightly generous, so a pass here is a real pass.
 const em = (ch: string) => (/[　-鿿＀-￯]/.test(ch) ? 1.18 : ch === ' ' ? 0.35 : 0.7);   // her marker font is wide
-export function wordBox(w: {w: string; key: boolean}, L: {size: number; width: number}): {width: number; height: number} {
+export function wordBox(w: {w: string; key: boolean}, L: {size: number; width: number; kind?: string; material?: string | null}): {width: number; height: number} {
   let size = L.size * (w.key ? 2.2 : 1);
-  const hScale = 1.35 / 0.72;
-  const aspect = ([...w.w].reduce((a, c) => a + em(c), 0) + 80 / 180) / 1.35;
+  const screen = L.material === 'screen', card = L.kind === 'card';      // Words3D pads a UI bar / a card face
+  const pad = card ? 140 : screen ? 180 : 80, extra = card ? 80 / 180 : screen ? 60 / 180 : 0;
+  const hScale = (1.35 + extra) / 0.72;
+  const aspect = ([...w.w].reduce((a, c) => a + em(c), 0) + pad / 180) / (1.35 + extra);
   let width = size * hScale * aspect;
   if (width > L.width) { size *= L.width / width; width = L.width; }
   return {width, height: size * hScale};
@@ -217,4 +219,60 @@ export function faceCrops(props: FilmProps): {shot: string; frame: number}[] {
     }
   }
   return out;
+}
+
+// ---------------------------------------------------------------- authoring aids: per-shot summary + camera fit
+export type ShotSummary = {shot: string; index: number; frames: number; cut: Record<string, number>; face: number; lyrics: string[]};
+
+/** Every guard per shot, counted (not just the first fault): what an author needs to reframe a whole film. */
+export function shotSummary(props: FilmProps): ShotSummary[] {
+  const aspect = props.width / props.height;
+  const text = lyricsOutOfFrame(props);
+  return props.shots.map((s, index) => {
+    const cut: Record<string, number> = {};
+    for (let f = s.from; f < s.to; f++) {
+      for (const x of visibleCutEdges(s, f, aspect, props.hits, props.fps)) {
+        const k = `${x.sprite.replace('sprites/', '').replace('.png', '')}:${x.side}`;
+        cut[k] = (cut[k] ?? 0) + 1;
+      }
+    }
+    const face = faceCrops({...props, shots: [s]}).length;
+    return {shot: s.id, index, frames: s.to - s.from, cut, face, lyrics: text.filter((t) => t.shot === s.id).map((t) => {
+      const cam = makeCamera(s, t.frame, aspect, [], props.fps);
+      const xy = lineCorners(s, t.line).map((v) => { const n = v.clone().project(cam); return n.z >= 1 ? 'behind' : `${((n.x + 1) / 2).toFixed(2)},${((1 - n.y) / 2).toFixed(2)}`; });
+      return `"${t.text}" ${t.why} f${t.frame} corners ${xy.join(' ')}`;
+    })};
+  });
+}
+
+function shotPasses(props: FilmProps, s: Shot): boolean {
+  const aspect = props.width / props.height;
+  for (let f = s.from; f < s.to; f++) if (visibleCutEdges(s, f, aspect, props.hits, props.fps).length) return false;
+  return faceCrops({...props, shots: [s]}).length === 0 && lyricsOutOfFrame({...props, shots: [s]}).length === 0;
+}
+
+/** The smallest change to a shot's camera that passes every guard: the lens is kept, the frame tightens (fov) and the
+ *  aim drifts toward her head until no cut edge, no sliced face and no lost lyric remains. null = no zoom fixes it
+ *  (choose a clean sprite or move her). Returns the new camera keys + the fov factor used (1 = unchanged). */
+export function fitShot(props: FilmProps, index: number): {factor: number; aim: number; camera: Shot['camera']} | null {
+  const s = props.shots[index];
+  if (shotPasses(props, s)) return {factor: 1, aim: 0, camera: s.camera};
+  const mid = Math.round((s.from + s.to) / 2);
+  const p = puppetAt(s.puppets, mid, props.fps);
+  let head: V3 | null = null;
+  if (p) {
+    const cam = makeCamera(s, mid, props.width / props.height, [], props.fps);
+    const m = puppetMatrix(p, [cam.position.x, cam.position.y, cam.position.z]);
+    const {h} = planeSize(p.key);
+    const v = new THREE.Vector3(0, (p.key.feet - p.key.top - 0.12) * h, 0).applyMatrix4(m);
+    head = [v.x, v.y, v.z];
+  }
+  for (let factor = 0.97; factor >= 0.25; factor -= 0.03) {
+    for (const aim of head ? [0, 0.25, 0.5, 0.75] : [0]) {
+      const camera = s.camera.map((k) => ({...k, fov: Number((k.fov * factor).toFixed(2)),
+        look: (head ? k.look.map((x, i) => Number((x + (head![i] - x) * aim).toFixed(3))) : k.look) as V3}));
+      if (shotPasses(props, {...s, camera})) return {factor: Number(factor.toFixed(2)), aim, camera};
+    }
+  }
+  return null;
 }

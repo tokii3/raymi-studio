@@ -127,3 +127,47 @@ export const Fish: React.FC<{f: number; path: {c: P3; r: [number, number]; speed
 export const seeded = (n: number, seed: number) => Array.from({length: n}, (_, i) => ({i, a: rnd(seed + i * 3.1), b: rnd(seed + i * 7.3), c: rnd(seed + i * 11.7)}));
 
 export const DoubleSide = THREE.DoubleSide;
+
+/** The wish chute: visitors drop coins into a brass slot on the hall side; a clear tube carries them down into her
+ *  tank (she collects every one). Plate + funnel at `pos` (hall side of the glass rim), the tube ends at `out`. */
+export const WishChute: React.FC<{pos: P3; out: P3; brass?: string}> = ({pos, out, brass = '#c9a14a'}) => {
+  const a = new THREE.Vector3(pos[0], pos[1] - 0.15, pos[2] - 0.45), b = new THREE.Vector3(...out);
+  const mid = a.clone().add(b).multiplyScalar(0.5), len = a.distanceTo(b);
+  const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), b.clone().sub(a).normalize());
+  return (
+    <group>
+      <group position={pos}>
+        <RBox size={[0.7, 0.42, 0.05]} pos={[0, 0, 0.03]} r={0.03} c={brass} />
+        <RBox size={[0.36, 0.05, 0.03]} pos={[0, 0.06, 0.07]} r={0.01} c="#2a1a08" />
+        <mesh position={[0, -0.12, -0.2]} rotation={[Math.PI / 2, 0, 0]} material={toon(brass)} castShadow>
+          <cylinderGeometry args={[0.22, 0.07, 0.4, 20, 1, true]} />
+        </mesh>
+        <mesh position={[0, -0.12, 0.07]} material={toon('#2a1a08')}><sphereGeometry args={[0.03, 10, 8]} /></mesh>
+      </group>
+      <mesh position={mid} quaternion={q} renderOrder={7}>
+        <cylinderGeometry args={[0.08, 0.08, len, 16, 1, true]} />
+        <meshBasicMaterial color="#cfefff" transparent opacity={0.16} depthWrite={false} side={THREE.DoubleSide} toneMapped={false} />
+      </mesh>
+      <mesh position={b} material={toon(brass)} castShadow><torusGeometry args={[0.09, 0.025, 8, 20]} /></mesh>
+    </group>
+  );
+};
+
+/** A row of ceiling lamps over the visitor hall with the pool of light it throws on the floor; `on` 0..1, `bang` = the
+ *  flash of a bank switching off (a big hall going dark bank by bank, like after a show). */
+export const LightBank: React.FC<{z: number; y: number; floorY: number; on: number; bang?: number; width?: number}> = ({z, y, floorY, on, bang = 0, width = 12}) => {
+  const lit = Math.min(1, on + bang * 0.8);
+  return (
+    <group>
+      {Array.from({length: 6}, (_, i) => (
+        <RBox key={i} size={[1.1, 0.12, 0.4]} pos={[-width / 2 + (i + 0.5) * (width / 6), y, z]} r={0.04} c="#2a2244"
+          e="#fff1d6" ei={Math.round(22 * lit) / 10} cast={false} />
+      ))}
+      <mesh position={[0, floorY + 0.012, z]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2}>
+        <planeGeometry args={[width, 2.6]} />
+        <meshBasicMaterial color="#fff1d6" transparent opacity={0.16 * lit} depthWrite={false} toneMapped={false} />
+      </mesh>
+      {lit > 0.01 ? <pointLight position={[0, y - 0.4, z]} color="#ffe9c9" intensity={9 * lit} distance={6} decay={1.5} /> : null}
+    </group>
+  );
+};

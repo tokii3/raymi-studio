@@ -62,7 +62,15 @@ export const Film: React.FC<FilmProps> = (props) => {
   if (!Set) cancelRender(new Error(`unknown set ${shot.set}`));
   const pose = puppetAt(shot.puppets, f, fps);
   const head = pose ? figurePoint(shot, f, fps, camPos, 0.62, pose.key.top + 0.02) : null;
-  const crownAt = shot.opts.crown === 'head' && pose ? figurePoint(shot, f, fps, camPos, 0.5, pose.key.top + 0.035) : null;
+  // the bottle-cap crown on her head; cap_off (frame) = she takes it off and tosses it back onto its pebble (12 frames)
+  const capOff = typeof shot.opts.cap_off === 'number' ? shot.opts.cap_off : Infinity;
+  let crownAt = shot.opts.crown === 'head' && pose ? figurePoint(shot, f, fps, camPos, 0.5, pose.key.top + 0.035) : null;
+  if (crownAt && f >= capOff) {
+    const t = (f - capOff) / 12;
+    const from = figurePoint(shot, capOff, fps, camPos, 0.5, pose!.key.top + 0.035)!;
+    const to = new THREE.Vector3(...((shot.opts.pebble as [number, number, number]) ?? [0.25, 0.42, -1.25]));
+    crownAt = t >= 1 ? null : from.clone().lerp(to, t).add(new THREE.Vector3(0, Math.sin(Math.PI * t) * 0.6, 0));
+  }
   let icon: React.ReactNode = null;
   if (pose?.key.icon && head) {
     const n = head.clone().project(cam);

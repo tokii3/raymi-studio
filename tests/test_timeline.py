@@ -90,3 +90,43 @@ def test_set_texts_are_glyph_checked(tmp_path):
     shot = {**SHOT, "at": "line:0", "opts": {"led": "@KING"}, "lyrics": None}
     p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot]), "mv", cmap=set(range(0x20, 0x7f)) - {ord("@")})
     assert any("@" in e for e in errors)
+
+
+def test_set_times_become_film_frames_and_a_window_drops_shots(tmp_path):
+    a = {**SHOT, "at": "line:0", "opts": {"banks_off": [10.5, 11.0], "crowd_look": [[10.4, "left"]], "flick": [10.6, "left"]}}
+    b = {**SHOT, "at": "line:1"}
+    spec = job(tmp_path, [a, b], window={"pilot": {"from": 11.5, "to": 13.9}})
+    p, errors, _ = T.compile_shots(tmp_path, spec, "mv", cmap=ALL)
+    o = p["shots"][0]["opts"]
+    assert o["banks_off"] == [315 - 299, 330 - 299] and o["crowd_look"] == [[312 - 299, "left"]] and o["flick"] == [318 - 299, "left"]
+    p, errors, _ = T.compile_shots(tmp_path, spec, "pilot", cmap=ALL)
+    assert errors == [] and p["composition"] == "MV"
+    assert [s["from"] for s in p["shots"]] == [0, 359 - 345]                 # shot 1 clipped to the window, shot 2 kept
+    assert p["durationInFrames"] == round(13.9 * 30) - 345
+
+
+def test_frame_camera_keeps_cut_edges_out_and_the_head_in(tmp_path):
+    shot = {**SHOT, "at": "line:0", "camera": [{"at": 0, "frame": "close", "cam": "tank_front"}],
+            "raymi": [{"at": 0, "sprite": "WS_F_PANIC_LUNGE_UV_203", "pos": "center"}]}
+    p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot]), "mv", cmap=ALL)
+    assert errors == []
+    k, c = p["shots"][0]["puppets"][0], p["shots"][0]["camera"][0]
+    t = T.math.tan(T.math.radians(c["fov"]) / 2)
+    edges, head = T._plane_points(k, 0.0)
+    p0 = k["pos"]
+    dx, dz = c["pos"][0] - p0[0], c["pos"][2] - p0[2]
+    n = T.math.hypot(dx, dz); rx, rz = dz / n, -dx / n
+    world = lambda x, y: [p0[0] + rx * x, y, p0[2] + rz * x]   # noqa: E731
+    for hx, hy in head:
+        q = T._ndc(c["pos"], c["look"], t, 16 / 9, world(hx, hy))
+        assert abs(q[0]) < 1 and abs(q[1]) < 1
+    for ex, ey in edges:
+        q = T._ndc(c["pos"], c["look"], t, 16 / 9, world(ex, ey))
+        assert q is None or abs(q[0]) > 1 or abs(q[1]) > 1
+
+
+def test_a_four_side_cut_bust_cannot_be_framed_in_16_9(tmp_path):
+    shot = {**SHOT, "at": "line:0", "camera": [{"at": 0, "frame": "close", "cam": "tank_front"}],
+            "raymi": [{"at": 0, "sprite": "MS_F_HAPPY_UV_005", "pos": "center"}]}
+    _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot]), "mv", cmap=ALL)
+    assert any("choose a clean sprite" in e for e in errors)

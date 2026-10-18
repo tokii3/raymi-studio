@@ -2,17 +2,22 @@
 // coral, toy castle, clam throne, bottle-cap crown, glass, visitor silhouettes with phones). Marks + cameras in
 // sets.json. Options: flashes (phones flash on music hits), dim (0..1 hall + tank lights going out), crowd (count),
 // led (text on the LED board above the glass), warning (true = DO NOT TAP THE GLASS sign).
+// Timed options (film frames, compiled from song seconds): flash_beats ('beats': phones flare on every beat),
+// flash_seq (bigger flares), crowd_look ([[f, 'left'|'right'|'center']]: heads turn in a wave), phones_up,
+// crowd_in / crowd_out (waves of visitors arrive / leave), hall_lights / banks_off (the hall's light banks switch on /
+// bang off; 'all' = dark), led_flip (letters light one by one), led_blink (the board blinks), chute (the wish chute).
 import React from 'react';
 import * as THREE from 'three';
 import {Beam, Bubbles, Caustics, Coral, Ground, Kelp, RBox, Rock, Sign, Visitor, drawText} from '../parts';
-import {BottleCap, Fish, ShellThrone, Stanchions, ToyCastle} from '../props';
+import {BottleCap, Fish, LightBank, ShellThrone, Stanchions, ToyCastle, WishChute} from '../props';
+import {flare, frames, passed, since, stepValue} from '../events';
 import {SetLight, canvasTexture, rnd, toon, useScreenTexture} from '../look';
 import type {SetProps} from './index';
 
 const SAND = '#c9a9d6', ROCK = '#5b4a8c', ROCK2 = '#3f3577', KELP = '#2f8f86', KELP2 = '#1f6f78';
 const HALL = '#191233', PEOPLE = '#231b4a', FRAME = '#2a1f45';
 
-export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
+export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats}) => {
   const dim = Number(opts.dim ?? 0);
   const crowd = Number(opts.crowd ?? 14);
   const flashes = opts.flashes !== false;
@@ -21,8 +26,12 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
   const screen = useScreenTexture(opts.screens ? String(opts.screens) : null);   // the phones film HER
   // pa pa pa: on each hit 3 seeded phones flash for 4 frames
   const forced = Number(opts.flash ?? 0);            // a held flash moment (key frames): that share of phones fires
+  const onBeats = opts.flash_beats === 'beats';       // chorus: local flares on every beat (max ~2.7 / s, flash-safe)
+  const seq = frames(opts.flash_seq);
   const flashOf = (i: number) => {
     if (forced > 0 && rnd(i * 7 + 3) < forced) return 1;
+    for (const t of seq) { const d = f - t; if (d >= 0 && d < 6 && rnd(t * 5 + i) < 0.4) return 1 - d / 6; }
+    if (onBeats) for (const b of beats) { const d = f - b; if (d >= 0 && d < 4 && rnd(b * 17 + i) < 0.14) return 1 - d / 4; }
     if (!flashes) return 0;
     for (const h of hits) {
       const d = f - h;
@@ -30,6 +39,31 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
     }
     return 0;
   };
+  // where the crowd looks: a wave of heads after each cue (staggered per visitor)
+  const LOOK: Record<string, number> = {left: -1, right: 1, center: 0};
+  const lookOf = (i: number) => {
+    const st = stepValue<string>(opts.crowd_look, f - Math.floor(rnd(i + 31) * 5), 5);
+    if (st.to === null) return 0;
+    const a = st.from === null ? 0 : LOOK[st.from] ?? 0, b = LOOK[st.to] ?? 0;
+    return a + (b - a) * st.t;
+  };
+  // waves of visitors: visitor i belongs to wave i % n; it slides in after its wave's frame / out after it
+  const wIn = frames(opts.crowd_in), wOut = frames(opts.crowd_out);
+  const presence = (i: number): number => {          // 0 = gone, 1 = at the rope; negative = walking away
+    let p = 1;
+    if (wIn.length) { const t = wIn[i % wIn.length]; p = Math.min(1, Math.max(0, (f - t) / 12)); }
+    if (wOut.length) { const t = wOut[i % wOut.length] + Math.floor(rnd(i + 77) * 4); if (f >= t) p = -Math.min(1, (f - t) / 14); }
+    return p;
+  };
+  const banks = [3.4, 5.2, 7.0];
+  const lightsOn = opts.hall_lights !== undefined ? Math.min(banks.length, passed(opts.hall_lights, f)) : banks.length;
+  const off = Math.min(banks.length, passed(opts.banks_off, f, banks.length));
+  const bankOff = frames(opts.banks_off);
+  const ledText = led;
+  const flipN = opts.led_flip !== undefined ? passed(opts.led_flip, f) : null;
+  const flips = frames(opts.led_flip).length;
+  const ledShown = flipN === null ? ledText : ledText.slice(0, Math.round((ledText.length * flipN) / Math.max(1, flips)));
+  const ledOff = since(opts.led_blink, f) < 5;
   const backdrop = canvasTexture('aq_back', 64, 512, (ctx, w, h) => {
     const g = ctx.createLinearGradient(0, 0, 0, h);
     g.addColorStop(0, '#53d6e0'); g.addColorStop(0.45, '#2a7fae'); g.addColorStop(1, '#2c1f6b');
@@ -75,7 +109,7 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
       {/* throne: a flat rock base, the open clam as backrest, a sea-glass gem */}
       <Rock pos={[-0.6, 0.16, -1.15]} size={[0.95, 0.32, 0.62]} seed={11} c={ROCK} />
       <ShellThrone pos={[-0.6, 0.0, -1.3]} scale={1.15} />
-      {opts.cap === 'seat'
+      {opts.crown === 'head' && !(typeof opts.cap_off === 'number' && f >= opts.cap_off + 12) ? null : opts.cap === 'seat'
         ? <BottleCap pos={[-0.6, 0.48, -1.08]} rot={[0.25, 0.5, -0.1]} scale={1.5} />
         : opts.cap === false ? null : <BottleCap pos={[0.25, 0.42, -1.25]} rot={[0.1, 0.4, -0.25]} scale={1.2} />}
       <Rock pos={[0.25, 0.18, -1.25]} size={[0.28, 0.26, 0.26]} seed={12} c={ROCK2} />
@@ -107,10 +141,17 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
       <RBox size={[16, 1.6, 0.3]} pos={[0, 5.3, 1.95]} r={0.02} c={HALL} cast={false} />
       <RBox size={[5, 7.5, 0.3]} pos={[-7.9, 1.6, 1.95]} r={0.02} c={HALL} cast={false} />
       <RBox size={[5, 7.5, 0.3]} pos={[7.9, 1.6, 1.95]} r={0.02} c={HALL} cast={false} />
-      <Sign id={`led${led}`} pos={[0, 4.95, 2.13]} size={[4.6, 0.5]} glow frame="#130e26" paint={(ctx, w, h) => {
+      <Sign id={`led${ledShown}|${ledOff}|${ledText}`} pos={[0, 4.95, 2.13]} size={[4.6, 0.5]} glow frame="#130e26" paint={(ctx, w, h) => {
         ctx.fillStyle = '#0d0920'; ctx.fillRect(0, 0, w, h);
-        drawText(ctx, led, w / 2, h / 2, h * 0.62, '#ffcf6b', {maxW: w * 0.92});
+        if (ledOff) return;
+        ctx.font = `${h * 0.62}px Raymi`;
+        const full = ctx.measureText(ledText).width, px = full > w * 0.92 ? (h * 0.62 * w * 0.92) / full : h * 0.62;
+        ctx.font = `${px}px Raymi`;
+        const x0 = w / 2 - ctx.measureText(ledText).width / 2;
+        drawText(ctx, ledText, x0, h / 2, px, '#3a2a18', {align: 'left'});          // unlit letters stay readable as bulbs
+        if (ledShown) drawText(ctx, ledShown, x0, h / 2, px, '#ffcf6b', {align: 'left'});
       }} />
+      {opts.chute ? <WishChute pos={[-3.6, 4.1, 1.95]} out={[-3.6, 0.25, 0.9]} /> : null}
       {opts.warning !== false ? (
         <Sign id="warn" pos={[2.1, 0.55, 1.62]} size={[0.9, 0.5]} frame="#1b1430" paint={(ctx, w, h) => {
           ctx.fillStyle = '#ffd34d'; ctx.fillRect(0, 0, w, h);
@@ -124,9 +165,18 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
       <mesh position={[0, -0.9, 6]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow material={toon('#2a1d52')}><planeGeometry args={[18, 9]} /></mesh>
       <Stanchions a={[-4.2, -0.9, 2.5]} b={[-1.4, -0.9, 2.5]} />
       <Stanchions a={[1.4, -0.9, 2.5]} b={[4.2, -0.9, 2.5]} />
+      {banks.map((z, k) => (
+        <LightBank key={z} z={z} y={3.3} floorY={-0.9} on={k < lightsOn && k >= off ? 1 : 0}
+          bang={k < off ? flare(bankOff[k], f, 4) : 0} />
+      ))}
       {Array.from({length: crowd}, (_, i) => {
+        const pr = presence(i);
+        if (pr === 0 || pr <= -1) return null;
         const row = i % 2, x = -5 + ((i * 0.83 + rnd(i) * 0.6) % 10), z = 3.2 + row * 1.1 + rnd(i + 5) * 0.5;
-        return <Visitor key={i} pos={[x, -0.9, z]} h={1.55 + rnd(i + 9) * 0.3} c={PEOPLE} seed={i} f={f} phone={rnd(i + 2) < 0.6 ? 1 : 0} flash={flashOf(i)} screen={screen} />;
+        const away = pr < 0 ? -pr : 1 - pr;                  // walks back into the dark hall
+        const phone = opts.phones_up ? 1 : rnd(i + 2) < 0.6 ? 1 : 0;
+        return <Visitor key={i} pos={[x + away * (x > 0 ? 1.5 : -1.5), -0.9, z + away * 4]} h={1.55 + rnd(i + 9) * 0.3} c={PEOPLE} seed={i} f={f}
+          phone={phone} flash={pr > 0 ? flashOf(i) : 0} screen={screen} look={lookOf(i)} raise={opts.phones_up ? 1 : 0} />;
       })}
     </group>
   );

@@ -9,6 +9,10 @@
   "short": {
    "from": 49.567,
    "to": 65.45
+  },
+  "pilot": {
+   "from": 49.567,
+   "to": 70.15
   }
  },
  "lyrics": "lyrics_timed.json",
@@ -1512,38 +1516,13 @@
    "camera": [
     {
      "at": 0,
-     "pos": [
-      0.6,
-      1.0,
-      2.15
-     ],
-     "look": [
-      0.6,
-      0.95,
-      1.1
-     ],
-     "fov": 30,
-     "short": {
-      "pos": [
-       0.6,
-       1.0,
-       2.3
-      ]
-     }
+     "frame": "close",
+     "cam": "glass_close"
     },
     {
      "at": 1.0,
-     "pos": [
-      0.6,
-      1.0,
-      2.4
-     ],
-     "look": [
-      0.6,
-      0.95,
-      1.1
-     ],
-     "fov": 30
+     "frame": "medium",
+     "cam": "glass_close"
     },
     {
      "at": "end",
@@ -1562,12 +1541,12 @@
    "lyrics": {
     "kind": "glass",
     "anchor": [
-     0.6,
-     0.35,
+     0.3,
+     0.85,
      1.57
     ],
     "size": 0.1,
-    "width": 2.0,
+    "width": 1.4,
     "lines": [
      11
     ],
@@ -1638,16 +1617,17 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_PANIC_LUNGE_UV_203",
+     "sprite": "WS_F_SCARED_RUN_UV_176",
      "pos": "left",
-     "act": "pop"
+     "act": "pop",
+     "flip": true
     }
    ],
    "lyrics": {
     "kind": "glass",
     "anchor": [
      -2.4,
-     2.2,
+     1.9,
      1.57
     ],
     "size": 0.28,
@@ -1724,7 +1704,7 @@
     "kind": "glass",
     "anchor": [
      2.4,
-     2.2,
+     1.9,
      1.57
     ],
     "size": 0.28,
@@ -1755,28 +1735,21 @@
    "camera": [
     {
      "at": 0,
-     "cam": "glass_close",
-     "offset": [
-      0,
-      0.15,
-      -0.3
-     ]
+     "frame": "close",
+     "cam": "glass_close"
     },
     {
      "at": "end",
+     "frame": "close",
      "cam": "glass_close",
-     "offset": [
-      0,
-      0.15,
-      -0.45
-     ]
+     "fov": 29
     }
    ],
    "kick": 2,
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
      "pos": "glass",
      "act": "pop"
     }
@@ -1785,12 +1758,12 @@
     "kind": "sign",
     "material": "screen",
     "anchor": [
-     1.1,
-     1.45,
-     2.05
+     0.4,
+     1.25,
+     3.39
     ],
-    "size": 0.16,
-    "width": 1.0,
+    "size": 0.035,
+    "width": 0.3,
     "lines": [
      13
     ],
@@ -1859,7 +1832,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
      "pos": "glass"
     },
     {
@@ -1870,7 +1843,7 @@
     },
     {
      "at": 0.62,
-     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
      "pos": "glass",
      "act": "pop"
     }
@@ -1878,12 +1851,12 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     0.4,
-     1.0,
-     2.6
+     0.49,
+     0.55,
+     1.4
     ],
-    "size": 0.22,
-    "width": 1.6,
+    "size": 0.08,
+    "width": 0.8,
     "lines": [
      13
     ],
@@ -1946,7 +1919,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_EMBARRASSED_DRAMA_UV_033",
+     "sprite": "WS_F_PAIN_CLUTCH_UV_163",
      "pos": [
       -3.0,
       0,
@@ -2000,19 +1973,24 @@
    "camera": [
     {
      "at": 0,
-     "cam": "top_down",
-     "offset": [
+     "pos": [
       0,
-      -0.8,
-      1.2
-     ]
+      4.4,
+      5.2
+     ],
+     "look": [
+      0,
+      0.5,
+      -0.5
+     ],
+     "fov": 46
     }
    ],
    "kick": 1.5,
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_SWIM_UV_116",
+     "sprite": "WS_F_FLY_UV_054",
      "pos": "left",
      "act": "pop"
     },
@@ -2031,7 +2009,7 @@
     "anchor": [
      0.0,
      0.03,
-     0.4
+     1.0
     ],
     "rot": 0,
     "size": 0.3,
@@ -2078,7 +2056,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_HAPPY_ENERG_UV_047",
+     "sprite": "WS_F_HAPPY_SPIN_UV_178",
      "pos": "throne",
      "act": "bounce"
     }
@@ -2154,7 +2132,7 @@
     "kind": "stamp",
     "anchor": [
      0.0,
-     2.6,
+     2.35,
      2.4
     ],
     "size": 0.3,
@@ -2199,10 +2177,10 @@
      ],
      "look": [
       -0.4,
-      2.2,
+      3.9,
       0.0
      ],
-     "fov": 38,
+     "fov": 50,
      "short": {
       "pos": [
        -0.2,
@@ -2216,15 +2194,15 @@
      "at": "end",
      "pos": [
       0.0,
-      -0.1,
-      5.4
+      -0.25,
+      6.0
      ],
      "look": [
       -0.4,
-      2.0,
+      4.0,
       0.0
      ],
-     "fov": 36,
+     "fov": 50,
      "short": {
       "pos": [
        -0.3,
@@ -2345,28 +2323,21 @@
    "camera": [
     {
      "at": 0,
-     "cam": "glass_close",
-     "offset": [
-      0,
-      0.1,
-      -0.1
-     ]
+     "frame": "close",
+     "cam": "glass_close"
     },
     {
      "at": "end",
+     "frame": "close",
      "cam": "glass_close",
-     "offset": [
-      0,
-      0.1,
-      -0.25
-     ]
+     "fov": 27
     }
    ],
    "kick": 1,
    "raymi": [
     {
      "at": 0,
-     "sprite": "MS_F_HAPPY_UV_005",
+     "sprite": "WS_F_SMUG_WINK_UV_169",
      "pos": "glass",
      "short": {
       "sprite": "WS_F_LONGING_GLASS_UV_201"
@@ -2415,7 +2386,7 @@
     },
     {
      "at": 0.77,
-     "sprite": "MS_F_HAPPY_UV_005",
+     "sprite": "WS_F_CALM_REST_UV_166",
      "pos": "throne",
      "act": "tilt"
     }
@@ -2534,7 +2505,7 @@
     },
     {
      "at": 0.19,
-     "sprite": "WS_F_SLEEP_UV_130",
+     "sprite": "WS_F_CALM_REST_UV_164",
      "pos": "throne",
      "act": "shrink"
     }
@@ -2569,31 +2540,29 @@
    "camera": [
     {
      "at": 0,
+     "frame": "close",
      "cam": "glass_close"
     },
     {
      "at": "end",
+     "frame": "close",
      "cam": "glass_close",
-     "offset": [
-      0,
-      0,
-      -0.2
-     ]
+     "fov": 26
     }
    ],
    "kick": 1,
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_NEUTRAL_CALM_UV_026",
+     "sprite": "WS_F_CALM_REST_UV_164",
      "pos": "glass",
      "act": "shrink"
     },
     {
      "at": 0.76,
-     "sprite": "WS_F_NEUTRAL_CALM_UV_027",
+     "sprite": "WS_F_CALM_REST_UV_164",
      "pos": "glass",
-     "act": "turn"
+     "act": "tilt"
     }
    ],
    "transition": {
