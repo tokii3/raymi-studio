@@ -13,3 +13,20 @@ component exactly as a video uses it. A new set / prop / lyric kind / transition
 | lyrics_stamp | Words3D `stamp` | the key word slammed in |
 | raymi_glow__weather_flood | Puppet3D `glow`, Weather `flood` / `power` | her own light in the dark (灯闇), the studio flooded |
 | transition_whip / bubbles / ink / pass / flash | `film/Transitions.tsx` | cuts through things, at full cover |
+
+## Status - what toki said about each part (`status.json`)
+Every component has a status with her words and the date: **toki-liked** (she praised it), **approved** (in a video
+she approved / uploaded), **open** (she named a fault - fix before reuse), **new** (she has not seen it). A new
+package reuses toki-liked / approved parts FIRST (4_SCRIPT "Reuse first") and gives each one something new in that
+video - never the last video's look again. After every verdict of hers, update status.json (a test keeps it valid).
+
+| part | status (2026-10-19) |
+|---|---|
+| transitions, puppet animation, effects, camera, grade per act | toki-liked |
+| aquarium, card table + story props, Short hook / CTA, guards | approved (critics' notes in status.json) |
+| crown (worn hero), lyrics v1 | open - her faults named, the hero guard / lyrics v2 answer them |
+| lyrics v2 + Raymi-Heavy, grades warm / clean, weather set | new |
+
+Grade library (the look step): `studio/src/film/grade.ts` - day, closing, night, own, warm, clean; shots.json `acts`
+picks one per act. Lyrics v2: `studio/src/film/lyricLayout.ts` + Words3D style v2 (style frames:
+`jobs/2026-10-19_lyrics-v2`, not rendered yet).
