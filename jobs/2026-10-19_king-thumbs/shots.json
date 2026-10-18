@@ -1,0 +1,263 @@
+{
+ "title": "KING thumbnails",
+ "audio": {
+  "file": "../2026-10-18_king/song.webm",
+  "from": 62.85,
+  "to": 117.0
+ },
+ "lyrics": "../2026-10-18_king/lyrics_timed.json",
+ "song_map": "../2026-10-18_king/song_map.json",
+ "grain": 0.03,
+ "shots": [
+  {
+   "id": "T1",
+   "at": 62.85,
+   "set": "aquarium",
+   "why": "thumbnail: crowned by the phones - her wink, the crown, flashes from the dark hall, KING in gold",
+   "opts": {
+    "crowd": 22,
+    "phones_up": true,
+    "flash": 0.5,
+    "dim": 0.35,
+    "screens": "WS_F_SMUG_WINK_UV_169",
+    "crown": "head",
+    "led": "",
+    "warning": false
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "cam": "tank_front",
+     "side": "right",
+     "top": 0.3
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "center",
+     "act": "idle"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -0.85,
+     1.64,
+     0.6
+    ],
+    "size": 0.3,
+    "width": 2,
+    "lines": [
+     17
+    ],
+    "words": [
+     "KING"
+    ],
+    "key": [
+     "KING"
+    ],
+    "color": "#ffcf6b",
+    "accent": "#ffcf6b"
+   }
+  },
+  {
+   "id": "T2",
+   "at": 65.6,
+   "set": "cardtable",
+   "why": "thumbnail: the King of Spades - she beside her own court card under the lamp, KING on the felt",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.0,
+    "house": 0,
+    "pool": true,
+    "pool_on": [
+     [
+      65.78,
+      "card"
+     ]
+    ],
+    "king": "WS_F_SMUG_WINK_UV_169"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      1.2,
+      2.6
+     ],
+     "look": [
+      -0.8,
+      1.1,
+      -0.9
+     ],
+     "fov": 40
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
+     "pos": [
+      -0.3,
+      0,
+      -0.6
+     ]
+    }
+   ],
+   "lyrics": {
+    "kind": "card",
+    "anchor": [
+     -1.02,
+     1.24,
+     0.4
+    ],
+    "size": 0.22,
+    "width": 1.6,
+    "lines": [
+     18
+    ],
+    "words": [
+     "KING"
+    ],
+    "key": [
+     "KING"
+    ],
+    "color": "#2a1240",
+    "accent": "#d0203a"
+   }
+  },
+  {
+   "id": "T3",
+   "at": 112.0,
+   "set": "cardtable",
+   "why": "thumbnail: her own light - violet glow in the black, the ray ring round her crown, KING drawn in light",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "house": 0,
+    "lamp": 0,
+    "black": true,
+    "glow": "#9b5cff",
+    "swarm_ring": "head",
+    "crown": "head",
+    "spade_glow": "all"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      0.0,
+      1.3,
+      3.0
+     ],
+     "side": "left",
+     "top": 0.3
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_JUMP_UV_161",
+     "pos": [
+      0.0,
+      0,
+      0.0
+     ]
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     1.42,
+     1.47,
+     0.4
+    ],
+    "size": 0.3,
+    "width": 2,
+    "lines": [
+     33
+    ],
+    "words": [
+     "KING"
+    ],
+    "key": [
+     "KING"
+    ],
+    "color": "#c9a2ff",
+    "accent": "#e6d4ff"
+   }
+  },
+  {
+   "id": "T4",
+   "at": 114.75,
+   "set": "aquarium",
+   "why": "thumbnail: they film her - a phone in the foreground, her wink on its screen and behind the glass, KING as the camera caption",
+   "opts": {
+    "crowd": 6,
+    "dim": 0.6,
+    "phone": [
+     0.35,
+     0.75,
+     3.0
+    ],
+    "screens": "WS_F_SMUG_WINK_UV_169",
+    "crown": "head",
+    "led": "",
+    "warning": false,
+    "flash": 0.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      0.85,
+      4.1
+     ],
+     "look": [
+      0.4,
+      1.0,
+      1.2
+     ],
+     "fov": 34
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "glass"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "screen",
+    "anchor": [
+     0.16,
+     1.21,
+     2.6
+    ],
+    "size": 0.08,
+    "width": 0.72,
+    "lines": [
+     34
+    ],
+    "words": [
+     "KING"
+    ],
+    "key": [
+     "KING"
+    ]
+   }
+  }
+ ]
+}
