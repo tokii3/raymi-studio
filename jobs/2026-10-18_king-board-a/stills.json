@@ -1,1 +1,16 @@
-{"format": "mv", "frames": [12, 771, 2334], "names": ["A2", "A1", "A3"], "scale": 0.5, "to": "renders"}
+{
+ "format": "mv",
+ "frames": [
+  12,
+  771,
+  2334
+ ],
+ "names": [
+  "A2",
+  "A1",
+  "A3"
+ ],
+ "scale": 0.5,
+ "to": "renders",
+ "round": 2
+}

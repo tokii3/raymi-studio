@@ -2,7 +2,7 @@
 // take the set's ambient colour (never grey), fog gives depth, nothing is glossy plastic.
 import React, {useEffect, useMemo, useState} from 'react';
 import * as THREE from 'three';
-import {cancelRender, continueRender, delayRender} from 'remotion';
+import {cancelRender, continueRender, delayRender, staticFile} from 'remotion';
 
 let gradient: THREE.DataTexture | null = null;
 /** 4-step ramp: deep shade, shade, light, a narrow highlight band (painted, not plastic). */
@@ -90,6 +90,20 @@ export function useImageTexture(url: string): THREE.Texture {
   const t = texCache.get(url);
   if (!t) cancelRender(new Error(`texture not preloaded: ${url}`));
   return t as THREE.Texture;
+}
+
+/** A preloaded sprite cropped to its upper part, as the picture on a phone or TV screen (null = no picture). */
+export function useScreenTexture(url: string | null): THREE.Texture | undefined {
+  return useMemo(() => {
+    if (!url) return undefined;
+    const base = texCache.get(staticFile(url));
+    if (!base) { cancelRender(new Error(`screen texture not preloaded: ${url}`)); return undefined; }
+    const t = base.clone();
+    t.repeat.set(0.8, 0.5);
+    t.offset.set(0.1, 0.48);
+    t.needsUpdate = true;
+    return t;
+  }, [url]);
 }
 
 const canvasCache = new Map<string, THREE.CanvasTexture>();

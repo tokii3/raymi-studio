@@ -70,9 +70,12 @@ def words_of(chunk: str) -> list[str]:
             if kind == "kanji" and s == "hira":
                 kind = "kanjihira"
         else:
+            carry = ""
+            if s == "kanji" and kind in ("hira", "kanjihira") and cur[-1] in "おご":
+                cur, carry = cur[:-1], cur[-1]      # the honorific お / ご belongs to the next word (お願い)
             if cur:
                 out.append(cur)
-            cur, kind = ch, s
+            cur, kind = carry + ch, s
     if cur:
         out.append(cur)
     return out
@@ -505,7 +508,7 @@ def resection(job_dir: Path) -> None:
     nb = sm.get("novelty_bounds") or [s["t0"] for s in sm["sections"][1:]]
     sm["novelty_bounds"] = nb
     sm["sections"] = sections(sm["duration"], nb, sm["stops"], sm["vocal_spans"], sm["loudness_db_10hz"], lines)
-    f.write_text(json.dumps(sm, indent=1, ensure_ascii=False), encoding="utf-8")
+    f.write_text(json.dumps(sm, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
 
 
 def analyze(job_dir: Path) -> dict:
@@ -525,11 +528,11 @@ def analyze(job_dir: Path) -> dict:
         asr = json.loads(cache.read_text(encoding="utf-8"))
     else:
         asr = transcribe(wav, cfg.get("language", "ja"), " ".join(text.split()), cfg.get("model", "large-v3"))
-        cache.write_text(json.dumps(asr, ensure_ascii=False, indent=0), encoding="utf-8")
+        cache.write_text(json.dumps(asr, ensure_ascii=False, indent=0), encoding="utf-8", newline="\n")
     res = time_lyrics(job_dir, text, asr, wav)
     lines = res["lines"]
     sm = song_map(song, wav, lines)
-    (job_dir / "song_map.json").write_text(json.dumps(sm, indent=1, ensure_ascii=False), encoding="utf-8")
+    (job_dir / "song_map.json").write_text(json.dumps(sm, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     return {"lines": len(lines), "stats": res["stats"], "sections": len(sm["sections"]), "bpm": sm["bpm"]}
 
 
@@ -546,5 +549,5 @@ def time_lyrics(job_dir: Path, text: str, asr: list[dict], vocals: Path) -> dict
     res = {"fps": FPS, "source": {"lyrics": "official text (YouTube description)", "timing": "vocal stem: demucs "
            "htdemucs + faster-whisper word times, romaji letter match, snapped to vocal onsets"},
            "stats": stats, "lines": timed}
-    (job_dir / "lyrics_timed.json").write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
+    (job_dir / "lyrics_timed.json").write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     return res

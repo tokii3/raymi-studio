@@ -331,22 +331,22 @@
      "cut": 1222
     },
     {
-     "w": "新たにお",
-     "roma": "aratanio",
+     "w": "新たに",
+     "roma": "aratani",
      "t0": 41.42,
      "how": "snapped",
-     "conf": 0.75,
-     "t1": 42.23,
+     "conf": 0.71,
+     "t1": 42.14,
      "cut": 1241
     },
     {
-     "w": "願い",
-     "roma": "negai",
-     "t0": 42.23,
+     "w": "お願い",
+     "roma": "onegai",
+     "t0": 42.14,
      "how": "snapped",
      "conf": 1.0,
      "t1": 43.29,
-     "cut": 1265
+     "cut": 1263
     },
     {
      "w": "1つ",
@@ -414,8 +414,8 @@
    "text": "無いのあなたにお願い1つ",
    "words": [
     {
-     "w": "無いのあなたにお",
-     "roma": "nainoanatanio",
+     "w": "無いのあなたに",
+     "roma": "nainoanatani",
      "t0": 46.6,
      "how": "measured",
      "conf": 0.92,
@@ -423,8 +423,8 @@
      "cut": 1397
     },
     {
-     "w": "願い",
-     "roma": "negai",
+     "w": "お願い",
+     "roma": "onegai",
      "t0": 48.01,
      "how": "snapped",
      "conf": 1.0,
@@ -959,22 +959,22 @@
    "text": "毎度新たにお願い1つ",
    "words": [
     {
-     "w": "毎度新たにお",
-     "roma": "maidoaratanio",
+     "w": "毎度新たに",
+     "roma": "maidoaratani",
      "t0": 90.05,
      "how": "snapped",
      "conf": 0.92,
-     "t1": 91.38,
+     "t1": 91.29,
      "cut": 2700
     },
     {
-     "w": "願い",
-     "roma": "negai",
-     "t0": 91.38,
+     "w": "お願い",
+     "roma": "onegai",
+     "t0": 91.29,
      "how": "snapped",
      "conf": 1.0,
      "t1": 92.47,
-     "cut": 2740
+     "cut": 2737
     },
     {
      "w": "1つ",
@@ -1060,17 +1060,17 @@
    "text": "無いのあなたにお願い1つ",
    "words": [
     {
-     "w": "無いのあなたにお",
-     "roma": "nainoanatanio",
+     "w": "無いのあなたに",
+     "roma": "nainoanatani",
      "t0": 96.09,
      "how": "snapped",
-     "conf": 0.69,
+     "conf": 0.67,
      "t1": 97.07,
      "cut": 2881
     },
     {
-     "w": "願い",
-     "roma": "negai",
+     "w": "お願い",
+     "roma": "onegai",
      "t0": 97.07,
      "how": "snapped",
      "conf": 1.0,

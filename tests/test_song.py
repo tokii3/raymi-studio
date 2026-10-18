@@ -14,7 +14,8 @@ You are KING
 
 def test_words_split_by_script():
     assert S.words_of("ユーヘイじゃ利口に難儀ダーリン") == ["ユーヘイ", "じゃ", "利口に", "難儀", "ダーリン"]
-    assert S.words_of("お願い1つ") == ["お", "願い", "1つ"]
+    assert S.words_of("お願い1つ") == ["お願い", "1つ"]
+    assert S.words_of("無いのあなたにお願い1つ") == ["無いのあなたに", "お願い", "1つ"]
     assert S.words_of("思い込め") == ["思い", "込め"]
     assert S.words_of("KING!") == ["KING!"]
 

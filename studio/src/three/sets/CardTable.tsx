@@ -35,6 +35,8 @@ export const CardTable: React.FC<SetProps> = ({f, opts}) => {
       }
     }
   }
+  const topY = levels > 0 ? (levels - 1) * (CARD_H * Math.cos(lean) + 0.03) + CARD_H * Math.cos(lean) : 0;
+  if (levels > 0) house.push(<Card key="top" pos={[2.2, topY + 0.03, -1.8]} rot={[-Math.PI / 2, 0, Math.PI / 2]} back />);
   return (
     <group>
       <SetLight sky="#5f8fd6" ground="#2a1446" fill={0.75} key="#ffe2b8" keyI={0.5 + 1.4 * lamp} keyPos={[1.5, 10, 2.5]} target={[0, 0, 0]}
@@ -86,7 +88,7 @@ export const CardTable: React.FC<SetProps> = ({f, opts}) => {
           <Card pos={[1.7, CARD_H / 2 + 0.01, 0.6]} rot={[0, -0.5, 0]} rank="K" sprite={king} crop={[0.02, 0.46]} />
         </group>
       ) : null}
-      {opts.swarm ? <RaySwarm center={[2.2, levels * (CARD_H * 0.95 + 0.03) + 0.9, -1.8]} r={1.1} n={9} f={f} /> : null}
+      {opts.swarm ? <RaySwarm center={[2.2, topY + 1.0, -1.8]} r={1.05} n={9} f={f} /> : null}
       {opts.dealt ? Array.from({length: 5}, (_, i) => <Card key={`x${i}`} pos={[-3 + i * 1.5, 0.02, 3.0]} rot={[-Math.PI / 2, 0, (rnd(i) - 0.5) * 0.3]} back />) : null}
     </group>
   );

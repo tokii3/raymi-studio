@@ -117,7 +117,7 @@ export const Weather: React.FC<SetProps> = ({f, opts, hits}) => {
       {/* back wall, map, trims, ticker */}
       <RBox size={[16, 6, 0.3]} pos={[0, 3, -3.2]} r={0.02} c={WALL} cast={false} />
       <RBox size={[8.4, 4.9, 0.2]} pos={[0, 2.25, -3.05]} r={0.05} c="#0c0f28" />
-      <mesh position={[0, 2.3, -2.93]}><planeGeometry args={[8, 4.5]} /><meshBasicMaterial map={tex} toneMapped={false} /></mesh>
+      <mesh position={[0, 2.3, -2.93]}><planeGeometry args={[8, 4.5]} /><meshBasicMaterial map={tex} color={new THREE.Color(1, 1, 1).multiplyScalar(0.3 + 0.7 * power)} toneMapped={false} /></mesh>
       <mesh position={[0, 0.3, -2.92]}><planeGeometry args={[8, 0.36]} /><meshBasicMaterial map={tick} toneMapped={false} /></mesh>
       {[-4.6, 4.6].map((x, i) => <mesh key={i} position={[x, 2.4, -3.0]}><boxGeometry args={[0.06, 4.4, 0.06]} /><meshBasicMaterial color={i ? TRIM2 : TRIM} toneMapped={false} /></mesh>)}
       <mesh position={[0, 4.85, -3.0]}><boxGeometry args={[9.4, 0.05, 0.05]} /><meshBasicMaterial color={TRIM} toneMapped={false} /></mesh>

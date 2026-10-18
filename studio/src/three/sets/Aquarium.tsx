@@ -6,7 +6,7 @@ import React from 'react';
 import * as THREE from 'three';
 import {Beam, Bubbles, Caustics, Coral, Ground, Kelp, RBox, Rock, Sign, Visitor, drawText} from '../parts';
 import {BottleCap, Fish, ShellThrone, Stanchions, ToyCastle} from '../props';
-import {SetLight, canvasTexture, rnd, toon} from '../look';
+import {SetLight, canvasTexture, rnd, toon, useScreenTexture} from '../look';
 import type {SetProps} from './index';
 
 const SAND = '#c9a9d6', ROCK = '#5b4a8c', ROCK2 = '#3f3577', KELP = '#2f8f86', KELP2 = '#1f6f78';
@@ -18,6 +18,7 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
   const flashes = opts.flashes !== false;
   const led = String(opts.led ?? 'STAR EXHIBIT');
   const on = 1 - dim;
+  const screen = useScreenTexture(opts.screens ? String(opts.screens) : null);   // the phones film HER
   // pa pa pa: on each hit 3 seeded phones flash for 4 frames
   const forced = Number(opts.flash ?? 0);            // a held flash moment (key frames): that share of phones fires
   const flashOf = (i: number) => {
@@ -60,11 +61,11 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
 
       {/* ---- the tank: sand, back wall, rocks, life */}
       <Ground size={[11, 6.4]} pos={[0, 0, -1.2]} c={SAND} dunes={0.06} />
-      <mesh position={[0, 3.0, -4.3]}><planeGeometry args={[16, 9]} /><meshBasicMaterial map={backdrop} toneMapped={false} fog={false} /></mesh>
+      <mesh position={[0, 3.0, -4.3]}><planeGeometry args={[16, 9]} /><meshBasicMaterial map={backdrop} color={new THREE.Color(1, 1, 1).multiplyScalar(1 - 0.88 * dim)} toneMapped={false} fog={false} /></mesh>
       {/* the water surface seen from below + the tank's side walls (a low camera never looks into a void) */}
       <mesh position={[0, 4.3, -1.3]} rotation={[Math.PI / 2, 0, 0]}>
         <planeGeometry args={[11, 6.2]} />
-        <meshBasicMaterial map={surface} toneMapped={false} side={THREE.DoubleSide} />
+        <meshBasicMaterial map={surface} color={new THREE.Color(1, 1, 1).multiplyScalar(1 - 0.85 * dim)} toneMapped={false} side={THREE.DoubleSide} />
       </mesh>
       {[-5.35, 5.35].map((x) => <RBox key={x} size={[0.3, 4.6, 6.2]} pos={[x, 2.1, -1.3]} r={0.05} c="#2a2357" cast={false} />)}
       {[[-4.2, 0.6, -3.6, 1.6, 1.4, 1.1, 1], [-2.6, 0.4, -3.9, 1.3, 1.0, 0.9, 2], [3.6, 0.7, -3.6, 1.7, 1.6, 1.2, 3], [1.4, 0.35, -3.9, 1.2, 0.8, 0.8, 4],
@@ -125,7 +126,7 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits}) => {
       <Stanchions a={[1.4, -0.9, 2.5]} b={[4.2, -0.9, 2.5]} />
       {Array.from({length: crowd}, (_, i) => {
         const row = i % 2, x = -5 + ((i * 0.83 + rnd(i) * 0.6) % 10), z = 3.2 + row * 1.1 + rnd(i + 5) * 0.5;
-        return <Visitor key={i} pos={[x, -0.9, z]} h={1.55 + rnd(i + 9) * 0.3} c={PEOPLE} seed={i} f={f} phone={rnd(i + 2) < 0.6 ? 1 : 0} flash={flashOf(i)} />;
+        return <Visitor key={i} pos={[x, -0.9, z]} h={1.55 + rnd(i + 9) * 0.3} c={PEOPLE} seed={i} f={f} phone={rnd(i + 2) < 0.6 ? 1 : 0} flash={flashOf(i)} screen={screen} />;
       })}
     </group>
   );

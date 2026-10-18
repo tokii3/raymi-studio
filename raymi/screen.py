@@ -158,14 +158,14 @@ def build(video: Path, out: Path, props: dict | None = None, spec: dict | None =
         "audio": _safe(lambda: {k: qc.loudness(video)[k] for k in ("input_i", "input_tp")}),
         "hint": "Measured hints only. They never prove an effect - the critic describes what is REALLY there.",
     }
-    (facts_dir / "facts.json").write_text(json.dumps(facts, indent=1), encoding="utf-8")
+    (facts_dir / "facts.json").write_text(json.dumps(facts, indent=1), encoding="utf-8", newline="\n")
     if spec and props:
         rows = []
         for s_in, s in zip(spec.get("shots", []), props["shots"]):
             rows.append({"id": s["id"], "from_s": round(s["from"] / fps, 2), "to_s": round(s["to"] / fps, 2),
                          "set": s["set"], "why": s_in.get("why", ""),
                          "words": " ".join(w["w"] for w in s["words"]), "transition_out": s["transition"]["kind"]})
-        (script_dir / "shots.json").write_text(json.dumps(rows, indent=1, ensure_ascii=False), encoding="utf-8")
+        (script_dir / "shots.json").write_text(json.dumps(rows, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     return out
 
 

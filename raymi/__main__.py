@@ -86,7 +86,7 @@ def main(argv: list[str]) -> int:
         if errors:
             print("timeline: FAIL")
             return 1
-        (out / "props.json").write_text(json.dumps(props, indent=1, ensure_ascii=False), encoding="utf-8")
+        (out / "props.json").write_text(json.dumps(props, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
         print(f"timeline ({fmt}): {len(props['shots'])} shots, {props['durationInFrames']} frames -> {out / 'props.json'}")
         return 0
     if cmd == "finish" and not (d / "plan.json").is_file():   # a film job: expected length from its props
@@ -95,7 +95,7 @@ def main(argv: list[str]) -> int:
         qc.normalize(raw, final)
         res = qc.run(final, props["durationInFrames"] / props["fps"], landscape=props["width"] > props["height"])
         qc.sheet(final, out / "sheet.jpg")
-        (out / "qc.json").write_text(json.dumps(res, indent=1), encoding="utf-8")
+        (out / "qc.json").write_text(json.dumps(res, indent=1), encoding="utf-8", newline="\n")
         print(json.dumps(res, indent=1))
         return 0 if res["pass"] else 1
     plan, words = P.load(job)
@@ -115,7 +115,7 @@ def main(argv: list[str]) -> int:
         if errors or words is None:
             print("refused: run `python -m raymi check` first")
             return 1
-        (out / "props.json").write_text(json.dumps(P.props(plan, words), indent=1, ensure_ascii=False), encoding="utf-8")
+        (out / "props.json").write_text(json.dumps(P.props(plan, words), indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
         print("props ->", out / "props.json")
         return 0
     if cmd == "finish":
@@ -124,7 +124,7 @@ def main(argv: list[str]) -> int:
         expect = words["duration"] + P.TAIL_S if words else None
         res = qc.run(final, expect)
         qc.sheet(final, out / "sheet.jpg")
-        (out / "qc.json").write_text(json.dumps(res, indent=1), encoding="utf-8")
+        (out / "qc.json").write_text(json.dumps(res, indent=1), encoding="utf-8", newline="\n")
         print(json.dumps(res, indent=1))
         return 0 if res["pass"] else 1
     print(__doc__)

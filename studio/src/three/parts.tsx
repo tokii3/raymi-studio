@@ -152,7 +152,9 @@ export const Caustics: React.FC<{size: [number, number]; pos: P3; f: number; c?:
 };
 
 /** A visitor / audience member: a built silhouette (no faces, no generated people), optionally holding a phone. */
-export const Visitor: React.FC<{pos: P3; h?: number; c: string; seed: number; phone?: number; f: number; flash?: number}> = ({pos, h = 1.7, c, seed, phone = 0, f, flash = 0}) => {
+export const Visitor: React.FC<{pos: P3; h?: number; c: string; seed: number; phone?: number; f: number; flash?: number; screen?: THREE.Texture}> = ({
+  pos, h = 1.7, c, seed, phone = 0, f, flash = 0, screen,
+}) => {
   const lean = (rnd(seed) - 0.5) * 0.08 + 0.02 * Math.sin(f / 40 + seed);
   const w = 0.42 + rnd(seed + 1) * 0.12;
   const headR = 0.12 + rnd(seed + 2) * 0.02;
@@ -165,8 +167,14 @@ export const Visitor: React.FC<{pos: P3; h?: number; c: string; seed: number; ph
       <mesh position={[0, h * 0.84, 0]} material={toon(c)} castShadow><sphereGeometry args={[headR, 14, 12]} /></mesh>
       {hair ? <mesh position={[0, h * 0.86, -0.02]} material={toon(c)} castShadow><sphereGeometry args={[headR * 1.15, 12, 10, 0, Math.PI * 2, 0, Math.PI / 1.8]} /></mesh> : null}
       {ph ? (
-        <group position={[0.12, h * 0.78 + 0.08 * phone, -0.22]} rotation={[0.1, 0, 0]}>
-          <RBox size={[0.09, 0.16, 0.012]} r={0.006} c="#16121f" e={flash > 0 ? '#ffffff' : '#7fd8ff'} ei={flash > 0 ? 2.5 : 0.7} cast={false} />
+        <group position={[0.16 * (seed % 2 ? 1 : -1), h * 1.02 + 0.06 * rnd(seed + 4), -0.12]} rotation={[0.12, 0, (rnd(seed + 6) - 0.5) * 0.3]}>
+          {/* the arm holding it up */}
+          <mesh position={[-0.03 * (seed % 2 ? 1 : -1), -0.25, 0.08]} rotation={[0.25, 0, 0.2 * (seed % 2 ? 1 : -1)]} material={toon(c)}><cylinderGeometry args={[0.045, 0.05, 0.5, 8]} /></mesh>
+          <RBox size={[0.15, 0.27, 0.014]} r={0.012} c="#16121f" e={flash > 0 ? '#ffffff' : '#000000'} ei={flash > 0 ? 2.5 : 0} cast={false} />
+          <mesh position={[0, 0, 0.009]}>
+            <planeGeometry args={[0.13, 0.24]} />
+            {screen ? <meshBasicMaterial map={screen} toneMapped={false} /> : <meshBasicMaterial color="#7fd8ff" toneMapped={false} />}
+          </mesh>
           {flash > 0 ? (
             <mesh position={[0, 0, -0.05]}>
               <planeGeometry args={[1.4 * flash, 1.4 * flash]} />
