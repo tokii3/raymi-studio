@@ -1,206 +1,8 @@
 [
  {
-  "id": "phone-flash",
-  "from_s": 0.0,
-  "to_s": 2.93,
-  "set": "aquarium",
-  "why": "the first second promises the world: a phone in the dark, a flash, her pose for it - she is lit by someone else (P6, colour rule a)",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "led-wakes",
-  "from_s": 2.93,
-  "to_s": 7.6,
-  "set": "aquarium",
-  "why": "the show switches on like a machine; she is small inside it",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "they-arrive",
-  "from_s": 7.6,
-  "to_s": 10.5,
-  "set": "aquarium",
-  "why": "the crowd comes for HER - we see it with her eyes first (the reverse angle is planted)",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "cap-on",
-  "from_s": 10.5,
-  "to_s": 12.3,
-  "set": "aquarium",
-  "why": "the costume goes on: the crown is part of the uniform (cap chain step 1)",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "grin-practice",
-  "from_s": 12.3,
-  "to_s": 15.07,
-  "set": "aquarium",
-  "why": "the forced smile is MADE in front of us - every later grin reads as work (story by action)",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "box",
-  "from_s": 15.07,
-  "to_s": 16.03,
-  "set": "aquarium",
-  "why": "confined = a box seen from above (the cage as a picture, not a word)",
-  "words": "幽閉",
-  "transition_out": "cut"
- },
- {
-  "id": "be-good",
-  "from_s": 16.03,
-  "to_s": 16.97,
-  "set": "aquarium",
-  "why": "be clever / be good - the rule of the cage, obeyed",
-  "words": "利口",
-  "transition_out": "cut"
- },
- {
-  "id": "hands-glass",
-  "from_s": 16.97,
-  "to_s": 18.77,
-  "set": "aquarium",
-  "why": "a dark line made brand-safe: absence, not death",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "cap-knock",
-  "from_s": 18.77,
-  "to_s": 21.6,
-  "set": "aquarium",
-  "why": "her fear of loud sudden noises makes every tap a jolt; the crown is not even hers to keep",
-  "words": "ユーヘイ じゃ 利口に",
-  "transition_out": "cut"
- },
- {
-  "id": "darling",
-  "from_s": 21.6,
-  "to_s": 22.5,
-  "set": "aquarium",
-  "why": "the jailer is sweet to her (darling) - and her sweetness is a switch she can turn off",
-  "words": "難儀 ダーリン",
-  "transition_out": "cut"
- },
- {
-  "id": "tap-tap",
-  "from_s": 22.5,
-  "to_s": 24.2,
-  "set": "aquarium",
-  "why": "seen from inside, the audience is huge and loud - her fear made visible",
-  "words": "幽閉 ストップ 知ってないし",
-  "transition_out": "cut"
- },
- {
-  "id": "cruel",
-  "from_s": 24.2,
-  "to_s": 26.0,
-  "set": "aquarium",
-  "why": "mercy and cruelty in one breath: 'give me a break' while the taps go on",
-  "words": "勘弁にしといてなんて 惨忍",
-  "transition_out": "cut"
- },
- {
-  "id": "fragments",
-  "from_s": 26.0,
-  "to_s": 29.07,
-  "set": "aquarium",
-  "why": "everyone's wish is a fragment - they each take a piece of her home",
-  "words": "人様願う 欠片の アイロニ",
-  "transition_out": "cut"
- },
- {
-  "id": "statue",
-  "from_s": 29.07,
-  "to_s": 32.27,
-  "set": "aquarium",
-  "why": "what they wish for is lifeless - she gives them a statue, and the camera has to move because she won't",
-  "words": "だれもが 願う 無機質なような",
-  "transition_out": "cut"
- },
- {
-  "id": "ahead",
-  "from_s": 32.27,
-  "to_s": 34.87,
-  "set": "aquarium",
-  "why": "she wants to start before them - the only race she can win in here",
-  "words": "一足先に 始めてたいような",
-  "transition_out": "cut"
- },
- {
-  "id": "happy-show",
-  "from_s": 34.87,
-  "to_s": 38.3,
-  "set": "aquarium",
-  "why": "the 'happy show' with no future: the biggest trick, on the board above her head",
-  "words": "先が 見えない ヴァージンハッピーショー",
-  "transition_out": "cut"
- },
- {
-  "id": "empty-throne",
-  "from_s": 38.3,
-  "to_s": 39.4,
-  "set": "aquarium",
-  "why": "WOW 1: the song's empty throne - and a ray can do it without anybody dying",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "eyes-in-sand",
-  "from_s": 39.4,
-  "to_s": 40.73,
-  "set": "aquarium",
-  "why": "she buried herself - first refusal, done with her body",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "coin-drop",
-  "from_s": 40.73,
-  "to_s": 42.1,
-  "set": "aquarium",
-  "why": "a wish is a coin thrown at her - the crowd buys her back out of the sand",
-  "words": "無いの 新たに",
-  "transition_out": "cut"
- },
- {
-  "id": "burst",
-  "from_s": 42.1,
-  "to_s": 43.57,
-  "set": "aquarium",
-  "why": "she gives in - and performs harder than before",
-  "words": "お願い 1つ",
-  "transition_out": "cut"
- },
- {
-  "id": "warning",
-  "from_s": 43.57,
-  "to_s": 46.57,
-  "set": "aquarium",
-  "why": "the warning is the one rule nobody keeps; her grin is the warning she ignores herself",
-  "words": "愛も 変わらずおまけに ワーニング ワーニング",
-  "transition_out": "cut"
- },
- {
-  "id": "coin-rain",
-  "from_s": 46.57,
-  "to_s": 49.57,
-  "set": "aquarium",
-  "why": "wishes are coins - and a collector keeps every one (her lore)",
-  "words": "無いのあなたに お願い 1つ",
-  "transition_out": "cut"
- },
- {
   "id": "palms-glass",
-  "from_s": 49.57,
-  "to_s": 51.63,
+  "from_s": 0.0,
+  "to_s": 2.07,
   "set": "aquarium",
   "why": "the strained feeling before the chorus: she is pressed flat against her own window (anticipation)",
   "words": "張り 詰めた 思い 込め",
@@ -208,8 +10,8 @@
  },
  {
   "id": "left-side",
-  "from_s": 51.63,
-  "to_s": 52.57,
+  "from_s": 2.07,
+  "to_s": 3.0,
   "set": "aquarium",
   "why": "left side for one half of the crowd: a tennis match where she is the ball",
   "words": "レフトサイド",
@@ -217,8 +19,8 @@
  },
  {
   "id": "right-side",
-  "from_s": 52.57,
-  "to_s": 53.57,
+  "from_s": 3.0,
+  "to_s": 4.0,
   "set": "aquarium",
   "why": "and the other half - nobody gets left out, so she never rests",
   "words": "ライトサイド",
@@ -226,8 +28,8 @@
  },
  {
   "id": "teeth-grin",
-  "from_s": 53.57,
-  "to_s": 55.7,
+  "from_s": 4.0,
+  "to_s": 6.13,
   "set": "aquarium",
   "why": "bare your teeth = the grin as a weapon for the phones",
   "words": "歯をむき 出して",
@@ -235,8 +37,8 @@
  },
  {
   "id": "pa-pa-pa",
-  "from_s": 55.7,
-  "to_s": 56.7,
+  "from_s": 6.13,
+  "to_s": 7.13,
   "set": "aquarium",
   "why": "pa pa pa = the flash; three flashes, three poses (local flares, flash-safe)",
   "words": "パッパッパ",
@@ -244,8 +46,8 @@
  },
  {
   "id": "embarrassing",
-  "from_s": 56.7,
-  "to_s": 57.67,
+  "from_s": 7.13,
+  "to_s": 8.1,
   "set": "aquarium",
   "why": "how embarrassing (chorus 1) - the real feeling leaks out for one second",
   "words": "照れくさいね",
@@ -253,8 +55,8 @@
  },
  {
   "id": "zigzag",
-  "from_s": 57.67,
-  "to_s": 59.53,
+  "from_s": 8.1,
+  "to_s": 9.97,
   "set": "aquarium",
   "why": "the same move from God's view: her whole life is this zigzag",
   "words": "レフトサイド ライトサイド",
@@ -262,8 +64,8 @@
  },
  {
   "id": "laugh",
-  "from_s": 59.53,
-  "to_s": 60.7,
+  "from_s": 9.97,
+  "to_s": 11.13,
   "set": "aquarium",
   "why": "teeth out, laughter - the grin turning into something wilder",
   "words": "歯を 突き 出して",
@@ -271,8 +73,8 @@
  },
  {
   "id": "haha",
-  "from_s": 60.7,
-  "to_s": 62.83,
+  "from_s": 11.13,
+  "to_s": 13.27,
   "set": "aquarium",
   "why": "the flashes accelerate - the show is at full speed",
   "words": "パッパッパッハハ",
@@ -280,8 +82,8 @@
  },
  {
   "id": "crowned-by-them",
-  "from_s": 62.83,
-  "to_s": 64.3,
+  "from_s": 13.27,
+  "to_s": 14.73,
   "set": "aquarium",
   "why": "the crowd crowns her - the crown is theirs to give",
   "words": "You are KING",
@@ -289,8 +91,8 @@
  },
  {
   "id": "phone-wall",
-  "from_s": 64.3,
-  "to_s": 64.9,
+  "from_s": 14.73,
+  "to_s": 15.33,
   "set": "aquarium",
   "why": "WOW 2: 'YOU' - every phone in the hall points at her",
   "words": "",
@@ -298,442 +100,10 @@
  },
  {
   "id": "lit-by-screens",
-  "from_s": 64.9,
-  "to_s": 65.73,
+  "from_s": 15.33,
+  "to_s": 15.9,
   "set": "aquarium",
   "why": "she is lit ONLY by their screens - the most owned moment of the video",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "king-again",
-  "from_s": 65.73,
-  "to_s": 66.57,
-  "set": "aquarium",
-  "why": "the last cheer of the day",
-  "words": "You are KING",
-  "transition_out": "cut"
- },
- {
-  "id": "lights-bang",
-  "from_s": 66.57,
-  "to_s": 67.77,
-  "set": "aquarium",
-  "why": "the show ends like a stage show: loud, bank by bank (the music is loud, so is the picture)",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "leaving",
-  "from_s": 67.77,
-  "to_s": 68.33,
-  "set": "aquarium",
-  "why": "the crowd leaves in waves; she keeps smiling one beat too long, then slumps",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "grin-drops",
-  "from_s": 68.33,
-  "to_s": 70.13,
-  "set": "aquarium",
-  "why": "the smile was work - when the last phone drops, so does it; the crown goes back on the sand (cap chain step 3)",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "deck-on-ledge",
-  "from_s": 70.13,
-  "to_s": 71.97,
-  "set": "aquarium",
-  "why": "someone left her merch behind - the only one who stays is the salmon",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "she-taps",
-  "from_s": 71.97,
-  "to_s": 73.0,
-  "set": "aquarium",
-  "why": "the one who taps the glass is her now - her first own act brings the night in",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "deck-sinks",
-  "from_s": 73.0,
-  "to_s": 74.9,
-  "set": "aquarium",
-  "why": "WOW 3: the whole deck - her face on every card - sinks into her own water; day turns to night",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "spiral",
-  "from_s": 74.9,
-  "to_s": 76.67,
-  "set": "aquarium",
-  "why": "the cards settle on the sand around her like a lid closing",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "king-lands",
-  "from_s": 76.67,
-  "to_s": 77.9,
-  "set": "aquarium",
-  "why": "THE SCALE RULE, shown not cut: she is pulled into her own portrait and from here until 120 she is card-sized (one card = her height); the next set is the same tank floor at that scale",
-  "words": "",
-  "transition_out": "pass"
- },
- {
-  "id": "flat-on-felt",
-  "from_s": 77.9,
-  "to_s": 79.53,
-  "set": "cardtable",
-  "why": "rays are flat: she fits on her own card; the rule's first proof is a card alone (the lamp plays what it lights)",
-  "words": "無邪気に 遊ぶ",
-  "transition_out": "cut"
- },
- {
-  "id": "lamp-deals",
-  "from_s": 79.53,
-  "to_s": 81.13,
-  "set": "cardtable",
-  "why": "the lamp is the dealer: what its light touches, it plays",
-  "words": "期待期待の ダーリン",
-  "transition_out": "cut"
- },
- {
-  "id": "snap",
-  "from_s": 81.13,
-  "to_s": 82.53,
-  "set": "cardtable",
-  "why": "THE RULE, shown once, loudly: in the lamp's light she performs, like the day grin for the flashes",
-  "words": "健気に 笑う",
-  "transition_out": "cut"
- },
- {
-  "id": "pain-go-away",
-  "from_s": 82.53,
-  "to_s": 83.8,
-  "set": "cardtable",
-  "why": "a child's charm to her own picture - sad and funny at once",
-  "words": "痛い 痛いの 消える",
-  "transition_out": "cut"
- },
- {
-  "id": "look-up",
-  "from_s": 83.8,
-  "to_s": 85.3,
-  "set": "cardtable",
-  "why": "what she wants all night: reach the light and switch it off",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "ladder",
-  "from_s": 85.3,
-  "to_s": 86.9,
-  "set": "cardtable",
-  "why": "a ladder made of copies of herself - the only material she has",
-  "words": "苦い 思いも 無くなって",
-  "transition_out": "cut"
- },
- {
-  "id": "ride",
-  "from_s": 86.9,
-  "to_s": 88.13,
-  "set": "cardtable",
-  "why": "a ray rides currents - the nonsense la-la is her one free moment of play",
-  "words": "ラララブウ ラッタッタ",
-  "transition_out": "cut"
- },
- {
-  "id": "reach-lamp",
-  "from_s": 88.13,
-  "to_s": 89.27,
-  "set": "cardtable",
-  "why": "so close - and the light catches her and freezes her into merch again",
-  "words": "嫌い 嫌いの",
-  "transition_out": "cut"
- },
- {
-  "id": "collapse",
-  "from_s": 89.27,
-  "to_s": 90.0,
-  "set": "cardtable",
-  "why": "down: the ladder of copies buries her",
-  "words": "ダウン",
-  "transition_out": "cut"
- },
- {
-  "id": "buried",
-  "from_s": 90.0,
-  "to_s": 91.23,
-  "set": "cardtable",
-  "why": "the crying close-up after the wide fall (wide action + reaction close-up)",
-  "words": "毎度新たに",
-  "transition_out": "cut"
- },
- {
-  "id": "coin-spins",
-  "from_s": 91.23,
-  "to_s": 92.67,
-  "set": "cardtable",
-  "why": "one wish left: the coin she will use at the end is planted here",
-  "words": "お願い 1つ",
-  "transition_out": "cut"
- },
- {
-  "id": "pick-up",
-  "from_s": 92.67,
-  "to_s": 94.87,
-  "set": "cardtable",
-  "why": "pick-up = she is the featured product - the merch reading of the song made literal",
-  "words": "愛も 変わらず ピックアップ の",
-  "transition_out": "cut"
- },
- {
-  "id": "digs-out",
-  "from_s": 94.87,
-  "to_s": 96.03,
-  "set": "cardtable",
-  "why": "warning: she sees what she is to them - and gets angry for the first time",
-  "words": "ワーニング ワーニング",
-  "transition_out": "cut"
- },
- {
-  "id": "seed",
-  "from_s": 96.03,
-  "to_s": 98.53,
-  "set": "cardtable",
-  "why": "the seed of the finale: in the dark, her touch wakes the ray on the card",
-  "words": "無いのあなたに お願い 1つ",
-  "transition_out": "cut"
- },
- {
-  "id": "pull",
-  "from_s": 98.53,
-  "to_s": 100.8,
-  "set": "cardtable",
-  "why": "anticipation: everything is under tension before chorus 2",
-  "words": "張り 詰めた 思い 込め",
-  "transition_out": "cut"
- },
- {
-  "id": "flip-180",
-  "from_s": 100.8,
-  "to_s": 101.9,
-  "set": "cardtable",
-  "why": "WOW 4: left side / right side = the two halves of a court card - she escapes through the mirror half",
-  "words": "レフトサイド",
-  "transition_out": "cut"
- },
- {
-  "id": "lands",
-  "from_s": 101.9,
-  "to_s": 102.67,
-  "set": "cardtable",
-  "why": "out of the printed half for good",
-  "words": "ライトサイド",
-  "transition_out": "cut"
- },
- {
-  "id": "gritted",
-  "from_s": 102.67,
-  "to_s": 104.43,
-  "set": "cardtable",
-  "why": "the same words as the day grin - now the teeth are real",
-  "words": "歯をむき 出して",
-  "transition_out": "cut"
- },
- {
-  "id": "face-down",
-  "from_s": 104.43,
-  "to_s": 105.67,
-  "set": "cardtable",
-  "why": "pa pa pa was their flashes - now it is her hand: she plays the table",
-  "words": "パッパッパ",
-  "transition_out": "cut"
- },
- {
-  "id": "kick",
-  "from_s": 105.67,
-  "to_s": 106.6,
-  "set": "cardtable",
-  "why": "how annoying (chorus 2) - the mood turned: the nuisance is the merch version of her",
-  "words": "邪魔くさいね",
-  "transition_out": "pass"
- },
- {
-  "id": "flick-left",
-  "from_s": 106.6,
-  "to_s": 107.7,
-  "set": "cardtable",
-  "why": "clearing the table of herself, left",
-  "words": "レフトサイド",
-  "transition_out": "whip"
- },
- {
-  "id": "flick-right",
-  "from_s": 107.7,
-  "to_s": 108.5,
-  "set": "cardtable",
-  "why": "and right - the same tennis match as the day, but now she is the player",
-  "words": "ライトサイド",
-  "transition_out": "cut"
- },
- {
-  "id": "glare-up",
-  "from_s": 108.5,
-  "to_s": 110.2,
-  "set": "cardtable",
-  "why": "the goal from 83.9 again, now with fury",
-  "words": "歯を 突き 出して",
-  "transition_out": "cut"
- },
- {
-  "id": "dominoes",
-  "from_s": 110.2,
-  "to_s": 112.03,
-  "set": "cardtable",
-  "why": "the laugh is hers now - the coins the crowd paid fall over",
-  "words": "パッパッパッハハ",
-  "transition_out": "cut"
- },
- {
-  "id": "coin-shot",
-  "from_s": 112.03,
-  "to_s": 113.4,
-  "set": "cardtable",
-  "why": "the house's verdict - and her answer: one coin, one shot",
-  "words": "You are KING",
-  "transition_out": "cut"
- },
- {
-  "id": "black",
-  "from_s": 113.4,
-  "to_s": 114.77,
-  "set": "cardtable",
-  "why": "her shot, not the song's: every light that owned her is gone",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "her-dots",
-  "from_s": 114.77,
-  "to_s": 115.67,
-  "set": "cardtable",
-  "why": "灯闇: she is the lamp in the dark - now SHE says it",
-  "words": "You are",
-  "transition_out": "cut"
- },
- {
-  "id": "spades-light",
-  "from_s": 115.67,
-  "to_s": 116.4,
-  "set": "cardtable",
-  "why": "the seed from 97 pays off on every card at once",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "rays-wake",
-  "from_s": 116.4,
-  "to_s": 117.5,
-  "set": "cardtable",
-  "why": "WOW 5 begins: her court is her own kind, woken by her light",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "rays-face",
-  "from_s": 117.5,
-  "to_s": 118.07,
-  "set": "cardtable",
-  "why": "the reaction close-up after the wide wake: she feels them before she sees them",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "rays-orbit",
-  "from_s": 118.07,
-  "to_s": 118.9,
-  "set": "cardtable",
-  "why": "the performance pose has no light to perform for - she drops it and laughs for real",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "reveal-tank",
-  "from_s": 118.9,
-  "to_s": 121.0,
-  "set": "aquarium",
-  "why": "the scale rule closes in the same kind of move that opened it (shown, not cut): the night was the tank floor at card scale - the coin stuck in the real work lamp's cage proves it",
-  "words": "",
-  "transition_out": "bubbles"
- },
- {
-  "id": "cap-rises",
-  "from_s": 121.0,
-  "to_s": 122.2,
-  "set": "aquarium",
-  "why": "the same cap from the same pebble (38.3, 69.1) - this time nobody is watching",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "self-crown",
-  "from_s": 122.2,
-  "to_s": 123.6,
-  "set": "aquarium",
-  "why": "the crown's reason changes for the last time: costume -> theirs -> hers",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "beam",
-  "from_s": 123.6,
-  "to_s": 124.87,
-  "set": "aquarium",
-  "why": "the reverse angle from 7.59 paid off: the hall she watched fill up is hers now - empty and lit by her",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "beam-top",
-  "from_s": 124.87,
-  "to_s": 125.77,
-  "set": "aquarium",
-  "why": "the spiral seen from above echoes the sinking deck (74.9) - the same shape, now rising and hers",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "led-king",
-  "from_s": 125.77,
-  "to_s": 127.7,
-  "set": "aquarium",
-  "why": "STAR EXHIBIT -> KING: the board answers the song's question",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "tail-wide",
-  "from_s": 127.7,
-  "to_s": 131.8,
-  "set": "aquarium",
-  "why": "the whole story in one picture, plus one gift to the only friend who never looked at a phone: a black building, one lit tank, the word KING",
-  "words": "",
-  "transition_out": "cut"
- },
- {
-  "id": "last-wink",
-  "from_s": 131.8,
-  "to_s": 134.87,
-  "set": "aquarium",
-  "why": "the ending is an action on the last note: a different wink from every forced one (her own sprite, her own violet light), then black (no end card)",
   "words": "",
   "transition_out": "cut"
  }
