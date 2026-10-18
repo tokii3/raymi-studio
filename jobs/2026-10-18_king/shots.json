@@ -1,0 +1,5511 @@
+{
+ "title": "KING (Kanaria feat. GUMI) - Raymi MV",
+ "audio": {
+  "file": "song.webm",
+  "from": 0.0,
+  "to": 134.87
+ },
+ "window": {
+  "short": {
+   "from": 49.567,
+   "to": 65.45
+  }
+ },
+ "lyrics": "lyrics_timed.json",
+ "song_map": "song_map.json",
+ "grain": 0.06,
+ "short": {
+  "hook": "they film me all day. watch this.",
+  "hook_at": 49.567,
+  "cta": "king of what?",
+  "cta_from": 62.6
+ },
+ "shots": [
+  {
+   "id": "phone-flash",
+   "at": 0.0,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 6,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "dim": 0.85,
+    "spot": false,
+    "phone": [
+     0.35,
+     0.55,
+     3.2
+    ],
+    "flashes": true
+   },
+   "why": "the first second promises the world: a phone in the dark, a flash, her pose for it - she is lit by someone else (P6, colour rule a)",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.55,
+      0.6,
+      4.3
+     ],
+     "look": [
+      0.4,
+      0.9,
+      1.2
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.5,
+      0.65,
+      3.8
+     ],
+     "look": [
+      0.4,
+      0.95,
+      1.0
+     ],
+     "fov": 32
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "pos": "glass"
+    },
+    {
+     "at": 2.37,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "glass",
+     "act": "pop"
+    },
+    {
+     "at": 2.53,
+     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "pos": "glass",
+     "act": "pop"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "led-wakes",
+   "at": 2.95,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 4,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "dim": 0.6,
+    "led_flip": [
+     3.62,
+     4.04,
+     4.76,
+     5.48,
+     6.2,
+     6.94
+    ],
+    "hall_lights": [
+     3.67,
+     5.13,
+     6.57
+    ]
+   },
+   "why": "the show switches on like a machine; she is small inside it",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      -0.6,
+      7.5
+     ],
+     "look": [
+      0.0,
+      4.6,
+      2.2
+     ],
+     "fov": 40
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.0,
+      0.2,
+      8.4
+     ],
+     "look": [
+      0.0,
+      1.4,
+      0.0
+     ],
+     "fov": 36
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_JELLYFISH_UV_073",
+     "pos": "center"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "they-arrive",
+   "at": 7.59,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "dim": 0.4,
+    "crowd_in": [
+     7.59,
+     7.96,
+     8.75,
+     9.06,
+     9.82,
+     10.19
+    ]
+   },
+   "why": "the crowd comes for HER - we see it with her eyes first (the reverse angle is planted)",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "inside_out"
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.6,
+      1.5,
+      -2.2
+     ],
+     "look": [
+      0.6,
+      0.8,
+      4.0
+     ],
+     "fov": 40
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_BK_NA_WADE_UV_182",
+     "pos": [
+      0.0,
+      0.0,
+      -0.9
+     ]
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "cap-on",
+   "at": 10.5,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "dim": 0.2,
+    "cap_pick": 11.24,
+    "crown_from": 11.59
+   },
+   "why": "the costume goes on: the crown is part of the uniform (cap chain step 1)",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "throne_low"
+    },
+    {
+     "at": "end",
+     "cam": "throne_low",
+     "offset": [
+      0.15,
+      0.05,
+      -0.2
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_CROUCH_UV_191",
+     "pos": "crown"
+    },
+    {
+     "at": 1.09,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": "crown",
+     "act": "hop"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "grin-practice",
+   "at": 12.31,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "dim": 0.1
+   },
+   "why": "the forced smile is MADE in front of us - every later grin reads as work (story by action)",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "glass_close"
+    },
+    {
+     "at": "end",
+     "cam": "glass_close",
+     "offset": [
+      0,
+      0,
+      -0.15
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_NEUTRAL_CALM_UV_026",
+     "pos": "glass"
+    },
+    {
+     "at": 0.72,
+     "sprite": "WS_F_HAPPY_ENERG_UV_047",
+     "pos": "glass",
+     "act": "pop"
+    },
+    {
+     "at": 1.09,
+     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "pos": "glass",
+     "act": "pop",
+     "icon": "sparkle"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "box",
+   "at": "line:0",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true
+   },
+   "why": "confined = a box seen from above (the cage as a picture, not a word)",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "top_down"
+    },
+    {
+     "at": "end",
+     "cam": "top_down",
+     "roll": 15
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SHY_DRAMA_UV_039",
+     "pos": "center"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     0.2,
+     0.02,
+     0.6
+    ],
+    "rot": 0,
+    "size": 0.35,
+    "width": 2.4,
+    "words": [
+     "幽閉"
+    ],
+    "color": "#e8fbff",
+    "accent": "#9ff6ff"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "be-good",
+   "at": "word:0.1",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true
+   },
+   "why": "be clever / be good - the rule of the cage, obeyed",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "throne_ms"
+    },
+    {
+     "at": "end",
+     "cam": "throne_ms",
+     "offset": [
+      0.1,
+      0,
+      -0.2
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SHY_DRAMA_UV_039",
+     "pos": "throne",
+     "act": "tilt"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -0.15,
+     0.7,
+     1.4
+    ],
+    "size": 0.16,
+    "width": 1.2,
+    "words": [
+     "利口"
+    ],
+    "color": "#ffcf6b"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "hands-glass",
+   "at": "word:0.2",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "hands": [
+     0.4,
+     1.4
+    ]
+   },
+   "why": "a dark line made brand-safe: absence, not death",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.4,
+      1.35,
+      -0.4
+     ],
+     "look": [
+      0.5,
+      1.2,
+      1.6
+     ],
+     "fov": 36
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.3,
+      1.35,
+      -0.1
+     ],
+     "look": [
+      0.5,
+      1.2,
+      1.6
+     ],
+     "fov": 34
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "CU_BK_NA_UV_001",
+     "pos": [
+      -0.2,
+      0.0,
+      0.2
+     ]
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "cap-knock",
+   "at": "line:1",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "taps": [
+     18.81,
+     18.99
+    ],
+    "crown": "head"
+   },
+   "why": "her fear of loud sudden noises makes every tap a jolt; the crown is not even hers to keep",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "glass_close"
+    },
+    {
+     "at": "end",
+     "cam": "glass_close",
+     "offset": [
+      -0.2,
+      0,
+      0.1
+     ]
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SURPRISE_DRAMA_UV_035",
+     "pos": "glass",
+     "icon": "!"
+    },
+    {
+     "at": 0.3,
+     "sprite": "WS_F_PANIC_LUNGE_UV_203",
+     "pos": [
+      0.1,
+      0,
+      1.0
+     ],
+     "act": "pop",
+     "move": 0.15
+    }
+   ],
+   "lyrics": {
+    "kind": "glass",
+    "anchor": "glass_text",
+    "size": 0.14,
+    "width": 2.2,
+    "lines": [
+     1
+    ],
+    "words": [
+     "ユーヘイ",
+     "じゃ",
+     "利口に"
+    ],
+    "material": "fog"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "darling",
+   "at": "word:1.3",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "child": [
+     -0.9,
+     -0.9,
+     2.4
+    ]
+   },
+   "why": "the jailer is sweet to her (darling) - and her sweetness is a switch she can turn off",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.3,
+      -0.1,
+      3.6
+     ],
+     "look": [
+      0.1,
+      0.9,
+      0.6
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.1,
+      -0.05,
+      3.3
+     ],
+     "look": [
+      0.1,
+      0.9,
+      0.6
+     ],
+     "fov": 33
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "MS_F_HAPPY_UV_005",
+     "pos": "glass",
+     "icon": "heart"
+    },
+    {
+     "at": 0.75,
+     "sprite": "WS_F_NEUTRAL_CALM_UV_027",
+     "pos": "glass",
+     "act": "shrink"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -0.9,
+     0.55,
+     2.2
+    ],
+    "size": 0.13,
+    "width": 1.0,
+    "words": [
+     "難儀",
+     "ダーリン"
+    ],
+    "key": [
+     "ダーリン"
+    ],
+    "color": "#ffd0ea",
+    "accent": "#ff7eb6"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "tap-tap",
+   "at": "line:2",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "taps": [
+     23.13,
+     23.5
+    ],
+    "warning_flash": true
+   },
+   "why": "seen from inside, the audience is huge and loud - her fear made visible",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      0.6,
+      0.2
+     ],
+     "look": [
+      1.6,
+      1.0,
+      1.7
+     ],
+     "fov": 44
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.2,
+      0.55,
+      -0.1
+     ],
+     "look": [
+      1.6,
+      1.0,
+      1.7
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SURPRISE_DRAMA_UV_035",
+     "pos": [
+      0.9,
+      0,
+      0.7
+     ],
+     "icon": "!",
+     "act": "shake"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     2.1,
+     0.62,
+     1.66
+    ],
+    "size": 0.2,
+    "width": 1.1,
+    "lines": [
+     2
+    ],
+    "key": [
+     "ストップ"
+    ],
+    "color": "#ff4f6b",
+    "accent": "#ffd34d"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "cruel",
+   "at": "line:3",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "taps": [
+     24.27,
+     24.59
+    ],
+    "warning_flash": true
+   },
+   "why": "mercy and cruelty in one breath: 'give me a break' while the taps go on",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.9,
+      0.5,
+      3.0
+     ],
+     "look": [
+      -0.3,
+      0.9,
+      -0.8
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.7,
+      0.55,
+      2.8
+     ],
+     "look": [
+      -0.4,
+      0.9,
+      -0.8
+     ],
+     "fov": 33
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_PAIN_CLUTCH_UV_163",
+     "pos": [
+      -1.2,
+      0,
+      -1.3
+     ]
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.0,
+     -0.45,
+     1.69
+    ],
+    "size": 0.12,
+    "width": 2.2,
+    "lines": [
+     3
+    ],
+    "key": [
+     "惨忍"
+    ],
+    "material": "engraved",
+    "color": "#e8c46a"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "fragments",
+   "at": "line:4",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "screens_crop": true,
+    "dim": 0.15
+   },
+   "why": "everyone's wish is a fragment - they each take a piece of her home",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -2.6,
+      0.55,
+      4.4
+     ],
+     "look": [
+      -2.0,
+      0.5,
+      3.0
+     ],
+     "fov": 30
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.4,
+      0.55,
+      4.4
+     ],
+     "look": [
+      2.0,
+      0.5,
+      3.0
+     ],
+     "fov": 30,
+     "ease": "linear"
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_NEUTRAL_CALM_UV_038",
+     "pos": "center"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -0.3,
+     0.95,
+     3.1
+    ],
+    "size": 0.13,
+    "width": 3.4,
+    "lines": [
+     4
+    ],
+    "key": [
+     "アイロニ"
+    ],
+    "color": "#e8fbff"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "statue",
+   "at": "line:5",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "flash": 0.5,
+    "crown": "head"
+   },
+   "why": "what they wish for is lifeless - she gives them a statue, and the camera has to move because she won't",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      1.4,
+      1.0
+     ],
+     "look": [
+      -0.6,
+      1.2,
+      -1.05
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "pos": [
+      -2.0,
+      1.4,
+      0.6
+     ],
+     "look": [
+      -0.6,
+      1.2,
+      -1.05
+     ],
+     "fov": 34
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_164",
+     "pos": "throne"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     0.4,
+     1.7,
+     -0.6
+    ],
+    "size": 0.2,
+    "width": 1.6,
+    "lines": [
+     5
+    ],
+    "key": [
+     "無機質なような"
+    ],
+    "color": "#c9d6e6"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "ahead",
+   "at": "line:6",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crowd_look": [
+     [
+      32.31,
+      "left"
+     ]
+    ],
+    "crown": "head"
+   },
+   "why": "she wants to start before them - the only race she can win in here",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "tank_front"
+    },
+    {
+     "at": "end",
+     "cam": "tank_front",
+     "offset": [
+      -1.6,
+      0,
+      0
+     ],
+     "look_offset": [
+      -2.0,
+      0,
+      0
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SWIM_UV_116",
+     "pos": [
+      1.2,
+      0.6,
+      -0.4
+     ]
+    },
+    {
+     "at": 0.15,
+     "sprite": "WS_F_SWIM_UV_116",
+     "pos": [
+      -2.4,
+      0.6,
+      -0.5
+     ],
+     "move": 0.5,
+     "ease": "snap"
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "anchor": [
+     -0.6,
+     1.6,
+     -0.4
+    ],
+    "size": 0.14,
+    "width": 2.6,
+    "lines": [
+     6
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "happy-show",
+   "at": "line:7",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.3
+   },
+   "why": "the 'happy show' with no future: the biggest trick, on the board above her head",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "hall_wide"
+    },
+    {
+     "at": "end",
+     "cam": "tank_front"
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SPIN_UV_178",
+     "pos": [
+      -0.3,
+      1.0,
+      -0.8
+     ],
+     "act": "float"
+    },
+    {
+     "at": 2.28,
+     "sprite": "WS_F_HAPPY_SPIN_UV_189",
+     "pos": [
+      -0.3,
+      1.4,
+      -0.8
+     ],
+     "act": "pop"
+    }
+   ],
+   "lyrics": {
+    "kind": "ticker",
+    "anchor": "led",
+    "size": 0.32,
+    "width": 4.4,
+    "lines": [
+     7
+    ],
+    "key": [
+     "ヴァージンハッピーショー"
+    ],
+    "color": "#ffcf6b"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "empty-throne",
+   "at": 38.3,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "spot": false,
+    "dim": 0.5
+   },
+   "why": "WOW 1: the song's empty throne - and a ray can do it without anybody dying",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "throne_ms"
+    }
+   ],
+   "kick": 1,
+   "raymi": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "eyes-in-sand",
+   "at": 39.4,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "spot": false,
+    "dim": 0.5,
+    "bury": [
+     0.0,
+     0.0,
+     -0.9
+    ]
+   },
+   "why": "she buried herself - first refusal, done with her body",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      0.7,
+      0.5
+     ],
+     "look": [
+      0.1,
+      0.1,
+      -1.0
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.25,
+      0.45,
+      0.0
+     ],
+     "look": [
+      0.1,
+      0.08,
+      -1.0
+     ],
+     "fov": 30
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "CU_F_CALM_UV_085",
+     "pos": [
+      0.0,
+      -0.55,
+      -0.9
+     ],
+     "height": 0.9
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "coin-drop",
+   "at": "line:8",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "spot": false,
+    "dim": 0.4,
+    "coin_drop": [
+     41.2
+    ]
+   },
+   "why": "a wish is a coin thrown at her - the crowd buys her back out of the sand",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -3.2,
+      4.2,
+      3.0
+     ],
+     "look": [
+      -3.6,
+      4.0,
+      1.9
+     ],
+     "fov": 30
+    },
+    {
+     "at": "end",
+     "pos": [
+      -3.0,
+      2.6,
+      3.0
+     ],
+     "look": [
+      -2.6,
+      1.0,
+      0.8
+     ],
+     "fov": 34
+    }
+   ],
+   "kick": 1,
+   "raymi": [],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -3.6,
+     4.1,
+     1.9
+    ],
+    "size": 0.12,
+    "width": 1.3,
+    "words": [
+     "無いの",
+     "新たに"
+    ],
+    "color": "#ffcf6b"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "burst",
+   "at": "word:8.2",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "burst": [
+     0.0,
+     0.0,
+     -0.9
+    ],
+    "cap_pick": 42.6,
+    "crown_from": 43.0
+   },
+   "why": "she gives in - and performs harder than before",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "throne_low"
+    },
+    {
+     "at": "end",
+     "cam": "throne_low",
+     "offset": [
+      0,
+      0.1,
+      0.3
+     ]
+    }
+   ],
+   "kick": 2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_JUMP_UV_161",
+     "pos": [
+      0.0,
+      0.0,
+      -0.9
+     ],
+     "act": "pop",
+     "icon": "!"
+    },
+    {
+     "at": 1.15,
+     "sprite": "MS_F_HAPPY_UV_006",
+     "pos": [
+      0.0,
+      0.0,
+      -0.9
+     ],
+     "act": "hop"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     0.9,
+     1.5,
+     -0.6
+    ],
+    "size": 0.22,
+    "width": 1.6,
+    "words": [
+     "お願い",
+     "1つ"
+    ],
+    "key": [
+     "1つ"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "warning",
+   "at": "line:9",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "warning_flash": [
+     45.75,
+     46.13
+    ],
+    "taps": [
+     44.75,
+     45.75,
+     46.13
+    ],
+    "crown": "head"
+   },
+   "why": "the warning is the one rule nobody keeps; her grin is the warning she ignores herself",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      2.6,
+      0.45,
+      3.0
+     ],
+     "look": [
+      0.6,
+      1.0,
+      0.6
+     ],
+     "fov": 32
+    },
+    {
+     "at": "end",
+     "pos": [
+      2.4,
+      0.5,
+      2.7
+     ],
+     "look": [
+      0.6,
+      1.0,
+      0.6
+     ],
+     "fov": 31
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "pos": "glass",
+     "icon": "sweat"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     2.1,
+     1.25,
+     1.7
+    ],
+    "size": 0.2,
+    "width": 1.6,
+    "lines": [
+     9
+    ],
+    "key": [
+     "ワーニング"
+    ],
+    "color": "#ff4f6b",
+    "accent": "#ffd34d"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "coin-rain",
+   "at": "line:10",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "coin_rain": [
+     48.11,
+     48.81
+    ],
+    "coin_pile": true,
+    "crown": "head"
+   },
+   "why": "wishes are coins - and a collector keeps every one (her lore)",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "top_down"
+    },
+    {
+     "at": "end",
+     "cam": "top_down",
+     "offset": [
+      0,
+      -1.5,
+      0
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PULL_UV_188",
+     "pos": [
+      -0.2,
+      0,
+      -0.6
+     ]
+    },
+    {
+     "at": 1.5,
+     "sprite": "WS_F_FOCUS_PULL_UV_187",
+     "pos": [
+      0.4,
+      0,
+      -0.5
+     ],
+     "act": "hop"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.9,
+     0.03,
+     0.4
+    ],
+    "size": 0.2,
+    "width": 2.6,
+    "lines": [
+     10
+    ],
+    "key": [
+     "お願い"
+    ],
+    "color": "#ffcf6b"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "palms-glass",
+   "at": "line:11",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 22,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "flash": 0.4,
+    "crown": "head"
+   },
+   "why": "the strained feeling before the chorus: she is pressed flat against her own window (anticipation)",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      1.0,
+      2.15
+     ],
+     "look": [
+      0.6,
+      0.95,
+      1.1
+     ],
+     "fov": 30,
+     "short": {
+      "pos": [
+       0.6,
+       1.0,
+       2.3
+      ]
+     }
+    },
+    {
+     "at": 1.0,
+     "pos": [
+      0.6,
+      1.0,
+      2.4
+     ],
+     "look": [
+      0.6,
+      0.95,
+      1.1
+     ],
+     "fov": 30
+    },
+    {
+     "at": "end",
+     "cam": "tank_front"
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_LONGING_GLASS_UV_200",
+     "pos": "glass",
+     "act": "stomp"
+    }
+   ],
+   "lyrics": {
+    "kind": "glass",
+    "anchor": [
+     0.6,
+     0.35,
+     1.57
+    ],
+    "size": 0.1,
+    "width": 2.0,
+    "lines": [
+     11
+    ],
+    "short": {
+     "anchor": [
+      0.6,
+      0.3,
+      1.57
+     ],
+     "width": 1.1
+    }
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "left-side",
+   "at": "line:12",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 22,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crowd_look": [
+     [
+      51.69,
+      "left"
+     ]
+    ],
+    "crown": "head",
+    "flash_beats": "beats"
+   },
+   "why": "left side for one half of the crowd: a tennis match where she is the ball",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.4,
+      0.9,
+      6.0
+     ],
+     "look": [
+      -1.4,
+      1.0,
+      0.0
+     ],
+     "fov": 36
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.0,
+      0.9,
+      6.0
+     ],
+     "look": [
+      -2.4,
+      1.0,
+      0.0
+     ],
+     "fov": 36
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_PANIC_LUNGE_UV_203",
+     "pos": "left",
+     "act": "pop"
+    }
+   ],
+   "lyrics": {
+    "kind": "glass",
+    "anchor": [
+     -2.4,
+     2.2,
+     1.57
+    ],
+    "size": 0.28,
+    "width": 3.0,
+    "words": [
+     "レフトサイド"
+    ]
+   },
+   "transition": {
+    "kind": "whip",
+    "frames": 6,
+    "dir": -1
+   }
+  },
+  {
+   "id": "right-side",
+   "at": "word:12.1",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 22,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crowd_look": [
+     [
+      52.63,
+      "right"
+     ]
+    ],
+    "crown": "head",
+    "flash_beats": "beats"
+   },
+   "why": "and the other half - nobody gets left out, so she never rests",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.0,
+      0.9,
+      6.0
+     ],
+     "look": [
+      2.4,
+      1.0,
+      0.0
+     ],
+     "fov": 36
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.3,
+      0.9,
+      5.8
+     ],
+     "look": [
+      2.6,
+      1.0,
+      0.0
+     ],
+     "fov": 35
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_PANIC_LUNGE_UV_202",
+     "pos": "right",
+     "act": "pop"
+    }
+   ],
+   "lyrics": {
+    "kind": "glass",
+    "anchor": [
+     2.4,
+     2.2,
+     1.57
+    ],
+    "size": 0.28,
+    "width": 3.0,
+    "words": [
+     "ライトサイド"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "teeth-grin",
+   "at": "line:13",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.3,
+    "flash_beats": "beats"
+   },
+   "why": "bare your teeth = the grin as a weapon for the phones",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "glass_close",
+     "offset": [
+      0,
+      0.15,
+      -0.3
+     ]
+    },
+    {
+     "at": "end",
+     "cam": "glass_close",
+     "offset": [
+      0,
+      0.15,
+      -0.45
+     ]
+    }
+   ],
+   "kick": 2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "pos": "glass",
+     "act": "pop"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "screen",
+    "anchor": [
+     1.1,
+     1.45,
+     2.05
+    ],
+    "size": 0.16,
+    "width": 1.0,
+    "lines": [
+     13
+    ],
+    "words": [
+     "歯をむき",
+     "出して"
+    ],
+    "key": [
+     "歯をむき"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "pa-pa-pa",
+   "at": "word:13.2",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "flash_seq": [
+     55.74,
+     56.05,
+     56.36
+    ],
+    "flash_beats": "beats"
+   },
+   "why": "pa pa pa = the flash; three flashes, three poses (local flares, flash-safe)",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      0.5,
+      3.4
+     ],
+     "look": [
+      0.5,
+      1.0,
+      1.0
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.45,
+      0.5,
+      3.25
+     ],
+     "look": [
+      0.5,
+      1.0,
+      1.0
+     ],
+     "fov": 33
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "pos": "glass"
+    },
+    {
+     "at": 0.31,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "glass",
+     "act": "pop"
+    },
+    {
+     "at": 0.62,
+     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "pos": "glass",
+     "act": "pop"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     0.4,
+     1.0,
+     2.6
+    ],
+    "size": 0.22,
+    "width": 1.6,
+    "lines": [
+     13
+    ],
+    "words": [
+     "パッパッパ"
+    ],
+    "key": [
+     "パッパッパ"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "embarrassing",
+   "at": "line:14",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "flash_beats": "beats"
+   },
+   "why": "how embarrassing (chorus 1) - the real feeling leaks out for one second",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -2.4,
+      1.2,
+      0.9
+     ],
+     "look": [
+      -3.2,
+      1.1,
+      -1.2
+     ],
+     "fov": 32
+    },
+    {
+     "at": "end",
+     "pos": [
+      -2.5,
+      1.2,
+      0.8
+     ],
+     "look": [
+      -3.2,
+      1.1,
+      -1.2
+     ],
+     "fov": 31
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_EMBARRASSED_DRAMA_UV_033",
+     "pos": [
+      -3.0,
+      0,
+      -1.4
+     ],
+     "icon": "sweat"
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "anchor": [
+     -2.6,
+     1.6,
+     -0.9
+    ],
+    "size": 0.12,
+    "width": 1.4,
+    "lines": [
+     14
+    ],
+    "color": "#ffd0ea"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "zigzag",
+   "at": "line:15",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 22,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crowd_look": [
+     [
+      57.7,
+      "left"
+     ],
+     [
+      58.57,
+      "right"
+     ]
+    ],
+    "crown": "head",
+    "flash_beats": "beats"
+   },
+   "why": "the same move from God's view: her whole life is this zigzag",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "top_down",
+     "offset": [
+      0,
+      -0.8,
+      1.2
+     ]
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SWIM_UV_116",
+     "pos": "left",
+     "act": "pop"
+    },
+    {
+     "at": 0.87,
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": "right",
+     "act": "pop",
+     "move": 0.2,
+     "ease": "snap",
+     "flip": true
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.0,
+     0.03,
+     0.4
+    ],
+    "rot": 0,
+    "size": 0.3,
+    "width": 5.0,
+    "lines": [
+     15
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "laugh",
+   "at": "line:16",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.3,
+    "flash_beats": "beats"
+   },
+   "why": "teeth out, laughter - the grin turning into something wilder",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "throne_ms"
+    },
+    {
+     "at": "end",
+     "cam": "throne_ms",
+     "offset": [
+      0.1,
+      0,
+      -0.3
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_ENERG_UV_047",
+     "pos": "throne",
+     "act": "bounce"
+    }
+   ],
+   "lyrics": {
+    "kind": "ticker",
+    "anchor": "led",
+    "size": 0.3,
+    "width": 4.4,
+    "color": "#ffcf6b",
+    "lines": [
+     16
+    ],
+    "words": [
+     "歯を",
+     "突き",
+     "出して"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "haha",
+   "at": "word:16.3",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 22,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.6,
+    "flash_beats": "beats"
+   },
+   "why": "the flashes accelerate - the show is at full speed",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "hall_wide",
+     "offset": [
+      0,
+      0.2,
+      -1.5
+     ]
+    },
+    {
+     "at": "end",
+     "cam": "hall_wide",
+     "offset": [
+      0,
+      0.2,
+      -2.3
+     ]
+    }
+   ],
+   "kick": 2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SPIN_UV_189",
+     "pos": [
+      0.2,
+      0.8,
+      -0.4
+     ],
+     "act": "float"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     0.0,
+     2.6,
+     2.4
+    ],
+    "size": 0.3,
+    "width": 4.0,
+    "lines": [
+     16
+    ],
+    "words": [
+     "パッパッパッハハ"
+    ],
+    "key": [
+     "パッパッパッハハ"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "crowned-by-them",
+   "at": "line:17",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 22,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.7,
+    "phones_up": true,
+    "flash_beats": "beats"
+   },
+   "why": "the crowd crowns her - the crown is theirs to give",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      -0.3,
+      6.5
+     ],
+     "look": [
+      -0.4,
+      2.2,
+      0.0
+     ],
+     "fov": 38,
+     "short": {
+      "pos": [
+       -0.2,
+       -0.2,
+       5.6
+      ],
+      "fov": 44
+     }
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.0,
+      -0.1,
+      5.4
+     ],
+     "look": [
+      -0.4,
+      2.0,
+      0.0
+     ],
+     "fov": 36,
+     "short": {
+      "pos": [
+       -0.3,
+       0.6,
+       3.2
+      ],
+      "look": [
+       -0.5,
+       1.2,
+       -1.0
+      ],
+      "fov": 36
+     }
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "throne",
+     "act": "stomp",
+     "short": {
+      "sprite": "MS_F_HAPPY_UV_006",
+      "pos": [
+       -0.4,
+       0,
+       0.6
+      ]
+     }
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": "led",
+    "size": 0.3,
+    "width": 4.4,
+    "lines": [
+     17
+    ],
+    "key": [
+     "KING"
+    ],
+    "color": "#ffcf6b"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "phone-wall",
+   "at": 64.3,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 26,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "flash": 1.0,
+    "dim": 0.7,
+    "phones_up": true
+   },
+   "why": "WOW 2: 'YOU' - every phone in the hall points at her",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.2,
+      1.3,
+      -1.6
+     ],
+     "look": [
+      0.3,
+      0.9,
+      4.0
+     ],
+     "fov": 42,
+     "short": {
+      "fov": 50
+     }
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_BK_NA_WADE_UV_183",
+     "pos": [
+      0.1,
+      0,
+      0.4
+     ]
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "lit-by-screens",
+   "at": 64.9,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 26,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "flash": 1.0,
+    "dim": 0.7,
+    "phones_up": true,
+    "short_cap_on_glass": true
+   },
+   "why": "she is lit ONLY by their screens - the most owned moment of the video",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "glass_close",
+     "offset": [
+      0,
+      0.1,
+      -0.1
+     ]
+    },
+    {
+     "at": "end",
+     "cam": "glass_close",
+     "offset": [
+      0,
+      0.1,
+      -0.25
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "MS_F_HAPPY_UV_005",
+     "pos": "glass",
+     "short": {
+      "sprite": "WS_F_LONGING_GLASS_UV_201"
+     }
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "king-again",
+   "at": "line:18",
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 22,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.6
+   },
+   "why": "the last cheer of the day",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "hall_wide"
+    },
+    {
+     "at": "end",
+     "cam": "hall_wide",
+     "offset": [
+      0,
+      0.4,
+      -1.2
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "throne"
+    },
+    {
+     "at": 0.77,
+     "sprite": "MS_F_HAPPY_UV_005",
+     "pos": "throne",
+     "act": "tilt"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": "led",
+    "size": 0.3,
+    "width": 4.4,
+    "lines": [
+     18
+    ],
+    "key": [
+     "KING"
+    ],
+    "color": "#ffcf6b"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "lights-bang",
+   "at": 66.57,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "banks_off": [
+     66.57,
+     67.78,
+     67.97
+    ],
+    "crowd_out": [
+     66.57,
+     66.92,
+     67.29,
+     67.66
+    ]
+   },
+   "why": "the show ends like a stage show: loud, bank by bank (the music is loud, so is the picture)",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "inside_out"
+    },
+    {
+     "at": "end",
+     "cam": "inside_out",
+     "offset": [
+      0.3,
+      0,
+      0.3
+     ]
+    }
+   ],
+   "kick": 2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_BK_NA_WADE_UV_183",
+     "pos": [
+      0.0,
+      0,
+      -0.6
+     ]
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "leaving",
+   "at": 67.78,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "banks_off": [
+     66.57,
+     67.78,
+     67.97
+    ],
+    "crowd_out": [
+     66.57,
+     68.34
+    ]
+   },
+   "why": "the crowd leaves in waves; she keeps smiling one beat too long, then slumps",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "hall_wide",
+     "offset": [
+      0,
+      0.3,
+      0.8
+     ]
+    }
+   ],
+   "kick": 2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "throne"
+    },
+    {
+     "at": 0.19,
+     "sprite": "WS_F_SLEEP_UV_130",
+     "pos": "throne",
+     "act": "shrink"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "grin-drops",
+   "at": 68.34,
+   "set": "aquarium",
+   "opts": {
+    "led": "CLOSED",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "crown": "head",
+    "banks_off": "all",
+    "dim": 0.5,
+    "last_phone_down": 68.34,
+    "led_blink": [
+     68.73,
+     69.1,
+     69.47,
+     69.82
+    ],
+    "cap_off": 69.1
+   },
+   "why": "the smile was work - when the last phone drops, so does it; the crown goes back on the sand (cap chain step 3)",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "glass_close"
+    },
+    {
+     "at": "end",
+     "cam": "glass_close",
+     "offset": [
+      0,
+      0,
+      -0.2
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_NEUTRAL_CALM_UV_026",
+     "pos": "glass",
+     "act": "shrink"
+    },
+    {
+     "at": 0.76,
+     "sprite": "WS_F_NEUTRAL_CALM_UV_027",
+     "pos": "glass",
+     "act": "turn"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "deck-on-ledge",
+   "at": 70.15,
+   "set": "aquarium",
+   "opts": {
+    "led": "CLOSED",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "banks_off": "all",
+    "dim": 0.55,
+    "deck_ledge": true,
+    "salmon": "glass",
+    "salmon_arrive": [
+     70.15,
+     70.91
+    ],
+    "card_flutter": [
+     71.26,
+     71.63
+    ]
+   },
+   "why": "someone left her merch behind - the only one who stays is the salmon",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -3.0,
+      3.9,
+      3.1
+     ],
+     "look": [
+      -2.6,
+      2.6,
+      0.6
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "pos": [
+      -3.0,
+      3.8,
+      2.7
+     ],
+     "look": [
+      -2.6,
+      2.4,
+      0.6
+     ],
+     "fov": 32
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_THINK_CALM_UV_036",
+     "pos": [
+      -2.4,
+      1.6,
+      0.9
+     ],
+     "act": "tilt",
+     "icon": "?"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "she-taps",
+   "at": 71.96,
+   "set": "aquarium",
+   "opts": {
+    "led": "CLOSED",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "banks_off": "all",
+    "dim": 0.6,
+    "deck_ledge": true,
+    "deck_tip": 71.96,
+    "deck_slide": 72.31,
+    "taps": [
+     71.96,
+     72.31
+    ],
+    "salmon": "glass"
+   },
+   "why": "the one who taps the glass is her now - her first own act brings the night in",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -2.5,
+      2.2,
+      0.2
+     ],
+     "look": [
+      -3.4,
+      3.8,
+      1.9
+     ],
+     "fov": 40
+    }
+   ],
+   "kick": 2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": [
+      -2.6,
+      1.4,
+      1.0
+     ],
+     "act": "shake"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "deck-sinks",
+   "at": 73.0,
+   "set": "aquarium",
+   "opts": {
+    "led": "CLOSED",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "banks_off": "all",
+    "dim": 0.75,
+    "card_rain": [
+     72.4,
+     76.6
+    ],
+    "salmon": "near",
+    "card_pass_lens": [
+     73.08,
+     73.45,
+     73.79,
+     74.16,
+     74.51
+    ]
+   },
+   "why": "WOW 3: the whole deck - her face on every card - sinks into her own water; day turns to night",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      0.3,
+      0.6
+     ],
+     "look": [
+      0.0,
+      3.5,
+      -0.8
+     ],
+     "fov": 48
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.4,
+      0.8,
+      0.6
+     ],
+     "look": [
+      0.0,
+      3.3,
+      -0.8
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SPIN_UV_190",
+     "pos": [
+      0.0,
+      1.4,
+      -0.6
+     ],
+     "act": "float"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "spiral",
+   "at": 74.9,
+   "set": "aquarium",
+   "opts": {
+    "led": "CLOSED",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "banks_off": "all",
+    "dim": 0.8,
+    "card_rain": [
+     72.4,
+     76.6
+    ],
+    "card_pass_lens": [
+     75.26,
+     75.6,
+     75.98,
+     76.32
+    ]
+   },
+   "why": "the cards settle on the sand around her like a lid closing",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "top_down",
+     "roll": 0
+    },
+    {
+     "at": "end",
+     "cam": "top_down",
+     "offset": [
+      0,
+      -2.0,
+      0
+     ],
+     "roll": 40
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_PRONE_UV_184",
+     "pos": [
+      0.0,
+      0,
+      -0.4
+     ]
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "king-lands",
+   "at": 76.65,
+   "set": "aquarium",
+   "opts": {
+    "led": "CLOSED",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "banks_off": "all",
+    "dim": 0.85,
+    "cards": "scattered",
+    "king_up": [
+     0.6,
+     0.02,
+     0.2
+    ]
+   },
+   "why": "THE SCALE RULE, shown not cut: she is pulled into her own portrait and from here until 120 she is card-sized (one card = her height); the next set is the same tank floor at that scale",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.2,
+      1.0,
+      1.4
+     ],
+     "look": [
+      0.6,
+      0.0,
+      0.2
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.6,
+      0.18,
+      0.25
+     ],
+     "look": [
+      0.6,
+      0.0,
+      0.2
+     ],
+     "fov": 28,
+     "ease": "in"
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_PRONE_UV_185",
+     "pos": [
+      -0.6,
+      0,
+      0.3
+     ]
+    },
+    {
+     "at": 0.91,
+     "sprite": "WS_F_CALM_PRONE_UV_185",
+     "pos": [
+      0.6,
+      0.01,
+      0.2
+     ],
+     "height": 0.09,
+     "move": 0.4,
+     "ease": "in"
+    }
+   ],
+   "transition": {
+    "kind": "pass",
+    "frames": 8,
+    "obj": "card"
+   }
+  },
+  {
+   "id": "flat-on-felt",
+   "at": "line:19",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "pool_on": [
+     [
+      77.96,
+      "card"
+     ],
+     [
+      79.0,
+      "deck"
+     ]
+    ],
+    "deal_beats": "beats"
+   },
+   "why": "rays are flat: she fits on her own card; the rule's first proof is a card alone (the lamp plays what it lights)",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "felt_low"
+    },
+    {
+     "at": "end",
+     "cam": "felt_low",
+     "offset": [
+      -0.3,
+      0.1,
+      -0.3
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_PRONE_UV_184",
+     "pos": [
+      -0.4,
+      0,
+      -1.0
+     ]
+    },
+    {
+     "at": 1.04,
+     "sprite": "WS_F_JELLYFISH_UV_073",
+     "pos": [
+      -0.4,
+      0,
+      -0.9
+     ],
+     "act": "hop"
+    }
+   ],
+   "lyrics": {
+    "kind": "card",
+    "anchor": [
+     0.9,
+     0.4,
+     0.4
+    ],
+    "size": 0.2,
+    "width": 2.4,
+    "lines": [
+     19
+    ],
+    "words": [
+     "無邪気に",
+     "遊ぶ"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "lamp-deals",
+   "at": "word:19.2",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.12,
+    "house": 0,
+    "pool": true,
+    "deal_beats": "beats"
+   },
+   "why": "the lamp is the dealer: what its light touches, it plays",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "table_wide"
+    },
+    {
+     "at": "end",
+     "cam": "table_wide",
+     "offset": [
+      0.4,
+      -0.2,
+      -0.8
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SURPRISE_DRAMA_UV_031",
+     "pos": [
+      -0.6,
+      0,
+      0.0
+     ],
+     "icon": "?"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "engraved",
+    "anchor": [
+     1.5,
+     1.1,
+     1.3
+    ],
+    "size": 0.22,
+    "width": 2.4,
+    "lines": [
+     19
+    ],
+    "words": [
+     "期待期待の",
+     "ダーリン"
+    ],
+    "key": [
+     "ダーリン"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "snap",
+   "at": "line:20",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "pool_on": [
+     [
+      81.17,
+      "raymi"
+     ]
+    ],
+    "king": "WS_F_SMUG_WINK_UV_169",
+    "deal_beats": "beats"
+   },
+   "why": "THE RULE, shown once, loudly: in the lamp's light she performs, like the day grin for the flashes",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "card_ms"
+    },
+    {
+     "at": "end",
+     "cam": "card_ms",
+     "offset": [
+      0.1,
+      0,
+      -0.2
+     ]
+    }
+   ],
+   "kick": 2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": [
+      -0.4,
+      0,
+      -1.0
+     ],
+     "act": "shake"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "print",
+    "anchor": [
+     -1.6,
+     0.35,
+     -1.06
+    ],
+    "size": 0.13,
+    "width": 1.0,
+    "lines": [
+     20
+    ],
+    "words": [
+     "健気に",
+     "笑う"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "pain-go-away",
+   "at": "word:20.2",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "pool_on": [
+     [
+      82.58,
+      "deck"
+     ]
+    ],
+    "king": "WS_F_SMUG_WINK_UV_169",
+    "deal_beats": "beats"
+   },
+   "why": "a child's charm to her own picture - sad and funny at once",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "card_ms",
+     "offset": [
+      0.2,
+      0.0,
+      -0.5
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_NEUTRAL_CALM_UV_027",
+     "pos": [
+      -0.6,
+      0,
+      -0.9
+     ],
+     "act": "lean"
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "anchor": [
+     -0.3,
+     1.5,
+     -0.6
+    ],
+    "size": 0.12,
+    "width": 1.4,
+    "lines": [
+     20
+    ],
+    "words": [
+     "痛い",
+     "痛いの",
+     "消える"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "look-up",
+   "at": "line:21",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.1,
+    "house": 0,
+    "pool": true,
+    "deal_beats": "beats"
+   },
+   "why": "what she wants all night: reach the light and switch it off",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.2,
+      0.3,
+      1.6
+     ],
+     "look": [
+      0.0,
+      6.5,
+      0.0
+     ],
+     "fov": 50
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PULL_UV_187",
+     "pos": [
+      0.0,
+      0,
+      0.2
+     ]
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "ladder",
+   "at": "word:21.2",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "house_keys": [
+     [
+      85.35,
+      1
+     ],
+     [
+      85.68,
+      2
+     ],
+     [
+      86.4,
+      3
+     ]
+    ],
+    "deal_beats": "beats"
+   },
+   "why": "a ladder made of copies of herself - the only material she has",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "house_up",
+     "offset": [
+      0,
+      -1.0,
+      0
+     ]
+    },
+    {
+     "at": "end",
+     "cam": "house_up"
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_173",
+     "pos": [
+      1.0,
+      0,
+      -1.6
+     ]
+    },
+    {
+     "at": 0.33,
+     "sprite": "WS_F_FOCUS_PULL_UV_188",
+     "pos": [
+      1.2,
+      0,
+      -1.4
+     ],
+     "act": "hop"
+    }
+   ],
+   "lyrics": {
+    "kind": "card",
+    "anchor": [
+     3.4,
+     2.4,
+     -1.6
+    ],
+    "size": 0.14,
+    "width": 1.6,
+    "lines": [
+     21
+    ],
+    "words": [
+     "苦い",
+     "思いも",
+     "無くなって"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "ride",
+   "at": "line:22",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 3,
+    "pool": true,
+    "shuffle": [
+     86.94,
+     88.1
+    ],
+    "ride_card": true,
+    "deal_beats": "beats"
+   },
+   "why": "a ray rides currents - the nonsense la-la is her one free moment of play",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -2.0,
+      2.2,
+      3.0
+     ],
+     "look": [
+      0.0,
+      2.0,
+      -1.0
+     ],
+     "fov": 40
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.6,
+      3.6,
+      2.6
+     ],
+     "look": [
+      2.2,
+      4.4,
+      -1.8
+     ],
+     "fov": 40
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": [
+      -1.6,
+      1.4,
+      -0.8
+     ]
+    },
+    {
+     "at": 0.74,
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
+     "pos": [
+      1.4,
+      4.2,
+      -1.6
+     ],
+     "move": 0.4,
+     "arc": 0.6
+    }
+   ],
+   "lyrics": {
+    "kind": "card",
+    "anchor": [
+     0.0,
+     2.6,
+     0.6
+    ],
+    "size": 0.24,
+    "width": 3.4,
+    "lines": [
+     22
+    ],
+    "key": [
+     "ラララブウ"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "reach-lamp",
+   "at": "line:23",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.2,
+    "house": 3,
+    "pool": true,
+    "pool_on": [
+     [
+      88.93,
+      "raymi"
+     ]
+    ],
+    "gust": 88.93
+   },
+   "why": "so close - and the light catches her and freezes her into merch again",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "house_up"
+    },
+    {
+     "at": "end",
+     "cam": "house_up",
+     "offset": [
+      0,
+      0.4,
+      -0.4
+     ]
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PULL_UV_188",
+     "pos": "top_of_house"
+    },
+    {
+     "at": 0.75,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "top_of_house",
+     "act": "shake"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     1.6,
+     5.3,
+     -1.4
+    ],
+    "size": 0.14,
+    "width": 1.2,
+    "lines": [
+     23
+    ],
+    "words": [
+     "嫌い",
+     "嫌いの"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "collapse",
+   "at": 89.28,
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 3,
+    "pool": true,
+    "collapse": 89.85
+   },
+   "why": "down: the ladder of copies buries her",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "table_wide",
+     "offset": [
+      0.6,
+      0.4,
+      -1.0
+     ]
+    },
+    {
+     "at": "end",
+     "cam": "table_wide",
+     "offset": [
+      0.7,
+      0.3,
+      -1.3
+     ],
+     "ease": "out"
+    }
+   ],
+   "kick": 2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_DIZZY_LIE_UV_193",
+     "pos": [
+      2.0,
+      0.2,
+      -1.2
+     ],
+     "act": "shrink"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     0.0,
+     2.8,
+     0.0
+    ],
+    "size": 0.3,
+    "width": 3.0,
+    "lines": [
+     23
+    ],
+    "words": [
+     "最低泣いて",
+     "ダウン"
+    ],
+    "key": [
+     "ダウン"
+    ],
+    "color": "#ff4f6b"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "buried",
+   "at": "line:24",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "pile": [
+     2.0,
+     0,
+     -1.2
+    ],
+    "coin_roll": 90.3
+   },
+   "why": "the crying close-up after the wide fall (wide action + reaction close-up)",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      2.4,
+      0.35,
+      0.4
+     ],
+     "look": [
+      2.0,
+      0.3,
+      -1.2
+     ],
+     "fov": 34
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "CU_F_CRY_UV_003",
+     "pos": [
+      2.0,
+      -0.2,
+      -1.1
+     ],
+     "height": 0.8
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "anchor": [
+     1.9,
+     0.6,
+     -0.9
+    ],
+    "size": 0.12,
+    "width": 1.4,
+    "lines": [
+     24
+    ],
+    "words": [
+     "毎度新たに"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "coin-spins",
+   "at": "word:24.1",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "pile": [
+     2.0,
+     0,
+     -1.2
+    ],
+    "coin_spin": 91.29
+   },
+   "why": "one wish left: the coin she will use at the end is planted here",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "top_down",
+     "offset": [
+      1.8,
+      -5.5,
+      -1.4
+     ],
+     "look_offset": [
+      2.0,
+      0,
+      -1.2
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [],
+   "lyrics": {
+    "kind": "sign",
+    "material": "engraved",
+    "anchor": [
+     1.2,
+     0.06,
+     -0.4
+    ],
+    "size": 0.2,
+    "width": 1.6,
+    "lines": [
+     24
+    ],
+    "words": [
+     "お願い",
+     "1つ"
+    ],
+    "color": "#d4ab4f"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "pick-up",
+   "at": "line:25",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "pile": [
+     2.0,
+     0,
+     -1.2
+    ],
+    "pickup": 94.0,
+    "king_float": true
+   },
+   "why": "pick-up = she is the featured product - the merch reading of the song made literal",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "table_wide",
+     "offset": [
+      0,
+      1.2,
+      -1.0
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": "felt_text",
+    "size": 0.35,
+    "width": 5.0,
+    "lines": [
+     25
+    ],
+    "words": [
+     "愛も",
+     "変わらず",
+     "ピックアップ",
+     "の"
+    ],
+    "key": [
+     "ピックアップ"
+    ],
+    "color": "#ffcf6b"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "digs-out",
+   "at": "word:25.4",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "pile": [
+     2.0,
+     0,
+     -1.2
+    ],
+    "king_float": true,
+    "warning_cards": [
+     94.9,
+     95.28
+    ],
+    "warning_slash": 95.28
+   },
+   "why": "warning: she sees what she is to them - and gets angry for the first time",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.2,
+      1.2,
+      2.0
+     ],
+     "look": [
+      2.0,
+      1.0,
+      -1.2
+     ],
+     "fov": 36
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_173",
+     "pos": [
+      2.0,
+      0,
+      -1.0
+     ],
+     "act": "pop",
+     "icon": "anger"
+    }
+   ],
+   "lyrics": {
+    "kind": "card",
+    "anchor": [
+     1.0,
+     0.6,
+     -0.2
+    ],
+    "size": 0.2,
+    "width": 1.6,
+    "lines": [
+     25
+    ],
+    "words": [
+     "ワーニング"
+    ],
+    "key": [
+     "ワーニング"
+    ],
+    "color": "#ff4f6b"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "seed",
+   "at": "line:26",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "king_held": true,
+    "spade_glow": 97.27,
+    "pool_on": [
+     [
+      97.8,
+      "raymi"
+     ]
+    ]
+   },
+   "why": "the seed of the finale: in the dark, her touch wakes the ray on the card",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      1.3,
+      1.2
+     ],
+     "look": [
+      0.0,
+      1.2,
+      -0.4
+     ],
+     "fov": 30
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "CU_F_HAPPY_UV_001",
+     "pos": [
+      0.0,
+      0,
+      -0.4
+     ],
+     "height": 1.2
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "lit": true,
+    "color": "#d8c2ff",
+    "anchor": [
+     0.5,
+     1.5,
+     -0.3
+    ],
+    "size": 0.12,
+    "width": 1.2,
+    "lines": [
+     26
+    ],
+    "key": [
+     "お願い"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "pull",
+   "at": "line:27",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.25,
+    "house": 0,
+    "pool": true,
+    "king_bend": true
+   },
+   "why": "anticipation: everything is under tension before chorus 2",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "felt_low"
+    },
+    {
+     "at": "end",
+     "cam": "felt_low",
+     "offset": [
+      0.2,
+      0.1,
+      -0.6
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PULL_UV_187",
+     "pos": [
+      -1.2,
+      0,
+      -0.8
+     ],
+     "act": "lean"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "print",
+    "anchor": [
+     -0.4,
+     1.9,
+     -0.9
+    ],
+    "size": 0.13,
+    "width": 2.0,
+    "lines": [
+     27
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "flip-180",
+   "at": "line:28",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.3,
+    "house": 0,
+    "pool": true,
+    "king_rot": [
+     100.85,
+     101.94
+    ],
+    "deal_beats": "beats"
+   },
+   "why": "WOW 4: left side / right side = the two halves of a court card - she escapes through the mirror half",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "card_ms",
+     "roll": 0
+    },
+    {
+     "at": "end",
+     "cam": "card_ms",
+     "roll": 180,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_JUMP_UV_160",
+     "pos": "card",
+     "act": "pop"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "print",
+    "anchor": [
+     -1.2,
+     2.0,
+     -1.0
+    ],
+    "size": 0.18,
+    "width": 1.4,
+    "words": [
+     "レフトサイド"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "lands",
+   "at": "word:28.1",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.3,
+    "house": 0,
+    "pool": true,
+    "deal_beats": "beats"
+   },
+   "why": "out of the printed half for good",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "table_wide",
+     "roll": -30
+    },
+    {
+     "at": "end",
+     "cam": "table_wide",
+     "roll": 0
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_173",
+     "pos": "center",
+     "act": "stomp"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "print",
+    "anchor": [
+     -1.6,
+     1.6,
+     -1.1
+    ],
+    "rot": 3.14,
+    "size": 0.18,
+    "width": 1.4,
+    "words": [
+     "ライトサイド"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "gritted",
+   "at": "line:29",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.3,
+    "house": 0,
+    "pool": true,
+    "deal_beats": "beats"
+   },
+   "why": "the same words as the day grin - now the teeth are real",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "felt_low",
+     "offset": [
+      0.2,
+      0.6,
+      -1.4
+     ]
+    }
+   ],
+   "kick": 2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_172",
+     "pos": [
+      0.0,
+      0,
+      -0.6
+     ],
+     "act": "lean"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     0.9,
+     1.4,
+     -0.3
+    ],
+    "size": 0.18,
+    "width": 1.6,
+    "lines": [
+     29
+    ],
+    "words": [
+     "歯をむき",
+     "出して"
+    ],
+    "color": "#ff4f6b"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "face-down",
+   "at": "word:29.2",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "slaps": [
+     104.47,
+     104.85,
+     105.2
+    ],
+    "deal_beats": "beats"
+   },
+   "why": "pa pa pa was their flashes - now it is her hand: she plays the table",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "top_down",
+     "offset": [
+      0,
+      -3.5,
+      0
+     ]
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": "center",
+     "act": "stomp"
+    },
+    {
+     "at": 0.38,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": [
+      0.8,
+      0,
+      0.3
+     ],
+     "act": "stomp",
+     "flip": true
+    },
+    {
+     "at": 0.73,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": [
+      -0.6,
+      0,
+      0.5
+     ],
+     "act": "stomp"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "felt",
+    "color": "#ff4f6b",
+    "anchor": [
+     0.0,
+     0.02,
+     1.2
+    ],
+    "size": 0.3,
+    "width": 3.0,
+    "lines": [
+     29
+    ],
+    "words": [
+     "パッパッパ"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "kick",
+   "at": "line:30",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "king_kick": 105.9,
+    "deal_beats": "beats"
+   },
+   "why": "how annoying (chorus 2) - the mood turned: the nuisance is the merch version of her",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "felt_low",
+     "offset": [
+      -0.6,
+      0.2,
+      -1.0
+     ]
+    }
+   ],
+   "kick": 2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_ANGRY_KICK_UV_198",
+     "pos": [
+      -0.6,
+      0,
+      -0.8
+     ],
+     "act": "pop",
+     "icon": "anger"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     0.4,
+     1.4,
+     0.2
+    ],
+    "size": 0.18,
+    "width": 1.6,
+    "lines": [
+     30
+    ],
+    "color": "#ff4f6b"
+   },
+   "transition": {
+    "kind": "pass",
+    "frames": 6,
+    "obj": "card",
+    "dir": -1
+   }
+  },
+  {
+   "id": "flick-left",
+   "at": "line:31",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "flick": [
+     106.65,
+     "left"
+    ],
+    "deal_beats": "beats"
+   },
+   "why": "clearing the table of herself, left",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "table_wide",
+     "offset": [
+      -1.0,
+      0,
+      -1.5
+     ],
+     "look_offset": [
+      -2.0,
+      0,
+      0
+     ]
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_ANGRY_KICK_UV_199",
+     "pos": [
+      -1.6,
+      0,
+      0.2
+     ],
+     "act": "pop",
+     "flip": true
+    }
+   ],
+   "lyrics": {
+    "kind": "ticker",
+    "color": "#d4ab4f",
+    "anchor": [
+     -2.0,
+     0.3,
+     4.4
+    ],
+    "size": 0.2,
+    "width": 1.8,
+    "words": [
+     "レフトサイド"
+    ]
+   },
+   "transition": {
+    "kind": "whip",
+    "frames": 6,
+    "dir": 1
+   }
+  },
+  {
+   "id": "flick-right",
+   "at": "word:31.1",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "flick": [
+     107.74,
+     "right"
+    ],
+    "deal_beats": "beats"
+   },
+   "why": "and right - the same tennis match as the day, but now she is the player",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "table_wide",
+     "offset": [
+      1.0,
+      0,
+      -1.5
+     ],
+     "look_offset": [
+      2.0,
+      0,
+      0
+     ]
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_PANIC_LUNGE_UV_202",
+     "pos": [
+      1.6,
+      0,
+      0.2
+     ],
+     "act": "pop"
+    }
+   ],
+   "lyrics": {
+    "kind": "ticker",
+    "color": "#d4ab4f",
+    "anchor": [
+     2.0,
+     0.3,
+     4.4
+    ],
+    "size": 0.2,
+    "width": 1.8,
+    "words": [
+     "ライトサイド"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "glare-up",
+   "at": "line:32",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.35,
+    "house": 0,
+    "pool": true,
+    "deal_beats": "beats"
+   },
+   "why": "the goal from 83.9 again, now with fury",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      0.25,
+      1.4
+     ],
+     "look": [
+      0.0,
+      6.0,
+      0.0
+     ],
+     "fov": 52
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SHOUT_WET_UV_177",
+     "pos": [
+      0.0,
+      0,
+      0.0
+     ],
+     "act": "stomp"
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "anchor": [
+     0.6,
+     2.2,
+     0.2
+    ],
+    "size": 0.16,
+    "width": 2.0,
+    "lines": [
+     32
+    ],
+    "words": [
+     "歯を",
+     "突き",
+     "出して"
+    ],
+    "color": "#ff7eb6"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "dominoes",
+   "at": "word:32.3",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "topple": 110.26,
+    "deal_beats": "beats"
+   },
+   "why": "the laugh is hers now - the coins the crowd paid fall over",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "top_down",
+     "offset": [
+      0.5,
+      -3.0,
+      0
+     ]
+    },
+    {
+     "at": "end",
+     "cam": "top_down",
+     "offset": [
+      1.5,
+      -3.0,
+      0.6
+     ]
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": [
+      0.6,
+      0,
+      0.9
+     ],
+     "act": "pop"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     1.5,
+     0.05,
+     1.8
+    ],
+    "size": 0.3,
+    "width": 3.4,
+    "lines": [
+     32
+    ],
+    "words": [
+     "パッパッパッハハ"
+    ],
+    "key": [
+     "パッパッパッハハ"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "coin-shot",
+   "at": "line:33",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.0,
+    "house": 0,
+    "pool": true,
+    "pool_on": [
+     [
+      112.07,
+      "raymi"
+     ]
+    ],
+    "coin_flick": 112.83,
+    "deal_beats": "beats"
+   },
+   "why": "the house's verdict - and her answer: one coin, one shot",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.5,
+      0.4,
+      2.2
+     ],
+     "look": [
+      0.0,
+      5.0,
+      0.0
+     ],
+     "fov": 48
+    }
+   ],
+   "kick": 2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": [
+      0.0,
+      0,
+      0.3
+     ],
+     "act": "shake"
+    },
+    {
+     "at": 0.7,
+     "sprite": "WS_F_SHOUT_WET_UV_177",
+     "pos": [
+      0.0,
+      0,
+      0.3
+     ],
+     "act": "pop"
+    }
+   ],
+   "lyrics": {
+    "kind": "card",
+    "anchor": [
+     -1.0,
+     0.5,
+     1.4
+    ],
+    "size": 0.26,
+    "width": 3.0,
+    "lines": [
+     33
+    ],
+    "key": [
+     "KING"
+    ],
+    "color": "#d4ab4f"
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "black",
+   "at": 113.4,
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "lamp": 0,
+    "bulb_pop": 113.4,
+    "black": true
+   },
+   "why": "her shot, not the song's: every light that owned her is gone",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.5,
+      0.4,
+      2.2
+     ],
+     "look": [
+      0.0,
+      5.0,
+      0.0
+     ],
+     "fov": 48
+    }
+   ],
+   "kick": 1,
+   "raymi": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "her-dots",
+   "at": "line:34",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "lamp": 0,
+    "black": true,
+    "glow": "#9b5cff"
+   },
+   "why": "灯闇: she is the lamp in the dark - now SHE says it",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "card_ms",
+     "offset": [
+      0.3,
+      0,
+      0.2
+     ]
+    },
+    {
+     "at": "end",
+     "cam": "card_ms",
+     "offset": [
+      0.4,
+      0,
+      -0.1
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_164",
+     "pos": [
+      -0.4,
+      0,
+      -0.4
+     ]
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "anchor": [
+     0.4,
+     1.6,
+     -0.3
+    ],
+    "size": 0.2,
+    "width": 2.2,
+    "lines": [
+     34
+    ],
+    "key": [
+     "KING"
+    ],
+    "color": "#d8c2ff",
+    "lit": true
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "spades-light",
+   "at": "word:34.2",
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "lamp": 0,
+    "black": true,
+    "glow": "#9b5cff",
+    "spade_glow": "all"
+   },
+   "why": "the seed from 97 pays off on every card at once",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "table_wide",
+     "offset": [
+      0,
+      0.6,
+      -1.0
+     ]
+    },
+    {
+     "at": "end",
+     "cam": "table_wide",
+     "offset": [
+      0,
+      1.4,
+      -0.6
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": [
+      -0.4,
+      0,
+      -0.4
+     ],
+     "act": "tilt"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "rays-wake",
+   "at": 116.4,
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "lamp": 0,
+    "black": true,
+    "glow": "#9b5cff",
+    "swarm_peel": [
+     116.4,
+     116.94,
+     117.49
+    ],
+    "glow_pulse": "beats"
+   },
+   "why": "WOW 5 begins: her court is her own kind, woken by her light",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "felt_low"
+    },
+    {
+     "at": "end",
+     "cam": "felt_low",
+     "offset": [
+      0,
+      0.3,
+      -0.5
+     ]
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": [
+      -0.4,
+      0,
+      -0.6
+     ]
+    },
+    {
+     "at": 1.09,
+     "sprite": "WS_F_HAPPY_JUMP_UV_160",
+     "pos": [
+      -0.4,
+      0.4,
+      -0.6
+     ],
+     "act": "float"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "rays-face",
+   "at": 117.49,
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "lamp": 0,
+    "black": true,
+    "glow": "#9b5cff",
+    "swarm": true,
+    "glow_pulse": "beats",
+    "rays_pass_lens": [
+     117.66,
+     118.03,
+     118.38
+    ]
+   },
+   "why": "the reaction close-up after the wide wake: she feels them before she sees them",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.3,
+      1.45,
+      0.6
+     ],
+     "look": [
+      -0.4,
+      1.4,
+      -0.6
+     ],
+     "fov": 30
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "CU_F_CALM_UV_091",
+     "pos": [
+      -0.4,
+      0,
+      -0.6
+     ],
+     "height": 1.3
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "rays-orbit",
+   "at": 118.6,
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "lamp": 0,
+    "black": true,
+    "glow": "#9b5cff",
+    "swarm": true,
+    "glow_pulse": "beats"
+   },
+   "why": "the performance pose has no light to perform for - she drops it and laughs for real",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.8,
+      1.4,
+      1.2
+     ],
+     "look": [
+      -0.4,
+      1.3,
+      -0.6
+     ],
+     "fov": 36
+    },
+    {
+     "at": "end",
+     "pos": [
+      -2.4,
+      1.4,
+      1.0
+     ],
+     "look": [
+      -0.4,
+      1.3,
+      -0.6
+     ],
+     "fov": 36
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": [
+      -0.4,
+      0,
+      -0.6
+     ]
+    },
+    {
+     "at": 0.37,
+     "sprite": "WS_F_HAPPY_SPIN_UV_178",
+     "pos": [
+      -0.4,
+      0.4,
+      -0.6
+     ],
+     "act": "float"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "reveal-tank",
+   "at": 120.02,
+   "set": "aquarium",
+   "opts": {
+    "led": "CLOSED",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "banks_off": "all",
+    "dim": 1.0,
+    "spot": false,
+    "cards": "scattered",
+    "glow": "#9b5cff",
+    "swarm": true,
+    "dead_lamp": true,
+    "salmon": "near",
+    "cap": true,
+    "glow_pulse": "beats"
+   },
+   "why": "the scale rule closes in the same kind of move that opened it (shown, not cut): the night was the tank floor at card scale - the coin stuck in the real work lamp's cage proves it",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.4,
+      2.4,
+      -0.4
+     ],
+     "look": [
+      -0.4,
+      0.0,
+      -0.9
+     ],
+     "fov": 50
+    },
+    {
+     "at": "end",
+     "cam": "top_down",
+     "ease": "out"
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": [
+      -0.2,
+      0.3,
+      -0.7
+     ],
+     "height": 0.09
+    },
+    {
+     "at": 0.35,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": [
+      -0.2,
+      0,
+      -0.7
+     ],
+     "height": 1.55,
+     "move": 0.6,
+     "ease": "out"
+    }
+   ],
+   "transition": {
+    "kind": "bubbles",
+    "frames": 10
+   }
+  },
+  {
+   "id": "cap-rises",
+   "at": 121.0,
+   "set": "aquarium",
+   "opts": {
+    "led": "CLOSED",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "banks_off": "all",
+    "dim": 1.0,
+    "spot": false,
+    "cards": "scattered",
+    "glow": "#9b5cff",
+    "swarm": true,
+    "cap_lift": 121.0,
+    "glow_pulse": "beats"
+   },
+   "why": "the same cap from the same pebble (38.3, 69.1) - this time nobody is watching",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "throne_low",
+     "offset": [
+      0.2,
+      0,
+      0
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PULL_UV_187",
+     "pos": "crown",
+     "act": "lean"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "self-crown",
+   "at": 122.2,
+   "set": "aquarium",
+   "opts": {
+    "led": "CLOSED",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "banks_off": "all",
+    "dim": 1.0,
+    "spot": false,
+    "cards": "scattered",
+    "glow": "#9b5cff",
+    "swarm_ring": "head",
+    "crown": "head",
+    "cap": false,
+    "crown_from": 122.5,
+    "glow_pulse": "beats"
+   },
+   "why": "the crown's reason changes for the last time: costume -> theirs -> hers",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "throne_ms"
+    },
+    {
+     "at": "end",
+     "cam": "throne_ms",
+     "offset": [
+      0.1,
+      0,
+      -0.25
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "MS_F_HAPPY_UV_005",
+     "pos": "throne",
+     "act": "stomp"
+    },
+    {
+     "at": 0.3,
+     "sprite": "MS_F_HAPPY_UV_005",
+     "pos": "throne",
+     "act": "pop",
+     "icon": "sparkle"
+    },
+    {
+     "at": 0.85,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": "throne",
+     "act": "tilt"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "beam",
+   "at": 123.6,
+   "set": "aquarium",
+   "opts": {
+    "led": "CLOSED",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "banks_off": "all",
+    "dim": 1.0,
+    "spot": false,
+    "cards": "scattered",
+    "glow": "#9b5cff",
+    "swarm_beam": 123.6,
+    "crown": "head",
+    "cap": false,
+    "glow_pulse": "beats"
+   },
+   "why": "the reverse angle from 7.59 paid off: the hall she watched fill up is hers now - empty and lit by her",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "inside_out"
+    },
+    {
+     "at": "end",
+     "cam": "inside_out",
+     "offset": [
+      0,
+      0.4,
+      -0.4
+     ]
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_BK_NA_SURF_UV_167",
+     "pos": [
+      0.0,
+      0,
+      -0.8
+     ]
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "beam-top",
+   "at": 124.88,
+   "set": "aquarium",
+   "opts": {
+    "led": "CLOSED",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "banks_off": "all",
+    "dim": 1.0,
+    "spot": false,
+    "cards": "scattered",
+    "glow": "#9b5cff",
+    "swarm_ring": "head",
+    "crown": "head",
+    "cap": false,
+    "glow_pulse": "beats"
+   },
+   "why": "the spiral seen from above echoes the sinking deck (74.9) - the same shape, now rising and hers",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "top_down",
+     "roll": 0
+    },
+    {
+     "at": "end",
+     "cam": "top_down",
+     "roll": -60,
+     "offset": [
+      0,
+      -2.0,
+      0
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_JUMP_UV_160",
+     "pos": "center",
+     "act": "pop"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "led-king",
+   "at": 125.78,
+   "set": "aquarium",
+   "opts": {
+    "led": "KING",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "led_flip": [
+     125.78,
+     126.53
+    ],
+    "banks_off": "all",
+    "dim": 1.0,
+    "spot": false,
+    "cards": "scattered",
+    "glow": "#9b5cff",
+    "swarm_ring": "head",
+    "crown": "head",
+    "cap": false,
+    "glow_pulse": "beats"
+   },
+   "why": "STAR EXHIBIT -> KING: the board answers the song's question",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      -0.6,
+      7.5
+     ],
+     "look": [
+      0.0,
+      3.6,
+      1.2
+     ],
+     "fov": 40
+    }
+   ],
+   "kick": 1.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_JUMP_UV_161",
+     "pos": "center",
+     "act": "pop"
+    },
+    {
+     "at": 0.75,
+     "sprite": "WS_F_HAPPY_SPIN_UV_189",
+     "pos": [
+      0.2,
+      0.5,
+      -0.2
+     ],
+     "act": "pop"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "tail-wide",
+   "at": 127.7,
+   "set": "aquarium",
+   "opts": {
+    "led": "KING",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "banks_off": "all",
+    "dim": 1.0,
+    "spot": false,
+    "cards": "scattered",
+    "glow": "#9b5cff",
+    "swarm_ring": "head",
+    "crown": "head",
+    "cap": false,
+    "salmon": "near",
+    "salmon_coin": 129.6,
+    "glow_pulse": "beats"
+   },
+   "why": "the whole story in one picture, plus one gift to the only friend who never looked at a phone: a black building, one lit tank, the word KING",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "hall_wide"
+    },
+    {
+     "at": "end",
+     "cam": "hall_wide",
+     "offset": [
+      0,
+      0.3,
+      2.5
+     ]
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "MS_F_HAPPY_UV_005",
+     "pos": "throne"
+    },
+    {
+     "at": 1.9,
+     "sprite": "MS_F_HAPPY_UV_006",
+     "pos": "throne",
+     "act": "hop"
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  },
+  {
+   "id": "last-wink",
+   "at": 131.8,
+   "set": "aquarium",
+   "opts": {
+    "led": "KING",
+    "crowd": 0,
+    "screens": "WS_F_PEACE_WINK_UV_131",
+    "chute": true,
+    "banks_off": "all",
+    "dim": 1.0,
+    "spot": false,
+    "glow": "#9b5cff",
+    "glow_out": 132.89,
+    "crown": "head",
+    "cap": false,
+    "salmon": "behind"
+   },
+   "why": "the ending is an action on the last note: a different wink from every forced one (her own sprite, her own violet light), then black (no end card)",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.15,
+      1.35,
+      0.6
+     ],
+     "look": [
+      -0.45,
+      1.3,
+      -1.05
+     ],
+     "fov": 30
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.2,
+      1.35,
+      0.45
+     ],
+     "look": [
+      -0.45,
+      1.3,
+      -1.05
+     ],
+     "fov": 29
+    }
+   ],
+   "kick": 1,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "CU_F_HAPPY_UV_002",
+     "pos": [
+      -0.6,
+      0.2,
+      -1.05
+     ],
+     "height": 1.3
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
+  }
+ ]
+}
