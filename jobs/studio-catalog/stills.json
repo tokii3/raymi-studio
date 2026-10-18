@@ -29,5 +29,6 @@
   "transition_flash"
  ],
  "scale": 0.5,
- "to": "catalog"
+ "to": "catalog",
+ "round": 2
 }
