@@ -39,11 +39,11 @@
     "kind": "sign",
     "anchor": [
      -0.71,
-     2.27,
-     -2.44
+     2.14,
+     -2.46
     ],
-    "size": 0.18,
-    "width": 2.8,
+    "size": 0.16,
+    "width": 2.6,
     "color": "#ffffff",
     "accent": "#ffd34d",
     "lines": [
@@ -92,12 +92,12 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     1.43,
-     2.55,
-     -2.53
+     0.62,
+     2.67,
+     -2.44
     ],
-    "size": 0.26,
-    "width": 4.0,
+    "size": 0.2,
+    "width": 3.0,
     "color": "#ffffff",
     "accent": "#ffffff",
     "lines": [

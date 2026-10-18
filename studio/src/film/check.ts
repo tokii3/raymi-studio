@@ -121,7 +121,7 @@ export function placeAt(props: FilmProps, shot: number, f: number, sx: number, s
 // ---------------------------------------------------------------- lyrics stay readable inside the frame
 // The renderer measures words with the real font; here (node, no font) a word's width is estimated from its characters:
 // kana / kanji ~1 em, Latin ~0.62 em, plus the texture padding. Slightly generous, so a pass here is a real pass.
-const em = (ch: string) => (/[　-鿿＀-￯]/.test(ch) ? 1.0 : ch === ' ' ? 0.3 : 0.62);
+const em = (ch: string) => (/[　-鿿＀-￯]/.test(ch) ? 1.18 : ch === ' ' ? 0.35 : 0.7);   // her marker font is wide
 export function wordBox(w: {w: string; key: boolean}, L: {size: number; width: number}): {width: number; height: number} {
   let size = L.size * (w.key ? 2.2 : 1);
   const hScale = 1.35 / 0.72;
@@ -145,7 +145,9 @@ export function lineCorners(s: Shot, line: number): THREE.Vector3[] {
     rr.w += (rr.w ? gap : 0) + b.width;
     rr.h = Math.max(rr.h, b.height * 0.68);           // ~ visible glyph height inside the padded texture
   }
-  const W = Math.max(...rows.map((r) => r.w)), H = rows.reduce((a, r) => a + r.h, 0);
+  // conservative: the real font may be narrower than the estimate and fit ONE row up to the wrap width
+  const single = ws.reduce((a, w) => a + wordBox(w, L).width, 0) + gap * (ws.length - 1);
+  const W = Math.max(Math.max(...rows.map((r) => r.w)), Math.min(L.width, single)), H = rows.reduce((a, r) => a + r.h, 0);
   const rot = new THREE.Matrix4().makeRotationY((L.rotY * Math.PI) / 180);
   const o = new THREE.Vector3(...L.anchor);
   return [[-W / 2, H / 2], [W / 2, H / 2], [-W / 2, -H / 2], [W / 2, -H / 2]].map(([x, y]) =>

@@ -133,7 +133,17 @@
    "camera": [
     {
      "at": 0,
-     "cam": "house_up"
+     "pos": [
+      0.7,
+      4.1,
+      2.0
+     ],
+     "look": [
+      2.2,
+      5.75,
+      -1.8
+     ],
+     "fov": 40
     }
    ],
    "raymi": [
@@ -148,12 +158,12 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     2.19,
-     3.39,
-     1.72
+     2.63,
+     5.74,
+     -0.27
     ],
-    "size": 0.16,
-    "width": 2.4,
+    "size": 0.14,
+    "width": 2.0,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "lines": [

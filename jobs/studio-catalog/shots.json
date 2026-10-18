@@ -167,15 +167,15 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.03,
-     1.48,
-     -0.71
+     -0.22,
+     1.71,
+     -0.59
     ],
     "lines": [
      28
     ],
-    "size": 0.12,
-    "width": 1.6,
+    "size": 0.075,
+    "width": 1.0,
     "color": "#ffcf6b",
     "accent": "#ffffff"
    },
