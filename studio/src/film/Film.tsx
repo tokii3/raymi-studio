@@ -64,10 +64,12 @@ export const Film: React.FC<FilmProps> = (props) => {
   const head = pose ? figurePoint(shot, f, fps, camPos, 0.62, pose.key.top + 0.02) : null;
   // the bottle-cap crown on her head; cap_off (frame) = she takes it off and tosses it back onto its pebble (12 frames)
   const capOff = typeof shot.opts.cap_off === 'number' ? shot.opts.cap_off : Infinity;
-  let crownAt = shot.opts.crown === 'head' && pose ? figurePoint(shot, f, fps, camPos, 0.5, pose.key.top + 0.035) : null;
+  // the crown sits on her HEAD (head box centre), not the sprite centre: leaning poses carry it with them (stills run 14)
+  const crownUV = (k: Shot['puppets'][number]): [number, number] => (k.head ? [(k.head[0] + k.head[2]) / 2, k.head[1] + 0.035] : [0.5, k.top + 0.035]);
+  let crownAt = shot.opts.crown === 'head' && pose ? figurePoint(shot, f, fps, camPos, ...crownUV(pose.key)) : null;
   if (crownAt && f >= capOff) {
     const t = (f - capOff) / 12;
-    const from = figurePoint(shot, capOff, fps, camPos, 0.5, pose!.key.top + 0.035)!;
+    const from = figurePoint(shot, capOff, fps, camPos, ...crownUV(pose!.key))!;
     const to = new THREE.Vector3(...((shot.opts.pebble as [number, number, number]) ?? [0.25, 0.42, -1.25]));
     crownAt = t >= 1 ? null : from.clone().lerp(to, t).add(new THREE.Vector3(0, Math.sin(Math.PI * t) * 0.6, 0));
   }

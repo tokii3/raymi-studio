@@ -52,7 +52,7 @@ TIME_OPTS = {"banks_off", "cap_lift", "cap_off", "cap_pick", "card_flutter", "ca
              "glow_out", "hall_lights", "last_phone_down", "led_blink", "led_flip", "salmon_arrive", "salmon_coin",
              "swarm_beam", "taps", "warning_flash", "bulb_pop", "coin_flick", "coin_roll", "coin_spin", "collapse",
              "flick", "gust", "house_keys", "king_kick", "king_rot", "pickup", "pool_on", "rays_pass_lens", "shuffle",
-             "slaps", "spade_glow", "swarm_peel", "topple", "warning_cards", "warning_slash"}
+             "slaps", "spade_glow", "swarm_peel", "topple", "warning_cards", "warning_slash", "burst_at"}
 
 
 def time_opt(v, fr):
@@ -470,6 +470,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         opts = dict(s.get("opts") or {})
         for k in TIME_OPTS & opts.keys():
             opts[k] = time_opt(opts[k], fr)
+        if lyr and lyr.get("anchor") == "led" and "led" in marks:
+            opts["led"] = ""                               # a lyric written on the LED board replaces its text (stills 14)
         for k, v in opts.items():
             if isinstance(v, str) and v in cat:            # a sprite printed on a prop (a card, a poster, a screen)
                 opts[k] = "sprites/" + Path(cat[v]["file"]).name

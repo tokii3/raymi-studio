@@ -397,6 +397,47 @@
    ]
   },
   {
+   "id": "sand-bury",
+   "at": 60.0,
+   "set": "aquarium",
+   "opts": {
+    "crowd": 0,
+    "bury": [
+     0.0,
+     0.0,
+     -0.62
+    ],
+    "bury_h": 0.22,
+    "spot": false,
+    "dim": 0.4
+   },
+   "why": "catalog: SandBury - she buried herself, only the eyes peek over the mound",
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      0.3,
+      0.7,
+      0.5
+     ],
+     "rise": 0.25,
+     "fov": 34
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_LONGING_GLASS_UV_200",
+     "pos": [
+      0.0,
+      -0.84,
+      -0.9
+     ]
+    }
+   ]
+  },
+  {
    "id": "aquarium",
    "at": 86.9,
    "set": "aquarium",

@@ -5,11 +5,12 @@
 // Timed options (film frames, compiled from song seconds): flash_beats ('beats': phones flare on every beat),
 // flash_seq (bigger flares), crowd_look ([[f, 'left'|'right'|'center']]: heads turn in a wave), phones_up,
 // crowd_in / crowd_out (waves of visitors arrive / leave), hall_lights / banks_off (the hall's light banks switch on /
-// bang off; 'all' = dark), led_flip (letters light one by one), led_blink (the board blinks), chute (the wish chute).
+// bang off; 'all' = dark), led_flip (letters light one by one), led_blink (the board blinks), chute (the wish chute),
+// bury: [x, y, z] + bury_h (a sand mound she hid in; burst: [x, y, z] + burst_at = the mound blows apart).
 import React from 'react';
 import * as THREE from 'three';
 import {Beam, Bubbles, Caustics, Coral, Ground, Kelp, RBox, Rock, Sign, Visitor, drawText} from '../parts';
-import {BottleCap, Fish, LightBank, ShellThrone, Stanchions, ToyCastle, WishChute} from '../props';
+import {BottleCap, Fish, LightBank, SandMound, ShellThrone, Stanchions, ToyCastle, WishChute} from '../props';
 import {flare, frames, passed, since, stepValue} from '../events';
 import {SetLight, canvasTexture, rnd, toon, useScreenTexture} from '../look';
 import type {SetProps} from './index';
@@ -21,7 +22,7 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats}) => {
   const dim = Number(opts.dim ?? 0);
   const crowd = Number(opts.crowd ?? 14);
   const flashes = opts.flashes !== false;
-  const led = String(opts.led ?? 'STAR EXHIBIT');
+  const led = String(opts.led ?? 'STAR EXHIBIT');   // '' = a blank board (a lyric is written on it)
   const on = 1 - dim;
   const screen = useScreenTexture(opts.screens ? String(opts.screens) : null);   // the phones film HER
   // pa pa pa: on each hit 3 seeded phones flash for 4 frames
@@ -151,6 +152,9 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats}) => {
         drawText(ctx, ledText, x0, h / 2, px, '#3a2a18', {align: 'left'});          // unlit letters stay readable as bulbs
         if (ledShown) drawText(ctx, ledShown, x0, h / 2, px, '#ffcf6b', {align: 'left'});
       }} />
+      {Array.isArray(opts.bury) ? <SandMound pos={opts.bury as [number, number, number]} h={Number(opts.bury_h ?? 0.2)} f={f} /> : null}
+      {Array.isArray(opts.burst) ? <SandMound pos={opts.burst as [number, number, number]} h={Number(opts.bury_h ?? 0.2)} f={f}
+        burst={typeof opts.burst_at === 'number' ? Math.max(0, (f - opts.burst_at) / 10) : 0} /> : null}
       {opts.chute ? <WishChute pos={[-3.6, 4.1, 1.95]} out={[-3.6, 0.25, 0.9]} /> : null}
       {opts.warning !== false ? (
         <Sign id="warn" pos={[2.1, 0.55, 1.62]} size={[0.9, 0.5]} frame="#1b1430" paint={(ctx, w, h) => {
@@ -166,7 +170,7 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats}) => {
       <Stanchions a={[-4.2, -0.9, 2.5]} b={[-1.4, -0.9, 2.5]} />
       <Stanchions a={[1.4, -0.9, 2.5]} b={[4.2, -0.9, 2.5]} />
       {banks.map((z, k) => (
-        <LightBank key={z} z={z} y={3.3} floorY={-0.9} on={k < lightsOn && k >= off ? 1 : 0}
+        <LightBank key={z} z={z} y={6.2} floorY={-0.9} on={k < lightsOn && k >= off ? 1 : 0}
           bang={k < off ? flare(bankOff[k], f, 4) : 0} />
       ))}
       {Array.from({length: crowd}, (_, i) => {

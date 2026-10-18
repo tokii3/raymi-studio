@@ -168,8 +168,10 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
     for (const line of lines) {
       const ws = s.words.filter((w) => w.line === line);
       const next = s.words.find((w) => w.line > line);
-      const a = Math.max(...ws.map((w) => w.from)) + 6;
       const z = Math.min(s.to, next ? next.from : Math.max(...ws.map((w) => w.to)) + props.fps);
+      // settled 6 frames after the last word - but a word landing at the very end of a shot is still checked (KING
+      // on the LED in king-again was never tested because its last word fell inside the shot's final 6 frames)
+      const a = Math.max(Math.min(...ws.map((w) => w.from)), Math.min(Math.max(...ws.map((w) => w.from)) + 6, z - 1));
       const corners = lineCorners(s, line);
       for (let f = a; f < z; f += 3) {
         const cam = makeCamera(s, f, aspect, [], props.fps);

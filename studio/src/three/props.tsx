@@ -167,7 +167,34 @@ export const LightBank: React.FC<{z: number; y: number; floorY: number; on: numb
         <planeGeometry args={[width, 2.6]} />
         <meshBasicMaterial color="#fff1d6" transparent opacity={0.16 * lit} depthWrite={false} toneMapped={false} />
       </mesh>
-      {lit > 0.01 ? <pointLight position={[0, y - 0.4, z]} color="#ffe9c9" intensity={9 * lit} distance={6} decay={1.5} /> : null}
+      {lit > 0.01 ? <pointLight position={[0, y - 0.4, z]} color="#ffe9c9" intensity={14 * lit} distance={9} decay={1.5} /> : null}
+    </group>
+  );
+};
+
+/** A sand mound she buried herself in (SandBury): a lumpy dune in front of her with a ring of loose grains; `h` = how
+ *  high it reaches (below her eyes, so only the eyes peek out). Her sprite stands sunk below the opaque tank floor. */
+export const SandMound: React.FC<{pos: P3; h: number; r?: number; c?: string; f: number; burst?: number}> = ({pos, h, r = 0.6, c = '#c9a9d6', f, burst = 0}) => {
+  const geo = React.useMemo(() => {
+    const g = new THREE.SphereGeometry(1, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2);
+    const p = g.attributes.position as THREE.BufferAttribute;
+    for (let i = 0; i < p.count; i++) {
+      const x = p.getX(i), y = p.getY(i), z = p.getZ(i);
+      const n = 1 + 0.08 * Math.sin(x * 7 + z * 5) + 0.05 * Math.cos(z * 11);
+      p.setXYZ(i, x * n, y * n, z * n);
+    }
+    g.computeVertexNormals();
+    return g;
+  }, []);
+  const k = 1 - Math.min(1, burst);                       // burst 0..1 blows the mound away (sand cloud)
+  return (
+    <group position={pos}>
+      {k > 0.02 ? <mesh geometry={geo} material={toon(c)} scale={[r * (1 + 0.6 * burst), h * k, r * 0.8 * (1 + 0.6 * burst)]} castShadow receiveShadow /> : null}
+      {Array.from({length: 18}, (_, i) => {
+        const a = (i / 18) * Math.PI * 2 + rnd(i) * 0.4, d = r * (1.05 + rnd(i + 3) * 0.3) * (1 + burst * 3);
+        const y = 0.02 + burst * (0.4 + rnd(i + 7)) * Math.sin(Math.min(1, burst) * Math.PI);
+        return <mesh key={i} position={[Math.cos(a) * d, y, Math.sin(a) * d * 0.8]} material={toon(c)}><sphereGeometry args={[0.025 + rnd(i + 9) * 0.03, 6, 5]} /></mesh>;
+      })}
     </group>
   );
 };
