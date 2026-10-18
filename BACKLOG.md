@@ -28,3 +28,9 @@
   size in the far wide shot, the "パッパッパッハハ" stamp over her body hard to read. Text placement was iterated 4x by
   hand -> anti-loop: next fix is a guard, not a 5th patch: minimum projected cap height for on-screen words (~3.5 %
   of the frame height at phone size) and "no stamp across her body" unless lyrics.over.
+- KING pilot STOP (2026-10-18, 3 blind-viewer FAILs, renders 13-15): recurring roots, not fixable by guards -
+  crowd silhouettes read as placeholder blobs (build the look pass: varied silhouettes, rim light from the tank,
+  never a dark mass in the lower third), Raymi tiny in hall wides (rewrite those shots as MS / CU or a figure-size
+  guard: her figure >= ~25 % of frame height unless the script says "tiny on purpose"), the LED "You are KING" unreadable
+  at phone size (bring the words down to her: a lyric object near her, not only on the far board), no hook at 0 s.
+  Waiting for toki's decision (PROGRESS 2026-10-18).
