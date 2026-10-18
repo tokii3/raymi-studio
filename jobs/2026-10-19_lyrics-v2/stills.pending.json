@@ -1,0 +1,19 @@
+{
+ "_how": "NOT rendered yet (toki 2026-10-19: no new render). To render in the cloud: rename this file to stills.json and push (stills.yml).",
+ "format": "mv",
+ "frames": [
+  58,
+  100,
+  194,
+  224
+ ],
+ "names": [
+  "v2_S_surface",
+  "v2_W_wide",
+  "v2_N_own_light",
+  "v2_C_close"
+ ],
+ "scale": 1,
+ "to": "boards",
+ "dest": "jobs/2026-10-19_lyrics-v2/boards"
+}
