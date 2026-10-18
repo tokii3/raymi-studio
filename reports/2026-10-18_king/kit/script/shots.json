@@ -1,0 +1,146 @@
+[
+ {
+  "id": "palms-glass",
+  "from_s": 0.0,
+  "to_s": 2.07,
+  "set": "aquarium",
+  "why": "the strained feeling before the chorus: she is pressed flat against her own window (anticipation)",
+  "words": "張り 詰めた 思い 込め",
+  "transition_out": "cut"
+ },
+ {
+  "id": "left-side",
+  "from_s": 2.07,
+  "to_s": 3.0,
+  "set": "aquarium",
+  "why": "left side for one half of the crowd: a tennis match where she is the ball",
+  "words": "レフトサイド",
+  "transition_out": "whip"
+ },
+ {
+  "id": "right-side",
+  "from_s": 3.0,
+  "to_s": 4.0,
+  "set": "aquarium",
+  "why": "and the other half - nobody gets left out, so she never rests",
+  "words": "ライトサイド",
+  "transition_out": "cut"
+ },
+ {
+  "id": "teeth-grin",
+  "from_s": 4.0,
+  "to_s": 6.13,
+  "set": "aquarium",
+  "why": "bare your teeth = the grin as a weapon for the phones",
+  "words": "歯をむき 出して",
+  "transition_out": "cut"
+ },
+ {
+  "id": "pa-pa-pa",
+  "from_s": 6.13,
+  "to_s": 7.13,
+  "set": "aquarium",
+  "why": "pa pa pa = the flash; three flashes, three poses (local flares, flash-safe)",
+  "words": "パッパッパ",
+  "transition_out": "cut"
+ },
+ {
+  "id": "embarrassing",
+  "from_s": 7.13,
+  "to_s": 8.1,
+  "set": "aquarium",
+  "why": "how embarrassing (chorus 1) - the real feeling leaks out for one second",
+  "words": "照れくさいね",
+  "transition_out": "cut"
+ },
+ {
+  "id": "zigzag",
+  "from_s": 8.1,
+  "to_s": 9.97,
+  "set": "aquarium",
+  "why": "the same move from God's view: her whole life is this zigzag",
+  "words": "レフトサイド ライトサイド",
+  "transition_out": "cut"
+ },
+ {
+  "id": "laugh",
+  "from_s": 9.97,
+  "to_s": 11.13,
+  "set": "aquarium",
+  "why": "teeth out, laughter - the grin turning into something wilder",
+  "words": "歯を 突き 出して",
+  "transition_out": "cut"
+ },
+ {
+  "id": "haha",
+  "from_s": 11.13,
+  "to_s": 13.27,
+  "set": "aquarium",
+  "why": "the flashes accelerate - the show is at full speed",
+  "words": "パッパッパッハハ",
+  "transition_out": "cut"
+ },
+ {
+  "id": "crowned-by-them",
+  "from_s": 13.27,
+  "to_s": 14.73,
+  "set": "aquarium",
+  "why": "the crowd crowns her - the crown is theirs to give",
+  "words": "You are KING",
+  "transition_out": "cut"
+ },
+ {
+  "id": "phone-wall",
+  "from_s": 14.73,
+  "to_s": 15.33,
+  "set": "aquarium",
+  "why": "WOW 2: 'YOU' - every phone in the hall points at her",
+  "words": "",
+  "transition_out": "cut"
+ },
+ {
+  "id": "lit-by-screens",
+  "from_s": 15.33,
+  "to_s": 16.17,
+  "set": "aquarium",
+  "why": "she is lit ONLY by their screens - the most owned moment of the video",
+  "words": "",
+  "transition_out": "cut"
+ },
+ {
+  "id": "king-again",
+  "from_s": 16.17,
+  "to_s": 17.0,
+  "set": "aquarium",
+  "why": "the last cheer of the day",
+  "words": "You are KING",
+  "transition_out": "cut"
+ },
+ {
+  "id": "lights-bang",
+  "from_s": 17.0,
+  "to_s": 18.2,
+  "set": "aquarium",
+  "why": "the show ends like a stage show: loud, bank by bank (the music is loud, so is the picture)",
+  "words": "",
+  "transition_out": "cut"
+ },
+ {
+  "id": "leaving",
+  "from_s": 18.2,
+  "to_s": 18.77,
+  "set": "aquarium",
+  "why": "the crowd leaves in waves; she keeps smiling one beat too long, then slumps",
+  "words": "",
+  "transition_out": "cut"
+ },
+ {
+  "id": "grin-drops",
+  "from_s": 18.77,
+  "to_s": 20.57,
+  "set": "aquarium",
+  "why": "the smile was work - when the last phone drops, so does it; the crown goes back on the sand (cap chain step 3)",
+  "words": "",
+  "transition_out": "cut"
+ }
+]

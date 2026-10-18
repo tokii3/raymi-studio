@@ -1,0 +1,2075 @@
+{
+ "composition": "MV",
+ "width": 1920,
+ "height": 1080,
+ "fps": 30,
+ "durationInFrames": 617,
+ "audio": {
+  "file": "audio.webm",
+  "from": 49.567,
+  "to": 70.15,
+  "src": "jobs/2026-10-18_king/song.webm"
+ },
+ "shots": [
+  {
+   "id": "palms-glass",
+   "from": 0,
+   "to": 62,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 22,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "flash": 0.4,
+    "crown": "head"
+   },
+   "camera": [
+    {
+     "f": 0,
+     "pos": [
+      0.98,
+      0.882,
+      5.524
+     ],
+     "look": [
+      0.621,
+      0.882,
+      1.148
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 30,
+     "pos": [
+      1.271,
+      0.342,
+      8.869
+     ],
+     "look": [
+      0.621,
+      0.342,
+      1.148
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 62,
+     "pos": [
+      0.3,
+      1.9,
+      2.6
+     ],
+     "look": [
+      0.4,
+      1.1,
+      0.5
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [
+    {
+     "f": 0,
+     "sprite": "sprites/WS_F_LONGING_GLASS_UV_200.png",
+     "size": [
+      1253,
+      1498
+     ],
+     "cuts": [],
+     "top": 0.07,
+     "feet": 0.98,
+     "head": [
+      0.3,
+      0.07,
+      0.73,
+      0.44
+     ],
+     "pos": [
+      0.6,
+      0.0,
+      1.15
+     ],
+     "height": 1.55,
+     "act": "stomp",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "glass",
+    "anchor": [
+     0.27,
+     1.7,
+     1.57
+    ],
+    "rotY": 0.0,
+    "size": 0.05,
+    "width": 0.7,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null
+   },
+   "words": [
+    {
+     "w": "張り",
+     "from": 0,
+     "to": 16,
+     "key": false,
+     "line": 11,
+     "idx": 0
+    },
+    {
+     "w": "詰めた",
+     "from": 14,
+     "to": 32,
+     "key": false,
+     "line": 11,
+     "idx": 1
+    },
+    {
+     "w": "思い",
+     "from": 30,
+     "to": 49,
+     "key": false,
+     "line": 11,
+     "idx": 2
+    },
+    {
+     "w": "込め",
+     "from": 48,
+     "to": 64,
+     "key": false,
+     "line": 11,
+     "idx": 3
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "left-side",
+   "from": 62,
+   "to": 90,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 22,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crowd_look": [
+     [
+      64,
+      "left"
+     ]
+    ],
+    "crown": "head",
+    "flash_beats": "beats"
+   },
+   "camera": [
+    {
+     "f": 62,
+     "pos": [
+      -0.4,
+      0.9,
+      6.0
+     ],
+     "look": [
+      -1.4,
+      1.0,
+      0.0
+     ],
+     "fov": 36.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 90,
+     "pos": [
+      -1.0,
+      0.9,
+      6.0
+     ],
+     "look": [
+      -2.4,
+      1.0,
+      0.0
+     ],
+     "fov": 36.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.5,
+   "puppets": [
+    {
+     "f": 62,
+     "sprite": "sprites/WS_F_SCARED_RUN_UV_176.png",
+     "size": [
+      1500,
+      1499
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.65,
+      0.05,
+      0.98,
+      0.32
+     ],
+     "pos": [
+      -2.8,
+      0.0,
+      -0.6
+     ],
+     "height": 1.55,
+     "act": "pop",
+     "icon": null,
+     "flip": true,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "glass",
+    "anchor": [
+     -2.4,
+     1.9,
+     1.57
+    ],
+    "rotY": 0.0,
+    "size": 0.28,
+    "width": 3.0,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null
+   },
+   "words": [
+    {
+     "w": "レフトサイド",
+     "from": 62,
+     "to": 92,
+     "key": false,
+     "line": 12,
+     "idx": 0
+    }
+   ],
+   "transition": {
+    "kind": "whip",
+    "frames": 6,
+    "dir": -1
+   },
+   "events": []
+  },
+  {
+   "id": "right-side",
+   "from": 90,
+   "to": 120,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 22,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crowd_look": [
+     [
+      92,
+      "right"
+     ]
+    ],
+    "crown": "head",
+    "flash_beats": "beats"
+   },
+   "camera": [
+    {
+     "f": 90,
+     "pos": [
+      1.0,
+      0.9,
+      6.0
+     ],
+     "look": [
+      2.4,
+      1.0,
+      0.0
+     ],
+     "fov": 36.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 120,
+     "pos": [
+      1.3,
+      0.9,
+      5.8
+     ],
+     "look": [
+      2.6,
+      1.0,
+      0.0
+     ],
+     "fov": 35.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.5,
+   "puppets": [
+    {
+     "f": 90,
+     "sprite": "sprites/WS_F_PANIC_LUNGE_UV_202.png",
+     "size": [
+      1435,
+      1481
+     ],
+     "cuts": [
+      "bottom"
+     ],
+     "top": 0.09,
+     "feet": 0.97,
+     "head": [
+      0.68,
+      0.09,
+      0.93,
+      0.28
+     ],
+     "pos": [
+      2.6,
+      0.0,
+      -0.4
+     ],
+     "height": 1.55,
+     "act": "pop",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "glass",
+    "anchor": [
+     2.4,
+     1.9,
+     1.57
+    ],
+    "rotY": 0.0,
+    "size": 0.28,
+    "width": 3.0,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null
+   },
+   "words": [
+    {
+     "w": "ライトサイド",
+     "from": 90,
+     "to": 122,
+     "key": false,
+     "line": 12,
+     "idx": 1
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "teeth-grin",
+   "from": 120,
+   "to": 184,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.3,
+    "flash_beats": "beats"
+   },
+   "camera": [
+    {
+     "f": 120,
+     "pos": [
+      0.866,
+      1.083,
+      4.207
+     ],
+     "look": [
+      0.267,
+      1.083,
+      1.179
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 184,
+     "pos": [
+      0.875,
+      1.083,
+      4.318
+     ],
+     "look": [
+      0.267,
+      1.083,
+      1.179
+     ],
+     "fov": 29.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 2.0,
+   "puppets": [
+    {
+     "f": 120,
+     "sprite": "sprites/WS_F_HAPPY_SURF_UV_180.png",
+     "size": [
+      1392,
+      1529
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.98,
+     "head": [
+      0.1,
+      0.03,
+      0.45,
+      0.3
+     ],
+     "pos": [
+      0.6,
+      0.0,
+      1.15
+     ],
+     "height": 1.55,
+     "act": "pop",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.4,
+     1.25,
+     3.39
+    ],
+    "rotY": 0.0,
+    "size": 0.035,
+    "width": 0.3,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": "screen"
+   },
+   "words": [
+    {
+     "w": "歯をむき",
+     "from": 120,
+     "to": 156,
+     "key": true,
+     "line": 13,
+     "idx": 0
+    },
+    {
+     "w": "出して",
+     "from": 154,
+     "to": 185,
+     "key": false,
+     "line": 13,
+     "idx": 1
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "pa-pa-pa",
+   "from": 184,
+   "to": 214,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crown": "head",
+    "flash_seq": [
+     185,
+     195,
+     204
+    ],
+    "flash_beats": "beats"
+   },
+   "camera": [
+    {
+     "f": 184,
+     "pos": [
+      0.4,
+      0.5,
+      3.4
+     ],
+     "look": [
+      0.5,
+      1.0,
+      1.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 214,
+     "pos": [
+      0.45,
+      0.5,
+      3.25
+     ],
+     "look": [
+      0.5,
+      1.0,
+      1.0
+     ],
+     "fov": 33.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [
+    {
+     "f": 184,
+     "sprite": "sprites/WS_F_HAPPY_SURF_UV_180.png",
+     "size": [
+      1392,
+      1529
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.98,
+     "head": [
+      0.1,
+      0.03,
+      0.45,
+      0.3
+     ],
+     "pos": [
+      0.6,
+      0.0,
+      1.15
+     ],
+     "height": 1.55,
+     "act": "idle",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 193,
+     "sprite": "sprites/WS_F_SMUG_WINK_UV_169.png",
+     "size": [
+      1059,
+      1513
+     ],
+     "cuts": [],
+     "top": 0.05,
+     "feet": 0.99,
+     "head": [
+      0.38,
+      0.05,
+      0.72,
+      0.3
+     ],
+     "pos": [
+      0.6,
+      0.0,
+      1.15
+     ],
+     "height": 1.55,
+     "act": "pop",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 203,
+     "sprite": "sprites/WS_F_HAPPY_SURF_UV_179.png",
+     "size": [
+      1449,
+      1514
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.5,
+      0.03,
+      0.82,
+      0.32
+     ],
+     "pos": [
+      0.6,
+      0.0,
+      1.15
+     ],
+     "height": 1.55,
+     "act": "pop",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     0.49,
+     0.55,
+     1.4
+    ],
+    "rotY": 0.0,
+    "size": 0.08,
+    "width": 0.8,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null
+   },
+   "words": [
+    {
+     "w": "パッパッパ",
+     "from": 184,
+     "to": 216,
+     "key": true,
+     "line": 13,
+     "idx": 2
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "embarrassing",
+   "from": 214,
+   "to": 243,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crown": "head",
+    "flash_beats": "beats"
+   },
+   "camera": [
+    {
+     "f": 214,
+     "pos": [
+      -2.4,
+      1.2,
+      0.9
+     ],
+     "look": [
+      -3.2,
+      1.1,
+      -1.2
+     ],
+     "fov": 32.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 243,
+     "pos": [
+      -2.5,
+      1.2,
+      0.8
+     ],
+     "look": [
+      -3.2,
+      1.1,
+      -1.2
+     ],
+     "fov": 31.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [
+    {
+     "f": 214,
+     "sprite": "sprites/WS_F_PAIN_CLUTCH_UV_163.png",
+     "size": [
+      924,
+      1507
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.99,
+     "head": [
+      0.3,
+      0.03,
+      0.65,
+      0.28
+     ],
+     "pos": [
+      -3.0,
+      0.0,
+      -1.4
+     ],
+     "height": 1.55,
+     "act": "idle",
+     "icon": "sweat",
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "anchor": [
+     -2.6,
+     1.6,
+     -0.9
+    ],
+    "rotY": 0.0,
+    "size": 0.12,
+    "width": 1.4,
+    "color": "#ffd0ea",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null
+   },
+   "words": [
+    {
+     "w": "照れくさいね",
+     "from": 214,
+     "to": 244,
+     "key": false,
+     "line": 14,
+     "idx": 0
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "zigzag",
+   "from": 243,
+   "to": 299,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 22,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crowd_look": [
+     [
+      244,
+      "left"
+     ],
+     [
+      270,
+      "right"
+     ]
+    ],
+    "crown": "head",
+    "flash_beats": "beats"
+   },
+   "camera": [
+    {
+     "f": 243,
+     "pos": [
+      0.0,
+      4.4,
+      5.2
+     ],
+     "look": [
+      0.0,
+      0.5,
+      -0.5
+     ],
+     "fov": 46.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.5,
+   "puppets": [
+    {
+     "f": 243,
+     "sprite": "sprites/WS_F_FLY_UV_054.png",
+     "size": [
+      1655,
+      976
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.03,
+      0.1,
+      0.3,
+      0.7
+     ],
+     "pos": [
+      -2.8,
+      0.0,
+      -0.6
+     ],
+     "height": 1.55,
+     "act": "pop",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 269,
+     "sprite": "sprites/WS_F_FLY_UV_054.png",
+     "size": [
+      1655,
+      976
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.03,
+      0.1,
+      0.3,
+      0.7
+     ],
+     "pos": [
+      2.6,
+      0.0,
+      -0.4
+     ],
+     "height": 1.55,
+     "act": "pop",
+     "icon": null,
+     "flip": true,
+     "move": 6,
+     "arc": 0.0,
+     "ease": "snap"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.0,
+     0.03,
+     1.0
+    ],
+    "rotY": 0.0,
+    "size": 0.3,
+    "width": 5.0,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null
+   },
+   "words": [
+    {
+     "w": "レフトサイド",
+     "from": 243,
+     "to": 270,
+     "key": false,
+     "line": 15,
+     "idx": 0
+    },
+    {
+     "w": "ライトサイド",
+     "from": 269,
+     "to": 300,
+     "key": false,
+     "line": 15,
+     "idx": 1
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "laugh",
+   "from": 299,
+   "to": 334,
+   "set": "aquarium",
+   "opts": {
+    "led": "",
+    "crowd": 16,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.3,
+    "flash_beats": "beats"
+   },
+   "camera": [
+    {
+     "f": 299,
+     "pos": [
+      -0.35,
+      1.75,
+      1.4
+     ],
+     "look": [
+      -0.6,
+      1.5,
+      -1.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 334,
+     "pos": [
+      -0.24999999999999997,
+      1.75,
+      1.0999999999999999
+     ],
+     "look": [
+      -0.5,
+      1.5,
+      -1.3
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [
+    {
+     "f": 299,
+     "sprite": "sprites/WS_F_HAPPY_SPIN_UV_178.png",
+     "size": [
+      1528,
+      1484
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.0,
+      0.05,
+      0.4,
+      0.4
+     ],
+     "pos": [
+      -0.6,
+      0.42,
+      -1.05
+     ],
+     "height": 1.55,
+     "act": "bounce",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "ticker",
+    "anchor": [
+     0.0,
+     4.95,
+     2.2
+    ],
+    "rotY": 0.0,
+    "size": 0.3,
+    "width": 4.4,
+    "color": "#ffcf6b",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null
+   },
+   "words": [
+    {
+     "w": "歯を",
+     "from": 299,
+     "to": 321,
+     "key": false,
+     "line": 16,
+     "idx": 0
+    },
+    {
+     "w": "突き",
+     "from": 320,
+     "to": 330,
+     "key": false,
+     "line": 16,
+     "idx": 1
+    },
+    {
+     "w": "出して",
+     "from": 328,
+     "to": 336,
+     "key": false,
+     "line": 16,
+     "idx": 2
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "haha",
+   "from": 334,
+   "to": 398,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 22,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.6,
+    "flash_beats": "beats"
+   },
+   "camera": [
+    {
+     "f": 334,
+     "pos": [
+      0.0,
+      0.95,
+      8.0
+     ],
+     "look": [
+      0.0,
+      1.5,
+      -1.5
+     ],
+     "fov": 33.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 398,
+     "pos": [
+      0.0,
+      0.95,
+      7.2
+     ],
+     "look": [
+      0.0,
+      1.5,
+      -2.3
+     ],
+     "fov": 33.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 2.0,
+   "puppets": [
+    {
+     "f": 334,
+     "sprite": "sprites/WS_F_HAPPY_SPIN_UV_189.png",
+     "size": [
+      1522,
+      1483
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.0,
+      0.0,
+      0.4,
+      0.4
+     ],
+     "pos": [
+      0.2,
+      0.8,
+      -0.4
+     ],
+     "height": 1.55,
+     "act": "float",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     0.0,
+     2.35,
+     2.4
+    ],
+    "rotY": 0.0,
+    "size": 0.3,
+    "width": 4.0,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null
+   },
+   "words": [
+    {
+     "w": "パッパッパッハハ",
+     "from": 334,
+     "to": 381,
+     "key": true,
+     "line": 16,
+     "idx": 3
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "crowned-by-them",
+   "from": 398,
+   "to": 442,
+   "set": "aquarium",
+   "opts": {
+    "led": "",
+    "crowd": 22,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.7,
+    "phones_up": true,
+    "flash_beats": "beats"
+   },
+   "camera": [
+    {
+     "f": 398,
+     "pos": [
+      0.0,
+      1.7,
+      8.6
+     ],
+     "look": [
+      -0.3,
+      3.3,
+      0.0
+     ],
+     "fov": 42.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 442,
+     "pos": [
+      0.0,
+      1.75,
+      7.9
+     ],
+     "look": [
+      -0.3,
+      3.3,
+      0.0
+     ],
+     "fov": 42.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.5,
+   "puppets": [
+    {
+     "f": 398,
+     "sprite": "sprites/WS_F_SMUG_WINK_UV_169.png",
+     "size": [
+      1059,
+      1513
+     ],
+     "cuts": [],
+     "top": 0.05,
+     "feet": 0.99,
+     "head": [
+      0.38,
+      0.05,
+      0.72,
+      0.3
+     ],
+     "pos": [
+      -0.6,
+      0.42,
+      -1.05
+     ],
+     "height": 1.55,
+     "act": "stomp",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.0,
+     4.95,
+     2.2
+    ],
+    "rotY": 0.0,
+    "size": 0.18,
+    "width": 4.4,
+    "color": "#ffcf6b",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null
+   },
+   "words": [
+    {
+     "w": "You",
+     "from": 398,
+     "to": 411,
+     "key": false,
+     "line": 17,
+     "idx": 0
+    },
+    {
+     "w": "are",
+     "from": 410,
+     "to": 423,
+     "key": false,
+     "line": 17,
+     "idx": 1
+    },
+    {
+     "w": "KING",
+     "from": 422,
+     "to": 445,
+     "key": true,
+     "line": 17,
+     "idx": 2
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "phone-wall",
+   "from": 442,
+   "to": 460,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 26,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.0,
+    "dim": 0.7,
+    "phones_up": true
+   },
+   "camera": [
+    {
+     "f": 442,
+     "pos": [
+      0.9,
+      1.3,
+      -1.4
+     ],
+     "look": [
+      0.3,
+      0.9,
+      4.0
+     ],
+     "fov": 42.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [
+    {
+     "f": 442,
+     "sprite": "sprites/WS_BK_NA_WADE_UV_183.png",
+     "size": [
+      1231,
+      1517
+     ],
+     "cuts": [],
+     "top": 0.0,
+     "feet": 0.99,
+     "head": [
+      0.38,
+      0.0,
+      0.65,
+      0.25
+     ],
+     "pos": [
+      0.1,
+      0.0,
+      0.4
+     ],
+     "height": 1.55,
+     "act": "idle",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "lit-by-screens",
+   "from": 460,
+   "to": 485,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 26,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.0,
+    "dim": 0.7,
+    "phones_up": true,
+    "short_cap_on_glass": true
+   },
+   "camera": [
+    {
+     "f": 460,
+     "pos": [
+      0.849,
+      1.113,
+      4.011
+     ],
+     "look": [
+      0.657,
+      1.113,
+      1.145
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 485,
+     "pos": [
+      0.878,
+      1.113,
+      4.343
+     ],
+     "look": [
+      0.657,
+      1.113,
+      1.145
+     ],
+     "fov": 27.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [
+    {
+     "f": 460,
+     "sprite": "sprites/WS_F_SMUG_WINK_UV_169.png",
+     "size": [
+      1059,
+      1513
+     ],
+     "cuts": [],
+     "top": 0.05,
+     "feet": 0.99,
+     "head": [
+      0.38,
+      0.05,
+      0.72,
+      0.3
+     ],
+     "pos": [
+      0.6,
+      0.0,
+      1.15
+     ],
+     "height": 1.55,
+     "act": "idle",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "king-again",
+   "from": 485,
+   "to": 510,
+   "set": "aquarium",
+   "opts": {
+    "led": "",
+    "crowd": 22,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crown": "head",
+    "flash": 0.6
+   },
+   "camera": [
+    {
+     "f": 485,
+     "pos": [
+      0.0,
+      1.2,
+      9.5
+     ],
+     "look": [
+      0.0,
+      3.2,
+      0.0
+     ],
+     "fov": 38.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 510,
+     "pos": [
+      0.0,
+      1.5,
+      8.3
+     ],
+     "look": [
+      0.0,
+      3.6,
+      0.5
+     ],
+     "fov": 36.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [
+    {
+     "f": 485,
+     "sprite": "sprites/WS_F_SMUG_WINK_UV_169.png",
+     "size": [
+      1059,
+      1513
+     ],
+     "cuts": [],
+     "top": 0.05,
+     "feet": 0.99,
+     "head": [
+      0.38,
+      0.05,
+      0.72,
+      0.3
+     ],
+     "pos": [
+      -0.6,
+      0.42,
+      -1.05
+     ],
+     "height": 1.55,
+     "act": "idle",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 508,
+     "sprite": "sprites/WS_F_CALM_REST_UV_166.png",
+     "size": [
+      1217,
+      1529
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.99,
+     "head": [
+      0.35,
+      0.03,
+      0.7,
+      0.28
+     ],
+     "pos": [
+      -0.6,
+      0.42,
+      -1.05
+     ],
+     "height": 1.55,
+     "act": "tilt",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.0,
+     4.95,
+     2.2
+    ],
+    "rotY": 0.0,
+    "size": 0.18,
+    "width": 4.4,
+    "color": "#ffcf6b",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null
+   },
+   "words": [
+    {
+     "w": "You",
+     "from": 485,
+     "to": 496,
+     "key": false,
+     "line": 18,
+     "idx": 0
+    },
+    {
+     "w": "are",
+     "from": 495,
+     "to": 509,
+     "key": false,
+     "line": 18,
+     "idx": 1
+    },
+    {
+     "w": "KING",
+     "from": 508,
+     "to": 529,
+     "key": true,
+     "line": 18,
+     "idx": 2
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "lights-bang",
+   "from": 510,
+   "to": 546,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crown": "head",
+    "banks_off": [
+     510,
+     546,
+     552
+    ],
+    "crowd_out": [
+     510,
+     521,
+     532,
+     543
+    ]
+   },
+   "camera": [
+    {
+     "f": 510,
+     "pos": [
+      0.6,
+      1.3,
+      -2.6
+     ],
+     "look": [
+      0.0,
+      1.0,
+      4.0
+     ],
+     "fov": 42.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 546,
+     "pos": [
+      0.8,
+      1.3,
+      -2.3
+     ],
+     "look": [
+      0.0,
+      1.0,
+      4.0
+     ],
+     "fov": 42.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 2.0,
+   "puppets": [
+    {
+     "f": 510,
+     "sprite": "sprites/WS_BK_NA_WADE_UV_183.png",
+     "size": [
+      1231,
+      1517
+     ],
+     "cuts": [],
+     "top": 0.0,
+     "feet": 0.99,
+     "head": [
+      0.38,
+      0.0,
+      0.65,
+      0.25
+     ],
+     "pos": [
+      0.0,
+      0.0,
+      -0.6
+     ],
+     "height": 1.55,
+     "act": "idle",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "leaving",
+   "from": 546,
+   "to": 563,
+   "set": "aquarium",
+   "opts": {
+    "led": "STAR EXHIBIT",
+    "crowd": 16,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crown": "head",
+    "banks_off": [
+     510,
+     546,
+     552
+    ],
+    "crowd_out": [
+     510,
+     563
+    ]
+   },
+   "camera": [
+    {
+     "f": 546,
+     "pos": [
+      0.0,
+      1.05,
+      10.3
+     ],
+     "look": [
+      0.0,
+      1.6,
+      0.8
+     ],
+     "fov": 33.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 2.0,
+   "puppets": [
+    {
+     "f": 546,
+     "sprite": "sprites/WS_F_SMUG_WINK_UV_169.png",
+     "size": [
+      1059,
+      1513
+     ],
+     "cuts": [],
+     "top": 0.05,
+     "feet": 0.99,
+     "head": [
+      0.38,
+      0.05,
+      0.72,
+      0.3
+     ],
+     "pos": [
+      -0.6,
+      0.42,
+      -1.05
+     ],
+     "height": 1.55,
+     "act": "idle",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 552,
+     "sprite": "sprites/WS_F_CALM_REST_UV_164.png",
+     "size": [
+      906,
+      1526
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.99,
+     "head": [
+      0.33,
+      0.03,
+      0.68,
+      0.28
+     ],
+     "pos": [
+      -0.6,
+      0.42,
+      -1.05
+     ],
+     "height": 1.55,
+     "act": "shrink",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  },
+  {
+   "id": "grin-drops",
+   "from": 563,
+   "to": 617,
+   "set": "aquarium",
+   "opts": {
+    "led": "CLOSED",
+    "crowd": 0,
+    "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
+    "chute": true,
+    "crown": "head",
+    "banks_off": "all",
+    "dim": 0.5,
+    "last_phone_down": 563,
+    "led_blink": [
+     575,
+     586,
+     597,
+     608
+    ],
+    "cap_off": 586
+   },
+   "camera": [
+    {
+     "f": 563,
+     "pos": [
+      0.844,
+      1.122,
+      3.951
+     ],
+     "look": [
+      0.605,
+      1.122,
+      1.15
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 617,
+     "pos": [
+      0.883,
+      1.122,
+      4.401
+     ],
+     "look": [
+      0.605,
+      1.122,
+      1.15
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [
+    {
+     "f": 563,
+     "sprite": "sprites/WS_F_CALM_REST_UV_164.png",
+     "size": [
+      906,
+      1526
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.99,
+     "head": [
+      0.33,
+      0.03,
+      0.68,
+      0.28
+     ],
+     "pos": [
+      0.6,
+      0.0,
+      1.15
+     ],
+     "height": 1.55,
+     "act": "shrink",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 586,
+     "sprite": "sprites/WS_F_CALM_REST_UV_164.png",
+     "size": [
+      906,
+      1526
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.99,
+     "head": [
+      0.33,
+      0.03,
+      0.68,
+      0.28
+     ],
+     "pos": [
+      0.6,
+      0.0,
+      1.15
+     ],
+     "height": 1.55,
+     "act": "tilt",
+     "icon": null,
+     "flip": false,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": []
+  }
+ ],
+ "hits": [
+  29,
+  86,
+  97,
+  119,
+  129,
+  140,
+  221,
+  238,
+  260,
+  271,
+  281,
+  292,
+  460,
+  510,
+  546,
+  552,
+  563
+ ],
+ "beats": [
+  0,
+  11,
+  22,
+  33,
+  44,
+  55,
+  65,
+  76,
+  87,
+  98,
+  109,
+  120,
+  131,
+  142,
+  152,
+  163,
+  174,
+  185,
+  196,
+  206,
+  218,
+  228,
+  239,
+  250,
+  261,
+  272,
+  282,
+  293,
+  304,
+  315,
+  326,
+  337,
+  347,
+  358,
+  369,
+  380,
+  391,
+  402,
+  413,
+  423,
+  434,
+  445,
+  456,
+  467,
+  477,
+  489,
+  500,
+  511,
+  521,
+  532,
+  543,
+  553,
+  564,
+  575,
+  586,
+  597,
+  608
+ ],
+ "sprites": [
+  "sprites/WS_BK_NA_WADE_UV_183.png",
+  "sprites/WS_F_CALM_REST_UV_164.png",
+  "sprites/WS_F_CALM_REST_UV_166.png",
+  "sprites/WS_F_FLY_UV_054.png",
+  "sprites/WS_F_HAPPY_SPIN_UV_178.png",
+  "sprites/WS_F_HAPPY_SPIN_UV_189.png",
+  "sprites/WS_F_HAPPY_SURF_UV_179.png",
+  "sprites/WS_F_HAPPY_SURF_UV_180.png",
+  "sprites/WS_F_LONGING_GLASS_UV_200.png",
+  "sprites/WS_F_PAIN_CLUTCH_UV_163.png",
+  "sprites/WS_F_PANIC_LUNGE_UV_202.png",
+  "sprites/WS_F_PEACE_WINK_UV_131.png",
+  "sprites/WS_F_SCARED_RUN_UV_176.png",
+  "sprites/WS_F_SMUG_WINK_UV_169.png"
+ ],
+ "grain": 0.06,
+ "title": "KING (Kanaria feat. GUMI) - Raymi MV"
+}
