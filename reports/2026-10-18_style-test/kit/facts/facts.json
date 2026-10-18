@@ -1,8 +1,8 @@
 {
  "video": "final.mp4",
  "size": [
-  1080,
-  1920
+  1920,
+  1080
  ],
  "fps": 30.0,
  "duration_s": 12.23,
@@ -28,8 +28,8 @@
  },
  "picture_change_on_hits": {
   "hits": 9,
-  "changed": 6,
-  "share": 0.67,
+  "changed": 7,
+  "share": 0.78,
   "threshold": 6.0
  },
  "still_spans_s": [],

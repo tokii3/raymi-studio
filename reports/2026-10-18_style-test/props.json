@@ -1,7 +1,7 @@
 {
- "composition": "MVShort",
- "width": 1080,
- "height": 1920,
+ "composition": "MV",
+ "width": 1920,
+ "height": 1080,
  "fps": 30,
  "durationInFrames": 367,
  "audio": {
@@ -120,13 +120,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.09,
-     1.64,
-     2.71
+     -0.1,
+     1.7,
+     3.21
     ],
     "rotY": 0.0,
-    "size": 0.09,
-    "width": 0.9,
+    "size": 0.12,
+    "width": 1.9,
     "color": "#ffcf6b",
     "accent": "#ffffff",
     "outline": "#1a0b33",
@@ -154,7 +154,7 @@
    "transition": {
     "kind": "pass",
     "frames": 10,
-    "obj": "curtain",
+    "obj": "kelp",
     "dir": 1
    },
    "events": []
@@ -266,13 +266,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     0.71,
-     0.79,
-     1.36
+     0.43,
+     1.07,
+     1.49
     ],
     "rotY": 0.0,
-    "size": 0.03,
-    "width": 0.55,
+    "size": 0.032,
+    "width": 0.6,
     "color": "#ffffff",
     "accent": "#ffffff",
     "outline": "#1a0b33",
@@ -375,13 +375,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     -0.25,
-     2.19,
-     -0.35
+     -1.08,
+     1.78,
+     -0.34
     ],
     "rotY": 0.0,
-    "size": 0.06,
-    "width": 0.7,
+    "size": 0.1,
+    "width": 1.2,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -485,9 +485,9 @@
       0.8
      ],
      "pos": [
-      0.16,
+      -0.24,
       -0.2,
-      -0.13
+      -0.5
      ],
      "height": 0.55,
      "act": "idle",
@@ -660,13 +660,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     -0.55,
-     0.98,
-     -0.65
+     -1.29,
+     1.45,
+     -0.77
     ],
     "rotY": 0.0,
-    "size": 0.06,
-    "width": 0.7,
+    "size": 0.085,
+    "width": 0.85,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
