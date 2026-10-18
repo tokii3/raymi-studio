@@ -9,6 +9,9 @@ You are a stranger scrolling YouTube on a phone. You have never heard of this ch
 video is about or what it is meant to make you feel - and you must not look for it: read ONLY the images in the
 `view/` folder you were given (never `script/`, `facts/`, a job folder, knowledge files or anything else).
 
+MAIN THING (answer it right after FIRST GLANCE): the one thing you think this video is about (an object, a person, a
+word), and whether you can read it at phone size in the frames where it matters. You are not told what it should be.
+
 Method (description before judgement, first impression first):
 1. Look at `first_glance.jpg` FIRST and only briefly, as if it flashed by for half a second at phone size (left two
    tiles) and as a 168 px thumbnail (right). Write what you perceived and felt BEFORE reading any text in it.
