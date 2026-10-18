@@ -8,17 +8,25 @@
 3. **Ideas** (`2_IDEAS.md` + `boards/`): three really different worlds with 3 key frames each, rendered from board
    jobs (`jobs/<date>_<song>-board-<x>/shots.json`) with the studio's built sets -> toki picks one and writes
    `approved: toki <date> <idea>`.
-4. **Treatment** (`3_TREATMENT.md`) at the depth of `knowledge/exemplars/lets-get-weird_TREATMENT.md` ->
+4. **Treatment** (`3_TREATMENT.md`, names the MAIN ELEMENT(S) and one grade per act) at the depth of
+   `knowledge/exemplars/lets-get-weird_TREATMENT.md` ->
    script-critic (`.claude/agents/script-critic.md`) -> its answer verbatim in `reviews/treatment_<n>.md` until PASS.
 5. **Shooting script** (`4_SCRIPT.md`): every shot decided (time, set, camera, what Raymi does, lyric treatment,
    transition, why) + the build list -> script-critic -> `reviews/script_<n>.md` until PASS.
-6. **Build** what the build list needs as reusable studio components (sets, props, lyric kinds, transitions), each
-   with a still in `studio/catalog/`. `shots.json` = the shooting script as data (format: `raymi/timeline.py`).
+6. **Build** - reuse first: `studio/catalog/status.json` says what toki liked / approved / named a fault in; build
+   only what is missing as reusable studio components (sets, props, lyric kinds, transitions, grades), each with a
+   still in `studio/catalog/`. `shots.json` = the shooting script as data (format: `raymi/timeline.py`): `acts` (the
+   look step: one grade per act), `heroes` + per shot `hero` (the main element), `lyric_style`, `translation`.
 7. **Pilot** with sound (a 20-40 s section) rendered in the cloud -> screening -> toki watches it.
 8. **Final** MV + Short (cut from the MV) in the cloud -> screening -> toki. Upload texts follow
    `canon/12_titles_descriptions.md` + `raymi/channel_rules.py`; toki uploads.
-9. **Learn**: one line in `canon/07_video_catalog.md`, a section in `knowledge/CASEBOOK.md` (idea, verdict, why);
-   a new reusable trick is already a studio component.
+9. **Thumbnails** (`5_THUMBS.md`): 4-5 candidates for the MV AND 4-5 for the Short, rendered in the cloud from the
+   studio's sets (a thumbs board job, stills.json `passes` mv + short, `"thumbs": true` -> boards/thumbs_168.jpg, the
+   feed view) -> thumb-critic (`reviews/thumbs_<n>.md`) -> toki picks (`picked: toki <date> MV=.. SHORT=..`).
+10. **Upload**: `upload.md` (canon/12 + channel_rules.py); toki uploads -> `toki.md` line `uploaded: toki <date> ...`.
+11. **Learn**: toki's words verbatim in `toki.md`; one line in `canon/07_video_catalog.md`; a section in
+   `knowledge/CASEBOOK.md`; the catalog status of every part used (`studio/catalog/status.json`); the critic
+   calibration (`knowledge/calibration/<date>_<song>.md`: what they caught, over-blocked, missed -> the agents change).
 `python -m raymi next <job>` shows where a job stands at any time.
 
 ## Lore Short
@@ -36,6 +44,21 @@ per beat whose expression fits the line, shot / side / act / icon / key words, `
 - Look development: push `jobs/<job>/stills.json` (`stills.yml`) -> stills on branch `renders` (`reports/<job>/stills/`),
   or `"to": "boards"` / `"to": "catalog"`. NEVER render on toki's PC - not even one still.
 
+## Lyrics v2 (built 2026-10-19, opt-in `"lyric_style": "v2"` until toki approves the style frames)
+- Her heavy weight (`assets/fonts/Raymi-Heavy.ttf`, `python -m raymi font heavy`, rebuilt in the cloud before every
+  stills / render run), no outline ring, a soft shadow in the scene's shadow colour, colours from the shot's grade,
+  lit by the set + a real cast shadow, `tilt` / `roll` put the block on a floor / table / diagonal, words swell while
+  sung. A Japanese line shows romaji + English under it from `lyrics_en.json` (`{"<line>": {"roma", "en"}}`, our own
+  safe translation); a line without English is refused unless the shot says `"sub": false` with a why.
+- Readable at phone size: a normal word >= 7 % of the frame height, romaji / English >= 4.4 % (`"small": "<why>"`
+  breaks it on purpose). Style frames: `jobs/2026-10-19_lyrics-v2` (+ v1 twin), `stills.pending.json` -> stills.json.
+
+## The main element (hero)
+- `shots.json` `"heroes": {"crown": {"kind": "worn", "size": [0.13, 0.07], "min": 0.05}}` (kinds: worn, face, word,
+  prop), per shot `"hero": ["crown"]`. Before every render: on screen and >= min of the frame height in >= 60 % of
+  the shot (`why_small` = the written exception). After every render / stills run: value contrast at phone size
+  (`raymi/hero.py` -> `out/hero.json`, kit `facts/hero.json`). `node guard.mjs <job> --summary` lists HERO lines.
+
 ## Her font grows (never a fallback font)
 - A character her font lacks is BUILT in her marker style and added (`python -m raymi font ensure <job>`,
   `raymi/font.py`, skeletons in `assets/fonts/skeletons/`, OFL): any script with a skeleton - Japanese, Chinese,
@@ -45,7 +68,8 @@ per beat whose expression fits the line, shot / side / act / icon / key words, `
 ## Screening (after every cloud render)
 - `render.yml` builds the critic kit (`python -m raymi screen`, `raymi/screen.py`) -> `reports/<job>/kit/` on `renders`.
 - Critics (`.claude/agents`): blind-viewer FIRST (gets only `kit/view/`), then look / motion / type / cut / story,
-  then vision (wanted vs felt). Their answers go VERBATIM into `jobs/<job>/reviews/<stage>_<critic>.md`; only
+  then vision (wanted vs felt). Every shot critic answers MAIN ELEMENT first (kit `script/heroes.json`), the
+  type-critic WEIGHT + SIZE first; calibration: `knowledge/calibration/`. Their answers go VERBATIM into `jobs/<job>/reviews/<stage>_<critic>.md`; only
   `BLOCK: fault|slop` stops; everything else goes to toki as notes. The builder never writes or edits a review.
 
 ## Render (cloud, parallel - toki's PC stays free)

@@ -59,7 +59,9 @@ Before planning a video also: `knowledge/CASEBOOK.md`, `canon/07_video_catalog.m
   `MVShort` (built 3D sets with a real camera, Raymi's sprites in the space, lyrics as objects, transitions through
   things) driven by one timeline (`raymi/timeline.py` <- `jobs/<job>/shots.json`). Catalog: `studio/catalog/`.
 - Song tools: `raymi/song.py` + `.github/workflows/analyze.yml` (vocal stem, word-timed lyrics, song map).
-  Screening: `raymi/screen.py` (critic kit) + critic agents in `.claude/agents`. Stills: `.github/workflows/stills.yml`.
+  Screening: `raymi/screen.py` (critic kit) + critic agents in `.claude/agents` (calibrated per package:
+  `knowledge/calibration/`), main element: `raymi/hero.py` + check.ts heroFaults. Stills: `.github/workflows/stills.yml`.
+  Asset library: `studio/catalog/status.json` (what toki liked / approved / named a fault in - reuse proven parts first).
 - `.github/workflows/render.yml` - parallel cloud render (see PRODUCTION.md "Render").
 - `assets/` - 172 checked Raymi sprites (`catalog.json`, MIGRATION.md), the brand font.
 

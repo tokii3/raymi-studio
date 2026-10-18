@@ -51,6 +51,13 @@ Verdicts are toki's words (old engine VIDEO_LEARNINGS / PROGRESS / catalog). Exe
   short to read muted, flat outlined lyrics. Lesson: the guards killed every mechanical fault class (cut edges, clipped
   text, props in the lens, a sliced face) for good; the critics and toki judge the art differently - toki's verdict wins,
   the critics' structural notes go to the next look pass (BACKLOG).
+  **toki's verdict on the final (2026-10-19, `jobs/2026-10-18_king/toki.md`):** better after the colour mix (the per-act
+  grade); "animationen tranitions und effekte mag ich alle sehr - ein großer schritt nach vorne"; uploaded "trotz kleiner
+  fehler". Faults: the crown - THE main element - hard to read ("muss selber erkannt werden"); the lyrics still too
+  small, too thin, pasted on, and Japanese lines need romaji + English under them; thumbnails for the Short too, always
+  4-5 to choose from. What became studio parts: the hero guard + contrast check, lyrics v2 (heavy weight, scene colour,
+  lit, on surfaces, romaji + English), the thumbnails stage, the catalog status, the grade library as the look step,
+  the critic calibration (`knowledge/calibration/2026-10-19_KING.md`).
 
 ## Failed - and the root
 - **K/DA MORE v1 (2026-10-09):** "Raymi-Slideshow aus PowerPoint, bodenlos". Pretty 3D plates as stills + 2D zoom,

@@ -45,3 +45,13 @@ VIDEO_LEARNINGS, PROGRESS (repo tokii3/raymi-vtuber). Read once per session that
 - Picture change on loud beats as a hint (dance ~80 %, story ~45 %, calm 10-30 %), not a verdict.
 - The critic raster (craft module 00): vision -> blind description -> felt effect -> analysis -> fix list.
 - Two-pass loudness, ends with the music, CTA hold, hook hold.
+
+## 5. The first raymi-studio package (KING, 2026-10-18/19) - what the new studio learned
+| what happened | evidence | the studio now |
+|---|---|---|
+| The main element (a crown) was too small to read in almost every shot, and no critic asked about it. | 28 of 30 crown shots at 0.2-4.2 % of the frame height (measured afterwards); critics filed it as one note among many. | The treatment names the main element(s); shots mark them; the hero guard measures size before every render and value contrast after it; every critic answers MAIN ELEMENT first. |
+| Lyrics: the same complaint as in the old engine, now "too small, too thin, pasted on" + no romaji / English. | toki 2026-10-19; type-critic and the Short's blind viewer said it too. | Lyrics v2: her heavy weight, colour from the grade, lit + shadowed in the set, lying on surfaces, romaji + English under Japanese lines, a higher readable size at phone size. |
+| Critics blocked art toki approved and praised (crowd, props, holds, rhythm). | 6 of 7 FAIL with BLOCKs on taste; toki uploaded, "animationen ... mag ich alle sehr". | Calibration per package; BLOCK only real faults / slop; the catalog status says what toki already approved. |
+| Thumbnails were an afterthought: 4 for the MV, none for the Short. | toki 2026-10-19 | A thumbs step in the writers' room (4-5 per format, cloud stills, 168 px feed view, thumb-critic, her pick). |
+| The per-act grade made the difference she noticed. | "nach der kritik mit den farben abmischen ... schon besser" | The grade library + shots.json acts are the default look step. |
+| Guards ended every mechanical fault class for good. | pilot + final screenings | Keep turning every mechanical fault into a guard - but as a principle with a default and a written exception, never a law that makes videos safe and dead (LESSONS 1.5). |

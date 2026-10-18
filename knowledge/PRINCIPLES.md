@@ -38,10 +38,13 @@ stronger effect with a written reason; real faults (section C) never.
     light, atmosphere), colour planned per section and unified inside it, shading coloured never grey, big colour
     masses calm and accents loud (Queencard: "grell, uebersaturiert"). 3D is stylised and matte next to her painting.
     Her skin stays pale grey-blue under any light.
-11. **Type is part of the picture.** One family (her font); variety from size hierarchy (one key word huge, fillers
-    small), one material or accent per key word, angle following the pose, colour from the scene's light - or the
-    medium's own type (UI, chalkboard, neon, tape). Lyrics move with the voice word by word. Never one subtitle band
-    slapped on top.
+11. **Type is part of the picture.** One family (her font; its heavy weight for lyrics); variety from size hierarchy
+    (one key word huge, fillers small), one material or accent per key word, angle following the pose, colour from
+    the scene's light - or the medium's own type (UI, chalkboard, neon, tape). Lyrics move with the voice word by word
+    and BELONG to the picture: lit by the scene, a shadow in it, lying on a surface in perspective. They read at a
+    glance on a phone - heavy and big, never thin or tiny (toki 2026-10-19: "oft zu klein, zu dünn oder wirken
+    aufgesetzt"). A Japanese line always shows its romaji and English under it (toki 2026-10-19). Never one subtitle
+    band slapped on top.
 12. **The picture DOES what the line means** through her body and her world. Order, never reversed: line -> meaning
     -> picture -> asset / technique. Never pick an asset because it exists and invent the reason afterwards.
 13. **Power, contrast, rhythm.** Off-centre, diagonal, too big for the frame; dense next to empty; a pause before the
@@ -51,6 +54,11 @@ stronger effect with a written reason; real faults (section C) never.
     effect is not.
 15. **Places have love and make sense.** Lived-in details with reasons, nothing floats or stands where it cannot
     (a hut on land, not in the water). Never an empty stage.
+16. **The main element reads.** Every video hangs on one to three things (an object she wears or holds, her face, a
+    key word) - the treatment names them. Wherever they matter they are big enough and separated by value from what is
+    behind them at phone size; scale them for the screen, not for realism (toki 2026-10-19: "fehler wie schlecht
+    erkennbare krone müssen selber erkannt werden, das ist das main element"). The studio measures it; a written
+    reason may keep one small on purpose.
 
 ## C. Real faults - always hard (code checks where possible)
 - Brand font only (a missing glyph is an error); spoken text clean (no kaomoji / digits / symbols to TTS).
@@ -67,3 +75,6 @@ stronger effect with a written reason; real faults (section C) never.
 - Repeated feedback = the process failed: fix the step that let it through, not the instance.
 - Never swing to the opposite extreme after a correction; compare with the last two liked videos.
 - She watches finished videos herself: never show her anything below the bar, no routine frame reports.
+- Principles, not hard rules (toki 2026-10-19): a number in the studio (a minimum size, a contrast) is the default of a
+  principle; a shot may break it with a written reason. And the studio serves EVERY video: never copy the last
+  package's look - reuse its proven parts and give them something new.

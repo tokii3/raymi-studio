@@ -1,5 +1,31 @@
 # PROGRESS - Raymi Studio (newest first, kept short)
 
+## 2026-10-19 - toki's KING verdict became studio parts (engine only, no render)
+- toki: colours better after the per-act grade; animation, transitions, effects "mag ich alle sehr"; MV uploaded
+  "trotz kleiner fehler"; the crown (main element) hard to read - must be caught by the studio itself; lyrics still too
+  small / thin / pasted on, Japanese lines need romaji + English; thumbnails for the Short too, 4-5 to choose from.
+  Then: principles not hard rules, the engine serves every video (no KING clones), no new render.
+- Lyrics v2 (opt-in `"lyric_style": "v2"` until toki approves): her heavy weight (raymi/font.py builds
+  Raymi-Heavy.ttf, every gap stays open; the cloud keeps it in sync), colours from the grade, toon-lit + cast shadow,
+  tilt / roll onto surfaces, romaji + English under Japanese lines (lyrics_en.json, own safe translation), words swell
+  while sung; one layout for renderer + guards (lyricLayout.ts); readable default 7 % / subs 4.4 % at phone size.
+  Style frames prepared, NOT rendered: jobs/2026-10-19_lyrics-v2 (+ v1 twin), all guards pass.
+- Main element: heroes in shots.json, size guard before every render (KING's timeline: 28 of 30 crown shots flagged),
+  value contrast after (raymi/hero.py), kit script/heroes.json + facts/hero.json, every critic answers it first.
+- Writers' room to the end: build / pilot / final / thumbs / upload proven by evidence (toki.md = her words),
+  5_THUMBS.md, stills `passes` (MV + Short in one run), 168 px feed sheet, thumb-critic.
+- Asset library: studio/catalog/status.json (toki-liked / approved / open / new with her words); grade library
+  (grade.ts: day, closing, night, own + new warm, clean) and shots.json `acts` = the look step.
+- Critic calibration: knowledge/calibration/ (right: lyrics; over-blocked: crowd / props / holds / rhythm / story;
+  missed: the crown); agents updated. Knowledge: PRINCIPLES 11 + 16, CASEBOOK, LESSONS 5, PRODUCTION, README.
+- Tests: 91 python + 13 studio green.
+
+## NEXT
+- toki looks at the lyric style frames: rename jobs/2026-10-19_lyrics-v{1,2}/stills.pending.json -> stills.json
+  (one cloud stills run, ~5 min) when she says go; type-critic on them; her OK -> v2 becomes the default
+  (timeline.py job_style default "v2", catalog status).
+- Next package: treatment names the main element(s) + grade per act; thumbs step at the end.
+
 ## 2026-10-18 (late) - KING full package rendered; final screening FAIL x2 -> STOP, toki decides
 - toki on the pilot: camera / lyrics / effects good, "fehler sehe ich keine"; asked for a real crown (built: the cap
   worn upside down) and a deeper grade (built: per-act grade + deeper toon steps). Then "gerne jetzt das mv bzw volles

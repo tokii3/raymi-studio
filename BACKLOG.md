@@ -38,3 +38,13 @@
   are studio / script work - a crowd look pass (varied silhouettes, rim light, phones with her face), richer set
   props (texture, wear, detail), an ambient backdrop for the night, a figure-size rule for wides, longer / bigger story
   beats for the setup and the scale payoff, more acting in holds, lyric colour per set. Waiting for toki's call.
+
+- KING verdict (2026-10-19) open items:
+  - Lyrics v2 not seen by toki yet: style frames prepared (jobs/2026-10-19_lyrics-v2), not rendered (toki: no new
+    render). Raymi-Heavy.ttf is built by the cloud on the next stills / render run (~887 glyphs, a few minutes once).
+  - stills.yml `passes` + `thumbs` and the hero contrast step are untested in the cloud (first thumbs run proves them).
+  - The crown component (props.tsx CapCrown) is 13 x 7 cm on her 1.55 m figure: reuse it as a main element only at a
+    screen scale (or framed close) - the hero guard refuses it otherwise. A crown look pass (thickness, a band that
+    follows her head) was a critic FIX, not toki's.
+  - KING's Short never got thumbnails (raymi next shows the thumbs step open) - only if toki wants them now.
+  - Still open from the critics (not toki): crowd look pass, prop texture pass, night backdrop (status.json notes).
