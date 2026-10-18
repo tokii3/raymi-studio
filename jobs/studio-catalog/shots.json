@@ -128,7 +128,7 @@
     "material": "screen",
     "anchor": [
      0.42,
-     1.23,
+     1.22,
      3.33
     ],
     "size": 0.035,
@@ -167,8 +167,8 @@
     "kind": "float",
     "material": "light",
     "anchor": [
-     0.9,
-     1.7,
+     0.61,
+     1.73,
      -0.1
     ],
     "size": 0.12,
@@ -595,15 +595,15 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.09,
-     1.41,
+     -0.13,
+     1.43,
      -0.55
     ],
     "lines": [
      28
     ],
     "size": 0.075,
-    "width": 1.0,
+    "width": 1,
     "color": "#ffcf6b",
     "accent": "#ffffff"
    },
@@ -635,8 +635,8 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     0.9,
-     1.9,
+     0.42,
+     1.84,
      -0.2
     ],
     "lines": [
