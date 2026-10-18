@@ -22,7 +22,8 @@
     "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
     "chute": true,
     "flash": 0.4,
-    "crown": "head"
+    "crown": "head",
+    "warning": false
    },
    "camera": [
     {
@@ -149,7 +150,63 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "left-side",
@@ -269,7 +326,76 @@
     "frames": 6,
     "dir": -1
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "warning sign",
+     "center": [
+      2.1,
+      0.55,
+      1.64
+     ],
+     "size": [
+      0.98,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "right-side",
@@ -361,8 +487,8 @@
    "lyrics": {
     "kind": "glass",
     "anchor": [
-     2.47,
-     0.8,
+     2.62,
+     0.67,
      1.57
     ],
     "rotY": 0.0,
@@ -390,7 +516,76 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "warning sign",
+     "center": [
+      2.1,
+      0.55,
+      1.64
+     ],
+     "size": [
+      0.98,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "teeth-grin",
@@ -475,13 +670,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.45,
-     1.22,
+     0.58,
+     1.01,
      3.39
     ],
     "rotY": 0.0,
     "size": 0.035,
-    "width": 0.3,
+    "width": 0.55,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -513,7 +708,76 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "warning sign",
+     "center": [
+      2.1,
+      0.55,
+      1.64
+     ],
+     "size": [
+      0.98,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "pa-pa-pa",
@@ -689,7 +953,76 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "warning sign",
+     "center": [
+      2.1,
+      0.55,
+      1.64
+     ],
+     "size": [
+      0.98,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "embarrassing",
@@ -802,7 +1135,76 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "warning sign",
+     "center": [
+      2.1,
+      0.55,
+      1.64
+     ],
+     "size": [
+      0.98,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "zigzag",
@@ -825,7 +1227,8 @@
      ]
     ],
     "crown": "head",
-    "flash_beats": "beats"
+    "flash_beats": "beats",
+    "warning": false
    },
    "camera": [
     {
@@ -995,7 +1398,63 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "laugh",
@@ -1127,7 +1586,63 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "warning sign",
+     "center": [
+      2.1,
+      0.55,
+      1.64
+     ],
+     "size": [
+      0.98,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "haha",
@@ -1213,7 +1728,7 @@
     "kind": "stamp",
     "anchor": [
      0.0,
-     1.21,
+     0.81,
      2.4
     ],
     "rotY": 0.0,
@@ -1241,7 +1756,76 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "warning sign",
+     "center": [
+      2.1,
+      0.55,
+      1.64
+     ],
+     "size": [
+      0.98,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "crowned-by-them",
@@ -1256,7 +1840,8 @@
     "crown": "head",
     "flash": 0.7,
     "phones_up": true,
-    "flash_beats": "beats"
+    "flash_beats": "beats",
+    "warning": false
    },
    "camera": [
     {
@@ -1374,7 +1959,50 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "phone-wall",
@@ -1389,7 +2017,8 @@
     "crown": "head",
     "flash": 0.0,
     "dim": 0.7,
-    "phones_up": true
+    "phones_up": true,
+    "warning": false
    },
    "camera": [
     {
@@ -1447,7 +2076,63 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "lit-by-screens",
@@ -1463,7 +2148,8 @@
     "flash": 0.0,
     "dim": 0.7,
     "phones_up": true,
-    "short_cap_on_glass": true
+    "short_cap_on_glass": true,
+    "warning": false
    },
    "camera": [
     {
@@ -1537,7 +2223,63 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "king-again",
@@ -1548,9 +2290,10 @@
     "led": "",
     "crowd": 22,
     "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
-    "chute": true,
+    "chute": false,
     "crown": "head",
-    "flash": 0.6
+    "flash": 0.6,
+    "warning": false
    },
    "camera": [
     {
@@ -1697,7 +2440,36 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "lights-bang",
@@ -1794,7 +2566,76 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "warning sign",
+     "center": [
+      2.1,
+      0.55,
+      1.64
+     ],
+     "size": [
+      0.98,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "leaving",
@@ -1805,7 +2646,7 @@
     "led": "STAR EXHIBIT",
     "crowd": 16,
     "screens": "sprites/WS_F_PEACE_WINK_UV_131.png",
-    "chute": true,
+    "chute": false,
     "crown": "head",
     "banks_off": [
      510,
@@ -1902,7 +2743,63 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "warning sign",
+     "center": [
+      2.1,
+      0.55,
+      1.64
+     ],
+     "size": [
+      0.98,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   },
   {
    "id": "grin-drops",
@@ -1924,7 +2821,8 @@
      597,
      608
     ],
-    "cap_off": 586
+    "cap_off": 586,
+    "warning": false
    },
    "camera": [
     {
@@ -2027,7 +2925,63 @@
     "kind": "cut",
     "frames": 0
    },
-   "events": []
+   "events": [],
+   "texts": [
+    {
+     "name": "LED board",
+     "center": [
+      0.0,
+      4.95,
+      2.15
+     ],
+     "size": [
+      4.68,
+      0.58
+     ],
+     "rot": 0
+    },
+    {
+     "name": "wish chute plate",
+     "center": [
+      -3.6,
+      4.1,
+      1.98
+     ],
+     "size": [
+      0.7,
+      0.42
+     ],
+     "rot": 0
+    }
+   ],
+   "noLens": [
+    {
+     "name": "under the sand",
+     "min": [
+      -5.5,
+      -3.0,
+      -4.4
+     ],
+     "max": [
+      5.5,
+      0.0,
+      1.55
+     ]
+    },
+    {
+     "name": "under the hall floor",
+     "min": [
+      -12.0,
+      -5.0,
+      1.55
+     ],
+     "max": [
+      12.0,
+      -0.85,
+      12.0
+     ]
+    }
+   ]
   }
  ],
  "hits": [
