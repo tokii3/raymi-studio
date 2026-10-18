@@ -36,6 +36,12 @@ per beat whose expression fits the line, shot / side / act / icon / key words, `
 - Look development: push `jobs/<job>/stills.json` (`stills.yml`) -> stills on branch `renders` (`reports/<job>/stills/`),
   or `"to": "boards"` / `"to": "catalog"`. NEVER render on toki's PC - not even one still.
 
+## Her font grows (never a fallback font)
+- A character her font lacks is BUILT in her marker style and added (`python -m raymi font ensure <job>`,
+  `raymi/font.py`, skeletons in `assets/fonts/skeletons/`, OFL): any script with a skeleton - Japanese, Chinese,
+  Hangul, Latin symbols. The cloud does it automatically before every stills / render run and commits the font; the
+  log is `assets/fonts/glyphs_built.txt`. Existing glyphs are never touched. A character no skeleton has fails loudly.
+
 ## Screening (after every cloud render)
 - `render.yml` builds the critic kit (`python -m raymi screen`, `raymi/screen.py`) -> `reports/<job>/kit/` on `renders`.
 - Critics (`.claude/agents`): blind-viewer FIRST (gets only `kit/view/`), then look / motion / type / cut / story,

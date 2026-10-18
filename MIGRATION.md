@@ -70,3 +70,6 @@ check everything again so no old fault moves over. Nothing was copied blindly; c
 | WS_F_WORRIED_DRAMA_UV_015 | old alpha-hole scan: eaten ruffles / key holes |
 | WS_F_WORRIED_DRAMA_UV_016 | old alpha-hole scan: eaten ruffles / key holes |
 | WS_F_WORRIED_DRAMA_UV_017 | old alpha-hole scan: eaten ruffles / key holes |
+
+- 2026-10-18: skeleton fonts for her glyph builder copied from the old engine (assets/fonts/skeletons/, OFL licences
+  next to them): M PLUS Rounded 1c Thin, Gothic A1 Thin, Noto Sans SC Thin (GB2312 subset). toki's OK (chat 2026-10-18).

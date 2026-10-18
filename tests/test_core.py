@@ -86,7 +86,7 @@ def test_same_sprite_twice_in_a_row_is_an_error():
 
 def test_missing_glyph_fails_loudly():
     plan = base_plan()
-    plan["cta"]["text"] = "follow @TouyamiRaymi?"   # the Raymi font has no '@'
+    plan["cta"]["text"] = "follow me 😀?"   # no font of hers will ever have an emoji
     errors, _ = P.check(plan, fake_words(plan))
     assert any("no glyph" in e for e in errors)
 

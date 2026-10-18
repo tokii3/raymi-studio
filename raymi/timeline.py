@@ -104,8 +104,8 @@ def glyph_errors(texts: list[str], cmap: set[int]) -> list[str]:
     for t in texts:
         miss = sorted({c for c in t if not c.isspace() and ord(c) not in cmap})
         if miss:
-            out.append(f"Raymi font has no glyph for {''.join(miss)} in {t!r} - extend her font (BACKLOG), never a "
-                       f"fallback font")
+            out.append(f"Raymi font has no glyph for {''.join(miss)} in {t!r} - build it in her style: "
+                       f"python -m raymi font ensure <job> (never a fallback font)")
     return out
 
 
@@ -246,7 +246,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             if isinstance(v, str) and v in cat:            # a sprite printed on a prop (a card, a poster, a screen)
                 opts[k] = "sprites/" + Path(cat[v]["file"]).name
                 sprites.add(opts[k])
-            elif isinstance(v, str) and (k.startswith("text") or k in ("led", "title")):
+            elif isinstance(v, str) and (k.startswith("text") or k in ("led", "title", "ticker")):
                 screen_texts.append(v)
         tr = s.get("transition", {"kind": "cut", "frames": 0})
         if tr.get("kind") not in TRANSITIONS:
@@ -276,6 +276,21 @@ def compile_job(job: str, fmt: str = "mv") -> tuple[dict, list[str], list[str]]:
     d = P.job_dir(job)
     spec = json.loads((d / "shots.json").read_text(encoding="utf-8"))
     return compile_shots(d, spec, fmt)
+
+
+def job_texts(job: str) -> list[str]:
+    """Everything a film job shows on screen in either frame (lyric words of its shots + set texts)."""
+    d = P.job_dir(job)
+    spec = json.loads((d / "shots.json").read_text(encoding="utf-8"))
+    everything = set(range(0x110000))
+    texts: set[str] = set()
+    for fmt in FORMATS:
+        props, _, _ = compile_shots(d, spec, fmt, cmap=everything)
+        for s in props["shots"]:
+            texts |= {w["w"] for w in s["words"]}
+            texts |= {v for k, v in s["opts"].items() if isinstance(v, str) and not v.startswith("sprites/")
+                      and (k.startswith("text") or k in ("led", "title", "ticker"))}
+    return sorted(texts)
 
 
 def frames_for(seconds: float) -> int:

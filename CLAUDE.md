@@ -35,7 +35,8 @@ Before planning a video also: `knowledge/CASEBOOK.md`, `canon/07_video_catalog.m
    `reviews/`; the builder never writes, edits or summarises one into a PASS.
 4. **Nothing reaches the screen unchecked.** `python -m raymi check` before a render (the workflow refuses otherwise);
    only sprites in `assets/catalog.json`; `limited` ones carry their limits in `notes`.
-5. **Brand font or nothing.** `assets/fonts/Raymi-Regular.ttf`; a missing glyph is an error (the font has no `@`).
+5. **Brand font or nothing.** `assets/fonts/Raymi-Regular.ttf`; a missing glyph is built in her style (`raymi font
+   ensure`, automatic in the cloud), never replaced by another font; a glyph no skeleton has is an error.
 6. **Spoken text is clean.** No kaomoji, emoji, digits, URLs or symbols reach TTS (`raymi/tts_text.py`).
 7. **Voice is fixed:** edge-tts `en-US-AnaNeural`, rate `+17%`, pitch `-7Hz` (`raymi/tts.py`).
 8. **Only Raymi is AI-generated.** Places, props, creatures are built (studio components or Blender) and stay

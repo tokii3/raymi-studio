@@ -9,6 +9,8 @@
   props  <job>          write jobs/<job>/out/props.json for the renderer
   finish <job>          loudness-normalise out/raw.mp4 -> out/final.mp4, then QC + contact sheet
   timeline <job> [mv|short]  shots.json (shooting script data) -> out/props.json for the MV / MVShort film
+  font ensure <job>     build every on-screen glyph her font lacks, in her marker style (raymi/font.py)
+  font add <chars>      the same for given characters
   screen <job> [video] critic kit (phone sheets, gray, motion strips, one frame per shot, facts) -> out/kit
   analyze <job>         song tools (cloud, heavy): vocal stem, word-timed lyrics, song map (raymi/song.py)
   lyrics <job>          re-align lyrics_timed.json locally from the cached whisper_words.json + vocals.ogg
@@ -37,6 +39,28 @@ def main(argv: list[str]) -> int:
         from . import parts
 
         print("raw ->", parts.assemble(P.job_dir(job), Path(argv[2])))
+        return 0
+    if cmd == "font":        # font ensure <job> | font add <chars>: build missing glyphs in her marker style
+        from . import font as FN
+
+        if job == "ensure":
+            jd = P.job_dir(argv[2])
+            if (jd / "shots.json").is_file():
+                from . import timeline as T
+
+                text = "".join(T.job_texts(argv[2]))
+            else:
+                text = "".join(P.screen_texts(json.loads((jd / "plan.json").read_text(encoding="utf-8"))))
+        elif job == "add":
+            text = "".join(argv[2:])
+        else:
+            print("usage: python -m raymi font ensure <job> | font add <chars>")
+            return 2
+        added, impossible = FN.grow(text)
+        print(f"font: built {len(added)} glyph(s) in her style: {''.join(added)}" if added else "font: nothing missing")
+        if impossible:
+            print(f"ERROR no skeleton has {''.join(impossible)} - add a skeleton font for that script (assets/fonts/skeletons)")
+            return 1
         return 0
     if cmd == "screen":      # screen <job> [video] -> out/kit (critic kit, cloud after assemble)
         from . import screen

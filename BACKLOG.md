@@ -1,7 +1,5 @@
 # BACKLOG - parked items (anti-loop rule: a fix that failed twice lands here with what was tried)
 
-- '@' glyph missing in Raymi-Regular.ttf: handles like @TouyamiRaymi cannot be drawn in her font. Options: add the
-  glyph in a font editor (toki) or write "touyamiraymi" without @ on screen.
 - Render speed: CPU-only render ~0.8 s per draft frame on 2 cores locally (2026-10-17). Per-frame SVG noise
   filters were replaced by cached textures. If finals get too slow on Actions: lower particle count, pre-render
   the world layer as a video.
@@ -15,9 +13,6 @@
 - yt-dlp needs a JS runtime for YouTube now: `--js-runtimes node --remote-components ejs:github` (2026-10-18).
 - Loudness after assemble lands at -14.7 LUFS (-14.06 single render): the apad silence tail lowers the integrated
   value slightly; still inside the QC tolerance. Watch it on music videos.
-- Raymi font lacks 27 kanji of KING (歯 幽 閉 照 邪 魔 突 詰 込 惨 嫌 泣 低 ... and 〇) (2026-10-18). The studio refuses them
-  (timeline compile fails loudly). Fix = extend her font the way the old engine did (marker-style glyphs grown from an
-  OFL skeleton font, M PLUS Rounded 1c Thin) as a tested `raymi font` tool. Needs toki's OK (adds the skeleton font).
 - KING verse 1 (15-26 s) lyric times are interpolated: GUMI's English voicebank sings Japanese, whisper hears English.
   If the pilot shows drift there: CTC forced alignment (MMS, romanised) on the vocal stem for weak lines.
 - Studio look (blind viewer, style test 2026-10-18): the aquarium crowd reads as "identical round-headed silhouettes"

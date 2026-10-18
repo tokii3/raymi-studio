@@ -78,6 +78,15 @@ jobs:
           echo "quality=$QUALITY" >> "$GITHUB_OUTPUT"
           echo "format=${FORMAT:-mv}" >> "$GITHUB_OUTPUT"
           echo "Rendering: $JOBS ($QUALITY)" >> "$GITHUB_STEP_SUMMARY"
+      - name: Her font grows (missing glyphs built in her style, committed back)
+        if: steps.which.outputs.jobs != ''
+        run: |
+          set -e
+          for J in ${{ steps.which.outputs.jobs }}; do python -m raymi font ensure "$J"; done
+          git config user.name "raymi-font-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/fonts/Raymi-Regular.ttf assets/fonts/glyphs_built.txt 2>/dev/null || true
+          git diff --cached --quiet || (git commit -qm "font: glyphs built for ${{ steps.which.outputs.jobs }} [skip ci]" && git pull --rebase -q && git push -q)
       - name: Voice, check, props, frame ranges
         id: split
         if: steps.which.outputs.jobs != ''
@@ -110,6 +119,7 @@ jobs:
       - name: Stage what the workers need (prep/<job>/... so the artifact keeps the job folder level)
         if: steps.which.outputs.jobs != ''
         run: |
+          mkdir -p prep/_font && cp assets/fonts/Raymi-Regular.ttf prep/_font/   # the font as grown above
           for J in ${{ steps.which.outputs.jobs }}; do
             mkdir -p "prep/$J/out" && cp "jobs/$J/out/props.json" "prep/$J/out/"
             V=$(python -c "import json,sys;print(json.load(open(sys.argv[1])).get('voice') or '')" "jobs/$J/out/props.json")
@@ -157,6 +167,7 @@ jobs:
           path: jobs
       - name: Render frames ${{ matrix.frames }} of ${{ matrix.job }}
         run: |
+          [ -f jobs/_font/Raymi-Regular.ttf ] && cp jobs/_font/Raymi-Regular.ttf assets/fonts/Raymi-Regular.ttf
           FLAG=""; [ "${{ needs.prepare.outputs.quality }}" = "draft" ] && FLAG="--draft"
           mkdir -p parts
           START=$(date +%s)
