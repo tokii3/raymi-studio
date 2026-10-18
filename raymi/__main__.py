@@ -11,6 +11,7 @@
   timeline <job> [mv|short]  shots.json (shooting script data) -> out/props.json for the MV / MVShort film
   font ensure <job>     build every on-screen glyph her font lacks, in her marker style (raymi/font.py)
   font add <chars>      the same for given characters
+  font heavy            build / update her heavy weight (Raymi-Heavy.ttf, lyrics v2) from Raymi-Regular.ttf
   screen <job> [video] critic kit (phone sheets, gray, motion strips, one frame per shot, facts) -> out/kit
   analyze <job>         song tools (cloud, heavy): vocal stem, word-timed lyrics, song map (raymi/song.py)
   lyrics <job>          re-align lyrics_timed.json locally from the cached whisper_words.json + vocals.ogg
@@ -43,6 +44,10 @@ def main(argv: list[str]) -> int:
     if cmd == "font":        # font ensure <job> | font add <chars>: build missing glyphs in her marker style
         from . import font as FN
 
+        if job == "heavy":
+            made = FN.heavy()
+            print(f"font heavy: {len(made)} glyph(s) emboldened -> {FN.HEAVY.name}")
+            return 0
         if job == "ensure":
             jd = P.job_dir(argv[2])
             if (jd / "shots.json").is_file():
@@ -54,7 +59,7 @@ def main(argv: list[str]) -> int:
         elif job == "add":
             text = "".join(argv[2:])
         else:
-            print("usage: python -m raymi font ensure <job> | font add <chars>")
+            print("usage: python -m raymi font ensure <job> | font add <chars> | font heavy")
             return 2
         added, impossible = FN.grow(text)
         print(f"font: built {len(added)} glyph(s) in her style: {''.join(added)}" if added else "font: nothing missing")

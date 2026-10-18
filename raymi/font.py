@@ -322,6 +322,80 @@ def add_glyphs(font, chars: list[str]) -> tuple[list[str], list[str]]:
     return added, impossible
 
 
+# ------------------------------------------------------------------ her heavy weight (lyrics v2)
+# toki 2026-10-19: lyrics "zu klein, zu dünn". The heavy weight is HER font, not another one: every glyph of
+# Raymi-Regular painted, its ink grown by HEAVY_R units (her marker pressed harder), traced back. The boldest growth
+# that keeps the glyph's topology wins (a counter never closes, an i-dot never melts into its stem), so dense kanji
+# get less. Glyph names, cmap and order stay identical: whatever Regular can show, Heavy can show.
+HEAVY = REPO / "assets" / "fonts" / "Raymi-Heavy.ttf"
+HEAVY_R = 18                  # extra half width in units (her stroke 49 -> 67, ~1.37x)
+
+
+def _counters(ink: np.ndarray) -> list[np.ndarray]:
+    """Masks of the enclosed counters (>= 300 px) of a binary glyph."""
+    cv2 = _cv2()
+    bg = cv2.copyMakeBorder(255 - ink, 1, 1, 1, 1, cv2.BORDER_CONSTANT, value=255)
+    n, lab, stats, _ = cv2.connectedComponentsWithStats(bg, connectivity=4)
+    return [(lab[1:-1, 1:-1] == i) for i in range(2, n) if stats[i, cv2.CC_STAT_AREA] >= 300]
+
+
+def embolden(mask: np.ndarray, ch: str = "", r: float = HEAVY_R) -> tuple[np.ndarray, float]:
+    """Grow the ink by up to r, but every gap between strokes keeps at least 45 % of its width: a pixel of background
+    is filled only if it is <= r from the ink AND <= 55 % of the local half gap (the ridge of the background distance
+    field nearby). So open letters grow the full r, dense kanji grow less, and no counter or gap ever closes - the
+    glyph stays legible at phone size. Returns (mask, r = the growth on the outside, for the spacing)."""
+    cv2 = _cv2()
+    k = int(round(r))
+    dist = cv2.distanceTransform(255 - mask, cv2.DIST_L2, 5)
+    ridge = cv2.dilate(dist, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (4 * k + 1, 4 * k + 1)))
+    fill = (dist <= k) & (dist <= 0.55 * ridge)
+    return np.where(fill | (mask > 0), 255, 0).astype(np.uint8), float(k)
+
+
+def heavy(src: Path = FONT, dst: Path = HEAVY, only: set[int] | None = None) -> list[str]:
+    """Build / update Raymi-Heavy.ttf from Raymi-Regular.ttf. A glyph already emboldened in an existing Heavy is kept
+    (same code point), so a grown Regular costs only its new glyphs. `only` limits the build (tests). Returns the chars
+    emboldened in this run."""
+    from fontTools.pens.transformPen import TransformPen
+    from fontTools.pens.ttGlyphPen import TTGlyphPen
+    from fontTools.ttLib import TTFont
+
+    reg = TTFont(str(src))
+    old = TTFont(str(dst)) if dst.is_file() else None
+    old_cmap = old.getBestCmap() if old is not None else {}
+    cmap = reg.getBestCmap()
+    glyf, hmtx = reg["glyf"], reg["hmtx"]
+    made = []
+    for cp, name in sorted(cmap.items()):
+        if only is not None and cp not in only:
+            continue
+        if cp in old_cmap and old_cmap[cp] == name:
+            glyf[name] = old["glyf"][name]
+            hmtx[name] = old["hmtx"][name]
+            continue
+        if glyf[name].numberOfContours == 0:         # space and friends: only a little wider
+            adv, lsb = hmtx[name]
+            hmtx[name] = (adv + HEAVY_R, lsb)
+            continue
+        mask, k = embolden(raster(reg, chr(cp)), chr(cp))
+        glyph, (x0, x1) = trace(mask)
+        pen = TTGlyphPen(None)
+        glyph.draw(TransformPen(pen, (1, 0, 0, 1, k, 0)), glyf)   # the ink grew k to the left: shift it back in
+        glyf[name] = pen.glyph()
+        glyf[name].recalcBounds(glyf)
+        adv, lsb = hmtx[name]
+        hmtx[name] = (int(adv + 2 * k), int(round(x0 + k)))
+        made.append(chr(cp))
+    reg["OS/2"].usWeightClass = 800
+    for rec in reg["name"].names:
+        if rec.nameID in (2, 17):
+            rec.string = "Heavy"
+        elif rec.nameID in (3, 4, 6, 16):
+            rec.string = str(rec.toUnicode()).replace("Regular", "Heavy").replace(" ", "-" if rec.nameID == 6 else " ")
+    reg.save(str(dst))
+    return made
+
+
 def grow(text: str, font_path: Path = FONT, log: Path | None = LOG) -> tuple[list[str], list[str]]:
     """Make sure every character of `text` exists in her font; save it if it grew."""
     from fontTools.ttLib import TTFont

@@ -89,3 +89,26 @@ def test_a_character_no_skeleton_has_fails_loudly(tmp_path):
     shutil.copy(F.FONT, p)
     added, impossible = F.grow("\U0001F600", p, log=None)
     assert added == [] and impossible == ["\U0001F600"]
+
+
+def test_heavy_weight_is_her_font_pressed_harder(tmp_path):
+    """Lyrics v2 (toki 2026-10-19 "zu dünn"): Heavy = every Regular glyph with more ink, same topology, same cmap;
+    an existing Heavy glyph is kept (a grown Regular costs only its new glyphs)."""
+    cv2 = pytest.importorskip("cv2")
+    dst = tmp_path / "Heavy.ttf"
+    chars = "Kiあ願"
+    made = F.heavy(F.FONT, dst, only={ord(c) for c in chars})
+    assert sorted(made) == sorted(chars)
+    reg, hv = TTFont(str(F.FONT)), TTFont(str(dst))
+    assert hv.getBestCmap() == reg.getBestCmap()
+    assert hv["OS/2"].usWeightClass == 800
+    for ch in chars:
+        a, b = F.raster(reg, ch), F.raster(hv, ch)
+        assert (b > 0).sum() > (1.25 if not F.is_cjk(ch) else 1.08) * (a > 0).sum(), ch   # clearly more ink
+        assert len(F._counters(b)) >= len(F._counters(a)), ch                # no counter closed
+        if not F.is_cjk(ch):
+            assert F.topology(b)[0] == F.topology(a)[0], ch                  # no dot melted into its stem
+        n = reg.getBestCmap()[ord(ch)]
+        assert hv["hmtx"][n][0] > reg["hmtx"][n][0]                         # wider advance, spacing kept
+    assert F.heavy(F.FONT, dst, only={ord(c) for c in chars}) == []        # already heavy: nothing rebuilt
+    assert cv2 is not None
