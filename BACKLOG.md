@@ -29,3 +29,7 @@
 - Style-test Short (9:16): rendered once (run 10) from the same timeline, but since the face guard (2026-10-18) three
   shots need `camera[].short` overrides (her face sliced by the narrow frame at f24 / f92 / f234). Frame it before the
   next Short render.
+- Style test screening round 5 (blind viewer PASS, 2026-10-18) left two readability BLOCKs: words too small at phone
+  size in the far wide shot, the "パッパッパッハハ" stamp over her body hard to read. Text placement was iterated 4x by
+  hand -> anti-loop: next fix is a guard, not a 5th patch: minimum projected cap height for on-screen words (~3.5 %
+  of the frame height at phone size) and "no stamp across her body" unless lyrics.over.

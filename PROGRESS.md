@@ -14,10 +14,12 @@
   the frame. Authoring aids: `--report`, `--place`. Stills only in the cloud (`stills.yml`, ~2-5 min per round).
 - Screening: `raymi screen` builds the critic kit after every cloud render (`reports/<job>/kit/`); 7 critics ported
   (`.claude/agents`). Style test (`jobs/2026-10-18_style-test`, 12 s, 5 shots): render 7 QC PASS (1080p, 8.5 min in
-  the cloud), blind viewer FAIL with 4 real faults (ghosting smears, lyrics leaving the frame) -> fixed in the studio
-  (lyrics guard, smear), re-render.
+  the cloud). Screened 5 rounds by the blind viewer (answers verbatim in its `reviews/`): FAIL, FAIL, PASS, PASS, PASS.
+  Every fault class it found became a guard, not a patch: cut edges, lyrics leaving the frame, lyrics on her face,
+  her face sliced by the frame edge or buried in sand. Left: text size at phone size in the far wide (BACKLOG).
+  Final style test: release `render-2026-10-18_style-test-12`; a 9:16 Short rendered once (run 10).
 - KING: `2_IDEAS.md` (A Star Exhibit / B King of Spades / C Storm Warning), boards rendered from board jobs
-  (`jobs/2026-10-18_king-board-*`) into `jobs/2026-10-18_king/boards/`. Waiting for toki's pick.
+  (`jobs/2026-10-18_king-board-*`) into `jobs/2026-10-18_king/boards/` (+ `overview.jpg`). Waiting for toki's pick.
 - toki 2026-10-18: NEVER render on her PC, not even single stills (memory saved; brief's "local stills" overruled).
 
 ## NEXT
