@@ -59,3 +59,50 @@ def test_no_step_counts_after_an_open_one(job):
 def test_next_names_the_knowledge_to_open(job):
     out = room.next_step(str(job))
     assert "knowledge/CASEBOOK.md" in out
+
+
+def _through_script(d):
+    for f, t in (("1_DOSSIER.md", "x"), ("2_IDEAS.md", "approved: toki 2026-10-18 A"), ("3_TREATMENT.md", "full"),
+                 ("4_SCRIPT.md", "shots")):
+        (d / f).write_text(t, encoding="utf-8")
+    for step in ("treatment", "script"):
+        (d / "reviews" / f"{step}_1.md").write_text("VERDICT: PASS\n", encoding="utf-8")
+
+
+def test_studio_steps_need_data_screening_and_tokis_words(job):
+    _through_script(job)
+    assert not states(job)["build"]
+    (job / "shots.json").write_text("{}", encoding="utf-8")
+    assert states(job)["build"] and not states(job)["pilot"]
+    (job / "toki.md").write_text("pilot: toki 2026-10-18 fehler sehe ich keine\n", encoding="utf-8")
+    assert not states(job)["pilot"]                          # her word alone is not enough: screen it first
+    (job / "reviews" / "pilot_blind-viewer_1.md").write_text("VERDICT: PASS\n", encoding="utf-8")
+    assert states(job)["pilot"] and not states(job)["final"]
+
+
+def test_thumbs_want_four_per_format_a_critic_and_her_pick(job):
+    _through_script(job)
+    (job / "shots.json").write_text("{}", encoding="utf-8")
+    for st in ("pilot", "final"):
+        (job / "reviews" / f"{st}_blind-viewer_1.md").write_text("VERDICT: PASS\n", encoding="utf-8")
+    (job / "toki.md").write_text("pilot: toki 2026-10-18 ok\nfinal: toki 2026-10-19 ok\n", encoding="utf-8")
+    why = lambda: dict((s, w) for s, _, w in room.status(str(job)))["thumbs"]          # noqa: E731
+    assert "0 mv thumbnail" in why()
+    for i in range(1, 5):
+        (job / "boards" / f"thumb_mv_M{i}.jpg").write_bytes(b"x")
+    assert "0 short thumbnail" in why()                      # toki 2026-10-19: the Short gets its own, too
+    for i in range(1, 5):
+        (job / "boards" / f"thumb_short_S{i}.jpg").write_bytes(b"x")
+    assert "thumb-critic" in why()
+    (job / "reviews" / "thumbs_1.md").write_text("VERDICT: PASS\n", encoding="utf-8")
+    assert "pick" in why()
+    (job / "5_THUMBS.md").write_text("picked: toki 2026-10-20 MV=M2 SHORT=S3\n", encoding="utf-8")
+    assert states(job)["thumbs"] and not states(job)["upload"]
+    (job / "upload.md").write_text("title ...", encoding="utf-8")
+    (job / "toki.md").write_text("pilot: toki 2026-10-18 ok\nfinal: toki 2026-10-19 ok\nuploaded: toki 2026-10-20 MV + Short\n",
+                                 encoding="utf-8")
+    assert all(states(job).values()) and "all steps done" in room.next_step(str(job))
+
+
+def test_new_job_gets_the_thumbs_template_and_tokis_page(job):
+    assert (job / "5_THUMBS.md").is_file() and (job / "toki.md").is_file()

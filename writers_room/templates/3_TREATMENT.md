@@ -7,6 +7,14 @@ Knowledge to open: `knowledge/exemplars/lets-get-weird_TREATMENT.md` (match this
 ## The one idea
 TODO (the sentence + 1 paragraph: the world, its two or three rules, how her sea is fused in)
 
+## Main element(s) (the hero - read at phone size)
+The one to three things the whole video hangs on (an object she wears or holds, her face, a key word). For each:
+what it is, why it IS the video, where it must read (which acts / moments), how it stays readable at phone size
+(scale against her figure, value contrast against what is behind it, light on it). They become shots.json
+`heroes` and every shot that needs them marks `hero` - the studio measures size before the render and contrast
+after it (studio/src/film/check.ts heroFaults, raymi/hero.py).
+TODO
+
 ## Raymi's part (not only the song)
 Her attitude in this video, her own line / lore gag, what she wants: TODO
 
@@ -16,7 +24,8 @@ Her attitude in this video, her own line / lore gag, what she wants: TODO
 | TODO | | | | |
 Payoff: what the end gives back from the start: TODO
 
-## Colour and light script (per act: hue / saturation / value, key light, why)
+## Colour and light script (the look step: one grade per act from studio/src/film/grade.ts - day, closing, night, own,
+## warm, clean - or a new grade added to the library; hue / value / key light per act, why)
 TODO
 
 ## Song map -> picture (every section, measured times)

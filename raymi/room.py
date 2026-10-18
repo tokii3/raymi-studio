@@ -1,7 +1,8 @@
-"""Writers' room steps: which file comes next, and is the step really done.
+"""Writers' room + studio steps: which file comes next, and is the step really done.
 
-A step is done by evidence in the job folder, never by a flag: no TODO left, toki's approval line, or a stored
-script-critic answer whose last verdict is PASS (writers_room/README.md).
+A step is done by evidence in the job folder, never by a flag: no TODO left, toki's approval line, a stored
+script-critic answer whose last verdict is PASS, the timeline data, stored screening answers + toki's verdict in
+toki.md, the thumbnail candidates + her pick, the upload line (writers_room/README.md).
 """
 from __future__ import annotations
 
@@ -22,18 +23,31 @@ STEPS = {
         ("ideas", "2_IDEAS.md", "approved"),
         ("treatment", "3_TREATMENT.md", "critic"),
         ("script", "4_SCRIPT.md", "critic"),
-        ("build", None, "studio"),
-        ("pilot", None, "studio"),
-        ("final", None, "studio"),
+        ("build", "shots.json", "built"),
+        ("pilot", "toki.md", "verdict"),
+        ("final", "toki.md", "verdict"),
+        ("thumbs", "5_THUMBS.md", "thumbs"),
+        ("upload", "upload.md", "upload"),
     ],
     "lore": [
         ("dossier", "1_DOSSIER.md", "filled"),
         ("ideas", "2_IDEAS.md", "approved"),
         ("plan", "plan.json", "plan"),
+        ("thumbs", "5_THUMBS.md", "thumbs"),
+        ("upload", "upload.md", "upload"),
     ],
 }
+# toki 2026-10-19: thumbnails for the MV AND the Short, always 4-5 to choose from
+THUMB_FORMATS = {"mv": ("mv", "short"), "lore": ("short",)}
+THUMB_MIN = 4
 
 APPROVED = re.compile(r"^approved:\s*toki\s+\d{4}-\d{2}-\d{2}\b", re.M)
+PICKED = re.compile(r"^picked:\s*toki\s+\d{4}-\d{2}-\d{2}\b", re.M)
+
+
+def toki_said(text: str, step: str) -> bool:
+    """toki.md line `<step>: toki YYYY-MM-DD <her words>`."""
+    return re.search(rf"^{step}:\s*toki\s+\d{{4}}-\d{{2}}-\d{{2}}\b", text, re.M) is not None
 VERDICT = re.compile(r"^VERDICT:\s*(PASS|BLOCK\b.*)$", re.M)
 
 
@@ -51,8 +65,10 @@ def new(job: str, kind: str) -> Path:
     (d / "reviews").mkdir(parents=True, exist_ok=True)
     (d / "boards").mkdir(exist_ok=True)
     for _, fname, how in STEPS[kind]:
-        if fname and fname.endswith(".md"):
+        if fname and fname.endswith(".md") and (TEMPLATES / fname).is_file() and not (d / fname).exists():
             shutil.copyfile(TEMPLATES / fname, d / fname)
+    if not (d / "toki.md").exists():
+        shutil.copyfile(TEMPLATES / "toki.md", d / "toki.md")
     (d / "job.json").write_text(json.dumps({"kind": kind, "created": date.today().isoformat()}, indent=1),
                                 encoding="utf-8")
     return d
@@ -72,10 +88,34 @@ def blocks(d: Path, step: str) -> int:
                if any(v.startswith("BLOCK") for v in VERDICT.findall(p.read_text(encoding="utf-8"))))
 
 
-def step_state(d: Path, step: str, fname: str | None, how: str) -> tuple[bool, str]:
-    if how == "studio":
-        return False, "studio step (phase 2): not automated yet"
+def step_state(d: Path, step: str, fname: str | None, how: str, kind: str = "mv") -> tuple[bool, str]:
     f = d / fname
+    if how == "built":
+        return (True, "done") if f.is_file() else (False, "shots.json missing - the shooting script as data (raymi/timeline.py)")
+    if how == "verdict":
+        if not list((d / "reviews").glob(f"{step}_*.md")):
+            return False, f"not screened yet (critic answers verbatim in reviews/{step}_<critic>_<n>.md)"
+        if not f.is_file() or not toki_said(f.read_text(encoding="utf-8"), step):
+            return False, f"waiting for toki's verdict (toki.md line `{step}: toki YYYY-MM-DD <her words>`)"
+        return True, "done"
+    if how == "thumbs":
+        boards = d / "boards"
+        for fmt in THUMB_FORMATS.get(kind, ("mv", "short")):
+            n = len(list(boards.glob(f"thumb_{fmt}_*.jpg")))
+            if n < THUMB_MIN:
+                return False, f"{n} {fmt} thumbnail(s) in boards/ - want {THUMB_MIN}-5 (thumb_{fmt}_<id>.jpg, cloud stills)"
+        if not list((d / "reviews").glob("thumbs_*.md")):
+            return False, "thumb-critic has not judged them (reviews/thumbs_<n>.md)"
+        if not f.is_file() or not PICKED.search(f.read_text(encoding="utf-8")):
+            return False, "waiting for toki's pick (5_THUMBS.md line `picked: toki YYYY-MM-DD MV=.. SHORT=..`)"
+        return True, "done"
+    if how == "upload":
+        if not f.is_file() or "TODO" in f.read_text(encoding="utf-8"):
+            return False, "upload.md missing or has TODO (canon/12_titles_descriptions.md, raymi/channel_rules.py)"
+        t = d / "toki.md"
+        if not t.is_file() or not toki_said(t.read_text(encoding="utf-8"), "uploaded"):
+            return False, "waiting for toki's upload (toki.md line `uploaded: toki YYYY-MM-DD ...`)"
+        return True, "done"
     if not f.is_file():
         return False, f"{fname} missing"
     text = f.read_text(encoding="utf-8")
@@ -110,7 +150,7 @@ def status(job: str) -> list[tuple[str, bool, str]]:
     kind = json.loads((d / "job.json").read_text(encoding="utf-8"))["kind"]
     out, blocked = [], False
     for step, fname, how in STEPS[kind]:
-        ok, why = step_state(d, step, fname, how)
+        ok, why = step_state(d, step, fname, how, kind)
         if blocked:
             ok, why = False, "after an open step"
         out.append((step, ok, why))

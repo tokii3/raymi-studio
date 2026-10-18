@@ -1,0 +1,6 @@
+# toki's verdicts on this job (her words, verbatim, with the date) - the steps after the script are proven here
+
+pilot: toki 2026-10-18 "fehler sehe ich keine" (camera, lyrics, effects good) - asked for a real crown and a deeper grade, then "gerne jetzt das mv bzw volles paket"
+final: toki 2026-10-19 "nach der kritik mit den farben abmischen etc war es schon besser, fehler wie schlecht erkennbare krone müssen selber erkannt werden das ist das main element, animationen tranitions und effekte mag ich alle sehr schon ein großer schritt nach vorne, ich habe das mv trotz kleiner fehler hochgeladen. außerdem: ich mag die lyrics immernoch nicht. bei japanischen songs solle immer romaji/ englisch noch unten mit stehen und die lyrics wirken immernoch nicht stimmig mit dem gesamtbild. sie sind oft zu klein , zu dünn oder wirken aufgesetzt."
+thumbs: toki 2026-10-19 "beim nächsten paket bitte thumbnails nicht vergessen auch für shorts erstellen, ich habe thumbnail 2-4 genommen abr gerne immer 4-5 zur auswahl stellen" (MV: 4 candidates boards/thumb_T1..T4 from the thumbs job; the Short got none - the gap this verdict names)
+uploaded: toki 2026-10-19 MV + Short uploaded ("ich habe das mv trotz kleiner fehler hochgeladen")

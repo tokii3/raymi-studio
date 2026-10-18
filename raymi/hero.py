@@ -102,14 +102,15 @@ def check(boxes: dict, source: Path, stills: dict[int, Path] | None = None) -> d
             "verdict": "PASS" if not bad else f"UNREADABLE in {len(bad)} of {len(rows)} sampled frames"}
 
 
-def run(job_dir: Path, source: Path) -> dict:
+def run(job_dir: Path, source: Path, frames: str | None = None, names: str | None = None) -> dict:
+    """source = the rendered video, or a stills folder (frames + names of the stills pass, comma separated)."""
     boxes = json.loads((job_dir / "out" / "hero_boxes.json").read_text(encoding="utf-8"))
     stills = None
-    if source.is_dir():               # a stills folder: names map to frames via the job's stills.json
-        spec = json.loads((job_dir / "stills.json").read_text(encoding="utf-8"))
-        frames = spec.get("frames", [])
-        names = spec.get("names") or [f"{'MVShort' if spec.get('format') == 'short' else 'MV'}_{f:04d}" for f in frames]
-        stills = {f: source / f"{n}.jpg" for f, n in zip(frames, names) if (source / f"{n}.jpg").is_file()}
+    if source.is_dir():
+        fr = [int(x) for x in (frames or "").split(",") if x.strip()]
+        nm = [x for x in (names or "").split(",") if x.strip()] or [f"MV_{f:04d}" for f in fr]
+        stills = {f: source / f"{n}.jpg" for f, n in zip(fr, nm) if (source / f"{n}.jpg").is_file()}
+        boxes = {**boxes, "boxes": [b for b in boxes["boxes"] if b["frame"] in stills]}
     res = check(boxes, source, stills)
     (job_dir / "out" / "hero.json").write_text(json.dumps(res, indent=1), encoding="utf-8", newline="\n")
     kit = job_dir / "out" / "kit" / "facts"

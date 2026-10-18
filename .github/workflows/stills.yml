@@ -3,6 +3,8 @@ name: stills
 # Single frames in the cloud (toki's PC never renders - not even one still): look development, idea boards,
 # the component catalog. Start by pushing jobs/<job>/stills.json:
 #   {"format": "mv" | "short", "frames": [12, 140], "names": ["A1", "A2"], "scale": 0.5,
+#    "passes": [{"format": "mv", "frames": [..], "names": [..]}, {"format": "short", ...}]  (instead of one format),
+#    "thumbs": true (thumbnail candidates: also boards/thumbs_168.jpg, every candidate at feed size - raymi/thumbs.py),
 #    "to": "renders" (default: reports/<job>/stills/ on branch renders) | "boards" (commit into jobs/<job>/boards/ on main)
 #          | "catalog" (commit into studio/catalog/ on main), "dest": "jobs/<song job>/boards" (with "to": "boards")}
 # A job with shots.json is compiled first (python -m raymi timeline), so the stills show exactly the script.
@@ -89,19 +91,23 @@ jobs:
           for J in ${{ steps.which.outputs.jobs }}; do
             S="jobs/$J/stills.json"
             get() { python -c "import json,sys;v=json.load(open(sys.argv[1])).get(sys.argv[2],sys.argv[3]);print(','.join(map(str,v)) if isinstance(v,list) else v)" "$S" "$1" "$2"; }
-            FMT=$(get format mv); FR=$(get frames 0); SC=$(get scale 1); TO=$(get to renders); NAMES=$(get names "")
-            if [ -f "jobs/$J/shots.json" ]; then python -m raymi timeline "$J" "$FMT"; fi
+            SC=$(get scale 1); TO=$(get to renders)
             OUT="/tmp/stills/$J"
             [ "$TO" = "boards" ] && OUT="$PWD/jobs/$J/boards"
             [ "$TO" = "catalog" ] && OUT="$PWD/studio/catalog"
             DEST=$(get dest ""); [ -n "$DEST" ] && OUT="$PWD/$DEST"   # e.g. a board job writes into the song job's boards/
-            START=$(date +%s)
-            (cd studio && node stills.mjs "$J" "$FR" --scale "$SC" --out "$OUT" ${NAMES:+--names "$NAMES"})
-            echo "$J: $(echo $FR | tr ',' ' ' | wc -w) stills in $(( $(date +%s) - START )) s -> $TO" >> "$GITHUB_STEP_SUMMARY"
-            if [ -f "jobs/$J/shots.json" ] && grep -q '"hero"' "jobs/$J/shots.json"; then   # main element readable at phone size?
-              (cd studio && node guard.mjs "$J" --hero-boxes "$FR" > "../jobs/$J/out/hero_boxes.json")
-              python -m raymi hero "$J" "$OUT" >> "$GITHUB_STEP_SUMMARY" || true
-            fi
+            python -m raymi stills-passes "$J" > "/tmp/stills/$J.passes"   # one pass per format (thumbs: mv + short)
+            while IFS=$'\t' read -r FMT FR NAMES; do
+              if [ -f "jobs/$J/shots.json" ]; then python -m raymi timeline "$J" "$FMT" < /dev/null; fi
+              START=$(date +%s)
+              (cd studio && node stills.mjs "$J" "$FR" --scale "$SC" --out "$OUT" ${NAMES:+--names "$NAMES"}) < /dev/null
+              echo "$J ($FMT): $(echo $FR | tr ',' ' ' | wc -w) stills in $(( $(date +%s) - START )) s -> $TO" >> "$GITHUB_STEP_SUMMARY"
+              if [ -f "jobs/$J/shots.json" ] && grep -q '"hero"' "jobs/$J/shots.json"; then   # main element readable at phone size?
+                (cd studio && node guard.mjs "$J" --hero-boxes "$FR" > "../jobs/$J/out/hero_boxes.json") < /dev/null
+                python -m raymi hero "$J" "$OUT" "$FR" "$NAMES" < /dev/null >> "$GITHUB_STEP_SUMMARY" || true
+              fi
+            done < "/tmp/stills/$J.passes"
+            if [ "$(get thumbs False)" = "True" ]; then python -m raymi thumbs "$OUT"; fi   # boards/thumbs_168.jpg: the feed view
             echo "$TO" > "/tmp/stills/$J.to"
           done
       - name: Publish

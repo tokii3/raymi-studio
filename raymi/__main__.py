@@ -14,6 +14,8 @@
   font heavy            build / update her heavy weight (Raymi-Heavy.ttf, lyrics v2) from Raymi-Regular.ttf
   screen <job> [video] critic kit (phone sheets, gray, motion strips, one frame per shot, facts) -> out/kit
   hero   <job> <video|stills dir>  is the main element readable at phone size? (value contrast, after a render)
+  stills-passes <job>   the stills passes of jobs/<job>/stills.json, one per line (stills.yml)
+  thumbs <boards dir>   thumbnail candidates at feed size (168 px, dark + light) -> thumbs_168.jpg (raymi/thumbs.py)
   analyze <job>         song tools (cloud, heavy): vocal stem, word-timed lyrics, song map (raymi/song.py)
   lyrics <job>          re-align lyrics_timed.json locally from the cached whisper_words.json + vocals.ogg
 """
@@ -73,10 +75,20 @@ def main(argv: list[str]) -> int:
 
         print("kit ->", screen.screen_job(P.job_dir(job), Path(argv[2]) if len(argv) > 2 else None))
         return 0
-    if cmd == "hero":        # hero <job> <final.mp4 | stills dir> -> out/hero.json (needs out/hero_boxes.json)
+    if cmd == "stills-passes":
+        from . import thumbs
+
+        print("\n".join(thumbs.main_lines(P.job_dir(job))))
+        return 0
+    if cmd == "thumbs":      # thumbs <boards dir> -> thumbs_168.jpg
+        from . import thumbs
+
+        print("feed view ->", thumbs.feed_sheet(Path(job)))
+        return 0
+    if cmd == "hero":        # hero <job> <final.mp4 | stills dir> [frames names] -> out/hero.json (needs out/hero_boxes.json)
         from . import hero
 
-        res = hero.run(P.job_dir(job), Path(argv[2]))
+        res = hero.run(P.job_dir(job), Path(argv[2]), *(argv[3:5]))
         print(f"hero: {res['verdict']}")
         for r in res["rows"]:
             if not r["readable"]:

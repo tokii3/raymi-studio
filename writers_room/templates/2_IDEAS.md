@@ -9,6 +9,7 @@ Three REALLY different worlds (not one idea in three colours). Each gets 3 key f
 - **World** (one place / medium, built - what it is made of): TODO
 - **Why only Raymi** (name / body / lore / voice): TODO
 - **Story of actions, muted** (5 sentences: wants -> does -> goes wrong / turns -> payoff): TODO
+- **Main element** (the ONE thing the viewer must read in every key frame - an object, her face, a word): TODO
 - **Lyric medium** (where the words live in this world): TODO
 - **5 wows** (time + what, strongest last): TODO
 - **The Short** (window + its own twist): TODO

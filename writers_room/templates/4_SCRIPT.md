@@ -6,9 +6,9 @@ Knowledge to open: `knowledge/craft/03_Videoschnitt.md`, `knowledge/craft/05_Kom
 The contract: screening checks the rendered video against every row. Times are measured song times.
 
 ## Shots
-| # | from-to | lyric / music | set + shot size | camera (start -> end) | Raymi DOES (sprite + act) | lyric in the picture (where, material, key word) | out (transition) | why (feeling / principle) |
-|---|---|---|---|---|---|---|---|---|
-| 1 | TODO | | | | | | | |
+| # | from-to | lyric / music | set + shot size | camera (start -> end) | Raymi DOES (sprite + act) | lyric in the picture (where, surface, material, key word) | hero (main element readable?) | out (transition) | why (feeling / principle) |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | TODO | | | | | | | | |
 
 Density per section (picture events per beat in loud parts - dance ~80 %, story ~45 %, calm 10-30 %): TODO
 
@@ -16,6 +16,9 @@ Density per section (picture events per beat in loud parts - dance ~80 %, story 
 | # | from-to (song) | shots used | frame 0 / hook | CTA |
 |---|---|---|---|---|
 | TODO | | | | |
+
+## Reuse first (studio/catalog/status.json: toki-liked / approved parts before anything new)
+Which proven parts carry this video, and what each one gets NEW here (never a copy of the last video's look): TODO
 
 ## Build list (what the studio does not have yet)
 | part | kind (set / prop / move / transition / type) | used in shots | status |
