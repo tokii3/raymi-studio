@@ -178,7 +178,7 @@ def _plane_points(k: dict, lift: float):
 
 
 def frame_window(keys: list[dict], aspect: float, size: str, side: str = "center", lift: float = 0.0,
-                 scale: float = 1.0):
+                 scale: float = 1.0, top: float = 0.2):
     """The frame on her sprite plane (centre x / y relative to her feet point, half-height s, metres) that shows the
     head of every key fully and none of their cut edges, at the shot size's head share (x scale) or the largest
     that fits. Returns (cx, cy, s, lo, hi): lo..hi = every frame centre x that works. None = impossible."""
@@ -231,7 +231,7 @@ def frame_window(keys: list[dict], aspect: float, size: str, side: str = "center
     lo, hi, ylo, yhi = win
     hcx = (hx0 + hx1) / 2
     cx = min(hi, max(lo, hcx - (FRAME_SIDE.get(side, 0.5) - 0.5) * 2 * a * s))
-    pref_y = (feet_y - s + 0.23 * s) if size == "wide" else (hy1 - 0.6 * s)
+    pref_y = (feet_y - s + 0.23 * s) if size == "wide" else (hy1 + (2 * top - 1) * s)   # head top at `top` from the frame top
     cy = min(yhi, max(ylo, pref_y))
     return cx, cy, s, lo, hi
 
@@ -294,7 +294,7 @@ def frame_camera(c: dict, base: dict, pkeys: list[dict], kf: int, aspect: float,
     # The lens sits on her plane's normal (the billboard faces it), so a frame centre beside her looks obliquely:
     # every candidate is checked with the real pinhole projection before it is taken.
     for scale in [1.0 - 0.05 * i for i in range(16)]:
-        win = frame_window(same, aspect, size, c.get("side", "center"), lift, scale)
+        win = frame_window(same, aspect, size, c.get("side", "center"), lift, scale, float(c.get("top", 0.2)))
         if win is None:
             break
         cx, cy, s, lo, hi = win

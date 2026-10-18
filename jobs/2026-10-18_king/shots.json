@@ -1538,13 +1538,19 @@
     {
      "at": 0,
      "frame": "close",
-     "cam": "glass_close"
+     "cam": "glass_close",
+     "short": {
+      "top": 0.3
+     }
     },
     {
      "at": "end",
      "frame": "close",
      "cam": "glass_close",
-     "fov": 26
+     "fov": 26,
+     "short": {
+      "top": 0.3
+     }
     }
    ],
    "kick": 1,
@@ -1610,7 +1616,11 @@
       0.9,
       6.0
      ],
-     "fov": 22
+     "fov": 22,
+     "short": {
+      "frame": "medium",
+      "top": 0.32
+     }
     },
     {
      "at": "end",
@@ -1620,7 +1630,11 @@
       0.9,
       6.0
      ],
-     "fov": 21
+     "fov": 21,
+     "short": {
+      "frame": "medium",
+      "top": 0.32
+     }
     }
    ],
    "kick": 1.5,
@@ -1644,7 +1658,17 @@
     "width": 3,
     "words": [
      "レフトサイド"
-    ]
+    ],
+    "short": {
+     "size": 0.123,
+     "width": 1.01,
+     "anchor": [
+      -2.98,
+      0.82,
+      0.27
+     ],
+     "rot": 0
+    }
    },
    "transition": {
     "kind": "whip",
@@ -1716,7 +1740,16 @@
     "width": 3,
     "words": [
      "ライトサイド"
-    ]
+    ],
+    "short": {
+     "size": 0.062,
+     "width": 0.5,
+     "anchor": [
+      2.41,
+      0.19,
+      1.57
+     ]
+    }
    },
    "transition": {
     "kind": "cut",
@@ -1778,7 +1811,17 @@
     ],
     "key": [
      "歯をむき"
-    ]
+    ],
+    "short": {
+     "size": 0.015,
+     "width": 0.18,
+     "anchor": [
+      0.54,
+      1.33,
+      2.17
+     ],
+     "rot": 0
+    }
    },
    "transition": {
     "kind": "cut",
@@ -1961,7 +2004,16 @@
     "lines": [
      14
     ],
-    "color": "#ffd0ea"
+    "color": "#ffd0ea",
+    "short": {
+     "size": 0.066,
+     "width": 0.59,
+     "anchor": [
+      -3.32,
+      1.31,
+      -0.9
+     ]
+    }
    },
    "transition": {
     "kind": "cut",
@@ -2069,7 +2121,11 @@
     "width": 1.4,
     "lines": [
      15
-    ]
+    ],
+    "short": {
+     "size": 0.066,
+     "width": 0.59
+    }
    },
    "transition": {
     "kind": "cut",
@@ -2207,7 +2263,11 @@
     ],
     "key": [
      "パッパッパッハハ"
-    ]
+    ],
+    "short": {
+     "size": 0.165,
+     "width": 1.68
+    }
    },
    "transition": {
     "kind": "cut",
@@ -2250,7 +2310,8 @@
        0.0,
        1.6,
        8.6
-      ]
+      ],
+      "top": 0.34
      }
     },
     {
@@ -2272,7 +2333,8 @@
        0.0,
        1.65,
        7.9
-      ]
+      ],
+      "top": 0.34
      }
     }
    ],
@@ -2304,7 +2366,17 @@
     "key": [
      "KING"
     ],
-    "color": "#ffcf6b"
+    "color": "#ffcf6b",
+    "short": {
+     "size": 0.11,
+     "width": 1.85,
+     "anchor": [
+      -0.13,
+      1.88,
+      0.21
+     ],
+     "rot": 0
+    }
    },
    "transition": {
     "kind": "cut",
@@ -2347,7 +2419,8 @@
        0.9,
        1.3,
        -1.4
-      ]
+      ],
+      "top": 0.34
      }
     }
    ],
@@ -2389,13 +2462,19 @@
     {
      "at": 0,
      "frame": "close",
-     "cam": "glass_close"
+     "cam": "glass_close",
+     "short": {
+      "top": 0.34
+     }
     },
     {
      "at": "end",
      "frame": "close",
      "cam": "glass_close",
-     "fov": 27
+     "fov": 27,
+     "short": {
+      "top": 0.34
+     }
     }
    ],
    "kick": 1,
