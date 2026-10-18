@@ -65,6 +65,7 @@ export type Shot = {
   events: SetEvent[];
   texts?: {name: string; center: V3; size: [number, number]; rot: number}[];   // readable props: never cut by the frame
   noLens?: {name: string; min: V3; max: V3}[];                                // the camera may never be inside these
+  solids?: {name: string; center: V3; size: V3}[];                            // props: lens never inside, face never hidden
 };
 
 export type FilmProps = {

@@ -105,3 +105,15 @@ test('set text guard: a sign held half out of frame is refused, fully in passes;
   assert.equal(lensInside(mk(0)).length, 0);
   assert.ok(lensInside(mk(0, -0.5)).length > 0);
 });
+
+test('solid guard: the lens inside a prop and her face hidden behind one are refused', async () => {
+  const o7 = out.replace('.mjs', '-s.mjs');
+  await build({entryPoints: [path.join(here, '../src/film/check.ts')], bundle: true, format: 'esm', platform: 'node', outfile: o7, logLevel: 'error'});
+  const {solidFaults} = await import(pathToFileURL(o7).href);
+  const mk = (box, camZ = 6) => ({width: 1920, height: 1080, fps: 30, durationInFrames: 30, hits: [], shots: [{id: 's', from: 0, to: 30,
+    camera: [{f: 0, pos: [0, 1.3, camZ], look: [0, 1.3, 0], fov: 35}], kick: 0,
+    puppets: [{...key([], [0, 0, 0]), head: [0.3, 0.04, 0.7, 0.3]}], solids: [{name: 'rock', center: box, size: [1, 1, 1]}]}]});
+  assert.equal(solidFaults(mk([3, 0.5, 0])).length, 0);
+  assert.ok(solidFaults(mk([0, 1.4, 3])).length > 0);          // in front of her face
+  assert.ok(solidFaults(mk([0, 1.3, 6])).length > 0);          // the lens inside it
+});

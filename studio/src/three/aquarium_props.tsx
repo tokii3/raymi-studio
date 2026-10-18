@@ -25,9 +25,10 @@ export const Coin: React.FC<{pos: P3; rot?: P3; scale?: number}> = ({pos, rot = 
     <group position={pos} rotation={rot} scale={scale}>
       <mesh castShadow>
         <cylinderGeometry args={[0.07, 0.07, 0.014, 28]} />
-        <meshToonMaterial attach="material-0" color="#c9982f" />
-        <meshToonMaterial attach="material-1" map={face} />
-        <meshToonMaterial attach="material-2" map={face} />
+        {/* gold catches any light: a little self-glow so a coin never turns into a black slab at night (stills run 19) */}
+        <meshToonMaterial attach="material-0" color="#c9982f" emissive="#7a5410" emissiveIntensity={0.55} />
+        <meshToonMaterial attach="material-1" map={face} emissive="#7a5410" emissiveIntensity={0.45} />
+        <meshToonMaterial attach="material-2" map={face} emissive="#7a5410" emissiveIntensity={0.45} />
       </mesh>
     </group>
   );

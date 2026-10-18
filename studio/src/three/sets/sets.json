@@ -228,6 +228,75 @@
      12.0
     ]
    }
+  ],
+  "solids": [
+   {
+    "name": "shell throne (backrest)",
+    "center": [
+     -0.6,
+     1.0,
+     -1.45
+    ],
+    "size": [
+     2.2,
+     1.4,
+     0.3
+    ]
+   },
+   {
+    "name": "shell throne (seat)",
+    "center": [
+     -0.6,
+     0.3,
+     -1.1
+    ],
+    "size": [
+     1.0,
+     0.6,
+     0.7
+    ]
+   },
+   {
+    "name": "toy castle",
+    "center": [
+     2.6,
+     0.55,
+     -1.65
+    ],
+    "size": [
+     1.3,
+     1.2,
+     0.9
+    ]
+   },
+   {
+    "name": "work lamp",
+    "center": [
+     0.9,
+     3.42,
+     -0.7
+    ],
+    "size": [
+     0.4,
+     0.35,
+     0.4
+    ],
+    "opt": "dead_lamp"
+   },
+   {
+    "name": "work lamp",
+    "center": [
+     0.9,
+     3.42,
+     -0.7
+    ],
+    "size": [
+     0.4,
+     0.35,
+     0.4
+    ],
+    "opt": "work_lamp"
+   }
   ]
  },
  "cardtable": {
@@ -361,7 +430,74 @@
     ]
    }
   ],
-  "texts": []
+  "texts": [],
+  "solids": [
+   {
+    "name": "coin tower",
+    "center": [
+     1.5,
+     0.4,
+     0.9
+    ],
+    "size": [
+     0.8,
+     0.8,
+     0.8
+    ]
+   },
+   {
+    "name": "coin tower",
+    "center": [
+     2.4,
+     0.27,
+     1.4
+    ],
+    "size": [
+     0.8,
+     0.55,
+     0.8
+    ]
+   },
+   {
+    "name": "coin tower",
+    "center": [
+     0.9,
+     0.6,
+     1.7
+    ],
+    "size": [
+     0.8,
+     1.2,
+     0.8
+    ]
+   },
+   {
+    "name": "coin tower",
+    "center": [
+     -4.6,
+     0.2,
+     2.6
+    ],
+    "size": [
+     0.8,
+     0.4,
+     0.8
+    ]
+   },
+   {
+    "name": "deck",
+    "center": [
+     -2.6,
+     0.12,
+     0.8
+    ],
+    "size": [
+     1.6,
+     0.24,
+     1.9
+    ]
+   }
+  ]
  },
  "weather": {
   "about": "Storm Warning: a TV weather studio (a big ocean weather map wall, a presenter mark, a news desk, two pedestal studio cameras with tally lights, light rigs, an ON AIR box, a teleprompter, a ticker band). Floor y=0, map wall at z=-3.",
@@ -475,7 +611,9 @@
    }
   },
   "no_lens": [],
-  "texts": []
+  "texts": [],
+  "solids": []
  },
- "_why_texts": "texts: built props that carry readable text (centre, size w/h in m, rotY deg; opt = only when that option is set, unless = not when that option is false). The guard refuses a frame that cuts one of them by the edge (pilot 1/2: a half sign reads as a fault). no_lens: boxes the camera may never be inside (min, max), e.g. under the sand or the hall floor. blank = not readable (so not guarded) when that text option is ''."
+ "_why_texts": "texts: built props that carry readable text (centre, size w/h in m, rotY deg; opt = only when that option is set, unless = not when that option is false). The guard refuses a frame that cuts one of them by the edge (pilot 1/2: a half sign reads as a fault). no_lens: boxes the camera may never be inside (min, max), e.g. under the sand or the hall floor. blank = not readable (so not guarded) when that text option is ''.",
+ "_why_solids": "solids: built props the lens may never be inside or right against, and that may never hide her face for 0.4 s (stills run 19: the lens inside a coin tower, the throne hiding her). centre, size (m); opt / unless as for texts."
 }

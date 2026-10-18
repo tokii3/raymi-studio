@@ -311,7 +311,17 @@
    "camera": [
     {
      "at": 0,
-     "cam": "inside_out"
+     "pos": [
+      2.2,
+      1.6,
+      -2.4
+     ],
+     "look": [
+      0.153,
+      1.089,
+      2.854
+     ],
+     "fov": 44.62
     }
    ],
    "raymi": [
@@ -434,6 +444,322 @@
       -0.84,
       -0.9
      ]
+    }
+   ]
+  },
+  {
+   "id": "night-table",
+   "at": 63.0,
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "pool_on": [
+     [
+      63.0,
+      "raymi"
+     ]
+    ],
+    "deal_beats": "beats",
+    "king": "WS_F_SMUG_WINK_UV_169"
+   },
+   "why": "catalog: night card table - wine felt, caged work lamp, its pool, coin towers, a card dealt on every beat",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "table_wide"
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
+     "pos": [
+      0.0,
+      0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "house-collapse",
+   "at": 66.0,
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 3,
+    "pool": true,
+    "collapse": 67.0,
+    "pile": [
+     2.0,
+     0,
+     -1.2
+    ]
+   },
+   "why": "catalog: house of cards collapses; a pile of cards",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "house_up"
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_DIZZY_LIE_UV_193",
+     "pos": [
+      0.6,
+      0,
+      0.6
+     ]
+    }
+   ]
+  },
+  {
+   "id": "king-prize",
+   "at": 69.0,
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "pickup": 69.0,
+    "king_float": true,
+    "warning_cards": [
+     69.3,
+     69.6
+    ],
+    "warning_slash": 69.9,
+    "king": "WS_F_SMUG_WINK_UV_169"
+   },
+   "why": "catalog: PICK UP in the felt, the prize card floating, red warning cards, one slashed",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      2.4,
+      7.0
+     ],
+     "look": [
+      0.0,
+      0.8,
+      1.2
+     ],
+     "fov": 38
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_173",
+     "pos": [
+      -1.2,
+      0,
+      1.0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "black-glow",
+   "at": 72.0,
+   "set": "cardtable",
+   "opts": {
+    "palette": "night",
+    "dealt": true,
+    "chips": "coins",
+    "swing": 0.08,
+    "house": 0,
+    "pool": true,
+    "lamp": 0,
+    "black": true,
+    "glow": "#9b5cff",
+    "spade_glow": "all",
+    "swarm_peel": [
+     72.3,
+     72.6,
+     72.9
+    ],
+    "glow_pulse": "beats"
+   },
+   "why": "catalog: total black, her own light, every spade glows, spades peel off as rays",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "table_wide"
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": [
+      0.0,
+      0,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "glass-story",
+   "at": 75.0,
+   "set": "aquarium",
+   "opts": {
+    "crowd": 10,
+    "phone": [
+     0.35,
+     0.55,
+     3.2
+    ],
+    "taps": [
+     75.2,
+     75.9
+    ],
+    "warning_flash": true,
+    "hands": [
+     0.2,
+     2.6
+    ],
+    "screens": "WS_F_SMUG_WINK_UV_169",
+    "work_lamp": "dark"
+   },
+   "why": "catalog: hero phone, knuckle taps + warning flash, hand silhouettes on the glass, the dark work lamp",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.0,
+      0.9,
+      5.2
+     ],
+     "look": [
+      1.0,
+      1.0,
+      1.2
+     ],
+     "fov": 42
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SCARED_RUN_UV_175",
+     "pos": "glass",
+     "act": "shake"
+    }
+   ]
+  },
+  {
+   "id": "coins-deck",
+   "at": 78.0,
+   "set": "aquarium",
+   "opts": {
+    "crowd": 0,
+    "chute": true,
+    "deck_ledge": true,
+    "coin_rain": [
+     78.1
+    ],
+    "coin_pile": true,
+    "salmon": "near",
+    "screens": "WS_F_SMUG_WINK_UV_169",
+    "warning": false
+   },
+   "why": "catalog: wish coins rain and pile, the souvenir deck on the chute ledge, the salmon",
+   "camera": [
+    {
+     "at": 0,
+     "cam": "tank_front"
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PULL_UV_188",
+     "pos": "center"
+    }
+   ]
+  },
+  {
+   "id": "card-rain",
+   "at": 81.0,
+   "set": "aquarium",
+   "opts": {
+    "crowd": 0,
+    "banks_off": "all",
+    "card_rain": [
+     80.0,
+     82.0
+    ],
+    "felt_mat": true,
+    "screens": "WS_F_SMUG_WINK_UV_169",
+    "warning": false
+   },
+   "why": "catalog: hand-sized cards sinking through the water like leaves, the felt mat",
+   "camera": [
+    {
+     "at": 0,
+     "frame": "wide",
+     "from": [
+      2.2,
+      1.6,
+      -2.4
+     ],
+     "fov": 44
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SPIN_UV_190",
+     "pos": "center"
+    }
+   ]
+  },
+  {
+   "id": "finale-ring",
+   "at": 84.0,
+   "set": "aquarium",
+   "opts": {
+    "crowd": 0,
+    "banks_off": "all",
+    "dim": 1.0,
+    "spot": false,
+    "cards": "scattered",
+    "glow": "#9b5cff",
+    "swarm_ring": "head",
+    "crown": "head",
+    "dead_lamp": true,
+    "glow_pulse": "beats",
+    "screens": "WS_F_SMUG_WINK_UV_169",
+    "warning": false
+   },
+   "why": "catalog: her crown with the ray ring, her glow, the scattered real deck, the dead lamp with the coin",
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "cam": "tank_front"
+    }
+   ],
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": "center"
     }
    ]
   },

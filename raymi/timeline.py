@@ -501,7 +501,9 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                       "texts": [{k: v for k, v in tx.items() if k not in ("opt", "unless", "blank")} for tx in sets[st].get("texts", [])
                                 if (not tx.get("opt") or opts.get(tx["opt"])) and opts.get(tx.get("unless", ""), True) is not False
                                 and not (tx.get("blank") and opts.get(tx["blank"]) == "")],
-                      "noLens": sets[st].get("no_lens", [])})
+                      "noLens": sets[st].get("no_lens", []),
+                      "solids": [{k: v for k, v in so.items() if k not in ("opt", "unless")} for so in sets[st].get("solids", [])
+                                 if (not so.get("opt") or opts.get(so["opt"])) and opts.get(so.get("unless", ""), True) is not False]})
     if shots and shots[0]["from"] != 0:
         errors.append(f"the first shot must start at the window start ({t_from:.2f} s)")
     overlay = None

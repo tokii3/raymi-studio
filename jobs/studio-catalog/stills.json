@@ -1,12 +1,26 @@
 {
  "format": "mv",
  "frames": [
-  2658
+  1497,
+  1587,
+  1677,
+  1767,
+  1857,
+  1947,
+  2037,
+  2125
  ],
  "names": [
-  "raymi_in_space__crown__lyrics_sign"
+  "set_cardtable_night__pool_deal",
+  "cardtable_house_collapse_pile",
+  "cardtable_pickup_king_warning",
+  "cardtable_black_spade_glow_rays",
+  "aquarium_phone_taps_hands_lamp",
+  "aquarium_coins_deck_salmon",
+  "aquarium_card_rain_felt",
+  "raymi_crown_ray_ring_glow"
  ],
  "scale": 0.5,
  "to": "catalog",
- "round": 10
+ "round": 11
 }

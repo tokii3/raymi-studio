@@ -22,8 +22,12 @@ export function makeCamera(shot: Shot, f: number, aspect: number, hits: number[]
 export function puppetMatrix(p: Pose, camPos: V3): THREE.Matrix4 {
   const k = p.key;
   const yaw = Math.atan2(camPos[0] - p.pos[0], camPos[2] - p.pos[2]);   // faces the lens (cylindrical billboard)
+  // a lens high above her (top-down) would see the plane edge-on: from 35 deg up the plane tilts back toward it
+  const flat = Math.hypot(camPos[0] - p.pos[0], camPos[2] - p.pos[2]);
+  const elev = Math.atan2(camPos[1] - (p.pos[1] + p.lift + 0.6), flat);
+  const pitch = elev * Math.min(1, Math.max(0, (elev - 0.6) / 0.5));
   const m = new THREE.Matrix4();
-  const q = new THREE.Quaternion().setFromEuler(new THREE.Euler(0, yaw, (-p.rot * Math.PI) / 180, 'YXZ'));
+  const q = new THREE.Quaternion().setFromEuler(new THREE.Euler(-pitch, yaw, (-p.rot * Math.PI) / 180, 'YXZ'));
   m.compose(new THREE.Vector3(p.pos[0], p.pos[1] + p.lift, p.pos[2]), q,
     new THREE.Vector3(p.sx * p.turn * (k.flip ? -1 : 1), p.sy, 1));
   return m;
@@ -260,6 +264,7 @@ export function shotSummary(props: FilmProps): ShotSummary[] {
     }
     const face = faceCrops({...props, shots: [s]}).length;
     const extra = [...setTextCuts({...props, shots: [s]}).map((x) => `"${x.text}" cut by the frame edge f${x.frame}`),
+      ...solidFaults({...props, shots: [s]}).map((x) => `${x.why} f${x.frame}`),
       ...lensInside({...props, shots: [s]}).map((x) => `lens ${x.where} f${x.frame}`)];
     return {shot: s.id, index, frames: s.to - s.from, cut, face, extra, lyrics: text.filter((t) => t.shot === s.id).map((t) => {
       const cam = makeCamera(s, t.frame, aspect, [], props.fps);
@@ -273,7 +278,7 @@ function shotPasses(props: FilmProps, s: Shot): boolean {
   const aspect = props.width / props.height;
   for (let f = s.from; f < s.to; f++) if (visibleCutEdges(s, f, aspect, props.hits, props.fps).length) return false;
   const one = {...props, shots: [s]};
-  return faceCrops(one).length === 0 && lyricsOutOfFrame(one).length === 0 && setTextCuts(one).length === 0 && lensInside(one).length === 0;
+  return faceCrops(one).length === 0 && lyricsOutOfFrame(one).length === 0 && setTextCuts(one).length === 0 && lensInside(one).length === 0 && solidFaults(one).length === 0;
 }
 
 /** The smallest change to a shot's camera that passes every guard: the lens is kept, the frame tightens (fov) and the
@@ -398,6 +403,43 @@ export function overlayOnFace(props: FilmProps): {shot: string; frame: number; w
       const ys = [p.key.head[1], p.key.head[3]].map((v) => (1 - new THREE.Vector3(0, (p.key.feet - v) * ph, 0).applyMatrix4(m).project(cam).y) / 2);
       const y0 = Math.min(...ys), y1 = Math.max(...ys);
       if (y1 > top && y0 < top + h) { out.push({shot: s.id, frame: f, what}); break; }
+    }
+  }
+  return out;
+}
+
+/** Solid props: the lens is never inside one (or within 0.2 m of it), and her face never hides behind one for 0.4 s
+ *  (stills run 19: the lens inside a coin tower; the shell throne between the lens and her). */
+export function solidFaults(props: FilmProps): {shot: string; frame: number; why: string}[] {
+  const aspect = props.width / props.height;
+  const out: {shot: string; frame: number; why: string}[] = [];
+  for (const s of props.shots) {
+    const boxes = (s.solids ?? []).map((b) => ({name: b.name, box: new THREE.Box3().setFromCenterAndSize(new THREE.Vector3(...b.center), new THREE.Vector3(...b.size))}));
+    if (!boxes.length) continue;
+    let run = 0, bad: string | null = null;
+    for (let f = s.from; f < s.to; f++) {
+      const cam = makeCamera(s, f, aspect, props.hits, props.fps);
+      const inside = boxes.find((b) => b.box.clone().expandByScalar(0.2).containsPoint(cam.position));
+      if (inside) { out.push({shot: s.id, frame: f, why: `lens inside the ${inside.name}`}); bad = 'x'; break; }
+      const p = puppetAt(s.puppets, f, props.fps);
+      let hidden: string | null = null;
+      if (p && p.key.head) {
+        const m = puppetMatrix(p, [cam.position.x, cam.position.y, cam.position.z]);
+        const {w, h} = planeSize(p.key);
+        const [x0, y0, x1, y1] = p.key.head;
+        const face = new THREE.Vector3(((x0 + x1) / 2 - 0.5) * w, (p.key.feet - (y0 + y1) / 2) * h, 0).applyMatrix4(m);
+        const n = face.clone().project(cam);
+        if (n.z < 1 && Math.abs(n.x) < 1 && Math.abs(n.y) < 1) {
+          const dir = face.clone().sub(cam.position), dist = dir.length();
+          const ray = new THREE.Ray(cam.position.clone(), dir.normalize());
+          for (const b of boxes) {
+            const hit = ray.intersectBox(b.box, new THREE.Vector3());
+            if (hit && hit.distanceTo(cam.position) < dist - 0.15 && !b.box.containsPoint(face)) { hidden = b.name; break; }
+          }
+        }
+      }
+      run = hidden ? run + 1 : 0;
+      if (run >= Math.round(props.fps * 0.4)) { out.push({shot: s.id, frame: f - run + 1, why: `her face hidden behind the ${hidden}`}); break; }
     }
   }
   return out;
