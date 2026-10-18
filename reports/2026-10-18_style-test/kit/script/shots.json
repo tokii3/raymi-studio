@@ -1,0 +1,47 @@
+[
+ {
+  "id": "left-right",
+  "from_s": 0.0,
+  "to_s": 1.87,
+  "set": "aquarium",
+  "why": "we are one of the visitors pushing to the glass; she performs left side / right side for the crowd",
+  "words": "レフトサイド ライトサイド",
+  "transition_out": "pass"
+ },
+ {
+  "id": "pa-pa-pa",
+  "from_s": 1.87,
+  "to_s": 5.17,
+  "set": "aquarium",
+  "why": "the forced grin for the phones: she presses on the glass, then poses as the flashes go pa pa pa",
+  "words": "パッパッパッハハ",
+  "transition_out": "flash"
+ },
+ {
+  "id": "you-are-king",
+  "from_s": 5.17,
+  "to_s": 6.6,
+  "set": "aquarium",
+  "why": "the crowd crowns her - worm's eye, she screams it back with the bottle cap on her head",
+  "words": "You are KING",
+  "transition_out": "cut"
+ },
+ {
+  "id": "empty-throne",
+  "from_s": 6.6,
+  "to_s": 8.07,
+  "set": "aquarium",
+  "why": "the stop: the throne is empty, only her bottle cap lies on the seat - she buried herself in the sand and peeks",
+  "words": "",
+  "transition_out": "cut"
+ },
+ {
+  "id": "back-on-top",
+  "from_s": 8.07,
+  "to_s": 12.23,
+  "set": "aquarium",
+  "why": "she bursts out of the sand (rays bury themselves) back onto the throne: the crown is hers by choice now",
+  "words": "You are KING",
+  "transition_out": "cut"
+ }
+]

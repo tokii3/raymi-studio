@@ -1,0 +1,41 @@
+{
+ "video": "final.mp4",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 30.0,
+ "duration_s": 12.23,
+ "shot_starts_s": [
+  0.0,
+  1.87,
+  5.17,
+  6.6,
+  8.07
+ ],
+ "shot_lengths_s": [
+  1.87,
+  3.3,
+  1.43,
+  1.47,
+  4.17
+ ],
+ "shot_rhythm": {
+  "n": 5,
+  "mean_s": 2.45,
+  "cv": 0.45,
+  "note": "cv ~0 = metronome, high cv = long holds next to bursts (craft module 03)"
+ },
+ "picture_change_on_hits": {
+  "hits": 9,
+  "changed": 8,
+  "share": 0.89,
+  "threshold": 6.0
+ },
+ "still_spans_s": [],
+ "audio": {
+  "input_i": "-14.08",
+  "input_tp": "-3.25"
+ },
+ "hint": "Measured hints only. They never prove an effect - the critic describes what is REALLY there."
+}
