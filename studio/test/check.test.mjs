@@ -67,3 +67,16 @@ test('lyrics guard: a line anchored off-screen is refused, a centred one passes'
   assert.equal(lyricsOutOfFrame(mk([0, 1.5, 0])).length, 0);
   assert.ok(lyricsOutOfFrame(mk([0, 3.4, 0])).length > 0);
 });
+
+test('lyrics guard: words over her face are refused unless lyrics.over says so', async () => {
+  const o4 = out.replace('.mjs', '-f.mjs');
+  await build({entryPoints: [path.join(here, '../src/film/check.ts')], bundle: true, format: 'esm', platform: 'node', outfile: o4, logLevel: 'error'});
+  const {lyricsOutOfFrame} = await import(pathToFileURL(o4).href);
+  const mk = (over) => ({width: 1920, height: 1080, fps: 30, durationInFrames: 60, hits: [], shots: [{id: 's', from: 0, to: 60,
+    camera: [{f: 0, pos: [0, 1, 6], look: [0, 1, 0], fov: 35}], kick: 0,
+    puppets: [{...key([], [0, 0, 0]), head: [0.3, 0.04, 0.7, 0.3]}],
+    lyrics: {kind: 'sign', anchor: [0, 1.35, 0.2], rotY: 0, size: 0.15, width: 2, color: '#fff', accent: '#fc0', outline: '#000', lit: false, over},
+    words: [{w: 'KING', from: 0, to: 30, key: true, line: 0, idx: 0}]}]});
+  assert.ok(lyricsOutOfFrame(mk(false)).some((x) => x.why === 'covers her face'));
+  assert.equal(lyricsOutOfFrame(mk(true)).length, 0);
+});

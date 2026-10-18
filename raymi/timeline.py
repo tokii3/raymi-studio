@@ -209,6 +209,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             sprites.add(fname)
             pkeys.append({"f": fr(_key_time(r.get("at", 0), a, b)), "sprite": fname, "size": info["size"],
                           "cuts": info["cut_sides"], "top": top, "feet": float(min(1.0, feet)),
+                          "head": [float(x) for x in head],
                           "pos": pos, "height": float(r.get("height", DEFAULT_HEIGHT)), "act": r.get("act", "idle"),
                           "icon": r.get("icon"), "flip": bool(r.get("flip", False)),
                           "move": round(float(r.get("move", 0.0)) * FPS), "arc": float(r.get("arc", 0.0)),
@@ -226,7 +227,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             L = {"kind": lyr.get("kind", "sign"), "anchor": anchor or [0, 1, 0], "rotY": float(lyr.get("rot", 0)),
                  "size": float(lyr.get("size", 0.3)), "width": float(lyr.get("width", 4.0)),
                  "color": lyr.get("color", "#ffffff"), "accent": lyr.get("accent", "#ffcf6b"),
-                 "outline": lyr.get("outline", "#1a0b33"), "lit": bool(lyr.get("lit", False))}
+                 "outline": lyr.get("outline", "#1a0b33"), "lit": bool(lyr.get("lit", False)),
+                 "over": bool(lyr.get("over", False))}     # true = the words cross her face ON PURPOSE (written why)
             only_lines = set(lyr["lines"]) if "lines" in lyr else None      # a line can be ACTED instead of written
             only_words = set(lyr["words"]) if "words" in lyr else None
             for li, ln in enumerate(lyrics):

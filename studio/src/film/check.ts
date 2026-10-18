@@ -154,7 +154,7 @@ export function lineCorners(s: Shot, line: number): THREE.Vector3[] {
     new THREE.Vector3(x, y, 0).applyMatrix4(rot).add(o));
 }
 
-export type TextFault = {shot: string; frame: number; line: number; text: string};
+export type TextFault = {shot: string; frame: number; line: number; text: string; why?: string};
 
 /** Every frame a lyric line is fully shown (from its last word on, settled), all of it must be inside the frame. */
 export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
@@ -172,7 +172,21 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
       for (let f = a; f < z; f += 3) {
         const cam = makeCamera(s, f, aspect, [], props.fps);
         const bad = corners.some((c) => { const n = c.clone().project(cam); return n.z >= 1 || Math.abs(n.x) > 0.985 || Math.abs(n.y) > 0.985; });
-        if (bad) { out.push({shot: s.id, frame: f, line, text: ws.map((w) => w.w).join(' ')}); break; }
+        if (bad) { out.push({shot: s.id, frame: f, line, text: ws.map((w) => w.w).join(' '), why: 'leaves the frame'}); break; }
+        // text on her face hides the one thing the viewer looks at (blind viewer, style test 2) - unless the script wants it
+        const p = s.lyrics.over ? null : puppetAt(s.puppets, f, props.fps);
+        if (p && p.key.head) {
+          const m = puppetMatrix(p, [cam.position.x, cam.position.y, cam.position.z]);
+          const {w, h} = planeSize(p.key);
+          const [x0, y0, x1, y1] = p.key.head;
+          const hp = [[x0, y0], [x1, y0], [x0, y1], [x1, y1]].map(([u, v]) =>
+            new THREE.Vector3((u - 0.5) * w, (p.key.feet - v) * h, 0).applyMatrix4(m).project(cam));
+          const tp = corners.map((c) => c.clone().project(cam));
+          const box = (ps: THREE.Vector3[]) => [Math.min(...ps.map((q) => q.x)), Math.min(...ps.map((q) => q.y)), Math.max(...ps.map((q) => q.x)), Math.max(...ps.map((q) => q.y))];
+          const [a0, b0, a1, b1] = box(hp), [c0, d0, c1, d1] = box(tp);
+          const inter = Math.max(0, Math.min(a1, c1) - Math.max(a0, c0)) * Math.max(0, Math.min(b1, d1) - Math.max(b0, d0));
+          if (inter > 0.15 * (a1 - a0) * (b1 - b0)) { out.push({shot: s.id, frame: f, line, text: ws.map((x) => x.w).join(' '), why: 'covers her face'}); break; }
+        }
       }
     }
   }

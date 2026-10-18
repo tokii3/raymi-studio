@@ -15,37 +15,39 @@
    "set": "aquarium",
    "opts": {
     "led": "STAR EXHIBIT",
-    "crowd": 16
+    "crowd": 16,
+    "screens": "WS_F_SMUG_WINK_UV_169",
+    "flash": 0.0
    },
-   "why": "we are one of the visitors pushing to the glass; she performs left side / right side for the crowd",
+   "why": "hook on her face, then the camera pulls back through the crowd: she performs left side / right side for phones that all film her",
    "camera": [
     {
      "at": 0,
      "pos": [
+      -0.55,
+      1.3,
+      2.6
+     ],
+     "look": [
+      -0.9,
+      1.15,
+      -0.4
+     ],
+     "fov": 30
+    },
+    {
+     "at": "end",
+     "pos": [
       0.4,
-      0.55,
-      9.0
+      0.7,
+      8.6
      ],
      "look": [
       0.0,
       1.2,
       0.0
      ],
-     "fov": 34
-    },
-    {
-     "at": "end",
-     "pos": [
-      0.1,
-      0.8,
-      4.6
-     ],
-     "look": [
-      0.0,
-      1.3,
-      -0.4
-     ],
-     "fov": 30,
+     "fov": 34,
      "ease": "inOut"
     }
    ],
@@ -79,12 +81,12 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.04,
-     1.42,
-     1.64
+     -0.1,
+     1.7,
+     3.21
     ],
-    "size": 0.16,
-    "width": 2.6,
+    "size": 0.12,
+    "width": 1.9,
     "color": "#ffcf6b",
     "accent": "#ffffff",
     "lines": [
@@ -176,12 +178,12 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     0.69,
-     0.99,
-     1.31
+     0.43,
+     1.07,
+     1.49
     ],
-    "size": 0.045,
-    "width": 0.95,
+    "size": 0.032,
+    "width": 0.6,
     "color": "#ffffff",
     "accent": "#ffffff",
     "words": [
@@ -251,12 +253,12 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     -0.4,
-     1.72,
-     -0.7
+     -1.08,
+     1.78,
+     -0.34
     ],
     "size": 0.1,
-    "width": 1.3,
+    "width": 1.2,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "lines": [
@@ -264,7 +266,16 @@
     ],
     "key": [
      "KING"
-    ]
+    ],
+    "short": {
+     "anchor": [
+      -0.25,
+      2.19,
+      -0.35
+     ],
+     "size": 0.06,
+     "width": 0.7
+    }
    },
    "transition": {
     "kind": "cut",
@@ -320,9 +331,9 @@
      "at": 0,
      "sprite": "WS_F_CALM_PRONE_UV_194",
      "pos": [
-      0.0,
+      0.16,
       -0.2,
-      -0.25
+      -0.13
      ],
      "act": "idle",
      "height": 0.55,
@@ -413,12 +424,12 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     -0.22,
-     1.74,
-     -1.06
+     -1.29,
+     1.45,
+     -0.77
     ],
-    "size": 0.11,
-    "width": 1.3,
+    "size": 0.085,
+    "width": 0.85,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "lines": [
@@ -429,12 +440,12 @@
     ],
     "short": {
      "anchor": [
-      -0.49,
-      2.03,
-      -1.09
+      -0.55,
+      0.98,
+      -0.65
      ],
-     "size": 0.08,
-     "width": 0.8
+     "size": 0.06,
+     "width": 0.7
     }
    },
    "transition": {

@@ -53,10 +53,10 @@ export async function guardCutEdges(props, range) {
     throw new Error(`REFUSED: a cut sprite edge would be on screen in ${faults.length} frame(s): ${first} - reframe (hard rule 9)`);
   }
   if (text.length) {
-    const first = text.map((x) => `${x.shot} f${x.frame} "${x.text}"`).join('; ');
-    throw new Error(`REFUSED: lyrics would leave the frame: ${first} - move the anchor / smaller size (PRINCIPLES C: text readable inside the frame)`);
+    const first = text.map((x) => `${x.shot} f${x.frame} "${x.text}" ${x.why}`).join('; ');
+    throw new Error(`REFUSED: lyrics problem: ${first} - move the anchor / smaller size, or lyrics.over with a reason (PRINCIPLES C)`);
   }
-  console.log('guards: cut edges ok, lyrics inside the frame ok');
+  console.log('guards: cut edges ok, lyrics inside the frame and off her face ok');
 }
 
 export async function bundleStudio(pub) {

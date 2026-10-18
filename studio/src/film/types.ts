@@ -16,6 +16,7 @@ export type PuppetKey = {
   cuts: string[];          // sides where the source image cut her figure: must never be seen
   top: number;             // fraction of the sprite height where her head / ears start
   feet: number;            // fraction where her feet touch the floor
+  head?: [number, number, number, number];   // her head box in the sprite (fractions x0, y0, x1, y1)
   pos: V3;                 // feet position in the set
   height: number;          // her figure height (head top .. feet) in metres
   act: Act;
@@ -39,6 +40,7 @@ export type Lyrics = {
   accent: string;
   outline: string;
   lit: boolean;            // true = painted on a surface (takes the set light), false = emits (neon, screen)
+  over?: boolean;          // true = the words cross her face on purpose (the script says why)
 };
 
 export type TransitionKind = 'cut' | 'bubbles' | 'ink' | 'whip' | 'flash' | 'pass';
