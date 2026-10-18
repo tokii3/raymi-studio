@@ -78,8 +78,8 @@ const WordMesh: React.FC<{p: Placed; L: Lyrics; f: number; fps: number; out: num
   const d = f - p.w.from;                                   // frames since the syllable (word appears on its cut frame)
   const h = p.size * p.tex.hScale, w = h * p.tex.aspect;
   const mat = useMemo(() => (L.lit || card
-    ? new THREE.MeshToonMaterial({map: p.tex.tex, gradientMap: toonRamp(), transparent: true, alphaTest: 0.05, side: THREE.DoubleSide})
-    : new THREE.MeshBasicMaterial({map: p.tex.tex, transparent: true, alphaTest: 0.02, toneMapped: false, side: THREE.DoubleSide})), [p.tex.tex, L.lit, card]);
+    ? new THREE.MeshToonMaterial({map: p.tex.tex, gradientMap: toonRamp(), transparent: true, alphaTest: 0.05, side: THREE.DoubleSide, fog: false})
+    : new THREE.MeshBasicMaterial({map: p.tex.tex, transparent: true, alphaTest: 0.02, toneMapped: false, side: THREE.DoubleSide, fog: false})), [p.tex.tex, L.lit, card]);
   let x = p.x, y = p.y, z = 0, s = 1, rz = 0, sx = 1, op = 1;
   const seed = p.w.line * 31 + p.w.idx * 7;
   switch (L.kind) {

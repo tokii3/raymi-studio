@@ -55,3 +55,15 @@ test('camera keys interpolate and ease', () => {
   assert.ok(Math.abs(c.pos[2] - 5) < 0.05 && Math.abs(c.fov - 30) < 1e-9);
   assert.equal(ease('hold', 0.99), 0);
 });
+
+test('lyrics guard: a line anchored off-screen is refused, a centred one passes', async () => {
+  const o3 = out.replace('.mjs', '-l.mjs');
+  await build({entryPoints: [path.join(here, '../src/film/check.ts')], bundle: true, format: 'esm', platform: 'node', outfile: o3, logLevel: 'error'});
+  const {lyricsOutOfFrame} = await import(pathToFileURL(o3).href);
+  const mk = (anchor) => ({width: 1920, height: 1080, fps: 30, durationInFrames: 60, hits: [], shots: [{id: 's', from: 0, to: 60,
+    camera: [{f: 0, pos: [0, 1, 6], look: [0, 1, 0], fov: 35}], kick: 0, puppets: [],
+    lyrics: {kind: 'sign', anchor, rotY: 0, size: 0.3, width: 4, color: '#fff', accent: '#fc0', outline: '#000', lit: false},
+    words: [{w: 'You', from: 0, to: 10, key: false, line: 0, idx: 0}, {w: 'KING', from: 10, to: 30, key: true, line: 0, idx: 1}]}]});
+  assert.equal(lyricsOutOfFrame(mk([0, 1.5, 0])).length, 0);
+  assert.ok(lyricsOutOfFrame(mk([0, 3.4, 0])).length > 0);
+});

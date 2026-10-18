@@ -8,7 +8,12 @@ import {build} from 'esbuild';
 import {guardCutEdges, here, loadJob} from './lib.mjs';
 
 const {props} = loadJob(process.argv[2]);
-await guardCutEdges(props, null);
+try {
+  await guardCutEdges(props, null);
+} catch (e) {
+  console.log(String(e.message));
+  process.exitCode = 1;
+}
 const pi = process.argv.indexOf('--place');      // --place <shot#> <frame> <x> <y> <dist>
 if (process.argv.includes('--report') || pi > 0) {
   const out = path.join(os.tmpdir(), `raymi-report-${process.pid}.mjs`);

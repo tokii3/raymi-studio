@@ -44,14 +44,19 @@ export async function guardCutEdges(props, range) {
   const out = path.join(os.tmpdir(), `raymi-check-${process.pid}.mjs`);
   await build({entryPoints: [path.join(here, 'src/film/check.ts')], bundle: true, format: 'esm', platform: 'node',
     outfile: out, logLevel: 'error'});
-  const {checkFilm} = await import(pathToFileURL(out).href);
+  const {checkFilm, lyricsOutOfFrame} = await import(pathToFileURL(out).href);
   const faults = checkFilm(props, range);
+  const text = lyricsOutOfFrame(props);
   fs.rmSync(out, {force: true});
   if (faults.length) {
     const first = faults.slice(0, 8).map((x) => `${x.shot} f${x.frame} ${x.side} (${x.sprite})`).join('; ');
     throw new Error(`REFUSED: a cut sprite edge would be on screen in ${faults.length} frame(s): ${first} - reframe (hard rule 9)`);
   }
-  console.log('cut-edge guard: ok');
+  if (text.length) {
+    const first = text.map((x) => `${x.shot} f${x.frame} "${x.text}"`).join('; ');
+    throw new Error(`REFUSED: lyrics would leave the frame: ${first} - move the anchor / smaller size (PRINCIPLES C: text readable inside the frame)`);
+  }
+  console.log('guards: cut edges ok, lyrics inside the frame ok');
 }
 
 export async function bundleStudio(pub) {

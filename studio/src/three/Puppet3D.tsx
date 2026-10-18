@@ -35,8 +35,8 @@ export const Puppet3D: React.FC<{keys: PuppetKey[]; f: number; fps: number; camP
   const m = puppetMatrix(p, camPos);
   const {w} = planeSize(p.key);
   const ghosts = [] as React.ReactNode[];
-  if (p.smear > 0.05) {                                      // smear frames: where she was 1 and 2 frames ago
-    for (const [d, o] of [[1, 0.42], [2, 0.2]] as const) {
+  if (p.smear > 0.35) {                                      // smear frames: where she was 1 and 2 frames ago
+    for (const [d, o] of [[1, 0.16]] as const) {   // one faint streak - strong copies read as a glitch (blind viewer, style test 1)
       const q = puppetAt(keys, f - d, fps);
       if (q && q.key.sprite === p.key.sprite) ghosts.push(<SpritePlane key={d} k={q.key} matrix={puppetMatrix(q, camPos)} opacity={o * p.smear} cast={false} />);
     }

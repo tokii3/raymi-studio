@@ -117,3 +117,62 @@ export function placeAt(props: FilmProps, shot: number, f: number, sx: number, s
   const p = cam.position.clone().addScaledVector(v, dist);
   return [Number(p.x.toFixed(2)), Number(p.y.toFixed(2)), Number(p.z.toFixed(2))];
 }
+
+// ---------------------------------------------------------------- lyrics stay readable inside the frame
+// The renderer measures words with the real font; here (node, no font) a word's width is estimated from its characters:
+// kana / kanji ~1 em, Latin ~0.62 em, plus the texture padding. Slightly generous, so a pass here is a real pass.
+const em = (ch: string) => (/[　-鿿＀-￯]/.test(ch) ? 1.0 : ch === ' ' ? 0.3 : 0.62);
+export function wordBox(w: {w: string; key: boolean}, L: {size: number; width: number}): {width: number; height: number} {
+  let size = L.size * (w.key ? 2.2 : 1);
+  const hScale = 1.35 / 0.72;
+  const aspect = ([...w.w].reduce((a, c) => a + em(c), 0) + 80 / 180) / 1.35;
+  let width = size * hScale * aspect;
+  if (width > L.width) { size *= L.width / width; width = L.width; }
+  return {width, height: size * hScale};
+}
+
+/** Settled corners of a lyric line block (same wrapping as Words3D.layout), in world space. */
+export function lineCorners(s: Shot, line: number): THREE.Vector3[] {
+  const L = s.lyrics!;
+  const ws = s.words.filter((w) => w.line === line);
+  const gap = L.size * 0.35;
+  const rows: {w: number; h: number}[] = [{w: 0, h: 0}];
+  for (const w of ws) {
+    const b = wordBox(w, L);
+    const r = rows[rows.length - 1];
+    if (r.w > 0 && r.w + gap + b.width > L.width) rows.push({w: 0, h: 0});
+    const rr = rows[rows.length - 1];
+    rr.w += (rr.w ? gap : 0) + b.width;
+    rr.h = Math.max(rr.h, b.height * 0.68);           // ~ visible glyph height inside the padded texture
+  }
+  const W = Math.max(...rows.map((r) => r.w)), H = rows.reduce((a, r) => a + r.h, 0);
+  const rot = new THREE.Matrix4().makeRotationY((L.rotY * Math.PI) / 180);
+  const o = new THREE.Vector3(...L.anchor);
+  return [[-W / 2, H / 2], [W / 2, H / 2], [-W / 2, -H / 2], [W / 2, -H / 2]].map(([x, y]) =>
+    new THREE.Vector3(x, y, 0).applyMatrix4(rot).add(o));
+}
+
+export type TextFault = {shot: string; frame: number; line: number; text: string};
+
+/** Every frame a lyric line is fully shown (from its last word on, settled), all of it must be inside the frame. */
+export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
+  const aspect = props.width / props.height;
+  const out: TextFault[] = [];
+  for (const s of props.shots) {
+    if (!s.lyrics || s.lyrics.kind === 'ticker' || s.lyrics.kind === 'float') continue;   // tickers scroll, bubbles rise out
+    const lines = [...new Set(s.words.map((w) => w.line))];
+    for (const line of lines) {
+      const ws = s.words.filter((w) => w.line === line);
+      const next = s.words.find((w) => w.line > line);
+      const a = Math.max(...ws.map((w) => w.from)) + 6;
+      const z = Math.min(s.to, next ? next.from : Math.max(...ws.map((w) => w.to)) + props.fps);
+      const corners = lineCorners(s, line);
+      for (let f = a; f < z; f += 3) {
+        const cam = makeCamera(s, f, aspect, [], props.fps);
+        const bad = corners.some((c) => { const n = c.clone().project(cam); return n.z >= 1 || Math.abs(n.x) > 0.985 || Math.abs(n.y) > 0.985; });
+        if (bad) { out.push({shot: s.id, frame: f, line, text: ws.map((w) => w.w).join(' ')}); break; }
+      }
+    }
+  }
+  return out;
+}
