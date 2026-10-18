@@ -123,4 +123,18 @@ glass), and the payoff comes from her name, like Let's Get Weird. B is the most 
 and could become a set piece inside A or a later lore Short. Weiss ich nicht sicher: whether the aquarium feels too
 close to LGW's glass for toki - the boards show the difference.
 
-approved: <toki writes here: date + idea + notes>
+## Chosen: A + B mixed (toki 2026-10-18)
+toki's words (chat): "ich möchte a und b gemischt das lied ist ja eher schnell und dynamisch und etwas dunkler vom
+thema her ich weiß nicht ob rein a dazu so gut passt ich denke b ist eine gute ergänzung und sorgt für zusätzliche
+scenen / varianz". Her core: faster, darker, more scene variety than the aquarium alone - B adds a second face.
+One world with a day and a night side (so it stays ONE story, not a scene mix) - sketch for the treatment:
+- DAY = A: she is the aquarium's star exhibit, phones flash, she smiles on cue (verse 1, chorus 1).
+- THE BRIDGE: the gift shop prints her face on playing cards - the King of Spades ("pick-up" of verse / pre-chorus 2
+  = her merch). At night a deck sinks into her tank.
+- NIGHT = B: she is pulled into the card game and is only a picture on a card that gets played - the dark part
+  (one lamp, red-violet light, faster cuts); the stops ("YOU") and the house of cards collapsing live here.
+- FINALE: she turns the game - the spades come alive as rays and circle her as a crown; back in the dark tank only she
+  glows (灯闇) and she crowns herself.
+Open for the treatment: how the deck enters the tank on screen, where exactly day turns to night in the song map.
+
+approved: toki 2026-10-18 A+B mixed (day = A Star Exhibit, night = B King of Spades)
