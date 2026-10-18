@@ -102,6 +102,10 @@ export function framingReport(props: FilmProps): string[] {
         parts.push(`feet ${at(cam, new THREE.Vector3(0, 0, 0).applyMatrix4(m))}`);
       }
       if (s.lyrics) parts.push(`lyrics ${at(cam, new THREE.Vector3(...s.lyrics.anchor))}`);
+      for (const t of s.texts ?? []) {
+        const [w, h] = t.size;
+        parts.push(`${t.name} ${at(cam, new THREE.Vector3(t.center[0] - w / 2, t.center[1] + h / 2, t.center[2]))}..${at(cam, new THREE.Vector3(t.center[0] + w / 2, t.center[1] - h / 2, t.center[2]))}`);
+      }
       out.push(parts.join('  '));
     }
   }
@@ -199,6 +203,12 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
           const [a0, b0, a1, b1] = box(hp), [c0, d0, c1, d1] = box(tp);
           const inter = Math.max(0, Math.min(a1, c1) - Math.max(a0, c0)) * Math.max(0, Math.min(b1, d1) - Math.max(b0, d0));
           if (inter > 0.15 * (a1 - a0) * (b1 - b0)) { out.push({shot: s.id, frame: f, line, text: ws.map((x) => x.w).join(' '), why: 'covers her face'}); break; }
+          // the hero hidden behind her own text (pilot 2: a huge stamp over a tiny Raymi in a wide)
+          const fp = [[0, p.key.top], [1, p.key.top], [0, p.key.feet], [1, p.key.feet]].map(([u, v]) =>
+            new THREE.Vector3((u - 0.5) * w, (p.key.feet - v) * h, 0).applyMatrix4(m).project(cam));
+          const [e0, g0, e1, g1] = box(fp);
+          const fig = Math.max(0, Math.min(e1, c1) - Math.max(e0, c0)) * Math.max(0, Math.min(g1, d1) - Math.max(g0, d0));
+          if (fig > 0.33 * (e1 - e0) * (g1 - g0)) { out.push({shot: s.id, frame: f, line, text: ws.map((x) => x.w).join(' '), why: 'covers her figure'}); break; }
         }
       }
     }
@@ -233,7 +243,7 @@ export function faceCrops(props: FilmProps): {shot: string; frame: number}[] {
 }
 
 // ---------------------------------------------------------------- authoring aids: per-shot summary + camera fit
-export type ShotSummary = {shot: string; index: number; frames: number; cut: Record<string, number>; face: number; lyrics: string[]};
+export type ShotSummary = {shot: string; index: number; frames: number; cut: Record<string, number>; face: number; extra: string[]; lyrics: string[]};
 
 /** Every guard per shot, counted (not just the first fault): what an author needs to reframe a whole film. */
 export function shotSummary(props: FilmProps): ShotSummary[] {
@@ -248,7 +258,9 @@ export function shotSummary(props: FilmProps): ShotSummary[] {
       }
     }
     const face = faceCrops({...props, shots: [s]}).length;
-    return {shot: s.id, index, frames: s.to - s.from, cut, face, lyrics: text.filter((t) => t.shot === s.id).map((t) => {
+    const extra = [...setTextCuts({...props, shots: [s]}).map((x) => `"${x.text}" cut by the frame edge f${x.frame}`),
+      ...lensInside({...props, shots: [s]}).map((x) => `lens ${x.where} f${x.frame}`)];
+    return {shot: s.id, index, frames: s.to - s.from, cut, face, extra, lyrics: text.filter((t) => t.shot === s.id).map((t) => {
       const cam = makeCamera(s, t.frame, aspect, [], props.fps);
       const xy = lineCorners(s, t.line).map((v) => { const n = v.clone().project(cam); return n.z >= 1 ? 'behind' : `${((n.x + 1) / 2).toFixed(2)},${((1 - n.y) / 2).toFixed(2)}`; });
       return `"${t.text}" ${t.why} f${t.frame} corners ${xy.join(' ')}`;
@@ -259,7 +271,8 @@ export function shotSummary(props: FilmProps): ShotSummary[] {
 function shotPasses(props: FilmProps, s: Shot): boolean {
   const aspect = props.width / props.height;
   for (let f = s.from; f < s.to; f++) if (visibleCutEdges(s, f, aspect, props.hits, props.fps).length) return false;
-  return faceCrops({...props, shots: [s]}).length === 0 && lyricsOutOfFrame({...props, shots: [s]}).length === 0;
+  const one = {...props, shots: [s]};
+  return faceCrops(one).length === 0 && lyricsOutOfFrame(one).length === 0 && setTextCuts(one).length === 0 && lensInside(one).length === 0;
 }
 
 /** The smallest change to a shot's camera that passes every guard: the lens is kept, the frame tightens (fov) and the
@@ -322,4 +335,42 @@ export function fitLyrics(props: FilmProps, index: number): {anchor: V3; size: n
     }
   }
   return null;
+}
+
+// ---------------------------------------------------------------- the set's own text and the lens's place (pilot 2)
+/** A readable set prop (a sign, the LED board, a plate) half cut by the frame edge reads as a fault: fully in or out. */
+export function setTextCuts(props: FilmProps): {shot: string; frame: number; text: string}[] {
+  const aspect = props.width / props.height;
+  const out: {shot: string; frame: number; text: string}[] = [];
+  for (const s of props.shots) {
+    for (const t of s.texts ?? []) {
+      const r = new THREE.Matrix4().makeRotationY((t.rot * Math.PI) / 180);
+      const [w, h] = t.size;
+      const pts = [[-w / 2, -h / 2], [w / 2, -h / 2], [-w / 2, h / 2], [w / 2, h / 2], [0, 0]].map(([x, y]) =>
+        new THREE.Vector3(x, y, 0).applyMatrix4(r).add(new THREE.Vector3(...t.center)));
+      // passing the edge during a camera move is fine; a sign that STAYS cut for 0.4 s reads as a fault
+      let run = 0;
+      for (let f = s.from; f < s.to; f++) {
+        const cam = makeCamera(s, f, aspect, props.hits, props.fps);
+        const inside = pts.map((q) => { const n = q.clone().project(cam); return n.z < 1 && n.z > -1 && Math.abs(n.x) <= 1 && Math.abs(n.y) <= 1; });
+        run = inside.some((x) => x) && inside.some((x) => !x) ? run + 1 : 0;
+        if (run >= Math.round(props.fps * 0.4) || (run > 0 && f === s.to - 1 && run === s.to - s.from)) { out.push({shot: s.id, frame: f - run + 1, text: t.name}); break; }
+      }
+    }
+  }
+  return out;
+}
+
+/** The lens inside a place no camera can be (above the water surface, under the sand) - the picture turns to glitch. */
+export function lensInside(props: FilmProps): {shot: string; frame: number; where: string}[] {
+  const aspect = props.width / props.height;
+  const out: {shot: string; frame: number; where: string}[] = [];
+  for (const s of props.shots) {
+    for (let f = s.from; f < s.to; f += 2) {
+      const p = makeCamera(s, f, aspect, props.hits, props.fps).position;
+      const box = (s.noLens ?? []).find((b) => p.x > b.min[0] && p.x < b.max[0] && p.y > b.min[1] && p.y < b.max[1] && p.z > b.min[2] && p.z < b.max[2]);
+      if (box) { out.push({shot: s.id, frame: f, where: box.name}); break; }
+    }
+  }
+  return out;
 }

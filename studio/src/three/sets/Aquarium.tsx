@@ -18,7 +18,7 @@ import type {SetProps} from './index';
 const SAND = '#c9a9d6', ROCK = '#5b4a8c', ROCK2 = '#3f3577', KELP = '#2f8f86', KELP2 = '#1f6f78';
 const HALL = '#191233', PEOPLE = '#231b4a', FRAME = '#2a1f45';
 
-export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats}) => {
+export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats, camPos}) => {
   const dim = Number(opts.dim ?? 0);
   const crowd = Number(opts.crowd ?? 14);
   const flashes = opts.flashes !== false;
@@ -100,7 +100,8 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats}) => {
       {/* the water surface seen from below + the tank's side walls (a low camera never looks into a void) */}
       <mesh position={[0, 4.3, -1.3]} rotation={[Math.PI / 2, 0, 0]}>
         <planeGeometry args={[11, 6.2]} />
-        <meshBasicMaterial map={surface} color={new THREE.Color(1, 1, 1).multiplyScalar(1 - 0.85 * dim)} toneMapped={false} side={THREE.DoubleSide} />
+        {/* seen from BELOW only: a lens above the open tank looks clean through the water (pilot 2 looked blurred) */}
+        <meshBasicMaterial map={surface} color={new THREE.Color(1, 1, 1).multiplyScalar(1 - 0.85 * dim)} toneMapped={false} side={THREE.FrontSide} />
       </mesh>
       {[-5.35, 5.35].map((x) => <RBox key={x} size={[0.3, 4.6, 6.2]} pos={[x, 2.1, -1.3]} r={0.05} c="#2a2357" cast={false} />)}
       {[[-4.2, 0.6, -3.6, 1.6, 1.4, 1.1, 1], [-2.6, 0.4, -3.9, 1.3, 1.0, 0.9, 2], [3.6, 0.7, -3.6, 1.7, 1.6, 1.2, 3], [1.4, 0.35, -3.9, 1.2, 0.8, 0.8, 4],
@@ -177,6 +178,8 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats}) => {
         const pr = presence(i);
         if (pr === 0 || pr <= -1) return null;
         const row = i % 2, x = -5 + ((i * 0.83 + rnd(i) * 0.6) % 10), z = 3.2 + row * 1.1 + rnd(i + 5) * 0.5;
+        // the cameraman's space: nobody stands within 1.8 m of the lens (pilot 2: blobs filled the frame)
+        if (camPos && Math.hypot(x - camPos[0], z - camPos[2]) < 1.8) return null;
         const away = pr < 0 ? -pr : 1 - pr;                  // walks back into the dark hall
         const phone = opts.phones_up ? 1 : rnd(i + 2) < 0.6 ? 1 : 0;
         return <Visitor key={i} pos={[x + away * (x > 0 ? 1.5 : -1.5), -0.9, z + away * 4]} h={1.55 + rnd(i + 9) * 0.3} c={PEOPLE} seed={i} f={f}

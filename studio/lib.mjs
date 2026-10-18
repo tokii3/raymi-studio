@@ -44,10 +44,11 @@ export async function guardCutEdges(props, range) {
   const out = path.join(os.tmpdir(), `raymi-check-${process.pid}.mjs`);
   await build({entryPoints: [path.join(here, 'src/film/check.ts')], bundle: true, format: 'esm', platform: 'node',
     outfile: out, logLevel: 'error'});
-  const {checkFilm, lyricsOutOfFrame, faceCrops} = await import(pathToFileURL(out).href);
+  const {checkFilm, lyricsOutOfFrame, faceCrops, setTextCuts, lensInside} = await import(pathToFileURL(out).href);
   const faults = checkFilm(props, range);
   const faces = faceCrops(props);
   const text = lyricsOutOfFrame(props);
+  const signs = setTextCuts(props), lens = lensInside(props);
   fs.rmSync(out, {force: true});
   if (faults.length) {
     const first = faults.slice(0, 8).map((x) => `${x.shot} f${x.frame} ${x.side} (${x.sprite})`).join('; ');
@@ -56,11 +57,17 @@ export async function guardCutEdges(props, range) {
   if (faces.length) {
     throw new Error(`REFUSED: her face would be sliced by the frame edge: ${faces.map((x) => `${x.shot} f${x.frame}`).join('; ')} - frame her face fully in or fully out`);
   }
+  if (lens.length) {
+    throw new Error(`REFUSED: the lens would be in a place no camera can be: ${lens.map((x) => `${x.shot} f${x.frame} ${x.where}`).join('; ')}`);
+  }
+  if (signs.length) {
+    throw new Error(`REFUSED: a readable set prop would be cut by the frame edge: ${signs.map((x) => `${x.shot} f${x.frame} ${x.text}`).join('; ')} - frame it fully in or fully out`);
+  }
   if (text.length) {
     const first = text.map((x) => `${x.shot} f${x.frame} "${x.text}" ${x.why}`).join('; ');
     throw new Error(`REFUSED: lyrics problem: ${first} - move the anchor / smaller size, or lyrics.over with a reason (PRINCIPLES C)`);
   }
-  console.log('guards: cut edges ok, face never sliced, lyrics inside the frame and off her face ok');
+  console.log('guards: cut edges ok, face never sliced, lyrics inside the frame and off her face ok, set texts whole, lens in a real place');
 }
 
 export async function bundleStudio(pub) {

@@ -487,7 +487,12 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                       "lyrics": L, "words": words,
                       "transition": {"kind": tr.get("kind", "cut"), "frames": int(tr.get("frames", 0)),
                                      **({"obj": tr["obj"]} if "obj" in tr else {}), **({"dir": tr["dir"]} if "dir" in tr else {})},
-                      "events": []})
+                      "events": [],
+                      # readable set props (guard: never cut by the frame edge) + places the lens may never be
+                      "texts": [{k: v for k, v in tx.items() if k not in ("opt", "unless", "blank")} for tx in sets[st].get("texts", [])
+                                if (not tx.get("opt") or opts.get(tx["opt"])) and opts.get(tx.get("unless", ""), True) is not False
+                                and not (tx.get("blank") and opts.get(tx["blank"]) == "")],
+                      "noLens": sets[st].get("no_lens", [])})
     if shots and shots[0]["from"] != 0:
         errors.append(f"the first shot must start at the window start ({t_from:.2f} s)")
     if cmap is None:

@@ -33,9 +33,9 @@ if (aid) {
     let bad = 0;
     for (const s of shotSummary(props)) {
       const cut = Object.entries(s.cut);
-      if (!cut.length && !s.face && !s.lyrics.length) continue;
+      if (!cut.length && !s.face && !s.lyrics.length && !s.extra.length) continue;
       bad++;
-      console.log(`#${s.index} ${s.shot} (${s.frames} f)  ${cut.map(([k, n]) => `${k} ${n}f`).join(', ')}${s.face ? '  FACE sliced' : ''}${s.lyrics.length ? `  LYRICS ${s.lyrics.join(' | ')}` : ''}`);
+      console.log(`#${s.index} ${s.shot} (${s.frames} f)  ${cut.map(([k, n]) => `${k} ${n}f`).join(', ')}${s.face ? '  FACE sliced' : ''}${s.extra.length ? `  SET ${s.extra.join(' | ')}` : ''}${s.lyrics.length ? `  LYRICS ${s.lyrics.join(' | ')}` : ''}`);
     }
     console.log(`${bad} of ${props.shots.length} shots fail a guard`);
   } else if (flag('--fit-lyrics') > 0) {

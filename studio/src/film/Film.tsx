@@ -85,7 +85,7 @@ export const Film: React.FC<FilmProps> = (props) => {
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>
             <CameraRig cam={cam} />
-            {Set ? <Set f={f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} /> : null}
+            {Set ? <Set f={f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} /> : null}
             <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
               glow={shot.opts.glow ? String(shot.opts.glow) : undefined} />
             {crownAt ? (

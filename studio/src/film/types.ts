@@ -63,6 +63,8 @@ export type Shot = {
   words: Word3[];
   transition: Transition;  // into the NEXT shot
   events: SetEvent[];
+  texts?: {name: string; center: V3; size: [number, number]; rot: number}[];   // readable props: never cut by the frame
+  noLens?: {name: string; min: V3; max: V3}[];                                // the camera may never be inside these
 };
 
 export type FilmProps = {

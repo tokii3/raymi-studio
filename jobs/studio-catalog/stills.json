@@ -1,12 +1,1 @@
-{
- "format": "mv",
- "frames": [
-  1377
- ],
- "names": [
-  "aquarium_sand_bury"
- ],
- "scale": 0.5,
- "to": "catalog",
- "round": 7
-}
+{"format":"mv","frames":[267],"names":["lyrics_screen"],"scale":0.5,"to":"catalog","round":8}

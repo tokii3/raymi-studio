@@ -28,16 +28,7 @@ function wordTexture(w: string, color: string, outline: string, card: boolean, m
       ctx.strokeStyle = '#c9b78f'; ctx.lineWidth = 5;
       ctx.beginPath(); ctx.roundRect(18, 18, W - 36, H - 36, 24); ctx.stroke();
     }
-    if (screen) {                                 // a phone's camera UI: dark caption bar, REC dot, corner brackets
-      ctx.fillStyle = 'rgba(8,6,18,0.78)';
-      ctx.beginPath(); ctx.roundRect(4, 4, W - 8, H - 8, 26); ctx.fill();
-      ctx.fillStyle = '#ff3b4e';
-      ctx.beginPath(); ctx.arc(46, 46, 16, 0, Math.PI * 2); ctx.fill();
-      ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 6;
-      for (const [x, y, dx, dy] of [[20, 20, 1, 1], [W - 20, 20, -1, 1], [20, H - 20, 1, -1], [W - 20, H - 20, -1, -1]]) {
-        ctx.beginPath(); ctx.moveTo(x, y + dy * 34); ctx.lineTo(x, y); ctx.lineTo(x + dx * 34, y); ctx.stroke();
-      }
-    }
+    // screen: the caption bar is ONE panel behind the whole line (ScreenPanel) - per-word boxes overlapped (pilot 2)
     ctx.font = `${PX}px Raymi`;
     ctx.textBaseline = 'middle';
     ctx.textAlign = 'center';
@@ -164,8 +155,22 @@ export const Words3D: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: numbe
   if (out <= 0) return null;
   let tickerX = 0;
   if (L.kind === 'ticker') tickerX = -((f - lineWords[0].from) / fps) * L.size * 0.9;
+  let panel: React.ReactNode = null;
+  if (L.material === 'screen') {                          // a phone's camera UI behind the line: dark bar, REC, corners
+    const shown = placed.filter((p) => p.w.from <= f);
+    const xs = shown.flatMap((p) => { const h = p.size * p.tex.hScale; return [p.x - (h * p.tex.aspect) / 2, p.x + (h * p.tex.aspect) / 2]; });
+    const ys = shown.flatMap((p) => { const h = p.size * p.tex.hScale; return [p.y - h / 2, p.y + h / 2]; });
+    const w = Math.max(...xs) - Math.min(...xs), h = Math.max(...ys) - Math.min(...ys);
+    panel = (
+      <mesh position={[(Math.max(...xs) + Math.min(...xs)) / 2, (Math.max(...ys) + Math.min(...ys)) / 2, -0.002]} scale={[w * 1.06, h * 1.1, 1]} renderOrder={5}>
+        <planeGeometry args={[1, 1]} />
+        <meshBasicMaterial map={screenPanel()} transparent opacity={out} depthWrite={false} toneMapped={false} />
+      </mesh>
+    );
+  }
   return (
     <group position={[L.anchor[0], L.anchor[1], L.anchor[2]]} rotation={[0, (L.rotY * Math.PI) / 180, 0]}>
+      {panel}
       <group position={[tickerX, 0, 0]}>
         {placed.filter((p) => p.w.from <= f).map((p) => (
           <WordMesh key={`${p.w.line}-${p.w.idx}`} p={p} L={L} f={f} fps={fps} out={out} card={card} />
@@ -174,3 +179,16 @@ export const Words3D: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: numbe
     </group>
   );
 };
+
+function screenPanel(): THREE.CanvasTexture {
+  return canvasTexture('screen_panel', 512, 192, (ctx, W, H) => {
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = 'rgba(8,6,18,0.8)';
+    ctx.beginPath(); ctx.roundRect(2, 2, W - 4, H - 4, 22); ctx.fill();
+    ctx.fillStyle = '#ff3b4e'; ctx.beginPath(); ctx.arc(26, 26, 9, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 4;
+    for (const [x, y, dx, dy] of [[12, 12, 1, 1], [W - 12, 12, -1, 1], [12, H - 12, 1, -1], [W - 12, H - 12, -1, -1]]) {
+      ctx.beginPath(); ctx.moveTo(x, y + dy * 22); ctx.lineTo(x, y); ctx.lineTo(x + dx * 22, y); ctx.stroke();
+    }
+  });
+}

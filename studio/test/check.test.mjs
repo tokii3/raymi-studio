@@ -91,3 +91,17 @@ test('face guard: a head sliced by the frame edge is refused, fully in frame pas
   assert.equal(faceCrops(mk(0)).length, 0);
   assert.ok(faceCrops(mk(1.75)).length > 0);
 });
+
+test('set text guard: a sign held half out of frame is refused, fully in passes; lens guard: no camera under the sand', async () => {
+  const o6 = out.replace('.mjs', '-t.mjs');
+  await build({entryPoints: [path.join(here, '../src/film/check.ts')], bundle: true, format: 'esm', platform: 'node', outfile: o6, logLevel: 'error'});
+  const {setTextCuts, lensInside} = await import(pathToFileURL(o6).href);
+  const mk = (x, camY = 1) => ({width: 1920, height: 1080, fps: 30, durationInFrames: 30, hits: [], shots: [{id: 's', from: 0, to: 30,
+    camera: [{f: 0, pos: [0, camY, 6], look: [0, 1, 0], fov: 35}], kick: 0, puppets: [],
+    texts: [{name: 'sign', center: [x, 1, 0], size: [1, 0.5], rot: 0}],
+    noLens: [{name: 'under the sand', min: [-9, -9, -9], max: [9, 0, 9]}]}]});
+  assert.equal(setTextCuts(mk(0)).length, 0);
+  assert.ok(setTextCuts(mk(3.35)).length > 0);
+  assert.equal(lensInside(mk(0)).length, 0);
+  assert.ok(lensInside(mk(0, -0.5)).length > 0);
+});
