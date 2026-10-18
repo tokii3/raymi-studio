@@ -44,6 +44,14 @@ Verdicts are toki's words (old engine VIDEO_LEARNINGS / PROGRESS / catalog). Exe
 - **KICK BACK (2026-10-16/17):** "gefaellt mir schon ganz gut, mir gefaellt wie raymi sich bewegt" - laundromat built
   in Blender; faults: frozen things behind glass, 7.7 s silence at the end, sprite holes cut by the engine.
 
+- **KING (2026-10-18/19, first raymi-studio film):** toki on the pilot: "fehler sehe ich keine" (camera, lyrics, effects)
+  - asked only for a real crown and a deeper grade; approved the final MV and Short as they are. Every critic
+  (blind viewer + 6 craft) still said FAIL on the final - the roots they named are studio / script work, not guards:
+  a placeholder-looking crowd, Raymi tiny / still in hall wides, primitive props next to her painting, story beats too
+  short to read muted, flat outlined lyrics. Lesson: the guards killed every mechanical fault class (cut edges, clipped
+  text, props in the lens, a sliced face) for good; the critics and toki judge the art differently - toki's verdict wins,
+  the critics' structural notes go to the next look pass (BACKLOG).
+
 ## Failed - and the root
 - **K/DA MORE v1 (2026-10-09):** "Raymi-Slideshow aus PowerPoint, bodenlos". Pretty 3D plates as stills + 2D zoom,
   even cuts, lyrics standing on top, no pilot. Every gate passed. v2 fixed it with a story of actions (one fan ->

@@ -1,6 +1,7 @@
 # Upload package - KING (MV + Short)
 
 approved: toki 2026-10-19 final MV (render run 18) as is - "Ich habe das MV gesehen, es passt so."
+approved: toki 2026-10-19 Short (render run 19) as is - "Der Short passt so, ich lade beides hoch."
 
 ## Files (toki uploads)
 | what | file | release |
@@ -9,7 +10,7 @@ approved: toki 2026-10-19 final MV (render run 18) as is - "Ich habe das MV gese
 | Short 9:16, 15.9 s, 1080x1920, QC PASS | final.mp4 | https://github.com/tokii3/raymi-studio/releases/tag/render-2026-10-18_king-19 |
 QC notes: MV QC flags 1.4 s of frozen picture at 1:53 - the planned total black after the bulb pops (music stop 3).
 Screening: all reviews in reviews/final_*.md (MV final 2: all 7 critics FAIL, toki approved it as is; Short round 2:
-blind viewer FAIL - waiting for toki's call).
+blind viewer FAIL, toki approved it as is).
 
 Research (canon/12 step 0, YouTube autocomplete, 2026-10-18): people type "king kanaria", "king kanaria lyrics",
 "king kanaria animation / animatic / anime", "king gumi", "king vocaloid". Nobody types a channel term. Original:

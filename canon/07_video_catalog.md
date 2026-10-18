@@ -5,6 +5,8 @@ Die alte Engine hat diese Datei automatisch gepflegt; in raymi-studio traegt Cla
 
 | Datum | Format | Titel | Worum es geht | Status |
 |---|---|---|---|---|
+| 2026-10-19 | mv | KING - Kanaria feat. GUMI (Fan Animation ft. Raymi) | first raymi-studio film (built 3D sets, one timeline): by day the star exhibit of an aquarium, crowned by phones; at closing she taps her own souvenir deck into the tank and shrinks into her King card; at night a work lamp plays whatever its light covers, she builds, falls, shoots a coin into the lamp; in the black her dots wake the spades as rays, she grows back and crowns herself with her bottle cap | an toki uebergeben (toki laedt hoch) |
+| 2026-10-19 | shorts | KING but you are the king | 15.9 s cut from the MV (49.57-65.45): hook "they film me all day. watch this.", the chorus as poses for the phones, CTA "king of what?" | an toki uebergeben (toki laedt hoch) |
 | 2026-10-10 | music_video | Know My Name - True Damage / Fan Animation (League of Legends / LOL Worlds 2026 Anthem) | nachgetragen 2026-10-14 (fehlte im Log) | hochgeladen |
 | 2026-10-10 | shorts | True Damage - Know My Name (League of Legends Worlds 2026) - but nobody knew MY name | nachgetragen 2026-10-14 (fehlte im Log) | hochgeladen |
 | 2026-10-09 | shorts | K/DA MORE but my fans are jellyfish | v2 (v1 was a 'slideshow' - toki): 18 s loop, story of actions: she points at you 'you want?' -> the jellyfish fans form MORE (card stunt) -> she throws one to the salmon -> they follow her -> they double and carry her away -> CTA 'what's YOUR more?' / close-ups native 9:16, wides follow her / precheck + board review + comp_qc PASS | produziert |
