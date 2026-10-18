@@ -1,0 +1,30 @@
+{
+ "_why": "Lyrics v2: every Japanese line shows romaji + English under it (toki 2026-10-19). Keyed by the line text of lyrics_timed.json. English = our own loose, safe translation (no official text copied; risky words softened: line 21's censored word stays censored). romaji = clean reading for singing along (no macrons: long vowels doubled).",
+ "lines": {
+  "幽閉 利口 逝く前に": {"roma": "yuuhei rikou iku mae ni", "en": "Locked up, so clever, before I go"},
+  "ユーヘイじゃ利口に難儀ダーリン": {"roma": "yuuhei ja rikou ni nangi daarin", "en": "Locked up, it's hard to be clever, darling"},
+  "幽閉 ストップ 知ってないし": {"roma": "yuuhei sutoppu shitte naishi", "en": "Locked up, stop - I don't even know"},
+  "勘弁にしといてなんて惨忍": {"roma": "kanben ni shitoite nante zannin", "en": "\"Go easy on me\" - how cruel"},
+  "人様願う欠片のアイロニ": {"roma": "hitosama negau kakera no aironi", "en": "Wishing on others: a shard of irony"},
+  "だれもが願う無機質なような": {"roma": "daremo ga negau mukishitsu na you na", "en": "What everyone wishes for, a little hollow"},
+  "一足先に始めてたいような": {"roma": "hitoashi saki ni hajimetetai you na", "en": "I kind of want to start one step ahead"},
+  "先が見えないヴァージンハッピーショー": {"roma": "saki ga mienai vaajin happii shoo", "en": "A brand-new happy show - can't see what's next"},
+  "無いの新たにお願い1つ": {"roma": "nai no arata ni onegai hitotsu", "en": "Nothing left - one more new wish"},
+  "愛も変わらずおまけにワーニング ワーニング": {"roma": "ai mo kawarazu omake ni waaningu waaningu", "en": "Love as always, and a warning, warning"},
+  "無いのあなたにお願い1つ": {"roma": "nai no anata ni onegai hitotsu", "en": "Nothing left - one wish for you"},
+  "張り詰めた思い込め": {"roma": "haritsumeta omoi kome", "en": "Put all that tension into it"},
+  "レフトサイド ライトサイド": {"roma": "refuto saido raito saido", "en": "Left side, right side"},
+  "レフトサイド　ライトサイド": {"roma": "refuto saido raito saido", "en": "Left side, right side"},
+  "歯をむき出して パッパッパ": {"roma": "ha wo mukidashite pappappa", "en": "Show your teeth, pa-pa-pa"},
+  "照れくさいね": {"roma": "terekusai ne", "en": "Kind of embarrassing, huh"},
+  "歯を突き出して パッパッパッハハ": {"roma": "ha wo tsukidashite pappappa haha", "en": "Teeth out, pa-pa-pa-haha"},
+  "無邪気に遊ぶ 期待期待のダーリン": {"roma": "mujaki ni asobu kitai kitai no daarin", "en": "Playing so innocent, my long-awaited darling"},
+  "健気に笑う 痛い痛いの消える": {"roma": "kenage ni warau itai itai no kieru", "en": "Smiling bravely, the hurt goes away"},
+  "無様に〇ねる 苦い思いも無くなって": {"roma": "buzama ni ...neru nigai omoi mo nakunatte", "en": "Fall flat, and the bitter feelings fade too"},
+  "ラララブウ ラッタッタ": {"roma": "ra ra rabuu rattatta", "en": "La-la-love, rat-tat-ta"},
+  "嫌い嫌いの最低泣いてダウン": {"roma": "kirai kirai no saitei naite daun", "en": "Hate it, hate it, the worst - crying, down"},
+  "毎度新たにお願い1つ": {"roma": "maido arata ni onegai hitotsu", "en": "Every time, one more new wish"},
+  "愛も変わらずピックアップのワーニング ワーニング": {"roma": "ai mo kawarazu pikkuappu no waaningu waaningu", "en": "Love as always, a pick-up warning, warning"},
+  "邪魔くさいね": {"roma": "jamakusai ne", "en": "Kind of a pain, huh"}
+ }
+}

@@ -22,6 +22,11 @@ export function buildPublic(jobDir, props) {
   fs.mkdirSync(path.join(pub, 'sprites'), {recursive: true});
   fs.mkdirSync(path.join(pub, 'fonts'), {recursive: true});
   fs.copyFileSync(path.join(repo, 'assets/fonts/Raymi-Regular.ttf'), path.join(pub, 'fonts/Raymi-Regular.ttf'));
+  if (props.heavy) {          // lyrics v2 in her heavy weight: built in the cloud (python -m raymi font heavy) - no fallback
+    const hv = path.join(repo, 'assets/fonts/Raymi-Heavy.ttf');
+    if (!fs.existsSync(hv)) throw new Error('Raymi-Heavy.ttf missing - run python -m raymi font heavy (never a fallback font)');
+    fs.copyFileSync(hv, path.join(pub, 'fonts/Raymi-Heavy.ttf'));
+  }
   const sprites = props.sprites ?? props.beats.map((b) => b.sprite);
   for (const s of sprites) {
     const src = path.join(repo, 'assets', s);

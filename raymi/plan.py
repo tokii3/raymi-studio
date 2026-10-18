@@ -42,9 +42,31 @@ def font_cmap() -> set[int]:
 _ADV: dict | None = None
 
 
-def text_em(text: str) -> float | None:
-    """Exact advance width of `text` in her font, in em (the guards measure words with this, never a guess)."""
-    global _ADV
+_ADV_HEAVY: dict | None = None
+
+
+def text_em(text: str, heavy: bool = False) -> float | None:
+    """Exact advance width of `text` in her font, in em (the guards measure words with this, never a guess).
+    heavy = her heavy weight (lyrics v2): its own widths once built, else Regular + the growth it will get."""
+    global _ADV, _ADV_HEAVY
+    if heavy:
+        from .font import HEAVY, HEAVY_R
+
+        if _ADV_HEAVY is None:
+            if HEAVY.is_file():
+                from fontTools.ttLib import TTFont
+
+                f = TTFont(str(HEAVY))
+                upm = f["head"].unitsPerEm
+                hm, cmap = f["hmtx"].metrics, f.getBestCmap()
+                _ADV_HEAVY = {cp: hm[g][0] / upm for cp, g in cmap.items() if g in hm}
+            else:
+                _ADV_HEAVY = {}
+        try:
+            return round(sum(_ADV_HEAVY[ord(c)] for c in text), 4)
+        except KeyError:
+            base = text_em(text)
+            return None if base is None else round(base + 2 * HEAVY_R / 1000 * sum(1 for c in text if not c.isspace()), 4)
     if _ADV is None:
         from fontTools.ttLib import TTFont
 

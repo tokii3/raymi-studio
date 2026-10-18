@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import {cameraAt, fovFor, planeSize, puppetAt} from './motion';
 import type {FilmProps, PuppetKey, Shot, V3} from './types';
 import type {Pose} from './motion';
+import {SUB, blockLayout, blockRotation, subOf} from './lyricLayout';
 
 export function makeCamera(shot: Shot, f: number, aspect: number, hits: number[], fps: number): THREE.PerspectiveCamera {
   const c = cameraAt(shot.camera, f, hits, shot.kick, fps);
@@ -143,9 +144,28 @@ export function wordBox(w: {w: string; key: boolean; em?: number | null}, L: {si
   return {width, height: size * hScale};
 }
 
-/** Settled corners of a lyric line block (same wrapping as Words3D.layout), in world space. */
+/** Lyrics v2: the block's items (main line + romaji + English) with the exact widths timeline.py measured. */
+export function v2Items(s: Shot, line: number) {
+  const L = s.lyrics!;
+  const ws = s.words.filter((w) => w.line === line);
+  const sub = subOf(L, line);
+  const est = (t: string) => [...t].reduce((a, c) => a + em(c), 0);
+  return blockLayout(ws, sub, L, (t, kind, idx) => (kind === 'main' ? ws.find((w) => w.idx === idx)?.em
+    : kind === 'roma' ? sub?.romaEm?.[idx] : sub?.enEm?.[idx]) ?? est(t));
+}
+
+/** Settled corners of a lyric line block (same wrapping as Words3D), in world space. */
 export function lineCorners(s: Shot, line: number): THREE.Vector3[] {
   const L = s.lyrics!;
+  if (L.style === 'v2') {
+    const it = v2Items(s, line);
+    const x0 = Math.min(...it.map((i) => i.x - i.w / 2)), x1 = Math.max(...it.map((i) => i.x + i.w / 2));
+    const y0 = Math.min(...it.map((i) => i.y - i.h / 2)), y1 = Math.max(...it.map((i) => i.y + i.h / 2));
+    const m = 1.06;                                   // a sung word swells up to 12 % around its own centre
+    const rot = new THREE.Matrix4().makeRotationFromEuler(blockRotation(L));
+    const o = new THREE.Vector3(...L.anchor);
+    return [[x0, y1], [x1, y1], [x0, y0], [x1, y0]].map(([x, y]) => new THREE.Vector3(x * m, y * m, 0).applyMatrix4(rot).add(o));
+  }
   const ws = s.words.filter((w) => w.line === line);
   const gap = L.size * 0.35;
   const rows: {w: number; h: number}[] = [{w: 0, h: 0}];
@@ -188,15 +208,27 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
       const a = Math.max(Math.min(...ws.map((w) => w.from)), Math.min(last + 6, z - 1));
       const zz = float ? Math.min(z, a + 18) : z;
       const corners0 = lineCorners(s, line);
-      // readable at phone size: a normal word at least 4.4 % of the frame height (48 px in 1080p, 85 px in the 1920 Short) (final Short 1: tiny captions)
-      {
+      // readable at phone size (a principle with a default, PRINCIPLES 11): v1 a normal word >= 4.4 % of the frame height;
+      // v2 (toki 2026-10-19 "oft zu klein") >= 7 % and its romaji / English >= 4.4 %. lyrics.small = a written reason
+      // to go smaller on purpose (a whisper, a detail in a wide) - then the guard trusts the script.
+      if (!L0(s).small) {
         const cam0 = makeCamera(s, a, aspect, props.hits, props.fps);
         const anc = new THREE.Vector3(...L0(s).anchor);
-        const tex = L0(s).size * (ws.every((w) => w.key) ? 2.2 : 1) * (1.35 / 0.72);
-        const up = new THREE.Vector3(0, 1, 0).applyQuaternion(cam0.quaternion);
-        const p0 = anc.clone().addScaledVector(up, -tex / 2).project(cam0), p1 = anc.clone().addScaledVector(up, tex / 2).project(cam0);
-        const px = (Math.abs(p1.y - p0.y) / 2) * props.height;
-        if (p0.z < 1 && p1.z < 1 && px < 0.044 * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `too small to read (${Math.round(px)} px)`}); continue; }
+        const v2 = L0(s).style === 'v2';
+        const up = v2 ? new THREE.Vector3(0, 1, 0).applyEuler(blockRotation(L0(s))) : new THREE.Vector3(0, 1, 0).applyQuaternion(cam0.quaternion);
+        const px = (size: number) => {
+          const tex = size * (1.35 / 0.72);
+          const p0 = anc.clone().addScaledVector(up, -tex / 2).project(cam0), p1 = anc.clone().addScaledVector(up, tex / 2).project(cam0);
+          if (p0.z >= 1 || p1.z >= 1) return Infinity;
+          return v2 ? Math.hypot(((p1.x - p0.x) / 2) * props.width, ((p1.y - p0.y) / 2) * props.height) : (Math.abs(p1.y - p0.y) / 2) * props.height;
+        };
+        const base = L0(s).size * (ws.every((w) => w.key) ? (v2 ? (L0(s).keyScale ?? 2.8) : 2.2) : 1);
+        const main = px(base);
+        if (main < (v2 ? 0.07 : 0.044) * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `too small to read (${Math.round(main)} px)`}); continue; }
+        if (v2 && subOf(L0(s), line)) {
+          const sp = px(L0(s).size * SUB);
+          if (sp < 0.044 * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `romaji / English too small to read (${Math.round(sp)} px)`}); continue; }
+        }
       }
       // a stamp slams in bigger than it lands: 2 frames after the last word it is still ~1.2x (final Short 1: clipped)
       if (s.lyrics.kind === 'stamp' || s.lyrics.kind === 'sign') {

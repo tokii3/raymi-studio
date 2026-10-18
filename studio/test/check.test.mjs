@@ -117,3 +117,22 @@ test('solid guard: the lens inside a prop and her face hidden behind one are ref
   assert.ok(solidFaults(mk([0, 1.4, 3])).length > 0);          // in front of her face
   assert.ok(solidFaults(mk([0, 1.3, 6])).length > 0);          // the lens inside it
 });
+
+test('lyrics v2: a small line is refused at phone size, its subs too - unless the script writes why', async () => {
+  const o5 = out.replace('.mjs', '-v2.mjs');
+  await build({entryPoints: [path.join(here, '../src/film/check.ts')], bundle: true, format: 'esm', platform: 'node', outfile: o5, logLevel: 'error'});
+  const {lyricsOutOfFrame, lineCorners} = await import(pathToFileURL(o5).href);
+  const mk = (size, extra = {}) => ({width: 1920, height: 1080, fps: 30, durationInFrames: 60, hits: [], shots: [{id: 's', from: 0, to: 60,
+    camera: [{f: 0, pos: [0, 1, 6], look: [0, 1, 0], fov: 35}], kick: 0, puppets: [],
+    lyrics: {kind: 'sign', anchor: [0, 1, 0], rotY: 0, size, width: 4, color: '#fff', accent: '#fc0', outline: '#000', lit: true, style: 'v2',
+      subs: {0: {roma: 'ha wo mukidashite', en: 'Show your teeth', romaEm: [0.9, 1.2, 4.5], enEm: [2.4, 2.1, 3.6]}}, ...extra},
+    words: [{w: '歯を', from: 0, to: 10, key: false, line: 0, idx: 0, em: 2.1}, {w: 'むき出して', from: 10, to: 30, key: true, line: 0, idx: 1, em: 5.2}]}]});
+  const why = (p) => lyricsOutOfFrame(p).map((x) => x.why);
+  assert.ok(why(mk(0.12)).some((w) => w.startsWith('too small')));             // v1's 4.4 % would pass this, v2 wants 7 %
+  assert.ok(why(mk(0.145)).some((w) => w.startsWith('romaji / English too small')));
+  assert.deepEqual(why(mk(0.26)), []);
+  assert.deepEqual(why(mk(0.12, {small: 'a whisper in the far wide, read in the next close-up'})), []);
+  // the block lies on a floor: its corners leave the vertical plane
+  const flat = lineCorners(mk(0.26, {tilt: -90}).shots[0], 0);
+  assert.ok(flat.every((c) => Math.abs(c.y - 1) < 1e-6) && Math.abs(flat[0].z - flat[2].z) > 0.3);
+});

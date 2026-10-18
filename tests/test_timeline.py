@@ -130,3 +130,63 @@ def test_a_four_side_cut_bust_cannot_be_framed_in_16_9(tmp_path):
             "raymi": [{"at": 0, "sprite": "MS_F_HAPPY_UV_005", "pos": "center"}]}
     _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot]), "mv", cmap=ALL)
     assert any("choose a clean sprite" in e for e in errors)
+
+
+# ---------------------------------------------------------------- lyrics v2, look step (acts), heroes
+EVERY = set(range(0x110000))
+
+
+def test_v2_japanese_line_gets_romaji_and_english_under_it(tmp_path):
+    """toki 2026-10-19: a Japanese line always shows romaji + English; an English line needs none."""
+    (tmp_path / "lyrics_en.json").write_text(json.dumps({"lines": {"レフトサイド ライトサイド": {
+        "roma": "refuto saido raito saido", "en": "Left side, right side"}}}, ensure_ascii=False), encoding="utf-8")
+    spec = job(tmp_path, [{**SHOT, "at": "line:0"}, {**SHOT, "at": "line:1"}], lyric_style="v2")
+    p, errors, _ = T.compile_shots(tmp_path, spec, "mv", cmap=EVERY)
+    assert errors == [] and p["heavy"] is True
+    L0, L1 = p["shots"][0]["lyrics"], p["shots"][1]["lyrics"]
+    assert L0["style"] == "v2" and L0["auto"] is True and L0["keyScale"] == 2.8
+    assert L0["subs"]["0"]["en"] == "Left side, right side" and len(L0["subs"]["0"]["romaEm"]) == 4
+    assert L1["subs"] == {}                                  # "You are KING" is English already
+    assert p["shots"][0]["words"][0]["em"] > T.P.text_em("レフトサイド")    # her heavy weight is wider
+
+
+def test_v2_japanese_line_without_translation_is_refused_unless_the_script_says_why(tmp_path):
+    spec = job(tmp_path, [{**SHOT, "at": "line:0"}], lyric_style="v2")
+    _, errors, _ = T.compile_shots(tmp_path, spec, "mv", cmap=EVERY)
+    assert any("no English" in e for e in errors)
+    shot = {**SHOT, "at": "line:0", "lyrics": {**SHOT["lyrics"], "sub": False}, "why": "the line is acted, no text"}
+    _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot], lyric_style="v2"), "mv", cmap=EVERY)
+    assert errors == []
+
+
+def test_v1_stays_the_default_until_toki_approves_v2(tmp_path):
+    p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [{**SHOT, "at": "line:0"}]), "mv", cmap=EVERY)
+    assert errors == [] and "style" not in p["shots"][0]["lyrics"] and p["heavy"] is False
+
+
+def test_acts_give_every_shot_its_grade_and_a_shot_may_name_its_own(tmp_path):
+    shots = [{**SHOT, "at": "line:0"}, {**SHOT, "at": "line:1", "opts": {"grade": "own"}}, {**SHOT, "at": 13.0}]
+    spec = job(tmp_path, shots, acts=[{"at": 0, "grade": "day"}, {"at": 12.5, "grade": "night"}])
+    p, errors, _ = T.compile_shots(tmp_path, spec, "mv", cmap=EVERY)
+    assert errors == [] and [s["opts"]["grade"] for s in p["shots"]] == ["day", "own", "night"]
+    _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, shots, acts=[{"at": 0, "grade": "sepia"}]), "mv", cmap=EVERY)
+    assert any("grade library" in e for e in errors)
+
+
+def test_grade_library_matches_the_studio():
+    import re
+    from pathlib import Path
+    ts = (Path(T.REPO) / "studio" / "src" / "film" / "grade.ts").read_text(encoding="utf-8")
+    body = ts[ts.index("export const TONES"):ts.index("};", ts.index("export const TONES"))]
+    assert set(re.findall(r"^  (\w+): \{filter", body, re.M)) == T.GRADES
+
+
+def test_heroes_are_named_once_and_marked_per_shot(tmp_path):
+    shot = {**SHOT, "at": "line:0", "hero": ["crown", {"name": "KING", "min": 0.08}]}
+    spec = job(tmp_path, [shot], heroes={"crown": {"what": "the crown on her head"}, "KING": {"kind": "word"}})
+    p, errors, _ = T.compile_shots(tmp_path, spec, "mv", cmap=EVERY)
+    assert errors == []
+    h = {x["name"]: x for x in p["shots"][0]["hero"]}
+    assert h["crown"]["kind"] == "crown" and h["crown"]["min"] == 0.05 and h["KING"]["min"] == 0.08
+    _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [{**SHOT, "at": "line:0", "hero": ["cape"]}]), "mv", cmap=EVERY)
+    assert any("hero 'cape'" in e for e in errors)

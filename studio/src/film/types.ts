@@ -29,6 +29,10 @@ export type PuppetKey = {
 
 export type Word3 = {w: string; from: number; to: number; key: boolean; line: number; idx: number; em?: number | null};
 
+/** Lyrics v2: what a line shows under itself - romaji + English for a Japanese line (toki 2026-10-19), with the exact
+ *  widths in her heavy font (em, from raymi/timeline.py) for the guards. */
+export type LyricSub = {roma: string; en: string; romaEm?: number[] | null; enEm?: number[] | null};
+
 export type LyricKind = 'sign' | 'float' | 'stamp' | 'glass' | 'card' | 'ticker';
 export type LyricMaterial = 'fog' | 'engraved' | 'screen' | 'print' | 'felt' | 'light';
 export type Lyrics = {
@@ -43,6 +47,14 @@ export type Lyrics = {
   lit: boolean;            // true = painted on a surface (takes the set light), false = emits (neon, screen)
   over?: boolean;          // true = the words cross her face on purpose (the script says why)
   material?: LyricMaterial | null;   // what the words are made of on their object (default: painted ink)
+  // ---- lyrics v2 (style 'v2'; 'v1' = the KING-era flat outlined marker, kept until toki approves v2 as the default)
+  style?: 'v1' | 'v2';
+  tilt?: number;           // degrees about the surface's x axis: -90 = lying flat on a floor / table, -10 = leaning back
+  roll?: number;           // degrees in the surface plane: the block follows the pose / the diagonal (This Is War)
+  keyScale?: number;       // key word size / normal size (v2 default 2.8: one word huge)
+  auto?: boolean;          // colours from the scene's grade (grade.ts LyricTone) instead of color / accent
+  subs?: Record<string, LyricSub>;   // per lyric line index: romaji + English under a Japanese line
+  small?: string | null;   // a written reason to go below the readable size on purpose (a principle, not a law)
 };
 
 export type TransitionKind = 'cut' | 'bubbles' | 'ink' | 'whip' | 'flash' | 'pass';
@@ -81,5 +93,6 @@ export type FilmProps = {
   sprites: string[];
   grain: number;
   title?: string;
+  heavy?: boolean;         // some lyric uses v2 (her heavy weight must be loaded)
   overlay?: {hook: {text: string; from: number; to: number}; cta: {text: string; from: number} | null} | null;   // the Short only
 };

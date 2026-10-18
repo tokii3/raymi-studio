@@ -17,7 +17,17 @@ jobs/<job>/shots.json is the machine part of the shooting script (4_SCRIPT.md sa
                   "lines": [16, 18], "words": ["KING"],   # optional: only these lines / words become objects
                   "color": "#fff", "accent": "#ffcf6b", "outline": "#1a0b33", "lit": false},
        "transition": {"kind": "bubbles", "frames": 12},
-       "why": "the feeling this shot serves"}]}
+       "hero": ["crown"],                          # the video's main element(s) this shot must show readably
+       "why": "the feeling this shot serves"}],
+     "heroes": {"crown": {"what": "the crown on her head", "min": 0.05}},   # the main element(s) (3_TREATMENT)
+     "acts": [{"at": 0, "grade": "day"}, {"at": 77.9, "grade": "night"}],  # the look step: one grade per act (grade.ts)
+     "lyric_style": "v2",                          # v2 = heavy weight, scene colour, lit, romaji + English under JP lines
+     "translation": "lyrics_en.json"}              # per line {"roma", "en"}: default <lyrics folder>/lyrics_en.json
+
+Lyrics v2 fields (shot "lyrics"): "style" (per shot), "tilt" / "roll" (deg: lie on a surface, follow a diagonal),
+"key_scale" (key word size, default 2.8), "sub": false (no romaji / English on purpose - write why in "why"),
+"small": "<reason>" (smaller than the readable default on purpose). Colours come from the shot's grade unless the
+lyric names "color". These are principles with defaults (PRINCIPLES 11), a written reason may break them.
 
 compile() refuses (errors) anything that would reach the screen broken: unknown set / mark / camera / sprite, glyphs
 the Raymi font lacks, times outside the window, non-increasing shots. The studio itself refuses cut sprite edges in
@@ -43,6 +53,8 @@ LYRIC_KINDS = {"sign", "float", "stamp", "glass", "card", "ticker"}
 # the felt's gold print, light
 LYRIC_MATERIALS = {None, "fog", "engraved", "screen", "print", "felt", "light"}
 TRANSITIONS = {"cut", "bubbles", "ink", "whip", "flash", "pass"}
+GRADES = {"day", "closing", "night", "own", "warm", "clean"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
+LYRIC_STYLES = {"v1", "v2"}
 ICONS = {None, "!", "?", "heart", "sweat", "anger", "zz", "bulb", "sparkle", "music"}
 DEFAULT_HEIGHT = 1.55   # Raymi's figure height in metres (ears to feet)
 # set options written in SONG seconds (the script's measured times); the compiler turns them into film frames so a
@@ -322,6 +334,32 @@ def glyph_errors(texts: list[str], cmap: set[int]) -> list[str]:
     return out
 
 
+def is_japanese(text: str) -> bool:
+    """Kana or kanji in a line: it gets romaji + English under it (lyrics v2)."""
+    return any(0x3040 <= ord(c) <= 0x30FF or 0x4E00 <= ord(c) <= 0x9FFF or c == "〇" for c in text)
+
+
+def load_translation(job: Path, spec: dict) -> dict:
+    """{line text: {"roma", "en"}} from the job's translation file (own, safe translation; raymi lyrics_en)."""
+    path = spec.get("translation")
+    if path is None and spec.get("lyrics"):
+        cand = _rel(job, spec["lyrics"]).parent / "lyrics_en.json"
+        path = cand if cand.is_file() else None
+    elif path is not None:
+        path = _rel(job, path)
+    if not path or not Path(path).is_file():
+        return {}
+    return json.loads(Path(path).read_text(encoding="utf-8")).get("lines", {})
+
+
+def act_grade(acts: list, t: float) -> str | None:
+    g = None
+    for a in sorted(acts, key=lambda x: float(x.get("at", 0))):
+        if float(a.get("at", 0)) <= t + 1e-6:
+            g = a.get("grade")
+    return g
+
+
 def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None = None) -> tuple[dict, list[str], list[str]]:
     errors: list[str] = []
     warns: list[str] = []
@@ -348,6 +386,14 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
     if not shots_in:
         errors.append("no shots")
     starts = [resolve_time(s.get("at", 0), lyrics, errors, f"shot {i + 1}") for i, s in enumerate(shots_in)]
+    trans = load_translation(job, spec)
+    job_style = spec.get("lyric_style", "v1")             # v1 until toki approves v2 as the studio default
+    acts = spec.get("acts") or []
+    for a_ in acts:
+        if a_.get("grade") not in GRADES:
+            errors.append(f"acts: grade {a_.get('grade')!r} is not in the grade library {sorted(GRADES)} (studio/src/film/grade.ts)")
+    heroes = spec.get("heroes") or {}
+    heavy = False
     shots, sprites, screen_texts = [], set(), []
     for i, s in enumerate(shots_in):
         tag = f"shot {i + 1}"
@@ -459,6 +505,14 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                  "outline": lyr.get("outline", "#1a0b33"), "lit": bool(lyr.get("lit", False)),
                  "over": bool(lyr.get("over", False)),       # true = the words cross her face ON PURPOSE (written why)
                  "material": lyr.get("material")}             # what the words are made of (Words3D): fog, screen ...
+            style = lyr.get("style", job_style)
+            if style not in LYRIC_STYLES:
+                errors.append(f"{tag}: lyrics.style must be one of {sorted(LYRIC_STYLES)}")
+            if style == "v2":
+                heavy = True
+                L.update({"style": "v2", "tilt": float(lyr.get("tilt", 0)), "roll": float(lyr.get("roll", 0)),
+                          "keyScale": float(lyr.get("key_scale", 2.8)), "auto": "color" not in lyr,
+                          "small": lyr.get("small"), "subs": {}})
             only_lines = set(lyr["lines"]) if "lines" in lyr else None      # a line can be ACTED instead of written
             only_words = set(lyr["words"]) if "words" in lyr else None
             for li, ln in enumerate(lyrics):
@@ -470,9 +524,28 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                     if round(a * FPS) <= w["cut"] < round(b * FPS) and t_from <= w["t0"] < t_to:   # frames, not floats
                         words.append({"w": w["w"], "from": w["cut"] - f0, "to": round(w["t1"] * FPS) - f0,
                                       "key": w["w"].lower() in keys or w["roma"] in keys, "line": li, "idx": wi,
-                                      "em": P.text_em(w["w"])})          # exact width in her font (guards)
+                                      "em": P.text_em(w["w"], heavy=style == "v2")})   # exact width in her font (guards)
                         screen_texts.append(w["w"])
+                if style == "v2" and lyr.get("sub", True) and is_japanese(ln["text"]) \
+                        and any(x["line"] == li for x in words):
+                    # toki 2026-10-19: a Japanese line ALWAYS shows romaji + English under it
+                    tr = trans.get(ln["text"]) or trans.get(ln["text"].replace("\u3000", " "))
+                    if not tr or not tr.get("en"):
+                        errors.append(f"{tag}: line {li} ({ln['text']}) has no English in the translation file "
+                                      f"(lyrics_en.json: {{\"<line>\": {{\"roma\": ..., \"en\": ...}}}}, own safe translation)")
+                        continue
+                    roma = tr.get("roma") or " ".join(w["roma"] for w in ln["words"])
+                    L["subs"][str(li)] = {"roma": roma, "en": tr["en"],
+                                          "romaEm": [P.text_em(t, heavy=True) for t in roma.split()],
+                                          "enEm": [P.text_em(t, heavy=True) for t in tr["en"].split()]}
+                    screen_texts += [roma, tr["en"]]
         opts = dict(s.get("opts") or {})
+        if "grade" not in opts and acts:                   # the look step: the act's grade (a shot may name its own)
+            g = act_grade(acts, a)
+            if g:
+                opts["grade"] = g
+        if "grade" in opts and opts["grade"] not in GRADES:
+            errors.append(f"{tag}: grade {opts['grade']!r} is not in the grade library {sorted(GRADES)}")
         short_opts = opts.pop("short", None)
         if fmt == "short" and isinstance(short_opts, dict):
             opts.update(short_opts)                        # the narrow frame's own set choices (e.g. a sign left out)
@@ -491,7 +564,17 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         tr = s.get("transition", {"kind": "cut", "frames": 0})
         if tr.get("kind") not in TRANSITIONS:
             errors.append(f"{tag}: transition.kind must be one of {sorted(TRANSITIONS)}")
-        shots.append({"id": s.get("id", f"s{i + 1}"), "from": max(0, fr(a)), "to": min(total, fr(b)), "set": st,
+        hero = []
+        for h in s.get("hero", []):
+            name = h if isinstance(h, str) else h.get("name")
+            spec_h = {**(heroes.get(name) or {}), **({} if isinstance(h, str) else h)}
+            if name not in heroes:
+                errors.append(f"{tag}: hero {name!r} is not named in shots.json 'heroes' (the treatment's main elements)")
+                continue
+            hero.append({"name": name, "kind": spec_h.get("kind", "crown" if name == "crown" else "word"),
+                         "word": spec_h.get("word", name), "min": float(spec_h.get("min", 0.05)),
+                         "why_small": spec_h.get("why_small")})
+        shots.append({"id": s.get("id", f"s{i + 1}"), "from": max(0, fr(a)), "to": min(total, fr(b)), "set": st, "hero": hero,
                       "opts": opts, "camera": ckeys, "kick": float(s.get("kick", 1.0)), "puppets": pkeys,
                       "lyrics": L, "words": words,
                       "transition": {"kind": tr.get("kind", "cut"), "frames": int(tr.get("frames", 0)),
@@ -524,7 +607,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
              "audio": ({"file": "audio" + Path(audio["file"]).suffix, "from": t_from, "to": t_to,
                         "src": _repo_path(_rel(job, audio["file"]))} if audio else None),
              "shots": shots, "hits": hits, "beats": beats, "sprites": sorted(sprites),
-             "grain": float(spec.get("grain", 0.06)), "title": spec.get("title", job.name), "overlay": overlay}
+             "grain": float(spec.get("grain", 0.06)), "title": spec.get("title", job.name), "overlay": overlay,
+             "heavy": heavy}
     return props, errors, warns
 
 
@@ -544,6 +628,8 @@ def job_texts(job: str) -> list[str]:
         props, _, _ = compile_shots(d, spec, fmt, cmap=everything)
         for s in props["shots"]:
             texts |= {w["w"] for w in s["words"]}
+            for sub in ((s.get("lyrics") or {}).get("subs") or {}).values():
+                texts |= {sub["roma"], sub["en"]}
             texts |= {v for k, v in s["opts"].items() if isinstance(v, str) and not v.startswith("sprites/")
                       and (k.startswith("text") or k in ("led", "title", "ticker"))}
     return sorted(texts)

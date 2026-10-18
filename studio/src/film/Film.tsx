@@ -21,6 +21,7 @@ import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
 import {Transitions, whipStyle} from './Transitions';
 import type {FilmProps, Shot} from './types';
+import {TONES, gradeName, type Tone} from './grade';
 
 export function shotAt(shots: Shot[], f: number): number {
   for (let i = shots.length - 1; i >= 0; i--) if (f >= shots[i].from) return i;
@@ -49,7 +50,7 @@ function figurePoint(shot: Shot, f: number, fps: number, camPos: [number, number
 }
 
 export const Film: React.FC<FilmProps> = (props) => {
-  const fontReady = useRaymiFont();
+  const fontReady = useRaymiFont(Boolean(props.heavy));
   const texReady = useTexturesReady(props.sprites.map((s) => staticFile(s)));
   const ready = fontReady && texReady;
   const f = useCurrentFrame();
@@ -130,7 +131,7 @@ export const Film: React.FC<FilmProps> = (props) => {
                 <CapCrown pos={[0, 0.0, 0]} rot={[0.12, 0, -0.18]} scale={0.62} />
               </group>
             ) : null}
-            {shot.lyrics ? <Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} /> : null}
+            {shot.lyrics ? <Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={TONES[gradeName(shot.opts, shot.set)].lyric} beats={props.beats} /> : null}
           </ThreeCanvas>
         ) : null}
       </AbsoluteFill>
@@ -148,20 +149,9 @@ export const Film: React.FC<FilmProps> = (props) => {
   );
 };
 
-// The colour grade (toki 2026-10-18: "sehr blass und ohne Tiefe" - like a mix in After Effects): contrast + saturation
-// on the picture, a split tone (cool light from the water above, deep violet in the shadows below) and a heavier
-// vignette. Per act: day (the show), night (the lamp: amber over wine), own (her violet light). Her skin keeps its
-// pale grey-blue (hard rule 9): the grade is moderate and her sprite is unlit by the set.
-export type Tone = {filter: string; top: string; bottom: string; split: number; vignette: number};
-const TONES: Record<string, Tone> = {
-  day: {filter: 'contrast(1.24) saturate(1.28) brightness(0.94)', top: '#36d6ff', bottom: '#2a0858', split: 0.42, vignette: 0.7},
-  closing: {filter: 'contrast(1.26) saturate(1.15) brightness(0.9)', top: '#2a7fae', bottom: '#14042e', split: 0.45, vignette: 0.75},
-  night: {filter: 'contrast(1.26) saturate(1.25) brightness(0.93)', top: '#ffb35c', bottom: '#2e0630', split: 0.4, vignette: 0.75},
-  own: {filter: 'contrast(1.24) saturate(1.28) brightness(0.93)', top: '#b98cff', bottom: '#0e0424', split: 0.42, vignette: 0.75},
-};
+// The colour grade: the library + per-act choice live in grade.ts (the studio's look step).
 export function gradeOf(shot: Shot): Tone {
-  const g = String(shot.opts.grade ?? (shot.opts.glow ? 'own' : shot.set === 'cardtable' ? 'night' : Number(shot.opts.dim ?? 0) >= 0.5 ? 'closing' : 'day'));
-  return TONES[g] ?? TONES.day;
+  return TONES[gradeName(shot.opts, shot.set)];
 }
 
 const Grade: React.FC<{grain: number; tone: Tone}> = ({grain, tone}) => {

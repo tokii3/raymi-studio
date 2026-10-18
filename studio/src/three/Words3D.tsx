@@ -6,6 +6,9 @@ import React, {useMemo} from 'react';
 import * as THREE from 'three';
 import {canvasTexture, rnd, toonRamp} from './look';
 import {ease} from '../film/motion';
+import {flare} from './events';
+import {PAD_EM, TEX_EM, blockLayout, blockRotation, romaShown, subOf, type Item} from '../film/lyricLayout';
+import type {LyricTone} from '../film/grade';
 import type {LyricMaterial, Lyrics, Word3} from '../film/types';
 
 const PX = 180;                    // font px on the texture
@@ -138,7 +141,8 @@ const WordMesh: React.FC<{p: Placed; L: Lyrics; f: number; fps: number; out: num
   );
 };
 
-export const Words3D: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: number}> = ({L, words, f, fps}) => {
+export const Words3D: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: number; tone?: LyricTone; beats?: number[]}> = ({L, words, f, fps, tone, beats}) => {
+  if (L.style === 'v2') return <WordsV2 L={L} words={words} f={f} fps={fps} tone={tone} beats={beats ?? []} />;
   const card = L.kind === 'card';
   const started = words.filter((w) => w.from <= f);
   if (!started.length) return null;
@@ -192,3 +196,121 @@ function screenPanel(): THREE.CanvasTexture {
     }
   });
 }
+
+// ================================================================ lyrics v2 (toki 2026-10-19)
+// "zu klein, zu dünn, wirken aufgesetzt; romaji / englisch unten mit": her HEAVY weight, no outline ring - a soft
+// shadow in the scene's own shadow colour instead; colours from the shot's grade (grade.ts LyricTone); painted words
+// are LIT by the set (toon, with a floor so they never go dull) and cast a real shadow onto the set; the block lies on
+// its surface in perspective (tilt / roll); words pop on their syllable and swell while they are sung; under a Japanese
+// line its romaji (following the voice) and its English. Light words glow and light the set around them.
+const PX2 = 160;
+
+function v2Texture(text: string, color: string, shadow: string, material: LyricMaterial | null | undefined, accent: string): THREE.CanvasTexture {
+  const W = Math.ceil((measureV2(text) + 2 * PAD_EM) * PX2), H = Math.ceil(TEX_EM * PX2);
+  return canvasTexture(`v2|${text}|${color}|${shadow}|${material ?? ''}|${accent}`, W, H, (ctx) => {
+    ctx.font = `${PX2}px RaymiHeavy`;
+    ctx.textBaseline = 'alphabetic';
+    ctx.textAlign = 'center';
+    const x = W / 2, y = PX2 * 1.02;
+    switch (material) {
+      case 'light':                               // drawn in light: wide glow, hot white core
+        ctx.shadowColor = accent; ctx.shadowBlur = PX2 * 0.28; ctx.fillStyle = color; ctx.fillText(text, x, y);
+        ctx.shadowBlur = PX2 * 0.08; ctx.fillStyle = '#ffffff'; ctx.globalAlpha = 0.65; ctx.fillText(text, x, y); ctx.globalAlpha = 1; return;
+      case 'engraved':                            // cut into the surface: light lip below, dark groove
+        ctx.fillStyle = 'rgba(255,240,200,0.7)'; ctx.fillText(text, x + 3, y + 5);
+        ctx.fillStyle = shadow; ctx.fillText(text, x, y);
+        ctx.fillStyle = color; ctx.globalAlpha = 0.4; ctx.fillText(text, x - 2, y - 2); ctx.globalAlpha = 1; return;
+      case 'print': case 'felt':                  // printed ON the object: flat ink, it takes the object's light
+        ctx.fillStyle = color; ctx.globalAlpha = material === 'felt' ? 0.9 : 1; ctx.fillText(text, x, y); ctx.globalAlpha = 1; return;
+      case 'fog':                                 // a finger through breath on glass
+        ctx.shadowColor = 'rgba(230,245,255,0.9)'; ctx.shadowBlur = 24; ctx.fillStyle = 'rgba(236,248,255,0.8)'; ctx.fillText(text, x, y); return;
+      default:                                    // painted ink, a soft shadow in the scene's shadow colour (no ring)
+        ctx.shadowColor = shadow; ctx.shadowBlur = PX2 * 0.1; ctx.shadowOffsetY = PX2 * 0.07; ctx.shadowOffsetX = PX2 * 0.03;
+        ctx.fillStyle = color; ctx.fillText(text, x, y);
+    }
+  });
+}
+
+const emOf = new Map<string, number>();
+function measureV2(t: string): number {
+  let v = emOf.get(t);
+  if (v === undefined) {
+    const m = document.createElement('canvas').getContext('2d')!;
+    m.font = `${PX2}px RaymiHeavy`;
+    v = m.measureText(t).width / PX2;
+    emOf.set(t, v);
+  }
+  return v;
+}
+
+const ItemMesh: React.FC<{it: Item; L: Lyrics; color: string; shadow: string; accent: string; s: number; dy: number; op: number}> = ({it, L, color, shadow, accent, s, dy, op}) => {
+  const tex = v2Texture(it.text, color, shadow, L.material, accent);
+  const glow = L.material === 'light';
+  const lit = !glow && L.material !== 'fog' && L.material !== 'screen';
+  const mat = useMemo(() => (lit
+    // lit by the set; the emissive floor (40 % of its own colour) keeps it readable when the key light is behind it
+    ? new THREE.MeshToonMaterial({map: tex, gradientMap: toonRamp(), transparent: true, alphaTest: 0.04, side: THREE.DoubleSide,
+      emissive: new THREE.Color('#666666'), emissiveMap: tex, fog: true})
+    : new THREE.MeshBasicMaterial({map: tex, transparent: true, alphaTest: 0.02, toneMapped: false, side: THREE.DoubleSide, fog: false,
+      blending: glow ? THREE.AdditiveBlending : THREE.NormalBlending, depthWrite: !glow})), [tex, lit, glow]);
+  const depth = useMemo(() => new THREE.MeshDepthMaterial({depthPacking: THREE.RGBADepthPacking, map: tex, alphaTest: 0.5, side: THREE.DoubleSide}), [tex]);
+  mat.opacity = op;
+  return (
+    <mesh position={[it.x, it.y + dy, 0]} scale={[it.w * s, it.h * s, 1]} material={mat} renderOrder={6}
+      castShadow={lit && op > 0.5} customDepthMaterial={depth}>
+      <planeGeometry args={[1, 1]} />
+    </mesh>
+  );
+};
+
+const v2layouts = new Map<string, Item[]>();
+
+const WordsV2: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: number; tone?: LyricTone; beats: number[]}> = ({L, words, f, fps, tone, beats}) => {
+  const started = words.filter((w) => w.from <= f);
+  if (!started.length) return null;
+  const line = started[started.length - 1].line;
+  const lineWords = words.filter((w) => w.line === line);
+  const nextLine = words.find((w) => w.line > line);
+  const lastEnd = Math.max(...lineWords.map((w) => w.to));
+  const until = nextLine ? nextLine.from : lastEnd + fps;
+  const out = f < until ? 1 : Math.max(0, 1 - (f - until) / 6);
+  if (out <= 0) return null;
+  const lk = `${JSON.stringify(L)}|${line}`;
+  let items = v2layouts.get(lk);
+  if (!items) { items = blockLayout(lineWords, subOf(L, line), L, (t) => measureV2(t)); v2layouts.set(lk, items); }
+  const auto = L.auto !== false && tone;
+  const col = auto ? tone.color : L.color, acc = auto ? tone.accent : L.accent, subC = auto ? tone.sub : L.color;
+  const shadow = tone?.shadow ?? 'rgba(10,4,30,0.85)';
+  const k = lineWords.filter((w) => w.from <= f).length;
+  const romaN = items.filter((i) => i.kind === 'roma').length;
+  const first = lineWords[0].from;
+  const breath = (1 + 0.02 * flare(beats, f, 6)) * (0.94 + 0.06 * out);     // the block breathes on the beat
+  const ys = items.map((i) => i.y);
+  return (
+    <group position={[L.anchor[0], L.anchor[1], L.anchor[2]]} rotation={blockRotation(L)} scale={[breath, breath, 1]}>
+      {L.material === 'light' ? <pointLight position={[0, (Math.max(...ys) + Math.min(...ys)) / 2, 0.3]} color={acc} intensity={2.4 * out} distance={3.5} decay={1.6} /> : null}
+      {items.map((it) => {
+        let s = 1, dy = 0, op = out;
+        if (it.kind === 'main') {
+          const w = lineWords.find((x) => x.idx === it.idx)!;
+          const d = f - w.from;
+          if (d < 0) return null;
+          const e = ease('snap', d / 7);
+          s = 0.6 + 0.4 * e;
+          dy = -(1 - e) * 0.25 * it.size;
+          const dur = Math.max(4, w.to - w.from);
+          if (d <= dur) s *= 1 + (w.key ? 0.12 : 0.06) * (1 - d / dur);   // swells while it is sung
+          op *= Math.min(1, 0.35 + d / 3);
+        } else {
+          if (it.kind === 'roma' && it.idx >= romaShown(k, lineWords.length, romaN)) return null;
+          const d = f - first - (it.kind === 'en' ? 3 : 0);
+          if (d < 0) return null;
+          op *= Math.min(1, d / 6);
+          dy = -(1 - ease('out', d / 6)) * 0.12 * it.size;
+        }
+        const c = it.kind === 'main' ? (it.key ? acc : col) : it.kind === 'roma' ? subC : col;
+        return <ItemMesh key={`${it.kind}${it.idx}`} it={it} L={L} color={c} shadow={shadow} accent={acc} s={s} dy={dy} op={op} />;
+      })}
+    </group>
+  );
+};
