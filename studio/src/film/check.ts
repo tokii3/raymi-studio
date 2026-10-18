@@ -208,7 +208,8 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
             new THREE.Vector3((u - 0.5) * w, (p.key.feet - v) * h, 0).applyMatrix4(m).project(cam));
           const [e0, g0, e1, g1] = box(fp);
           const fig = Math.max(0, Math.min(e1, c1) - Math.max(e0, c0)) * Math.max(0, Math.min(g1, d1) - Math.max(g0, d0));
-          if (fig > 0.33 * (e1 - e0) * (g1 - g0)) { out.push({shot: s.id, frame: f, line, text: ws.map((x) => x.w).join(' '), why: 'covers her figure'}); break; }
+          if (fig > 0.15 * (e1 - e0) * (g1 - g0)) {   // 0.33 let a caption bar cover her torso (grade stills 2026-10-18)
+             out.push({shot: s.id, frame: f, line, text: ws.map((x) => x.w).join(' '), why: 'covers her figure'}); break; }
         }
       }
     }
@@ -370,6 +371,33 @@ export function lensInside(props: FilmProps): {shot: string; frame: number; wher
       const p = makeCamera(s, f, aspect, props.hits, props.fps).position;
       const box = (s.noLens ?? []).find((b) => p.x > b.min[0] && p.x < b.max[0] && p.y > b.min[1] && p.y < b.max[1] && p.z > b.min[2] && p.z < b.max[2]);
       if (box) { out.push({shot: s.id, frame: f, where: box.name}); break; }
+    }
+  }
+  return out;
+}
+
+/** Where the Short's hook / CTA sit (share of the height, below the UI band). */
+export const OVERLAY = {hookTop: 0.075, hookH: 0.14, ctaTop: 0.09, ctaH: 0.12};
+
+/** The Short's hook and CTA may never sit on her face (S0 draft: they covered it). */
+export function overlayOnFace(props: FilmProps): {shot: string; frame: number; what: string}[] {
+  const o = props.overlay;
+  if (!o) return [];
+  const aspect = props.width / props.height;
+  const out: {shot: string; frame: number; what: string}[] = [];
+  const spans: [string, number, number, number, number][] = [['hook', o.hook.from, o.hook.to, OVERLAY.hookTop, OVERLAY.hookH]];
+  if (o.cta) spans.push(['CTA', o.cta.from, props.durationInFrames, OVERLAY.ctaTop, OVERLAY.ctaH]);
+  for (const [what, a, b, top, h] of spans) {
+    for (let f = a; f < b; f += 2) {
+      const s = props.shots.find((x) => f >= x.from && f < x.to);
+      const p = s ? puppetAt(s.puppets, f, props.fps) : null;
+      if (!s || !p || !p.key.head) continue;
+      const cam = makeCamera(s, f, aspect, props.hits, props.fps);
+      const m = puppetMatrix(p, [cam.position.x, cam.position.y, cam.position.z]);
+      const {w, h: ph} = planeSize(p.key);
+      const ys = [p.key.head[1], p.key.head[3]].map((v) => (1 - new THREE.Vector3(0, (p.key.feet - v) * ph, 0).applyMatrix4(m).project(cam).y) / 2);
+      const y0 = Math.min(...ys), y1 = Math.max(...ys);
+      if (y1 > top && y0 < top + h) { out.push({shot: s.id, frame: f, what}); break; }
     }
   }
   return out;

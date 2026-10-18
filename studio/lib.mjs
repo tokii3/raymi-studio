@@ -44,11 +44,11 @@ export async function guardCutEdges(props, range) {
   const out = path.join(os.tmpdir(), `raymi-check-${process.pid}.mjs`);
   await build({entryPoints: [path.join(here, 'src/film/check.ts')], bundle: true, format: 'esm', platform: 'node',
     outfile: out, logLevel: 'error'});
-  const {checkFilm, lyricsOutOfFrame, faceCrops, setTextCuts, lensInside} = await import(pathToFileURL(out).href);
+  const {checkFilm, lyricsOutOfFrame, faceCrops, setTextCuts, lensInside, overlayOnFace} = await import(pathToFileURL(out).href);
   const faults = checkFilm(props, range);
   const faces = faceCrops(props);
   const text = lyricsOutOfFrame(props);
-  const signs = setTextCuts(props), lens = lensInside(props);
+  const signs = setTextCuts(props), lens = lensInside(props), over = overlayOnFace(props);
   fs.rmSync(out, {force: true});
   if (faults.length) {
     const first = faults.slice(0, 8).map((x) => `${x.shot} f${x.frame} ${x.side} (${x.sprite})`).join('; ');
@@ -56,6 +56,9 @@ export async function guardCutEdges(props, range) {
   }
   if (faces.length) {
     throw new Error(`REFUSED: her face would be sliced by the frame edge: ${faces.map((x) => `${x.shot} f${x.frame}`).join('; ')} - frame her face fully in or fully out`);
+  }
+  if (over.length) {
+    throw new Error(`REFUSED: the Short's ${over[0].what} would sit on her face: ${over.map((x) => `${x.shot} f${x.frame}`).join('; ')} - reframe her lower`);
   }
   if (lens.length) {
     throw new Error(`REFUSED: the lens would be in a place no camera can be: ${lens.map((x) => `${x.shot} f${x.frame} ${x.where}`).join('; ')}`);

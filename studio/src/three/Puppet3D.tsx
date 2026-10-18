@@ -29,7 +29,7 @@ const SpritePlane: React.FC<{k: PuppetKey; matrix: THREE.Matrix4; opacity?: numb
   );
 };
 
-export const Puppet3D: React.FC<{keys: PuppetKey[]; f: number; fps: number; camPos: V3; shadow?: string; glow?: string}> = ({keys, f, fps, camPos, shadow = '#1d0b38', glow}) => {
+export const Puppet3D: React.FC<{keys: PuppetKey[]; f: number; fps: number; camPos: V3; shadow?: string; glow?: string; glowGain?: number}> = ({keys, f, fps, camPos, shadow = '#1d0b38', glow, glowGain = 1}) => {
   const p = puppetAt(keys, f, fps);
   if (!p) return null;
   const m = puppetMatrix(p, camPos);
@@ -51,10 +51,10 @@ export const Puppet3D: React.FC<{keys: PuppetKey[]; f: number; fps: number; camP
       </mesh>
       {ghosts}
       <SpritePlane k={p.key} matrix={m} />
-      {glow ? (() => {                                       // 灯闇: she is the lamp in the dark (her glowing dots)
+      {glow && glowGain > 0.01 ? (() => {                                       // 灯闇: she is the lamp in the dark (her glowing dots)
         const {h} = planeSize(p.key);
         const c = new THREE.Vector3(0, h * (p.key.feet - p.key.top) * 0.55, -0.06).applyMatrix4(m);
-        const pulse = 0.85 + 0.15 * Math.sin(f / 9);
+        const pulse = (0.85 + 0.15 * Math.sin(f / 9)) * glowGain;   // glow_pulse (beats) / glow_out from the film
         return (
           <group>
             <pointLight position={[c.x, c.y, c.z]} color={glow} intensity={7 * pulse} distance={5} decay={1.4} />

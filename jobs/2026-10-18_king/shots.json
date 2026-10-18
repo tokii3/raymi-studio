@@ -635,12 +635,12 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.65,
-     0.19,
+     -0.74,
+     0.18,
      2.2
     ],
-    "size": 0.104,
-    "width": 0.8,
+    "size": 0.083,
+    "width": 0.64,
     "words": [
      "難儀",
      "ダーリン"
@@ -794,8 +794,8 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.99,
-     0.38,
+     1.15,
+     0.32,
      1.69
     ],
     "size": 0.062,
@@ -870,12 +870,12 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.64,
-     0.4,
-     2.75
+     -0.73,
+     0.43,
+     0.82
     ],
-    "size": 0.05,
-    "width": 0.75,
+    "size": 0.09,
+    "width": 1.1,
     "lines": [
      4
     ],
@@ -934,7 +934,7 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     -0.02,
+     0.22,
      1.24,
      -0.6
     ],
@@ -1423,7 +1423,7 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     1.52,
+     1.68,
      0.77,
      1.7
     ],
@@ -1637,7 +1637,7 @@
     "kind": "glass",
     "anchor": [
      -2.99,
-     0.65,
+     0.2,
      1.57
     ],
     "size": 0.28,
@@ -1668,7 +1668,10 @@
      ]
     ],
     "crown": "head",
-    "flash_beats": "beats"
+    "flash_beats": "beats",
+    "short": {
+     "warning": false
+    }
    },
    "why": "and the other half - nobody gets left out, so she never rests",
    "camera": [
@@ -1705,8 +1708,8 @@
    "lyrics": {
     "kind": "glass",
     "anchor": [
-     2.62,
-     0.67,
+     2.78,
+     0.15,
      1.57
     ],
     "size": 0.28,
@@ -1760,12 +1763,12 @@
     "kind": "sign",
     "material": "screen",
     "anchor": [
-     0.58,
-     1.01,
+     0.54,
+     1.02,
      3.39
     ],
-    "size": 0.035,
-    "width": 0.55,
+    "size": 0.028,
+    "width": 0.44,
     "lines": [
      13
     ],
@@ -1813,7 +1816,15 @@
       1.0,
       1.0
      ],
-     "fov": 34
+     "fov": 34,
+     "short": {
+      "frame": "medium",
+      "from": [
+       0.4,
+       0.5,
+       3.4
+      ]
+     }
     },
     {
      "at": "end",
@@ -1827,7 +1838,15 @@
       1.0,
       1.0
      ],
-     "fov": 33
+     "fov": 33,
+     "short": {
+      "frame": "medium",
+      "from": [
+       0.45,
+       0.5,
+       3.25
+      ]
+     }
     }
    ],
    "kick": 1,
@@ -2074,7 +2093,10 @@
    "camera": [
     {
      "at": 0,
-     "cam": "throne_ms"
+     "cam": "throne_ms",
+     "short": {
+      "frame": "medium"
+     }
     },
     {
      "at": "end",
@@ -2083,7 +2105,10 @@
       0.1,
       0,
       -0.3
-     ]
+     ],
+     "short": {
+      "frame": "medium"
+     }
     }
    ],
    "kick": 1,
@@ -2126,7 +2151,10 @@
     "chute": true,
     "crown": "head",
     "flash": 0.6,
-    "flash_beats": "beats"
+    "flash_beats": "beats",
+    "short": {
+     "warning": false
+    }
    },
    "why": "the flashes accelerate - the show is at full speed",
    "camera": [
@@ -2166,7 +2194,7 @@
     "kind": "stamp",
     "anchor": [
      0,
-     0.81,
+     0.68,
      2.4
     ],
     "size": 0.3,
@@ -2217,12 +2245,12 @@
      ],
      "fov": 42,
      "short": {
-      "pos": [
-       -0.2,
-       -0.2,
-       5.6
-      ],
-      "fov": 44
+      "frame": "medium",
+      "from": [
+       0.0,
+       1.6,
+       8.6
+      ]
      }
     },
     {
@@ -2239,17 +2267,12 @@
      ],
      "fov": 42,
      "short": {
-      "pos": [
-       -0.3,
-       0.6,
-       3.2
-      ],
-      "look": [
-       -0.5,
-       1.2,
-       -1.0
-      ],
-      "fov": 36
+      "frame": "medium",
+      "from": [
+       0.0,
+       1.65,
+       7.9
+      ]
      }
     }
    ],
@@ -2261,7 +2284,7 @@
      "pos": "throne",
      "act": "stomp",
      "short": {
-      "sprite": "MS_F_HAPPY_UV_006",
+      "sprite": "WS_F_HAPPY_SURF_UV_179",
       "pos": [
        -0.4,
        0,
@@ -2319,7 +2342,12 @@
      ],
      "fov": 42,
      "short": {
-      "fov": 50
+      "frame": "medium",
+      "from": [
+       0.9,
+       1.3,
+       -1.4
+      ]
      }
     }
    ],
@@ -2377,7 +2405,7 @@
      "sprite": "WS_F_SMUG_WINK_UV_169",
      "pos": "glass",
      "short": {
-      "sprite": "WS_F_LONGING_GLASS_UV_201"
+      "sprite": "WS_F_LONGING_GLASS_UV_200"
      }
     }
    ],
@@ -2928,7 +2956,7 @@
       0.674,
       0.252
      ],
-     "fov": 32.98
+     "fov": 27.04
     },
     {
      "at": "end",
@@ -2942,7 +2970,7 @@
       0.674,
       0.252
      ],
-     "fov": 27.16,
+     "fov": 22.27,
      "ease": "in"
     }
    ],
@@ -3040,12 +3068,12 @@
    "lyrics": {
     "kind": "card",
     "anchor": [
-     -0.26,
-     0.18,
+     -0.45,
+     0.1,
      0.4
     ],
-    "size": 0.2,
-    "width": 2.4,
+    "size": 0.16,
+    "width": 1.92,
     "lines": [
      19
     ],
@@ -3247,8 +3275,8 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     -0.47,
-     0.96,
+     -1.25,
+     0.94,
      -0.6
     ],
     "size": 0.12,
@@ -3575,8 +3603,8 @@
     "kind": "sign",
     "material": "light",
     "anchor": [
-     1.6,
-     5.3,
+     1.04,
+     5.19,
      -1.4
     ],
     "size": 0.14,
@@ -3910,12 +3938,12 @@
    "lyrics": {
     "kind": "card",
     "anchor": [
-     2.33,
-     0.77,
+     2.65,
+     0.76,
      -0.2
     ],
-    "size": 0.16,
-    "width": 1.28,
+    "size": 0.128,
+    "width": 1.02,
     "lines": [
      25
     ],
@@ -3981,8 +4009,8 @@
     "lit": true,
     "color": "#d8c2ff",
     "anchor": [
-     -0.32,
-     0.72,
+     -0.81,
+     0.7,
      -0.3
     ],
     "size": 0.12,

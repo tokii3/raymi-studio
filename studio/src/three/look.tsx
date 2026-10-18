@@ -106,6 +106,20 @@ export function useScreenTexture(url: string | null): THREE.Texture | undefined 
   }, [url]);
 }
 
+/** Pieces of her for many phone screens (screens_crop): an eye, the head with the cap, the dress, the tail. */
+export function useScreenCrops(url: string | null): THREE.Texture[] | undefined {
+  return useMemo(() => {
+    if (!url) return undefined;
+    const base = texCache.get(staticFile(url));
+    if (!base) { cancelRender(new Error(`screen texture not preloaded: ${url}`)); return undefined; }
+    return ([[0.3, 0.12, 0.35, 0.82], [0.25, 0.25, 0.3, 0.72], [0.4, 0.3, 0.3, 0.4], [0.3, 0.2, 0.55, 0.1]] as const).map(([w, h, x, y]) => {
+      const t = base.clone();
+      t.repeat.set(w, h); t.offset.set(x, y); t.needsUpdate = true;
+      return t;
+    });
+  }, [url]);
+}
+
 const canvasCache = new Map<string, THREE.CanvasTexture>();
 /** A texture painted once with the 2D canvas API (signs, maps, card faces, gradients), cached by key. */
 export function canvasTexture(key: string, w: number, h: number, paint: (ctx: CanvasRenderingContext2D, w: number, h: number) => void): THREE.CanvasTexture {

@@ -129,6 +129,12 @@ export function puppetAt(keys: PuppetKey[], f: number, fps = 30): Pose | null {
   if (prevKey.arc > 0 && local >= 0 && local < 6 && !now.moving) { const s = 1 - local / 6; sx *= 1 + 0.12 * s; sy *= 1 - 0.12 * s; }
   // stretch along fast moves
   if (now.moving) { sx *= 1 + Math.min(0.18, speed * 0.6); sy *= 1 - Math.min(0.08, speed * 0.25); rot += Math.max(-8, Math.min(8, -vel[0] * 60)); }
+  // a height change between two keys is a TWEEN over the move (she shrinks into the card / grows back, KING 43 / 75)
+  const nxt = keys[i + 1];
+  if (nxt && nxt.move > 0 && nxt.height !== key.height && f >= nxt.f - nxt.move && f < nxt.f) {
+    const k = 1 + (nxt.height / key.height - 1) * ease(nxt.ease ?? 'inOut', (f - (nxt.f - nxt.move)) / nxt.move);
+    sx *= k; sy *= k;
+  }
   const smear = clamp01((speed - 0.05) / 0.12);
   return {key, local, pos: now.pos, vel, sx, sy, rot, lift, smear, turn};
 }

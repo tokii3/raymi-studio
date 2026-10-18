@@ -80,4 +80,5 @@ export type FilmProps = {
   sprites: string[];
   grain: number;
   title?: string;
+  overlay?: {hook: {text: string; from: number; to: number}; cta: {text: string; from: number} | null} | null;   // the Short only
 };

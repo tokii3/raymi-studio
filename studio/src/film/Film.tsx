@@ -9,12 +9,15 @@ import {useThree} from '@react-three/fiber';
 import {useRaymiFont} from '../font';
 import {grainTile} from '../textures';
 import {ReactionIcon} from '../Icons';
+import {Stamp} from '../Text';
 import {SETS} from '../three/sets';
 import {Puppet3D} from '../three/Puppet3D';
 import {Words3D} from '../three/Words3D';
 import {CapCrown} from '../three/props';
+import {Card, RaySwarm} from '../three/cards';
+import {flare, frames, since} from '../three/events';
 import {useTexturesReady} from '../three/look';
-import {makeCamera, puppetMatrix, visibleCutEdges} from './check';
+import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
 import {Transitions, whipStyle} from './Transitions';
 import type {FilmProps, Shot} from './types';
@@ -66,12 +69,45 @@ export const Film: React.FC<FilmProps> = (props) => {
   const capOff = typeof shot.opts.cap_off === 'number' ? shot.opts.cap_off : Infinity;
   // the crown sits on her HEAD (head box centre), not the sprite centre: leaning poses carry it with them (stills run 14)
   const crownUV = (k: Shot['puppets'][number]): [number, number] => (k.head ? [(k.head[0] + k.head[2]) / 2, k.head[1] + 0.035] : [0.5, k.top + 0.035]);
-  let crownAt = shot.opts.crown === 'head' && pose ? figurePoint(shot, f, fps, camPos, ...crownUV(pose.key)) : null;
+  // crown_from (frame): she puts it on - before it lies on its pebble, then it drops onto her head with an overshoot
+  const crownFrom = typeof shot.opts.crown_from === 'number' ? shot.opts.crown_from : -Infinity;
+  const wearing = (shot.opts.crown === 'head' || Number.isFinite(crownFrom)) && f >= crownFrom;
+  let crownAt = wearing && pose ? figurePoint(shot, f, fps, camPos, ...crownUV(pose.key)) : null;
+  if (crownAt && f - crownFrom < 8) crownAt.add(new THREE.Vector3(0, 0.35 * (1 - (f - crownFrom) / 8) ** 2 - 0.03 * Math.sin(((f - crownFrom) / 8) * Math.PI), 0));
   if (crownAt && f >= capOff) {
     const t = (f - capOff) / 12;
     const from = figurePoint(shot, capOff, fps, camPos, ...crownUV(pose!.key))!;
     const to = new THREE.Vector3(...((shot.opts.pebble as [number, number, number]) ?? [0.25, 0.42, -1.25]));
     crownAt = t >= 1 ? null : from.clone().lerp(to, t).add(new THREE.Vector3(0, Math.sin(Math.PI * t) * 0.6, 0));
+  }
+  // her own light: glow_pulse ('beats') kicks on every beat, glow_out (frame) punches it out
+  const o = shot.opts;
+  let glowGain = 1;
+  if (o.glow_pulse === 'beats') glowGain *= 1 + 0.9 * flare(props.beats, f, 6);
+  if (typeof o.glow_out === 'number' && f >= o.glow_out) glowGain *= Math.max(0, 1 - (f - o.glow_out) / 4);
+  // the rays: a ring around her head (swarm_ring 'head'), rising and widening into a beam after swarm_beam (frame)
+  let rays: React.ReactNode = null;
+  const headTop = pose ? figurePoint(shot, f, fps, camPos, ...crownUV(pose.key)) : null;
+  if (headTop && (o.swarm_ring === 'head' || o.swarm === true)) {
+    const b = typeof o.swarm_beam === 'number' && f >= o.swarm_beam ? Math.min(1, (f - o.swarm_beam) / 40) : 0;
+    const ring = o.swarm_ring === 'head';
+    const c = ring ? headTop.clone().add(new THREE.Vector3(0, 0.12 + b * 3, 0)) : headTop.clone().add(new THREE.Vector3(0, -0.6, 0));
+    rays = <RaySwarm center={[c.x, c.y, c.z]} r={(ring ? 0.32 : 0.9) * (1 + b * 4)} n={ring ? 7 : 11} f={f} size={ring ? 0.12 : 0.22} c="#9b5cff" />;
+  }
+  // ride_card: the card under her feet that carries her (she stands on it, KING 50)
+  const ride = o.ride_card && pose ? <Card pos={[pose.pos[0], pose.pos[1] + pose.lift + 0.02, pose.pos[2]]} rot={[-Math.PI / 2, 0, 0.3]} back /> : null;
+  // something passes right in front of the lens on given frames: a playing card (card_pass_lens) or a ray (rays_pass_lens)
+  let lensPass: React.ReactNode = null;
+  for (const [key, ray] of [['card_pass_lens', false], ['rays_pass_lens', true]] as const) {
+    const d = since(o[key], f);
+    if (d < 10) {
+      const fw = new THREE.Vector3(0, 0, -1).applyQuaternion(cam.quaternion);
+      const rt = new THREE.Vector3(1, 0, 0).applyQuaternion(cam.quaternion);
+      const p = cam.position.clone().addScaledVector(fw, 0.7).addScaledVector(rt, 0.9 - (d / 10) * 1.8).add(new THREE.Vector3(0, 0.15 - d * 0.03, 0));
+      lensPass = ray
+        ? <RaySwarm center={[p.x, p.y, p.z]} r={0.01} n={1} f={f} size={0.35} c="#9b5cff" />
+        : <Card pos={[p.x, p.y, p.z]} rot={[0.3, d * 0.4, d * 0.25]} scale={0.32} back={frames(o[key]).indexOf(f - d) % 2 === 1} sprite={o.king ? String(o.king) : undefined} rank="K" />;
+    }
   }
   let icon: React.ReactNode = null;
   if (pose?.key.icon && head) {
@@ -87,7 +123,8 @@ export const Film: React.FC<FilmProps> = (props) => {
             <CameraRig cam={cam} />
             {Set ? <Set f={f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} /> : null}
             <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
-              glow={shot.opts.glow ? String(shot.opts.glow) : undefined} />
+              glow={shot.opts.glow ? String(shot.opts.glow) : undefined} glowGain={glowGain} />
+            {rays}{ride}{lensPass}
             {crownAt ? (
               <group position={[crownAt.x, crownAt.y, crownAt.z]} rotation={[0, Math.atan2(camPos[0] - crownAt.x, camPos[2] - crownAt.z), 0]}>
                 <CapCrown pos={[0, 0.0, 0]} rot={[0.12, 0, -0.18]} scale={0.62} />
@@ -100,6 +137,12 @@ export const Film: React.FC<FilmProps> = (props) => {
       {icon}
       <Transitions shots={props.shots} f={f} />
       <Grade grain={props.grain} tone={gradeOf(shot)} />
+      {props.overlay ? (
+        <>
+          <Stamp text={props.overlay.hook.text} from={props.overlay.hook.from} to={props.overlay.hook.to} top={H * OVERLAY.hookTop} accent="#b56bff" size={96} />
+          {props.overlay.cta ? <Stamp text={props.overlay.cta.text} from={props.overlay.cta.from} to={props.durationInFrames + 1} top={H * OVERLAY.ctaTop} accent="#b56bff" size={84} bubble /> : null}
+        </>
+      ) : null}
       {props.audio ? <Audio src={staticFile(props.audio.file)} trimBefore={Math.round(props.audio.from * fps)} /> : null}
     </AbsoluteFill>
   );
@@ -111,10 +154,10 @@ export const Film: React.FC<FilmProps> = (props) => {
 // pale grey-blue (hard rule 9): the grade is moderate and her sprite is unlit by the set.
 export type Tone = {filter: string; top: string; bottom: string; split: number; vignette: number};
 const TONES: Record<string, Tone> = {
-  day: {filter: 'contrast(1.16) saturate(1.2) brightness(0.96)', top: '#36d6ff', bottom: '#3a0f6e', split: 0.34, vignette: 0.62},
-  closing: {filter: 'contrast(1.2) saturate(1.1) brightness(0.92)', top: '#2a7fae', bottom: '#1a0638', split: 0.4, vignette: 0.7},
-  night: {filter: 'contrast(1.2) saturate(1.18) brightness(0.95)', top: '#ffb35c', bottom: '#3b0a3a', split: 0.32, vignette: 0.72},
-  own: {filter: 'contrast(1.18) saturate(1.22) brightness(0.95)', top: '#b98cff', bottom: '#14062e', split: 0.36, vignette: 0.7},
+  day: {filter: 'contrast(1.24) saturate(1.28) brightness(0.94)', top: '#36d6ff', bottom: '#2a0858', split: 0.42, vignette: 0.7},
+  closing: {filter: 'contrast(1.26) saturate(1.15) brightness(0.9)', top: '#2a7fae', bottom: '#14042e', split: 0.45, vignette: 0.75},
+  night: {filter: 'contrast(1.26) saturate(1.25) brightness(0.93)', top: '#ffb35c', bottom: '#2e0630', split: 0.4, vignette: 0.75},
+  own: {filter: 'contrast(1.24) saturate(1.28) brightness(0.93)', top: '#b98cff', bottom: '#0e0424', split: 0.42, vignette: 0.75},
 };
 export function gradeOf(shot: Shot): Tone {
   const g = String(shot.opts.grade ?? (shot.opts.glow ? 'own' : shot.set === 'cardtable' ? 'night' : Number(shot.opts.dim ?? 0) >= 0.5 ? 'closing' : 'day'));

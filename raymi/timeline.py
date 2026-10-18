@@ -54,6 +54,8 @@ TIME_OPTS = {"banks_off", "cap_lift", "cap_off", "cap_pick", "card_flutter", "ca
              "flick", "gust", "house_keys", "king_kick", "king_rot", "pickup", "pool_on", "rays_pass_lens", "shuffle",
              "slaps", "spade_glow", "swarm_peel", "topple", "warning_cards", "warning_slash", "burst_at"}
 
+REL_OPTS = {"hands"}                               # set options in seconds from the shot start
+
 
 def time_opt(v, fr):
     """song seconds -> film frames inside a set option: 12.3 | [t, ...] | [[t, x], ...] | [t, "left"]; else as is."""
@@ -370,6 +372,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         pkeys = []
         for k, r in enumerate(s.get("raymi", [])):
             ktag = f"{tag} raymi key {k + 1}"
+            if fmt == "short" and isinstance(r.get("short"), dict):
+                r = {**r, **r["short"]}                   # the Short plays its own beat here (sprite / pos)
             sp = r.get("sprite")
             if sp not in cat:
                 errors.append(f"{ktag}: sprite {sp!r} is not in assets/catalog.json")
@@ -469,8 +473,13 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                                       "em": P.text_em(w["w"])})          # exact width in her font (guards)
                         screen_texts.append(w["w"])
         opts = dict(s.get("opts") or {})
+        short_opts = opts.pop("short", None)
+        if fmt == "short" and isinstance(short_opts, dict):
+            opts.update(short_opts)                        # the narrow frame's own set choices (e.g. a sign left out)
         for k in TIME_OPTS & opts.keys():
             opts[k] = time_opt(opts[k], fr)
+        for k in REL_OPTS & opts.keys():                   # seconds from this shot's start
+            opts[k] = time_opt(opts[k], lambda t, a=a: fr(a + t))
         if lyr and lyr.get("anchor") == "led" and "led" in marks:
             opts["led"] = ""                               # a lyric written on the LED board replaces its text (stills 14)
         for k, v in opts.items():
@@ -495,6 +504,15 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                       "noLens": sets[st].get("no_lens", [])})
     if shots and shots[0]["from"] != 0:
         errors.append(f"the first shot must start at the window start ({t_from:.2f} s)")
+    overlay = None
+    sh = spec.get("short") or {}
+    if fmt == "short" and sh.get("hook"):                  # the Short's hook (frame 0) and its comment question (CTA)
+        hook_to = float(sh.get("hook_to", float(sh.get("hook_at", t_from)) + 2.43))
+        overlay = {"hook": {"text": sh["hook"], "from": 0, "to": max(1, fr(hook_to))},
+                   "cta": ({"text": sh["cta"], "from": max(0, fr(float(sh["cta_from"])))} if sh.get("cta") else None)}
+        screen_texts += [sh["hook"]] + ([sh["cta"]] if sh.get("cta") else [])
+        if overlay["cta"] and total - overlay["cta"]["from"] < round(2.5 * FPS):
+            errors.append("short: the CTA must be readable >= 2.5 s before the end")
     if cmap is None:
         cmap = P.font_cmap()
     errors += glyph_errors(sorted(set(screen_texts)), cmap)
@@ -504,7 +522,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
              "audio": ({"file": "audio" + Path(audio["file"]).suffix, "from": t_from, "to": t_to,
                         "src": _repo_path(_rel(job, audio["file"]))} if audio else None),
              "shots": shots, "hits": hits, "beats": beats, "sprites": sorted(sprites),
-             "grain": float(spec.get("grain", 0.06)), "title": spec.get("title", job.name)}
+             "grain": float(spec.get("grain", 0.06)), "title": spec.get("title", job.name), "overlay": overlay}
     return props, errors, warns
 
 

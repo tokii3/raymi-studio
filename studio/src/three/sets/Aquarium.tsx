@@ -7,15 +7,22 @@
 // crowd_in / crowd_out (waves of visitors arrive / leave), hall_lights / banks_off (the hall's light banks switch on /
 // bang off; 'all' = dark), led_flip (letters light one by one), led_blink (the board blinks), chute (the wish chute),
 // bury: [x, y, z] + bury_h (a sand mound she hid in; burst: [x, y, z] + burst_at = the mound blows apart).
+// Story props: phone [x,y,z] (hero phone), taps (knuckle on the glass) + warning_flash, hands [fade from, to] (frames),
+// screens_crop (each phone a different piece of her), coin_drop / coin_rain / coin_pile, deck_ledge + deck_tip /
+// deck_slide, card_rain [a, b], cards 'scattered', king_up [x,y,z], dead_lamp, salmon 'glass'|'near'|'behind' +
+// salmon_arrive [a, b] + salmon_coin, cap_lift (the cap rises off its pebble), child [x,y,z] (a small waving visitor).
 import React from 'react';
 import * as THREE from 'three';
 import {Beam, Bubbles, Caustics, Coral, Ground, Kelp, RBox, Rock, Sign, Visitor, drawText} from '../parts';
 import {BottleCap, Fish, LightBank, SandMound, ShellThrone, Stanchions, ToyCastle, WishChute} from '../props';
 import {flare, frames, passed, since, stepValue} from '../events';
-import {SetLight, canvasTexture, rnd, toon, useScreenTexture} from '../look';
+import {CardRain, Coin, GlassHands, HeroPhone, KnuckleTap, LedgeDeck, Salmon, ScatteredDeck, WorkLamp} from '../aquarium_props';
+import {Card} from '../cards';
+import {SetLight, canvasTexture, rnd, toon, useScreenCrops, useScreenTexture} from '../look';
 import type {SetProps} from './index';
 
-const SAND = '#c9a9d6', ROCK = '#5b4a8c', ROCK2 = '#3f3577', KELP = '#2f8f86', KELP2 = '#1f6f78';
+const SAND = '#a98bc4',   // a deeper sand: the bright lavender floor washed every frame out (toki: blass)
+      ROCK = '#5b4a8c', ROCK2 = '#3f3577', KELP = '#2f8f86', KELP2 = '#1f6f78';
 const HALL = '#191233', PEOPLE = '#231b4a', FRAME = '#2a1f45';
 
 export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats, camPos}) => {
@@ -25,6 +32,7 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats, camPos}) => 
   const led = String(opts.led ?? 'STAR EXHIBIT');   // '' = a blank board (a lyric is written on it)
   const on = 1 - dim;
   const screen = useScreenTexture(opts.screens ? String(opts.screens) : null);   // the phones film HER
+  const crops = useScreenCrops(opts.screens_crop && opts.screens ? String(opts.screens) : null);   // each phone a piece of her
   // pa pa pa: on each hit 3 seeded phones flash for 4 frames
   const forced = Number(opts.flash ?? 0);            // a held flash moment (key frames): that share of phones fires
   const onBeats = opts.flash_beats === 'beats';       // chorus: local flares on every beat (max ~2.7 / s, flash-safe)
@@ -88,8 +96,8 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats, camPos}) => 
   });
   return (
     <group>
-      <SetLight sky={on ? '#8be3f0' : '#2a2a6a'} ground="#3b1e72" fill={0.6 + 0.8 * on} key="#e9fbff" keyI={2.4 * on + 0.2} keyPos={[-2.5, 9, 3]}
-        target={[0, 0, -0.8]} shadowSize={7} fog="#1b1542" fogNear={9} fogFar={28} bg="#120d2b" />
+      <SetLight sky={on ? '#6fd2e8' : '#2a2a6a'} ground="#2a0f5c" fill={0.4 + 0.5 * on} key="#e9fbff" keyI={2.4 * on + 0.2} keyPos={[-2.5, 9, 3]}
+        target={[0, 0, -0.8]} shadowSize={7} fog="#140f3a" fogNear={7} fogFar={24} bg="#120d2b" />
       <pointLight position={[0, 2.2, 1.0]} color="#7ff0ff" intensity={14 * on + 1} distance={9} decay={1.6} />
       <spotLight position={[-0.6, 4.6, -0.2]} target-position={[-0.6, 0.4, -1.0]} angle={0.42} penumbra={0.7} color="#ffd1f2"
         intensity={60 * (opts.spot === false ? 0 : 1) * (0.25 + 0.75 * on)} distance={9} castShadow />
@@ -111,9 +119,11 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats, camPos}) => 
       {/* throne: a flat rock base, the open clam as backrest, a sea-glass gem */}
       <Rock pos={[-0.6, 0.16, -1.15]} size={[0.95, 0.32, 0.62]} seed={11} c={ROCK} />
       <ShellThrone pos={[-0.6, 0.0, -1.3]} scale={1.15} />
-      {opts.crown === 'head' && !(typeof opts.cap_off === 'number' && f >= opts.cap_off + 12) ? null : opts.cap === 'seat'
+      {(opts.crown === 'head' || typeof opts.crown_from === 'number') && !(typeof opts.crown_from === 'number' && f < opts.crown_from)
+        && !(typeof opts.cap_off === 'number' && f >= opts.cap_off + 12) ? null : opts.cap === 'seat'
         ? <BottleCap pos={[-0.6, 0.48, -1.08]} rot={[0.25, 0.5, -0.1]} scale={1.5} />
-        : opts.cap === false ? null : <BottleCap pos={[0.25, 0.42, -1.25]} rot={[0.1, 0.4, -0.25]} scale={1.2} />}
+        : opts.cap === false ? null : <BottleCap pos={[0.25, 0.42 + (typeof opts.cap_lift === 'number' && f >= opts.cap_lift ? Math.min(0.5, (f - opts.cap_lift) * 0.012) : 0), -1.25]}
+          rot={[0.1, 0.4 + (typeof opts.cap_lift === 'number' && f >= opts.cap_lift ? (f - opts.cap_lift) * 0.05 : 0), -0.25]} scale={1.2} />}
       <Rock pos={[0.25, 0.18, -1.25]} size={[0.28, 0.26, 0.26]} seed={12} c={ROCK2} />
       <ToyCastle pos={[2.6, 0, -1.7]} scale={1.15} rotY={-0.35} />
       {[[-3.6, 2.6, 1, KELP], [-3.2, 3.2, 2, KELP2], [-4.3, 2.2, 3, KELP], [3.3, 2.9, 4, KELP2], [4.1, 2.4, 5, KELP], [-1.9, 1.9, 6, KELP2], [1.2, 2.1, 7, KELP]].map(([x, h, s, c]) => (
@@ -156,6 +166,53 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats, camPos}) => 
       {Array.isArray(opts.bury) ? <SandMound pos={opts.bury as [number, number, number]} h={Number(opts.bury_h ?? 0.2)} f={f} /> : null}
       {Array.isArray(opts.burst) ? <SandMound pos={opts.burst as [number, number, number]} h={Number(opts.bury_h ?? 0.2)} f={f}
         burst={typeof opts.burst_at === 'number' ? Math.max(0, (f - opts.burst_at) / 10) : 0} /> : null}
+      {Array.isArray(opts.phone) ? <HeroPhone pos={opts.phone as [number, number, number]} screen={screen} flash={flashOf(0)} /> : null}
+      {opts.taps !== undefined ? <KnuckleTap pos={[1.25, 1.35, 1.95]} d={since(opts.taps, f)} big={1.4} /> : null}
+      {opts.warning !== false && (opts.warning_flash !== undefined) ? (
+        <mesh position={[2.1, 0.55, 1.68]} renderOrder={9}><planeGeometry args={[1.0, 0.6]} />
+          <meshBasicMaterial color="#ff3b4e" transparent opacity={0.75 * flare(opts.warning_flash === true ? opts.taps : opts.warning_flash, f, 6)}
+            depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} /></mesh>
+      ) : null}
+      {Array.isArray(opts.hands) ? <GlassHands pos={[0.9, 1.5, 1.66]}
+        fade={Math.max(0, Math.min(1, (f - (opts.hands as number[])[0]) / Math.max(1, (opts.hands as number[])[1] - (opts.hands as number[])[0])))} /> : null}
+      {typeof opts.coin_drop !== 'undefined' ? (() => {
+        const d = since(opts.coin_drop, f);
+        if (!Number.isFinite(d)) return null;
+        const t = Math.min(1, d / 24), u = Math.max(0, Math.min(1, (d - 24) / 12));
+        const p: [number, number, number] = t < 1 ? [-3.6, 3.95 - 3.7 * t, 1.5 - 0.6 * t] : [-3.6 + 0.3 * u, 0.25 - 0.22 * u, 0.9 - 0.2 * u];
+        return <Coin pos={p} rot={[d * 0.5, 0, d * 0.3]} scale={1.3} />;
+      })() : null}
+      {opts.coin_rain !== undefined ? frames(opts.coin_rain).flatMap((t0, k) => Array.from({length: 7}, (_, i) => {
+        const d = f - t0 - i * 2;
+        if (d < 0) return null;
+        const t = Math.min(1, d / 26);
+        return <Coin key={`${k}-${i}`} pos={[-0.6 + (rnd(i + k * 9) - 0.5) * 2.4, 4.2 - 4.15 * t, -0.6 + (rnd(i + k * 9 + 4) - 0.5) * 1.6]}
+          rot={t < 1 ? [d * 0.4, i, d * 0.2] : [Math.PI / 2, 0, i]} scale={1.3} />;
+      })) : null}
+      {opts.coin_pile ? Array.from({length: 9}, (_, i) => <Coin key={`p${i}`} pos={[-0.15 + (i % 3) * 0.02, 0.02 + i * 0.019, -0.55]} rot={[Math.PI / 2, 0, i]} scale={1.3} />) : null}
+      {opts.deck_ledge ? <LedgeDeck pos={[-3.6, 3.83, 2.18]} f={f} tip={typeof opts.deck_tip === 'number' ? opts.deck_tip : undefined}
+        slide={typeof opts.deck_slide === 'number' ? opts.deck_slide : undefined} sprite={opts.screens ? String(opts.screens) : undefined} /> : null}
+      {opts.card_rain !== undefined ? <CardRain center={[0, 0, -0.5]} f={f} a={frames(opts.card_rain)[0]} b={frames(opts.card_rain)[1] ?? frames(opts.card_rain)[0] + 60}
+        sprite={opts.screens ? String(opts.screens) : undefined} /> : null}
+      {opts.cards === 'scattered' ? <ScatteredDeck center={[0.2, 0, -0.4]} sprite={opts.screens ? String(opts.screens) : undefined} /> : null}
+      {Array.isArray(opts.king_up) ? <Card pos={opts.king_up as [number, number, number]} rot={[-Math.PI / 2, 0, 0.2]} scale={0.12} rank="K"
+        sprite={opts.screens ? String(opts.screens) : undefined} /> : null}
+      {opts.dead_lamp ? <WorkLamp pos={[0.9, 3.5, -0.7]} coin swing={0.03 * Math.sin(f / 40)} /> : null}
+      {opts.salmon ? (() => {
+        const at: Record<string, [number, number, number]> = {glass: [-2.0, 1.5, 1.15], near: [1.3, 1.7, -0.3], behind: [-0.1, 1.6, -1.7]};
+        const p = at[String(opts.salmon)] ?? at.near;
+        const arr = frames(opts.salmon_arrive);
+        const coin = since(opts.salmon_coin, f);
+        return (
+          <group>
+            <Salmon at={p} f={f} a={arr[0]} b={arr[1]} from={arr.length ? [-5.2, p[1] + 0.4, p[2] - 0.5] : undefined} />
+            {coin < 14 ? <Coin pos={[-0.2 + (p[0] + 0.2) * (coin / 14), 0.3 + (p[1] - 0.3) * (coin / 14) + Math.sin((coin / 14) * Math.PI) * 0.6, -0.6 + (p[2] + 0.6) * (coin / 14)]}
+              rot={[coin * 0.6, 0, 0]} scale={1.3} /> : null}
+          </group>
+        );
+      })() : null}
+      {Array.isArray(opts.child) ? <Visitor pos={opts.child as [number, number, number]} h={1.0} c={PEOPLE} seed={77} f={f} phone={1} flash={0} screen={screen}
+        look={0.3 * Math.sin(f / 4)} raise={0.6} /> : null}
       {opts.chute ? <WishChute pos={[-3.6, 4.1, 1.95]} out={[-3.6, 0.25, 0.9]} /> : null}
       {opts.warning !== false ? (
         <Sign id="warn" pos={[2.1, 0.55, 1.62]} size={[0.9, 0.5]} frame="#1b1430" paint={(ctx, w, h) => {
@@ -183,7 +240,7 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats, camPos}) => 
         const away = pr < 0 ? -pr : 1 - pr;                  // walks back into the dark hall
         const phone = opts.phones_up ? 1 : rnd(i + 2) < 0.6 ? 1 : 0;
         return <Visitor key={i} pos={[x + away * (x > 0 ? 1.5 : -1.5), -0.9, z + away * 4]} h={1.55 + rnd(i + 9) * 0.3} c={PEOPLE} seed={i} f={f}
-          phone={phone} flash={pr > 0 ? flashOf(i) : 0} screen={screen} look={lookOf(i)} raise={opts.phones_up ? 1 : 0} />;
+          phone={phone} flash={pr > 0 ? flashOf(i) : 0} screen={crops ? crops[i % crops.length] : screen} look={lookOf(i)} raise={opts.phones_up ? 1 : 0} />;
       })}
     </group>
   );
