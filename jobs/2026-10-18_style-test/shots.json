@@ -38,16 +38,16 @@
     {
      "at": "end",
      "pos": [
-      0.4,
-      0.7,
-      8.6
+      0.3,
+      0.75,
+      7.4
      ],
      "look": [
       0.0,
       1.2,
       0.0
      ],
-     "fov": 34,
+     "fov": 32,
      "ease": "inOut"
     }
    ],
@@ -81,9 +81,9 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.1,
-     1.7,
-     3.21
+     -0.14,
+     1.63,
+     2.57
     ],
     "size": 0.12,
     "width": 1.9,
@@ -103,10 +103,8 @@
     }
    },
    "transition": {
-    "kind": "pass",
-    "frames": 10,
-    "obj": "kelp",
-    "dir": 1
+    "kind": "bubbles",
+    "frames": 14
    }
   },
   {
@@ -332,7 +330,7 @@
      "sprite": "WS_F_CALM_PRONE_UV_194",
      "pos": [
       -0.24,
-      -0.2,
+      0.0,
       -0.5
      ],
      "act": "idle",

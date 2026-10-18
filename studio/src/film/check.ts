@@ -209,7 +209,7 @@ export function faceCrops(props: FilmProps): {shot: string; frame: number}[] {
       const pts = [[x0, y0], [x1, y0], [x0, y1], [x1, y1], [(x0 + x1) / 2, (y0 + y1) / 2]].map(([u, v]) =>
         new THREE.Vector3((u - 0.5) * w, (p.key.feet - v) * h, 0).applyMatrix4(m));
       const inside = pts.map((q) => {
-        if (q.y < -0.01 && cam.position.y > 0) return null;          // under the sand: hidden on purpose
+        if (q.y < -0.01 && cam.position.y > 0) return false;         // half buried in sand reads as sliced too (style test 4)
         const n = q.clone().project(cam);
         return n.z < 1 && Math.abs(n.x) <= 1 && Math.abs(n.y) <= 1;
       }).filter((x) => x !== null);

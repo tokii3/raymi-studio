@@ -26,3 +26,6 @@
   (12 s = 8.5 min with 3 workers); a full MV fits in 20 workers.
 - The MVShort (9:16) of the style test is compiled + guarded but not rendered yet (one cloud run, render.json
   `"format": "short"`).
+- Style-test Short (9:16): rendered once (run 10) from the same timeline, but since the face guard (2026-10-18) three
+  shots need `camera[].short` overrides (her face sliced by the narrow frame at f24 / f92 / f234). Frame it before the
+  next Short render.
