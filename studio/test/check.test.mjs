@@ -80,3 +80,14 @@ test('lyrics guard: words over her face are refused unless lyrics.over says so',
   assert.ok(lyricsOutOfFrame(mk(false)).some((x) => x.why === 'covers her face'));
   assert.equal(lyricsOutOfFrame(mk(true)).length, 0);
 });
+
+test('face guard: a head sliced by the frame edge is refused, fully in frame passes', async () => {
+  const o5 = out.replace('.mjs', '-c.mjs');
+  await build({entryPoints: [path.join(here, '../src/film/check.ts')], bundle: true, format: 'esm', platform: 'node', outfile: o5, logLevel: 'error'});
+  const {faceCrops} = await import(pathToFileURL(o5).href);
+  const mk = (x) => ({width: 1920, height: 1080, fps: 30, durationInFrames: 6, hits: [], shots: [{id: 's', from: 0, to: 6,
+    camera: [{f: 0, pos: [0, 1.3, 3], look: [0, 1.3, 0], fov: 35}], kick: 0,
+    puppets: [{...key([], [x, 0, 0]), head: [0.3, 0.04, 0.7, 0.3]}]}]});
+  assert.equal(faceCrops(mk(0)).length, 0);
+  assert.ok(faceCrops(mk(1.75)).length > 0);
+});

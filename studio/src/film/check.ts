@@ -192,3 +192,29 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
   }
   return out;
 }
+
+/** Her face half cut by the frame edge (blind viewer, style test 2 + 3): the head box must be fully inside the frame
+ *  or fully outside it - never sliced. Sampled every 3 frames (pure math, before any render). */
+export function faceCrops(props: FilmProps): {shot: string; frame: number}[] {
+  const aspect = props.width / props.height;
+  const out: {shot: string; frame: number}[] = [];
+  for (const s of props.shots) {
+    for (let f = s.from; f < s.to; f += 3) {
+      const p = puppetAt(s.puppets, f, props.fps);
+      if (!p || !p.key.head || p.lift < -0.3) continue;
+      const cam = makeCamera(s, f, aspect, [], props.fps);
+      const m = puppetMatrix(p, [cam.position.x, cam.position.y, cam.position.z]);
+      const {w, h} = planeSize(p.key);
+      const [x0, y0, x1, y1] = p.key.head;
+      const pts = [[x0, y0], [x1, y0], [x0, y1], [x1, y1], [(x0 + x1) / 2, (y0 + y1) / 2]].map(([u, v]) =>
+        new THREE.Vector3((u - 0.5) * w, (p.key.feet - v) * h, 0).applyMatrix4(m));
+      const inside = pts.map((q) => {
+        if (q.y < -0.01 && cam.position.y > 0) return null;          // under the sand: hidden on purpose
+        const n = q.clone().project(cam);
+        return n.z < 1 && Math.abs(n.x) <= 1 && Math.abs(n.y) <= 1;
+      }).filter((x) => x !== null);
+      if (inside.length && inside.some((x) => x) && inside.some((x) => !x)) { out.push({shot: s.id, frame: f}); break; }
+    }
+  }
+  return out;
+}
