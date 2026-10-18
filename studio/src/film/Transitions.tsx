@@ -22,13 +22,14 @@ function active(shots: Shot[], f: number): Active | null {
 /** Cover amount 0..1 that is exactly 1 on the boundary frame. */
 const cover = (p: number) => 1 - Math.abs(p - 0.5) * 2;
 
+// whip blur 16 px (38 px smeared the words over the whip - final Short 1)
 export function whipStyle(shots: Shot[], f: number, W: number): React.CSSProperties {
   const a = active(shots, f);
   if (!a || a.shot.transition.kind !== 'whip') return {};
   const dir = a.shot.transition.dir ?? 1;
   const k = cover(a.p);
   const off = a.p < 0.5 ? -ease('in', a.p * 2) : 1 - ease('out', (a.p - 0.5) * 2);
-  return {transform: `translateX(${dir * off * W * 0.35}px)`, filter: `blur(${(k * 38).toFixed(1)}px)`};
+  return {transform: `translateX(${dir * off * W * 0.35}px)`, filter: `blur(${(k * 16).toFixed(1)}px)`};
 }
 
 export const Transitions: React.FC<{shots: Shot[]; f: number}> = ({shots, f}) => {

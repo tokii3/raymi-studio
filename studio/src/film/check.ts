@@ -169,6 +169,8 @@ export function lineCorners(s: Shot, line: number): THREE.Vector3[] {
 export type TextFault = {shot: string; frame: number; line: number; text: string; why?: string};
 
 /** Every frame a lyric line is fully shown (from its last word on, settled), all of it must be inside the frame. */
+const L0 = (s: Shot) => s.lyrics!;
+
 export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
   const aspect = props.width / props.height;
   const out: TextFault[] = [];
@@ -186,6 +188,26 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
       const a = Math.max(Math.min(...ws.map((w) => w.from)), Math.min(last + 6, z - 1));
       const zz = float ? Math.min(z, a + 18) : z;
       const corners0 = lineCorners(s, line);
+      // readable at phone size: a normal word at least 4.4 % of the frame height (48 px in 1080p, 85 px in the 1920 Short) (final Short 1: tiny captions)
+      {
+        const cam0 = makeCamera(s, a, aspect, props.hits, props.fps);
+        const anc = new THREE.Vector3(...L0(s).anchor);
+        const tex = L0(s).size * (ws.every((w) => w.key) ? 2.2 : 1) * (1.35 / 0.72);
+        const up = new THREE.Vector3(0, 1, 0).applyQuaternion(cam0.quaternion);
+        const p0 = anc.clone().addScaledVector(up, -tex / 2).project(cam0), p1 = anc.clone().addScaledVector(up, tex / 2).project(cam0);
+        const px = (Math.abs(p1.y - p0.y) / 2) * props.height;
+        if (p0.z < 1 && p1.z < 1 && px < 0.044 * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `too small to read (${Math.round(px)} px)`}); continue; }
+      }
+      // a stamp slams in bigger than it lands: 2 frames after the last word it is still ~1.2x (final Short 1: clipped)
+      if (s.lyrics.kind === 'stamp' || s.lyrics.kind === 'sign') {
+        const k = s.lyrics.kind === 'stamp' ? 1.2 : 1.05, fe = Math.min(last + 2, z - 1);
+        const camE = makeCamera(s, fe, aspect, props.hits, props.fps);
+        const an = new THREE.Vector3(...s.lyrics.anchor);
+        const big = corners0.map((cc) => cc.clone().sub(an).multiplyScalar(k).add(an));
+        if (big.some((cc) => { const n = cc.clone().project(camE); return n.z >= 1 || Math.abs(n.x) > 0.97 || Math.abs(n.y) > 0.97; })) {
+          out.push({shot: s.id, frame: fe, line, text: ws.map((w) => w.w).join(' '), why: 'slams in past the frame edge'}); continue;
+        }
+      }
       // every frame, with the real camera kick on the music hits (pilot 1: a stamp clipped by the punch on a hit)
       for (let f = a; f < zz; f++) {
         const rise = float ? ((f - last) / props.fps) * 0.12 + 0.04 : 0;     // Words3D float: rises 0.12 m/s
@@ -194,6 +216,20 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
         // inside the typographic safe area (4 % margin): a word touching the frame edge reads as clipped (pilot 1)
         const bad = corners.some((c) => { const n = c.clone().project(cam); return n.z >= 1 || Math.abs(n.x) > 0.92 || Math.abs(n.y) > 0.92; });
         if (bad) { out.push({shot: s.id, frame: f, line, text: ws.map((w) => w.w).join(' '), why: 'leaves the frame'}); break; }
+        // text on text: a lyric over a readable set prop (the sign, the LED) makes both unreadable (final 1: ワーニング on the sign)
+        const tbox = (ps: THREE.Vector3[]) => [Math.min(...ps.map((q) => q.x)), Math.min(...ps.map((q) => q.y)), Math.max(...ps.map((q) => q.x)), Math.max(...ps.map((q) => q.y))];
+        const lt = tbox(corners.map((c) => c.clone().project(cam)));
+        const onSign = (s.texts ?? []).find((t) => {
+          const r = new THREE.Matrix4().makeRotationY((t.rot * Math.PI) / 180);
+          const [tw, th] = t.size;
+          const sp = [[-tw / 2, -th / 2], [tw / 2, -th / 2], [-tw / 2, th / 2], [tw / 2, th / 2]].map(([x, yy]) =>
+            new THREE.Vector3(x, yy, 0).applyMatrix4(r).add(new THREE.Vector3(...t.center)).project(cam));
+          if (sp.some((q) => q.z >= 1 || q.z <= -1)) return false;                // behind the lens: not on screen
+          const st = tbox(sp);
+          const ov = Math.max(0, Math.min(lt[2], st[2]) - Math.max(lt[0], st[0])) * Math.max(0, Math.min(lt[3], st[3]) - Math.max(lt[1], st[1]));
+          return ov > 0.2 * Math.min((lt[2] - lt[0]) * (lt[3] - lt[1]), (st[2] - st[0]) * (st[3] - st[1]));
+        });
+        if (onSign && !s.lyrics.over) { out.push({shot: s.id, frame: f, line, text: ws.map((x) => x.w).join(' '), why: `covers the ${onSign.name}`}); break; }
         // text on her face hides the one thing the viewer looks at (blind viewer, style test 2) - unless the script wants it
         const p = s.lyrics.over ? null : puppetAt(s.puppets, f, props.fps);
         if (p && p.key.head) {
@@ -325,7 +361,7 @@ export function fitLyrics(props: FilmProps, index: number): {anchor: V3; size: n
   const spots: [number, number][] = [];
   for (let y = 0.12; y <= 0.881; y += 0.04) for (let x = 0.2; x <= 0.801; x += 0.05) spots.push([x, y]);
   spots.sort((p, q) => Math.hypot(p[0] - ox, p[1] - oy) - Math.hypot(q[0] - ox, q[1] - oy));
-  for (const k of [1, 0.8, 0.65, 0.5, 0.4]) {
+  for (const k of [1, 1.25, 1.5, 1.8, 2.2, 0.8, 0.65, 0.5, 0.4]) {   // grow first: too small reads as clipped too
     for (const [x, y] of spots) {
       // the words stay on their own surface (the plane through the scripted anchor, facing rotY): slide, never float off
       const ray = new THREE.Vector3(x * 2 - 1, 1 - y * 2, 0.5).unproject(cam).sub(cam.position).normalize();
@@ -358,8 +394,11 @@ export function setTextCuts(props: FilmProps): {shot: string; frame: number; tex
       let run = 0;
       for (let f = s.from; f < s.to; f++) {
         const cam = makeCamera(s, f, aspect, props.hits, props.fps);
-        const inside = pts.map((q) => { const n = q.clone().project(cam); return n.z < 1 && n.z > -1 && Math.abs(n.x) <= 1 && Math.abs(n.y) <= 1; });
-        run = inside.some((x) => x) && inside.some((x) => !x) ? run + 1 : 0;
+        // whole means inside the 4 % safe area; any part between that and the edge reads as clipped (final 1: STAR EXHIBIT)
+        const ns = pts.map((q) => q.clone().project(cam));
+        const vis = ns.map((n) => n.z < 1 && n.z > -1 && Math.abs(n.x) <= 1 && Math.abs(n.y) <= 1);
+        const safe = ns.map((n) => n.z < 1 && n.z > -1 && Math.abs(n.x) <= 0.92 && Math.abs(n.y) <= 0.92);
+        run = vis.some((x) => x) && safe.some((x) => !x) ? run + 1 : 0;
         if (run >= Math.round(props.fps * 0.4) || (run > 0 && f === s.to - 1 && run === s.to - s.from)) { out.push({shot: s.id, frame: f - run + 1, text: t.name}); break; }
       }
     }
@@ -416,11 +455,16 @@ export function solidFaults(props: FilmProps): {shot: string; frame: number; why
   for (const s of props.shots) {
     const boxes = (s.solids ?? []).map((b) => ({name: b.name, box: new THREE.Box3().setFromCenterAndSize(new THREE.Vector3(...b.center), new THREE.Vector3(...b.size))}));
     if (!boxes.length) continue;
-    let run = 0, bad: string | null = null;
+    let run = 0, close = 0, bad: string | null = null;
     for (let f = s.from; f < s.to; f++) {
       const cam = makeCamera(s, f, aspect, props.hits, props.fps);
       const inside = boxes.find((b) => b.box.clone().expandByScalar(0.2).containsPoint(cam.position));
       if (inside) { out.push({shot: s.id, frame: f, why: `lens inside the ${inside.name}`}); bad = 'x'; break; }
+      // a prop right at the lens fills the frame as a flat mass (final 1: a coin tower for 1.5 s)
+      const fwd = new THREE.Vector3(0, 0, -1).applyQuaternion(cam.quaternion);
+      const near = boxes.find((b) => b.box.distanceToPoint(cam.position) < 0.6 && b.box.getCenter(new THREE.Vector3()).sub(cam.position).dot(fwd) > 0);
+      close = near ? close + 1 : 0;
+      if (close >= Math.round(props.fps * 0.4)) { out.push({shot: s.id, frame: f - close + 1, why: `the ${near!.name} fills the lens`}); bad = 'x'; break; }
       const p = puppetAt(s.puppets, f, props.fps);
       let hidden: string | null = null;
       if (p && p.key.head) {
@@ -443,4 +487,21 @@ export function solidFaults(props: FilmProps): {shot: string; frame: number; why
     }
   }
   return out;
+}
+
+/** The smallest move of the whole camera path (same move on every key: pos, and look by half) that passes every
+ *  guard - for occlusion / prop / sign faults that a zoom cannot fix. null = no move within 1.6 m works. */
+export function fitLens(props: FilmProps, index: number): Shot['camera'] | null {
+  const s = props.shots[index];
+  if (shotPasses(props, s)) return s.camera;
+  const steps: V3[] = [];
+  for (const dx of [-1.6, -1.2, -0.8, -0.4, 0, 0.4, 0.8, 1.2, 1.6]) for (const dz of [-1.6, -1.2, -0.8, -0.4, 0, 0.4, 0.8, 1.2, 1.6])
+    for (const dy of [0, 0.3, -0.3, 0.6]) steps.push([dx, dy, dz]);
+  steps.sort((p, q) => Math.hypot(...p) - Math.hypot(...q));
+  for (const [dx, dy, dz] of steps) {
+    const camera = s.camera.map((k) => ({...k, pos: [k.pos[0] + dx, k.pos[1] + dy, k.pos[2] + dz] as V3,
+      look: [k.look[0] + dx / 2, k.look[1] + dy / 2, k.look[2] + dz / 2] as V3}));
+    if (shotPasses(props, {...s, camera})) return camera;
+  }
+  return null;
 }

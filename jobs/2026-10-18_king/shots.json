@@ -108,7 +108,7 @@
     "led": "STAR EXHIBIT",
     "crowd": 4,
     "screens": "WS_F_PEACE_WINK_UV_131",
-    "chute": true,
+    "chute": false,
     "dim": 0.6,
     "led_flip": [
      3.62,
@@ -137,7 +137,7 @@
      ],
      "look": [
       0.106,
-      2.987,
+      3.4,
       1
      ],
      "fov": 38.8
@@ -151,7 +151,7 @@
      ],
      "look": [
       0.106,
-      2.987,
+      3.4,
       1
      ],
      "fov": 38.8
@@ -208,30 +208,34 @@
     {
      "at": 0,
      "pos": [
-      2.2,
+      2.4,
       1.6,
-      -2.4
+      -2.8
      ],
      "look": [
-      0.6,
+      1,
       0.9,
-      4.0
+      4.2
      ],
-     "fov": 42
+     "fov": 42,
+     "roll": 0,
+     "ease": "inOut"
     },
     {
      "at": "end",
      "pos": [
-      2.2,
+      2.4,
       1.5,
-      -2.2
+      -2.6
      ],
      "look": [
-      0.6,
+      1,
       0.9,
-      4.0
+      4.2
      ],
-     "fov": 40
+     "fov": 40,
+     "roll": 0,
+     "ease": "inOut"
     }
    ],
    "kick": 1,
@@ -563,12 +567,12 @@
    "lyrics": {
     "kind": "glass",
     "anchor": [
-     0.75,
-     0.75,
+     0.58,
+     0.7,
      1.57
     ],
-    "size": 0.05,
-    "width": 0.6,
+    "size": 0.063,
+    "width": 0.75,
     "lines": [
      1
     ],
@@ -733,7 +737,7 @@
     "kind": "stamp",
     "anchor": [
      2.1,
-     0.62,
+     1.15,
      1.7
     ],
     "size": 0.12,
@@ -772,30 +776,30 @@
     {
      "at": 0,
      "pos": [
-      2.4,
-      0.6,
-      3.9
+      2.9,
+      0.7,
+      4.6
      ],
      "look": [
       0.6,
       0.7,
       -0.5
      ],
-     "fov": 40
+     "fov": 38
     },
     {
      "at": "end",
      "pos": [
-      2.3,
-      0.62,
-      3.7
+      2.8,
+      0.72,
+      4.4
      ],
      "look": [
       0.5,
       0.7,
       -0.5
      ],
-     "fov": 39
+     "fov": 37
     }
    ],
    "kick": 1.5,
@@ -1255,28 +1259,32 @@
      "pos": [
       -3.2,
       4.2,
-      3.0
+      3.4
      ],
      "look": [
       -3.6,
-      4.0,
-      1.9
+      4,
+      2.1
      ],
-     "fov": 40
+     "fov": 40,
+     "roll": 0,
+     "ease": "inOut"
     },
     {
      "at": "end",
      "pos": [
       -3.25,
       4.15,
-      2.9
+      3.3
      ],
      "look": [
       -3.6,
-      4.0,
-      1.9
+      4,
+      2.1
      ],
-     "fov": 38
+     "fov": 38,
+     "roll": 0,
+     "ease": "inOut"
     }
    ],
    "kick": 1,
@@ -1419,16 +1427,16 @@
     {
      "at": "end",
      "pos": [
-      2.85,
-      0.62,
-      3.5
+      2.9,
+      0.6,
+      3.6
      ],
      "look": [
       1.2,
       0.9,
       0.6
      ],
-     "fov": 35
+     "fov": 35.5
     }
    ],
    "kick": 1.5,
@@ -1443,8 +1451,8 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     1.68,
-     0.77,
+     1.67,
+     1.13,
      1.7
     ],
     "size": 0.08,
@@ -1585,8 +1593,8 @@
    "lyrics": {
     "kind": "glass",
     "anchor": [
-     0.27,
-     1.7,
+     1.4,
+     1.68,
      1.57
     ],
     "size": 0.05,
@@ -1833,8 +1841,8 @@
      "歯をむき"
     ],
     "short": {
-     "size": 0.015,
-     "width": 0.18,
+     "size": 0.019,
+     "width": 0.22,
      "anchor": [
       0.54,
       1.33,
@@ -2230,7 +2238,8 @@
     "flash_beats": "beats",
     "short": {
      "warning": false
-    }
+    },
+    "warning": false
    },
    "why": "the flashes accelerate - the show is at full speed",
    "camera": [
@@ -2423,22 +2432,24 @@
     {
      "at": 0,
      "pos": [
-      0.9,
+      0.8,
       1.3,
-      -1.4
+      -0.9
      ],
      "look": [
-      0.3,
+      0.1,
       0.9,
-      4.0
+      4
      ],
      "fov": 42,
+     "roll": 0,
+     "ease": "inOut",
      "short": {
       "frame": "medium",
       "from": [
-       0.9,
+       1.4,
        1.3,
-       -1.4
+       -0.4
       ],
       "top": 0.34
      }
@@ -2616,30 +2627,34 @@
     {
      "at": 0,
      "pos": [
-      2.4000000000000004,
-      1.3,
+      1.7,
+      1.4,
       -2.9
      ],
      "look": [
       -0.2,
-      1.0,
-      4.0
+      1,
+      4.2
      ],
-     "fov": 46
+     "fov": 46,
+     "roll": 0,
+     "ease": "inOut"
     },
     {
      "at": "end",
      "pos": [
-      2.6,
-      1.3,
+      1.8,
+      1.4,
       -2.6
      ],
      "look": [
       -0.2,
-      1.0,
-      4.0
+      1,
+      4.2
      ],
-     "fov": 46
+     "fov": 46,
+     "roll": 0,
+     "ease": "inOut"
     }
    ],
    "kick": 2,
@@ -2988,7 +3003,8 @@
      75.98,
      76.32
     ],
-    "felt_mat": true
+    "felt_mat": true,
+    "warning": false
    },
    "why": "the cards settle on the sand around her like a lid closing",
    "camera": [
@@ -3819,12 +3835,19 @@
    "camera": [
     {
      "at": 0,
-     "frame": "medium",
-     "from": [
-      2.4,
-      0.35,
-      0.4
-     ]
+     "pos": [
+      3.734,
+      0.743,
+      3.503
+     ],
+     "look": [
+      2.265,
+      0.743,
+      -1.317
+     ],
+     "fov": 30,
+     "roll": 0,
+     "ease": "inOut"
     }
    ],
    "kick": 1,
@@ -5171,33 +5194,51 @@
    "camera": [
     {
      "at": 0,
-     "frame": "medium",
-     "from": [
-      1.8,
-      1.4,
-      1.2
+     "pos": [
+      2.035,
+      0.76,
+      2.047
      ],
-     "fov": 36
+     "look": [
+      -0.763,
+      0.76,
+      -0.645
+     ],
+     "fov": 36,
+     "roll": 0,
+     "ease": "inOut"
     },
     {
      "at": 0.7,
-     "frame": "medium",
-     "from": [
-      0.0,
-      1.4,
-      2.4
+     "pos": [
+      -0.187,
+      0.658,
+      6.994
      ],
-     "fov": 36
+     "look": [
+      -1.305,
+      0.658,
+      -0.533
+     ],
+     "fov": 36,
+     "roll": 0,
+     "ease": "inOut"
     },
     {
      "at": "end",
-     "frame": "medium",
-     "from": [
-      -2.4,
-      1.4,
-      1.0
+     "pos": [
+      -7.183,
+      0.658,
+      4.186
      ],
-     "fov": 36
+     "look": [
+      -1.118,
+      0.658,
+      -0.998
+     ],
+     "fov": 36,
+     "roll": 0,
+     "ease": "inOut"
     }
    ],
    "kick": 1,
@@ -5537,7 +5578,8 @@
     "swarm_ring": "head",
     "crown": "head",
     "cap": false,
-    "glow_pulse": "beats"
+    "glow_pulse": "beats",
+    "warning": false
    },
    "why": "the spiral seen from above echoes the sinking deck (74.9) - the same shape, now rising and hers",
    "camera": [

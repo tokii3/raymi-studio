@@ -160,7 +160,7 @@ export const LightBank: React.FC<{z: number; y: number; floorY: number; on: numb
   return (
     <group>
       {Array.from({length: 6}, (_, i) => (
-        <RBox key={i} size={[1.1, 0.12, 0.4]} pos={[-width / 2 + (i + 0.5) * (width / 6), y, z]} r={0.04} c="#2a2244"
+        <RBox key={i} size={[1.1, 0.12, 0.4]} pos={[-width / 2 + (i + 0.5) * (width / 6), y, z]} r={0.04} c={lit > 0.05 ? '#2a2244' : '#07050d'}
           e="#fff1d6" ei={Math.round(22 * lit) / 10} cast={false} />
       ))}
       <mesh position={[0, floorY + 0.012, z]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2}>

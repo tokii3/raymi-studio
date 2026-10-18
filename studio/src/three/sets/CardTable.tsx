@@ -24,7 +24,7 @@ type P3 = [number, number, number];
 const DAY = {felt: '#1f4f5c', rim: '#3a1f52', back: ['#0e2f4f', '#1b1846', '#120c2a'], floor: '#3a2c62', lamp: '#ffd9a3', sky: '#5f8fd6'};
 const NIGHT = {felt: '#5a1830', rim: '#1a0f22', back: ['#0a0614', '#140a24', '#07040e'], floor: '#160d24', lamp: '#ffb35c', sky: '#3a2a5e'};
 const GOLD = '#d4ab4f';
-const TARGET: Record<string, P3> = {card: [-1.6, 0, -1.2], deck: [-2.6, 0, 0.8], raymi: [0, 0, 0], house: [2.2, 0, -1.8], chips: [1.5, 0, 0.9]};
+const TARGET: Record<string, P3> = {card: [-1.6, 0, -1.2], deck: [-2.6, 0, 0.8], raymi: [0, 0, 0], house: [2.2, 0, -1.8], chips: [3.3, 0, 0.9]};
 
 export const CardTable: React.FC<SetProps> = ({f, opts, beats}) => {
   const night = opts.palette === 'night';
@@ -86,7 +86,8 @@ export const CardTable: React.FC<SetProps> = ({f, opts, beats}) => {
   );
   // ---- coins (wish coins as chip towers at night), topple
   const tp = since(opts.topple, f);
-  const towers: [P3, number, string, number][] = [[[1.5, 0, 0.9], 6, '#7a49c4', 1], [[2.4, 0, 1.4], 4, '#2fa3a0', 2], [[0.9, 0, 1.7], 9, GOLD, 3], [[-4.6, 0, 2.6], 3, '#c2416f', 4]];
+  // the towers stand to the right of the play area, out of the lenses' way (final 1: a tower filled the frame)
+  const towers: [P3, number, string, number][] = [[[3.3, 0, 0.9], 6, '#7a49c4', 1], [[4.1, 0, 1.6], 4, '#2fa3a0', 2], [[2.7, 0, 2.2], 9, GOLD, 3], [[-4.6, 0, 2.6], 3, '#c2416f', 4]];
   const chips = towers.map(([p, n, c, s], i) => {
     const t = Number.isFinite(tp) ? Math.max(0, Math.min(1, (tp - i * 4) / 10)) : 0;
     const coins = opts.chips === 'coins';
@@ -144,16 +145,23 @@ export const CardTable: React.FC<SetProps> = ({f, opts, beats}) => {
     return <Coin pos={[lx * t, 1.0 + (6.9 - 1.0) * ease('out', t), lz * t + 0.4 * (1 - t)]} rot={[cf, 0, cf * 0.7]} scale={5.5} />;
   })() : null;
   const cr = since(opts.coin_roll, f);
-  const coinRoll = Number.isFinite(cr) ? <Coin pos={[1.5 - Math.min(cr, 30) * 0.06, 0.4, 0.9 + Math.min(cr, 30) * 0.02]} rot={[Math.PI / 2, 0, -cr * 0.3]} scale={5.5} /> : null;
+  const coinRoll = Number.isFinite(cr) ? <Coin pos={[3.3 - Math.min(cr, 30) * 0.08, 0.4, 0.9 + Math.min(cr, 30) * 0.02]} rot={[Math.PI / 2, 0, -cr * 0.3]} scale={5.5} /> : null;
   const cs = since(opts.coin_spin, f);
   const coinSpin = Number.isFinite(cs) ? <Coin pos={[1.2, 0.42, -0.4]} rot={[0.15 * Math.sin(cs / 3), cs * 0.45, Math.PI / 2]} scale={5.5} /> : null;
   // ---- the bulb popping: sparks
   const bp = since(opts.bulb_pop, f);
-  const sparks = bp < 10 ? Array.from({length: 10}, (_, i) => {
-    const a = rnd(i) * Math.PI * 2, r = bp * 0.12;
-    return <mesh key={i} position={[lx + Math.cos(a) * r, 6.9 - bp * 0.05 - rnd(i + 1) * r, lz + Math.sin(a) * r]}><sphereGeometry args={[0.05, 6, 4]} />
-      <meshBasicMaterial color="#fff1cc" transparent opacity={1 - bp / 10} toneMapped={false} /></mesh>;
+  // the pop: sparks burst and drift down through the water for 1.5 s, the filament glows out - the black stays alive
+  // (QC on the final: a frozen picture for 1.4 s)
+  const sparks = bp < 46 ? Array.from({length: 14}, (_, i) => {
+    const a = rnd(i) * Math.PI * 2, r = Math.min(bp, 8) * 0.12 + (bp > 8 ? (bp - 8) * 0.01 : 0);
+    const fall = bp > 8 ? (bp - 8) * (0.05 + rnd(i + 3) * 0.04) : 0;
+    return <mesh key={i} position={[lx + Math.cos(a) * r, 6.9 - Math.min(bp, 8) * 0.05 - rnd(i + 1) * r - fall, lz + Math.sin(a) * r]}><sphereGeometry args={[0.05, 6, 4]} />
+      <meshBasicMaterial color={i % 2 ? '#ffd9a0' : '#ff9a4a'} transparent opacity={Math.max(0, 1 - bp / 46) * (0.6 + 0.4 * Math.sin(bp * 0.7 + i))} toneMapped={false} /></mesh>;
   }) : null;
+  const ember = Number.isFinite(bp) && bp < 60 ? (
+    <mesh position={[lx, 6.95, lz]}><sphereGeometry args={[0.12, 12, 8]} />
+      <meshBasicMaterial map={blobTexture('#ff7a2a')} transparent opacity={0.9 * Math.exp(-bp / 22)} depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} /></mesh>
+  ) : null;
   // ---- her light on the cards: spade_glow (one card once at f, or 'all'), swarm_peel (spades leave the cards as rays)
   const sgAll = opts.spade_glow === 'all';
   const sgOne = typeof opts.spade_glow === 'number' ? flare(opts.spade_glow, f, 20) : 0;
@@ -213,7 +221,7 @@ export const CardTable: React.FC<SetProps> = ({f, opts, beats}) => {
         <mesh position={[lampPos[0] * 0.6, 0.015, lampPos[2] * 0.6]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2}><planeGeometry args={[4.2, 4.2]} />
           <meshBasicMaterial map={blobTexture('#ffcf8a')} transparent opacity={0.35 * lamp} depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} /></mesh>
       ) : null}
-      {sparks}
+      {sparks}{ember}
       {opts.king_float ? (
         <Card pos={[0, 1.6 + 0.15 * Math.sin(f / 10), 2.0]} rot={[0.1, f * 0.06, 0]} rank="K" sprite={king} crop={[0.02, 0.46]} scale={0.6} />
       ) : null}

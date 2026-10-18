@@ -3,6 +3,7 @@
 // --report prints where her head / feet and the lyric anchor land in the frame per shot (start, middle, end);
 // --summary lists every guard fault per shot (cut edges by sprite:side in frames, sliced-face, lyric faults);
 // --fit [shot#...] proposes the smallest camera change (tighter fov, aim toward her head) that passes every guard;
+// --fit-lens [shot#...] proposes the smallest move of the whole camera path that passes every guard (JSON keys);
 // --fit-lyrics [shot#...] proposes the nearest lyric anchor (+ size) inside the frame and off her face (JSON per shot).
 import os from 'node:os';
 import path from 'node:path';
@@ -12,7 +13,7 @@ import {guardCutEdges, here, loadJob} from './lib.mjs';
 
 const {props} = loadJob(process.argv[2]);
 const flag = (n) => process.argv.indexOf(n);
-const aid = ['--report', '--place', '--summary', '--fit', '--fit-lyrics'].some((n) => flag(n) > 0);
+const aid = ['--report', '--place', '--summary', '--fit', '--fit-lyrics', '--fit-lens'].some((n) => flag(n) > 0);
 if (!aid || process.argv.includes('--report')) {
   try {
     await guardCutEdges(props, null);
@@ -24,7 +25,7 @@ if (!aid || process.argv.includes('--report')) {
 if (aid) {
   const out = path.join(os.tmpdir(), `raymi-report-${process.pid}.mjs`);
   await build({entryPoints: [path.join(here, 'src/film/check.ts')], bundle: true, format: 'esm', platform: 'node', outfile: out, logLevel: 'error'});
-  const {framingReport, placeAt, shotSummary, fitShot, fitLyrics} = await import(pathToFileURL(out).href);
+  const {framingReport, placeAt, shotSummary, fitShot, fitLyrics, fitLens} = await import(pathToFileURL(out).href);
   const pi = flag('--place');
   if (pi > 0) {
     const [s, f, x, y, d] = process.argv.slice(pi + 1, pi + 6).map(Number);
@@ -38,6 +39,11 @@ if (aid) {
       console.log(`#${s.index} ${s.shot} (${s.frames} f)  ${cut.map(([k, n]) => `${k} ${n}f`).join(', ')}${s.face ? '  FACE sliced' : ''}${s.extra.length ? `  SET ${s.extra.join(' | ')}` : ''}${s.lyrics.length ? `  LYRICS ${s.lyrics.join(' | ')}` : ''}`);
     }
     console.log(`${bad} of ${props.shots.length} shots fail a guard`);
+  } else if (flag('--fit-lens') > 0) {
+    const want = process.argv.slice(flag('--fit-lens') + 1).filter((x) => /^\d+$/.test(x)).map(Number);
+    const out = {};
+    for (const i of want) { const c = fitLens(props, i); out[i] = c ? c.map(({f, pos, look, fov, roll, ease}) => ({f, pos, look, fov, roll, ease})) : null; }
+    console.log(JSON.stringify(out));
   } else if (flag('--fit-lyrics') > 0) {
     const want = process.argv.slice(flag('--fit-lyrics') + 1).filter((x) => /^\d+$/.test(x)).map(Number);
     const out = {};
