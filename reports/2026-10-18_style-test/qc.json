@@ -1,11 +1,11 @@
 {
  "file": "final.mp4",
- "width": 1920,
- "height": 1080,
+ "width": 1080,
+ "height": 1920,
  "duration": 12.23,
  "fps": "30/1",
  "checks": {
-  "landscape_16x9": true,
+  "portrait_9x16": true,
   "has_audio": true,
   "loudness_-14": true,
   "true_peak_<=-1": true,
