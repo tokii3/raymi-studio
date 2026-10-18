@@ -89,7 +89,16 @@
     "accent": "#ffffff",
     "lines": [
      15
-    ]
+    ],
+    "short": {
+     "anchor": [
+      0.09,
+      1.64,
+      2.71
+     ],
+     "size": 0.09,
+     "width": 0.9
+    }
    },
    "transition": {
     "kind": "pass",
@@ -180,7 +189,16 @@
     ],
     "key": [
      "パッパッパッハハ"
-    ]
+    ],
+    "short": {
+     "anchor": [
+      0.71,
+      0.79,
+      1.36
+     ],
+     "size": 0.03,
+     "width": 0.55
+    }
    },
    "transition": {
     "kind": "flash",
@@ -408,7 +426,16 @@
     ],
     "key": [
      "KING"
-    ]
+    ],
+    "short": {
+     "anchor": [
+      -0.49,
+      2.03,
+      -1.09
+     ],
+     "size": 0.08,
+     "width": 0.8
+    }
    },
    "transition": {
     "kind": "cut",

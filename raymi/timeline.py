@@ -215,6 +215,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                           "ease": r.get("ease", "inOut")})
         # lyrics living in this shot
         lyr = s.get("lyrics")
+        if lyr and fmt == "short" and isinstance(lyr.get("short"), dict):
+            lyr = {**lyr, **lyr["short"]}                 # the Short frame is narrow: its own anchor / size / width
         L, words = None, []
         if lyr:
             if lyr.get("kind") not in LYRIC_KINDS:

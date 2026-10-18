@@ -52,6 +52,9 @@ def test_short_format_uses_the_same_shots_portrait(tmp_path):
     p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot]), "short", cmap=ALL)
     assert errors == [] and p["composition"] == "MVShort" and (p["width"], p["height"]) == (1080, 1920)
     assert p["shots"][0]["camera"][0]["fov"] == 50
+    shot["lyrics"] = {"kind": "sign", "anchor": "led", "size": 0.4, "short": {"size": 0.2, "width": 1.5}}
+    p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot]), "short", cmap=ALL)
+    assert (p["shots"][0]["lyrics"]["size"], p["shots"][0]["lyrics"]["width"]) == (0.2, 1.5)
 
 
 def test_missing_glyph_fails_loudly(tmp_path):
