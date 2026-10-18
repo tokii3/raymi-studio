@@ -197,7 +197,13 @@ export const Aquarium: React.FC<SetProps> = ({f, opts, hits, beats, camPos}) => 
       {opts.cards === 'scattered' ? <ScatteredDeck center={[0.2, 0, -0.4]} sprite={opts.screens ? String(opts.screens) : undefined} /> : null}
       {Array.isArray(opts.king_up) ? <Card pos={opts.king_up as [number, number, number]} rot={[-Math.PI / 2, 0, 0.2]} scale={0.12} rank="K"
         sprite={opts.screens ? String(opts.screens) : undefined} /> : null}
-      {opts.dead_lamp ? <WorkLamp pos={[0.9, 3.5, -0.7]} coin swing={0.03 * Math.sin(f / 40)} /> : null}
+      {/* the tank's night-service work lamp: hangs dark by day (planted, KING script-critic 3), dead with the coin after the night */}
+      {opts.dead_lamp || opts.work_lamp ? <WorkLamp pos={[0.9, 3.5, -0.7]} coin={!!opts.dead_lamp} on={opts.work_lamp === 'on' ? 1 : 0} swing={0.03 * Math.sin(f / 40)} /> : null}
+      {opts.felt_mat && opts.card_rain !== undefined ? (() => {           // the deck's little play mat sinks with the cards
+        const t = Math.max(0, Math.min(1, (f - frames(opts.card_rain)[0]) / 110));
+        return t > 0 ? <mesh position={[0.6 + Math.sin(t * 6) * 0.4, 4.0 - 3.96 * t, -0.9]} rotation={[-Math.PI / 2 + (1 - t) * 0.6 * Math.sin(t * 9), 0, t * 2]}>
+          <planeGeometry args={[0.55, 0.38]} /><meshToonMaterial color="#5a1830" side={THREE.DoubleSide} /></mesh> : null;
+      })() : null}
       {opts.salmon ? (() => {
         const at: Record<string, [number, number, number]> = {glass: [-2.0, 1.5, 1.15], near: [1.3, 1.7, -0.3], behind: [-0.1, 1.6, -1.7]};
         const p = at[String(opts.salmon)] ?? at.near;

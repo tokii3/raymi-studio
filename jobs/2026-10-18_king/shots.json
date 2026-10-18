@@ -123,7 +123,8 @@
      5.13,
      6.57
     ],
-    "warning": false
+    "warning": false,
+    "work_lamp": "dark"
    },
    "why": "the show switches on like a machine; she is small inside it",
    "camera": [
@@ -348,7 +349,8 @@
     "crowd": 16,
     "screens": "WS_F_PEACE_WINK_UV_131",
     "chute": true,
-    "warning": false
+    "warning": false,
+    "work_lamp": "dark"
    },
    "why": "confined = a box seen from above (the cage as a picture, not a word)",
    "camera": [
@@ -1053,7 +1055,8 @@
     "chute": true,
     "crown": "head",
     "flash": 0.3,
-    "warning": false
+    "warning": false,
+    "work_lamp": "dark"
    },
    "why": "the 'happy show' with no future: the biggest trick, on the board above her head",
    "camera": [
@@ -2895,7 +2898,8 @@
      73.79,
      74.16,
      74.51
-    ]
+    ],
+    "felt_mat": true
    },
    "why": "WOW 3: the whole deck - her face on every card - sinks into her own water; day turns to night",
    "camera": [
@@ -2966,7 +2970,8 @@
      75.6,
      75.98,
      76.32
-    ]
+    ],
+    "felt_mat": true
    },
    "why": "the cards settle on the sand around her like a lid closing",
    "camera": [
@@ -4801,6 +4806,16 @@
      "act": "shake"
     },
     {
+     "at": 0.45,
+     "sprite": "WS_F_FOCUS_PULL_UV_188",
+     "pos": [
+      0.0,
+      0,
+      0.3
+     ],
+     "act": "stomp"
+    },
+    {
      "at": 0.7,
      "sprite": "WS_F_SHOUT_WET_UV_177",
      "pos": [
@@ -5115,7 +5130,7 @@
   },
   {
    "id": "rays-orbit",
-   "at": 118.6,
+   "at": 118.05,
    "set": "cardtable",
    "opts": {
     "palette": "night",
@@ -5192,7 +5207,7 @@
   },
   {
    "id": "reveal-tank",
-   "at": 120.02,
+   "at": 118.9,
    "set": "aquarium",
    "opts": {
     "led": "CLOSED",
@@ -5215,16 +5230,44 @@
     {
      "at": 0,
      "pos": [
-      -0.4,
-      2.4,
-      -0.4
+      -0.3,
+      0.9,
+      0.6
      ],
      "look": [
-      -0.4,
-      0.0,
-      -0.9
+      -0.2,
+      0.3,
+      -0.7
      ],
-     "fov": 50
+     "fov": 46
+    },
+    {
+     "at": 0.95,
+     "pos": [
+      0.3,
+      2.7,
+      1.2
+     ],
+     "look": [
+      0.3,
+      2.0,
+      -0.7
+     ],
+     "fov": 52
+    },
+    {
+     "at": 1.45,
+     "pos": [
+      0.4,
+      3.2,
+      0.9
+     ],
+     "look": [
+      0.25,
+      0.4,
+      -1.25
+     ],
+     "fov": 40
     },
     {
      "at": "end",
@@ -5245,7 +5288,7 @@
      "height": 0.09
     },
     {
-     "at": 0.35,
+     "at": 0.95,
      "sprite": "WS_F_CALM_REST_UV_166",
      "pos": [
       -0.2,
@@ -5253,8 +5296,18 @@
       -0.7
      ],
      "height": 1.55,
-     "move": 0.6,
+     "move": 0.85,
      "ease": "out"
+    },
+    {
+     "at": 1.47,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": [
+      -0.2,
+      0,
+      -0.7
+     ],
+     "act": "tilt"
     }
    ],
    "transition": {
@@ -5555,7 +5608,8 @@
     "cap": false,
     "salmon": "near",
     "salmon_coin": 129.6,
-    "glow_pulse": "beats"
+    "glow_pulse": "beats",
+    "warning": false
    },
    "why": "the whole story in one picture, plus one gift to the only friend who never looked at a phone: a black building, one lit tank, the word KING",
    "camera": [
@@ -5564,13 +5618,42 @@
      "cam": "hall_wide"
     },
     {
-     "at": "end",
+     "at": 1.8,
      "cam": "hall_wide",
      "offset": [
       0,
       0.3,
       2.5
      ]
+    },
+    {
+     "at": 1.84,
+     "pos": [
+      0.6,
+      1.0,
+      6.0
+     ],
+     "look": [
+      0,
+      2.4,
+      0
+     ],
+     "fov": 36,
+     "ease": "hold"
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.5,
+      1.0,
+      5.6
+     ],
+     "look": [
+      0,
+      2.4,
+      0
+     ],
+     "fov": 35
     }
    ],
    "kick": 1,
@@ -5636,7 +5719,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "sprite": "WS_F_HAPPY_JUMP_UV_161",
      "pos": [
       -0.6,
       0,

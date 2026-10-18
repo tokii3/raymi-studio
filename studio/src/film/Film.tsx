@@ -98,7 +98,7 @@ export const Film: React.FC<FilmProps> = (props) => {
   const ride = o.ride_card && pose ? <Card pos={[pose.pos[0], pose.pos[1] + pose.lift + 0.02, pose.pos[2]]} rot={[-Math.PI / 2, 0, 0.3]} back /> : null;
   // something passes right in front of the lens on given frames: a playing card (card_pass_lens) or a ray (rays_pass_lens)
   let lensPass: React.ReactNode = null;
-  for (const [key, ray] of [['card_pass_lens', false], ['rays_pass_lens', true]] as const) {
+  for (const [key, ray] of [['card_pass_lens', false], ['shuffle', false], ['rays_pass_lens', true]] as const) {
     const d = since(o[key], f);
     if (d < 10) {
       const fw = new THREE.Vector3(0, 0, -1).applyQuaternion(cam.quaternion);
