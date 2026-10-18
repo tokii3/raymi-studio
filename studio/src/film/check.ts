@@ -276,3 +276,39 @@ export function fitShot(props: FilmProps, index: number): {factor: number; aim: 
   }
   return null;
 }
+
+/** A lyric anchor (and size) that keeps every line inside the frame and off her face: the line keeps its distance
+ *  from the lens and slides across the screen, nearest to where the script put it first, shrinking only if no spot
+ *  fits. null = the shot has no lyrics or nothing fits (rethink the surface). */
+export function fitLyrics(props: FilmProps, index: number): {anchor: V3; size: number; width: number} | null {
+  const s = props.shots[index];
+  if (!s.lyrics) return null;
+  const one = (L: Shot['lyrics']) => lyricsOutOfFrame({...props, shots: [{...s, lyrics: L}]}).length === 0;
+  if (one(s.lyrics)) return {anchor: s.lyrics.anchor, size: s.lyrics.size, width: s.lyrics.width};
+  const firstWord = s.words.length ? Math.min(...s.words.map((w) => w.from)) : s.from;
+  const f = Math.max(s.from, Math.min(s.to - 1, firstWord));
+  const cam = makeCamera(s, f, props.width / props.height, [], props.fps);
+  const a = new THREE.Vector3(...s.lyrics.anchor);
+  const n = a.clone().project(cam);
+  const dist = Math.max(0.6, a.distanceTo(cam.position));
+  const ox = n.z < 1 ? (n.x + 1) / 2 : 0.5, oy = n.z < 1 ? (1 - n.y) / 2 : 0.5;
+  const spots: [number, number][] = [];
+  for (let y = 0.12; y <= 0.881; y += 0.04) for (let x = 0.2; x <= 0.801; x += 0.05) spots.push([x, y]);
+  spots.sort((p, q) => Math.hypot(p[0] - ox, p[1] - oy) - Math.hypot(q[0] - ox, q[1] - oy));
+  for (const k of [1, 0.8, 0.65, 0.5, 0.4]) {
+    for (const [x, y] of spots) {
+      // the words stay on their own surface (the plane through the scripted anchor, facing rotY): slide, never float off
+      const ray = new THREE.Vector3(x * 2 - 1, 1 - y * 2, 0.5).unproject(cam).sub(cam.position).normalize();
+      const nrm = new THREE.Vector3(Math.sin((s.lyrics.rotY * Math.PI) / 180), 0, Math.cos((s.lyrics.rotY * Math.PI) / 180));
+      const den = ray.dot(nrm);
+      if (Math.abs(den) < 1e-3) continue;
+      const tt = a.clone().sub(cam.position).dot(nrm) / den;
+      if (tt < 0.3 || tt > dist * 4) continue;
+      const pt = cam.position.clone().addScaledVector(ray, tt);
+      const anchor: V3 = [Number(pt.x.toFixed(2)), Number(pt.y.toFixed(2)), Number(pt.z.toFixed(2))];
+      const L = {...s.lyrics, anchor, size: Number((s.lyrics.size * k).toFixed(3)), width: Number((s.lyrics.width * k).toFixed(2))};
+      if (one(L)) return {anchor, size: L.size, width: L.width};
+    }
+  }
+  return null;
+}

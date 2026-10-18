@@ -78,7 +78,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
      "pos": "glass"
     },
     {
@@ -89,7 +89,7 @@
     },
     {
      "at": 2.53,
-     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
      "pos": "glass",
      "act": "pop"
     }
@@ -128,37 +128,37 @@
     {
      "at": 0,
      "pos": [
-      0.0,
+      0,
       -0.6,
       7.5
      ],
      "look": [
-      0.0,
-      4.6,
-      2.2
+      0.106,
+      2.987,
+      1
      ],
-     "fov": 40
+     "fov": 38.8
     },
     {
      "at": "end",
      "pos": [
-      0.0,
+      0,
       0.2,
       8.4
      ],
      "look": [
-      0.0,
-      1.4,
-      0.0
+      0.106,
+      1.387,
+      -0.1
      ],
-     "fov": 36
+     "fov": 34.92
     }
    ],
    "kick": 1,
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_JELLYFISH_UV_073",
+     "sprite": "WS_F_CALM_REST_UV_166",
      "pos": "center"
     }
    ],
@@ -257,7 +257,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_FOCUS_CROUCH_UV_191",
+     "sprite": "WS_F_FOCUS_CROUCH_UV_192",
      "pos": "crown"
     },
     {
@@ -287,34 +287,32 @@
    "camera": [
     {
      "at": 0,
+     "frame": "medium",
      "cam": "glass_close"
     },
     {
      "at": "end",
+     "frame": "medium",
      "cam": "glass_close",
-     "offset": [
-      0,
-      0,
-      -0.15
-     ]
+     "fov": 28
     }
    ],
    "kick": 1,
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_NEUTRAL_CALM_UV_026",
+     "sprite": "WS_F_LONGING_GLASS_UV_200",
      "pos": "glass"
     },
     {
      "at": 0.72,
-     "sprite": "WS_F_HAPPY_ENERG_UV_047",
+     "sprite": "WS_F_HAPPY_JUMP_UV_161",
      "pos": "glass",
      "act": "pop"
     },
     {
      "at": 1.09,
-     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "sprite": "WS_F_SMUG_WINK_UV_169",
      "pos": "glass",
      "act": "pop",
      "icon": "sparkle"
@@ -351,7 +349,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_SHY_DRAMA_UV_039",
+     "sprite": "WS_F_FOCUS_CROUCH_UV_192",
      "pos": "center"
     }
    ],
@@ -406,7 +404,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_SHY_DRAMA_UV_039",
+     "sprite": "WS_F_CALM_REST_UV_166",
      "pos": "throne",
      "act": "tilt"
     }
@@ -414,12 +412,12 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.15,
-     0.7,
-     1.4
+     -0.65,
+     1.11,
+     -0.45
     ],
-    "size": 0.16,
-    "width": 1.2,
+    "size": 0.08,
+    "width": 0.5,
     "words": [
      "利口"
     ],
@@ -448,38 +446,29 @@
    "camera": [
     {
      "at": 0,
-     "pos": [
+     "frame": "medium",
+     "from": [
       -0.4,
       1.35,
       -0.4
-     ],
-     "look": [
-      0.5,
-      1.2,
-      1.6
-     ],
-     "fov": 36
+     ]
     },
     {
      "at": "end",
-     "pos": [
+     "frame": "medium",
+     "from": [
       -0.3,
       1.35,
       -0.1
      ],
-     "look": [
-      0.5,
-      1.2,
-      1.6
-     ],
-     "fov": 34
+     "fov": 32
     }
    ],
    "kick": 1,
    "raymi": [
     {
      "at": 0,
-     "sprite": "CU_BK_NA_UV_001",
+     "sprite": "WS_BK_NA_WADE_UV_182",
      "pos": [
       -0.2,
       0.0,
@@ -511,32 +500,29 @@
    "camera": [
     {
      "at": 0,
+     "frame": "medium",
      "cam": "glass_close"
     },
     {
      "at": "end",
-     "cam": "glass_close",
-     "offset": [
-      -0.2,
-      0,
-      0.1
-     ]
+     "frame": "medium",
+     "cam": "glass_close"
     }
    ],
    "kick": 1.5,
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_SURPRISE_DRAMA_UV_035",
+     "sprite": "WS_F_HAPPY_JUMP_UV_160",
      "pos": "glass",
      "icon": "!"
     },
     {
      "at": 0.3,
-     "sprite": "WS_F_PANIC_LUNGE_UV_203",
+     "sprite": "WS_F_PANIC_LUNGE_UV_202",
      "pos": [
       0.1,
-      0,
+      -0.03,
       1.0
      ],
      "act": "pop",
@@ -545,9 +531,13 @@
    ],
    "lyrics": {
     "kind": "glass",
-    "anchor": "glass_text",
-    "size": 0.14,
-    "width": 2.2,
+    "anchor": [
+     0.75,
+     0.75,
+     1.57
+    ],
+    "size": 0.05,
+    "width": 0.6,
     "lines": [
      1
     ],
@@ -613,13 +603,13 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "MS_F_HAPPY_UV_005",
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
      "pos": "glass",
      "icon": "heart"
     },
     {
      "at": 0.75,
-     "sprite": "WS_F_NEUTRAL_CALM_UV_027",
+     "sprite": "WS_F_CALM_REST_UV_164",
      "pos": "glass",
      "act": "shrink"
     }
@@ -627,8 +617,8 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.9,
-     0.55,
+     -0.65,
+     0.19,
      2.2
     ],
     "size": 0.13,
@@ -667,30 +657,24 @@
    "camera": [
     {
      "at": 0,
-     "pos": [
+     "frame": "medium",
+     "from": [
       0.4,
       0.6,
       0.2
      ],
-     "look": [
-      1.6,
-      1.0,
-      1.7
-     ],
+     "side": "left",
      "fov": 44
     },
     {
      "at": "end",
-     "pos": [
+     "frame": "medium",
+     "from": [
       0.2,
       0.55,
       -0.1
      ],
-     "look": [
-      1.6,
-      1.0,
-      1.7
-     ],
+     "side": "left",
      "fov": 46
     }
    ],
@@ -698,7 +682,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_SURPRISE_DRAMA_UV_035",
+     "sprite": "WS_F_SCARED_RUN_UV_175",
      "pos": [
       0.9,
       0,
@@ -792,12 +776,12 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.0,
-     -0.45,
+     0.71,
+     0.51,
      1.69
     ],
-    "size": 0.12,
-    "width": 2.2,
+    "size": 0.078,
+    "width": 1.43,
     "lines": [
      3
     ],
@@ -834,9 +818,9 @@
       4.4
      ],
      "look": [
-      -2.0,
-      0.5,
-      3.0
+      0.2,
+      0.7,
+      -0.2
      ],
      "fov": 30
     },
@@ -848,9 +832,9 @@
       4.4
      ],
      "look": [
-      2.0,
-      0.5,
-      3.0
+      0.2,
+      0.7,
+      -0.2
      ],
      "fov": 30,
      "ease": "linear"
@@ -860,19 +844,19 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_NEUTRAL_CALM_UV_038",
+     "sprite": "WS_F_CALM_REST_UV_166",
      "pos": "center"
     }
    ],
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.3,
-     0.95,
-     3.1
+     0.64,
+     0.4,
+     2.75
     ],
-    "size": 0.13,
-    "width": 3.4,
+    "size": 0.05,
+    "width": 0.75,
     "lines": [
      4
     ],
@@ -902,31 +886,21 @@
    "camera": [
     {
      "at": 0,
-     "pos": [
+     "frame": "medium",
+     "from": [
       0.9,
       1.4,
       1.0
-     ],
-     "look": [
-      -0.6,
-      1.2,
-      -1.05
-     ],
-     "fov": 34
+     ]
     },
     {
      "at": "end",
-     "pos": [
+     "frame": "medium",
+     "from": [
       -2.0,
       1.4,
       0.6
-     ],
-     "look": [
-      -0.6,
-      1.2,
-      -1.05
-     ],
-     "fov": 34
+     ]
     }
    ],
    "kick": 1,
@@ -940,12 +914,12 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     0.4,
-     1.7,
+     -0.56,
+     1.26,
      -0.6
     ],
-    "size": 0.2,
-    "width": 1.6,
+    "size": 0.16,
+    "width": 1.28,
     "lines": [
      5
     ],
@@ -980,28 +954,38 @@
    "camera": [
     {
      "at": 0,
-     "cam": "tank_front"
+     "pos": [
+      0.3,
+      1.35,
+      4.2
+     ],
+     "look": [
+      -1.871,
+      1.747,
+      -0.627
+     ],
+     "fov": 29.1
     },
     {
      "at": "end",
-     "cam": "tank_front",
-     "offset": [
-      -1.6,
-      0,
-      0
+     "pos": [
+      -1.3,
+      1.35,
+      4.2
      ],
-     "look_offset": [
-      -2.0,
-      0,
-      0
-     ]
+     "look": [
+      -2.371,
+      1.747,
+      -0.627
+     ],
+     "fov": 29.1
     }
    ],
    "kick": 1,
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_SWIM_UV_116",
+     "sprite": "WS_F_FLY_UV_054",
      "pos": [
       1.2,
       0.6,
@@ -1010,7 +994,7 @@
     },
     {
      "at": 0.15,
-     "sprite": "WS_F_SWIM_UV_116",
+     "sprite": "WS_F_FLY_UV_054",
      "pos": [
       -2.4,
       0.6,
@@ -1054,11 +1038,31 @@
    "camera": [
     {
      "at": 0,
-     "cam": "hall_wide"
+     "pos": [
+      0,
+      0.75,
+      9.5
+     ],
+     "look": [
+      -0.14,
+      1.865,
+      -0.401
+     ],
+     "fov": 32.01
     },
     {
      "at": "end",
-     "cam": "tank_front"
+     "pos": [
+      0.3,
+      1.35,
+      4.2
+     ],
+     "look": [
+      -0.29,
+      1.765,
+      -0.901
+     ],
+     "fov": 29.1
     }
    ],
    "kick": 1,
@@ -1228,16 +1232,16 @@
     {
      "at": "end",
      "pos": [
-      -3.0,
-      2.6,
-      3.0
+      -3.1,
+      3.9,
+      3.2
      ],
      "look": [
-      -2.6,
-      1.0,
-      0.8
+      -3.45,
+      3.3,
+      1.6
      ],
-     "fov": 34
+     "fov": 32
     }
    ],
    "kick": 1,
@@ -1245,12 +1249,12 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -3.6,
-     4.1,
-     1.9
+     -3.77,
+     3.78,
+     2.06
     ],
-    "size": 0.12,
-    "width": 1.3,
+    "size": 0.033,
+    "width": 0.39,
     "words": [
      "無いの",
      "新たに"
@@ -1310,7 +1314,7 @@
     },
     {
      "at": 1.15,
-     "sprite": "MS_F_HAPPY_UV_006",
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
      "pos": [
       0.0,
       0.0,
@@ -1322,8 +1326,8 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     0.9,
-     1.5,
+     -1.32,
+     2,
      -0.6
     ],
     "size": 0.22,
@@ -1396,7 +1400,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_PEACE_WINK_UV_131",
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
      "pos": "glass",
      "icon": "sweat"
     }
@@ -1404,12 +1408,12 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     2.1,
-     1.25,
+     1.52,
+     0.77,
      1.7
     ],
-    "size": 0.2,
-    "width": 1.6,
+    "size": 0.1,
+    "width": 0.8,
     "lines": [
      9
     ],
@@ -2627,7 +2631,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_THINK_CALM_UV_036",
+     "sprite": "WS_F_CALM_REST_UV_166",
      "pos": [
       -2.4,
       1.6,
@@ -2666,15 +2670,11 @@
    "camera": [
     {
      "at": 0,
-     "pos": [
+     "frame": "medium",
+     "from": [
       -2.5,
       2.2,
       0.2
-     ],
-     "look": [
-      -3.4,
-      3.8,
-      1.9
      ],
      "fov": 40
     }
@@ -2851,15 +2851,15 @@
      "at": 0,
      "pos": [
       -0.2,
-      1.0,
+      1,
       1.4
      ],
      "look": [
-      0.6,
-      0.0,
-      0.2
+      0.014,
+      0.674,
+      0.252
      ],
-     "fov": 34
+     "fov": 32.98
     },
     {
      "at": "end",
@@ -2869,11 +2869,11 @@
       0.25
      ],
      "look": [
-      0.6,
-      0.0,
-      0.2
+      0.014,
+      0.674,
+      0.252
      ],
-     "fov": 28,
+     "fov": 27.16,
      "ease": "in"
     }
    ],
@@ -2881,7 +2881,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_CALM_PRONE_UV_185",
+     "sprite": "WS_F_CALM_PRONE_UV_184",
      "pos": [
       -0.6,
       0,
@@ -2890,7 +2890,7 @@
     },
     {
      "at": 0.91,
-     "sprite": "WS_F_CALM_PRONE_UV_185",
+     "sprite": "WS_F_CALM_PRONE_UV_184",
      "pos": [
       0.6,
       0.01,
@@ -2959,7 +2959,7 @@
     },
     {
      "at": 1.04,
-     "sprite": "WS_F_JELLYFISH_UV_073",
+     "sprite": "WS_F_HAPPY_JUMP_UV_160",
      "pos": [
       -0.4,
       0,
@@ -2971,8 +2971,8 @@
    "lyrics": {
     "kind": "card",
     "anchor": [
-     0.9,
-     0.4,
+     -0.26,
+     0.26,
      0.4
     ],
     "size": 0.2,
@@ -3023,7 +3023,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_SURPRISE_DRAMA_UV_031",
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
      "pos": [
       -0.6,
       0,
@@ -3166,7 +3166,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_NEUTRAL_CALM_UV_027",
+     "sprite": "WS_F_PAIN_CLUTCH_UV_163",
      "pos": [
       -0.6,
       0,
@@ -3276,16 +3276,31 @@
    "camera": [
     {
      "at": 0,
-     "cam": "house_up",
-     "offset": [
-      0,
-      -1.0,
-      0
-     ]
+     "pos": [
+      0.2,
+      0.4,
+      3.8
+     ],
+     "look": [
+      1.704,
+      2.353,
+      -1.599
+     ],
+     "fov": 44.62
     },
     {
      "at": "end",
-     "cam": "house_up"
+     "pos": [
+      0.2,
+      1.4,
+      3.8
+     ],
+     "look": [
+      1.704,
+      2.853,
+      -1.599
+     ],
+     "fov": 44.62
     }
    ],
    "kick": 1,
@@ -3594,30 +3609,24 @@
    "camera": [
     {
      "at": 0,
-     "pos": [
+     "frame": "medium",
+     "from": [
       2.4,
       0.35,
       0.4
-     ],
-     "look": [
-      2.0,
-      0.3,
-      -1.2
-     ],
-     "fov": 34
+     ]
     }
    ],
    "kick": 1,
    "raymi": [
     {
      "at": 0,
-     "sprite": "CU_F_CRY_UV_003",
+     "sprite": "WS_F_SHOUT_WET_UV_177",
      "pos": [
       2.0,
-      -0.2,
+      0,
       -1.1
-     ],
-     "height": 0.8
+     ]
     }
    ],
    "lyrics": {
@@ -3816,8 +3825,8 @@
    "lyrics": {
     "kind": "card",
     "anchor": [
-     1.0,
-     0.6,
+     1.48,
+     0.75,
      -0.2
     ],
     "size": 0.2,
@@ -3862,30 +3871,24 @@
    "camera": [
     {
      "at": 0,
-     "pos": [
+     "frame": "close",
+     "from": [
       0.4,
       1.3,
       1.2
-     ],
-     "look": [
-      0.0,
-      1.2,
-      -0.4
-     ],
-     "fov": 30
+     ]
     }
    ],
    "kick": 1,
    "raymi": [
     {
      "at": 0,
-     "sprite": "CU_F_HAPPY_UV_001",
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
      "pos": [
       0.0,
       0,
       -0.4
-     ],
-     "height": 1.2
+     ]
     }
    ],
    "lyrics": {
@@ -4016,12 +4019,12 @@
     "kind": "sign",
     "material": "print",
     "anchor": [
-     -1.2,
-     2.0,
-     -1.0
+     -1.04,
+     0.66,
+     -1
     ],
-    "size": 0.18,
-    "width": 1.4,
+    "size": 0.144,
+    "width": 1.12,
     "words": [
      "レフトサイド"
     ]
@@ -4127,8 +4130,8 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     0.9,
-     1.4,
+     0.59,
+     1.67,
      -0.3
     ],
     "size": 0.18,
@@ -4248,12 +4251,8 @@
    "camera": [
     {
      "at": 0,
-     "cam": "felt_low",
-     "offset": [
-      -0.6,
-      0.2,
-      -1.0
-     ]
+     "frame": "wide",
+     "cam": "felt_low"
     }
    ],
    "kick": 2,
@@ -4273,12 +4272,12 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     0.4,
-     1.4,
+     -0.1,
+     1.05,
      0.2
     ],
-    "size": 0.18,
-    "width": 1.6,
+    "size": 0.09,
+    "width": 0.8,
     "lines": [
      30
     ],
@@ -4312,17 +4311,13 @@
    "camera": [
     {
      "at": 0,
-     "cam": "table_wide",
-     "offset": [
-      -1.0,
-      0,
-      -1.5
+     "frame": "wide",
+     "from": [
+      -1.5,
+      2.6,
+      7.0
      ],
-     "look_offset": [
-      -2.0,
-      0,
-      0
-     ]
+     "fov": 36
     }
    ],
    "kick": 1.5,
@@ -4627,8 +4622,8 @@
    "lyrics": {
     "kind": "card",
     "anchor": [
-     -1.0,
-     0.5,
+     -0.5,
+     3.68,
      1.4
     ],
     "size": 0.26,
@@ -4901,30 +4896,24 @@
    "camera": [
     {
      "at": 0,
-     "pos": [
+     "frame": "close",
+     "from": [
       -0.3,
       1.45,
       0.6
-     ],
-     "look": [
-      -0.4,
-      1.4,
-      -0.6
-     ],
-     "fov": 30
+     ]
     }
    ],
    "kick": 1,
    "raymi": [
     {
      "at": 0,
-     "sprite": "CU_F_CALM_UV_091",
+     "sprite": "WS_F_CALM_REST_UV_164",
      "pos": [
       -0.4,
       0,
       -0.6
-     ],
-     "height": 1.3
+     ]
     }
    ],
    "transition": {
@@ -4953,29 +4942,21 @@
    "camera": [
     {
      "at": 0,
-     "pos": [
+     "frame": "medium",
+     "from": [
       1.8,
       1.4,
       1.2
-     ],
-     "look": [
-      -0.4,
-      1.3,
-      -0.6
      ],
      "fov": 36
     },
     {
      "at": "end",
-     "pos": [
+     "frame": "medium",
+     "from": [
       -2.4,
       1.4,
       1.0
-     ],
-     "look": [
-      -0.4,
-      1.3,
-      -0.6
      ],
      "fov": 36
     }
@@ -5147,29 +5128,27 @@
    "camera": [
     {
      "at": 0,
+     "frame": "medium",
      "cam": "throne_ms"
     },
     {
      "at": "end",
+     "frame": "medium",
      "cam": "throne_ms",
-     "offset": [
-      0.1,
-      0,
-      -0.25
-     ]
+     "fov": 31
     }
    ],
    "kick": 1,
    "raymi": [
     {
      "at": 0,
-     "sprite": "MS_F_HAPPY_UV_005",
+     "sprite": "WS_F_HAPPY_JUMP_UV_161",
      "pos": "throne",
      "act": "stomp"
     },
     {
      "at": 0.3,
-     "sprite": "MS_F_HAPPY_UV_005",
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
      "pos": "throne",
      "act": "pop",
      "icon": "sparkle"
@@ -5317,16 +5296,16 @@
     {
      "at": 0,
      "pos": [
-      0.0,
+      0,
       -0.6,
       7.5
      ],
      "look": [
-      0.0,
-      3.6,
-      1.2
+      0.094,
+      2.739,
+      0.5
      ],
-     "fov": 40
+     "fov": 38.8
     }
    ],
    "kick": 1.5,
@@ -5394,12 +5373,12 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "MS_F_HAPPY_UV_005",
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
      "pos": "throne"
     },
     {
      "at": 1.9,
-     "sprite": "MS_F_HAPPY_UV_006",
+     "sprite": "WS_F_HAPPY_JUMP_UV_160",
      "pos": "throne",
      "act": "hop"
     }
@@ -5431,44 +5410,34 @@
    "camera": [
     {
      "at": 0,
-     "pos": [
+     "frame": "close",
+     "from": [
       -0.15,
       1.35,
       0.6
-     ],
-     "look": [
-      -0.45,
-      1.3,
-      -1.05
-     ],
-     "fov": 30
+     ]
     },
     {
      "at": "end",
-     "pos": [
+     "frame": "close",
+     "from": [
       -0.2,
       1.35,
       0.45
      ],
-     "look": [
-      -0.45,
-      1.3,
-      -1.05
-     ],
-     "fov": 29
+     "fov": 28
     }
    ],
    "kick": 1,
    "raymi": [
     {
      "at": 0,
-     "sprite": "CU_F_HAPPY_UV_002",
+     "sprite": "WS_F_SMUG_WINK_UV_169",
      "pos": [
       -0.6,
-      0.2,
+      0,
       -1.05
-     ],
-     "height": 1.3
+     ]
     }
    ],
    "transition": {
