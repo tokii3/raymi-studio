@@ -46,7 +46,31 @@ def script_of(ch: str) -> str:
         return "kanji"           # digits behave like kanji: "1つ" is one word (counter + okurigana)
     if ch.isascii() and (ch.isalpha() or ch == "'"):
         return "latin"
+    if 0xAC00 <= o <= 0xD7A3:
+        return "hangul"          # K-pop lines (K/DA): a Hangul run is one word, Korean already spaces its words
     return "other"
+
+
+# Revised Romanisation of Hangul syllables (algorithmic, no dependency): initial, vowel, final jamo
+_HL = ["g", "kk", "n", "d", "tt", "r", "m", "b", "pp", "s", "ss", "", "j", "jj", "ch", "k", "t", "p", "h"]
+_HV = ["a", "ae", "ya", "yae", "eo", "e", "yeo", "ye", "o", "wa", "wae", "oe", "yo", "u", "wo", "we", "wi", "yu",
+       "eu", "ui", "i"]
+_HT = ["", "k", "k", "k", "n", "n", "n", "t", "l", "k", "m", "l", "l", "l", "p", "l", "m", "p", "p", "t", "t", "ng",
+       "t", "t", "k", "t", "p", "t"]
+
+
+def hangul_roma(s: str) -> str:
+    """Hangul syllables -> Revised Romanisation (other characters pass through): 불을 -> bureul is NOT done
+    (no liaison), 불을 -> buleul; close enough to match the recogniser's letters by sound."""
+    out = []
+    for ch in s:
+        o = ord(ch)
+        if 0xAC00 <= o <= 0xD7A3:
+            k = o - 0xAC00
+            out.append(_HL[k // 588] + _HV[(k % 588) // 28] + _HT[k % 28])
+        else:
+            out.append(ch)
+    return "".join(out)
 
 
 def words_of(chunk: str) -> list[str]:
@@ -116,6 +140,8 @@ def _kakasi():
 def roma(s: str) -> str:
     """Letters only, by sound: kana/kanji -> Hepburn (pykakasi), long vowels folded so 'yuuhei' == 'yuhei'."""
     s = unicodedata.normalize("NFKC", s)
+    if any(script_of(c) == "hangul" for c in s):
+        s = hangul_roma(s)
     if any(script_of(c) in ("kata", "hira", "kanji") for c in s):
         s = "".join(x["hepburn"] for x in _kakasi().convert(s))
     s = re.sub(r"[^a-z]", "", s.lower())

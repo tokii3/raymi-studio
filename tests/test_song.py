@@ -126,3 +126,11 @@ def test_sections_from_stops_paragraphs_and_repeats():
     by = {s["t0"]: s for s in secs}
     assert by[0.0]["kind"] == "intro" and by[29.0]["kind"] == "stop"
     assert by[20.0]["part"] == by[44.0]["part"] != by[10.0]["part"]      # the chorus repeats
+
+
+def test_hangul_is_one_word_and_matches_by_sound():
+    assert S.words_of("불을") == ["불을"]
+    assert S.words_of("(후후)")[-1] == "후후)"
+    assert S.hangul_roma("축제") == "chukje"
+    assert S.roma("월화수목금토일") == "wolhwasumokgeumtoil"
+    assert S.roma("I'm the lighter") == "imthelighter"
