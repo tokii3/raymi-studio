@@ -104,7 +104,7 @@ the frame - it hides nothing cheap and makes the fire the picture; shading colou
 skin stays pale grey-blue under every fire light (the puppet keeps its skin grade).
 | act | grade | masses (hue / sat / value) | key light | accent | why |
 |---|---|---|---|---|---|
-| 0 COLD OPEN | night | wine-red water, burning amber vents behind (never behind her head), black basalt | her violet flame under her face | the violet flame | the promise: the fullest picture of the first half, shown first |
+| 0 COLD OPEN | own (violet) | violet-black water, burning amber vents behind (never behind her head), black basalt - NO red (the red is wow 3's, 67.35) | her violet flame under her face | the violet flame | the promise: the fullest picture of the first half, shown first |
 | 1 THE LONG DARK | own | black-indigo, value ~5 % - but never empty for more than ~1 s (each failure leaves a glow: a fin, a crack, Salmon's eyes) | her dots (faint UV) + the sparks | violet-white sparks | the dark is the world; every failure lights something |
 | 2 IT CATCHES | own | black; the vent and floor around her in violet shade | her flame (violet, gold core), under-light | her flame | the one light is hers |
 | 3 FLOOR CATCHES | own | black floor drawn by violet -> pink crack lines; vents dark basalt | her flame + the crack glow (floor bounce) | the main vent's first flame | the world is drawn by her light |
@@ -120,10 +120,10 @@ Lines with Korean get romanisation + English (`lyrics_en.json`, own translation)
 marked "acted". W = written by fire.
 | time | section | picture (what happens, what the camera does, how the lyric lives) |
 |---|---|---|
-| 0.0-2.0 | intro: the first sound, stop 0.3-0.7, hit 1.0 | **COLD OPEN = the thumbnail picture at frame 0**: her face, close and big, lit from below by the violet flame in her palm; behind her (never behind her head) the vent field burns amber, red water. On the 0.3-0.7 stop she looks up into the lens (a held breath); on the hit 1.0 a slow push in, her grin. No title, no logo |
-| 2.0-2.4 | beats 2.0 / 2.46 | **the rewind**: the flame is sucked back into her palm as a spark, the field's fires run back into the cracks in reverse (a rewind smear, the camera pulls back fast) - black. The video now shows how it started |
-| 2.4-2.95 | beat | black; two violet eyes open low in the frame (she lies in her sleeping dip in the black sand, only eyes and faint dots) |
-| 2.95 | strike 1 | **the wet fizz**: she whips her barb across the vent's rock - one sad spark, a bubble pops "pff" in her face (sweat icon). Camera strike_close. Her face lit for 4 frames |
+| 0.0-2.0 | intro: the first sound, stop 0.3-0.7, hit 1.0 | **COLD OPEN = the thumbnail picture at frame 0**: her face, close and big, lit from below by the violet flame in her palm; behind her (never behind her head) the vent field burns amber in VIOLET water (the red is kept for 67.35). On the 0.3-0.7 stop she looks up into the lens (a held breath); on the hit 1.0 a slow push in, her grin. No title, no logo |
+| 2.0-2.4 | beats 2.0 / 2.46 | **the rewind**: the flame is sucked back into her palm as a spark, the field's fires run back into the cracks in reverse (a rewind smear, the camera pulls back fast) - and AS the smear fades her two violet eyes open in the dark (no dead black) |
+| 2.4-2.95 | beat | her eyes and faint dots in the black, she lies in her sleeping dip; she lifts her tail (anticipation for strike 1) |
+| 2.95 | strike 1 | **the wet fizz**: she whips her barb across the vent's rock - one sad spark, a bubble pops "pff" in her face (sweat icon). Camera strike_close. Every strike leaves a residual glow of 8-12 frames (here: the spark's dying ember on the rock), so the frame never drops under ~1 s of dead black (check 0-13 s muted in the pilot) |
 | 4.90 | strike 2 | **the thief**: a burst of sparks - a passing deep-sea fish's fin catches one and swims off with it, its fin glowing, lighting a slice of the black chimneys as it goes; she lunges after it, too late. Camera floor_low, follows the fish |
 | 6.86 | strike 3 | **the crack that dies**: she strikes harder - a crack under her lights up and runs a metre, then fades (top_down) - the mechanic the video will use, shown once failing |
 | 8.81 | strike 4 | **Salmon singed**: the sparks land on Salmon (watching nervously in the dark, now lit) - it jumps, its fin tip smokes; it looks around for something to put her out with (the bucket half-buried in the sand: set-up for 30.81). Camera on Salmon, she is out of frame |
@@ -163,23 +163,23 @@ marked "acted". W = written by fire.
 | 107.69-111.28 | "Let's go 삐걱 삐-삐걱 어느새 lose control" | the floor creaks: on each "삐걱" (creak) the cracks widen and the camera shakes (3 frames, hits 108.67, 109.13, 109.58); the flame in her hands balloons, she wobbles (losing control, worried sweat icon) |
 | 111.28-113.57 | "자 beat drop beat-beat drop" (W: "beat drop" only, English, big) | **WOW 4 - THE DROP**: every vent erupts at once - bubble fireworks rise through the water, gold and violet rings bursting on every hit (111.41 ... 113.24). "DROP" written huge on the dark water above the eruptions (not over a flame) |
 | 113.57-115.57 | "놀아보자 얼쑤 (얼쑤!)" (W + roma + EN) | she dances in the rain of sparks; "얼쑤!" (the festival cheer) stamped huge on 113.71 and 115.08 - may cover her for a beat (allowed) |
-| 115.57-118.32 | bridge: "Ooh ooh / 불을 지펴라 / 까마디 까만 이 밤하늘을 달려" | the biggest eruption becomes a standing **heat column** (a shimmering violet-amber pillar of light); she jumps onto it and RIDES it up (FLY sprites, smear on the takeoff). Camera from below looking up after her: the black water above is the "night sky", marine snow streams down past her like stars; the Korean line in light trailing behind her. Cut on 116.22: from the side - the column climbs past the 7th chimney's mouth, she high-fives its flame on the way |
+| 115.57-118.32 | bridge: "Ooh ooh / 불을 지펴라 / 까마디 까만 이 밤하늘을 달려" | "불을 지펴라" (light the fire): she touches the 7th chimney's mouth with her flame and its heat rises as a standing **heat column** (a shimmering violet-amber pillar of light); she jumps onto it and RIDES it up (FLY sprites, smear on the takeoff). Camera from below looking up after her: the black water above is the "night sky", marine snow streams down past her like stars; the Korean line in light trailing behind her |
 | 118.32-121.9 | "Ooh ooh / 준비됐어 난 / Sit back relax" | she lies back on the rising heat, hands behind her head (rest sprite), eyes closed - and a **school of fire-finned fish** catches up and swims beside her, their fins lit by her fire (her new crowd, the light she will take to the surface). Cut 119.89: Salmon below, chasing her up with the bucket (a vertical whip down to it and back up) |
 | 121.9-129.78 | "Gonna take it / When I start the fire / better be ready for when I take it higher" | **the cliff**: the column runs up along a sea-mount wall - a new place the light reveals: on every "higher" (123.81, 125.62, 128.36) the fire climbs the cliff's cracks beside her in a rising line, a step ahead of her (she races it). Cuts every 2-3 s: from below (the column and the cliff converging up), macro on the snow in her light, a side tracking shot along the wall; the light from above gets bluer (moonlight through the surface) |
-| 129.78-137.94 | pre-chorus 2: "I'm insane / like it that way / chaos in my veins" | cuts between her face rising (dots fire-coloured), the fish school spiralling around her, and the moonlit surface coming closer from below (a ring of silver light growing) - each cut on a hit (132.21, 133.42, 134.75) |
-| 137.94-141.26 | "느껴봐 차갑던 이 세상을" (W) | **she looks down** (her POV, no Raymi): far below, the whole sea floor glows - fire lines like a city at night seen from a plane, the seven vents as bright points, and the heat column as a straight line of light from the city up to the lens. The words lie on the dark water between |
-| 141.26-143.8 | "붉게 물들일 이 순간" (W) | she reaches up; the column pushes her the last metres; her hand breaks through the moonlit surface |
+| 129.78-137.94 | pre-chorus 2: "I'm insane / like it that way / chaos in my veins" | **the cold comes back** (the antagonist of act 4): at 129.78 the cyan current hits the climbing column from the side - the column bends and thins, the fish scatter, her flame shrinks to a spark in her cupped hands; she curls around it and shields it with her whole body ("I'm the lighter", the line from 43.79, paid off without words); cuts on the hits 132.21 / 133.42 / 134.75: the current, her curled back, the spark between her fingers, her dots flaring fire-coloured as she feeds it ("chaos in my veins") |
+| 137.94-141.26 | "느껴봐 차갑던 이 세상을" (W) | **she looks down** (her POV, no Raymi): far below, the whole sea floor glows - fire lines like a city at night seen from a plane, the seven vents as bright points, and the bent heat column straightening again as a line of light from the city up to her. The words lie on the dark water between |
+| 141.26-143.8 | "붉게 물들일 이 순간" (W) | "the moment I paint it red": the spark in her hands catches again, BIGGER (her flame back, violet-gold), the column surges, pushes her the last metres; her hand breaks through the moonlit surface |
 | 143.8-144.3 | **STOP** | **the surface**: a split frame - half under water (the glowing column, the fish), half above (stars, the moon) - her head breaking the surface, frozen for the stop. Silence |
 | 144.3-149.24 | final chorus 1 (C): "drama..." | above water, at night, under real stars: the column breaks the surface with her - a violet pool of light around her in the black sea (the visible source); on 147.84 / 148.19 / 149.19 the fire-finned fish surface behind her one by one, each a gold dot of light on the water - her crowd, up here now |
 | 149.24-158.63 | "call me crazy... begging for water / Imma start a fire / Imma fire starter" | Salmon surfaces beside her with the bucket, filled with glowing water - and **toasts** her: she clinks her flame against the bucket (153.32, a spark burst) - the fire fighter has joined the fire. Wide: the pool of light, the gold fish, the moon |
-| 158.63-166.43 | final chorus 2 (M): "Imma start a fire / drama / fire fighter / karma" | **the rain gag** (her lore): Salmon looks at her - "fire fighter?" - she squints at the sky and confidently predicts rain (bulb icon, a smug finger up); 163.84: it RAINS - for once she is right - and every raindrop that hits the glowing sea lights a ring of violet-gold; the rings spread and join into a path of light running to the horizon (164.3 / 165.02 / 165.47 the path grows). She looks at the camera: told you |
+| 158.63-166.43 | final chorus 2 (M): "Imma start a fire / drama / fire fighter / karma" | **the rain gag** (her lore): from 158.63 a dark cloud edge drifts over the moon (seen before anyone speaks of rain); Salmon looks at her - "fire fighter?" - she squints at the cloud and confidently predicts rain (bulb icon, a smug finger up); 163.84: it RAINS - for once she is right - and every raindrop that hits the glowing sea lights a ring of violet-gold; the rings spread and join into a path of light running to the horizon (164.3 / 165.02 / 165.47 the path grows). She looks at the camera: told you |
 | 166.43-170.49 | "If you can't take the heat / then get out of the sauna" (W) | **the sauna gag**, cut down to the main vent: the deep-sea fish sit around the hot vent in tiny towels, steam rising; the biggest one sits in front with a towel on its head and a small shell over each eye, like at a spa. "SAUNA" written in the steam. No Raymi |
-| 170.49-174.27 | "Imma start a fire / Imma fire starter" | **WOW 5**: back on the surface in the rain, she throws her flame straight up into the night sky (anticipation: she winds up, squash; release, stretch) - it climbs on a trail and BURSTS on 174.38 - not into rings but into **letters**: the firework writes "FIRE STARTER" across the sky in violet-gold sparks, mirrored in the glowing sea |
-| 174.27-185.23 | hook outro: "I'm a fire starter / work a lil harder / fired up / burn it down like / I'm a fire starter / crazy out of order" | the fish and the rain rings answer: from all over the glowing sea fireworks rise and each one writes the line being sung (the biggest type of the video, in the sky); she SURFS the path of light toward the horizon (surf sprites - a ray riding the glow, no mount), the camera racing beside her low over the water; on "like" (181.0) the line is finished by the picture: the whole horizon lights at once |
+| 170.49-174.27 | "Imma start a fire / Imma fire starter" | **WOW 5, part 1 - under water**: she dives back down a few metres and throws her flame UP from below (anticipation: she winds up, squash; release, stretch) - it climbs through the water on a trail of bubbles, the fish streaming after it - and bursts THROUGH the surface on 174.38. **Part 2 - above**: it explodes into **letters**: the firework writes "FIRE STARTER" across the sky in violet-gold sparks, mirrored in the glowing sea - fire from under the water, the thumbnail's impossible thing made huge |
+| 174.27-185.23 | hook outro: "I'm a fire starter / work a lil harder / fired up / burn it down like / I'm a fire starter / crazy out of order" | from all over the glowing sea the answer comes FROM BELOW: shells rise through the water (seen from a camera just under the surface) and burst through it into the sky, each writing the line being sung (the biggest type of the video, in the sky); she SURFS the path of light toward the horizon (surf sprites - a ray riding the glow, no mount), the camera racing beside her half under, half above the waterline; on "like" (181.0) the line is finished by the picture: the whole horizon lights at once |
 | 185.23-188.39 | "I'm a I'm a I'm a fire starter!" | three last fireworks, one per "I'm a" (185.62, 186.55, 187.46), each from farther away; on "starter" she spins to the lens and points straight at you with her grin - "you" |
-| 188.39-195.0 | outro (quiet) | the fireworks fade into the stars, the rain stops; she floats on her back in her pool of light, the fish around her, Salmon asleep on the bucket |
+| 188.39-195.0 | outro (quiet) | three events instead of a hold: (1) 188.39 the camera sinks under the surface beside her: far below, the vent field glows like a city again - the place she started, seen from where she arrived; (2) 191.24 / 192.45 the fire-finned fish light her one at a time from below as they gather around her (the last vocal tag 191.5-193.4); (3) the rain stops, Salmon drifts by with the bucket as a pillow |
 | 195.0-195.4 | stop | she blows out the small flame in her hand like a birthday candle - and on the same frame the whole glowing sea pulses ONE step brighter, outward from her (the fire does not need her hand anymore: it belongs to the sea now) |
-| 195.4-206.46 | tail | slow crane up and away: a tiny her on a black sea that glows from beneath to the horizon, stars above; on the last note (196.6 hit, then the tail) her eyes close - the opening, reversed. Black. Ends with the music, no end card |
+| 195.4-206.46 | tail | **the last frame repeats the first**: the same close framing as the cold open - her face lit from below, but now by the glowing sea instead of her flame, calm, eyes half closed; on the last note her eyes close. Black. Ends with the music, no end card |
 
 ## Wow budget (5, strongest last - each a DIFFERENT picture)
 0. (the hook, not counted) **0.0** - the cold open: the thumbnail picture is the first frame; 2.0 the rewind.
@@ -188,8 +188,9 @@ marked "acted". W = written by fire.
    single gold light in black).
 3. **67.35** - "this is the moment I paint it red": the red wave spreads through the WATER itself (colour, not fire).
 4. **111.28** - the drop: every vent erupts in bubble bursts under water (the floor exploding upward).
-5. **170.49-174.38** - above water, under the stars, her thrown flame bursts into fireworks that WRITE "FIRE STARTER"
-   across the sky, and the whole glowing sea answers line by line (type made of fireworks, the widest picture).
+5. **170.49-174.38** - she throws her flame up from UNDER the water, it bursts through the surface into fireworks that
+   WRITE "FIRE STARTER" across the sky, and the whole glowing sea answers from below line by line (fire from under the
+   water - the thumbnail's promise at its biggest; type made of fireworks, the widest picture).
 
 ## Elements (every element gets its chain)
 | element | means for this song + Raymi | idea | perfect version | connections | exists / build | reinvented in her world |
@@ -244,24 +245,34 @@ marked "acted". W = written by fire.
 - **Picture change on most loud beats:** a strike, an ignition, an eruption or a cut on the hits (song_map hits).
 
 ## The Short (window, frame 0, twist, CTA)
-- **Window: 0.0-20.20 (20.2 s)** - the cold open (frame 0 = the thumbnail picture, bright, her face big), the rewind,
-  the five failed strikes (a gag every ~2 s), the catch on the first sung word (12.84) and the first hook half, ending
-  on the hanging "Imma burn it down like..." - cut one frame before the second "I'm a fire starter" (20.24). The Short
-  ends on the unfinished sentence; the MV finishes it (the teaser toki asked for).
+- **Window: 0.0-19.90 (19.9 s, inside the 20 s limit)** - the cold open (frame 0 = the thumbnail picture, bright,
+  her face big), the rewind, four failed strikes in the Short's cut (the Short drops strike 3 - the crack that dies -
+  so its own crack at the end is the first one), the catch on the first sung word (12.84) and the first hook half,
+  ending on the hanging "Imma burn it down like..." The Short ends on the unfinished sentence; the MV finishes it (the
+  teaser toki asked for).
 - **Frame 0 (9:16):** her face big, lit from below by her violet flame, the burning field behind - readable in 0.5 s.
   Hook text (<= 8 words, her voice): "they said fire can't burn underwater".
-- **Its own twist (not in the MV):** in 9:16 the crack does not run over the floor - it runs UP the screen toward the
-  viewer's thumb (camera top_down, the frame turned so the floor is the phone screen), and on "like" the crack stops
-  right at the bottom edge where your thumb is.
-- **CTA (readable >= 2.5 s before the end):** "what would YOU set on fire?"
+- **Its own twist (not in the MV):** at 18.19 ("Imma burn it down like") she presses her palm to the floor EARLY (a
+  Short-only action - in the MV she only looks at the dead cracks here) and the crack runs UP the 9:16 screen toward the
+  viewer's thumb (camera top_down, the floor is the phone screen); on "like" it stops right at the bottom edge where
+  your thumb is - and the Short ends.
+- **Text:** ONE hook line 0-2.5 s ("they said fire can't burn underwater"); the CTA at 15.0-17.4 s (readable >= 2.5 s
+  before the end, over the catch / flame-play stretch where no lyric fights it): "what would YOU set on fire?"
 
 ## Ending check
 Why the last third is the strongest: it is the only part with an open sky (the freshest place, held back until 144.3),
 three new beats in 22 s (the fish surfacing, Salmon's toast, the rain path), the biggest wow (fireworks writing the
 lyrics, a picture nothing before it used), the biggest type (lyrics written in the sky), the widest pictures and the
 warmest grade (`ember`, the only use). The cut rate in the final choruses matches the drop's;
-the outro is quiet because the music is - and it pays off frame 0 (eyes closing on a glowing sea instead of opening in
-the black).
+the outro is quiet because the music is but has three events (the city below seen again, the fish lighting her, the
+last frame = the first frame's framing) - and it pays off frame 0 (the same face, lit by the sea now, eyes closing).
+
+## After the PASS (reviews/treatment_2.md)
+The critic's high-priority FIXes 1-4 and the medium 5-6 are written in above (Short window + its own crack + text
+timing; the cold returns at 129.78; wow 5 starts under water, outro in three events ending on the cold-open framing;
+no dead black after the rewind; cold open violet, red only at 67.35; the rain's cloud, the high-five replaced by
+lighting the column). FIX 7 (a signature "idol move": her barb strike as a held hit pose on the three stamps at
+97.43-100.69 and the drop) goes into the shooting script.
 
 ## Build list (studio components, reusable - CLAUDE.md hard rule 2)
 1. Spark burst on a strike (Fires: short-lived spark flame + sparks flying out) - `fire.tsx`.
