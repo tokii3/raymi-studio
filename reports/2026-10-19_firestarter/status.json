@@ -1,7 +1,7 @@
 {
- "run": 24,
+ "run": 26,
  "quality": "final",
  "state": "done",
- "release": "render-2026-10-19_firestarter-24",
- "commit": "e90ae05559cb4114ad845f41512d0dcdff49298f"
+ "release": "render-2026-10-19_firestarter-26",
+ "commit": "2125fff61209dfc4df88be9802ff6e6d73a8d46b"
 }

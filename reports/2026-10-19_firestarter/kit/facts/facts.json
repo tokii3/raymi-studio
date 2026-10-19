@@ -1,11 +1,11 @@
 {
  "video": "final.mp4",
  "size": [
-  1920,
-  1080
+  1080,
+  1920
  ],
  "fps": 30.0,
- "duration_s": 27.3,
+ "duration_s": 19.9,
  "shot_starts_s": [
   0.0,
   2.0,
@@ -20,11 +20,7 @@
   12.8,
   14.77,
   16.5,
-  18.13,
-  20.2,
-  22.03,
-  24.1,
-  25.6
+  18.13
  ],
  "shot_lengths_s": [
   2.0,
@@ -40,28 +36,24 @@
   1.97,
   1.73,
   1.63,
-  2.07,
-  1.83,
-  2.07,
-  1.5,
-  1.67
+  1.77
  ],
  "shot_rhythm": {
-  "n": 18,
-  "mean_s": 1.51,
-  "cv": 0.4,
+  "n": 14,
+  "mean_s": 1.42,
+  "cv": 0.45,
   "note": "cv ~0 = metronome, high cv = long holds next to bursts (craft module 03)"
  },
  "picture_change_on_hits": {
-  "hits": 10,
-  "changed": 1,
-  "share": 0.1,
+  "hits": 4,
+  "changed": 2,
+  "share": 0.5,
   "threshold": 6.0
  },
  "still_spans_s": [],
  "audio": {
   "input_i": "-14.19",
-  "input_tp": "-1.84"
+  "input_tp": "-1.40"
  },
  "hint": "Measured hints only. They never prove an effect - the critic describes what is REALLY there."
 }

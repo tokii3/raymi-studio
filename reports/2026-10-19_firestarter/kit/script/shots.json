@@ -152,7 +152,7 @@
  {
   "id": "s14",
   "from_s": 18.13,
-  "to_s": 20.2,
+  "to_s": 19.9,
   "set": "deep",
   "why": "the sentence is not finished: the hook hangs (the Short's cliffhanger)",
   "words": "Imma burn it down like",
@@ -160,47 +160,5 @@
   "hero": [
    "flame"
   ]
- },
- {
-  "id": "s15",
-  "from_s": 20.2,
-  "to_s": 22.03,
-  "set": "deep",
-  "why": "the fire takes the floor - rule (b): the world grows as the light runs",
-  "words": "I'm a fire starter",
-  "transition_out": "cut",
-  "hero": [
-   "fire_word"
-  ]
- },
- {
-  "id": "s16",
-  "from_s": 22.03,
-  "to_s": 24.1,
-  "set": "deep",
-  "why": "chaos drawn as a map - Raymi not forced: small on purpose",
-  "words": "Crazy out of order",
-  "transition_out": "cut",
-  "hero": []
- },
- {
-  "id": "s17",
-  "from_s": 24.1,
-  "to_s": 25.6,
-  "set": "deep",
-  "why": "the fire travels on its own - she caused it",
-  "words": "Got me fired up",
-  "transition_out": "cut",
-  "hero": []
- },
- {
-  "id": "s18",
-  "from_s": 25.6,
-  "to_s": 27.27,
-  "set": "deep",
-  "why": "second hang: the vent is the answer",
-  "words": "like",
-  "transition_out": "cut",
-  "hero": []
  }
 ]
