@@ -52,6 +52,20 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
           pip install -q -r requirements.txt
+      # node for the main element's boxes (guard.mjs --hero-boxes needs esbuild + three): without it every film render
+      # died in prepare (FIRESTARTER pilot 2026-10-19, ERR_MODULE_NOT_FOUND esbuild)
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Node modules (cached)
+        id: nm
+        uses: actions/cache@v4
+        with:
+          path: studio/node_modules
+          key: nm-${{ runner.os }}-${{ hashFiles('studio/package-lock.json') }}-v1
+      - name: Install
+        if: steps.nm.outputs.cache-hit != 'true'
+        run: cd studio && npm ci --no-audit --no-fund
       - name: Tests (nothing renders when a guard is broken)
         run: python -m pytest -q tests
       - name: Which jobs
