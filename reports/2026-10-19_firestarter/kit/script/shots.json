@@ -27,7 +27,7 @@
  {
   "id": "s3",
   "from_s": 2.93,
-  "to_s": 4.9,
+  "to_s": 4.77,
   "set": "deep",
   "why": "failure 1 - a gag, not a black hole: every strike leaves a residual glow (FIX 4)",
   "words": "",
@@ -38,8 +38,8 @@
  },
  {
   "id": "s4",
-  "from_s": 4.9,
-  "to_s": 6.87,
+  "from_s": 4.77,
+  "to_s": 6.7,
   "set": "deep",
   "why": "failure 2 plants the creatures (they come back drawn to her light at 34.49)",
   "words": "",
@@ -48,8 +48,8 @@
  },
  {
   "id": "s5",
-  "from_s": 6.87,
-  "to_s": 8.8,
+  "from_s": 6.7,
+  "to_s": 8.53,
   "set": "deep",
   "why": "failure 3 shows the crack mechanic failing once - the floor will draw itself at 20.24",
   "words": "",
@@ -58,13 +58,15 @@
  },
  {
   "id": "s6",
-  "from_s": 8.8,
+  "from_s": 8.53,
   "to_s": 10.77,
   "set": "deep",
   "why": "Salmon's arc begins (the bucket for 30.81); Raymi not forced: the reaction is the picture",
   "words": "",
   "transition_out": "cut",
-  "hero": []
+  "hero": [
+   "face"
+  ]
  },
  {
   "id": "s7",
@@ -106,7 +108,9 @@
   "why": "the build ends one frame before the voice: the catch belongs to the first sung word",
   "words": "",
   "transition_out": "cut",
-  "hero": []
+  "hero": [
+   "face"
+  ]
  },
  {
   "id": "s11",

@@ -43,7 +43,7 @@
    "opts": {
     "grade": "own",
     "ignite": 1.0,
-    "vent_cap": 0.5,
+    "vent_cap": 0.35,
     "snow": 0.7,
     "glow": "#b45cff",
     "dip": true,
@@ -100,14 +100,14 @@
     {
      "f": 60,
      "pos": [
-      0.606,
-      1.306,
-      1.235
+      0.782,
+      1.156,
+      2.211
      ],
      "look": [
       0.655,
-      1.126,
-      -0.659
+      0.956,
+      -0.661
      ],
      "fov": 32.0,
      "roll": 0.0,
@@ -178,15 +178,15 @@
     }
    ],
    "lyrics": {
-    "kind": "float",
+    "kind": "sign",
     "anchor": [
-     0.22,
-     1.24,
-     -0.04
+     0.28,
+     1.29,
+     -0.05
     ],
     "rotY": 0.0,
-    "size": 0.07,
-    "width": 0.65,
+    "size": 0.075,
+    "width": 0.55,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -602,7 +602,7 @@
   {
    "id": "s3",
    "from": 88,
-   "to": 147,
+   "to": 143,
    "set": "deep",
    "hero": [
     {
@@ -638,7 +638,7 @@
       "at": 89,
       "n": 5,
       "ember": 330,
-      "c": "#d9a6ff",
+      "c": "#ffb35c",
       "size": 0.8,
       "pos": [
        0.0,
@@ -848,8 +848,8 @@
   },
   {
    "id": "s4",
-   "from": 147,
-   "to": 206,
+   "from": 143,
+   "to": 201,
    "set": "deep",
    "hero": [],
    "opts": {
@@ -863,9 +863,11 @@
        0.25,
        -0.7
       ],
-      "at": 148,
-      "n": 16,
-      "ember": 180
+      "at": 144,
+      "n": 20,
+      "ember": 240,
+      "c": "#ffb35c",
+      "size": 1.5
      }
     ],
     "fish": [
@@ -880,7 +882,7 @@
        1.0,
        -2.6
       ],
-      "at": 149,
+      "at": 146,
       "dur_s": 1.85,
       "glow": "#b45cff",
       "spark": true,
@@ -890,7 +892,7 @@
    },
    "camera": [
     {
-     "f": 147,
+     "f": 143,
      "pos": [
       0.5,
       0.6,
@@ -906,7 +908,7 @@
      "ease": "inOut"
     },
     {
-     "f": 206,
+     "f": 201,
      "pos": [
       -0.4,
       0.6,
@@ -925,7 +927,7 @@
    "kick": 0.8,
    "puppets": [
     {
-     "f": 147,
+     "f": 143,
      "sprite": "sprites/WS_F_PANIC_LUNGE_UV_202.png",
      "size": [
       1435,
@@ -957,7 +959,7 @@
      "ease": "inOut"
     },
     {
-     "f": 170,
+     "f": 166,
      "sprite": "sprites/WS_F_PANIC_LUNGE_UV_202.png",
      "size": [
       1435,
@@ -1108,8 +1110,8 @@
   },
   {
    "id": "s5",
-   "from": 206,
-   "to": 264,
+   "from": 201,
+   "to": 256,
    "set": "deep",
    "hero": [],
    "opts": {
@@ -1122,9 +1124,9 @@
     ],
     "crack_dir": 0.4,
     "crack_n": 3,
-    "ignite_at": 208,
+    "ignite_at": 202,
     "ignite_s": 4.5,
-    "dark_at": 236,
+    "dark_at": 232,
     "dark_s": 0.7,
     "sparks": [
      {
@@ -1132,11 +1134,11 @@
        0.12,
        0.77
       ],
-      "at": 207,
-      "n": 12,
+      "at": 201,
+      "n": 16,
       "ember": 300,
-      "c": "#d9a6ff",
-      "size": 1.0,
+      "c": "#ffb35c",
+      "size": 1.5,
       "pos": [
        0.0,
        0.0,
@@ -1144,7 +1146,7 @@
       ]
      }
     ],
-    "whip": 206,
+    "whip": 201,
     "whip_pivot": [
      0.4,
      0.55
@@ -1158,7 +1160,7 @@
    },
    "camera": [
     {
-     "f": 206,
+     "f": 201,
      "pos": [
       0.3,
       4.0,
@@ -1174,7 +1176,7 @@
      "ease": "inOut"
     },
     {
-     "f": 264,
+     "f": 256,
      "pos": [
       0.3,
       3.7,
@@ -1193,7 +1195,7 @@
    "kick": 0.8,
    "puppets": [
     {
-     "f": 206,
+     "f": 201,
      "sprite": "sprites/WS_F_FOCUS_PUSH_UV_173.png",
      "size": [
       1517,
@@ -1342,10 +1344,18 @@
   },
   {
    "id": "s6",
-   "from": 264,
+   "from": 256,
    "to": 323,
    "set": "deep",
-   "hero": [],
+   "hero": [
+    {
+     "name": "face",
+     "kind": "face",
+     "word": "face",
+     "min": 0.14,
+     "why_small": null
+    }
+   ],
    "opts": {
     "grade": "own",
     "snow": 0.6,
@@ -1356,10 +1366,11 @@
        0.62,
        -1.25
       ],
-      "at": 265,
-      "n": 14,
-      "ember": 1200,
-      "size": 0.9
+      "at": 257,
+      "n": 18,
+      "ember": 900,
+      "size": 1.2,
+      "c": "#ffb35c"
      }
     ],
     "fires": [
@@ -1372,23 +1383,24 @@
       "size": 0.12,
       "c": "#b45cff",
       "core": "#ffe2b8",
-      "at": 266,
+      "at": 258,
       "grow": 3,
       "out": 297,
       "fade": 9,
-      "light": 2.5
+      "light": 0.8
      }
     ],
+    "glow": "#b45cff",
     "salmon": {
      "pos": [
       -1.1,
       0.42,
       -1.3
      ],
-     "jump_at": 267,
-     "singe_at": 268,
+     "jump_at": 259,
+     "singe_at": 259,
      "icon": "!",
-     "icon_at": 268,
+     "icon_at": 259,
      "yaw": 0.5
     },
     "props": [
@@ -1405,24 +1417,85 @@
    },
    "camera": [
     {
-     "f": 264,
+     "f": 256,
      "pos": [
-      -0.55,
-      0.62,
-      0.55
+      1.985,
+      0.551,
+      4.811
      ],
      "look": [
-      -1.0,
-      0.45,
-      -1.25
+      -0.128,
+      0.551,
+      -0.353
      ],
-     "fov": 34.0,
+     "fov": 30.0,
      "roll": 0.0,
      "ease": "inOut"
     }
    ],
    "kick": 0.5,
-   "puppets": [],
+   "puppets": [
+    {
+     "f": 256,
+     "sprite": "sprites/WS_F_FOCUS_PUSH_UV_172.png",
+     "size": [
+      1535,
+      1524
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.55,
+      0.03,
+      0.9,
+      0.33
+     ],
+     "pos": [
+      0.15,
+      0.0,
+      -0.45
+     ],
+     "height": 1.42,
+     "act": "stomp",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 268,
+     "sprite": "sprites/WS_F_FOCUS_PUSH_UV_172.png",
+     "size": [
+      1535,
+      1524
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.55,
+      0.03,
+      0.9,
+      0.33
+     ],
+     "pos": [
+      0.15,
+      0.0,
+      -0.45
+     ],
+     "height": 1.42,
+     "act": "shake",
+     "icon": "sweat",
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
    "lyrics": null,
    "words": [],
    "transition": {
@@ -1811,8 +1884,8 @@
       "at": 338,
       "n": 14,
       "ember": 360,
-      "c": "#d9a6ff",
-      "size": 1.0,
+      "c": "#ffb35c",
+      "size": 1.5,
       "pos": [
        0.0,
        0.0,
@@ -2210,7 +2283,15 @@
    "from": 367,
    "to": 384,
    "set": "deep",
-   "hero": [],
+   "hero": [
+    {
+     "name": "face",
+     "kind": "face",
+     "word": "face",
+     "min": 0.14,
+     "why_small": null
+    }
+   ],
    "opts": {
     "grade": "own",
     "snow": 0.5,
@@ -2264,22 +2345,83 @@
     {
      "f": 367,
      "pos": [
-      0.9,
-      2.35,
-      -0.55
+      0.2,
+      1.75,
+      0.9
      ],
      "look": [
-      1.4,
-      2.0,
-      -2.4
+      1.0,
+      1.5,
+      -1.6
      ],
-     "fov": 42.0,
+     "fov": 46.0,
      "roll": 0.0,
      "ease": "inOut"
     }
    ],
    "kick": 1.0,
-   "puppets": [],
+   "puppets": [
+    {
+     "f": 367,
+     "sprite": "sprites/WS_F_FOCUS_PUSH_UV_171.png",
+     "size": [
+      1434,
+      1505
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.55,
+      0.03,
+      0.95,
+      0.32
+     ],
+     "pos": [
+      0.45,
+      0.0,
+      -0.95
+     ],
+     "height": 1.42,
+     "act": "stomp",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 382,
+     "sprite": "sprites/WS_F_FOCUS_PUSH_UV_171.png",
+     "size": [
+      1434,
+      1505
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.55,
+      0.03,
+      0.95,
+      0.32
+     ],
+     "pos": [
+      0.45,
+      0.0,
+      -0.95
+     ],
+     "height": 1.42,
+     "act": "stomp",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
    "lyrics": null,
    "words": [],
    "transition": {
@@ -3512,12 +3654,12 @@
     "kind": "sign",
     "anchor": [
      0.4,
-     0.2,
-     -0.45
+     0.25,
+     -0.75
     ],
     "rotY": 0.0,
-    "size": 0.08,
-    "width": 2.6,
+    "size": 0.095,
+    "width": 2.2,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -3811,13 +3953,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     1.25,
-     0.03,
-     0.75
+     -0.67,
+     0.39,
+     0.05
     ],
-    "rotY": -30.0,
-    "size": 0.17,
-    "width": 2.2,
+    "rotY": -20.0,
+    "size": 0.238,
+    "width": 3.08,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -3825,7 +3967,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -90.0,
+    "tilt": -12.0,
     "roll": 0.0,
     "keyScale": 2.8,
     "auto": true,
@@ -4092,13 +4234,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.4,
+     -0.3,
      0.03,
-     -1.5
+     -1.3
     ],
     "rotY": 0.0,
-    "size": 0.22,
-    "width": 3.0,
+    "size": 0.32,
+    "width": 3.6,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -4335,13 +4477,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.9,
-     0.03,
-     -1.25
+     1.65,
+     0.43,
+     -1.26
     ],
     "rotY": 15.0,
-    "size": 0.08,
-    "width": 1.0,
+    "size": 0.126,
+    "width": 2.24,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -4349,7 +4491,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -90.0,
+    "tilt": -12.0,
     "roll": 0.0,
     "keyScale": 2.8,
     "auto": true,

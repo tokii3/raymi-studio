@@ -10,9 +10,9 @@
   0.0,
   2.0,
   2.93,
-  4.9,
-  6.87,
-  8.8,
+  4.77,
+  6.7,
+  8.53,
   10.77,
   11.27,
   11.73,
@@ -29,10 +29,10 @@
  "shot_lengths_s": [
   2.0,
   0.93,
-  1.97,
-  1.97,
+  1.83,
   1.93,
-  1.97,
+  1.83,
+  2.23,
   0.5,
   0.47,
   0.5,
@@ -48,8 +48,8 @@
  ],
  "shot_rhythm": {
   "n": 18,
-  "mean_s": 1.52,
-  "cv": 0.39,
+  "mean_s": 1.51,
+  "cv": 0.4,
   "note": "cv ~0 = metronome, high cv = long holds next to bursts (craft module 03)"
  },
  "picture_change_on_hits": {
