@@ -10446,13 +10446,14 @@
    "camera": [
     {
      "at": 0,
-     "frame": "close",
+     "frame": "medium",
      "from": [
-      0.6,
-      0.6,
-      1.3
+      0.15,
+      0.7,
+      1.6
      ],
-     "rise": 0.15
+     "rise": 0.15,
+     "side": "center"
     }
    ],
    "kick": 0,

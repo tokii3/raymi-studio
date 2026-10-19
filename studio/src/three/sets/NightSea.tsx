@@ -232,6 +232,19 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
           <pointLight position={[0, -0.4, 0]} color={VIOLET} intensity={9 * pool} distance={6} decay={1.4} />
         </group>
       ) : null}
+      {/* the waterline round her: where her body enters the water, rings of light ripple out (a figure IN the water,
+          never a cut-out on a flat sheet - final 1 blind viewer) */}
+      {pool > 0 && !under && !split ? (
+        <group position={[poolPos[0], 0.03, poolPos[2]]}>
+          {[0, 1, 2].map((k) => {
+            const t = ((f / 45 + k / 3) % 1), R = 0.28 + t * 0.9;
+            return <mesh key={`wl${k}`} rotation={[-Math.PI / 2, 0, 0]} renderOrder={7}><ringGeometry args={[R * 0.9, R, 64]} />
+              <meshBasicMaterial color="#e9d2ff" {...add} opacity={0.55 * (1 - t) * pool} /></mesh>;
+          })}
+          <mesh rotation={[-Math.PI / 2, 0, 0]} renderOrder={7}><ringGeometry args={[0.2, 0.34, 64]} />
+            <meshBasicMaterial map={glowTex('#f2e4ff')} {...add} opacity={0.7 * pool} /></mesh>
+        </group>
+      ) : null}
       {pulses.map((t, k) => {
         const d = f - t;
         if (d < 0 || d > 90) return null;
