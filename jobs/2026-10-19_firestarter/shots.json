@@ -99,7 +99,10 @@
       1.3
      ],
      "rise": 0.25,
-     "fov": 34
+     "fov": 34,
+     "short": {
+      "top": 0.34
+     }
     },
     {
      "at": 1.0,
@@ -111,7 +114,10 @@
      ],
      "rise": 0.22,
      "fov": 33,
-     "ease": "linear"
+     "ease": "linear",
+     "short": {
+      "top": 0.34
+     }
     },
     {
      "at": "end",
@@ -125,7 +131,8 @@
      "fov": 32,
      "ease": "out",
      "short": {
-      "frame": "close"
+      "frame": "close",
+      "top": 0.34
      }
     }
    ],
@@ -1036,7 +1043,10 @@
       1.2,
       1.6
      ],
-     "side": "left"
+     "side": "left",
+     "short": {
+      "top": 0.34
+     }
     },
     {
      "at": "end",
@@ -1047,7 +1057,10 @@
       1.75
      ],
      "side": "left",
-     "ease": "inOut"
+     "ease": "inOut",
+     "short": {
+      "top": 0.34
+     }
     }
    ],
    "kick": 0.6,
@@ -1138,7 +1151,11 @@
       2.3,
       1.1,
       0.7
-     ]
+     ],
+     "short": {
+      "frame": "medium",
+      "top": 0.36
+     }
     },
     {
      "at": 0.8,
@@ -1148,7 +1165,11 @@
       1.1,
       2.0
      ],
-     "ease": "linear"
+     "ease": "linear",
+     "short": {
+      "frame": "medium",
+      "top": 0.36
+     }
     },
     {
      "at": "end",
@@ -1158,7 +1179,11 @@
       1.1,
       0.7
      ],
-     "ease": "out"
+     "ease": "out",
+     "short": {
+      "frame": "medium",
+      "top": 0.36
+     }
     }
    ],
    "kick": 0.6,
@@ -1193,12 +1218,12 @@
     "width": 2.2,
     "short": {
      "anchor": [
-      0.3,
-      0.72,
+      0.16,
+      0.71,
       -0.9
      ],
-     "size": 0.075,
-     "width": 0.9,
+     "size": 0.135,
+     "width": 1.62,
      "key_scale": 2.2
     }
    },
@@ -1717,6 +1742,8643 @@
     "size": 0.12,
     "width": 1.6
    }
+  },
+  {
+   "id": "s19",
+   "at": "line:8",
+   "set": "deep",
+   "why": "WOW 1: the world appears because her light reached it",
+   "opts": {
+    "grade": "own",
+    "snow": 0.6,
+    "glow": "#b45cff",
+    "origin": [
+     0.9,
+     -0.5
+    ],
+    "ignite_at": 28.47,
+    "ignite_s": 1.0,
+    "vents_at": [
+     28.47,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "vents_s": 0.25,
+    "vent_cap": 0.7,
+    "pulse": "beats",
+    "fires": [
+     {
+      "uv": [
+       0.92,
+       0.08
+      ],
+      "size": 0.26,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.5,
+      1.0,
+      1.4
+     ],
+     "look": [
+      0.35,
+      0.9,
+      -0.6
+     ],
+     "fov": 40
+    },
+    {
+     "at": 0.9,
+     "pos": [
+      1.0,
+      3.2,
+      1.6
+     ],
+     "look": [
+      0.5,
+      0.3,
+      -0.8
+     ],
+     "fov": 44,
+     "ease": "in"
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.6,
+      9.0,
+      0.6
+     ],
+     "look": [
+      0.6,
+      0.0,
+      -1.6
+     ],
+     "fov": 48,
+     "ease": "out"
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_JUMP_UV_161",
+     "pos": "center",
+     "act": "hop",
+     "height": 1.25
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "reveal": "burn",
+    "lines": [
+     8
+    ],
+    "words": [
+     "fire"
+    ],
+    "key": [
+     "fire"
+    ],
+    "tilt": -90,
+    "rot": 0,
+    "anchor": [
+     0.0,
+     0.03,
+     -1.9
+    ],
+    "size": 0.36,
+    "width": 3.6
+   },
+   "hero": [
+    {
+     "name": "fire_word"
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "at": "line:9",
+   "set": "deep",
+   "why": "smug - she likes the chaos she made (devil guard: no flame behind her head)",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "snow": 0.7,
+    "glow": "#b45cff",
+    "vents_at": [
+     0.0,
+     29.42,
+     null,
+     null,
+     null,
+     29.42,
+     null
+    ],
+    "vents_s": 0.25,
+    "flares": [
+     [
+      29.42,
+      "1"
+     ],
+     [
+      29.42,
+      "5"
+     ]
+    ],
+    "fires": [
+     {
+      "uv": [
+       0.96,
+       0.47
+      ],
+      "size": 0.26,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      -0.2,
+      1.1,
+      1.8
+     ]
+    },
+    {
+     "at": "end",
+     "frame": "medium",
+     "from": [
+      -0.2,
+      1.1,
+      1.5
+     ],
+     "ease": "out"
+    }
+   ],
+   "kick": 1.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": [
+      -0.4,
+      0,
+      -0.9
+     ],
+     "act": "pop"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     9
+    ],
+    "words": [
+     "drama"
+    ],
+    "key": [
+     "drama"
+    ],
+    "anchor": [
+     0.64,
+     1.71,
+     -1.1
+    ],
+    "size": 0.1,
+    "width": 1.8
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.96,
+      0.47
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "at": "line:10",
+   "set": "deep",
+   "why": "the gag starts: her best friend is the fire fighter",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "snow": 0.7,
+    "salmon": {
+     "pos": [
+      0.2,
+      0.55,
+      -0.4
+     ],
+     "from": [
+      -3.0,
+      0.7,
+      0.2
+     ],
+     "at": 30.81,
+     "dur_s": 0.9,
+     "hold": "bucket"
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      0.45,
+      1.6
+     ],
+     "look": [
+      -0.6,
+      0.55,
+      -0.4
+     ],
+     "fov": 42
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.7,
+      0.45,
+      1.4
+     ],
+     "look": [
+      0.1,
+      0.55,
+      -0.5
+     ],
+     "fov": 40,
+     "ease": "out"
+    }
+   ],
+   "kick": 0.6,
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     10
+    ],
+    "anchor": [
+     -0.28,
+     1,
+     -0.9
+    ],
+    "size": 0.07,
+    "width": 1.6
+   }
+  },
+  {
+   "id": "s22",
+   "at": "line:11",
+   "set": "deep",
+   "why": "rule (c) proven by a joke only a sea creature can make",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "snow": 0.7,
+    "salmon": {
+     "pos": [
+      0.2,
+      0.55,
+      -0.4
+     ],
+     "hold": "bucket",
+     "tip_at": 33.09,
+     "icon": "sweat",
+     "icon_at": 33.6,
+     "yaw": -0.6
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.25,
+      0.75,
+      0.9
+     ],
+     "look": [
+      0.15,
+      0.55,
+      -0.5
+     ],
+     "fov": 40
+    }
+   ],
+   "kick": 1.0,
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     11
+    ],
+    "words": [
+     "Karma"
+    ],
+    "key": [
+     "karma"
+    ],
+    "anchor": [
+     0.06,
+     0.96,
+     -1.9
+    ],
+    "size": 0.1,
+    "width": 2
+   }
+  },
+  {
+   "id": "s23",
+   "at": "line:12",
+   "set": "deep",
+   "why": "the creatures from strike 2 come back - drawn by her light",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "snow": 0.7,
+    "glow": "#b45cff",
+    "fish": [
+     {
+      "from": [
+       -3.5,
+       1.2,
+       -3.0
+      ],
+      "to": [
+       -0.8,
+       0.9,
+       -1.6
+      ],
+      "at": 34.5,
+      "dur_s": 1.8,
+      "glow": "#b45cff"
+     },
+     {
+      "from": [
+       3.6,
+       1.6,
+       -3.8
+      ],
+      "to": [
+       1.4,
+       1.1,
+       -2.2
+      ],
+      "at": 34.6,
+      "dur_s": 1.7,
+      "glow": "#ffb35c"
+     },
+     {
+      "from": [
+       -2.0,
+       2.2,
+       -5.0
+      ],
+      "to": [
+       -0.2,
+       1.5,
+       -2.8
+      ],
+      "at": 34.5,
+      "dur_s": 1.8,
+      "glow": "#b45cff",
+      "scale": 0.26
+     },
+     {
+      "from": [
+       2.5,
+       0.6,
+       -0.5
+      ],
+      "to": [
+       1.0,
+       0.7,
+       -0.9
+      ],
+      "at": 34.8,
+      "dur_s": 1.4,
+      "glow": "#ffb35c",
+      "scale": 0.24
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -2.4,
+      1.0,
+      2.6
+     ],
+     "look": [
+      0.3,
+      0.9,
+      -2.0
+     ],
+     "fov": 44
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.6,
+      0.9,
+      2.0
+     ],
+     "look": [
+      0.4,
+      0.9,
+      -2.0
+     ],
+     "fov": 44,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": [
+      0.6,
+      0,
+      -2.6
+     ],
+     "height": 1.55
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     12
+    ],
+    "tilt": -90,
+    "rot": 20,
+    "anchor": [
+     -0.4,
+     0.03,
+     -1.2
+    ],
+    "size": 0.13,
+    "width": 2.6
+   },
+   "hero": [
+    {
+     "name": "face",
+     "why_small": "she is far back and soft: the creatures drawn to her light are the picture"
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "at": "line:13",
+   "set": "deep",
+   "why": "the joke: she is IN water and still burning",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "snow": 0.7,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.96,
+       0.47
+      ],
+      "size": 0.28,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ],
+    "fish": [
+     {
+      "pos": [
+       0.3,
+       1.6,
+       -1.2
+      ],
+      "r": 1.3,
+      "glow": "#b45cff"
+     },
+     {
+      "pos": [
+       0.4,
+       1.0,
+       -1.5
+      ],
+      "r": 1.6,
+      "glow": "#ffb35c",
+      "speed": -0.01
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      0.3,
+      1.0,
+      2.0
+     ]
+    },
+    {
+     "at": 1.19,
+     "frame": "medium",
+     "from": [
+      0.3,
+      1.0,
+      1.85
+     ],
+     "ease": "snap"
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "center",
+     "act": "idle"
+    },
+    {
+     "at": 1.19,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "center",
+     "act": "pop"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     13
+    ],
+    "words": [
+     "water"
+    ],
+    "key": [
+     "water"
+    ],
+    "tilt": -12,
+    "anchor": [
+     0.36,
+     1.79,
+     -1.2
+    ],
+    "size": 0.1,
+    "width": 2.6
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.96,
+      0.47
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s25",
+   "at": "line:14",
+   "set": "deep",
+   "why": "the fire spreads to the field",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.8,
+    "vents_at": [
+     0.0,
+     29.42,
+     38.6,
+     null,
+     null,
+     29.42,
+     null
+    ],
+    "vents_s": 1.2
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      2.6,
+      1.5,
+      0.5
+     ],
+     "look": [
+      3.6,
+      2.0,
+      -4.1
+     ],
+     "fov": 38
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.9,
+      1.8,
+      0.4
+     ],
+     "look": [
+      3.4,
+      2.0,
+      -4.1
+     ],
+     "fov": 44,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 0.6,
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     14
+    ],
+    "words": [
+     "start",
+     "a",
+     "fire"
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     2.6,
+     2.4,
+     -2.6
+    ],
+    "size": 0.1,
+    "width": 2.0
+   }
+  },
+  {
+   "id": "s26",
+   "at": 39.95,
+   "set": "deep",
+   "why": "the scale of what she lit",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.8,
+    "vents_at": [
+     0.0,
+     29.42,
+     38.6,
+     40.4,
+     41.31,
+     29.42,
+     null
+    ],
+    "vents_s": 0.3,
+    "flares": [
+     [
+      40.4,
+      "3"
+     ],
+     [
+      41.31,
+      "4"
+     ]
+    ],
+    "fires": [
+     {
+      "uv": [
+       0.86,
+       0.34
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ],
+    "glow": "#b45cff"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "abyss_wide",
+     "offset": [
+      0,
+      -0.2,
+      -1.4
+     ]
+    },
+    {
+     "at": "end",
+     "cam": "abyss_wide",
+     "ease": "out"
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": "center",
+     "height": 1.42
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     15
+    ],
+    "words": [
+     "fire",
+     "starter"
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     0.19,
+     3.28,
+     -3
+    ],
+    "size": 0.25,
+    "width": 6.25
+   },
+   "hero": [
+    {
+     "name": "fire_word"
+    },
+    {
+     "name": "flame",
+     "uv": [
+      0.86,
+      0.34
+     ],
+     "why_small": "the field is the picture: she is small in what she lit"
+    }
+   ]
+  },
+  {
+   "id": "s27",
+   "at": "line:16",
+   "set": "deep",
+   "why": "her name in the song: at the end of the long dark, I light the fire - main element big at the line that matters most (FIX 5 of review 1)",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.8,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.86,
+       0.34
+      ],
+      "size": 0.34,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.25,
+      1.05,
+      0.05
+     ],
+     "look": [
+      0.45,
+      1.2,
+      -0.65
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.2,
+      1.05,
+      0.15
+     ],
+     "look": [
+      0.45,
+      1.2,
+      -0.65
+     ],
+     "fov": 34,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.4,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": "center",
+     "height": 1.42
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     16
+    ],
+    "key": [
+     "불을"
+    ],
+    "anchor": [
+     -0.91,
+     1.38,
+     -1.3
+    ],
+    "size": 0.08,
+    "width": 1.6
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.86,
+      0.34
+     ]
+    },
+    "face"
+   ]
+  },
+  {
+   "id": "s28",
+   "at": "line:17",
+   "set": "deep",
+   "why": "the wind arrives - the only cold colour in the video",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.8,
+    "glow": "#b45cff",
+    "current_at": [
+     44.6,
+     44.75
+    ],
+    "current_s": 0.7,
+    "current_dir": 1,
+    "fires": [
+     {
+      "uv": [
+       0.8,
+       0.52
+      ],
+      "size": 0.22,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -2.4,
+      1.0,
+      1.0
+     ],
+     "look": [
+      0.6,
+      1.0,
+      -1.0
+     ],
+     "fov": 42
+    },
+    {
+     "at": "end",
+     "pos": [
+      -2.2,
+      1.0,
+      1.3
+     ],
+     "look": [
+      0.6,
+      1.0,
+      -1.0
+     ],
+     "fov": 42,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_BK_NA_WADE_UV_181",
+     "pos": "center",
+     "act": "turn"
+    },
+    {
+     "at": 0.9,
+     "sprite": "WS_BK_NA_WADE_UV_181",
+     "pos": "center",
+     "act": "shrink"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     17
+    ],
+    "key": [
+     "lighter"
+    ],
+    "anchor": [
+     0.35,
+     1.07,
+     -3.07
+    ],
+    "rot": 40,
+    "size": 0.15,
+    "width": 3.75
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.8,
+      0.52
+     ],
+     "why_small": "shielded by her body - its light spills round her"
+    }
+   ]
+  },
+  {
+   "id": "s29",
+   "at": "line:18",
+   "set": "deep",
+   "why": "a desire that never bends",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.8,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.9,
+       0.24
+      ],
+      "size": 0.42,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "at": 45.5,
+      "grow": 0.3
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      1.0,
+      1.25,
+      1.2
+     ],
+     "side": "left"
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_172",
+     "pos": "center",
+     "act": "pop",
+     "height": 1.42
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     18
+    ],
+    "words": [
+     "desire"
+    ],
+    "key": [
+     "desire"
+    ],
+    "roll": 90,
+    "anchor": [
+     1.55,
+     1.03,
+     -0.49
+    ],
+    "rot": 20,
+    "size": 0.072,
+    "width": 1.28
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.9,
+      0.24
+     ]
+    },
+    "face"
+   ]
+  },
+  {
+   "id": "s30",
+   "at": "line:19",
+   "set": "deep",
+   "why": "the festival promised - small, so the drop can be big",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.8,
+    "glow": "#b45cff",
+    "shells": [
+     [
+      47.95,
+      "0"
+     ],
+     [
+      48.9,
+      "0"
+     ]
+    ],
+    "fires": [
+     {
+      "uv": [
+       0.06,
+       0.5
+      ],
+      "size": 0.22,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.6,
+      0.35,
+      1.7
+     ],
+     "look": [
+      0.6,
+      1.4,
+      -1.4
+     ],
+     "fov": 48
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.6,
+      0.35,
+      1.7
+     ],
+     "look": [
+      0.9,
+      3.0,
+      -1.7
+     ],
+     "fov": 52,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": [
+      0.1,
+      0,
+      -0.5
+     ],
+     "act": "bounce",
+     "height": 1.45
+    },
+    {
+     "at": 1.4,
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": [
+      0.1,
+      0,
+      -0.5
+     ],
+     "act": "hop",
+     "height": 1.45
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     19
+    ],
+    "words": [
+     "축제"
+    ],
+    "key": [
+     "축제"
+    ],
+    "anchor": [
+     3.84,
+     3.65,
+     -2.8
+    ],
+    "size": 0.288,
+    "width": 6.12
+   }
+  },
+  {
+   "id": "s31",
+   "at": 50.0,
+   "set": "deep",
+   "why": "the turn: black again - the stakes",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.8,
+    "kill_at": 50.02,
+    "current": 0.7,
+    "glow": "#b45cff",
+    "sparks": [
+     {
+      "pos": [
+       1.3,
+       2.4,
+       -1.7
+      ],
+      "at": 50.02,
+      "n": 12,
+      "ember": 11
+     },
+     {
+      "pos": [
+       -0.7,
+       3.9,
+       -5.8
+      ],
+      "at": 50.02,
+      "n": 10,
+      "ember": 11
+     },
+     {
+      "pos": [
+       -2.7,
+       3.2,
+       -3.3
+      ],
+      "at": 50.02,
+      "n": 10,
+      "ember": 11
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "abyss_wide"
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_BK_NA_WADE_UV_182",
+     "pos": "center"
+    }
+   ]
+  },
+  {
+   "id": "s32",
+   "at": 50.4,
+   "set": "deep",
+   "why": "sweet - then the venom",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.0,
+    "snow": 0.4,
+    "glow": [
+     [
+      50.4,
+      "#000000"
+     ],
+     [
+      50.6,
+      "#6a4cff"
+     ]
+    ],
+    "fires": [
+     {
+      "uv": [
+       0.42,
+       0.95
+      ],
+      "size": 0.07,
+      "c": "#ffc15a",
+      "core": "#fff4c8",
+      "at": 50.55,
+      "grow": 0.1,
+      "light": 0.5
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      0.4,
+      1.3,
+      1.4
+     ]
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "center"
+    }
+   ],
+   "hero": [
+    {
+     "name": "face",
+     "why_small": "dim on purpose: in the black after the stop only her eyes and the gold glint"
+    }
+   ]
+  },
+  {
+   "id": "s33",
+   "at": "line:21",
+   "set": "deep",
+   "why": "WOW 2: she relights from her own body",
+   "opts": {
+    "grade": "own",
+    "snow": 0.6,
+    "glow": "#b45cff",
+    "vents_at": [
+     52.34,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "vents_s": 0.2,
+    "vent_cap": 0.6,
+    "fires": [
+     {
+      "uv": [
+       0.06,
+       0.88
+      ],
+      "size": 0.12,
+      "c": "#ffc15a",
+      "core": "#fff4c8",
+      "out": 52.4,
+      "fade": 0.1
+     },
+     {
+      "pos": [
+       1.25,
+       2.25,
+       -1.55
+      ],
+      "size": 0.55,
+      "c": "#b45cff",
+      "core": "#ffc15a",
+      "at": 52.34,
+      "grow": 0.25
+     }
+    ],
+    "sparks": [
+     {
+      "uv": [
+       0.06,
+       0.88
+      ],
+      "at": 52.3,
+      "n": 22,
+      "ember": 8,
+      "c": "#ffc15a",
+      "size": 1.3
+     }
+    ],
+    "whip": 52.25,
+    "whip_pivot": [
+     0.45,
+     0.5
+    ],
+    "whip_tip": [
+     0.06,
+     0.88
+    ],
+    "whip_sweep": 150,
+    "whip_dir": 1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.9,
+      1.6,
+      2.2
+     ],
+     "look": [
+      0.8,
+      1.3,
+      -1.2
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 1.3,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_ANGRY_KICK_UV_198",
+     "pos": [
+      0.55,
+      0,
+      -1.0
+     ],
+     "height": 1.5
+    },
+    {
+     "at": 1.44,
+     "sprite": "WS_F_ANGRY_KICK_UV_198",
+     "pos": [
+      0.55,
+      0,
+      -1.0
+     ],
+     "act": "stomp",
+     "height": 1.5
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     21
+    ],
+    "words": [
+     "venom"
+    ],
+    "key": [
+     "venom"
+    ],
+    "color": "#ffd27a",
+    "accent": "#ffc15a",
+    "anchor": [
+     1.38,
+     1.54,
+     -1.4
+    ],
+    "size": 0.1,
+    "width": 1.8
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "center": [
+      1.25,
+      2.35,
+      -1.55
+     ],
+     "size": [
+      0.25,
+      0.4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s34",
+   "at": "line:22",
+   "set": "deep",
+   "why": "the audience returns - her light is the show",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.73,
+       0.56
+      ],
+      "size": 0.36,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ],
+    "fish": [
+     {
+      "pos": [
+       0.4,
+       1.3,
+       -0.9
+      ],
+      "r": 0.9,
+      "glow": "#b45cff",
+      "speed": 0.014
+     },
+     {
+      "pos": [
+       0.2,
+       1.7,
+       -1.1
+      ],
+      "r": 1.1,
+      "glow": "#ffb35c",
+      "speed": -0.012
+     },
+     {
+      "pos": [
+       0.5,
+       0.9,
+       -1.0
+      ],
+      "r": 1.0,
+      "glow": "#b45cff",
+      "speed": 0.011,
+      "phase": 2
+     },
+     {
+      "pos": [
+       0.3,
+       2.0,
+       -1.4
+      ],
+      "r": 1.4,
+      "glow": "#ffb35c",
+      "speed": 0.009,
+      "phase": 4
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "wide",
+     "from": [
+      0.3,
+      1.2,
+      3.2
+     ]
+    },
+    {
+     "at": "end",
+     "frame": "wide",
+     "from": [
+      0.3,
+      1.1,
+      2.6
+     ],
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": "center",
+     "height": 1.55
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     22
+    ],
+    "words": [
+     "for",
+     "a",
+     "fee"
+    ],
+    "anchor": [
+     -1,
+     0.57,
+     -0.9
+    ],
+    "size": 0.1,
+    "width": 1.75
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.73,
+      0.56
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s35",
+   "at": "line:23",
+   "set": "deep",
+   "why": "Salmon's 'tea' - the bucket again",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.9,
+       0.55
+      ],
+      "size": 0.26,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ],
+    "salmon": {
+     "pos": [
+      1.1,
+      0.75,
+      -0.7
+     ],
+     "hold": "bucket",
+     "yaw": 2.6
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.75,
+      1.15,
+      1.6
+     ],
+     "look": [
+      0.7,
+      0.85,
+      -0.65
+     ],
+     "fov": 40
+    }
+   ],
+   "kick": 0.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
+     "pos": [
+      0.2,
+      0,
+      -0.6
+     ],
+     "icon": "?",
+     "height": 1.35
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     23
+    ],
+    "words": [
+     "tea"
+    ],
+    "key": [
+     "tea"
+    ],
+    "anchor": [
+     1.5,
+     1.35,
+     -0.75
+    ],
+    "size": 0.07,
+    "width": 0.8
+   }
+  },
+  {
+   "id": "s36",
+   "at": "line:24",
+   "set": "deep",
+   "why": "her body takes the fire in (three pictures, not one circle - FIX 6 of review 1)",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "glow": [
+     [
+      56.3,
+      "#6a4cff"
+     ],
+     [
+      57.2,
+      "#ff6a3d"
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      1.2,
+      1.2,
+      1.2
+     ],
+     "side": "left"
+    },
+    {
+     "at": "end",
+     "frame": "close",
+     "from": [
+      1.3,
+      1.3,
+      1.0
+     ],
+     "side": "left",
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": "center",
+     "height": 1.42
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     24
+    ],
+    "words": [
+     "insane"
+    ],
+    "anchor": [
+     0.95,
+     0.85,
+     -0.5
+    ],
+    "size": 0.045,
+    "width": 0.6,
+    "small": "a macro on her arm: the word runs along it, read in a close frame"
+   }
+  },
+  {
+   "id": "s37",
+   "at": 58.98,
+   "set": "deep",
+   "why": "the build in silhouette - devil guard: violet rim, red only below the shoulders",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "glow": "#ff6a3d",
+    "flares": [
+     [
+      58.98,
+      "0"
+     ],
+     [
+      60.14,
+      "0"
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.3,
+      0.15,
+      0.9
+     ],
+     "look": [
+      0.6,
+      1.6,
+      -1.3
+     ],
+     "fov": 50
+    }
+   ],
+   "kick": 1.2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PULL_UV_188",
+     "pos": [
+      0.5,
+      0,
+      -1.0
+     ],
+     "height": 1.5
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     25
+    ],
+    "words": [
+     "that",
+     "way"
+    ],
+    "anchor": [
+     -0.64,
+     1.43,
+     -1.6
+    ],
+    "size": 0.1,
+    "width": 2
+   }
+  },
+  {
+   "id": "s38",
+   "at": "line:26",
+   "set": "deep",
+   "why": "her audience answers",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "fish": [
+     {
+      "pos": [
+       0.3,
+       1.0,
+       -0.6
+      ],
+      "r": 1.5,
+      "glow": "#ff6a3d",
+      "speed": 0.02
+     },
+     {
+      "pos": [
+       0.3,
+       1.5,
+       -0.6
+      ],
+      "r": 1.8,
+      "glow": "#b45cff",
+      "speed": -0.018
+     },
+     {
+      "pos": [
+       0.3,
+       0.7,
+       -0.6
+      ],
+      "r": 1.2,
+      "glow": "#ffb35c",
+      "speed": 0.016,
+      "phase": 3
+     },
+     {
+      "pos": [
+       0.3,
+       1.9,
+       -0.6
+      ],
+      "r": 2.1,
+      "glow": "#ff6a3d",
+      "speed": 0.014,
+      "phase": 1
+     },
+     {
+      "pos": [
+       0.3,
+       1.2,
+       -0.6
+      ],
+      "r": 2.4,
+      "glow": "#b45cff",
+      "speed": -0.012,
+      "phase": 5
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -2.6,
+      1.3,
+      1.9
+     ],
+     "look": [
+      0.3,
+      1.2,
+      -0.6
+     ],
+     "fov": 40
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.6,
+      1.3,
+      2.6
+     ],
+     "look": [
+      0.3,
+      1.2,
+      -0.6
+     ],
+     "fov": 40,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.6,
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     26
+    ],
+    "words": [
+     "Chaos"
+    ],
+    "key": [
+     "chaos"
+    ],
+    "anchor": [
+     0.25,
+     2.23,
+     -2.2
+    ],
+    "size": 0.1,
+    "width": 2.4
+   }
+  },
+  {
+   "id": "s39",
+   "at": 62.5,
+   "set": "deep",
+   "why": "the fire is in her now",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "glow": "#ff6a3d",
+    "fires": [
+     {
+      "uv": [
+       0.06,
+       0.5
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      0.1,
+      1.15,
+      1.4
+     ]
+    },
+    {
+     "at": "end",
+     "frame": "close",
+     "from": [
+      0.1,
+      1.15,
+      1.25
+     ],
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": "center",
+     "height": 1.45
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     26
+    ],
+    "words": [
+     "veins"
+    ],
+    "key": [
+     "veins"
+    ],
+    "anchor": [
+     0.62,
+     1.33,
+     -0.4
+    ],
+    "size": 0.07,
+    "width": 1
+   },
+   "hero": [
+    "face"
+   ]
+  },
+  {
+   "id": "s40",
+   "at": "line:27",
+   "set": "deep",
+   "why": "feel it: the world was cold",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.25,
+    "origin": [
+     0.4,
+     -0.7
+    ],
+    "vent_cap": 0.6,
+    "snow": 1.0,
+    "glow": "#ff6a3d",
+    "fog_far": 30,
+    "fires": [
+     {
+      "uv": [
+       0.86,
+       0.34
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "abyss_wide",
+     "offset": [
+      0,
+      0,
+      -2.0
+     ]
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.4,
+      3.2,
+      9.5
+     ],
+     "look": [
+      0.3,
+      1.0,
+      -1.0
+     ],
+     "fov": 44,
+     "ease": "out"
+    }
+   ],
+   "kick": 0.4,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": "center",
+     "height": 1.42
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     27
+    ],
+    "key": [
+     "차갑던"
+    ],
+    "anchor": [
+     0.25,
+     2.95,
+     -2
+    ],
+    "size": 0.352,
+    "width": 9.68
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.86,
+      0.34
+     ],
+     "why_small": "the cold is the picture: her warm island in the enormous black"
+    }
+   ]
+  },
+  {
+   "id": "s41",
+   "at": "line:28",
+   "set": "deep",
+   "why": "WOW 3: the colour turn happens on the line (the red is used here first - FIX 5 of review 2)",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.4,
+    "origin": [
+     0.4,
+     -0.7
+    ],
+    "vent_cap": 0.7,
+    "glow": "#ff6a3d",
+    "tint_at": 67.45,
+    "tint_s": 2.2,
+    "grade_to": "night",
+    "grade_at": 67.9,
+    "grade_s": 0.8
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.35,
+      8.5,
+      0.2
+     ],
+     "look": [
+      0.35,
+      0.0,
+      -0.8
+     ],
+     "fov": 50
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.35,
+      6.8,
+      0.2
+     ],
+     "look": [
+      0.35,
+      0.0,
+      -0.8
+     ],
+     "fov": 52,
+     "ease": "linear"
+    }
+   ],
+   "kick": 1.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_173",
+     "pos": "center",
+     "height": 1.45
+    },
+    {
+     "at": 0.1,
+     "sprite": "WS_F_FOCUS_PUSH_UV_173",
+     "pos": "center",
+     "act": "stomp",
+     "height": 1.45
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     28
+    ],
+    "words": [
+     "붉게"
+    ],
+    "key": [
+     "붉게"
+    ],
+    "tilt": -90,
+    "anchor": [
+     0.35,
+     0.05,
+     -2.6
+    ],
+    "size": 0.42,
+    "width": 6.0
+   }
+  },
+  {
+   "id": "s42",
+   "at": "line:29",
+   "set": "deep",
+   "why": "a new zone: the chimney forest - she rides the heat (rays ride currents)",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "fires": [
+     {
+      "uv": [
+       0.9,
+       0.55
+      ],
+      "size": 0.24,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -3.6,
+      1.0,
+      0.6
+     ],
+     "look": [
+      -1.4,
+      0.9,
+      -2.6
+     ],
+     "fov": 44
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.2,
+      1.0,
+      0.4
+     ],
+     "look": [
+      1.0,
+      0.9,
+      -3.0
+     ],
+     "fov": 44,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
+     "pos": [
+      -2.4,
+      0.1,
+      -2.0
+     ],
+     "act": "float",
+     "height": 1.35
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
+     "pos": [
+      0.2,
+      0.1,
+      -2.6
+     ],
+     "act": "float",
+     "move": 1.9,
+     "ease": "linear",
+     "height": 1.35
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     29
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     0.83,
+     1.77,
+     -4.2
+    ],
+    "size": 0.175,
+    "width": 4.25
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.9,
+      0.55
+     ],
+     "why_small": "she surfs through the forest: the burning chimneys are the picture"
+    }
+   ],
+   "transition": {
+    "kind": "whip",
+    "frames": 8,
+    "dir": 1
+   }
+  },
+  {
+   "id": "s43",
+   "at": "line:30",
+   "set": "deep",
+   "why": "speed in the burning world",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "fires": [
+     {
+      "uv": [
+       0.06,
+       0.5
+      ],
+      "size": 0.24,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      2.6,
+      1.0,
+      -0.6
+     ],
+     "look": [
+      0.8,
+      0.9,
+      -3.4
+     ],
+     "fov": 42
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.4,
+      1.0,
+      0.2
+     ],
+     "look": [
+      1.6,
+      0.9,
+      -3.6
+     ],
+     "fov": 42,
+     "ease": "snap"
+    }
+   ],
+   "kick": 1.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": [
+      0.5,
+      0.1,
+      -3.0
+     ],
+     "act": "float",
+     "height": 1.45
+    },
+    {
+     "at": 0.9,
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": [
+      1.7,
+      0.1,
+      -3.4
+     ],
+     "act": "lean",
+     "move": 0.5,
+     "ease": "snap",
+     "flip": true,
+     "height": 1.45
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": [
+      0.9,
+      0.1,
+      -3.6
+     ],
+     "act": "lean",
+     "move": 0.5,
+     "ease": "snap",
+     "height": 1.45
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     30
+    ],
+    "words": [
+     "drama"
+    ],
+    "key": [
+     "drama"
+    ],
+    "anchor": [
+     0.84,
+     1.7,
+     -4.6
+    ],
+    "size": 0.14,
+    "width": 3
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.06,
+      0.5
+     ],
+     "why_small": "the slalom between the chimneys carries it"
+    }
+   ]
+  },
+  {
+   "id": "s44",
+   "at": "line:31",
+   "set": "deep",
+   "why": "the gag escalates",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "salmon": {
+     "pos": [
+      0.0,
+      0.6,
+      -0.6
+     ],
+     "hold": "extinguisher",
+     "spray_at": 75.47,
+     "spray_s": 1.0,
+     "yaw": 0.3
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      0.45,
+      0.9
+     ],
+     "look": [
+      0.0,
+      0.6,
+      -0.8
+     ],
+     "fov": 40
+    }
+   ],
+   "kick": 1.2,
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     31
+    ],
+    "key": [
+     "fighter"
+    ],
+    "anchor": [
+     0.34,
+     0.78,
+     -0.9
+    ],
+    "size": 0.06,
+    "width": 1
+   }
+  },
+  {
+   "id": "s45",
+   "at": "line:32",
+   "set": "deep",
+   "why": "the fire fighter converts",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "salmon": {
+     "pos": [
+      0.75,
+      0.65,
+      -1.3
+     ],
+     "yaw": 2.2,
+     "icon": "heart",
+     "icon_at": 77.4
+    },
+    "props": [
+     {
+      "kind": "extinguisher",
+      "pos": [
+       0.25,
+       0.0,
+       -0.9
+      ],
+      "rot": [
+       0,
+       0,
+       1.45
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      0.9,
+      0.9
+     ],
+     "look": [
+      0.9,
+      0.8,
+      -1.5
+     ],
+     "fov": 40
+    }
+   ],
+   "kick": 0.6,
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     32
+    ],
+    "words": [
+     "Karma"
+    ],
+    "key": [
+     "karma"
+    ],
+    "anchor": [
+     0.28,
+     1.28,
+     -1.7
+    ],
+    "size": 0.09,
+    "width": 1.6
+   }
+  },
+  {
+   "id": "s46",
+   "at": "line:33",
+   "set": "deep",
+   "why": "the lyric IS the floor",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.6,
+      8.0,
+      -0.4
+     ],
+     "look": [
+      -1.6,
+      0.0,
+      -1.2
+     ],
+     "fov": 46
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.6,
+      8.0,
+      -0.4
+     ],
+     "look": [
+      1.6,
+      0.0,
+      -1.2
+     ],
+     "fov": 46,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      -2.4,
+      0.3,
+      -1.0
+     ],
+     "flip": true,
+     "height": 0.55
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      2.2,
+      0.3,
+      -1.0
+     ],
+     "flip": true,
+     "move": 1.7,
+     "ease": "linear",
+     "height": 0.55
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "reveal": "burn",
+    "lines": [
+     33
+    ],
+    "tilt": -90,
+    "anchor": [
+     0.0,
+     0.04,
+     -1.6
+    ],
+    "size": 0.32,
+    "width": 6.0
+   }
+  },
+  {
+   "id": "s47",
+   "at": "line:34",
+   "set": "deep",
+   "why": "the water joke, now as a surf",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      2.4,
+      0.3,
+      1.5
+     ],
+     "look": [
+      0.2,
+      0.25,
+      -0.6
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SURF_UV_126",
+     "pos": [
+      -0.8,
+      -0.06,
+      -0.9
+     ],
+     "height": 1.5
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_SURF_UV_126",
+     "pos": [
+      1.2,
+      -0.06,
+      -0.4
+     ],
+     "move": 1.7,
+     "ease": "inOut",
+     "height": 1.5
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     34
+    ],
+    "words": [
+     "water"
+    ],
+    "key": [
+     "water"
+    ],
+    "tilt": -90,
+    "rot": 15,
+    "anchor": [
+     0.4,
+     0.04,
+     -0.4
+    ],
+    "size": 0.2,
+    "width": 3.0
+   }
+  },
+  {
+   "id": "s48",
+   "at": "line:35",
+   "set": "deep",
+   "why": "back to where it began",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "flares": [
+     [
+      82.57,
+      "0"
+     ],
+     [
+      83.48,
+      "0"
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.4,
+      1.2,
+      1.4
+     ],
+     "look": [
+      1.3,
+      1.8,
+      -1.7
+     ],
+     "fov": 42
+    }
+   ],
+   "kick": 1.2,
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     35
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     1.04,
+     2.34,
+     -2.4
+    ],
+    "size": 0.13,
+    "width": 3
+   },
+   "transition": {
+    "kind": "whip",
+    "frames": 8,
+    "dir": -1
+   }
+  },
+  {
+   "id": "s49",
+   "at": "line:36",
+   "set": "deep",
+   "why": "a held landing before the hook comes back",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "flares": [
+     [
+      83.74,
+      "0"
+     ],
+     [
+      84.36,
+      "0"
+     ]
+    ],
+    "fires": [
+     {
+      "uv": [
+       0.06,
+       0.06
+      ],
+      "size": 0.24,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      0.3,
+      1.4
+     ],
+     "look": [
+      0.9,
+      1.5,
+      -1.4
+     ],
+     "fov": 48
+    }
+   ],
+   "kick": 1.2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_JUMP_UV_160",
+     "pos": [
+      0.5,
+      0.0,
+      -0.6
+     ],
+     "act": "stomp",
+     "height": 1.25
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     36
+    ],
+    "words": [
+     "fire",
+     "starter"
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     1.75,
+     0.96,
+     -1.22
+    ],
+    "rot": -20,
+    "size": 0.09,
+    "width": 2
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.06,
+      0.06
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s50",
+   "at": "line:37",
+   "set": "deep",
+   "why": "the intro lines come back in a burning world (one zone per line)",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "dip": true,
+    "glow": "#ff6a3d",
+    "fires": [
+     {
+      "uv": [
+       0.96,
+       0.47
+      ],
+      "size": 0.26,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      0.4,
+      1.4,
+      1.9
+     ]
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "center",
+     "act": "pop"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "reveal": "burn",
+    "lines": [
+     37
+    ],
+    "key": [
+     "fire"
+    ],
+    "tilt": -90,
+    "rot": -30,
+    "anchor": [
+     0.9,
+     0.04,
+     -0.2
+    ],
+    "size": 0.2,
+    "width": 2.6
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.96,
+      0.47
+     ]
+    }
+   ],
+   "transition": {
+    "kind": "whip",
+    "frames": 8,
+    "dir": 1
+   }
+  },
+  {
+   "id": "s51",
+   "at": "line:38",
+   "set": "deep",
+   "why": "the same gesture, now with confidence",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "fires": [
+     {
+      "uv": [
+       0.73,
+       0.56
+      ],
+      "size": 0.2,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "out": 89.2,
+      "fade": 0.1
+     },
+     {
+      "uv": [
+       0.73,
+       0.56
+      ],
+      "size": 0.4,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "at": 89.2,
+      "grow": 0.2
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      1.6,
+      1.2,
+      1.0
+     ],
+     "side": "left"
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": [
+      0.6,
+      0,
+      -1.0
+     ],
+     "act": "tilt",
+     "height": 1.55
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     38
+    ],
+    "words": [
+     "harder"
+    ],
+    "key": [
+     "harder"
+    ],
+    "anchor": [
+     1.4,
+     1.5,
+     -1.0
+    ],
+    "size": 0.08,
+    "width": 1.6
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.73,
+      0.56
+     ]
+    }
+   ],
+   "transition": {
+    "kind": "whip",
+    "frames": 8,
+    "dir": -1
+   }
+  },
+  {
+   "id": "s52",
+   "at": "line:39",
+   "set": "deep",
+   "why": "the third zone of the field: the chimney forest (a new place per line)",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "fires": [
+     {
+      "uv": [
+       0.25,
+       0.4
+      ],
+      "uv2": [
+       0.8,
+       0.45
+      ],
+      "toss": [
+       90.4,
+       90.9
+      ],
+      "size": 0.26,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "wide",
+     "from": [
+      0.4,
+      1.0,
+      0.6
+     ]
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SPIN_UV_189",
+     "pos": [
+      0.2,
+      0.2,
+      -2.4
+     ],
+     "act": "bounce",
+     "height": 1.15
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     39
+    ],
+    "words": [
+     "fired",
+     "up"
+    ],
+    "key": [
+     "fired"
+    ],
+    "anchor": [
+     -0.58,
+     1.18,
+     -2.6
+    ],
+    "size": 0.08,
+    "width": 1.6
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.5,
+      0.45
+     ],
+     "size": [
+      0.8,
+      0.35
+     ],
+     "why_small": "tossed between two chimneys"
+    }
+   ],
+   "transition": {
+    "kind": "whip",
+    "frames": 8,
+    "dir": 1
+   }
+  },
+  {
+   "id": "s53",
+   "at": "line:40",
+   "set": "deep",
+   "why": "the hang is answered: a new place appears",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.8,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     93.4
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "vents_s": 3.0,
+    "glow": "#ff6a3d",
+    "fog_far": 32
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.2,
+      0.55,
+      -4.0
+     ],
+     "look": [
+      0.6,
+      3.2,
+      -10.0
+     ],
+     "fov": 56
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.2,
+      0.5,
+      -4.4
+     ],
+     "look": [
+      0.6,
+      3.3,
+      -10.0
+     ],
+     "fov": 56,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_CROUCH_UV_192",
+     "pos": "giant_stage",
+     "height": 1.05
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     40
+    ],
+    "words": [
+     "like"
+    ],
+    "key": [
+     "like"
+    ],
+    "anchor": [
+     0.8,
+     3.6,
+     -9.4
+    ],
+    "size": 0.4,
+    "width": 3.0
+   }
+  },
+  {
+   "id": "s54",
+   "at": "line:41",
+   "set": "deep",
+   "why": "the fire answers the hang on its own - a chain she started",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "flares": [
+     [
+      93.9,
+      "5"
+     ],
+     [
+      94.2,
+      "1"
+     ],
+     [
+      94.48,
+      "3"
+     ],
+     [
+      94.69,
+      "2"
+     ],
+     [
+      95.0,
+      "4"
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -5.2,
+      1.6,
+      1.2
+     ],
+     "look": [
+      -2.0,
+      1.4,
+      -2.8
+     ],
+     "fov": 44
+    },
+    {
+     "at": "end",
+     "pos": [
+      3.2,
+      1.6,
+      1.4
+     ],
+     "look": [
+      5.0,
+      1.2,
+      -2.6
+     ],
+     "fov": 44,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.8,
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     41
+    ],
+    "words": [
+     "fire",
+     "starter"
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     4.64,
+     2.02,
+     -3.6
+    ],
+    "size": 0.195,
+    "width": 5.4
+   }
+  },
+  {
+   "id": "s55",
+   "at": "line:42",
+   "set": "deep",
+   "why": "she rides what she started (rays ride currents)",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "flares": [
+     [
+      95.6,
+      "2"
+     ],
+     [
+      96.3,
+      "4"
+     ]
+    ],
+    "fires": [
+     {
+      "uv": [
+       0.06,
+       0.5
+      ],
+      "size": 0.22,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      3.6,
+      0.9,
+      1.6
+     ],
+     "look": [
+      2.2,
+      0.9,
+      -1.0
+     ],
+     "fov": 42
+    },
+    {
+     "at": "end",
+     "pos": [
+      4.6,
+      0.9,
+      0.8
+     ],
+     "look": [
+      3.6,
+      0.9,
+      -1.8
+     ],
+     "fov": 42,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": [
+      2.0,
+      0.1,
+      -1.0
+     ],
+     "act": "float",
+     "height": 1.45
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": [
+      3.4,
+      0.1,
+      -1.9
+     ],
+     "act": "float",
+     "move": 1.9,
+     "ease": "linear",
+     "height": 1.45
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     42
+    ],
+    "tilt": -90,
+    "anchor": [
+     3.0,
+     0.04,
+     -1.6
+    ],
+    "size": 0.13,
+    "width": 2.6
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.06,
+      0.5
+     ],
+     "why_small": "riding the chain reaction"
+    }
+   ]
+  },
+  {
+   "id": "s56",
+   "at": "line:43",
+   "set": "deep",
+   "why": "FIX 7 of review 2: her idol move - the barb strike as a held hit pose",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "flares": [
+     [
+      97.5,
+      "0"
+     ]
+    ],
+    "shells": [
+     [
+      97.5,
+      "0"
+     ]
+    ],
+    "whip": 97.45,
+    "whip_pivot": [
+     0.45,
+     0.55
+    ],
+    "whip_tip": [
+     0.42,
+     0.88
+    ],
+    "whip_sweep": 120,
+    "whip_dir": 1,
+    "sparks": [
+     {
+      "uv": [
+       0.42,
+       0.88
+      ],
+      "at": 97.47,
+      "n": 16,
+      "ember": 8
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      0.9,
+      1.1,
+      1.8
+     ],
+     "side": "left"
+    }
+   ],
+   "kick": 1.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_ANGRY_KICK_UV_199",
+     "pos": "center",
+     "act": "stomp",
+     "height": 1.45
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     43
+    ],
+    "anchor": [
+     0.34,
+     1.57,
+     -0.8
+    ],
+    "size": 0.1,
+    "width": 1.8
+   }
+  },
+  {
+   "id": "s57",
+   "at": 98.08,
+   "set": "deep",
+   "why": "the second stamp mirrors the first - a pose the audience can learn",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "flares": [
+     [
+      98.36,
+      "1"
+     ]
+    ],
+    "shells": [
+     [
+      98.36,
+      "1"
+     ]
+    ],
+    "whip": 98.1,
+    "whip_pivot": [
+     0.45,
+     0.5
+    ],
+    "whip_tip": [
+     0.06,
+     0.88
+    ],
+    "whip_sweep": 120,
+    "whip_dir": -1,
+    "sparks": [
+     {
+      "uv": [
+       0.06,
+       0.88
+      ],
+      "at": 98.12,
+      "n": 16,
+      "ember": 8
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      -1.0,
+      1.1,
+      1.6
+     ],
+     "side": "right"
+    }
+   ],
+   "kick": 1.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_ANGRY_KICK_UV_198",
+     "pos": "center",
+     "act": "stomp",
+     "flip": true,
+     "height": 1.5
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     43
+    ],
+    "anchor": [
+     -0.65,
+     1.63,
+     -0.8
+    ],
+    "size": 0.1,
+    "width": 1.8
+   }
+  },
+  {
+   "id": "s58",
+   "at": 98.35,
+   "set": "deep",
+   "why": "three stamps, the last biggest",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "flares": [
+     [
+      100.19,
+      "3"
+     ],
+     [
+      100.66,
+      "0"
+     ]
+    ],
+    "shells": [
+     [
+      100.19,
+      "3"
+     ],
+     [
+      100.66,
+      "0"
+     ],
+     [
+      100.66,
+      "2"
+     ]
+    ],
+    "erupt_at": 100.66,
+    "erupt_s": 0.3
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -2.6,
+      0.5,
+      0.8
+     ],
+     "look": [
+      0.4,
+      1.4,
+      -1.0
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 1.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SPIN_UV_189",
+     "pos": [
+      0.0,
+      0.15,
+      -0.8
+     ],
+     "act": "hop",
+     "height": 1.15
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     43
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     0.2,
+     1.68,
+     -2.83
+    ],
+    "rot": 30,
+    "size": 0.16,
+    "width": 4
+   },
+   "hero": [
+    {
+     "name": "fire_word"
+    }
+   ]
+  },
+  {
+   "id": "s59",
+   "at": "line:44",
+   "set": "deep",
+   "why": "the rap starts on her landing",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     null
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "fog_far": 32,
+    "fires": [
+     {
+      "uv": [
+       0.9,
+       0.69
+      ],
+      "size": 0.24,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      1.8,
+      1.4,
+      -7.0
+     ]
+    }
+   ],
+   "kick": 1.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_CROUCH_UV_192",
+     "pos": "giant_stage",
+     "act": "stomp",
+     "height": 1.05
+    }
+   ],
+   "lyrics": {
+    "kind": "ticker",
+    "material": "light",
+    "lines": [
+     44
+    ],
+    "tilt": -90,
+    "anchor": [
+     -0.4,
+     0.55,
+     -8.0
+    ],
+    "size": 0.1,
+    "width": 3.0
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.9,
+      0.69
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s60",
+   "at": "line:45",
+   "set": "deep",
+   "why": "seven days = seven fires (the rap counted in light)",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.8,
+    "snow": 0.6,
+    "red": 0.8,
+    "fog_far": 36,
+    "vents_at": [
+     102.07,
+     101.67,
+     101.84,
+     101.94,
+     101.60000000000001,
+     101.53,
+     102.34
+    ],
+    "vents_s": 0.12,
+    "flares": [
+     [
+      101.53,
+      "5"
+     ],
+     [
+      101.67,
+      "1"
+     ],
+     [
+      101.8,
+      "0"
+     ],
+     [
+      101.94,
+      "3"
+     ],
+     [
+      102.07,
+      "4"
+     ],
+     [
+      102.2,
+      "2"
+     ],
+     [
+      102.34,
+      "6"
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      6.5,
+      6.5
+     ],
+     "look": [
+      0.4,
+      1.2,
+      -5.0
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 0.8,
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     45
+    ],
+    "anchor": [
+     2.02,
+     3.58,
+     0.4
+    ],
+    "tilt": -40,
+    "size": 0.225,
+    "width": 6.25
+   }
+  },
+  {
+   "id": "s61",
+   "at": "line:46",
+   "set": "deep",
+   "why": "never runs dry - the jug that never empties",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "fires": [
+     {
+      "uv": [
+       0.95,
+       0.27
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     },
+     {
+      "pos": [
+       1.15,
+       0.05,
+       -0.75
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "at": 103.2,
+      "grow": 0.4
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      0.8,
+      1.2,
+      1.9
+     ]
+    },
+    {
+     "at": "end",
+     "frame": "medium",
+     "from": [
+      0.7,
+      1.2,
+      1.6
+     ],
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_173",
+     "pos": "center",
+     "height": 1.45
+    }
+   ],
+   "lyrics": {
+    "kind": "ticker",
+    "material": "light",
+    "lines": [
+     46,
+     47,
+     48
+    ],
+    "tilt": -90,
+    "anchor": [
+     0.3,
+     0.05,
+     0.35
+    ],
+    "size": 0.1,
+    "width": 3.0
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.95,
+      0.27
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s62",
+   "at": "line:49",
+   "set": "deep",
+   "why": "0 to 100 - the light reaches the lens",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "fires": [
+     {
+      "uv": [
+       0.86,
+       0.34
+      ],
+      "size": 0.05,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "out": 104.75,
+      "fade": 0.05
+     },
+     {
+      "uv": [
+       0.86,
+       0.34
+      ],
+      "size": 2.0,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "at": 104.75,
+      "grow": 1.5
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      1.2,
+      1.2,
+      1.8
+     ],
+     "side": "left"
+    },
+    {
+     "at": "end",
+     "frame": "close",
+     "from": [
+      1.2,
+      1.3,
+      1.4
+     ],
+     "side": "left",
+     "ease": "in"
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": "center",
+     "height": 1.42
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     49,
+     50
+    ],
+    "anchor": [
+     -0.7,
+     1.5,
+     -1.0
+    ],
+    "size": 0.12,
+    "width": 2.2
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.86,
+      0.34
+     ],
+     "size": [
+      0.6,
+      1.5
+     ],
+     "why_small": "0 to 100: the flame outgrows the frame on purpose, the lens goes through it"
+    }
+   ],
+   "transition": {
+    "kind": "pass",
+    "frames": 10,
+    "obj": "fish",
+    "dir": 1
+   }
+  },
+  {
+   "id": "s63",
+   "at": "line:51",
+   "set": "deep",
+   "why": "spreads in one breath",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "ignite_at": 106.32,
+    "ignite_s": 1.2,
+    "origin": [
+     0.4,
+     -0.7
+    ],
+    "fires": [
+     {
+      "uv": [
+       0.86,
+       0.34
+      ],
+      "size": 2.0,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "abyss_wide",
+     "offset": [
+      0,
+      0.6,
+      0
+     ]
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": "center",
+     "height": 1.42
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     51
+    ],
+    "key": [
+     "퍼져"
+    ],
+    "anchor": [
+     -0.77,
+     3.03,
+     -1.4
+    ],
+    "size": 0.21,
+    "width": 5.1
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.86,
+      0.34
+     ],
+     "size": [
+      0.6,
+      1.5
+     ],
+     "why_small": "the light spreading over the field is the picture"
+    }
+   ]
+  },
+  {
+   "id": "s64",
+   "at": "line:52",
+   "set": "deep",
+   "why": "anticipation before the drop: the world compresses",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "flares": [
+     [
+      108.67,
+      "0"
+     ],
+     [
+      109.13,
+      "0"
+     ]
+    ],
+    "fires": [
+     {
+      "uv": [
+       0.5,
+       0.25
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      0.3,
+      1.2,
+      1.8
+     ]
+    }
+   ],
+   "kick": 2.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_PAIN_CLUTCH_UV_163",
+     "pos": "center",
+     "act": "shake"
+    },
+    {
+     "at": 0.98,
+     "sprite": "WS_F_PAIN_CLUTCH_UV_163",
+     "pos": "center",
+     "act": "shake",
+     "icon": "sweat"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     52
+    ],
+    "words": [
+     "삐걱",
+     "삐-삐걱"
+    ],
+    "anchor": [
+     0.27,
+     1.67,
+     -1.2
+    ],
+    "size": 0.12,
+    "width": 3.9
+   }
+  },
+  {
+   "id": "s65",
+   "at": 109.58,
+   "set": "deep",
+   "why": "she loses control - on purpose of the song",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.75,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "fires": [
+     {
+      "uv": [
+       0.06,
+       0.06
+      ],
+      "size": 0.4,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "at": 109.6,
+      "grow": 1.4
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      0.5,
+      1.2,
+      1.9
+     ]
+    },
+    {
+     "at": "end",
+     "frame": "close",
+     "from": [
+      0.5,
+      1.2,
+      1.7
+     ],
+     "ease": "in"
+    }
+   ],
+   "kick": 1.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_JUMP_UV_160",
+     "pos": "center",
+     "act": "float",
+     "icon": "sweat",
+     "height": 1.25
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     52
+    ],
+    "words": [
+     "lose",
+     "control"
+    ],
+    "anchor": [
+     0.99,
+     0.98,
+     -0.7
+    ],
+    "size": 0.144,
+    "width": 2.88
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.06,
+      0.06
+     ],
+     "size": [
+      0.4,
+      0.7
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s66",
+   "at": "line:53",
+   "set": "deep",
+   "why": "WOW 4: the floor explodes upward",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.9,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "erupt_at": 111.3,
+    "erupt_s": 0.2,
+    "shells": [
+     [
+      111.41,
+      "0"
+     ],
+     [
+      111.87,
+      "1"
+     ],
+     [
+      112.31,
+      "2"
+     ],
+     [
+      112.78,
+      "3"
+     ],
+     [
+      113.24,
+      "4"
+     ],
+     [
+      111.6,
+      "5"
+     ],
+     [
+      112.0,
+      "6"
+     ]
+    ],
+    "whip": 111.3,
+    "whip_pivot": [
+     0.45,
+     0.65
+    ],
+    "whip_tip": [
+     0.25,
+     0.95
+    ],
+    "whip_sweep": 100,
+    "whip_dir": 1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      0.5,
+      6.0
+     ],
+     "look": [
+      0.4,
+      2.6,
+      -3.0
+     ],
+     "fov": 50
+    }
+   ],
+   "kick": 1.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_JUMP_UV_160",
+     "pos": "center",
+     "act": "hop",
+     "height": 1.25
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     53
+    ],
+    "words": [
+     "beat",
+     "drop",
+     "beat-beat"
+    ],
+    "key": [
+     "drop"
+    ],
+    "sub": false,
+    "anchor": [
+     0.41,
+     4.1,
+     -3.6
+    ],
+    "size": 0.375,
+    "width": 11.25
+   }
+  },
+  {
+   "id": "s67",
+   "at": "line:54",
+   "set": "deep",
+   "why": "the festival cheer",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.9,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "snow": 0.7,
+    "red": 0.8,
+    "pulse": "beats",
+    "glow": "#ff6a3d",
+    "erupt": 1.0,
+    "sparks": [
+     {
+      "pos": [
+       0.0,
+       1.8,
+       -0.4
+      ],
+      "at": 113.71,
+      "n": 20,
+      "ember": 6
+     },
+     {
+      "pos": [
+       0.7,
+       1.6,
+       -0.6
+      ],
+      "at": 115.08,
+      "n": 20,
+      "ember": 6
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      2.0,
+      1.0,
+      2.4
+     ],
+     "look": [
+      0.3,
+      0.8,
+      -0.6
+     ],
+     "fov": 44
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.4,
+      1.0,
+      2.6
+     ],
+     "look": [
+      0.3,
+      0.8,
+      -0.6
+     ],
+     "fov": 44,
+     "ease": "linear"
+    }
+   ],
+   "kick": 1.2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SPIN_UV_178",
+     "pos": [
+      0.3,
+      0.15,
+      -0.6
+     ],
+     "act": "bounce",
+     "height": 1.15
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     54
+    ],
+    "key": [
+     "얼쑤"
+    ],
+    "anchor": [
+     0.17,
+     0.78,
+     -0.2
+    ],
+    "size": 0.065,
+    "width": 1.56
+   }
+  },
+  {
+   "id": "s68",
+   "at": "line:55",
+   "set": "deep",
+   "why": "light the fire = start the column (replaces the high-five, FIX 6 of review 2)",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 46,
+    "snow": 1.0,
+    "glow": "#ff6a3d",
+    "column_at": 115.95,
+    "column_s": 1.2,
+    "fires": [
+     {
+      "uv": [
+       0.86,
+       0.34
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.4,
+      6.6,
+      -7.6
+     ],
+     "look": [
+      0.4,
+      6.0,
+      -10.2
+     ],
+     "fov": 40
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": [
+      -0.25,
+      5.2,
+      -9.9
+     ],
+     "act": "float",
+     "height": 1.42
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     55,
+     56
+    ],
+    "anchor": [
+     -0.54,
+     6.6,
+     -10.4
+    ],
+    "size": 0.1,
+    "width": 2.2
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.86,
+      0.34
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s69",
+   "at": "line:57",
+   "set": "deep",
+   "why": "the black water above IS her night sky",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 46,
+    "snow": 1.0,
+    "glow": "#ff6a3d",
+    "column": 1.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.8,
+      4.0,
+      -7.6
+     ],
+     "look": [
+      0.9,
+      11.0,
+      -10.0
+     ],
+     "fov": 52
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.8,
+      6.0,
+      -7.6
+     ],
+     "look": [
+      0.9,
+      14.0,
+      -10.0
+     ],
+     "fov": 52,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FLY_UV_081",
+     "pos": [
+      0.9,
+      8.0,
+      -9.9
+     ],
+     "height": 0.62
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_FLY_UV_081",
+     "pos": [
+      0.9,
+      12.5,
+      -9.9
+     ],
+     "height": 0.62,
+     "move": 2.0,
+     "ease": "in"
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     57
+    ],
+    "anchor": [
+     -0.6,
+     9.2,
+     -10.6
+    ],
+    "size": 0.2,
+    "width": 4.4
+   }
+  },
+  {
+   "id": "s70",
+   "at": "line:58",
+   "set": "deep",
+   "why": "the calm beat - her new crowd joins",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 46,
+    "snow": 1.0,
+    "column": 1.0,
+    "glow": "#ff6a3d",
+    "school": {
+     "from": [
+      2.2,
+      12.2,
+      -9.6
+     ],
+     "to": [
+      1.7,
+      13.6,
+      -9.7
+     ],
+     "at": 118.32,
+     "dur_s": 1.5,
+     "n": 10,
+     "glow": "#ffc15a"
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      4.0,
+      13.4,
+      -7.0
+     ],
+     "look": [
+      1.0,
+      13.6,
+      -10.2
+     ],
+     "fov": 42
+    }
+   ],
+   "kick": 0.4,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_164",
+     "pos": [
+      0.9,
+      12.8,
+      -10.1
+     ],
+     "rot": -68,
+     "act": "float",
+     "height": 1.55
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     58,
+     59
+    ],
+    "anchor": [
+     2.39,
+     14.32,
+     -10.6
+    ],
+    "size": 0.112,
+    "width": 2.75
+   }
+  },
+  {
+   "id": "s71",
+   "at": 119.89,
+   "set": "deep",
+   "why": "Salmon follows - comedy inside the climb",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 46,
+    "snow": 1.0,
+    "column": 1.0,
+    "glow": "#ff6a3d",
+    "salmon": {
+     "pos": [
+      1.7,
+      9.6,
+      -9.6
+     ],
+     "from": [
+      1.7,
+      7.8,
+      -9.6
+     ],
+     "at": 119.9,
+     "dur_s": 1.0,
+     "hold": "bucket",
+     "yaw": 1.4
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      4.0,
+      13.6,
+      -7.0
+     ],
+     "look": [
+      1.0,
+      13.8,
+      -10.2
+     ],
+     "fov": 42
+    },
+    {
+     "at": 0.3,
+     "pos": [
+      4.0,
+      11.0,
+      -7.0
+     ],
+     "look": [
+      1.6,
+      9.4,
+      -9.6
+     ],
+     "fov": 42,
+     "ease": "snap"
+    },
+    {
+     "at": 0.85,
+     "pos": [
+      4.0,
+      11.0,
+      -7.0
+     ],
+     "look": [
+      1.6,
+      9.6,
+      -9.6
+     ],
+     "fov": 42,
+     "ease": "linear"
+    },
+    {
+     "at": "end",
+     "pos": [
+      4.0,
+      13.8,
+      -7.0
+     ],
+     "look": [
+      1.0,
+      14.0,
+      -10.2
+     ],
+     "fov": 42,
+     "ease": "snap"
+    }
+   ],
+   "kick": 0.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_164",
+     "pos": [
+      0.9,
+      13.6,
+      -10.1
+     ],
+     "rot": -68,
+     "act": "float",
+     "height": 1.55
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     60
+    ],
+    "anchor": [
+     0.5,
+     12.6,
+     -9.4
+    ],
+    "size": 0.12,
+    "width": 2.2
+   },
+   "transition": {
+    "kind": "whip",
+    "frames": 8,
+    "dir": 1
+   }
+  },
+  {
+   "id": "s72",
+   "at": "line:61",
+   "set": "deep",
+   "why": "a new place the light reveals (the cliff)",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 46,
+    "snow": 1.0,
+    "cliff": true,
+    "column": 1.0,
+    "glow": "#ff6a3d",
+    "cliff_ignite_at": 121.1,
+    "cliff_ignite_s": 2.4,
+    "cliff_base": 10.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      5.6,
+      15.0,
+      -6.6
+     ],
+     "look": [
+      0.6,
+      17.0,
+      -12.0
+     ],
+     "fov": 48
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      1.4,
+      15.0,
+      -10.6
+     ],
+     "rot": -80,
+     "height": 0.55
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      1.4,
+      17.6,
+      -10.6
+     ],
+     "rot": -80,
+     "move": 2.5,
+     "ease": "linear",
+     "height": 0.55
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     63
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     3.4,
+     16.24,
+     -12.4
+    ],
+    "size": 0.2,
+    "width": 4.2
+   }
+  },
+  {
+   "id": "s73",
+   "at": "line:64",
+   "set": "deep",
+   "why": "she races the fire up",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 46,
+    "snow": 1.0,
+    "cliff": true,
+    "column": 1.0,
+    "glow": "#ff6a3d",
+    "cliff_base": 14.0,
+    "cliff_steps": [
+     123.81
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      2.6,
+      11.0,
+      -6.8
+     ],
+     "look": [
+      0.8,
+      24.0,
+      -12.0
+     ],
+     "fov": 56
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      1.4,
+      18.6,
+      -10.6
+     ],
+     "rot": -80,
+     "height": 0.55
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      1.4,
+      20.4,
+      -10.6
+     ],
+     "rot": -80,
+     "move": 1.9,
+     "ease": "linear",
+     "height": 0.55
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     64
+    ],
+    "words": [
+     "higher"
+    ],
+    "key": [
+     "higher"
+    ],
+    "anchor": [
+     -1.5,
+     22.0,
+     -12.6
+    ],
+    "size": 0.4,
+    "width": 5.0
+   }
+  },
+  {
+   "id": "s74",
+   "at": "line:66",
+   "set": "deep",
+   "why": "texture beat: speed through the snow",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 46,
+    "snow": 1.4,
+    "cliff": true,
+    "column": 1.0,
+    "glow": "#ff6a3d",
+    "cliff_base": 18.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.6,
+      21.6,
+      -8.6
+     ],
+     "look": [
+      1.2,
+      21.7,
+      -10.2
+     ],
+     "fov": 36
+    }
+   ],
+   "kick": 0.5,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      2.6,
+      20.6,
+      -10.4
+     ],
+     "rot": -80,
+     "height": 0.55
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      2.6,
+      22.4,
+      -10.4
+     ],
+     "rot": -80,
+     "move": 1.7,
+     "ease": "linear",
+     "height": 0.55
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     66
+    ],
+    "words": [
+     "fire"
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     0.68,
+     21.88,
+     -10
+    ],
+    "size": 0.06,
+    "width": 1
+   }
+  },
+  {
+   "id": "s75",
+   "at": "line:67",
+   "set": "deep",
+   "why": "racing the fire up the wall: the climb as a contest (competitive about everything)",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 46,
+    "snow": 1.0,
+    "cliff": true,
+    "column": 1.0,
+    "glow": "#ff6a3d",
+    "cliff_base": 18.0,
+    "cliff_steps": [
+     125.62,
+     128.36
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      5.2,
+      23.0,
+      -7.2
+     ],
+     "look": [
+      0.2,
+      24.0,
+      -12.6
+     ],
+     "fov": 46
+    },
+    {
+     "at": "end",
+     "pos": [
+      5.2,
+      26.5,
+      -7.2
+     ],
+     "look": [
+      0.2,
+      27.5,
+      -12.6
+     ],
+     "fov": 46,
+     "ease": "linear"
+    }
+   ],
+   "kick": 1.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      1.4,
+      23.4,
+      -10.6
+     ],
+     "rot": -80,
+     "height": 0.55
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      1.4,
+      27.0,
+      -10.6
+     ],
+     "rot": -80,
+     "move": 2.4,
+     "ease": "linear",
+     "height": 0.55
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     67
+    ],
+    "words": [
+     "take",
+     "that"
+    ],
+    "anchor": [
+     -1.0,
+     27.5,
+     -12.4
+    ],
+    "size": 0.3,
+    "width": 5.0
+   }
+  },
+  {
+   "id": "s76",
+   "at": "line:68",
+   "set": "deep",
+   "why": "the antagonist returns (FIX 2 of review 2)",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 40,
+    "snow": 1.0,
+    "column": 1.0,
+    "column_bend_at": 129.8,
+    "column_bend_s": 0.8,
+    "current_at": [
+     129.78
+    ],
+    "current_s": 1.6,
+    "school": {
+     "from": [
+      1.8,
+      28.8,
+      -9.8
+     ],
+     "to": [
+      5.5,
+      29.6,
+      -9.0
+     ],
+     "at": 129.9,
+     "dur_s": 1.0,
+     "n": 10,
+     "glow": "#ffc15a"
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.8,
+      27.5,
+      -0.5
+     ],
+     "look": [
+      1.0,
+      29.0,
+      -10.4
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 1.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_CROUCH_UV_192",
+     "pos": [
+      1.0,
+      28.6,
+      -10.2
+     ],
+     "rot": -20,
+     "height": 1.05
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     68
+    ],
+    "words": [
+     "insane"
+    ],
+    "anchor": [
+     -2.03,
+     29.51,
+     -10.4
+    ],
+    "size": 0.324,
+    "width": 5.4
+   }
+  },
+  {
+   "id": "s77",
+   "at": 131.53,
+   "set": "deep",
+   "why": "she could lose it",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 40,
+    "snow": 1.0,
+    "column": 1.0,
+    "column_bend": 1.0,
+    "current": 0.7,
+    "glow": "#ff6a3d",
+    "fires": [
+     {
+      "uv": [
+       0.9,
+       0.69
+      ],
+      "size": 0.08,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      2.6,
+      29.6,
+      -8.6
+     ]
+    }
+   ],
+   "kick": 1.2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_CROUCH_UV_192",
+     "pos": [
+      1.0,
+      28.8,
+      -10.2
+     ],
+     "rot": -15,
+     "act": "shrink",
+     "height": 1.05
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     69
+    ],
+    "words": [
+     "like",
+     "it",
+     "that",
+     "way"
+    ],
+    "anchor": [
+     1.85,
+     29.97,
+     -10.6
+    ],
+    "size": 0.07,
+    "width": 1.6
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.9,
+      0.69
+     ],
+     "size": [
+      0.1,
+      0.16
+     ],
+     "why_small": "a spark, shielded: the cold has shrunk it"
+    }
+   ]
+  },
+  {
+   "id": "s78",
+   "at": 133.42,
+   "set": "deep",
+   "why": "the 'I'm the lighter' line paid off by her body, wordless (the emotional hold)",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 40,
+    "snow": 1.0,
+    "column": 1.0,
+    "column_bend": 1.0,
+    "current": 1.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      0.6,
+      29.4,
+      -12.8
+     ]
+    }
+   ],
+   "kick": 1.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_BK_NA_WADE_UV_182",
+     "pos": [
+      1.0,
+      28.8,
+      -10.2
+     ],
+     "act": "shrink"
+    }
+   ]
+  },
+  {
+   "id": "s79",
+   "at": 134.72,
+   "set": "deep",
+   "why": "she feeds the spark with her own lights - the veins callback",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 40,
+    "snow": 1.0,
+    "column": 1.0,
+    "column_bend": 1.0,
+    "column_unbend_at": 137.0,
+    "current": 0.4,
+    "glow": [
+     [
+      134.72,
+      "#ff6a3d"
+     ],
+     [
+      135.4,
+      "#ff9a3d"
+     ]
+    ],
+    "fires": [
+     {
+      "uv": [
+       0.9,
+       0.69
+      ],
+      "size": 0.08,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "out": 136.0,
+      "fade": 0.1
+     },
+     {
+      "uv": [
+       0.9,
+       0.69
+      ],
+      "size": 0.18,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "at": 136.0,
+      "grow": 1.2
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      2.6,
+      29.6,
+      -8.6
+     ]
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_CROUCH_UV_192",
+     "pos": [
+      1.0,
+      28.8,
+      -10.2
+     ],
+     "rot": -15,
+     "height": 1.05
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     70
+    ],
+    "words": [
+     "veins"
+    ],
+    "key": [
+     "veins"
+    ],
+    "anchor": [
+     0.3,
+     29.7,
+     -10.6
+    ],
+    "size": 0.06,
+    "width": 0.9
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.9,
+      0.69
+     ],
+     "size": [
+      0.14,
+      0.24
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s80",
+   "at": "line:71",
+   "set": "deep",
+   "why": "the look down: what she made",
+   "opts": {
+    "ignite": 1.0,
+    "vent_cap": 0.9,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "fog_far": 75,
+    "snow": 0.6,
+    "smoke": false,
+    "column": 1.0,
+    "column_bend": 1.0,
+    "column_unbend_at": 138.4,
+    "column_unbend_s": 2.0,
+    "pulse": "beats"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "city_down"
+    },
+    {
+     "at": "end",
+     "cam": "city_down",
+     "offset": [
+      0,
+      2.0,
+      0
+     ],
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.3,
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     71
+    ],
+    "tilt": -60,
+    "anchor": [
+     0.4,
+     14.0,
+     -6.0
+    ],
+    "size": 0.8,
+    "width": 12.0
+   }
+  },
+  {
+   "id": "s81",
+   "at": "line:72",
+   "set": "nightsea",
+   "why": "relit - for the last time",
+   "opts": {
+    "grade": "own",
+    "pool": 0.6,
+    "column": 1.0,
+    "column_pos": [
+     0.0,
+     -46.0,
+     0.0
+    ],
+    "glow": "#ff9a3d",
+    "fires": [
+     {
+      "uv": [
+       0.21,
+       0.03
+      ],
+      "size": 0.22,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "out": 141.3,
+      "fade": 0.1
+     },
+     {
+      "uv": [
+       0.21,
+       0.03
+      ],
+      "size": 0.32,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "at": 141.3,
+      "grow": 0.3
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      -4.4,
+      2.4
+     ],
+     "look": [
+      0.0,
+      -1.2,
+      -0.4
+     ],
+     "fov": 48
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.9,
+      -3.6,
+      2.4
+     ],
+     "look": [
+      0.0,
+      -0.4,
+      -0.4
+     ],
+     "fov": 48,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SHOUT_WET_UV_177",
+     "pos": [
+      0.0,
+      -3.4,
+      0.0
+     ],
+     "height": 1.55
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_SHOUT_WET_UV_177",
+     "pos": [
+      0.0,
+      -1.7,
+      0.0
+     ],
+     "move": 2.3,
+     "ease": "in",
+     "height": 1.55
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     72
+    ],
+    "words": [
+     "붉게"
+    ],
+    "key": [
+     "붉게"
+    ],
+    "anchor": [
+     -1.2,
+     -1.4,
+     -1.0
+    ],
+    "size": 0.2,
+    "width": 3.8
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.21,
+      0.03
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s82",
+   "at": 143.8,
+   "set": "nightsea",
+   "why": "the surface - the split frame shows both worlds",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.1,
+    "column": 1.0,
+    "school": {
+     "from": [
+      -1.4,
+      -1.6,
+      -1.2
+     ],
+     "to": [
+      -1.0,
+      -1.3,
+      -1.4
+     ],
+     "at": 143.8,
+     "dur_s": 0.5,
+     "n": 8,
+     "glow": "#ffc15a"
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "split_waterline"
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PULL_UV_187",
+     "pos": [
+      0.0,
+      -1.05,
+      0.0
+     ],
+     "height": 1.5
+    }
+   ],
+   "hero": [
+    {
+     "name": "face",
+     "why_small": "the split frame: half of her under water, the moon above - the surface is the picture"
+    }
+   ]
+  },
+  {
+   "id": "s83",
+   "at": 144.3,
+   "set": "nightsea",
+   "why": "the first open sky of the video",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "glow": "#ff9a3d",
+    "fires": [
+     {
+      "uv": [
+       0.21,
+       0.03
+      ],
+      "size": 0.34,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      0.35,
+      3.2
+     ],
+     "look": [
+      0.0,
+      0.6,
+      0.0
+     ],
+     "fov": 40
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.35,
+      0.35,
+      2.6
+     ],
+     "look": [
+      0.0,
+      0.6,
+      0.0
+     ],
+     "fov": 40,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SHOUT_WET_UV_177",
+     "pos": "center",
+     "act": "pop",
+     "height": 1.55
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     74
+    ],
+    "words": [
+     "drama"
+    ],
+    "key": [
+     "drama"
+    ],
+    "tilt": -80,
+    "anchor": [
+     0.9,
+     0.04,
+     0.8
+    ],
+    "size": 0.12,
+    "width": 1.8
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.21,
+      0.03
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s84",
+   "at": 145.69,
+   "set": "nightsea",
+   "why": "her face lit by her fire above water for the first time",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "fires": [
+     {
+      "pos": [
+       0.32,
+       0.35,
+       0.25
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      0.4,
+      0.6,
+      1.8
+     ]
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": [
+      0.0,
+      -0.75,
+      0.0
+     ],
+     "height": 1.45
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     75
+    ],
+    "words": [
+     "fire",
+     "fighter"
+    ],
+    "key": [
+     "fire"
+    ],
+    "tilt": -80,
+    "anchor": [
+     -0.5,
+     0.04,
+     0.6
+    ],
+    "size": 0.08,
+    "width": 1.4
+   },
+   "hero": [
+    "face",
+    {
+     "name": "flame",
+     "center": [
+      0.32,
+      0.5,
+      0.25
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s85",
+   "at": 147.84,
+   "set": "nightsea",
+   "why": "her crowd arrives (one fish per hit)",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "dots_at": [
+     147.84,
+     148.19,
+     149.19
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      1.4,
+      3.4
+     ],
+     "look": [
+      -0.2,
+      0.2,
+      -4.0
+     ],
+     "fov": 44
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_BK_NA_WADE_UV_181",
+     "pos": "center"
+    }
+   ]
+  },
+  {
+   "id": "s86",
+   "at": 149.24,
+   "set": "nightsea",
+   "why": "the fire fighter comes up too - the friendship's payoff starts",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "dots_at": [
+     147.84,
+     148.19,
+     149.19
+    ],
+    "salmon": {
+     "pos": "salmon",
+     "hold": "bucket",
+     "water": "#d79bff",
+     "from": [
+      0.8,
+      -0.9,
+      -0.35
+     ],
+     "at": 149.3,
+     "dur_s": 0.6,
+     "yaw": -0.5
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.0,
+      0.2,
+      1.2
+     ],
+     "look": [
+      0.75,
+      0.05,
+      -0.35
+     ],
+     "fov": 40
+    }
+   ],
+   "kick": 0.8,
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     76
+    ],
+    "words": [
+     "crazy,"
+    ],
+    "tilt": -80,
+    "anchor": [
+     0.6,
+     0.04,
+     0.2
+    ],
+    "size": 0.12,
+    "width": 1.6
+   }
+  },
+  {
+   "id": "s87",
+   "at": 150.81,
+   "set": "nightsea",
+   "why": "she laughs at her friend - warmth before the toast",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "dots_at": [
+     147.84,
+     148.19,
+     149.19
+    ],
+    "salmon": {
+     "pos": "salmon",
+     "hold": "bucket",
+     "water": "#d79bff",
+     "yaw": -0.5
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      -0.2,
+      0.7,
+      1.9
+     ]
+    }
+   ],
+   "kick": 1.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_JUMP_UV_161",
+     "pos": [
+      0.0,
+      -0.6,
+      0.0
+     ],
+     "act": "bounce",
+     "height": 1.25
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     76
+    ],
+    "words": [
+     "Karma"
+    ],
+    "key": [
+     "karma"
+    ],
+    "anchor": [
+     -0.7,
+     0.6,
+     -0.3
+    ],
+    "size": 0.06,
+    "width": 1.0
+   },
+   "hero": [
+    "face"
+   ]
+  },
+  {
+   "id": "s88",
+   "at": "line:77",
+   "set": "nightsea",
+   "why": "the toast begins: fire and the bucket meet",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "dots_at": [
+     147.84,
+     148.19,
+     149.19
+    ],
+    "salmon": {
+     "pos": "salmon",
+     "hold": "bucket",
+     "water": "#d79bff",
+     "yaw": 2.6
+    },
+    "fires": [
+     {
+      "uv": [
+       0.96,
+       0.47
+      ],
+      "size": 0.28,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.2,
+      0.55,
+      2.4
+     ],
+     "look": [
+      0.35,
+      0.35,
+      -0.2
+     ],
+     "fov": 42
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": [
+      -0.15,
+      -0.55,
+      0.0
+     ]
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     77
+    ],
+    "tilt": -80,
+    "anchor": [
+     0.0,
+     0.04,
+     0.9
+    ],
+    "size": 0.1,
+    "width": 1.9
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.96,
+      0.47
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s89",
+   "at": 153.32,
+   "set": "nightsea",
+   "why": "the fire fighter has joined the fire",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "salmon": {
+     "pos": [
+      0.62,
+      -0.02,
+      -0.05
+     ],
+     "hold": "bucket",
+     "water": "#d79bff",
+     "toast_at": 153.32,
+     "yaw": 2.8
+    },
+    "fires": [
+     {
+      "pos": [
+       0.36,
+       0.12,
+       0.0
+      ],
+      "size": 0.22,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ],
+    "sparks": [
+     {
+      "pos": [
+       0.46,
+       0.2,
+       -0.02
+      ],
+      "at": 153.32,
+      "n": 22,
+      "ember": 8
+     },
+     {
+      "pos": [
+       0.5,
+       0.03,
+       0.1
+      ],
+      "at": 153.79,
+      "n": 10,
+      "ember": 6
+     },
+     {
+      "pos": [
+       0.3,
+       0.03,
+       0.15
+      ],
+      "at": 154.67,
+      "n": 10,
+      "ember": 6
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.55,
+      0.32,
+      0.75
+     ],
+     "look": [
+      0.48,
+      0.12,
+      -0.05
+     ],
+     "fov": 36
+    }
+   ],
+   "kick": 0.8,
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     78
+    ],
+    "words": [
+     "water"
+    ],
+    "key": [
+     "water"
+    ],
+    "anchor": [
+     0.27,
+     0.21,
+     -0.3
+    ],
+    "size": 0.05,
+    "width": 0.8
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "center": [
+      0.36,
+      0.25,
+      0.0
+     ],
+     "size": [
+      0.12,
+      0.22
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s90",
+   "at": "line:79",
+   "set": "nightsea",
+   "why": "the pool of light is the sea's new lamp - the scale of her comeback",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "dots_at": [
+     147.84,
+     148.19,
+     149.19,
+     155.5,
+     155.7,
+     155.9,
+     156.1
+    ],
+    "fires": [
+     {
+      "uv": [
+       0.21,
+       0.03
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      2.5,
+      5.5
+     ],
+     "look": [
+      0.0,
+      0.3,
+      -2.0
+     ],
+     "fov": 44
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.0,
+      6.0,
+      7.5
+     ],
+     "look": [
+      0.0,
+      0.0,
+      -3.0
+     ],
+     "fov": 46,
+     "ease": "out"
+    }
+   ],
+   "kick": 0.4,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SHOUT_WET_UV_177",
+     "pos": "center",
+     "height": 1.55
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     79
+    ],
+    "tilt": -70,
+    "anchor": [
+     0.0,
+     0.05,
+     0.5
+    ],
+    "size": 0.32,
+    "width": 5.0
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.21,
+      0.03
+     ],
+     "why_small": "she is small in her pool: the gold ring of fish and the moon are the picture"
+    }
+   ]
+  },
+  {
+   "id": "s91",
+   "at": "line:80",
+   "set": "nightsea",
+   "why": "she gathers her crowd into a ring - the fish follow her light",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "school": {
+     "from": [
+      1.4,
+      -0.25,
+      0.6
+     ],
+     "to": [
+      -1.4,
+      -0.25,
+      -0.8
+     ],
+     "at": 156.84,
+     "dur_s": 1.8,
+     "n": 8,
+     "glow": "#ffc15a",
+     "spread": 0.6
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      2.4,
+      0.5,
+      2.4
+     ],
+     "look": [
+      0.0,
+      0.0,
+      -0.4
+     ],
+     "fov": 44
+    },
+    {
+     "at": "end",
+     "pos": [
+      -2.2,
+      0.5,
+      2.4
+     ],
+     "look": [
+      0.0,
+      0.0,
+      -0.4
+     ],
+     "fov": 44,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      0.8,
+      -0.1,
+      0.2
+     ],
+     "flip": true,
+     "height": 0.55
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      -0.8,
+      -0.1,
+      -0.4
+     ],
+     "move": 1.7,
+     "ease": "inOut",
+     "height": 0.55
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     80
+    ],
+    "tilt": -80,
+    "anchor": [
+     0.0,
+     0.04,
+     0.4
+    ],
+    "size": 0.12,
+    "width": 2.4
+   }
+  },
+  {
+   "id": "s92",
+   "at": "line:81",
+   "set": "nightsea",
+   "why": "the rain's cause is seen before the gag - and she is the one who sees it",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "cloud_at": 158.63,
+    "cloud_s": 5.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      0.6,
+      2.4
+     ],
+     "look": [
+      0.0,
+      0.6,
+      -2.0
+     ],
+     "fov": 40
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.9,
+      0.6,
+      2.4
+     ],
+     "look": [
+      -12.0,
+      8.0,
+      -40.0
+     ],
+     "fov": 40,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 0.4,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_BK_NA_WADE_UV_183",
+     "pos": "center"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     81
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     -4.5,
+     3.5,
+     -14.0
+    ],
+    "rot": 15,
+    "size": 0.5,
+    "width": 8.0
+   }
+  },
+  {
+   "id": "s93",
+   "at": "line:82",
+   "set": "nightsea",
+   "why": "her lore (rain predictions, wrong more often than right) set up in one picture",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "cloud": 1.0,
+    "salmon": {
+     "pos": "salmon",
+     "hold": "bucket",
+     "water": "#d79bff",
+     "icon": "sweat",
+     "icon_at": 162.0,
+     "yaw": 2.6
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.25,
+      0.6,
+      2.4
+     ],
+     "look": [
+      0.35,
+      0.4,
+      -0.2
+     ],
+     "fov": 42
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": [
+      -0.15,
+      -0.55,
+      0.0
+     ]
+    },
+    {
+     "at": 0.9,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": [
+      -0.15,
+      -0.55,
+      0.0
+     ],
+     "act": "pop",
+     "icon": "bulb"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "lines": [
+     83
+    ],
+    "key": [
+     "fire"
+    ],
+    "tilt": -80,
+    "anchor": [
+     0.0,
+     0.04,
+     0.5
+    ],
+    "size": 0.08,
+    "width": 1.6
+   }
+  },
+  {
+   "id": "s94",
+   "at": 163.84,
+   "set": "nightsea",
+   "why": "she was right for once - and rain cannot put it out either",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.45,
+    "column": 1.0,
+    "cloud": 1.0,
+    "rain_at": 163.84,
+    "path_at": 164.3,
+    "path_s": 1.4
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.5,
+      2.6,
+      6.0
+     ],
+     "look": [
+      0.0,
+      0.0,
+      -14.0
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 0.8
+  },
+  {
+   "id": "s95",
+   "at": 165.47,
+   "set": "nightsea",
+   "why": "her payoff - the forecaster was right",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.45,
+    "column": 1.0,
+    "cloud": 1.0,
+    "rain_at": 163.84,
+    "path": 1.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      0.5,
+      0.6,
+      1.9
+     ]
+    },
+    {
+     "at": "end",
+     "frame": "close",
+     "from": [
+      0.5,
+      0.6,
+      1.6
+     ],
+     "ease": "out"
+    }
+   ],
+   "kick": 1.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
+     "pos": [
+      0.0,
+      -0.75,
+      0.0
+     ],
+     "height": 1.35
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     84
+    ],
+    "words": [
+     "Karma"
+    ],
+    "key": [
+     "karma"
+    ],
+    "anchor": [
+     -0.7,
+     0.55,
+     -0.3
+    ],
+    "size": 0.06,
+    "width": 1.0
+   },
+   "hero": [
+    "face"
+   ]
+  },
+  {
+   "id": "s96",
+   "at": "line:85",
+   "set": "deep",
+   "why": "the sauna: one shot of comic breath",
+   "opts": {
+    "grade": "night",
+    "ignite": 1.0,
+    "vent_cap": 0.8,
+    "vents_at": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "red": 0.5,
+    "sauna": {
+     "pos": [
+      1.3,
+      0.0,
+      -1.7
+     ],
+     "n": 7,
+     "r": 0.85
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      1.1,
+      1.4
+     ],
+     "look": [
+      1.2,
+      0.4,
+      -1.4
+     ],
+     "fov": 42
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.15,
+      0.7,
+      0.2
+     ],
+     "look": [
+      1.25,
+      0.3,
+      -1.4
+     ],
+     "fov": 40,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 0.4,
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     85
+    ],
+    "words": [
+     "heat"
+    ],
+    "key": [
+     "heat"
+    ],
+    "anchor": [
+     0.76,
+     0.54,
+     -1.8
+    ],
+    "size": 0.08,
+    "width": 1
+   }
+  },
+  {
+   "id": "s97",
+   "at": "line:86",
+   "set": "nightsea",
+   "why": "the build climbs again: she goes back under for the biggest thing",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.5,
+    "column": 1.0,
+    "cloud": 1.0,
+    "rain_at": 163.84,
+    "path": 1.0,
+    "fires": [
+     {
+      "uv": [
+       0.04,
+       0.85
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      0.4,
+      2.0
+     ],
+     "look": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "fov": 42
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.9,
+      -1.4,
+      1.8
+     ],
+     "look": [
+      0.0,
+      -2.4,
+      -0.2
+     ],
+     "fov": 50,
+     "ease": "in"
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      0.0,
+      -0.3,
+      0.0
+     ],
+     "height": 0.55
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_FLY_UV_054",
+     "pos": [
+      0.0,
+      -2.5,
+      -0.2
+     ],
+     "rot": 55,
+     "move": 1.6,
+     "ease": "in",
+     "height": 0.55
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     86
+    ],
+    "key": [
+     "sauna"
+    ],
+    "anchor": [
+     -0.8,
+     -0.8,
+     -0.4
+    ],
+    "size": 0.12,
+    "width": 2.0
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.04,
+      0.85
+     ],
+     "size": [
+      0.3,
+      0.45
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s98",
+   "at": "line:87",
+   "set": "nightsea",
+   "why": "the impossible thing one last time: fire under water",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "path": 1.0,
+    "fires": [
+     {
+      "uv": [
+       0.96,
+       0.08
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "at": 170.6,
+      "grow": 1.2
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.8,
+      -5.6,
+      2.2
+     ],
+     "look": [
+      0.0,
+      -3.0,
+      -0.2
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PULL_UV_187",
+     "pos": [
+      0.0,
+      -4.6,
+      0.0
+     ],
+     "act": "shrink",
+     "height": 1.5
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     87
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     0.62,
+     -3.81,
+     -0.6
+    ],
+    "size": 0.12,
+    "width": 2.4
+   },
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.96,
+      0.08
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s99",
+   "at": 172.5,
+   "set": "nightsea",
+   "why": "the release: the impossible fire travels up through the water",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.3,
+    "column": 1.0,
+    "path": 1.0,
+    "fireworks": [
+     173.35
+    ],
+    "fw_from": [
+     [
+      0.2,
+      -0.1
+     ]
+    ],
+    "school": {
+     "from": [
+      -0.8,
+      -5.0,
+      -0.4
+     ],
+     "to": [
+      0.2,
+      -1.0,
+      -0.2
+     ],
+     "at": 173.4,
+     "dur_s": 0.9,
+     "n": 9,
+     "glow": "#ffc15a"
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.0,
+      -6.4,
+      2.6
+     ],
+     "look": [
+      0.2,
+      -2.0,
+      -0.2
+     ],
+     "fov": 52
+    }
+   ],
+   "kick": 1.0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PULL_UV_188",
+     "pos": [
+      -0.3,
+      -5.2,
+      0.0
+     ],
+     "act": "stomp",
+     "height": 1.5
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "material": "light",
+    "lines": [
+     88
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     1.87,
+     -4.33,
+     -0.6
+    ],
+    "size": 0.125,
+    "width": 2.5
+   }
+  },
+  {
+   "id": "s100",
+   "at": "line:89",
+   "set": "nightsea",
+   "why": "WOW 5: fire from under the water writes the song across the sky",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.6,
+    "column": 1.0,
+    "path": 1.0,
+    "fireworks": [
+     174.42,
+     174.67
+    ],
+    "fw_from": [
+     [
+      -14,
+      -40
+     ],
+     [
+      9,
+      -46
+     ],
+     [
+      -3,
+      -60
+     ],
+     [
+      18,
+      -38
+     ],
+     [
+      -22,
+      -50
+     ],
+     [
+      4,
+      -34
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      1.0,
+      7.5
+     ],
+     "look": [
+      0.0,
+      5.5,
+      -14.0
+     ],
+     "fov": 50
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_BK_NA_SURF_UV_167",
+     "pos": "center",
+     "height": 1.5
+    }
+   ],
+   "lyrics": {
+    "kind": "firework",
+    "material": "light",
+    "lines": [
+     89
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     0.0,
+     8.0,
+     -16.0
+    ],
+    "size": 1.0,
+    "width": 22.0,
+    "mirror": 0.0
+   },
+   "hero": [
+    {
+     "name": "fire_word"
+    }
+   ]
+  },
+  {
+   "id": "s101",
+   "at": "line:90",
+   "set": "nightsea",
+   "why": "the whole sea answers - from below",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.6,
+    "column": 1.0,
+    "path": 1.0,
+    "fireworks": [
+     175.32,
+     176.25,
+     176.69
+    ],
+    "fw_from": [
+     [
+      -3,
+      -60
+     ],
+     [
+      18,
+      -38
+     ],
+     [
+      -22,
+      -50
+     ],
+     [
+      4,
+      -34
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      0.02,
+      4.0
+     ],
+     "look": [
+      0.0,
+      2.0,
+      -16.0
+     ],
+     "fov": 52
+    }
+   ],
+   "kick": 0.8,
+   "lyrics": {
+    "kind": "firework",
+    "material": "light",
+    "lines": [
+     90
+    ],
+    "anchor": [
+     0.0,
+     7.0,
+     -16.0
+    ],
+    "size": 0.9,
+    "width": 20.0
+   }
+  },
+  {
+   "id": "s102",
+   "at": "line:91",
+   "set": "nightsea",
+   "why": "a ray riding the glow (no mount)",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.6,
+    "column": 1.0,
+    "path": 1.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      2.0,
+      0.15,
+      1.4
+     ],
+     "look": [
+      0.0,
+      0.6,
+      -4.0
+     ],
+     "fov": 46
+    },
+    {
+     "at": "end",
+     "pos": [
+      2.0,
+      0.15,
+      -1.0
+     ],
+     "look": [
+      0.0,
+      0.6,
+      -6.4
+     ],
+     "fov": 46,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SURF_UV_125",
+     "pos": [
+      0.0,
+      -0.45,
+      -0.4
+     ],
+     "height": 1.45
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_SURF_UV_125",
+     "pos": [
+      0.0,
+      -0.45,
+      -2.8
+     ],
+     "move": 1.1,
+     "ease": "linear",
+     "height": 1.45
+    }
+   ],
+   "lyrics": {
+    "kind": "firework",
+    "material": "light",
+    "lines": [
+     91
+    ],
+    "key": [
+     "fired"
+    ],
+    "anchor": [
+     -3.55,
+     4.15,
+     -18
+    ],
+    "size": 0.9,
+    "width": 16,
+    "mirror": 0.0
+   }
+  },
+  {
+   "id": "s103",
+   "at": "line:92",
+   "set": "nightsea",
+   "why": "the hang is finished by the picture",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.6,
+    "column": 1.0,
+    "path": 1.0,
+    "pulse_at": [
+     181.0
+    ],
+    "sea_glow_at": 180.9,
+    "sea_glow_s": 0.4
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      0.7,
+      6.0
+     ],
+     "look": [
+      0.0,
+      1.0,
+      -30.0
+     ],
+     "fov": 48
+    }
+   ],
+   "kick": 0.6,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SURF_UV_126",
+     "pos": [
+      0.0,
+      -0.5,
+      -4.0
+     ],
+     "height": 1.5
+    }
+   ],
+   "lyrics": {
+    "kind": "firework",
+    "material": "light",
+    "lines": [
+     92
+    ],
+    "words": [
+     "burn",
+     "it",
+     "down"
+    ],
+    "anchor": [
+     0.0,
+     7.0,
+     -20.0
+    ],
+    "size": 1.0,
+    "width": 20.0,
+    "mirror": 0.0
+   }
+  },
+  {
+   "id": "s104",
+   "at": "line:93",
+   "set": "nightsea",
+   "why": "the biggest words of the video - the sky is the last lyric surface",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 1.0,
+    "path": 1.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      0.8,
+      6.0
+     ],
+     "look": [
+      0.0,
+      3.0,
+      -16.0
+     ],
+     "fov": 50
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.0,
+      0.8,
+      6.0
+     ],
+     "look": [
+      0.0,
+      8.0,
+      -16.0
+     ],
+     "fov": 50,
+     "ease": "out"
+    }
+   ],
+   "kick": 0.6,
+   "lyrics": {
+    "kind": "firework",
+    "material": "light",
+    "lines": [
+     93
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     0.0,
+     8.5,
+     -16.0
+    ],
+    "size": 1.2,
+    "width": 24.0
+   },
+   "hero": [
+    {
+     "name": "fire_word"
+    }
+   ]
+  },
+  {
+   "id": "s105",
+   "at": 182.42,
+   "set": "nightsea",
+   "why": "her joy in the middle of her fireworks",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 1.0,
+    "path": 1.0,
+    "fireworks": [
+     181.92,
+     182.4
+    ],
+    "fw_from": [
+     [
+      -2,
+      -10
+     ],
+     [
+      3,
+      -12
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      0.6,
+      0.6,
+      2.4
+     ]
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SURF_UV_126",
+     "pos": [
+      0.0,
+      -0.55,
+      0.0
+     ],
+     "act": "bounce",
+     "height": 1.5
+    }
+   ]
+  },
+  {
+   "id": "s106",
+   "at": "line:94",
+   "set": "nightsea",
+   "why": "speed toward the lens before the last stamps",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 1.0,
+    "path": 1.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      0.25,
+      2.2
+     ],
+     "look": [
+      0.0,
+      0.5,
+      -4.0
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 0.8,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
+     "pos": [
+      0.0,
+      -0.75,
+      -3.2
+     ],
+     "height": 1.35
+    },
+    {
+     "at": "end",
+     "sprite": "WS_F_HAPPY_SURF_UV_179",
+     "pos": [
+      0.0,
+      -0.75,
+      -0.6
+     ],
+     "move": 1.4,
+     "ease": "in",
+     "height": 1.35
+    }
+   ],
+   "lyrics": {
+    "kind": "firework",
+    "material": "light",
+    "lines": [
+     94
+    ],
+    "anchor": [
+     0.0,
+     6.0,
+     -16.0
+    ],
+    "size": 0.9,
+    "width": 18.0
+   }
+  },
+  {
+   "id": "s107",
+   "at": "line:95",
+   "set": "nightsea",
+   "why": "the signature move as fireworks: one per 'I'm a'",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 1.0,
+    "path": 1.0,
+    "fireworks": [
+     184.75
+    ],
+    "fw_from": [
+     [
+      -3,
+      -16
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      1.0,
+      5.0
+     ],
+     "look": [
+      -3.0,
+      12.0,
+      -16.0
+     ],
+     "fov": 50
+    }
+   ],
+   "kick": 1.4,
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     95
+    ],
+    "anchor": [
+     1.81,
+     5.7,
+     -12
+    ],
+    "size": 0.6,
+    "width": 8
+   }
+  },
+  {
+   "id": "s108",
+   "at": 185.86,
+   "set": "nightsea",
+   "why": "stamp 2 - each farther, the whole sea is hers",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 1.0,
+    "path": 1.0,
+    "fireworks": [
+     185.68
+    ],
+    "fw_from": [
+     [
+      8,
+      -36
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      1.0,
+      5.0
+     ],
+     "look": [
+      8.0,
+      14.0,
+      -36.0
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 1.4,
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     95
+    ],
+    "anchor": [
+     1.04,
+     5.59,
+     -20
+    ],
+    "size": 0.8,
+    "width": 10
+   }
+  },
+  {
+   "id": "s109",
+   "at": 186.55,
+   "set": "nightsea",
+   "why": "stamp 3 - the farthest, the horizon",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 1.0,
+    "path": 1.0,
+    "fireworks": [
+     186.59
+    ],
+    "fw_from": [
+     [
+      -12,
+      -70
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      1.0,
+      5.0
+     ],
+     "look": [
+      -10.0,
+      16.0,
+      -70.0
+     ],
+     "fov": 44
+    }
+   ],
+   "kick": 1.2,
+   "lyrics": {
+    "kind": "firework",
+    "material": "light",
+    "lines": [
+     95
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     -4.0,
+     12.0,
+     -36.0
+    ],
+    "size": 1.8,
+    "width": 30.0
+   },
+   "hero": [
+    {
+     "name": "fire_word"
+    }
+   ]
+  },
+  {
+   "id": "s110",
+   "at": 187.46,
+   "set": "nightsea",
+   "why": "the signature move ends as 'you'",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 1.0,
+    "path": 1.0,
+    "fires": [
+     {
+      "uv": [
+       0.86,
+       0.34
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      0.3,
+      0.7,
+      2.6
+     ]
+    },
+    {
+     "at": "end",
+     "frame": "close",
+     "from": [
+      0.3,
+      0.7,
+      2.0
+     ],
+     "ease": "snap"
+    }
+   ],
+   "kick": 1.2,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": [
+      0.0,
+      -0.55,
+      0.0
+     ],
+     "act": "pop",
+     "height": 1.42
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "material": "light",
+    "lines": [
+     95
+    ],
+    "anchor": [
+     -0.8,
+     0.7,
+     -0.4
+    ],
+    "size": 0.07,
+    "width": 1.4
+   },
+   "hero": [
+    "face"
+   ]
+  },
+  {
+   "id": "s111",
+   "at": 188.39,
+   "set": "nightsea",
+   "why": "the place she began, seen from where she arrived",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 0.6,
+    "stars": 1.0,
+    "deep_glow": 1.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.2,
+      0.5,
+      2.2
+     ],
+     "look": [
+      0.0,
+      -0.4,
+      -2.0
+     ],
+     "fov": 46
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.2,
+      -2.2,
+      2.2
+     ],
+     "look": [
+      0.0,
+      -12.0,
+      -4.0
+     ],
+     "fov": 50,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 0
+  },
+  {
+   "id": "s112",
+   "at": 191.24,
+   "set": "nightsea",
+   "why": "the fish she gathered now light HER - the lamp lit by what she lit",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 0.6,
+    "stars": 1.0,
+    "dots_at": [
+     191.24
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.6,
+      0.6,
+      1.0
+     ],
+     "look": [
+      0.0,
+      0.0,
+      -0.4
+     ],
+     "fov": 40
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_164",
+     "pos": [
+      0.0,
+      0.12,
+      -0.4
+     ],
+     "rot": -86,
+     "height": 1.55
+    }
+   ],
+   "hero": [
+    {
+     "name": "face",
+     "why_small": "she floats on her back in a medium shot: the fish lighting her from below is the moment"
+    }
+   ]
+  },
+  {
+   "id": "s113",
+   "at": 192.45,
+   "set": "nightsea",
+   "why": "rest: the story is told, everyone she touched glows",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 0.6,
+    "stars": 1.0,
+    "dots_at": [
+     191.24,
+     192.45,
+     192.63,
+     193.6
+    ],
+    "rain_at": 192.45,
+    "rain_end_at": 193.5,
+    "salmon": {
+     "pos": [
+      1.6,
+      -0.02,
+      -0.9
+     ],
+     "hold": "bucket",
+     "water": "#d79bff",
+     "from": [
+      3.4,
+      -0.02,
+      -1.4
+     ],
+     "at": 192.5,
+     "dur_s": 2.5,
+     "yaw": 2.9
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      3.2,
+      5.6
+     ],
+     "look": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "fov": 42
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_164",
+     "pos": [
+      0.0,
+      0.12,
+      -0.4
+     ],
+     "rot": -86,
+     "height": 1.55
+    }
+   ]
+  },
+  {
+   "id": "s114",
+   "at": 195.0,
+   "set": "nightsea",
+   "why": "the fire belongs to the sea now",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 0.8,
+    "column": 0.6,
+    "stars": 1.0,
+    "pulse_at": [
+     195.05
+    ],
+    "fires": [
+     {
+      "uv": [
+       0.73,
+       0.56
+      ],
+      "size": 0.14,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "out": 195.05,
+      "fade": 0.12
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      0.4,
+      0.7,
+      1.8
+     ]
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": [
+      0.0,
+      -0.85,
+      0.0
+     ],
+     "height": 1.55
+    }
+   ],
+   "hero": [
+    "face"
+   ]
+  },
+  {
+   "id": "s115",
+   "at": 195.4,
+   "set": "nightsea",
+   "why": "the lamp lit by what she lit",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 0.6,
+    "stars": 1.0,
+    "dots_at": [
+     196.6
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      0.0,
+      0.4,
+      1.9
+     ],
+     "rise": -0.1
+    },
+    {
+     "at": "end",
+     "frame": "close",
+     "from": [
+      0.0,
+      0.4,
+      1.7
+     ],
+     "rise": -0.1,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": [
+      0.0,
+      -0.85,
+      0.0
+     ],
+     "height": 1.55
+    }
+   ],
+   "hero": [
+    "face"
+   ]
+  },
+  {
+   "id": "s116",
+   "at": 199.0,
+   "set": "nightsea",
+   "why": "a last event in the quiet - the whole video in one reflection (review script_1 FIX 1)",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 0.6,
+    "stars": 1.0,
+    "fireworks": [
+     199.4
+    ],
+    "fw_from": [
+     [
+      -6,
+      -30
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      0.6,
+      0.7,
+      1.6
+     ],
+     "side": "right"
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": [
+      0.0,
+      -0.75,
+      0.0
+     ],
+     "height": 1.45
+    }
+   ],
+   "hero": [
+    "face"
+   ]
+  },
+  {
+   "id": "s117",
+   "at": 203.0,
+   "set": "nightsea",
+   "why": "the last frame repeats the first: the promise kept",
+   "opts": {
+    "pool": 1.0,
+    "sea_glow": 1.0,
+    "column": 0.6,
+    "stars": 1.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      0.6,
+      0.6,
+      1.3
+     ],
+     "rise": 0.15
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SLEEP_UV_130",
+     "pos": [
+      0.0,
+      -0.85,
+      0.0
+     ],
+     "act": "shrink"
+    }
+   ],
+   "hero": [
+    "face"
+   ]
   }
  ]
 }

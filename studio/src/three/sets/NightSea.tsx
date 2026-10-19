@@ -6,7 +6,8 @@
 // so anything below the waterline (her legs while she treads water) is hidden like under a floor.
 // Options (times song s -> frames; *_s seconds):
 //   pool 0..1 | pool_at + pool_s       the violet pool of light around `pool_pos` (default the `pool` mark)
-//   glow 0..1 | glow_at + glow_s       the whole sea glows from below; pulse_at [t] = a brighter ring runs outward
+//   sea_glow 0..1 | sea_glow_at + _s   the whole sea glows from below; pulse_at [t] = a brighter ring runs outward
+//   deep_glow 0..1                     far below, the vent field glows like a city (seen from under the surface)
 //   dots_at [t, ...]                   one gold fish light surfaces per time (seeded spots behind her)
 //   path 0..1 | path_at + path_s; path_dir (rad, 0 = toward -z)   the path of light to the horizon
 //   cloud 0..1 | cloud_at + cloud_s    the cloud edge drifts over the moon
@@ -55,6 +56,28 @@ function seaGlowTex(): THREE.CanvasTexture {
       const c = i % 4 === 0 ? '255,190,90' : '180,92,255';
       g.addColorStop(0, `rgba(${c},${0.25 + rnd(i) * 0.35})`); g.addColorStop(1, `rgba(${c},0)`);
       ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2);
+    }
+  });
+}
+
+/** The lit sea floor seen from far above: crack lines and seven bright vent points (a city at night from a plane). */
+function cityTex(): THREE.CanvasTexture {
+  return canvasTexture('deepcity', 512, 512, (ctx, w, h) => {
+    ctx.fillStyle = '#000'; ctx.fillRect(0, 0, w, h);
+    ctx.lineCap = 'round';
+    for (let r = 0; r < 40; r++) {
+      let x = w / 2 + (rnd(r * 3) - 0.5) * 60, y = h / 2 + (rnd(r * 5) - 0.5) * 60, a = rnd(r * 7) * Math.PI * 2;
+      ctx.strokeStyle = r % 3 ? 'rgba(200,110,255,0.7)' : 'rgba(255,170,90,0.7)';
+      ctx.lineWidth = 1 + rnd(r) * 1.5;
+      ctx.beginPath(); ctx.moveTo(x, y);
+      for (let i = 0; i < 30; i++) { a += (rnd(r * 31 + i) - 0.5) * 0.9; x += Math.cos(a) * 8; y += Math.sin(a) * 8; ctx.lineTo(x, y); }
+      ctx.stroke();
+    }
+    for (let i = 0; i < 7; i++) {
+      const x = w / 2 + (rnd(i * 13) - 0.5) * 220, y = h / 2 + (rnd(i * 17) - 0.5) * 220;
+      const g = ctx.createRadialGradient(x, y, 0, x, y, 22);
+      g.addColorStop(0, 'rgba(255,230,190,1)'); g.addColorStop(1, 'rgba(255,140,60,0)');
+      ctx.fillStyle = g; ctx.fillRect(x - 22, y - 22, 44, 44);
     }
   });
 }
@@ -111,7 +134,7 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const C = new THREE.Vector3(...(camPos ?? [0, 1.5, 6]));
   const under = C.y < 0;
   const pool = prog(o, 'pool', f, fps, 1);
-  const glow = prog(o, 'glow', f, fps, 2);
+  const glow = prog(o, 'sea_glow', f, fps, 2);
   const path = prog(o, 'path', f, fps, 3);
   const cloud = prog(o, 'cloud', f, fps, 4);
   const poolPos = (o.pool_pos as P3) ?? [0, 0, 0];
@@ -251,11 +274,20 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
           ?? [(rnd(k * 9) - 0.5) * 24, -14 - rnd(k * 3) * 30] as [number, number];
         return <Firework key={`fw${k}`} from={from} at={t} f={f} seed={k * 7 + 1} cam={C} top={14 + rnd(k * 5) * 8} />;
       })}
+      {/* far below: the vent field she lit, glowing like a city at night */}
+      {Number(o.deep_glow ?? 0) > 0 ? (
+        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -38, -10]} renderOrder={-3}>
+          <planeGeometry args={[90, 90]} />
+          <meshBasicMaterial map={cityTex()} {...add} opacity={Number(o.deep_glow)} fog={false} />
+        </mesh>
+      ) : null}
       {/* under the surface: the dark water box and the heat column that carried her */}
-      <mesh position={[0, -20, -20]} renderOrder={-4}>
-        <boxGeometry args={[120, 39.9, 120]} />
-        <meshBasicMaterial color="#090c2c" side={THREE.BackSide} transparent opacity={under ? 1 : 0.0} depthWrite={false} fog={false} />
-      </mesh>
+      {under ? (
+        <mesh position={[0, -20, -20]} renderOrder={-4}>
+          <boxGeometry args={[120, 39.9, 120]} />
+          <meshBasicMaterial color="#090c2c" side={THREE.BackSide} depthWrite={false} fog={false} />
+        </mesh>
+      ) : null}
       <HeatColumn base={(o.column_pos as P3) ?? [poolPos[0], -46, poolPos[2]]} f={f} grow={prog(o, 'column', f, fps, 1)} bend={prog(o, 'column_bend', f, fps, 0.6)} dir={1}
         pulse={flare(o.column_pulse, f, 10)} height={46} r={0.9} />
       <Fires list={o.fires} f={f} />

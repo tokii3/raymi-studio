@@ -17,6 +17,7 @@
 //   current 0..1 | current_at [t, ...] + current_s + current_dir   the cold current: cyan streaks, snow blown sideways,
 //                                        every flame bent flat
 //   tint_at + tint_s + tint              a ring of red-violet colour spreading through the WATER from the origin
+//   red 0..1                             the water itself is red-violet (after the wave: the deep is hers)
 //   cliff true; cliff_ignite 0..1 | cliff_ignite_at + _s; cliff_steps [t, ...]   the sea-mount wall + its cracks lit
 //                                        from the bottom up (one step per hit)
 //   column 0..1 | column_at + column_s; column_bend 0..1 | column_bend_at + _s + column_unbend_at; column_pulse [t]
@@ -371,7 +372,7 @@ export const Deep: React.FC<SetProps> = ({f, fps, opts, beats, camPos}) => {
   const tintR = typeof o.tint_at === 'number' && f >= o.tint_at ? ((f - o.tint_at) / (Number(o.tint_s ?? 2) * fps)) * 26 : -1;
   const tint = String(o.tint ?? '#c2275e');
   const camD = camPos ? Math.hypot(camPos[0] - ox, camPos[1] - 1, camPos[2] - oz) : 99;
-  const inRed = tintR > camD ? Math.min(1, (tintR - camD) / 3) : 0;
+  const inRed = Math.max(Number(o.red ?? 0), tintR > camD ? Math.min(1, (tintR - camD) / 3) : 0);   // red: the water stays red (acts 6-7)
   const fogC = new THREE.Color('#05060f').lerp(new THREE.Color('#1c0410'), inRed).getStyle();
   const fogFar = Number(o.fog_far ?? 24);
   // the cliff and the column

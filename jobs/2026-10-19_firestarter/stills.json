@@ -8,5 +8,5 @@
   {"format": "short", "frames": [0, 470, 585], "names": ["s00_short_frame0", "s16_short_cta", "s19_short_twist"]}
  ],
  "scale": 0.5,
- "round": 1
+ "round": 2
 }
