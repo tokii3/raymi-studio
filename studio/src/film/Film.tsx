@@ -128,7 +128,7 @@ export const Film: React.FC<FilmProps> = (props) => {
         const b = figurePoint(shot, f, fps, camPos, s.uv2[0], s.uv2[1]);
         if (b) { anchored.push(<TossedFlame key={`tf${k}`} a={p} b={toLens(b)} tosses={frames(s.toss)} f={f} size={size} c={s.c} core={s.core} seed={k * 17 + 3} />); return; }
       }
-      anchored.push(<Flame key={`af${k}`} pos={[p.x, p.y - size * 0.15, p.z]} f={f} size={size} c={s.c} core={s.core} seed={k * 17 + 3} light={s.light ?? 1} dim={s.dim ?? 1} />);
+      anchored.push(<Flame key={`af${k}`} pos={[p.x, p.y - size * 0.15, p.z]} f={f} size={size} c={s.c} core={s.core} seed={k * 17 + 3} light={s.light ?? 1} dim={s.dim ?? 1} embers={3} />);
     });
     (Array.isArray(o.sparks) ? (o.sparks as SparkSpec[]) : []).forEach((s, k) => {
       if (!s.uv || f < s.at) return;

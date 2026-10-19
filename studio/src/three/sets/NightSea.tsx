@@ -201,9 +201,9 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
         </group>
       ) : (
         // at the waterline: no surface sheet - the bright skin of the water is one line across the frame
-        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[C.x, 0, C.z - 40]} renderOrder={6}>
+        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[C.x, 0, C.z - 55]} renderOrder={6}>
           <planeGeometry args={[200, 80]} />
-          <meshBasicMaterial color="#9fb2ff" {...add} opacity={0.55} fog={false} />
+          <meshBasicMaterial color="#9fb2ff" {...add} opacity={0.3} fog={false} />
         </mesh>
       )}
       {/* moonlight on the water: a shimmering path toward the moon */}

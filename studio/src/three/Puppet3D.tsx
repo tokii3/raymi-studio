@@ -57,7 +57,7 @@ export const Puppet3D: React.FC<{keys: PuppetKey[]; f: number; fps: number; camP
         const pulse = (0.85 + 0.15 * Math.sin(f / 9)) * glowGain;   // glow_pulse (beats) / glow_out from the film
         return (
           <group>
-            <pointLight position={[c.x, c.y, c.z]} color={glow} intensity={7 * pulse} distance={5} decay={1.4} />
+            <pointLight position={[c.x, c.y, c.z]} color={glow} intensity={12 * pulse} distance={7} decay={1.4} />
             <mesh position={[c.x, c.y, c.z]} quaternion={new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().extractRotation(m))} renderOrder={3}>
               <planeGeometry args={[w * 2.4, h * 1.3]} />
               <meshBasicMaterial map={blobTexture(glow)} transparent opacity={0.55 * pulse} depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} />

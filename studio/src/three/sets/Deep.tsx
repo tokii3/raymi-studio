@@ -314,7 +314,7 @@ const Cliff: React.FC<{front: number; f: number; cap: number}> = ({front, f, cap
   const segs = cliffCracks();
   return (
     <group position={[0, 0, CLIFF_Z]}>
-      <mesh geometry={geo} material={toon('#2c3252', '#160c2c', 0.7)} position={[0, 24, 0]} receiveShadow />
+      <mesh geometry={geo} material={toon('#3a4268', '#2a1650', 0.9)} position={[0, 24, 0]} receiveShadow />
       {Array.from({length: 18}, (_, i) => {
         const x = (rnd(i * 3 + 400) - 0.5) * 24, y = 1 + rnd(i * 5 + 400) * 40, s = 0.6 + rnd(i * 7 + 400) * 1.4;
         return <Rock key={i} pos={[x, y, 0.4]} size={[s * 1.6, s * 0.45, s]} seed={i + 400} c={ROCK} rotY={rnd(i) * 3} />;
@@ -378,7 +378,7 @@ export const Deep: React.FC<SetProps> = ({f, fps, opts, beats, camPos}) => {
   const tint = String(o.tint ?? '#c2275e');
   const camD = camPos ? Math.hypot(camPos[0] - ox, camPos[1] - 1, camPos[2] - oz) : 99;
   const inRed = Math.max(Number(o.red ?? 0), tintR > camD ? Math.min(1, (tintR - camD) / 3) : 0);   // red: the water stays red (acts 6-7)
-  const fogC = new THREE.Color('#05060f').lerp(new THREE.Color('#1c0410'), inRed).getStyle();
+  const fogC = new THREE.Color('#0e0a26').lerp(new THREE.Color('#1c0410'), inRed).getStyle();   // dark violet, never dead black (pilot 1)
   const fogFar = Number(o.fog_far ?? 24);
   // the cliff and the column
   const cliffFront = prog(o, 'cliff_ignite', f, fps) * 30 + Number(o.cliff_base ?? 0)
@@ -390,7 +390,7 @@ export const Deep: React.FC<SetProps> = ({f, fps, opts, beats, camPos}) => {
   const cx = camPos ? camPos[0] : 0, cy = camPos ? camPos[1] : 3, cz = camPos ? camPos[2] : 0;
   return (
     <group>
-      <SetLight sky="#1b2150" ground="#06050d" fill={0.18 + 0.3 * warm} key="#7b86ff" keyI={0.35 + 0.4 * warm} keyPos={[-2, 9, 4]}
+      <SetLight sky="#2c2470" ground="#0a0718" fill={0.42 + 0.3 * warm} key="#8f8cff" keyI={0.6 + 0.4 * warm} keyPos={[-2, 9, 4]}
         target={[0.5, 0, -2]} shadowSize={9} fog={fogC} fogNear={7} fogFar={fogFar} bg={fogC} />
       {warm > 0 ? <pointLight position={[ox, 1.2, oz - 1]} color={erupt > 0.3 ? HOT : '#ff8a5c'} intensity={12 * warm * cap} distance={10 + front} decay={1.4} /> : null}
       <Ground size={[40, 34]} c={BASALT} pos={[0, 0, -5]} dunes={0.12} seed={11} />
