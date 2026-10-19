@@ -63,7 +63,7 @@ BLOCK lines (0 or more, right before the verdict) - ONLY for what must never rea
 kritiker sind dazu da um fehler zu finden und schlechte generische slop sachen abzulehnen ... aber sie sollen nicht zu
 viel blockieren und einschraenken"):
 BLOCK: fault: <time + what>   a real fault - a visible cut sprite edge, broken anatomy or an AI artefact, a generated
-                              background, text on her face by accident or cut off, a glitch
+                              background, text parked on her face by accident or cut off, a glitch (lyrics flying over her for a moment are allowed, toki 2026-10-19)
 BLOCK: slop: <time + what>    generic slop - template / stock / slideshow look, nothing of this song or of Raymi in it
 Everything else (taste, a bolder idea, a structural rethink) is a FIX for toki, never a BLOCK - she decides. Your answer
 is stored VERBATIM in the job's `reviews/` (nobody edits or summarises it). End with exactly:

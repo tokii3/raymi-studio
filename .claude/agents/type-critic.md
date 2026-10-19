@@ -37,8 +37,10 @@ Answer:
    lit by the scene, in the camera's perspective) or a layer on top? Does it appear WORD BY WORD with the voice
    (compare the time stamps with `script/shots.json`) and leave with intent?
 2. Hierarchy: key word big, fillers small? Readable at phone size and in time (contrast, reading speed)? Type MAY
-   cross her face or the frame edge when that is a designed choice - fault only when it hides her eyes / mouth by
-   accident or a word is cut so it cannot be read.
+   cross her face, fly over her, hide her for a moment or cross the frame edge when that is a designed choice (toki
+   2026-10-19: "auch wenn lyrics sie mal überdecken ist das nicht all zu schlimm"). Never ask for smaller or
+   pushed-away lyrics just to keep her clear: big type beats a clear Raymi. Fault only when text STAYS on her eyes /
+   mouth by accident, buries her for a whole line, or a word is cut so it cannot be read.
 3. Variety within one family, or the same treatment everywhere?
 4. The 3 most important fixes, concrete. Max 200 words.
 
@@ -60,7 +62,7 @@ BLOCK lines (0 or more, right before the verdict) - ONLY for what must never rea
 kritiker sind dazu da um fehler zu finden und schlechte generische slop sachen abzulehnen ... aber sie sollen nicht zu
 viel blockieren und einschraenken"):
 BLOCK: fault: <time + what>   a real fault - a wrong / missing / mistimed lyric, another font, a word cut off or
-                              unreadable, text over her eyes by accident
+                              unreadable, text parked on her eyes by accident (a pass-over is not a fault)
 BLOCK: slop: <time + what>    generic slop - one subtitle band on top, same treatment everywhere
 Everything else is a FIX for toki, never a BLOCK - she decides. Your answer is stored VERBATIM in the job's
 `reviews/` (nobody edits or summarises it). End with exactly:

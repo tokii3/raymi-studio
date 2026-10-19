@@ -25,7 +25,10 @@ Answer:
 1. Retell the story you SEE in 3-6 sentences (who wants what, what she does, what goes wrong, the payoff). If you
    cannot, say so - that is the main failure.
 2. Shot by shot (by time stamp): what does Raymi DO? Flag every shot where she only stands / poses / is shown, and
-   every shot whose meaning depends on reading text.
+   every shot whose meaning depends on reading text. A shot WITHOUT her is fine (toki 2026-10-19: "raymi muss nicht
+   immer ins bild forciert werden") when it shows her world, what she sees, what she caused or a big lyric moment -
+   flag it only if the story stops being hers. Also flag the opposite: her forced into a shot where she has nothing
+   to do.
 3. Are reaction icons (heart, !, ?, anger, sweat, Zz ...) used to tell feelings, popping at the right moment? Missing
    ones where a reaction would land the joke?
 4. The 3 biggest story problems, each with one concrete fix. Max 250 words. Be harsh; toki is tired of mediocre work.

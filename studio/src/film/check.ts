@@ -188,6 +188,10 @@ export function lineCorners(s: Shot, line: number): THREE.Vector3[] {
 
 export type TextFault = {shot: string; frame: number; line: number; text: string; why?: string};
 
+// lyrics over Raymi (toki 2026-10-19): a word may cross her; only a stay is a fault
+const FACE_HOLD = 0.6;   // s of text continuously on her face
+const FIG_HOLD = 1.0;    // s of a settled line hiding > 60 % of her figure, for its whole hold
+
 /** Every frame a lyric line is fully shown (from its last word on, settled), all of it must be inside the frame. */
 const L0 = (s: Shot) => s.lyrics!;
 
@@ -241,6 +245,7 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
         }
       }
       // every frame, with the real camera kick on the music hits (pilot 1: a stamp clipped by the punch on a hit)
+      let faceRun = 0, figRun = 0;
       for (let f = a; f < zz; f++) {
         const rise = float ? ((f - last) / props.fps) * 0.12 + 0.04 : 0;     // Words3D float: rises 0.12 m/s
         const corners = rise ? corners0.map((c) => c.clone().add(new THREE.Vector3(0, rise, 0))) : corners0;
@@ -262,7 +267,10 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
           return ov > 0.2 * Math.min((lt[2] - lt[0]) * (lt[3] - lt[1]), (st[2] - st[0]) * (st[3] - st[1]));
         });
         if (onSign && !s.lyrics.over) { out.push({shot: s.id, frame: f, line, text: ws.map((x) => x.w).join(' '), why: `covers the ${onSign.name}`}); break; }
-        // text on her face hides the one thing the viewer looks at (blind viewer, style test 2) - unless the script wants it
+        // text that PARKS on her face hides the one thing the viewer looks at (blind viewer, style test 2) - but lyrics may
+        // fly over her, pass her, cover her for a moment (toki 2026-10-19: "raymi muss nicht immer ins bild forciert
+        // werden ... auch wenn lyrics sie mal überdecken ... solange raymi nicht dauerhaft abgeschnitten wird"). So only
+        // a continuous stay counts: on her face >= FACE_HOLD, or over most of her figure for the line's whole hold.
         const p = s.lyrics.over ? null : puppetAt(s.puppets, f, props.fps);
         if (p && p.key.head) {
           const m = puppetMatrix(p, [cam.position.x, cam.position.y, cam.position.z]);
@@ -274,14 +282,20 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
           const box = (ps: THREE.Vector3[]) => [Math.min(...ps.map((q) => q.x)), Math.min(...ps.map((q) => q.y)), Math.max(...ps.map((q) => q.x)), Math.max(...ps.map((q) => q.y))];
           const [a0, b0, a1, b1] = box(hp), [c0, d0, c1, d1] = box(tp);
           const inter = Math.max(0, Math.min(a1, c1) - Math.max(a0, c0)) * Math.max(0, Math.min(b1, d1) - Math.max(b0, d0));
-          if (inter > 0.15 * (a1 - a0) * (b1 - b0)) { out.push({shot: s.id, frame: f, line, text: ws.map((x) => x.w).join(' '), why: 'covers her face'}); break; }
-          // the hero hidden behind her own text (pilot 2: a huge stamp over a tiny Raymi in a wide)
+          faceRun = inter > 0.15 * (a1 - a0) * (b1 - b0) ? faceRun + 1 : 0;
+          if (faceRun >= Math.round(FACE_HOLD * props.fps)) {
+            out.push({shot: s.id, frame: f - faceRun + 1, line, text: ws.map((x) => x.w).join(' '), why: 'parks on her face'}); break;
+          }
+          // the hero buried under her own text (pilot 2: a huge stamp over a tiny Raymi in a wide): most of her figure
+          // hidden for the line's WHOLE hold - a pass-over, a word flying through her, a moment of cover is fine
           const fp = [[0, p.key.top], [1, p.key.top], [0, p.key.feet], [1, p.key.feet]].map(([u, v]) =>
             new THREE.Vector3((u - 0.5) * w, (p.key.feet - v) * h, 0).applyMatrix4(m).project(cam));
           const [e0, g0, e1, g1] = box(fp);
           const fig = Math.max(0, Math.min(e1, c1) - Math.max(e0, c0)) * Math.max(0, Math.min(g1, d1) - Math.max(g0, d0));
-          if (fig > 0.15 * (e1 - e0) * (g1 - g0)) {   // 0.33 let a caption bar cover her torso (grade stills 2026-10-18)
-             out.push({shot: s.id, frame: f, line, text: ws.map((x) => x.w).join(' '), why: 'covers her figure'}); break; }
+          if (fig > 0.6 * (e1 - e0) * (g1 - g0)) figRun++;
+        } else faceRun = 0;
+        if (f === zz - 1 && figRun >= zz - a && zz - a >= Math.round(FIG_HOLD * props.fps)) {
+          out.push({shot: s.id, frame: a, line, text: ws.map((x) => x.w).join(' '), why: 'buries her figure the whole line'}); break;
         }
       }
     }

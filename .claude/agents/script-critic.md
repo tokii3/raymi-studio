@@ -23,11 +23,16 @@ Answer in this order:
    because it is Raymi. Fewer than three = slop.
 3. **Against the top three:** is the idea as strong as Renai / LGW / POP IN 2? What do they have that this lacks?
 4. **Dead stretches:** every span > ~8 s (MV) or > ~3 s (Short) where nothing new happens to the eye; the first
-   second; the last third (must be the strongest).
+   second; the last third (must be the strongest). THE OPENING gets its own line (`OPENING: <hooks or not>`): would a
+   viewer who found the video by search still be there after 3 s and want more? A slow intro, a logo, a calm
+   establishing shot or a build-up with nothing happening is `BLOCK: thin` for an MV (Know My Name: 69 % after 3 s
+   against an 89 % median; toki 2026-10-19 "der anfang muss stark und spannend sein"). Does the thumbnail's promise
+   appear in the first seconds? Does the Short end wanting the MV?
 5. **Unreasoned elements:** every effect, place, transition, prop or type treatment without a chain (meaning ->
    idea -> perfect version -> in her world) or whose reason was clearly invented afterwards.
 6. **Sense and love:** places that make no physical sense, empty stages, props without a role.
-7. For 4_SCRIPT.md also: shots where Raymi only stands / poses, lyric treatments that are a subtitle band, camera
+7. For 4_SCRIPT.md also: shots where Raymi only stands / poses or is forced into a frame where she has nothing to do
+   (a shot without her is fine when it carries the moment, toki 2026-10-19), lyric treatments that are a subtitle band, camera
    that never travels, repeated set-ups without a change, transitions without meaning, rows whose time does not
    match the dossier's measured map.
 

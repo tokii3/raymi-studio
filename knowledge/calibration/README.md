@@ -11,3 +11,9 @@ One file per package: `<date>_<song>.md` (table + what changed in the agents). R
 | package | critics right | critics over-blocked | critics missed | agents changed |
 |---|---|---|---|---|
 | [KING 2026-10-19](2026-10-19_KING.md) | lyrics flat / small / thin; untranslated Japanese | crowd look, props, holds, cut rhythm, story (toki uploaded, liked animation + effects) | the crown = the main element unreadable | hero first, lyric weight first, BLOCK only real faults / slop, catalog status respected |
+
+Rule change 2026-10-19 (toki, before the Firestarter package): "raymi muss nicht immer ins bild forciert werden ...
+auch wenn lyrics sie mal überdecken ist das nicht all zu schlimm ... solange raymi nicht dauerhaft abgeschnitten wird".
+Story / type / look critics no longer flag a shot without her or lyrics flying over her; the guard (check.ts) only
+refuses text PARKED on her face (>= 0.6 s) or burying > 60 % of her figure for a whole line. Script critic: new
+`OPENING:` line (Know My Name lost viewers in the first 3 s).

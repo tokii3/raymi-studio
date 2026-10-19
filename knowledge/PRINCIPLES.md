@@ -26,11 +26,19 @@ stronger effect with a written reason; real faults (section C) never.
 
 6. **The first second promises the world.** Start inside it with something happening; a calm intro is not a hook.
    Shorts: what a swiping viewer perceives in 0.5-1 s (her face big and readable, bright, one promise).
+   MVs too (Know My Name 2026-10-10: found by search, but only 69 % still there after 3 s against a channel median of
+   89 %, and 29 % average viewed. toki 2026-10-19: "der anfang muss stark und spannend sein und den zuschauer direkt
+   fesseln"): no slow intro. A COLD OPEN shows the strongest picture of the video (or its question) in the first
+   0-3 s and then cuts back. The thumbnail promises exactly that picture, so the click is paid off at once. The Short
+   is a teaser that leaves the payoff to the MV.
 7. **The camera goes everywhere** and travels in 3D: inside things, top-down, upside-down, macro, worm's eye, tiny in
    a wide. Shot size changes on every cut. A centred Raymi bust in front of a background never carries a moment.
    Stills with a 2D zoom cut every 2-3 s = slideshow (MORE v1), even if every still is pretty.
-8. **Raymi acts in every shot.** Holds, throws, hides, dashes, sulks, celebrates: squash and stretch, smears on fast
-   moves, held key poses, reaction icons as her language. Base rhythm: a wide action + a cut-in reaction close-up.
+8. **Raymi acts in every shot she is in.** Holds, throws, hides, dashes, sulks, celebrates: squash and stretch, smears on fast
+   moves, held key poses, reaction icons as her language. She is never FORCED into the frame (toki 2026-10-19: "raymi
+   muss nicht immer ins bild forciert werden"): a shot of her world, of the main element, of a huge lyric, of what
+   she sees or of what she caused can carry a moment on its own, and her absence makes her return land harder. The
+   story stays hers (her action causes it, or her reaction follows it). Base rhythm: a wide action + a cut-in reaction close-up.
    She stands IN the place (on the floor, with a shadow), never a sticker in front of wallpaper.
 9. **Frames are objects of the world** (porthole, CCTV, camcorder, polaroid, phone, TV) with a reason, never a generic
    box or circle around her again and again.
@@ -44,7 +52,10 @@ stronger effect with a written reason; real faults (section C) never.
     and BELONG to the picture: lit by the scene, a shadow in it, lying on a surface in perspective. They read at a
     glance on a phone - heavy and big, never thin or tiny (toki 2026-10-19: "oft zu klein, zu dünn oder wirken
     aufgesetzt"). A Japanese line always shows its romaji and English under it (toki 2026-10-19). Never one subtitle
-    band slapped on top.
+    band slapped on top. Lyrics MAY fly over her, pass across her or hide her for a moment when the moment calls for big
+    type (toki 2026-10-19: "auch wenn lyrics sie mal überdecken ist das nicht all zu schlimm ... solange raymi nicht
+    dauerhaft abgeschnitten wird"). A fault is only text parked on her face or burying her for a whole line; never
+    shrink or push the lyrics away just to keep her clear.
 12. **The picture DOES what the line means** through her body and her world. Order, never reversed: line -> meaning
     -> picture -> asset / technique. Never pick an asset because it exists and invent the reason afterwards.
 13. **Power, contrast, rhythm.** Off-centre, diagonal, too big for the frame; dense next to empty; a pause before the
