@@ -650,7 +650,7 @@
   },
   {
    "t0": 56.28,
-   "t1": 64.3,
+   "t1": 64.29,
    "kind": "high",
    "loud_db": -12.2,
    "sung": 1.0,
@@ -658,7 +658,7 @@
    "first_line": "I'm insane"
   },
   {
-   "t0": 64.3,
+   "t0": 64.29,
    "t1": 70.76,
    "kind": "high",
    "loud_db": -12.4,
@@ -668,7 +668,7 @@
   },
   {
    "t0": 70.76,
-   "t1": 101.63,
+   "t1": 86.37,
    "kind": "high",
    "loud_db": -9.4,
    "sung": 1.0,
@@ -676,31 +676,85 @@
    "first_line": "Imma start a fire"
   },
   {
-   "t0": 101.63,
-   "t1": 114.66,
-   "kind": "peak",
-   "loud_db": -8.8,
-   "sung": 1.0,
-   "part": null,
-   "first_line": null
-  },
-  {
-   "t0": 114.66,
-   "t1": 137.35,
+   "t0": 86.37,
+   "t1": 93.82,
    "kind": "high",
-   "loud_db": -9.3,
+   "loud_db": -9.2,
    "sung": 1.0,
-   "part": null,
-   "first_line": null
+   "part": "A",
+   "first_line": "I'm a fire starter"
   },
   {
-   "t0": 137.35,
+   "t0": 93.82,
+   "t1": 100.69,
+   "kind": "high",
+   "loud_db": -9.8,
+   "sung": 1.0,
+   "part": "G",
+   "first_line": "I'm a fire starter"
+  },
+  {
+   "t0": 100.69,
+   "t1": 104.67,
+   "kind": "high",
+   "loud_db": -12.4,
+   "sung": 1.0,
+   "part": "H",
+   "first_line": "멈추지 않아"
+  },
+  {
+   "t0": 104.67,
+   "t1": 107.69,
+   "kind": "high",
+   "loud_db": -9.8,
+   "sung": 1.0,
+   "part": "I",
+   "first_line": "0부터 100까지"
+  },
+  {
+   "t0": 107.69,
+   "t1": 115.57,
+   "kind": "peak",
+   "loud_db": -8.6,
+   "sung": 1.0,
+   "part": "J",
+   "first_line": "Let’s go 삐걱 삐-삐걱 어느새 lose control"
+  },
+  {
+   "t0": 115.57,
+   "t1": 121.9,
+   "kind": "high",
+   "loud_db": -8.9,
+   "sung": 1.0,
+   "part": "K",
+   "first_line": "Ooh ooh"
+  },
+  {
+   "t0": 121.9,
+   "t1": 129.78,
+   "kind": "high",
+   "loud_db": -9.0,
+   "sung": 1.0,
+   "part": "L",
+   "first_line": "Ooh ooh"
+  },
+  {
+   "t0": 129.78,
+   "t1": 137.94,
+   "kind": "high",
+   "loud_db": -11.2,
+   "sung": 1.0,
+   "part": "E",
+   "first_line": "I'm insane"
+  },
+  {
+   "t0": 137.94,
    "t1": 143.8,
    "kind": "high",
    "loud_db": -11.3,
    "sung": 1.0,
-   "part": null,
-   "first_line": null
+   "part": "F",
+   "first_line": "느껴봐 차갑던 이 세상을"
   },
   {
    "t0": 143.8,
@@ -717,84 +771,30 @@
    "kind": "high",
    "loud_db": -11.3,
    "sung": 1.0,
-   "part": null,
-   "first_line": null
+   "part": "C",
+   "first_line": "Oh I like a little drama"
   },
   {
    "t0": 149.24,
-   "t1": 156.73,
+   "t1": 158.63,
    "kind": "high",
    "loud_db": -9.4,
    "sung": 1.0,
    "part": "C",
-   "first_line": "got you burning so hot"
+   "first_line": "Call me crazy, call it Karma"
   },
   {
-   "t0": 156.73,
-   "t1": 158.93,
-   "kind": "high",
-   "loud_db": -9.7,
-   "sung": 1.0,
-   "part": "C",
-   "first_line": "Imma fire starter"
-  },
-  {
-   "t0": 158.93,
-   "t1": 160.26,
-   "kind": "peak",
-   "loud_db": -8.0,
-   "sung": 1.0,
-   "part": "G",
-   "first_line": "멈추지 않아"
-  },
-  {
-   "t0": 160.26,
-   "t1": 162.8,
+   "t0": 158.63,
+   "t1": 174.27,
    "kind": "high",
    "loud_db": -9.4,
    "sung": 1.0,
-   "part": "H",
-   "first_line": "단숨에 다 퍼져 퍼져"
+   "part": "M",
+   "first_line": "Imma start a fire"
   },
   {
-   "t0": 162.8,
-   "t1": 165.0,
-   "kind": "high",
-   "loud_db": -9.5,
-   "sung": 1.0,
-   "part": "I",
-   "first_line": "Ooh ooh"
-  },
-  {
-   "t0": 165.0,
-   "t1": 166.6,
-   "kind": "high",
-   "loud_db": -9.8,
-   "sung": 1.0,
-   "part": "E",
-   "first_line": "I'm insane"
-  },
-  {
-   "t0": 166.6,
-   "t1": 169.06,
-   "kind": "high",
-   "loud_db": -9.3,
-   "sung": 1.0,
-   "part": "F",
-   "first_line": "붉게 물들일 이 순간"
-  },
-  {
-   "t0": 169.06,
-   "t1": 174.32,
-   "kind": "high",
-   "loud_db": -9.4,
-   "sung": 1.0,
-   "part": "C",
-   "first_line": "Imma fire starter"
-  },
-  {
-   "t0": 174.32,
-   "t1": 181.64,
+   "t0": 174.27,
+   "t1": 181.65,
    "kind": "high",
    "loud_db": -9.4,
    "sung": 1.0,
@@ -802,12 +802,12 @@
    "first_line": "I'm a fire starter"
   },
   {
-   "t0": 181.64,
+   "t0": 181.65,
    "t1": 190.03,
    "kind": "high",
    "loud_db": -9.5,
    "sung": 0.85,
-   "part": "J",
+   "part": "G",
    "first_line": "I'm a fire starter"
   },
   {

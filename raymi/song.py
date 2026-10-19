@@ -152,6 +152,59 @@ def roma(s: str) -> str:
 
 # ------------------------------------------------------------------ alignment
 
+def match_runs(a: list[str], b: list[str]) -> list[tuple[int, int, int]]:
+    """Monotonic global alignment of two letter sequences (Needleman-Wunsch: match +2, mismatch / gap -1), returned
+    as runs of consecutive matches (a index, b index, length). difflib took the LONGEST common block first, so a song
+    whose choruses repeat word for word matched chorus 2's text to the final chorus' audio and dropped everything in
+    between (FIRESTARTER 2026-10-19: 76-151 s lost). A global alignment keeps every text line in song order."""
+    n, m = len(a), len(b)
+    if not n or not m:
+        return []
+    A = np.frombuffer("".join(a).encode("ascii", "replace"), np.uint8)
+    B = np.frombuffer("".join(b).encode("ascii", "replace"), np.uint8)
+    ptr = np.zeros((n + 1, m + 1), np.uint8)                 # 0 diag, 1 up (gap in b), 2 left (gap in a)
+    ptr[0, 1:] = 2
+    ptr[1:, 0] = 1
+    prev = -np.arange(m + 1, dtype=np.int32)
+    idx = np.arange(m + 1, dtype=np.int32)
+    for i in range(1, n + 1):
+        sub = np.where(B == A[i - 1], 2, -1).astype(np.int32)
+        diag = prev[:-1] + sub
+        up = prev[1:] - 1
+        best = np.maximum(diag, up)                              # without the left move, for j >= 1
+        d = np.empty(m + 1, np.int32)
+        d[0] = -i
+        d[1:] = best
+        # left moves: H[j] = max_k<=j (d[k] - (j - k)) = cummax(d + idx) - idx
+        cur = np.maximum.accumulate(d + idx) - idx
+        p = np.where(diag >= up, 0, 1).astype(np.uint8)
+        left = cur[1:] > best
+        p[left] = 2
+        ptr[i, 1:] = p
+        prev = cur
+    pairs = []
+    i, j = n, m
+    while i > 0 and j > 0:
+        p = ptr[i, j]
+        if p == 0:
+            if A[i - 1] == B[j - 1]:
+                pairs.append((i - 1, j - 1))
+            i, j = i - 1, j - 1
+        elif p == 1:
+            i -= 1
+        else:
+            j -= 1
+    pairs.reverse()
+    runs: list[tuple[int, int, int]] = []
+    for x, y in pairs:
+        if runs and runs[-1][0] + runs[-1][2] == x and runs[-1][1] + runs[-1][2] == y:
+            ra, rb, rs = runs[-1]
+            runs[-1] = (ra, rb, rs + 1)
+        else:
+            runs.append((x, y, 1))
+    return runs
+
+
 def align(lines: list[dict], asr: list[dict]) -> list[list[dict]]:
     """Official words <- recognised words (asr: [{w, t0, t1}]) by romanised letters.
 
@@ -171,13 +224,12 @@ def align(lines: list[dict], asr: list[dict]) -> list[list[dict]]:
             b.append(ch)
             b_t.append(x["t0"] + (x["t1"] - x["t0"]) * k / max(n, 1))
     hits: dict[tuple[int, int], list[tuple[int, float]]] = {}
-    sm = difflib.SequenceMatcher(None, a, b, autojunk=False)
-    for blk in sm.get_matching_blocks():
-        if blk.size < MIN_BLOCK:
+    for blk_a, blk_b, size in match_runs(a, b):
+        if size < MIN_BLOCK:
             continue
-        for k in range(blk.size):
-            li, wi, pos = a_own[blk.a + k]
-            hits.setdefault((li, wi), []).append((pos, b_t[blk.b + k]))
+        for k in range(size):
+            li, wi, pos = a_own[blk_a + k]
+            hits.setdefault((li, wi), []).append((pos, b_t[blk_b + k]))
     out = []
     for li, ln in enumerate(lines):
         row = []

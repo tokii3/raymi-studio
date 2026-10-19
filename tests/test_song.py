@@ -147,3 +147,15 @@ def test_heard_letters_prefers_the_pass_that_sounds_like_the_lyrics():
     en = [{"w": "I'm"}, {"w": "insane"}, {"w": "yeah"}, {"w": "I"}, {"w": "know"}, {"w": "you"}, {"w": "like"}]
     ko = [{"w": "아임"}, {"w": "인세인"}, {"w": "예"}, {"w": "아이"}, {"w": "노"}, {"w": "유"}, {"w": "라이크"}, {"w": "잇"}]
     assert S.heard_letters(en, target)[0] > S.heard_letters(ko, target)[0]
+
+
+def test_repeated_choruses_keep_song_order():
+    text = "start a fire call the fighter\nverse words here\nstart a fire call the fighter"
+    lines = S.parse_lyrics(text)
+    # the recogniser missed the FIRST chorus: its words must not steal the second one's times
+    asr = [{"w": w, "t0": 10.0 + k, "t1": 10.5 + k} for k, w in enumerate("verse words here start a fire call the fighter".split())]
+    m = S.align(lines, asr)
+    first = [w["t0"] for w in m[0]]
+    last = [w["t0"] for w in m[2]]
+    assert all(t is None for t in first) or max(t for t in first if t is not None) < 10.0
+    assert last[0] is not None and last[0] >= 13.0

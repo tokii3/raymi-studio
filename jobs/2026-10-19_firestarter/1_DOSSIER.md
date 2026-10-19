@@ -121,10 +121,15 @@ Hangul by Revised Romanisation -> snapped to vocal onsets). 129.2 BPM, 206.46 s.
 | 145.7-174.3 | final chorus x2 (2nd ends "get out of the sauna") | high | timing re-measured (second pass) |
 | 174.28-190.0 | hook x2 + "I'm a I'm a I'm a fire starter!" | high | |
 | 190.0-206.46 | outro | quiet (-20..-24 dB) | a last vocal tag 191.5-193.4, stop 195.0-195.4, tail |
-Lyric line times: `lyrics_timed.json`. First pass: 266 / 436 words measured; Whisper heard nothing in 57-70 s and
-145-170 s (one hallucinated word) -> the studio got a **second pass** (`raymi/song.py` asr_gaps / fill_gaps: only the
-empty sung windows, once in English and once in Korean, the better wins; `analyze.json` "gap_languages"). Re-run
-pushed 2026-10-19; until it lands, times in those two windows are interpolated. Lines 0-23 and 37-72 are measured.
+Lyric line times: `lyrics_timed.json` - **333 / 436 words measured** (2026-10-19, after two studio fixes):
+1. Whisper heard nothing in 57-70 s and 145-170 s -> a **second pass** on just the empty sung windows, in English and
+   in Korean, the pass that SOUNDS like the lyrics wins (`asr_gaps` / `fill_gaps` / `heard_letters`; `analyze.json`
+   "gap_languages"). A first version (most words wins) made it worse and was reverted.
+2. The text-to-audio match took the longest common block first: identical choruses matched the wrong repeat and
+   76-151 s fell out -> a **monotonic global alignment** (`match_runs`, Needleman-Wunsch) keeps every line in song
+   order. Local re-align: `python -m raymi lyrics <job>`.
+Weak spots (interpolated, check by ear in the pilot): 121-123 s ("Gonna take it"), 138-149 s (end of pre-chorus 2,
+the stop at 143.8, first lines of the final chorus).
 
 ## 6. Where Raymi meets this song
 The contradiction is the idea engine: **fire cannot burn underwater - and she does it anyway.**
