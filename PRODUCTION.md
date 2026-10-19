@@ -44,7 +44,7 @@ per beat whose expression fits the line, shot / side / act / icon / key words, `
 - Look development: push `jobs/<job>/stills.json` (`stills.yml`) -> stills on branch `renders` (`reports/<job>/stills/`),
   or `"to": "boards"` / `"to": "catalog"`. NEVER render on toki's PC - not even one still.
 
-## Lyrics v2 (built 2026-10-19, opt-in `"lyric_style": "v2"` until toki approves the style frames)
+## Lyrics v2 - the default since 2026-10-19 (toki: "ja, v2 wird der Standard"; old jobs pin `"lyric_style": "v1"`)
 - Her heavy weight (`assets/fonts/Raymi-Heavy.ttf`, `python -m raymi font heavy`, rebuilt in the cloud before every
   stills / render run), no outline ring, a soft shadow in the scene's shadow colour, colours from the shot's grade,
   lit by the set + a real cast shadow, `tilt` / `roll` put the block on a floor / table / diagonal, words swell while

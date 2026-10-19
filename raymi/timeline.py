@@ -21,7 +21,7 @@ jobs/<job>/shots.json is the machine part of the shooting script (4_SCRIPT.md sa
        "why": "the feeling this shot serves"}],
      "heroes": {"crown": {"kind": "worn", "size": [0.13, 0.07], "min": 0.05}},   # the main element(s) (3_TREATMENT)
      "acts": [{"at": 0, "grade": "day"}, {"at": 77.9, "grade": "night"}],  # the look step: one grade per act (grade.ts)
-     "lyric_style": "v2",                          # v2 = heavy weight, scene colour, lit, romaji + English under JP lines
+     "lyric_style": "v2",                          # default v2 (heavy, scene colour, lit, romaji + English); "v1" = old jobs
      "translation": "lyrics_en.json"}              # per line {"roma", "en"}: default <lyrics folder>/lyrics_en.json
 
 Lyrics v2 fields (shot "lyrics"): "style" (per shot), "tilt" / "roll" (deg: lie on a surface, follow a diagonal),
@@ -389,7 +389,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         errors.append("no shots")
     starts = [resolve_time(s.get("at", 0), lyrics, errors, f"shot {i + 1}") for i, s in enumerate(shots_in)]
     trans = load_translation(job, spec)
-    job_style = spec.get("lyric_style", "v1")             # v1 until toki approves v2 as the studio default
+    job_style = spec.get("lyric_style", "v2")             # v2 = the studio default (toki 2026-10-19); v1 = jobs made before
     acts = spec.get("acts") or []
     for a_ in acts:
         if a_.get("grade") not in GRADES:

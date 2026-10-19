@@ -24,9 +24,10 @@ video - never the last video's look again. After every verdict of hers, update s
 |---|---|
 | transitions, puppet animation, effects, camera, grade per act | toki-liked |
 | aquarium, card table + story props, Short hook / CTA, guards | approved (critics' notes in status.json) |
-| crown (worn hero), lyrics v1 | open - her faults named, the hero guard / lyrics v2 answer them |
-| lyrics v2 + Raymi-Heavy, grades warm / clean, weather set | new |
+| crown (worn hero) | open - the hero guard measures it |
+| lyrics v2 + Raymi-Heavy | approved 2026-10-19 = the default (v1 superseded) |
+| grades warm / clean, weather set | new |
 
 Grade library (the look step): `studio/src/film/grade.ts` - day, closing, night, own, warm, clean; shots.json `acts`
-picks one per act. Lyrics v2: `studio/src/film/lyricLayout.ts` + Words3D style v2 (style frames:
-`jobs/2026-10-19_lyrics-v2`, not rendered yet).
+picks one per act. Lyrics v2 (the default): `studio/src/film/lyricLayout.ts` + Words3D style v2 (style frames:
+`jobs/2026-10-19_lyrics-v2/boards`).

@@ -40,8 +40,6 @@
   beats for the setup and the scale payoff, more acting in holds, lyric colour per set. Waiting for toki's call.
 
 - KING verdict (2026-10-19) open items:
-  - Lyrics v2 not seen by toki yet: style frames prepared (jobs/2026-10-19_lyrics-v2), not rendered (toki: no new
-    render). Raymi-Heavy.ttf is built by the cloud on the next stills / render run (~887 glyphs, a few minutes once).
   - stills.yml `passes` + `thumbs` and the hero contrast step are untested in the cloud (first thumbs run proves them).
   - The crown component (props.tsx CapCrown) is 13 x 7 cm on her 1.55 m figure: reuse it as a main element only at a
     screen scale (or framed close) - the hero guard refuses it otherwise. A crown look pass (thickness, a band that
@@ -51,7 +49,7 @@
   - The new "lyrics hidden behind a prop" guard (2026-10-19) flags 2 delivered KING shots (lamp-deals, buried: behind
     a coin tower) - evidence only, KING is not re-rendered. The weather set now registers its studio cameras + desk,
     the card table its standing King card as solids.
-- Lyric style frames (2026-10-19): type-critic FAIL x2 (reviews/style_type-critic_1/2.md) -> STOP (anti-loop), toki
-  decides. Round 2 open points: aquarium shell / coral are not solids (a lyric row ran behind them - the guard could not
+- Lyrics v2 NEXT ROUND (toki 2026-10-19: v2 is the default, "die offenen Punkte vom type-critic gehen in die nächste
+  Runde"; type-critic FAIL x2 in reviews/style_type-critic_1/2.md). Open points: aquarium shell / coral are not solids (a lyric row ran behind them - the guard could not
   see it); her Latin "m" reads like "n" in the heavy weight at small sizes; romaji / English rows still small on a
   390 px feed; critic wants a carrier object + a different form per shot (key word only, English only, an acted word).

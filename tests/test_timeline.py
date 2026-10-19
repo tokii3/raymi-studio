@@ -19,6 +19,8 @@ LYRICS = {"lines": [
 def job(tmp_path, shots, **extra):
     (tmp_path / "lyrics_timed.json").write_text(json.dumps(LYRICS, ensure_ascii=False), encoding="utf-8")
     (tmp_path / "song_map.json").write_text(json.dumps({"hits": [10.5, 12.95], "beats": [10.0, 10.37]}), encoding="utf-8")
+    (tmp_path / "lyrics_en.json").write_text(json.dumps({"lines": {"レフトサイド ライトサイド": {    # lyrics v2 (default)
+        "roma": "refuto saido raito saido", "en": "Left side, right side"}}}, ensure_ascii=False), encoding="utf-8")
     spec = {"audio": {"file": "song.webm", "from": 299 / 30, "to": 14.0}, "lyrics": "lyrics_timed.json",
             "song_map": "song_map.json", "shots": shots, **extra}
     return spec
@@ -152,6 +154,7 @@ def test_v2_japanese_line_gets_romaji_and_english_under_it(tmp_path):
 
 def test_v2_japanese_line_without_translation_is_refused_unless_the_script_says_why(tmp_path):
     spec = job(tmp_path, [{**SHOT, "at": "line:0"}], lyric_style="v2")
+    (tmp_path / "lyrics_en.json").unlink()
     _, errors, _ = T.compile_shots(tmp_path, spec, "mv", cmap=EVERY)
     assert any("no English" in e for e in errors)
     shot = {**SHOT, "at": "line:0", "lyrics": {**SHOT["lyrics"], "sub": False}, "why": "the line is acted, no text"}
@@ -159,8 +162,11 @@ def test_v2_japanese_line_without_translation_is_refused_unless_the_script_says_
     assert errors == []
 
 
-def test_v1_stays_the_default_until_toki_approves_v2(tmp_path):
+def test_v2_is_the_default_and_old_jobs_keep_v1(tmp_path):
+    """toki 2026-10-19: "ja, v2 wird der Standard"; a job made before pins "lyric_style": "v1"."""
     p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [{**SHOT, "at": "line:0"}]), "mv", cmap=EVERY)
+    assert errors == [] and p["shots"][0]["lyrics"]["style"] == "v2" and p["heavy"] is True
+    p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [{**SHOT, "at": "line:0"}], lyric_style="v1"), "mv", cmap=EVERY)
     assert errors == [] and "style" not in p["shots"][0]["lyrics"] and p["heavy"] is False
 
 

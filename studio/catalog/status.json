@@ -1,48 +1,229 @@
 {
  "_why": "The studio's asset library: every reusable component with toki's verdict (her words, verbatim, dated) and its open notes. A new package reuses toki-liked / approved parts first and gives each one something NEW in that video (never a copy of the last video's look). status: toki-liked (she praised it) | approved (in a video she approved / uploaded, no complaint) | open (in use, but she named a fault - fix before reuse) | new (built, toki has not seen it yet). Update this file whenever toki judges a video (raymi next: the final / thumbs steps).",
- "statuses": ["toki-liked", "approved", "open", "new"],
+ "statuses": [
+  "toki-liked",
+  "approved",
+  "open",
+  "new"
+ ],
  "components": [
-  {"id": "transitions", "code": "studio/src/film/Transitions.tsx", "stills": ["transition_whip.jpg", "transition_bubbles.jpg", "transition_ink.jpg", "transition_pass.jpg", "transition_flash.jpg"],
-   "status": "toki-liked", "date": "2026-10-19", "toki": "animationen tranitions und effekte mag ich alle sehr schon ein großer schritt nach vorne",
-   "notes": "cuts through things at full cover; land one frame before the syllable", "used_in": ["2026-10-18_king"]},
-  {"id": "puppet-animation", "code": "studio/src/three/Puppet3D.tsx", "stills": ["raymi_in_space__crown__lyrics_sign.jpg"],
-   "status": "toki-liked", "date": "2026-10-19", "toki": "animationen tranitions und effekte mag ich alle sehr",
-   "notes": "Raymi standing in the set: floor shadow + contact shadow, breathing, squash & stretch, one faint smear streak, held key poses, acts (pop, hop, stomp, shrink ...); critics (KING final): long holds read still - give holds an acting beat", "used_in": ["2026-10-18_king"]},
-  {"id": "effects", "code": "studio/src/three/cards.tsx RaySwarm, studio/src/three/events.ts flare, studio/src/film/Film.tsx (glow pulse, lens passes)", "stills": ["raymi_crown_ray_ring_glow.jpg", "raymi_glow__weather_flood.jpg", "cardtable_black_spade_glow_rays.jpg"],
-   "status": "toki-liked", "date": "2026-10-19", "toki": "animationen tranitions und effekte mag ich alle sehr",
-   "notes": "her own glow (灯闇), beat flares, ray ring / beam, things passing the lens, coin / card rain, bulb pop", "used_in": ["2026-10-18_king"]},
-  {"id": "camera", "code": "studio/src/film/motion.ts cameraAt, raymi/timeline.py frame_camera", "stills": ["camera_frame_close.jpg"],
-   "status": "toki-liked", "date": "2026-10-18", "toki": "fehler sehe ich keine (camera, lyrics, effects good - pilot)",
-   "notes": "real camera keys in 3D, kicks on hits, the frame camera solves close / medium / wide with cut edges out", "used_in": ["2026-10-18_king"]},
-  {"id": "grade-per-act", "code": "studio/src/film/grade.ts (day, closing, night, own)", "stills": [],
-   "status": "toki-liked", "date": "2026-10-19", "toki": "nach der kritik mit den farben abmischen etc war es schon besser",
-   "notes": "the default LOOK STEP: shots.json acts -> one grade per act; warm + clean are new grades (status new until seen)", "used_in": ["2026-10-18_king"]},
-  {"id": "grade-warm-clean", "code": "studio/src/film/grade.ts (warm, clean)", "stills": [],
-   "status": "new", "date": "2026-10-19", "toki": "", "notes": "added for songs whose world is not under water at night; first seen in the lyrics v2 style frames", "used_in": []},
-  {"id": "set-aquarium", "code": "studio/src/three/sets/Aquarium.tsx", "stills": ["set_aquarium__lyrics_glass.jpg", "aquarium_crowd_look_phones_up.jpg", "aquarium_light_banks_crowd_out.jpg", "aquarium_sand_bury.jpg"],
-   "status": "approved", "date": "2026-10-19", "toki": "ich habe das mv trotz kleiner fehler hochgeladen",
-   "notes": "critics (KING final, not toki): the crowd (parts.tsx Visitor) reads as placeholder primitives; props flat next to her painting - a look pass before the crowd carries a whole video again (BACKLOG)", "used_in": ["2026-10-18_king"]},
-  {"id": "set-cardtable", "code": "studio/src/three/sets/CardTable.tsx, studio/src/three/cards.tsx", "stills": ["set_cardtable__lyrics_card.jpg", "set_cardtable_night__pool_deal.jpg", "cardtable_house_collapse_pile.jpg", "cardtable_pickup_king_warning.jpg"],
-   "status": "approved", "date": "2026-10-19", "toki": "ich habe das mv trotz kleiner fehler hochgeladen",
-   "notes": "critics: black voids in the night - an ambient backdrop before reuse", "used_in": ["2026-10-18_king"]},
-  {"id": "set-weather", "code": "studio/src/three/sets/Weather.tsx", "stills": ["set_weather__lyrics_ticker.jpg", "raymi_glow__weather_flood.jpg"],
-   "status": "new", "date": "2026-10-18", "toki": "", "notes": "built for the KING boards (idea C, not picked); never in an uploaded video", "used_in": []},
-  {"id": "aquarium-story-props", "code": "studio/src/three/aquarium_props.tsx, studio/src/three/props.tsx", "stills": ["aquarium_phone_taps_hands_lamp.jpg", "aquarium_coins_deck_salmon.jpg", "aquarium_card_rain_felt.jpg", "aquarium_led_flip_wish_chute.jpg", "aquarium_cap_off.jpg"],
-   "status": "approved", "date": "2026-10-19", "toki": "ich habe das mv trotz kleiner fehler hochgeladen",
-   "notes": "phone, knuckle taps, glass hands, coins, ledge deck, card rain, work lamp, salmon, wish chute; critics: primitive next to her painting (texture / wear pass)", "used_in": ["2026-10-18_king"]},
-  {"id": "crown", "code": "studio/src/three/props.tsx CapCrown, studio/src/film/Film.tsx (worn on her head)", "stills": ["raymi_crown_ray_ring_glow.jpg", "aquarium_cap_off.jpg"],
-   "status": "open", "date": "2026-10-19", "toki": "fehler wie schlecht erkennbare krone müssen selber erkannt werden das ist das main element",
-   "notes": "13 x 7 cm on a 1.55 m figure: 0.2-4.2 % of the frame height in 28 of KING's 30 crown shots. A worn hero needs scale for the screen, not for realism, and value contrast to her hair; the hero guard (check.ts heroFaults) measures it now", "used_in": ["2026-10-18_king"]},
-  {"id": "lyrics-v1", "code": "studio/src/three/Words3D.tsx (style v1: sign, float, stamp, glass, card, ticker; fog, engraved, screen, print, felt, light)", "stills": ["lyrics_float.jpg", "lyrics_stamp.jpg", "lyrics_fog.jpg", "lyrics_engraved.jpg", "lyrics_print.jpg", "lyrics_screen.jpg", "lyrics_light.jpg"],
-   "status": "open", "date": "2026-10-19", "toki": "ich mag die lyrics immernoch nicht ... die lyrics wirken immernoch nicht stimmig mit dem gesamtbild. sie sind oft zu klein , zu dünn oder wirken aufgesetzt.",
-   "notes": "the kinds (where words live) stay; the look (thin regular weight, outline ring, one colour logic, flat) is replaced by v2 once toki approves its style frames", "used_in": ["2026-10-18_king"]},
-  {"id": "lyrics-v2", "code": "studio/src/three/Words3D.tsx (style v2), studio/src/film/lyricLayout.ts, assets/fonts/Raymi-Heavy.ttf (raymi/font.py heavy)", "stills": [],
-   "status": "new", "date": "2026-10-19", "toki": "",
-   "notes": "her heavy weight, colour from the grade, lit by the set + cast shadow, tilt / roll onto surfaces, romaji + English under Japanese lines, words swell while sung; style frames: jobs/2026-10-19_lyrics-v2 (waiting for toki)", "used_in": []},
-  {"id": "short-hook-cta", "code": "studio/src/film/Film.tsx overlay, studio/src/Text.tsx Stamp", "stills": [],
-   "status": "approved", "date": "2026-10-19", "toki": "", "notes": "hook <= 8 words at frame 0, comment question >= 2.5 s before the end, never on her face", "used_in": ["2026-10-18_king"]},
-  {"id": "guards", "code": "studio/src/film/check.ts, studio/guard.mjs", "stills": [],
-   "status": "approved", "date": "2026-10-19", "toki": "",
-   "notes": "killed every mechanical fault class in KING for good (cut edges, clipped text, props in the lens, sliced face); now also the main element (hero) and lyrics v2 sizes", "used_in": ["2026-10-18_king"]}
+  {
+   "id": "transitions",
+   "code": "studio/src/film/Transitions.tsx",
+   "stills": [
+    "transition_whip.jpg",
+    "transition_bubbles.jpg",
+    "transition_ink.jpg",
+    "transition_pass.jpg",
+    "transition_flash.jpg"
+   ],
+   "status": "toki-liked",
+   "date": "2026-10-19",
+   "toki": "animationen tranitions und effekte mag ich alle sehr schon ein großer schritt nach vorne",
+   "notes": "cuts through things at full cover; land one frame before the syllable",
+   "used_in": [
+    "2026-10-18_king"
+   ]
+  },
+  {
+   "id": "puppet-animation",
+   "code": "studio/src/three/Puppet3D.tsx",
+   "stills": [
+    "raymi_in_space__crown__lyrics_sign.jpg"
+   ],
+   "status": "toki-liked",
+   "date": "2026-10-19",
+   "toki": "animationen tranitions und effekte mag ich alle sehr",
+   "notes": "Raymi standing in the set: floor shadow + contact shadow, breathing, squash & stretch, one faint smear streak, held key poses, acts (pop, hop, stomp, shrink ...); critics (KING final): long holds read still - give holds an acting beat",
+   "used_in": [
+    "2026-10-18_king"
+   ]
+  },
+  {
+   "id": "effects",
+   "code": "studio/src/three/cards.tsx RaySwarm, studio/src/three/events.ts flare, studio/src/film/Film.tsx (glow pulse, lens passes)",
+   "stills": [
+    "raymi_crown_ray_ring_glow.jpg",
+    "raymi_glow__weather_flood.jpg",
+    "cardtable_black_spade_glow_rays.jpg"
+   ],
+   "status": "toki-liked",
+   "date": "2026-10-19",
+   "toki": "animationen tranitions und effekte mag ich alle sehr",
+   "notes": "her own glow (灯闇), beat flares, ray ring / beam, things passing the lens, coin / card rain, bulb pop",
+   "used_in": [
+    "2026-10-18_king"
+   ]
+  },
+  {
+   "id": "camera",
+   "code": "studio/src/film/motion.ts cameraAt, raymi/timeline.py frame_camera",
+   "stills": [
+    "camera_frame_close.jpg"
+   ],
+   "status": "toki-liked",
+   "date": "2026-10-18",
+   "toki": "fehler sehe ich keine (camera, lyrics, effects good - pilot)",
+   "notes": "real camera keys in 3D, kicks on hits, the frame camera solves close / medium / wide with cut edges out",
+   "used_in": [
+    "2026-10-18_king"
+   ]
+  },
+  {
+   "id": "grade-per-act",
+   "code": "studio/src/film/grade.ts (day, closing, night, own)",
+   "stills": [],
+   "status": "toki-liked",
+   "date": "2026-10-19",
+   "toki": "nach der kritik mit den farben abmischen etc war es schon besser",
+   "notes": "the default LOOK STEP: shots.json acts -> one grade per act; warm + clean are new grades (status new until seen)",
+   "used_in": [
+    "2026-10-18_king"
+   ]
+  },
+  {
+   "id": "grade-warm-clean",
+   "code": "studio/src/film/grade.ts (warm, clean)",
+   "stills": [],
+   "status": "new",
+   "date": "2026-10-19",
+   "toki": "",
+   "notes": "added for songs whose world is not under water at night; first seen in the lyrics v2 style frames",
+   "used_in": []
+  },
+  {
+   "id": "set-aquarium",
+   "code": "studio/src/three/sets/Aquarium.tsx",
+   "stills": [
+    "set_aquarium__lyrics_glass.jpg",
+    "aquarium_crowd_look_phones_up.jpg",
+    "aquarium_light_banks_crowd_out.jpg",
+    "aquarium_sand_bury.jpg"
+   ],
+   "status": "approved",
+   "date": "2026-10-19",
+   "toki": "ich habe das mv trotz kleiner fehler hochgeladen",
+   "notes": "critics (KING final, not toki): the crowd (parts.tsx Visitor) reads as placeholder primitives; props flat next to her painting - a look pass before the crowd carries a whole video again (BACKLOG)",
+   "used_in": [
+    "2026-10-18_king"
+   ]
+  },
+  {
+   "id": "set-cardtable",
+   "code": "studio/src/three/sets/CardTable.tsx, studio/src/three/cards.tsx",
+   "stills": [
+    "set_cardtable__lyrics_card.jpg",
+    "set_cardtable_night__pool_deal.jpg",
+    "cardtable_house_collapse_pile.jpg",
+    "cardtable_pickup_king_warning.jpg"
+   ],
+   "status": "approved",
+   "date": "2026-10-19",
+   "toki": "ich habe das mv trotz kleiner fehler hochgeladen",
+   "notes": "critics: black voids in the night - an ambient backdrop before reuse",
+   "used_in": [
+    "2026-10-18_king"
+   ]
+  },
+  {
+   "id": "set-weather",
+   "code": "studio/src/three/sets/Weather.tsx",
+   "stills": [
+    "set_weather__lyrics_ticker.jpg",
+    "raymi_glow__weather_flood.jpg"
+   ],
+   "status": "new",
+   "date": "2026-10-18",
+   "toki": "",
+   "notes": "built for the KING boards (idea C, not picked); never in an uploaded video",
+   "used_in": []
+  },
+  {
+   "id": "aquarium-story-props",
+   "code": "studio/src/three/aquarium_props.tsx, studio/src/three/props.tsx",
+   "stills": [
+    "aquarium_phone_taps_hands_lamp.jpg",
+    "aquarium_coins_deck_salmon.jpg",
+    "aquarium_card_rain_felt.jpg",
+    "aquarium_led_flip_wish_chute.jpg",
+    "aquarium_cap_off.jpg"
+   ],
+   "status": "approved",
+   "date": "2026-10-19",
+   "toki": "ich habe das mv trotz kleiner fehler hochgeladen",
+   "notes": "phone, knuckle taps, glass hands, coins, ledge deck, card rain, work lamp, salmon, wish chute; critics: primitive next to her painting (texture / wear pass)",
+   "used_in": [
+    "2026-10-18_king"
+   ]
+  },
+  {
+   "id": "crown",
+   "code": "studio/src/three/props.tsx CapCrown, studio/src/film/Film.tsx (worn on her head)",
+   "stills": [
+    "raymi_crown_ray_ring_glow.jpg",
+    "aquarium_cap_off.jpg"
+   ],
+   "status": "open",
+   "date": "2026-10-19",
+   "toki": "fehler wie schlecht erkennbare krone müssen selber erkannt werden das ist das main element",
+   "notes": "13 x 7 cm on a 1.55 m figure: 0.2-4.2 % of the frame height in 28 of KING's 30 crown shots. A worn hero needs scale for the screen, not for realism, and value contrast to her hair; the hero guard (check.ts heroFaults) measures it now",
+   "used_in": [
+    "2026-10-18_king"
+   ]
+  },
+  {
+   "id": "lyrics-v1",
+   "code": "studio/src/three/Words3D.tsx (style v1: sign, float, stamp, glass, card, ticker; fog, engraved, screen, print, felt, light)",
+   "stills": [
+    "lyrics_float.jpg",
+    "lyrics_stamp.jpg",
+    "lyrics_fog.jpg",
+    "lyrics_engraved.jpg",
+    "lyrics_print.jpg",
+    "lyrics_screen.jpg",
+    "lyrics_light.jpg"
+   ],
+   "status": "open",
+   "date": "2026-10-19",
+   "toki": "ich mag die lyrics immernoch nicht ... die lyrics wirken immernoch nicht stimmig mit dem gesamtbild. sie sind oft zu klein , zu dünn oder wirken aufgesetzt.",
+   "notes": "superseded by v2 (2026-10-19); jobs made before pin \"lyric_style\": \"v1\" so they render as they were. The kinds (where words live) carry on in v2.",
+   "used_in": [
+    "2026-10-18_king"
+   ]
+  },
+  {
+   "id": "lyrics-v2",
+   "code": "studio/src/three/Words3D.tsx (style v2), studio/src/film/lyricLayout.ts, assets/fonts/Raymi-Heavy.ttf (raymi/font.py heavy)",
+   "stills": [],
+   "status": "approved",
+   "date": "2026-10-19",
+   "toki": "Ja, v2 wird der Standard für Lyrics. Die offenen Punkte vom type-critic gehen in die nächste Runde.",
+   "notes": "THE default since 2026-10-19 (timeline.py lyric_style v2). Style frames: jobs/2026-10-19_lyrics-v2/boards. Next round (type-critic, reviews/style_type-critic_1/2.md): aquarium shell / coral as solids, her heavy Latin m reads like n when small, romaji / English bigger on the 390 px feed, a carrier object + a different form per shot",
+   "used_in": []
+  },
+  {
+   "id": "short-hook-cta",
+   "code": "studio/src/film/Film.tsx overlay, studio/src/Text.tsx Stamp",
+   "stills": [],
+   "status": "approved",
+   "date": "2026-10-19",
+   "toki": "",
+   "notes": "hook <= 8 words at frame 0, comment question >= 2.5 s before the end, never on her face",
+   "used_in": [
+    "2026-10-18_king"
+   ]
+  },
+  {
+   "id": "guards",
+   "code": "studio/src/film/check.ts, studio/guard.mjs",
+   "stills": [],
+   "status": "approved",
+   "date": "2026-10-19",
+   "toki": "",
+   "notes": "killed every mechanical fault class in KING for good (cut edges, clipped text, props in the lens, sliced face); now also the main element (hero) and lyrics v2 sizes",
+   "used_in": [
+    "2026-10-18_king"
+   ]
+  }
  ]
 }

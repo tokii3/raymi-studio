@@ -1,5 +1,12 @@
 # PROGRESS - Raymi Studio (newest first, kept short)
 
+## 2026-10-19 (later) - lyrics v2 is the studio default
+- Style frames rendered in the cloud (stills runs, 2 rounds, jobs/2026-10-19_lyrics-v2/boards), type-critic FAIL x2
+  (verbatim in its reviews/) -> stop; toki: "Ja, v2 wird der Standard für Lyrics. Die offenen Punkte vom type-critic
+  gehen in die nächste Runde." timeline.py default lyric_style = v2; every job made before pins "v1".
+- From round 1 became studio parts: a guard for lyrics hidden behind a prop (+ missing solids registered), romaji /
+  English 0.7 of a line and >= 5 %. Next round (BACKLOG): shell / coral solids, the heavy "m", feed-size subs, carriers.
+
 ## 2026-10-19 - toki's KING verdict became studio parts (engine only, no render)
 - toki: colours better after the per-act grade; animation, transitions, effects "mag ich alle sehr"; MV uploaded
   "trotz kleiner fehler"; the crown (main element) hard to read - must be caught by the studio itself; lyrics still too
@@ -21,9 +28,7 @@
 - Tests: 91 python + 13 studio green.
 
 ## NEXT
-- toki looks at the lyric style frames: rename jobs/2026-10-19_lyrics-v{1,2}/stills.pending.json -> stills.json
-  (one cloud stills run, ~5 min) when she says go; type-critic on them; her OK -> v2 becomes the default
-  (timeline.py job_style default "v2", catalog status).
+- (done later the same day: lyric style frames rendered, v2 is the default)
 - Next package: treatment names the main element(s) + grade per act; thumbs step at the end.
 
 ## 2026-10-18 (late) - KING full package rendered; final screening FAIL x2 -> STOP, toki decides
