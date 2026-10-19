@@ -213,9 +213,12 @@ function v2Texture(text: string, color: string, shadow: string, material: LyricM
     ctx.textAlign = 'center';
     const x = W / 2, y = PX2 * 1.02;
     switch (material) {
-      case 'light':                               // drawn in light: wide glow, hot white core
-        ctx.shadowColor = accent; ctx.shadowBlur = PX2 * 0.28; ctx.fillStyle = color; ctx.fillText(text, x, y);
-        ctx.shadowBlur = PX2 * 0.08; ctx.fillStyle = '#ffffff'; ctx.globalAlpha = 0.65; ctx.fillText(text, x, y); ctx.globalAlpha = 1; return;
+      case 'light':                               // drawn in light: a soft dark bed (contrast over flames / her dress),
+        // a coloured glow, then a CRISP coloured core. Was additive with a white core: on bright parts it clipped to
+        // white blobs ("fire" unreadable, Firestarter boards 2026-10-19)
+        ctx.shadowColor = shadow; ctx.shadowBlur = PX2 * 0.16; ctx.fillStyle = shadow; ctx.globalAlpha = 0.85; ctx.fillText(text, x, y);
+        ctx.globalAlpha = 1; ctx.shadowColor = accent; ctx.shadowBlur = PX2 * 0.22; ctx.fillStyle = color; ctx.fillText(text, x, y);
+        ctx.shadowBlur = 0; ctx.fillText(text, x, y); return;
       case 'engraved':                            // cut into the surface: light lip below, dark groove
         ctx.fillStyle = 'rgba(255,240,200,0.7)'; ctx.fillText(text, x + 3, y + 5);
         ctx.fillStyle = shadow; ctx.fillText(text, x, y);
@@ -252,7 +255,7 @@ const ItemMesh: React.FC<{it: Item; L: Lyrics; color: string; shadow: string; ac
     ? new THREE.MeshToonMaterial({map: tex, gradientMap: toonRamp(), transparent: true, alphaTest: 0.04, side: THREE.DoubleSide,
       emissive: new THREE.Color('#666666'), emissiveMap: tex, fog: true})
     : new THREE.MeshBasicMaterial({map: tex, transparent: true, alphaTest: 0.02, toneMapped: false, side: THREE.DoubleSide, fog: false,
-      blending: glow ? THREE.AdditiveBlending : THREE.NormalBlending, depthWrite: !glow})), [tex, lit, glow]);
+      blending: THREE.NormalBlending, depthWrite: !glow})), [tex, lit, glow]);
   const depth = useMemo(() => new THREE.MeshDepthMaterial({depthPacking: THREE.RGBADepthPacking, map: tex, alphaTest: 0.5, side: THREE.DoubleSide}), [tex]);
   mat.opacity = op;
   return (

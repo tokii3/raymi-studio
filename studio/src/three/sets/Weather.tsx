@@ -25,7 +25,7 @@ function mapPaint(mode: string, warning: boolean) {
     for (let i = 1; i < 5; i++) { ctx.beginPath(); ctx.moveTo(0, (i / 5) * h); ctx.lineTo(w, (i / 5) * h); ctx.stroke(); }
     const isl = [[0.2, 0.62, 0.13, 0.09], [0.31, 0.4, 0.07, 0.05], [0.72, 0.68, 0.16, 0.1], [0.83, 0.32, 0.09, 0.07], [0.55, 0.22, 0.05, 0.04]];
     for (const [x, y, rx, ry] of isl) {
-      ctx.fillStyle = mode === 'fire' ? '#ff7a3d' : '#3fc4a0';
+      ctx.fillStyle = mode === 'fire' ? '#2f8f80' : '#3fc4a0';
       ctx.beginPath();
       for (let k = 0; k <= 16; k++) {
         const a = (k / 16) * Math.PI * 2, r = 1 + 0.18 * Math.sin(a * 3 + x * 20);
@@ -65,10 +65,21 @@ function mapPaint(mode: string, warning: boolean) {
       for (let k = 0; k < 4; k++) { ctx.beginPath(); ctx.arc(w * 0.5, h * 0.5, h * (0.08 + k * 0.07), k, k + 4.2); ctx.stroke(); }
       sym(0.22, 0.45, 'storm'); sym(0.75, 0.5, 'storm'); sym(0.83, 0.2, 'rain'); sym(0.3, 0.22, 'rain');
     } else if (mode === 'fire') {
-      ctx.strokeStyle = 'rgba(255,120,60,0.6)'; ctx.lineWidth = h * 0.014; ctx.setLineDash([h * 0.03, h * 0.02]);
-      for (let k = 0; k < 3; k++) { ctx.beginPath(); ctx.arc(w * 0.48, h * 0.55, h * (0.14 + k * 0.11), Math.PI * 0.9, Math.PI * 2.1); ctx.stroke(); }
-      ctx.setLineDash([]);
-      sym(0.22, 0.5, 'flame'); sym(0.72, 0.56, 'flame'); sym(0.33, 0.33, 'flame'); sym(0.84, 0.26, 'flame'); sym(0.55, 0.2, 'flame');
+      // a broadcast heat map (clean, like a real weather graphic): soft heat blooms over the islands, thin isotherms,
+      // small flame pins - boards 1 had flat orange islands + crude dashed arcs
+      ctx.globalCompositeOperation = 'lighter';
+      for (const [x, y, r] of [[0.22, 0.6, 0.2], [0.74, 0.66, 0.24], [0.33, 0.38, 0.12], [0.84, 0.3, 0.14], [0.55, 0.22, 0.09]]) {
+        const g2 = ctx.createRadialGradient(x * w, y * h, 0, x * w, y * h, r * w);
+        g2.addColorStop(0, 'rgba(255,214,120,0.85)'); g2.addColorStop(0.35, 'rgba(255,110,50,0.6)'); g2.addColorStop(1, 'rgba(120,20,60,0)');
+        ctx.fillStyle = g2; ctx.fillRect(0, 0, w, h);
+      }
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = 'rgba(255,190,150,0.35)'; ctx.lineWidth = h * 0.004;
+      for (const [x, y, r] of [[0.22, 0.6, 0.2], [0.74, 0.66, 0.24]]) for (let k = 1; k <= 3; k++) {
+        ctx.beginPath(); ctx.ellipse(x * w, y * h, r * w * k * 0.33, r * h * k * 0.5, 0.2, 0, Math.PI * 2); ctx.stroke();
+      }
+      const pin = (x: number, y: number) => { ctx.save(); ctx.translate(x * w, y * h); ctx.scale(0.55, 0.55); ctx.translate(-x * w, -y * h); sym(x, y, 'flame'); ctx.restore(); };
+      pin(0.22, 0.58); pin(0.74, 0.64); pin(0.33, 0.37); pin(0.84, 0.29); pin(0.55, 0.21);
     } else {
       sym(0.22, 0.48, 'sun'); sym(0.72, 0.52, 'sun'); sym(0.83, 0.2, 'cloud'); sym(0.32, 0.25, 'sun');
     }

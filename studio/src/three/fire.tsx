@@ -24,7 +24,7 @@ function flameTex(c: string, core: string): THREE.CanvasTexture {
     ctx.fillStyle = g; ctx.fill(path);
     ctx.restore();
     const r = ctx.createRadialGradient(w / 2, h * 0.74, 0, w / 2, h * 0.74, w * 0.34);
-    r.addColorStop(0, 'rgba(255,255,255,0.95)'); r.addColorStop(1, 'rgba(255,255,255,0)');
+    r.addColorStop(0, 'rgba(255,255,255,0.6)'); r.addColorStop(1, 'rgba(255,255,255,0)');
     ctx.fillStyle = r; ctx.fillRect(0, 0, w, h);
   });
 }
@@ -61,7 +61,7 @@ export const Flame: React.FC<{pos: P3; f: number; size?: number; c?: string; cor
       {[0, 1].map((k) => (
         <mesh key={`i${k}`} position={[0, size * 0.28 * fl, 0]} rotation={[0, (k * Math.PI) / 2 + 0.4, -sway]} scale={[w * 0.5, size * 0.56 * fl, 1]} renderOrder={10}>
           <planeGeometry args={[1, 1]} />
-          <meshBasicMaterial map={flameTex('#fff1d6', '#ffffff')} {...add} opacity={0.85} />
+          <meshBasicMaterial map={flameTex(core, '#ffffff')} {...add} opacity={0.6} />
         </mesh>
       ))}
       {/* halo in the water around it */}

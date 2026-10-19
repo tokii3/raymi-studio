@@ -13,12 +13,12 @@
 import React from 'react';
 import * as THREE from 'three';
 import {Bubbles, Ground, RBox, Rock} from '../parts';
-import {SetLight, rnd, toon} from '../look';
+import {SetLight, blobTexture, rnd, toon} from '../look';
 import {Fires, Flame} from '../fire';
 import type {SetProps} from './index';
 
 type P3 = [number, number, number];
-const BASALT = '#161a2a', ROCK = '#1e2336', CHIMNEY = '#23202c', HOT = '#ff7a3d', VIOLET = '#b45cff';
+const BASALT = '#161a2a', ROCK = '#1e2336', CHIMNEY = '#17141d', HOT = '#ff7a3d', VIOLET = '#b45cff';
 
 export const VENTS: {pos: P3; h: number; r: number}[] = [
   {pos: [1.3, 0, -1.7], h: 2.2, r: 0.42},     // the main vent ("vent" mark): where she strikes
@@ -61,10 +61,24 @@ const Chimney: React.FC<{pos: P3; h: number; r: number; seed: number; heat: numb
         const t0 = i / rings, t1 = (i + 1) / rings;
         const r0 = r * (1 - t0 * 0.55) * (0.9 + 0.2 * rnd(seed + i)), r1 = r * (1 - t1 * 0.55) * (0.9 + 0.2 * rnd(seed + i + 1));
         return (
-          <mesh key={i} position={[0.05 * (rnd(seed + i * 3) - 0.5), (t0 + t1) / 2 * h, 0.05 * (rnd(seed + i * 5) - 0.5)]} material={toon(CHIMNEY, heat > 0 ? glowC.getStyle() : '#000000', heat * 0.25 * (1 - t0))} castShadow receiveShadow>
-            <cylinderGeometry args={[r1, r0, h / rings + 0.02, 9]} />
-          </mesh>
+          <group key={i}>
+            <mesh position={[0.07 * (rnd(seed + i * 3) - 0.5), (t0 + t1) / 2 * h, 0.07 * (rnd(seed + i * 5) - 0.5)]} rotation={[0.06 * (rnd(seed + i) - 0.5), rnd(seed + i * 9) * 3, 0.06 * (rnd(seed + i * 2) - 0.5)]}
+              material={toon(CHIMNEY)} castShadow receiveShadow>
+              <cylinderGeometry args={[r1, r0, h / rings + 0.03, 7]} />
+            </mesh>
+            {heat > 0 && i > 0 ? (
+              <mesh position={[0, t0 * h, 0]} rotation={[0.05 * (rnd(seed + i * 4) - 0.5), 0, 0.05 * (rnd(seed + i * 6) - 0.5)]}>
+                <cylinderGeometry args={[r0 * 1.015, r0 * 1.015, 0.018, 7, 1, true]} />
+                <meshBasicMaterial color={glowC} toneMapped={false} transparent opacity={Math.min(1, heat) * (1 - t0 * 0.6)} side={THREE.DoubleSide} />
+              </mesh>
+            ) : null}
+          </group>
         );
+      })}
+      {[0, 1, 2, 3].map((k) => {
+        const a = rnd(seed + k * 7) * Math.PI * 2, rr = r * (0.9 + 0.3 * rnd(seed + k));
+        const sz = r * (0.45 + 0.35 * rnd(seed + k * 3));
+        return <Rock key={`c${k}`} pos={[Math.cos(a) * rr, sz * 0.3 + (k === 3 ? h * 0.35 : 0), Math.sin(a) * rr]} size={[sz, sz * 0.8, sz]} seed={seed + k + 90} c={CHIMNEY} rotY={a} />;
       })}
       {/* the glowing mouth */}
       <mesh position={[0, h + 0.01, 0]} rotation={[-Math.PI / 2, 0, 0]}>
@@ -74,11 +88,11 @@ const Chimney: React.FC<{pos: P3; h: number; r: number; seed: number; heat: numb
       {heat > 0 ? <Flame pos={[0, h, 0]} f={f} size={r * (1.1 + 3.2 * erupt) * Math.min(1, heat * 1.5)} c={erupt > 0.3 ? HOT : VIOLET} core="#ffe2b8" seed={seed} light={0.8 + erupt} embers={8 + Math.round(erupt * 12)} /> : null}
       {smoke ? Array.from({length: 7}, (_, i) => {
         const life = 160, t = ((f + rnd(seed + i) * life) % life) / life;
-        const s = r * (0.6 + t * 2.2);
+        const s = r * (0.45 + t * 1.6);
         return (
           <mesh key={`s${i}`} position={[0.3 * Math.sin(t * 4 + i), h + t * 4.5, 0.2 * Math.cos(t * 3 + i)]} scale={s} renderOrder={6}>
             <sphereGeometry args={[1, 10, 8]} />
-            <meshBasicMaterial color={heat > 0 ? '#3a2430' : '#14131c'} transparent opacity={0.35 * (1 - t)} depthWrite={false} />
+            <meshBasicMaterial color={heat > 0 ? '#24161e' : '#0f0e16'} transparent opacity={0.13 * (1 - t) * Math.min(1, t * 6)} depthWrite={false} />
           </mesh>
         );
       }) : null}
@@ -117,9 +131,11 @@ const Lantern: React.FC<{pos: P3; on: number; f: number; seed: number; c: string
   const col = new THREE.Color('#3a2c3c').lerp(new THREE.Color(c), on);
   return (
     <group position={pos} rotation={[0, 0, sw]}>
-      <mesh position={[0, -0.18, 0]} material={toon(col.getStyle(), on > 0 ? c : '#000000', 0.9 * on)}><sphereGeometry args={[0.16, 14, 10]} /></mesh>
-      <mesh position={[0, -0.02, 0]} material={toon('#1a1418')}><cylinderGeometry args={[0.07, 0.09, 0.05, 10]} /></mesh>
-      <mesh position={[0, -0.35, 0]} material={toon('#1a1418')}><cylinderGeometry args={[0.09, 0.07, 0.04, 10]} /></mesh>
+      <mesh position={[0, -0.2, 0]} scale={[1, 1.3, 1]} material={toon(col.getStyle(), on > 0 ? c : '#000000', 0.95 * on)}><sphereGeometry args={[0.15, 16, 12]} /></mesh>
+      {[-0.12, -0.2, -0.28].map((yy, k) => <mesh key={k} position={[0, yy, 0]} rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[0.152 * Math.sqrt(1 - ((yy + 0.2) / 0.2) ** 2 * 0.9), 0.004, 4, 24]} /><meshBasicMaterial color={on > 0 ? '#7a4a20' : '#1a1418'} /></mesh>)}
+      <mesh position={[0, -0.01, 0]} material={toon('#1a1418')}><cylinderGeometry args={[0.045, 0.05, 0.03, 10]} /></mesh>
+      <mesh position={[0, -0.395, 0]}><cylinderGeometry args={[0.05, 0.045, 0.02, 10]} /><meshBasicMaterial color={on > 0 ? c : '#1a1418'} toneMapped={false} /></mesh>
+      {on > 0 ? <mesh position={[0, -0.2, 0]} scale={0.9 * on}><sphereGeometry args={[0.5, 14, 10]} /><meshBasicMaterial map={blobTexture(c)} transparent opacity={0.16} blending={THREE.AdditiveBlending} depthWrite={false} toneMapped={false} side={THREE.BackSide} /></mesh> : null}
       {on > 0.5 && seed % 3 === 0 ? <pointLight position={[0, -0.18, 0]} color={c} intensity={2.2 * on} distance={2.6} decay={1.8} /> : null}
     </group>
   );
