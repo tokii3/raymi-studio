@@ -39,14 +39,14 @@ fire has a real home down there; "fireworks" are bubble bursts rising from the v
 
 ## Main element(s) (the hero - read at phone size)
 1. **Her flame** (`heroes.flame`, kind `prop`): the violet fire in her hand. It IS the video - the impossible thing the
-   thumbnail promises. Where it must read: 0-27 s (the strikes, the catch, the hook), 41-50 (the wind), 50.4-53 (the
-   relight), 115-120 (she rides it up), 171-174 (she throws it into the sky). Size: never smaller than ~8 % of the
+   thumbnail promises. Where it must read: 0-2.0 (the cold open), 12.84-27.31 (the catch, the hook), 41-50 (the wind),
+   50.4-53 (the relight), 115-120 (she rides it up), 171-174 (she throws it into the sky). Size: never smaller than ~8 % of the
    frame height in those shots (the component scales: a 0.34 m flame at strike_close is ~20 %); value contrast: a hot
    near-white core against BLACK water - in every shot that marks it, it is the brightest thing on screen: the vents in
    those shots burn amber at a capped value (dimmer than her violet-white core), so six burning chimneys never outshine it. Colour: her violet (#b45cff) with a gold core - never orange (orange is everyone's fire;
    violet is hers).
 2. **Her face lit from below by her own fire** (`heroes.face`, kind `face`): the thumbnail and the opening. Where:
-   0-13 (every spark lights it for a few frames), 12.84, 50.82, 64.29, 141-143.8, 190-206. Readable = the face box >= 14 %
+   0-2.0 (the cold open = the thumbnail), 2.95-12.84 (each strike lights it), 12.84, 50.82, 64.29, 141-143.8, 190-206. Readable = the face box >= 14 %
    of the frame height in those close shots; lit by the flame (under-light) with the black around it.
 3. **The word FIRE** (`heroes.fire_word`, kind `word`): the one key word of the song, written by the fire itself
    (cracks, bubbles, fireworks). Key size (keyScale 2.8) every time it is sung in a chorus; never over a flame (BACKLOG
@@ -194,7 +194,7 @@ marked "acted". W = written by fire.
 ## Elements (every element gets its chain)
 | element | means for this song + Raymi | idea | perfect version | connections | exists / build | reinvented in her world |
 |---|---|---|---|---|---|---|
-| the strikes (intro) | "work a lil harder": fire needs effort; the comeback is not free | she tries to light the dark and fails 6 times | sparks that light only her face for frames; each shows more world; on the first word it catches | thumbnail (1.0 s), payoff (the venom strike at 50.82 is the same move done right) | Fires (`at` + `grow`), sparks = short flames; build: a spark burst (BUILD 1) | her barb is the match |
+| the strikes (intro) | "work a lil harder": fire needs effort; the comeback is not free | she tries to light the dark and fails five times (each failure its own gag, see 'the failed strikes') | sparks that light her face for frames; on the first sung word it catches | the venom strike at 50.82 is the same move done right | Fires (`at` + `grow`), sparks = short flames; build: a spark burst (BUILD 1) | her barb is the match |
 | the vent field | the only real fire on the sea floor | the place the fire lives | dark basalt chimneys with lava seams, glowing mouths, mineral smoke; a seventh tall one at the back | the rap's seven days; the drop | set `deep` (built 2026-10-19), BUILD 2: 7th vent, per-vent ignite times | a black smoker is a sea-floor torch |
 | the crack network | "burn it down" = light it up | fire runs along the cracks | the floor draws itself into a glowing map; the lyrics are written by it | wow 1, the look down at 137.94 | `deep` ignite / origin (built); BUILD 3: lyric words in crack style on the floor (Words3D light, tilt -90 - exists) | |
 | the cold current | "바람 불어도" - the wind | the only thing that can kill the fire | a pale cyan streak, marine snow blown sideways, flames bend flat; at 50.0 it kills all | the turn; "I'm the lighter" | BUILD 4: current streak + flame bend (set option `current`) | wind underwater = a current |
