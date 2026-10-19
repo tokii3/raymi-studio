@@ -76,13 +76,7 @@ jobs:
       - name: Her font grows (missing glyphs built in her style, committed back)
         if: steps.which.outputs.jobs != ''
         run: |
-          set -e
-          for J in ${{ steps.which.outputs.jobs }}; do python -m raymi font ensure "$J"; done
-          python -m raymi font heavy        # her heavy weight (lyrics v2) follows every grown glyph
-          git config user.name "raymi-font-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add assets/fonts/Raymi-Regular.ttf assets/fonts/Raymi-Heavy.ttf assets/fonts/glyphs_built.txt 2>/dev/null || true
-          git diff --cached --quiet || (git commit -qm "font: glyphs built for ${{ steps.which.outputs.jobs }} [skip ci]" && git pull --rebase -q && git push -q)
+          bash .github/font_grow.sh ${{ steps.which.outputs.jobs }}   # retries on a parallel run's font push
       - name: Render stills
         if: steps.which.outputs.jobs != ''
         run: |

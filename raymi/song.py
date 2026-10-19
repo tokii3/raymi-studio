@@ -464,21 +464,34 @@ def asr_gaps(asr: list[dict], spans: list[list[float]], min_gap: float = 4.0, pa
 
 def fill_gaps(vocals: Path, asr: list[dict], spans: list[list[float]], langs: list[str], prompt: str, model: str
               ) -> tuple[list[dict], list[dict]]:
-    """Second pass: every gap window transcribed alone, once per language; the pass with the most words wins and
-    replaces whatever stood in the window (a lone hallucinated word). Returns (new asr, log)."""
+    """Second pass: every gap window transcribed alone, once per language; the pass whose SOUND matches the official
+    text best wins (letters in common, `heard_letters`) and replaces whatever stood in the window (a lone hallucinated
+    word). Most WORDS was the first rule and failed (FIRESTARTER 2026-10-19: Korean mode wrote the English chorus in
+    Hangul - more words, wrong ones - and the alignment got worse). A pass that matches less than half of its own
+    letters is not used. Returns (new asr, log)."""
+    target = roma(prompt)
     log = []
     for a, b in asr_gaps(asr, spans):
         best: list[dict] = []
+        best_score = 0
         tried = {}
         for lang in langs:
             got = [w for w in transcribe(vocals, lang, prompt, model, clip=(a, b)) if a <= w["t0"] < b]
-            tried[lang] = len(got)
-            if len(got) > len(best):
-                best = got
+            sc, n = heard_letters(got, target)
+            tried[lang] = {"words": len(got), "letters": n, "matched": sc}
+            if sc > best_score and sc >= 0.5 * n:
+                best, best_score = got, sc
         if best:
             asr = sorted([w for w in asr if not (a <= w["t0"] < b)] + best, key=lambda w: w["t0"])
-        log.append({"window": [a, b], "words": tried})
+        log.append({"window": [a, b], "passes": tried, "used": bool(best)})
     return asr, log
+
+
+def heard_letters(words: list[dict], target: str, min_block: int = 3) -> tuple[int, int]:
+    """(letters of the recognised words that match the official text in runs of >= min_block, all their letters)."""
+    got = "".join(roma(w["w"]) for w in words)
+    sm = difflib.SequenceMatcher(None, got, target, autojunk=False)
+    return sum(m.size for m in sm.get_matching_blocks() if m.size >= min_block), len(got)
 
 
 def beats(song: Path) -> dict:

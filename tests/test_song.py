@@ -140,3 +140,10 @@ def test_asr_gaps_find_sung_windows_the_recogniser_missed():
     asr = [{"w": "a", "t0": 1.0}, {"w": "b", "t0": 2.0}, {"w": "x", "t0": 9.0}, {"w": "c", "t0": 20.0}]
     assert S.asr_gaps(asr, [[0.5, 21.0]], min_gap=4.0, pad=0.5) == [[1.5, 9.5], [8.5, 20.5]]
     assert S.asr_gaps(asr, [[0.5, 3.0]]) == []
+
+
+def test_heard_letters_prefers_the_pass_that_sounds_like_the_lyrics():
+    target = S.roma("I'm insane yeah I know you like it that way chaos running wild in my veins")
+    en = [{"w": "I'm"}, {"w": "insane"}, {"w": "yeah"}, {"w": "I"}, {"w": "know"}, {"w": "you"}, {"w": "like"}]
+    ko = [{"w": "아임"}, {"w": "인세인"}, {"w": "예"}, {"w": "아이"}, {"w": "노"}, {"w": "유"}, {"w": "라이크"}, {"w": "잇"}]
+    assert S.heard_letters(en, target)[0] > S.heard_letters(ko, target)[0]
