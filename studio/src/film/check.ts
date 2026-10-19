@@ -193,8 +193,8 @@ const FACE_HOLD = 0.6;   // s of text continuously on her face
 const FIG_HOLD = 1.0;    // s of a settled line hiding > 60 % of her figure, for its whole hold
 
 /** Lyrics v2 readable at phone size, measured on the CAP height: a normal word >= 5.4 % of the frame height (~ the
- *  10 % texture box), romaji / English >= 3.6 % (toki 2026-10-19 "zu klein, zu duenn"; FIRESTARTER pilots 1-3). */
-export const CAP_MIN = 0.054, SUB_CAP_MIN = 0.036;
+ *  10 % texture box), romaji / English >= 4 % (toki 2026-10-19 "zu klein, zu duenn"; FIRESTARTER pilots 1-3). */
+export const CAP_MIN = 0.054, SUB_CAP_MIN = 0.04;
 
 /** Every frame a lyric line is fully shown (from its last word on, settled), all of it must be inside the frame. */
 const L0 = (s: Shot) => s.lyrics!;
