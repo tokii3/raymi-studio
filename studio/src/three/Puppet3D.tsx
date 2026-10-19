@@ -68,3 +68,31 @@ export const Puppet3D: React.FC<{keys: PuppetKey[]; f: number; fps: number; camP
     </group>
   );
 };
+
+/** Her tail whip (FIRESTARTER: the barb is the match): a smear arc of light along the barb's path - the leading edge
+ *  sweeps `sweep` degrees round the pivot (her hip) to the barb tip in 4 frames, then the arc fades in 6. Drawn in her
+ *  sprite plane (it faces the lens like she does). d = frames since the whip. */
+export const WhipSmear: React.FC<{pivot: THREE.Vector3; tip: THREE.Vector3; camPos: V3; d: number; sweep?: number; c?: string; dir?: number}> = ({
+  pivot, tip, camPos, d, sweep = 140, c = '#c98bff', dir = 1,
+}) => {
+  if (d < 0 || d > 10) return null;
+  const yaw = Math.atan2(camPos[0] - pivot.x, camPos[2] - pivot.z);
+  const inv = new THREE.Matrix4().makeRotationY(-yaw);
+  const local = tip.clone().sub(pivot).applyMatrix4(inv);             // tip in the plane facing the lens (x right, y up)
+  const R = Math.max(0.05, Math.hypot(local.x, local.y)), end = Math.atan2(local.y, local.x);
+  const lead = Math.min(1, d / 4), fade = d <= 4 ? 1 : 1 - (d - 4) / 6;
+  const len = (sweep * Math.PI) / 180 * lead;
+  const start = dir > 0 ? end - len : end;
+  return (
+    <group position={pivot} rotation={[0, yaw, 0]}>
+      <mesh position={[0, 0, 0.04]} renderOrder={8}>
+        <ringGeometry args={[R * 0.82, R * 1.08, 40, 1, start, Math.max(0.01, len)]} />
+        <meshBasicMaterial map={blobTexture(c)} transparent opacity={0.75 * fade} depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} side={THREE.DoubleSide} />
+      </mesh>
+      <mesh position={[0, 0, 0.045]} renderOrder={9}>
+        <ringGeometry args={[R * 0.93, R * 0.99, 40, 1, start + len * 0.5, Math.max(0.01, len * 0.5)]} />
+        <meshBasicMaterial color="#fff0ff" transparent opacity={0.8 * fade} depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} side={THREE.DoubleSide} />
+      </mesh>
+    </group>
+  );
+};

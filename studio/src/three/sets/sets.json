@@ -671,7 +671,7 @@
  "_why_texts": "texts: built props that carry readable text (centre, size w/h in m, rotY deg; opt = only when that option is set, unless = not when that option is false). The guard refuses a frame that cuts one of them by the edge (pilot 1/2: a half sign reads as a fault). no_lens: boxes the camera may never be inside (min, max), e.g. under the sand or the hall floor. blank = not readable (so not guarded) when that text option is ''.",
  "_why_solids": "solids: built props the lens may never be inside or right against, and that may never hide her face for 0.4 s (stills run 19: the lens inside a coin tower, the throne hiding her). centre, size (m); opt / unless as for texts.",
  "deep": {
-  "about": "The Lamp in the Dark: the abyss 4,000 m down - black basalt floor, pillow rocks, six black-smoker chimneys (hydrothermal vents), a crack network that glows when the fire front passes, mineral smoke, marine snow; optional festival dressing (lantern strings + driftwood stalls). Floor y=0, her stage around (0.3, 0, -0.6) is kept clear, the main vent at (1.3, 0, -1.7) is 2.2 m tall.",
+  "about": "The Lamp in the Dark: the abyss 4,000 m down - black basalt floor, pillow rocks, black-smoker chimneys (hydrothermal vents), a crack network that glows when the fire front passes, mineral smoke, marine snow. Four zones: her sleeping dip (dip, ring of stones), the main vent (vent, 2.2 m), the chimney forest (five more), the giant at the back (7th vent, 5.6 m on a rise at z -10.5); behind it the sea-mount cliff (z -13.2) rising to the surface, and the heat column on the giant. Floor y=0, her stage around (0.3, 0, -0.6) is kept clear.",
   "marks": {
    "center": [
     0.3,
@@ -727,6 +727,56 @@
     0.62,
     1.05,
     -0.45
+   ],
+   "dip": [
+    0.3,
+    0.0,
+    -0.6
+   ],
+   "forest": [
+    0.2,
+    0.0,
+    -3.4
+   ],
+   "giant_stage": [
+    -0.6,
+    0.47,
+    -9.2
+   ],
+   "giant": [
+    0.8,
+    0.7,
+    -10.5
+   ],
+   "giant_top": [
+    0.8,
+    6.3,
+    -10.5
+   ],
+   "salmon_spot": [
+    -1.1,
+    0.42,
+    -1.3
+   ],
+   "bucket": [
+    -0.75,
+    0.02,
+    -1.05
+   ],
+   "cliff_base": [
+    0.8,
+    0.0,
+    -12.6
+   ],
+   "column_mid": [
+    0.8,
+    14.0,
+    -10.5
+   ],
+   "column_high": [
+    0.8,
+    30.0,
+    -10.5
    ]
   },
   "cams": {
@@ -807,6 +857,97 @@
      -1.2
     ],
     "fov": 44
+   },
+   "cold_open": {
+    "pos": [
+     0.3,
+     1.05,
+     0.55
+    ],
+    "look": [
+     0.3,
+     1.3,
+     -0.6
+    ],
+    "fov": 36
+   },
+   "barb_macro": {
+    "pos": [
+     -0.15,
+     0.45,
+     0.2
+    ],
+    "look": [
+     0.0,
+     0.35,
+     -0.6
+    ],
+    "fov": 30
+   },
+   "forest_track": {
+    "pos": [
+     -3.8,
+     1.0,
+     1.6
+    ],
+    "look": [
+     0.0,
+     1.2,
+     -3.5
+    ],
+    "fov": 44
+   },
+   "giant_low": {
+    "pos": [
+     0.4,
+     0.45,
+     -5.2
+    ],
+    "look": [
+     0.8,
+     4.5,
+     -10.5
+    ],
+    "fov": 52
+   },
+   "column_up": {
+    "pos": [
+     2.0,
+     5.0,
+     -6.8
+    ],
+    "look": [
+     0.8,
+     14.0,
+     -10.5
+    ],
+    "fov": 55
+   },
+   "city_down": {
+    "pos": [
+     0.9,
+     27.0,
+     -9.0
+    ],
+    "look": [
+     0.3,
+     0.0,
+     -3.0
+    ],
+    "fov": 50
+   },
+   "cliff_side": {
+    "pos": [
+     4.6,
+     12.0,
+     -8.6
+    ],
+    "look": [
+     0.4,
+     13.0,
+     -11.8
+    ],
+    "fov": 46
    }
   },
   "no_lens": [
@@ -909,7 +1050,167 @@
      0.72
     ],
     "unless": "vents"
+   },
+   {
+    "name": "giant vent chimney",
+    "center": [
+     0.8,
+     3.5,
+     -10.5
+    ],
+    "size": [
+     1.9,
+     5.6,
+     1.9
+    ],
+    "unless": "vents"
    }
   ]
+ },
+ "nightsea": {
+  "about": "The open sea at night (FIRESTARTER act 9): a calm sea to the horizon, a low moon (towards -x / -z), stars, a cloud that can drift over the moon; the surface (y=0) is opaque from above and can glow from below (pool around her, gold fish dots, a path to the horizon, rain rings); under it dark water and the heat column. She treads water: feet at y -0.85 so the waterline sits at her hips (a bust's cut bottom stays under the surface).",
+  "marks": {
+   "center": [
+    0.0,
+    -0.85,
+    0.0
+   ],
+   "pool": [
+    0.0,
+    -0.85,
+    0.0
+   ],
+   "bust": [
+    0.0,
+    -0.55,
+    0.0
+   ],
+   "salmon": [
+    0.8,
+    -0.06,
+    -0.35
+   ],
+   "under": [
+    0.0,
+    -3.5,
+    0.0
+   ],
+   "deep_under": [
+    0.0,
+    -8.0,
+    -1.0
+   ],
+   "sky": [
+    0.0,
+    12.0,
+    -30.0
+   ],
+   "horizon": [
+    0.0,
+    0.0,
+    -120.0
+   ],
+   "surface": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "cams": {
+   "surface_wide": {
+    "pos": [
+     0.0,
+     1.6,
+     6.5
+    ],
+    "look": [
+     0.0,
+     0.6,
+     -4.0
+    ],
+    "fov": 40
+   },
+   "surface_close": {
+    "pos": [
+     0.0,
+     0.85,
+     1.7
+    ],
+    "look": [
+     0.0,
+     0.65,
+     0.0
+    ],
+    "fov": 34
+   },
+   "split_waterline": {
+    "pos": [
+     0.0,
+     0.02,
+     3.2
+    ],
+    "look": [
+     0.0,
+     0.02,
+     0.0
+    ],
+    "fov": 46
+   },
+   "sky_up": {
+    "pos": [
+     0.0,
+     0.7,
+     4.5
+    ],
+    "look": [
+     0.0,
+     10.0,
+     -20.0
+    ],
+    "fov": 50
+   },
+   "under_up": {
+    "pos": [
+     0.0,
+     -2.8,
+     2.6
+    ],
+    "look": [
+     0.0,
+     0.4,
+     -2.0
+    ],
+    "fov": 50
+   },
+   "path_track": {
+    "pos": [
+     2.6,
+     0.9,
+     1.2
+    ],
+    "look": [
+     0.0,
+     0.5,
+     -6.0
+    ],
+    "fov": 42
+   },
+   "aerial": {
+    "pos": [
+     0.0,
+     9.0,
+     8.0
+    ],
+    "look": [
+     0.0,
+     0.0,
+     -6.0
+    ],
+    "fov": 48
+   }
+  },
+  "no_lens": [],
+  "texts": [],
+  "solids": []
  }
 }

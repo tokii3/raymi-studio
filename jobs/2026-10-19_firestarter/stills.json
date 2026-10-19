@@ -1,0 +1,12 @@
+{
+ "_why": "pilot look check (shots 1-18) before the full pilot render: one key frame per shot + the Short's frame 0 and its twist",
+ "passes": [
+  {"format": "pilot", "frames": [15, 72, 92, 160, 222, 272, 327, 340, 356, 375, 400, 480, 520, 580, 640, 700, 745, 800],
+   "names": ["p01_cold_open", "p02_rewind_eyes", "p03_strike_fizz", "p04_thief_fish", "p05_crack_dies", "p06_salmon_singed",
+             "p07_current", "p08_barb_macro", "p09_eyes", "p10_vent_salmon", "p11_catch", "p12_shrug_doubles", "p13_toss_orbit",
+             "p14_hang", "p15_crack_runs", "p16_top_down_map", "p17_crack_track", "p18_vent_rings"]},
+  {"format": "short", "frames": [0, 470, 585], "names": ["s00_short_frame0", "s16_short_cta", "s19_short_twist"]}
+ ],
+ "scale": 0.5,
+ "round": 1
+}

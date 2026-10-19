@@ -48,12 +48,12 @@ FORMATS = {"mv": ("MV", 1920, 1080), "short": ("MVShort", 1080, 1920),
            "pilot": ("MV", 1920, 1080)}   # pilot = the MV frame over shots.json window.pilot (a 20-40 s section)
 ACTS = {"idle", "pop", "hop", "bounce", "shake", "tilt", "lean", "shrink", "turn", "stomp", "float"}
 EASES = {"linear", "in", "out", "inOut", "snap", "hold"}
-LYRIC_KINDS = {"sign", "float", "stamp", "glass", "card", "ticker"}
+LYRIC_KINDS = {"sign", "float", "stamp", "glass", "card", "ticker", "firework"}
 # what a lyric is MADE of on its object (Words3D): breath-fog, engraved brass, a phone's camera UI, a card's print,
 # the felt's gold print, light
 LYRIC_MATERIALS = {None, "fog", "engraved", "screen", "print", "felt", "light"}
-TRANSITIONS = {"cut", "bubbles", "ink", "whip", "flash", "pass"}
-GRADES = {"day", "closing", "night", "own", "warm", "clean"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
+TRANSITIONS = {"cut", "bubbles", "ink", "whip", "flash", "pass", "rewind"}
+GRADES = {"day", "closing", "night", "own", "warm", "clean", "ember"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
 LYRIC_STYLES = {"v1", "v2"}
 # a main element: worn on her head (crown, hat), her face, a lyric word, a prop box in the set (check.ts heroBox)
 HERO_KINDS = {"worn", "face", "word", "prop"}
@@ -67,7 +67,20 @@ TIME_OPTS = {"banks_off", "cap_lift", "cap_off", "cap_pick", "card_flutter", "ca
              "swarm_beam", "taps", "warning_flash", "bulb_pop", "coin_flick", "coin_roll", "coin_spin", "collapse",
              "flick", "gust", "house_keys", "king_kick", "king_rot", "pickup", "pool_on", "rays_pass_lens", "shuffle",
              "slaps", "spade_glow", "swarm_peel", "topple", "warning_cards", "warning_slash", "burst_at",
-             "ignite_at", "erupt_at", "lit_at", "rise_at"}
+             "ignite_at", "erupt_at", "lit_at", "rise_at",
+             # FIRESTARTER build (sets/Deep, sets/NightSea, Film): the fire's life, the vents, the current, the colour
+             # wave, the cliff, the column, the surface, her glow colour over time, the tail whip, a grade change
+             "rewind_at", "dark_at", "kill_at", "vents_at", "flares", "shells", "current_at", "tint_at",
+             "cliff_ignite_at", "cliff_steps", "column_at", "column_bend_at", "column_unbend_at", "column_pulse",
+             "pool_at", "glow_at", "pulse_at", "dots_at", "path_at", "cloud_at", "rain_at", "rain_end_at", "fireworks",
+             "glow", "whip", "grade_at"}
+# options holding specs (a dict or a list of dicts) whose own fields are times / positions (three/fire.tsx,
+# three/creatures.tsx): "at" / "out" / "toss" / "*_at" = song seconds -> frames, "grow" / "fade" / "ember" = seconds ->
+# frame counts, "pos" / "from" / "to" = a mark or [x, y, z]
+NESTED_OPTS = {"fires", "sparks", "fish", "school", "sauna", "salmon", "props"}
+NESTED_TIME = {"at", "out", "toss"}
+NESTED_FRAMES = {"grow", "fade", "ember"}
+NESTED_VEC = {"pos", "from", "to"}
 
 REL_OPTS = {"hands"}                               # set options in seconds from the shot start
 
@@ -82,6 +95,25 @@ def time_opt(v, fr):
             return [fr(v[0]), v[1]]
         return [time_opt(x, fr) if (num(x) or isinstance(x, list)) else x for x in v]
     return v
+
+
+def nested_opt(v, fr, marks: dict, errors: list[str], tag: str):
+    """A spec option (dict or list of dicts): its times to film frames, its positions to [x, y, z]."""
+    if isinstance(v, list):
+        return [nested_opt(x, fr, marks, errors, tag) for x in v]
+    if not isinstance(v, dict):
+        return v
+    out = {}
+    for k, x in v.items():
+        if k in NESTED_VEC:
+            out[k] = _v3(x, marks, errors, f"{tag} {k}")
+        elif k in NESTED_TIME or k.endswith("_at"):
+            out[k] = time_opt(x, fr)
+        elif k in NESTED_FRAMES and isinstance(x, (int, float)):
+            out[k] = max(1, round(float(x) * FPS))
+        else:
+            out[k] = x
+    return out
 
 
 class TimelineError(ValueError):
@@ -453,7 +485,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                           "cuts": info["cut_sides"], "top": top, "feet": float(min(1.0, feet)),
                           "head": [float(x) for x in head],
                           "pos": pos, "height": float(r.get("height", DEFAULT_HEIGHT)), "act": r.get("act", "idle"),
-                          "icon": r.get("icon"), "flip": bool(r.get("flip", False)),
+                          "icon": r.get("icon"), "flip": bool(r.get("flip", False)), "rot": float(r.get("rot", 0)),
                           "move": round(float(r.get("move", 0.0)) * FPS), "arc": float(r.get("arc", 0.0)),
                           "ease": r.get("ease", "inOut")})
         # camera keys
@@ -493,6 +525,11 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             continue
         # lyrics living in this shot
         lyr = s.get("lyrics")
+        text = s.get("text")                              # words that are not sung (a title in the picture: the cold
+        if text and lyr:                                  # open's 'FIRE. UNDERWATER.'), timed from the shot start
+            errors.append(f"{tag}: a shot shows lyrics OR a text, not both")
+        elif text:
+            lyr = {k: v for k, v in text.items() if k != "say"}
         if lyr and fmt == "short" and isinstance(lyr.get("short"), dict):
             lyr = {**lyr, **lyr["short"]}                 # the Short frame is narrow: its own anchor / size / width
         L, words = None, []
@@ -516,8 +553,17 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                 heavy = True
                 L.update({"style": "v2", "tilt": float(lyr.get("tilt", 0)), "roll": float(lyr.get("roll", 0)),
                           "keyScale": float(lyr.get("key_scale", 2.8)), "auto": "color" not in lyr,
-                          "small": lyr.get("small"), "subs": {}})
-            only_lines = set(lyr["lines"]) if "lines" in lyr else None      # a line can be ACTED instead of written
+                          "small": lyr.get("small"), "subs": {}, "reveal": lyr.get("reveal"), "dim": lyr.get("dim"),
+                          "mirror": lyr.get("mirror")})
+            if text:
+                say = text.get("say") or []
+                line_no = 10000 + i                       # never a lyric line index
+                for wi, (w, t) in enumerate(say):
+                    t1 = float(say[wi + 1][1]) if wi + 1 < len(say) else float(text.get("until", b - a))
+                    words.append({"w": w, "from": fr(a + float(t)), "to": fr(a + t1), "key": w.lower() in keys,
+                                  "line": line_no, "idx": wi, "em": P.text_em(w, heavy=style == "v2")})
+                    screen_texts.append(w)
+            only_lines = set(lyr["lines"]) if "lines" in lyr else (set() if text else None)   # a line can be ACTED instead of written
             only_words = set(lyr["words"]) if "words" in lyr else None
             for li, ln in enumerate(lyrics):
                 if only_lines is not None and li not in only_lines:
@@ -557,19 +603,10 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             opts[k] = time_opt(opts[k], fr)
         for k in REL_OPTS & opts.keys():                   # seconds from this shot's start
             opts[k] = time_opt(opts[k], lambda t, a=a: fr(a + t))
-        if isinstance(opts.get("fires"), list):           # flames anywhere (three/fire.tsx): at = song s, grow = s
-            fires = []
-            for x in opts["fires"]:
-                pos = _v3(x.get("pos"), marks, errors, f"{tag} fire") if isinstance(x, dict) else None
-                if pos is None:
-                    continue
-                y = {**x, "pos": pos}
-                if "at" in x:
-                    y["at"] = fr(x["at"])
-                if "grow" in x:
-                    y["grow"] = max(1, round(float(x["grow"]) * FPS))
-                fires.append(y)
-            opts["fires"] = fires
+        for k in NESTED_OPTS & opts.keys():               # flames, strikes, creatures, props: their times + places
+            if k in ("fires", "sparks") and isinstance(opts[k], list):   # a flame on HER (uv) needs no world place
+                opts[k] = [{**x, "pos": x.get("pos", [0, 0, 0])} if isinstance(x, dict) else x for x in opts[k]]
+            opts[k] = nested_opt(opts[k], fr, marks, errors, f"{tag} {k}")
         if lyr and lyr.get("anchor") == "led" and "led" in marks:
             opts["led"] = ""                               # a lyric written on the LED board replaces its text (stills 14)
         for k, v in opts.items():
@@ -583,6 +620,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             errors.append(f"{tag}: transition.kind must be one of {sorted(TRANSITIONS)}")
         hero = []
         for h in s.get("hero", []):
+            if fmt == "short" and isinstance(h, dict) and isinstance(h.get("short"), dict):
+                h = {**{k: v for k, v in h.items() if k != "short"}, **h["short"]}   # the narrow frame's own reason
             name = h if isinstance(h, str) else h.get("name")
             spec_h = {**(heroes.get(name) or {}), **({} if isinstance(h, str) else h)}
             if name not in heroes:
@@ -593,7 +632,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                 errors.append(f"{tag}: hero {name!r} kind must be one of {sorted(HERO_KINDS)}")
                 continue
             hero.append({"name": name, "kind": kind, "word": spec_h.get("word", name), "min": float(spec_h.get("min", 0.05)),
-                         "why_small": spec_h.get("why_small"),
+                         "why_small": spec_h.get("why_small"), **({"uv": spec_h["uv"]} if "uv" in spec_h else {}),
                          **({"size": spec_h["size"]} if "size" in spec_h else {}),
                          **({"center": _v3(spec_h["center"], marks, errors, tag)} if "center" in spec_h else {})})
         shots.append({"id": s.get("id", f"s{i + 1}"), "from": max(0, fr(a)), "to": min(total, fr(b)), "set": st, "hero": hero,

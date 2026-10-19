@@ -22,6 +22,7 @@ export type PuppetKey = {
   act: Act;
   icon?: string | null;
   flip?: boolean;
+  rot?: number;            // degrees in the picture plane: she lies back / floats / dives (a standing sprite turned)
   move: number;            // frames the move from the previous key's pos takes (ends at f)
   arc: number;             // hop height of that move (m)
   ease?: Ease;
@@ -33,7 +34,7 @@ export type Word3 = {w: string; from: number; to: number; key: boolean; line: nu
  *  widths in her heavy font (em, from raymi/timeline.py) for the guards. */
 export type LyricSub = {roma: string; en: string; romaEm?: number[] | null; enEm?: number[] | null};
 
-export type LyricKind = 'sign' | 'float' | 'stamp' | 'glass' | 'card' | 'ticker';
+export type LyricKind = 'sign' | 'float' | 'stamp' | 'glass' | 'card' | 'ticker' | 'firework';
 export type LyricMaterial = 'fog' | 'engraved' | 'screen' | 'print' | 'felt' | 'light';
 export type Lyrics = {
   kind: LyricKind;
@@ -55,15 +56,19 @@ export type Lyrics = {
   auto?: boolean;          // colours from the scene's grade (grade.ts LyricTone) instead of color / accent
   subs?: Record<string, LyricSub>;   // per lyric line index: romaji + English under a Japanese line
   small?: string | null;   // a written reason to go below the readable size on purpose (a principle, not a law)
+  reveal?: 'burn' | null;  // each word is BURNED in left to right over its sung time (a crack writing it), hot leading edge
+  dim?: number | null;     // 0..1 brightness of the non-key words (a line lying dark, only its key word glowing)
+  mirror?: number | null;  // firework words: the water surface height they are mirrored in (null = no mirror)
 };
 
-export type TransitionKind = 'cut' | 'bubbles' | 'ink' | 'whip' | 'flash' | 'pass';
+export type TransitionKind = 'cut' | 'bubbles' | 'ink' | 'whip' | 'flash' | 'pass' | 'rewind';
 export type Transition = {kind: TransitionKind; frames: number; obj?: string; dir?: number};
 
 export type SetEvent = {f: number; kind: string; arg?: number | string};
 
 /** A main element: worn on her head (crown, hat), her face, a lyric word, or a prop box in the set. */
-export type Hero = {name: string; kind: 'worn' | 'face' | 'word' | 'prop'; word?: string; min: number; size?: [number, number]; center?: V3; why_small?: string | null};
+export type Hero = {name: string; kind: 'worn' | 'face' | 'word' | 'prop'; word?: string; min: number; size?: [number, number]; center?: V3; why_small?: string | null;
+  uv?: [number, number]};   // uv: a prop she HOLDS - its box centre is that point of her sprite (the flame in her palm)
 
 export type Shot = {
   id: string;

@@ -11,17 +11,18 @@ import {grainTile} from '../textures';
 import {ReactionIcon} from '../Icons';
 import {Stamp} from '../Text';
 import {SETS} from '../three/sets';
-import {Puppet3D} from '../three/Puppet3D';
+import {Puppet3D, WhipSmear} from '../three/Puppet3D';
+import {Flame, SparkBurst, TossedFlame, fireScale, type FireSpec, type SparkSpec} from '../three/fire';
 import {Words3D} from '../three/Words3D';
 import {CapCrown} from '../three/props';
 import {Card, RaySwarm} from '../three/cards';
-import {flare, frames, since} from '../three/events';
+import {flare, frames, since, stepValue} from '../three/events';
 import {useTexturesReady} from '../three/look';
 import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
 import {Transitions, whipStyle} from './Transitions';
 import type {FilmProps, Shot} from './types';
-import {TONES, gradeName, type Tone} from './grade';
+import {TONES, gradeName, mixTone, type LyricTone, type Tone} from './grade';
 
 export function shotAt(shots: Shot[], f: number): number {
   for (let i = shots.length - 1; i >= 0; i--) if (f >= shots[i].from) return i;
@@ -110,6 +111,42 @@ export const Film: React.FC<FilmProps> = (props) => {
         : <Card pos={[p.x, p.y, p.z]} rot={[0.3, d * 0.4, d * 0.25]} scale={0.32} back={frames(o[key]).indexOf(f - d) % 2 === 1} sprite={o.king ? String(o.king) : undefined} rank="K" />;
     }
   }
+  // things anchored to a point of HER sprite (u across, v from the top): the flame in her palm, the barb's gold glow,
+  // a strike's sparks at the barb, the whip smear round her hip - they move with her (fire.tsx, Puppet3D WhipSmear)
+  const toLens = (v: THREE.Vector3, d = 0.06) => v.clone().add(new THREE.Vector3(camPos[0] - v.x, 0, camPos[2] - v.z).normalize().multiplyScalar(d));
+  const anchored: React.ReactNode[] = [];
+  if (pose) {
+    (Array.isArray(o.fires) ? (o.fires as FireSpec[]) : []).forEach((s, k) => {
+      if (!s.uv) return;
+      const sc = fireScale(s, f);
+      if (sc <= 0) return;
+      const a = figurePoint(shot, f, fps, camPos, s.uv[0], s.uv[1]);
+      if (!a) return;
+      const p = toLens(a);
+      const size = (s.size ?? 0.3) * sc;
+      if (s.uv2 && s.toss !== undefined) {
+        const b = figurePoint(shot, f, fps, camPos, s.uv2[0], s.uv2[1]);
+        if (b) { anchored.push(<TossedFlame key={`tf${k}`} a={p} b={toLens(b)} tosses={frames(s.toss)} f={f} size={size} c={s.c} core={s.core} seed={k * 17 + 3} />); return; }
+      }
+      anchored.push(<Flame key={`af${k}`} pos={[p.x, p.y - size * 0.15, p.z]} f={f} size={size} c={s.c} core={s.core} seed={k * 17 + 3} light={s.light ?? 1} dim={s.dim ?? 1} />);
+    });
+    (Array.isArray(o.sparks) ? (o.sparks as SparkSpec[]) : []).forEach((s, k) => {
+      if (!s.uv || f < s.at) return;
+      const q = puppetAt(shot.puppets, s.at, fps);                     // the sparks fly from where the barb WAS
+      if (!q) return;
+      const a = figurePoint(shot, s.at, fps, camPos, s.uv[0], s.uv[1]);
+      if (a) anchored.push(<SparkBurst key={`as${k}`} s={{seed: k * 13 + 2, ...s}} f={f} at={[toLens(a).x, toLens(a).y, toLens(a).z]} />);
+    });
+    if (o.whip !== undefined && Array.isArray(o.whip_pivot) && Array.isArray(o.whip_tip)) {
+      const d = since(o.whip, f);
+      if (d <= 10) {
+        const t0 = f - d;
+        const pv = figurePoint(shot, t0, fps, camPos, ...(o.whip_pivot as [number, number]));
+        const tp = figurePoint(shot, t0, fps, camPos, ...(o.whip_tip as [number, number]));
+        if (pv && tp) anchored.push(<WhipSmear key="whip" pivot={pv} tip={tp} camPos={camPos} d={d} sweep={Number(o.whip_sweep ?? 140)} dir={Number(o.whip_dir ?? 1)} c={String(o.whip_c ?? '#c98bff')} />);
+      }
+    }
+  }
   let icon: React.ReactNode = null;
   if (pose?.key.icon && head) {
     const n = head.clone().project(cam);
@@ -117,27 +154,27 @@ export const Film: React.FC<FilmProps> = (props) => {
   }
   return (
     <AbsoluteFill style={{backgroundColor: '#0b0818', overflow: 'hidden'}}>
-      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: [whipStyle(props.shots, f, W).filter, gradeOf(shot).filter].filter(Boolean).join(' ')}}>
+      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter].filter(Boolean).join(' ')}}>
         {ready ? (
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>
             <CameraRig cam={cam} />
             {Set ? <Set f={f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} /> : null}
             <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
-              glow={shot.opts.glow ? String(shot.opts.glow) : undefined} glowGain={glowGain} />
-            {rays}{ride}{lensPass}
+              glow={glowColor(shot.opts.glow, f)} glowGain={glowGain} />
+            {rays}{ride}{lensPass}{anchored}
             {crownAt ? (
               <group position={[crownAt.x, crownAt.y, crownAt.z]} rotation={[0, Math.atan2(camPos[0] - crownAt.x, camPos[2] - crownAt.z), 0]}>
                 <CapCrown pos={[0, 0.0, 0]} rot={[0.12, 0, -0.18]} scale={0.62} />
               </group>
             ) : null}
-            {shot.lyrics ? <Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={TONES[gradeName(shot.opts, shot.set)].lyric} beats={props.beats} /> : null}
+            {shot.lyrics ? <Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} /> : null}
           </ThreeCanvas>
         ) : null}
       </AbsoluteFill>
       {icon}
       <Transitions shots={props.shots} f={f} />
-      <Grade grain={props.grain} tone={gradeOf(shot)} />
+      <Grade grain={props.grain} tone={gradeAt(shot, f)} />
       {props.overlay ? (
         <>
           <Stamp text={props.overlay.hook.text} from={props.overlay.hook.from} to={props.overlay.hook.to} top={H * OVERLAY.hookTop} accent="#b56bff" size={96} />
@@ -152,6 +189,27 @@ export const Film: React.FC<FilmProps> = (props) => {
 // The colour grade: the library + per-act choice live in grade.ts (the studio's look step).
 export function gradeOf(shot: Shot): Tone {
   return TONES[gradeName(shot.opts, shot.set)];
+}
+
+/** The grade at frame f: a shot can turn into another grade on an event (grade_to + grade_at frame + grade_s seconds,
+ *  e.g. the red wave reaching the lens: own -> night). */
+export function gradeAt(shot: Shot, f: number): Tone & {lyric: LyricTone} {
+  const a = TONES[gradeName(shot.opts, shot.set)];
+  const to = shot.opts.grade_to, at = shot.opts.grade_at;
+  if (typeof to !== 'string' || !(to in TONES) || typeof at !== 'number') return a;
+  const t = (f - at) / Math.max(1, Number(shot.opts.grade_s ?? 0.5) * 30);
+  return mixTone(a, TONES[to], Math.max(0, Math.min(1, t)));
+}
+
+/** Her glow colour: one colour, or [[frame, colour], ...] - the colour RUNS from one to the next over ~1 s (her dots
+ *  turning from UV-blue to fire-violet: "chaos running wild in my veins"). */
+export function glowColor(v: unknown, f: number): string | undefined {
+  if (!v) return undefined;
+  if (typeof v === 'string') return v;
+  const {from, to, t} = stepValue<string>(v, f, 30);
+  if (!to) { const first = (Array.isArray(v) && Array.isArray(v[0]) ? v[0][1] : null) as string | null; return first ?? undefined; }
+  if (!from) return to;
+  return `#${new THREE.Color(from).lerp(new THREE.Color(to), t).getHexString()}`;
 }
 
 export const Grade: React.FC<{grain: number; tone: Tone}> = ({grain, tone}) => {

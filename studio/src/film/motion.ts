@@ -98,7 +98,7 @@ export function puppetAt(keys: PuppetKey[], f: number, fps = 30): Pose | null {
   const speed = Math.hypot(vel[0], vel[1], vel[2]);
   const t = f / fps;
   let sx = 1 - 0.008 * Math.sin(t * Math.PI * 0.84), sy = 1 + 0.014 * Math.sin(t * Math.PI * 0.84);   // breathing
-  let rot = 0.8 * Math.sin(t * Math.PI * 0.42);
+  let rot = 0.8 * Math.sin(t * Math.PI * 0.42) + (key.rot ?? 0);
   let lift = now.lift, turn = 1;
   const spring = (d: number, k = 0.28, damp = 0.16) => Math.exp(-damp * d) * Math.cos(k * d);   // 1 -> 0 ringing
   const act: Act = key.act;

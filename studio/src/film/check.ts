@@ -605,6 +605,15 @@ export function heroBox(props: FilmProps, s: Shot, f: number, h: NonNullable<Sho
     const [bw, bh] = h.size ?? [0.13, 0.07];
     return screenBox(quad(top.add(new THREE.Vector3(0, bh / 2, 0)), bw, bh), cam);
   }
+  if (h.kind === 'prop' && h.uv) {                       // a prop she holds: it moves with her sprite
+    const p = puppetAt(s.puppets, f, props.fps);
+    if (!p) return null;
+    const m = puppetMatrix(p, [cam.position.x, cam.position.y, cam.position.z]);
+    const {w, h: ph} = planeSize(p.key);
+    const c = new THREE.Vector3((h.uv[0] - 0.5) * w, (p.key.feet - h.uv[1]) * ph, 0).applyMatrix4(m);
+    const [bw, bh] = h.size ?? [0.2, 0.3];
+    return screenBox(quad(c.add(new THREE.Vector3(0, bh * 0.35, 0)), bw, bh), cam);
+  }
   if (h.kind === 'prop' && h.center) {
     const [bw, bh] = h.size ?? [0.3, 0.3];
     return screenBox(quad(new THREE.Vector3(...h.center), bw, bh), cam);

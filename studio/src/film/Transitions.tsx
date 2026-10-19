@@ -1,5 +1,6 @@
 // Transitions THROUGH things (PRINCIPLES 13): the cut hides behind something of her world at full cover -
-// a burst of bubbles, a cloud of Sumi ink, a foreground object passing the lens, a whip pan, a flash.
+// a burst of bubbles, a cloud of Sumi ink, a foreground object passing the lens, a whip pan, a flash, a rewind
+// (streaks rushing into the centre: time running back).
 // The shot change happens at the boundary frame; the cover peaks there, so the switch is never seen.
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
@@ -85,6 +86,25 @@ export const Transitions: React.FC<{shots: Shot[]; f: number}> = ({shots, f}) =>
               : obj === 'card' ? <rect x={-20} y={-10} width={140} height={120} rx={8} fill={fill} transform="rotate(-8 50 50)" />
                 : <path d="M-10 110 C 10 60 -5 30 20 -10 L 120 -10 C 95 30 110 60 90 110 Z" fill={fill} />}
           </g>
+        </svg>
+      );
+    }
+    case 'rewind': {
+      // time running backwards: streaks rush INTO the centre (the fire sucked back into her palm), a violet veil
+      const n = 64;
+      return (
+        <svg viewBox="0 0 160 90" preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%'}}>
+          <rect x={0} y={0} width={160} height={90} fill="#1a0838" opacity={0.55 * k} />
+          {Array.from({length: n}, (_, i) => {
+            const ang = rnd(i * 2.7) * Math.PI * 2, r0 = 40 + rnd(i * 5.3) * 70;
+            const r1 = r0 * (1 - 0.9 * ease('in', clamp01(a.p * 1.3 - rnd(i) * 0.25)));
+            const len = 6 + 28 * k;
+            return (
+              <line key={i} x1={80 + Math.cos(ang) * r1} y1={45 + Math.sin(ang) * r1} x2={80 + Math.cos(ang) * (r1 + len)} y2={45 + Math.sin(ang) * (r1 + len)}
+                stroke={i % 3 ? '#c98bff' : '#ffd9a8'} strokeWidth={0.35 + rnd(i * 9.1) * 0.6} strokeOpacity={0.85 * k} strokeLinecap="round" />
+            );
+          })}
+          <circle cx={80} cy={45} r={2 + 6 * k} fill="#fff1e0" opacity={0.9 * k} />
         </svg>
       );
     }

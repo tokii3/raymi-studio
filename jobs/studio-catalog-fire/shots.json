@@ -1,0 +1,739 @@
+{
+ "lyric_style": "v2",
+ "title": "studio component catalog - FIRESTARTER build",
+ "audio": {
+  "file": "../2026-10-19_firestarter/song.webm",
+  "from": 0.0,
+  "to": 206.46
+ },
+ "lyrics": "../2026-10-19_firestarter/lyrics_timed.json",
+ "song_map": "../2026-10-19_firestarter/song_map.json",
+ "translation": "../2026-10-19_firestarter/lyrics_en.json",
+ "grain": 0.04,
+ "shots": [
+  {
+   "id": "deep_zones_giant_column_cliff",
+   "at": 0.0,
+   "set": "deep",
+   "opts": {
+    "grade": "night",
+    "ignite": 1.0,
+    "vents_at": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0.0
+    ],
+    "column": 1.0,
+    "cliff": true,
+    "cliff_ignite": 0.35,
+    "fog_far": 40,
+    "vent_cap": 0.8
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      7.5,
+      5.5,
+      5.0
+     ],
+     "look": [
+      0.2,
+      3.5,
+      -8.0
+     ],
+     "fov": 50
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: sets/Deep zones: the chimney forest, the 7th giant vent on its rise (vents_at), the heat column, the sea-mount cliff and its cracks",
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_JUMP_UV_161",
+     "pos": "giant_stage",
+     "height": 1.25
+    }
+   ]
+  },
+  {
+   "id": "deep_current_bend",
+   "at": 5.0,
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "current": 1.0,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.86,
+       0.34
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "abyss_wide",
+     "offset": [
+      0.0,
+      -0.2,
+      -2.6
+     ]
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: sets/Deep current: the cold current bends every flame, blows the marine snow sideways (fire.tsx Flame bend)",
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": "center",
+     "height": 1.42
+    }
+   ]
+  },
+  {
+   "id": "deep_tint_wave",
+   "at": 9.0,
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.6,
+    "tint_at": 9.2,
+    "tint_s": 2.4,
+    "glow": "#b45cff",
+    "grade_to": "night",
+    "grade_at": 10.0,
+    "grade_s": 0.6
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "abyss_wide"
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: sets/Deep tint_wave + Film grade_to: a ring of red-violet spreads through the water, the grade turns on its front",
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SHOUT_WET_UV_177",
+     "pos": "center",
+     "act": "stomp"
+    }
+   ]
+  },
+  {
+   "id": "fire_strike_whip_sparks",
+   "at": 13.0,
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "snow": 0.6,
+    "glow": "#6a4cff",
+    "whip": 13.0,
+    "whip_pivot": [
+     0.45,
+     0.6
+    ],
+    "whip_tip": [
+     0.07,
+     0.36
+    ],
+    "whip_sweep": 140,
+    "sparks": [
+     {
+      "uv": [
+       0.07,
+       0.36
+      ],
+      "at": 13.02,
+      "n": 16,
+      "ember": 12
+     }
+    ],
+    "dip": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "medium",
+     "from": [
+      0.9,
+      1.0,
+      1.4
+     ],
+     "side": "right"
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: fire.tsx SparkBurst (anchored to her barb) + Puppet3D WhipSmear: the barb strike as a match",
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_CROUCH_UV_192",
+     "pos": "center",
+     "height": 1.05,
+     "act": "stomp"
+    }
+   ]
+  },
+  {
+   "id": "fire_palm_anchor",
+   "at": 17.0,
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "snow": 0.7,
+    "glow": "#b45cff",
+    "ignite_at": 17.0,
+    "ignite_s": 0.5,
+    "rewind_at": 17.5,
+    "rewind_s": 0.7,
+    "fires": [
+     {
+      "uv": [
+       0.86,
+       0.34
+      ],
+      "size": 0.34,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "at": 17.0,
+      "grow": 0.2
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "from": [
+      0.9,
+      1.3,
+      1.4
+     ],
+     "side": "left"
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: fire.tsx Fires uv: the flame anchored to her palm, moving with her; ignite + rewind = the light whooshes out and back",
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": "center",
+     "height": 1.42
+    }
+   ]
+  },
+  {
+   "id": "lyrics_burn_crack",
+   "at": "line:4",
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "origin": [
+     0.9,
+     -0.5
+    ],
+    "crack_dir": 1.2,
+    "crack_n": 3,
+    "ignite_at": 20.3,
+    "ignite_s": 3.2,
+    "pulse": "beats",
+    "glow": "#b45cff"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      2.3,
+      1.9,
+      3.1
+     ],
+     "look": [
+      0.7,
+      0.35,
+      -0.3
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: Words3D reveal burn: a crack burns each word in left to right with a hot front; crack_dir / crack_n = one directed crack",
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_CROUCH_UV_192",
+     "pos": "center",
+     "height": 1.05
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "reveal": "burn",
+    "lines": [
+     4
+    ],
+    "key": [
+     "fire"
+    ],
+    "tilt": -90,
+    "rot": -20,
+    "anchor": [
+     0.95,
+     0.03,
+     -0.05
+    ],
+    "size": 0.17,
+    "width": 2.6
+   }
+  },
+  {
+   "id": "creatures_salmon_bucket_fish",
+   "at": 23.0,
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.7,
+    "vent_cap": 0.7,
+    "glow": "#b45cff",
+    "salmon": {
+     "pos": [
+      0.9,
+      0.55,
+      -0.6
+     ],
+     "from": [
+      3.5,
+      0.7,
+      0.2
+     ],
+     "at": 23.0,
+     "dur_s": 0.4,
+     "hold": "bucket",
+     "tip_at": 23.45,
+     "icon": "sweat",
+     "icon_at": 23.5
+    },
+    "fish": [
+     {
+      "from": [
+       -2,
+       0.9,
+       -1.5
+      ],
+      "to": [
+       2.5,
+       1.1,
+       -2.5
+      ],
+      "at": 23.0,
+      "dur_s": 2,
+      "glow": "#b45cff",
+      "spark": true,
+      "scale": 0.34
+     },
+     {
+      "pos": [
+       -0.6,
+       1.4,
+       -2.0
+      ],
+      "r": 1.1,
+      "glow": "#ffb35c",
+      "scale": 0.3
+     },
+     {
+      "pos": [
+       1.4,
+       1.7,
+       -2.6
+      ],
+      "r": 0.9,
+      "glow": "#b45cff",
+      "scale": 0.26,
+      "speed": -0.015
+     }
+    ],
+    "props": [
+     {
+      "kind": "bucket",
+      "pos": "bucket",
+      "buried": 0.6
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      0.95,
+      2.2
+     ],
+     "look": [
+      0.4,
+      0.8,
+      -1.0
+     ],
+     "fov": 42
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: creatures.tsx: SalmonActor with the bucket (tip = the throw, sweat icon), DeepFish with glowing fin edges (one carries a spark), Bucket half-buried"
+  },
+  {
+   "id": "creatures_sauna_extinguisher",
+   "at": 27.0,
+   "set": "deep",
+   "opts": {
+    "grade": "night",
+    "ignite": 1.0,
+    "vent_cap": 0.8,
+    "sauna": {
+     "pos": [
+      1.3,
+      0.0,
+      -1.7
+     ],
+     "n": 7,
+     "r": 0.85
+    },
+    "salmon": {
+     "pos": [
+      -0.2,
+      0.7,
+      -0.9
+     ],
+     "hold": "extinguisher",
+     "spray_at": 27.2,
+     "spray_s": 2.0,
+     "yaw": -0.4
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      1.0,
+      1.8
+     ],
+     "look": [
+      1.1,
+      0.5,
+      -1.6
+     ],
+     "fov": 40
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: creatures.tsx Sauna (towels, eye shells, steam) + Extinguisher spraying bubbles"
+  },
+  {
+   "id": "nightsea_pool_moon_cloud",
+   "at": 31.0,
+   "set": "nightsea",
+   "opts": {
+    "grade": "ember",
+    "pool": 1.0,
+    "glow": 0.35,
+    "dots_at": [
+     31.0,
+     31.2,
+     31.4
+    ],
+    "cloud": 0.45,
+    "glow_c": "#b45cff",
+    "salmon": {
+     "pos": "salmon",
+     "hold": "bucket",
+     "water": "#d79bff"
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "surface_wide"
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: sets/NightSea: sky + stars + low moon + cloud, the sea lit from below (pool, gold dots), Salmon's bucket of glowing water; grade ember",
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_166",
+     "pos": "center"
+    }
+   ]
+  },
+  {
+   "id": "nightsea_rain_path_fireworks",
+   "at": 35.0,
+   "set": "nightsea",
+   "opts": {
+    "grade": "ember",
+    "pool": 1.0,
+    "glow": 0.7,
+    "path": 1.0,
+    "rain_at": 35.0,
+    "fireworks": [
+     35.2,
+     35.6,
+     36.0
+    ],
+    "fw_from": [
+     [
+      -6,
+      -20
+     ],
+     [
+      4,
+      -26
+     ],
+     [
+      10,
+      -16
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      2.5,
+      1.6,
+      6.0
+     ],
+     "look": [
+      0.0,
+      3.0,
+      -20.0
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: sets/NightSea rain (a light ring per drop), path of light to the horizon, fireworks shot from under the water",
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_BK_NA_SURF_UV_167",
+     "pos": [
+      0.0,
+      -0.75,
+      0.0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nightsea_split_waterline",
+   "at": 39.0,
+   "set": "nightsea",
+   "opts": {
+    "grade": "ember",
+    "pool": 0.8,
+    "column": 1.0,
+    "school": {
+     "from": [
+      -1.5,
+      -1.6,
+      -1.0
+     ],
+     "to": [
+      -1.2,
+      -1.2,
+      -1.2
+     ],
+     "at": 39.0,
+     "dur_s": 1,
+     "n": 9,
+     "glow": "#ffc15a"
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "split_waterline"
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: sets/NightSea split_waterline camera + the heat column below + a School with glowing fins",
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_SURF_UV_180",
+     "pos": [
+      0.0,
+      -0.6,
+      0.0
+     ],
+     "height": 1.45
+    }
+   ]
+  },
+  {
+   "id": "deep_rise_column_school",
+   "at": 42.0,
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "column": 1.0,
+    "cliff": true,
+    "cliff_ignite": 0.55,
+    "fog_far": 45,
+    "glow": "#b45cff",
+    "school": {
+     "from": [
+      2.0,
+      14.0,
+      -9.5
+     ],
+     "to": [
+      2.0,
+      15.0,
+      -9.5
+     ],
+     "at": 42.0,
+     "dur_s": 2,
+     "n": 10,
+     "glow": "#ffc15a"
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      4.2,
+      13.6,
+      -6.0
+     ],
+     "look": [
+      0.8,
+      15.0,
+      -10.8
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: Puppet3D rot (she lies back on the heat) + HeatColumn + Cliff cracks climbing + School",
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_CALM_REST_UV_164",
+     "pos": [
+      0.9,
+      14.0,
+      -10.3
+     ],
+     "rot": -68,
+     "act": "float"
+    }
+   ]
+  },
+  {
+   "id": "transition_rewind_a",
+   "at": 45.0,
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.5
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "abyss_wide"
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: Transitions rewind: streaks rushing into the centre",
+   "transition": {
+    "kind": "rewind",
+    "frames": 10
+   }
+  },
+  {
+   "id": "transition_rewind_b",
+   "at": 46.0,
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.0
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "abyss_wide"
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: the shot after the rewind"
+  },
+  {
+   "id": "lyrics_firework",
+   "at": "line:89",
+   "set": "nightsea",
+   "opts": {
+    "grade": "ember",
+    "pool": 0.7,
+    "glow": 0.6
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      1.2,
+      7.0
+     ],
+     "look": [
+      0.0,
+      5.0,
+      -14.0
+     ],
+     "fov": 48
+    }
+   ],
+   "kick": 0,
+   "why": "catalog: Words3D kind firework: sparks fly out to the letters (+ mirror on the water)",
+   "lyrics": {
+    "kind": "firework",
+    "material": "light",
+    "lines": [
+     89
+    ],
+    "key": [
+     "fire"
+    ],
+    "anchor": [
+     0.0,
+     7.5,
+     -16.0
+    ],
+    "size": 0.95,
+    "width": 20.0,
+    "mirror": 0.0
+   }
+  }
+ ]
+}

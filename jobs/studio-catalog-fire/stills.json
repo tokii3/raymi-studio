@@ -1,0 +1,38 @@
+{
+ "format": "mv",
+ "frames": [
+  75,
+  180,
+  309,
+  393,
+  528,
+  628,
+  708,
+  834,
+  960,
+  1110,
+  1185,
+  1290,
+  1379,
+  5258
+ ],
+ "names": [
+  "deep_zones_giant_column_cliff",
+  "deep_current_bend",
+  "deep_tint_wave",
+  "fire_strike_whip_sparks",
+  "fire_palm_anchor",
+  "lyrics_burn_crack",
+  "creatures_salmon_bucket_fish",
+  "creatures_sauna_extinguisher",
+  "nightsea_pool_moon_cloud",
+  "nightsea_rain_path_fireworks",
+  "nightsea_split_waterline",
+  "deep_rise_column_school",
+  "transition_rewind",
+  "lyrics_firework"
+ ],
+ "scale": 0.5,
+ "to": "catalog",
+ "round": 1
+}

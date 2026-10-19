@@ -141,8 +141,8 @@ const WordMesh: React.FC<{p: Placed; L: Lyrics; f: number; fps: number; out: num
   );
 };
 
-export const Words3D: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: number; tone?: LyricTone; beats?: number[]}> = ({L, words, f, fps, tone, beats}) => {
-  if (L.style === 'v2') return <WordsV2 L={L} words={words} f={f} fps={fps} tone={tone} beats={beats ?? []} />;
+export const Words3D: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: number; tone?: LyricTone; beats?: number[]; cam?: [number, number, number]}> = ({L, words, f, fps, tone, beats, cam}) => {
+  if (L.style === 'v2' || L.kind === 'firework') return <WordsV2 L={L} words={words} f={f} fps={fps} tone={tone} beats={beats ?? []} cam={cam} />;
   const card = L.kind === 'card';
   const started = words.filter((w) => w.from <= f);
   if (!started.length) return null;
@@ -246,7 +246,7 @@ function measureV2(t: string): number {
   return v;
 }
 
-const ItemMesh: React.FC<{it: Item; L: Lyrics; color: string; shadow: string; accent: string; s: number; dy: number; op: number}> = ({it, L, color, shadow, accent, s, dy, op}) => {
+const ItemMesh: React.FC<{it: Item; L: Lyrics; color: string; shadow: string; accent: string; s: number; dy: number; op: number; reveal?: number}> = ({it, L, color, shadow, accent, s, dy, op, reveal = 1}) => {
   const tex = v2Texture(it.text, color, shadow, L.material, accent);
   const glow = L.material === 'light';
   const lit = !glow && L.material !== 'fog' && L.material !== 'screen';
@@ -257,25 +257,139 @@ const ItemMesh: React.FC<{it: Item; L: Lyrics; color: string; shadow: string; ac
     : new THREE.MeshBasicMaterial({map: tex, transparent: true, alphaTest: 0.02, toneMapped: false, side: THREE.DoubleSide, fog: false,
       blending: THREE.NormalBlending, depthWrite: !glow})), [tex, lit, glow]);
   const depth = useMemo(() => new THREE.MeshDepthMaterial({depthPacking: THREE.RGBADepthPacking, map: tex, alphaTest: 0.5, side: THREE.DoubleSide}), [tex]);
+  // reveal < 1: only the left part is burned in yet (a crack writing the word) - the plane and its UVs end at the front
+  const geo = useMemo(() => new THREE.PlaneGeometry(1, 1), []);
+  const r = Math.max(0.001, Math.min(1, reveal));
+  const pos = geo.attributes.position as THREE.BufferAttribute, uv = geo.attributes.uv as THREE.BufferAttribute;
+  for (const i of [1, 3]) { pos.setX(i, -0.5 + r); uv.setX(i, r); }
+  pos.needsUpdate = true; uv.needsUpdate = true;
   mat.opacity = op;
+  const w = it.w * s, h = it.h * s;
   return (
-    <mesh position={[it.x, it.y + dy, 0]} scale={[it.w * s, it.h * s, 1]} material={mat} renderOrder={6}
-      castShadow={lit && op > 0.5} customDepthMaterial={depth}>
-      <planeGeometry args={[1, 1]} />
-    </mesh>
+    <group position={[it.x - w / 2, it.y + dy, 0]}>
+      <mesh geometry={geo} position={[w / 2, 0, 0]} scale={[w, h, 1]} material={mat} renderOrder={6}
+        castShadow={lit && op > 0.5} customDepthMaterial={depth} />
+      {r < 1 ? (
+        <mesh position={[w * r, 0, 0.01]} scale={[h * 0.55, h * 0.8, 1]} renderOrder={7}>
+          <planeGeometry args={[1, 1]} />
+          <meshBasicMaterial map={blobTex('#fff1d6')} transparent opacity={0.95 * op} depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} />
+        </mesh>
+      ) : null}
+    </group>
+  );
+};
+
+function blobTex(c: string): THREE.CanvasTexture {
+  return canvasTexture(`wblob${c}`, 64, 64, (ctx, w, h) => {
+    const g = ctx.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, w / 2);
+    g.addColorStop(0, c); g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+  });
+}
+
+/** The glyph points of a word (where its ink is), in the word plane's units (-0.5..0.5), sampled once per text. */
+const glyphPts = new Map<string, [number, number][]>();
+function glyphPoints(text: string): [number, number][] {
+  let pts = glyphPts.get(text);
+  if (pts) return pts;
+  const tex = v2Texture(text, '#ffffff', 'rgba(0,0,0,0)', null, '#ffffff');
+  const cv = tex.image as HTMLCanvasElement;
+  const ctx = cv.getContext('2d')!;
+  const {width: W, height: H} = cv;
+  const data = ctx.getImageData(0, 0, W, H).data;
+  pts = [];
+  const step = Math.max(3, Math.round(Math.sqrt((W * H) / 2600)));
+  for (let y = 0; y < H; y += step) for (let x = 0; x < W; x += step) {
+    if (data[(y * W + x) * 4 + 3] > 140) pts.push([x / W - 0.5, 0.5 - y / H]);
+  }
+  glyphPts.set(text, pts);
+  return pts;
+}
+
+/** Firework words (FIRESTARTER wow 5): a shell climbs to the word's spot in the 12 frames before its syllable, bursts on
+ *  it, and the sparks fly OUT to the word's own letters - then twinkle and sink slowly. The readable letters in light
+ *  glow up under the sparks; `mirror` (a water height) lays their reflection on the sea for the lens. */
+const FireworkWord: React.FC<{it: Item; w: Word3; f: number; out: number; color: string; accent: string; shadow: string; L: Lyrics;
+  world: THREE.Matrix4; cam?: [number, number, number]}> = ({it, w, f, out, color, accent, shadow, L, world, cam}) => {
+  const d = f - w.from;
+  const c = it.key ? accent : color;
+  if (d < -12) return null;
+  if (d < 0) {                                                         // the shell climbing to its spot
+    const u = 1 + d / 12, y = it.y - (1 - u) * (1 - u) * 6;
+    return (
+      <group>
+        <mesh position={[it.x, y, 0]} scale={0.06}><sphereGeometry args={[1, 8, 6]} /><meshBasicMaterial color="#fff2dc" toneMapped={false} /></mesh>
+        <mesh position={[it.x, y - 0.4, 0]} scale={[0.02, 0.8, 0.02]}><boxGeometry args={[1, 1, 1]} />
+          <meshBasicMaterial color={c} transparent opacity={0.6} depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} /></mesh>
+      </group>
+    );
+  }
+  const pts = glyphPoints(it.text);
+  const R = Math.min(1, d / 7);                                        // the burst reaches the letters in 7 frames
+  const sink = Math.max(0, d - 20) * 0.0015 * it.h;
+  const arr = new Float32Array(pts.length * 3);
+  const e = ease('out', R);
+  pts.forEach(([px, py], i) => {
+    const tx = it.x + px * it.w, ty = it.y + py * it.h - sink * (0.5 + rnd(i) * 0.8);
+    arr[i * 3] = it.x + (tx - it.x) * e + (rnd(i * 3) - 0.5) * 0.02 * it.h * Math.sin(f / 3 + i);
+    arr[i * 3 + 1] = it.y + (ty - it.y) * e;
+    arr[i * 3 + 2] = (rnd(i * 7) - 0.5) * 0.04 * it.h;
+  });
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(arr, 3));
+  const tw = 0.75 + 0.25 * Math.sin(f / 2.3 + w.idx);
+  const size = Math.max(0.012, it.h * 0.07);
+  const text = Math.min(1, Math.max(0, (d - 4) / 8)) * out;
+  // the reflection of the letters on the water, as seen from the lens (a light above the sea mirrors below it)
+  let mirror: React.ReactNode = null;
+  if (typeof L.mirror === 'number' && cam && cam[1] > L.mirror + 0.05) {
+    const C = new THREE.Vector3(...cam);
+    const ref = new Float32Array(pts.length * 3);
+    const inv = world.clone().invert();
+    const loc = new THREE.Vector3();
+    for (let i = 0; i < pts.length; i++) {
+      loc.set(arr[i * 3], arr[i * 3 + 1], arr[i * 3 + 2]).applyMatrix4(world);
+      const hh = loc.y - L.mirror;
+      if (hh <= 0) continue;
+      const m = new THREE.Vector3(loc.x, L.mirror - hh, loc.z);
+      const t = (C.y - L.mirror) / (C.y - L.mirror + hh);
+      const q = C.clone().lerp(m, t).setY(L.mirror + 0.02).applyMatrix4(inv);
+      ref[i * 3] = q.x; ref[i * 3 + 1] = q.y; ref[i * 3 + 2] = q.z;
+    }
+    const g2 = new THREE.BufferGeometry();
+    g2.setAttribute('position', new THREE.BufferAttribute(ref, 3));
+    mirror = (
+      <points geometry={g2} renderOrder={6}>
+        <pointsMaterial map={blobTex(c)} color={c} size={size * 1.4} transparent opacity={0.4 * out * tw} depthWrite={false} blending={THREE.AdditiveBlending} toneMapped={false} />
+      </points>
+    );
+  }
+  return (
+    <group>
+      {d < 5 ? (
+        <mesh position={[it.x, it.y, 0]} scale={it.h * 2.5 * (1 + d * 0.4)} renderOrder={7}><sphereGeometry args={[0.5, 12, 8]} />
+          <meshBasicMaterial map={blobTex(c)} transparent opacity={0.8 * (1 - d / 5)} depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} side={THREE.BackSide} /></mesh>
+      ) : null}
+      {text > 0 ? <ItemMesh it={it} L={{...L, material: 'light'}} color={c} shadow={shadow} accent={accent} s={1} dy={-sink * 0.5} op={text} /> : null}
+      <points geometry={geo} renderOrder={8}>
+        <pointsMaterial map={blobTex('#fff4e0')} color={c} size={size} transparent opacity={out * tw} depthWrite={false} blending={THREE.AdditiveBlending} toneMapped={false} />
+      </points>
+      {mirror}
+    </group>
   );
 };
 
 const v2layouts = new Map<string, Item[]>();
 
-const WordsV2: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: number; tone?: LyricTone; beats: number[]}> = ({L, words, f, fps, tone, beats}) => {
-  const started = words.filter((w) => w.from <= f);
+const WordsV2: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: number; tone?: LyricTone; beats: number[]; cam?: [number, number, number]}> = ({L, words, f, fps, tone, beats, cam}) => {
+  const fw = L.kind === 'firework';                                 // firework words: the shell climbs 12 frames early
+  const started = words.filter((w) => w.from <= f + (fw ? 12 : 0));
   if (!started.length) return null;
   const line = started[started.length - 1].line;
   const lineWords = words.filter((w) => w.line === line);
   const nextLine = words.find((w) => w.line > line);
   const lastEnd = Math.max(...lineWords.map((w) => w.to));
-  const until = nextLine ? nextLine.from : lastEnd + fps;
+  const until = nextLine ? nextLine.from - (fw ? 12 : 0) : lastEnd + fps;
   const out = f < until ? 1 : Math.max(0, 1 - (f - until) / 6);
   if (out <= 0) return null;
   const lk = `${JSON.stringify(L)}|${line}`;
@@ -289,13 +403,15 @@ const WordsV2: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: number; tone
   const first = lineWords[0].from;
   const breath = (1 + 0.02 * flare(beats, f, 6)) * (0.94 + 0.06 * out);     // the block breathes on the beat
   const ys = items.map((i) => i.y);
+  const world = new THREE.Matrix4().compose(new THREE.Vector3(...L.anchor), new THREE.Quaternion().setFromEuler(blockRotation(L)), new THREE.Vector3(breath, breath, 1));
   return (
     <group position={[L.anchor[0], L.anchor[1], L.anchor[2]]} rotation={blockRotation(L)} scale={[breath, breath, 1]}>
       {L.material === 'light' ? <pointLight position={[0, (Math.max(...ys) + Math.min(...ys)) / 2, 0.3]} color={acc} intensity={2.4 * out} distance={3.5} decay={1.6} /> : null}
       {items.map((it) => {
-        let s = 1, dy = 0, op = out;
+        let s = 1, dy = 0, op = out, reveal = 1;
         if (it.kind === 'main') {
           const w = lineWords.find((x) => x.idx === it.idx)!;
+          if (fw) return <FireworkWord key={`fw${it.idx}`} it={it} w={w} f={f} out={out} color={col} accent={acc} shadow={shadow} L={L} world={world} cam={cam} />;
           const d = f - w.from;
           if (d < 0) return null;
           const e = ease('snap', d / 7);
@@ -304,6 +420,10 @@ const WordsV2: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: number; tone
           const dur = Math.max(4, w.to - w.from);
           if (d <= dur) s *= 1 + (w.key ? 0.12 : 0.06) * (1 - d / dur);   // swells while it is sung
           op *= Math.min(1, 0.35 + d / 3);
+          if (L.reveal === 'burn') {                                   // a crack writes the word: no pop, a burning front
+            reveal = (d + 1) / Math.max(4, Math.min(14, dur));
+            s = 1; dy = 0; op = out;
+          }
         } else {
           if (it.kind === 'roma' && it.idx >= romaShown(k, lineWords.length, romaN)) return null;
           const d = f - first - (it.kind === 'en' ? 3 : 0);
@@ -311,8 +431,9 @@ const WordsV2: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: number; tone
           op *= Math.min(1, d / 6);
           dy = -(1 - ease('out', d / 6)) * 0.12 * it.size;
         }
-        const c = it.kind === 'main' ? (it.key ? acc : col) : it.kind === 'roma' ? subC : col;
-        return <ItemMesh key={`${it.kind}${it.idx}`} it={it} L={L} color={c} shadow={shadow} accent={acc} s={s} dy={dy} op={op} />;
+        let c = it.kind === 'main' ? (it.key ? acc : col) : it.kind === 'roma' ? subC : col;
+        if (it.kind === 'main' && !it.key && typeof L.dim === 'number') c = `#${new THREE.Color(c).multiplyScalar(L.dim).getHexString()}`;
+        return <ItemMesh key={`${it.kind}${it.idx}`} it={it} L={L} color={c} shadow={shadow} accent={acc} s={s} dy={dy} op={op} reveal={reveal} />;
       })}
     </group>
   );
