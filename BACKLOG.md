@@ -61,3 +61,21 @@
     cannot change; lighting / framing must keep the ears out of red rim light, or the VRM model solves it.
   - "beat drop" (board A3) runs through the vent flames: key words must sit on a dark area, never over a flame.
   - Fixed: two cloud runs growing her font at once died on a binary rebase conflict -> .github/font_grow.sh retries.
+
+- FIRESTARTER pilot (2026-10-20, renders 21 / 22 / 23, reviews/pilot_*_1..3.md) - parked by the anti-loop rule (two fix rounds):
+  - Lyric readability: the guard's v2 minimum (7 % of the frame height) is met, yet every critic (3 rounds) calls the
+    floor / wide-shot lines "tiny, thin, low contrast" at phone size ("Imma burn it down", "Crazy out of order", "Work a
+    lil harder"). Tried: round 1 bigger + leaning floor words, round 2 the hook lines x1.4. Next idea (studio, not per
+    shot): measure the CAP height on the phone sheet (not the texture box) and raise the v2 default to ~10 %, a dark
+    halo behind light words, floor words only in shots that look down on them.
+  - The dark middle 2-12.8 s: Raymi / flame small and mid-grey on navy, s6 / s10 near-black without her (swipe at
+    8-12 s). Tried: round 1 set fill 0.18 -> 0.42 + violet fog + stronger glow light, closer frames; round 2 a light on
+    Salmon, the vent mouth sooner. Next idea: a warm spark flash per failed strike (6-10 f), keep Raymi or her flame in
+    every frame of 8.8-12.8 (script change: s6 / s10 with her in it), a rim light on the sprite.
+  - Open from the pilot critics (not yet tried): the title "UNDERWATER." floats out of the frame at 1.5 s (float kind
+    + push-in; the guard checks only 18 frames of a float), cuts at 4.9 / 6.87 / 8.8 off the beat grid (the script's
+    strike times), 1 of 10 hits changes the picture, a one-frame Salmon flash at 8.8 s (its swim-in from / pos?),
+    the salmon / bucket / pedestal read as flat placeholders, story: the fish never takes or threatens the flame.
+  - Devil guard: the look critic answered "what are the shapes on her head?" with "horn-like nubs / little devil horns"
+    in pilot 1 AND pilot 3 - the tako ears read as horns at phone size in this fire-lit world. Sprites cannot change;
+    toki decides (VRM model, ear-shaped glow, or accept).
