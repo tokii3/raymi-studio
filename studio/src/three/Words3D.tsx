@@ -217,6 +217,8 @@ function v2Texture(text: string, color: string, shadow: string, material: LyricM
         // a coloured glow, then a CRISP coloured core. Was additive with a white core: on bright parts it clipped to
         // white blobs ("fire" unreadable, Firestarter boards 2026-10-19)
         ctx.shadowColor = shadow; ctx.shadowBlur = PX2 * 0.16; ctx.fillStyle = shadow; ctx.globalAlpha = 0.85; ctx.fillText(text, x, y);
+        // a dark halo ring: light words read on dark violet AND on bright glow (FIRESTARTER pilots: thin, low contrast)
+        ctx.shadowBlur = 0; ctx.globalAlpha = 0.9; ctx.lineJoin = 'round'; ctx.lineWidth = PX2 * 0.12; ctx.strokeStyle = shadow; ctx.strokeText(text, x, y);
         ctx.globalAlpha = 1; ctx.shadowColor = accent; ctx.shadowBlur = PX2 * 0.22; ctx.fillStyle = color; ctx.fillText(text, x, y);
         ctx.shadowBlur = 0; ctx.fillText(text, x, y); return;
       case 'engraved':                            // cut into the surface: light lip below, dark groove

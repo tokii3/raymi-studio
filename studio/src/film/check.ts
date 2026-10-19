@@ -192,6 +192,10 @@ export type TextFault = {shot: string; frame: number; line: number; text: string
 const FACE_HOLD = 0.6;   // s of text continuously on her face
 const FIG_HOLD = 1.0;    // s of a settled line hiding > 60 % of her figure, for its whole hold
 
+/** Lyrics v2 readable at phone size, measured on the CAP height: a normal word >= 5.4 % of the frame height (~ the
+ *  10 % texture box), romaji / English >= 3.6 % (toki 2026-10-19 "zu klein, zu duenn"; FIRESTARTER pilots 1-3). */
+export const CAP_MIN = 0.054, SUB_CAP_MIN = 0.036;
+
 /** Every frame a lyric line is fully shown (from its last word on, settled), all of it must be inside the frame. */
 const L0 = (s: Shot) => s.lyrics!;
 
@@ -221,17 +225,18 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
         const v2 = L0(s).style === 'v2';
         const up = v2 ? new THREE.Vector3(0, 1, 0).applyEuler(blockRotation(L0(s))) : new THREE.Vector3(0, 1, 0).applyQuaternion(cam0.quaternion);
         const px = (size: number) => {
-          const tex = size * (1.35 / 0.72);
+          // v2: the CAP height itself (FIRESTARTER pilots 1-3: the texture box passed 7 % while the letters were tiny)
+          const tex = v2 ? size : size * (1.35 / 0.72);
           const p0 = anc.clone().addScaledVector(up, -tex / 2).project(cam0), p1 = anc.clone().addScaledVector(up, tex / 2).project(cam0);
           if (p0.z >= 1 || p1.z >= 1) return Infinity;
           return v2 ? Math.hypot(((p1.x - p0.x) / 2) * props.width, ((p1.y - p0.y) / 2) * props.height) : (Math.abs(p1.y - p0.y) / 2) * props.height;
         };
         const base = L0(s).size * (ws.every((w) => w.key) ? (v2 ? (L0(s).keyScale ?? 2.8) : 2.2) : 1);
         const main = px(base);
-        if (main < (v2 ? 0.07 : 0.044) * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `too small to read (${Math.round(main)} px)`}); continue; }
+        if (main < (v2 ? CAP_MIN : 0.044) * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `too small to read (${Math.round(main)} px)`}); continue; }
         if (v2 && subOf(L0(s), line)) {
           const sp = px(L0(s).size * SUB);
-          if (sp < 0.05 * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `romaji / English too small to read (${Math.round(sp)} px)`}); continue; }
+          if (sp < SUB_CAP_MIN * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `romaji / English too small to read (${Math.round(sp)} px)`}); continue; }
         }
       }
       // a stamp slams in bigger than it lands: 2 frames after the last word it is still ~1.2x (final Short 1: clipped)

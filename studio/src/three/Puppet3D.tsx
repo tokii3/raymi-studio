@@ -29,6 +29,21 @@ const SpritePlane: React.FC<{k: PuppetKey; matrix: THREE.Matrix4; opacity?: numb
   );
 };
 
+/** A rim of her own light round her silhouette (she reads against a dark set - FIRESTARTER pilots): her sprite, a bit
+ *  bigger, tinted and additive, just BEHIND her - her painting covers it, only the edge glows. */
+const RimPlane: React.FC<{k: PuppetKey; matrix: THREE.Matrix4; color: string}> = ({k, matrix, color}) => {
+  const tex = useImageTexture(staticFile(k.sprite));
+  const {w, h} = planeSize(k);
+  const geo = useMemo(() => {
+    const g = new THREE.PlaneGeometry(w * 1.035, h * 1.02);
+    g.translate(0, h / 2 - (1 - k.feet) * h, -0.015);
+    return g;
+  }, [w, h, k.feet]);
+  const mat = useMemo(() => new THREE.MeshBasicMaterial({map: tex, color, transparent: true, alphaTest: 0.2, side: THREE.DoubleSide,
+    toneMapped: false, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0.75}), [tex, color]);
+  return <mesh geometry={geo} material={mat} matrixAutoUpdate={false} matrix={matrix} renderOrder={3} />;
+};
+
 export const Puppet3D: React.FC<{keys: PuppetKey[]; f: number; fps: number; camPos: V3; shadow?: string; glow?: string; glowGain?: number}> = ({keys, f, fps, camPos, shadow = '#1d0b38', glow, glowGain = 1}) => {
   const p = puppetAt(keys, f, fps);
   if (!p) return null;
@@ -51,6 +66,7 @@ export const Puppet3D: React.FC<{keys: PuppetKey[]; f: number; fps: number; camP
       </mesh>
       {ghosts}
       <SpritePlane k={p.key} matrix={m} />
+      {glow ? <RimPlane k={p.key} matrix={m} color={glow} /> : null}
       {glow && glowGain > 0.01 ? (() => {                                       // 灯闇: she is the lamp in the dark (her glowing dots)
         const {h} = planeSize(p.key);
         const c = new THREE.Vector3(0, h * (p.key.feet - p.key.top) * 0.55, -0.06).applyMatrix4(m);
