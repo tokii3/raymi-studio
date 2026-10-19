@@ -413,7 +413,7 @@ export function fitLyrics(props: FilmProps, index: number): {anchor: V3; size: n
   for (let y = 0.12; y <= 0.881; y += 0.04) for (let x = 0.2; x <= 0.801; x += 0.05) spots.push([x, y]);
   spots.sort((p, q) => Math.hypot(p[0] - ox, p[1] - oy) - Math.hypot(q[0] - ox, q[1] - oy));
   for (const k of [1, 1.25, 1.5, 1.8, 2.2, 0.8, 0.65, 0.5, 0.4]) {   // grow first: too small reads as clipped too
-    for (const [x, y] of spots) {
+    for (const wf of [1, 0.75, 0.55]) for (const [x, y] of spots) {      // a narrower block wraps into rows (FIRESTARTER)
       // the words stay on their own surface (the plane through the scripted anchor, facing rotY): slide, never float off
       const ray = new THREE.Vector3(x * 2 - 1, 1 - y * 2, 0.5).unproject(cam).sub(cam.position).normalize();
       const nrm = new THREE.Vector3(Math.sin((s.lyrics.rotY * Math.PI) / 180), 0, Math.cos((s.lyrics.rotY * Math.PI) / 180));
@@ -423,7 +423,7 @@ export function fitLyrics(props: FilmProps, index: number): {anchor: V3; size: n
       if (tt < 0.3 || tt > dist * 4) continue;
       const pt = cam.position.clone().addScaledVector(ray, tt);
       const anchor: V3 = [Number(pt.x.toFixed(2)), Number(pt.y.toFixed(2)), Number(pt.z.toFixed(2))];
-      const L = {...s.lyrics, anchor, size: Number((s.lyrics.size * k).toFixed(3)), width: Number((s.lyrics.width * k).toFixed(2))};
+      const L = {...s.lyrics, anchor, size: Number((s.lyrics.size * k).toFixed(3)), width: Number((s.lyrics.width * k * wf).toFixed(2))};
       if (one(L)) return {anchor, size: L.size, width: L.width};
     }
   }

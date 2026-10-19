@@ -4,3 +4,5 @@ pilot: <toki YYYY-MM-DD her words>
 final: <toki YYYY-MM-DD her words>
 uploaded: <toki YYYY-MM-DD what went up>
 ideas: toki 2026-10-19 "approved: A - The Lamp in the Dark. Weiter mit Treatment."
+
+pilot: toki 2026-10-20 (after pilot 3): "ich würde aber trotzdem gerne mit dem Mac fortfahren und vertraue auf die Besserungen pass auf den Token Verbrauch auf ich habe nur noch 10% Wochen Limit die müssen reichen" - then: "Ich möchte bitte das volle mv bzw. Paket nicht ein weiteres Pilot" (pilot 4 = the last pilot; straight to the full MV + Short + thumbs)

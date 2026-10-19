@@ -1,12 +1,11 @@
 {
- "_why": "pilot look check (shots 1-18) before the full pilot render: one key frame per shot + the Short's frame 0 and its twist",
+ "_why": "thumbnail candidates (5_THUMBS.md): 5 MV + 4 Short frames from the film itself; lead = the cold open (her face beside her violet flame, FIRE. UNDERWATER.)",
  "passes": [
-  {"format": "pilot", "frames": [15, 72, 92, 160, 222, 272, 327, 340, 356, 375, 400, 480, 520, 580, 640, 700, 745, 800],
-   "names": ["p01_cold_open", "p02_rewind_eyes", "p03_strike_fizz", "p04_thief_fish", "p05_crack_dies", "p06_salmon_singed",
-             "p07_current", "p08_barb_macro", "p09_eyes", "p10_vent_salmon", "p11_catch", "p12_shrug_doubles", "p13_toss_orbit",
-             "p14_hang", "p15_crack_runs", "p16_top_down_map", "p17_crack_track", "p18_vent_rings"]},
-  {"format": "short", "frames": [0, 470, 585], "names": ["s00_short_frame0", "s16_short_cta", "s19_short_twist"]}
+  {"format": "mv", "frames": [30, 420, 860, 4380, 5300], "names": ["thumb_mv_M1_cold_open", "thumb_mv_M2_catch", "thumb_mv_M3_floor_map", "thumb_mv_M4_surface_flame", "thumb_mv_M5_firework_letters"]},
+  {"format": "short", "frames": [20, 410, 530, 585], "names": ["thumb_short_S1_cold_open", "thumb_short_S2_catch", "thumb_short_S3_toss", "thumb_short_S4_crack_twist"]}
  ],
- "scale": 0.5,
+ "scale": 1,
+ "to": "boards",
+ "thumbs": true,
  "round": 2
 }
