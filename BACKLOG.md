@@ -51,3 +51,7 @@
   - The new "lyrics hidden behind a prop" guard (2026-10-19) flags 2 delivered KING shots (lamp-deals, buried: behind
     a coin tower) - evidence only, KING is not re-rendered. The weather set now registers its studio cameras + desk,
     the card table its standing King card as solids.
+- Lyric style frames (2026-10-19): type-critic FAIL x2 (reviews/style_type-critic_1/2.md) -> STOP (anti-loop), toki
+  decides. Round 2 open points: aquarium shell / coral are not solids (a lyric row ran behind them - the guard could not
+  see it); her Latin "m" reads like "n" in the heavy weight at small sizes; romaji / English rows still small on a
+  390 px feed; critic wants a carrier object + a different form per shot (key word only, English only, an acted word).
