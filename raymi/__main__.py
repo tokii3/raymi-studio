@@ -57,8 +57,10 @@ def main(argv: list[str]) -> int:
                 from . import timeline as T
 
                 text = "".join(T.job_texts(argv[2]))
-            else:
+            elif (jd / "plan.json").is_file():
                 text = "".join(P.screen_texts(json.loads((jd / "plan.json").read_text(encoding="utf-8"))))
+            else:                    # a board without words (the VRM test board): nothing to grow
+                text = ""
         elif job == "add":
             text = "".join(argv[2:])
         else:

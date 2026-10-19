@@ -11,6 +11,7 @@
     "guard": "node guard.mjs"
   },
   "dependencies": {
+    "@pixiv/three-vrm": "3.5.5",
     "@react-three/fiber": "8.17.10",
     "@remotion/bundler": "4.0.532",
     "@remotion/cli": "4.0.532",

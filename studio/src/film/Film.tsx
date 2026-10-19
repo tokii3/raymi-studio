@@ -154,7 +154,7 @@ export function gradeOf(shot: Shot): Tone {
   return TONES[gradeName(shot.opts, shot.set)];
 }
 
-const Grade: React.FC<{grain: number; tone: Tone}> = ({grain, tone}) => {
+export const Grade: React.FC<{grain: number; tone: Tone}> = ({grain, tone}) => {
   const f = useCurrentFrame();
   return (
     <>

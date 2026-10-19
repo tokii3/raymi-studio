@@ -12,7 +12,10 @@ export const repo = path.resolve(here, '..');
 
 export function loadJob(job) {
   const jobDir = fs.existsSync(job) ? path.resolve(job) : path.join(repo, 'jobs', job);
-  const props = JSON.parse(fs.readFileSync(path.join(jobDir, 'out', 'props.json'), 'utf8'));
+  // compiled props (out/, not in git) - or a board job's own data file (board.json: the VRM test board, no compiler)
+  const compiled = path.join(jobDir, 'out', 'props.json');
+  const file = fs.existsSync(compiled) ? compiled : path.join(jobDir, 'board.json');
+  const props = JSON.parse(fs.readFileSync(file, 'utf8'));
   return {jobDir, props, composition: props.composition || 'Short'};
 }
 
@@ -26,6 +29,10 @@ export function buildPublic(jobDir, props) {
     const hv = path.join(repo, 'assets/fonts/Raymi-Heavy.ttf');
     if (!fs.existsSync(hv)) throw new Error('Raymi-Heavy.ttf missing - run python -m raymi font heavy (never a fallback font)');
     fs.copyFileSync(hv, path.join(pub, 'fonts/Raymi-Heavy.ttf'));
+  }
+  if (props.vrm) {             // the 3D Raymi (VrmPuppet): assets/vrm/<file>
+    fs.mkdirSync(path.join(pub, 'vrm'), {recursive: true});
+    fs.copyFileSync(path.join(repo, 'assets', props.vrm), path.join(pub, props.vrm));
   }
   const sprites = props.sprites ?? props.beats.map((b) => b.sprite);
   for (const s of sprites) {
