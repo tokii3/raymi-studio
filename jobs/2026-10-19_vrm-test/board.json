@@ -1,0 +1,1106 @@
+{
+ "_why": "VRM test board (studio stage, roadmap 4): the 3D VRM Raymi (VrmPuppet) in the built sets - turntable, key poses in three lights, face close-ups, the painted sprite beside her. Cloud stills only.",
+ "composition": "VrmBoard",
+ "width": 1920,
+ "height": 1080,
+ "fps": 30,
+ "durationInFrames": 29,
+ "vrm": "vrm/raymi3.vrm",
+ "sprites": [
+  "sprites/WS_F_CALM_REST_UV_166.png"
+ ],
+ "grain": 0.06,
+ "tiles": [
+  {
+   "name": "turn_000",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0.2,
+      0,
+      -0.2
+     ],
+     "rotY": 0
+    }
+   ]
+  },
+  {
+   "name": "turn_045",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0.2,
+      0,
+      -0.2
+     ],
+     "rotY": 45
+    }
+   ]
+  },
+  {
+   "name": "turn_090",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0.2,
+      0,
+      -0.2
+     ],
+     "rotY": 90
+    }
+   ]
+  },
+  {
+   "name": "turn_135",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0.2,
+      0,
+      -0.2
+     ],
+     "rotY": 135
+    }
+   ]
+  },
+  {
+   "name": "turn_180",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0.2,
+      0,
+      -0.2
+     ],
+     "rotY": 180
+    }
+   ]
+  },
+  {
+   "name": "turn_225",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0.2,
+      0,
+      -0.2
+     ],
+     "rotY": 225
+    }
+   ]
+  },
+  {
+   "name": "turn_270",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0.2,
+      0,
+      -0.2
+     ],
+     "rotY": 270
+    }
+   ]
+  },
+  {
+   "name": "turn_315",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0.2,
+      0,
+      -0.2
+     ],
+     "rotY": 315
+    }
+   ]
+  },
+  {
+   "name": "aquarium_stand",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "expr": {
+      "fun": 0.6
+     },
+     "pos": [
+      0.2,
+      0,
+      -0.2
+     ],
+     "rotY": 25.9
+    }
+   ]
+  },
+  {
+   "name": "aquarium_point",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "point",
+     "expr": "joy",
+     "pos": [
+      0.2,
+      0,
+      -0.2
+     ],
+     "rotY": 25.9
+    }
+   ]
+  },
+  {
+   "name": "aquarium_crouch",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "crouch",
+     "expr": "surprised",
+     "pos": [
+      0.2,
+      0,
+      -0.2
+     ],
+     "rotY": 25.9
+    }
+   ]
+  },
+  {
+   "name": "aquarium_arms_up",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "arms_up",
+     "expr": "joy",
+     "pos": [
+      0.2,
+      0,
+      -0.2
+     ],
+     "rotY": 25.9
+    }
+   ]
+  },
+  {
+   "name": "weather_stand",
+   "set": "weather",
+   "opts": {
+    "grade": "clean",
+    "map": "sunny"
+   },
+   "cam": {
+    "pos": [
+     1.8,
+     1.2,
+     2.6
+    ],
+    "look": [
+     0.6,
+     0.85,
+     -1.2
+    ],
+    "fov": 32
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "expr": {
+      "fun": 0.6
+     },
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": 39.5
+    }
+   ]
+  },
+  {
+   "name": "weather_point",
+   "set": "weather",
+   "opts": {
+    "grade": "clean",
+    "map": "sunny"
+   },
+   "cam": {
+    "pos": [
+     1.8,
+     1.2,
+     2.6
+    ],
+    "look": [
+     0.6,
+     0.85,
+     -1.2
+    ],
+    "fov": 32
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "point",
+     "expr": "joy",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": 39.5
+    }
+   ]
+  },
+  {
+   "name": "weather_crouch",
+   "set": "weather",
+   "opts": {
+    "grade": "clean",
+    "map": "sunny"
+   },
+   "cam": {
+    "pos": [
+     1.8,
+     1.2,
+     2.6
+    ],
+    "look": [
+     0.6,
+     0.85,
+     -1.2
+    ],
+    "fov": 32
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "crouch",
+     "expr": "surprised",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": 39.5
+    }
+   ]
+  },
+  {
+   "name": "weather_arms_up",
+   "set": "weather",
+   "opts": {
+    "grade": "clean",
+    "map": "sunny"
+   },
+   "cam": {
+    "pos": [
+     1.8,
+     1.2,
+     2.6
+    ],
+    "look": [
+     0.6,
+     0.85,
+     -1.2
+    ],
+    "fov": 32
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "arms_up",
+     "expr": "joy",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": 39.5
+    }
+   ]
+  },
+  {
+   "name": "deep_stand",
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.55,
+    "origin": [
+     0.75,
+     -1.0
+    ],
+    "snow": 0.6,
+    "glow": "#b45cff"
+   },
+   "cam": {
+    "pos": [
+     0.6,
+     1.15,
+     3.8
+    ],
+    "look": [
+     0.3,
+     0.85,
+     -0.6
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "expr": {
+      "fun": 0.6
+     },
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "rotY": 25.9
+    }
+   ]
+  },
+  {
+   "name": "deep_point",
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.55,
+    "origin": [
+     0.75,
+     -1.0
+    ],
+    "snow": 0.6,
+    "glow": "#b45cff"
+   },
+   "cam": {
+    "pos": [
+     0.6,
+     1.15,
+     3.8
+    ],
+    "look": [
+     0.3,
+     0.85,
+     -0.6
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "point",
+     "expr": "joy",
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "rotY": 25.9
+    }
+   ]
+  },
+  {
+   "name": "deep_crouch",
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.55,
+    "origin": [
+     0.75,
+     -1.0
+    ],
+    "snow": 0.6,
+    "glow": "#b45cff"
+   },
+   "cam": {
+    "pos": [
+     0.6,
+     1.15,
+     3.8
+    ],
+    "look": [
+     0.3,
+     0.85,
+     -0.6
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "crouch",
+     "expr": "surprised",
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "rotY": 25.9
+    }
+   ]
+  },
+  {
+   "name": "deep_arms_up",
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.55,
+    "origin": [
+     0.75,
+     -1.0
+    ],
+    "snow": 0.6,
+    "glow": "#b45cff"
+   },
+   "cam": {
+    "pos": [
+     0.6,
+     1.15,
+     3.8
+    ],
+    "look": [
+     0.3,
+     0.85,
+     -0.6
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "arms_up",
+     "expr": "joy",
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "rotY": 25.9
+    }
+   ]
+  },
+  {
+   "name": "face_neutral",
+   "set": "weather",
+   "opts": {
+    "grade": "clean",
+    "map": "sunny"
+   },
+   "cam": {
+    "pos": [
+     0.85,
+     1.4,
+     0.15
+    ],
+    "look": [
+     0.6,
+     1.33,
+     -1.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "expr": null,
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens"
+    }
+   ]
+  },
+  {
+   "name": "face_joy",
+   "set": "weather",
+   "opts": {
+    "grade": "clean",
+    "map": "sunny"
+   },
+   "cam": {
+    "pos": [
+     0.85,
+     1.4,
+     0.15
+    ],
+    "look": [
+     0.6,
+     1.33,
+     -1.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "expr": "joy",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens"
+    }
+   ]
+  },
+  {
+   "name": "face_fun",
+   "set": "weather",
+   "opts": {
+    "grade": "clean",
+    "map": "sunny"
+   },
+   "cam": {
+    "pos": [
+     0.85,
+     1.4,
+     0.15
+    ],
+    "look": [
+     0.6,
+     1.33,
+     -1.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "expr": "fun",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens"
+    }
+   ]
+  },
+  {
+   "name": "face_angry",
+   "set": "weather",
+   "opts": {
+    "grade": "clean",
+    "map": "sunny"
+   },
+   "cam": {
+    "pos": [
+     0.85,
+     1.4,
+     0.15
+    ],
+    "look": [
+     0.6,
+     1.33,
+     -1.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "expr": "angry",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens"
+    }
+   ]
+  },
+  {
+   "name": "face_sorrow",
+   "set": "weather",
+   "opts": {
+    "grade": "clean",
+    "map": "sunny"
+   },
+   "cam": {
+    "pos": [
+     0.85,
+     1.4,
+     0.15
+    ],
+    "look": [
+     0.6,
+     1.33,
+     -1.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "expr": "sorrow",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens"
+    }
+   ]
+  },
+  {
+   "name": "face_surprised",
+   "set": "weather",
+   "opts": {
+    "grade": "clean",
+    "map": "sunny"
+   },
+   "cam": {
+    "pos": [
+     0.85,
+     1.4,
+     0.15
+    ],
+    "look": [
+     0.6,
+     1.33,
+     -1.2
+    ],
+    "fov": 30
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "expr": "surprised",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens"
+    }
+   ]
+  },
+  {
+   "name": "aquarium_vs_sprite",
+   "set": "aquarium",
+   "opts": {
+    "grade": "day"
+   },
+   "cam": {
+    "pos": [
+     0.5,
+     1.15,
+     4.2
+    ],
+    "look": [
+     0.2,
+     0.85,
+     -0.2
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "expr": {
+      "fun": 0.6
+     },
+     "pos": [
+      -0.3,
+      0,
+      -0.2
+     ],
+     "rotY": "lens"
+    }
+   ],
+   "sprite": {
+    "sprite": "sprites/WS_F_CALM_REST_UV_166.png",
+    "size": [
+     1217,
+     1529
+    ],
+    "cuts": [],
+    "top": 0.03,
+    "feet": 0.99,
+    "head": [
+     0.35,
+     0.03,
+     0.7,
+     0.28
+    ],
+    "height": 1.55,
+    "act": "idle",
+    "icon": null,
+    "flip": false,
+    "move": 0,
+    "arc": 0,
+    "f": 0,
+    "pos": [
+     0.7,
+     0,
+     -0.2
+    ]
+   }
+  },
+  {
+   "name": "weather_vs_sprite",
+   "set": "weather",
+   "opts": {
+    "grade": "clean",
+    "map": "sunny"
+   },
+   "cam": {
+    "pos": [
+     1.8,
+     1.2,
+     2.6
+    ],
+    "look": [
+     0.6,
+     0.85,
+     -1.2
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "expr": {
+      "fun": 0.6
+     },
+     "pos": [
+      0.09999999999999998,
+      0,
+      -1.2
+     ],
+     "rotY": "lens"
+    }
+   ],
+   "sprite": {
+    "sprite": "sprites/WS_F_CALM_REST_UV_166.png",
+    "size": [
+     1217,
+     1529
+    ],
+    "cuts": [],
+    "top": 0.03,
+    "feet": 0.99,
+    "head": [
+     0.35,
+     0.03,
+     0.7,
+     0.28
+    ],
+    "height": 1.55,
+    "act": "idle",
+    "icon": null,
+    "flip": false,
+    "move": 0,
+    "arc": 0,
+    "f": 0,
+    "pos": [
+     1.1,
+     0,
+     -1.2
+    ]
+   }
+  },
+  {
+   "name": "deep_vs_sprite",
+   "set": "deep",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.55,
+    "origin": [
+     0.75,
+     -1.0
+    ],
+    "snow": 0.6,
+    "glow": "#b45cff"
+   },
+   "cam": {
+    "pos": [
+     0.6,
+     1.15,
+     3.8
+    ],
+    "look": [
+     0.3,
+     0.85,
+     -0.6
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "expr": {
+      "fun": 0.6
+     },
+     "pos": [
+      -0.2,
+      0,
+      -0.6
+     ],
+     "rotY": "lens"
+    }
+   ],
+   "sprite": {
+    "sprite": "sprites/WS_F_CALM_REST_UV_166.png",
+    "size": [
+     1217,
+     1529
+    ],
+    "cuts": [],
+    "top": 0.03,
+    "feet": 0.99,
+    "head": [
+     0.35,
+     0.03,
+     0.7,
+     0.28
+    ],
+    "height": 1.55,
+    "act": "idle",
+    "icon": null,
+    "flip": false,
+    "move": 0,
+    "arc": 0,
+    "f": 0,
+    "pos": [
+     0.8,
+     0,
+     -0.6
+    ]
+   }
+  }
+ ]
+}
