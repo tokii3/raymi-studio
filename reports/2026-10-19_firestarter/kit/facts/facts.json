@@ -54,14 +54,14 @@
  },
  "picture_change_on_hits": {
   "hits": 10,
-  "changed": 2,
-  "share": 0.2,
+  "changed": 1,
+  "share": 0.1,
   "threshold": 6.0
  },
  "still_spans_s": [],
  "audio": {
-  "input_i": "-14.16",
-  "input_tp": "-0.82"
+  "input_i": "-14.19",
+  "input_tp": "-1.84"
  },
  "hint": "Measured hints only. They never prove an effect - the critic describes what is REALLY there."
 }

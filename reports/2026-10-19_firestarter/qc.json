@@ -8,13 +8,13 @@
   "landscape_16x9": true,
   "has_audio": true,
   "loudness_-14": true,
-  "true_peak_<=-1": false,
+  "true_peak_<=-1": true,
   "duration_matches_plan": true,
   "no_frozen_picture_>1.2s": true
  },
  "full_res": true,
- "lufs": -14.16,
- "true_peak": -0.82,
+ "lufs": -14.19,
+ "true_peak": -1.84,
  "frozen_spans": [],
- "pass": false
+ "pass": true
 }

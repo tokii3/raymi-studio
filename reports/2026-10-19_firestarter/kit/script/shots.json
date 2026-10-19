@@ -32,7 +32,9 @@
   "why": "failure 1 - a gag, not a black hole: every strike leaves a residual glow (FIX 4)",
   "words": "",
   "transition_out": "cut",
-  "hero": []
+  "hero": [
+   "face"
+  ]
  },
  {
   "id": "s4",
