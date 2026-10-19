@@ -3,8 +3,8 @@
  "title": "FIRESTARTER board A - The Lamp in the Dark",
  "audio": {
   "file": "../2026-10-19_firestarter/song.webm",
-  "from": 0.0,
-  "to": 30.0
+  "from": 12.5,
+  "to": 116.0
  },
  "lyrics": "../2026-10-19_firestarter/lyrics_timed.json",
  "song_map": "../2026-10-19_firestarter/song_map.json",
@@ -13,7 +13,7 @@
  "shots": [
   {
    "id": "A1",
-   "at": 0.0,
+   "at": 12.5,
    "set": "deep",
    "why": "the cold open: black water, one strike - her own violet flame at her palm lights her face from below",
    "opts": {
@@ -61,11 +61,29 @@
      ],
      "act": "idle"
     }
-   ]
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.07,
+     1.01,
+     -0.33
+    ],
+    "rot": 8,
+    "size": 0.055,
+    "width": 0.6,
+    "material": "light",
+    "key": [
+     "fire"
+    ],
+    "lines": [
+     0
+    ]
+   }
   },
   {
    "id": "A2",
-   "at": 10.0,
+   "at": 27.0,
    "set": "deep",
    "why": "the fire runs over the sea floor from her strike - she is small at its origin, the fire is the picture",
    "opts": {
@@ -97,7 +115,7 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_FOCUS_CROUCH_UV_191",
+     "sprite": "WS_F_FOCUS_CROUCH_UV_192",
      "pos": [
       0.3,
       0,
@@ -105,11 +123,30 @@
      ],
      "act": "idle"
     }
-   ]
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -0.7,
+     0.03,
+     -0.2
+    ],
+    "tilt": -90,
+    "rot": -20,
+    "size": 0.26,
+    "width": 6.5,
+    "material": "light",
+    "key": [
+     "fire"
+    ],
+    "lines": [
+     8
+    ]
+   }
   },
   {
    "id": "A3",
-   "at": 20.0,
+   "at": 111.0,
    "set": "deep",
    "why": "the vents erupt - bubble fireworks rise, she conducts them",
    "opts": {
@@ -127,22 +164,22 @@
      "at": 0,
      "pos": [
       0.2,
-      0.6,
-      5.4
+      1.0,
+      6.4
      ],
      "look": [
       0.4,
-      2.2,
+      1.9,
       -2.5
      ],
-     "fov": 44
+     "fov": 46
     }
    ],
    "kick": 0,
    "raymi": [
     {
      "at": 0,
-     "sprite": "WS_F_MIC_CONDUCT_UV_123",
+     "sprite": "WS_F_HAPPY_JUMP_UV_160",
      "pos": [
       0.3,
       0,
@@ -150,7 +187,33 @@
      ],
      "act": "idle"
     }
-   ]
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     0.3,
+     2.75,
+     -0.6
+    ],
+    "rot": 0,
+    "roll": -6,
+    "size": 0.235,
+    "width": 10.0,
+    "material": "light",
+    "key": [
+     "drop"
+    ],
+    "lines": [
+     53
+    ],
+    "words": [
+     "beat",
+     "drop",
+     "beat-beat"
+    ],
+    "sub": false,
+    "sub_why": "only the English words of the line are written (the drop as one huge English word); the Korean 'ja' is a breath"
+   }
   }
  ]
 }

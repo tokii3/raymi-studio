@@ -134,3 +134,9 @@ def test_hangul_is_one_word_and_matches_by_sound():
     assert S.hangul_roma("축제") == "chukje"
     assert S.roma("월화수목금토일") == "wolhwasumokgeumtoil"
     assert S.roma("I'm the lighter") == "imthelighter"
+
+
+def test_asr_gaps_find_sung_windows_the_recogniser_missed():
+    asr = [{"w": "a", "t0": 1.0}, {"w": "b", "t0": 2.0}, {"w": "x", "t0": 9.0}, {"w": "c", "t0": 20.0}]
+    assert S.asr_gaps(asr, [[0.5, 21.0]], min_gap=4.0, pad=0.5) == [[1.5, 9.5], [8.5, 20.5]]
+    assert S.asr_gaps(asr, [[0.5, 3.0]]) == []

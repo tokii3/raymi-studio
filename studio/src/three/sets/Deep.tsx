@@ -8,7 +8,7 @@
 //   erupt 0..1 / erupt_at  the vents blow: tall flames, bubble columns, bubble-firework bursts rising
 //   lanterns n          the festival dressing: n strings of paper lanterns + stalls; lit 0..1 / lit_at + lit_s
 //   rise 0..1 / rise_at + rise_s  the lit lanterns let go and rise to the surface (staggered, drifting)
-//   snow 0..1           marine snow density (default 1); smoke false = no mineral smoke
+//   snow 0..1           marine snow density (default 1); smoke false = no mineral smoke; vents false = no chimneys
 //   fires [...]         flames anywhere (three/fire.tsx Fires), e.g. the one in her hand
 import React from 'react';
 import * as THREE from 'three';
@@ -173,12 +173,12 @@ export const Deep: React.FC<SetProps> = ({f, fps, opts}) => {
           </mesh>
         );
       })}
-      {VENTS.map((v, i) => {
+      {opts.vents !== false ? VENTS.map((v, i) => {
         const d = Math.hypot(v.pos[0] - ox, v.pos[2] - oz);
         const heat = Math.max(0, Math.min(1, (front - d) / 1.5));
         return <Chimney key={i} pos={v.pos} h={v.h} r={v.r} seed={i * 19 + 5} heat={heat} f={f} erupt={erupt * heat} smoke={smoke} />;
-      })}
-      {erupt > 0 ? VENTS.slice(0, 4).map((v, i) => <BubbleBurst key={`b${i}`} from={[v.pos[0], v.h, v.pos[2]]} f={f} seed={i * 7 + 1} c={i % 2 ? HOT : VIOLET} />) : null}
+      }) : null}
+      {erupt > 0 && opts.vents !== false ? VENTS.slice(0, 4).map((v, i) => <BubbleBurst key={`b${i}`} from={[v.pos[0], v.h, v.pos[2]]} f={f} seed={i * 7 + 1} c={i % 2 ? HOT : VIOLET} />) : null}
       {/* the festival dressing (idea C): lantern strings over a street of driftwood stalls */}
       {nLanterns > 0 ? (
         <group>

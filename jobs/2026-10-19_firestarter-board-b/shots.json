@@ -3,8 +3,8 @@
  "title": "FIRESTARTER board B - Breaking News: Fire Warning",
  "audio": {
   "file": "../2026-10-19_firestarter/song.webm",
-  "from": 0.0,
-  "to": 30.0
+  "from": 12.5,
+  "to": 116.0
  },
  "lyrics": "../2026-10-19_firestarter/lyrics_timed.json",
  "song_map": "../2026-10-19_firestarter/song_map.json",
@@ -13,7 +13,7 @@
  "shots": [
   {
    "id": "B1",
-   "at": 0.0,
+   "at": 12.5,
    "set": "weather",
    "why": "the cold open: ON AIR, she smiles into camera 1 - the map behind her is a FIRE WARNING",
    "opts": {
@@ -62,15 +62,33 @@
    "raymi": [
     {
      "at": 0,
-     "sprite": "MS_F_HAPPY_UV_006",
+     "sprite": "WS_F_SMUG_WINK_UV_169",
      "pos": "presenter",
      "act": "idle"
     }
-   ]
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -0.93,
+     2.06,
+     -2.9
+    ],
+    "rot": 0,
+    "size": 0.195,
+    "width": 3.9,
+    "material": "screen",
+    "key": [
+     "fire"
+    ],
+    "lines": [
+     0
+    ]
+   }
   },
   {
    "id": "B2",
-   "at": 10.0,
+   "at": 27.0,
    "set": "weather",
    "why": "she pushes the fire front across the map like a weather front, island by island",
    "opts": {
@@ -122,11 +140,29 @@
      "pos": "presenter",
      "act": "idle"
     }
-   ]
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.2,
+     1.82,
+     -2.9
+    ],
+    "rot": 0,
+    "size": 0.34,
+    "width": 4.6,
+    "material": "light",
+    "key": [
+     "fire"
+    ],
+    "lines": [
+     8
+    ]
+   }
   },
   {
    "id": "B3",
-   "at": 20.0,
+   "at": 74.5,
    "set": "weather",
    "why": "call the fire fighter: the sprinklers - her sea floods the studio, the fire glows under the water",
    "opts": {
@@ -171,7 +207,26 @@
      "pos": "presenter",
      "act": "idle"
     }
-   ]
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     -0.42,
+     1.5,
+     0.2
+    ],
+    "rot": 0,
+    "roll": 5,
+    "size": 0.169,
+    "width": 1.95,
+    "material": "light",
+    "key": [
+     "fighter"
+    ],
+    "lines": [
+     31
+    ]
+   }
   }
  ]
 }
