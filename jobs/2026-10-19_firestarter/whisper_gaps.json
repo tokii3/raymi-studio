@@ -1,0 +1,40 @@
+[
+ {
+  "window": [
+   55.46,
+   71.0
+  ],
+  "passes": {
+   "en": {
+    "words": 28,
+    "letters": 120,
+    "matched": 120
+   },
+   "ko": {
+    "words": 28,
+    "letters": 118,
+    "matched": 117
+   }
+  },
+  "used": true
+ },
+ {
+  "window": [
+   139.08,
+   168.7
+  ],
+  "passes": {
+   "en": {
+    "words": 52,
+    "letters": 188,
+    "matched": 181
+   },
+   "ko": {
+    "words": 51,
+    "letters": 210,
+    "matched": 178
+   }
+  },
+  "used": true
+ }
+]
