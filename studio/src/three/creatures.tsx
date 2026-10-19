@@ -190,7 +190,7 @@ export const PropList: React.FC<{list: unknown; f: number}> = ({list, f}) => {
 // ---------------------------------------------------------------- the sauna
 /** Fish sitting round a hot vent in tiny towels, steam rising; the boss in front with a towel on its head and a shell
  *  over each eye, like at a spa. */
-export const Sauna: React.FC<{pos: P3; f: number; n?: number; r?: number; glow?: string | null}> = ({pos, f, n = 7, r = 0.75, glow = '#ffb35c'}) => (
+export const Sauna: React.FC<{pos: P3; f: number; n?: number; r?: number; glow?: string | null}> = ({pos, f, n = 7, r = 0.95, glow = '#ffb35c'}) => (
   <group position={pos}>
     {Array.from({length: n}, (_, i) => {
       const a = Math.PI * 0.15 + (i / Math.max(1, n - 1)) * Math.PI * 0.7;      // a half ring facing the lens (+z)
@@ -198,7 +198,7 @@ export const Sauna: React.FC<{pos: P3; f: number; n?: number; r?: number; glow?:
       const rr = boss ? r * 1.25 : r;
       const p: P3 = [Math.cos(a) * rr, 0.16 + 0.02 * Math.sin(f / 23 + i), Math.sin(a) * rr];
       const yaw = Math.atan2(p[2], -p[0]) + Math.PI;                              // head toward the vent
-      const s = boss ? 0.42 : 0.28 + 0.05 * rnd(i);
+      const s = boss ? 0.62 : 0.42 + 0.06 * rnd(i);              // big enough to read the towels (stills run 2)
       return (
         <group key={i}>
           <DeepFish pos={p} yaw={yaw} f={f * 0.25} glow={glow} scale={s} seed={i + 20} />

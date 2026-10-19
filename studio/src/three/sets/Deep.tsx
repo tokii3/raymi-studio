@@ -258,7 +258,7 @@ export const HeatColumn: React.FC<{base: P3; f: number; grow: number; bend: numb
   tex.offset.set(0, -f * 0.012);                                  // the shimmer rises
   const H = height * grow, segs = 24;
   const thin = 1 - 0.55 * bend;
-  const bright = (0.55 + 0.45 * pulse) * (1 - 0.5 * bend);
+  const bright = (0.8 + 0.4 * pulse) * (1 - 0.5 * bend);
   return (
     <group position={base}>
       {Array.from({length: segs}, (_, i) => {
@@ -269,7 +269,7 @@ export const HeatColumn: React.FC<{base: P3; f: number; grow: number; bend: numb
         const wob = 1 + 0.06 * Math.sin(f / 5 + i * 0.8);
         return (
           <group key={i} position={[(x0 + x1) / 2, (y0 + y1) / 2, 0]} rotation={[0, 0, -tilt]}>
-            {([[1, '#ffb35c', 0.18], [0.62, VIOLET, 0.32], [0.3, '#ffe6c8', 0.38]] as [number, string, number][]).map(([k, c, op], j) => (
+            {([[1.3, '#ffb35c', 0.22], [0.75, VIOLET, 0.45], [0.32, '#ffe6c8', 0.6]] as [number, string, number][]).map(([k, c, op], j) => (
               <mesh key={j} scale={[r * k * thin * wob, len, r * k * thin * wob]} renderOrder={7}>
                 <cylinderGeometry args={[1, 1, 1, 18, 1, true]} />
                 <meshBasicMaterial map={tex} color={c} {...add} opacity={op * bright * (i < 2 ? (i + 1) / 3 : 1)} />
@@ -297,21 +297,24 @@ export const HeatColumn: React.FC<{base: P3; f: number; grow: number; bend: numb
 };
 
 /** The sea-mount wall: rough basalt rising to the surface, ledges, and its own crack network lit from the bottom up. */
+/** The cliff face's relief (local x, y from its foot): the wall mesh and the cracks on it share it. */
+const cliffZ = (x: number, y: number) => {
+  const yl = y - 24;
+  return 0.6 * Math.sin(x * 0.7 + yl * 0.3) * Math.cos(yl * 0.5) + 0.25 * Math.sin(x * 2.1 - yl * 1.7) + 0.4 * Math.sin(yl * 0.9);
+};
+
 const Cliff: React.FC<{front: number; f: number; cap: number}> = ({front, f, cap}) => {
   const geo = React.useMemo(() => {
     const g = new THREE.PlaneGeometry(34, 48, 60, 80);
     const p = g.attributes.position as THREE.BufferAttribute;
-    for (let i = 0; i < p.count; i++) {
-      const x = p.getX(i), y = p.getY(i);
-      p.setZ(i, 0.6 * Math.sin(x * 0.7 + y * 0.3) * Math.cos(y * 0.5) + 0.25 * Math.sin(x * 2.1 - y * 1.7) + 0.4 * Math.sin(y * 0.9));
-    }
+    for (let i = 0; i < p.count; i++) p.setZ(i, cliffZ(p.getX(i), p.getY(i) + 24));
     g.computeVertexNormals();
     return g;
   }, []);
   const segs = cliffCracks();
   return (
     <group position={[0, 0, CLIFF_Z]}>
-      <mesh geometry={geo} material={toon('#141826')} position={[0, 24, 0]} receiveShadow />
+      <mesh geometry={geo} material={toon('#2c3252', '#160c2c', 0.7)} position={[0, 24, 0]} receiveShadow />
       {Array.from({length: 18}, (_, i) => {
         const x = (rnd(i * 3 + 400) - 0.5) * 24, y = 1 + rnd(i * 5 + 400) * 40, s = 0.6 + rnd(i * 7 + 400) * 1.4;
         return <Rock key={i} pos={[x, y, 0.4]} size={[s * 1.6, s * 0.45, s]} seed={i + 400} c={ROCK} rotY={rnd(i) * 3} />;
@@ -322,10 +325,12 @@ const Cliff: React.FC<{front: number; f: number; cap: number}> = ({front, f, cap
         const len = Math.hypot(bx - ax, by - ay), heat = Math.max(0, 1 - (front - s.d) / 3);
         const c = new THREE.Color(VIOLET).lerp(new THREE.Color('#ff5a6e'), Math.min(1, s.d / 30)).lerp(new THREE.Color('#fff1d6'), heat * 0.7);
         return (
-          <mesh key={i} position={[(ax + bx) / 2, (ay + by) / 2, 0.75]} rotation={[0, 0, Math.atan2(by - ay, bx - ax)]}>
-            <planeGeometry args={[len + 0.03, (0.05 + 0.07 * heat + 0.02 * Math.sin(f / 5 + i)) * cap]} />
-            <meshBasicMaterial color={c} toneMapped={false} />
-          </mesh>
+          <group key={i} position={[(ax + bx) / 2, (ay + by) / 2, cliffZ((ax + bx) / 2, (ay + by) / 2) + 0.08]} rotation={[0, 0, Math.atan2(by - ay, bx - ax)]}>
+            <mesh><planeGeometry args={[len + 0.03, (0.04 + 0.05 * heat + 0.01 * Math.sin(f / 5 + i)) * cap]} />
+              <meshBasicMaterial color={c} toneMapped={false} /></mesh>
+            <mesh position={[0, 0, 0.01]} renderOrder={3}><planeGeometry args={[len + 0.2, 0.5 * cap]} />
+              <meshBasicMaterial map={glowTex(VIOLET)} {...add} opacity={0.3 * cap} /></mesh>
+          </group>
         );
       })}
       {front > 0 ? <pointLight position={[0.5, front, 2.5]} color="#ff7aa8" intensity={8 * cap} distance={9} decay={1.5} /> : null}
@@ -408,16 +413,28 @@ export const Deep: React.FC<SetProps> = ({f, fps, opts, beats, camPos}) => {
       }) : null}
       {/* glowing cracks: lit where the fire front has passed, hottest right at the front */}
       {segs.map((s, i) => {
-        if (s.d > front || live <= 0) return null;
-        const [ax, az] = s.a, [bx, bz] = s.b;
-        const len = Math.hypot(bx - ax, bz - az), heat = Math.max(0, 1 - (front - s.d) / 4);
+        // nothing burns before the front has left the origin (stills run 2: the first segments showed at ignite 0)
+        if (front <= 0.001 || s.d >= front || live <= 0) return null;
+        const [ax, az] = s.a, [bx0, bz0] = s.b;
+        const len0 = Math.hypot(bx0 - ax, bz0 - az), u = Math.min(1, (front - s.d) / len0);   // the front runs INTO a segment
+        const bx = ax + (bx0 - ax) * u, bz = az + (bz0 - az) * u, len = len0 * u;
+        const heat = Math.max(0, 1 - (front - s.d) / 4);
         const breathe = pulse * Math.max(0, 1 - Math.abs(s.d - (1 - pulse) * 8) / 2);   // one ring runs out on the beat
-        const c = new THREE.Color(VIOLET).lerp(new THREE.Color(HOT), Math.min(1, s.d / 5)).lerp(new THREE.Color('#fff1d6'), Math.min(1, heat * 0.7 + breathe * 0.5));
+        // a hot line, never a white plank: thin core, violet -> amber by distance, only the front glows pale
+        const c = new THREE.Color(VIOLET).lerp(new THREE.Color(HOT), Math.min(1, s.d / 5)).lerp(new THREE.Color('#ffd9f0'), Math.min(0.45, heat * 0.4 + breathe * 0.3));
+        const w = (0.018 + 0.022 * heat + 0.02 * breathe + 0.006 * Math.sin(f / 5 + i)) * live;
+        const rot: [number, number, number] = [-Math.PI / 2, 0, -Math.atan2(bz - az, bx - ax)];
         return (
-          <mesh key={i} position={[(ax + bx) / 2, 0.012, (az + bz) / 2]} rotation={[-Math.PI / 2, 0, -Math.atan2(bz - az, bx - ax)]}>
-            <planeGeometry args={[len + 0.02, (0.035 + 0.05 * heat + 0.03 * breathe + 0.02 * Math.sin(f / 5 + i)) * live]} />
-            <meshBasicMaterial color={c} toneMapped={false} />
-          </mesh>
+          <group key={i}>
+            <mesh position={[(ax + bx) / 2, 0.012, (az + bz) / 2]} rotation={rot}>
+              <planeGeometry args={[len + 0.01, w]} />
+              <meshBasicMaterial color={c} toneMapped={false} />
+            </mesh>
+            <mesh position={[(ax + bx) / 2, 0.014, (az + bz) / 2]} rotation={rot} renderOrder={3}>
+              <planeGeometry args={[len + 0.08, w * 7]} />
+              <meshBasicMaterial map={glowTex(s.d < 2.5 ? VIOLET : HOT)} {...add} opacity={0.35 * live} />
+            </mesh>
+          </group>
         );
       })}
       {o.vents !== false ? VENTS.map((v, i) => (

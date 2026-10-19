@@ -104,7 +104,8 @@ export const Transitions: React.FC<{shots: Shot[]; f: number}> = ({shots, f}) =>
                 stroke={i % 3 ? '#c98bff' : '#ffd9a8'} strokeWidth={0.35 + rnd(i * 9.1) * 0.6} strokeOpacity={0.85 * k} strokeLinecap="round" />
             );
           })}
-          <circle cx={80} cy={45} r={2 + 6 * k} fill="#fff1e0" opacity={0.9 * k} />
+          <defs><radialGradient id="rwcore"><stop offset="0%" stopColor="#fff1e0" stopOpacity={1} /><stop offset="35%" stopColor="#d9a6ff" stopOpacity={0.7} /><stop offset="100%" stopColor="#7a3cff" stopOpacity={0} /></radialGradient></defs>
+          <circle cx={80} cy={45} r={4 + 14 * k} fill="url(#rwcore)" opacity={0.95 * k} />
         </svg>
       );
     }

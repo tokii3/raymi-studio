@@ -3,7 +3,8 @@
 // around her, gold dots of fish that surfaced, a path of light to the horizon, the whole sea pulsing); rain whose every
 // drop lights a ring on the glowing water; fireworks shot up from under the surface. Under the surface: dark water,
 // the heat column that carried her, her fish. Built, never generated (hard rule 8). The surface is opaque from above,
-// so anything below the waterline (her legs while she treads water) is hidden like under a floor.
+// so anything below the waterline (her legs while she treads water) is hidden like under a floor - except for a lens
+// AT the waterline (|y| < 0.3, split_waterline): then the frame is half sky, half under water.
 // Options (times song s -> frames; *_s seconds):
 //   pool 0..1 | pool_at + pool_s       the violet pool of light around `pool_pos` (default the `pool` mark)
 //   sea_glow 0..1 | sea_glow_at + _s   the whole sea glows from below; pulse_at [t] = a brighter ring runs outward
@@ -133,6 +134,7 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const o = opts;
   const C = new THREE.Vector3(...(camPos ?? [0, 1.5, 6]));
   const under = C.y < 0;
+  const split = Math.abs(C.y) < 0.3;              // the lens AT the waterline: half sky, half under water (split_waterline)
   const pool = prog(o, 'pool', f, fps, 1);
   const glow = prog(o, 'sea_glow', f, fps, 2);
   const path = prog(o, 'path', f, fps, 3);
@@ -152,7 +154,7 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   return (
     <group>
       <SetLight sky="#2a3a8a" ground="#05040e" fill={0.35 + 0.3 * glow} key="#b9c8ff" keyI={0.55} keyPos={[moonP.x * 0.1, 12, moonP.z * 0.1]}
-        target={[0, 0, 0]} shadowSize={8} fog={under ? '#070a24' : '#0b1236'} fogNear={under ? 3 : 40} fogFar={under ? 26 : 150} />
+        target={[0, 0, 0]} shadowSize={8} fog={under ? '#070a24' : '#16205a'} fogNear={under ? 3 : 12} fogFar={under ? 26 : 130} />
       {/* the sky: gradient dome, stars, the low moon (+ its halo and its path on the water), the cloud */}
       <mesh scale={SKY_R} renderOrder={-10}>
         <sphereGeometry args={[1, 32, 24]} />
@@ -187,21 +189,31 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
         ))}
       </group>
       {/* the sea surface: opaque from above (hides what is under the waterline), a silvery skin from below */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -60]} material={toon('#070b1f')} receiveShadow>
-        <planeGeometry args={[400, 400, 1, 1]} />
-      </mesh>
-      <mesh rotation={[Math.PI / 2, 0, 0]} position={[0, -0.005, -60]}>
-        <planeGeometry args={[400, 400]} />
-        <meshBasicMaterial color="#26306a" transparent opacity={0.85} side={THREE.FrontSide} />
-      </mesh>
+      {!split ? (
+        <group>
+          <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -60]} material={toon('#0a1030')} receiveShadow>
+            <planeGeometry args={[400, 400, 1, 1]} />
+          </mesh>
+          <mesh rotation={[Math.PI / 2, 0, 0]} position={[0, -0.005, -60]}>
+            <planeGeometry args={[400, 400]} />
+            <meshBasicMaterial color="#26306a" transparent opacity={0.85} side={THREE.FrontSide} />
+          </mesh>
+        </group>
+      ) : (
+        // at the waterline: no surface sheet - the bright skin of the water is one line across the frame
+        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[C.x, 0, C.z - 40]} renderOrder={6}>
+          <planeGeometry args={[200, 80]} />
+          <meshBasicMaterial color="#9fb2ff" {...add} opacity={0.55} fog={false} />
+        </mesh>
+      )}
       {/* moonlight on the water: a shimmering path toward the moon */}
-      {!under ? Array.from({length: 70}, (_, i) => {
+      {!under && !split ? Array.from({length: 70}, (_, i) => {
         const t = rnd(i * 3), dist = 8 + t * 90;
         const p = new THREE.Vector3(MOON_DIR.x, 0, MOON_DIR.z).normalize().multiplyScalar(dist);
         const w = 0.6 + dist * 0.06;
         return <mesh key={`m${i}`} position={[p.x + (rnd(i * 5) - 0.5) * w * 2, 0.02, p.z]} rotation={[-Math.PI / 2, 0, 0]}
-          scale={[w * (0.6 + 0.4 * Math.sin(f / 7 + i)), 0.08 + dist * 0.004, 1]} renderOrder={4}>
-          <planeGeometry args={[1, 1]} /><meshBasicMaterial color="#cfd8ff" {...add} opacity={0.35 * (1 - 0.7 * cloud)} />
+          scale={[w * (0.6 + 0.4 * Math.sin(f / 7 + i)), 0.5 + dist * 0.03, 1]} renderOrder={4}>
+          <planeGeometry args={[1, 1]} /><meshBasicMaterial color="#cfd8ff" {...add} opacity={0.55 * (1 - 0.7 * cloud)} />
         </mesh>;
       }) : null}
       {/* the sea glows from below: its pattern, the pool around her, pulses, the gold fish, the path */}
@@ -282,10 +294,10 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
         </mesh>
       ) : null}
       {/* under the surface: the dark water box and the heat column that carried her */}
-      {under ? (
-        <mesh position={[0, -20, -20]} renderOrder={-4}>
-          <boxGeometry args={[120, 39.9, 120]} />
-          <meshBasicMaterial color="#090c2c" side={THREE.BackSide} depthWrite={false} fog={false} />
+      {under || split ? (
+        <mesh position={[0, -20.02, -20]} renderOrder={-4}>
+          <boxGeometry args={[120, 39.96, 120]} />
+          <meshBasicMaterial color="#0c1442" side={THREE.BackSide} depthWrite={false} fog={false} />
         </mesh>
       ) : null}
       <HeatColumn base={(o.column_pos as P3) ?? [poolPos[0], -46, poolPos[2]]} f={f} grow={prog(o, 'column', f, fps, 1)} bend={prog(o, 'column_bend', f, fps, 0.6)} dir={1}

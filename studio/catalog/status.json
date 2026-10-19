@@ -224,6 +224,98 @@
    "used_in": [
     "2026-10-18_king"
    ]
+  },
+  {
+   "id": "set-deep",
+   "code": "studio/src/three/sets/Deep.tsx",
+   "stills": [
+    "deep_zones_giant_column_cliff.jpg",
+    "deep_current_bend.jpg",
+    "deep_tint_wave.jpg",
+    "deep_rise_column_school.jpg"
+   ],
+   "status": "new",
+   "date": "2026-10-19",
+   "toki": "",
+   "notes": "the abyss: four zones (her dip, the main vent, the chimney forest, the 7th giant on its rise), crack network (one directed crack: crack_dir / crack_n), vents_at / flares / shells / vent_cap, rewind / dark / kill_at, the cold current (bends every flame), the red tint wave + red water, the sea-mount cliff with its own cracks (cliff_steps), the heat column (column_bend / unbend / pulse); FIRESTARTER build 2026-10-19",
+   "used_in": [
+    "2026-10-19_firestarter"
+   ]
+  },
+  {
+   "id": "fire",
+   "code": "studio/src/three/fire.tsx, studio/src/film/Film.tsx (anchored fires / sparks), studio/src/three/Puppet3D.tsx WhipSmear",
+   "stills": [
+    "fire_palm_anchor.jpg",
+    "fire_strike_whip_sparks.jpg"
+   ],
+   "status": "new",
+   "date": "2026-10-19",
+   "toki": "",
+   "notes": "built fire as light: Flame (bend, dim, white-hot heart), Fires (at / grow / out / fade = a kill or a rewind), a flame anchored to a point of her sprite (uv: her palm, her barb) and tossed hand to hand (uv2 + toss), SparkBurst on a strike with a residual ember, the tail-whip smear arc",
+   "used_in": [
+    "2026-10-19_firestarter"
+   ]
+  },
+  {
+   "id": "creatures-deep",
+   "code": "studio/src/three/creatures.tsx",
+   "stills": [
+    "creatures_salmon_bucket_fish.jpg",
+    "creatures_sauna_extinguisher.jpg"
+   ],
+   "status": "new",
+   "date": "2026-10-19",
+   "toki": "",
+   "notes": "deep-sea fish with glowing fin edges (one can carry a spark), a school, the sauna (fish in towels, eye shells, steam), Salmon as an actor (bucket throw, extinguisher spraying bubbles, glowing water, singed fin, covering its eyes, toast, 3D icons), bucket / extinguisher / towel props",
+   "used_in": [
+    "2026-10-19_firestarter"
+   ]
+  },
+  {
+   "id": "set-nightsea",
+   "code": "studio/src/three/sets/NightSea.tsx, studio/src/film/grade.ts (ember)",
+   "stills": [
+    "nightsea_pool_moon_cloud.jpg",
+    "nightsea_rain_path_fireworks.jpg",
+    "nightsea_split_waterline.jpg"
+   ],
+   "status": "new",
+   "date": "2026-10-19",
+   "toki": "",
+   "notes": "the sea at night: sky, stars, low moon + its path, a cloud over the moon, the sea lit from below (pool, gold fish dots, sea_glow, pulses, a path to the horizon), rain with a light ring per drop, fireworks shot from under the water (+ reflections), the split waterline, the vent field far below (deep_glow); grade ember",
+   "used_in": [
+    "2026-10-19_firestarter"
+   ]
+  },
+  {
+   "id": "lyrics-firework-burn",
+   "code": "studio/src/three/Words3D.tsx (kind firework, reveal burn, dim), raymi/timeline.py (shot text)",
+   "stills": [
+    "lyrics_firework.jpg",
+    "lyrics_burn_crack.jpg"
+   ],
+   "status": "new",
+   "date": "2026-10-19",
+   "toki": "",
+   "notes": "firework words: a shell climbs to each word and its sparks fly out to the letters (mirror on the water); reveal burn: a crack burns each word in left to right; dim: a line lying dark with one glowing key word; shot 'text': words that are not sung (a title in the picture)",
+   "used_in": [
+    "2026-10-19_firestarter"
+   ]
+  },
+  {
+   "id": "transition-rewind",
+   "code": "studio/src/film/Transitions.tsx",
+   "stills": [
+    "transition_rewind.jpg"
+   ],
+   "status": "new",
+   "date": "2026-10-19",
+   "toki": "",
+   "notes": "time running backwards: streaks rush into the centre (the cold open's flash-forward runs back)",
+   "used_in": [
+    "2026-10-19_firestarter"
+   ]
   }
  ]
 }

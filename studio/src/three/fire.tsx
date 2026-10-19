@@ -81,14 +81,19 @@ export const Flame: React.FC<{pos: P3; f: number; size?: number; c?: string; cor
         {[0, 1].map((k) => (
           <mesh key={`i${k}`} position={[0, size * 0.28 * fl * tall, 0]} rotation={[0, (k * Math.PI) / 2 + 0.4, 0]} scale={[w * 0.5, size * 0.56 * fl * tall, 1]} renderOrder={10}>
             <planeGeometry args={[1, 1]} />
-            <meshBasicMaterial map={flameTex(core, '#ffffff')} {...add} opacity={0.6 * dim} />
+            <meshBasicMaterial map={flameTex(core, '#ffffff')} {...add} opacity={0.95 * dim} />
           </mesh>
         ))}
+        {/* the white-hot heart: a flame reads as a FLAME, not a violet blob (stills run 2) */}
+        <mesh position={[0, size * 0.18 * tall, 0]} scale={[w * 0.28, size * 0.3 * tall, w * 0.28]} renderOrder={11}>
+          <sphereGeometry args={[0.5, 12, 10]} />
+          <meshBasicMaterial color="#fff6ea" {...add} opacity={0.85 * dim} />
+        </mesh>
       </group>
       {/* halo in the water around it */}
       <mesh position={[0, size * 0.4, 0]} scale={size * 2.6 * fl} renderOrder={8}>
         <sphereGeometry args={[0.5, 16, 12]} />
-        <meshBasicMaterial map={halo} {...add} opacity={0.22 * dim} side={THREE.BackSide} />
+        <meshBasicMaterial map={halo} {...add} opacity={0.15 * dim} side={THREE.BackSide} />
       </mesh>
       {/* embers / steam: rise, drift (sideways in a current), fade */}
       {Array.from({length: embers}, (_, i) => {
