@@ -100,8 +100,31 @@ Korean - the studio's v2 lyrics have the `lyrics_en.json` slot for it).
 - Search: "kda firestarter", "firestarter lyrics", "kda firestarter fan animation", "firestarter kda vtuber".
 
 ## 5. Song map (MEASURED)
-Filled from the cloud run (`analyze.yml`, 2026-10-19): see below once `song_map.json` + `lyrics_timed.json` land.
-TODO
+Cloud run 2026-10-19 (`analyze.yml`: Demucs vocal stem -> faster-whisper large-v3 -> official words matched by sound,
+Hangul by Revised Romanisation -> snapped to vocal onsets). 129.2 BPM, 206.46 s.
+| time | section | energy | what happens in the music |
+|---|---|---|---|
+| 0.0-12.84 | intro | build, no vocal (-17 dB) | a hit and a 0.4 s stop at 0.3-0.7, then the beat builds - **12.8 s without a voice: the danger zone for retention** |
+| 12.84-27.31 | hook x2 ("I'm a fire starter / ... burn it down like") | calm -> high | the first voice; the second half louder; "like" hangs at 27.3 |
+| 27.31-41.35 | chorus 1 ("Imma start a fire ... Imma fire starter") | high (-9.5 dB) | |
+| 41.35-50.0 | Korean verse ("긴 어둠 끝 불을 밝혀 ... 축제 같지") | high | at the end of the long dark, light the fire |
+| 50.0-50.4 | **stop** | - | before "I can be sweet" |
+| 50.4-57.2 | verse ("gold venom on my teeth ... for the tea") | high | |
+| 57.2-70.4 | pre-chorus ("I'm insane ... 붉게 물들일 이 순간") | calm -> high | timing re-measured (second pass, see below) |
+| ~72-86.3 | chorus 2 | high | |
+| 86.38-100.7 | hook x2 + "I'm a I'm a I'm a fire starter!" | high | the stutter hit at ~100 |
+| 100.7-107.7 | rap (SOYEON: Mon-Sun, 0 to 100) | calm -> high | fast Korean |
+| 107.69-115.57 | **"Let's go creak lose control / beat drop / eolssu!"** | **peak, loudest (-8.6 dB)** | the drop of the song |
+| 115.57-130.38 | bridge ("불을 지펴라 / sit back relax / when I start the fire") | high | the run across the night sky, then the last build |
+| 130.38-143.8 | pre-chorus 2 ("I'm insane ... 이 순간") | high (-11 dB) | |
+| 143.8-144.3 | **stop** | - | the breath before the final chorus |
+| 145.7-174.3 | final chorus x2 (2nd ends "get out of the sauna") | high | timing re-measured (second pass) |
+| 174.28-190.0 | hook x2 + "I'm a I'm a I'm a fire starter!" | high | |
+| 190.0-206.46 | outro | quiet (-20..-24 dB) | a last vocal tag 191.5-193.4, stop 195.0-195.4, tail |
+Lyric line times: `lyrics_timed.json`. First pass: 266 / 436 words measured; Whisper heard nothing in 57-70 s and
+145-170 s (one hallucinated word) -> the studio got a **second pass** (`raymi/song.py` asr_gaps / fill_gaps: only the
+empty sung windows, once in English and once in Korean, the better wins; `analyze.json` "gap_languages"). Re-run
+pushed 2026-10-19; until it lands, times in those two windows are interpolated. Lines 0-23 and 37-72 are measured.
 
 ## 6. Where Raymi meets this song
 The contradiction is the idea engine: **fire cannot burn underwater - and she does it anyway.**
@@ -130,8 +153,13 @@ Never: devil / demon / hell framing (fire + horns is the classic trap - her tako
 hellfire), real destruction, burning creatures.
 
 ## 7. Short windows (12-20 s, start and end on phrase edges)
-TODO after the measured map. Candidates by the text: the opening hook ("I'm a fire starter" x2 -> chorus), the
-"eolssu" beat drop, the final "get out of the sauna" chorus. The Short must END on a cliffhanger that the MV pays off.
+- **A: 12.84-27.31 (14.5 s)** - the hook twice, ending on the hanging "Imma burn it down like..." one frame before
+  "Imma start a fire": the Short ends on the unfinished sentence, the MV finishes it = the teaser toki asked for.
+  Recommended.
+- **B: 107.69-123.05 (15.4 s)** - "lose control / beat drop / eolssu" into the bridge: the loudest, most visual
+  stretch - stronger as a spectacle, but it gives the MV's best moment away.
+- **C: final chorus with "get out of the sauna"** (~167-174.3) - the joke line; edges after the second timing pass.
+The Short must END on a cliffhanger that the MV pays off (toki 2026-10-19: "das short muss lust aufs video machen").
 
 ## Sources
 - Official video + description (credits, lyrics): https://www.youtube.com/watch?v=Mmw-PpWhKFg (yt-dlp, 2026-10-19)

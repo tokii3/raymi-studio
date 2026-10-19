@@ -9,8 +9,10 @@ fire cannot burn underwater, and she does it anyway (灯闇 = a lamp in the dark
 long darkness, light the fire).
 
 Three demands from toki's brief that EVERY idea answers (2026-10-19):
-1. **The opening grabs** (Know My Name lost 31 % in the first 3 s): the song itself starts on its hook ("I'm a fire
-   starter" at 0 s) - so the video starts on its strongest picture, the thumbnail shows that same picture.
+1. **The opening grabs** (Know My Name lost 31 % in the first 3 s). MEASURED: the song does NOT start on its hook -
+   0-12.84 s is an instrumental intro (a hit + stop at 0.3-0.7, then a build), the first voice is "I'm a fire
+   starter" at 12.84. So the PICTURE must carry the first 12.8 s alone: something happens at 0 s (on the hit), the
+   intro is a countdown to the ignition on the first sung word, and the thumbnail's picture appears by ~3 s.
 2. **The Short is a teaser**: it ends on the cliffhanger the MV pays off.
 3. **Clean and professional**: one calm colour mass per act, few loud accents, darkness as the frame (the dark hides
    nothing cheap; light carries the picture). Raymi is not forced into every shot: the fire, the world, a huge lyric
@@ -36,9 +38,11 @@ Three demands from toki's brief that EVERY idea answers (2026-10-19):
 - **Lyric medium:** the fire itself - words written by the flame running along the cracks (key words burn in, fillers
   as embers), words in rising smoke / bubbles, Korean lines glowing in the vent mouths with romanisation + English
   as embers below. Big words may sweep across her - she is lit BY them.
-- **Opening (0-3 s) + thumbnail:** black; on "I'm a fire starter" a single strike - her face lit from below by her
-  own violet flame, eyes glowing, the flame between her fingers in the black water. Thumbnail = that frame, huge
-  flame, 3 words max: "FIRE. UNDERWATER." The first 15 s then cut back to the dark sleep.
+- **Opening (measured: 12.8 s intro before the first voice) + thumbnail:** 0.0 s on the intro's hit: black, two
+  violet eyes open. 0.7-12.8 s the intro is a struggle: she strikes her barb on the vent on the beats - sparks light
+  her face for a few frames each time (the thumbnail picture by ~2 s), the spark dies, again, closer, faster. On the
+  first sung word "I'm a fire starter" (12.84) it CATCHES: the flame in her hand. Thumbnail = her face lit from
+  below by her own violet flame in the black water, 2-3 words: "FIRE. UNDERWATER."
 - **5 wows** (by line, measured times after the cloud run): 1. 0 s the strike in the black; 2. first chorus - the
   fire runs over the floor in one camera move; 3. "call the fire fighter" - Salmon's bucket gag; 4. beat drop /
   eolssu - all vents erupt, bubble fireworks; 5. final chorus - she breaks the surface, the sea glows below her.
@@ -46,7 +50,7 @@ Three demands from toki's brief that EVERY idea answers (2026-10-19):
   "how far does it go?" -> MV. CTA: "what would YOU set on fire?"
 - **Risk:** fire + dark + her = the devil framing she must never get (no horns from her tako ears, no hellfire red
   alone - her violet leads). Needs a NEW set (abyss vents) + a reusable fire component.
-- **Key frames:** boards/A1.jpg (the strike in the black), A2 (the fire spreads over the floor), A3 (the vents erupt)
+- **Key frames:** boards/A1.jpg (the strike, 13 s), A2 (the fire runs over the floor, chorus 1 "Imma start a fire"), A3 (the vents erupt on the beat drop, 111 s)
 
 ## Idea B - Breaking News: Fire Warning (the weather studio)
 - **The one sentence:** "Weather with Raymi" goes live with a fire warning for the ocean - and the forecaster is the
@@ -67,15 +71,17 @@ Three demands from toki's brief that EVERY idea answers (2026-10-19):
 - **Lyric medium:** the broadcast's own type - lower thirds, the ticker, the map's labels and warning banner, the
   teleprompter, captions on the studio monitors (Korean lines as a translated news caption: romanisation + English
   in the lower third). Clean and professional by its very medium.
-- **Opening (0-3 s) + thumbnail:** ON AIR tally goes red, she smiles into the lens, the map behind her explodes into
-  a FIRE ALERT. Thumbnail: her grin in front of a burning map, banner "FIRE WARNING".
+- **Opening (12.8 s intro) + thumbnail:** 0.0 s on the hit: the ON AIR tally slams red. The intro is the countdown
+  to the broadcast - the ticker runs "BREAKING", the map flickers alert, she turns to camera 1 with a grin; on the
+  first sung word (12.84) the map behind her explodes into the FIRE ALERT. Thumbnail: her grin in front of a burning
+  map, banner "FIRE WARNING".
 - **5 wows:** 1. 0 s the map ignites behind her; 2. she drags the fire front across the map; 3. sprinklers - rain
   in the studio; 4. beat drop - all cameras / screens become her; 5. the sea floods the studio, fire under water.
 - **The Short:** cold open into the first chorus as a live broadcast in 9:16 (a phone filming the TV) - ends with
   "after the break: the ocean" -> MV. CTA: "would you trust my forecast?"
 - **Risk:** a TV studio is the least "ocean" of the three; reads as comedy more than heat; the weather set is
   toy-like in wides (critic notes) - must live in close and medium shots, screens and type.
-- **Key frames:** boards/B1.jpg (live, the map ignites), B2 (the fire front on the map), B3 (rain in the studio)
+- **Key frames:** boards/B1.jpg (live, the map ignites, 13 s), B2 (the fire front on the map, chorus 1), B3 ("call the fire fighter": the studio floods, 75 s)
 
 ## Idea C - The Lantern Festival (축제)
 - **The one sentence:** the sea floor's festival has been dark for years because nothing can burn down here - Raymi
@@ -93,15 +99,16 @@ Three demands from toki's brief that EVERY idea answers (2026-10-19):
   night sky full of lanterns - and one more lights by itself: the comeback is everyone's now.
 - **Lyric medium:** the lanterns' own paper - words painted on the lanterns light up as she lights them; key words
   on the big festival banner; Korean lines on the lanterns with romanisation + English as smaller paper tags.
-- **Opening (0-3 s) + thumbnail:** black - she blows on her cupped hands, a lantern ignites in her face; cut: a
-  thousand lanterns blaze at once. Thumbnail: her lit face between hundreds of glowing lanterns.
+- **Opening (12.8 s intro) + thumbnail:** 0.0 s on the hit: a dead lantern swings into the lens. The intro: she
+  breathes on her cupped hands again and again, a warm glow grows between her fingers; on the first sung word
+  (12.84) the first lantern ignites in her face. Thumbnail: her lit face between hundreds of glowing lanterns.
 - **5 wows:** 1. 0 s the first lantern in her hands; 2. chorus 1 - the street catches in one move; 3. the clam drum
   drop - eolssu; 4. bridge - the lanterns rise; 5. the surface - a sky of lanterns.
 - **The Short:** the first lantern into the street catching - ends on her letting the lantern go up: "where does it
   go?" -> MV. CTA: "make a wish - what's on YOUR lantern?"
 - **Risk:** the warmest, but the least "FIRE starter" - a sky-lantern release is a known image (Tangled); it is
   more beautiful than dangerous, and the song is dangerous. Shares the abyss floor with idea A (a new set either way).
-- **Key frames:** boards/C1.jpg (the first lantern), C2 (the street catches), C3 (the lanterns rise)
+- **Key frames:** boards/C1.jpg (the first lantern, "긴 어둠 끝 불을 밝혀" 41 s), C2 (the street catches, "축제" 47 s), C3 (the lanterns rise, "밤하늘을 달려" 116 s)
 
 ## My recommendation (toki decides)
 **A - The Lamp in the Dark.** It is the only idea where the song's heat and her ocean collide (fire underwater is the
