@@ -9,7 +9,7 @@ import * as THREE from 'three';
 export const CAP = 0.72;            // cap height share of the font size (her font)
 export const PAD_EM = 0.25;         // texture room left / right of a word (its soft shadow)
 export const TEX_EM = 1.45;         // texture height in em (glyph + shadow below)
-export const SUB = 0.6;             // romaji / English size vs a normal word
+export const SUB = 0.7;             // romaji / English size vs a normal word (type-critic style frames 1: 0.6 too small)
 export const KEY = 2.8;             // default key word size vs a normal word (v2: one word HUGE)
 
 export type Item = {kind: 'main' | 'roma' | 'en'; text: string; idx: number; key: boolean; size: number; x: number; y: number; w: number; h: number; row: number};

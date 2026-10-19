@@ -8,7 +8,7 @@
 - Lyrics v2 (opt-in `"lyric_style": "v2"` until toki approves): her heavy weight (raymi/font.py builds
   Raymi-Heavy.ttf, every gap stays open; the cloud keeps it in sync), colours from the grade, toon-lit + cast shadow,
   tilt / roll onto surfaces, romaji + English under Japanese lines (lyrics_en.json, own safe translation), words swell
-  while sung; one layout for renderer + guards (lyricLayout.ts); readable default 7 % / subs 4.4 % at phone size.
+  while sung; one layout for renderer + guards (lyricLayout.ts); readable default 7 % / subs 5 % at phone size (subs 0.7 of a line).
   Style frames prepared, NOT rendered: jobs/2026-10-19_lyrics-v2 (+ v1 twin), all guards pass.
 - Main element: heroes in shots.json, size guard before every render (KING's timeline: 28 of 30 crown shots flagged),
   value contrast after (raymi/hero.py), kit script/heroes.json + facts/hero.json, every critic answers it first.

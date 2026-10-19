@@ -21,7 +21,8 @@ Lyrics FIRST (toki 2026-10-19: "ich mag die lyrics immernoch nicht ... oft zu kl
 "bei japanischen songs soll immer romaji / englisch noch unten mit stehen"): before anything else answer
 `WEIGHT + SIZE: <ok or not>` - is every line heavy enough and big enough to read on a phone at a glance (a thin or
 small line is a fault, not taste), and does every Japanese line show its romaji AND English under it (a missing one is
-`BLOCK: fault` unless the script marks the line `sub: false` with a reason)? Then: does the type BELONG to the picture -
+`BLOCK: fault` unless the script marks the line `sub: false` with a reason)? The JP + romaji + English block is
+toki's own requirement - judge whether it reads and belongs, never call its existence slop (calibration, style frames 1). Then: does the type BELONG to the picture -
 its colour from the scene's light, lit by it, a shadow in the scene, lying on its surface in perspective - or is it
 pasted on top?
 

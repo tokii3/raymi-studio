@@ -48,3 +48,6 @@
     follows her head) was a critic FIX, not toki's.
   - KING's Short never got thumbnails (raymi next shows the thumbs step open) - only if toki wants them now.
   - Still open from the critics (not toki): crowd look pass, prop texture pass, night backdrop (status.json notes).
+  - The new "lyrics hidden behind a prop" guard (2026-10-19) flags 2 delivered KING shots (lamp-deals, buried: behind
+    a coin tower) - evidence only, KING is not re-rendered. The weather set now registers its studio cameras + desk,
+    the card table its standing King card as solids.

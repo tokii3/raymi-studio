@@ -129,7 +129,7 @@ test('lyrics v2: a small line is refused at phone size, its subs too - unless th
     words: [{w: '歯を', from: 0, to: 10, key: false, line: 0, idx: 0, em: 2.1}, {w: 'むき出して', from: 10, to: 30, key: true, line: 0, idx: 1, em: 5.2}]}]});
   const why = (p) => lyricsOutOfFrame(p).map((x) => x.why);
   assert.ok(why(mk(0.12)).some((w) => w.startsWith('too small')));             // v1's 4.4 % would pass this, v2 wants 7 %
-  assert.ok(why(mk(0.145)).some((w) => w.startsWith('romaji / English too small')));
+  assert.ok(why(mk(0.143)).some((w) => w.startsWith('romaji / English too small')));
   assert.deepEqual(why(mk(0.26)), []);
   assert.deepEqual(why(mk(0.12, {small: 'a whisper in the far wide, read in the next close-up'})), []);
   // the block lies on a floor: its corners leave the vertical plane

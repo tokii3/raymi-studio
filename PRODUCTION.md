@@ -50,7 +50,7 @@ per beat whose expression fits the line, shot / side / act / icon / key words, `
   lit by the set + a real cast shadow, `tilt` / `roll` put the block on a floor / table / diagonal, words swell while
   sung. A Japanese line shows romaji + English under it from `lyrics_en.json` (`{"<line>": {"roma", "en"}}`, our own
   safe translation); a line without English is refused unless the shot says `"sub": false` with a why.
-- Readable at phone size: a normal word >= 7 % of the frame height, romaji / English >= 4.4 % (`"small": "<why>"`
+- Readable at phone size: a normal word >= 7 % of the frame height, romaji / English >= 5 % (`"small": "<why>"`
   breaks it on purpose). Style frames: `jobs/2026-10-19_lyrics-v2` (+ v1 twin), `stills.pending.json` -> stills.json.
 
 ## The main element (hero)

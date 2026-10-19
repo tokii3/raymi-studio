@@ -209,7 +209,7 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
       const zz = float ? Math.min(z, a + 18) : z;
       const corners0 = lineCorners(s, line);
       // readable at phone size (a principle with a default, PRINCIPLES 11): v1 a normal word >= 4.4 % of the frame height;
-      // v2 (toki 2026-10-19 "oft zu klein") >= 7 % and its romaji / English >= 4.4 %. lyrics.small = a written reason
+      // v2 (toki 2026-10-19 "oft zu klein") >= 7 % and its romaji / English >= 5 %. lyrics.small = a written reason
       // to go smaller on purpose (a whisper, a detail in a wide) - then the guard trusts the script.
       if (!L0(s).small) {
         const cam0 = makeCamera(s, a, aspect, props.hits, props.fps);
@@ -227,7 +227,7 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
         if (main < (v2 ? 0.07 : 0.044) * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `too small to read (${Math.round(main)} px)`}); continue; }
         if (v2 && subOf(L0(s), line)) {
           const sp = px(L0(s).size * SUB);
-          if (sp < 0.044 * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `romaji / English too small to read (${Math.round(sp)} px)`}); continue; }
+          if (sp < 0.05 * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `romaji / English too small to read (${Math.round(sp)} px)`}); continue; }
         }
       }
       // a stamp slams in bigger than it lands: 2 frames after the last word it is still ~1.2x (final Short 1: clipped)
@@ -516,6 +516,24 @@ export function solidFaults(props: FilmProps): {shot: string; frame: number; why
       }
       run = hidden ? run + 1 : 0;
       if (run >= Math.round(props.fps * 0.4)) { out.push({shot: s.id, frame: f - run + 1, why: `her face hidden behind the ${hidden}`}); break; }
+    }
+    // a lyric line behind a prop reads as a cut word (lyrics v2 style frames 1: a studio camera over パッパッパ):
+    // its centre and corners (pulled 15 % in) must be seen by the lens on the line's settled frame - unless lyrics.over
+    if (s.lyrics && !s.lyrics.over && !bad) {
+      for (const line of [...new Set(s.words.map((w) => w.line))]) {
+        const ws = s.words.filter((w) => w.line === line);
+        const f = Math.min(s.to - 1, Math.max(...ws.map((w) => w.from)) + 6);
+        const cam = makeCamera(s, f, aspect, props.hits, props.fps);
+        const cs = lineCorners(s, line);
+        const c = cs.reduce((a, b) => a.clone().add(b), new THREE.Vector3()).multiplyScalar(1 / cs.length);
+        const pts = [c, ...cs.map((q) => q.clone().lerp(c, 0.15))];
+        const blocked = pts.map((q) => {
+          const dir = q.clone().sub(cam.position), dist = dir.length();
+          const ray = new THREE.Ray(cam.position.clone(), dir.normalize());
+          return boxes.find((b) => { const hit = ray.intersectBox(b.box, new THREE.Vector3()); return hit && hit.distanceTo(cam.position) < dist - 0.1 && !b.box.containsPoint(q); });
+        }).filter(Boolean);
+        if (blocked.length) { out.push({shot: s.id, frame: f, why: `lyrics hidden behind the ${blocked[0]!.name}`}); break; }
+      }
     }
   }
   return out;

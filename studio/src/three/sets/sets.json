@@ -496,6 +496,20 @@
      0.24,
      1.9
     ]
+   },
+   {
+    "name": "King card",
+    "center": [
+     -1.6,
+     0.9,
+     -1.2
+    ],
+    "size": [
+     1.3,
+     1.8,
+     0.4
+    ],
+    "unless": "king_kick"
    }
   ]
  },
@@ -612,7 +626,47 @@
   },
   "no_lens": [],
   "texts": [],
-  "solids": []
+  "solids": [
+   {
+    "name": "studio camera",
+    "center": [
+     0.4,
+     0.95,
+     4.3
+    ],
+    "size": [
+     1.0,
+     1.9,
+     1.4
+    ]
+   },
+   {
+    "name": "studio camera",
+    "center": [
+     3.6,
+     0.95,
+     3.4
+    ],
+    "size": [
+     1.2,
+     1.9,
+     1.4
+    ]
+   },
+   {
+    "name": "news desk",
+    "center": [
+     -3.6,
+     0.5,
+     0.3
+    ],
+    "size": [
+     2.8,
+     1.0,
+     1.8
+    ]
+   }
+  ]
  },
  "_why_texts": "texts: built props that carry readable text (centre, size w/h in m, rotY deg; opt = only when that option is set, unless = not when that option is false). The guard refuses a frame that cuts one of them by the edge (pilot 1/2: a half sign reads as a fault). no_lens: boxes the camera may never be inside (min, max), e.g. under the sand or the hall floor. blank = not readable (so not guarded) when that text option is ''.",
  "_why_solids": "solids: built props the lens may never be inside or right against, and that may never hide her face for 0.4 s (stills run 19: the lens inside a coin tower, the throne hiding her). centre, size (m); opt / unless as for texts."
