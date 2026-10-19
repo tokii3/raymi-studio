@@ -1,0 +1,219 @@
+{
+ "lyric_style": "v2",
+ "title": "FIRESTARTER board A - The Lamp in the Dark",
+ "audio": {
+  "file": "../2026-10-19_firestarter/song.webm",
+  "from": 12.5,
+  "to": 116.0
+ },
+ "lyrics": "../2026-10-19_firestarter/lyrics_timed.json",
+ "song_map": "../2026-10-19_firestarter/song_map.json",
+ "translation": "../2026-10-19_firestarter/lyrics_en.json",
+ "grain": 0.04,
+ "shots": [
+  {
+   "id": "A1",
+   "at": 12.5,
+   "set": "deep",
+   "why": "the cold open: black water, one strike - her own violet flame at her palm lights her face from below",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.0,
+    "snow": 0.6,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "pos": [
+       0.78,
+       1.08,
+       -0.55
+      ],
+      "size": 0.34,
+      "c": "#b45cff"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.05,
+      1.2,
+      1.25
+     ],
+     "look": [
+      0.45,
+      1.1,
+      -0.7
+     ],
+     "fov": 30
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": [
+      0.1,
+      0,
+      -0.6
+     ],
+     "act": "idle"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.07,
+     1.01,
+     -0.33
+    ],
+    "rot": 8,
+    "size": 0.055,
+    "width": 0.6,
+    "material": "light",
+    "key": [
+     "fire"
+    ],
+    "lines": [
+     0
+    ]
+   }
+  },
+  {
+   "id": "A2",
+   "at": 27.0,
+   "set": "deep",
+   "why": "the fire runs over the sea floor from her strike - she is small at its origin, the fire is the picture",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.55,
+    "origin": [
+     0.75,
+     -1.0
+    ],
+    "glow": "#b45cff"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.4,
+      4.6,
+      3.6
+     ],
+     "look": [
+      0.6,
+      0.0,
+      -2.2
+     ],
+     "fov": 44
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_CROUCH_UV_192",
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "act": "idle"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -0.7,
+     0.03,
+     -0.2
+    ],
+    "tilt": -90,
+    "rot": -20,
+    "size": 0.26,
+    "width": 6.5,
+    "material": "light",
+    "key": [
+     "fire"
+    ],
+    "lines": [
+     8
+    ]
+   }
+  },
+  {
+   "id": "A3",
+   "at": 111.0,
+   "set": "deep",
+   "why": "the vents erupt - bubble fireworks rise, she conducts them",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "erupt": 1.0,
+    "origin": [
+     0.75,
+     -1.0
+    ],
+    "glow": "#b45cff"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.2,
+      1.0,
+      6.4
+     ],
+     "look": [
+      0.4,
+      1.9,
+      -2.5
+     ],
+     "fov": 46
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_HAPPY_JUMP_UV_160",
+     "pos": [
+      0.3,
+      0,
+      -0.4
+     ],
+     "act": "idle"
+    }
+   ],
+   "lyrics": {
+    "kind": "stamp",
+    "anchor": [
+     0.3,
+     2.75,
+     -0.6
+    ],
+    "rot": 0,
+    "roll": -6,
+    "size": 0.235,
+    "width": 10.0,
+    "material": "light",
+    "key": [
+     "drop"
+    ],
+    "lines": [
+     53
+    ],
+    "words": [
+     "beat",
+     "drop",
+     "beat-beat"
+    ],
+    "sub": false,
+    "sub_why": "only the English words of the line are written (the drop as one huge English word); the Korean 'ja' is a breath"
+   }
+  }
+ ]
+}

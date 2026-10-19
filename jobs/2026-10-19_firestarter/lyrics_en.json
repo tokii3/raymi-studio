@@ -1,0 +1,81 @@
+{
+ "_why": "Lyrics v2: every Korean line shows its romanisation + English under it (toki 2026-10-19 rule for Japanese, same need for Korean). Keyed by the line text of lyrics_timed.json. English = our own loose, safe translation (no official translation copied). Romanisation = Revised Romanisation, readable for singing along.",
+ "lines": {
+  "긴 어둠 끝 불을 밝혀": {
+   "roma": "gin eodum kkeut bureul balkyeo",
+   "en": "at the end of the long dark, I light the fire"
+  },
+  "바람 불어도 (후후) I’m the lighter": {
+   "roma": "baram bureodo (huhu) I'm the lighter",
+   "en": "let the wind blow (whoo whoo), I'm the lighter"
+  },
+  "꺾이지 않는 desire": {
+   "roma": "kkeokkiji anneun desire",
+   "en": "a desire that never bends"
+  },
+  "올라가 펑펑 터져 마치 축제 같지": {
+   "roma": "ollaga peong peong teojyeo machi chukje gatji",
+   "en": "up it goes, bang bang, it bursts like a festival"
+  },
+  "느껴봐 차갑던 이 세상을": {
+   "roma": "neukkyeobwa chagapdeon i sesangeul",
+   "en": "feel it, this world that was so cold"
+  },
+  "붉게 물들일 이 순간": {
+   "roma": "bulge muldeuril i sungan",
+   "en": "this is the moment I paint it red"
+  },
+  "멈추지 않아": {
+   "roma": "meomchuji ana",
+   "en": "it never stops"
+  },
+  "월화수목금토일": {
+   "roma": "wol hwa su mok geum to il",
+   "en": "Monday to Sunday"
+  },
+  "나를 jealous": {
+   "roma": "nareul jealous",
+   "en": "they're jealous of me"
+  },
+  "근데 영 고갈이 안돼": {
+   "roma": "geunde yeong gogari andwae",
+   "en": "but I never run dry"
+  },
+  "0부터 100까지": {
+   "roma": "yeongbuteo baekkkaji",
+   "en": "from zero to a hundred"
+  },
+  "너의 무의식까지": {
+   "roma": "neoui muuisikkkaji",
+   "en": "all the way into your dreams"
+  },
+  "단숨에 다 퍼져 퍼져": {
+   "roma": "dansume da peojyeo peojyeo",
+   "en": "it spreads in one breath, spreads"
+  },
+  "Let’s go 삐걱 삐-삐걱 어느새 lose control": {
+   "roma": "Let's go ppigeok ppi-ppigeok eoneusae lose control",
+   "en": "let's go, creak, cr-creak, and suddenly lose control"
+  },
+  "자 beat drop beat-beat drop": {
+   "roma": "ja beat drop beat-beat drop",
+   "en": "now, beat drop"
+  },
+  "놀아보자 얼쑤 (얼쑤!)": {
+   "roma": "noraboja eolssu (eolssu!)",
+   "en": "let's play, eolssu! (a festival cheer)"
+  },
+  "불을 지펴라": {
+   "roma": "bureul jipyeora",
+   "en": "light the fire"
+  },
+  "까마디 까만 이 밤하늘을 달려": {
+   "roma": "kkamadi kkaman i bamhaneureul dallyeo",
+   "en": "race across this pitch-black night sky"
+  },
+  "준비됐어 난": {
+   "roma": "junbidwaesseo nan",
+   "en": "I'm ready"
+  }
+ }
+}

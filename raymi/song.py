@@ -423,15 +423,62 @@ def separate(song: Path, out_dir: Path) -> Path:
     return wav
 
 
-def transcribe(vocals: Path, language: str, prompt: str, model: str = "large-v3") -> list[dict]:
+_WHISPER: dict = {}
+
+
+def _whisper(model: str):
     from faster_whisper import WhisperModel
 
-    m = WhisperModel(model, device="cpu", compute_type="int8")
+    if model not in _WHISPER:
+        _WHISPER[model] = WhisperModel(model, device="cpu", compute_type="int8")
+    return _WHISPER[model]
+
+
+def transcribe(vocals: Path, language: str, prompt: str, model: str = "large-v3", clip: tuple[float, float] | None = None
+               ) -> list[dict]:
+    """Word times from the vocal stem; clip = (t0, t1) transcribes only that window (times stay song times)."""
     audio = load_audio(vocals, SR)
-    segs, _ = m.transcribe(audio, language=language, word_timestamps=True, vad_filter=False, beam_size=5,
-                           condition_on_previous_text=False, initial_prompt=prompt[:800])
-    return [{"w": w.word.strip(), "t0": round(w.start, 3), "t1": round(w.end, 3)}
+    off = 0.0
+    if clip:
+        off = max(0.0, clip[0])
+        audio = audio[int(off * SR):int(clip[1] * SR)]
+    segs, _ = _whisper(model).transcribe(audio, language=language, word_timestamps=True, vad_filter=False, beam_size=5,
+                                         condition_on_previous_text=False, initial_prompt=prompt[:800])
+    return [{"w": w.word.strip(), "t0": round(w.start + off, 3), "t1": round(w.end + off, 3)}
             for s in segs for w in (s.words or []) if w.word.strip()]
+
+
+def asr_gaps(asr: list[dict], spans: list[list[float]], min_gap: float = 4.0, pad: float = 0.6) -> list[list[float]]:
+    """Windows where the singer sings (vocal spans) but the recogniser heard (almost) nothing for >= min_gap s.
+    Whisper on a whole song loses itself in long repeated / mixed-language stretches (FIRESTARTER 2026-10-19: 57-70 s
+    and 145-170 s empty, one hallucinated word) - a second pass on just these windows hears them."""
+    out = []
+    ts = sorted(w["t0"] for w in asr)
+    for a, b in spans:
+        edges = [a] + [t for t in ts if a <= t < b] + [b]
+        for x, y in zip(edges, edges[1:]):
+            if y - x >= min_gap:
+                out.append([round(max(a, x - pad), 2), round(min(b, y + pad), 2)])
+    return out
+
+
+def fill_gaps(vocals: Path, asr: list[dict], spans: list[list[float]], langs: list[str], prompt: str, model: str
+              ) -> tuple[list[dict], list[dict]]:
+    """Second pass: every gap window transcribed alone, once per language; the pass with the most words wins and
+    replaces whatever stood in the window (a lone hallucinated word). Returns (new asr, log)."""
+    log = []
+    for a, b in asr_gaps(asr, spans):
+        best: list[dict] = []
+        tried = {}
+        for lang in langs:
+            got = [w for w in transcribe(vocals, lang, prompt, model, clip=(a, b)) if a <= w["t0"] < b]
+            tried[lang] = len(got)
+            if len(got) > len(best):
+                best = got
+        if best:
+            asr = sorted([w for w in asr if not (a <= w["t0"] < b)] + best, key=lambda w: w["t0"])
+        log.append({"window": [a, b], "words": tried})
+    return asr, log
 
 
 def beats(song: Path) -> dict:
@@ -555,6 +602,13 @@ def analyze(job_dir: Path) -> dict:
     else:
         asr = transcribe(wav, cfg.get("language", "ja"), " ".join(text.split()), cfg.get("model", "large-v3"))
         cache.write_text(json.dumps(asr, ensure_ascii=False, indent=0), encoding="utf-8", newline="\n")
+    langs = cfg.get("gap_languages")      # e.g. ["en", "ko"] for a bilingual song: a second pass on the empty windows
+    gap_log = cache.with_name("whisper_gaps.json")
+    if langs and not gap_log.is_file():
+        spans0 = vocal_spans(loudness_db(load_audio(wav, SR), SR))
+        asr, log = fill_gaps(wav, asr, spans0, list(langs), " ".join(text.split()), cfg.get("model", "large-v3"))
+        cache.write_text(json.dumps(asr, ensure_ascii=False, indent=0), encoding="utf-8", newline="\n")
+        gap_log.write_text(json.dumps(log, indent=1), encoding="utf-8", newline="\n")
     res = time_lyrics(job_dir, text, asr, wav)
     lines = res["lines"]
     sm = song_map(song, wav, lines)

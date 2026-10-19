@@ -66,7 +66,8 @@ TIME_OPTS = {"banks_off", "cap_lift", "cap_off", "cap_pick", "card_flutter", "ca
              "glow_out", "hall_lights", "last_phone_down", "led_blink", "led_flip", "salmon_arrive", "salmon_coin",
              "swarm_beam", "taps", "warning_flash", "bulb_pop", "coin_flick", "coin_roll", "coin_spin", "collapse",
              "flick", "gust", "house_keys", "king_kick", "king_rot", "pickup", "pool_on", "rays_pass_lens", "shuffle",
-             "slaps", "spade_glow", "swarm_peel", "topple", "warning_cards", "warning_slash", "burst_at"}
+             "slaps", "spade_glow", "swarm_peel", "topple", "warning_cards", "warning_slash", "burst_at",
+             "ignite_at", "erupt_at", "lit_at", "rise_at"}
 
 REL_OPTS = {"hands"}                               # set options in seconds from the shot start
 
@@ -337,8 +338,9 @@ def glyph_errors(texts: list[str], cmap: set[int]) -> list[str]:
 
 
 def is_japanese(text: str) -> bool:
-    """Kana or kanji in a line: it gets romaji + English under it (lyrics v2)."""
-    return any(0x3040 <= ord(c) <= 0x30FF or 0x4E00 <= ord(c) <= 0x9FFF or c == "〇" for c in text)
+    """Kana, kanji or Hangul in a line: it gets its romanisation + English under it (lyrics v2; K-pop lines too)."""
+    return any(0x3040 <= ord(c) <= 0x30FF or 0x4E00 <= ord(c) <= 0x9FFF or c == "〇" or 0xAC00 <= ord(c) <= 0xD7A3
+               for c in text)
 
 
 def load_translation(job: Path, spec: dict) -> dict:
@@ -555,6 +557,19 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             opts[k] = time_opt(opts[k], fr)
         for k in REL_OPTS & opts.keys():                   # seconds from this shot's start
             opts[k] = time_opt(opts[k], lambda t, a=a: fr(a + t))
+        if isinstance(opts.get("fires"), list):           # flames anywhere (three/fire.tsx): at = song s, grow = s
+            fires = []
+            for x in opts["fires"]:
+                pos = _v3(x.get("pos"), marks, errors, f"{tag} fire") if isinstance(x, dict) else None
+                if pos is None:
+                    continue
+                y = {**x, "pos": pos}
+                if "at" in x:
+                    y["at"] = fr(x["at"])
+                if "grow" in x:
+                    y["grow"] = max(1, round(float(x["grow"]) * FPS))
+                fires.append(y)
+            opts["fires"] = fires
         if lyr and lyr.get("anchor") == "led" and "led" in marks:
             opts["led"] = ""                               # a lyric written on the LED board replaces its text (stills 14)
         for k, v in opts.items():

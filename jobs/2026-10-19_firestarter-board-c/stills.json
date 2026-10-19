@@ -1,0 +1,17 @@
+{
+ "format": "mv",
+ "frames": [
+  97,
+  279,
+  2332
+ ],
+ "names": [
+  "C1",
+  "C2",
+  "C3"
+ ],
+ "scale": 1,
+ "to": "boards",
+ "dest": "jobs/2026-10-19_firestarter/boards",
+ "_why": "idea boards for toki (FIRESTARTER 2026-10-19): three key frames per idea, each at its settled lyric"
+}
