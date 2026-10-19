@@ -180,13 +180,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     1.0,
+     0.22,
      1.24,
-     0.05
+     -0.04
     ],
     "rotY": 0.0,
     "size": 0.07,
-    "width": 0.9,
+    "width": 0.65,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -194,7 +194,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -10.0,
+    "tilt": 0.0,
     "roll": 0.0,
     "keyScale": 1.4,
     "auto": true,
@@ -1362,6 +1362,23 @@
       "size": 0.9
      }
     ],
+    "fires": [
+     {
+      "pos": [
+       -1.2,
+       0.5,
+       -1.15
+      ],
+      "size": 0.12,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "at": 266,
+      "grow": 3,
+      "out": 297,
+      "fade": 9,
+      "light": 2.5
+     }
+    ],
     "salmon": {
      "pos": [
       -1.1,
@@ -2206,7 +2223,7 @@
      null,
      null
     ],
-    "vents_s": 4.0,
+    "vents_s": 1.2,
     "vent_cap": 0.8,
     "sparks": [
      {
@@ -2517,13 +2534,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     1.0,
-     1.11,
-     -0.53
+     1.57,
+     0.99,
+     -0.79
     ],
     "rotY": 25.0,
-    "size": 0.11,
-    "width": 1.5,
+    "size": 0.154,
+    "width": 2.1,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -2861,8 +2878,8 @@
      -0.5
     ],
     "rotY": 0.0,
-    "size": 0.1,
-    "width": 1.2,
+    "size": 0.14,
+    "width": 1.68,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -3173,13 +3190,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     -0.35,
-     0.72,
+     -0.13,
+     0.58,
      -0.6
     ],
     "rotY": 0.0,
-    "size": 0.085,
-    "width": 2.2,
+    "size": 0.119,
+    "width": 3.08,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -4009,32 +4026,32 @@
     {
      "f": 661,
      "pos": [
-      0.7,
-      8.5,
-      -0.2
+      0.5,
+      5.6,
+      0.3
      ],
      "look": [
-      0.7,
+      0.4,
       0.0,
-      -1.3
+      -0.8
      ],
-     "fov": 46.0,
+     "fov": 48.0,
      "roll": 0.0,
      "ease": "inOut"
     },
     {
      "f": 723,
      "pos": [
-      0.7,
-      8.0,
-      -0.2
+      0.5,
+      5.2,
+      0.3
      ],
      "look": [
-      0.7,
+      0.4,
       0.0,
-      -1.3
+      -0.8
      ],
-     "fov": 46.0,
+     "fov": 48.0,
      "roll": 20.0,
      "ease": "linear"
     }
@@ -4075,13 +4092,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.6,
+     -0.4,
      0.03,
-     -2.2
+     -1.5
     ],
     "rotY": 0.0,
-    "size": 0.3,
-    "width": 3.6,
+    "size": 0.22,
+    "width": 3.0,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -4531,14 +4548,14 @@
     {
      "f": 768,
      "pos": [
-      1.9,
+      1.45,
       1.0,
-      1.9
+      1.1
      ],
      "look": [
-      0.7,
-      1.3,
-      -1.3
+      0.75,
+      1.35,
+      -1.4
      ],
      "fov": 52.0,
      "roll": 0.0,
@@ -4547,14 +4564,14 @@
     {
      "f": 818,
      "pos": [
-      1.85,
+      1.4,
       0.95,
-      1.7
+      0.95
      ],
      "look": [
-      0.75,
-      1.4,
-      -1.3
+      0.8,
+      1.45,
+      -1.4
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -4597,13 +4614,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     1.35,
-     1.93,
-     -1.06
+     1.04,
+     1.51,
+     -1.17
     ],
     "rotY": -20.0,
-    "size": 0.12,
-    "width": 1.6,
+    "size": 0.168,
+    "width": 2.24,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
