@@ -1,0 +1,200 @@
+[
+ {
+  "id": "s1",
+  "from_s": 0.0,
+  "to_s": 2.0,
+  "set": "deep",
+  "why": "the first frame IS the promise (P6, the Know My Name lesson): fire underwater, her face, in 0.0 s; behind her the amber vents sit low in frame, never behind her head (devil guard); the thumbnail's words appear in the picture so the click is paid at once (review script_1 FIX 3)",
+  "words": "FIRE. UNDERWATER.",
+  "transition_out": "rewind",
+  "hero": [
+   "flame",
+   "face"
+  ]
+ },
+ {
+  "id": "s2",
+  "from_s": 2.0,
+  "to_s": 2.93,
+  "set": "deep",
+  "why": "the video shows how it began - never dead black: the eyes open ON the rewind (treatment FIX 4)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": [
+   "face"
+  ]
+ },
+ {
+  "id": "s3",
+  "from_s": 2.93,
+  "to_s": 4.9,
+  "set": "deep",
+  "why": "failure 1 - a gag, not a black hole: every strike leaves a residual glow (FIX 4)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "s4",
+  "from_s": 4.9,
+  "to_s": 6.87,
+  "set": "deep",
+  "why": "failure 2 plants the creatures (they come back drawn to her light at 34.49)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "s5",
+  "from_s": 6.87,
+  "to_s": 8.8,
+  "set": "deep",
+  "why": "failure 3 shows the crack mechanic failing once - the floor will draw itself at 20.24",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "s6",
+  "from_s": 8.8,
+  "to_s": 10.77,
+  "set": "deep",
+  "why": "Salmon's arc begins (the bucket for 30.81); Raymi not forced: the reaction is the picture",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "s7",
+  "from_s": 10.77,
+  "to_s": 11.27,
+  "set": "deep",
+  "why": "the antagonist is planted (the current, act 4 / act 8)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "s8",
+  "from_s": 11.27,
+  "to_s": 11.73,
+  "set": "deep",
+  "why": "the last bars before the voice: a strike per beat, each lights more",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "s9",
+  "from_s": 11.73,
+  "to_s": 12.23,
+  "set": "deep",
+  "why": "rising light, rising cut rate (craft 03: acceleration)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": [
+   "face"
+  ]
+ },
+ {
+  "id": "s10",
+  "from_s": 12.23,
+  "to_s": 12.8,
+  "set": "deep",
+  "why": "the build ends one frame before the voice: the catch belongs to the first sung word",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "s11",
+  "from_s": 12.8,
+  "to_s": 14.77,
+  "set": "deep",
+  "why": "IT CATCHES on the first sung word - the hook pays off",
+  "words": "I'm a fire starter",
+  "transition_out": "cut",
+  "hero": [
+   "flame",
+   "face"
+  ]
+ },
+ {
+  "id": "s12",
+  "from_s": 14.77,
+  "to_s": 16.5,
+  "set": "deep",
+  "why": "light tsundere: 'that was easy' while the fire doubles",
+  "words": "Work a lil harder",
+  "transition_out": "cut",
+  "hero": [
+   "flame"
+  ]
+ },
+ {
+  "id": "s13",
+  "from_s": 16.5,
+  "to_s": 18.13,
+  "set": "deep",
+  "why": "the camera really travels around her (P7); play, not pose",
+  "words": "Got me fired up",
+  "transition_out": "cut",
+  "hero": [
+   "flame"
+  ]
+ },
+ {
+  "id": "s14",
+  "from_s": 18.13,
+  "to_s": 20.2,
+  "set": "deep",
+  "why": "the sentence is not finished: the hook hangs (the Short's cliffhanger)",
+  "words": "Imma burn it down like",
+  "transition_out": "cut",
+  "hero": [
+   "flame"
+  ]
+ },
+ {
+  "id": "s15",
+  "from_s": 20.2,
+  "to_s": 22.03,
+  "set": "deep",
+  "why": "the fire takes the floor - rule (b): the world grows as the light runs",
+  "words": "I'm a fire starter",
+  "transition_out": "cut",
+  "hero": [
+   "fire_word"
+  ]
+ },
+ {
+  "id": "s16",
+  "from_s": 22.03,
+  "to_s": 24.1,
+  "set": "deep",
+  "why": "chaos drawn as a map - Raymi not forced: small on purpose",
+  "words": "Crazy out of order",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "s17",
+  "from_s": 24.1,
+  "to_s": 25.6,
+  "set": "deep",
+  "why": "the fire travels on its own - she caused it",
+  "words": "Got me fired up",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "s18",
+  "from_s": 25.6,
+  "to_s": 27.27,
+  "set": "deep",
+  "why": "second hang: the vent is the answer",
+  "words": "like",
+  "transition_out": "cut",
+  "hero": []
+ }
+]

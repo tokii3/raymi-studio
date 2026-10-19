@@ -1,0 +1,19 @@
+{
+ "flame": {
+  "kind": "prop",
+  "size": [
+   0.18,
+   0.32
+  ],
+  "min": 0.08
+ },
+ "face": {
+  "kind": "face",
+  "min": 0.14
+ },
+ "fire_word": {
+  "kind": "word",
+  "word": "fire",
+  "min": 0.07
+ }
+}

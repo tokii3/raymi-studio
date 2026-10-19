@@ -1,0 +1,4829 @@
+{
+ "composition": "MV",
+ "width": 1920,
+ "height": 1080,
+ "fps": 30,
+ "durationInFrames": 818,
+ "audio": {
+  "file": "audio.webm",
+  "from": 0.0,
+  "to": 27.266,
+  "src": "jobs/2026-10-19_firestarter/song.webm"
+ },
+ "shots": [
+  {
+   "id": "s1",
+   "from": 0,
+   "to": 60,
+   "set": "deep",
+   "hero": [
+    {
+     "name": "flame",
+     "kind": "prop",
+     "word": "flame",
+     "min": 0.08,
+     "why_small": null,
+     "uv": [
+      0.86,
+      0.34
+     ],
+     "size": [
+      0.18,
+      0.32
+     ]
+    },
+    {
+     "name": "face",
+     "kind": "face",
+     "word": "face",
+     "min": 0.14,
+     "why_small": null
+    }
+   ],
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.5,
+    "snow": 0.7,
+    "glow": "#b45cff",
+    "dip": true,
+    "fires": [
+     {
+      "uv": [
+       0.86,
+       0.34
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "pos": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 0,
+     "pos": [
+      0.717,
+      1.206,
+      2.042
+     ],
+     "look": [
+      0.655,
+      0.956,
+      -0.656
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 30,
+     "pos": [
+      0.742,
+      1.176,
+      2.125
+     ],
+     "look": [
+      0.655,
+      0.956,
+      -0.658
+     ],
+     "fov": 33.0,
+     "roll": 0.0,
+     "ease": "linear"
+    },
+    {
+     "f": 60,
+     "pos": [
+      0.606,
+      1.306,
+      1.235
+     ],
+     "look": [
+      0.655,
+      1.126,
+      -0.659
+     ],
+     "fov": 32.0,
+     "roll": 0.0,
+     "ease": "out"
+    }
+   ],
+   "kick": 0.4,
+   "puppets": [
+    {
+     "f": 0,
+     "sprite": "sprites/WS_F_FOCUS_PUSH_UV_171.png",
+     "size": [
+      1434,
+      1505
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.55,
+      0.03,
+      0.95,
+      0.32
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.42,
+     "act": "idle",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 30,
+     "sprite": "sprites/WS_F_FOCUS_PUSH_UV_171.png",
+     "size": [
+      1434,
+      1505
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.55,
+      0.03,
+      0.95,
+      0.32
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.42,
+     "act": "pop",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "anchor": [
+     0.98,
+     0.88,
+     0.22
+    ],
+    "rotY": 0.0,
+    "size": 0.056,
+    "width": 0.7,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": "light",
+    "style": "v2",
+    "tilt": -25.0,
+    "roll": 0.0,
+    "keyScale": 2.0,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "FIRE.",
+     "from": 3,
+     "to": 14,
+     "key": true,
+     "line": 10000,
+     "idx": 0,
+     "em": 2.581
+    },
+    {
+     "w": "UNDERWATER.",
+     "from": 14,
+     "to": 57,
+     "key": false,
+     "line": 10000,
+     "idx": 1,
+     "em": 7.11
+    }
+   ],
+   "transition": {
+    "kind": "rewind",
+    "frames": 10
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "from": 60,
+   "to": 88,
+   "set": "deep",
+   "hero": [
+    {
+     "name": "face",
+     "kind": "face",
+     "word": "face",
+     "min": 0.14,
+     "why_small": "only her eyes and dots in the black on purpose - the dark she wakes up in"
+    }
+   ],
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "vent_cap": 0.5,
+    "snow": 0.5,
+    "dip": true,
+    "rewind_at": 60,
+    "rewind_s": 0.35,
+    "glow": [
+     [
+      60,
+      "#000000"
+     ],
+     [
+      67,
+      "#6a4cff"
+     ]
+    ],
+    "fires": [
+     {
+      "pos": [
+       0.3,
+       0.88,
+       -0.32
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "out": 60,
+      "fade": 8
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 60,
+     "pos": [
+      0.3,
+      1.5,
+      0.36
+     ],
+     "look": [
+      0.3,
+      1.0,
+      -0.55
+     ],
+     "fov": 33.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 72,
+     "pos": [
+      0.9,
+      0.75,
+      1.15
+     ],
+     "look": [
+      0.45,
+      0.25,
+      -0.6
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "snap"
+    }
+   ],
+   "kick": 0.0,
+   "puppets": [
+    {
+     "f": 66,
+     "sprite": "sprites/WS_F_CALM_PRONE_UV_194.png",
+     "size": [
+      1480,
+      799
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.7,
+      0.05,
+      0.98,
+      0.8
+     ],
+     "pos": [
+      0.25,
+      0.0,
+      -0.6
+     ],
+     "height": 0.62,
+     "act": "idle",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 74,
+     "sprite": "sprites/WS_F_CALM_PRONE_UV_194.png",
+     "size": [
+      1480,
+      799
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.7,
+      0.05,
+      0.98,
+      0.8
+     ],
+     "pos": [
+      0.25,
+      0.0,
+      -0.6
+     ],
+     "height": 0.62,
+     "act": "pop",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "from": 88,
+   "to": 147,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "grade": "own",
+    "snow": 0.6,
+    "dip": true,
+    "glow": "#6a4cff",
+    "whip": 88,
+    "whip_pivot": [
+     0.45,
+     0.6
+    ],
+    "whip_tip": [
+     0.07,
+     0.36
+    ],
+    "whip_sweep": 140,
+    "whip_dir": 1,
+    "sparks": [
+     {
+      "uv": [
+       0.07,
+       0.36
+      ],
+      "at": 89,
+      "n": 5,
+      "ember": 330,
+      "c": "#d9a6ff",
+      "size": 0.8,
+      "pos": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 88,
+     "pos": [
+      1.365,
+      0.472,
+      2.951
+     ],
+     "look": [
+      -0.031,
+      0.472,
+      -0.501
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [
+    {
+     "f": 88,
+     "sprite": "sprites/WS_F_FOCUS_CROUCH_UV_192.png",
+     "size": [
+      1426,
+      1516
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.4,
+      0.03,
+      0.75,
+      0.3
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.05,
+     "act": "stomp",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 100,
+     "sprite": "sprites/WS_F_FOCUS_CROUCH_UV_192.png",
+     "size": [
+      1426,
+      1516
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.4,
+      0.03,
+      0.75,
+      0.3
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.05,
+     "act": "shrink",
+     "icon": "sweat",
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "from": 147,
+   "to": 206,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "grade": "own",
+    "snow": 0.6,
+    "glow": "#6a4cff",
+    "sparks": [
+     {
+      "pos": [
+       0.55,
+       0.25,
+       -0.7
+      ],
+      "at": 148,
+      "n": 16,
+      "ember": 180
+     }
+    ],
+    "fish": [
+     {
+      "from": [
+       0.9,
+       0.55,
+       -0.9
+      ],
+      "to": [
+       -5.2,
+       1.0,
+       -2.6
+      ],
+      "at": 149,
+      "dur_s": 1.85,
+      "glow": "#b45cff",
+      "spark": true,
+      "scale": 0.32
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 147,
+     "pos": [
+      0.6,
+      0.35,
+      2.6
+     ],
+     "look": [
+      -0.2,
+      0.6,
+      -0.9
+     ],
+     "fov": 46.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 206,
+     "pos": [
+      -0.6,
+      0.4,
+      2.4
+     ],
+     "look": [
+      -2.4,
+      0.8,
+      -1.8
+     ],
+     "fov": 50.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 0.8,
+   "puppets": [
+    {
+     "f": 147,
+     "sprite": "sprites/WS_F_PANIC_LUNGE_UV_202.png",
+     "size": [
+      1435,
+      1481
+     ],
+     "cuts": [
+      "bottom"
+     ],
+     "top": 0.09,
+     "feet": 0.97,
+     "head": [
+      0.68,
+      0.09,
+      0.93,
+      0.28
+     ],
+     "pos": [
+      0.3,
+      -0.12,
+      -0.6
+     ],
+     "height": 1.3,
+     "act": "idle",
+     "icon": null,
+     "flip": true,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 170,
+     "sprite": "sprites/WS_F_PANIC_LUNGE_UV_202.png",
+     "size": [
+      1435,
+      1481
+     ],
+     "cuts": [
+      "bottom"
+     ],
+     "top": 0.09,
+     "feet": 0.97,
+     "head": [
+      0.68,
+      0.09,
+      0.93,
+      0.28
+     ],
+     "pos": [
+      -0.25,
+      -0.12,
+      -0.75
+     ],
+     "height": 1.3,
+     "act": "lean",
+     "icon": null,
+     "flip": true,
+     "rot": 0.0,
+     "move": 10,
+     "arc": 0.0,
+     "ease": "snap"
+    }
+   ],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "from": 206,
+   "to": 264,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "grade": "own",
+    "snow": 0.5,
+    "glow": "#6a4cff",
+    "origin": [
+     0.35,
+     -0.55
+    ],
+    "crack_dir": 0.4,
+    "crack_n": 3,
+    "ignite_at": 208,
+    "ignite_s": 4.5,
+    "dark_at": 236,
+    "dark_s": 0.7,
+    "sparks": [
+     {
+      "uv": [
+       0.12,
+       0.77
+      ],
+      "at": 207,
+      "n": 12,
+      "ember": 300,
+      "c": "#d9a6ff",
+      "size": 1.0,
+      "pos": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ],
+    "whip": 206,
+    "whip_pivot": [
+     0.4,
+     0.55
+    ],
+    "whip_tip": [
+     0.12,
+     0.77
+    ],
+    "whip_sweep": 110,
+    "whip_dir": 1
+   },
+   "camera": [
+    {
+     "f": 206,
+     "pos": [
+      0.3,
+      5.2,
+      0.6
+     ],
+     "look": [
+      0.35,
+      0.0,
+      -0.75
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 264,
+     "pos": [
+      0.3,
+      4.6,
+      0.45
+     ],
+     "look": [
+      0.35,
+      0.0,
+      -0.75
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.8,
+   "puppets": [
+    {
+     "f": 206,
+     "sprite": "sprites/WS_F_FOCUS_PUSH_UV_173.png",
+     "size": [
+      1517,
+      1503
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.55,
+      0.03,
+      0.9,
+      0.33
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.45,
+     "act": "stomp",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "from": 264,
+   "to": 323,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "grade": "own",
+    "snow": 0.6,
+    "sparks": [
+     {
+      "pos": [
+       -1.0,
+       0.62,
+       -1.25
+      ],
+      "at": 265,
+      "n": 14,
+      "ember": 1200,
+      "size": 0.9
+     }
+    ],
+    "salmon": {
+     "pos": [
+      -1.1,
+      0.42,
+      -1.3
+     ],
+     "jump_at": 267,
+     "singe_at": 268,
+     "icon": "!",
+     "icon_at": 268,
+     "yaw": 0.5
+    },
+    "props": [
+     {
+      "kind": "bucket",
+      "pos": [
+       -0.75,
+       0.02,
+       -1.05
+      ],
+      "buried": 0.6
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 264,
+     "pos": [
+      -0.55,
+      0.62,
+      0.55
+     ],
+     "look": [
+      -1.0,
+      0.45,
+      -1.25
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 0.5,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "from": 323,
+   "to": 338,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "grade": "own",
+    "snow": 0.8,
+    "glow": "#6a4cff",
+    "current_at": [
+     328
+    ],
+    "current_s": 0.25,
+    "current_dir": 1,
+    "fires": [
+     {
+      "pos": [
+       0.85,
+       0.05,
+       -1.05
+      ],
+      "size": 0.16,
+      "c": "#b45cff",
+      "at": 324,
+      "grow": 3,
+      "out": 330,
+      "fade": 4
+     }
+    ],
+    "sparks": [
+     {
+      "pos": [
+       0.85,
+       0.1,
+       -1.05
+      ],
+      "at": 323,
+      "n": 10,
+      "ember": 120
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 323,
+     "pos": [
+      1.053,
+      0.551,
+      4.92
+     ],
+     "look": [
+      -0.039,
+      0.551,
+      -0.554
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.2,
+   "puppets": [
+    {
+     "f": 323,
+     "sprite": "sprites/WS_F_FOCUS_PUSH_UV_172.png",
+     "size": [
+      1535,
+      1524
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.55,
+      0.03,
+      0.9,
+      0.33
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.42,
+     "act": "stomp",
+     "icon": null,
+     "flip": true,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 330,
+     "sprite": "sprites/WS_F_FOCUS_PUSH_UV_172.png",
+     "size": [
+      1535,
+      1524
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.55,
+      0.03,
+      0.9,
+      0.33
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.42,
+     "act": "shake",
+     "icon": "anger",
+     "flip": true,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "from": 338,
+   "to": 352,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "grade": "own",
+    "snow": 0.6,
+    "glow": "#6a4cff",
+    "whip": 338,
+    "whip_pivot": [
+     0.45,
+     0.6
+    ],
+    "whip_tip": [
+     0.07,
+     0.36
+    ],
+    "whip_sweep": 140,
+    "whip_dir": 1,
+    "sparks": [
+     {
+      "uv": [
+       0.07,
+       0.36
+      ],
+      "at": 338,
+      "n": 14,
+      "ember": 360,
+      "c": "#d9a6ff",
+      "size": 1.0,
+      "pos": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 338,
+     "pos": [
+      -0.42,
+      0.72,
+      0.08
+     ],
+     "look": [
+      -0.2,
+      0.66,
+      -0.6
+     ],
+     "fov": 22.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 352,
+     "pos": [
+      -0.4,
+      0.71,
+      0.02
+     ],
+     "look": [
+      -0.2,
+      0.66,
+      -0.6
+     ],
+     "fov": 21.0,
+     "roll": 0.0,
+     "ease": "linear"
+    }
+   ],
+   "kick": 1.2,
+   "puppets": [
+    {
+     "f": 338,
+     "sprite": "sprites/WS_F_FOCUS_CROUCH_UV_192.png",
+     "size": [
+      1426,
+      1516
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.4,
+      0.03,
+      0.75,
+      0.3
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.05,
+     "act": "stomp",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "from": 352,
+   "to": 367,
+   "set": "deep",
+   "hero": [
+    {
+     "name": "face",
+     "kind": "face",
+     "word": "face",
+     "min": 0.14,
+     "why_small": null
+    }
+   ],
+   "opts": {
+    "grade": "own",
+    "snow": 0.4,
+    "glow": "#6a4cff",
+    "sparks": [
+     {
+      "pos": [
+       0.75,
+       1.0,
+       -0.2
+      ],
+      "at": 352,
+      "n": 16,
+      "ember": 420,
+      "size": 1.2
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 352,
+     "pos": [
+      0.3,
+      1.116,
+      1.459
+     ],
+     "look": [
+      -0.042,
+      1.116,
+      -0.6
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.2,
+   "puppets": [
+    {
+     "f": 352,
+     "sprite": "sprites/WS_F_FOCUS_PUSH_UV_172.png",
+     "size": [
+      1535,
+      1524
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.55,
+      0.03,
+      0.9,
+      0.33
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.42,
+     "act": "idle",
+     "icon": null,
+     "flip": true,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "from": 367,
+   "to": 384,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "grade": "own",
+    "snow": 0.5,
+    "vents_at": [
+     368,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "vents_s": 4.0,
+    "vent_cap": 0.8,
+    "sparks": [
+     {
+      "pos": [
+       1.3,
+       2.25,
+       -1.7
+      ],
+      "at": 367,
+      "n": 16,
+      "ember": 300
+     },
+     {
+      "pos": [
+       1.3,
+       2.25,
+       -1.7
+      ],
+      "at": 382,
+      "n": 18,
+      "ember": 300
+     }
+    ],
+    "salmon": {
+     "pos": [
+      1.55,
+      1.75,
+      -2.75
+     ],
+     "cover_at": [
+      367,
+      390
+     ],
+     "yaw": 2.0
+    }
+   },
+   "camera": [
+    {
+     "f": 367,
+     "pos": [
+      0.9,
+      2.35,
+      -0.55
+     ],
+     "look": [
+      1.4,
+      2.0,
+      -2.4
+     ],
+     "fov": 42.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "from": 384,
+   "to": 443,
+   "set": "deep",
+   "hero": [
+    {
+     "name": "flame",
+     "kind": "prop",
+     "word": "flame",
+     "min": 0.08,
+     "why_small": null,
+     "uv": [
+      0.86,
+      0.34
+     ],
+     "size": [
+      0.18,
+      0.32
+     ]
+    },
+    {
+     "name": "face",
+     "kind": "face",
+     "word": "face",
+     "min": 0.14,
+     "why_small": null
+    }
+   ],
+   "opts": {
+    "grade": "own",
+    "snow": 0.7,
+    "glow": "#b45cff",
+    "ignite_at": 387,
+    "ignite_s": 0.45,
+    "rewind_at": 404,
+    "rewind_s": 0.7,
+    "vents_at": [
+     368,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "vents_s": 4.0,
+    "vent_cap": 0.45,
+    "fires": [
+     {
+      "uv": [
+       0.86,
+       0.34
+      ],
+      "size": 0.34,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "at": 386,
+      "grow": 6,
+      "pos": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 384,
+     "pos": [
+      1.177,
+      0.956,
+      2.323
+     ],
+     "look": [
+      0.979,
+      0.956,
+      -0.804
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 443,
+     "pos": [
+      1.717,
+      0.58,
+      4.596
+     ],
+     "look": [
+      1.241,
+      0.58,
+      -0.857
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "out"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [
+    {
+     "f": 384,
+     "sprite": "sprites/WS_F_FOCUS_PUSH_UV_171.png",
+     "size": [
+      1434,
+      1505
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.55,
+      0.03,
+      0.95,
+      0.32
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.42,
+     "act": "pop",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     1.05,
+     1.32,
+     -0.55
+    ],
+    "rotY": 25.0,
+    "size": 0.11,
+    "width": 1.5,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": "light",
+    "style": "v2",
+    "tilt": 0.0,
+    "roll": 0.0,
+    "keyScale": 2.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "from": 384,
+     "to": 409,
+     "key": false,
+     "line": 0,
+     "idx": 0,
+     "em": 1.61
+    },
+    {
+     "w": "a",
+     "from": 408,
+     "to": 416,
+     "key": false,
+     "line": 0,
+     "idx": 1,
+     "em": 0.677
+    },
+    {
+     "w": "fire",
+     "from": 414,
+     "to": 423,
+     "key": true,
+     "line": 0,
+     "idx": 2,
+     "em": 2.017
+    },
+    {
+     "w": "starter",
+     "from": 421,
+     "to": 444,
+     "key": false,
+     "line": 0,
+     "idx": 3,
+     "em": 3.963
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "from": 443,
+   "to": 495,
+   "set": "deep",
+   "hero": [
+    {
+     "name": "flame",
+     "kind": "prop",
+     "word": "flame",
+     "min": 0.08,
+     "why_small": null,
+     "uv": [
+      0.73,
+      0.56
+     ],
+     "size": [
+      0.18,
+      0.32
+     ]
+    }
+   ],
+   "opts": {
+    "grade": "own",
+    "snow": 0.7,
+    "glow": "#b45cff",
+    "vent_cap": 0.45,
+    "fires": [
+     {
+      "uv": [
+       0.73,
+       0.56
+      ],
+      "size": 0.2,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "out": 468,
+      "fade": 3,
+      "pos": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "uv": [
+       0.73,
+       0.56
+      ],
+      "size": 0.38,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "at": 468,
+      "grow": 6,
+      "pos": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 443,
+     "pos": [
+      1.805,
+      0.776,
+      4.129
+     ],
+     "look": [
+      0.871,
+      0.776,
+      -0.782
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 495,
+     "pos": [
+      -0.328,
+      0.776,
+      4.322
+     ],
+     "look": [
+      0.895,
+      0.776,
+      -0.524
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 0.6,
+   "puppets": [
+    {
+     "f": 443,
+     "sprite": "sprites/WS_F_CALM_REST_UV_166.png",
+     "size": [
+      1217,
+      1529
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.99,
+     "head": [
+      0.35,
+      0.03,
+      0.7,
+      0.28
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.55,
+     "act": "tilt",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 467,
+     "sprite": "sprites/WS_F_CALM_REST_UV_166.png",
+     "size": [
+      1217,
+      1529
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.99,
+     "head": [
+      0.35,
+      0.03,
+      0.7,
+      0.28
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.55,
+     "act": "pop",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "anchor": [
+     1.0,
+     1.0,
+     -0.5
+    ],
+    "rotY": 0.0,
+    "size": 0.1,
+    "width": 1.4,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": "light",
+    "style": "v2",
+    "tilt": 0.0,
+    "roll": 0.0,
+    "keyScale": 2.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "Work",
+     "from": 443,
+     "to": 464,
+     "key": false,
+     "line": 1,
+     "idx": 0,
+     "em": 2.25
+    },
+    {
+     "w": "a",
+     "from": 463,
+     "to": 468,
+     "key": false,
+     "line": 1,
+     "idx": 1,
+     "em": 0.677
+    },
+    {
+     "w": "lil",
+     "from": 467,
+     "to": 476,
+     "key": false,
+     "line": 1,
+     "idx": 2,
+     "em": 1.442
+    },
+    {
+     "w": "harder",
+     "from": 475,
+     "to": 496,
+     "key": false,
+     "line": 1,
+     "idx": 3,
+     "em": 3.302
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "from": 495,
+   "to": 544,
+   "set": "deep",
+   "hero": [
+    {
+     "name": "flame",
+     "kind": "prop",
+     "word": "flame",
+     "min": 0.08,
+     "why_small": "the flame flies hand to hand - it is the toss, never still",
+     "uv": [
+      0.5,
+      0.6
+     ],
+     "size": [
+      0.9,
+      0.4
+     ]
+    }
+   ],
+   "opts": {
+    "grade": "own",
+    "snow": 0.7,
+    "glow": "#b45cff",
+    "vent_cap": 0.45,
+    "fires": [
+     {
+      "uv": [
+       0.2,
+       0.62
+      ],
+      "uv2": [
+       0.78,
+       0.6
+      ],
+      "toss": [
+       499,
+       512,
+       524,
+       537
+      ],
+      "size": 0.28,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "pos": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 495,
+     "pos": [
+      3.192,
+      0.539,
+      1.28
+     ],
+     "look": [
+      0.094,
+      0.539,
+      -0.283
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 519,
+     "pos": [
+      0.3,
+      0.539,
+      2.849
+     ],
+     "look": [
+      -0.078,
+      0.539,
+      -0.6
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "linear"
+    },
+    {
+     "f": 544,
+     "pos": [
+      -2.592,
+      0.539,
+      1.28
+     ],
+     "look": [
+      0.094,
+      0.539,
+      -0.917
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "out"
+    }
+   ],
+   "kick": 0.6,
+   "puppets": [
+    {
+     "f": 495,
+     "sprite": "sprites/WS_F_HAPPY_SPIN_UV_178.png",
+     "size": [
+      1528,
+      1484
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.0,
+      0.05,
+      0.4,
+      0.4
+     ],
+     "pos": [
+      0.3,
+      0.15,
+      -0.6
+     ],
+     "height": 1.15,
+     "act": "bounce",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "anchor": [
+     -0.35,
+     0.72,
+     -0.6
+    ],
+    "rotY": 0.0,
+    "size": 0.085,
+    "width": 2.2,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": "light",
+    "style": "v2",
+    "tilt": 0.0,
+    "roll": 0.0,
+    "keyScale": 2.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "Got",
+     "from": 495,
+     "to": 518,
+     "key": false,
+     "line": 2,
+     "idx": 0,
+     "em": 1.944
+    },
+    {
+     "w": "me",
+     "from": 517,
+     "to": 523,
+     "key": false,
+     "line": 2,
+     "idx": 1,
+     "em": 1.361
+    },
+    {
+     "w": "fired",
+     "from": 522,
+     "to": 538,
+     "key": true,
+     "line": 2,
+     "idx": 2,
+     "em": 2.623
+    },
+    {
+     "w": "up",
+     "from": 537,
+     "to": 546,
+     "key": false,
+     "line": 2,
+     "idx": 3,
+     "em": 1.161
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "from": 544,
+   "to": 606,
+   "set": "deep",
+   "hero": [
+    {
+     "name": "flame",
+     "kind": "prop",
+     "word": "flame",
+     "min": 0.08,
+     "why_small": null,
+     "uv": [
+      0.9,
+      0.69
+     ],
+     "size": [
+      0.18,
+      0.32
+     ]
+    }
+   ],
+   "opts": {
+    "grade": "own",
+    "snow": 0.6,
+    "glow": "#b45cff",
+    "dip": true,
+    "fires": [
+     {
+      "uv": [
+       0.9,
+       0.69
+      ],
+      "size": 0.24,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "pos": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 544,
+     "pos": [
+      0.3,
+      2.5,
+      2.0
+     ],
+     "look": [
+      0.35,
+      0.45,
+      -0.45
+     ],
+     "fov": 44.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 606,
+     "pos": [
+      0.32,
+      2.15,
+      1.45
+     ],
+     "look": [
+      0.35,
+      0.5,
+      -0.5
+     ],
+     "fov": 42.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 0.5,
+   "puppets": [
+    {
+     "f": 544,
+     "sprite": "sprites/WS_F_FOCUS_CROUCH_UV_192.png",
+     "size": [
+      1426,
+      1516
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.4,
+      0.03,
+      0.75,
+      0.3
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.05,
+     "act": "idle",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 553,
+     "sprite": "sprites/WS_F_FOCUS_CROUCH_UV_192.png",
+     "size": [
+      1426,
+      1516
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.4,
+      0.03,
+      0.75,
+      0.3
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.05,
+     "act": "lean",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.35,
+     0.03,
+     -0.22
+    ],
+    "rotY": 0.0,
+    "size": 0.1,
+    "width": 2.2,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": "light",
+    "style": "v2",
+    "tilt": -90.0,
+    "roll": 0.0,
+    "keyScale": 2.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": 0.4,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "Imma",
+     "from": 544,
+     "to": 560,
+     "key": false,
+     "line": 3,
+     "idx": 0,
+     "em": 2.54
+    },
+    {
+     "w": "burn",
+     "from": 558,
+     "to": 573,
+     "key": false,
+     "line": 3,
+     "idx": 1,
+     "em": 2.285
+    },
+    {
+     "w": "it",
+     "from": 572,
+     "to": 578,
+     "key": false,
+     "line": 3,
+     "idx": 2,
+     "em": 0.997
+    },
+    {
+     "w": "down",
+     "from": 577,
+     "to": 593,
+     "key": false,
+     "line": 3,
+     "idx": 3,
+     "em": 2.487
+    },
+    {
+     "w": "like",
+     "from": 591,
+     "to": 607,
+     "key": true,
+     "line": 3,
+     "idx": 4,
+     "em": 2.097
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "from": 606,
+   "to": 661,
+   "set": "deep",
+   "hero": [
+    {
+     "name": "fire_word",
+     "kind": "word",
+     "word": "fire",
+     "min": 0.07,
+     "why_small": "the word lies on the floor in a low shot - the running crack is the picture"
+    }
+   ],
+   "opts": {
+    "grade": "own",
+    "snow": 0.6,
+    "glow": "#b45cff",
+    "origin": [
+     0.9,
+     -0.5
+    ],
+    "crack_dir": 1.2,
+    "crack_n": 3,
+    "ignite_at": 609,
+    "ignite_s": 3.2,
+    "pulse": "beats",
+    "fires": [
+     {
+      "uv": [
+       0.9,
+       0.69
+      ],
+      "size": 0.2,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "pos": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 606,
+     "pos": [
+      1.9,
+      0.45,
+      2.8
+     ],
+     "look": [
+      0.5,
+      0.45,
+      -0.6
+     ],
+     "fov": 46.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 661,
+     "pos": [
+      2.0,
+      0.4,
+      2.6
+     ],
+     "look": [
+      0.9,
+      0.3,
+      -0.2
+     ],
+     "fov": 48.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 0.6,
+   "puppets": [
+    {
+     "f": 606,
+     "sprite": "sprites/WS_F_FOCUS_CROUCH_UV_192.png",
+     "size": [
+      1426,
+      1516
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.4,
+      0.03,
+      0.75,
+      0.3
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.05,
+     "act": "stomp",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     1.25,
+     0.03,
+     0.75
+    ],
+    "rotY": -30.0,
+    "size": 0.14,
+    "width": 1.8,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": "light",
+    "style": "v2",
+    "tilt": -90.0,
+    "roll": 0.0,
+    "keyScale": 2.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": "burn",
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "from": 606,
+     "to": 628,
+     "key": false,
+     "line": 4,
+     "idx": 0,
+     "em": 1.61
+    },
+    {
+     "w": "a",
+     "from": 626,
+     "to": 633,
+     "key": false,
+     "line": 4,
+     "idx": 1,
+     "em": 0.677
+    },
+    {
+     "w": "fire",
+     "from": 631,
+     "to": 642,
+     "key": true,
+     "line": 4,
+     "idx": 2,
+     "em": 2.017
+    },
+    {
+     "w": "starter",
+     "from": 641,
+     "to": 662,
+     "key": false,
+     "line": 4,
+     "idx": 3,
+     "em": 3.963
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "from": 661,
+   "to": 723,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "grade": "own",
+    "snow": 0.4,
+    "glow": "#b45cff",
+    "origin": [
+     0.9,
+     -0.5
+    ],
+    "ignite_at": 630,
+    "ignite_s": 5.0,
+    "pulse": "beats",
+    "fires": [
+     {
+      "uv": [
+       0.9,
+       0.69
+      ],
+      "size": 0.2,
+      "c": "#b45cff",
+      "core": "#ffe2b8",
+      "pos": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 661,
+     "pos": [
+      0.7,
+      8.5,
+      -0.2
+     ],
+     "look": [
+      0.7,
+      0.0,
+      -1.3
+     ],
+     "fov": 46.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 723,
+     "pos": [
+      0.7,
+      8.0,
+      -0.2
+     ],
+     "look": [
+      0.7,
+      0.0,
+      -1.3
+     ],
+     "fov": 46.0,
+     "roll": 20.0,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.5,
+   "puppets": [
+    {
+     "f": 661,
+     "sprite": "sprites/WS_F_FOCUS_CROUCH_UV_192.png",
+     "size": [
+      1426,
+      1516
+     ],
+     "cuts": [],
+     "top": 0.03,
+     "feet": 0.97,
+     "head": [
+      0.4,
+      0.03,
+      0.75,
+      0.3
+     ],
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "height": 1.05,
+     "act": "idle",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -0.6,
+     0.03,
+     -2.2
+    ],
+    "rotY": 0.0,
+    "size": 0.3,
+    "width": 3.6,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": "light",
+    "style": "v2",
+    "tilt": -90.0,
+    "roll": 0.0,
+    "keyScale": 2.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": "burn",
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "Crazy",
+     "from": 661,
+     "to": 682,
+     "key": false,
+     "line": 5,
+     "idx": 0,
+     "em": 2.847
+    },
+    {
+     "w": "out",
+     "from": 681,
+     "to": 698,
+     "key": false,
+     "line": 5,
+     "idx": 1,
+     "em": 1.8
+    },
+    {
+     "w": "of",
+     "from": 697,
+     "to": 703,
+     "key": false,
+     "line": 5,
+     "idx": 2,
+     "em": 1.126
+    },
+    {
+     "w": "order",
+     "from": 701,
+     "to": 724,
+     "key": false,
+     "line": 5,
+     "idx": 3,
+     "em": 2.657
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "from": 723,
+   "to": 768,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "grade": "own",
+    "snow": 0.5,
+    "origin": [
+     0.9,
+     -0.5
+    ],
+    "ignite_at": 630,
+    "ignite_s": 5.0,
+    "vent_cap": 0.8,
+    "vents_at": [
+     746,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "vents_s": 2.6
+   },
+   "camera": [
+    {
+     "f": 723,
+     "pos": [
+      -0.8,
+      0.35,
+      0.8
+     ],
+     "look": [
+      0.6,
+      0.15,
+      -1.0
+     ],
+     "fov": 44.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 768,
+     "pos": [
+      -0.1,
+      0.34,
+      0.15
+     ],
+     "look": [
+      1.3,
+      0.4,
+      -1.7
+     ],
+     "fov": 44.0,
+     "roll": 0.0,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.3,
+   "puppets": [],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.9,
+     0.03,
+     -1.25
+    ],
+    "rotY": 15.0,
+    "size": 0.08,
+    "width": 1.0,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": "light",
+    "style": "v2",
+    "tilt": -90.0,
+    "roll": 0.0,
+    "keyScale": 2.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "Got",
+     "from": 723,
+     "to": 738,
+     "key": false,
+     "line": 6,
+     "idx": 0,
+     "em": 1.944
+    },
+    {
+     "w": "me",
+     "from": 737,
+     "to": 743,
+     "key": false,
+     "line": 6,
+     "idx": 1,
+     "em": 1.361
+    },
+    {
+     "w": "fired",
+     "from": 742,
+     "to": 759,
+     "key": true,
+     "line": 6,
+     "idx": 2,
+     "em": 2.623
+    },
+    {
+     "w": "up",
+     "from": 758,
+     "to": 770,
+     "key": false,
+     "line": 6,
+     "idx": 3,
+     "em": 1.161
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "from": 768,
+   "to": 818,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "grade": "own",
+    "snow": 0.5,
+    "origin": [
+     0.9,
+     -0.5
+    ],
+    "ignite": 0.6,
+    "vent_cap": 0.9,
+    "vents_at": [
+     746,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "vents_s": 2.6,
+    "flares": [
+     [
+      800,
+      "0"
+     ]
+    ]
+   },
+   "camera": [
+    {
+     "f": 768,
+     "pos": [
+      1.6,
+      0.55,
+      0.9
+     ],
+     "look": [
+      0.9,
+      1.8,
+      -1.6
+     ],
+     "fov": 52.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 818,
+     "pos": [
+      1.65,
+      0.5,
+      0.8
+     ],
+     "look": [
+      0.95,
+      1.9,
+      -1.6
+     ],
+     "fov": 50.0,
+     "roll": 0.0,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0.8,
+   "puppets": [
+    {
+     "f": 768,
+     "sprite": "sprites/WS_BK_NA_WADE_UV_182.png",
+     "size": [
+      1241,
+      1521
+     ],
+     "cuts": [],
+     "top": 0.0,
+     "feet": 0.99,
+     "head": [
+      0.38,
+      0.0,
+      0.65,
+      0.25
+     ],
+     "pos": [
+      -0.1,
+      0.0,
+      -1.2
+     ],
+     "height": 1.55,
+     "act": "pop",
+     "icon": null,
+     "flip": false,
+     "rot": 0.0,
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut"
+    }
+   ],
+   "lyrics": {
+    "kind": "float",
+    "anchor": [
+     1.3,
+     2.01,
+     -1.07
+    ],
+    "rotY": -20.0,
+    "size": 0.12,
+    "width": 1.6,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": "light",
+    "style": "v2",
+    "tilt": 0.0,
+    "roll": 0.0,
+    "keyScale": 2.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "like",
+     "from": 812,
+     "to": 819,
+     "key": true,
+     "line": 7,
+     "idx": 4,
+     "em": 2.097
+    }
+   ],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": [
+    {
+     "name": "vent chimney",
+     "center": [
+      1.3,
+      1.1,
+      -1.7
+     ],
+     "size": [
+      0.84,
+      2.2,
+      0.84
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -2.7,
+      1.55,
+      -3.3
+     ],
+     "size": [
+      1.0,
+      3.1,
+      1.0
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      3.6,
+      1.3,
+      -4.1
+     ],
+     "size": [
+      0.9,
+      2.6,
+      0.9
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -0.7,
+      1.9,
+      -5.8
+     ],
+     "size": [
+      1.2,
+      3.8,
+      1.2
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      5.2,
+      0.75,
+      -1.8
+     ],
+     "size": [
+      0.64,
+      1.5,
+      0.64
+     ]
+    },
+    {
+     "name": "vent chimney",
+     "center": [
+      -4.8,
+      0.9,
+      -1.2
+     ],
+     "size": [
+      0.72,
+      1.8,
+      0.72
+     ]
+    },
+    {
+     "name": "giant vent chimney",
+     "center": [
+      0.8,
+      3.5,
+      -10.5
+     ],
+     "size": [
+      1.9,
+      5.6,
+      1.9
+     ]
+    }
+   ]
+  }
+ ],
+ "hits": [
+  30,
+  387,
+  490,
+  588,
+  601,
+  614,
+  670,
+  691,
+  746,
+  800
+ ],
+ "beats": [
+  32,
+  46,
+  60,
+  74,
+  88,
+  102,
+  116,
+  130,
+  143,
+  158,
+  173,
+  187,
+  201,
+  215,
+  228,
+  242,
+  256,
+  270,
+  284,
+  298,
+  312,
+  326,
+  340,
+  355,
+  368,
+  382,
+  396,
+  410,
+  424,
+  437,
+  451,
+  465,
+  479,
+  492,
+  506,
+  520,
+  534,
+  548,
+  561,
+  575,
+  589,
+  603,
+  616,
+  630,
+  644,
+  658,
+  672,
+  685,
+  699,
+  713,
+  726,
+  740,
+  754,
+  767,
+  781,
+  795,
+  809
+ ],
+ "sprites": [
+  "sprites/WS_BK_NA_WADE_UV_182.png",
+  "sprites/WS_F_CALM_PRONE_UV_194.png",
+  "sprites/WS_F_CALM_REST_UV_166.png",
+  "sprites/WS_F_FOCUS_CROUCH_UV_192.png",
+  "sprites/WS_F_FOCUS_PUSH_UV_171.png",
+  "sprites/WS_F_FOCUS_PUSH_UV_172.png",
+  "sprites/WS_F_FOCUS_PUSH_UV_173.png",
+  "sprites/WS_F_HAPPY_SPIN_UV_178.png",
+  "sprites/WS_F_PANIC_LUNGE_UV_202.png"
+ ],
+ "grain": 0.045,
+ "title": "FIRESTARTER - Raymi (K/DA)",
+ "overlay": null,
+ "heavy": true
+}
