@@ -1,0 +1,4899 @@
+{
+ "fps": 30,
+ "source": {
+  "lyrics": "official text (YouTube description)",
+  "timing": "vocal stem: demucs htdemucs + faster-whisper word times, romaji letter match, snapped to vocal onsets"
+ },
+ "stats": {
+  "snapped": 261,
+  "measured": 5,
+  "interpolated": 170,
+  "words": 436
+ },
+ "lines": [
+  {
+   "i": 0,
+   "para": 0,
+   "text": "I'm a fire starter",
+   "words": [
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 12.84,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 13.64,
+     "cut": 384
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 13.64,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 13.85,
+     "cut": 408
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 13.85,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 14.09,
+     "cut": 414
+    },
+    {
+     "w": "starter",
+     "roma": "starter",
+     "t0": 14.09,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 14.81,
+     "cut": 421
+    }
+   ],
+   "t0": 12.84,
+   "t1": 14.81,
+   "cut": 384
+  },
+  {
+   "i": 1,
+   "para": 0,
+   "text": "Work a lil harder",
+   "words": [
+    {
+     "w": "Work",
+     "roma": "work",
+     "t0": 14.81,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 15.47,
+     "cut": 443
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 15.47,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 15.59,
+     "cut": 463
+    },
+    {
+     "w": "lil",
+     "roma": "lil",
+     "t0": 15.59,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 15.87,
+     "cut": 466
+    },
+    {
+     "w": "harder",
+     "roma": "harder",
+     "t0": 15.87,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 16.54,
+     "cut": 475
+    }
+   ],
+   "t0": 14.81,
+   "t1": 16.54,
+   "cut": 443
+  },
+  {
+   "i": 2,
+   "para": 0,
+   "text": "Got me fired up",
+   "words": [
+    {
+     "w": "Got",
+     "roma": "got",
+     "t0": 16.54,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 17.27,
+     "cut": 495
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 17.27,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 17.44,
+     "cut": 517
+    },
+    {
+     "w": "fired",
+     "roma": "fired",
+     "t0": 17.44,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 17.94,
+     "cut": 522
+    },
+    {
+     "w": "up",
+     "roma": "up",
+     "t0": 17.94,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 18.19,
+     "cut": 537
+    }
+   ],
+   "t0": 16.54,
+   "t1": 18.19,
+   "cut": 495
+  },
+  {
+   "i": 3,
+   "para": 0,
+   "text": "Imma burn it down like",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 18.19,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 18.66,
+     "cut": 544
+    },
+    {
+     "w": "burn",
+     "roma": "burn",
+     "t0": 18.66,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 19.11,
+     "cut": 558
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 19.11,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 19.27,
+     "cut": 572
+    },
+    {
+     "w": "down",
+     "roma": "down",
+     "t0": 19.27,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 19.57,
+     "cut": 577
+    },
+    {
+     "w": "like",
+     "roma": "like",
+     "t0": 19.57,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 20.24,
+     "cut": 586
+    }
+   ],
+   "t0": 18.19,
+   "t1": 20.24,
+   "cut": 544
+  },
+  {
+   "i": 4,
+   "para": 1,
+   "text": "I'm a fire starter",
+   "words": [
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 20.24,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 20.93,
+     "cut": 606
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 20.93,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 21.12,
+     "cut": 626
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 21.12,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 21.38,
+     "cut": 632
+    },
+    {
+     "w": "starter",
+     "roma": "starter",
+     "t0": 21.38,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 22.08,
+     "cut": 640
+    }
+   ],
+   "t0": 20.24,
+   "t1": 22.08,
+   "cut": 606
+  },
+  {
+   "i": 5,
+   "para": 1,
+   "text": "Crazy out of order",
+   "words": [
+    {
+     "w": "Crazy",
+     "roma": "crazy",
+     "t0": 22.08,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 22.96,
+     "cut": 661
+    },
+    {
+     "w": "out",
+     "roma": "ot",
+     "t0": 22.96,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 23.25,
+     "cut": 687
+    },
+    {
+     "w": "of",
+     "roma": "of",
+     "t0": 23.25,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 23.43,
+     "cut": 696
+    },
+    {
+     "w": "order",
+     "roma": "order",
+     "t0": 23.43,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 24.15,
+     "cut": 701
+    }
+   ],
+   "t0": 22.08,
+   "t1": 24.15,
+   "cut": 661
+  },
+  {
+   "i": 6,
+   "para": 1,
+   "text": "Got me fired up",
+   "words": [
+    {
+     "w": "Got",
+     "roma": "got",
+     "t0": 24.15,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 24.6,
+     "cut": 723
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 24.6,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 24.76,
+     "cut": 737
+    },
+    {
+     "w": "fired",
+     "roma": "fired",
+     "t0": 24.76,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 25.27,
+     "cut": 741
+    },
+    {
+     "w": "up",
+     "roma": "up",
+     "t0": 25.27,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 25.66,
+     "cut": 757
+    }
+   ],
+   "t0": 24.15,
+   "t1": 25.66,
+   "cut": 723
+  },
+  {
+   "i": 7,
+   "para": 1,
+   "text": "Imma burn it down like",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 25.66,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 26.1,
+     "cut": 768
+    },
+    {
+     "w": "burn",
+     "roma": "burn",
+     "t0": 26.1,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 26.58,
+     "cut": 782
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 26.58,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 26.75,
+     "cut": 796
+    },
+    {
+     "w": "down",
+     "roma": "down",
+     "t0": 26.75,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 27.1,
+     "cut": 801
+    },
+    {
+     "w": "like",
+     "roma": "like",
+     "t0": 27.1,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 27.31,
+     "cut": 812
+    }
+   ],
+   "t0": 25.66,
+   "t1": 27.31,
+   "cut": 768
+  },
+  {
+   "i": 8,
+   "para": 2,
+   "text": "Imma start a fire",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 27.31,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 27.48,
+     "cut": 818
+    },
+    {
+     "w": "start",
+     "roma": "start",
+     "t0": 27.48,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 27.72,
+     "cut": 823
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 27.72,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 28.06,
+     "cut": 830
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 28.06,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 28.73,
+     "cut": 840
+    }
+   ],
+   "t0": 27.31,
+   "t1": 28.73,
+   "cut": 818
+  },
+  {
+   "i": 9,
+   "para": 2,
+   "text": "Oh I like a little drama",
+   "words": [
+    {
+     "w": "Oh",
+     "roma": "oh",
+     "t0": 28.73,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 29.18,
+     "cut": 860
+    },
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 29.18,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 29.42,
+     "cut": 874
+    },
+    {
+     "w": "like",
+     "roma": "like",
+     "t0": 29.42,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 29.89,
+     "cut": 881
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 29.89,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 30.02,
+     "cut": 895
+    },
+    {
+     "w": "little",
+     "roma": "little",
+     "t0": 30.02,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 30.15,
+     "cut": 899
+    },
+    {
+     "w": "drama",
+     "roma": "drama",
+     "t0": 30.15,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 30.81,
+     "cut": 903
+    }
+   ],
+   "t0": 28.73,
+   "t1": 30.81,
+   "cut": 860
+  },
+  {
+   "i": 10,
+   "para": 2,
+   "text": "Call the fire fighter",
+   "words": [
+    {
+     "w": "Call",
+     "roma": "call",
+     "t0": 30.81,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 31.01,
+     "cut": 923
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 31.01,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 31.26,
+     "cut": 929
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 31.26,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 31.71,
+     "cut": 936
+    },
+    {
+     "w": "fighter",
+     "roma": "fighter",
+     "t0": 31.71,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 32.05,
+     "cut": 950
+    }
+   ],
+   "t0": 30.81,
+   "t1": 32.05,
+   "cut": 923
+  },
+  {
+   "i": 11,
+   "para": 2,
+   "text": "Call me crazy, call it Karma",
+   "words": [
+    {
+     "w": "Call",
+     "roma": "call",
+     "t0": 32.05,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 32.84,
+     "cut": 960
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 32.84,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 33.1,
+     "cut": 984
+    },
+    {
+     "w": "crazy,",
+     "roma": "crazy",
+     "t0": 33.1,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 33.58,
+     "cut": 992
+    },
+    {
+     "w": "call",
+     "roma": "call",
+     "t0": 33.58,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 33.77,
+     "cut": 1006
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 33.77,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 34.0,
+     "cut": 1012
+    },
+    {
+     "w": "Karma",
+     "roma": "karma",
+     "t0": 34.0,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 34.49,
+     "cut": 1019
+    }
+   ],
+   "t0": 32.05,
+   "t1": 34.49,
+   "cut": 960
+  },
+  {
+   "i": 12,
+   "para": 2,
+   "text": "got you burning so hot",
+   "words": [
+    {
+     "w": "got",
+     "roma": "got",
+     "t0": 34.49,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 34.7,
+     "cut": 1033
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 34.7,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 34.96,
+     "cut": 1040
+    },
+    {
+     "w": "burning",
+     "roma": "burning",
+     "t0": 34.96,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 35.41,
+     "cut": 1047
+    },
+    {
+     "w": "so",
+     "roma": "so",
+     "t0": 35.41,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 35.84,
+     "cut": 1061
+    },
+    {
+     "w": "hot",
+     "roma": "hot",
+     "t0": 35.84,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 36.25,
+     "cut": 1074
+    }
+   ],
+   "t0": 34.49,
+   "t1": 36.25,
+   "cut": 1033
+  },
+  {
+   "i": 13,
+   "para": 2,
+   "text": "you'll be begging for water",
+   "words": [
+    {
+     "w": "you'll",
+     "roma": "yoll",
+     "t0": 36.25,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 36.56,
+     "cut": 1086
+    },
+    {
+     "w": "be",
+     "roma": "be",
+     "t0": 36.56,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 36.75,
+     "cut": 1095
+    },
+    {
+     "w": "begging",
+     "roma": "begging",
+     "t0": 36.75,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 37.18,
+     "cut": 1101
+    },
+    {
+     "w": "for",
+     "roma": "for",
+     "t0": 37.18,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 37.66,
+     "cut": 1114
+    },
+    {
+     "w": "water",
+     "roma": "water",
+     "t0": 37.66,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 38.14,
+     "cut": 1128
+    }
+   ],
+   "t0": 36.25,
+   "t1": 38.14,
+   "cut": 1086
+  },
+  {
+   "i": 14,
+   "para": 2,
+   "text": "Imma start a fire",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 38.14,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 38.65,
+     "cut": 1143
+    },
+    {
+     "w": "start",
+     "roma": "start",
+     "t0": 38.65,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 38.82,
+     "cut": 1158
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 38.82,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 39.04,
+     "cut": 1163
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 39.04,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 39.95,
+     "cut": 1170
+    }
+   ],
+   "t0": 38.14,
+   "t1": 39.95,
+   "cut": 1143
+  },
+  {
+   "i": 15,
+   "para": 2,
+   "text": "Imma fire starter",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 39.95,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 40.42,
+     "cut": 1197
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 40.42,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 40.79,
+     "cut": 1211
+    },
+    {
+     "w": "starter",
+     "roma": "starter",
+     "t0": 40.79,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 41.35,
+     "cut": 1222
+    }
+   ],
+   "t0": 39.95,
+   "t1": 41.35,
+   "cut": 1197
+  },
+  {
+   "i": 16,
+   "para": 3,
+   "text": "긴 어둠 끝 불을 밝혀",
+   "words": [
+    {
+     "w": "긴",
+     "roma": "gin",
+     "t0": 41.35,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 42.51,
+     "cut": 1239
+    },
+    {
+     "w": "어둠",
+     "roma": "eodum",
+     "t0": 42.51,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 42.74,
+     "cut": 1274
+    },
+    {
+     "w": "끝",
+     "roma": "kkeut",
+     "t0": 42.74,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 42.95,
+     "cut": 1281
+    },
+    {
+     "w": "불을",
+     "roma": "buleul",
+     "t0": 42.95,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 43.3,
+     "cut": 1287
+    },
+    {
+     "w": "밝혀",
+     "roma": "bakhyeo",
+     "t0": 43.3,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 43.79,
+     "cut": 1298
+    }
+   ],
+   "t0": 41.35,
+   "t1": 43.79,
+   "cut": 1239
+  },
+  {
+   "i": 17,
+   "para": 3,
+   "text": "바람 불어도 (후후) I’m the lighter",
+   "words": [
+    {
+     "w": "바람",
+     "roma": "baram",
+     "t0": 43.79,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 44.18,
+     "cut": 1312
+    },
+    {
+     "w": "불어도",
+     "roma": "buleodo",
+     "t0": 44.18,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 44.41,
+     "cut": 1324
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 44.41,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 44.54,
+     "cut": 1331
+    },
+    {
+     "w": "후후)",
+     "roma": "huhu",
+     "t0": 44.54,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 44.86,
+     "cut": 1335
+    },
+    {
+     "w": "I’m",
+     "roma": "im",
+     "t0": 44.86,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 45.14,
+     "cut": 1344
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 45.14,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 45.27,
+     "cut": 1353
+    },
+    {
+     "w": "lighter",
+     "roma": "lighter",
+     "t0": 45.27,
+     "how": "interpolated",
+     "conf": 0.43,
+     "t1": 45.49,
+     "cut": 1357
+    }
+   ],
+   "t0": 43.79,
+   "t1": 45.49,
+   "cut": 1312
+  },
+  {
+   "i": 18,
+   "para": 3,
+   "text": "꺾이지 않는 desire",
+   "words": [
+    {
+     "w": "꺾이지",
+     "roma": "kkeokiji",
+     "t0": 45.49,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 46.39,
+     "cut": 1363
+    },
+    {
+     "w": "않는",
+     "roma": "anneun",
+     "t0": 46.39,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 46.94,
+     "cut": 1390
+    },
+    {
+     "w": "desire",
+     "roma": "desire",
+     "t0": 46.94,
+     "how": "interpolated",
+     "conf": 0.17,
+     "t1": 47.45,
+     "cut": 1407
+    }
+   ],
+   "t0": 45.49,
+   "t1": 47.45,
+   "cut": 1363
+  },
+  {
+   "i": 19,
+   "para": 3,
+   "text": "올라가 펑펑 터져 마치 축제 같지",
+   "words": [
+    {
+     "w": "올라가",
+     "roma": "olraga",
+     "t0": 47.45,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 47.66,
+     "cut": 1422
+    },
+    {
+     "w": "펑펑",
+     "roma": "peongpeong",
+     "t0": 47.66,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 48.11,
+     "cut": 1428
+    },
+    {
+     "w": "터져",
+     "roma": "teojyeo",
+     "t0": 48.11,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 48.7,
+     "cut": 1442
+    },
+    {
+     "w": "마치",
+     "roma": "machi",
+     "t0": 48.7,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 49.07,
+     "cut": 1460
+    },
+    {
+     "w": "축제",
+     "roma": "chukje",
+     "t0": 49.07,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 49.38,
+     "cut": 1471
+    },
+    {
+     "w": "같지",
+     "roma": "gatji",
+     "t0": 49.38,
+     "how": "snapped",
+     "conf": 0.8,
+     "t1": 49.74,
+     "cut": 1480
+    }
+   ],
+   "t0": 47.45,
+   "t1": 49.74,
+   "cut": 1422
+  },
+  {
+   "i": 20,
+   "para": 3,
+   "text": "I can be sweet",
+   "words": [
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 49.74,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 50.26,
+     "cut": 1491
+    },
+    {
+     "w": "can",
+     "roma": "can",
+     "t0": 50.26,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 50.39,
+     "cut": 1506
+    },
+    {
+     "w": "be",
+     "roma": "be",
+     "t0": 50.39,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 50.53,
+     "cut": 1510
+    },
+    {
+     "w": "sweet",
+     "roma": "swet",
+     "t0": 50.53,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 50.8,
+     "cut": 1514
+    }
+   ],
+   "t0": 49.74,
+   "t1": 50.8,
+   "cut": 1491
+  },
+  {
+   "i": 21,
+   "para": 3,
+   "text": "but I got gold venom on my teeth",
+   "words": [
+    {
+     "w": "but",
+     "roma": "but",
+     "t0": 50.8,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 51.16,
+     "cut": 1523
+    },
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 51.16,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 51.3,
+     "cut": 1533
+    },
+    {
+     "w": "got",
+     "roma": "got",
+     "t0": 51.3,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 51.44,
+     "cut": 1538
+    },
+    {
+     "w": "gold",
+     "roma": "gold",
+     "t0": 51.44,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 51.66,
+     "cut": 1542
+    },
+    {
+     "w": "venom",
+     "roma": "venom",
+     "t0": 51.66,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 52.09,
+     "cut": 1548
+    },
+    {
+     "w": "on",
+     "roma": "on",
+     "t0": 52.09,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 52.23,
+     "cut": 1561
+    },
+    {
+     "w": "my",
+     "roma": "my",
+     "t0": 52.23,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 52.42,
+     "cut": 1565
+    },
+    {
+     "w": "teeth",
+     "roma": "teth",
+     "t0": 52.42,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 52.63,
+     "cut": 1571
+    }
+   ],
+   "t0": 50.8,
+   "t1": 52.63,
+   "cut": 1523
+  },
+  {
+   "i": 22,
+   "para": 3,
+   "text": "I'm only showing up for a fee",
+   "words": [
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 52.63,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 53.05,
+     "cut": 1577
+    },
+    {
+     "w": "only",
+     "roma": "only",
+     "t0": 53.05,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 53.28,
+     "cut": 1590
+    },
+    {
+     "w": "showing",
+     "roma": "showing",
+     "t0": 53.28,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 53.52,
+     "cut": 1597
+    },
+    {
+     "w": "up",
+     "roma": "up",
+     "t0": 53.52,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 53.86,
+     "cut": 1604
+    },
+    {
+     "w": "for",
+     "roma": "for",
+     "t0": 53.86,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 54.04,
+     "cut": 1614
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 54.04,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 54.33,
+     "cut": 1620
+    },
+    {
+     "w": "fee",
+     "roma": "fe",
+     "t0": 54.33,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 54.53,
+     "cut": 1628
+    }
+   ],
+   "t0": 52.63,
+   "t1": 54.53,
+   "cut": 1577
+  },
+  {
+   "i": 23,
+   "para": 3,
+   "text": "You're only showing up for the tea",
+   "words": [
+    {
+     "w": "You're",
+     "roma": "yore",
+     "t0": 54.53,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 54.84,
+     "cut": 1634
+    },
+    {
+     "w": "only",
+     "roma": "only",
+     "t0": 54.84,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 55.02,
+     "cut": 1644
+    },
+    {
+     "w": "showing",
+     "roma": "showing",
+     "t0": 55.02,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 55.31,
+     "cut": 1649
+    },
+    {
+     "w": "up",
+     "roma": "up",
+     "t0": 55.31,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 55.69,
+     "cut": 1658
+    },
+    {
+     "w": "for",
+     "roma": "for",
+     "t0": 55.69,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 55.92,
+     "cut": 1669
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 55.92,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 56.03,
+     "cut": 1676
+    },
+    {
+     "w": "tea",
+     "roma": "tea",
+     "t0": 56.03,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 57.53,
+     "cut": 1679
+    }
+   ],
+   "t0": 54.53,
+   "t1": 57.53,
+   "cut": 1634
+  },
+  {
+   "i": 24,
+   "para": 4,
+   "text": "I'm insane",
+   "words": [
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 70.42,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 70.55,
+     "cut": 2111
+    },
+    {
+     "w": "insane",
+     "roma": "insane",
+     "t0": 70.55,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 70.617,
+     "cut": 2115
+    }
+   ],
+   "t0": 70.42,
+   "t1": 70.617,
+   "cut": 2111
+  },
+  {
+   "i": 25,
+   "para": 4,
+   "text": "Yeah I know you like it that way",
+   "words": [
+    {
+     "w": "Yeah",
+     "roma": "yeah",
+     "t0": 70.617,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 70.683,
+     "cut": 2117
+    },
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 70.683,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 70.75,
+     "cut": 2119
+    },
+    {
+     "w": "know",
+     "roma": "know",
+     "t0": 70.75,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 70.817,
+     "cut": 2121
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 70.817,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 70.883,
+     "cut": 2123
+    },
+    {
+     "w": "like",
+     "roma": "like",
+     "t0": 70.883,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 70.95,
+     "cut": 2125
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 70.95,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.017,
+     "cut": 2127
+    },
+    {
+     "w": "that",
+     "roma": "that",
+     "t0": 71.017,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.083,
+     "cut": 2129
+    },
+    {
+     "w": "way",
+     "roma": "way",
+     "t0": 71.083,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.15,
+     "cut": 2131
+    }
+   ],
+   "t0": 70.617,
+   "t1": 71.15,
+   "cut": 2117
+  },
+  {
+   "i": 26,
+   "para": 4,
+   "text": "Chaos running wild in my veins",
+   "words": [
+    {
+     "w": "Chaos",
+     "roma": "chaos",
+     "t0": 71.15,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.217,
+     "cut": 2133
+    },
+    {
+     "w": "running",
+     "roma": "running",
+     "t0": 71.217,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.283,
+     "cut": 2135
+    },
+    {
+     "w": "wild",
+     "roma": "wild",
+     "t0": 71.283,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.35,
+     "cut": 2137
+    },
+    {
+     "w": "in",
+     "roma": "in",
+     "t0": 71.35,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.417,
+     "cut": 2139
+    },
+    {
+     "w": "my",
+     "roma": "my",
+     "t0": 71.417,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.483,
+     "cut": 2141
+    },
+    {
+     "w": "veins",
+     "roma": "veins",
+     "t0": 71.483,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.55,
+     "cut": 2143
+    }
+   ],
+   "t0": 71.15,
+   "t1": 71.55,
+   "cut": 2133
+  },
+  {
+   "i": 27,
+   "para": 5,
+   "text": "느껴봐 차갑던 이 세상을",
+   "words": [
+    {
+     "w": "느껴봐",
+     "roma": "neukkyeobwa",
+     "t0": 71.55,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.617,
+     "cut": 2145
+    },
+    {
+     "w": "차갑던",
+     "roma": "chagapdeon",
+     "t0": 71.617,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.683,
+     "cut": 2147
+    },
+    {
+     "w": "이",
+     "roma": "i",
+     "t0": 71.683,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.75,
+     "cut": 2149
+    },
+    {
+     "w": "세상을",
+     "roma": "sesangeul",
+     "t0": 71.75,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.817,
+     "cut": 2151
+    }
+   ],
+   "t0": 71.55,
+   "t1": 71.817,
+   "cut": 2145
+  },
+  {
+   "i": 28,
+   "para": 5,
+   "text": "붉게 물들일 이 순간",
+   "words": [
+    {
+     "w": "붉게",
+     "roma": "bukge",
+     "t0": 71.817,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.883,
+     "cut": 2153
+    },
+    {
+     "w": "물들일",
+     "roma": "muldeulil",
+     "t0": 71.883,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 71.95,
+     "cut": 2155
+    },
+    {
+     "w": "이",
+     "roma": "i",
+     "t0": 71.95,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 72.017,
+     "cut": 2157
+    },
+    {
+     "w": "순간",
+     "roma": "sungan",
+     "t0": 72.017,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 72.083,
+     "cut": 2159
+    }
+   ],
+   "t0": 71.817,
+   "t1": 72.083,
+   "cut": 2153
+  },
+  {
+   "i": 29,
+   "para": 6,
+   "text": "Imma start a fire",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 72.083,
+     "how": "interpolated",
+     "conf": 0.25,
+     "t1": 72.15,
+     "cut": 2161
+    },
+    {
+     "w": "start",
+     "roma": "start",
+     "t0": 72.15,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 72.217,
+     "cut": 2163
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 72.217,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 72.283,
+     "cut": 2165
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 72.283,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 72.76,
+     "cut": 2167
+    }
+   ],
+   "t0": 72.083,
+   "t1": 72.76,
+   "cut": 2161
+  },
+  {
+   "i": 30,
+   "para": 6,
+   "text": "Oh I like a little drama",
+   "words": [
+    {
+     "w": "Oh",
+     "roma": "oh",
+     "t0": 72.76,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 73.15,
+     "cut": 2181
+    },
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 73.15,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 73.38,
+     "cut": 2193
+    },
+    {
+     "w": "like",
+     "roma": "like",
+     "t0": 73.38,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 73.74,
+     "cut": 2200
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 73.74,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 73.86,
+     "cut": 2211
+    },
+    {
+     "w": "little",
+     "roma": "little",
+     "t0": 73.86,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 74.3,
+     "cut": 2214
+    },
+    {
+     "w": "drama",
+     "roma": "drama",
+     "t0": 74.3,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 74.78,
+     "cut": 2228
+    }
+   ],
+   "t0": 72.76,
+   "t1": 74.78,
+   "cut": 2181
+  },
+  {
+   "i": 31,
+   "para": 6,
+   "text": "Call the fire fighter",
+   "words": [
+    {
+     "w": "Call",
+     "roma": "call",
+     "t0": 74.78,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 74.99,
+     "cut": 2242
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 74.99,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 75.24,
+     "cut": 2248
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 75.24,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 75.66,
+     "cut": 2256
+    },
+    {
+     "w": "fighter",
+     "roma": "fighter",
+     "t0": 75.66,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 76.54,
+     "cut": 2268
+    }
+   ],
+   "t0": 74.78,
+   "t1": 76.54,
+   "cut": 2242
+  },
+  {
+   "i": 32,
+   "para": 6,
+   "text": "Call me crazy, call it Karma",
+   "words": [
+    {
+     "w": "Call",
+     "roma": "call",
+     "t0": 76.54,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 76.8,
+     "cut": 2295
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 76.8,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 77.07,
+     "cut": 2303
+    },
+    {
+     "w": "crazy,",
+     "roma": "crazy",
+     "t0": 77.07,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 77.55,
+     "cut": 2311
+    },
+    {
+     "w": "call",
+     "roma": "call",
+     "t0": 77.55,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 77.74,
+     "cut": 2325
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 77.74,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 77.97,
+     "cut": 2331
+    },
+    {
+     "w": "Karma",
+     "roma": "karma",
+     "t0": 77.97,
+     "how": "interpolated",
+     "conf": 0.4,
+     "t1": 78.46,
+     "cut": 2338
+    }
+   ],
+   "t0": 76.54,
+   "t1": 78.46,
+   "cut": 2295
+  },
+  {
+   "i": 33,
+   "para": 6,
+   "text": "got you burning so hot",
+   "words": [
+    {
+     "w": "got",
+     "roma": "got",
+     "t0": 78.46,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 78.68,
+     "cut": 2352
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 78.68,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 78.93,
+     "cut": 2359
+    },
+    {
+     "w": "burning",
+     "roma": "burning",
+     "t0": 78.93,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 79.47,
+     "cut": 2366
+    },
+    {
+     "w": "so",
+     "roma": "so",
+     "t0": 79.47,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 79.81,
+     "cut": 2383
+    },
+    {
+     "w": "hot",
+     "roma": "hot",
+     "t0": 79.81,
+     "how": "interpolated",
+     "conf": 0.33,
+     "t1": 80.22,
+     "cut": 2393
+    }
+   ],
+   "t0": 78.46,
+   "t1": 80.22,
+   "cut": 2352
+  },
+  {
+   "i": 34,
+   "para": 6,
+   "text": "you'll be begging for water",
+   "words": [
+    {
+     "w": "you'll",
+     "roma": "yoll",
+     "t0": 80.22,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 80.58,
+     "cut": 2405
+    },
+    {
+     "w": "be",
+     "roma": "be",
+     "t0": 80.58,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 80.72,
+     "cut": 2416
+    },
+    {
+     "w": "begging",
+     "roma": "begging",
+     "t0": 80.72,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 81.3,
+     "cut": 2420
+    },
+    {
+     "w": "for",
+     "roma": "for",
+     "t0": 81.3,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 81.76,
+     "cut": 2438
+    },
+    {
+     "w": "water",
+     "roma": "water",
+     "t0": 81.76,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 82.11,
+     "cut": 2451
+    }
+   ],
+   "t0": 80.22,
+   "t1": 82.11,
+   "cut": 2405
+  },
+  {
+   "i": 35,
+   "para": 6,
+   "text": "Imma start a fire",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 82.11,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 82.46,
+     "cut": 2462
+    },
+    {
+     "w": "start",
+     "roma": "start",
+     "t0": 82.46,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 82.79,
+     "cut": 2472
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 82.79,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 83.07,
+     "cut": 2482
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 83.07,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 83.74,
+     "cut": 2491
+    }
+   ],
+   "t0": 82.11,
+   "t1": 83.74,
+   "cut": 2462
+  },
+  {
+   "i": 36,
+   "para": 6,
+   "text": "Imma fire starter",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 83.74,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 84.36,
+     "cut": 2511
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 84.36,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 84.77,
+     "cut": 2529
+    },
+    {
+     "w": "starter",
+     "roma": "starter",
+     "t0": 84.77,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 86.27,
+     "cut": 2542
+    }
+   ],
+   "t0": 83.74,
+   "t1": 86.27,
+   "cut": 2511
+  },
+  {
+   "i": 37,
+   "para": 7,
+   "text": "I'm a fire starter",
+   "words": [
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 86.38,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 87.04,
+     "cut": 2590
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 87.04,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 87.112,
+     "cut": 2610
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 87.112,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 87.4,
+     "cut": 2612
+    },
+    {
+     "w": "starter",
+     "roma": "starter",
+     "t0": 87.4,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 88.3,
+     "cut": 2621
+    }
+   ],
+   "t0": 86.38,
+   "t1": 88.3,
+   "cut": 2590
+  },
+  {
+   "i": 38,
+   "para": 7,
+   "text": "Work a lil harder",
+   "words": [
+    {
+     "w": "Work",
+     "roma": "work",
+     "t0": 88.3,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 88.89,
+     "cut": 2648
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 88.89,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 88.957,
+     "cut": 2665
+    },
+    {
+     "w": "lil",
+     "roma": "lil",
+     "t0": 88.957,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 89.44,
+     "cut": 2667
+    },
+    {
+     "w": "harder",
+     "roma": "harder",
+     "t0": 89.44,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 90.1,
+     "cut": 2682
+    }
+   ],
+   "t0": 88.3,
+   "t1": 90.1,
+   "cut": 2648
+  },
+  {
+   "i": 39,
+   "para": 7,
+   "text": "Got me fired up",
+   "words": [
+    {
+     "w": "Got",
+     "roma": "got",
+     "t0": 90.1,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 90.56,
+     "cut": 2702
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 90.56,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 90.72,
+     "cut": 2715
+    },
+    {
+     "w": "fired",
+     "roma": "fired",
+     "t0": 90.72,
+     "how": "snapped",
+     "conf": 0.8,
+     "t1": 91.32,
+     "cut": 2720
+    },
+    {
+     "w": "up",
+     "roma": "up",
+     "t0": 91.32,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 91.48,
+     "cut": 2738
+    }
+   ],
+   "t0": 90.1,
+   "t1": 91.48,
+   "cut": 2702
+  },
+  {
+   "i": 40,
+   "para": 7,
+   "text": "Imma burn it down like",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 91.48,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 92.06,
+     "cut": 2743
+    },
+    {
+     "w": "burn",
+     "roma": "burn",
+     "t0": 92.06,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 92.48,
+     "cut": 2760
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 92.48,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 92.68,
+     "cut": 2773
+    },
+    {
+     "w": "down",
+     "roma": "down",
+     "t0": 92.68,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 93.26,
+     "cut": 2779
+    },
+    {
+     "w": "like",
+     "roma": "like",
+     "t0": 93.26,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 93.82,
+     "cut": 2796
+    }
+   ],
+   "t0": 91.48,
+   "t1": 93.82,
+   "cut": 2743
+  },
+  {
+   "i": 41,
+   "para": 8,
+   "text": "I'm a fire starter",
+   "words": [
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 93.82,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 94.37,
+     "cut": 2813
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 94.37,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 94.437,
+     "cut": 2830
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 94.437,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 94.67,
+     "cut": 2832
+    },
+    {
+     "w": "starter",
+     "roma": "starter",
+     "t0": 94.67,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 95.42,
+     "cut": 2839
+    }
+   ],
+   "t0": 93.82,
+   "t1": 95.42,
+   "cut": 2813
+  },
+  {
+   "i": 42,
+   "para": 8,
+   "text": "Crazy out of order",
+   "words": [
+    {
+     "w": "Crazy",
+     "roma": "crazy",
+     "t0": 95.42,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 96.13,
+     "cut": 2861
+    },
+    {
+     "w": "out",
+     "roma": "ot",
+     "t0": 96.13,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 96.49,
+     "cut": 2882
+    },
+    {
+     "w": "of",
+     "roma": "of",
+     "t0": 96.49,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 96.71,
+     "cut": 2893
+    },
+    {
+     "w": "order",
+     "roma": "order",
+     "t0": 96.71,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 97.43,
+     "cut": 2900
+    }
+   ],
+   "t0": 95.42,
+   "t1": 97.43,
+   "cut": 2861
+  },
+  {
+   "i": 43,
+   "para": 8,
+   "text": "I'm a I'm a I'm a fire starter!",
+   "words": [
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 97.43,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 97.89,
+     "cut": 2921
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 97.89,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 98.13,
+     "cut": 2935
+    },
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 98.13,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 98.21,
+     "cut": 2942
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 98.21,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 98.35,
+     "cut": 2945
+    },
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 98.35,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 99.04,
+     "cut": 2949
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 99.04,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 99.15,
+     "cut": 2970
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 99.15,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 99.38,
+     "cut": 2973
+    },
+    {
+     "w": "starter!",
+     "roma": "starter",
+     "t0": 99.38,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 100.7,
+     "cut": 2980
+    }
+   ],
+   "t0": 97.43,
+   "t1": 100.7,
+   "cut": 2921
+  },
+  {
+   "i": 44,
+   "para": 9,
+   "text": "멈추지 않아",
+   "words": [
+    {
+     "w": "멈추지",
+     "roma": "meomchuji",
+     "t0": 100.7,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 101.27,
+     "cut": 3020
+    },
+    {
+     "w": "않아",
+     "roma": "ana",
+     "t0": 101.27,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 101.37,
+     "cut": 3037
+    }
+   ],
+   "t0": 100.7,
+   "t1": 101.37,
+   "cut": 3020
+  },
+  {
+   "i": 45,
+   "para": 9,
+   "text": "월화수목금토일",
+   "words": [
+    {
+     "w": "월화수목금토일",
+     "roma": "wolhwasumokgeumtoil",
+     "t0": 101.37,
+     "how": "interpolated",
+     "conf": 0.16,
+     "t1": 102.46,
+     "cut": 3040
+    }
+   ],
+   "t0": 101.37,
+   "t1": 102.46,
+   "cut": 3040
+  },
+  {
+   "i": 46,
+   "para": 9,
+   "text": "나를 jealous",
+   "words": [
+    {
+     "w": "나를",
+     "roma": "nareul",
+     "t0": 102.46,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 102.81,
+     "cut": 3072
+    },
+    {
+     "w": "jealous",
+     "roma": "jealos",
+     "t0": 102.81,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 103.08,
+     "cut": 3083
+    }
+   ],
+   "t0": 102.46,
+   "t1": 103.08,
+   "cut": 3072
+  },
+  {
+   "i": 47,
+   "para": 9,
+   "text": "근데 영 고갈이 안돼",
+   "words": [
+    {
+     "w": "근데",
+     "roma": "geunde",
+     "t0": 103.08,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 103.41,
+     "cut": 3091
+    },
+    {
+     "w": "영",
+     "roma": "yeong",
+     "t0": 103.41,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 103.62,
+     "cut": 3101
+    },
+    {
+     "w": "고갈이",
+     "roma": "gogali",
+     "t0": 103.62,
+     "how": "interpolated",
+     "conf": 0.17,
+     "t1": 104.01,
+     "cut": 3107
+    },
+    {
+     "w": "안돼",
+     "roma": "andwae",
+     "t0": 104.01,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 104.34,
+     "cut": 3119
+    }
+   ],
+   "t0": 103.08,
+   "t1": 104.34,
+   "cut": 3091
+  },
+  {
+   "i": 48,
+   "para": 9,
+   "text": "Dreamers",
+   "words": [
+    {
+     "w": "Dreamers",
+     "roma": "dreamers",
+     "t0": 104.34,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 104.67,
+     "cut": 3129
+    }
+   ],
+   "t0": 104.34,
+   "t1": 104.67,
+   "cut": 3129
+  },
+  {
+   "i": 49,
+   "para": 10,
+   "text": "0부터 100까지",
+   "words": [
+    {
+     "w": "0",
+     "roma": "",
+     "t0": 104.67,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 104.76,
+     "cut": 3139
+    },
+    {
+     "w": "부터",
+     "roma": "buteo",
+     "t0": 104.76,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 105.0,
+     "cut": 3141
+    },
+    {
+     "w": "100",
+     "roma": "",
+     "t0": 105.0,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 105.12,
+     "cut": 3149
+    },
+    {
+     "w": "까지",
+     "roma": "kkaji",
+     "t0": 105.12,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 105.48,
+     "cut": 3152
+    }
+   ],
+   "t0": 104.67,
+   "t1": 105.48,
+   "cut": 3139
+  },
+  {
+   "i": 50,
+   "para": 10,
+   "text": "너의 무의식까지",
+   "words": [
+    {
+     "w": "너의",
+     "roma": "neoi",
+     "t0": 105.48,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 105.68,
+     "cut": 3163
+    },
+    {
+     "w": "무의식까지",
+     "roma": "muisikkkaji",
+     "t0": 105.68,
+     "how": "snapped",
+     "conf": 0.55,
+     "t1": 106.32,
+     "cut": 3169
+    }
+   ],
+   "t0": 105.48,
+   "t1": 106.32,
+   "cut": 3163
+  },
+  {
+   "i": 51,
+   "para": 10,
+   "text": "단숨에 다 퍼져 퍼져",
+   "words": [
+    {
+     "w": "단숨에",
+     "roma": "dansume",
+     "t0": 106.32,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 106.78,
+     "cut": 3188
+    },
+    {
+     "w": "다",
+     "roma": "da",
+     "t0": 106.78,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 106.96,
+     "cut": 3202
+    },
+    {
+     "w": "퍼져",
+     "roma": "peojyeo",
+     "t0": 106.96,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 107.27,
+     "cut": 3207
+    },
+    {
+     "w": "퍼져",
+     "roma": "peojyeo",
+     "t0": 107.27,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 107.69,
+     "cut": 3217
+    }
+   ],
+   "t0": 106.32,
+   "t1": 107.69,
+   "cut": 3188
+  },
+  {
+   "i": 52,
+   "para": 11,
+   "text": "Let’s go 삐걱 삐-삐걱 어느새 lose control",
+   "words": [
+    {
+     "w": "Let’s",
+     "roma": "lets",
+     "t0": 107.69,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 108.21,
+     "cut": 3229
+    },
+    {
+     "w": "go",
+     "roma": "go",
+     "t0": 108.21,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 108.47,
+     "cut": 3245
+    },
+    {
+     "w": "삐걱",
+     "roma": "ppigeok",
+     "t0": 108.47,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 109.02,
+     "cut": 3253
+    },
+    {
+     "w": "삐-삐걱",
+     "roma": "ppippigeok",
+     "t0": 109.02,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 109.91,
+     "cut": 3269
+    },
+    {
+     "w": "어느새",
+     "roma": "eoneusae",
+     "t0": 109.91,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 110.66,
+     "cut": 3296
+    },
+    {
+     "w": "lose",
+     "roma": "lose",
+     "t0": 110.66,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 110.83,
+     "cut": 3318
+    },
+    {
+     "w": "control",
+     "roma": "control",
+     "t0": 110.83,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 111.28,
+     "cut": 3323
+    }
+   ],
+   "t0": 107.69,
+   "t1": 111.28,
+   "cut": 3229
+  },
+  {
+   "i": 53,
+   "para": 11,
+   "text": "자 beat drop beat-beat drop",
+   "words": [
+    {
+     "w": "자",
+     "roma": "ja",
+     "t0": 111.28,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 111.91,
+     "cut": 3337
+    },
+    {
+     "w": "beat",
+     "roma": "beat",
+     "t0": 111.91,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 112.14,
+     "cut": 3356
+    },
+    {
+     "w": "drop",
+     "roma": "drop",
+     "t0": 112.14,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 112.54,
+     "cut": 3363
+    },
+    {
+     "w": "beat-beat",
+     "roma": "beatbeat",
+     "t0": 112.54,
+     "how": "interpolated",
+     "conf": 0.25,
+     "t1": 113.24,
+     "cut": 3375
+    },
+    {
+     "w": "drop",
+     "roma": "drop",
+     "t0": 113.24,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 113.57,
+     "cut": 3396
+    }
+   ],
+   "t0": 111.28,
+   "t1": 113.57,
+   "cut": 3337
+  },
+  {
+   "i": 54,
+   "para": 11,
+   "text": "놀아보자 얼쑤 (얼쑤!)",
+   "words": [
+    {
+     "w": "놀아보자",
+     "roma": "nolaboja",
+     "t0": 113.57,
+     "how": "snapped",
+     "conf": 0.88,
+     "t1": 114.42,
+     "cut": 3406
+    },
+    {
+     "w": "얼쑤",
+     "roma": "eolssu",
+     "t0": 114.42,
+     "how": "snapped",
+     "conf": 0.83,
+     "t1": 114.86,
+     "cut": 3431
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 114.86,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 115.02,
+     "cut": 3444
+    },
+    {
+     "w": "얼쑤!)",
+     "roma": "eolssu",
+     "t0": 115.02,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 115.57,
+     "cut": 3449
+    }
+   ],
+   "t0": 113.57,
+   "t1": 115.57,
+   "cut": 3406
+  },
+  {
+   "i": 55,
+   "para": 12,
+   "text": "Ooh ooh",
+   "words": [
+    {
+     "w": "Ooh",
+     "roma": "oh",
+     "t0": 115.57,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 115.65,
+     "cut": 3466
+    },
+    {
+     "w": "ooh",
+     "roma": "oh",
+     "t0": 115.65,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 115.8,
+     "cut": 3468
+    }
+   ],
+   "t0": 115.57,
+   "t1": 115.8,
+   "cut": 3466
+  },
+  {
+   "i": 56,
+   "para": 12,
+   "text": "불을 지펴라",
+   "words": [
+    {
+     "w": "불을",
+     "roma": "buleul",
+     "t0": 115.8,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 116.01,
+     "cut": 3473
+    },
+    {
+     "w": "지펴라",
+     "roma": "jipyeora",
+     "t0": 116.01,
+     "how": "interpolated",
+     "conf": 0.12,
+     "t1": 116.26,
+     "cut": 3479
+    }
+   ],
+   "t0": 115.8,
+   "t1": 116.26,
+   "cut": 3473
+  },
+  {
+   "i": 57,
+   "para": 12,
+   "text": "까마디 까만 이 밤하늘을 달려",
+   "words": [
+    {
+     "w": "까마디",
+     "roma": "kkamadi",
+     "t0": 116.26,
+     "how": "measured",
+     "conf": 0.71,
+     "t1": 116.69,
+     "cut": 3486
+    },
+    {
+     "w": "까만",
+     "roma": "kkaman",
+     "t0": 116.69,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 117.15,
+     "cut": 3499
+    },
+    {
+     "w": "이",
+     "roma": "i",
+     "t0": 117.15,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 117.24,
+     "cut": 3513
+    },
+    {
+     "w": "밤하늘을",
+     "roma": "bamhaneuleul",
+     "t0": 117.24,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 117.82,
+     "cut": 3516
+    },
+    {
+     "w": "달려",
+     "roma": "dalryeo",
+     "t0": 117.82,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 118.31,
+     "cut": 3533
+    }
+   ],
+   "t0": 116.26,
+   "t1": 118.31,
+   "cut": 3486
+  },
+  {
+   "i": 58,
+   "para": 12,
+   "text": "Ooh ooh",
+   "words": [
+    {
+     "w": "Ooh",
+     "roma": "oh",
+     "t0": 118.31,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 118.55,
+     "cut": 3548
+    },
+    {
+     "w": "ooh",
+     "roma": "oh",
+     "t0": 118.55,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 118.86,
+     "cut": 3555
+    }
+   ],
+   "t0": 118.31,
+   "t1": 118.86,
+   "cut": 3548
+  },
+  {
+   "i": 59,
+   "para": 12,
+   "text": "준비됐어 난",
+   "words": [
+    {
+     "w": "준비됐어",
+     "roma": "junbidwaeteo",
+     "t0": 118.86,
+     "how": "snapped",
+     "conf": 0.42,
+     "t1": 119.67,
+     "cut": 3564
+    },
+    {
+     "w": "난",
+     "roma": "nan",
+     "t0": 119.67,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 119.93,
+     "cut": 3589
+    }
+   ],
+   "t0": 118.86,
+   "t1": 119.93,
+   "cut": 3564
+  },
+  {
+   "i": 60,
+   "para": 12,
+   "text": "Sit back relax",
+   "words": [
+    {
+     "w": "Sit",
+     "roma": "sit",
+     "t0": 119.93,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 120.38,
+     "cut": 3596
+    },
+    {
+     "w": "back",
+     "roma": "back",
+     "t0": 120.38,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 120.79,
+     "cut": 3610
+    },
+    {
+     "w": "relax",
+     "roma": "relax",
+     "t0": 120.79,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 122.29,
+     "cut": 3622
+    }
+   ],
+   "t0": 119.93,
+   "t1": 122.29,
+   "cut": 3596
+  },
+  {
+   "i": 61,
+   "para": 12,
+   "text": "Gonna take it gonna take ooh!",
+   "words": [
+    {
+     "w": "Gonna",
+     "roma": "gonna",
+     "t0": 122.44,
+     "how": "snapped",
+     "conf": 0.6,
+     "t1": 122.65,
+     "cut": 3672
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 122.65,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 122.717,
+     "cut": 3678
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 122.717,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 122.783,
+     "cut": 3680
+    },
+    {
+     "w": "gonna",
+     "roma": "gonna",
+     "t0": 122.783,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 122.85,
+     "cut": 3682
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 122.85,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 122.98,
+     "cut": 3684
+    },
+    {
+     "w": "ooh!",
+     "roma": "oh",
+     "t0": 122.98,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 123.047,
+     "cut": 3688
+    }
+   ],
+   "t0": 122.44,
+   "t1": 123.047,
+   "cut": 3672
+  },
+  {
+   "i": 62,
+   "para": 13,
+   "text": "Ooh ooh",
+   "words": [
+    {
+     "w": "Ooh",
+     "roma": "oh",
+     "t0": 123.047,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 123.113,
+     "cut": 3690
+    },
+    {
+     "w": "ooh",
+     "roma": "oh",
+     "t0": 123.113,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 123.18,
+     "cut": 3692
+    }
+   ],
+   "t0": 123.047,
+   "t1": 123.18,
+   "cut": 3690
+  },
+  {
+   "i": 63,
+   "para": 13,
+   "text": "When I start the fire",
+   "words": [
+    {
+     "w": "When",
+     "roma": "when",
+     "t0": 123.18,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 123.247,
+     "cut": 3694
+    },
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 123.247,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 123.313,
+     "cut": 3696
+    },
+    {
+     "w": "start",
+     "roma": "start",
+     "t0": 123.313,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 123.38,
+     "cut": 3698
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 123.38,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 123.447,
+     "cut": 3700
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 123.447,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 123.66,
+     "cut": 3702
+    }
+   ],
+   "t0": 123.18,
+   "t1": 123.66,
+   "cut": 3694
+  },
+  {
+   "i": 64,
+   "para": 13,
+   "text": "Better be ready for when I take it higher",
+   "words": [
+    {
+     "w": "Better",
+     "roma": "better",
+     "t0": 123.66,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 124.13,
+     "cut": 3708
+    },
+    {
+     "w": "be",
+     "roma": "be",
+     "t0": 124.13,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 124.23,
+     "cut": 3722
+    },
+    {
+     "w": "ready",
+     "roma": "ready",
+     "t0": 124.23,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 124.51,
+     "cut": 3725
+    },
+    {
+     "w": "for",
+     "roma": "for",
+     "t0": 124.51,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 124.62,
+     "cut": 3734
+    },
+    {
+     "w": "when",
+     "roma": "when",
+     "t0": 124.62,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 124.82,
+     "cut": 3737
+    },
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 124.82,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 124.887,
+     "cut": 3743
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 124.887,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 124.99,
+     "cut": 3745
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 124.99,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 125.18,
+     "cut": 3748
+    },
+    {
+     "w": "higher",
+     "roma": "higher",
+     "t0": 125.18,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 125.247,
+     "cut": 3754
+    }
+   ],
+   "t0": 123.66,
+   "t1": 125.247,
+   "cut": 3708
+  },
+  {
+   "i": 65,
+   "para": 13,
+   "text": "Ooh ooh",
+   "words": [
+    {
+     "w": "Ooh",
+     "roma": "oh",
+     "t0": 125.247,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 125.32,
+     "cut": 3756
+    },
+    {
+     "w": "ooh",
+     "roma": "oh",
+     "t0": 125.32,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 125.57,
+     "cut": 3758
+    }
+   ],
+   "t0": 125.247,
+   "t1": 125.57,
+   "cut": 3756
+  },
+  {
+   "i": 66,
+   "para": 13,
+   "text": "When I start the fire",
+   "words": [
+    {
+     "w": "When",
+     "roma": "when",
+     "t0": 125.57,
+     "how": "interpolated",
+     "conf": 0.25,
+     "t1": 126.08,
+     "cut": 3766
+    },
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 126.08,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 126.26,
+     "cut": 3781
+    },
+    {
+     "w": "start",
+     "roma": "start",
+     "t0": 126.26,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 126.79,
+     "cut": 3786
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 126.79,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 126.98,
+     "cut": 3802
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 126.98,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 127.29,
+     "cut": 3808
+    }
+   ],
+   "t0": 125.57,
+   "t1": 127.29,
+   "cut": 3766
+  },
+  {
+   "i": 67,
+   "para": 13,
+   "text": "Better be ready for when I take that take that",
+   "words": [
+    {
+     "w": "Better",
+     "roma": "better",
+     "t0": 127.29,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 127.8,
+     "cut": 3817
+    },
+    {
+     "w": "be",
+     "roma": "be",
+     "t0": 127.8,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 127.9,
+     "cut": 3833
+    },
+    {
+     "w": "ready",
+     "roma": "ready",
+     "t0": 127.9,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 128.04,
+     "cut": 3836
+    },
+    {
+     "w": "for",
+     "roma": "for",
+     "t0": 128.04,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 128.29,
+     "cut": 3840
+    },
+    {
+     "w": "when",
+     "roma": "when",
+     "t0": 128.29,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 128.48,
+     "cut": 3847
+    },
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 128.48,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 128.547,
+     "cut": 3853
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 128.547,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 128.62,
+     "cut": 3855
+    },
+    {
+     "w": "that",
+     "roma": "that",
+     "t0": 128.62,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 129.09,
+     "cut": 3857
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 129.09,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 129.78,
+     "cut": 3871
+    },
+    {
+     "w": "that",
+     "roma": "that",
+     "t0": 129.78,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 130.38,
+     "cut": 3892
+    }
+   ],
+   "t0": 127.29,
+   "t1": 130.38,
+   "cut": 3817
+  },
+  {
+   "i": 68,
+   "para": 14,
+   "text": "I'm insane",
+   "words": [
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 130.38,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 130.7,
+     "cut": 3910
+    },
+    {
+     "w": "insane",
+     "roma": "insane",
+     "t0": 130.7,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 131.53,
+     "cut": 3919
+    }
+   ],
+   "t0": 130.38,
+   "t1": 131.53,
+   "cut": 3910
+  },
+  {
+   "i": 69,
+   "para": 14,
+   "text": "Yeah I know you like it that way",
+   "words": [
+    {
+     "w": "Yeah",
+     "roma": "yeah",
+     "t0": 131.53,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 132.19,
+     "cut": 3944
+    },
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 132.19,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 132.38,
+     "cut": 3964
+    },
+    {
+     "w": "know",
+     "roma": "know",
+     "t0": 132.38,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 132.7,
+     "cut": 3970
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 132.7,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 132.93,
+     "cut": 3979
+    },
+    {
+     "w": "like",
+     "roma": "like",
+     "t0": 132.93,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 133.15,
+     "cut": 3986
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 133.15,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 133.39,
+     "cut": 3993
+    },
+    {
+     "w": "that",
+     "roma": "that",
+     "t0": 133.39,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 133.7,
+     "cut": 4000
+    },
+    {
+     "w": "way",
+     "roma": "way",
+     "t0": 133.7,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 134.72,
+     "cut": 4009
+    }
+   ],
+   "t0": 131.53,
+   "t1": 134.72,
+   "cut": 3944
+  },
+  {
+   "i": 70,
+   "para": 14,
+   "text": "Chaos running wild in my veins",
+   "words": [
+    {
+     "w": "Chaos",
+     "roma": "chaos",
+     "t0": 134.72,
+     "how": "interpolated",
+     "conf": 0.2,
+     "t1": 136.22,
+     "cut": 4040
+    },
+    {
+     "w": "running",
+     "roma": "running",
+     "t0": 136.38,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 136.67,
+     "cut": 4090
+    },
+    {
+     "w": "wild",
+     "roma": "wild",
+     "t0": 136.67,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 136.99,
+     "cut": 4099
+    },
+    {
+     "w": "in",
+     "roma": "in",
+     "t0": 136.99,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 137.1,
+     "cut": 4108
+    },
+    {
+     "w": "my",
+     "roma": "my",
+     "t0": 137.1,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 137.41,
+     "cut": 4112
+    },
+    {
+     "w": "veins",
+     "roma": "veins",
+     "t0": 137.41,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 137.94,
+     "cut": 4121
+    }
+   ],
+   "t0": 134.72,
+   "t1": 137.94,
+   "cut": 4040
+  },
+  {
+   "i": 71,
+   "para": 15,
+   "text": "느껴봐 차갑던 이 세상을",
+   "words": [
+    {
+     "w": "느껴봐",
+     "roma": "neukkyeobwa",
+     "t0": 137.94,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 138.7,
+     "cut": 4137
+    },
+    {
+     "w": "차갑던",
+     "roma": "chagapdeon",
+     "t0": 138.7,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 139.52,
+     "cut": 4160
+    },
+    {
+     "w": "이",
+     "roma": "i",
+     "t0": 139.52,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 139.65,
+     "cut": 4184
+    },
+    {
+     "w": "세상을",
+     "roma": "sesangeul",
+     "t0": 139.65,
+     "how": "snapped",
+     "conf": 0.78,
+     "t1": 141.15,
+     "cut": 4188
+    }
+   ],
+   "t0": 137.94,
+   "t1": 141.15,
+   "cut": 4137
+  },
+  {
+   "i": 72,
+   "para": 15,
+   "text": "붉게 물들일 이 순간",
+   "words": [
+    {
+     "w": "붉게",
+     "roma": "bukge",
+     "t0": 141.36,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 142.38,
+     "cut": 4239
+    },
+    {
+     "w": "물들일",
+     "roma": "muldeulil",
+     "t0": 142.38,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 143.88,
+     "cut": 4270
+    },
+    {
+     "w": "이",
+     "roma": "i",
+     "t0": 144.31,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 144.46,
+     "cut": 4328
+    },
+    {
+     "w": "순간",
+     "roma": "sungan",
+     "t0": 144.46,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 145.69,
+     "cut": 4332
+    }
+   ],
+   "t0": 141.36,
+   "t1": 145.69,
+   "cut": 4239
+  },
+  {
+   "i": 73,
+   "para": 16,
+   "text": "Imma start a fire",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 145.69,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 146.44,
+     "cut": 4369
+    },
+    {
+     "w": "start",
+     "roma": "start",
+     "t0": 146.44,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 147.38,
+     "cut": 4392
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 147.38,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 147.59,
+     "cut": 4420
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 147.59,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 148.42,
+     "cut": 4426
+    }
+   ],
+   "t0": 145.69,
+   "t1": 148.42,
+   "cut": 4369
+  },
+  {
+   "i": 74,
+   "para": 16,
+   "text": "Oh I like a little drama",
+   "words": [
+    {
+     "w": "Oh",
+     "roma": "oh",
+     "t0": 148.42,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 148.99,
+     "cut": 4451
+    },
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 148.99,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 149.057,
+     "cut": 4468
+    },
+    {
+     "w": "like",
+     "roma": "like",
+     "t0": 149.057,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 149.873,
+     "cut": 4470
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 149.873,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 150.09,
+     "cut": 4495
+    },
+    {
+     "w": "little",
+     "roma": "little",
+     "t0": 150.09,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 151.28,
+     "cut": 4501
+    },
+    {
+     "w": "drama",
+     "roma": "drama",
+     "t0": 151.28,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 152.21,
+     "cut": 4537
+    }
+   ],
+   "t0": 148.42,
+   "t1": 152.21,
+   "cut": 4451
+  },
+  {
+   "i": 75,
+   "para": 16,
+   "text": "Call the fire fighter",
+   "words": [
+    {
+     "w": "Call",
+     "roma": "call",
+     "t0": 152.21,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 153.1,
+     "cut": 4565
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 153.1,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 153.66,
+     "cut": 4592
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 153.66,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 154.43,
+     "cut": 4608
+    },
+    {
+     "w": "fighter",
+     "roma": "fighter",
+     "t0": 154.43,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 155.84,
+     "cut": 4631
+    }
+   ],
+   "t0": 152.21,
+   "t1": 155.84,
+   "cut": 4565
+  },
+  {
+   "i": 76,
+   "para": 16,
+   "text": "Call me crazy, call it Karma",
+   "words": [
+    {
+     "w": "Call",
+     "roma": "call",
+     "t0": 155.84,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 156.69,
+     "cut": 4674
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 156.69,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 157.06,
+     "cut": 4699
+    },
+    {
+     "w": "crazy,",
+     "roma": "crazy",
+     "t0": 157.06,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 158.2,
+     "cut": 4710
+    },
+    {
+     "w": "call",
+     "roma": "call",
+     "t0": 158.2,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 158.85,
+     "cut": 4745
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 158.85,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 159.22,
+     "cut": 4764
+    },
+    {
+     "w": "Karma",
+     "roma": "karma",
+     "t0": 159.22,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 160.35,
+     "cut": 4775
+    }
+   ],
+   "t0": 155.84,
+   "t1": 160.35,
+   "cut": 4674
+  },
+  {
+   "i": 77,
+   "para": 16,
+   "text": "got you burning so hot",
+   "words": [
+    {
+     "w": "got",
+     "roma": "got",
+     "t0": 160.35,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 161.0,
+     "cut": 4809
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 161.0,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 161.32,
+     "cut": 4829
+    },
+    {
+     "w": "burning",
+     "roma": "burning",
+     "t0": 161.32,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 162.73,
+     "cut": 4838
+    },
+    {
+     "w": "so",
+     "roma": "so",
+     "t0": 162.73,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 163.19,
+     "cut": 4880
+    },
+    {
+     "w": "hot",
+     "roma": "hot",
+     "t0": 163.19,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 163.75,
+     "cut": 4894
+    }
+   ],
+   "t0": 160.35,
+   "t1": 163.75,
+   "cut": 4809
+  },
+  {
+   "i": 78,
+   "para": 16,
+   "text": "you'll be begging for water",
+   "words": [
+    {
+     "w": "you'll",
+     "roma": "yoll",
+     "t0": 163.75,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 164.49,
+     "cut": 4911
+    },
+    {
+     "w": "be",
+     "roma": "be",
+     "t0": 164.49,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 164.84,
+     "cut": 4933
+    },
+    {
+     "w": "begging",
+     "roma": "begging",
+     "t0": 164.84,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 166.34,
+     "cut": 4944
+    },
+    {
+     "w": "for",
+     "roma": "for",
+     "t0": 166.34,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 166.82,
+     "cut": 4989
+    },
+    {
+     "w": "water",
+     "roma": "water",
+     "t0": 166.82,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 167.85,
+     "cut": 5003
+    }
+   ],
+   "t0": 163.75,
+   "t1": 167.85,
+   "cut": 4911
+  },
+  {
+   "i": 79,
+   "para": 16,
+   "text": "Imma start a fire",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 167.85,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 168.65,
+     "cut": 5034
+    },
+    {
+     "w": "start",
+     "roma": "start",
+     "t0": 168.65,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 169.82,
+     "cut": 5058
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 169.82,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 169.887,
+     "cut": 5093
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 169.887,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 170.72,
+     "cut": 5095
+    }
+   ],
+   "t0": 167.85,
+   "t1": 170.72,
+   "cut": 5034
+  },
+  {
+   "i": 80,
+   "para": 16,
+   "text": "Imma fire starter",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 170.72,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 170.95,
+     "cut": 5120
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 170.95,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 171.07,
+     "cut": 5127
+    },
+    {
+     "w": "starter",
+     "roma": "starter",
+     "t0": 171.07,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 171.137,
+     "cut": 5131
+    }
+   ],
+   "t0": 170.72,
+   "t1": 171.137,
+   "cut": 5120
+  },
+  {
+   "i": 81,
+   "para": 17,
+   "text": "Imma start a fire",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 171.137,
+     "how": "interpolated",
+     "conf": 0.25,
+     "t1": 171.203,
+     "cut": 5133
+    },
+    {
+     "w": "start",
+     "roma": "start",
+     "t0": 171.203,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.27,
+     "cut": 5135
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 171.27,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.337,
+     "cut": 5137
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 171.337,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.403,
+     "cut": 5139
+    }
+   ],
+   "t0": 171.137,
+   "t1": 171.403,
+   "cut": 5133
+  },
+  {
+   "i": 82,
+   "para": 17,
+   "text": "Oh I like a little drama",
+   "words": [
+    {
+     "w": "Oh",
+     "roma": "oh",
+     "t0": 171.403,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.47,
+     "cut": 5141
+    },
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 171.47,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.537,
+     "cut": 5143
+    },
+    {
+     "w": "like",
+     "roma": "like",
+     "t0": 171.537,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.603,
+     "cut": 5145
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 171.603,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.67,
+     "cut": 5147
+    },
+    {
+     "w": "little",
+     "roma": "little",
+     "t0": 171.67,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.737,
+     "cut": 5149
+    },
+    {
+     "w": "drama",
+     "roma": "drama",
+     "t0": 171.737,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.803,
+     "cut": 5151
+    }
+   ],
+   "t0": 171.403,
+   "t1": 171.803,
+   "cut": 5141
+  },
+  {
+   "i": 83,
+   "para": 17,
+   "text": "Call the fire fighter",
+   "words": [
+    {
+     "w": "Call",
+     "roma": "call",
+     "t0": 171.803,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.87,
+     "cut": 5153
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 171.87,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.937,
+     "cut": 5155
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 171.937,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.003,
+     "cut": 5157
+    },
+    {
+     "w": "fighter",
+     "roma": "fighter",
+     "t0": 172.003,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.07,
+     "cut": 5159
+    }
+   ],
+   "t0": 171.803,
+   "t1": 172.07,
+   "cut": 5153
+  },
+  {
+   "i": 84,
+   "para": 17,
+   "text": "Call me crazy, call it Karma",
+   "words": [
+    {
+     "w": "Call",
+     "roma": "call",
+     "t0": 172.07,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.137,
+     "cut": 5161
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 172.137,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.203,
+     "cut": 5163
+    },
+    {
+     "w": "crazy,",
+     "roma": "crazy",
+     "t0": 172.203,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.27,
+     "cut": 5165
+    },
+    {
+     "w": "call",
+     "roma": "call",
+     "t0": 172.27,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.337,
+     "cut": 5167
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 172.337,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.403,
+     "cut": 5169
+    },
+    {
+     "w": "Karma",
+     "roma": "karma",
+     "t0": 172.403,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.47,
+     "cut": 5171
+    }
+   ],
+   "t0": 172.07,
+   "t1": 172.47,
+   "cut": 5161
+  },
+  {
+   "i": 85,
+   "para": 17,
+   "text": "If you can't take the heat",
+   "words": [
+    {
+     "w": "If",
+     "roma": "if",
+     "t0": 172.47,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.537,
+     "cut": 5173
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 172.537,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.603,
+     "cut": 5175
+    },
+    {
+     "w": "can't",
+     "roma": "cant",
+     "t0": 172.603,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.67,
+     "cut": 5177
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 172.67,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.737,
+     "cut": 5179
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 172.737,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.803,
+     "cut": 5181
+    },
+    {
+     "w": "heat",
+     "roma": "heat",
+     "t0": 172.803,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.87,
+     "cut": 5183
+    }
+   ],
+   "t0": 172.47,
+   "t1": 172.87,
+   "cut": 5173
+  },
+  {
+   "i": 86,
+   "para": 17,
+   "text": "then get out of the sauna",
+   "words": [
+    {
+     "w": "then",
+     "roma": "then",
+     "t0": 172.87,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.937,
+     "cut": 5185
+    },
+    {
+     "w": "get",
+     "roma": "get",
+     "t0": 172.937,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 173.003,
+     "cut": 5187
+    },
+    {
+     "w": "out",
+     "roma": "ot",
+     "t0": 173.003,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 173.07,
+     "cut": 5189
+    },
+    {
+     "w": "of",
+     "roma": "of",
+     "t0": 173.07,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 173.137,
+     "cut": 5191
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 173.137,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 173.203,
+     "cut": 5193
+    },
+    {
+     "w": "sauna",
+     "roma": "sauna",
+     "t0": 173.203,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 173.27,
+     "cut": 5195
+    }
+   ],
+   "t0": 172.87,
+   "t1": 173.27,
+   "cut": 5185
+  },
+  {
+   "i": 87,
+   "para": 17,
+   "text": "Imma start a fire",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 173.27,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 173.337,
+     "cut": 5197
+    },
+    {
+     "w": "start",
+     "roma": "start",
+     "t0": 173.337,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 173.403,
+     "cut": 5199
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 173.403,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 173.47,
+     "cut": 5201
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 173.47,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 173.537,
+     "cut": 5203
+    }
+   ],
+   "t0": 173.27,
+   "t1": 173.537,
+   "cut": 5197
+  },
+  {
+   "i": 88,
+   "para": 17,
+   "text": "Imma fire starter",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 173.537,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 173.603,
+     "cut": 5205
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 173.603,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 173.67,
+     "cut": 5207
+    },
+    {
+     "w": "starter",
+     "roma": "starter",
+     "t0": 173.67,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 174.28,
+     "cut": 5209
+    }
+   ],
+   "t0": 173.537,
+   "t1": 174.28,
+   "cut": 5205
+  },
+  {
+   "i": 89,
+   "para": 18,
+   "text": "I'm a fire starter",
+   "words": [
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 174.28,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 174.87,
+     "cut": 5227
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 174.87,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 175.05,
+     "cut": 5245
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 175.05,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 175.47,
+     "cut": 5250
+    },
+    {
+     "w": "starter",
+     "roma": "starter",
+     "t0": 175.47,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 176.25,
+     "cut": 5263
+    }
+   ],
+   "t0": 174.28,
+   "t1": 176.25,
+   "cut": 5227
+  },
+  {
+   "i": 90,
+   "para": 18,
+   "text": "Work a lil harder",
+   "words": [
+    {
+     "w": "Work",
+     "roma": "work",
+     "t0": 176.25,
+     "how": "interpolated",
+     "conf": 0.25,
+     "t1": 176.72,
+     "cut": 5286
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 176.72,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 176.82,
+     "cut": 5300
+    },
+    {
+     "w": "lil",
+     "roma": "lil",
+     "t0": 176.82,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 177.13,
+     "cut": 5303
+    },
+    {
+     "w": "harder",
+     "roma": "harder",
+     "t0": 177.13,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 178.25,
+     "cut": 5312
+    }
+   ],
+   "t0": 176.25,
+   "t1": 178.25,
+   "cut": 5286
+  },
+  {
+   "i": 91,
+   "para": 18,
+   "text": "Got me fired up",
+   "words": [
+    {
+     "w": "Got",
+     "roma": "got",
+     "t0": 178.25,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 178.48,
+     "cut": 5346
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 178.48,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 178.66,
+     "cut": 5353
+    },
+    {
+     "w": "fired",
+     "roma": "fired",
+     "t0": 178.66,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 179.26,
+     "cut": 5358
+    },
+    {
+     "w": "up",
+     "roma": "up",
+     "t0": 179.26,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 179.5,
+     "cut": 5376
+    }
+   ],
+   "t0": 178.25,
+   "t1": 179.5,
+   "cut": 5346
+  },
+  {
+   "i": 92,
+   "para": 18,
+   "text": "Imma burn it down like",
+   "words": [
+    {
+     "w": "Imma",
+     "roma": "imma",
+     "t0": 179.5,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 180.02,
+     "cut": 5384
+    },
+    {
+     "w": "burn",
+     "roma": "burn",
+     "t0": 180.02,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 180.52,
+     "cut": 5399
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 180.52,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 180.78,
+     "cut": 5414
+    },
+    {
+     "w": "down",
+     "roma": "down",
+     "t0": 180.78,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 181.2,
+     "cut": 5422
+    },
+    {
+     "w": "like",
+     "roma": "like",
+     "t0": 181.2,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 181.64,
+     "cut": 5435
+    }
+   ],
+   "t0": 179.5,
+   "t1": 181.64,
+   "cut": 5384
+  },
+  {
+   "i": 93,
+   "para": 19,
+   "text": "I'm a fire starter",
+   "words": [
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 181.64,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 182.24,
+     "cut": 5448
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 182.24,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 182.36,
+     "cut": 5466
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 182.36,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 182.64,
+     "cut": 5469
+    },
+    {
+     "w": "starter",
+     "roma": "starter",
+     "t0": 182.64,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 183.72,
+     "cut": 5478
+    }
+   ],
+   "t0": 181.64,
+   "t1": 183.72,
+   "cut": 5448
+  },
+  {
+   "i": 94,
+   "para": 19,
+   "text": "Crazy out of order",
+   "words": [
+    {
+     "w": "Crazy",
+     "roma": "crazy",
+     "t0": 183.72,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 184.18,
+     "cut": 5510
+    },
+    {
+     "w": "out",
+     "roma": "ot",
+     "t0": 184.18,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 184.43,
+     "cut": 5524
+    },
+    {
+     "w": "of",
+     "roma": "of",
+     "t0": 184.43,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 184.62,
+     "cut": 5531
+    },
+    {
+     "w": "order",
+     "roma": "order",
+     "t0": 184.62,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 185.85,
+     "cut": 5537
+    }
+   ],
+   "t0": 183.72,
+   "t1": 185.85,
+   "cut": 5510
+  },
+  {
+   "i": 95,
+   "para": 19,
+   "text": "I'm a I'm a I'm a fire starter!",
+   "words": [
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 185.85,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 186.3,
+     "cut": 5574
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 186.3,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 186.367,
+     "cut": 5588
+    },
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 186.367,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 186.433,
+     "cut": 5590
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 186.433,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 186.5,
+     "cut": 5591
+    },
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 186.5,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 186.567,
+     "cut": 5594
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 186.567,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 186.633,
+     "cut": 5596
+    },
+    {
+     "w": "fire",
+     "roma": "fire",
+     "t0": 186.633,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 186.73,
+     "cut": 5597
+    },
+    {
+     "w": "starter!",
+     "roma": "starter",
+     "t0": 186.73,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 188.23,
+     "cut": 5600
+    }
+   ],
+   "t0": 185.85,
+   "t1": 188.23,
+   "cut": 5574
+  }
+ ]
+}
