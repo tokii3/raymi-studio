@@ -2,11 +2,13 @@
 // islands, weather symbols), a ticker band, a news desk, two pedestal studio cameras with tally lights (frames as
 // objects), light stands with softboxes, an ON AIR box. Options: map ('sunny' | 'storm'), warning (true = WARNING
 // banner on the map), onair (true), ticker (text), flood (0..1 water rising in the studio), lightning (true = white
-// flashes on music hits), tally (0 | 1 | 2 = which camera is live).
+// flashes on music hits), tally (0 | 1 | 2 = which camera is live). map 'fire' = the FIRE ALERT map (burning islands, red
+// fronts); fires = flames anywhere in the studio (three/fire.tsx).
 import React from 'react';
 import * as THREE from 'three';
 import {Beam, Bubbles, RBox, Sign, drawText} from '../parts';
 import {SetLight, canvasTexture, rnd, toon} from '../look';
+import {Fires} from '../fire';
 import type {SetProps} from './index';
 
 const FLOOR = '#1c2350', WALL = '#141a3c', TRIM = '#2fd1d6', TRIM2 = '#9b5cff';
@@ -14,14 +16,16 @@ const FLOOR = '#1c2350', WALL = '#141a3c', TRIM = '#2fd1d6', TRIM2 = '#9b5cff';
 function mapPaint(mode: string, warning: boolean) {
   return (ctx: CanvasRenderingContext2D, w: number, h: number) => {
     const g = ctx.createLinearGradient(0, 0, 0, h);
-    g.addColorStop(0, mode === 'storm' ? '#203069' : '#1d6fb0'); g.addColorStop(1, mode === 'storm' ? '#141a44' : '#1a3f8a');
+    const top = mode === 'storm' ? '#203069' : mode === 'fire' ? '#2a1640' : '#1d6fb0';
+    const bot = mode === 'storm' ? '#141a44' : mode === 'fire' ? '#3a1220' : '#1a3f8a';
+    g.addColorStop(0, top); g.addColorStop(1, bot);
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
     ctx.strokeStyle = 'rgba(255,255,255,0.12)'; ctx.lineWidth = 2;
     for (let i = 1; i < 8; i++) { ctx.beginPath(); ctx.moveTo((i / 8) * w, 0); ctx.lineTo((i / 8) * w, h); ctx.stroke(); }
     for (let i = 1; i < 5; i++) { ctx.beginPath(); ctx.moveTo(0, (i / 5) * h); ctx.lineTo(w, (i / 5) * h); ctx.stroke(); }
     const isl = [[0.2, 0.62, 0.13, 0.09], [0.31, 0.4, 0.07, 0.05], [0.72, 0.68, 0.16, 0.1], [0.83, 0.32, 0.09, 0.07], [0.55, 0.22, 0.05, 0.04]];
     for (const [x, y, rx, ry] of isl) {
-      ctx.fillStyle = '#3fc4a0';
+      ctx.fillStyle = mode === 'fire' ? '#ff7a3d' : '#3fc4a0';
       ctx.beginPath();
       for (let k = 0; k <= 16; k++) {
         const a = (k / 16) * Math.PI * 2, r = 1 + 0.18 * Math.sin(a * 3 + x * 20);
@@ -32,7 +36,17 @@ function mapPaint(mode: string, warning: boolean) {
     }
     const sym = (x: number, y: number, kind: string) => {
       const s = h * 0.09, cx = x * w, cy = y * h;
-      if (kind === 'sun') {
+      if (kind === 'flame') {
+        const fl = (sc: number, c: string) => {
+          ctx.fillStyle = c; ctx.beginPath();
+          ctx.moveTo(cx, cy - s * sc);
+          ctx.bezierCurveTo(cx + s * 0.25 * sc, cy - s * 0.5 * sc, cx + s * 0.55 * sc, cy, cx + s * 0.4 * sc, cy + s * 0.35 * sc);
+          ctx.bezierCurveTo(cx + s * 0.25 * sc, cy + s * 0.6 * sc, cx - s * 0.25 * sc, cy + s * 0.6 * sc, cx - s * 0.4 * sc, cy + s * 0.35 * sc);
+          ctx.bezierCurveTo(cx - s * 0.55 * sc, cy, cx - s * 0.25 * sc, cy - s * 0.5 * sc, cx, cy - s * sc);
+          ctx.fill();
+        };
+        fl(1, '#ff5a3c'); fl(0.62, '#ffb347'); fl(0.32, '#fff1c4');
+      } else if (kind === 'sun') {
         ctx.fillStyle = '#ffd34d'; ctx.beginPath(); ctx.arc(cx, cy, s * 0.5, 0, Math.PI * 2); ctx.fill();
         ctx.strokeStyle = '#ffd34d'; ctx.lineWidth = s * 0.12;
         for (let k = 0; k < 8; k++) { const a = (k / 8) * Math.PI * 2; ctx.beginPath(); ctx.moveTo(cx + Math.cos(a) * s * 0.7, cy + Math.sin(a) * s * 0.7); ctx.lineTo(cx + Math.cos(a) * s, cy + Math.sin(a) * s); ctx.stroke(); }
@@ -50,12 +64,17 @@ function mapPaint(mode: string, warning: boolean) {
       ctx.strokeStyle = 'rgba(255,255,255,0.55)'; ctx.lineWidth = h * 0.012;
       for (let k = 0; k < 4; k++) { ctx.beginPath(); ctx.arc(w * 0.5, h * 0.5, h * (0.08 + k * 0.07), k, k + 4.2); ctx.stroke(); }
       sym(0.22, 0.45, 'storm'); sym(0.75, 0.5, 'storm'); sym(0.83, 0.2, 'rain'); sym(0.3, 0.22, 'rain');
+    } else if (mode === 'fire') {
+      ctx.strokeStyle = 'rgba(255,120,60,0.6)'; ctx.lineWidth = h * 0.014; ctx.setLineDash([h * 0.03, h * 0.02]);
+      for (let k = 0; k < 3; k++) { ctx.beginPath(); ctx.arc(w * 0.48, h * 0.55, h * (0.14 + k * 0.11), Math.PI * 0.9, Math.PI * 2.1); ctx.stroke(); }
+      ctx.setLineDash([]);
+      sym(0.22, 0.5, 'flame'); sym(0.72, 0.56, 'flame'); sym(0.33, 0.33, 'flame'); sym(0.84, 0.26, 'flame'); sym(0.55, 0.2, 'flame');
     } else {
       sym(0.22, 0.48, 'sun'); sym(0.72, 0.52, 'sun'); sym(0.83, 0.2, 'cloud'); sym(0.32, 0.25, 'sun');
     }
     if (warning) {
       ctx.fillStyle = '#ff5a3c'; ctx.fillRect(0, 0, w, h * 0.13);
-      drawText(ctx, 'WARNING', w / 2, h * 0.067, h * 0.1, '#ffffff');
+      drawText(ctx, mode === 'fire' ? 'FIRE WARNING' : 'WARNING', w / 2, h * 0.067, h * 0.1, '#ffffff');
     }
   };
 }
@@ -164,6 +183,8 @@ export const Weather: React.FC<SetProps> = ({f, opts, hits}) => {
           ))}
         </group>
       ) : null}
+      <Fires list={opts.fires} f={f} />
+      {mode === 'fire' ? <pointLight position={[0, 2.4, -1.6]} color="#ff7a3d" intensity={9 * power} distance={8} decay={1.5} /> : null}
       {flash > 0 ? <ambientLight intensity={flash * 3} color="#e8ecff" /> : null}
     </group>
   );

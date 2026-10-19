@@ -669,5 +669,241 @@
   ]
  },
  "_why_texts": "texts: built props that carry readable text (centre, size w/h in m, rotY deg; opt = only when that option is set, unless = not when that option is false). The guard refuses a frame that cuts one of them by the edge (pilot 1/2: a half sign reads as a fault). no_lens: boxes the camera may never be inside (min, max), e.g. under the sand or the hall floor. blank = not readable (so not guarded) when that text option is ''.",
- "_why_solids": "solids: built props the lens may never be inside or right against, and that may never hide her face for 0.4 s (stills run 19: the lens inside a coin tower, the throne hiding her). centre, size (m); opt / unless as for texts."
+ "_why_solids": "solids: built props the lens may never be inside or right against, and that may never hide her face for 0.4 s (stills run 19: the lens inside a coin tower, the throne hiding her). centre, size (m); opt / unless as for texts.",
+ "deep": {
+  "about": "The Lamp in the Dark: the abyss 4,000 m down - black basalt floor, pillow rocks, six black-smoker chimneys (hydrothermal vents), a crack network that glows when the fire front passes, mineral smoke, marine snow; optional festival dressing (lantern strings + driftwood stalls). Floor y=0, her stage around (0.3, 0, -0.6) is kept clear, the main vent at (1.3, 0, -1.7) is 2.2 m tall.",
+  "marks": {
+   "center": [
+    0.3,
+    0.0,
+    -0.6
+   ],
+   "strike": [
+    0.75,
+    0.0,
+    -1.25
+   ],
+   "vent": [
+    1.3,
+    0.0,
+    -1.7
+   ],
+   "vent_top": [
+    1.3,
+    2.2,
+    -1.7
+   ],
+   "left": [
+    -2.0,
+    0.0,
+    -1.2
+   ],
+   "right": [
+    2.8,
+    0.0,
+    -0.9
+   ],
+   "back": [
+    0.0,
+    0.0,
+    -4.2
+   ],
+   "front": [
+    0.2,
+    0.0,
+    0.9
+   ],
+   "above": [
+    0.3,
+    3.2,
+    -0.6
+   ],
+   "sky": [
+    0.0,
+    6.0,
+    -3.0
+   ],
+   "hand_r": [
+    0.62,
+    1.05,
+    -0.45
+   ]
+  },
+  "cams": {
+   "abyss_wide": {
+    "pos": [
+     0.4,
+     1.4,
+     6.2
+    ],
+    "look": [
+     0.2,
+     1.2,
+     -2.0
+    ],
+    "fov": 40
+   },
+   "strike_close": {
+    "pos": [
+     0.15,
+     1.15,
+     1.15
+    ],
+    "look": [
+     0.55,
+     1.05,
+     -0.7
+    ],
+    "fov": 32
+   },
+   "floor_low": {
+    "pos": [
+     -1.6,
+     0.25,
+     1.8
+    ],
+    "look": [
+     1.0,
+     0.7,
+     -2.5
+    ],
+    "fov": 46
+   },
+   "top_down": {
+    "pos": [
+     0.3,
+     9.0,
+     -0.4
+    ],
+    "look": [
+     0.3,
+     0.0,
+     -1.4
+    ],
+    "fov": 46
+   },
+   "vent_up": {
+    "pos": [
+     0.6,
+     0.4,
+     -0.6
+    ],
+    "look": [
+     1.4,
+     3.4,
+     -2.0
+    ],
+    "fov": 50
+   },
+   "rise": {
+    "pos": [
+     0.3,
+     5.0,
+     2.6
+    ],
+    "look": [
+     0.3,
+     1.0,
+     -1.2
+    ],
+    "fov": 44
+   }
+  },
+  "no_lens": [
+   {
+    "name": "under the sea floor",
+    "min": [
+     -17,
+     -3,
+     -16
+    ],
+    "max": [
+     17,
+     0.02,
+     10
+    ]
+   }
+  ],
+  "texts": [],
+  "solids": [
+   {
+    "name": "vent chimney",
+    "center": [
+     1.3,
+     1.1,
+     -1.7
+    ],
+    "size": [
+     0.84,
+     2.2,
+     0.84
+    ]
+   },
+   {
+    "name": "vent chimney",
+    "center": [
+     -2.7,
+     1.55,
+     -3.3
+    ],
+    "size": [
+     1.0,
+     3.1,
+     1.0
+    ]
+   },
+   {
+    "name": "vent chimney",
+    "center": [
+     3.6,
+     1.3,
+     -4.1
+    ],
+    "size": [
+     0.9,
+     2.6,
+     0.9
+    ]
+   },
+   {
+    "name": "vent chimney",
+    "center": [
+     -0.7,
+     1.9,
+     -5.8
+    ],
+    "size": [
+     1.2,
+     3.8,
+     1.2
+    ]
+   },
+   {
+    "name": "vent chimney",
+    "center": [
+     5.2,
+     0.75,
+     -1.8
+    ],
+    "size": [
+     0.64,
+     1.5,
+     0.64
+    ]
+   },
+   {
+    "name": "vent chimney",
+    "center": [
+     -4.8,
+     0.9,
+     -1.2
+    ],
+    "size": [
+     0.72,
+     1.8,
+     0.72
+    ]
+   }
+  ]
+ }
 }

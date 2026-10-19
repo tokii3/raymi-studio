@@ -1,0 +1,156 @@
+{
+ "lyric_style": "v2",
+ "title": "FIRESTARTER board A - The Lamp in the Dark",
+ "audio": {
+  "file": "../2026-10-19_firestarter/song.webm",
+  "from": 0.0,
+  "to": 30.0
+ },
+ "lyrics": "../2026-10-19_firestarter/lyrics_timed.json",
+ "song_map": "../2026-10-19_firestarter/song_map.json",
+ "translation": "../2026-10-19_firestarter/lyrics_en.json",
+ "grain": 0.04,
+ "shots": [
+  {
+   "id": "A1",
+   "at": 0.0,
+   "set": "deep",
+   "why": "the cold open: black water, one strike - her own violet flame at her palm lights her face from below",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.0,
+    "snow": 0.6,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "pos": [
+       0.78,
+       1.08,
+       -0.55
+      ],
+      "size": 0.34,
+      "c": "#b45cff"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.05,
+      1.2,
+      1.25
+     ],
+     "look": [
+      0.45,
+      1.1,
+      -0.7
+     ],
+     "fov": 30
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_171",
+     "pos": [
+      0.1,
+      0,
+      -0.6
+     ],
+     "act": "idle"
+    }
+   ]
+  },
+  {
+   "id": "A2",
+   "at": 10.0,
+   "set": "deep",
+   "why": "the fire runs over the sea floor from her strike - she is small at its origin, the fire is the picture",
+   "opts": {
+    "grade": "own",
+    "ignite": 0.55,
+    "origin": [
+     0.75,
+     -1.0
+    ],
+    "glow": "#b45cff"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.4,
+      4.6,
+      3.6
+     ],
+     "look": [
+      0.6,
+      0.0,
+      -2.2
+     ],
+     "fov": 44
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_CROUCH_UV_191",
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "act": "idle"
+    }
+   ]
+  },
+  {
+   "id": "A3",
+   "at": 20.0,
+   "set": "deep",
+   "why": "the vents erupt - bubble fireworks rise, she conducts them",
+   "opts": {
+    "grade": "own",
+    "ignite": 1.0,
+    "erupt": 1.0,
+    "origin": [
+     0.75,
+     -1.0
+    ],
+    "glow": "#b45cff"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.2,
+      0.6,
+      5.4
+     ],
+     "look": [
+      0.4,
+      2.2,
+      -2.5
+     ],
+     "fov": 44
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_MIC_CONDUCT_UV_123",
+     "pos": [
+      0.3,
+      0,
+      -0.4
+     ],
+     "act": "idle"
+    }
+   ]
+  }
+ ]
+}
