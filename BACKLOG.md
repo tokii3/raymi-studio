@@ -53,3 +53,13 @@
   Runde"; type-critic FAIL x2 in reviews/style_type-critic_1/2.md). Open points: aquarium shell / coral are not solids (a lyric row ran behind them - the guard could not
   see it); her Latin "m" reads like "n" in the heavy weight at small sizes; romaji / English rows still small on a
   390 px feed; critic wants a carrier object + a different form per shot (key word only, English only, an acted word).
+
+- FIRESTARTER (2026-10-19) open items:
+  - Lyric timing: Whisper's first pass heard nothing in 57-70 s and 145-170 s (266 / 436 words measured). Second pass v1
+    (most words per window wins) made it WORSE (Korean mode wrote English in Hangul) -> reverted. v2 (pass that sounds
+    like the lyrics wins, `heard_letters`) pushed; if it fails too (anti-loop: 2nd try), park it and use CTC forced
+    alignment (MMS, romanised) on the vocal stem or set those lines by ear.
+  - Her tako ears read as horns in fire light / dark sets (boards A1, A3) - the devil framing canon/01 forbids. Sprites
+    cannot change; lighting / framing must keep the ears out of red rim light, or the VRM model solves it.
+  - "beat drop" (board A3) runs through the vent flames: key words must sit on a dark area, never over a flame.
+  - Fixed: two cloud runs growing her font at once died on a binary rebase conflict -> .github/font_grow.sh retries.

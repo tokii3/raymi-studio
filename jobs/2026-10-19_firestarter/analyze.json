@@ -1,1 +1,11 @@
-{"song": "song.webm", "lyrics": "lyrics.txt", "language": "ko", "model": "large-v3", "gap_languages": ["en", "ko"]}
+{
+ "song": "song.webm",
+ "lyrics": "lyrics.txt",
+ "language": "ko",
+ "model": "large-v3",
+ "gap_languages": [
+  "en",
+  "ko"
+ ],
+ "_why": "second pass v2 (2026-10-19): gap windows pick the pass that sounds like the lyrics; whisper_words.json = first pass"
+}
