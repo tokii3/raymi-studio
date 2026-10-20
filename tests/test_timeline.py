@@ -65,9 +65,21 @@ def test_missing_glyph_fails_loudly(tmp_path):
 
 
 def test_a_line_can_be_acted_instead_of_written(tmp_path):
-    shot = {**SHOT, "at": "line:0", "lyrics": {"kind": "stamp", "anchor": "led", "lines": [1], "words": ["KING"]}}
+    # v1: lines / words pick what is written
+    shot = {**SHOT, "at": "line:0", "lyrics": {"kind": "stamp", "style": "v1", "anchor": "led", "lines": [1], "words": ["KING"]}}
     p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot]), "mv", cmap=set(range(0x20, 0x7f)))
     assert errors == [] and [w["w"] for w in p["shots"][0]["words"]] == ["KING"]
+
+
+def test_v2_writes_every_sung_word_unless_acted(tmp_path):
+    # toki 2026-10-20 (FIRESTARTER final, "die Hälfte fehlt"): v2 never cuts a line to its key words - they become keys
+    shot = {**SHOT, "at": "line:0", "lyrics": {"kind": "stamp", "anchor": "led", "lines": [1], "words": ["KING"]}}
+    p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot]), "mv", cmap=ALL)
+    ws = p["shots"][0]["words"]
+    assert errors == [] and len(ws) > 1 and [w["w"] for w in ws if w["key"]] == ["KING"]
+    acted = {**shot, "lyrics": {**shot["lyrics"], "acted": sorted({w["line"] for w in ws})}}
+    p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [acted]), "mv", cmap=ALL)
+    assert errors == [] and p["shots"][0]["words"] == []
 
 
 @pytest.mark.parametrize("bad, msg", [

@@ -52,3 +52,15 @@ far below), 82 (the split frame), 90 (small in her pool), 112 (floating, the fis
 Frame 0 = the MV's cold open (FOCUS_PUSH_171, the flame in her palm) framed lower so the hook sits above her face
 (stills run 1 was refused by the guard: hook / CTA on her face). Shot 14's Short twist (the crack runs at your thumb) is
 `opts.short` + a top-down camera override.
+
+## Final fix 2026-10-20 (toki: half the lyrics missing, cut off / behind assets, use the empty space)
+- Cause 1: the shot list cut lines down to their key words (`lines` / `words`): 182 of 436 sung words never showed.
+  Studio: lyrics v2 now write EVERY sung word; `words` become the big keys; only `"acted": [line]` leaves a line out;
+  a shot without a lyric block gets one automatically (timeline.py). Now 0 words missing.
+- Cause 2: v2 words were depth-tested and fogged, so vents, rocks, fish, Salmon and her hid or swallowed them.
+  Words3D: v2 words draw on top (depthTest off, renderOrder 40, fog off).
+- Cause 3: blocks sat where the script put them, small. guard.mjs `--fill` (check.ts fillLyrics) puts each block in
+  the frame's empty space (away from her figure, the hero and the Short bands), facing the lens, as big as every lyric
+  guard allows (cap 12 % of the frame height down to 5.6 %). Stored per shot as `lyrics_fit` {mv, short}.
+- s65 shows its line without subs (s64 shows the same line's romaji + English).
+

@@ -153,6 +153,34 @@
      "height": 1.42
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.23,
+      1.44,
+      -0.63
+     ],
+     "size": 0.1,
+     "width": 0.86,
+     "tilt": -4.8,
+     "roll": 0,
+     "rot": -10.1,
+     "key_scale": 1.4
+    },
+    "short": {
+     "anchor": [
+      0.89,
+      1.54,
+      -0.96
+     ],
+     "size": 0.235,
+     "width": 0.5,
+     "tilt": -7.9,
+     "roll": 0,
+     "rot": -9.5,
+     "key_scale": 1.4
+    }
+   },
    "text": {
     "say": [
      [
@@ -1043,6 +1071,34 @@
      "height": 1.42
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.54,
+      0.96,
+      -0.57
+     ],
+     "size": 0.185,
+     "width": 1.78,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": -7.8,
+     "key_scale": 1.8
+    },
+    "short": {
+     "anchor": [
+      1.02,
+      1.12,
+      -0.71
+     ],
+     "size": 0.2,
+     "width": 0.28,
+     "tilt": -0.2,
+     "roll": 0,
+     "rot": -6.5,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -1161,6 +1217,34 @@
      "act": "pop"
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.36,
+      1.12,
+      -0.43
+     ],
+     "size": 0.175,
+     "width": 0.78,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": -20.9,
+     "key_scale": 1.8
+    },
+    "short": {
+     "anchor": [
+      0.25,
+      1.68,
+      -0.87
+     ],
+     "size": 0.125,
+     "width": 0.29,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": 2.3,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -1283,6 +1367,34 @@
      "height": 1.15
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.55,
+      0.54,
+      -1.16
+     ],
+     "size": 0.2,
+     "width": 1.34,
+     "tilt": 0.2,
+     "roll": 0,
+     "rot": -39.8,
+     "key_scale": 1.8
+    },
+    "short": {
+     "anchor": [
+      -0.44,
+      1.21,
+      -1.09
+     ],
+     "size": 0.356,
+     "width": 0.5,
+     "tilt": 0.2,
+     "roll": 0,
+     "rot": -42.7,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -1710,6 +1822,21 @@
     }
    ],
    "kick": 0.3,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.65,
+      0.48,
+      -0.99
+     ],
+     "size": 0.14,
+     "width": 1.76,
+     "tilt": 1.1,
+     "roll": 0,
+     "rot": -33.7,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -1805,6 +1932,21 @@
      "act": "pop"
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.31,
+      1.56,
+      -1.1
+     ],
+     "size": 0.166,
+     "width": 2.26,
+     "tilt": 11.6,
+     "roll": 0,
+     "rot": 2.5,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -1922,6 +2064,21 @@
      "height": 1.25
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.26,
+      0.75,
+      -0.97
+     ],
+     "size": 0.292,
+     "width": 3.97,
+     "tilt": -58.1,
+     "roll": 0,
+     "rot": 15.6,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -2028,6 +2185,21 @@
      "act": "pop"
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.57,
+      0.76,
+      -0.51
+     ],
+     "size": 0.247,
+     "width": 1.32,
+     "tilt": 0,
+     "roll": 0,
+     "rot": -6.7,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -2116,6 +2288,21 @@
     }
    ],
    "kick": 0.6,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.1,
+      0.66,
+      -0.2
+     ],
+     "size": 0.15,
+     "width": 1.89,
+     "tilt": 3,
+     "roll": 0,
+     "rot": 20.9,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -2171,6 +2358,21 @@
     }
    ],
    "kick": 1.0,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.02,
+      0.62,
+      -0.96
+     ],
+     "size": 0.136,
+     "width": 2.06,
+     "tilt": -7.9,
+     "roll": 0,
+     "rot": 6.7,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -2312,6 +2514,21 @@
      "height": 1.55
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.2,
+      0.9,
+      -1.79
+     ],
+     "size": 0.461,
+     "width": 4.44,
+     "tilt": -0.2,
+     "roll": 0,
+     "rot": -36.8,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -2414,6 +2631,21 @@
      "act": "pop"
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.23,
+      0.76,
+      -0.14
+     ],
+     "size": 0.247,
+     "width": 1.98,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": -11.4,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -2497,6 +2729,21 @@
     }
    ],
    "kick": 0.6,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      2.37,
+      1.75,
+      -0.78
+     ],
+     "size": 0.103,
+     "width": 1.55,
+     "tilt": 2.5,
+     "roll": 0,
+     "rot": -21.7,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -2590,6 +2837,21 @@
      "height": 1.42
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.08,
+      1.24,
+      -0.04
+     ],
+     "size": 0.544,
+     "width": 6.85,
+     "tilt": -1.4,
+     "roll": 0,
+     "rot": 4.3,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -2697,6 +2959,21 @@
      "height": 1.42
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.19,
+      1.24,
+      -0.83
+     ],
+     "size": 0.063,
+     "width": 1.31,
+     "tilt": 7.7,
+     "roll": 0,
+     "rot": 46.6,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -2809,6 +3086,21 @@
      "act": "shrink"
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.42,
+      1,
+      -1.21
+     ],
+     "size": 0.141,
+     "width": 1.82,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": -35.5,
+     "key_scale": 1.6
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -2897,6 +3189,21 @@
      "height": 1.42
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.55,
+      0.94,
+      -0.67
+     ],
+     "size": 0.114,
+     "width": 1.27,
+     "tilt": 0.1,
+     "roll": 0,
+     "rot": -2.2,
+     "key_scale": 1.6
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -3030,6 +3337,21 @@
      "height": 1.45
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.04,
+      1.58,
+      0.07
+     ],
+     "size": 0.147,
+     "width": 2.37,
+     "tilt": 35.4,
+     "roll": 0,
+     "rot": -18.8,
+     "key_scale": 1.6
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -3123,7 +3445,22 @@
      "sprite": "WS_BK_NA_WADE_UV_182",
      "pos": "center"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -1.37,
+      2.61,
+      -0.04
+     ],
+     "size": 0.546,
+     "width": 6.88,
+     "tilt": -1.5,
+     "roll": 0,
+     "rot": 15.9,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "s32",
@@ -3178,6 +3515,21 @@
      "pos": "center"
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.1,
+      1.26,
+      -0.53
+     ],
+     "size": 0.178,
+     "width": 0.79,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": -13.2,
+     "key_scale": 1.8
+    }
+   },
    "hero": [
     {
      "name": "face",
@@ -3295,6 +3647,21 @@
      "height": 1.45
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.47,
+      1.62,
+      -1.01
+     ],
+     "size": 0.295,
+     "width": 3.41,
+     "tilt": -4.5,
+     "roll": 0,
+     "rot": -23.3,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -3438,6 +3805,21 @@
      "height": 1.55
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.39,
+      0.73,
+      -0.18
+     ],
+     "size": 0.132,
+     "width": 1.7,
+     "tilt": 0,
+     "roll": 0,
+     "rot": -15.4,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -3538,6 +3920,21 @@
      "height": 1.35
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.29,
+      1.01,
+      -0.7
+     ],
+     "size": 0.12,
+     "width": 1.33,
+     "tilt": -7.4,
+     "roll": 0,
+     "rot": -13.1,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -3621,6 +4018,21 @@
      "height": 1.42
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.52,
+      1.11,
+      -0.86
+     ],
+     "size": 0.185,
+     "width": 1.23,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 5.5,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -3700,6 +4112,21 @@
      "height": 1.5
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.12,
+      1.41,
+      -0.45
+     ],
+     "size": 0.125,
+     "width": 2.62,
+     "tilt": 31.5,
+     "roll": 0,
+     "rot": -17.2,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -3826,6 +4253,21 @@
     }
    ],
    "kick": 0.6,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.29,
+      1.46,
+      -0.78
+     ],
+     "size": 0.304,
+     "width": 3.82,
+     "tilt": -1.4,
+     "roll": 0,
+     "rot": -38.1,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -3909,6 +4351,21 @@
      "height": 1.45
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.74,
+      1.01,
+      -0.49
+     ],
+     "size": 0.147,
+     "width": 0.78,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": 14.9,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -3991,6 +4448,21 @@
      "height": 1.42
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.12,
+      2.62,
+      -0.07
+     ],
+     "size": 0.309,
+     "width": 7.52,
+     "tilt": -1.5,
+     "roll": 0,
+     "rot": 4.3,
+     "key_scale": 1.5
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -4089,6 +4561,21 @@
      "height": 1.45
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.67,
+      0.64,
+      -0.07
+     ],
+     "size": 0.384,
+     "width": 3.3,
+     "tilt": -81.9,
+     "roll": 0,
+     "rot": -78.3,
+     "key_scale": 1.6
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -4203,6 +4690,21 @@
      "height": 1.35
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.58,
+      0.93,
+      -1.58
+     ],
+     "size": 0.241,
+     "width": 1.93,
+     "tilt": -1.5,
+     "roll": 0,
+     "rot": -49.3,
+     "key_scale": 1.6
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -4345,6 +4847,21 @@
      "height": 1.45
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -1.66,
+      0.91,
+      -3.59
+     ],
+     "size": 0.394,
+     "width": 4.55,
+     "tilt": -1.1,
+     "roll": 0,
+     "rot": 27.2,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -4425,6 +4942,21 @@
     }
    ],
    "kick": 1.2,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.13,
+      0.46,
+      -0.24
+     ],
+     "size": 0.108,
+     "width": 1.36,
+     "tilt": 4.7,
+     "roll": 0,
+     "rot": 22.6,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -4506,6 +5038,21 @@
     }
    ],
    "kick": 0.6,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.53,
+      0.96,
+      -0.77
+     ],
+     "size": 0.127,
+     "width": 1.93,
+     "tilt": -2.1,
+     "roll": 0,
+     "rot": -17.8,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -4687,6 +5234,21 @@
      "height": 1.5
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.62,
+      0.37,
+      0.31
+     ],
+     "size": 0.353,
+     "width": 4.45,
+     "tilt": -1.4,
+     "roll": 0,
+     "rot": 40.9,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -4758,6 +5320,21 @@
     }
    ],
    "kick": 1.2,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.41,
+      1.51,
+      -0.28
+     ],
+     "size": 0.174,
+     "width": 1.68,
+     "tilt": 9.7,
+     "roll": 0,
+     "rot": -25.6,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -4854,6 +5431,21 @@
      "height": 1.25
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.49,
+      1.03,
+      -0.3
+     ],
+     "size": 0.198,
+     "width": 0.88,
+     "tilt": 23.2,
+     "roll": 0,
+     "rot": -19.1,
+     "key_scale": 1.6
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -5050,6 +5642,21 @@
      "height": 1.55
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      2.11,
+      0.78,
+      -1.11
+     ],
+     "size": 0.291,
+     "width": 1.29,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": 8.9,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -5151,6 +5758,21 @@
      "height": 1.15
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.7,
+      0.65,
+      -1.94
+     ],
+     "size": 0.143,
+     "width": 1.34,
+     "tilt": 0.2,
+     "roll": 0,
+     "rot": 20.8,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -5256,6 +5878,21 @@
      "height": 1.05
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.96,
+      2.55,
+      -8.55
+     ],
+     "size": 0.596,
+     "width": 7.5,
+     "tilt": 25.9,
+     "roll": 0,
+     "rot": 3.3,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -5351,7 +5988,22 @@
      "ease": "linear"
     }
    ],
-   "kick": 0.8
+   "kick": 0.8,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      3.39,
+      1.31,
+      -1.59
+     ],
+     "size": 0.326,
+     "width": 1.74,
+     "tilt": -4.2,
+     "roll": 0,
+     "rot": -45.6,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "s55",
@@ -5454,6 +6106,21 @@
      "height": 1.45
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      4.29,
+      0.9,
+      -1.99
+     ],
+     "size": 0.213,
+     "width": 1.13,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": 1.8,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -5558,6 +6225,21 @@
      "height": 1.45
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.63,
+      1.47,
+      -0.03
+     ],
+     "size": 0.185,
+     "width": 2.33,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 35,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -5652,6 +6334,21 @@
      "height": 1.5
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -1.26,
+      1.13,
+      -0.9
+     ],
+     "size": 0.208,
+     "width": 2.61,
+     "tilt": 0.1,
+     "roll": 0,
+     "rot": -3.5,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -5745,6 +6442,21 @@
      "height": 1.15
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.12,
+      1.19,
+      0.14
+     ],
+     "size": 0.281,
+     "width": 1.25,
+     "tilt": 14.5,
+     "roll": 0,
+     "rot": -76.3,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -5918,6 +6630,21 @@
     }
    ],
    "kick": 0.8,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.24,
+      4.93,
+      2.16
+     ],
+     "size": 0.391,
+     "width": 4.52,
+     "tilt": -24.8,
+     "roll": 0,
+     "rot": 4.6,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -6114,6 +6841,21 @@
      "height": 1.42
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.35,
+      0.95,
+      -0.48
+     ],
+     "size": 0.157,
+     "width": 1.74,
+     "tilt": 0.1,
+     "roll": 0,
+     "rot": 8.3,
+     "key_scale": 1.6
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -6212,6 +6954,21 @@
      "height": 1.42
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.09,
+      1.84,
+      -0.17
+     ],
+     "size": 0.395,
+     "width": 7.02,
+     "tilt": -1.4,
+     "roll": 0,
+     "rot": 4.4,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -6314,6 +7071,21 @@
      "icon": "sweat"
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.1,
+      0.78,
+      -0.16
+     ],
+     "size": 0.15,
+     "width": 2.8,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 2.4,
+     "key_scale": 1.6
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -6403,9 +7175,25 @@
      "height": 1.25
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.36,
+      0.75,
+      0.1
+     ],
+     "size": 0.376,
+     "width": 1.67,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": 11.8,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
+    "sub": false,
     "lines": [
      52
     ],
@@ -6526,6 +7314,21 @@
      "height": 1.25
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.03,
+      1.85,
+      0.2
+     ],
+     "size": 0.4,
+     "width": 8.39,
+     "tilt": 13.2,
+     "roll": 0,
+     "rot": 3.2,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -6640,6 +7443,21 @@
      "height": 1.15
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.07,
+      1.06,
+      -0.44
+     ],
+     "size": 0.177,
+     "width": 2.85,
+     "tilt": -3.4,
+     "roll": 0,
+     "rot": -12.8,
+     "key_scale": 1.6
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -6725,6 +7543,21 @@
      "height": 1.42
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.68,
+      6.49,
+      -9.4
+     ],
+     "size": 0.138,
+     "width": 2.9,
+     "tilt": -10.8,
+     "roll": 0,
+     "rot": -49.1,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -6828,6 +7661,21 @@
      "ease": "in"
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.94,
+      10.39,
+      -8.92
+     ],
+     "size": 0.3,
+     "width": 5.59,
+     "tilt": 71.9,
+     "roll": 0,
+     "rot": 33.2,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -6913,6 +7761,21 @@
      "height": 1.55
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.75,
+      13.58,
+      -10.35
+     ],
+     "size": 0.366,
+     "width": 3.53,
+     "tilt": 2.6,
+     "roll": 0,
+     "rot": 33.8,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -7043,6 +7906,21 @@
      "height": 1.55
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.74,
+      13.07,
+      -10.35
+     ],
+     "size": 0.363,
+     "width": 4.58,
+     "tilt": 2.7,
+     "roll": 0,
+     "rot": 33.9,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -7132,6 +8010,21 @@
      "height": 0.55
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      2.15,
+      16.49,
+      -10.86
+     ],
+     "size": 0.606,
+     "width": 5.83,
+     "tilt": 15.2,
+     "roll": 0,
+     "rot": 39.1,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -7220,6 +8113,21 @@
      "height": 0.55
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      2.09,
+      19.29,
+      -10.34
+     ],
+     "size": 0.814,
+     "width": 11.06,
+     "tilt": 67.1,
+     "roll": 0,
+     "rot": 8.1,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -7294,6 +8202,21 @@
     }
    ],
    "kick": 0.5,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.25,
+      21.67,
+      -9.75
+     ],
+     "size": 0.094,
+     "width": 1.18,
+     "tilt": 3.6,
+     "roll": 0,
+     "rot": 16.5,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -7401,6 +8324,21 @@
      "height": 0.55
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      2.3,
+      27.07,
+      -10.74
+     ],
+     "size": 0.243,
+     "width": 4.53,
+     "tilt": 7.8,
+     "roll": 0,
+     "rot": 39.4,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -7493,6 +8431,21 @@
      "height": 1.05
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      3.63,
+      27.34,
+      -9.35
+     ],
+     "size": 0.895,
+     "width": 3.98,
+     "tilt": 8.6,
+     "roll": 0,
+     "rot": -17.8,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -7572,6 +8525,21 @@
      "height": 1.05
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.76,
+      29.45,
+      -10.45
+     ],
+     "size": 0.112,
+     "width": 1.44,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": 32.9,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -7653,7 +8621,22 @@
      ],
      "act": "shrink"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.09,
+      30.31,
+      -10.49
+     ],
+     "size": 0.282,
+     "width": 3.55,
+     "tilt": 0.1,
+     "roll": 0,
+     "rot": 177.7,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "s79",
@@ -7738,6 +8721,21 @@
      "height": 1.05
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.4,
+      29.64,
+      -10.44
+     ],
+     "size": 0.091,
+     "width": 0.86,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 32,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -7930,6 +8928,21 @@
      "height": 1.55
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.2,
+      -1.96,
+      0.19
+     ],
+     "size": 0.229,
+     "width": 1.44,
+     "tilt": 48.3,
+     "roll": 0,
+     "rot": -7.6,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -8010,6 +9023,21 @@
      "height": 1.5
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.55,
+      0.79,
+      0.17
+     ],
+     "size": 0.309,
+     "width": 3.89,
+     "tilt": 0.1,
+     "roll": 0,
+     "rot": 10.3,
+     "key_scale": 1.8
+    }
+   },
    "hero": [
     {
      "name": "face",
@@ -8080,6 +9108,21 @@
      "height": 1.55
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.15,
+      1.17,
+      0.08
+     ],
+     "size": 0.232,
+     "width": 2.92,
+     "tilt": 5.3,
+     "roll": 0,
+     "rot": 4.3,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -8157,6 +9200,21 @@
      "height": 1.45
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.95,
+      0.26,
+      0.45
+     ],
+     "size": 0.176,
+     "width": 0.78,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 33.8,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -8229,7 +9287,22 @@
      "sprite": "WS_BK_NA_WADE_UV_181",
      "pos": "center"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.25,
+      1.7,
+      -0.5
+     ],
+     "size": 0.36,
+     "width": 4.53,
+     "tilt": -9.2,
+     "roll": 0,
+     "rot": -9.5,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "s86",
@@ -8276,6 +9349,21 @@
     }
    ],
    "kick": 0.8,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.75,
+      0.08,
+      0.03
+     ],
+     "size": 0.105,
+     "width": 1.01,
+     "tilt": -5.2,
+     "roll": 0,
+     "rot": 12.1,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -8341,6 +9429,21 @@
      "height": 1.25
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.46,
+      -0.61,
+      0.35
+     ],
+     "size": 0.134,
+     "width": 3.27,
+     "tilt": 0.1,
+     "roll": 0,
+     "rot": -0.2,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -8425,6 +9528,21 @@
      ]
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.99,
+      0.55,
+      0.04
+     ],
+     "size": 0.221,
+     "width": 1.47,
+     "tilt": -4.4,
+     "roll": 0,
+     "rot": -18.6,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -8532,6 +9650,21 @@
     }
    ],
    "kick": 0.8,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.39,
+      0.03,
+      -0.4
+     ],
+     "size": 0.094,
+     "width": 1.18,
+     "tilt": -14.3,
+     "roll": 0,
+     "rot": 8.3,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -8747,6 +9880,21 @@
      "height": 0.55
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.21,
+      -0.13,
+      0.25
+     ],
+     "size": 0.25,
+     "width": 3.15,
+     "tilt": -9.3,
+     "roll": 0,
+     "rot": -32.5,
+     "key_scale": 1.6
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -8816,6 +9964,21 @@
      "pos": "center"
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.02,
+      1.22,
+      -0.03
+     ],
+     "size": 0.231,
+     "width": 2.91,
+     "tilt": 9.4,
+     "roll": 0,
+     "rot": 19.9,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -8893,6 +10056,21 @@
      "icon": "bulb"
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1,
+      0.6,
+      0
+     ],
+     "size": 0.186,
+     "width": 1.49,
+     "tilt": -4.5,
+     "roll": 0,
+     "rot": -17.6,
+     "key_scale": 1.6
+    }
+   },
    "lyrics": {
     "kind": "sign",
     "material": "light",
@@ -8944,7 +10122,22 @@
      "fov": 46
     }
    ],
-   "kick": 0.8
+   "kick": 0.8,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.28,
+      2.28,
+      -0.87
+     ],
+     "size": 0.709,
+     "width": 6.83,
+     "tilt": -7.4,
+     "roll": 0,
+     "rot": 14.5,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "s95",
@@ -8993,6 +10186,21 @@
      "height": 1.35
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.55,
+      0.31,
+      0.03
+     ],
+     "size": 0.176,
+     "width": 1.17,
+     "tilt": 0.1,
+     "roll": 0,
+     "rot": 6.6,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -9078,6 +10286,21 @@
     }
    ],
    "kick": 0.4,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.99,
+      0.29,
+      -1.44
+     ],
+     "size": 0.122,
+     "width": 1.41,
+     "tilt": -14.2,
+     "roll": 0,
+     "rot": 5.6,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -9180,6 +10403,21 @@
      "height": 0.55
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.04,
+      -1.83,
+      0.36
+     ],
+     "size": 0.218,
+     "width": 2.96,
+     "tilt": -8.8,
+     "roll": 0,
+     "rot": 21.9,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -9265,6 +10503,21 @@
      "height": 1.5
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.21,
+      -3.82,
+      0.86
+     ],
+     "size": 0.195,
+     "width": 2.94,
+     "tilt": 45.8,
+     "roll": 0,
+     "rot": 24,
+     "key_scale": 1.6
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -9362,6 +10615,21 @@
      "height": 1.5
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.89,
+      -3.74,
+      1.49
+     ],
+     "size": 0.332,
+     "width": 4.18,
+     "tilt": 56.5,
+     "roll": 0,
+     "rot": 6,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "float",
     "material": "light",
@@ -9667,6 +10935,21 @@
      "height": 1.5
     }
    ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.58,
+      0.77,
+      -3
+     ],
+     "size": 0.801,
+     "width": 9.26,
+     "tilt": 0.5,
+     "roll": 0,
+     "rot": -3.6,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "firework",
     "material": "light",
@@ -9803,7 +11086,22 @@
      "act": "bounce",
      "height": 1.5
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.82,
+      -0.69,
+      0.75
+     ],
+     "size": 0.329,
+     "width": 4.14,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 24.7,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "s106",
@@ -9909,6 +11207,21 @@
     }
    ],
    "kick": 1.4,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -1.24,
+      4.63,
+      -0.53
+     ],
+     "size": 0.749,
+     "width": 7.21,
+     "tilt": 27.4,
+     "roll": 0,
+     "rot": 12.6,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",
@@ -9961,6 +11274,21 @@
     }
    ],
    "kick": 1.4,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -2,
+      4.2,
+      -3.42
+     ],
+     "size": 0.863,
+     "width": 10.87,
+     "tilt": 17.3,
+     "roll": 0,
+     "rot": 13.4,
+     "key_scale": 1.8
+    }
+   },
    "lyrics": {
     "kind": "stamp",
     "material": "light",

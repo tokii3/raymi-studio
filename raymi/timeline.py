@@ -525,6 +525,14 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             continue
         # lyrics living in this shot
         lyr = s.get("lyrics")
+        if lyr is None and job_style == "v2" and spec.get("all_lyrics", True) and not s.get("text")                 and not s.get("acted") and any(round(a * FPS) <= w["cut"] < round(b * FPS) and t_from <= w["t0"] < t_to
+                                               for ln in lyrics for w in ln["words"]):
+            # toki 2026-10-20 (FIRESTARTER final: "die Hälfte fehlt"): every sung word is on screen. A shot without a
+            # lyric block gets one at the camera's look point, facing the lens; guard.mjs --fill places it in the frame's
+            # empty space. A shot that ACTS its line instead says "acted": "<why>".
+            lk = ckeys[0]["look"]; cp = ckeys[0]["pos"]
+            lyr = {"kind": "sign", "anchor": [round(v, 2) for v in lk], "size": 0.3, "width": 4.0,
+                   "rot": round(math.degrees(math.atan2(cp[0] - lk[0], cp[2] - lk[2])), 1), "auto": True}
         text = s.get("text")                              # words that are not sung (a title in the picture: the cold
         if text and lyr:                                  # open's 'FIRE. UNDERWATER.'), timed from the shot start
             errors.append(f"{tag}: a shot shows lyrics OR a text, not both")
@@ -532,6 +540,9 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             lyr = {k: v for k, v in text.items() if k != "say"}
         if lyr and fmt == "short" and isinstance(lyr.get("short"), dict):
             lyr = {**lyr, **lyr["short"]}                 # the Short frame is narrow: its own anchor / size / width
+        fit = (s.get("lyrics_fit") or {}).get(fmt)      # guard.mjs --fill: the block placed in the frame's empty space
+        if lyr and isinstance(fit, dict):
+            lyr = {**lyr, **fit}
         L, words = None, []
         if lyr:
             if lyr.get("kind") not in LYRIC_KINDS:
@@ -565,6 +576,13 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                     screen_texts.append(w)
             only_lines = set(lyr["lines"]) if "lines" in lyr else (set() if text else None)   # a line can be ACTED instead of written
             only_words = set(lyr["words"]) if "words" in lyr else None
+            if style == "v2" and spec.get("all_lyrics", True) and not text:
+                # toki 2026-10-20: a line is never cut down to its key words - the chosen words are the BIG ones
+                # (keys), the rest of the sung line is still written; only "acted": [line, ...] leaves a line out
+                keys |= {w.lower() for w in (only_words or ())}
+                only_words = None
+                acted = lyr.get("acted")
+                only_lines = None if not acted else {li for li in range(len(lyrics)) if li not in set(acted)}
             for li, ln in enumerate(lyrics):
                 if only_lines is not None and li not in only_lines:
                     continue

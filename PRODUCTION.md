@@ -85,3 +85,5 @@ per beat whose expression fits the line, shot / side / act / icon / key words, `
 - Look at sheet + qc BEFORE telling toki; fix what fails. Free quota: 2,000 Actions minutes / month (private repo);
   every worker pays its own setup (~2-3 min), so do not split short drafts finer than needed.
 - Layout check without a full render: push `stills.json` (cloud stills), never local renders.
+
+- Lyrics v2 (toki 2026-10-20): every sung word is written (keys = the big words; `"acted": [line]` to act one instead); `node guard.mjs <job> --fill <shot#...>` places a block in the frame's empty space as big as the guards allow -> store it as the shot's `lyrics_fit` {mv, short}.

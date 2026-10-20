@@ -255,9 +255,11 @@ const ItemMesh: React.FC<{it: Item; L: Lyrics; color: string; shadow: string; ac
   const mat = useMemo(() => (lit
     // lit by the set; the emissive floor (40 % of its own colour) keeps it readable when the key light is behind it
     ? new THREE.MeshToonMaterial({map: tex, gradientMap: toonRamp(), transparent: true, alphaTest: 0.04, side: THREE.DoubleSide,
-      emissive: new THREE.Color('#666666'), emissiveMap: tex, fog: true})
+      emissive: new THREE.Color('#8a8a8a'), emissiveMap: tex, fog: false, depthTest: false, depthWrite: false})
     : new THREE.MeshBasicMaterial({map: tex, transparent: true, alphaTest: 0.02, toneMapped: false, side: THREE.DoubleSide, fog: false,
-      blending: THREE.NormalBlending, depthWrite: !glow})), [tex, lit, glow]);
+      blending: THREE.NormalBlending, depthTest: false, depthWrite: false})), [tex, lit, glow]);
+  // toki 2026-10-20 (FIRESTARTER final): "oft abgeschnitten / hinter Assets" - a sung line is never hidden by the set,
+  // a prop, a creature or her (depthTest off, drawn last) and never swallowed by the fog of a dark scene
   const depth = useMemo(() => new THREE.MeshDepthMaterial({depthPacking: THREE.RGBADepthPacking, map: tex, alphaTest: 0.5, side: THREE.DoubleSide}), [tex]);
   // reveal < 1: only the left part is burned in yet (a crack writing the word) - the plane and its UVs end at the front
   const geo = useMemo(() => new THREE.PlaneGeometry(1, 1), []);
@@ -269,10 +271,10 @@ const ItemMesh: React.FC<{it: Item; L: Lyrics; color: string; shadow: string; ac
   const w = it.w * s, h = it.h * s;
   return (
     <group position={[it.x - w / 2, it.y + dy, 0]}>
-      <mesh geometry={geo} position={[w / 2, 0, 0]} scale={[w, h, 1]} material={mat} renderOrder={6}
+      <mesh geometry={geo} position={[w / 2, 0, 0]} scale={[w, h, 1]} material={mat} renderOrder={40}
         castShadow={lit && op > 0.5} customDepthMaterial={depth} />
       {r < 1 ? (
-        <mesh position={[w * r, 0, 0.01]} scale={[h * 0.55, h * 0.8, 1]} renderOrder={7}>
+        <mesh position={[w * r, 0, 0.01]} scale={[h * 0.55, h * 0.8, 1]} renderOrder={41}>
           <planeGeometry args={[1, 1]} />
           <meshBasicMaterial map={blobTex('#fff1d6')} transparent opacity={0.95 * op} depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} />
         </mesh>

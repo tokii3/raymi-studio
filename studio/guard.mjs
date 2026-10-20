@@ -14,7 +14,7 @@ import {guardCutEdges, here, loadJob} from './lib.mjs';
 
 const {props} = loadJob(process.argv[2]);
 const flag = (n) => process.argv.indexOf(n);
-const aid = ['--report', '--place', '--summary', '--fit', '--fit-lyrics', '--fit-lens', '--hero-boxes'].some((n) => flag(n) > 0);
+const aid = ['--report', '--place', '--summary', '--fit', '--fit-lyrics', '--fill', '--fit-lens', '--hero-boxes'].some((n) => flag(n) > 0);
 if (!aid || process.argv.includes('--report')) {
   try {
     await guardCutEdges(props, null);
@@ -26,7 +26,7 @@ if (!aid || process.argv.includes('--report')) {
 if (aid) {
   const out = path.join(os.tmpdir(), `raymi-report-${process.pid}.mjs`);
   await build({entryPoints: [path.join(here, 'src/film/check.ts')], bundle: true, format: 'esm', platform: 'node', outfile: out, logLevel: 'error'});
-  const {framingReport, placeAt, shotSummary, fitShot, fitLyrics, fitLens, heroBoxes, heroFaults} = await import(pathToFileURL(out).href);
+  const {framingReport, placeAt, shotSummary, fitShot, fitLyrics, fillLyrics, fitLens, heroBoxes, heroFaults} = await import(pathToFileURL(out).href);
   const pi = flag('--place');
   if (pi > 0) {
     const [s, f, x, y, d] = process.argv.slice(pi + 1, pi + 6).map(Number);
@@ -49,6 +49,12 @@ if (aid) {
     const want = process.argv.slice(flag('--fit-lens') + 1).filter((x) => /^\d+$/.test(x)).map(Number);
     const out = {};
     for (const i of want) { const c = fitLens(props, i); out[i] = c ? c.map(({f, pos, look, fov, roll, ease}) => ({f, pos, look, fov, roll, ease})) : null; }
+    console.log(JSON.stringify(out));
+  } else if (flag('--fill') > 0) {
+    // --fill [shot#...]: the biggest lyric block in the frame's empty space (check.ts fillLyrics), JSON per shot
+    const want = process.argv.slice(flag('--fill') + 1).filter((x) => /^\d+$/.test(x)).map(Number);
+    const out = {};
+    for (const i of want) out[i] = fillLyrics(props, i);
     console.log(JSON.stringify(out));
   } else if (flag('--fit-lyrics') > 0) {
     const want = process.argv.slice(flag('--fit-lyrics') + 1).filter((x) => /^\d+$/.test(x)).map(Number);
