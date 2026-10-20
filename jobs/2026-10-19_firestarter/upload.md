@@ -5,8 +5,8 @@
 ## Files (toki uploads)
 | what | file | release |
 |---|---|---|
-| MV 16:9, 3:26, 1080p, -14 LUFS | final.mp4 | https://github.com/tokii3/raymi-studio/releases/tag/render-2026-10-19_firestarter-28 (QC pass, -14.25 LUFS, TP -1.77) |
-| Short 9:16, 19.9 s, 1080x1920 | final.mp4 | https://github.com/tokii3/raymi-studio/releases/tag/render-2026-10-19_firestarter-26 |
+| MV 16:9, 3:26, 1080p, -14 LUFS | final.mp4 | https://github.com/tokii3/raymi-studio/releases/tag/render-2026-10-19_firestarter-33 (lyrics fix, toki liked it 2026-10-20) |
+| Short 9:16, 19.9 s, 1080x1920 | final.mp4 | https://github.com/tokii3/raymi-studio/releases/tag/render-2026-10-19_firestarter-34 |
 Screening: reviews/final_blind-viewer_1.md (MV), reviews/thumbs_1.md (FAIL; use MV thumb_mv_M2_catch, Short thumb_short_S2_catch - S1 is best but its UNDERWATER line hides behind her head, parked); the pilot rounds in reviews/pilot_*.md.
 
 Research (1_DOSSIER.md, release day 2026-10-19): people search "kda firestarter", "firestarter lyrics",
