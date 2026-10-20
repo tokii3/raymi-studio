@@ -79,3 +79,5 @@
   - Devil guard: the look critic answered "what are the shapes on her head?" with "horn-like nubs / little devil horns"
     in pilot 1 AND pilot 3 - the tako ears read as horns at phone size in this fire-lit world. Sprites cannot change;
     toki decides (VRM model, ear-shaped glow, or accept).
+
+- FIRESTARTER thumbs (reviews/thumbs_1.md, FAIL): S1 cold open's "UNDERWATER." line sits behind her horns/hair (move the title line in the Short cold open or a thumbnail-only text layer); only one MV candidate has a face (M3/M5 empty) - thumbnails need their own framing (close face + flame + one word), not film frames. Not looped (toki: lean, full package).
