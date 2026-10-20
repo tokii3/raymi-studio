@@ -1,6 +1,6 @@
 {
  "quality": "final",
- "format": "short",
- "round": 6,
- "_why": "lyrics fix (toki 2026-10-20): the Short with lyrics in free space, 8 % margin"
+ "format": "mv",
+ "round": 7,
+ "_why": "lyrics guard v3.1: frame edge from the first word on (run 32 Short: Imma burn off the edge while coming in)"
 }

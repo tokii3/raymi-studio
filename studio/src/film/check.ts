@@ -155,10 +155,11 @@ export function v2Items(s: Shot, line: number) {
 }
 
 /** Settled corners of a lyric line block (same wrapping as Words3D), in world space. */
-export function lineCorners(s: Shot, line: number): THREE.Vector3[] {
+export function lineCorners(s: Shot, line: number, f?: number): THREE.Vector3[] {
   const L = s.lyrics!;
   if (L.style === 'v2') {
-    const it = v2Items(s, line);
+    // f given: only the words already out at frame f (+ the romaji / English rows, they come with the first word)
+    const it = v2Items(s, line).filter((i) => f === undefined || i.kind !== 'main' || (s.words.find((w) => w.line === line && w.idx === i.idx)?.from ?? 0) <= f);
     const x0 = Math.min(...it.map((i) => i.x - i.w / 2)), x1 = Math.max(...it.map((i) => i.x + i.w / 2));
     const y0 = Math.min(...it.map((i) => i.y - i.h / 2)), y1 = Math.max(...it.map((i) => i.y + i.h / 2));
     const m = 1.06;                                   // a sung word swells up to 12 % around its own centre
@@ -198,6 +199,14 @@ export const CAP_MIN = 0.054, SUB_CAP_MIN = 0.04;
 
 /** Every frame a lyric line is fully shown (from its last word on, settled), all of it must be inside the frame. */
 const L0 = (s: Shot) => s.lyrics!;
+/** The lens turning faster than WHIP_DEG per frame is a whip: the picture smears, nothing is read at the frame edge
+ *  then (FIRESTARTER s71: a 38 degree snap in 8 frames under "relax" - no place in the world stays in both views). */
+const WHIP_DEG = 3;
+function whipping(s: Shot, f: number, aspect: number, props: FilmProps): boolean {
+  if (f <= s.from || f >= s.to - 1) return false;
+  const dir = (k: number) => new THREE.Vector3(0, 0, -1).applyQuaternion(makeCamera(s, k, aspect, props.hits, props.fps).quaternion);
+  return (dir(f - 1).angleTo(dir(f + 1)) * 180) / Math.PI / 2 > WHIP_DEG;
+}
 /** The safe area for lyrics in NDC: 8 % of each side stays free (toki 2026-10-20). */
 export const SAFE = 0.84;
 const lt0 = (ps: THREE.Vector3[], cam: THREE.Camera) => { const q = ps.map((p) => p.clone().project(cam)); return [Math.min(...q.map((v) => v.x)), Math.min(...q.map((v) => v.y)), Math.max(...q.map((v) => v.x)), Math.max(...q.map((v) => v.y))]; };
@@ -300,13 +309,24 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
       }
       // every frame, with the real camera kick on the music hits (pilot 1: a stamp clipped by the punch on a hit)
       let faceRun = 0, figRun = 0, sitRun = 0;
+      // v2: the frame edge counts from the line's FIRST word on - the lens still moves while the words come in
+      // (FIRESTARTER Short run 32: "Imma burn" off the right edge before the line had settled)
+      if (s.lyrics.style === 'v2') {
+        const f0 = Math.max(s.from, Math.min(...ws.map((w) => w.from)));
+        const early = Array.from({length: Math.max(0, a - f0)}, (_, k) => f0 + k).find((f) => {
+          if (whipping(s, f, aspect, props)) return false;
+          const cam = makeCamera(s, f, aspect, props.hits, props.fps);
+          return lineCorners(s, line, f).some((c) => { const n = c.clone().project(cam); return n.z >= 1 || Math.abs(n.x) > SAFE || Math.abs(n.y) > SAFE; });
+        });
+        if (early !== undefined) { out.push({shot: s.id, frame: early, line, text: ws.map((w) => w.w).join(' '), why: 'leaves the frame while it comes in'}); continue; }
+      }
       for (let f = a; f < zz; f++) {
         const rise = float ? ((f - last) / props.fps) * 0.12 + 0.04 : 0;     // Words3D float: rises 0.12 m/s
         const corners = rise ? corners0.map((c) => c.clone().add(new THREE.Vector3(0, rise, 0))) : corners0;
         const cam = makeCamera(s, f, aspect, props.hits, props.fps);
         // inside the typographic safe area: a word near the frame edge reads as clipped (pilot 1: 4 %; FIRESTARTER final
         // Short, toki 2026-10-20 "abgeschnitten": its glow still touched the edge -> 8 % of each side)
-        const bad = corners.some((c) => { const n = c.clone().project(cam); return n.z >= 1 || Math.abs(n.x) > SAFE || Math.abs(n.y) > SAFE; });
+        const bad = (s.lyrics.style !== 'v2' || !whipping(s, f, aspect, props)) && corners.some((c) => { const n = c.clone().project(cam); return n.z >= 1 || Math.abs(n.x) > SAFE || Math.abs(n.y) > SAFE; });
         if (bad) { out.push({shot: s.id, frame: f, line, text: ws.map((w) => w.w).join(' '), why: 'leaves the frame'}); break; }
         // v2 (toki 2026-10-20 "hinter raymi / assets oder clippen in assets"): a settled line sits in free space - not on
         // her figure, not on a prop / solid / creature (more than 10 % of the block for 6 frames in a row)
@@ -749,12 +769,24 @@ function figureBox(props: FilmProps, s: Shot, f: number, cam: THREE.Camera): [nu
 /** FIRESTARTER final (toki: "leere Fläche effektiv nutzen"): the BIGGEST lyric block that passes every lyric guard,
  *  placed in the empty part of the frame (away from her figure and the shot's hero), facing the lens. The words draw on
  *  top of the set (Words3D depthTest off), so only the frame, her and the hero decide. null = nothing fits. */
-export function fillLyrics(props: FilmProps, index: number): {anchor: V3; size: number; width: number; tilt: number; roll: number; rot: number; key_scale: number; small?: string} | null {
+type Fill = {anchor: V3; size: number; width: number; tilt: number; roll: number; rot: number; key_scale: number; small?: string};
+export function fillLyrics(props: FilmProps, index: number): Fill | null {
   const s = props.shots[index];
   if (!s.lyrics || !s.words.length) return null;
+  // the camera where the (last) line has settled - the guard reads size and frame there; a lens that moves fast while the
+  // words come in is tried at the first word and halfway too (FIRESTARTER: cranes / whips under a line)
+  const fs = Math.max(s.from, Math.min(s.to - 1, Math.max(...s.words.map((w) => w.from)) + 6));
+  const f0 = Math.max(s.from, Math.min(...s.words.map((w) => w.from)));
+  for (const f of [...new Set([fs, f0, ...[0.5, 0.25, 0.75].map((t) => Math.round(f0 + (fs - f0) * t)), Math.min(s.to - 1, fs + 12)])]) {
+    const r = fillAt(props, s, f);
+    if (r) return r;
+  }
+  return null;
+}
+
+function fillAt(props: FilmProps, s: Shot, f: number): Fill | null {
+  if (!s.lyrics) return null;
   const aspect = props.width / props.height;
-  // the camera where the (last) line has settled - the guard reads size and frame there; a moving lens is checked per frame
-  const f = Math.max(s.from, Math.min(s.to - 1, Math.max(...s.words.map((w) => w.from)) + 6));
   const cam = makeCamera(s, f, aspect, [], props.fps);
   const heroes = (s.hero ?? []).filter((h) => h.kind !== 'word').map((h) => heroBox(props, s, f, h)).filter(Boolean) as [number, number, number, number][];
   // the Short's hook and comment question sit in the top band (OVERLAY): lyrics stay out of it
@@ -766,7 +798,7 @@ export function fillLyrics(props: FilmProps, index: number): {anchor: V3; size: 
   // a line leaning back on the floor (tilt <= -45: burned into it) first tries lying flat on the floor - moved along it,
   // so a crane up keeps it in the picture (FIRESTARTER s19: 'fire' burned into the vent floor)
   const floorY = (s.lyrics.tilt ?? 0) <= -45 ? 0.03 : null;
-  for (const surf of floorY !== null ? [true, false] : [false]) for (const d of surf ? [d0] : [d0, Math.max(0.8, d0 * 0.55)]) {
+  for (const surf of floorY !== null ? [true, false] : [false]) for (const d of surf ? [d0] : [d0, Math.max(0.8, d0 * 0.55), 14, 24]) {   // far: a travelling lens barely moves it
   const occ = occluders(props, s, f, cam, d);                 // her silhouette cells + props in front of the words
   const avoid = [...occ.flatMap((o) => o.boxes), ...heroes, ...bands];
   const H = 2 * d * Math.tan(((cam as THREE.PerspectiveCamera).fov * Math.PI) / 360), Wd = H * aspect;
