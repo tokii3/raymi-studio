@@ -180,13 +180,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.28,
-     1.29,
-     -0.05
+     1.23,
+     1.44,
+     -0.63
     ],
-    "rotY": 0.0,
-    "size": 0.075,
-    "width": 0.55,
+    "rotY": -10.1,
+    "size": 0.1,
+    "width": 0.86,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -194,7 +194,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -4.8,
     "roll": 0.0,
     "keyScale": 1.4,
     "auto": true,
@@ -2676,13 +2676,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     1.57,
-     0.99,
-     -0.79
+     1.54,
+     0.96,
+     -0.57
     ],
-    "rotY": 25.0,
-    "size": 0.154,
-    "width": 2.1,
+    "rotY": -7.8,
+    "size": 0.185,
+    "width": 1.78,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -2690,9 +2690,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -0.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -3015,13 +3015,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     0.95,
-     1.35,
-     -0.5
+     1.36,
+     1.12,
+     -0.43
     ],
-    "rotY": 0.0,
-    "size": 0.14,
-    "width": 1.68,
+    "rotY": -20.9,
+    "size": 0.175,
+    "width": 0.78,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -3029,9 +3029,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -0.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -3332,13 +3332,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     -0.13,
-     0.58,
-     -0.6
+     -0.55,
+     0.54,
+     -1.16
     ],
-    "rotY": 0.0,
-    "size": 0.119,
-    "width": 3.08,
+    "rotY": -39.8,
+    "size": 0.2,
+    "width": 1.34,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -3346,9 +3346,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 0.2,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -4477,13 +4477,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     1.65,
-     0.43,
-     -1.26
+     0.65,
+     0.48,
+     -0.99
     ],
-    "rotY": 15.0,
-    "size": 0.126,
-    "width": 2.24,
+    "rotY": -33.7,
+    "size": 0.14,
+    "width": 1.76,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -4491,9 +4491,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -12.0,
+    "tilt": 1.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -4756,13 +4756,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     1.04,
-     1.51,
-     -1.17
+     1.31,
+     1.56,
+     -1.1
     ],
-    "rotY": -20.0,
-    "size": 0.168,
-    "width": 2.24,
+    "rotY": 2.5,
+    "size": 0.166,
+    "width": 2.26,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -4770,9 +4770,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 11.6,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -4781,6 +4781,42 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "Imma",
+     "from": 768,
+     "to": 784,
+     "key": false,
+     "line": 7,
+     "idx": 0,
+     "em": 2.54
+    },
+    {
+     "w": "burn",
+     "from": 783,
+     "to": 793,
+     "key": false,
+     "line": 7,
+     "idx": 1,
+     "em": 2.285
+    },
+    {
+     "w": "it",
+     "from": 791,
+     "to": 802,
+     "key": false,
+     "line": 7,
+     "idx": 2,
+     "em": 0.997
+    },
+    {
+     "w": "down",
+     "from": 801,
+     "to": 813,
+     "key": false,
+     "line": 7,
+     "idx": 3,
+     "em": 2.487
+    },
     {
      "w": "like",
      "from": 812,
@@ -5045,13 +5081,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.2,
-     0.03,
-     -1.0
+     0.26,
+     0.75,
+     -0.97
     ],
-    "rotY": 0.0,
-    "size": 0.28,
-    "width": 3.0,
+    "rotY": 15.6,
+    "size": 0.292,
+    "width": 3.97,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -5059,9 +5095,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -90.0,
+    "tilt": -58.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -5070,6 +5106,33 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "Imma",
+     "from": 818,
+     "to": 824,
+     "key": false,
+     "line": 8,
+     "idx": 0,
+     "em": 2.54
+    },
+    {
+     "w": "start",
+     "from": 823,
+     "to": 835,
+     "key": false,
+     "line": 8,
+     "idx": 1,
+     "em": 2.912
+    },
+    {
+     "w": "a",
+     "from": 834,
+     "to": 842,
+     "key": false,
+     "line": 8,
+     "idx": 2,
+     "em": 0.677
+    },
     {
      "w": "fire",
      "from": 840,
@@ -5330,13 +5393,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     0.64,
-     1.71,
-     -1.1
+     0.57,
+     0.76,
+     -0.51
     ],
-    "rotY": 0.0,
-    "size": 0.1,
-    "width": 1.8,
+    "rotY": -6.7,
+    "size": 0.247,
+    "width": 1.32,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -5346,7 +5409,7 @@
     "style": "v2",
     "tilt": 0.0,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -5355,6 +5418,51 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "Oh",
+     "from": 863,
+     "to": 876,
+     "key": false,
+     "line": 9,
+     "idx": 0,
+     "em": 1.251
+    },
+    {
+     "w": "I",
+     "from": 874,
+     "to": 883,
+     "key": false,
+     "line": 9,
+     "idx": 1,
+     "em": 0.351
+    },
+    {
+     "w": "like",
+     "from": 881,
+     "to": 897,
+     "key": false,
+     "line": 9,
+     "idx": 2,
+     "em": 2.097
+    },
+    {
+     "w": "a",
+     "from": 895,
+     "to": 901,
+     "key": false,
+     "line": 9,
+     "idx": 3,
+     "em": 0.677
+    },
+    {
+     "w": "little",
+     "from": 899,
+     "to": 904,
+     "key": false,
+     "line": 9,
+     "idx": 4,
+     "em": 3.253
+    },
     {
      "w": "drama",
      "from": 902,
@@ -5546,13 +5654,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     -0.28,
-     1.0,
-     -0.9
+     0.1,
+     0.66,
+     -0.2
     ],
-    "rotY": 0.0,
-    "size": 0.105,
-    "width": 2.4,
+    "rotY": 20.9,
+    "size": 0.15,
+    "width": 1.89,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -5560,9 +5668,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 3.0,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -5770,13 +5878,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.06,
-     0.96,
-     -1.9
+     0.02,
+     0.62,
+     -0.96
     ],
-    "rotY": 0.0,
-    "size": 0.1,
-    "width": 2.0,
+    "rotY": 6.7,
+    "size": 0.136,
+    "width": 2.06,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -5784,9 +5892,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -7.9,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -5795,6 +5903,51 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "Call",
+     "from": 964,
+     "to": 985,
+     "key": false,
+     "line": 11,
+     "idx": 0,
+     "em": 2.285
+    },
+    {
+     "w": "me",
+     "from": 984,
+     "to": 993,
+     "key": false,
+     "line": 11,
+     "idx": 1,
+     "em": 1.361
+    },
+    {
+     "w": "crazy,",
+     "from": 992,
+     "to": 1007,
+     "key": false,
+     "line": 11,
+     "idx": 2,
+     "em": 3.178
+    },
+    {
+     "w": "call",
+     "from": 1006,
+     "to": 1013,
+     "key": false,
+     "line": 11,
+     "idx": 3,
+     "em": 2.251
+    },
+    {
+     "w": "it",
+     "from": 1012,
+     "to": 1020,
+     "key": false,
+     "line": 11,
+     "idx": 4,
+     "em": 0.997
+    },
     {
      "w": "Karma",
      "from": 1019,
@@ -6075,13 +6228,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.33,
-     0.53,
-     -1.6
+     1.2,
+     0.9,
+     -1.79
     ],
-    "rotY": 0.0,
-    "size": 0.18,
-    "width": 4.5,
+    "rotY": -36.8,
+    "size": 0.461,
+    "width": 4.44,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -6089,9 +6242,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -15.0,
+    "tilt": -0.2,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -6427,13 +6580,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.36,
-     1.79,
-     -1.2
+     1.23,
+     0.76,
+     -0.14
     ],
-    "rotY": 0.0,
-    "size": 0.1,
-    "width": 2.6,
+    "rotY": -11.4,
+    "size": 0.247,
+    "width": 1.98,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -6441,9 +6594,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -12.0,
+    "tilt": -0.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -6452,6 +6605,42 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "you'll",
+     "from": 1086,
+     "to": 1098,
+     "key": false,
+     "line": 13,
+     "idx": 0,
+     "em": 3.34
+    },
+    {
+     "w": "be",
+     "from": 1097,
+     "to": 1102,
+     "key": false,
+     "line": 13,
+     "idx": 1,
+     "em": 1.218
+    },
+    {
+     "w": "begging",
+     "from": 1101,
+     "to": 1115,
+     "key": false,
+     "line": 13,
+     "idx": 2,
+     "em": 3.797
+    },
+    {
+     "w": "for",
+     "from": 1114,
+     "to": 1130,
+     "key": false,
+     "line": 13,
+     "idx": 3,
+     "em": 1.572
+    },
     {
      "w": "water",
      "from": 1128,
@@ -6637,13 +6826,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     2.88,
-     1.89,
-     -0.97
+     2.37,
+     1.75,
+     -0.78
     ],
-    "rotY": -12.8,
-    "size": 0.081,
-    "width": 1.14,
+    "rotY": -21.7,
+    "size": 0.103,
+    "width": 1.55,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -6651,9 +6840,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 5.8,
+    "tilt": 2.5,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -6663,10 +6852,19 @@
    },
    "words": [
     {
+     "w": "Imma",
+     "from": 1143,
+     "to": 1160,
+     "key": false,
+     "line": 14,
+     "idx": 0,
+     "em": 2.54
+    },
+    {
      "w": "start",
      "from": 1158,
      "to": 1165,
-     "key": false,
+     "key": true,
      "line": 14,
      "idx": 1,
      "em": 2.912
@@ -6675,7 +6873,7 @@
      "w": "a",
      "from": 1163,
      "to": 1172,
-     "key": false,
+     "key": true,
      "line": 14,
      "idx": 2,
      "em": 0.677
@@ -6688,6 +6886,15 @@
      "line": 14,
      "idx": 3,
      "em": 2.017
+    },
+    {
+     "w": "Imma",
+     "from": 1196,
+     "to": 1212,
+     "key": false,
+     "line": 15,
+     "idx": 0,
+     "em": 2.54
     }
    ],
    "transition": {
@@ -6946,13 +7153,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.19,
-     3.03,
-     -3.0
+     -0.08,
+     1.24,
+     -0.04
     ],
-    "rotY": 0.0,
-    "size": 0.375,
-    "width": 9.38,
+    "rotY": 4.3,
+    "size": 0.544,
+    "width": 6.85,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -6960,9 +7167,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -1.4,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -6984,7 +7191,7 @@
      "w": "starter",
      "from": 1222,
      "to": 1240,
-     "key": false,
+     "key": true,
      "line": 15,
      "idx": 2,
      "em": 3.963
@@ -7236,13 +7443,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     -0.46,
-     1.23,
-     -1.3
+     0.19,
+     1.24,
+     -0.83
     ],
-    "rotY": 0.0,
-    "size": 0.08,
-    "width": 1.6,
+    "rotY": 46.6,
+    "size": 0.063,
+    "width": 1.31,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -7250,9 +7457,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 7.7,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {
@@ -7607,13 +7814,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.35,
+     -0.42,
      1.0,
-     -0.36
+     -1.21
     ],
-    "rotY": -56.2,
-    "size": 0.127,
-    "width": 3.17,
+    "rotY": -35.5,
+    "size": 0.141,
+    "width": 1.82,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -7621,7 +7828,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -0.1,
     "roll": 0.0,
     "keyScale": 1.6,
     "auto": true,
@@ -7952,13 +8159,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.8,
-     0.97,
-     -0.21
+     1.55,
+     0.94,
+     -0.67
     ],
-    "rotY": 20.0,
-    "size": 0.094,
-    "width": 1.66,
+    "rotY": -2.2,
+    "size": 0.114,
+    "width": 1.27,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -7966,7 +8173,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 0.1,
     "roll": 0.0,
     "keyScale": 1.6,
     "auto": true,
@@ -7994,6 +8201,24 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "꺾이지",
+     "from": 1363,
+     "to": 1392,
+     "key": false,
+     "line": 18,
+     "idx": 0,
+     "em": 2.312
+    },
+    {
+     "w": "않는",
+     "from": 1390,
+     "to": 1408,
+     "key": false,
+     "line": 18,
+     "idx": 1,
+     "em": 1.667
+    },
     {
      "w": "desire",
      "from": 1407,
@@ -8267,13 +8492,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     0.0,
-     0.85,
-     1.11
+     -0.04,
+     1.58,
+     0.07
     ],
-    "rotY": -45.3,
-    "size": 0.051,
-    "width": 0.55,
+    "rotY": -18.8,
+    "size": 0.147,
+    "width": 2.37,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -8281,7 +8506,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 32.6,
+    "tilt": 35.4,
     "roll": 0.0,
     "keyScale": 1.6,
     "auto": true,
@@ -8319,6 +8544,42 @@
    },
    "words": [
     {
+     "w": "올라가",
+     "from": 1422,
+     "to": 1430,
+     "key": false,
+     "line": 19,
+     "idx": 0,
+     "em": 2.464
+    },
+    {
+     "w": "펑펑",
+     "from": 1428,
+     "to": 1443,
+     "key": false,
+     "line": 19,
+     "idx": 1,
+     "em": 1.48
+    },
+    {
+     "w": "터져",
+     "from": 1442,
+     "to": 1461,
+     "key": false,
+     "line": 19,
+     "idx": 2,
+     "em": 1.486
+    },
+    {
+     "w": "마치",
+     "from": 1460,
+     "to": 1472,
+     "key": false,
+     "line": 19,
+     "idx": 3,
+     "em": 1.639
+    },
+    {
      "w": "축제",
      "from": 1471,
      "to": 1481,
@@ -8326,6 +8587,24 @@
      "line": 19,
      "idx": 4,
      "em": 1.635
+    },
+    {
+     "w": "같지",
+     "from": 1480,
+     "to": 1492,
+     "key": false,
+     "line": 19,
+     "idx": 5,
+     "em": 1.632
+    },
+    {
+     "w": "I",
+     "from": 1491,
+     "to": 1508,
+     "key": false,
+     "line": 20,
+     "idx": 0,
+     "em": 0.351
     }
    ],
    "transition": {
@@ -8550,8 +8829,53 @@
      "ease": "inOut"
     }
    ],
-   "lyrics": null,
-   "words": [],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -1.37,
+     2.61,
+     -0.04
+    ],
+    "rotY": 15.9,
+    "size": 0.546,
+    "width": 6.88,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null,
+    "style": "v2",
+    "tilt": -1.5,
+    "roll": 0.0,
+    "keyScale": 1.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "can",
+     "from": 1506,
+     "to": 1512,
+     "key": false,
+     "line": 20,
+     "idx": 1,
+     "em": 1.786
+    },
+    {
+     "w": "be",
+     "from": 1510,
+     "to": 1516,
+     "key": false,
+     "line": 20,
+     "idx": 2,
+     "em": 1.218
+    }
+   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -8766,8 +9090,44 @@
      "ease": "inOut"
     }
    ],
-   "lyrics": null,
-   "words": [],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     1.1,
+     1.26,
+     -0.53
+    ],
+    "rotY": -13.2,
+    "size": 0.178,
+    "width": 0.79,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null,
+    "style": "v2",
+    "tilt": -0.1,
+    "roll": 0.0,
+    "keyScale": 1.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "sweet",
+     "from": 1514,
+     "to": 1524,
+     "key": false,
+     "line": 20,
+     "idx": 3,
+     "em": 3.14
+    }
+   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -9065,13 +9425,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     1.38,
-     1.54,
-     -1.4
+     0.47,
+     1.62,
+     -1.01
     ],
-    "rotY": 0.0,
-    "size": 0.1,
-    "width": 1.8,
+    "rotY": -23.3,
+    "size": 0.295,
+    "width": 3.41,
     "color": "#ffd27a",
     "accent": "#ffc15a",
     "outline": "#1a0b33",
@@ -9079,9 +9439,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -4.5,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": false,
     "small": null,
     "subs": {},
@@ -9091,6 +9451,42 @@
    },
    "words": [
     {
+     "w": "but",
+     "from": 1523,
+     "to": 1536,
+     "key": false,
+     "line": 21,
+     "idx": 0,
+     "em": 1.859
+    },
+    {
+     "w": "I",
+     "from": 1535,
+     "to": 1539,
+     "key": false,
+     "line": 21,
+     "idx": 1,
+     "em": 0.351
+    },
+    {
+     "w": "got",
+     "from": 1538,
+     "to": 1543,
+     "key": false,
+     "line": 21,
+     "idx": 2,
+     "em": 1.691
+    },
+    {
+     "w": "gold",
+     "from": 1542,
+     "to": 1550,
+     "key": false,
+     "line": 21,
+     "idx": 3,
+     "em": 2.218
+    },
+    {
      "w": "venom",
      "from": 1549,
      "to": 1562,
@@ -9098,6 +9494,33 @@
      "line": 21,
      "idx": 4,
      "em": 3.13
+    },
+    {
+     "w": "on",
+     "from": 1561,
+     "to": 1567,
+     "key": false,
+     "line": 21,
+     "idx": 5,
+     "em": 1.137
+    },
+    {
+     "w": "my",
+     "from": 1565,
+     "to": 1573,
+     "key": false,
+     "line": 21,
+     "idx": 6,
+     "em": 1.348
+    },
+    {
+     "w": "teeth",
+     "from": 1571,
+     "to": 1579,
+     "key": false,
+     "line": 21,
+     "idx": 7,
+     "em": 2.938
     }
    ],
    "transition": {
@@ -9383,13 +9806,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -1.0,
-     0.57,
-     -0.9
+     1.39,
+     0.73,
+     -0.18
     ],
-    "rotY": 0.0,
-    "size": 0.15,
-    "width": 2.63,
+    "rotY": -15.4,
+    "size": 0.132,
+    "width": 1.7,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -9399,7 +9822,7 @@
     "style": "v2",
     "tilt": 0.0,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -9409,10 +9832,46 @@
    },
    "words": [
     {
+     "w": "I'm",
+     "from": 1577,
+     "to": 1591,
+     "key": false,
+     "line": 22,
+     "idx": 0,
+     "em": 1.61
+    },
+    {
+     "w": "only",
+     "from": 1590,
+     "to": 1598,
+     "key": false,
+     "line": 22,
+     "idx": 1,
+     "em": 2.253
+    },
+    {
+     "w": "showing",
+     "from": 1597,
+     "to": 1606,
+     "key": false,
+     "line": 22,
+     "idx": 2,
+     "em": 3.914
+    },
+    {
+     "w": "up",
+     "from": 1604,
+     "to": 1616,
+     "key": false,
+     "line": 22,
+     "idx": 3,
+     "em": 1.161
+    },
+    {
      "w": "for",
      "from": 1614,
      "to": 1621,
-     "key": false,
+     "key": true,
      "line": 22,
      "idx": 4,
      "em": 1.572
@@ -9421,7 +9880,7 @@
      "w": "a",
      "from": 1620,
      "to": 1633,
-     "key": false,
+     "key": true,
      "line": 22,
      "idx": 5,
      "em": 0.677
@@ -9430,7 +9889,7 @@
      "w": "fee",
      "from": 1631,
      "to": 1640,
-     "key": false,
+     "key": true,
      "line": 22,
      "idx": 6,
      "em": 1.782
@@ -9652,13 +10111,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     1.5,
-     1.35,
-     -0.75
+     1.29,
+     1.01,
+     -0.7
     ],
-    "rotY": 0.0,
-    "size": 0.07,
-    "width": 0.8,
+    "rotY": -13.1,
+    "size": 0.12,
+    "width": 1.33,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -9666,9 +10125,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -7.4,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -9677,6 +10136,60 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "You're",
+     "from": 1639,
+     "to": 1645,
+     "key": false,
+     "line": 23,
+     "idx": 0,
+     "em": 3.357
+    },
+    {
+     "w": "only",
+     "from": 1644,
+     "to": 1654,
+     "key": false,
+     "line": 23,
+     "idx": 1,
+     "em": 2.253
+    },
+    {
+     "w": "showing",
+     "from": 1653,
+     "to": 1665,
+     "key": false,
+     "line": 23,
+     "idx": 2,
+     "em": 3.914
+    },
+    {
+     "w": "up",
+     "from": 1664,
+     "to": 1668,
+     "key": false,
+     "line": 23,
+     "idx": 3,
+     "em": 1.161
+    },
+    {
+     "w": "for",
+     "from": 1667,
+     "to": 1678,
+     "key": false,
+     "line": 23,
+     "idx": 4,
+     "em": 1.572
+    },
+    {
+     "w": "the",
+     "from": 1676,
+     "to": 1681,
+     "key": false,
+     "line": 23,
+     "idx": 5,
+     "em": 1.73
+    },
     {
      "w": "tea",
      "from": 1679,
@@ -9903,13 +10416,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.95,
-     0.85,
-     -0.5
+     1.52,
+     1.11,
+     -0.86
     ],
-    "rotY": 0.0,
-    "size": 0.045,
-    "width": 0.6,
+    "rotY": 5.5,
+    "size": 0.185,
+    "width": 1.23,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -9919,7 +10432,7 @@
     "style": "v2",
     "tilt": 0.0,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": "a macro on her arm: the word runs along it, read in a close frame",
     "subs": {},
@@ -9929,13 +10442,31 @@
    },
    "words": [
     {
+     "w": "I'm",
+     "from": 1687,
+     "to": 1705,
+     "key": false,
+     "line": 24,
+     "idx": 0,
+     "em": 1.61
+    },
+    {
      "w": "insane",
      "from": 1703,
      "to": 1722,
-     "key": false,
+     "key": true,
      "line": 24,
      "idx": 1,
      "em": 3.425
+    },
+    {
+     "w": "Yeah",
+     "from": 1721,
+     "to": 1767,
+     "key": false,
+     "line": 25,
+     "idx": 0,
+     "em": 2.41
     }
    ],
    "transition": {
@@ -10139,13 +10670,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     -0.35,
-     0.98,
-     -1.6
+     0.12,
+     1.41,
+     -0.45
     ],
-    "rotY": 0.0,
+    "rotY": -17.2,
     "size": 0.125,
-    "width": 2.5,
+    "width": 2.62,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -10153,9 +10684,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 31.5,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -10165,10 +10696,55 @@
    },
    "words": [
     {
+     "w": "I",
+     "from": 1771,
+     "to": 1776,
+     "key": false,
+     "line": 25,
+     "idx": 1,
+     "em": 0.351
+    },
+    {
+     "w": "know",
+     "from": 1775,
+     "to": 1783,
+     "key": false,
+     "line": 25,
+     "idx": 2,
+     "em": 2.455
+    },
+    {
+     "w": "you",
+     "from": 1781,
+     "to": 1790,
+     "key": false,
+     "line": 25,
+     "idx": 3,
+     "em": 1.789
+    },
+    {
+     "w": "like",
+     "from": 1789,
+     "to": 1796,
+     "key": false,
+     "line": 25,
+     "idx": 4,
+     "em": 2.097
+    },
+    {
+     "w": "it",
+     "from": 1795,
+     "to": 1802,
+     "key": false,
+     "line": 25,
+     "idx": 5,
+     "em": 0.997
+    },
+    {
      "w": "that",
      "from": 1801,
      "to": 1815,
-     "key": false,
+     "key": true,
      "line": 25,
      "idx": 6,
      "em": 2.405
@@ -10177,7 +10753,7 @@
      "w": "way",
      "from": 1813,
      "to": 1829,
-     "key": false,
+     "key": true,
      "line": 25,
      "idx": 7,
      "em": 2.013
@@ -10413,13 +10989,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.25,
-     2.23,
-     -2.2
+     -0.29,
+     1.46,
+     -0.78
     ],
-    "rotY": 0.0,
-    "size": 0.1,
-    "width": 2.4,
+    "rotY": -38.1,
+    "size": 0.304,
+    "width": 3.82,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -10427,9 +11003,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -1.4,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -10679,13 +11255,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.62,
-     1.33,
-     -0.4
+     -0.74,
+     1.01,
+     -0.49
     ],
-    "rotY": 0.0,
-    "size": 0.07,
-    "width": 1.0,
+    "rotY": 14.9,
+    "size": 0.147,
+    "width": 0.78,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -10693,9 +11269,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -0.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -10704,6 +11280,42 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "running",
+     "from": 1883,
+     "to": 1899,
+     "key": false,
+     "line": 26,
+     "idx": 1,
+     "em": 3.766
+    },
+    {
+     "w": "wild",
+     "from": 1898,
+     "to": 1911,
+     "key": false,
+     "line": 26,
+     "idx": 2,
+     "em": 2.268
+    },
+    {
+     "w": "in",
+     "from": 1910,
+     "to": 1917,
+     "key": false,
+     "line": 26,
+     "idx": 3,
+     "em": 0.977
+    },
+    {
+     "w": "my",
+     "from": 1916,
+     "to": 1924,
+     "key": false,
+     "line": 26,
+     "idx": 4,
+     "em": 1.348
+    },
     {
      "w": "veins",
      "from": 1922,
@@ -10949,13 +11561,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.3,
-     2.39,
-     2.82
+     -0.12,
+     2.62,
+     -0.07
     ],
-    "rotY": 0.0,
-    "size": 0.2,
-    "width": 6.0,
+    "rotY": 4.3,
+    "size": 0.309,
+    "width": 7.52,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -10963,7 +11575,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -8.0,
+    "tilt": -1.5,
     "roll": 0.0,
     "keyScale": 1.5,
     "auto": true,
@@ -11268,13 +11880,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -1.5,
-     0.3,
-     -0.9
+     1.67,
+     0.64,
+     -0.07
     ],
-    "rotY": 0.0,
-    "size": 0.468,
-    "width": 3.9,
+    "rotY": -78.3,
+    "size": 0.384,
+    "width": 3.3,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -11282,7 +11894,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -60.0,
+    "tilt": -81.9,
     "roll": 0.0,
     "keyScale": 1.6,
     "auto": true,
@@ -11322,6 +11934,33 @@
      "line": 28,
      "idx": 0,
      "em": 1.659
+    },
+    {
+     "w": "물들일",
+     "from": 2061,
+     "to": 2092,
+     "key": false,
+     "line": 28,
+     "idx": 1,
+     "em": 2.483
+    },
+    {
+     "w": "이",
+     "from": 2090,
+     "to": 2100,
+     "key": false,
+     "line": 28,
+     "idx": 2,
+     "em": 0.745
+    },
+    {
+     "w": "순간",
+     "from": 2099,
+     "to": 2123,
+     "key": false,
+     "line": 28,
+     "idx": 3,
+     "em": 1.721
     }
    ],
    "transition": {
@@ -11595,13 +12234,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.68,
-     0.91,
-     -1.8
+     0.58,
+     0.93,
+     -1.58
     ],
-    "rotY": -50.6,
-    "size": 0.158,
-    "width": 1.91,
+    "rotY": -49.3,
+    "size": 0.241,
+    "width": 1.93,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -11609,7 +12248,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -1.4,
+    "tilt": -1.5,
     "roll": 0.0,
     "keyScale": 1.6,
     "auto": true,
@@ -11959,13 +12598,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     -0.74,
-     1.7,
-     -2.6
+     -1.66,
+     0.91,
+     -3.59
     ],
-    "rotY": 0.0,
-    "size": 0.14,
-    "width": 3.0,
+    "rotY": 27.2,
+    "size": 0.394,
+    "width": 4.55,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -11973,9 +12612,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -1.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -11984,6 +12623,51 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "Oh",
+     "from": 2180,
+     "to": 2194,
+     "key": false,
+     "line": 30,
+     "idx": 0,
+     "em": 1.251
+    },
+    {
+     "w": "I",
+     "from": 2193,
+     "to": 2202,
+     "key": false,
+     "line": 30,
+     "idx": 1,
+     "em": 0.351
+    },
+    {
+     "w": "like",
+     "from": 2200,
+     "to": 2210,
+     "key": false,
+     "line": 30,
+     "idx": 2,
+     "em": 2.097
+    },
+    {
+     "w": "a",
+     "from": 2208,
+     "to": 2216,
+     "key": false,
+     "line": 30,
+     "idx": 3,
+     "em": 0.677
+    },
+    {
+     "w": "little",
+     "from": 2214,
+     "to": 2222,
+     "key": false,
+     "line": 30,
+     "idx": 4,
+     "em": 3.253
+    },
     {
      "w": "drama",
      "from": 2220,
@@ -12166,13 +12850,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     0.22,
-     0.74,
-     -0.9
+     0.13,
+     0.46,
+     -0.24
     ],
-    "rotY": 0.0,
-    "size": 0.075,
-    "width": 1.25,
+    "rotY": 22.6,
+    "size": 0.108,
+    "width": 1.36,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -12180,9 +12864,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 4.7,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -12414,13 +13098,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.28,
-     1.28,
-     -1.7
+     0.53,
+     0.96,
+     -0.77
     ],
-    "rotY": 0.0,
-    "size": 0.09,
-    "width": 1.6,
+    "rotY": -17.8,
+    "size": 0.127,
+    "width": 1.93,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -12428,9 +13112,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -2.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -12439,6 +13123,51 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "Call",
+     "from": 2295,
+     "to": 2304,
+     "key": false,
+     "line": 32,
+     "idx": 0,
+     "em": 2.285
+    },
+    {
+     "w": "me",
+     "from": 2303,
+     "to": 2312,
+     "key": false,
+     "line": 32,
+     "idx": 1,
+     "em": 1.361
+    },
+    {
+     "w": "crazy,",
+     "from": 2310,
+     "to": 2326,
+     "key": false,
+     "line": 32,
+     "idx": 2,
+     "em": 3.178
+    },
+    {
+     "w": "call",
+     "from": 2325,
+     "to": 2332,
+     "key": false,
+     "line": 32,
+     "idx": 3,
+     "em": 2.251
+    },
+    {
+     "w": "it",
+     "from": 2331,
+     "to": 2339,
+     "key": false,
+     "line": 32,
+     "idx": 4,
+     "em": 0.997
+    },
     {
      "w": "Karma",
      "from": 2338,
@@ -12986,13 +13715,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.4,
-     0.04,
-     -0.4
+     0.62,
+     0.37,
+     0.31
     ],
-    "rotY": 15.0,
-    "size": 0.2,
-    "width": 3.0,
+    "rotY": 40.9,
+    "size": 0.353,
+    "width": 4.45,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -13000,9 +13729,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -90.0,
+    "tilt": -1.4,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -13011,6 +13740,42 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "you'll",
+     "from": 2405,
+     "to": 2416,
+     "key": false,
+     "line": 34,
+     "idx": 0,
+     "em": 3.34
+    },
+    {
+     "w": "be",
+     "from": 2414,
+     "to": 2421,
+     "key": false,
+     "line": 34,
+     "idx": 1,
+     "em": 1.218
+    },
+    {
+     "w": "begging",
+     "from": 2420,
+     "to": 2439,
+     "key": false,
+     "line": 34,
+     "idx": 2,
+     "em": 3.797
+    },
+    {
+     "w": "for",
+     "from": 2438,
+     "to": 2453,
+     "key": false,
+     "line": 34,
+     "idx": 3,
+     "em": 1.572
+    },
     {
      "w": "water",
      "from": 2451,
@@ -13192,13 +13957,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     1.55,
-     1.79,
-     -0.6
+     0.41,
+     1.51,
+     -0.28
     ],
-    "rotY": 0.0,
-    "size": 0.13,
-    "width": 3.0,
+    "rotY": -25.6,
+    "size": 0.174,
+    "width": 1.68,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -13206,9 +13971,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 9.7,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -13490,13 +14255,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     1.55,
-     0.98,
-     -1.29
+     1.49,
+     1.03,
+     -0.3
     ],
-    "rotY": -20.0,
-    "size": 0.152,
-    "width": 3.38,
+    "rotY": -19.1,
+    "size": 0.198,
+    "width": 0.88,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -13504,7 +14269,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 23.2,
     "roll": 0.0,
     "keyScale": 1.6,
     "auto": true,
@@ -13515,6 +14280,15 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "Imma",
+     "from": 2511,
+     "to": 2531,
+     "key": false,
+     "line": 36,
+     "idx": 0,
+     "em": 2.54
+    },
     {
      "w": "fire",
      "from": 2529,
@@ -13528,7 +14302,7 @@
      "w": "starter",
      "from": 2541,
      "to": 2588,
-     "key": false,
+     "key": true,
      "line": 36,
      "idx": 2,
      "em": 3.963
@@ -14066,13 +14840,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     1.4,
-     1.5,
-     -1.0
+     2.11,
+     0.78,
+     -1.11
     ],
-    "rotY": 0.0,
-    "size": 0.08,
-    "width": 1.6,
+    "rotY": 8.9,
+    "size": 0.291,
+    "width": 1.29,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -14080,9 +14854,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -0.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -14091,6 +14865,33 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "Work",
+     "from": 2648,
+     "to": 2667,
+     "key": false,
+     "line": 38,
+     "idx": 0,
+     "em": 2.25
+    },
+    {
+     "w": "a",
+     "from": 2665,
+     "to": 2675,
+     "key": false,
+     "line": 38,
+     "idx": 1,
+     "em": 0.677
+    },
+    {
+     "w": "lil",
+     "from": 2674,
+     "to": 2688,
+     "key": false,
+     "line": 38,
+     "idx": 2,
+     "em": 1.442
+    },
     {
      "w": "harder",
      "from": 2686,
@@ -14335,13 +15136,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     -0.58,
-     1.1,
-     -2.6
+     -0.7,
+     0.65,
+     -1.94
     ],
-    "rotY": 0.0,
-    "size": 0.12,
-    "width": 2.4,
+    "rotY": 20.8,
+    "size": 0.143,
+    "width": 1.34,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -14349,9 +15150,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 0.2,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -14360,6 +15161,24 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "Got",
+     "from": 2702,
+     "to": 2717,
+     "key": false,
+     "line": 39,
+     "idx": 0,
+     "em": 1.944
+    },
+    {
+     "w": "me",
+     "from": 2715,
+     "to": 2722,
+     "key": false,
+     "line": 39,
+     "idx": 1,
+     "em": 1.361
+    },
     {
      "w": "fired",
      "from": 2720,
@@ -14373,7 +15192,7 @@
      "w": "up",
      "from": 2735,
      "to": 2744,
-     "key": false,
+     "key": true,
      "line": 39,
      "idx": 3,
      "em": 1.161
@@ -14591,13 +15410,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.8,
-     3.6,
-     -9.4
+     0.96,
+     2.55,
+     -8.55
     ],
-    "rotY": 0.0,
-    "size": 0.4,
-    "width": 3.0,
+    "rotY": 3.3,
+    "size": 0.596,
+    "width": 7.5,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -14605,9 +15424,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 25.9,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -14616,6 +15435,42 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "Imma",
+     "from": 2743,
+     "to": 2763,
+     "key": false,
+     "line": 40,
+     "idx": 0,
+     "em": 2.54
+    },
+    {
+     "w": "burn",
+     "from": 2762,
+     "to": 2772,
+     "key": false,
+     "line": 40,
+     "idx": 1,
+     "em": 2.285
+    },
+    {
+     "w": "it",
+     "from": 2770,
+     "to": 2780,
+     "key": false,
+     "line": 40,
+     "idx": 2,
+     "em": 0.997
+    },
+    {
+     "w": "down",
+     "from": 2779,
+     "to": 2798,
+     "key": false,
+     "line": 40,
+     "idx": 3,
+     "em": 2.487
+    },
     {
      "w": "like",
      "from": 2796,
@@ -14822,8 +15677,71 @@
    ],
    "kick": 0.8,
    "puppets": [],
-   "lyrics": null,
-   "words": [],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     3.39,
+     1.31,
+     -1.59
+    ],
+    "rotY": -45.6,
+    "size": 0.326,
+    "width": 1.74,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null,
+    "style": "v2",
+    "tilt": -4.2,
+    "roll": 0.0,
+    "keyScale": 1.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "from": 2813,
+     "to": 2831,
+     "key": false,
+     "line": 41,
+     "idx": 0,
+     "em": 1.61
+    },
+    {
+     "w": "a",
+     "from": 2830,
+     "to": 2833,
+     "key": false,
+     "line": 41,
+     "idx": 1,
+     "em": 0.677
+    },
+    {
+     "w": "fire",
+     "from": 2832,
+     "to": 2840,
+     "key": false,
+     "line": 41,
+     "idx": 2,
+     "em": 2.017
+    },
+    {
+     "w": "starter",
+     "from": 2839,
+     "to": 2863,
+     "key": false,
+     "line": 41,
+     "idx": 3,
+     "em": 3.963
+    }
+   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -15105,13 +16023,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     2.9,
-     0.59,
-     -2.6
+     4.29,
+     0.9,
+     -1.99
     ],
-    "rotY": 0.0,
-    "size": 0.163,
-    "width": 4.0,
+    "rotY": 1.8,
+    "size": 0.213,
+    "width": 1.13,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -15119,9 +16037,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -15.0,
+    "tilt": -0.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -15401,13 +16319,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     0.34,
-     1.57,
-     -0.8
+     -0.63,
+     1.47,
+     -0.03
     ],
-    "rotY": 0.0,
-    "size": 0.1,
-    "width": 1.8,
+    "rotY": 35.0,
+    "size": 0.185,
+    "width": 2.33,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -15417,7 +16335,7 @@
     "style": "v2",
     "tilt": 0.0,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -15688,13 +16606,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     -0.65,
-     1.63,
-     -0.8
+     -1.26,
+     1.13,
+     -0.9
     ],
-    "rotY": 0.0,
-    "size": 0.1,
-    "width": 1.8,
+    "rotY": -3.5,
+    "size": 0.208,
+    "width": 2.61,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -15702,9 +16620,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 0.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -15959,13 +16877,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     1.23,
-     1.24,
-     -3.43
+     0.12,
+     1.19,
+     0.14
     ],
-    "rotY": 30.0,
-    "size": 0.26,
-    "width": 6.5,
+    "rotY": -76.3,
+    "size": 0.281,
+    "width": 1.25,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -15973,9 +16891,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 14.5,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -16488,13 +17406,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     2.02,
-     3.58,
-     0.4
+     0.24,
+     4.93,
+     2.16
     ],
-    "rotY": 0.0,
-    "size": 0.338,
-    "width": 9.38,
+    "rotY": 4.6,
+    "size": 0.391,
+    "width": 4.52,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -16502,9 +17420,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -40.0,
+    "tilt": -24.8,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {
@@ -17175,13 +18093,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.6,
-     1.02,
-     -1.2
+     1.35,
+     0.95,
+     -0.48
     ],
-    "rotY": 0.0,
-    "size": 0.212,
-    "width": 2.79,
+    "rotY": 8.3,
+    "size": 0.157,
+    "width": 1.74,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -17189,7 +18107,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 0.1,
     "roll": 0.0,
     "keyScale": 1.6,
     "auto": true,
@@ -17520,13 +18438,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     0.21,
-     2.59,
-     -1.4
+     -0.09,
+     1.84,
+     -0.17
     ],
-    "rotY": 0.0,
-    "size": 0.315,
-    "width": 7.65,
+    "rotY": 4.4,
+    "size": 0.395,
+    "width": 7.02,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -17534,9 +18452,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -1.4,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {
@@ -17850,13 +18768,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     0.27,
-     1.19,
-     -1.2
+     0.1,
+     0.78,
+     -0.16
     ],
-    "rotY": 0.0,
-    "size": 0.203,
-    "width": 3.62,
+    "rotY": 2.4,
+    "size": 0.15,
+    "width": 2.8,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -17900,10 +18818,28 @@
    },
    "words": [
     {
+     "w": "Let’s",
+     "from": 3229,
+     "to": 3246,
+     "key": false,
+     "line": 52,
+     "idx": 0,
+     "em": 2.914
+    },
+    {
+     "w": "go",
+     "from": 3245,
+     "to": 3255,
+     "key": false,
+     "line": 52,
+     "idx": 1,
+     "em": 1.088
+    },
+    {
      "w": "삐걱",
      "from": 3254,
      "to": 3266,
-     "key": false,
+     "key": true,
      "line": 52,
      "idx": 2,
      "em": 1.519
@@ -17912,7 +18848,7 @@
      "w": "삐-삐걱",
      "from": 3265,
      "to": 3294,
-     "key": false,
+     "key": true,
      "line": 52,
      "idx": 3,
      "em": 2.767
@@ -18161,13 +19097,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.24,
-     0.99,
-     -0.7
+     -0.36,
+     0.75,
+     0.1
     ],
-    "rotY": 0.0,
-    "size": 0.216,
-    "width": 4.32,
+    "rotY": 11.8,
+    "size": 0.376,
+    "width": 1.67,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -18175,46 +19111,31 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -0.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
-    "subs": {
-     "52": {
-      "roma": "Let's go ppigeok ppi-ppigeok eoneusae lose control",
-      "en": "let's go, creak, cr-creak, and suddenly lose control",
-      "romaEm": [
-       2.914,
-       1.088,
-       3.697,
-       5.638,
-       4.855,
-       2.266,
-       3.79
-      ],
-      "enEm": [
-       2.818,
-       1.453,
-       3.193,
-       4.676,
-       1.866,
-       4.742,
-       2.266,
-       3.79
-      ]
-     }
-    },
+    "subs": {},
     "reveal": null,
     "dim": null,
     "mirror": null
    },
    "words": [
     {
+     "w": "어느새",
+     "from": 3293,
+     "to": 3320,
+     "key": false,
+     "line": 52,
+     "idx": 4,
+     "em": 2.486
+    },
+    {
      "w": "lose",
      "from": 3318,
      "to": 3325,
-     "key": false,
+     "key": true,
      "line": 52,
      "idx": 5,
      "em": 2.266
@@ -18223,7 +19144,7 @@
      "w": "control",
      "from": 3323,
      "to": 3338,
-     "key": false,
+     "key": true,
      "line": 52,
      "idx": 6,
      "em": 3.79
@@ -18465,13 +19386,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.37,
-     1.1,
-     0.0
+     -0.03,
+     1.85,
+     0.2
     ],
-    "rotY": 0.0,
-    "size": 0.3,
-    "width": 8.0,
+    "rotY": 3.2,
+    "size": 0.4,
+    "width": 8.39,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -18479,9 +19400,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 13.2,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -18491,10 +19412,19 @@
    },
    "words": [
     {
+     "w": "자",
+     "from": 3337,
+     "to": 3357,
+     "key": false,
+     "line": 53,
+     "idx": 0,
+     "em": 0.893
+    },
+    {
      "w": "beat",
      "from": 3356,
      "to": 3364,
-     "key": false,
+     "key": true,
      "line": 53,
      "idx": 1,
      "em": 2.498
@@ -18512,7 +19442,7 @@
      "w": "beat-beat",
      "from": 3375,
      "to": 3397,
-     "key": false,
+     "key": true,
      "line": 53,
      "idx": 3,
      "em": 5.507
@@ -18759,13 +19689,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     0.51,
-     0.96,
-     -1.4
+     0.07,
+     1.06,
+     -0.44
     ],
-    "rotY": 0.0,
-    "size": 0.234,
-    "width": 3.8,
+    "rotY": -12.8,
+    "size": 0.177,
+    "width": 2.85,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -18773,7 +19703,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -3.4,
     "roll": 0.0,
     "keyScale": 1.6,
     "auto": true,
@@ -19065,13 +19995,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     -0.55,
-     6.52,
-     -10.4
+     0.68,
+     6.49,
+     -9.4
     ],
-    "rotY": 0.0,
-    "size": 0.125,
-    "width": 2.75,
+    "rotY": -49.1,
+    "size": 0.138,
+    "width": 2.9,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -19079,9 +20009,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -10.8,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {
@@ -19380,13 +20310,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     0.75,
-     15.53,
-     -10.4
+     0.94,
+     10.39,
+     -8.92
     ],
-    "rotY": 0.0,
-    "size": 0.656,
-    "width": 11.25,
+    "rotY": 33.2,
+    "size": 0.3,
+    "width": 5.59,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -19394,9 +20324,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 45.0,
+    "tilt": 71.9,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {
@@ -19680,13 +20610,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     2.1,
-     14.0,
-     -10.6
+     1.75,
+     13.58,
+     -10.35
     ],
-    "rotY": 0.0,
-    "size": 0.21,
-    "width": 5.16,
+    "rotY": 33.8,
+    "size": 0.366,
+    "width": 3.53,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -19694,9 +20624,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 2.6,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {
@@ -19753,6 +20683,15 @@
      "line": 59,
      "idx": 1,
      "em": 0.841
+    },
+    {
+     "w": "Sit",
+     "from": 3596,
+     "to": 3611,
+     "key": false,
+     "line": 60,
+     "idx": 0,
+     "em": 1.719
     }
    ],
    "transition": {
@@ -20012,13 +20951,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     0.4,
-     13.0,
-     -9.4
+     1.74,
+     13.07,
+     -10.35
     ],
-    "rotY": 0.0,
-    "size": 0.182,
-    "width": 3.12,
+    "rotY": 33.9,
+    "size": 0.363,
+    "width": 4.58,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -20026,9 +20965,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 2.7,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -20284,13 +21223,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     2.4,
-     16.87,
-     -12.4
+     2.15,
+     16.49,
+     -10.86
     ],
-    "rotY": 0.0,
-    "size": 0.36,
-    "width": 7.56,
+    "rotY": 39.1,
+    "size": 0.606,
+    "width": 5.83,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -20298,9 +21237,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 15.2,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -20309,6 +21248,78 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "Gonna",
+     "from": 3630,
+     "to": 3636,
+     "key": false,
+     "line": 61,
+     "idx": 0,
+     "em": 3.184
+    },
+    {
+     "w": "take",
+     "from": 3635,
+     "to": 3639,
+     "key": false,
+     "line": 61,
+     "idx": 1,
+     "em": 2.459
+    },
+    {
+     "w": "it",
+     "from": 3638,
+     "to": 3646,
+     "key": false,
+     "line": 61,
+     "idx": 2,
+     "em": 0.997
+    },
+    {
+     "w": "gonna",
+     "from": 3644,
+     "to": 3650,
+     "key": false,
+     "line": 61,
+     "idx": 3,
+     "em": 2.931
+    },
+    {
+     "w": "take",
+     "from": 3648,
+     "to": 3655,
+     "key": false,
+     "line": 61,
+     "idx": 4,
+     "em": 2.459
+    },
+    {
+     "w": "ooh!",
+     "from": 3653,
+     "to": 3657,
+     "key": false,
+     "line": 61,
+     "idx": 5,
+     "em": 1.989
+    },
+    {
+     "w": "Ooh",
+     "from": 3655,
+     "to": 3659,
+     "key": false,
+     "line": 62,
+     "idx": 0,
+     "em": 1.805
+    },
+    {
+     "w": "ooh",
+     "from": 3658,
+     "to": 3666,
+     "key": false,
+     "line": 62,
+     "idx": 1,
+     "em": 1.63
+    },
     {
      "w": "When",
      "from": 3664,
@@ -20583,13 +21594,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -1.68,
-     20.44,
-     -12.6
+     2.09,
+     19.29,
+     -10.34
     ],
-    "rotY": 0.0,
-    "size": 0.4,
-    "width": 5.0,
+    "rotY": 8.1,
+    "size": 0.814,
+    "width": 11.06,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -20597,9 +21608,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 67.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -20609,6 +21620,78 @@
    },
    "words": [
     {
+     "w": "Better",
+     "from": 3708,
+     "to": 3724,
+     "key": false,
+     "line": 64,
+     "idx": 0,
+     "em": 3.559
+    },
+    {
+     "w": "be",
+     "from": 3722,
+     "to": 3727,
+     "key": false,
+     "line": 64,
+     "idx": 1,
+     "em": 1.218
+    },
+    {
+     "w": "ready",
+     "from": 3725,
+     "to": 3731,
+     "key": false,
+     "line": 64,
+     "idx": 2,
+     "em": 2.926
+    },
+    {
+     "w": "for",
+     "from": 3730,
+     "to": 3739,
+     "key": false,
+     "line": 64,
+     "idx": 3,
+     "em": 1.572
+    },
+    {
+     "w": "when",
+     "from": 3737,
+     "to": 3745,
+     "key": false,
+     "line": 64,
+     "idx": 4,
+     "em": 2.454
+    },
+    {
+     "w": "I",
+     "from": 3743,
+     "to": 3747,
+     "key": false,
+     "line": 64,
+     "idx": 5,
+     "em": 0.351
+    },
+    {
+     "w": "take",
+     "from": 3745,
+     "to": 3749,
+     "key": false,
+     "line": 64,
+     "idx": 6,
+     "em": 2.459
+    },
+    {
+     "w": "it",
+     "from": 3748,
+     "to": 3755,
+     "key": false,
+     "line": 64,
+     "idx": 7,
+     "em": 0.997
+    },
+    {
      "w": "higher",
      "from": 3754,
      "to": 3757,
@@ -20616,6 +21699,24 @@
      "line": 64,
      "idx": 8,
      "em": 3.023
+    },
+    {
+     "w": "Ooh",
+     "from": 3756,
+     "to": 3760,
+     "key": false,
+     "line": 65,
+     "idx": 0,
+     "em": 1.805
+    },
+    {
+     "w": "ooh",
+     "from": 3758,
+     "to": 3767,
+     "key": false,
+     "line": 65,
+     "idx": 1,
+     "em": 1.63
     }
    ],
    "transition": {
@@ -20794,13 +21895,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     0.68,
-     21.88,
-     -10.0
+     1.25,
+     21.67,
+     -9.75
     ],
-    "rotY": 0.0,
-    "size": 0.06,
-    "width": 1.0,
+    "rotY": 16.5,
+    "size": 0.094,
+    "width": 1.18,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -20808,9 +21909,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 3.6,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -20819,6 +21920,42 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "When",
+     "from": 3766,
+     "to": 3782,
+     "key": false,
+     "line": 66,
+     "idx": 0,
+     "em": 2.386
+    },
+    {
+     "w": "I",
+     "from": 3781,
+     "to": 3788,
+     "key": false,
+     "line": 66,
+     "idx": 1,
+     "em": 0.351
+    },
+    {
+     "w": "start",
+     "from": 3786,
+     "to": 3804,
+     "key": false,
+     "line": 66,
+     "idx": 2,
+     "em": 2.912
+    },
+    {
+     "w": "the",
+     "from": 3802,
+     "to": 3809,
+     "key": false,
+     "line": 66,
+     "idx": 3,
+     "em": 1.73
+    },
     {
      "w": "fire",
      "from": 3808,
@@ -21074,13 +22211,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     1.07,
-     26.53,
-     -12.4
+     2.3,
+     27.07,
+     -10.74
     ],
-    "rotY": 0.0,
-    "size": 0.3,
-    "width": 5.0,
+    "rotY": 39.4,
+    "size": 0.243,
+    "width": 4.53,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -21088,9 +22225,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 7.8,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -21100,10 +22237,64 @@
    },
    "words": [
     {
+     "w": "Better",
+     "from": 3817,
+     "to": 3834,
+     "key": false,
+     "line": 67,
+     "idx": 0,
+     "em": 3.559
+    },
+    {
+     "w": "be",
+     "from": 3832,
+     "to": 3837,
+     "key": false,
+     "line": 67,
+     "idx": 1,
+     "em": 1.218
+    },
+    {
+     "w": "ready",
+     "from": 3836,
+     "to": 3841,
+     "key": false,
+     "line": 67,
+     "idx": 2,
+     "em": 2.926
+    },
+    {
+     "w": "for",
+     "from": 3840,
+     "to": 3849,
+     "key": false,
+     "line": 67,
+     "idx": 3,
+     "em": 1.572
+    },
+    {
+     "w": "when",
+     "from": 3847,
+     "to": 3855,
+     "key": false,
+     "line": 67,
+     "idx": 4,
+     "em": 2.454
+    },
+    {
+     "w": "I",
+     "from": 3853,
+     "to": 3873,
+     "key": false,
+     "line": 67,
+     "idx": 5,
+     "em": 0.351
+    },
+    {
      "w": "take",
      "from": 3871,
      "to": 3879,
-     "key": false,
+     "key": true,
      "line": 67,
      "idx": 6,
      "em": 2.459
@@ -21112,7 +22303,7 @@
      "w": "that",
      "from": 3877,
      "to": 3887,
-     "key": false,
+     "key": true,
      "line": 67,
      "idx": 7,
      "em": 2.405
@@ -21121,7 +22312,7 @@
      "w": "take",
      "from": 3886,
      "to": 3890,
-     "key": false,
+     "key": true,
      "line": 67,
      "idx": 8,
      "em": 2.459
@@ -21130,7 +22321,7 @@
      "w": "that",
      "from": 3889,
      "to": 3893,
-     "key": false,
+     "key": true,
      "line": 67,
      "idx": 9,
      "em": 2.405
@@ -21350,13 +22541,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -2.03,
-     29.51,
-     -10.4
+     3.63,
+     27.34,
+     -9.35
     ],
-    "rotY": 0.0,
-    "size": 0.486,
-    "width": 8.1,
+    "rotY": -17.8,
+    "size": 0.895,
+    "width": 3.98,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -21364,9 +22555,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 8.6,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -21376,13 +22567,31 @@
    },
    "words": [
     {
+     "w": "I'm",
+     "from": 3892,
+     "to": 3909,
+     "key": false,
+     "line": 68,
+     "idx": 0,
+     "em": 1.61
+    },
+    {
      "w": "insane",
      "from": 3908,
      "to": 3942,
-     "key": false,
+     "key": true,
      "line": 68,
      "idx": 1,
      "em": 3.425
+    },
+    {
+     "w": "Yeah",
+     "from": 3941,
+     "to": 3968,
+     "key": false,
+     "line": 69,
+     "idx": 0,
+     "em": 2.41
     }
    ],
    "transition": {
@@ -21612,13 +22821,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     1.85,
-     29.89,
-     -10.6
+     1.76,
+     29.45,
+     -10.45
     ],
-    "rotY": 0.0,
-    "size": 0.105,
-    "width": 2.4,
+    "rotY": 32.9,
+    "size": 0.112,
+    "width": 1.44,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -21626,9 +22835,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -0.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -21638,10 +22847,37 @@
    },
    "words": [
     {
+     "w": "I",
+     "from": 3966,
+     "to": 3971,
+     "key": false,
+     "line": 69,
+     "idx": 1,
+     "em": 0.351
+    },
+    {
+     "w": "know",
+     "from": 3970,
+     "to": 3981,
+     "key": false,
+     "line": 69,
+     "idx": 2,
+     "em": 2.455
+    },
+    {
+     "w": "you",
+     "from": 3979,
+     "to": 3988,
+     "key": false,
+     "line": 69,
+     "idx": 3,
+     "em": 1.789
+    },
+    {
      "w": "like",
      "from": 3986,
      "to": 3995,
-     "key": false,
+     "key": true,
      "line": 69,
      "idx": 4,
      "em": 2.097
@@ -21650,7 +22886,7 @@
      "w": "it",
      "from": 3993,
      "to": 4002,
-     "key": false,
+     "key": true,
      "line": 69,
      "idx": 5,
      "em": 0.997
@@ -21659,7 +22895,7 @@
      "w": "that",
      "from": 4001,
      "to": 4014,
-     "key": false,
+     "key": true,
      "line": 69,
      "idx": 6,
      "em": 2.405
@@ -21856,8 +23092,53 @@
      "ease": "inOut"
     }
    ],
-   "lyrics": null,
-   "words": [],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     0.09,
+     30.31,
+     -10.49
+    ],
+    "rotY": 177.7,
+    "size": 0.282,
+    "width": 3.55,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null,
+    "style": "v2",
+    "tilt": 0.1,
+    "roll": 0.0,
+    "keyScale": 1.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "way",
+     "from": 4013,
+     "to": 4041,
+     "key": false,
+     "line": 69,
+     "idx": 7,
+     "em": 2.013
+    },
+    {
+     "w": "Chaos",
+     "from": 4039,
+     "to": 4086,
+     "key": false,
+     "line": 70,
+     "idx": 0,
+     "em": 2.896
+    }
+   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -22113,13 +23394,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.3,
-     29.7,
-     -10.6
+     1.4,
+     29.64,
+     -10.44
     ],
-    "rotY": 0.0,
-    "size": 0.06,
-    "width": 0.9,
+    "rotY": 32.0,
+    "size": 0.091,
+    "width": 0.86,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -22129,7 +23410,7 @@
     "style": "v2",
     "tilt": 0.0,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -22138,6 +23419,42 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "running",
+     "from": 4088,
+     "to": 4098,
+     "key": false,
+     "line": 70,
+     "idx": 1,
+     "em": 3.766
+    },
+    {
+     "w": "wild",
+     "from": 4096,
+     "to": 4114,
+     "key": false,
+     "line": 70,
+     "idx": 2,
+     "em": 2.268
+    },
+    {
+     "w": "in",
+     "from": 4112,
+     "to": 4121,
+     "key": false,
+     "line": 70,
+     "idx": 3,
+     "em": 0.977
+    },
+    {
+     "w": "my",
+     "from": 4120,
+     "to": 4127,
+     "key": false,
+     "line": 70,
+     "idx": 4,
+     "em": 1.348
+    },
     {
      "w": "veins",
      "from": 4125,
@@ -22695,13 +24012,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     1.6,
-     0.2,
-     -2.4
+     1.2,
+     -1.96,
+     0.19
     ],
-    "rotY": 0.0,
-    "size": 0.27,
-    "width": 3.4,
+    "rotY": -7.6,
+    "size": 0.229,
+    "width": 1.44,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -22709,9 +24026,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 35.0,
+    "tilt": 48.3,
     "roll": 0.0,
-    "keyScale": 2.0,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -22728,6 +24045,42 @@
      "line": 72,
      "idx": 0,
      "em": 1.659
+    },
+    {
+     "w": "물들일",
+     "from": 4257,
+     "to": 4282,
+     "key": false,
+     "line": 72,
+     "idx": 1,
+     "em": 2.483
+    },
+    {
+     "w": "이",
+     "from": 4280,
+     "to": 4288,
+     "key": false,
+     "line": 72,
+     "idx": 2,
+     "em": 0.745
+    },
+    {
+     "w": "순간",
+     "from": 4286,
+     "to": 4304,
+     "key": false,
+     "line": 72,
+     "idx": 3,
+     "em": 1.721
+    },
+    {
+     "w": "Imma",
+     "from": 4303,
+     "to": 4318,
+     "key": false,
+     "line": 73,
+     "idx": 0,
+     "em": 2.54
     }
    ],
    "transition": {
@@ -22826,8 +24179,44 @@
      "ease": "inOut"
     }
    ],
-   "lyrics": null,
-   "words": [],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -0.55,
+     0.79,
+     0.17
+    ],
+    "rotY": 10.3,
+    "size": 0.309,
+    "width": 3.89,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null,
+    "style": "v2",
+    "tilt": 0.1,
+    "roll": 0.0,
+    "keyScale": 1.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "start",
+     "from": 4317,
+     "to": 4337,
+     "key": false,
+     "line": 73,
+     "idx": 1,
+     "em": 2.912
+    }
+   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -22952,13 +24341,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.9,
-     0.04,
-     0.8
+     0.15,
+     1.17,
+     0.08
     ],
-    "rotY": 0.0,
-    "size": 0.12,
-    "width": 1.8,
+    "rotY": 4.3,
+    "size": 0.232,
+    "width": 2.92,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -22966,9 +24355,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -80.0,
+    "tilt": 5.3,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -22976,7 +24365,53 @@
     "dim": null,
     "mirror": null
    },
-   "words": [],
+   "words": [
+    {
+     "w": "a",
+     "from": 4336,
+     "to": 4339,
+     "key": false,
+     "line": 73,
+     "idx": 2,
+     "em": 0.677
+    },
+    {
+     "w": "fire",
+     "from": 4338,
+     "to": 4353,
+     "key": false,
+     "line": 73,
+     "idx": 3,
+     "em": 2.017
+    },
+    {
+     "w": "Oh",
+     "from": 4352,
+     "to": 4359,
+     "key": false,
+     "line": 74,
+     "idx": 0,
+     "em": 1.251
+    },
+    {
+     "w": "I",
+     "from": 4358,
+     "to": 4361,
+     "key": false,
+     "line": 74,
+     "idx": 1,
+     "em": 0.351
+    },
+    {
+     "w": "like",
+     "from": 4360,
+     "to": 4374,
+     "key": false,
+     "line": 74,
+     "idx": 2,
+     "em": 2.097
+    }
+   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -23088,13 +24523,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.5,
-     0.04,
-     0.6
+     -0.95,
+     0.26,
+     0.45
     ],
-    "rotY": 0.0,
-    "size": 0.08,
-    "width": 1.4,
+    "rotY": 33.8,
+    "size": 0.176,
+    "width": 0.78,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -23102,9 +24537,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -80.0,
+    "tilt": 0.0,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -23113,6 +24548,51 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "a",
+     "from": 4373,
+     "to": 4376,
+     "key": false,
+     "line": 74,
+     "idx": 3,
+     "em": 0.677
+    },
+    {
+     "w": "little",
+     "from": 4375,
+     "to": 4393,
+     "key": false,
+     "line": 74,
+     "idx": 4,
+     "em": 3.253
+    },
+    {
+     "w": "drama",
+     "from": 4391,
+     "to": 4414,
+     "key": false,
+     "line": 74,
+     "idx": 5,
+     "em": 3.162
+    },
+    {
+     "w": "Call",
+     "from": 4413,
+     "to": 4428,
+     "key": false,
+     "line": 75,
+     "idx": 0,
+     "em": 2.285
+    },
+    {
+     "w": "the",
+     "from": 4426,
+     "to": 4435,
+     "key": false,
+     "line": 75,
+     "idx": 1,
+     "em": 1.73
+    },
     {
      "w": "fire",
      "from": 4433,
@@ -23200,8 +24680,53 @@
      "ease": "inOut"
     }
    ],
-   "lyrics": null,
-   "words": [],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     1.25,
+     1.7,
+     -0.5
+    ],
+    "rotY": -9.5,
+    "size": 0.36,
+    "width": 4.53,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null,
+    "style": "v2",
+    "tilt": -9.2,
+    "roll": 0.0,
+    "keyScale": 1.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "fighter",
+     "from": 4447,
+     "to": 4468,
+     "key": false,
+     "line": 75,
+     "idx": 3,
+     "em": 3.676
+    },
+    {
+     "w": "Call",
+     "from": 4467,
+     "to": 4483,
+     "key": false,
+     "line": 76,
+     "idx": 0,
+     "em": 2.285
+    }
+   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -23268,13 +24793,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.6,
-     0.04,
-     0.2
+     0.75,
+     0.08,
+     0.03
     ],
-    "rotY": 0.0,
-    "size": 0.12,
-    "width": 1.6,
+    "rotY": 12.1,
+    "size": 0.105,
+    "width": 1.01,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -23282,9 +24807,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -80.0,
+    "tilt": -5.2,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -23294,13 +24819,31 @@
    },
    "words": [
     {
+     "w": "me",
+     "from": 4482,
+     "to": 4490,
+     "key": false,
+     "line": 76,
+     "idx": 1,
+     "em": 1.361
+    },
+    {
      "w": "crazy,",
      "from": 4488,
      "to": 4525,
-     "key": false,
+     "key": true,
      "line": 76,
      "idx": 2,
      "em": 3.178
+    },
+    {
+     "w": "call",
+     "from": 4523,
+     "to": 4532,
+     "key": false,
+     "line": 76,
+     "idx": 3,
+     "em": 2.251
     }
    ],
    "transition": {
@@ -23401,13 +24944,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     -0.7,
-     0.6,
-     -0.3
+     -0.46,
+     -0.61,
+     0.35
     ],
-    "rotY": 0.0,
-    "size": 0.06,
-    "width": 1.0,
+    "rotY": -0.2,
+    "size": 0.134,
+    "width": 3.27,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -23415,9 +24958,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 0.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -23426,6 +24969,15 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "it",
+     "from": 4530,
+     "to": 4539,
+     "key": false,
+     "line": 76,
+     "idx": 4,
+     "em": 0.997
+    },
     {
      "w": "Karma",
      "from": 4538,
@@ -23558,13 +25110,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.04,
-     0.28,
-     -0.6
+     0.99,
+     0.55,
+     0.04
     ],
-    "rotY": 0.0,
-    "size": 0.135,
-    "width": 3.3,
+    "rotY": -18.6,
+    "size": 0.221,
+    "width": 1.47,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -23572,9 +25124,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": -20.0,
+    "tilt": -4.4,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -23627,6 +25179,15 @@
      "line": 77,
      "idx": 4,
      "em": 1.679
+    },
+    {
+     "w": "you'll",
+     "from": 4599,
+     "to": 4616,
+     "key": false,
+     "line": 78,
+     "idx": 0,
+     "em": 3.34
     }
    ],
    "transition": {
@@ -23745,13 +25306,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.27,
-     0.21,
-     -0.3
+     0.39,
+     0.03,
+     -0.4
     ],
-    "rotY": 0.0,
-    "size": 0.05,
-    "width": 0.8,
+    "rotY": 8.3,
+    "size": 0.094,
+    "width": 1.18,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -23759,9 +25320,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -14.3,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -23770,6 +25331,33 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "be",
+     "from": 4614,
+     "to": 4620,
+     "key": false,
+     "line": 78,
+     "idx": 1,
+     "em": 1.218
+    },
+    {
+     "w": "begging",
+     "from": 4618,
+     "to": 4633,
+     "key": false,
+     "line": 78,
+     "idx": 2,
+     "em": 3.797
+    },
+    {
+     "w": "for",
+     "from": 4631,
+     "to": 4647,
+     "key": false,
+     "line": 78,
+     "idx": 3,
+     "em": 1.572
+    },
     {
      "w": "water",
      "from": 4646,
@@ -24112,13 +25700,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.1,
-     -0.16,
-     0.4
+     0.21,
+     -0.13,
+     0.25
     ],
-    "rotY": 0.0,
-    "size": 0.203,
-    "width": 4.06,
+    "rotY": -32.5,
+    "size": 0.25,
+    "width": 3.15,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -24126,7 +25714,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -9.3,
     "roll": 0.0,
     "keyScale": 1.6,
     "auto": true,
@@ -24258,13 +25846,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -4.71,
-     3.35,
-     -13.94
+     0.02,
+     1.22,
+     -0.03
     ],
-    "rotY": 15.0,
-    "size": 0.75,
-    "width": 12.0,
+    "rotY": 19.9,
+    "size": 0.231,
+    "width": 2.91,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -24272,9 +25860,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 9.4,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -24438,13 +26026,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.17,
-     0.04,
-     -0.2
+     1.0,
+     0.6,
+     0.0
     ],
-    "rotY": 0.0,
-    "size": 0.203,
-    "width": 3.38,
+    "rotY": -17.6,
+    "size": 0.186,
+    "width": 1.49,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -24452,7 +26040,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -4.5,
     "roll": 0.0,
     "keyScale": 1.6,
     "auto": true,
@@ -24463,6 +26051,60 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "Oh",
+     "from": 4818,
+     "to": 4840,
+     "key": false,
+     "line": 82,
+     "idx": 0,
+     "em": 1.251
+    },
+    {
+     "w": "I",
+     "from": 4838,
+     "to": 4844,
+     "key": false,
+     "line": 82,
+     "idx": 1,
+     "em": 0.351
+    },
+    {
+     "w": "like",
+     "from": 4842,
+     "to": 4854,
+     "key": false,
+     "line": 82,
+     "idx": 2,
+     "em": 2.097
+    },
+    {
+     "w": "a",
+     "from": 4853,
+     "to": 4856,
+     "key": false,
+     "line": 82,
+     "idx": 3,
+     "em": 0.677
+    },
+    {
+     "w": "little",
+     "from": 4855,
+     "to": 4864,
+     "key": false,
+     "line": 82,
+     "idx": 4,
+     "em": 3.253
+    },
+    {
+     "w": "drama",
+     "from": 4863,
+     "to": 4882,
+     "key": false,
+     "line": 82,
+     "idx": 5,
+     "em": 3.162
+    },
     {
      "w": "Call",
      "from": 4880,
@@ -24545,8 +26187,62 @@
    ],
    "kick": 0.8,
    "puppets": [],
-   "lyrics": null,
-   "words": [],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -0.28,
+     2.28,
+     -0.87
+    ],
+    "rotY": 14.5,
+    "size": 0.709,
+    "width": 6.83,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null,
+    "style": "v2",
+    "tilt": -7.4,
+    "roll": 0.0,
+    "keyScale": 1.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "Call",
+     "from": 4928,
+     "to": 4946,
+     "key": false,
+     "line": 84,
+     "idx": 0,
+     "em": 2.285
+    },
+    {
+     "w": "me",
+     "from": 4944,
+     "to": 4950,
+     "key": false,
+     "line": 84,
+     "idx": 1,
+     "em": 1.361
+    },
+    {
+     "w": "crazy,",
+     "from": 4949,
+     "to": 4965,
+     "key": false,
+     "line": 84,
+     "idx": 2,
+     "em": 3.178
+    }
+   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -24649,13 +26345,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     -0.7,
      0.55,
-     -0.3
+     0.31,
+     0.03
     ],
-    "rotY": 0.0,
-    "size": 0.06,
-    "width": 1.0,
+    "rotY": 6.6,
+    "size": 0.176,
+    "width": 1.17,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -24663,9 +26359,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 0.1,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -24674,6 +26370,24 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "call",
+     "from": 4964,
+     "to": 4971,
+     "key": false,
+     "line": 84,
+     "idx": 3,
+     "em": 2.251
+    },
+    {
+     "w": "it",
+     "from": 4970,
+     "to": 4978,
+     "key": false,
+     "line": 84,
+     "idx": 4,
+     "em": 0.997
+    },
     {
      "w": "Karma",
      "from": 4976,
@@ -24762,13 +26476,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     0.76,
-     0.54,
-     -1.8
+     0.99,
+     0.29,
+     -1.44
     ],
-    "rotY": 0.0,
-    "size": 0.08,
-    "width": 1.0,
+    "rotY": 5.6,
+    "size": 0.122,
+    "width": 1.41,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -24776,9 +26490,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -14.2,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -24787,6 +26501,51 @@
     "mirror": null
    },
    "words": [
+    {
+     "w": "If",
+     "from": 4991,
+     "to": 4996,
+     "key": false,
+     "line": 85,
+     "idx": 0,
+     "em": 0.923
+    },
+    {
+     "w": "you",
+     "from": 4994,
+     "to": 5005,
+     "key": false,
+     "line": 85,
+     "idx": 1,
+     "em": 1.789
+    },
+    {
+     "w": "can't",
+     "from": 5003,
+     "to": 5017,
+     "key": false,
+     "line": 85,
+     "idx": 2,
+     "em": 2.892
+    },
+    {
+     "w": "take",
+     "from": 5016,
+     "to": 5022,
+     "key": false,
+     "line": 85,
+     "idx": 3,
+     "em": 2.459
+    },
+    {
+     "w": "the",
+     "from": 5021,
+     "to": 5035,
+     "key": false,
+     "line": 85,
+     "idx": 4,
+     "em": 1.73
+    },
     {
      "w": "heat",
      "from": 5034,
@@ -25059,13 +26818,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     -1.35,
-     -1.74,
-     -0.2
+     -0.04,
+     -1.83,
+     0.36
     ],
-    "rotY": 0.0,
-    "size": 0.195,
-    "width": 3.6,
+    "rotY": 21.9,
+    "size": 0.218,
+    "width": 2.96,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -25073,9 +26832,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": -8.8,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -25249,13 +27008,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     0.5,
-     -4.23,
-     1.3
+     0.21,
+     -3.82,
+     0.86
     ],
-    "rotY": 18.3,
-    "size": 0.102,
-    "width": 2.03,
+    "rotY": 24.0,
+    "size": 0.195,
+    "width": 2.94,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -25263,7 +27022,7 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 45.7,
+    "tilt": 45.8,
     "roll": 0.0,
     "keyScale": 1.6,
     "auto": true,
@@ -25308,6 +27067,24 @@
      "key": true,
      "line": 87,
      "idx": 3,
+     "em": 2.017
+    },
+    {
+     "w": "Imma",
+     "from": 5153,
+     "to": 5170,
+     "key": false,
+     "line": 88,
+     "idx": 0,
+     "em": 2.54
+    },
+    {
+     "w": "fire",
+     "from": 5168,
+     "to": 5185,
+     "key": true,
+     "line": 88,
+     "idx": 1,
      "em": 2.017
     }
    ],
@@ -25412,13 +27189,13 @@
    "lyrics": {
     "kind": "float",
     "anchor": [
-     1.87,
-     -4.33,
-     -0.6
+     0.89,
+     -3.74,
+     1.49
     ],
-    "rotY": 0.0,
-    "size": 0.188,
-    "width": 3.75,
+    "rotY": 6.0,
+    "size": 0.332,
+    "width": 4.18,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -25426,9 +27203,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 56.5,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -26024,13 +27801,13 @@
    "lyrics": {
     "kind": "firework",
     "anchor": [
-     -8.23,
-     0.45,
-     -20.0
+     0.58,
+     0.77,
+     -3.0
     ],
-    "rotY": 0.0,
-    "size": 1.25,
-    "width": 25.0,
+    "rotY": -3.6,
+    "size": 0.801,
+    "width": 9.26,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -26038,9 +27815,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 0.5,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -26050,10 +27827,19 @@
    },
    "words": [
     {
+     "w": "Imma",
+     "from": 5383,
+     "to": 5401,
+     "key": false,
+     "line": 92,
+     "idx": 0,
+     "em": 2.54
+    },
+    {
      "w": "burn",
      "from": 5399,
      "to": 5415,
-     "key": false,
+     "key": true,
      "line": 92,
      "idx": 1,
      "em": 2.285
@@ -26062,7 +27848,7 @@
      "w": "it",
      "from": 5413,
      "to": 5423,
-     "key": false,
+     "key": true,
      "line": 92,
      "idx": 2,
      "em": 0.997
@@ -26071,10 +27857,19 @@
      "w": "down",
      "from": 5422,
      "to": 5436,
-     "key": false,
+     "key": true,
      "line": 92,
      "idx": 3,
      "em": 2.487
+    },
+    {
+     "w": "like",
+     "from": 5435,
+     "to": 5450,
+     "key": false,
+     "line": 92,
+     "idx": 4,
+     "em": 2.097
     }
    ],
    "transition": {
@@ -26288,8 +28083,44 @@
      "ease": "inOut"
     }
    ],
-   "lyrics": null,
-   "words": [],
+   "lyrics": {
+    "kind": "sign",
+    "anchor": [
+     -0.82,
+     -0.69,
+     0.75
+    ],
+    "rotY": 24.7,
+    "size": 0.329,
+    "width": 4.14,
+    "color": "#ffffff",
+    "accent": "#ffcf6b",
+    "outline": "#1a0b33",
+    "lit": false,
+    "over": false,
+    "material": null,
+    "style": "v2",
+    "tilt": 0.0,
+    "roll": 0.0,
+    "keyScale": 1.8,
+    "auto": true,
+    "small": null,
+    "subs": {},
+    "reveal": null,
+    "dim": null,
+    "mirror": null
+   },
+   "words": [
+    {
+     "w": "starter",
+     "from": 5477,
+     "to": 5512,
+     "key": false,
+     "line": 93,
+     "idx": 3,
+     "em": 3.963
+    }
+   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -26512,13 +28343,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     2.81,
-     3.28,
-     -12.0
+     -1.24,
+     4.63,
+     -0.53
     ],
-    "rotY": 0.0,
-    "size": 0.75,
-    "width": 10.0,
+    "rotY": 12.6,
+    "size": 0.749,
+    "width": 7.21,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -26526,9 +28357,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 27.4,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},
@@ -26637,13 +28468,13 @@
    "lyrics": {
     "kind": "stamp",
     "anchor": [
-     -2.18,
-     0.75,
-     -20.0
+     -2.0,
+     4.2,
+     -3.42
     ],
-    "rotY": 0.0,
-    "size": 1.0,
-    "width": 12.5,
+    "rotY": 13.4,
+    "size": 0.863,
+    "width": 10.87,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -26651,9 +28482,9 @@
     "over": false,
     "material": "light",
     "style": "v2",
-    "tilt": 0.0,
+    "tilt": 17.3,
     "roll": 0.0,
-    "keyScale": 2.8,
+    "keyScale": 1.8,
     "auto": true,
     "small": null,
     "subs": {},

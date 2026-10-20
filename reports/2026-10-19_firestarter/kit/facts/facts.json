@@ -252,15 +252,11 @@
  },
  "picture_change_on_hits": {
   "hits": 143,
-  "changed": 59,
-  "share": 0.41,
+  "changed": 64,
+  "share": 0.45,
   "threshold": 6.0
  },
  "still_spans_s": [
-  [
-   134.97,
-   137.37
-  ],
   [
    195.53,
    199.0
