@@ -1,0 +1,300 @@
+{
+  "composition": "VrmBoard",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "durationInFrames": 5,
+  "vrm": "vrm/raymi4.vrm",
+  "sprites": [
+    "sprites/WS_F_FOCUS_PUSH_UV_171.png"
+  ],
+  "grain": 0.045,
+  "tiles": [
+    {
+      "name": "cold_open",
+      "set": "deep",
+      "opts": {
+        "grade": "own",
+        "ignite": 0.9,
+        "origin": [
+          0.75,
+          -1.0
+        ],
+        "snow": 0.7,
+        "glow": "#b45cff",
+        "dip": true,
+        "vent_cap": 0.35,
+        "fires": [
+          {
+            "pos": [
+              0.6,
+              1.4,
+              -0.55
+            ],
+            "size": 0.38,
+            "c": "#b45cff",
+            "core": "#ffe2b8"
+          }
+        ]
+      },
+      "cam": {
+        "pos": [
+          0.717,
+          1.206,
+          2.042
+        ],
+        "look": [
+          0.655,
+          0.956,
+          -0.656
+        ],
+        "fov": 34
+      },
+      "keys": [
+        {
+          "f": 0,
+          "pose": "arms_up",
+          "expr": "joy",
+          "pos": [
+            0.3,
+            0.0,
+            -0.6
+          ],
+          "rotY": "lens"
+        }
+      ]
+    },
+    {
+      "name": "eruption",
+      "set": "deep",
+      "opts": {
+        "grade": "own",
+        "ignite": 1.0,
+        "origin": [
+          0.9,
+          -0.5
+        ],
+        "snow": 0.6,
+        "glow": "#b45cff",
+        "vent_cap": 0.7,
+        "pulse": "beats",
+        "fires": [
+          {
+            "pos": [
+              1.25,
+              2.25,
+              -1.55
+            ],
+            "size": 0.55,
+            "c": "#b45cff",
+            "core": "#ffc15a"
+          }
+        ]
+      },
+      "cam": {
+        "pos": [
+          1.5,
+          1.0,
+          1.4
+        ],
+        "look": [
+          0.35,
+          0.9,
+          -0.6
+        ],
+        "fov": 40
+      },
+      "keys": [
+        {
+          "f": 0,
+          "pose": "arms_up",
+          "expr": "joy",
+          "pos": [
+            0.3,
+            0.0,
+            -0.6
+          ],
+          "rotY": "lens"
+        }
+      ]
+    },
+    {
+      "name": "gold_venom",
+      "set": "deep",
+      "opts": {
+        "grade": "own",
+        "snow": 0.6,
+        "glow": "#b45cff",
+        "vent_cap": 0.6,
+        "fires": [
+          {
+            "pos": [
+              0.15,
+              1.1,
+              -0.35
+            ],
+            "size": 0.12,
+            "c": "#ffc15a",
+            "core": "#fff4c8"
+          },
+          {
+            "pos": [
+              1.25,
+              2.25,
+              -1.55
+            ],
+            "size": 0.55,
+            "c": "#b45cff",
+            "core": "#ffc15a"
+          }
+        ]
+      },
+      "cam": {
+        "pos": [
+          -0.9,
+          1.6,
+          2.2
+        ],
+        "look": [
+          0.8,
+          1.3,
+          -1.2
+        ],
+        "fov": 46
+      },
+      "keys": [
+        {
+          "f": 0,
+          "pose": "point",
+          "expr": "angry",
+          "pos": [
+            0.55,
+            0.0,
+            -1.0
+          ],
+          "rotY": "lens"
+        }
+      ]
+    },
+    {
+      "name": "vrm_vs_sprite",
+      "set": "deep",
+      "opts": {
+        "grade": "own",
+        "ignite": 0.55,
+        "origin": [
+          0.75,
+          -1.0
+        ],
+        "snow": 0.6,
+        "glow": "#b45cff",
+        "vent_cap": 0.5
+      },
+      "cam": {
+        "pos": [
+          0.6,
+          1.15,
+          3.8
+        ],
+        "look": [
+          0.3,
+          0.85,
+          -0.6
+        ],
+        "fov": 36
+      },
+      "keys": [
+        {
+          "f": 0,
+          "pose": "stand",
+          "expr": {
+            "fun": 0.6
+          },
+          "pos": [
+            -0.2,
+            0.0,
+            -0.6
+          ],
+          "rotY": "lens"
+        }
+      ],
+      "sprite": {
+        "sprite": "sprites/WS_F_FOCUS_PUSH_UV_171.png",
+        "size": [
+          1434,
+          1505
+        ],
+        "cuts": [],
+        "top": 0.03,
+        "feet": 0.97,
+        "head": [
+          0.55,
+          0.03,
+          0.95,
+          0.32
+        ],
+        "height": 1.42,
+        "act": "idle",
+        "icon": null,
+        "flip": false,
+        "move": 0,
+        "arc": 0,
+        "f": 0,
+        "pos": [
+          0.8,
+          0.0,
+          -0.6
+        ]
+      }
+    },
+    {
+      "name": "surface",
+      "set": "nightsea",
+      "opts": {
+        "pool": 1.0,
+        "sea_glow": 0.3,
+        "column": 1.0,
+        "glow": "#ff9a3d",
+        "fires": [
+          {
+            "pos": [
+              0.25,
+              0.9,
+              0.1
+            ],
+            "size": 0.34,
+            "c": "#b45cff",
+            "core": "#ffe2b8"
+          }
+        ],
+        "grade": "ember"
+      },
+      "cam": {
+        "pos": [
+          0.4,
+          0.35,
+          3.2
+        ],
+        "look": [
+          0.0,
+          0.6,
+          0.0
+        ],
+        "fov": 40
+      },
+      "keys": [
+        {
+          "f": 0,
+          "pose": "arms_up",
+          "expr": "joy",
+          "pos": [
+            0.0,
+            -0.85,
+            0.0
+          ],
+          "rotY": "lens"
+        }
+      ]
+    }
+  ]
+}
