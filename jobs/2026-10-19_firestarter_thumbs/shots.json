@@ -1,0 +1,757 @@
+{
+ "title": "FIRESTARTER thumbnails",
+ "_why": "toki 2026-10-20 'die thumbnails sind total schlecht': DESIGNED stills, not film frames - her face huge with one strong expression, the flame the brightest thing, teal-black water, at most two huge words (MV)",
+ "audio": {
+  "file": "../2026-10-19_firestarter/song.webm",
+  "from": 0,
+  "to": 8
+ },
+ "window": {
+  "short": {
+   "from": 4,
+   "to": 8
+  }
+ },
+ "all_lyrics": false,
+ "grain": 0.03,
+ "heroes": {
+  "flame": {
+   "kind": "prop",
+   "size": [
+    0.16,
+    0.3
+   ],
+   "min": 0.2
+  },
+  "face": {
+   "kind": "face",
+   "min": 0.4
+  }
+ },
+ "shots": [
+  {
+   "id": "t1",
+   "at": 0,
+   "set": "deep",
+   "why": "MV thumbnail: gritted teeth, the flame pushed at the lens",
+   "opts": {
+    "grade": "closing",
+    "ignite": 0.22,
+    "crack_n": 2,
+    "vent_cap": 0.25,
+    "snow": 0.35,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.92,
+       0.2
+      ],
+      "size": 0.34,
+      "c": "#b45cff",
+      "core": "#fff6ea"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "extreme",
+     "side": "left",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "frame": "extreme",
+     "side": "left",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_172",
+     "pos": "center",
+     "act": "idle",
+     "height": 1.42
+    }
+   ],
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.92,
+      0.2
+     ]
+    },
+    "face"
+   ],
+   "text": {
+    "say": [
+     [
+      "FIRE?",
+      0
+     ]
+    ],
+    "until": 1,
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     1.08,
+     1.17,
+     0.09
+    ],
+    "rot": 0,
+    "tilt": 0,
+    "size": 0.06,
+    "width": 0.46,
+    "key_scale": 2.2,
+    "key": [
+     "FIRE?"
+    ],
+    "color": "#ffffff",
+    "accent": "#ffcf6b"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.29,
+      1.44,
+      -0.65
+     ],
+     "size": 0.14,
+     "width": 0.62,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": -20.8,
+     "key_scale": 1.8
+    }
+   }
+  },
+  {
+   "id": "t2",
+   "at": 1,
+   "set": "deep",
+   "why": "MV thumbnail: wink, the flame held low: her face lit from below",
+   "opts": {
+    "grade": "closing",
+    "ignite": 0.22,
+    "crack_n": 2,
+    "vent_cap": 0.25,
+    "snow": 0.35,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.95,
+       0.42
+      ],
+      "size": 0.34,
+      "c": "#b45cff",
+      "core": "#fff6ea"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "extreme",
+     "side": "left",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "frame": "extreme",
+     "side": "left",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "center",
+     "act": "idle",
+     "height": 1.42
+    }
+   ],
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.95,
+      0.42
+     ]
+    },
+    "face"
+   ],
+   "text": {
+    "say": [
+     [
+      "FIRE?",
+      0
+     ],
+     [
+      "UNDERWATER",
+      0.04
+     ]
+    ],
+    "until": 1,
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     0.9,
+     1.25,
+     -0.25
+    ],
+    "rot": 0,
+    "tilt": 0,
+    "size": 0.045,
+    "width": 0.46,
+    "key_scale": 2,
+    "key": [
+     "FIRE?"
+    ],
+    "color": "#ffffff",
+    "accent": "#ffcf6b"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.92,
+      1.4,
+      -0.82
+     ],
+     "size": 0.126,
+     "width": 0.56,
+     "tilt": 0.1,
+     "roll": 0,
+     "rot": -12.7,
+     "key_scale": 1.8
+    }
+   }
+  },
+  {
+   "id": "t3",
+   "at": 2,
+   "set": "deep",
+   "why": "MV thumbnail: scream, the fist up as a torch",
+   "opts": {
+    "grade": "closing",
+    "ignite": 0.22,
+    "crack_n": 2,
+    "vent_cap": 0.25,
+    "snow": 0.35,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.2,
+       0.03
+      ],
+      "size": 0.36,
+      "c": "#b45cff",
+      "core": "#fff6ea"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "side": "right",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "frame": "close",
+     "side": "right",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SHOUT_WET_UV_177",
+     "pos": "center",
+     "act": "idle",
+     "height": 1.42
+    }
+   ],
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.2,
+      0.03
+     ]
+    },
+    {
+     "name": "face",
+     "why_small": "the torch pose: her raised fist with the flame needs the taller frame"
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "at": 3,
+   "set": "deep",
+   "why": "MV thumbnail: determined, the flame thrust at the lens",
+   "opts": {
+    "grade": "closing",
+    "ignite": 0.22,
+    "crack_n": 2,
+    "vent_cap": 0.25,
+    "snow": 0.35,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.8,
+       0.25
+      ],
+      "size": 0.3,
+      "c": "#b45cff",
+      "core": "#fff6ea"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "extreme",
+     "side": "left",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "frame": "extreme",
+     "side": "left",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_173",
+     "pos": "center",
+     "act": "idle",
+     "height": 1.42
+    }
+   ],
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.8,
+      0.25
+     ]
+    },
+    "face"
+   ],
+   "text": {
+    "say": [
+     [
+      "FIRE?",
+      0
+     ],
+     [
+      "UNDERWATER",
+      0.04
+     ]
+    ],
+    "until": 1,
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     1.09,
+     1.17,
+     0.1
+    ],
+    "rot": 0,
+    "tilt": 0,
+    "size": 0.045,
+    "width": 0.46,
+    "key_scale": 2,
+    "key": [
+     "FIRE?"
+    ],
+    "color": "#ffffff",
+    "accent": "#ffcf6b"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.28,
+      1.37,
+      -0.64
+     ],
+     "size": 0.14,
+     "width": 0.62,
+     "tilt": 0.2,
+     "roll": 0,
+     "rot": -21.2,
+     "key_scale": 1.8
+    }
+   }
+  },
+  {
+   "id": "t5",
+   "at": 4,
+   "set": "deep",
+   "why": "Short thumbnail: determined, the flame thrust at the lens",
+   "opts": {
+    "grade": "closing",
+    "ignite": 0.22,
+    "crack_n": 2,
+    "vent_cap": 0.25,
+    "snow": 0.35,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.8,
+       0.25
+      ],
+      "size": 0.46,
+      "c": "#b45cff",
+      "core": "#fff6ea"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "side": "left",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "frame": "close",
+     "side": "left",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_173",
+     "pos": "center",
+     "act": "idle",
+     "height": 1.42
+    }
+   ],
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.8,
+      0.25
+     ],
+     "size": [
+      0.21,
+      0.41
+     ]
+    },
+    {
+     "name": "face",
+     "min": 0.24
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "at": 5,
+   "set": "deep",
+   "why": "Short thumbnail: gritted teeth, the flame pushed at the lens",
+   "opts": {
+    "grade": "closing",
+    "ignite": 0.22,
+    "crack_n": 2,
+    "vent_cap": 0.25,
+    "snow": 0.35,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.92,
+       0.2
+      ],
+      "size": 0.46,
+      "c": "#b45cff",
+      "core": "#fff6ea"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "side": "left",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "frame": "close",
+     "side": "left",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_FOCUS_PUSH_UV_172",
+     "pos": "center",
+     "act": "idle",
+     "height": 1.42
+    }
+   ],
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.92,
+      0.2
+     ],
+     "size": [
+      0.21,
+      0.41
+     ]
+    },
+    {
+     "name": "face",
+     "min": 0.24
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "at": 6,
+   "set": "deep",
+   "why": "Short thumbnail: wink, the flame held low: her face lit from below",
+   "opts": {
+    "grade": "closing",
+    "ignite": 0.22,
+    "crack_n": 2,
+    "vent_cap": 0.25,
+    "snow": 0.35,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.84,
+       0.4
+      ],
+      "size": 0.46,
+      "c": "#b45cff",
+      "core": "#fff6ea"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "side": "left",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34
+    },
+    {
+     "at": "end",
+     "frame": "close",
+     "side": "left",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34,
+     "ease": "linear"
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SMUG_WINK_UV_169",
+     "pos": "center",
+     "act": "idle",
+     "height": 1.42
+    }
+   ],
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.84,
+      0.4
+     ],
+     "size": [
+      0.21,
+      0.41
+     ]
+    },
+    {
+     "name": "face",
+     "min": 0.24
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "at": 7,
+   "set": "deep",
+   "why": "Short thumbnail: scream, the fist up as a torch",
+   "opts": {
+    "grade": "closing",
+    "ignite": 0.22,
+    "crack_n": 2,
+    "vent_cap": 0.25,
+    "snow": 0.35,
+    "glow": "#b45cff",
+    "fires": [
+     {
+      "uv": [
+       0.27,
+       0.06
+      ],
+      "size": 0.46,
+      "c": "#b45cff",
+      "core": "#fff6ea"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "frame": "close",
+     "side": "right",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34,
+     "top": 0.36
+    },
+    {
+     "at": "end",
+     "frame": "close",
+     "side": "right",
+     "from": [
+      0.6,
+      1.45,
+      1.3
+     ],
+     "fov": 34,
+     "ease": "linear",
+     "top": 0.36
+    }
+   ],
+   "kick": 0,
+   "raymi": [
+    {
+     "at": 0,
+     "sprite": "WS_F_SHOUT_WET_UV_177",
+     "pos": "center",
+     "act": "idle",
+     "height": 1.42
+    }
+   ],
+   "hero": [
+    {
+     "name": "flame",
+     "uv": [
+      0.27,
+      0.06
+     ],
+     "size": [
+      0.21,
+      0.41
+     ]
+    },
+    {
+     "name": "face",
+     "min": 0.24
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "_why": "toki 2026-10-20 'die thumbnails sind total schlecht bitte neu machen': designed thumbnail stills (shots.json here), not film frames",
+ "passes": [
+  {"format": "mv", "frames": [15, 45, 75, 105], "names": ["thumb_mv_N1_teeth_fire", "thumb_mv_N2_wink_underwater", "thumb_mv_N3_torch", "thumb_mv_N4_push_underwater"]},
+  {"format": "short", "frames": [15, 45, 75, 105], "names": ["thumb_short_N1_push", "thumb_short_N2_teeth", "thumb_short_N3_wink", "thumb_short_N4_torch"]}
+ ],
+ "scale": 1,
+ "dest": "jobs/2026-10-19_firestarter/boards",
+ "thumbs": true,
+ "round": 1
+}
