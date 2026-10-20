@@ -1,6 +1,6 @@
 {
  "quality": "final",
- "format": "mv",
- "round": 5,
- "_why": "lyrics fix (toki 2026-10-20 \"abgeschnitten, hinter raymi / assets\"): 8 % safe margin, never on her silhouette or a prop in front"
+ "format": "short",
+ "round": 6,
+ "_why": "lyrics fix (toki 2026-10-20): the Short with lyrics in free space, 8 % margin"
 }
