@@ -44,6 +44,27 @@ from . import plan as P
 REPO = Path(__file__).resolve().parents[1]
 SETS = REPO / "studio" / "src" / "three" / "sets" / "sets.json"
 FPS = 30
+MASK_N = 16
+_MASKS: dict[str, list[str]] = {}
+
+
+def _silhouette(file: str) -> list[str]:
+    """Her coarse silhouette in the sprite: MASK_N rows of MASK_N '0'/'1' cells (alpha > 8 % of the cell), so the
+    lyric guard knows where her body really is - the trimmed sprite box is mostly empty around a crouch / spread
+    arms (toki 2026-10-20 FIRESTARTER: lyrics on her body, while beside her was free)."""
+    if file not in _MASKS:
+        import cv2
+        import numpy as np
+        img = cv2.imread(str(REPO / file), cv2.IMREAD_UNCHANGED)
+        if img is None or img.ndim < 3 or img.shape[2] < 4:
+            _MASKS[file] = ["1" * MASK_N] * MASK_N
+        else:
+            a = (img[:, :, 3] > 40).astype(np.float32)
+            cell = cv2.resize(a, (MASK_N, MASK_N), interpolation=cv2.INTER_AREA)
+            _MASKS[file] = ["".join("1" if v > 0.08 else "0" for v in row) for row in cell]
+    return _MASKS[file]
+
+
 FORMATS = {"mv": ("MV", 1920, 1080), "short": ("MVShort", 1080, 1920),
            "pilot": ("MV", 1920, 1080)}   # pilot = the MV frame over shots.json window.pilot (a 20-40 s section)
 ACTS = {"idle", "pop", "hop", "bounce", "shake", "tilt", "lean", "shrink", "turn", "stomp", "float"}
@@ -483,7 +504,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             sprites.add(fname)
             pkeys.append({"f": fr(_key_time(r.get("at", 0), a, b)), "sprite": fname, "size": info["size"],
                           "cuts": info["cut_sides"], "top": top, "feet": float(min(1.0, feet)),
-                          "head": [float(x) for x in head],
+                          "head": [float(x) for x in head], "mask": _silhouette(info["file"]),
                           "pos": pos, "height": float(r.get("height", DEFAULT_HEIGHT)), "act": r.get("act", "idle"),
                           "icon": r.get("icon"), "flip": bool(r.get("flip", False)), "rot": float(r.get("rot", 0)),
                           "move": round(float(r.get("move", 0.0)) * FPS), "arc": float(r.get("arc", 0.0)),

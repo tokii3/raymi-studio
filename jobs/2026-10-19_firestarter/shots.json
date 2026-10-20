@@ -3,16 +3,16 @@
  "lyric_style": "v2",
  "audio": {
   "file": "song.webm",
-  "from": 0.0,
+  "from": 0,
   "to": 206.46
  },
  "window": {
   "pilot": {
-   "from": 0.0,
+   "from": 0,
    "to": 27.266
   },
   "short": {
-   "from": 0.0,
+   "from": 0,
    "to": 19.9
   }
  },
@@ -59,20 +59,20 @@
  },
  "short": {
   "hook": "they said fire can't burn underwater",
-  "hook_at": 0.0,
+  "hook_at": 0,
   "hook_to": 2.5,
   "cta": "what would YOU set on fire?",
-  "cta_from": 15.0
+  "cta_from": 15
  },
  "shots": [
   {
    "id": "s1",
-   "at": 0.0,
+   "at": 0,
    "set": "deep",
    "why": "the first frame IS the promise (P6, the Know My Name lesson): fire underwater, her face, in 0.0 s; behind her the amber vents sit low in frame, never behind her head (devil guard); the thumbnail's words appear in the picture so the click is paid at once (review script_1 FIX 3)",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.35,
     "snow": 0.7,
     "glow": "#b45cff",
@@ -105,7 +105,7 @@
      }
     },
     {
-     "at": 1.0,
+     "at": 1,
      "frame": "close",
      "from": [
       0.6,
@@ -146,7 +146,7 @@
      "height": 1.42
     },
     {
-     "at": 1.0,
+     "at": 1,
      "sprite": "WS_F_FOCUS_PUSH_UV_171",
      "pos": "center",
      "act": "pop",
@@ -157,27 +157,27 @@
     "mv": {
      "anchor": [
       1.23,
-      1.44,
-      -0.63
+      0.64,
+      -0.56
      ],
-     "size": 0.1,
+     "size": 0.193,
      "width": 0.86,
      "tilt": -4.8,
      "roll": 0,
-     "rot": -10.1,
+     "rot": -10.4,
      "key_scale": 1.4
     },
     "short": {
      "anchor": [
-      0.89,
-      1.54,
-      -0.96
+      0.43,
+      1.58,
+      -0.99
      ],
      "size": 0.235,
-     "width": 0.5,
+     "width": 0.33,
      "tilt": -7.9,
      "roll": 0,
-     "rot": -9.5,
+     "rot": 3.8,
      "key_scale": 1.4
     }
    },
@@ -235,20 +235,20 @@
   },
   {
    "id": "s2",
-   "at": 2.0,
+   "at": 2,
    "set": "deep",
    "why": "the video shows how it began - never dead black: the eyes open ON the rewind (treatment FIX 4)",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.5,
     "snow": 0.5,
     "dip": true,
-    "rewind_at": 2.0,
+    "rewind_at": 2,
     "rewind_s": 0.35,
     "glow": [
      [
-      2.0,
+      2,
       "#000000"
      ],
      [
@@ -265,7 +265,7 @@
       ],
       "size": 0.3,
       "c": "#b45cff",
-      "out": 2.0,
+      "out": 2,
       "fade": 0.25
      }
     ]
@@ -280,7 +280,7 @@
      ],
      "look": [
       0.3,
-      1.0,
+      1,
       -0.55
      ],
      "fov": 33
@@ -308,7 +308,7 @@
      "sprite": "WS_F_CALM_PRONE_UV_194",
      "pos": [
       0.25,
-      0.0,
+      0,
       -0.6
      ],
      "height": 0.62,
@@ -319,7 +319,7 @@
      "sprite": "WS_F_CALM_PRONE_UV_194",
      "pos": [
       0.25,
-      0.0,
+      0,
       -0.6
      ],
      "height": 0.62,
@@ -374,7 +374,7 @@
      "frame": "close",
      "from": [
       0.9,
-      1.0,
+      1,
       1.4
      ],
      "side": "right",
@@ -442,7 +442,7 @@
       ],
       "to": [
        -5.2,
-       1.0,
+       1,
        -2.6
       ],
       "at": 4.86,
@@ -462,7 +462,7 @@
       1.5
      ],
      "look": [
-      0.0,
+      0,
       0.7,
       -0.7
      ],
@@ -563,12 +563,12 @@
      "at": 0,
      "pos": [
       0.3,
-      4.0,
+      4,
       0.5
      ],
      "look": [
       0.35,
-      0.0,
+      0,
       -0.75
      ],
      "fov": 42
@@ -582,7 +582,7 @@
      ],
      "look": [
       0.35,
-      0.0,
+      0,
       -0.75
      ],
      "fov": 42,
@@ -596,7 +596,7 @@
      "sprite": "WS_F_FOCUS_PUSH_UV_173",
      "pos": [
       0.3,
-      0.0,
+      0,
       -0.6
      ],
      "act": "stomp",
@@ -615,7 +615,7 @@
     "sparks": [
      {
       "pos": [
-       -1.0,
+       -1,
        0.62,
        -1.25
       ],
@@ -666,7 +666,7 @@
      "frame": "medium",
      "from": [
       0.9,
-      1.0,
+      1,
       1.7
      ],
      "side": "right"
@@ -679,7 +679,7 @@
      "sprite": "WS_F_FOCUS_PUSH_UV_172",
      "pos": [
       0.15,
-      0.0,
+      0,
       -0.45
      ],
      "act": "stomp",
@@ -690,7 +690,7 @@
      "sprite": "WS_F_FOCUS_PUSH_UV_172",
      "pos": [
       0.15,
-      0.0,
+      0,
       -0.45
      ],
      "act": "shake",
@@ -727,7 +727,7 @@
       "c": "#b45cff",
       "at": 10.8,
       "grow": 0.1,
-      "out": 11.0,
+      "out": 11,
       "fade": 0.12
      }
     ],
@@ -750,7 +750,7 @@
      "frame": "medium",
      "from": [
       0.6,
-      1.0,
+      1,
       1.6
      ]
     }
@@ -865,7 +865,7 @@
      {
       "pos": [
        0.75,
-       1.0,
+       1,
        -0.2
       ],
       "at": 11.75,
@@ -950,9 +950,9 @@
      ],
      "cover_at": [
       12.23,
-      13.0
+      13
      ],
-     "yaw": 2.0
+     "yaw": 2
     }
    },
    "camera": [
@@ -964,21 +964,21 @@
       0.9
      ],
      "look": [
-      1.0,
+      1,
       1.5,
       -1.6
      ],
      "fov": 46
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
      "sprite": "WS_F_FOCUS_PUSH_UV_171",
      "pos": [
       0.45,
-      0.0,
+      0,
       -0.95
      ],
      "act": "stomp",
@@ -989,7 +989,7 @@
      "sprite": "WS_F_FOCUS_PUSH_UV_171",
      "pos": [
       0.45,
-      0.0,
+      0,
       -0.95
      ],
      "act": "stomp",
@@ -1022,7 +1022,7 @@
      null,
      null
     ],
-    "vents_s": 4.0,
+    "vents_s": 4,
     "vent_cap": 0.45,
     "fires": [
      {
@@ -1061,7 +1061,7 @@
      "ease": "out"
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
@@ -1075,11 +1075,11 @@
     "mv": {
      "anchor": [
       1.54,
-      0.96,
+      1.02,
       -0.57
      ],
-     "size": 0.185,
-     "width": 1.78,
+     "size": 0.154,
+     "width": 1.24,
      "tilt": -0.1,
      "roll": 0,
      "rot": -7.8,
@@ -1087,16 +1087,17 @@
     },
     "short": {
      "anchor": [
-      1.02,
-      1.12,
+      0.94,
+      0.52,
       -0.71
      ],
-     "size": 0.2,
+     "size": 0.083,
      "width": 0.28,
      "tilt": -0.2,
      "roll": 0,
-     "rot": -6.5,
-     "key_scale": 1.8
+     "rot": -4.2,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    },
    "lyrics": {
@@ -1124,7 +1125,7 @@
      ],
      "size": 0.075,
      "width": 0.75,
-     "key_scale": 2.0
+     "key_scale": 2
     }
    },
    "hero": [
@@ -1178,7 +1179,7 @@
      "at": 0,
      "frame": "close",
      "from": [
-      1.0,
+      1,
       1.2,
       1.6
      ],
@@ -1220,28 +1221,28 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.36,
-      1.12,
-      -0.43
+      1.16,
+      1.09,
+      -0.45
      ],
      "size": 0.175,
-     "width": 0.78,
+     "width": 1.17,
      "tilt": -0.1,
      "roll": 0,
-     "rot": -20.9,
+     "rot": -16.7,
      "key_scale": 1.8
     },
     "short": {
      "anchor": [
-      0.25,
-      1.68,
-      -0.87
+      0.7,
+      1.51,
+      -0.84
      ],
-     "size": 0.125,
+     "size": 0.208,
      "width": 0.29,
      "tilt": -0.1,
      "roll": 0,
-     "rot": 2.3,
+     "rot": -11,
      "key_scale": 1.8
     }
    },
@@ -1330,7 +1331,7 @@
      "from": [
       0.3,
       1.1,
-      2.0
+      2
      ],
      "ease": "linear",
      "short": {
@@ -1370,28 +1371,28 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.55,
-      0.54,
-      -1.16
+      -0.59,
+      0.5,
+      -1.2
      ],
-     "size": 0.2,
-     "width": 1.34,
+     "size": 0.167,
+     "width": 0.89,
      "tilt": 0.2,
      "roll": 0,
-     "rot": -39.8,
+     "rot": -38.8,
      "key_scale": 1.8
     },
     "short": {
      "anchor": [
-      -0.44,
-      1.21,
-      -1.09
+      -0.37,
+      0.32,
+      -1.01
      ],
      "size": 0.356,
      "width": 0.5,
      "tilt": 0.2,
      "roll": 0,
-     "rot": -42.7,
+     "rot": -44.5,
      "key_scale": 1.8
     }
    },
@@ -1419,7 +1420,7 @@
      ],
      "size": 0.18,
      "width": 1.8,
-     "key_scale": 2.0
+     "key_scale": 2
     }
    },
    "hero": [
@@ -1489,7 +1490,7 @@
      "pos": [
       0.32,
       1.7,
-      1.0
+      1
      ],
      "look": [
       0.4,
@@ -1506,7 +1507,7 @@
       ],
       "look": [
        0.7,
-       0.0,
+       0,
        -0.2
       ],
       "fov": 48
@@ -1556,7 +1557,7 @@
      "anchor": [
       0.7,
       0.03,
-      0.0
+      0
      ],
      "size": 0.36,
      "width": 1.9,
@@ -1575,7 +1576,37 @@
       "why_small": "the Short's top-down twist: the crack running at your thumb is the picture"
      }
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "short": {
+     "anchor": [
+      0.98,
+      0.03,
+      0.67
+     ],
+     "size": 0.353,
+     "width": 2.23,
+     "tilt": -90,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    },
+    "mv": {
+     "anchor": [
+      0.45,
+      0.03,
+      -0.41
+     ],
+     "size": 0.099,
+     "width": 3.38,
+     "tilt": -90,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
+   }
   },
   {
    "id": "s15",
@@ -1625,7 +1656,7 @@
     {
      "at": "end",
      "pos": [
-      2.0,
+      2,
       0.4,
       2.6
      ],
@@ -1673,7 +1704,22 @@
      "name": "fire_word",
      "why_small": "the word lies on the floor in a low shot - the running crack is the picture"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.75,
+      0.42,
+      -0.83
+     ],
+     "size": 0.292,
+     "width": 2.34,
+     "tilt": -1.9,
+     "roll": 0,
+     "rot": 4,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "s16",
@@ -1688,8 +1734,8 @@
      0.9,
      -0.5
     ],
-    "ignite_at": 21.0,
-    "ignite_s": 5.0,
+    "ignite_at": 21,
+    "ignite_s": 5,
     "pulse": "beats",
     "fires": [
      {
@@ -1713,7 +1759,7 @@
      ],
      "look": [
       0.4,
-      0.0,
+      0,
       -0.8
      ],
      "fov": 48,
@@ -1728,7 +1774,7 @@
      ],
      "look": [
       0.4,
-      0.0,
+      0,
       -0.8
      ],
      "fov": 48,
@@ -1762,6 +1808,21 @@
     ],
     "size": 0.32,
     "width": 3.6
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.97,
+      0.35,
+      0.44
+     ],
+     "size": 0.311,
+     "width": 2.3,
+     "tilt": -78.2,
+     "roll": 0,
+     "rot": 95.4,
+     "key_scale": 1.8
+    }
    }
   },
   {
@@ -1776,8 +1837,8 @@
      0.9,
      -0.5
     ],
-    "ignite_at": 21.0,
-    "ignite_s": 5.0,
+    "ignite_at": 21,
+    "ignite_s": 5,
     "vent_cap": 0.8,
     "vents_at": [
      24.87,
@@ -1801,7 +1862,7 @@
      "look": [
       0.6,
       0.15,
-      -1.0
+      -1
      ],
      "fov": 44
     },
@@ -1825,15 +1886,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.65,
-      0.48,
-      -0.99
+      0.66,
+      0.4,
+      -0.81
      ],
-     "size": 0.14,
-     "width": 1.76,
+     "size": 0.127,
+     "width": 1.59,
      "tilt": 1.1,
      "roll": 0,
-     "rot": -33.7,
+     "rot": -38.7,
      "key_scale": 1.8
     }
    },
@@ -1893,7 +1954,7 @@
      "at": 0,
      "pos": [
       1.45,
-      1.0,
+      1,
       1.1
      ],
      "look": [
@@ -1926,7 +1987,7 @@
      "sprite": "WS_BK_NA_WADE_UV_182",
      "pos": [
       0.2,
-      0.0,
+      0,
       -0.8
      ],
      "act": "pop"
@@ -1935,15 +1996,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.31,
+      1.17,
       1.56,
-      -1.1
+      -1.06
      ],
      "size": 0.166,
      "width": 2.26,
      "tilt": 11.6,
      "roll": 0,
-     "rot": 2.5,
+     "rot": 6.3,
      "key_scale": 1.8
     }
    },
@@ -1983,7 +2044,7 @@
      -0.5
     ],
     "ignite_at": 28.47,
-    "ignite_s": 1.0,
+    "ignite_s": 1,
     "vents_at": [
      28.47,
      null,
@@ -2013,7 +2074,7 @@
      "at": 0,
      "pos": [
       1.5,
-      1.0,
+      1,
       1.4
      ],
      "look": [
@@ -2026,7 +2087,7 @@
     {
      "at": 0.9,
      "pos": [
-      1.0,
+      1,
       3.2,
       1.6
      ],
@@ -2042,12 +2103,12 @@
      "at": "end",
      "pos": [
       0.6,
-      9.0,
+      9,
       0.6
      ],
      "look": [
       0.6,
-      0.0,
+      0,
       -1.6
      ],
      "fov": 48,
@@ -2067,16 +2128,17 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.26,
-      0.75,
-      -0.97
+      1.9,
+      0.03,
+      -0.23
      ],
-     "size": 0.292,
-     "width": 3.97,
-     "tilt": -58.1,
+     "size": 0.208,
+     "width": 2.77,
+     "tilt": -90,
      "roll": 0,
      "rot": 15.6,
-     "key_scale": 1.8
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    },
    "lyrics": {
@@ -2097,14 +2159,15 @@
     "anchor": [
      0.2,
      0.03,
-     -1.0
+     -1
     ],
     "size": 0.28,
-    "width": 3.0
+    "width": 3
    },
    "hero": [
     {
-     "name": "fire_word"
+     "name": "fire_word",
+     "why_small": "the crane climbs 9 m above her; every place big enough for the burned line sits on her (lyric guard 2026-10-20) - the line goes beside her, smaller"
     }
    ]
   },
@@ -2115,12 +2178,12 @@
    "why": "smug - she likes the chaos she made (devil guard: no flame behind her head)",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "snow": 0.7,
     "glow": "#b45cff",
     "vents_at": [
-     0.0,
+     0,
      29.42,
      null,
      null,
@@ -2172,7 +2235,7 @@
      "ease": "out"
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
@@ -2189,10 +2252,10 @@
     "mv": {
      "anchor": [
       0.57,
-      0.76,
+      1.16,
       -0.51
      ],
-     "size": 0.247,
+     "size": 0.178,
      "width": 1.32,
      "tilt": 0,
      "roll": 0,
@@ -2237,7 +2300,7 @@
    "why": "the gag starts: her best friend is the fire fighter",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "snow": 0.7,
     "salmon": {
@@ -2247,7 +2310,7 @@
       -0.4
      ],
      "from": [
-      -3.0,
+      -3,
       0.7,
       0.2
      ],
@@ -2291,15 +2354,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.1,
-      0.66,
-      -0.2
+      0.27,
+      0.57,
+      -0.09
      ],
-     "size": 0.15,
-     "width": 1.89,
+     "size": 0.136,
+     "width": 1.71,
      "tilt": 3,
      "roll": 0,
-     "rot": 20.9,
+     "rot": 16.4,
      "key_scale": 1.8
     }
    },
@@ -2325,7 +2388,7 @@
    "why": "rule (c) proven by a joke only a sea creature can make",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "snow": 0.7,
     "salmon": {
@@ -2357,16 +2420,16 @@
      "fov": 40
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.02,
-      0.62,
-      -0.96
+      0.04,
+      0.56,
+      -0.77
      ],
-     "size": 0.136,
-     "width": 2.06,
+     "size": 0.123,
+     "width": 1.86,
      "tilt": -7.9,
      "roll": 0,
      "rot": 6.7,
@@ -2401,7 +2464,7 @@
    "why": "the creatures from strike 2 come back - drawn by her light",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "snow": 0.7,
     "glow": "#b45cff",
@@ -2410,7 +2473,7 @@
       "from": [
        -3.5,
        1.2,
-       -3.0
+       -3
       ],
       "to": [
        -0.8,
@@ -2438,9 +2501,9 @@
      },
      {
       "from": [
-       -2.0,
+       -2,
        2.2,
-       -5.0
+       -5
       ],
       "to": [
        -0.2,
@@ -2459,7 +2522,7 @@
        -0.5
       ],
       "to": [
-       1.0,
+       1,
        0.7,
        -0.9
       ],
@@ -2475,13 +2538,13 @@
      "at": 0,
      "pos": [
       -2.4,
-      1.0,
+      1,
       2.6
      ],
      "look": [
       0.3,
       0.9,
-      -2.0
+      -2
      ],
      "fov": 44
     },
@@ -2490,12 +2553,12 @@
      "pos": [
       -1.6,
       0.9,
-      2.0
+      2
      ],
      "look": [
       0.4,
       0.9,
-      -2.0
+      -2
      ],
      "fov": 44,
      "ease": "linear"
@@ -2517,15 +2580,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.2,
-      0.9,
-      -1.79
+      -0.86,
+      1.28,
+      -2.85
      ],
-     "size": 0.461,
-     "width": 4.44,
+     "size": 0.326,
+     "width": 2.05,
      "tilt": -0.2,
      "roll": 0,
-     "rot": -36.8,
+     "rot": -9.5,
      "key_scale": 1.8
     }
    },
@@ -2558,7 +2621,7 @@
    "why": "the joke: she is IN water and still burning",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "snow": 0.7,
     "glow": "#b45cff",
@@ -2586,7 +2649,7 @@
      {
       "pos": [
        0.4,
-       1.0,
+       1,
        -1.5
       ],
       "r": 1.6,
@@ -2601,8 +2664,8 @@
      "frame": "medium",
      "from": [
       0.3,
-      1.0,
-      2.0
+      1,
+      2
      ]
     },
     {
@@ -2610,7 +2673,7 @@
      "frame": "medium",
      "from": [
       0.3,
-      1.0,
+      1,
       1.85
      ],
      "ease": "snap"
@@ -2635,10 +2698,10 @@
     "mv": {
      "anchor": [
       1.23,
-      0.76,
+      1.16,
       -0.14
      ],
-     "size": 0.247,
+     "size": 0.153,
      "width": 1.98,
      "tilt": -0.1,
      "roll": 0,
@@ -2684,10 +2747,10 @@
    "why": "the fire spreads to the field",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.8,
     "vents_at": [
-     0.0,
+     0,
      29.42,
      38.6,
      null,
@@ -2707,7 +2770,7 @@
      ],
      "look": [
       3.6,
-      2.0,
+      2,
       -4.1
      ],
      "fov": 38
@@ -2721,7 +2784,7 @@
      ],
      "look": [
       3.4,
-      2.0,
+      2,
       -4.1
      ],
      "fov": 44,
@@ -2732,15 +2795,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      2.37,
-      1.75,
-      -0.78
+      2.31,
+      1.77,
+      -0.73
      ],
-     "size": 0.103,
-     "width": 1.55,
+     "size": 0.082,
+     "width": 1.12,
      "tilt": 2.5,
      "roll": 0,
-     "rot": -21.7,
+     "rot": -20.1,
      "key_scale": 1.8
     }
    },
@@ -2777,10 +2840,10 @@
    "why": "the scale of what she lit",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.8,
     "vents_at": [
-     0.0,
+     0,
      29.42,
      38.6,
      40.4,
@@ -2840,15 +2903,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.08,
-      1.24,
-      -0.04
+      -1.53,
+      1.97,
+      -0.02
      ],
      "size": 0.544,
-     "width": 6.85,
+     "width": 2.42,
      "tilt": -1.4,
      "roll": 0,
-     "rot": 4.3,
+     "rot": 17.2,
      "key_scale": 1.8
     }
    },
@@ -2894,15 +2957,15 @@
    "why": "her name in the song: at the end of the long dark, I light the fire - main element big at the line that matters most (FIX 5 of review 1)",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.8,
@@ -2962,16 +3025,17 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.19,
-      1.24,
-      -0.83
+      0,
+      1.28,
+      -0.63
      ],
-     "size": 0.063,
-     "width": 1.31,
+     "size": 0.038,
+     "width": 0.46,
      "tilt": 7.7,
      "roll": 0,
-     "rot": 46.6,
-     "key_scale": 1.8
+     "rot": 57.7,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    },
    "lyrics": {
@@ -3009,15 +3073,15 @@
    "why": "the wind arrives - the only cold colour in the video",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.8,
@@ -3045,13 +3109,13 @@
      "at": 0,
      "pos": [
       -2.4,
-      1.0,
-      1.0
+      1,
+      1
      ],
      "look": [
       0.6,
-      1.0,
-      -1.0
+      1,
+      -1
      ],
      "fov": 42
     },
@@ -3059,13 +3123,13 @@
      "at": "end",
      "pos": [
       -2.2,
-      1.0,
+      1,
       1.3
      ],
      "look": [
       0.6,
-      1.0,
-      -1.0
+      1,
+      -1
      ],
      "fov": 42,
      "ease": "linear"
@@ -3089,16 +3153,17 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.42,
-      1,
-      -1.21
+      -0.47,
+      1.09,
+      -1.28
      ],
-     "size": 0.141,
-     "width": 1.82,
+     "size": 0.114,
+     "width": 1.22,
      "tilt": -0.1,
      "roll": 0,
-     "rot": -35.5,
-     "key_scale": 1.6
+     "rot": -34,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    },
    "lyrics": {
@@ -3140,15 +3205,15 @@
    "why": "a desire that never bends",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.8,
@@ -3172,7 +3237,7 @@
      "at": 0,
      "frame": "close",
      "from": [
-      1.0,
+      1,
       1.25,
       1.2
      ],
@@ -3246,15 +3311,15 @@
    "why": "the festival promised - small, so the drop can be big",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.8,
@@ -3305,14 +3370,14 @@
      ],
      "look": [
       0.9,
-      3.0,
+      3,
       -1.7
      ],
      "fov": 52,
      "ease": "inOut"
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
@@ -3340,16 +3405,16 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.04,
-      1.58,
-      0.07
+      0.12,
+      1.74,
+      0.27
      ],
-     "size": 0.147,
+     "size": 0.127,
      "width": 2.37,
      "tilt": 35.4,
      "roll": 0,
-     "rot": -18.8,
-     "key_scale": 1.6
+     "rot": -26.3,
+     "key_scale": 1
     }
    },
    "lyrics": {
@@ -3379,20 +3444,20 @@
   },
   {
    "id": "s31",
-   "at": 50.0,
+   "at": 50,
    "set": "deep",
    "why": "the turn: black again - the stakes",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.8,
@@ -3449,15 +3514,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.37,
-      2.61,
+      -1.05,
+      2.25,
       -0.04
      ],
      "size": 0.546,
      "width": 6.88,
      "tilt": -1.5,
      "roll": 0,
-     "rot": 15.9,
+     "rot": 13.1,
      "key_scale": 1.8
     }
    }
@@ -3469,7 +3534,7 @@
    "why": "sweet - then the venom",
    "opts": {
     "grade": "own",
-    "ignite": 0.0,
+    "ignite": 0,
     "snow": 0.4,
     "glow": [
      [
@@ -3518,15 +3583,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.1,
-      1.26,
-      -0.53
+      0.89,
+      1.44,
+      -0.52
      ],
      "size": 0.178,
-     "width": 0.79,
+     "width": 2.25,
      "tilt": -0.1,
      "roll": 0,
-     "rot": -13.2,
+     "rot": -9,
      "key_scale": 1.8
     }
    },
@@ -3631,7 +3696,7 @@
      "pos": [
       0.55,
       0,
-      -1.0
+      -1
      ],
      "height": 1.45
     },
@@ -3641,7 +3706,7 @@
      "pos": [
       0.55,
       0,
-      -1.0
+      -1
      ],
      "act": "stomp",
      "height": 1.45
@@ -3650,11 +3715,11 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.47,
-      1.62,
-      -1.01
+      0.48,
+      1.8,
+      -1.03
      ],
-     "size": 0.295,
+     "size": 0.165,
      "width": 3.41,
      "tilt": -4.5,
      "roll": 0,
@@ -3706,15 +3771,15 @@
    "why": "the audience returns - her light is the show",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -3755,9 +3820,9 @@
       "pos": [
        0.5,
        0.9,
-       -1.0
+       -1
       ],
-      "r": 1.0,
+      "r": 1,
       "glow": "#b45cff",
       "speed": 0.011,
       "phase": 2
@@ -3765,7 +3830,7 @@
      {
       "pos": [
        0.3,
-       2.0,
+       2,
        -1.4
       ],
       "r": 1.4,
@@ -3808,15 +3873,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.39,
+      1.31,
       0.73,
       -0.18
      ],
-     "size": 0.132,
-     "width": 1.7,
+     "size": 0.119,
+     "width": 1.14,
      "tilt": 0,
      "roll": 0,
-     "rot": -15.4,
+     "rot": -14.3,
      "key_scale": 1.8
     }
    },
@@ -3856,15 +3921,15 @@
    "why": "Salmon's 'tea' - the bucket again",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -3923,15 +3988,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.29,
-      1.01,
-      -0.7
+      1.11,
+      1.11,
+      -0.71
      ],
-     "size": 0.12,
+     "size": 0.103,
      "width": 1.33,
      "tilt": -7.4,
      "roll": 0,
-     "rot": -13.1,
+     "rot": -8.9,
      "key_scale": 1.8
     }
    },
@@ -3963,15 +4028,15 @@
    "why": "her body takes the fire in (three pictures, not one circle - FIX 6 of review 1)",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -4003,7 +4068,7 @@
      "from": [
       1.3,
       1.3,
-      1.0
+      1
      ],
      "side": "left",
      "ease": "linear"
@@ -4021,15 +4086,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.52,
-      1.11,
-      -0.86
+      1.36,
+      0.74,
+      -0.81
      ],
      "size": 0.185,
      "width": 1.23,
      "tilt": 0,
      "roll": 0,
-     "rot": 5.5,
+     "rot": 8.7,
      "key_scale": 1.8
     }
    },
@@ -4059,15 +4124,15 @@
    "why": "the build in silhouette - devil guard: violet rim, red only below the shoulders",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -4107,7 +4172,7 @@
      "pos": [
       0.5,
       0,
-      -1.0
+      -1
      ],
      "height": 1.5
     }
@@ -4115,12 +4180,12 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.12,
-      1.41,
-      -0.45
+      0.11,
+      1.44,
+      -0.43
      ],
-     "size": 0.125,
-     "width": 2.62,
+     "size": 0.108,
+     "width": 2,
      "tilt": 31.5,
      "roll": 0,
      "rot": -17.2,
@@ -4153,15 +4218,15 @@
    "why": "her audience answers",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -4169,7 +4234,7 @@
      {
       "pos": [
        0.3,
-       1.0,
+       1,
        -0.6
       ],
       "r": 1.5,
@@ -4256,15 +4321,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.29,
-      1.46,
-      -0.78
+      -0.26,
+      1.31,
+      -0.3
      ],
-     "size": 0.304,
-     "width": 3.82,
+     "size": 0.277,
+     "width": 3.49,
      "tilt": -1.4,
      "roll": 0,
-     "rot": -38.1,
+     "rot": -44,
      "key_scale": 1.8
     }
    },
@@ -4296,15 +4361,15 @@
    "why": "the fire is in her now",
    "opts": {
     "grade": "own",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -4354,15 +4419,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.74,
-      1.01,
+      -0.59,
+      1.07,
       -0.49
      ],
      "size": 0.147,
      "width": 0.78,
      "tilt": -0.1,
      "roll": 0,
-     "rot": 14.9,
+     "rot": 11.8,
      "key_scale": 1.8
     }
    },
@@ -4403,7 +4468,7 @@
      -0.7
     ],
     "vent_cap": 0.6,
-    "snow": 1.0,
+    "snow": 1,
     "glow": "#ff6a3d",
     "fog_far": 30,
     "fires": [
@@ -4425,7 +4490,7 @@
      "offset": [
       0,
       0,
-      -1.0
+      -1
      ]
     },
     {
@@ -4451,15 +4516,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.12,
-      2.62,
-      -0.07
+      0.41,
+      2.43,
+      -0.08
      ],
      "size": 0.309,
      "width": 7.52,
      "tilt": -1.5,
      "roll": 0,
-     "rot": 4.3,
+     "rot": -0.1,
      "key_scale": 1.5
     }
    },
@@ -4478,7 +4543,7 @@
      2.82
     ],
     "size": 0.2,
-    "width": 6.0,
+    "width": 6,
     "key_scale": 1.5,
     "tilt": -8,
     "roll": 0
@@ -4524,7 +4589,7 @@
      ],
      "look": [
       0.35,
-      0.0,
+      0,
       -0.8
      ],
      "fov": 50
@@ -4538,14 +4603,14 @@
      ],
      "look": [
       0.35,
-      0.0,
+      0,
       -0.8
      ],
      "fov": 52,
      "ease": "linear"
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
@@ -4564,16 +4629,17 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.67,
-      0.64,
-      -0.07
+      -2.08,
+      0.66,
+      -0.22
      ],
-     "size": 0.384,
+     "size": 0.272,
      "width": 3.3,
      "tilt": -81.9,
      "roll": 0,
-     "rot": -78.3,
-     "key_scale": 1.6
+     "rot": 80.1,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    },
    "lyrics": {
@@ -4605,15 +4671,15 @@
    "set": "deep",
    "why": "a new zone: the chimney forest - she rides the heat (rays ride currents)",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -4637,7 +4703,7 @@
      "at": 0,
      "pos": [
       -3.6,
-      1.0,
+      1,
       0.6
      ],
      "look": [
@@ -4651,13 +4717,13 @@
      "at": "end",
      "pos": [
       -1.2,
-      1.0,
+      1,
       0.4
      ],
      "look": [
-      1.0,
+      1,
       0.9,
-      -3.0
+      -3
      ],
      "fov": 44,
      "ease": "linear"
@@ -4671,7 +4737,7 @@
      "pos": [
       -2.4,
       0.1,
-      -2.0
+      -2
      ],
      "act": "float",
      "height": 1.35
@@ -4693,12 +4759,12 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.58,
-      0.93,
+      0.59,
+      1.17,
       -1.58
      ],
-     "size": 0.241,
-     "width": 1.93,
+     "size": 0.174,
+     "width": 1.29,
      "tilt": -1.5,
      "roll": 0,
      "rot": -49.3,
@@ -4748,15 +4814,15 @@
    "set": "deep",
    "why": "speed in the burning world",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -4780,13 +4846,13 @@
      "at": 0,
      "pos": [
       1.2,
-      1.0,
+      1,
       0.6
      ],
      "look": [
       -1.2,
       0.9,
-      -4.0
+      -4
      ],
      "fov": 44
     },
@@ -4794,11 +4860,11 @@
      "at": "end",
      "pos": [
       0.6,
-      1.0,
+      1,
       0.8
      ],
      "look": [
-      -1.0,
+      -1,
       0.9,
       -4.3
      ],
@@ -4806,7 +4872,7 @@
      "ease": "snap"
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
@@ -4850,16 +4916,16 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.66,
-      0.91,
-      -3.59
+      -0.72,
+      -0.11,
+      -3.87
      ],
-     "size": 0.394,
+     "size": 0.244,
      "width": 4.55,
      "tilt": -1.1,
      "roll": 0,
-     "rot": 27.2,
-     "key_scale": 1.8
+     "rot": 15.8,
+     "key_scale": 1.3
     }
    },
    "lyrics": {
@@ -4899,15 +4965,15 @@
    "set": "deep",
    "why": "the gag escalates",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -4915,13 +4981,13 @@
     "pulse": "beats",
     "salmon": {
      "pos": [
-      0.0,
+      0,
       0.6,
       -0.6
      ],
      "hold": "extinguisher",
      "spray_at": 75.47,
-     "spray_s": 1.0,
+     "spray_s": 1,
      "yaw": 0.3
     }
    },
@@ -4934,7 +5000,7 @@
       0.9
      ],
      "look": [
-      0.0,
+      0,
       0.6,
       -0.8
      ],
@@ -4945,15 +5011,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.13,
-      0.46,
+      0.23,
+      0.48,
       -0.24
      ],
-     "size": 0.108,
-     "width": 1.36,
+     "size": 0.105,
+     "width": 1.32,
      "tilt": 4.7,
      "roll": 0,
-     "rot": 22.6,
+     "rot": 18.2,
      "key_scale": 1.8
     }
    },
@@ -4981,15 +5047,15 @@
    "set": "deep",
    "why": "the fire fighter converts",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -5010,7 +5076,7 @@
       "kind": "extinguisher",
       "pos": [
        0.25,
-       0.0,
+       0,
        -0.9
       ],
       "rot": [
@@ -5025,7 +5091,7 @@
     {
      "at": 0,
      "pos": [
-      0.0,
+      0,
       0.9,
       0.9
      ],
@@ -5041,12 +5107,12 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.53,
-      0.96,
-      -0.77
+      0.47,
+      0.88,
+      -0.61
      ],
-     "size": 0.127,
-     "width": 1.93,
+     "size": 0.115,
+     "width": 1.74,
      "tilt": -2.1,
      "roll": 0,
      "rot": -17.8,
@@ -5080,15 +5146,15 @@
    "set": "deep",
    "why": "the lyric IS the floor",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -5101,12 +5167,12 @@
      "at": 0,
      "pos": [
       -1.6,
-      8.0,
+      8,
       -0.4
      ],
      "look": [
       -1.6,
-      0.0,
+      0,
       -1.2
      ],
      "fov": 46
@@ -5115,12 +5181,12 @@
      "at": "end",
      "pos": [
       1.6,
-      8.0,
+      8,
       -0.4
      ],
      "look": [
       1.6,
-      0.0,
+      0,
       -1.2
      ],
      "fov": 46,
@@ -5135,7 +5201,7 @@
      "pos": [
       -2.4,
       0.3,
-      -1.0
+      -1
      ],
      "flip": true,
      "height": 0.55
@@ -5146,7 +5212,7 @@
      "pos": [
       2.2,
       0.3,
-      -1.0
+      -1
      ],
      "flip": true,
      "move": 1.7,
@@ -5163,12 +5229,27 @@
     ],
     "tilt": -90,
     "anchor": [
-     0.0,
+     0,
      0.04,
      -1.6
     ],
     "size": 0.416,
     "width": 7.8
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.77,
+      0.03,
+      0.15
+     ],
+     "size": 0.59,
+     "width": 7.62,
+     "tilt": -90,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.8
+    }
    }
   },
   {
@@ -5177,15 +5258,15 @@
    "set": "deep",
    "why": "the water joke, now as a surf",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -5237,15 +5318,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.62,
-      0.37,
-      0.31
+      0.11,
+      0.67,
+      0.68
      ],
-     "size": 0.353,
-     "width": 4.45,
+     "size": 0.212,
+     "width": 2.36,
      "tilt": -1.4,
      "roll": 0,
-     "rot": 40.9,
+     "rot": 52.4,
      "key_scale": 1.8
     }
    },
@@ -5269,7 +5350,7 @@
      -0.4
     ],
     "size": 0.2,
-    "width": 3.0
+    "width": 3
    }
   },
   {
@@ -5278,15 +5359,15 @@
    "set": "deep",
    "why": "back to where it began",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -5364,15 +5445,15 @@
    "set": "deep",
    "why": "a held landing before the hook comes back",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -5424,7 +5505,7 @@
      "sprite": "WS_F_HAPPY_JUMP_UV_160",
      "pos": [
       0.5,
-      0.0,
+      0,
       -0.6
      ],
      "act": "stomp",
@@ -5485,15 +5566,15 @@
    "set": "deep",
    "why": "the intro lines come back in a burning world (one zone per line)",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -5568,6 +5649,21 @@
     "kind": "whip",
     "frames": 8,
     "dir": 1
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.51,
+      0.41,
+      -0.18
+     ],
+     "size": 0.178,
+     "width": 1.32,
+     "tilt": 0,
+     "roll": 0,
+     "rot": -12.2,
+     "key_scale": 1.6
+    }
    }
   },
   {
@@ -5576,15 +5672,15 @@
    "set": "deep",
    "why": "the same gesture, now with confidence",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -5623,7 +5719,7 @@
      "from": [
       1.6,
       1.2,
-      1.0
+      1
      ],
      "side": "left"
     }
@@ -5636,7 +5732,7 @@
      "pos": [
       0.6,
       0,
-      -1.0
+      -1
      ],
      "act": "tilt",
      "height": 1.55
@@ -5672,7 +5768,7 @@
     "anchor": [
      1.4,
      1.5,
-     -1.0
+     -1
     ],
     "size": 0.08,
     "width": 1.6
@@ -5698,15 +5794,15 @@
    "set": "deep",
    "why": "the third zone of the field: the chimney forest (a new place per line)",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -5739,7 +5835,7 @@
      "frame": "wide",
      "from": [
       0.4,
-      1.0,
+      1,
       0.6
      ]
     }
@@ -5761,15 +5857,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.7,
-      0.65,
-      -1.94
+      -0.76,
+      0.72,
+      -1.93
      ],
      "size": 0.143,
-     "width": 1.34,
+     "width": 0.89,
      "tilt": 0.2,
      "roll": 0,
-     "rot": 20.8,
+     "rot": 21.9,
      "key_scale": 1.8
     }
    },
@@ -5820,21 +5916,21 @@
    "set": "deep",
    "why": "the hang is answered: a new place appears",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.8,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      93.4
     ],
     "snow": 0.7,
     "red": 0.8,
     "pulse": "beats",
-    "vents_s": 3.0,
+    "vents_s": 3,
     "glow": "#ff6a3d",
     "fog_far": 32
    },
@@ -5844,12 +5940,12 @@
      "pos": [
       1.2,
       0.55,
-      -4.0
+      -4
      ],
      "look": [
       0.4,
       3.2,
-      -10.0
+      -10
      ],
      "fov": 56
     },
@@ -5863,7 +5959,7 @@
      "look": [
       0.4,
       3.3,
-      -10.0
+      -10
      ],
      "fov": 56,
      "ease": "linear"
@@ -5881,15 +5977,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.96,
-      2.55,
-      -8.55
+      1.33,
+      2.73,
+      -8.51
      ],
-     "size": 0.596,
-     "width": 7.5,
+     "size": 0.422,
+     "width": 5.74,
      "tilt": 25.9,
      "roll": 0,
-     "rot": 3.3,
+     "rot": -1.6,
      "key_scale": 1.8
     }
    },
@@ -5911,7 +6007,7 @@
      -9.4
     ],
     "size": 0.4,
-    "width": 3.0
+    "width": 3
    }
   },
   {
@@ -5920,15 +6016,15 @@
    "set": "deep",
    "why": "the fire answers the hang on its own - a chain she started",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -5952,7 +6048,7 @@
       "2"
      ],
      [
-      95.0,
+      95,
       "4"
      ]
     ]
@@ -5966,7 +6062,7 @@
       1.2
      ],
      "look": [
-      -2.0,
+      -2,
       1.4,
       -2.8
      ],
@@ -5980,7 +6076,7 @@
       1.4
      ],
      "look": [
-      5.0,
+      5,
       1.2,
       -2.6
      ],
@@ -5992,12 +6088,12 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      3.39,
-      1.31,
-      -1.59
+      3.2,
+      1.45,
+      -1.41
      ],
-     "size": 0.326,
-     "width": 1.74,
+     "size": 0.22,
+     "width": 1.63,
      "tilt": -4.2,
      "roll": 0,
      "rot": -45.6,
@@ -6011,15 +6107,15 @@
    "set": "deep",
    "why": "she rides what she started (rays ride currents)",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -6059,7 +6155,7 @@
      "look": [
       2.2,
       0.9,
-      -1.0
+      -1
      ],
      "fov": 42
     },
@@ -6085,9 +6181,9 @@
      "at": 0,
      "sprite": "WS_F_HAPPY_SURF_UV_180",
      "pos": [
-      2.0,
+      2,
       0.1,
-      -1.0
+      -1
      ],
      "act": "float",
      "height": 1.45
@@ -6109,15 +6205,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      4.29,
-      0.9,
-      -1.99
+      4.22,
+      0.6,
+      -1.96
      ],
-     "size": 0.213,
+     "size": 0.181,
      "width": 1.13,
      "tilt": -0.1,
      "roll": 0,
-     "rot": 1.8,
+     "rot": 3.2,
      "key_scale": 1.8
     }
    },
@@ -6153,15 +6249,15 @@
    "set": "deep",
    "why": "FIX 7 of review 2: her idol move - the barb strike as a held hit pose",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -6228,15 +6324,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.63,
-      1.47,
-      -0.03
+      -0.58,
+      1.44,
+      -0.05
      ],
      "size": 0.185,
      "width": 2.33,
      "tilt": 0,
      "roll": 0,
-     "rot": 35,
+     "rot": 33.9,
      "key_scale": 1.8
     }
    },
@@ -6261,15 +6357,15 @@
    "set": "deep",
    "why": "the second stamp mirrors the first - a pose the audience can learn",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -6316,7 +6412,7 @@
      "at": 0,
      "frame": "medium",
      "from": [
-      -1.0,
+      -1,
       1.1,
       1.6
      ],
@@ -6370,15 +6466,15 @@
    "set": "deep",
    "why": "three stamps, the last biggest",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -6423,7 +6519,7 @@
      "look": [
       0.4,
       1.4,
-      -1.0
+      -1
      ],
      "fov": 46
     }
@@ -6434,7 +6530,7 @@
      "at": 0,
      "sprite": "WS_F_HAPPY_SPIN_UV_189",
      "pos": [
-      0.0,
+      0,
       0.15,
       -0.8
      ],
@@ -6445,15 +6541,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.12,
-      1.19,
-      0.14
+      -0.37,
+      1.69,
+      -0.44
      ],
-     "size": 0.281,
-     "width": 1.25,
+     "size": 0.199,
+     "width": 3.54,
      "tilt": 14.5,
      "roll": 0,
-     "rot": -76.3,
+     "rot": -60.9,
      "key_scale": 1.8
     }
    },
@@ -6487,15 +6583,15 @@
    "set": "deep",
    "why": "the rap starts on her landing",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
      null
     ],
     "snow": 0.7,
@@ -6522,11 +6618,11 @@
      "from": [
       1.8,
       1.4,
-      -7.0
+      -7
      ]
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
@@ -6546,10 +6642,10 @@
     "anchor": [
      -0.4,
      0.55,
-     -8.0
+     -8
     ],
     "size": 0.1,
-    "width": 3.0
+    "width": 3
    },
    "hero": [
     {
@@ -6567,7 +6663,7 @@
    "set": "deep",
    "why": "seven days = seven fires (the rap counted in light)",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.8,
     "snow": 0.6,
     "red": 0.8,
@@ -6624,7 +6720,7 @@
      "look": [
       0.4,
       1.2,
-      -5.0
+      -5
      ],
      "fov": 46
     }
@@ -6633,15 +6729,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.24,
-      4.93,
-      2.16
+      0.28,
+      4.89,
+      2.66
      ],
-     "size": 0.391,
-     "width": 4.52,
+     "size": 0.354,
+     "width": 4.09,
      "tilt": -24.8,
      "roll": 0,
-     "rot": 4.6,
+     "rot": 4.7,
      "key_scale": 1.8
     }
    },
@@ -6667,16 +6763,16 @@
    "set": "deep",
    "why": "never runs dry - the jug that never empties",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "snow": 0.7,
     "red": 0.8,
@@ -6751,7 +6847,7 @@
      0.35
     ],
     "size": 0.1,
-    "width": 3.0
+    "width": 3
    },
    "hero": [
     {
@@ -6769,16 +6865,16 @@
    "set": "deep",
    "why": "0 to 100 - the light reaches the lens",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "snow": 0.7,
     "red": 0.8,
@@ -6801,7 +6897,7 @@
        0.86,
        0.34
       ],
-      "size": 2.0,
+      "size": 2,
       "c": "#b45cff",
       "core": "#ffe2b8",
       "at": 104.75,
@@ -6844,16 +6940,17 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.35,
-      0.95,
-      -0.48
+      1.5,
+      0.69,
+      -0.51
      ],
-     "size": 0.157,
-     "width": 1.74,
+     "size": 0.096,
+     "width": 1.16,
      "tilt": 0.1,
      "roll": 0,
-     "rot": 8.3,
-     "key_scale": 1.6
+     "rot": 6.2,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    },
    "lyrics": {
@@ -6901,16 +6998,16 @@
    "set": "deep",
    "why": "spreads in one breath",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "snow": 0.7,
     "red": 0.8,
@@ -6928,7 +7025,7 @@
        0.86,
        0.34
       ],
-      "size": 2.0,
+      "size": 2,
       "c": "#b45cff",
       "core": "#ffe2b8"
      }
@@ -6958,14 +7055,14 @@
     "mv": {
      "anchor": [
       -0.09,
-      1.84,
-      -0.17
+      2.59,
+      -0.18
      ],
-     "size": 0.395,
+     "size": 0.288,
      "width": 7.02,
      "tilt": -1.4,
      "roll": 0,
-     "rot": 4.4,
+     "rot": 4.3,
      "key_scale": 1.8
     }
    },
@@ -7007,16 +7104,16 @@
    "set": "deep",
    "why": "anticipation before the drop: the world compresses",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "snow": 0.7,
     "red": 0.8,
@@ -7055,7 +7152,7 @@
      ]
     }
    ],
-   "kick": 2.0,
+   "kick": 2,
    "raymi": [
     {
      "at": 0,
@@ -7074,16 +7171,17 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.1,
-      0.78,
-      -0.16
+      -0.67,
+      0.73,
+      -0.15
      ],
-     "size": 0.15,
-     "width": 2.8,
+     "size": 0.121,
+     "width": 1.29,
      "tilt": 0,
      "roll": 0,
-     "rot": 2.4,
-     "key_scale": 1.6
+     "rot": 12.1,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    },
    "lyrics": {
@@ -7114,16 +7212,16 @@
    "set": "deep",
    "why": "she loses control - on purpose of the song",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.75,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "snow": 0.7,
     "red": 0.8,
@@ -7164,7 +7262,7 @@
      "ease": "in"
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
@@ -7178,16 +7276,17 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.36,
-      0.75,
-      0.1
+      1.09,
+      1.32,
+      -0.04
      ],
-     "size": 0.376,
+     "size": 0.157,
      "width": 1.67,
      "tilt": -0.1,
      "roll": 0,
-     "rot": 11.8,
-     "key_scale": 1.8
+     "rot": -2.3,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    },
    "lyrics": {
@@ -7229,16 +7328,16 @@
    "set": "deep",
    "why": "WOW 4: the floor explodes upward",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.9,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "snow": 0.7,
     "red": 0.8,
@@ -7272,7 +7371,7 @@
       "5"
      ],
      [
-      112.0,
+      112,
       "6"
      ]
     ],
@@ -7294,12 +7393,12 @@
      "pos": [
       0.3,
       0.5,
-      6.0
+      6
      ],
      "look": [
       0.4,
       2.6,
-      -3.0
+      -3
      ],
      "fov": 50
     }
@@ -7317,15 +7416,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.03,
-      1.85,
-      0.2
+      0.56,
+      2.72,
+      0.41
      ],
-     "size": 0.4,
+     "size": 0.311,
      "width": 8.39,
      "tilt": 13.2,
      "roll": 0,
-     "rot": 3.2,
+     "rot": -2.7,
      "key_scale": 1.8
     }
    },
@@ -7359,26 +7458,26 @@
    "set": "deep",
    "why": "the festival cheer",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.9,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "snow": 0.7,
     "red": 0.8,
     "pulse": "beats",
     "glow": "#ff6a3d",
-    "erupt": 1.0,
+    "erupt": 1,
     "sparks": [
      {
       "pos": [
-       0.0,
+       0,
        1.8,
        -0.4
       ],
@@ -7402,8 +7501,8 @@
     {
      "at": 0,
      "pos": [
-      2.0,
-      1.0,
+      2,
+      1,
       2.4
      ],
      "look": [
@@ -7417,7 +7516,7 @@
      "at": "end",
      "pos": [
       -1.4,
-      1.0,
+      1,
       2.6
      ],
      "look": [
@@ -7446,16 +7545,17 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.07,
-      1.06,
-      -0.44
+      0.33,
+      1.5,
+      -0.39
      ],
-     "size": 0.177,
-     "width": 2.85,
+     "size": 0.123,
+     "width": 3.72,
      "tilt": -3.4,
      "roll": 0,
-     "rot": -12.8,
-     "key_scale": 1.6
+     "rot": -17.7,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    },
    "lyrics": {
@@ -7485,19 +7585,19 @@
    "set": "deep",
    "why": "light the fire = start the column (replaces the high-five, FIX 6 of review 2)",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 46,
-    "snow": 1.0,
+    "snow": 1,
     "glow": "#ff6a3d",
     "column_at": 115.95,
     "column_s": 1.2,
@@ -7523,7 +7623,7 @@
      ],
      "look": [
       0.4,
-      6.0,
+      6,
       -10.2
      ],
      "fov": 40
@@ -7546,16 +7646,17 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.68,
-      6.49,
-      -9.4
+      -0.67,
+      6.52,
+      -10.34
      ],
-     "size": 0.138,
+     "size": 0.084,
      "width": 2.9,
      "tilt": -10.8,
      "roll": 0,
-     "rot": -49.1,
-     "key_scale": 1.8
+     "rot": -15,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    },
    "lyrics": {
@@ -7589,34 +7690,34 @@
    "set": "deep",
    "why": "the black water above IS her night sky",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 46,
-    "snow": 1.0,
+    "snow": 1,
     "glow": "#ff6a3d",
-    "column": 1.0
+    "column": 1
    },
    "camera": [
     {
      "at": 0,
      "pos": [
       1.8,
-      4.0,
+      4,
       -7.6
      ],
      "look": [
       0.9,
-      11.0,
-      -10.0
+      11,
+      -10
      ],
      "fov": 52
     },
@@ -7624,13 +7725,13 @@
      "at": "end",
      "pos": [
       1.8,
-      6.0,
+      6,
       -7.6
      ],
      "look": [
       0.9,
-      14.0,
-      -10.0
+      14,
+      -10
      ],
      "fov": 52,
      "ease": "linear"
@@ -7643,7 +7744,7 @@
      "sprite": "WS_F_FLY_UV_081",
      "pos": [
       0.9,
-      8.0,
+      8,
       -9.9
      ],
      "height": 0.62
@@ -7657,23 +7758,24 @@
       -9.9
      ],
      "height": 0.62,
-     "move": 2.0,
+     "move": 2,
      "ease": "in"
     }
    ],
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.94,
-      10.39,
-      -8.92
+      1.68,
+      10.63,
+      -8.42
      ],
-     "size": 0.3,
-     "width": 5.59,
+     "size": 0.213,
+     "width": 7.31,
      "tilt": 71.9,
      "roll": 0,
-     "rot": 33.2,
-     "key_scale": 1.8
+     "rot": 8.6,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    },
    "lyrics": {
@@ -7698,20 +7800,20 @@
    "set": "deep",
    "why": "the calm beat - her new crowd joins",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 46,
-    "snow": 1.0,
-    "column": 1.0,
+    "snow": 1,
+    "column": 1,
     "glow": "#ff6a3d",
     "school": {
      "from": [
@@ -7734,12 +7836,12 @@
     {
      "at": 0,
      "pos": [
-      4.0,
+      4,
       13.4,
-      -7.0
+      -7
      ],
      "look": [
-      1.0,
+      1,
       13.6,
       -10.2
      ],
@@ -7764,15 +7866,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.75,
-      13.58,
-      -10.35
+      1.84,
+      13.7,
+      -10.42
      ],
-     "size": 0.366,
-     "width": 3.53,
+     "size": 0.26,
+     "width": 2.44,
      "tilt": 2.6,
      "roll": 0,
-     "rot": 33.8,
+     "rot": 32.2,
      "key_scale": 1.8
     }
    },
@@ -7798,20 +7900,20 @@
    "set": "deep",
    "why": "Salmon follows - comedy inside the climb",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 46,
-    "snow": 1.0,
-    "column": 1.0,
+    "snow": 1,
+    "column": 1,
     "glow": "#ff6a3d",
     "salmon": {
      "pos": [
@@ -7825,7 +7927,7 @@
       -9.6
      ],
      "at": 119.9,
-     "dur_s": 1.0,
+     "dur_s": 1,
      "hold": "bucket",
      "yaw": 1.4
     }
@@ -7834,12 +7936,12 @@
     {
      "at": 0,
      "pos": [
-      4.0,
+      4,
       13.6,
-      -7.0
+      -7
      ],
      "look": [
-      1.0,
+      1,
       13.8,
       -10.2
      ],
@@ -7848,9 +7950,9 @@
     {
      "at": 0.3,
      "pos": [
-      4.0,
-      11.0,
-      -7.0
+      4,
+      11,
+      -7
      ],
      "look": [
       1.6,
@@ -7863,9 +7965,9 @@
     {
      "at": 0.85,
      "pos": [
-      4.0,
-      11.0,
-      -7.0
+      4,
+      11,
+      -7
      ],
      "look": [
       1.6,
@@ -7878,13 +7980,13 @@
     {
      "at": "end",
      "pos": [
-      4.0,
+      4,
       13.8,
-      -7.0
+      -7
      ],
      "look": [
-      1.0,
-      14.0,
+      1,
+      14,
       -10.2
      ],
      "fov": 42,
@@ -7909,15 +8011,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.74,
-      13.07,
-      -10.35
+      1.59,
+      13.19,
+      -10.2
      ],
      "size": 0.363,
      "width": 4.58,
      "tilt": 2.7,
      "roll": 0,
-     "rot": 33.9,
+     "rot": 36.9,
      "key_scale": 1.8
     }
    },
@@ -7929,7 +8031,7 @@
     ],
     "anchor": [
      0.4,
-     13.0,
+     13,
      -9.4
     ],
     "size": 0.182,
@@ -7947,38 +8049,38 @@
    "set": "deep",
    "why": "a new place the light reveals (the cliff)",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 46,
-    "snow": 1.0,
+    "snow": 1,
     "cliff": true,
-    "column": 1.0,
+    "column": 1,
     "glow": "#ff6a3d",
     "cliff_ignite_at": 121.1,
     "cliff_ignite_s": 2.4,
-    "cliff_base": 10.0
+    "cliff_base": 10
    },
    "camera": [
     {
      "at": 0,
      "pos": [
       5.6,
-      15.0,
+      15,
       -6.6
      ],
      "look": [
       0.6,
-      17.0,
-      -12.0
+      17,
+      -12
      ],
      "fov": 48
     }
@@ -7990,7 +8092,7 @@
      "sprite": "WS_F_FLY_UV_054",
      "pos": [
       1.4,
-      15.0,
+      15,
       -10.6
      ],
      "rot": -80,
@@ -8013,15 +8115,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      2.15,
-      16.49,
-      -10.86
+      3.18,
+      16.39,
+      -11.85
      ],
-     "size": 0.606,
-     "width": 5.83,
+     "size": 0.429,
+     "width": 2.69,
      "tilt": 15.2,
      "roll": 0,
-     "rot": 39.1,
+     "rot": 24.7,
      "key_scale": 1.8
     }
    },
@@ -8049,23 +8151,23 @@
    "set": "deep",
    "why": "she races the fire up",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 46,
-    "snow": 1.0,
+    "snow": 1,
     "cliff": true,
-    "column": 1.0,
+    "column": 1,
     "glow": "#ff6a3d",
-    "cliff_base": 14.0,
+    "cliff_base": 14,
     "cliff_steps": [
      123.81
     ]
@@ -8075,13 +8177,13 @@
      "at": 0,
      "pos": [
       2.6,
-      11.0,
+      11,
       -6.8
      ],
      "look": [
       0.8,
-      24.0,
-      -12.0
+      24,
+      -12
      ],
      "fov": 56
     }
@@ -8116,16 +8218,16 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      2.09,
-      19.29,
-      -10.34
+      1.2,
+      18.55,
+      -11.89
      ],
-     "size": 0.814,
-     "width": 11.06,
+     "size": 0.593,
+     "width": 14.46,
      "tilt": 67.1,
      "roll": 0,
-     "rot": 8.1,
-     "key_scale": 1.8
+     "rot": 15.4,
+     "key_scale": 1.3
     }
    },
    "lyrics": {
@@ -8155,23 +8257,23 @@
    "set": "deep",
    "why": "texture beat: speed through the snow",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 46,
     "snow": 1.4,
     "cliff": true,
-    "column": 1.0,
+    "column": 1,
     "glow": "#ff6a3d",
-    "cliff_base": 18.0,
+    "cliff_base": 18,
     "fires": [
      {
       "pos": [
@@ -8244,23 +8346,23 @@
    "set": "deep",
    "why": "racing the fire up the wall: the climb as a contest (competitive about everything)",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 46,
-    "snow": 1.0,
+    "snow": 1,
     "cliff": true,
-    "column": 1.0,
+    "column": 1,
     "glow": "#ff6a3d",
-    "cliff_base": 18.0,
+    "cliff_base": 18,
     "cliff_steps": [
      125.62,
      128.36
@@ -8271,12 +8373,12 @@
      "at": 0,
      "pos": [
       5.2,
-      23.0,
+      23,
       -7.2
      ],
      "look": [
       0.2,
-      24.0,
+      24,
       -12.6
      ],
      "fov": 46
@@ -8297,7 +8399,7 @@
      "ease": "linear"
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
@@ -8315,7 +8417,7 @@
      "sprite": "WS_F_FLY_UV_054",
      "pos": [
       1.4,
-      27.0,
+      27,
       -10.6
      ],
      "rot": -80,
@@ -8327,16 +8429,16 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      2.3,
-      27.07,
-      -10.74
+      2.78,
+      26.76,
+      -11.25
      ],
-     "size": 0.243,
-     "width": 4.53,
+     "size": 0.282,
+     "width": 3.14,
      "tilt": 7.8,
      "roll": 0,
-     "rot": 39.4,
-     "key_scale": 1.8
+     "rot": 30.9,
+     "key_scale": 1
     }
    },
    "lyrics": {
@@ -8364,20 +8466,20 @@
    "set": "deep",
    "why": "the antagonist returns (FIX 2 of review 2)",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 40,
-    "snow": 1.0,
-    "column": 1.0,
+    "snow": 1,
+    "column": 1,
     "column_bend_at": 129.8,
     "column_bend_s": 0.8,
     "current_at": [
@@ -8393,10 +8495,10 @@
      "to": [
       5.5,
       29.6,
-      -9.0
+      -9
      ],
      "at": 129.9,
-     "dur_s": 1.0,
+     "dur_s": 1,
      "n": 10,
      "glow": "#ffc15a"
     }
@@ -8410,20 +8512,20 @@
       -0.5
      ],
      "look": [
-      1.0,
-      29.0,
+      1,
+      29,
       -10.4
      ],
      "fov": 46
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
      "sprite": "WS_F_FOCUS_CROUCH_UV_192",
      "pos": [
-      1.0,
+      1,
       28.6,
       -10.2
      ],
@@ -8434,15 +8536,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      3.63,
-      27.34,
-      -9.35
+      3.62,
+      30,
+      -8.95
      ],
      "size": 0.895,
      "width": 3.98,
      "tilt": 8.6,
      "roll": 0,
-     "rot": -17.8,
+     "rot": -18.5,
      "key_scale": 1.8
     }
    },
@@ -8470,21 +8572,21 @@
    "set": "deep",
    "why": "she could lose it",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 40,
-    "snow": 1.0,
-    "column": 1.0,
-    "column_bend": 1.0,
+    "snow": 1,
+    "column": 1,
+    "column_bend": 1,
     "current": 0.7,
     "glow": "#ff6a3d",
     "fires": [
@@ -8516,7 +8618,7 @@
      "at": 0,
      "sprite": "WS_F_FOCUS_CROUCH_UV_192",
      "pos": [
-      1.0,
+      1,
       28.8,
       -10.2
      ],
@@ -8581,22 +8683,22 @@
    "set": "deep",
    "why": "the 'I'm the lighter' line paid off by her body, wordless (the emotional hold)",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 40,
-    "snow": 1.0,
-    "column": 1.0,
-    "column_bend": 1.0,
-    "current": 1.0
+    "snow": 1,
+    "column": 1,
+    "column_bend": 1,
+    "current": 1
    },
    "camera": [
     {
@@ -8609,13 +8711,13 @@
      ]
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
      "sprite": "WS_BK_NA_WADE_UV_182",
      "pos": [
-      1.0,
+      1,
       28.8,
       -10.2
      ],
@@ -8625,15 +8727,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.09,
-      30.31,
-      -10.49
+      1.83,
+      30.12,
+      -10.75
      ],
      "size": 0.282,
      "width": 3.55,
      "tilt": 0.1,
      "roll": 0,
-     "rot": 177.7,
+     "rot": -159.6,
      "key_scale": 1.8
     }
    }
@@ -8644,22 +8746,22 @@
    "set": "deep",
    "why": "she feeds the spark with her own lights - the veins callback",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.6,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 40,
-    "snow": 1.0,
-    "column": 1.0,
-    "column_bend": 1.0,
-    "column_unbend_at": 137.0,
+    "snow": 1,
+    "column": 1,
+    "column_bend": 1,
+    "column_unbend_at": 137,
     "current": 0.4,
     "glow": [
      [
@@ -8680,7 +8782,7 @@
       "size": 0.08,
       "c": "#b45cff",
       "core": "#ffe2b8",
-      "out": 136.0,
+      "out": 136,
       "fade": 0.1
      },
      {
@@ -8691,7 +8793,7 @@
       "size": 0.18,
       "c": "#b45cff",
       "core": "#ffe2b8",
-      "at": 136.0,
+      "at": 136,
       "grow": 1.2
      }
     ]
@@ -8713,7 +8815,7 @@
      "at": 0,
      "sprite": "WS_F_FOCUS_CROUCH_UV_192",
      "pos": [
-      1.0,
+      1,
       28.8,
       -10.2
      ],
@@ -8725,11 +8827,11 @@
     "mv": {
      "anchor": [
       1.4,
-      29.64,
+      29.57,
       -10.44
      ],
-     "size": 0.091,
-     "width": 0.86,
+     "size": 0.107,
+     "width": 0.57,
      "tilt": 0,
      "roll": 0,
      "rot": 32,
@@ -8776,24 +8878,24 @@
    "set": "deep",
    "why": "the look down: what she made",
    "opts": {
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.9,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "fog_far": 75,
     "snow": 0.6,
     "smoke": false,
-    "column": 1.0,
-    "column_bend": 1.0,
+    "column": 1,
+    "column_bend": 1,
     "column_unbend_at": 138.4,
-    "column_unbend_s": 2.0,
+    "column_unbend_s": 2,
     "pulse": "beats"
    },
    "camera": [
@@ -8806,7 +8908,7 @@
      "cam": "city_down",
      "offset": [
       0,
-      2.0,
+      2,
       0
      ],
      "ease": "linear"
@@ -8840,11 +8942,11 @@
    "opts": {
     "grade": "own",
     "pool": 0.6,
-    "column": 1.0,
+    "column": 1,
     "column_pos": [
-     0.0,
-     -46.0,
-     0.0
+     0,
+     -46,
+     0
     ],
     "glow": "#ff9a3d",
     "fires": [
@@ -8881,7 +8983,7 @@
       2.4
      ],
      "look": [
-      0.0,
+      0,
       -1.2,
       -0.4
      ],
@@ -8895,7 +8997,7 @@
       2.4
      ],
      "look": [
-      0.0,
+      0,
       -0.9,
       -0.4
      ],
@@ -8909,9 +9011,9 @@
      "at": 0,
      "sprite": "WS_F_SHOUT_WET_UV_177",
      "pos": [
-      0.0,
+      0,
       -3.4,
-      0.0
+      0
      ],
      "height": 1.55
     },
@@ -8919,9 +9021,9 @@
      "at": "end",
      "sprite": "WS_F_SHOUT_WET_UV_177",
      "pos": [
-      0.0,
+      0,
       -1.7,
-      0.0
+      0
      ],
      "move": 2.3,
      "ease": "in",
@@ -8931,16 +9033,16 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.2,
-      -1.96,
-      0.19
+      0.55,
+      -1.46,
+      0.99
      ],
-     "size": 0.229,
-     "width": 1.44,
+     "size": 0.167,
+     "width": 4.08,
      "tilt": 48.3,
      "roll": 0,
-     "rot": -7.6,
-     "key_scale": 1.8
+     "rot": 14.1,
+     "key_scale": 1.3
     }
    },
    "lyrics": {
@@ -8964,7 +9066,7 @@
     ],
     "size": 0.27,
     "width": 3.4,
-    "key_scale": 2.0,
+    "key_scale": 2,
     "roll": 0
    },
    "hero": [
@@ -8984,9 +9086,9 @@
    "set": "nightsea",
    "why": "the surface - the split frame shows both worlds",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.1,
-    "column": 1.0,
+    "column": 1,
     "school": {
      "from": [
       -1.4,
@@ -8994,7 +9096,7 @@
       -1.2
      ],
      "to": [
-      -1.0,
+      -1,
       -1.3,
       -1.4
      ],
@@ -9016,9 +9118,9 @@
      "at": 0,
      "sprite": "WS_F_FOCUS_PULL_UV_187",
      "pos": [
-      0.0,
+      0,
       -1.05,
-      0.0
+      0
      ],
      "height": 1.5
     }
@@ -9026,15 +9128,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.55,
-      0.79,
+      -1.01,
+      0.59,
       0.17
      ],
      "size": 0.309,
      "width": 3.89,
      "tilt": 0.1,
      "roll": 0,
-     "rot": 10.3,
+     "rot": 18.4,
      "key_scale": 1.8
     }
    },
@@ -9051,9 +9153,9 @@
    "set": "nightsea",
    "why": "the first open sky of the video",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
+    "column": 1,
     "glow": "#ff9a3d",
     "fires": [
      {
@@ -9076,9 +9178,9 @@
       3.2
      ],
      "look": [
-      0.0,
+      0,
       0.6,
-      0.0
+      0
      ],
      "fov": 40
     },
@@ -9090,9 +9192,9 @@
       2.6
      ],
      "look": [
-      0.0,
+      0,
       0.6,
-      0.0
+      0
      ],
      "fov": 40,
      "ease": "linear"
@@ -9111,15 +9213,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.15,
-      1.17,
-      0.08
+      0.28,
+      1.02,
+      0.05
      ],
      "size": 0.232,
      "width": 2.92,
      "tilt": 5.3,
      "roll": 0,
-     "rot": 4.3,
+     "rot": 1.3,
      "key_scale": 1.8
     }
    },
@@ -9160,9 +9262,9 @@
    "set": "nightsea",
    "why": "her face lit by her fire above water for the first time",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
+    "column": 1,
     "fires": [
      {
       "pos": [
@@ -9193,9 +9295,9 @@
      "at": 0,
      "sprite": "WS_F_HAPPY_SURF_UV_180",
      "pos": [
-      0.0,
+      0,
       -0.75,
-      0.0
+      0
      ],
      "height": 1.45
     }
@@ -9203,15 +9305,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.95,
-      0.26,
-      0.45
+      -0.8,
+      0.41,
+      0.39
      ],
-     "size": 0.176,
+     "size": 0.125,
      "width": 0.78,
      "tilt": 0,
      "roll": 0,
-     "rot": 33.8,
+     "rot": 30.7,
      "key_scale": 1.8
     }
    },
@@ -9255,9 +9357,9 @@
    "set": "nightsea",
    "why": "her crowd arrives (one fish per hit)",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
+    "column": 1,
     "dots_at": [
      147.84,
      148.19,
@@ -9275,7 +9377,7 @@
      "look": [
       -0.2,
       0.2,
-      -4.0
+      -4
      ],
      "fov": 44
     }
@@ -9291,15 +9393,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.25,
-      1.7,
-      -0.5
+      0.94,
+      1.46,
+      -0.43
      ],
      "size": 0.36,
      "width": 4.53,
      "tilt": -9.2,
      "roll": 0,
-     "rot": -9.5,
+     "rot": -5,
      "key_scale": 1.8
     }
    }
@@ -9310,9 +9412,9 @@
    "set": "nightsea",
    "why": "the fire fighter comes up too - the friendship's payoff starts",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
+    "column": 1,
     "dots_at": [
      147.84,
      148.19,
@@ -9336,7 +9438,7 @@
     {
      "at": 0,
      "pos": [
-      1.0,
+      1,
       0.2,
       1.2
      ],
@@ -9352,15 +9454,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.75,
-      0.08,
-      0.03
+      0.66,
+      0.12,
+      0.04
      ],
      "size": 0.105,
-     "width": 1.01,
+     "width": 0.7,
      "tilt": -5.2,
      "roll": 0,
-     "rot": 12.1,
+     "rot": 16.5,
      "key_scale": 1.8
     }
    },
@@ -9389,9 +9491,9 @@
    "set": "nightsea",
    "why": "she laughs at her friend - warmth before the toast",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
+    "column": 1,
     "dots_at": [
      147.84,
      148.19,
@@ -9415,15 +9517,15 @@
      ]
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
      "sprite": "WS_F_HAPPY_JUMP_UV_161",
      "pos": [
-      0.0,
+      0,
       -0.6,
-      0.0
+      0
      ],
      "act": "bounce",
      "height": 1.25
@@ -9432,16 +9534,16 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.46,
-      -0.61,
-      0.35
+      0.99,
+      0.26,
+      0.52
      ],
-     "size": 0.134,
-     "width": 3.27,
+     "size": 0.156,
+     "width": 1.15,
      "tilt": 0.1,
      "roll": 0,
-     "rot": -0.2,
-     "key_scale": 1.8
+     "rot": -20.6,
+     "key_scale": 1.3
     }
    },
    "lyrics": {
@@ -9462,7 +9564,7 @@
      -0.3
     ],
     "size": 0.06,
-    "width": 1.0
+    "width": 1
    },
    "hero": [
     "face"
@@ -9474,9 +9576,9 @@
    "set": "nightsea",
    "why": "the toast begins: fire and the bucket meet",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
+    "column": 1,
     "dots_at": [
      147.84,
      148.19,
@@ -9524,7 +9626,7 @@
      "pos": [
       -0.15,
       -0.55,
-      0.0
+      0
      ]
     }
    ],
@@ -9532,14 +9634,14 @@
     "mv": {
      "anchor": [
       0.99,
-      0.55,
-      0.04
+      0.22,
+      0.06
      ],
-     "size": 0.221,
+     "size": 0.184,
      "width": 1.47,
      "tilt": -4.4,
      "roll": 0,
-     "rot": -18.6,
+     "rot": -18.8,
      "key_scale": 1.8
     }
    },
@@ -9574,9 +9676,9 @@
    "set": "nightsea",
    "why": "the fire fighter has joined the fire",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
+    "column": 1,
     "salmon": {
      "pos": [
       0.62,
@@ -9593,7 +9695,7 @@
       "pos": [
        0.36,
        0.12,
-       0.0
+       0
       ],
       "size": 0.22,
       "c": "#b45cff",
@@ -9653,15 +9755,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.39,
-      0.03,
-      -0.4
+      0.47,
+      0.01,
+      -0.41
      ],
      "size": 0.094,
-     "width": 1.18,
+     "width": 0.42,
      "tilt": -14.3,
      "roll": 0,
-     "rot": 8.3,
+     "rot": 4.2,
      "key_scale": 1.8
     }
    },
@@ -9691,7 +9793,7 @@
      "center": [
       0.36,
       0.25,
-      0.0
+      0
      ],
      "size": [
       0.12,
@@ -9706,9 +9808,9 @@
    "set": "nightsea",
    "why": "the pool of light is the sea's new lamp - the scale of her comeback",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
+    "column": 1,
     "dots_at": [
      147.84,
      148.19,
@@ -9734,28 +9836,28 @@
     {
      "at": 0,
      "pos": [
-      0.0,
+      0,
       2.5,
       5.5
      ],
      "look": [
-      0.0,
+      0,
       0.3,
-      -2.0
+      -2
      ],
      "fov": 44
     },
     {
      "at": "end",
      "pos": [
-      0.0,
-      6.0,
+      0,
+      6,
       7.5
      ],
      "look": [
-      0.0,
-      0.0,
-      -3.0
+      0,
+      0,
+      -3
      ],
      "fov": 46,
      "ease": "out"
@@ -9778,7 +9880,7 @@
     ],
     "tilt": -70,
     "anchor": [
-     0.0,
+     0,
      0.05,
      0.5
     ],
@@ -9794,7 +9896,22 @@
      ],
      "why_small": "she is small in her pool: the gold ring of fish and the moon are the picture"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.9,
+      0.03,
+      -7.26
+     ],
+     "size": 1.902,
+     "width": 10.14,
+     "tilt": -90,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "s91",
@@ -9802,9 +9919,9 @@
    "set": "nightsea",
    "why": "she gathers her crowd into a ring - the fish follow her light",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
+    "column": 1,
     "school": {
      "from": [
       1.4,
@@ -9832,8 +9949,8 @@
       2.4
      ],
      "look": [
-      0.0,
-      0.0,
+      0,
+      0,
       -0.4
      ],
      "fov": 44
@@ -9846,8 +9963,8 @@
       2.4
      ],
      "look": [
-      0.0,
-      0.0,
+      0,
+      0,
       -0.4
      ],
      "fov": 44,
@@ -9883,15 +10000,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.21,
-      -0.13,
-      0.25
+      0.5,
+      0.04,
+      0.34
      ],
      "size": 0.25,
-     "width": 3.15,
+     "width": 1.11,
      "tilt": -9.3,
      "roll": 0,
-     "rot": -32.5,
+     "rot": -38.8,
      "key_scale": 1.6
     }
    },
@@ -9919,11 +10036,11 @@
    "set": "nightsea",
    "why": "the rain's cause is seen before the gag - and she is the one who sees it",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
+    "column": 1,
     "cloud_at": 158.63,
-    "cloud_s": 5.0
+    "cloud_s": 5
    },
    "camera": [
     {
@@ -9934,9 +10051,9 @@
       2.4
      ],
      "look": [
-      0.0,
+      0,
       0.6,
-      -2.0
+      -2
      ],
      "fov": 40
     },
@@ -9948,9 +10065,9 @@
       2.4
      ],
      "look": [
-      -12.0,
-      8.0,
-      -40.0
+      -12,
+      8,
+      -40
      ],
      "fov": 40,
      "ease": "inOut"
@@ -9967,15 +10084,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.02,
+      0.42,
       1.22,
-      -0.03
+      -0.15
      ],
-     "size": 0.231,
+     "size": 0.193,
      "width": 2.91,
      "tilt": 9.4,
      "roll": 0,
-     "rot": 19.9,
+     "rot": 10.8,
      "key_scale": 1.8
     }
    },
@@ -10004,16 +10121,16 @@
    "set": "nightsea",
    "why": "her lore (rain predictions, wrong more often than right) set up in one picture",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
-    "cloud": 1.0,
+    "column": 1,
+    "cloud": 1,
     "salmon": {
      "pos": "salmon",
      "hold": "bucket",
      "water": "#d79bff",
      "icon": "sweat",
-     "icon_at": 162.0,
+     "icon_at": 162,
      "yaw": 2.6
     }
    },
@@ -10041,7 +10158,7 @@
      "pos": [
       -0.15,
       -0.55,
-      0.0
+      0
      ]
     },
     {
@@ -10050,7 +10167,7 @@
      "pos": [
       -0.15,
       -0.55,
-      0.0
+      0
      ],
      "act": "pop",
      "icon": "bulb"
@@ -10059,15 +10176,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1,
+      0.81,
       0.6,
-      0
+      -0.01
      ],
-     "size": 0.186,
+     "size": 0.158,
      "width": 1.49,
      "tilt": -4.5,
      "roll": 0,
-     "rot": -17.6,
+     "rot": -13.2,
      "key_scale": 1.6
     }
    },
@@ -10098,10 +10215,10 @@
    "set": "nightsea",
    "why": "she was right for once - and rain cannot put it out either",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.45,
-    "column": 1.0,
-    "cloud": 1.0,
+    "column": 1,
+    "cloud": 1,
     "rain_at": 163.84,
     "path_at": 164.3,
     "path_s": 1.4
@@ -10112,12 +10229,12 @@
      "pos": [
       1.5,
       2.6,
-      6.0
+      6
      ],
      "look": [
-      0.0,
-      0.0,
-      -14.0
+      0,
+      0,
+      -14
      ],
      "fov": 46
     }
@@ -10145,12 +10262,12 @@
    "set": "nightsea",
    "why": "her payoff - the forecaster was right",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.45,
-    "column": 1.0,
-    "cloud": 1.0,
+    "column": 1,
+    "cloud": 1,
     "rain_at": 163.84,
-    "path": 1.0
+    "path": 1
    },
    "camera": [
     {
@@ -10173,15 +10290,15 @@
      "ease": "out"
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
      "sprite": "WS_F_HAPPY_SURF_UV_179",
      "pos": [
-      0.0,
+      0,
       -0.75,
-      0.0
+      0
      ],
      "height": 1.35
     }
@@ -10189,15 +10306,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.55,
-      0.31,
-      0.03
+      -0.31,
+      0.48,
+      0.23
      ],
-     "size": 0.176,
-     "width": 1.17,
+     "size": 0.125,
+     "width": 0.78,
      "tilt": 0.1,
      "roll": 0,
-     "rot": 6.6,
+     "rot": 24.9,
      "key_scale": 1.8
     }
    },
@@ -10219,7 +10336,7 @@
      -0.3
     ],
     "size": 0.06,
-    "width": 1.0
+    "width": 1
    },
    "hero": [
     "face"
@@ -10232,22 +10349,22 @@
    "why": "the sauna: one shot of comic breath",
    "opts": {
     "grade": "night",
-    "ignite": 1.0,
+    "ignite": 1,
     "vent_cap": 0.8,
     "vents_at": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ],
     "red": 0.5,
     "sauna": {
      "pos": [
       1.3,
-      0.0,
+      0,
       -1.7
      ],
      "n": 7,
@@ -10289,15 +10406,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.99,
-      0.29,
-      -1.44
+      1.16,
+      0.45,
+      -0.6
      ],
-     "size": 0.122,
-     "width": 1.41,
+     "size": 0.061,
+     "width": 0.71,
      "tilt": -14.2,
      "roll": 0,
-     "rot": 5.6,
+     "rot": -0.4,
      "key_scale": 1.8
     }
    },
@@ -10328,12 +10445,12 @@
    "set": "nightsea",
    "why": "the build climbs again: she goes back under for the biggest thing",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.5,
-    "column": 1.0,
-    "cloud": 1.0,
+    "column": 1,
+    "cloud": 1,
     "rain_at": 163.84,
-    "path": 1.0,
+    "path": 1,
     "fires": [
      {
       "uv": [
@@ -10355,9 +10472,9 @@
       2.6
      ],
      "look": [
-      0.0,
+      0,
       -0.4,
-      0.0
+      0
      ],
      "fov": 52
     },
@@ -10369,7 +10486,7 @@
       2.8
      ],
      "look": [
-      0.0,
+      0,
       -2.3,
       -0.2
      ],
@@ -10383,9 +10500,9 @@
      "at": 0,
      "sprite": "WS_F_FLY_UV_054",
      "pos": [
-      0.0,
+      0,
       -0.3,
-      0.0
+      0
      ],
      "height": 0.55
     },
@@ -10393,7 +10510,7 @@
      "at": "end",
      "sprite": "WS_F_FLY_UV_054",
      "pos": [
-      0.0,
+      0,
       -2.5,
       -0.2
      ],
@@ -10406,16 +10523,16 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.04,
-      -1.83,
-      0.36
+      0.23,
+      -2.13,
+      0.32
      ],
-     "size": 0.218,
-     "width": 2.96,
+     "size": 0.144,
+     "width": 3.87,
      "tilt": -8.8,
      "roll": 0,
-     "rot": 21.9,
-     "key_scale": 1.8
+     "rot": 15.6,
+     "key_scale": 1.3
     }
    },
    "lyrics": {
@@ -10455,10 +10572,10 @@
    "set": "nightsea",
    "why": "the impossible thing one last time: fire under water",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
-    "path": 1.0,
+    "column": 1,
+    "path": 1,
     "fires": [
      {
       "uv": [
@@ -10482,8 +10599,8 @@
       2.2
      ],
      "look": [
-      0.0,
-      -3.0,
+      0,
+      -3,
       -0.2
      ],
      "fov": 46
@@ -10495,9 +10612,9 @@
      "at": 0,
      "sprite": "WS_F_FOCUS_PULL_UV_187",
      "pos": [
-      0.0,
+      0,
       -4.6,
-      0.0
+      0
      ],
      "act": "shrink",
      "height": 1.5
@@ -10506,15 +10623,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.21,
-      -3.82,
-      0.86
+      0.43,
+      -3.74,
+      0.87
      ],
-     "size": 0.195,
-     "width": 2.94,
+     "size": 0.166,
+     "width": 2.25,
      "tilt": 45.8,
      "roll": 0,
-     "rot": 24,
+     "rot": 15.7,
      "key_scale": 1.6
     }
    },
@@ -10555,10 +10672,10 @@
    "set": "nightsea",
    "why": "the release: the impossible fire travels up through the water",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.3,
-    "column": 1.0,
-    "path": 1.0,
+    "column": 1,
+    "path": 1,
     "fireworks": [
      173.35
     ],
@@ -10571,12 +10688,12 @@
     "school": {
      "from": [
       -0.8,
-      -5.0,
+      -5,
       -0.4
      ],
      "to": [
       0.2,
-      -1.0,
+      -1,
       -0.2
      ],
      "at": 173.4,
@@ -10589,19 +10706,19 @@
     {
      "at": 0,
      "pos": [
-      1.0,
+      1,
       -6.4,
       2.6
      ],
      "look": [
       0.2,
-      -2.0,
+      -2,
       -0.2
      ],
      "fov": 52
     }
    ],
-   "kick": 1.0,
+   "kick": 1,
    "raymi": [
     {
      "at": 0,
@@ -10609,7 +10726,7 @@
      "pos": [
       -0.3,
       -5.2,
-      0.0
+      0
      ],
      "act": "stomp",
      "height": 1.5
@@ -10654,10 +10771,10 @@
    "set": "nightsea",
    "why": "WOW 5: fire from under the water writes the song across the sky",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.6,
-    "column": 1.0,
-    "path": 1.0,
+    "column": 1,
+    "path": 1,
     "fireworks": [
      174.42,
      174.67
@@ -10693,14 +10810,14 @@
     {
      "at": 0,
      "pos": [
-      0.0,
-      1.0,
+      0,
+      1,
       7.5
      ],
      "look": [
-      0.0,
+      0,
       5.5,
-      -14.0
+      -14
      ],
      "fov": 50
     }
@@ -10730,7 +10847,7 @@
     ],
     "size": 1.25,
     "width": 27.5,
-    "mirror": 0.0
+    "mirror": 0
    },
    "hero": [
     {
@@ -10744,10 +10861,10 @@
    "set": "nightsea",
    "why": "the whole sea answers - from below",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.6,
-    "column": 1.0,
-    "path": 1.0,
+    "column": 1,
+    "path": 1,
     "fireworks": [
      175.32,
      176.25,
@@ -10776,14 +10893,14 @@
     {
      "at": 0,
      "pos": [
-      0.0,
+      0,
       0.02,
-      4.0
+      4
      ],
      "look": [
-      0.0,
-      2.0,
-      -16.0
+      0,
+      2,
+      -16
      ],
      "fov": 52
     }
@@ -10810,35 +10927,35 @@
    "set": "nightsea",
    "why": "a ray riding the glow (no mount)",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.6,
-    "column": 1.0,
-    "path": 1.0
+    "column": 1,
+    "path": 1
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      2.0,
+      2,
       0.15,
       1.4
      ],
      "look": [
-      0.0,
+      0,
       0.6,
-      -4.0
+      -4
      ],
      "fov": 46
     },
     {
      "at": "end",
      "pos": [
-      2.0,
+      2,
       0.15,
-      -1.0
+      -1
      ],
      "look": [
-      0.0,
+      0,
       0.6,
       -6.4
      ],
@@ -10852,7 +10969,7 @@
      "at": 0,
      "sprite": "WS_F_SURF_UV_125",
      "pos": [
-      0.0,
+      0,
       -0.45,
       -0.4
      ],
@@ -10862,7 +10979,7 @@
      "at": "end",
      "sprite": "WS_F_SURF_UV_125",
      "pos": [
-      0.0,
+      0,
       -0.45,
       -2.8
      ],
@@ -10887,7 +11004,22 @@
     ],
     "size": 0.9,
     "width": 16,
-    "mirror": 0.0
+    "mirror": 0
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.42,
+      0.3,
+      -3.36
+     ],
+     "size": 0.253,
+     "width": 1.69,
+     "tilt": 4.5,
+     "roll": 0,
+     "rot": 13.5,
+     "key_scale": 1.8
+    }
    }
   },
   {
@@ -10896,12 +11028,12 @@
    "set": "nightsea",
    "why": "the hang is finished by the picture",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.6,
-    "column": 1.0,
-    "path": 1.0,
+    "column": 1,
+    "path": 1,
     "pulse_at": [
-     181.0
+     181
     ],
     "sea_glow_at": 180.9,
     "sea_glow_s": 0.4
@@ -10910,14 +11042,14 @@
     {
      "at": 0,
      "pos": [
-      0.0,
+      0,
       0.7,
-      6.0
+      6
      ],
      "look": [
-      0.0,
-      1.0,
-      -30.0
+      0,
+      1,
+      -30
      ],
      "fov": 48
     }
@@ -10928,9 +11060,9 @@
      "at": 0,
      "sprite": "WS_F_SURF_UV_126",
      "pos": [
-      0.0,
+      0,
       -0.5,
-      -4.0
+      -4
      ],
      "height": 1.5
     }
@@ -10938,15 +11070,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.58,
-      0.77,
+      3.7,
+      0.61,
       -3
      ],
-     "size": 0.801,
-     "width": 9.26,
+     "size": 0.449,
+     "width": 4.27,
      "tilt": 0.5,
      "roll": 0,
-     "rot": -3.6,
+     "rot": -22.4,
      "key_scale": 1.8
     }
    },
@@ -10968,7 +11100,7 @@
     ],
     "size": 1.25,
     "width": 25,
-    "mirror": 0.0
+    "mirror": 0
    }
   },
   {
@@ -10977,37 +11109,37 @@
    "set": "nightsea",
    "why": "the biggest words of the video - the sky is the last lyric surface",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
-    "column": 1.0,
-    "path": 1.0
+    "pool": 1,
+    "sea_glow": 1,
+    "column": 1,
+    "path": 1
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      0.0,
+      0,
       0.8,
-      6.0
+      6
      ],
      "look": [
-      0.0,
-      3.0,
-      -16.0
+      0,
+      3,
+      -16
      ],
      "fov": 50
     },
     {
      "at": "end",
      "pos": [
-      0.0,
+      0,
       0.8,
-      6.0
+      6
      ],
      "look": [
-      0.0,
-      8.0,
-      -16.0
+      0,
+      8,
+      -16
      ],
      "fov": 50,
      "ease": "out"
@@ -11043,10 +11175,10 @@
    "set": "nightsea",
    "why": "her joy in the middle of her fireworks",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
-    "column": 1.0,
-    "path": 1.0,
+    "pool": 1,
+    "sea_glow": 1,
+    "column": 1,
+    "path": 1,
     "fireworks": [
      181.92,
      182.4
@@ -11079,9 +11211,9 @@
      "at": 0,
      "sprite": "WS_F_SURF_UV_126",
      "pos": [
-      0.0,
+      0,
       -0.55,
-      0.0
+      0
      ],
      "act": "bounce",
      "height": 1.5
@@ -11090,15 +11222,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.82,
-      -0.69,
-      0.75
+      -0.91,
+      0.9,
+      0.77
      ],
      "size": 0.329,
-     "width": 4.14,
+     "width": 1.46,
      "tilt": 0,
      "roll": 0,
-     "rot": 24.7,
+     "rot": 25.8,
      "key_scale": 1.8
     }
    }
@@ -11109,23 +11241,23 @@
    "set": "nightsea",
    "why": "speed toward the lens before the last stamps",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
-    "column": 1.0,
-    "path": 1.0
+    "pool": 1,
+    "sea_glow": 1,
+    "column": 1,
+    "path": 1
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      0.0,
+      0,
       0.25,
       2.2
      ],
      "look": [
-      0.0,
+      0,
       0.5,
-      -4.0
+      -4
      ],
      "fov": 46
     }
@@ -11136,7 +11268,7 @@
      "at": 0,
      "sprite": "WS_F_HAPPY_SURF_UV_179",
      "pos": [
-      0.0,
+      0,
       -0.75,
       -3.2
      ],
@@ -11146,7 +11278,7 @@
      "at": "end",
      "sprite": "WS_F_HAPPY_SURF_UV_179",
      "pos": [
-      0.0,
+      0,
       -0.75,
       -0.6
      ],
@@ -11162,12 +11294,12 @@
      94
     ],
     "anchor": [
-     0.0,
-     6.0,
-     -16.0
+     0,
+     6,
+     -16
     ],
     "size": 0.9,
-    "width": 18.0
+    "width": 18
    }
   },
   {
@@ -11176,10 +11308,10 @@
    "set": "nightsea",
    "why": "the signature move as fireworks: one per 'I'm a'",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
-    "column": 1.0,
-    "path": 1.0,
+    "pool": 1,
+    "sea_glow": 1,
+    "column": 1,
+    "path": 1,
     "fireworks": [
      184.75
     ],
@@ -11194,14 +11326,14 @@
     {
      "at": 0,
      "pos": [
-      0.0,
-      1.0,
-      5.0
+      0,
+      1,
+      5
      ],
      "look": [
-      -3.0,
-      12.0,
-      -16.0
+      -3,
+      12,
+      -16
      ],
      "fov": 50
     }
@@ -11243,10 +11375,10 @@
    "set": "nightsea",
    "why": "stamp 2 - each farther, the whole sea is hers",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
-    "column": 1.0,
-    "path": 1.0,
+    "pool": 1,
+    "sea_glow": 1,
+    "column": 1,
+    "path": 1,
     "fireworks": [
      185.68
     ],
@@ -11261,14 +11393,14 @@
     {
      "at": 0,
      "pos": [
-      0.0,
-      1.0,
-      5.0
+      0,
+      1,
+      5
      ],
      "look": [
-      8.0,
-      14.0,
-      -36.0
+      8,
+      14,
+      -36
      ],
      "fov": 46
     }
@@ -11310,10 +11442,10 @@
    "set": "nightsea",
    "why": "stamp 3 - the farthest, the horizon",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
-    "column": 1.0,
-    "path": 1.0,
+    "pool": 1,
+    "sea_glow": 1,
+    "column": 1,
+    "path": 1,
     "fireworks": [
      186.59
     ],
@@ -11328,14 +11460,14 @@
     {
      "at": 0,
      "pos": [
-      0.0,
-      1.0,
-      5.0
+      0,
+      1,
+      5
      ],
      "look": [
-      -10.0,
-      16.0,
-      -70.0
+      -10,
+      16,
+      -70
      ],
      "fov": 44
     }
@@ -11370,10 +11502,10 @@
    "set": "nightsea",
    "why": "the signature move ends as 'you'",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
-    "column": 1.0,
-    "path": 1.0,
+    "pool": 1,
+    "sea_glow": 1,
+    "column": 1,
+    "path": 1,
     "fires": [
      {
       "uv": [
@@ -11402,7 +11534,7 @@
      "from": [
       0.3,
       0.7,
-      2.0
+      2
      ],
      "ease": "snap"
     }
@@ -11413,9 +11545,9 @@
      "at": 0,
      "sprite": "WS_F_FOCUS_PUSH_UV_171",
      "pos": [
-      0.0,
+      0,
       -0.55,
-      0.0
+      0
      ],
      "act": "pop",
      "height": 1.42
@@ -11445,11 +11577,11 @@
    "set": "nightsea",
    "why": "the place she began, seen from where she arrived",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
+    "pool": 1,
+    "sea_glow": 1,
     "column": 0.6,
-    "stars": 1.0,
-    "deep_glow": 1.0
+    "stars": 1,
+    "deep_glow": 1
    },
    "camera": [
     {
@@ -11460,9 +11592,9 @@
       2.2
      ],
      "look": [
-      0.0,
+      0,
       -0.4,
-      -2.0
+      -2
      ],
      "fov": 46
     },
@@ -11474,9 +11606,9 @@
       2.2
      ],
      "look": [
-      0.0,
-      -12.0,
-      -4.0
+      0,
+      -12,
+      -4
      ],
      "fov": 50,
      "ease": "inOut"
@@ -11490,10 +11622,10 @@
    "set": "nightsea",
    "why": "the fish she gathered now light HER - the lamp lit by what she lit",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
+    "pool": 1,
+    "sea_glow": 1,
     "column": 0.6,
-    "stars": 1.0,
+    "stars": 1,
     "dots_at": [
      191.24
     ]
@@ -11502,7 +11634,7 @@
     {
      "at": 0,
      "pos": [
-      1.0,
+      1,
       0.8,
       1.6
      ],
@@ -11520,7 +11652,7 @@
      "at": 0,
      "sprite": "WS_F_CALM_REST_UV_164",
      "pos": [
-      0.0,
+      0,
       0.12,
       -0.4
      ],
@@ -11541,10 +11673,10 @@
    "set": "nightsea",
    "why": "rest: the story is told, everyone she touched glows",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
+    "pool": 1,
+    "sea_glow": 1,
     "column": 0.6,
-    "stars": 1.0,
+    "stars": 1,
     "dots_at": [
      191.24,
      192.45,
@@ -11575,14 +11707,14 @@
     {
      "at": 0,
      "pos": [
-      0.0,
+      0,
       3.2,
       5.6
      ],
      "look": [
-      0.0,
-      0.0,
-      -1.0
+      0,
+      0,
+      -1
      ],
      "fov": 42
     }
@@ -11593,7 +11725,7 @@
      "at": 0,
      "sprite": "WS_F_CALM_REST_UV_164",
      "pos": [
-      0.0,
+      0,
       0.12,
       -0.4
      ],
@@ -11604,14 +11736,14 @@
   },
   {
    "id": "s114",
-   "at": 195.0,
+   "at": 195,
    "set": "nightsea",
    "why": "the fire belongs to the sea now",
    "opts": {
-    "pool": 1.0,
+    "pool": 1,
     "sea_glow": 0.8,
     "column": 0.6,
-    "stars": 1.0,
+    "stars": 1,
     "pulse_at": [
      195.05
     ],
@@ -11646,9 +11778,9 @@
      "at": 0,
      "sprite": "WS_F_CALM_REST_UV_166",
      "pos": [
-      0.0,
+      0,
       -0.85,
-      0.0
+      0
      ],
      "height": 1.55
     }
@@ -11663,10 +11795,10 @@
    "set": "nightsea",
    "why": "the lamp lit by what she lit",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
+    "pool": 1,
+    "sea_glow": 1,
     "column": 0.6,
-    "stars": 1.0,
+    "stars": 1,
     "dots_at": [
      196.6
     ]
@@ -11676,7 +11808,7 @@
      "at": 0,
      "frame": "close",
      "from": [
-      0.0,
+      0,
       0.4,
       1.9
      ],
@@ -11686,7 +11818,7 @@
      "at": "end",
      "frame": "close",
      "from": [
-      0.0,
+      0,
       0.4,
       1.7
      ],
@@ -11700,9 +11832,9 @@
      "at": 0,
      "sprite": "WS_F_CALM_REST_UV_166",
      "pos": [
-      0.0,
+      0,
       -0.85,
-      0.0
+      0
      ],
      "height": 1.55
     }
@@ -11713,14 +11845,14 @@
   },
   {
    "id": "s116",
-   "at": 199.0,
+   "at": 199,
    "set": "nightsea",
    "why": "a last event in the quiet - the whole video in one reflection (review script_1 FIX 1)",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
+    "pool": 1,
+    "sea_glow": 1,
     "column": 0.6,
-    "stars": 1.0,
+    "stars": 1,
     "fireworks": [
      199.4
     ],
@@ -11749,9 +11881,9 @@
      "at": 0,
      "sprite": "WS_F_HAPPY_SURF_UV_180",
      "pos": [
-      0.0,
+      0,
       -0.75,
-      0.0
+      0
      ],
      "height": 1.45
     }
@@ -11762,14 +11894,14 @@
   },
   {
    "id": "s117",
-   "at": 203.0,
+   "at": 203,
    "set": "nightsea",
    "why": "the last frame repeats the first: the promise kept",
    "opts": {
-    "pool": 1.0,
-    "sea_glow": 1.0,
+    "pool": 1,
+    "sea_glow": 1,
     "column": 0.6,
-    "stars": 1.0
+    "stars": 1
    },
    "camera": [
     {
@@ -11790,9 +11922,9 @@
      "at": 0,
      "sprite": "WS_F_SLEEP_UV_130",
      "pos": [
-      0.0,
+      0,
       -0.85,
-      0.0
+      0
      ],
      "act": "shrink"
     }

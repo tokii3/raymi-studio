@@ -198,6 +198,55 @@ export const CAP_MIN = 0.054, SUB_CAP_MIN = 0.04;
 
 /** Every frame a lyric line is fully shown (from its last word on, settled), all of it must be inside the frame. */
 const L0 = (s: Shot) => s.lyrics!;
+/** The safe area for lyrics in NDC: 8 % of each side stays free (toki 2026-10-20). */
+export const SAFE = 0.84;
+const lt0 = (ps: THREE.Vector3[], cam: THREE.Camera) => { const q = ps.map((p) => p.clone().project(cam)); return [Math.min(...q.map((v) => v.x)), Math.min(...q.map((v) => v.y)), Math.max(...q.map((v) => v.x)), Math.max(...q.map((v) => v.y))]; };
+const area = (b: number[]) => (b[2] - b[0]) * (b[3] - b[1]);
+/** A line sits on an occluder when > 10 % of the smaller of the two is shared (a big block over a small Raymi counts). */
+export const sitsOn = (o: {boxes: number[][]}, lb: number[]) =>
+  o.boxes.reduce((t, bx) => t + boxOverlap(bx, lb), 0) > 0.1 * Math.min(area(lb), o.boxes.reduce((t, bx) => t + area(bx), 0));
+const boxOverlap = (a: number[], b: number[]) => Math.max(0, Math.min(a[2], b[2]) - Math.max(a[0], b[0])) * Math.max(0, Math.min(a[3], b[3]) - Math.max(a[1], b[1]));
+
+/** What a settled lyric line must not sit on (screen boxes 0..1, y down): her silhouette (coarse cells of her sprite,
+ *  timeline.py mask - the trimmed sprite box is mostly air around spread arms) and every solid prop / creature that
+ *  stands IN FRONT of the words (nearer the lens than `depth`): words drawn over a prop in front read as cut into it;
+ *  a far wall / chimney behind the words is their background. */
+export function occluders(props: FilmProps, s: Shot, f: number, cam: THREE.Camera, depth = Infinity): {name: string; boxes: [number, number, number, number][]}[] {
+  const out: {name: string; boxes: [number, number, number, number][]}[] = [];
+  const toBox = (pts: THREE.Vector3[]): [number, number, number, number] | null => {
+    const q = pts.map((p) => p.clone().project(cam));
+    if (q.some((p) => p.z >= 1 || p.z <= -1)) return null;
+    const bx: [number, number, number, number] = [Math.max(0, Math.min(...q.map((p) => (p.x + 1) / 2))), Math.max(0, Math.min(...q.map((p) => (1 - p.y) / 2))),
+      Math.min(1, Math.max(...q.map((p) => (p.x + 1) / 2))), Math.min(1, Math.max(...q.map((p) => (1 - p.y) / 2)))];
+    return bx[2] > bx[0] && bx[3] > bx[1] ? bx : null;
+  };
+  const p = puppetAt(s.puppets, f, props.fps);
+  if (p) {
+    const m = puppetMatrix(p, [cam.position.x, (cam.position as THREE.Vector3).y, cam.position.z]);
+    const {w, h} = planeSize(p.key);
+    const mask = p.key.mask ?? ['1'];
+    const ny = mask.length, nx = mask[0].length;
+    const cells: [number, number, number, number][] = [];
+    mask.forEach((row, j) => [...row].forEach((c, i) => {
+      if (c !== '1') return;
+      const pts = [[i / nx, j / ny], [(i + 1) / nx, j / ny], [i / nx, (j + 1) / ny], [(i + 1) / nx, (j + 1) / ny]].map(([u, v]) =>
+        new THREE.Vector3((u - 0.5) * w, (p.key.feet - v) * h, 0).applyMatrix4(m));
+      const bx = toBox(pts);
+      if (bx) cells.push(bx);
+    }));
+    if (cells.length) out.push({name: 'her figure', boxes: cells});
+  }
+  for (const b of s.solids ?? []) {
+    const box = new THREE.Box3().setFromCenterAndSize(new THREE.Vector3(...b.center), new THREE.Vector3(...b.size));
+    if (box.distanceToPoint(cam.position) >= depth) continue;
+    const pts: THREE.Vector3[] = [];
+    for (const i of [0, 1]) for (const j of [0, 1]) for (const k of [0, 1])
+      pts.push(new THREE.Vector3(i ? box.max.x : box.min.x, j ? box.max.y : box.min.y, k ? box.max.z : box.min.z));
+    const bx = toBox(pts);                              // reaching behind the lens: the lens guard owns that
+    if (bx) out.push({name: `the ${b.name}`, boxes: [bx]});
+  }
+  return out;
+}
 
 export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
   const aspect = props.width / props.height;
@@ -240,7 +289,7 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
         }
       }
       // a stamp slams in bigger than it lands: 2 frames after the last word it is still ~1.2x (final Short 1: clipped)
-      if (s.lyrics.kind === 'stamp' || s.lyrics.kind === 'sign') {
+      if ((s.lyrics.kind === 'stamp' || s.lyrics.kind === 'sign') && s.lyrics.reveal !== 'burn') {   // a burned word never pops (Words3D)
         const k = s.lyrics.kind === 'stamp' ? 1.2 : 1.05, fe = Math.min(last + 2, z - 1);
         const camE = makeCamera(s, fe, aspect, props.hits, props.fps);
         const an = new THREE.Vector3(...s.lyrics.anchor);
@@ -250,14 +299,24 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
         }
       }
       // every frame, with the real camera kick on the music hits (pilot 1: a stamp clipped by the punch on a hit)
-      let faceRun = 0, figRun = 0;
+      let faceRun = 0, figRun = 0, sitRun = 0;
       for (let f = a; f < zz; f++) {
         const rise = float ? ((f - last) / props.fps) * 0.12 + 0.04 : 0;     // Words3D float: rises 0.12 m/s
         const corners = rise ? corners0.map((c) => c.clone().add(new THREE.Vector3(0, rise, 0))) : corners0;
         const cam = makeCamera(s, f, aspect, props.hits, props.fps);
-        // inside the typographic safe area (4 % margin): a word touching the frame edge reads as clipped (pilot 1)
-        const bad = corners.some((c) => { const n = c.clone().project(cam); return n.z >= 1 || Math.abs(n.x) > 0.92 || Math.abs(n.y) > 0.92; });
+        // inside the typographic safe area: a word near the frame edge reads as clipped (pilot 1: 4 %; FIRESTARTER final
+        // Short, toki 2026-10-20 "abgeschnitten": its glow still touched the edge -> 8 % of each side)
+        const bad = corners.some((c) => { const n = c.clone().project(cam); return n.z >= 1 || Math.abs(n.x) > SAFE || Math.abs(n.y) > SAFE; });
         if (bad) { out.push({shot: s.id, frame: f, line, text: ws.map((w) => w.w).join(' '), why: 'leaves the frame'}); break; }
+        // v2 (toki 2026-10-20 "hinter raymi / assets oder clippen in assets"): a settled line sits in free space - not on
+        // her figure, not on a prop / solid / creature (more than 10 % of the block for 6 frames in a row)
+        if (s.lyrics.style === 'v2' && !s.lyrics.over) {
+          const lb: [number, number, number, number] = [(lt0(corners, cam)[0] + 1) / 2, (1 - lt0(corners, cam)[3]) / 2, (lt0(corners, cam)[2] + 1) / 2, (1 - lt0(corners, cam)[1]) / 2];
+          const depth = cam.position.distanceTo(new THREE.Vector3(...s.lyrics.anchor));
+          const hit = occluders(props, s, f, cam, depth).find((o) => sitsOn(o, lb));
+          sitRun = hit ? sitRun + 1 : 0;
+          if (hit && sitRun >= Math.min(6, zz - a)) { out.push({shot: s.id, frame: f - 5, line, text: ws.map((x) => x.w).join(' '), why: `sits on ${hit.name}`}); break; }
+        }
         // text on text: a lyric over a readable set prop (the sign, the LED) makes both unreadable (final 1: ワーニング on the sign)
         const tbox = (ps: THREE.Vector3[]) => [Math.min(...ps.map((q) => q.x)), Math.min(...ps.map((q) => q.y)), Math.max(...ps.map((q) => q.x)), Math.max(...ps.map((q) => q.y))];
         const lt = tbox(corners.map((c) => c.clone().project(cam)));
@@ -690,21 +749,26 @@ function figureBox(props: FilmProps, s: Shot, f: number, cam: THREE.Camera): [nu
 /** FIRESTARTER final (toki: "leere Fläche effektiv nutzen"): the BIGGEST lyric block that passes every lyric guard,
  *  placed in the empty part of the frame (away from her figure and the shot's hero), facing the lens. The words draw on
  *  top of the set (Words3D depthTest off), so only the frame, her and the hero decide. null = nothing fits. */
-export function fillLyrics(props: FilmProps, index: number): {anchor: V3; size: number; width: number; tilt: number; roll: number; rot: number; key_scale: number} | null {
+export function fillLyrics(props: FilmProps, index: number): {anchor: V3; size: number; width: number; tilt: number; roll: number; rot: number; key_scale: number; small?: string} | null {
   const s = props.shots[index];
   if (!s.lyrics || !s.words.length) return null;
   const aspect = props.width / props.height;
   // the camera where the (last) line has settled - the guard reads size and frame there; a moving lens is checked per frame
   const f = Math.max(s.from, Math.min(s.to - 1, Math.max(...s.words.map((w) => w.from)) + 6));
   const cam = makeCamera(s, f, aspect, [], props.fps);
-  const fig = figureBox(props, s, f, cam);
-  const heroes = (s.hero ?? []).map((h) => heroBox(props, s, f, h)).filter(Boolean) as [number, number, number, number][];
+  const heroes = (s.hero ?? []).filter((h) => h.kind !== 'word').map((h) => heroBox(props, s, f, h)).filter(Boolean) as [number, number, number, number][];
   // the Short's hook and comment question sit in the top band (OVERLAY): lyrics stay out of it
   const bands: [number, number, number, number][] = aspect < 1 ? [[0, OVERLAY.hookTop, 1, OVERLAY.hookTop + OVERLAY.hookH], [0, OVERLAY.ctaTop, 1, OVERLAY.ctaTop + OVERLAY.ctaH]] : [];
-  const avoid = [...(fig ? [fig] : []), ...heroes, ...bands];
   const p = puppetAt(s.puppets, f, props.fps);
   const her = p ? new THREE.Vector3(...p.pos) : new THREE.Vector3(...s.lyrics.anchor);
-  const d = Math.max(1.2, Math.min(9, her.distanceTo(cam.position) * 0.9));
+  const d0 = Math.max(1.2, Math.min(9, her.distanceTo(cam.position) * 0.9));
+  // at her depth first; then nearer the lens, so a prop that stood in front of the words becomes their background
+  // a line leaning back on the floor (tilt <= -45: burned into it) first tries lying flat on the floor - moved along it,
+  // so a crane up keeps it in the picture (FIRESTARTER s19: 'fire' burned into the vent floor)
+  const floorY = (s.lyrics.tilt ?? 0) <= -45 ? 0.03 : null;
+  for (const surf of floorY !== null ? [true, false] : [false]) for (const d of surf ? [d0] : [d0, Math.max(0.8, d0 * 0.55)]) {
+  const occ = occluders(props, s, f, cam, d);                 // her silhouette cells + props in front of the words
+  const avoid = [...occ.flatMap((o) => o.boxes), ...heroes, ...bands];
   const H = 2 * d * Math.tan(((cam as THREE.PerspectiveCamera).fov * Math.PI) / 360), Wd = H * aspect;
   const fwd = new THREE.Vector3(0, 0, -1).applyQuaternion(cam.quaternion);
   const tilt = Number(((Math.asin(Math.max(-1, Math.min(1, fwd.y))) * 180) / Math.PI).toFixed(1));
@@ -714,31 +778,43 @@ export function fillLyrics(props: FilmProps, index: number): {anchor: V3; size: 
     return Math.hypot(dx * aspect, dy);
   }));
   const spots: [number, number][] = [];
-  for (let y = 0.2; y <= 0.801; y += 0.1) for (let x = 0.22; x <= 0.781; x += 0.08) spots.push([x, y]);
+  for (let y = 0.16; y <= 0.841; y += 0.06) for (let x = 0.16; x <= 0.841; x += 0.06) spots.push([x, y]);
   spots.sort((a, b) => emptiness(b[0], b[1]) - emptiness(a[0], a[1]) || Math.abs(a[1] - 0.45) - Math.abs(b[1] - 0.45));
-  const ks = Math.min(s.lyrics.keyScale ?? 2.8, 1.8);
-  // first off her entirely (<= 20 % of the block on her), then partly; the face guard still holds in every pass
-  for (const allow of [0.2, 0.5, 1.01]) for (const frac of [0.12, 0.1, 0.085, 0.072, 0.062, 0.056]) {
+  // off her and every prop (<= 10 % of the block on them - the guard holds the same line), biggest first; in a tight
+  // frame the key word gives up its emphasis before the line gives up its place (FIRESTARTER Short: I'm a fire starter)
+  const allow = 0.1;
+  // last resort: a frame whose free space is too small for the readable default takes the line smaller (>= 3.6 % cap
+  // height, still readable on a phone) - written as lyrics.small, never onto her or a prop
+  const tiers: [number, number[], string | undefined][] = [
+    ...[...new Set([Math.min(s.lyrics.keyScale ?? 2.8, 1.8), 1.3, 1])].map((k) => [k, [0.12, 0.1, 0.085, 0.072, 0.062, 0.056], undefined] as [number, number[], undefined]),
+    [1, [0.05, 0.044, 0.04, 0.036], 'fitter: the free space beside her is small in this frame']];
+  for (const [ks, fracs, small] of tiers) for (const frac of fracs) {
     for (const wf of [0.85, 0.65, 0.45, 0.3]) for (const [x, y] of spots) {
       const ray = new THREE.Vector3(x * 2 - 1, 1 - y * 2, 0.5).unproject(cam).sub(cam.position).normalize();
-      const pt = cam.position.clone().addScaledVector(ray, d / Math.max(0.3, ray.dot(fwd)));
+      if (surf && ray.y > -0.05) continue;
+      const pt = surf ? cam.position.clone().addScaledVector(ray, (floorY! - cam.position.y) / ray.y)
+        : cam.position.clone().addScaledVector(ray, d / Math.max(0.3, ray.dot(fwd)));
+      const dd = surf ? pt.distanceTo(cam.position) : d;
+      const Hs = 2 * dd * Math.tan(((cam as THREE.PerspectiveCamera).fov * Math.PI) / 360);
       const anchor: V3 = [Number(pt.x.toFixed(2)), Number(pt.y.toFixed(2)), Number(pt.z.toFixed(2))];
-      const rot = Number(((Math.atan2(cam.position.x - pt.x, cam.position.z - pt.z) * 180) / Math.PI).toFixed(1));
-      const L = {...s.lyrics, anchor, rotY: rot, tilt, roll: 0, keyScale: ks, small: undefined,
-        size: Number((frac * H).toFixed(3)), width: Number((wf * Wd).toFixed(2))};
+      const rot = surf ? s.lyrics.rotY : Number(((Math.atan2(cam.position.x - pt.x, cam.position.z - pt.z) * 180) / Math.PI).toFixed(1));
+      const tl = surf ? -90 : tilt;
+      const L = {...s.lyrics, anchor, rotY: rot, tilt: tl, roll: 0, keyScale: ks, small,
+        size: Number((frac * (surf ? Hs * 1.4 : H)).toFixed(3)), width: Number((wf * (surf ? Hs * 1.4 * aspect : Wd)).toFixed(2))};
       const sh = {...s, lyrics: L};
-      // off her figure and the hero: at most 20 % of the block on them (a word may cross, a line may not sit there)
       const clear = [...new Set(s.words.map((w) => w.line))].every((line) => {
         const q = lineCorners(sh, line).map((c) => c.clone().project(cam));
         const b = [Math.min(...q.map((v) => (v.x + 1) / 2)), Math.min(...q.map((v) => (1 - v.y) / 2)), Math.max(...q.map((v) => (v.x + 1) / 2)), Math.max(...q.map((v) => (1 - v.y) / 2))];
         const area = (b[2] - b[0]) * (b[3] - b[1]);
-        return avoid.every((a) => ov(a, b) <= allow * area);
+        return occ.every((o) => !sitsOn(o, b)) && [...heroes, ...bands].every((a) => ov(a, b) <= allow * area);
       });
       if (!clear) continue;
       const pr = {...props, shots: [sh]};
-      if (lyricsOutOfFrame(pr).length === 0)   // v2 words draw over every solid (Words3D depthTest off)
-        return {anchor, size: L.size, width: L.width, tilt, roll: 0, rot, key_scale: ks};
+      // a key word that IS the shot's main element keeps its readable size (heroFaults)
+      if (lyricsOutOfFrame(pr).length === 0 && heroFaults(pr).length === 0)
+        return {anchor, size: L.size, width: L.width, tilt: tl, roll: 0, rot, key_scale: ks, ...(small ? {small} : {})};
     }
+  }
   }
   return null;
 }

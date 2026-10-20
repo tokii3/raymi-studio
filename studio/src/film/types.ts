@@ -17,6 +17,7 @@ export type PuppetKey = {
   top: number;             // fraction of the sprite height where her head / ears start
   feet: number;            // fraction where her feet touch the floor
   head?: [number, number, number, number];   // her head box in the sprite (fractions x0, y0, x1, y1)
+  mask?: string[];         // her coarse silhouette: rows top..bottom of "0"/"1" cells over the sprite (timeline.py)
   pos: V3;                 // feet position in the set
   height: number;          // her figure height (head top .. feet) in metres
   act: Act;

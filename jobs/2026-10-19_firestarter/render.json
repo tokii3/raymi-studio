@@ -1,6 +1,6 @@
 {
  "quality": "final",
- "format": "short",
- "round": 4,
- "_why": "final fix (toki 2026-10-20): the Short with every sung word, filled into the empty space"
+ "format": "mv",
+ "round": 5,
+ "_why": "lyrics fix (toki 2026-10-20 \"abgeschnitten, hinter raymi / assets\"): 8 % safe margin, never on her silhouette or a prop in front"
 }
