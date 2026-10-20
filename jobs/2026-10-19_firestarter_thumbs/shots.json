@@ -40,7 +40,7 @@
     "crack_n": 2,
     "vent_cap": 0.25,
     "snow": 0.35,
-    "glow": "#b45cff",
+    "glow": "#0f5866",
     "fires": [
      {
       "uv": [
@@ -56,7 +56,7 @@
    "camera": [
     {
      "at": 0,
-     "frame": "extreme",
+     "frame": "huge",
      "side": "left",
      "from": [
       0.6,
@@ -67,7 +67,7 @@
     },
     {
      "at": "end",
-     "frame": "extreme",
+     "frame": "huge",
      "side": "left",
      "from": [
       0.6,
@@ -127,15 +127,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.29,
-      1.44,
-      -0.65
+      1.17,
+      1.5,
+      -0.86
      ],
-     "size": 0.14,
-     "width": 0.62,
-     "tilt": -0.1,
+     "size": 0.058,
+     "width": 1.41,
+     "tilt": -0.2,
      "roll": 0,
-     "rot": -20.8,
+     "rot": -26,
      "key_scale": 1.8
     }
    }
@@ -151,12 +151,12 @@
     "crack_n": 2,
     "vent_cap": 0.25,
     "snow": 0.35,
-    "glow": "#b45cff",
+    "glow": "#0f5866",
     "fires": [
      {
       "uv": [
-       0.95,
-       0.42
+       0.86,
+       0.27
       ],
       "size": 0.34,
       "c": "#b45cff",
@@ -167,7 +167,7 @@
    "camera": [
     {
      "at": 0,
-     "frame": "extreme",
+     "frame": "huge",
      "side": "left",
      "from": [
       0.6,
@@ -178,7 +178,7 @@
     },
     {
      "at": "end",
-     "frame": "extreme",
+     "frame": "huge",
      "side": "left",
      "from": [
       0.6,
@@ -203,8 +203,8 @@
     {
      "name": "flame",
      "uv": [
-      0.95,
-      0.42
+      0.86,
+      0.27
      ]
     },
     "face"
@@ -242,15 +242,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.92,
-      1.4,
-      -0.82
+      0.8,
+      1.46,
+      -1.07
      ],
-     "size": 0.126,
-     "width": 0.56,
-     "tilt": 0.1,
+     "size": 0.105,
+     "width": 0.47,
+     "tilt": 0.2,
      "roll": 0,
-     "rot": -12.7,
+     "rot": -13.9,
      "key_scale": 1.8
     }
    }
@@ -266,7 +266,7 @@
     "crack_n": 2,
     "vent_cap": 0.25,
     "snow": 0.35,
-    "glow": "#b45cff",
+    "glow": "#0f5866",
     "fires": [
      {
       "uv": [
@@ -339,7 +339,7 @@
     "crack_n": 2,
     "vent_cap": 0.25,
     "snow": 0.35,
-    "glow": "#b45cff",
+    "glow": "#0f5866",
     "fires": [
      {
       "uv": [
@@ -355,7 +355,7 @@
    "camera": [
     {
      "at": 0,
-     "frame": "extreme",
+     "frame": "huge",
      "side": "left",
      "from": [
       0.6,
@@ -366,7 +366,7 @@
     },
     {
      "at": "end",
-     "frame": "extreme",
+     "frame": "huge",
      "side": "left",
      "from": [
       0.6,
@@ -430,15 +430,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.28,
-      1.37,
-      -0.64
+      1.17,
+      1.44,
+      -0.85
      ],
-     "size": 0.14,
-     "width": 0.62,
+     "size": 0.111,
+     "width": 0.49,
      "tilt": 0.2,
      "roll": 0,
-     "rot": -21.2,
+     "rot": -26.6,
      "key_scale": 1.8
     }
    }
@@ -454,7 +454,7 @@
     "crack_n": 2,
     "vent_cap": 0.25,
     "snow": 0.35,
-    "glow": "#b45cff",
+    "glow": "#0f5866",
     "fires": [
      {
       "uv": [
@@ -531,7 +531,7 @@
     "crack_n": 2,
     "vent_cap": 0.25,
     "snow": 0.35,
-    "glow": "#b45cff",
+    "glow": "#0f5866",
     "fires": [
      {
       "uv": [
@@ -608,7 +608,7 @@
     "crack_n": 2,
     "vent_cap": 0.25,
     "snow": 0.35,
-    "glow": "#b45cff",
+    "glow": "#0f5866",
     "fires": [
      {
       "uv": [
@@ -685,7 +685,7 @@
     "crack_n": 2,
     "vent_cap": 0.25,
     "snow": 0.35,
-    "glow": "#b45cff",
+    "glow": "#0f5866",
     "fires": [
      {
       "uv": [

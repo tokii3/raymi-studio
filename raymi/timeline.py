@@ -196,7 +196,9 @@ def _key_time(at, start: float, end: float) -> float:
 # Framing her in the 3D space (the 3D twin of studio/src/framing.ts): a camera key {"frame": "close"} is solved
 # from her sprite plane - the head fully in, every cut edge fully out (hard rule 9), the head at the shot size's
 # share of the frame. "from" = the side the lens is on (a set camera or a point; default the key's "cam").
-FRAME_SHARE = {"extreme": 0.46, "close": 0.3, "medium": 0.17}   # head height / frame height (as framing.ts)
+FRAME_SHARE = {"huge": 0.72, "extreme": 0.46, "close": 0.3, "medium": 0.17}   # head height / frame height (as framing.ts)
+# "huge": thumbnails only (toki 2026-10-20 FIRESTARTER thumbs) - the head box holds her long hair, so 46 % read as a
+# small face at feed size; 72 % makes the FACE the picture
 FRAME_FIGURE = 0.66                                            # wide: figure height / frame height
 FRAME_SIDE = {"center": 0.5, "left": 0.38, "right": 0.62}
 ACT_LIFT = {"hop": 0.3, "float": 0.2, "bounce": 0.07}
