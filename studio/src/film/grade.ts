@@ -32,6 +32,9 @@ export const TONES: Record<string, Tone & {lyric: LyricTone}> = {
   // neutral: a clean, bright picture (comedy, daylight on land)
   clean: {filter: 'contrast(1.12) saturate(1.12) brightness(1.0)', top: '#cfefff', bottom: '#1c1440', split: 0.25, vignette: 0.5,
     lyric: {color: '#ffffff', accent: '#ffcf4a', sub: '#e4ecff', shadow: 'rgba(16,10,40,0.8)'}},
+  // VRM Firestarter look test: retain the deep-violet setting while keeping highlights on pale MToon materials.
+  vrm_fire: {filter: 'contrast(1.08) saturate(1.08) brightness(0.92)', top: '#d39a82', bottom: '#180d31', split: 0.36, vignette: 0.62,
+    lyric: {color: '#f3ecff', accent: '#ffc46b', sub: '#d8d2e8', shadow: 'rgba(12,5,30,0.84)'}},
 };
 
 /** Two grades mixed (a grade change ON an event inside a shot, e.g. the red wave's front): numbers of the filter, the

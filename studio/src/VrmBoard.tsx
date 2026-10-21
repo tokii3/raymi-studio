@@ -22,6 +22,8 @@ export type BoardTile = {
   cam: {pos: V3; look: V3; fov: number};
   keys: VrmKey[];                 // f relative to the tile (0 = a still)
   lock?: number;                  // VrmPuppet colour lock (hard rule 9)
+  materialStyle?: string;
+  glowGain?: number;
   sprite?: PuppetKey | null;      // the painted puppet next to her, for the comparison
 };
 
@@ -61,7 +63,8 @@ export const VrmBoard: React.FC<VrmBoardProps> = (props) => {
             {Set ? <Set f={f} fps={fps} opts={tile.opts} hits={[]} beats={[]} camPos={tile.cam.pos} /> : null}
             <VrmPuppet url={staticFile(props.vrm)} keys={keys} f={f} fps={fps} from={f} camPos={tile.cam.pos}
               lock={tile.lock ?? 0.6} shadow={String(tile.opts.shadow ?? '#1d0b38')}
-              glow={tile.opts.glow ? String(tile.opts.glow) : undefined} />
+              glow={tile.opts.glow ? String(tile.opts.glow) : undefined} glowGain={tile.glowGain}
+              materialStyle={tile.materialStyle} />
             {sprite.length ? <Puppet3D keys={sprite} f={f} fps={fps} camPos={tile.cam.pos} shadow={String(tile.opts.shadow ?? '#1d0b38')} /> : null}
           </ThreeCanvas>
         ) : null}

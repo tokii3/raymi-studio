@@ -1,0 +1,143 @@
+{
+  "composition": "VrmClip",
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "durationInFrames": 240,
+  "vrm": "vrm/raymi4.vrm",
+  "sprites": [],
+  "set": "deep",
+  "opts": {
+    "grade": "vrm_fire",
+    "ignite": 0.16,
+    "origin": [
+      0.6,
+      -1.0
+    ],
+    "snow": 0.25,
+    "smoke": false,
+    "vent_cap": 0.2,
+    "fog_far": 20,
+    "fires": [
+      {
+        "pos": [
+          1.2,
+          0.1,
+          -1.9
+        ],
+        "size": 0.38,
+        "c": "#b45cff",
+        "core": "#ffe2b8",
+        "light": 0.12,
+        "embers": 8
+      }
+    ],
+    "shadow": "#120b2b"
+  },
+  "cam": {
+    "pos": [
+      0.1,
+      1.55,
+      4.6
+    ],
+    "look": [
+      0,
+      0.9,
+      -0.3
+    ],
+    "fov": 38
+  },
+  "lock": 0.28,
+  "glowGain": 0,
+  "materialStyle": "firestarter",
+  "grain": 0.02,
+  "keys": [
+    {
+      "f": 0,
+      "pose": "ignite",
+      "expr": {
+        "fun": 0.35
+      },
+      "pos": [
+        -0.16,
+        0,
+        -0.6
+      ],
+      "rotY": "lens",
+      "blend": 0
+    },
+    {
+      "f": 34,
+      "pose": "sway",
+      "expr": {
+        "joy": 0.65
+      },
+      "pos": [
+        -0.22,
+        0,
+        -0.58
+      ],
+      "rotY": 8,
+      "blend": 22
+    },
+    {
+      "f": 78,
+      "pose": "point",
+      "expr": {
+        "joy": 0.7
+      },
+      "pos": [
+        0.04,
+        0,
+        -0.62
+      ],
+      "rotY": -9,
+      "blend": 20
+    },
+    {
+      "f": 126,
+      "pose": "arms_up",
+      "expr": "joy",
+      "pos": [
+        0.08,
+        0,
+        -0.68
+      ],
+      "rotY": "lens",
+      "blend": 22
+    },
+    {
+      "f": 178,
+      "pose": "ignite",
+      "expr": {
+        "joy": 0.75
+      },
+      "pos": [
+        -0.1,
+        0,
+        -0.58
+      ],
+      "rotY": 11,
+      "blend": 20
+    },
+    {
+      "f": 222,
+      "pose": "arms_up",
+      "expr": "joy",
+      "pos": [
+        0,
+        0.035,
+        -0.62
+      ],
+      "rotY": "lens",
+      "blend": 18
+    }
+  ],
+  "audio": {
+    "src": "jobs/2026-10-19_firestarter/song.webm",
+    "file": "firestarter.webm",
+    "startFrame": 819,
+    "volume": 0.72
+  },
+  "output": "boards/firestarter-refrain-vrm4.mp4"
+}

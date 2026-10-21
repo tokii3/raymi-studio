@@ -32,6 +32,8 @@ type Rig = {
   restLow: number;                         // lowest foot bone y in the rest pose
   mirror: boolean;                         // VRM 0.x: normalized rotations mirrored (x, z negated)
   lock: number | null;
+  materialStyle: string | null;
+  materialBases: Map<THREE.Material, {color?: THREE.Color; shade?: THREE.Color; emissive?: THREE.Color; emissiveMap?: THREE.Texture | null}>;
 };
 
 const rigs = new Map<string, Rig>();
@@ -57,8 +59,13 @@ async function loadRig(url: string, data?: ArrayBuffer): Promise<Rig> {
   root.updateMatrixWorld(true);
   vrm.scene.traverse((o) => { const s = o as THREE.SkinnedMesh; if (s.isSkinnedMesh) { s.skeleton.update(); s.computeBoundingBox(); } });
   const box = new THREE.Box3().setFromObject(vrm.scene);
+  const materialBases = new Map<THREE.Material, {color?: THREE.Color; shade?: THREE.Color; emissive?: THREE.Color; emissiveMap?: THREE.Texture | null}>();
+  for (const material of vrm.materials ?? []) {
+    const m = material as THREE.Material & {color?: THREE.Color; shadeColorFactor?: THREE.Color; emissive?: THREE.Color; emissiveMap?: THREE.Texture | null};
+    materialBases.set(material, {color: m.color?.clone(), shade: m.shadeColorFactor?.clone(), emissive: m.emissive?.clone(), emissiveMap: m.emissiveMap});
+  }
   const rig: Rig = {vrm, root, ground, natural: box.max.y - box.min.y, floor: box.min.y, restLow: lowestFoot(vrm),
-    mirror: vrm.meta?.metaVersion === '0', lock: null};
+    mirror: vrm.meta?.metaVersion === '0', lock: null, materialStyle: null, materialBases};
   vrm.springBoneManager?.setInitState();
   return rig;
 }
@@ -92,6 +99,29 @@ export function useVrmReady(urls: string[]): boolean {
       .catch((e) => cancelRender(e));
   }, [key]);   // eslint-disable-line react-hooks/exhaustive-deps
   return ready;
+}
+
+function styleMaterials(rig: Rig, style: string) {
+  if (rig.materialStyle === style) return;
+  for (const mat of rig.vrm.materials ?? []) {
+    const m = mat as THREE.Material & {isMToonMaterial?: boolean; color?: THREE.Color; shadeColorFactor?: THREE.Color;
+      emissive?: THREE.Color; emissiveMap?: THREE.Texture | null; name?: string; map?: THREE.Texture | null};
+    const base = rig.materialBases.get(mat);
+    if (base?.color && m.color) m.color.copy(base.color);
+    if (base?.shade && m.shadeColorFactor) m.shadeColorFactor.copy(base.shade);
+    if (base?.emissive && m.emissive) m.emissive.copy(base.emissive);
+    if (base && m.emissiveMap !== undefined) m.emissiveMap = base.emissiveMap ?? null;
+    if (!m.isMToonMaterial || !m.color) continue;
+    if (style !== 'firestarter') continue;
+    const name = m.name ?? '';
+    // A cool, slightly darker finish keeps the original textures but gives hair, skin and pale fabric
+    // enough separation under the violet fire lights.
+    if (name.includes('HAIR')) m.color.multiply(new THREE.Color('#c2c8f3'));
+    else if (name.includes('SKIN')) m.color.multiply(new THREE.Color('#e0edf5'));
+    else if (name.includes('CLOTH')) m.color.multiply(new THREE.Color('#c4c5dd'));
+  }
+  rig.materialStyle = style;
+  rig.lock = null;
 }
 
 function lockColours(rig: Rig, lock: number) {
@@ -234,13 +264,16 @@ export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
 }
 
 export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: number; from?: number; camPos: V3;
-  lock?: number; shadow?: string; glow?: string; glowGain?: number}> = ({url, keys, f, fps, from = 0, camPos, lock = 0.6,
-  shadow = '#1d0b38', glow, glowGain = 1}) => {
+  lock?: number; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string}> = ({url, keys, f, fps, from = 0, camPos, lock = 0.6,
+  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none'}) => {
   if (!keys.length || f < keys[0].f) return null;
-  const rig = poseVrm(url, keys, f, fps, Math.max(from, keys[0].f), camPos, lock);
-  const p = rig.root.position;
-  const w = (rig.root.scale.x * rig.natural) * 0.42;
-  const chest = rig.vrm.humanoid.getRawBoneNode('chest')?.getWorldPosition(new THREE.Vector3());
+  const rig = rigs.get(url);
+  if (!rig) { cancelRender(new Error(`VRM not preloaded: ${url}`)); throw new Error('unreachable'); }
+  styleMaterials(rig, materialStyle);
+  const posed = poseVrm(url, keys, f, fps, Math.max(from, keys[0].f), camPos, lock);
+  const p = posed.root.position;
+  const w = (posed.root.scale.x * posed.natural) * 0.42;
+  const chest = posed.vrm.humanoid.getRawBoneNode('chest')?.getWorldPosition(new THREE.Vector3());
   const pulse = (0.85 + 0.15 * Math.sin(f / 9)) * glowGain;
   return (
     <group>
@@ -248,7 +281,7 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
         <planeGeometry args={[w * 1.3, w * 0.7]} />
         <meshBasicMaterial map={blobTexture(shadow)} transparent depthWrite={false} opacity={0.8} toneMapped={false} />
       </mesh>
-      <primitive object={rig.root} />
+      <primitive object={posed.root} />
       {glow && chest && glowGain > 0.01 ? (    // 灯闇: she is the lamp in the dark (like Puppet3D)
         <pointLight position={[chest.x, chest.y, chest.z + 0.25]} color={glow} intensity={7 * pulse} distance={5} decay={1.4} />
       ) : null}

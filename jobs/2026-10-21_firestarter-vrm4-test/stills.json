@@ -1,7 +1,20 @@
 {
   "format": "mv",
-  "frames": [0, 1, 2, 3, 4],
-  "names": ["cold_open", "eruption", "gold_venom", "vrm_vs_sprite", "surface"],
+  "frames": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "names": [
+    "cold_open",
+    "eruption",
+    "gold_venom",
+    "vrm_vs_sprite",
+    "surface"
+  ],
   "scale": 1,
-  "to": "boards"
+  "to": "boards",
+  "grain": 0.025
 }

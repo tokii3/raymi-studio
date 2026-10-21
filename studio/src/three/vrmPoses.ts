@@ -60,6 +60,24 @@ export const POSES: Record<string, VrmPose> = {
     leftLowerArm: [0, -0.35, 0.15], rightLowerArm: [0, 0.35, -0.15],
     leftUpperLeg: [0, 0, 0.08], rightUpperLeg: [0, 0, -0.08],
   },
+  // a playful ignition cue: one hand presents the spark, the other opens to the side
+  ignite: {
+    ...curl('left', 0.35), ...curl('right', 0.25),
+    hips: [0, 0.06, -0.08], spine: [0.03, -0.12, -0.04], chest: [0, -0.08, 0.02],
+    neck: [0, 0.03, 0], head: [-0.03, -0.12, 0.06],
+    leftUpperArm: [0, -0.35, -0.72], leftLowerArm: [0.08, -0.8, 0.05], leftHand: [0, 0, -0.12],
+    rightUpperArm: [-0.08, 0.35, -0.32], rightLowerArm: [0, 0.25, 0], rightHand: [0, 0, 0.1],
+    leftUpperLeg: [-0.06, 0, 0.1], rightUpperLeg: [0.04, 0, -0.04],
+  },
+  // a small rhythmic weight shift with one hand high and one hand near her waist
+  sway: {
+    ...curl('left', 0.3), ...curl('right', 0.45),
+    hips: [0.02, -0.09, 0.1], spine: [0.04, 0.08, 0.06], chest: [-0.02, 0.06, -0.03],
+    neck: [0, 0, -0.03], head: [0.02, 0.08, -0.08],
+    leftUpperArm: [0, -0.18, 0.75], leftLowerArm: [0, -0.28, 0], leftHand: [0, 0, 0.1],
+    rightUpperArm: [0, 0.38, 0.65], rightLowerArm: [0, -0.55, 0], rightHand: [0, 0, -0.1],
+    leftUpperLeg: [-0.05, 0, 0.09], rightUpperLeg: [0.08, 0, -0.07], rightLowerLeg: [0.12, 0, 0],
+  },
 };
 
 /** Expression names: the VRM 0.x names (her VRoid export) -> three-vrm's preset names; anything else is custom. */

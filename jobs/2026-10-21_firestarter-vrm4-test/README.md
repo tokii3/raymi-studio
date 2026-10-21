@@ -1,7 +1,5 @@
-# Firestarter VRM 4 comparison
+# Firestarter VRM 4 look and motion test
 
-Cloud stills using the same built deep-sea and night-sea sets and the matching Firestarter camera setups for shots 1,
-19, 33 and 83. The fourth tile compares the new VRM against the current shot 1 sprite under Firestarter lighting.
+Cloud look board plus an 8-second animation excerpt from the first chorus of Firestarter. The preview uses the uploaded `raymi4.vrm`, the existing deep-sea set, an adjusted Firestarter material profile, and the VRM spring-bone simulation for hair, skirt, tail and ears.
 
-This is a visual look test, not a VRM cut of the finished film: the current MV composition still uses the sprite
-puppet. The stills deliberately render through the cloud workflow.
+The film itself still uses the sprite puppet. This is a separate 3D look and motion study, not a replacement cut of the finished video. The short audio excerpt begins at 27.31 seconds in the project's existing song file.

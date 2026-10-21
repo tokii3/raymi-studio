@@ -3,6 +3,7 @@ import {Composition} from 'remotion';
 import {Short} from './Short';
 import {Film} from './film/Film';
 import {VrmBoard, type VrmBoardProps} from './VrmBoard';
+import {VrmClip, type VrmClipProps} from './VrmClip';
 import type {ShortProps} from './types';
 import type {FilmProps} from './film/types';
 
@@ -22,6 +23,11 @@ const vrmBoard: VrmBoardProps = {composition: 'VrmBoard', width: 1920, height: 1
   vrm: 'vrm/raymi3.vrm', sprites: [], tiles: [{name: 'empty', set: 'aquarium', opts: {}, cam: {pos: [0, 1.2, 5], look: [0, 0.9, 0], fov: 32},
     keys: [{f: 0, pose: 'stand', pos: [0, 0, 0]}]}]};
 
+const vrmClip: VrmClipProps = {composition: 'VrmClip', width: 1280, height: 720, fps: 30, durationInFrames: 240,
+  vrm: 'vrm/raymi3.vrm', sprites: [], set: 'deep', opts: {grade: 'vrm_fire'},
+  cam: {pos: [0, 1.55, 4.6], look: [0, 0.9, -0.3], fov: 38},
+  keys: [{f: 0, pose: 'stand', pos: [0, 0, -0.6]}]};
+
 const meta = ({props}: {props: Record<string, unknown>}) => {
   const p = props as unknown as {durationInFrames: number; fps: number; width: number; height: number};
   return {durationInFrames: p.durationInFrames, fps: p.fps, width: p.width, height: p.height};
@@ -39,5 +45,7 @@ export const Root: React.FC = () => (
     {/* the 3D VRM Raymi test board (cloud stills only; jobs/<job>/board.json) */}
     <Composition id="VrmBoard" component={VrmBoard as unknown as React.FC<Record<string, unknown>>} width={1920} height={1080}
       fps={30} durationInFrames={1} defaultProps={vrmBoard as unknown as Record<string, unknown>} calculateMetadata={meta} />
+    <Composition id="VrmClip" component={VrmClip as unknown as React.FC<Record<string, unknown>>} width={1280} height={720}
+      fps={30} durationInFrames={240} defaultProps={vrmClip as unknown as Record<string, unknown>} calculateMetadata={meta} />
   </>
 );

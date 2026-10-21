@@ -1,0 +1,75 @@
+name: vrm-clip
+
+# Short VRM animation studies are rendered on GitHub Actions; never render on the local machine.
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "job folder under jobs/"
+        required: true
+  push:
+    branches: [main]
+    paths: ["jobs/*/clip.json"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vrm-clip-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  clip:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Browser and media tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+      - name: Node modules (cached)
+        id: nm
+        uses: actions/cache@v4
+        with:
+          path: studio/node_modules
+          key: nm-${{ runner.os }}-${{ hashFiles('studio/package-lock.json') }}-v1
+      - name: Install
+        if: steps.nm.outputs.cache-hit != 'true'
+        run: cd studio && npm ci --no-audit --no-fund
+      - name: Typecheck and prepare browser
+        run: cd studio && npx tsc --noEmit && npx remotion browser ensure
+      - name: Render clip
+        id: render
+        env:
+          JOB_INPUT: ${{ inputs.job }}
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_BEFORE: ${{ github.event.before }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            JOBS="$JOB_INPUT"
+          else
+            BEFORE="$EVENT_BEFORE"
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
+              BEFORE=$(git rev-parse -q --verify HEAD~1 || git hash-object -t tree /dev/null)
+            fi
+            JOBS=$(git diff --name-only "$BEFORE" HEAD -- 'jobs/*/clip.json' | cut -d/ -f2 | sort -u | tr '\n' ' ')
+          fi
+          echo "jobs=$JOBS" >> "$GITHUB_OUTPUT"
+          for J in $JOBS; do node studio/clip.mjs "$J"; done
+      - name: Publish review clips
+        if: steps.render.outputs.jobs != ''
+        env:
+          JOBS: ${{ steps.render.outputs.jobs }}
+        run: |
+          git config user.name "raymi-clip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          for J in $JOBS; do git add "jobs/$J/boards/"*.mp4; done
+          if ! git diff --cached --quiet; then
+            git commit -m "VRM motion study for $JOBS [skip ci]"
+            for t in 1 2 3 4; do git pull --rebase -q && git push -q && break || sleep 10; done
+          fi
