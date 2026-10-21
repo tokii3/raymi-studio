@@ -72,5 +72,10 @@ jobs:
           for J in $JOBS; do git add "jobs/$J/boards/"*.mp4; done
           if ! git diff --cached --quiet; then
             git commit -m "VRM motion study for $JOBS [skip ci]"
-            for t in 1 2 3 4; do git pull --rebase -q && git push -q && break || sleep 10; done
+            for t in 1 2 3 4; do
+              if git fetch origin "$GITHUB_REF_NAME" -q && git rebase -q "origin/$GITHUB_REF_NAME" && git push -q origin HEAD:"$GITHUB_REF_NAME"; then break; fi
+              git rebase --abort 2>/dev/null || true
+              if [ "$t" = 4 ]; then exit 1; fi
+              sleep 10
+            done
           fi
