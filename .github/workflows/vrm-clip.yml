@@ -9,7 +9,7 @@ on:
         required: true
   push:
     branches: [main]
-    paths: ["jobs/*/clip.json"]
+    paths: ["jobs/*/clip.json", "studio/clip.mjs", "studio/src/VrmClip.tsx", "studio/src/three/VrmPuppet.tsx", "studio/src/three/vrmLipSync.ts", ".github/workflows/vrm-clip.yml"]
 
 permissions:
   contents: write
@@ -25,6 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.sha }}
           fetch-depth: 2
       - uses: actions/setup-node@v4
         with:
