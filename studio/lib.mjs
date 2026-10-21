@@ -57,8 +57,10 @@ export async function guardCutEdges(props, range) {
   await build({entryPoints: [path.join(here, 'src/film/check.ts')], bundle: true, format: 'esm', platform: 'node',
     outfile: out, logLevel: 'error'});
   const {checkFilm, lyricsOutOfFrame, faceCrops, setTextCuts, lensInside, overlayOnFace, solidFaults, heroFaults} = await import(pathToFileURL(out).href);
-  const faults = checkFilm(props, range);
-  const faces = faceCrops(props);
+  // VRM renders have a real volumetric silhouette; sprite alpha-edge/face-box checks do not apply to that actor.
+  // Keep every scene, lyric, lens, and hero guard active for the same film data.
+  const faults = props.vrm ? [] : checkFilm(props, range);
+  const faces = props.vrm ? [] : faceCrops(props);
   const text = lyricsOutOfFrame(props);
   const signs = setTextCuts(props), lens = lensInside(props), over = overlayOnFace(props), solid = solidFaults(props), hero = heroFaults(props);
   fs.rmSync(out, {force: true});

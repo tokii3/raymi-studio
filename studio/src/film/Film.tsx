@@ -1,7 +1,7 @@
 // The music-video composition: built 3D sets seen through a real camera, Raymi in the space, lyrics as objects,
 // transitions through things. MV (1920x1080) and its Short (1080x1920) are the SAME timeline (types.ts) - only the
 // frame differs; the camera widens its vertical view for portrait (motion.fovFor).
-import React, {useLayoutEffect} from 'react';
+import React, {useLayoutEffect, useMemo} from 'react';
 import * as THREE from 'three';
 import {AbsoluteFill, Audio, cancelRender, random, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {ThreeCanvas} from '@remotion/three';
@@ -18,6 +18,9 @@ import {CapCrown} from '../three/props';
 import {Card, RaySwarm} from '../three/cards';
 import {flare, frames, since, stepValue} from '../three/events';
 import {useTexturesReady} from '../three/look';
+import {VrmPuppet, useVrmReady} from '../three/VrmPuppet';
+import {makeVrmMouthKeys} from '../three/vrmLipSync';
+import {vrmFilmKeys, vrmFilmWords} from '../three/vrmFilm';
 import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
 import {Transitions, whipStyle} from './Transitions';
@@ -52,16 +55,20 @@ function figurePoint(shot: Shot, f: number, fps: number, camPos: [number, number
 
 export const Film: React.FC<FilmProps> = (props) => {
   const fontReady = useRaymiFont(Boolean(props.heavy));
-  const texReady = useTexturesReady(props.sprites.map((s) => staticFile(s)));
-  const ready = fontReady && texReady;
+  const texReady = useTexturesReady(props.vrm ? [] : props.sprites.map((s) => staticFile(s)));
+  const vrmReady = useVrmReady(props.vrm ? [staticFile(props.vrm)] : []);
+  const ready = fontReady && texReady && vrmReady;
   const f = useCurrentFrame();
   const {width: W, height: H, fps} = useVideoConfig();
+  const mouthWords = useMemo(() => vrmFilmWords(props.shots, fps), [props.shots, fps]);
+  const mouthKeys = useMemo(() => makeVrmMouthKeys(mouthWords, fps, 0), [mouthWords, fps]);
   const i = shotAt(props.shots, f);
   const shot = props.shots[i];
+  const actorKeys = useMemo(() => vrmFilmKeys(shot.puppets), [shot]);
   const aspect = W / H;
   const cam = makeCamera(shot, f, aspect, props.hits, fps);
   const camPos: [number, number, number] = [cam.position.x, cam.position.y, cam.position.z];
-  const faults = visibleCutEdges(shot, f, aspect, props.hits, fps);
+  const faults = props.vrm ? [] : visibleCutEdges(shot, f, aspect, props.hits, fps);
   if (faults.length) cancelRender(new Error(`cut sprite edge on screen: ${JSON.stringify(faults)} - reframe the shot (hard rule 9)`));
   const Set = SETS[shot.set];
   if (!Set) cancelRender(new Error(`unknown set ${shot.set}`));
@@ -160,8 +167,14 @@ export const Film: React.FC<FilmProps> = (props) => {
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>
             <CameraRig cam={cam} />
             {Set ? <Set f={f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} /> : null}
-            <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
-              glow={glowColor(shot.opts.glow, f)} glowGain={glowGain} />
+            {props.vrm ? (
+              <VrmPuppet url={staticFile(props.vrm)} keys={actorKeys} f={f} fps={fps} from={shot.from} camPos={camPos}
+                mouthKeys={mouthKeys} lock={0.38} shadow={String(shot.opts.shadow ?? '#120b2b')}
+                glow={glowColor(shot.opts.glow, f)} glowGain={0.12 * glowGain} materialStyle="firestarter" />
+            ) : (
+              <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
+                glow={glowColor(shot.opts.glow, f)} glowGain={glowGain} />
+            )}
             {rays}{ride}{lensPass}{anchored}
             {crownAt ? (
               <group position={[crownAt.x, crownAt.y, crownAt.z]} rotation={[0, Math.atan2(camPos[0] - crownAt.x, camPos[2] - crownAt.z), 0]}>

@@ -98,9 +98,10 @@
    "status": "new",
    "date": "2026-10-21",
    "toki": "",
-   "notes": "first VRM material profile: cool tint for hair / skin / cloth, lower self-light and a gentler Firestarter grade; VrmClip drives held poses, spring bones, word-timed A/I/U/E/O visemes and keyed camera movement",
+   "notes": "first VRM material profile: cool tint for hair / skin / cloth, lower self-light and a gentler Firestarter grade; VrmClip study and full-film adapter drive held poses, spring bones, word-timed A/I/U/E/O visemes; full MV preserves the source camera and shot timeline",
    "used_in": [
-    "2026-10-21_firestarter-vrm4-test"
+    "2026-10-21_firestarter-vrm4-test",
+    "2026-10-21_firestarter-vrm-mv"
    ]
   },
   {

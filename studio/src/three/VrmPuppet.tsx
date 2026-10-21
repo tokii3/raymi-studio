@@ -143,7 +143,7 @@ function lockColours(rig: Rig, lock: number) {
 }
 
 // ------------------------------------------------------------------ the state at a frame (pure, from the keys)
-type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; height: number; f: number};
+type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; rollZ: number; height: number; squash: number; act: VrmKey['act']; local: number; f: number};
 
 function keyAt(keys: VrmKey[], f: number): number {
   let i = 0;
@@ -156,16 +156,45 @@ function stateAt(keys: VrmKey[], f: number, camPos: V3): State {
   const blend = k.blend ?? 8;
   const t = i === 0 || blend <= 0 ? 1 : ease('inOut', (f - k.f) / blend);
   const lerp = (x: number, y: number) => x + (y - x) * t;
-  const pos: V3 = [lerp(p.pos[0], k.pos[0]), lerp(p.pos[1], k.pos[1]), lerp(p.pos[2], k.pos[2])];
-  const yawOf = (q: VrmKey) => (q.rotY === 'lens' || q.rotY === undefined
-    ? Math.atan2(camPos[0] - pos[0], camPos[2] - pos[2]) : (q.rotY * Math.PI) / 180);
+  const pos = moveAt(keys, f);
+  const yawOf = (q: VrmKey) => {
+    const lens = Math.atan2(camPos[0] - pos[0], camPos[2] - pos[2]);
+    if (q.rotY === 'away') return lens + Math.PI;
+    return q.rotY === 'lens' || q.rotY === undefined ? lens : (q.rotY * Math.PI) / 180;
+  };
   const pose = (name: string) => {
     const x = POSES[name];
     if (!x) cancelRender(new Error(`unknown VRM pose ${name} (studio/src/three/vrmPoses.ts)`));
     return x;
   };
+  const local = f - k.f;
+  const beat = Math.sin((f / 30) * (129.2 / 60) * Math.PI * 2);
+  const squash = k.act === 'shrink' ? 1 - 0.14 * ease('out', local / 10)
+    : k.act === 'pop' ? 1 + 0.055 * Math.exp(-local / 10) * Math.cos(local * 0.8)
+      : k.act === 'stomp' && local < 12 ? 1 - 0.09 * Math.max(0, Math.sin(local * 0.45)) : 1;
+  let lift = 0;
+  if (k.act === 'hop' && local < 16) lift = 0.28 * Math.sin(Math.PI * Math.min(1, local / 12));
+  if (k.act === 'bounce') lift = 0.055 * Math.abs(beat);
+  if (k.act === 'float') lift = 0.12 + 0.05 * Math.sin((f / 30) * Math.PI * 0.7);
+  pos[1] += lift;
   return {a: pose(p.pose), b: pose(k.pose), t, pos, yaw: lerp(yawOf(p), yawOf(k)),
-    height: lerp(p.height ?? DEFAULT_HEIGHT, k.height ?? DEFAULT_HEIGHT), f};
+    rollZ: lerp(p.rollZ ?? 0, k.rollZ ?? 0) + (k.act === 'tilt' ? 0.12 * ease('out', local / 8) : k.act === 'lean' ? -0.08 * ease('out', local / 10) : 0),
+    height: lerp(p.height ?? DEFAULT_HEIGHT, k.height ?? DEFAULT_HEIGHT), squash, act: k.act, local, f};
+}
+
+/** Reuse the timeline's keyed floor travel and hop arcs, rather than easing the actor to a new spot after each cut. */
+function moveAt(keys: VrmKey[], f: number): V3 {
+  let i = keyAt(keys, f);
+  const current = keys[i];
+  const next = keys[i + 1];
+  if (!next || !next.move || f < next.f - next.move) return [...current.pos] as V3;
+  const t = Math.max(0, Math.min(1, (f - (next.f - next.move)) / next.move));
+  const e = ease(next.ease, t);
+  return [
+    current.pos[0] + (next.pos[0] - current.pos[0]) * e,
+    current.pos[1] + (next.pos[1] - current.pos[1]) * e + (next.arc ?? 0) * Math.sin(Math.PI * t),
+    current.pos[2] + (next.pos[2] - current.pos[2]) * e,
+  ];
 }
 
 const qa = new THREE.Quaternion(), qb = new THREE.Quaternion(), eu = new THREE.Euler();
@@ -194,14 +223,32 @@ function applyState(rig: Rig, s: State, fps: number) {
   add('chest', [0.03 * Math.sin(t * Math.PI * 0.84), 0, 0]);
   add('spine', [0, 0, 0.015 * Math.sin(t * Math.PI * 0.42)]);
   add('head', [0.012 * Math.sin(t * 1.3 + 1), 0.02 * Math.sin(t * 0.9), 0]);
+  const phase = t * Math.PI * 2.69;
+  const kick = s.local < 18 ? Math.sin(s.local * 0.55) * Math.exp(-s.local / 8) : 0;
+  if (s.act === 'idle' || s.act === 'bounce' || s.act === 'float') {
+    add('hips', [0, 0, 0.055 * Math.sin(t * 1.55)]);
+    add('spine', [0.025 * Math.sin(t * 1.55 + 0.6), 0, 0]);
+    add('leftUpperArm', [0, 0, 0.035 * Math.sin(t * 1.55)]);
+    add('rightUpperArm', [0, 0, -0.035 * Math.sin(t * 1.55)]);
+  }
+  if (s.act === 'hop' || s.act === 'bounce') {
+    add('hips', [-0.04 * Math.abs(Math.sin(phase)), 0, 0]);
+    add('leftUpperLeg', [-0.12 * Math.max(0, Math.sin(phase)), 0, 0]);
+    add('rightUpperLeg', [-0.12 * Math.max(0, -Math.sin(phase)), 0, 0]);
+  }
+  if (s.act === 'stomp') { add('hips', [kick * 0.2, 0, 0]); add('chest', [-kick * 0.16, 0, 0]); }
+  if (s.act === 'shake') add('head', [0, 0, Math.sin(s.local * 1.7) * 0.16 * Math.exp(-s.local / 17)]);
+  if (s.act === 'lean') add('spine', [0.08, 0, 0]);
+  if (s.act === 'float') add('spine', [0.025 * Math.sin(t * Math.PI * 0.7), 0, 0.025 * Math.sin(t * Math.PI * 0.5)]);
   vrm.humanoid.update();
   // feet on the floor: measure the posed rig unplaced, then place it
   root.position.set(0, 0, 0); root.rotation.set(0, 0, 0); root.scale.setScalar(1); ground.position.set(0, 0, 0);
   root.updateMatrixWorld(true);
   ground.position.y = rig.restLow - lowestFoot(vrm) - rig.floor;
   root.position.set(...s.pos);
-  root.rotation.y = s.yaw;
-  root.scale.setScalar(s.height / rig.natural);
+  root.rotation.set(0, s.yaw + (s.act === 'turn' ? Math.PI * ease('out', s.local / 8) : 0), s.rollZ, 'YXZ');
+  const size = (s.height / rig.natural) * s.squash;
+  root.scale.set(size, size * (s.act === 'hop' && s.local < 10 ? 1.06 : 1), size);
   root.updateMatrixWorld(true);
 }
 
@@ -221,7 +268,7 @@ function setExpressions(rig: Rig, k: VrmKey, f: number, fps: number, mouthKeys: 
     if (em.getExpression(n)) em.setValue(n, v);
   }
   // blinks: every ~3.4 s on fixed frames (no randomness between workers), 5 frames; never during a held blink / joy
-  if (!('blink' in want) && !('joy' in want) && !('happy' in want)) {
+  if (!('blink' in want) && !('blink_l' in want) && !('blink_r' in want) && !('joy' in want) && !('happy' in want)) {
     const period = Math.round(3.4 * fps), ph = f % period;
     if (ph < 5) em.setValue('blink', Math.sin((ph / 5) * Math.PI));
   }

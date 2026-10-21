@@ -711,6 +711,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
              "shots": shots, "hits": hits, "beats": beats, "sprites": sorted(sprites),
              "grain": float(spec.get("grain", 0.06)), "title": spec.get("title", job.name), "overlay": overlay,
              "heavy": heavy}
+    if spec.get("vrm"):
+        props["vrm"] = spec["vrm"]
     return props, errors, warns
 
 

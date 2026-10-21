@@ -1,3 +1,5 @@
+import type {Act, Ease} from '../film/types';
+
 // Raymi's 3D key poses (VRM rig) as pure data: bone -> Euler XYZ (radians) on the NORMALIZED humanoid (VRM 1.0
 // convention: rest = T-pose, she faces +Z, her left arm points to +X). The loader mirrors them for VRM 0.x models.
 // A pose is a held key like a sprite was: the film blends between keys, breathes and blinks on top (VrmPuppet).
@@ -78,6 +80,66 @@ export const POSES: Record<string, VrmPose> = {
     rightUpperArm: [0, 0.38, 0.65], rightLowerArm: [0, -0.55, 0], rightHand: [0, 0, -0.1],
     leftUpperLeg: [-0.05, 0, 0.09], rightUpperLeg: [0.08, 0, -0.07], rightLowerLeg: [0.12, 0, 0],
   },
+  // Translate the existing sprite performances into reusable full body actions for the VRM rig.
+  focus: {
+    ...relaxedHands, hips: [0.01, 0.02, -0.05], spine: [0.08, 0.05, 0.02], chest: [0.03, 0, 0], head: [-0.05, 0.02, 0],
+    leftUpperArm: [0, -0.25, -0.85], leftLowerArm: [0.05, -0.7, 0], rightUpperArm: [0, 0.24, -0.25], rightLowerArm: [0, -0.8, 0],
+    leftUpperLeg: [-0.03, 0, 0.06], rightUpperLeg: [0.04, 0, -0.04],
+  },
+  glide: {
+    ...relaxedHands, spine: [0.16, 0, 0], chest: [0.1, 0, 0], head: [-0.08, 0, 0],
+    leftUpperArm: [0.05, -0.15, 0.35], rightUpperArm: [0.05, 0.15, -0.35],
+    leftLowerArm: [0.04, -0.15, -0.1], rightLowerArm: [0.04, 0.15, 0.1],
+    leftUpperLeg: [-0.18, 0, 0.05], rightUpperLeg: [0.12, 0, -0.06], rightLowerLeg: [0.26, 0, 0],
+  },
+  surf: {
+    ...relaxedHands, hips: [0, -0.07, 0.05], spine: [0.1, 0, 0], chest: [0.04, 0, 0], head: [-0.06, 0, 0.04],
+    leftUpperArm: [0, -0.28, 0.82], leftLowerArm: [0, -0.55, -0.12], rightUpperArm: [0, 0.3, -0.72], rightLowerArm: [0, 0.55, 0.12],
+    leftUpperLeg: [-0.14, 0, 0.08], rightUpperLeg: [0.12, 0, -0.04],
+  },
+  smug: {
+    ...relaxedHands, hips: [0, 0.05, 0.04], spine: [0.02, -0.04, 0], head: [0.02, 0.13, -0.12],
+    leftUpperArm: [0, -0.22, -0.95], leftLowerArm: [0, -0.86, 0], leftHand: [0, 0, -0.1],
+    rightUpperArm: [0, 0.14, -0.22], rightLowerArm: [0, 0.1, 0],
+  },
+  sing: {
+    ...relaxedHands, hips: [0, 0, -0.02], spine: [-0.03, 0, 0], chest: [-0.04, 0, 0], head: [-0.12, 0, 0],
+    leftUpperArm: [0, -0.42, 0.52], leftLowerArm: [0, -0.22, 0], rightUpperArm: [0, 0.42, 0.18], rightLowerArm: [0, 0.75, 0],
+    leftUpperLeg: [-0.03, 0, 0.04], rightUpperLeg: [0.03, 0, -0.04],
+  },
+  jump: {
+    ...relaxedHands, spine: [-0.08, 0, 0], chest: [-0.08, 0, 0], head: [-0.1, 0, 0],
+    leftUpperArm: [0, -0.22, 0.82], rightUpperArm: [0, 0.22, -0.82], leftLowerArm: [0, -0.1, -0.2], rightLowerArm: [0, 0.1, 0.2],
+    leftUpperLeg: [-0.4, 0, 0.1], rightUpperLeg: [0.18, 0, -0.08], rightLowerLeg: [0.38, 0, 0],
+  },
+  lunge: {
+    ...relaxedHands, hips: [0.08, 0, -0.07], spine: [0.28, 0, 0], chest: [0.12, 0, 0], head: [-0.12, 0, 0],
+    leftUpperArm: [0, -0.55, 0.6], leftLowerArm: [0, -0.4, -0.1], rightUpperArm: [0.08, 0.25, -0.55], rightLowerArm: [0, 0.3, 0],
+    leftUpperLeg: [-0.62, 0, 0.08], rightUpperLeg: [0.18, 0, -0.05], rightLowerLeg: [0.38, 0, 0],
+  },
+  spin: {
+    ...relaxedHands, spine: [0, 0, 0.04], head: [0, 0, -0.08],
+    leftUpperArm: [0, -0.3, 0.62], rightUpperArm: [0, 0.3, -0.62], leftLowerArm: [0, -0.28, 0], rightLowerArm: [0, 0.28, 0],
+    leftUpperLeg: [-0.1, 0, 0.08], rightUpperLeg: [0.1, 0, -0.08],
+  },
+  pull: {
+    ...relaxedHands, hips: [0.08, 0, 0], spine: [0.18, 0, 0], chest: [0.06, 0, 0], head: [-0.06, 0, 0],
+    leftUpperArm: [0, -0.65, -0.35], leftLowerArm: [0, -0.8, 0], rightUpperArm: [0, 0.65, -0.35], rightLowerArm: [0, 0.8, 0],
+  },
+  clutch: {
+    ...relaxedHands, spine: [0.14, 0, 0], chest: [0.1, 0, 0], head: [0.12, 0, -0.08],
+    leftUpperArm: [0, -0.5, -0.48], leftLowerArm: [0, -0.5, 0], rightUpperArm: [0, 0.5, -0.48], rightLowerArm: [0, 0.5, 0],
+  },
+  kick: {
+    ...relaxedHands, hips: [0, 0.04, -0.08], spine: [-0.08, 0.06, 0], chest: [-0.04, 0, 0],
+    leftUpperArm: [0, -0.35, 0.52], rightUpperArm: [0, 0.35, 0.42],
+    leftUpperLeg: [-0.1, 0, 0.06], rightUpperLeg: [-0.72, 0, -0.04], rightLowerLeg: [0.5, 0, 0],
+  },
+  recline: {
+    ...relaxedHands, spine: [-0.06, 0, 0], chest: [-0.04, 0, 0], head: [0.05, 0, 0],
+    leftUpperArm: [0, -0.1, 0.2], rightUpperArm: [0, 0.1, -0.2],
+    leftUpperLeg: [-0.15, 0, 0.04], rightUpperLeg: [0.12, 0, -0.04],
+  },
 };
 
 /** Expression names: the VRM 0.x names (her VRoid export) -> three-vrm's preset names; anything else is custom. */
@@ -92,10 +154,15 @@ export type VrmKey = {
   pose: string;              // POSES name
   expr?: Record<string, number> | string | null;   // 'joy' or {joy: 0.7, a: 0.4}
   pos: [number, number, number];   // feet on the set floor
-  rotY?: number | 'lens';    // degrees (0 = faces +Z), 'lens' = turns to the camera
+  rotY?: number | 'lens' | 'away'; // degrees (0 = faces +Z), or turns toward / away from the camera
+  rollZ?: number;            // radians in the picture plane for the existing lean / float acting
   height?: number;           // figure height incl. ears (m), default 1.55
   blend?: number;            // frames the pose blends in from the previous key (default 8)
   look?: 'lens' | null;      // eyes follow the camera (default 'lens')
+  act?: Act;
+  move?: number;             // original puppet travel duration in frames
+  arc?: number;              // original hop arc in metres
+  ease?: Ease;
 };
 
 export function exprOf(k: VrmKey): Record<string, number> {

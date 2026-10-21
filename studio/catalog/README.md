@@ -17,7 +17,7 @@ build; stills.yml, `"to": "catalog"`), so every still shows the component exactl
 | fire_palm_anchor / fire_strike_whip_sparks | `three/fire.tsx`, Film anchored fires, Puppet3D `WhipSmear` | a flame in her palm, a strike: whip smear + spark burst + ember |
 | creatures_salmon_bucket_fish / creatures_sauna_extinguisher | `three/creatures.tsx` | glowing deep-sea fish, Salmon the fire fighter (bucket, extinguisher), the sauna |
 | nightsea_pool_moon_cloud / nightsea_rain_path_fireworks / nightsea_split_waterline | `three/sets/NightSea.tsx`, grade `ember` | the sea at night lit from below, rain rings, fireworks from under the water, the split waterline |
-| Firestarter VRM look + motion test | `three/VrmPuppet.tsx`, `three/vrmLipSync.ts`, `VrmClip.tsx`, grade `vrm_fire` | Raymi's VRM hair / skin / clothing materials, spring-bone motion, aligned lyric-to-vowel mouth shapes, and a keyed camera |
+| Firestarter VRM look + motion | `three/VrmPuppet.tsx`, `three/vrmLipSync.ts`, `three/vrmFilm.ts`, `film/Film.tsx`, grade `vrm_fire` | The full MV can replace its sprite performer with Raymi's VRM, translating existing held poses and moves, lyric-timed vowel mouth shapes, while retaining the original shot and camera timeline; deterministic hair / ears / tail spring-bone motion |
 | lyrics_firework / lyrics_burn_crack | Words3D `firework`, `reveal: burn` | words written by fireworks in the sky; words burned into the floor by a crack |
 | transition_rewind | `film/Transitions.tsx` | time running backwards |
 

@@ -104,5 +104,6 @@ export type FilmProps = {
   grain: number;
   title?: string;
   heavy?: boolean;         // some lyric uses v2 (her heavy weight must be loaded)
+  vrm?: string;            // replace the 2D actor with this model while keeping the exact same film timeline
   overlay?: {hook: {text: string; from: number; to: number}; cta: {text: string; from: number} | null} | null;   // the Short only
 };
