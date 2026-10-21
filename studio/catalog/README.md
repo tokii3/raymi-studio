@@ -17,6 +17,7 @@ build; stills.yml, `"to": "catalog"`), so every still shows the component exactl
 | fire_palm_anchor / fire_strike_whip_sparks | `three/fire.tsx`, Film anchored fires, Puppet3D `WhipSmear` | a flame in her palm, a strike: whip smear + spark burst + ember |
 | creatures_salmon_bucket_fish / creatures_sauna_extinguisher | `three/creatures.tsx` | glowing deep-sea fish, Salmon the fire fighter (bucket, extinguisher), the sauna |
 | nightsea_pool_moon_cloud / nightsea_rain_path_fireworks / nightsea_split_waterline | `three/sets/NightSea.tsx`, grade `ember` | the sea at night lit from below, rain rings, fireworks from under the water, the split waterline |
+| Firestarter VRM look + motion test | `three/VrmPuppet.tsx`, `VrmClip.tsx`, grade `vrm_fire` | Raymi's VRM hair / skin / clothing materials and spring-bone motion |
 | lyrics_firework / lyrics_burn_crack | Words3D `firework`, `reveal: burn` | words written by fireworks in the sky; words burned into the floor by a crack |
 | transition_rewind | `film/Transitions.tsx` | time running backwards |
 
@@ -32,8 +33,8 @@ video - never the last video's look again. After every verdict of hers, update s
 | aquarium, card table + story props, Short hook / CTA, guards | approved (critics' notes in status.json) |
 | crown (worn hero) | open - the hero guard measures it |
 | lyrics v2 + Raymi-Heavy | approved 2026-10-19 = the default (v1 superseded) |
-| grades warm / clean, weather set | new |
+| grades warm / clean, weather set, Firestarter VRM look / motion | new |
 
-Grade library (the look step): `studio/src/film/grade.ts` - day, closing, night, own, warm, clean; shots.json `acts`
+Grade library (the look step): `studio/src/film/grade.ts` - day, closing, night, own, warm, clean, ember, vrm_fire; shots.json `acts`
 picks one per act. Lyrics v2 (the default): `studio/src/film/lyricLayout.ts` + Words3D style v2 (style frames:
 `jobs/2026-10-19_lyrics-v2/boards`).

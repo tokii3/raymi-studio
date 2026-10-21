@@ -92,6 +92,16 @@
    "used_in": []
   },
   {
+   "id": "vrm-firestarter-look-motion",
+   "code": "studio/src/three/VrmPuppet.tsx (materialStyle firestarter + spring bones), studio/src/film/grade.ts (vrm_fire), studio/src/VrmClip.tsx",
+   "stills": [],
+   "status": "new",
+   "date": "2026-10-21",
+   "toki": "",
+   "notes": "first VRM material profile: cool tint for hair / skin / cloth, lower self-light and a gentler Firestarter grade; VrmClip drives held poses and the model's spring bones",
+   "used_in": []
+  },
+  {
    "id": "set-aquarium",
    "code": "studio/src/three/sets/Aquarium.tsx",
    "stills": [
