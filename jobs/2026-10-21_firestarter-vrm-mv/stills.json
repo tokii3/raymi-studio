@@ -1,0 +1,22 @@
+{
+  "format": "mv",
+  "frames": [0, 442, 884, 1327, 1769, 2212, 2654, 3097, 3539, 3981, 4424, 4866, 5309, 5751],
+  "names": [
+    "01_fire-underwater",
+    "02_first-hook",
+    "03_drama",
+    "04_lighter",
+    "05_verse",
+    "06_chorus",
+    "07_work-harder",
+    "08_jealous",
+    "09_night-flight",
+    "10_crouch",
+    "11_nightsea-entry",
+    "12_firefighter",
+    "13_nightsea-rest",
+    "14_final-verse"
+  ],
+  "scale": 0.5,
+  "to": "boards"
+}
