@@ -32,13 +32,14 @@
         "embers": 8
       }
     ],
-    "shadow": "#120b2b"
+    "shadow": "#120b2b",
+    "glow": "#a994ff"
   },
   "cam": {
     "pos": [
       0.1,
-      1.55,
-      4.6
+      1.5,
+      3.3
     ],
     "look": [
       0,
@@ -47,8 +48,8 @@
     ],
     "fov": 38
   },
-  "lock": 0.28,
-  "glowGain": 0,
+  "lock": 0.38,
+  "glowGain": 0.12,
   "materialStyle": "firestarter",
   "grain": 0.02,
   "keys": [
