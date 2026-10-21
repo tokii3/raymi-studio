@@ -11,11 +11,16 @@ import {Grade} from './film/Film';
 import {TONES, gradeName} from './film/grade';
 import type {V3} from './film/types';
 import type {VrmKey} from './three/vrmPoses';
+import {makeVrmMouthKeys, type TimedLyricWord} from './three/vrmLipSync';
+import {ease} from './film/motion';
+
+type CamKey = {f: number; pos: V3; look: V3; fov: number};
 
 export type VrmClipProps = {
   composition: 'VrmClip'; width: number; height: number; fps: number; durationInFrames: number;
   vrm: string; sprites: string[]; set: string; opts: Record<string, unknown>;
-  cam: {pos: V3; look: V3; fov: number}; keys: VrmKey[];
+  cam: {pos: V3; look: V3; fov: number}; camKeys?: CamKey[]; keys: VrmKey[];
+  lyrics?: {source: string; startSeconds: number}; mouthWords?: TimedLyricWord[];
   lock?: number; glowGain?: number; materialStyle?: string; grain?: number;
   audio?: {src: string; file: string; startFrame: number; volume?: number} | null;
 };
@@ -37,15 +42,17 @@ export const VrmClip: React.FC<VrmClipProps> = (props) => {
   const texReady = useTexturesReady(props.sprites.map((s) => staticFile(s)));
   const Set = SETS[props.set];
   const tone = TONES[gradeName(props.opts, props.set)];
+  const camera = cameraAt(props.camKeys, f, props.cam);
+  const mouthKeys = props.mouthWords ? makeVrmMouthKeys(props.mouthWords, fps, props.lyrics?.startSeconds ?? 0) : [];
   return (
     <AbsoluteFill style={{backgroundColor: '#090614', overflow: 'hidden'}}>
       <AbsoluteFill style={{filter: tone.filter}}>
         {vrmReady && texReady ? (
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
-            camera={{fov: props.cam.fov, near: 0.05, far: 200, position: props.cam.pos}}>
-            <Lens {...props.cam} />
-            {Set ? <Set f={f} fps={fps} opts={props.opts} hits={[]} beats={[]} camPos={props.cam.pos} /> : null}
-            <VrmPuppet url={staticFile(props.vrm)} keys={props.keys} f={f} fps={fps} from={0} camPos={props.cam.pos}
+            camera={{fov: camera.fov, near: 0.05, far: 200, position: camera.pos}}>
+            <Lens {...camera} />
+            {Set ? <Set f={f} fps={fps} opts={props.opts} hits={[]} beats={[]} camPos={camera.pos} /> : null}
+            <VrmPuppet url={staticFile(props.vrm)} keys={props.keys} mouthKeys={mouthKeys} f={f} fps={fps} from={0} camPos={camera.pos}
               lock={props.lock ?? 0.25} shadow={String(props.opts.shadow ?? '#120b2b')} glow={String(props.opts.glow ?? '') || undefined}
               glowGain={props.glowGain ?? 0} materialStyle={props.materialStyle ?? 'firestarter'} />
           </ThreeCanvas>
@@ -56,3 +63,13 @@ export const VrmClip: React.FC<VrmClipProps> = (props) => {
     </AbsoluteFill>
   );
 };
+
+function cameraAt(keys: CamKey[] | undefined, f: number, fallback: Omit<CamKey, 'f'>): CamKey {
+  if (!keys?.length) return {...fallback, f};
+  let i = 0;
+  while (i < keys.length - 1 && keys[i + 1].f <= f) i++;
+  const a = keys[i], b = keys[Math.min(i + 1, keys.length - 1)];
+  const t = a === b ? 0 : ease('inOut', (f - a.f) / Math.max(1, b.f - a.f));
+  const mix = (x: V3, y: V3): V3 => [x[0] + (y[0] - x[0]) * t, x[1] + (y[1] - x[1]) * t, x[2] + (y[2] - x[2]) * t];
+  return {f, pos: mix(a.pos, b.pos), look: mix(a.look, b.look), fov: a.fov + (b.fov - a.fov) * t};
+}

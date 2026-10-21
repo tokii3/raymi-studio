@@ -11,6 +11,16 @@ const jobDir = path.join(repo, 'jobs', job);
 const configPath = path.join(jobDir, 'clip.json');
 const props = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 if (props.composition !== 'VrmClip') throw new Error(`${configPath} must use composition VrmClip`);
+if (props.lyrics?.source) {
+  const lyricPath = path.resolve(repo, props.lyrics.source);
+  if (!lyricPath.startsWith(repo + path.sep)) throw new Error('lyric source must stay inside the repository');
+  const track = JSON.parse(fs.readFileSync(lyricPath, 'utf8'));
+  const start = props.lyrics.startSeconds ?? 0;
+  const end = start + props.durationInFrames / props.fps;
+  props.mouthWords = (track.lines ?? []).flatMap((line) => line.words ?? [])
+    .filter((word) => word.t1 > start && word.t0 < end)
+    .map(({roma, w, t0, t1}) => ({roma, w, t0, t1}));
+}
 const out = path.resolve(jobDir, props.output || 'boards/vrm-clip-test.mp4');
 if (!out.startsWith(jobDir + path.sep)) throw new Error('clip output must stay inside its job folder');
 fs.mkdirSync(path.dirname(out), {recursive: true});

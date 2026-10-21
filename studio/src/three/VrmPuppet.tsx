@@ -17,6 +17,7 @@ import {cancelRender, continueRender, delayRender} from 'remotion';
 import {blobTexture} from './look';
 import {ease} from '../film/motion';
 import {EXPRESSION_ALIAS, POSES, exprOf, type VrmKey, type VrmPose} from './vrmPoses';
+import {vrmMouthAt, type VrmMouthKey} from './vrmLipSync';
 import type {V3} from '../film/types';
 
 export const DEFAULT_HEIGHT = 1.55;       // ears to feet, like the sprite puppet (raymi/timeline.py DEFAULT_HEIGHT)
@@ -204,7 +205,7 @@ function applyState(rig: Rig, s: State, fps: number) {
   root.updateMatrixWorld(true);
 }
 
-function setExpressions(rig: Rig, k: VrmKey, f: number, fps: number) {
+function setExpressions(rig: Rig, k: VrmKey, f: number, fps: number, mouthKeys: VrmMouthKey[]) {
   const em = rig.vrm.expressionManager;
   if (!em) return;
   for (const e of em.expressions) em.setValue(e.expressionName, 0);
@@ -213,6 +214,11 @@ function setExpressions(rig: Rig, k: VrmKey, f: number, fps: number) {
     const n = EXPRESSION_ALIAS[name.toLowerCase()] ?? name;
     if (!em.getExpression(n)) cancelRender(new Error(`VRM has no expression ${name} (${n})`));
     em.setValue(n, v);
+  }
+  // Apply tracked vowel presets on top of the expression; Raymi's VRM has native A/I/U/E/O morphs.
+  for (const [name, v] of Object.entries(vrmMouthAt(mouthKeys, f))) {
+    const n = EXPRESSION_ALIAS[name] ?? name;
+    if (em.getExpression(n)) em.setValue(n, v);
   }
   // blinks: every ~3.4 s on fixed frames (no randomness between workers), 5 frames; never during a held blink / joy
   if (!('blink' in want) && !('joy' in want) && !('happy' in want)) {
@@ -223,7 +229,8 @@ function setExpressions(rig: Rig, k: VrmKey, f: number, fps: number) {
 
 const camV = new THREE.Vector3();
 /** Run the deterministic simulation and leave the rig posed for frame f. */
-export function poseVrm(url: string, keys: VrmKey[], f: number, fps: number, from: number, camPos: V3, lock: number): Rig {
+export function poseVrm(url: string, keys: VrmKey[], f: number, fps: number, from: number, camPos: V3, lock: number,
+  mouthKeys: VrmMouthKey[] = []): Rig {
   const rig = rigs.get(url);
   if (!rig) { cancelRender(new Error(`VRM not preloaded: ${url}`)); throw new Error('unreachable'); }
   lockColours(rig, lock);
@@ -239,7 +246,7 @@ export function poseVrm(url: string, keys: VrmKey[], f: number, fps: number, fro
     vrm.springBoneManager?.update(dt);
   }
   const k = keys[keyAt(keys, f)];
-  setExpressions(rig, k, f, fps);
+  setExpressions(rig, k, f, fps, mouthKeys);
   vrm.expressionManager?.update();
   if (vrm.lookAt && (k.look ?? 'lens') === 'lens') {
     vrm.lookAt.autoUpdate = true;
@@ -264,13 +271,13 @@ export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
 }
 
 export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: number; from?: number; camPos: V3;
-  lock?: number; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string}> = ({url, keys, f, fps, from = 0, camPos, lock = 0.6,
+  mouthKeys?: VrmMouthKey[]; lock?: number; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string}> = ({url, keys, mouthKeys = [], f, fps, from = 0, camPos, lock = 0.6,
   shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none'}) => {
   if (!keys.length || f < keys[0].f) return null;
   const rig = rigs.get(url);
   if (!rig) { cancelRender(new Error(`VRM not preloaded: ${url}`)); throw new Error('unreachable'); }
   styleMaterials(rig, materialStyle);
-  const posed = poseVrm(url, keys, f, fps, Math.max(from, keys[0].f), camPos, lock);
+  const posed = poseVrm(url, keys, f, fps, Math.max(from, keys[0].f), camPos, lock, mouthKeys);
   const p = posed.root.position;
   const w = (posed.root.scale.x * posed.natural) * 0.42;
   const chest = posed.vrm.humanoid.getRawBoneNode('chest')?.getWorldPosition(new THREE.Vector3());

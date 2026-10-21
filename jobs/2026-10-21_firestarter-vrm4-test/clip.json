@@ -3,7 +3,7 @@
   "width": 1280,
   "height": 720,
   "fps": 30,
-  "durationInFrames": 240,
+  "durationInFrames": 422,
   "vrm": "vrm/raymi4.vrm",
   "sprites": [],
   "set": "deep",
@@ -12,7 +12,7 @@
     "ignite": 0.16,
     "origin": [
       0.6,
-      -1.0
+      -1
     ],
     "snow": 0.25,
     "smoke": false,
@@ -68,7 +68,7 @@
       "blend": 0
     },
     {
-      "f": 34,
+      "f": 44,
       "pose": "sway",
       "expr": {
         "joy": 0.65
@@ -79,10 +79,10 @@
         -0.58
       ],
       "rotY": 8,
-      "blend": 22
+      "blend": 24
     },
     {
-      "f": 78,
+      "f": 105,
       "pose": "point",
       "expr": {
         "joy": 0.7
@@ -93,10 +93,24 @@
         -0.62
       ],
       "rotY": -9,
-      "blend": 20
+      "blend": 24
     },
     {
-      "f": 126,
+      "f": 154,
+      "pose": "sway",
+      "expr": {
+        "joy": 0.7
+      },
+      "pos": [
+        0.08,
+        0,
+        -0.62
+      ],
+      "rotY": "lens",
+      "blend": 24
+    },
+    {
+      "f": 208,
       "pose": "arms_up",
       "expr": "joy",
       "pos": [
@@ -105,10 +119,10 @@
         -0.68
       ],
       "rotY": "lens",
-      "blend": 22
+      "blend": 24
     },
     {
-      "f": 178,
+      "f": 266,
       "pose": "ignite",
       "expr": {
         "joy": 0.75
@@ -119,10 +133,24 @@
         -0.58
       ],
       "rotY": 11,
-      "blend": 20
+      "blend": 24
     },
     {
-      "f": 222,
+      "f": 327,
+      "pose": "sway",
+      "expr": {
+        "joy": 0.7
+      },
+      "pos": [
+        -0.05,
+        0,
+        -0.6
+      ],
+      "rotY": -6,
+      "blend": 24
+    },
+    {
+      "f": 378,
       "pose": "arms_up",
       "expr": "joy",
       "pos": [
@@ -131,7 +159,7 @@
         -0.62
       ],
       "rotY": "lens",
-      "blend": 18
+      "blend": 24
     }
   ],
   "audio": {
@@ -140,5 +168,67 @@
     "startFrame": 819,
     "volume": 0.72
   },
-  "output": "boards/firestarter-refrain-vrm4.mp4"
+  "output": "boards/firestarter-refrain-vrm4.mp4",
+  "camKeys": [
+    {
+      "f": 0,
+      "pos": [
+        0.1,
+        1.5,
+        3.3
+      ],
+      "look": [
+        0,
+        0.9,
+        -0.3
+      ],
+      "fov": 38
+    },
+    {
+      "f": 112,
+      "pos": [
+        -0.28,
+        1.48,
+        3.2
+      ],
+      "look": [
+        0,
+        0.98,
+        -0.3
+      ],
+      "fov": 37
+    },
+    {
+      "f": 258,
+      "pos": [
+        0.32,
+        1.55,
+        3.35
+      ],
+      "look": [
+        0,
+        0.94,
+        -0.3
+      ],
+      "fov": 38
+    },
+    {
+      "f": 421,
+      "pos": [
+        0,
+        1.48,
+        3.15
+      ],
+      "look": [
+        0,
+        0.98,
+        -0.3
+      ],
+      "fov": 36
+    }
+  ],
+  "lyrics": {
+    "source": "jobs/2026-10-19_firestarter/lyrics_timed.json",
+    "startSeconds": 27.31
+  }
 }
