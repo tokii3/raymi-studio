@@ -19,6 +19,7 @@ type CamKey = {f: number; pos: V3; look: V3; fov: number};
 export type VrmClipProps = {
   composition: 'VrmClip'; width: number; height: number; fps: number; durationInFrames: number;
   vrm: string; sprites: string[]; set: string; opts: Record<string, unknown>;
+  motions?: string[];
   cam: {pos: V3; look: V3; fov: number}; camKeys?: CamKey[]; keys: VrmKey[];
   lyrics?: {source: string; startSeconds: number}; mouthWords?: TimedLyricWord[];
   lock?: number; glowGain?: number; materialStyle?: string; grain?: number;
@@ -38,7 +39,7 @@ const Lens: React.FC<{pos: V3; look: V3; fov: number}> = ({pos, look, fov}) => {
 export const VrmClip: React.FC<VrmClipProps> = (props) => {
   const f = useCurrentFrame();
   const {width: W, height: H, fps} = useVideoConfig();
-  const vrmReady = useVrmReady([staticFile(props.vrm)]);
+  const vrmReady = useVrmReady([staticFile(props.vrm)], (props.motions ?? []).map(staticFile));
   const texReady = useTexturesReady(props.sprites.map((s) => staticFile(s)));
   const Set = SETS[props.set];
   const tone = TONES[gradeName(props.opts, props.set)];

@@ -18,11 +18,21 @@ export function vrmFilmKeys(keys: PuppetKey[]): VrmKey[] {
       height: lying ? Math.max(1.2, k.height) : k.height,
       blend: Math.max(6, Math.min(18, k.move || 8)),
       act: k.act,
+      motion: motionFor(name, k.act),
       move: k.move,
       arc: k.arc,
       ease: k.ease,
     };
   });
+}
+
+function motionFor(name: string, act: PuppetKey['act']): string | undefined {
+  // Keep floor work and sleep poses clear of a standing dance rig. Performances and
+  // energetic beats use the retargeted Mixamo routine; standing holds use the idle take.
+  if (/CALM_PRONE|SLEEP|_FLY_|BK_NA|FOCUS_CROUCH/.test(name)) return undefined;
+  if (/SHOUT_WET|HAPPY|ANGRY_KICK|PANIC_LUNGE/.test(name) || act === 'hop' || act === 'bounce' || act === 'stomp') return 'dance';
+  if (/CALM_REST|FOCUS_PUSH|FOCUS_PULL|SMUG_WINK/.test(name)) return 'idle';
+  return undefined;
 }
 
 function poseFor(name: string, act: PuppetKey['act']): string {

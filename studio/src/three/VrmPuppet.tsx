@@ -12,7 +12,9 @@
 import React, {useEffect, useState} from 'react';
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {FBXLoader} from 'three/examples/jsm/loaders/FBXLoader.js';
 import {VRMLoaderPlugin, VRMUtils, type VRM, type VRMHumanBoneName} from '@pixiv/three-vrm';
+import {retargetAnimation} from 'vrm-mixamo-retarget';
 import {cancelRender, continueRender, delayRender} from 'remotion';
 import {blobTexture} from './look';
 import {ease} from '../film/motion';
@@ -35,6 +37,9 @@ type Rig = {
   lock: number | null;
   materialStyle: string | null;
   materialBases: Map<THREE.Material, {color?: THREE.Color; shade?: THREE.Color; emissive?: THREE.Color; emissiveMap?: THREE.Texture | null}>;
+  motions: Map<string, THREE.AnimationClip>;
+  mixer: THREE.AnimationMixer;
+  actions: Map<string, THREE.AnimationAction>;
 };
 
 const rigs = new Map<string, Rig>();
@@ -66,7 +71,8 @@ async function loadRig(url: string, data?: ArrayBuffer): Promise<Rig> {
     materialBases.set(material, {color: m.color?.clone(), shade: m.shadeColorFactor?.clone(), emissive: m.emissive?.clone(), emissiveMap: m.emissiveMap});
   }
   const rig: Rig = {vrm, root, ground, natural: box.max.y - box.min.y, floor: box.min.y, restLow: lowestFoot(vrm),
-    mirror: vrm.meta?.metaVersion === '0', lock: null, materialStyle: null, materialBases};
+    mirror: vrm.meta?.metaVersion === '0', lock: null, materialStyle: null, materialBases,
+    motions: new Map(), mixer: new THREE.AnimationMixer(vrm.scene), actions: new Map()};
   vrm.springBoneManager?.setInitState();
   return rig;
 }
@@ -86,16 +92,34 @@ export async function preloadVrm(url: string, data?: ArrayBuffer): Promise<void>
   if (!rigs.has(url)) rigs.set(url, await loadRig(url, data));
 }
 
+async function preloadMotion(url: string): Promise<void> {
+  const id = decodeURIComponent(new URL(url, 'https://raymi.invalid').pathname.split('/').pop() ?? url).replace(/\.[^.]+$/, '');
+  if ([...rigs.values()].every((rig) => rig.motions.has(id))) return;
+  const loader = new FBXLoader();
+  const fbx = await loader.loadAsync(url);
+  for (const rig of rigs.values()) {
+    if (rig.motions.has(id)) continue;
+    const clip = retargetAnimation(fbx, rig.vrm, {logWarnings: false});
+    if (!clip) throw new Error(`Mixamo animation could not be retargeted: ${url}`);
+    rig.motions.set(id, clip);
+  }
+}
+
 /** Preload VRM models before the canvas mounts (like useTexturesReady: a model that loads later misses its frame). */
-export function useVrmReady(urls: string[]): boolean {
-  const key = urls.join('|');
+export function useVrmReady(urls: string[], motionUrls: string[] = []): boolean {
+  const key = [...urls, ...motionUrls].join('|');
   const [ready, setReady] = useState(() => urls.every((u) => rigs.has(u)));
   useEffect(() => {
     const todo = urls.filter((u) => !rigs.has(u));
-    if (!todo.length) { setReady(true); return; }
+    const motionTodo = motionUrls.filter((u) => {
+      const id = decodeURIComponent(new URL(u, 'https://raymi.invalid').pathname.split('/').pop() ?? u).replace(/\.[^.]+$/, '');
+      return [...rigs.values()].some((rig) => !rig.motions.has(id));
+    });
+    if (!todo.length && !motionTodo.length) { setReady(true); return; }
     // a 25 MB model + its textures under software GL: far longer than the 30 s default
     const handle = delayRender(`vrm ${todo.join(',')}`, {timeoutInMilliseconds: 110000});
     Promise.all(todo.map((u) => preloadVrm(u)))
+      .then(() => Promise.all(motionTodo.map((u) => preloadMotion(u))))
       .then(() => { setReady(true); continueRender(handle); })
       .catch((e) => cancelRender(e));
   }, [key]);   // eslint-disable-line react-hooks/exhaustive-deps
@@ -143,7 +167,7 @@ function lockColours(rig: Rig, lock: number) {
 }
 
 // ------------------------------------------------------------------ the state at a frame (pure, from the keys)
-type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; rollZ: number; height: number; squash: number; act: VrmKey['act']; local: number; f: number};
+type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; rollZ: number; height: number; squash: number; act: VrmKey['act']; motion?: string; local: number; f: number};
 
 function keyAt(keys: VrmKey[], f: number): number {
   let i = 0;
@@ -177,7 +201,7 @@ function stateAt(keys: VrmKey[], f: number, camPos: V3): State {
   if (k.act === 'bounce') lift = 0.055 * Math.abs(beat);
   if (k.act === 'float') lift = 0.12 + 0.05 * Math.sin((f / 30) * Math.PI * 0.7);
   pos[1] += lift;
-  return {a: pose(p.pose), b: pose(k.pose), t, pos, yaw: lerp(yawOf(p), yawOf(k)),
+  return {a: pose(p.pose), b: pose(k.pose), t, pos, yaw: lerp(yawOf(p), yawOf(k)), motion: k.motion ?? p.motion,
     rollZ: lerp(p.rollZ ?? 0, k.rollZ ?? 0) + (k.act === 'tilt' ? 0.12 * ease('out', local / 8) : k.act === 'lean' ? -0.08 * ease('out', local / 10) : 0),
     height: lerp(p.height ?? DEFAULT_HEIGHT, k.height ?? DEFAULT_HEIGHT), squash, act: k.act, local, f};
 }
@@ -240,6 +264,19 @@ function applyState(rig: Rig, s: State, fps: number) {
   if (s.act === 'shake') add('head', [0, 0, Math.sin(s.local * 1.7) * 0.16 * Math.exp(-s.local / 17)]);
   if (s.act === 'lean') add('spine', [0.08, 0, 0]);
   if (s.act === 'float') add('spine', [0.025 * Math.sin(t * Math.PI * 0.7), 0, 0.025 * Math.sin(t * Math.PI * 0.5)]);
+  // Sample a retargeted Mixamo clip at an absolute timestamp. This keeps arbitrary-order,
+  // parallel Remotion frames deterministic and lets expression/spring-bone simulation stay local.
+  for (const [id, clip] of rig.motions) {
+    let action = rig.actions.get(id);
+    if (!action) { action = rig.mixer.clipAction(clip); action.play(); rig.actions.set(id, action); }
+    const weight = id === s.motion ? 1 : 0;
+    action.enabled = true;
+    action.setEffectiveWeight(weight);
+    if (weight > 0) {
+      action.time = ((s.f / fps) % clip.duration + clip.duration) % clip.duration;
+    }
+  }
+  if (s.motion && rig.motions.has(s.motion)) rig.mixer.update(0);
   vrm.humanoid.update();
   // feet on the floor: measure the posed rig unplaced, then place it
   root.position.set(0, 0, 0); root.rotation.set(0, 0, 0); root.scale.setScalar(1); ground.position.set(0, 0, 0);

@@ -56,7 +56,8 @@ function figurePoint(shot: Shot, f: number, fps: number, camPos: [number, number
 export const Film: React.FC<FilmProps> = (props) => {
   const fontReady = useRaymiFont(Boolean(props.heavy));
   const texReady = useTexturesReady(props.vrm ? [] : props.sprites.map((s) => staticFile(s)));
-  const vrmReady = useVrmReady(props.vrm ? [staticFile(props.vrm)] : []);
+  const vrmReady = useVrmReady(props.vrm ? [staticFile(props.vrm)] : [],
+    props.vrm ? ['motions/dance.fbx', 'motions/idle.fbx'].map(staticFile) : []);
   const ready = fontReady && texReady && vrmReady;
   const f = useCurrentFrame();
   const {width: W, height: H, fps} = useVideoConfig();

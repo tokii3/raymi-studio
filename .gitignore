@@ -2,6 +2,8 @@
 jobs/*/out/
 studio/node_modules/
 studio/public/
+studio/.motions/
+studio/.mixamo-secret-chunks/
 studio/out/
 __pycache__/
 .pytest_cache/

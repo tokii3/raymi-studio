@@ -34,6 +34,14 @@ export function buildPublic(jobDir, props) {
     fs.mkdirSync(path.join(pub, 'vrm'), {recursive: true});
     fs.copyFileSync(path.join(repo, 'assets', props.vrm), path.join(pub, props.vrm));
   }
+  const motions = props.motions ?? (props.vrm ? ['motions/dance.fbx', 'motions/idle.fbx'] : []);
+  for (const motion of motions) {
+    const src = path.join(here, '.motions', path.basename(motion));
+    const dst = path.join(pub, motion);
+    if (!fs.existsSync(src)) throw new Error(`Mixamo motion missing from protected runner storage: ${motion}`);
+    fs.mkdirSync(path.dirname(dst), {recursive: true});
+    fs.copyFileSync(src, dst);
+  }
   const sprites = props.sprites ?? props.beats.map((b) => b.sprite);
   for (const s of sprites) {
     const src = path.join(repo, 'assets', s);

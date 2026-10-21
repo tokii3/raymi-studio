@@ -6,18 +6,22 @@ const vowels = new Set(['a', 'i', 'u', 'e', 'o']);
 
 function vowelShape(group: string): VrmMouthKey['values'] {
   const g = group.toLowerCase();
-  if (g.includes('ou') || g.includes('ow') || g.includes('oo')) return {u: 0.9};
+  if (g.includes('oo') || g.includes('ou')) return {u: 0.9};
+  if (g.includes('ow')) return {o: 0.45, u: 0.6};
   if (g.includes('ai') || g.includes('ay') || g.includes('ei') || g.includes('ey')) return {e: 0.62, i: 0.48};
   if (g.includes('oi') || g.includes('oy')) return {o: 0.6, i: 0.5};
-  const letter = [...g].find((c) => vowels.has(c)) ?? 'a';
+  if (g.includes('ee')) return {i: 0.9};
+  if (g.includes('au')) return {a: 0.55, u: 0.42};
+  const letter = [...g].find((c) => vowels.has(c)) ?? (g.includes('y') ? 'i' : 'a');
   return {[letter]: 1};
 }
 
 function consonantShape(group: string, next: VrmMouthKey['values'] | undefined): VrmMouthKey['values'] {
   const g = group.toLowerCase();
-  if (/[bmp]/.test(g)) return {u: 0.2}; // closed/rounded lip approximation (no closed preset in this model)
-  if (/(s|z|f|v|th|sh|ch|j)/.test(g)) return {i: 0.46}; // narrow teeth/tongue shapes
-  if (next) return Object.fromEntries(Object.entries(next).map(([k, v]) => [k, (v ?? 0) * 0.3])) as VrmMouthKey['values'];
+  if (/[bmp]/.test(g)) return {}; // brief lip closure; this VRM has no native closed-mouth viseme
+  if (/[szfv]/.test(g) || /(th|sh|ch|j)/.test(g)) return {i: 0.38}; // narrower teeth/tongue approximation
+  if (/[wn]/.test(g)) return {u: 0.16, i: 0.12};
+  if (next) return Object.fromEntries(Object.entries(next).map(([k, v]) => [k, (v ?? 0) * 0.22])) as VrmMouthKey['values'];
   return {};
 }
 
@@ -35,7 +39,7 @@ export function makeVrmMouthKeys(words: TimedLyricWord[], fps: number, excerptSt
     const shapes = groups.map((g, i) => /[aeiouy]/.test(g)
       ? vowelShape(g)
       : consonantShape(g, groups.slice(i + 1).find((x) => /[aeiouy]/.test(x)) ? vowelShape(groups.slice(i + 1).find((x) => /[aeiouy]/.test(x))!) : undefined));
-    const weights = groups.map((g) => /[aeiouy]/.test(g) ? 1.25 : 0.62);
+    const weights = groups.map((g) => /[aeiouy]/.test(g) ? 1 : 0.38);
     const sum = weights.reduce((a, b) => a + b, 0);
     const span = Math.max(1, to - from);
     let cursor = Math.max(0, from);

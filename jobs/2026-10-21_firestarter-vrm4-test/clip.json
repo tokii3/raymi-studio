@@ -5,6 +5,7 @@
   "fps": 30,
   "durationInFrames": 422,
   "vrm": "vrm/raymi4.vrm",
+  "motions": ["motions/dance.fbx", "motions/idle.fbx"],
   "sprites": [],
   "set": "deep",
   "opts": {
@@ -56,6 +57,7 @@
     {
       "f": 0,
       "pose": "ignite",
+      "motion": "idle",
       "expr": {
         "fun": 0.35
       },
@@ -70,6 +72,7 @@
     {
       "f": 44,
       "pose": "sway",
+      "motion": "dance",
       "expr": {
         "joy": 0.65
       },
@@ -84,6 +87,7 @@
     {
       "f": 105,
       "pose": "point",
+      "motion": "dance",
       "expr": {
         "joy": 0.7
       },
@@ -98,6 +102,7 @@
     {
       "f": 154,
       "pose": "sway",
+      "motion": "dance",
       "expr": {
         "joy": 0.7
       },
@@ -112,6 +117,7 @@
     {
       "f": 208,
       "pose": "arms_up",
+      "motion": "dance",
       "expr": "joy",
       "pos": [
         0.08,
@@ -124,6 +130,7 @@
     {
       "f": 266,
       "pose": "ignite",
+      "motion": "dance",
       "expr": {
         "joy": 0.75
       },
@@ -138,6 +145,7 @@
     {
       "f": 327,
       "pose": "sway",
+      "motion": "dance",
       "expr": {
         "joy": 0.7
       },
@@ -152,6 +160,7 @@
     {
       "f": 378,
       "pose": "arms_up",
+      "motion": "dance",
       "expr": "joy",
       "pos": [
         0,
