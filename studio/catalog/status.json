@@ -93,13 +93,15 @@
   },
   {
    "id": "vrm-firestarter-look-motion",
-   "code": "studio/src/three/VrmPuppet.tsx (materialStyle firestarter + spring bones), studio/src/film/grade.ts (vrm_fire), studio/src/VrmClip.tsx",
+   "code": "studio/src/three/VrmPuppet.tsx (materialStyle firestarter + spring bones), studio/src/three/vrmLipSync.ts (aligned lyric-to-VRM vowel mapping), studio/src/film/grade.ts (vrm_fire), studio/src/VrmClip.tsx (keyed camera)",
    "stills": [],
    "status": "new",
    "date": "2026-10-21",
    "toki": "",
-   "notes": "first VRM material profile: cool tint for hair / skin / cloth, lower self-light and a gentler Firestarter grade; VrmClip drives held poses and the model's spring bones",
-   "used_in": []
+   "notes": "first VRM material profile: cool tint for hair / skin / cloth, lower self-light and a gentler Firestarter grade; VrmClip drives held poses, spring bones, word-timed A/I/U/E/O visemes and keyed camera movement",
+   "used_in": [
+    "2026-10-21_firestarter-vrm4-test"
+   ]
   },
   {
    "id": "set-aquarium",
