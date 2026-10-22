@@ -16,13 +16,13 @@ hand-written treatment; the worst ones had heavy process and a weak idea (`knowl
 | 3 | `3_TREATMENT.md` | Claude, at the depth of `knowledge/exemplars/lets-get-weird_TREATMENT.md` | script critic PASS stored in `reviews/` |
 | 4 | `4_SCRIPT.md` | Claude: the shooting script, shot by shot | script critic PASS stored in `reviews/`; every needed part exists or is on the build list |
 | 5 | build | reuse what toki liked first (`studio/catalog/status.json`); missing parts become reusable components | `shots.json` exists; each new part has a still in `studio/catalog/` |
-| 6 | pilot | a 20-40 s section with sound, rendered in the cloud | screening stored in `reviews/pilot_*`, toki's verdict in `toki.md` |
+| 6 | stills | >= 12 cloud stills across the whole MV (no pilot since toki 2026-10-22) | `boards/still_*.jpg`, `stills: toki <date>` in `toki.md` |
 | 7 | final | full MV + Short (cut from the MV), rendered in the cloud | screening stored in `reviews/final_*`, toki's verdict in `toki.md` |
-| 8 | `5_THUMBS.md` | 4-5 MV + 4-5 Short candidates, cloud stills from the sets | `boards/thumb_mv_*` + `thumb_short_*`, thumb-critic in `reviews/thumbs_*`, `picked: toki <date>` |
+| 8 | `5_THUMBS.md` | 5 MV + 5 Short candidates, cloud stills from the sets | `boards/thumb_mv_*` + `thumb_short_*`, thumb-critic in `reviews/thumbs_*`, `picked: toki <date>` |
 | 9 | `upload.md` | upload texts (canon/12, channel_rules.py) | toki uploaded: `toki.md` line `uploaded: toki <date>` |
 
 A lore Short uses steps 1 (light: what the channel needs, `canon/10_kanal_puls*`), 2 (3 claims / hooks), 4 (`plan.json`),
-then thumbs (4-5 Short candidates) and upload.
+then thumbs (5 MV + 5 Short candidates) and upload.
 
 ## What each step must achieve (and the trap it avoids)
 1. **Dossier - understand before inventing.** What every line MEANS (not only translates), what story the song tells,
@@ -48,4 +48,4 @@ builder never writes or edits a review. Two BLOCKs on the same step -> back to I
 ## Screening (steps 6 + 7, built in phase 2)
 Critics look at the REAL video: phone-size frames, motion strips, a Gemini viewer that watches with sound. Blind first
 (knows nothing), then shot by shot "script says X - screen shows Y", then against reference frames of the top three.
-Only real faults and slop block; taste notes go to toki with the pilot.
+Only real faults and slop block; taste notes go to toki with the stills board / the final.

@@ -24,7 +24,9 @@ STEPS = {
         ("treatment", "3_TREATMENT.md", "critic"),
         ("script", "4_SCRIPT.md", "critic"),
         ("build", "shots.json", "built"),
-        ("pilot", "toki.md", "verdict"),
+        # toki 2026-10-22: no pilot any more ("frisst zu viel Zeit, zu kurz um das Gesamtvideo zu beurteilen") -
+        # a stills board across the WHOLE MV goes to her instead, then the full MV + Short
+        ("stills", "toki.md", "stills"),
         ("final", "toki.md", "verdict"),
         ("thumbs", "5_THUMBS.md", "thumbs"),
         ("upload", "upload.md", "upload"),
@@ -39,7 +41,8 @@ STEPS = {
 }
 # toki 2026-10-19: thumbnails for the MV AND the Short, always 4-5 to choose from
 THUMB_FORMATS = {"mv": ("mv", "short"), "lore": ("short",)}
-THUMB_MIN = 4
+THUMB_MIN = 5     # toki 2026-10-22: 5 thumbnails for the MV and 5 for the Short
+STILLS_MIN = 12   # the stills board that replaces the pilot: every act and key moment of the MV
 
 APPROVED = re.compile(r"^approved:\s*toki\s+\d{4}-\d{2}-\d{2}\b", re.M)
 PICKED = re.compile(r"^picked:\s*toki\s+\d{4}-\d{2}-\d{2}\b", re.M)
@@ -98,12 +101,19 @@ def step_state(d: Path, step: str, fname: str | None, how: str, kind: str = "mv"
         if not f.is_file() or not toki_said(f.read_text(encoding="utf-8"), step):
             return False, f"waiting for toki's verdict (toki.md line `{step}: toki YYYY-MM-DD <her words>`)"
         return True, "done"
+    if how == "stills":
+        n = len(list((d / "boards").glob("still_*.jpg")))
+        if n < STILLS_MIN:
+            return False, f"{n} stills in boards/ - want >= {STILLS_MIN} across the whole MV (boards/still_<nn>.jpg, cloud stills)"
+        if not f.is_file() or not toki_said(f.read_text(encoding="utf-8"), "stills"):
+            return False, "waiting for toki's verdict on the stills (toki.md line `stills: toki YYYY-MM-DD <her words>`)"
+        return True, "done"
     if how == "thumbs":
         boards = d / "boards"
         for fmt in THUMB_FORMATS.get(kind, ("mv", "short")):
             n = len(list(boards.glob(f"thumb_{fmt}_*.jpg")))
             if n < THUMB_MIN:
-                return False, f"{n} {fmt} thumbnail(s) in boards/ - want {THUMB_MIN}-5 (thumb_{fmt}_<id>.jpg, cloud stills)"
+                return False, f"{n} {fmt} thumbnail(s) in boards/ - want {THUMB_MIN} (thumb_{fmt}_<id>.jpg, cloud stills)"
         if not list((d / "reviews").glob("thumbs_*.md")):
             return False, "thumb-critic has not judged them (reviews/thumbs_<n>.md)"
         if not f.is_file() or not PICKED.search(f.read_text(encoding="utf-8")):

@@ -17,10 +17,12 @@
    only what is missing as reusable studio components (sets, props, lyric kinds, transitions, grades), each with a
    still in `studio/catalog/`. `shots.json` = the shooting script as data (format: `raymi/timeline.py`): `acts` (the
    look step: one grade per act), `heroes` + per shot `hero` (the main element), `lyric_style`, `translation`.
-7. **Pilot** with sound (a 20-40 s section) rendered in the cloud -> screening -> toki watches it.
+7. **Stills board** (toki 2026-10-22: no pilot any more - it ate time and was too short to judge the video): >= 12 cloud
+   stills across the WHOLE MV (every act, every key moment, the Short's hook) as `boards/still_<nn>.jpg` -> toki
+   (`toki.md` line `stills: toki <date> ...`). Then straight to the full MV.
 8. **Final** MV + Short (cut from the MV) in the cloud -> screening -> toki. Upload texts follow
    `canon/12_titles_descriptions.md` + `raymi/channel_rules.py`; toki uploads.
-9. **Thumbnails** (`5_THUMBS.md`): 4-5 candidates for the MV AND 4-5 for the Short, rendered in the cloud from the
+9. **Thumbnails** (`5_THUMBS.md`): 5 candidates for the MV AND 5 for the Short, rendered in the cloud from the
    studio's sets (a thumbs board job, stills.json `passes` mv + short, `"thumbs": true` -> boards/thumbs_168.jpg, the
    feed view) -> thumb-critic (`reviews/thumbs_<n>.md`) -> toki picks (`picked: toki <date> MV=.. SHORT=..`).
 10. **Upload**: `upload.md` (canon/12 + channel_rules.py); toki uploads -> `toki.md` line `uploaded: toki <date> ...`.
