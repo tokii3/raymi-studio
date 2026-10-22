@@ -75,6 +75,11 @@ per beat whose expression fits the line, shot / side / act / icon / key words, `
   `BLOCK: fault|slop` stops; everything else goes to toki as notes. The builder never writes or edits a review.
 
 ## Render (cloud, parallel - toki's PC stays free)
+- Private assets (toki 2026-10-23): this repo is PUBLIC (unlimited Actions minutes), so licensed / personal files live in
+  the private `tokii3/raymi-private-assets`: Mixamo clips (`motions/<slug>.fbx`, toki's downloads) and her VRM models
+  (`vrm/*.vrm`). Every render / stills / clip workflow checks it out with the read-only deploy key (secret
+  `ASSETS_DEPLOY_KEY`) onto the runner only (`studio/.motions/`, `assets/vrm/`). Never commit either to this repo. A new
+  clip: add the FBX to that repo; a job names the clips it uses (`shots.json` "motions": ["motions/<slug>.fbx", ...]).
 - Start: push `jobs/<job>/plan.json` (draft), or push `jobs/<job>/render.json` = `{"quality": "draft" | "final",
   "format": "mv" | "short"}` (a job with shots.json renders the film)
   (works from any Claude session, no gh needed), or Actions -> render -> Run workflow.

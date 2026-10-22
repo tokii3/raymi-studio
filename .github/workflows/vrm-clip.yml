@@ -9,7 +9,7 @@ on:
         required: true
   push:
     branches: [main]
-    paths: ["jobs/*/clip.json", "studio/clip.mjs", "studio/lib.mjs", "studio/restore-mixamo.mjs", "studio/src/VrmClip.tsx", "studio/src/film/Film.tsx", "studio/src/three/VrmPuppet.tsx", "studio/src/three/vrmFilm.ts", "studio/src/three/vrmPoses.ts", "studio/src/three/vrmLipSync.ts", "studio/src/film/Fx2D.tsx", "studio/src/film/motion.ts", "studio/src/film/Transitions.tsx", ".github/workflows/vrm-clip.yml"]
+    paths: ["jobs/*/clip.json", "studio/clip.mjs", "studio/lib.mjs", "studio/src/VrmClip.tsx", "studio/src/film/Film.tsx", "studio/src/three/VrmPuppet.tsx", "studio/src/three/vrmFilm.ts", "studio/src/three/vrmPoses.ts", "studio/src/three/vrmLipSync.ts", "studio/src/film/Fx2D.tsx", "studio/src/film/motion.ts", "studio/src/film/Transitions.tsx", ".github/workflows/vrm-clip.yml"]
 
 permissions:
   contents: write
@@ -44,33 +44,17 @@ jobs:
         run: cd studio && npm ci --no-audit --no-fund
       - name: Typecheck and prepare browser
         run: cd studio && npx tsc --noEmit && npx remotion browser ensure
-      - name: Restore protected Mixamo motions
-        env:
-          MIXAMO_BUNDLE_01: ${{ secrets.MIXAMO_BUNDLE_01 }}
-          MIXAMO_BUNDLE_02: ${{ secrets.MIXAMO_BUNDLE_02 }}
-          MIXAMO_BUNDLE_03: ${{ secrets.MIXAMO_BUNDLE_03 }}
-          MIXAMO_BUNDLE_04: ${{ secrets.MIXAMO_BUNDLE_04 }}
-          MIXAMO_BUNDLE_05: ${{ secrets.MIXAMO_BUNDLE_05 }}
-          MIXAMO_BUNDLE_06: ${{ secrets.MIXAMO_BUNDLE_06 }}
-          MIXAMO_BUNDLE_07: ${{ secrets.MIXAMO_BUNDLE_07 }}
-          MIXAMO_BUNDLE_08: ${{ secrets.MIXAMO_BUNDLE_08 }}
-          MIXAMO_BUNDLE_09: ${{ secrets.MIXAMO_BUNDLE_09 }}
-          MIXAMO_BUNDLE_10: ${{ secrets.MIXAMO_BUNDLE_10 }}
-          MIXAMO_BUNDLE_11: ${{ secrets.MIXAMO_BUNDLE_11 }}
-          MIXAMO_BUNDLE_12: ${{ secrets.MIXAMO_BUNDLE_12 }}
-          MIXAMO_BUNDLE_13: ${{ secrets.MIXAMO_BUNDLE_13 }}
-          MIXAMO_BUNDLE_14: ${{ secrets.MIXAMO_BUNDLE_14 }}
-          MIXAMO_BUNDLE_15: ${{ secrets.MIXAMO_BUNDLE_15 }}
-          MIXAMO_BUNDLE_16: ${{ secrets.MIXAMO_BUNDLE_16 }}
-          MIXAMO_BUNDLE_17: ${{ secrets.MIXAMO_BUNDLE_17 }}
-          MIXAMO_BUNDLE_18: ${{ secrets.MIXAMO_BUNDLE_18 }}
-          MIXAMO_BUNDLE_19: ${{ secrets.MIXAMO_BUNDLE_19 }}
-          MIXAMO_BUNDLE_20: ${{ secrets.MIXAMO_BUNDLE_20 }}
-          MIXAMO_BUNDLE_21: ${{ secrets.MIXAMO_BUNDLE_21 }}
-          MIXAMO_BUNDLE_22: ${{ secrets.MIXAMO_BUNDLE_22 }}
-          MIXAMO_BUNDLE_23: ${{ secrets.MIXAMO_BUNDLE_23 }}
-          MIXAMO_BUNDLE_24: ${{ secrets.MIXAMO_BUNDLE_24 }}
-        run: node studio/restore-mixamo.mjs
+      - name: Private assets (licensed motions + VRM models - never in this public repo)
+        uses: actions/checkout@v4
+        with:
+          repository: tokii3/raymi-private-assets
+          ssh-key: ${{ secrets.ASSETS_DEPLOY_KEY }}
+          path: .private-assets
+      - name: Stage private assets on the runner only
+        run: |
+          mkdir -p studio/.motions assets/vrm
+          cp .private-assets/motions/*.fbx studio/.motions/
+          cp .private-assets/vrm/*.vrm assets/vrm/
       - name: Render clip
         id: render
         env:

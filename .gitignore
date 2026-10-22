@@ -4,6 +4,8 @@ studio/node_modules/
 studio/public/
 studio/.motions/
 studio/.mixamo-secret-chunks/
+.private-assets/
+assets/vrm/*.vrm
 studio/out/
 __pycache__/
 .pytest_cache/
