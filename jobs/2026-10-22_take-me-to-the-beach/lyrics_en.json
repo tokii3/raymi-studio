@@ -1,0 +1,53 @@
+{
+ "_why": "Lyrics v2: every Japanese line (Ado) shows romaji + English under it (toki 2026-10-19). Keyed by the line text of lyrics_timed.json. English = our own loose, safe translation (no official translation copied). For the outro lines only the Japanese backing phrase in brackets is translated.",
+ "lines": {
+  "聞く耳断つ": {
+   "roma": "kiku mimi tatsu",
+   "en": "I stopped listening"
+  },
+  "奴が大層な胸を張る": {
+   "roma": "yatsu ga taisou na mune wo haru",
+   "en": "There he goes, puffing out his chest"
+  },
+  "また構わずやる": {
+   "roma": "mata kamawazu yaru",
+   "en": "And I just do it anyway, again"
+  },
+  "「望まない」から舌を打つ": {
+   "roma": "\"nozomanai\" kara shita wo utsu",
+   "en": "\"Not what I want\" - so I click my tongue"
+  },
+  "え？": {
+   "roma": "e?",
+   "en": "Huh?"
+  },
+  "あぁ、神か仏か？ヒト気取りか？": {
+   "roma": "aa, kami ka hotoke ka? hito kidori ka?",
+   "en": "Oh, a god? A Buddha? Or just playing human?"
+  },
+  "頭の中": {
+   "roma": "atama no naka",
+   "en": "All inside my head"
+  },
+  "誰になればいいの？": {
+   "roma": "dare ni nareba ii no?",
+   "en": "Who am I supposed to be?"
+  },
+  "吐き出す前に口をとじろ": {
+   "roma": "hakidasu mae ni kuchi wo tojiro",
+   "en": "Shut your mouth before you spit it out"
+  },
+  "I don't have no friends, ask anyone (そう何も)": {
+   "roma": "sou nanimo",
+   "en": "(yeah, nothing at all)"
+  },
+  "Got me 'til the end, my favorite one (最後まで)": {
+   "roma": "saigo made",
+   "en": "(until the very end)"
+  },
+  "I don't have no friends, ask anyone (そう誰も)": {
+   "roma": "sou daremo",
+   "en": "(yeah, no one)"
+  }
+ }
+}

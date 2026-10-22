@@ -159,3 +159,23 @@ def test_repeated_choruses_keep_song_order():
     last = [w["t0"] for w in m[2]]
     assert all(t is None for t in first) or max(t for t in first if t is not None) < 10.0
     assert last[0] is not None and last[0] >= 13.0
+
+
+def test_salient_hits_find_quiet_intro_stabs_not_only_loud_ones():
+    times = np.arange(0, 20, 0.01)
+    strength = np.full_like(times, 0.2)
+    for t in (4.2, 4.5, 4.8):                      # three stabs in a quiet intro
+        strength[int(t * 100)] = 1.5
+    strength[1500:] = 3.0                          # a loud band later: its steady onsets are not salient
+    strength[1700] = 9.0                           # ... but a real accent on top of it is
+    hits = S.salient_hits(times, strength, np.array([4.2, 4.5, 4.8, 15.5, 17.0]))
+    assert [h["t"] for h in hits] == [4.2, 4.5, 4.8, 17.0]
+    assert hits[0]["cut"] == S.cut_frame(4.2)
+
+
+def test_label_voices_anchor_japanese_lines_to_ado():
+    stats = [{"i": 0, "f0": 180.0, "ja": False}, {"i": 1, "f0": 175.0, "ja": False}, {"i": 2, "f0": 390.0, "ja": True},
+             {"i": 3, "f0": 410.0, "ja": False}, {"i": 4, "f0": None, "ja": False}]
+    out = S.label_voices(stats)
+    assert [o["voice"] for o in out] == ["other", "other", "ado", "ado", None]
+    assert out[3]["conf"] > 0.5 and out[4]["conf"] == 0.0

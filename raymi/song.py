@@ -467,11 +467,14 @@ def separate(song: Path, out_dir: Path) -> Path:
         y = apply_model(model, x[None], device="cpu", shifts=1, split=True, overlap=0.25, progress=False)[0]
     y = y * (ref.std() + 1e-8) + ref.mean()
     voc = y[model.sources.index("vocals")].numpy()
+    # everything but the voice (drums + bass + other): its own hits - a guitar stab, a can opening - are found there
+    acc = sum(y[i] for i, n in enumerate(model.sources) if n != "vocals").numpy()
     out_dir.mkdir(parents=True, exist_ok=True)
     wav = out_dir / "vocals.wav"
-    pcm = np.clip(voc.T, -1, 1).astype(np.float32).tobytes()
-    subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ac", "2", "-ar", str(model.samplerate), "-i", "-",
-                    str(wav)], input=pcm, check=True)
+    for sig, f in ((voc, wav), (acc, out_dir / "accomp.wav")):
+        pcm = np.clip(sig.T, -1, 1).astype(np.float32).tobytes()
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ac", "2", "-ar", str(model.samplerate), "-i", "-",
+                        str(f)], input=pcm, check=True)
     return wav
 
 
@@ -619,7 +622,83 @@ def sections(dur: float, novelty_bounds: list[float], stop_list: list[dict], spa
     return out
 
 
-def song_map(song: Path, vocals: Path, lines: list[dict]) -> dict:
+def salient_hits(times: np.ndarray, strength: np.ndarray, at: np.ndarray, win_s: float = 4.0, thr: float = 2.5,
+                 gap_s: float = 0.08) -> list[dict]:
+    """Onsets that stand out from THEIR surroundings (a quiet intro's three guitar stabs count, not only the loudest
+    hits of the whole song): salience = onset strength / median strength within +-win_s."""
+    out: list[dict] = []
+    for t in at:
+        lo, hi = np.searchsorted(times, t - win_s), np.searchsorted(times, t + win_s)
+        local = float(np.median(strength[lo:hi])) if hi > lo else 0.0
+        k = int(np.clip(np.searchsorted(times, t), 0, len(strength) - 1))
+        v = float(strength[max(0, k - 2):k + 3].max())
+        sal = v / max(local, 1e-6)
+        if sal >= thr and (not out or t - out[-1]["t"] >= gap_s):
+            out.append({"t": round(float(t), 3), "sal": round(sal, 1), "cut": cut_frame(float(t))})
+    return out
+
+
+def instrument_hits(accomp: Path) -> list[dict]:
+    """Hits of the band without the voice (accompaniment stem): time, salience, brightness (spectral centroid, Hz)."""
+    import librosa
+
+    y, sr = librosa.load(str(accomp), sr=22050, mono=True)
+    env = librosa.onset.onset_strength(y=y, sr=sr)
+    times = librosa.times_like(env, sr=sr)
+    on = librosa.onset.onset_detect(onset_envelope=env, sr=sr, units="time", backtrack=False)
+    hits = salient_hits(times, env, on)
+    cen = librosa.feature.spectral_centroid(y=y, sr=sr)[0]
+    ct = librosa.times_like(cen, sr=sr)
+    for h in hits:
+        k = int(np.clip(np.searchsorted(ct, h["t"]), 0, len(cen) - 1))
+        h["bright_hz"] = int(np.median(cen[k:k + 4]))
+    return hits
+
+
+def label_voices(stats: list[dict]) -> list[dict]:
+    """Who sings a line, from its measured median pitch (two singers): 2-means on log f0; the cluster that holds the
+    Japanese lines is "ado". Lines without enough voiced frames stay unknown. An ESTIMATE - check by ear (duets
+    overlap, backing vocals)."""
+    pts = [(i, math.log(s["f0"])) for i, s in enumerate(stats) if s.get("f0")]
+    out = [{**s, "voice": None, "conf": 0.0} for s in stats]
+    if len(pts) < 2:
+        return out
+    vals = np.array([v for _, v in pts])
+    c = np.array([vals.min(), vals.max()])
+    for _ in range(30):
+        lab = np.abs(vals[:, None] - c[None, :]).argmin(1)
+        c = np.array([vals[lab == k].mean() if (lab == k).any() else c[k] for k in (0, 1)])
+    ja = [lab[n] for n, (i, _) in enumerate(pts) if stats[i].get("ja")]
+    ado = round(float(np.mean(ja))) if ja else 1          # no Japanese line: the higher cluster
+    gap = abs(c[1] - c[0]) or 1e-6
+    for n, (i, v) in enumerate(pts):
+        d0, d1 = abs(v - c[0]), abs(v - c[1])
+        out[i]["voice"] = "ado" if lab[n] == ado else "other"
+        out[i]["conf"] = round(float(abs(d0 - d1) / gap), 2)
+    return out
+
+
+def line_voices(vocals: Path, lines: list[dict]) -> list[dict]:
+    """Median pitch + brightness of every timed line on the vocal stem, labelled by singer (label_voices)."""
+    import librosa
+
+    y = load_audio(vocals, SR)
+    stats = []
+    for ln in lines:
+        a, z = int(ln["t0"] * SR), int(ln["t1"] * SR)
+        seg = y[a:z]
+        f0 = None
+        if len(seg) > SR // 5:
+            f, voiced, _ = librosa.pyin(seg, fmin=70, fmax=1000, sr=SR, frame_length=1024, hop_length=320)
+            ok = f[voiced & ~np.isnan(f)]
+            if len(ok) >= 8:
+                f0 = round(float(np.median(ok)), 1)
+        ja = any(script_of(ch) in ("kata", "hira", "kanji") and not ch.isdigit() for ch in ln["text"])
+        stats.append({"i": ln["i"], "t0": ln["t0"], "t1": ln["t1"], "text": ln["text"], "f0": f0, "ja": ja})
+    return label_voices(stats)
+
+
+def song_map(song: Path, vocals: Path, lines: list[dict], accomp: Path | None = None) -> dict:
     full = load_audio(song, SR)
     dur = len(full) / SR
     db = loudness_db(full, SR)
@@ -631,9 +710,13 @@ def song_map(song: Path, vocals: Path, lines: list[dict]) -> dict:
     vx = load_audio(vocals, SR)
     spans = vocal_spans(loudness_db(vx, SR))
     loud = [round(float(v), 1) for v in db]
-    return {"duration": round(dur, 2), "bpm": b["bpm"], "beats": b["beats"], "hits": b["hits"],
-            "sections": sections(dur, nb, st, spans, loud, lines), "stops": st, "vocal_spans": spans,
-            "vocal_onsets": pick_onsets(onset_env(vx)), "novelty_bounds": nb, "loudness_db_10hz": loud}
+    out = {"duration": round(dur, 2), "bpm": b["bpm"], "beats": b["beats"], "hits": b["hits"],
+           "sections": sections(dur, nb, st, spans, loud, lines), "stops": st, "vocal_spans": spans,
+           "vocal_onsets": pick_onsets(onset_env(vx)), "novelty_bounds": nb, "loudness_db_10hz": loud}
+    if accomp is not None and accomp.is_file():
+        out["inst_hits"] = instrument_hits(accomp)     # 2026-10-22 (Beach: guitar stabs, the can opening)
+    out["voices"] = line_voices(vocals, lines)         # 2026-10-22 (Beach: Ado / Dan Reynolds per line, an estimate)
+    return out
 
 
 def resection(job_dir: Path) -> None:
@@ -655,7 +738,7 @@ def analyze(job_dir: Path) -> dict:
     song = job_dir / cfg.get("song", "song.webm")
     stems = job_dir / "out" / "stems"
     wav = stems / "vocals.wav"
-    if not wav.is_file():
+    if not wav.is_file() or not (stems / "accomp.wav").is_file():
         separate(song, stems)
     ogg = job_dir / "vocals.ogg"            # small stem kept in the repo: local re-alignment + checks by ear
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(wav), "-ac", "1", "-c:a", "libopus", "-b:a", "48k",
@@ -676,7 +759,7 @@ def analyze(job_dir: Path) -> dict:
         gap_log.write_text(json.dumps(log, indent=1), encoding="utf-8", newline="\n")
     res = time_lyrics(job_dir, text, asr, wav)
     lines = res["lines"]
-    sm = song_map(song, wav, lines)
+    sm = song_map(song, wav, lines, stems / "accomp.wav")
     (job_dir / "song_map.json").write_text(json.dumps(sm, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     return {"lines": len(lines), "stats": res["stats"], "sections": len(sm["sections"]), "bpm": sm["bpm"]}
 

@@ -1,0 +1,11 @@
+{
+ "song": "song.webm",
+ "lyrics": "lyrics.txt",
+ "language": "en",
+ "model": "large-v3",
+ "gap_languages": [
+  "ja",
+  "en"
+ ],
+ "_why": "English song with Ado's Japanese verse: first pass English, gap windows retried in Japanese / English (FIRESTARTER method). 2026-10-22: song_map also gets inst_hits (accompaniment stem) and voices (singer per line, estimate)."
+}
