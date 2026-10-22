@@ -638,6 +638,26 @@ def salient_hits(times: np.ndarray, strength: np.ndarray, at: np.ndarray, win_s:
     return out
 
 
+def fast_runs(hits: list[dict], k: float = 0.6, n: int = 3) -> list[dict]:
+    """Runs of >= n band hits much faster than the band's own pulse (spacing < k x the median gap between hits - the
+    beat tracker may count half time): a guitar stab triplet, a fill - the moments a cut can ride (Beach intro: three
+    fast stabs ~4.6 s, toki 2026-10-22). Pure, from the map."""
+    if len(hits) < n:
+        return []
+    fast = k * float(np.median(np.diff([h["t"] for h in hits])))
+    runs, cur = [], [hits[0]]
+    for h in hits[1:]:
+        if h["t"] - cur[-1]["t"] < fast:
+            cur.append(h)
+        else:
+            if len(cur) >= n:
+                runs.append(cur)
+            cur = [h]
+    if len(cur) >= n:
+        runs.append(cur)
+    return [{"t0": r[0]["t"], "t1": r[-1]["t"], "times": [h["t"] for h in r], "cuts": [h["cut"] for h in r]} for r in runs]
+
+
 def instrument_hits(accomp: Path) -> list[dict]:
     """Hits of the band without the voice (accompaniment stem): time, salience, brightness (spectral centroid, Hz)."""
     import librosa
@@ -715,7 +735,10 @@ def song_map(song: Path, vocals: Path, lines: list[dict], accomp: Path | None = 
            "vocal_onsets": pick_onsets(onset_env(vx)), "novelty_bounds": nb, "loudness_db_10hz": loud}
     if accomp is not None and accomp.is_file():
         out["inst_hits"] = instrument_hits(accomp)     # 2026-10-22 (Beach: guitar stabs, the can opening)
-    out["voices"] = line_voices(vocals, lines)         # 2026-10-22 (Beach: Ado / Dan Reynolds per line, an estimate)
+        out["fast_runs"] = fast_runs(out["inst_hits"])
+    # 2026-10-22: median pitch per line. Beach showed it measures REGISTER, not the singer (Dan Reynolds and Ado both
+    # sing the verse low and the bridge high) - "voice" is only a hint; who sings is checked by ear in the dossier
+    out["voices"] = line_voices(vocals, lines)
     return out
 
 

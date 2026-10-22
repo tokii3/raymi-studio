@@ -179,3 +179,9 @@ def test_label_voices_anchor_japanese_lines_to_ado():
     out = S.label_voices(stats)
     assert [o["voice"] for o in out] == ["other", "other", "ado", "ado", None]
     assert out[3]["conf"] > 0.5 and out[4]["conf"] == 0.0
+
+
+def test_fast_runs_find_a_stab_triplet_between_beats():
+    hits = [{"t": t, "cut": S.cut_frame(t)} for t in (0.29, 0.58, 0.87, 1.16, 4.57, 4.71, 4.85, 5.41, 6.0)]
+    runs = S.fast_runs(hits)
+    assert [r["times"] for r in runs] == [[4.57, 4.71, 4.85]]
