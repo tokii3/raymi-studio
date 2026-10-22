@@ -1,0 +1,3684 @@
+{
+ "fps": 30,
+ "source": {
+  "lyrics": "official text (YouTube description)",
+  "timing": "vocal stem: demucs htdemucs + faster-whisper word times, romaji letter match, snapped to vocal onsets"
+ },
+ "stats": {
+  "snapped": 229,
+  "measured": 8,
+  "interpolated": 104,
+  "words": 341
+ },
+ "lines": [
+  {
+   "i": 0,
+   "para": 0,
+   "text": "People-pleasin' planet",
+   "words": [
+    {
+     "w": "People-pleasin'",
+     "roma": "peoplepleasin",
+     "t0": 9.08,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 10.28,
+     "cut": 271
+    },
+    {
+     "w": "planet",
+     "roma": "planet",
+     "t0": 10.28,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 10.76,
+     "cut": 307
+    }
+   ],
+   "t0": 9.08,
+   "t1": 10.76,
+   "cut": 271
+  },
+  {
+   "i": 1,
+   "para": 0,
+   "text": "Got a million people sayin' how to plan it",
+   "words": [
+    {
+     "w": "Got",
+     "roma": "got",
+     "t0": 10.76,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 11.41,
+     "cut": 321
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 11.41,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 11.55,
+     "cut": 341
+    },
+    {
+     "w": "million",
+     "roma": "million",
+     "t0": 11.55,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 11.86,
+     "cut": 345
+    },
+    {
+     "w": "people",
+     "roma": "people",
+     "t0": 11.86,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 11.96,
+     "cut": 354
+    },
+    {
+     "w": "sayin'",
+     "roma": "sayin",
+     "t0": 11.96,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 12.5,
+     "cut": 357
+    },
+    {
+     "w": "how",
+     "roma": "how",
+     "t0": 12.5,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 12.59,
+     "cut": 374
+    },
+    {
+     "w": "to",
+     "roma": "to",
+     "t0": 12.59,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 12.657,
+     "cut": 376
+    },
+    {
+     "w": "plan",
+     "roma": "plan",
+     "t0": 12.657,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 13.01,
+     "cut": 378
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 13.01,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 13.38,
+     "cut": 389
+    }
+   ],
+   "t0": 10.76,
+   "t1": 13.38,
+   "cut": 321
+  },
+  {
+   "i": 2,
+   "para": 0,
+   "text": "I can no longer stand it",
+   "words": [
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 13.38,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 13.84,
+     "cut": 400
+    },
+    {
+     "w": "can",
+     "roma": "can",
+     "t0": 13.84,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 13.94,
+     "cut": 414
+    },
+    {
+     "w": "no",
+     "roma": "no",
+     "t0": 13.94,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 14.11,
+     "cut": 417
+    },
+    {
+     "w": "longer",
+     "roma": "longer",
+     "t0": 14.11,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 14.63,
+     "cut": 422
+    },
+    {
+     "w": "stand",
+     "roma": "stand",
+     "t0": 14.63,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 15.1,
+     "cut": 437
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 15.1,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 15.29,
+     "cut": 452
+    }
+   ],
+   "t0": 13.38,
+   "t1": 15.29,
+   "cut": 400
+  },
+  {
+   "i": 3,
+   "para": 0,
+   "text": "Gonna spend my days tellin' them to can it",
+   "words": [
+    {
+     "w": "Gonna",
+     "roma": "gonna",
+     "t0": 15.29,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 16.08,
+     "cut": 457
+    },
+    {
+     "w": "spend",
+     "roma": "spend",
+     "t0": 16.08,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 16.23,
+     "cut": 481
+    },
+    {
+     "w": "my",
+     "roma": "my",
+     "t0": 16.23,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 16.37,
+     "cut": 485
+    },
+    {
+     "w": "days",
+     "roma": "days",
+     "t0": 16.37,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 16.66,
+     "cut": 490
+    },
+    {
+     "w": "tellin'",
+     "roma": "tellin",
+     "t0": 16.66,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 17.08,
+     "cut": 498
+    },
+    {
+     "w": "them",
+     "roma": "them",
+     "t0": 17.08,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 17.167,
+     "cut": 511
+    },
+    {
+     "w": "to",
+     "roma": "to",
+     "t0": 17.167,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 17.233,
+     "cut": 514
+    },
+    {
+     "w": "can",
+     "roma": "can",
+     "t0": 17.233,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 17.36,
+     "cut": 515
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 17.36,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 17.54,
+     "cut": 519
+    }
+   ],
+   "t0": 15.29,
+   "t1": 17.54,
+   "cut": 457
+  },
+  {
+   "i": 4,
+   "para": 0,
+   "text": "Each and to their own",
+   "words": [
+    {
+     "w": "Each",
+     "roma": "each",
+     "t0": 17.54,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 17.7,
+     "cut": 525
+    },
+    {
+     "w": "and",
+     "roma": "and",
+     "t0": 18.53,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 18.72,
+     "cut": 554
+    },
+    {
+     "w": "to",
+     "roma": "to",
+     "t0": 18.72,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 19.1,
+     "cut": 560
+    },
+    {
+     "w": "their",
+     "roma": "their",
+     "t0": 19.1,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 19.27,
+     "cut": 572
+    },
+    {
+     "w": "own",
+     "roma": "own",
+     "t0": 19.27,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 19.69,
+     "cut": 577
+    }
+   ],
+   "t0": 17.54,
+   "t1": 19.69,
+   "cut": 525
+  },
+  {
+   "i": 5,
+   "para": 0,
+   "text": "Got a salesman ringin' my phone",
+   "words": [
+    {
+     "w": "Got",
+     "roma": "got",
+     "t0": 19.69,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 20.53,
+     "cut": 589
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 20.53,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 20.67,
+     "cut": 614
+    },
+    {
+     "w": "salesman",
+     "roma": "salesman",
+     "t0": 20.67,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 21.27,
+     "cut": 619
+    },
+    {
+     "w": "ringin'",
+     "roma": "ringin",
+     "t0": 21.27,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 21.54,
+     "cut": 637
+    },
+    {
+     "w": "my",
+     "roma": "my",
+     "t0": 21.54,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 21.69,
+     "cut": 645
+    },
+    {
+     "w": "phone",
+     "roma": "phone",
+     "t0": 21.69,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 21.97,
+     "cut": 649
+    }
+   ],
+   "t0": 19.69,
+   "t1": 21.97,
+   "cut": 589
+  },
+  {
+   "i": 6,
+   "para": 0,
+   "text": "Tell me where to go",
+   "words": [
+    {
+     "w": "Tell",
+     "roma": "tell",
+     "t0": 21.97,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 23.08,
+     "cut": 658
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 23.08,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 23.27,
+     "cut": 691
+    },
+    {
+     "w": "where",
+     "roma": "where",
+     "t0": 23.27,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 23.66,
+     "cut": 697
+    },
+    {
+     "w": "to",
+     "roma": "to",
+     "t0": 23.66,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 23.84,
+     "cut": 708
+    },
+    {
+     "w": "go",
+     "roma": "go",
+     "t0": 23.84,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 24.23,
+     "cut": 714
+    }
+   ],
+   "t0": 21.97,
+   "t1": 24.23,
+   "cut": 658
+  },
+  {
+   "i": 7,
+   "para": 0,
+   "text": "No, I don't wanna hear the down low",
+   "words": [
+    {
+     "w": "No,",
+     "roma": "no",
+     "t0": 24.23,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 25.11,
+     "cut": 725
+    },
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 25.11,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 25.25,
+     "cut": 752
+    },
+    {
+     "w": "don't",
+     "roma": "dont",
+     "t0": 25.25,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 25.5,
+     "cut": 756
+    },
+    {
+     "w": "wanna",
+     "roma": "wanna",
+     "t0": 25.5,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 25.8,
+     "cut": 764
+    },
+    {
+     "w": "hear",
+     "roma": "hear",
+     "t0": 25.8,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 25.98,
+     "cut": 773
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 25.98,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 26.1,
+     "cut": 778
+    },
+    {
+     "w": "down",
+     "roma": "down",
+     "t0": 26.1,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 26.36,
+     "cut": 782
+    },
+    {
+     "w": "low",
+     "roma": "low",
+     "t0": 26.36,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 26.62,
+     "cut": 789
+    }
+   ],
+   "t0": 24.23,
+   "t1": 26.62,
+   "cut": 725
+  },
+  {
+   "i": 8,
+   "para": 1,
+   "text": "I owe, oh-oh-oh",
+   "words": [
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 26.62,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 27.18,
+     "cut": 797
+    },
+    {
+     "w": "owe,",
+     "roma": "owe",
+     "t0": 27.18,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 28.24,
+     "cut": 814
+    },
+    {
+     "w": "oh-oh-oh",
+     "roma": "ohohoh",
+     "t0": 28.24,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 29.35,
+     "cut": 846
+    }
+   ],
+   "t0": 26.62,
+   "t1": 29.35,
+   "cut": 797
+  },
+  {
+   "i": 9,
+   "para": 1,
+   "text": "Nothin', not a penny, never wanna hear you preach",
+   "words": [
+    {
+     "w": "Nothin',",
+     "roma": "nothin",
+     "t0": 29.35,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 29.97,
+     "cut": 879
+    },
+    {
+     "w": "not",
+     "roma": "not",
+     "t0": 29.97,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 30.13,
+     "cut": 898
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 30.13,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 30.24,
+     "cut": 902
+    },
+    {
+     "w": "penny,",
+     "roma": "penny",
+     "t0": 30.24,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 30.66,
+     "cut": 906
+    },
+    {
+     "w": "never",
+     "roma": "never",
+     "t0": 30.66,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 30.81,
+     "cut": 918
+    },
+    {
+     "w": "wanna",
+     "roma": "wanna",
+     "t0": 30.81,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 31.23,
+     "cut": 923
+    },
+    {
+     "w": "hear",
+     "roma": "hear",
+     "t0": 31.23,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 31.33,
+     "cut": 935
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 31.33,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 31.53,
+     "cut": 938
+    },
+    {
+     "w": "preach",
+     "roma": "preach",
+     "t0": 31.53,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 32.04,
+     "cut": 944
+    }
+   ],
+   "t0": 29.35,
+   "t1": 32.04,
+   "cut": 879
+  },
+  {
+   "i": 10,
+   "para": 1,
+   "text": "No, oh-oh-oh",
+   "words": [
+    {
+     "w": "No,",
+     "roma": "no",
+     "t0": 32.04,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 32.25,
+     "cut": 960
+    },
+    {
+     "w": "oh-oh-oh",
+     "roma": "ohohoh",
+     "t0": 32.25,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 33.39,
+     "cut": 966
+    }
+   ],
+   "t0": 32.04,
+   "t1": 33.39,
+   "cut": 960
+  },
+  {
+   "i": 11,
+   "para": 2,
+   "text": "(Take-take-take-take) Take me to the beach",
+   "words": [
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 33.39,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 33.49,
+     "cut": 1000
+    },
+    {
+     "w": "Take-take-take-take)",
+     "roma": "taketaketaketake",
+     "t0": 33.49,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 34.99,
+     "cut": 1003
+    },
+    {
+     "w": "Take",
+     "roma": "take",
+     "t0": 35.39,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 35.66,
+     "cut": 1060
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 35.66,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 35.97,
+     "cut": 1068
+    },
+    {
+     "w": "to",
+     "roma": "to",
+     "t0": 35.97,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 36.25,
+     "cut": 1078
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 36.25,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 36.53,
+     "cut": 1086
+    },
+    {
+     "w": "beach",
+     "roma": "beach",
+     "t0": 36.53,
+     "how": "snapped",
+     "conf": 0.8,
+     "t1": 36.66,
+     "cut": 1094
+    }
+   ],
+   "t0": 33.39,
+   "t1": 36.66,
+   "cut": 1000
+  },
+  {
+   "i": 12,
+   "para": 2,
+   "text": "Ah-ah-ah, you can have the mountains",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 36.66,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 37.71,
+     "cut": 1098
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 37.71,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 38.25,
+     "cut": 1130
+    },
+    {
+     "w": "can",
+     "roma": "can",
+     "t0": 38.25,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 38.39,
+     "cut": 1146
+    },
+    {
+     "w": "have",
+     "roma": "have",
+     "t0": 38.39,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 38.57,
+     "cut": 1150
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 38.57,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 38.82,
+     "cut": 1156
+    },
+    {
+     "w": "mountains",
+     "roma": "montains",
+     "t0": 38.82,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 39.44,
+     "cut": 1163
+    }
+   ],
+   "t0": 36.66,
+   "t1": 39.44,
+   "cut": 1098
+  },
+  {
+   "i": 13,
+   "para": 2,
+   "text": "Ah-ah-ah, you take the snow",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 39.44,
+     "how": "interpolated",
+     "conf": 0.33,
+     "t1": 40.0,
+     "cut": 1182
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 40.0,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 40.48,
+     "cut": 1199
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 40.48,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 40.77,
+     "cut": 1213
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 40.77,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 41.11,
+     "cut": 1222
+    },
+    {
+     "w": "snow",
+     "roma": "snow",
+     "t0": 41.11,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 41.68,
+     "cut": 1232
+    }
+   ],
+   "t0": 39.44,
+   "t1": 41.68,
+   "cut": 1182
+  },
+  {
+   "i": 14,
+   "para": 2,
+   "text": "Ah-ah-ah, it's way too cold",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 41.68,
+     "how": "interpolated",
+     "conf": 0.33,
+     "t1": 42.29,
+     "cut": 1249
+    },
+    {
+     "w": "it's",
+     "roma": "its",
+     "t0": 42.29,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 42.89,
+     "cut": 1267
+    },
+    {
+     "w": "way",
+     "roma": "way",
+     "t0": 42.89,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 43.07,
+     "cut": 1285
+    },
+    {
+     "w": "too",
+     "roma": "to",
+     "t0": 43.07,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 43.36,
+     "cut": 1291
+    },
+    {
+     "w": "cold",
+     "roma": "cold",
+     "t0": 43.36,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 44.01,
+     "cut": 1299
+    }
+   ],
+   "t0": 41.68,
+   "t1": 44.01,
+   "cut": 1249
+  },
+  {
+   "i": 15,
+   "para": 2,
+   "text": "My heart is cold enough",
+   "words": [
+    {
+     "w": "My",
+     "roma": "my",
+     "t0": 44.01,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 44.5,
+     "cut": 1319
+    },
+    {
+     "w": "heart",
+     "roma": "heart",
+     "t0": 44.5,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 44.83,
+     "cut": 1334
+    },
+    {
+     "w": "is",
+     "roma": "is",
+     "t0": 44.83,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 45.12,
+     "cut": 1343
+    },
+    {
+     "w": "cold",
+     "roma": "cold",
+     "t0": 45.12,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 45.5,
+     "cut": 1352
+    },
+    {
+     "w": "enough",
+     "roma": "enogh",
+     "t0": 45.5,
+     "how": "measured",
+     "conf": 0.8,
+     "t1": 45.69,
+     "cut": 1364
+    }
+   ],
+   "t0": 44.01,
+   "t1": 45.69,
+   "cut": 1319
+  },
+  {
+   "i": 16,
+   "para": 2,
+   "text": "Ah-ah-ah, push comes to shove",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 45.69,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 46.83,
+     "cut": 1369
+    },
+    {
+     "w": "push",
+     "roma": "push",
+     "t0": 46.83,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 47.21,
+     "cut": 1403
+    },
+    {
+     "w": "comes",
+     "roma": "comes",
+     "t0": 47.21,
+     "how": "interpolated",
+     "conf": 0.2,
+     "t1": 47.71,
+     "cut": 1415
+    },
+    {
+     "w": "to",
+     "roma": "to",
+     "t0": 47.71,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 47.96,
+     "cut": 1430
+    },
+    {
+     "w": "shove",
+     "roma": "shove",
+     "t0": 47.96,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 48.57,
+     "cut": 1437
+    }
+   ],
+   "t0": 45.69,
+   "t1": 48.57,
+   "cut": 1369
+  },
+  {
+   "i": 17,
+   "para": 2,
+   "text": "Ah-ah-ah, you can have the mountains",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 48.57,
+     "how": "interpolated",
+     "conf": 0.33,
+     "t1": 49.13,
+     "cut": 1456
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 49.13,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 49.59,
+     "cut": 1472
+    },
+    {
+     "w": "can",
+     "roma": "can",
+     "t0": 49.59,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 49.83,
+     "cut": 1486
+    },
+    {
+     "w": "have",
+     "roma": "have",
+     "t0": 49.83,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 50.03,
+     "cut": 1493
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 50.03,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 50.25,
+     "cut": 1499
+    },
+    {
+     "w": "mountains",
+     "roma": "montains",
+     "t0": 50.25,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 51.09,
+     "cut": 1506
+    }
+   ],
+   "t0": 48.57,
+   "t1": 51.09,
+   "cut": 1456
+  },
+  {
+   "i": 18,
+   "para": 2,
+   "text": "Ah-ah-ah, I'll take the beach",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 51.09,
+     "how": "interpolated",
+     "conf": 0.33,
+     "t1": 51.87,
+     "cut": 1531
+    },
+    {
+     "w": "I'll",
+     "roma": "ill",
+     "t0": 51.87,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 52.06,
+     "cut": 1555
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 52.06,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 52.2,
+     "cut": 1560
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 52.2,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 52.53,
+     "cut": 1565
+    },
+    {
+     "w": "beach",
+     "roma": "beach",
+     "t0": 52.53,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 53.1,
+     "cut": 1574
+    }
+   ],
+   "t0": 51.09,
+   "t1": 53.1,
+   "cut": 1531
+  },
+  {
+   "i": 19,
+   "para": 3,
+   "text": "聞く耳断つ",
+   "words": [
+    {
+     "w": "聞く",
+     "roma": "kiku",
+     "t0": 54.41,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 55.26,
+     "cut": 1631
+    },
+    {
+     "w": "耳断つ",
+     "roma": "mimitatsu",
+     "t0": 55.26,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 56.73,
+     "cut": 1656
+    }
+   ],
+   "t0": 54.41,
+   "t1": 56.73,
+   "cut": 1631
+  },
+  {
+   "i": 20,
+   "para": 3,
+   "text": "奴が大層な胸を張る",
+   "words": [
+    {
+     "w": "奴が",
+     "roma": "yatsuga",
+     "t0": 56.73,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 57.24,
+     "cut": 1700
+    },
+    {
+     "w": "大層な",
+     "roma": "taisona",
+     "t0": 57.24,
+     "how": "snapped",
+     "conf": 0.86,
+     "t1": 57.91,
+     "cut": 1716
+    },
+    {
+     "w": "胸を",
+     "roma": "munewo",
+     "t0": 57.91,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 58.24,
+     "cut": 1736
+    },
+    {
+     "w": "張る",
+     "roma": "haru",
+     "t0": 58.24,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 58.8,
+     "cut": 1746
+    }
+   ],
+   "t0": 56.73,
+   "t1": 58.8,
+   "cut": 1700
+  },
+  {
+   "i": 21,
+   "para": 3,
+   "text": "また構わずやる",
+   "words": [
+    {
+     "w": "また",
+     "roma": "mata",
+     "t0": 58.8,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 59.53,
+     "cut": 1763
+    },
+    {
+     "w": "構わずやる",
+     "roma": "kamawazuyaru",
+     "t0": 59.53,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 61.03,
+     "cut": 1784
+    }
+   ],
+   "t0": 58.8,
+   "t1": 61.03,
+   "cut": 1763
+  },
+  {
+   "i": 22,
+   "para": 3,
+   "text": "「望まない」から舌を打つ",
+   "words": [
+    {
+     "w": "「",
+     "roma": "",
+     "t0": 61.08,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 61.29,
+     "cut": 1831
+    },
+    {
+     "w": "望まない」から",
+     "roma": "nozomanaikara",
+     "t0": 61.29,
+     "how": "snapped",
+     "conf": 0.69,
+     "t1": 62.43,
+     "cut": 1837
+    },
+    {
+     "w": "舌を",
+     "roma": "shitawo",
+     "t0": 62.43,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 62.83,
+     "cut": 1871
+    },
+    {
+     "w": "打つ",
+     "roma": "utsu",
+     "t0": 62.83,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 63.29,
+     "cut": 1883
+    }
+   ],
+   "t0": 61.08,
+   "t1": 63.29,
+   "cut": 1831
+  },
+  {
+   "i": 23,
+   "para": 3,
+   "text": "え？",
+   "words": [
+    {
+     "w": "え？",
+     "roma": "e",
+     "t0": 63.29,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 63.39,
+     "cut": 1897
+    }
+   ],
+   "t0": 63.29,
+   "t1": 63.39,
+   "cut": 1897
+  },
+  {
+   "i": 24,
+   "para": 3,
+   "text": "あぁ、神か仏か？ヒト気取りか？",
+   "words": [
+    {
+     "w": "あぁ、",
+     "roma": "a",
+     "t0": 63.39,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 63.53,
+     "cut": 1900
+    },
+    {
+     "w": "神か",
+     "roma": "kamika",
+     "t0": 63.53,
+     "how": "snapped",
+     "conf": 0.83,
+     "t1": 65.03,
+     "cut": 1904
+    },
+    {
+     "w": "仏か？",
+     "roma": "hotokeka",
+     "t0": 65.1,
+     "how": "snapped",
+     "conf": 0.88,
+     "t1": 66.12,
+     "cut": 1951
+    },
+    {
+     "w": "ヒト",
+     "roma": "hito",
+     "t0": 66.12,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 66.51,
+     "cut": 1982
+    },
+    {
+     "w": "気取りか？",
+     "roma": "kidorika",
+     "t0": 66.51,
+     "how": "snapped",
+     "conf": 0.88,
+     "t1": 67.55,
+     "cut": 1994
+    }
+   ],
+   "t0": 63.39,
+   "t1": 67.55,
+   "cut": 1900
+  },
+  {
+   "i": 25,
+   "para": 3,
+   "text": "頭の中",
+   "words": [
+    {
+     "w": "頭の",
+     "roma": "atamano",
+     "t0": 67.55,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 68.47,
+     "cut": 2025
+    },
+    {
+     "w": "中",
+     "roma": "naka",
+     "t0": 68.47,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 68.82,
+     "cut": 2053
+    }
+   ],
+   "t0": 67.55,
+   "t1": 68.82,
+   "cut": 2025
+  },
+  {
+   "i": 26,
+   "para": 3,
+   "text": "Leave me alone",
+   "words": [
+    {
+     "w": "Leave",
+     "roma": "leave",
+     "t0": 68.82,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 69.38,
+     "cut": 2063
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 69.38,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 69.54,
+     "cut": 2080
+    },
+    {
+     "w": "alone",
+     "roma": "alone",
+     "t0": 69.54,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 70.01,
+     "cut": 2085
+    }
+   ],
+   "t0": 68.82,
+   "t1": 70.01,
+   "cut": 2063
+  },
+  {
+   "i": 27,
+   "para": 3,
+   "text": "誰になればいいの？",
+   "words": [
+    {
+     "w": "誰になればいいの？",
+     "roma": "dareninarebaino",
+     "t0": 70.01,
+     "how": "snapped",
+     "conf": 0.67,
+     "t1": 71.51,
+     "cut": 2099
+    }
+   ],
+   "t0": 70.01,
+   "t1": 71.51,
+   "cut": 2099
+  },
+  {
+   "i": 28,
+   "para": 3,
+   "text": "Take your hands off!",
+   "words": [
+    {
+     "w": "Take",
+     "roma": "take",
+     "t0": 71.86,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 72.4,
+     "cut": 2154
+    },
+    {
+     "w": "your",
+     "roma": "yor",
+     "t0": 72.4,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 72.88,
+     "cut": 2171
+    },
+    {
+     "w": "hands",
+     "roma": "hands",
+     "t0": 72.88,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 73.52,
+     "cut": 2185
+    },
+    {
+     "w": "off!",
+     "roma": "off",
+     "t0": 73.52,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 73.72,
+     "cut": 2204
+    }
+   ],
+   "t0": 71.86,
+   "t1": 73.72,
+   "cut": 2154
+  },
+  {
+   "i": 29,
+   "para": 4,
+   "text": "I owe, oh-oh-oh",
+   "words": [
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 73.72,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 73.9,
+     "cut": 2210
+    },
+    {
+     "w": "owe,",
+     "roma": "owe",
+     "t0": 73.9,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 74.25,
+     "cut": 2216
+    },
+    {
+     "w": "oh-oh-oh",
+     "roma": "ohohoh",
+     "t0": 74.25,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 75.05,
+     "cut": 2226
+    }
+   ],
+   "t0": 73.72,
+   "t1": 75.05,
+   "cut": 2210
+  },
+  {
+   "i": 30,
+   "para": 4,
+   "text": "吐き出す前に口をとじろ",
+   "words": [
+    {
+     "w": "吐き",
+     "roma": "haki",
+     "t0": 75.05,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 75.61,
+     "cut": 2250
+    },
+    {
+     "w": "出す",
+     "roma": "dasu",
+     "t0": 75.61,
+     "how": "snapped",
+     "conf": 0.75,
+     "t1": 75.98,
+     "cut": 2267
+    },
+    {
+     "w": "前に",
+     "roma": "maeni",
+     "t0": 75.98,
+     "how": "interpolated",
+     "conf": 0.4,
+     "t1": 76.54,
+     "cut": 2278
+    },
+    {
+     "w": "口をとじろ",
+     "roma": "kuchiwotojiro",
+     "t0": 76.54,
+     "how": "snapped",
+     "conf": 0.92,
+     "t1": 77.52,
+     "cut": 2295
+    }
+   ],
+   "t0": 75.05,
+   "t1": 77.52,
+   "cut": 2250
+  },
+  {
+   "i": 31,
+   "para": 4,
+   "text": "No, oh-oh-oh",
+   "words": [
+    {
+     "w": "No,",
+     "roma": "no",
+     "t0": 77.52,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 77.587,
+     "cut": 2324
+    },
+    {
+     "w": "oh-oh-oh",
+     "roma": "ohohoh",
+     "t0": 77.587,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 77.96,
+     "cut": 2326
+    }
+   ],
+   "t0": 77.52,
+   "t1": 77.96,
+   "cut": 2324
+  },
+  {
+   "i": 32,
+   "para": 5,
+   "text": "(Take-take-take-take) Take me to the beach",
+   "words": [
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 77.96,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 78.027,
+     "cut": 2337
+    },
+    {
+     "w": "Take-take-take-take)",
+     "roma": "taketaketaketake",
+     "t0": 78.027,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 79.11,
+     "cut": 2339
+    },
+    {
+     "w": "Take",
+     "roma": "take",
+     "t0": 79.11,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 79.85,
+     "cut": 2372
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 79.85,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 80.53,
+     "cut": 2394
+    },
+    {
+     "w": "to",
+     "roma": "to",
+     "t0": 80.53,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 81.96,
+     "cut": 2414
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 81.96,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 82.24,
+     "cut": 2457
+    },
+    {
+     "w": "beach",
+     "roma": "beach",
+     "t0": 82.24,
+     "how": "snapped",
+     "conf": 0.8,
+     "t1": 82.82,
+     "cut": 2466
+    }
+   ],
+   "t0": 77.96,
+   "t1": 82.82,
+   "cut": 2337
+  },
+  {
+   "i": 33,
+   "para": 5,
+   "text": "Ah-ah-ah, you can have the mountains",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 82.82,
+     "how": "interpolated",
+     "conf": 0.5,
+     "t1": 83.39,
+     "cut": 2483
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 83.39,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 83.97,
+     "cut": 2500
+    },
+    {
+     "w": "can",
+     "roma": "can",
+     "t0": 83.97,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 84.12,
+     "cut": 2518
+    },
+    {
+     "w": "have",
+     "roma": "have",
+     "t0": 84.12,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 84.32,
+     "cut": 2522
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 84.32,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 84.54,
+     "cut": 2528
+    },
+    {
+     "w": "mountains",
+     "roma": "montains",
+     "t0": 84.54,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 85.33,
+     "cut": 2535
+    }
+   ],
+   "t0": 82.82,
+   "t1": 85.33,
+   "cut": 2483
+  },
+  {
+   "i": 34,
+   "para": 5,
+   "text": "Ah-ah-ah, you take the snow",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 85.33,
+     "how": "interpolated",
+     "conf": 0.33,
+     "t1": 85.94,
+     "cut": 2558
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 85.94,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 86.32,
+     "cut": 2577
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 86.32,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 86.59,
+     "cut": 2588
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 86.59,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 86.84,
+     "cut": 2596
+    },
+    {
+     "w": "snow",
+     "roma": "snow",
+     "t0": 86.84,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 87.42,
+     "cut": 2604
+    }
+   ],
+   "t0": 85.33,
+   "t1": 87.42,
+   "cut": 2558
+  },
+  {
+   "i": 35,
+   "para": 5,
+   "text": "Ah-ah-ah, it's way too cold",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 87.42,
+     "how": "interpolated",
+     "conf": 0.33,
+     "t1": 88.24,
+     "cut": 2621
+    },
+    {
+     "w": "it's",
+     "roma": "its",
+     "t0": 88.24,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 88.77,
+     "cut": 2646
+    },
+    {
+     "w": "way",
+     "roma": "way",
+     "t0": 88.77,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 88.9,
+     "cut": 2662
+    },
+    {
+     "w": "too",
+     "roma": "to",
+     "t0": 88.9,
+     "how": "interpolated",
+     "conf": 1.0,
+     "t1": 89.11,
+     "cut": 2666
+    },
+    {
+     "w": "cold",
+     "roma": "cold",
+     "t0": 89.11,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 89.73,
+     "cut": 2672
+    }
+   ],
+   "t0": 87.42,
+   "t1": 89.73,
+   "cut": 2621
+  },
+  {
+   "i": 36,
+   "para": 5,
+   "text": "My heart is cold enough",
+   "words": [
+    {
+     "w": "My",
+     "roma": "my",
+     "t0": 89.73,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 90.24,
+     "cut": 2690
+    },
+    {
+     "w": "heart",
+     "roma": "heart",
+     "t0": 90.24,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 90.52,
+     "cut": 2706
+    },
+    {
+     "w": "is",
+     "roma": "is",
+     "t0": 90.52,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 90.97,
+     "cut": 2714
+    },
+    {
+     "w": "cold",
+     "roma": "cold",
+     "t0": 90.97,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 91.16,
+     "cut": 2728
+    },
+    {
+     "w": "enough",
+     "roma": "enogh",
+     "t0": 91.16,
+     "how": "snapped",
+     "conf": 0.8,
+     "t1": 91.39,
+     "cut": 2733
+    }
+   ],
+   "t0": 89.73,
+   "t1": 91.39,
+   "cut": 2690
+  },
+  {
+   "i": 37,
+   "para": 5,
+   "text": "Ah-ah-ah, push comes to shove",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 91.39,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 92.81,
+     "cut": 2740
+    },
+    {
+     "w": "push",
+     "roma": "push",
+     "t0": 92.81,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 93.1,
+     "cut": 2783
+    },
+    {
+     "w": "comes",
+     "roma": "comes",
+     "t0": 93.1,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 93.44,
+     "cut": 2792
+    },
+    {
+     "w": "to",
+     "roma": "to",
+     "t0": 93.44,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 93.69,
+     "cut": 2802
+    },
+    {
+     "w": "shove",
+     "roma": "shove",
+     "t0": 93.69,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 94.25,
+     "cut": 2809
+    }
+   ],
+   "t0": 91.39,
+   "t1": 94.25,
+   "cut": 2740
+  },
+  {
+   "i": 38,
+   "para": 5,
+   "text": "Ah-ah-ah, you can have the mountains",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 94.25,
+     "how": "interpolated",
+     "conf": 0.33,
+     "t1": 95.1,
+     "cut": 2826
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 95.1,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 95.3,
+     "cut": 2852
+    },
+    {
+     "w": "can",
+     "roma": "can",
+     "t0": 95.3,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 95.54,
+     "cut": 2858
+    },
+    {
+     "w": "have",
+     "roma": "have",
+     "t0": 95.54,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 95.74,
+     "cut": 2865
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 95.74,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 95.96,
+     "cut": 2871
+    },
+    {
+     "w": "mountains",
+     "roma": "montains",
+     "t0": 95.96,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 96.85,
+     "cut": 2877
+    }
+   ],
+   "t0": 94.25,
+   "t1": 96.85,
+   "cut": 2826
+  },
+  {
+   "i": 39,
+   "para": 5,
+   "text": "Ah-ah-ah, I'll take the beach",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 96.85,
+     "how": "interpolated",
+     "conf": 0.33,
+     "t1": 97.6,
+     "cut": 2904
+    },
+    {
+     "w": "I'll",
+     "roma": "ill",
+     "t0": 97.6,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 97.74,
+     "cut": 2927
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 97.74,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 98.0,
+     "cut": 2931
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 98.0,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 98.24,
+     "cut": 2939
+    },
+    {
+     "w": "beach",
+     "roma": "beach",
+     "t0": 98.24,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 99.23,
+     "cut": 2946
+    }
+   ],
+   "t0": 96.85,
+   "t1": 99.23,
+   "cut": 2904
+  },
+  {
+   "i": 40,
+   "para": 6,
+   "text": "I'm better off alone",
+   "words": [
+    {
+     "w": "I'm",
+     "roma": "im",
+     "t0": 99.23,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 99.95,
+     "cut": 2975
+    },
+    {
+     "w": "better",
+     "roma": "better",
+     "t0": 99.95,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 100.14,
+     "cut": 2997
+    },
+    {
+     "w": "off",
+     "roma": "off",
+     "t0": 100.14,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 100.36,
+     "cut": 3003
+    },
+    {
+     "w": "alone",
+     "roma": "alone",
+     "t0": 100.36,
+     "how": "measured",
+     "conf": 1.0,
+     "t1": 101.37,
+     "cut": 3009
+    }
+   ],
+   "t0": 99.23,
+   "t1": 101.37,
+   "cut": 2975
+  },
+  {
+   "i": 41,
+   "para": 6,
+   "text": "Like a rollin' stone",
+   "words": [
+    {
+     "w": "Like",
+     "roma": "like",
+     "t0": 101.37,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 102.23,
+     "cut": 3040
+    },
+    {
+     "w": "a",
+     "roma": "a",
+     "t0": 102.23,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 102.36,
+     "cut": 3065
+    },
+    {
+     "w": "rollin'",
+     "roma": "rollin",
+     "t0": 102.36,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 102.72,
+     "cut": 3069
+    },
+    {
+     "w": "stone",
+     "roma": "stone",
+     "t0": 102.72,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 103.96,
+     "cut": 3080
+    }
+   ],
+   "t0": 101.37,
+   "t1": 103.96,
+   "cut": 3040
+  },
+  {
+   "i": 42,
+   "para": 6,
+   "text": "Turnin' off my phone",
+   "words": [
+    {
+     "w": "Turnin'",
+     "roma": "turnin",
+     "t0": 103.96,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 104.52,
+     "cut": 3117
+    },
+    {
+     "w": "off",
+     "roma": "off",
+     "t0": 104.52,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 104.87,
+     "cut": 3134
+    },
+    {
+     "w": "my",
+     "roma": "my",
+     "t0": 104.87,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 105.26,
+     "cut": 3145
+    },
+    {
+     "w": "phone",
+     "roma": "phone",
+     "t0": 105.26,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 105.53,
+     "cut": 3156
+    }
+   ],
+   "t0": 103.96,
+   "t1": 105.53,
+   "cut": 3117
+  },
+  {
+   "i": 43,
+   "para": 6,
+   "text": "No one bringin' me down, down, down, down",
+   "words": [
+    {
+     "w": "No",
+     "roma": "no",
+     "t0": 105.53,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 106.8,
+     "cut": 3164
+    },
+    {
+     "w": "one",
+     "roma": "one",
+     "t0": 106.8,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 106.96,
+     "cut": 3203
+    },
+    {
+     "w": "bringin'",
+     "roma": "bringin",
+     "t0": 106.96,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 107.25,
+     "cut": 3207
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 107.25,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 107.317,
+     "cut": 3216
+    },
+    {
+     "w": "down,",
+     "roma": "down",
+     "t0": 107.317,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 107.383,
+     "cut": 3218
+    },
+    {
+     "w": "down,",
+     "roma": "down",
+     "t0": 107.383,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 108.09,
+     "cut": 3220
+    },
+    {
+     "w": "down,",
+     "roma": "down",
+     "t0": 108.09,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 108.55,
+     "cut": 3241
+    },
+    {
+     "w": "down",
+     "roma": "down",
+     "t0": 108.55,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 110.05,
+     "cut": 3255
+    }
+   ],
+   "t0": 105.53,
+   "t1": 110.05,
+   "cut": 3164
+  },
+  {
+   "i": 44,
+   "para": 6,
+   "text": "Just give me some space",
+   "words": [
+    {
+     "w": "Just",
+     "roma": "just",
+     "t0": 110.62,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 111.15,
+     "cut": 3317
+    },
+    {
+     "w": "give",
+     "roma": "give",
+     "t0": 111.15,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 111.69,
+     "cut": 3333
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 111.69,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 111.8,
+     "cut": 3349
+    },
+    {
+     "w": "some",
+     "roma": "some",
+     "t0": 111.8,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 111.97,
+     "cut": 3353
+    },
+    {
+     "w": "space",
+     "roma": "space",
+     "t0": 111.97,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 112.76,
+     "cut": 3358
+    }
+   ],
+   "t0": 110.62,
+   "t1": 112.76,
+   "cut": 3317
+  },
+  {
+   "i": 45,
+   "para": 6,
+   "text": "That sun in my face",
+   "words": [
+    {
+     "w": "That",
+     "roma": "that",
+     "t0": 112.76,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 113.51,
+     "cut": 3381
+    },
+    {
+     "w": "sun",
+     "roma": "sun",
+     "t0": 113.51,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 114.04,
+     "cut": 3404
+    },
+    {
+     "w": "in",
+     "roma": "in",
+     "t0": 114.04,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 114.22,
+     "cut": 3420
+    },
+    {
+     "w": "my",
+     "roma": "my",
+     "t0": 114.22,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 114.34,
+     "cut": 3425
+    },
+    {
+     "w": "face",
+     "roma": "face",
+     "t0": 114.34,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 114.85,
+     "cut": 3429
+    }
+   ],
+   "t0": 112.76,
+   "t1": 114.85,
+   "cut": 3381
+  },
+  {
+   "i": 46,
+   "para": 6,
+   "text": "And the days go on, and on, and on, and on (T-A-K-E, T-A-K-E)",
+   "words": [
+    {
+     "w": "And",
+     "roma": "and",
+     "t0": 114.85,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 115.95,
+     "cut": 3444
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 115.95,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 116.06,
+     "cut": 3477
+    },
+    {
+     "w": "days",
+     "roma": "days",
+     "t0": 116.06,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 116.39,
+     "cut": 3480
+    },
+    {
+     "w": "go",
+     "roma": "go",
+     "t0": 116.39,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 116.67,
+     "cut": 3490
+    },
+    {
+     "w": "on,",
+     "roma": "on",
+     "t0": 116.67,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 116.96,
+     "cut": 3499
+    },
+    {
+     "w": "and",
+     "roma": "and",
+     "t0": 116.96,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 117.37,
+     "cut": 3507
+    },
+    {
+     "w": "on,",
+     "roma": "on",
+     "t0": 117.37,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 117.7,
+     "cut": 3520
+    },
+    {
+     "w": "and",
+     "roma": "and",
+     "t0": 117.7,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 117.94,
+     "cut": 3530
+    },
+    {
+     "w": "on,",
+     "roma": "on",
+     "t0": 117.94,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 118.08,
+     "cut": 3537
+    },
+    {
+     "w": "and",
+     "roma": "and",
+     "t0": 118.08,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 118.5,
+     "cut": 3541
+    },
+    {
+     "w": "on",
+     "roma": "on",
+     "t0": 118.5,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 118.73,
+     "cut": 3554
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 118.73,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 118.797,
+     "cut": 3560
+    },
+    {
+     "w": "T-A-K-E,",
+     "roma": "take",
+     "t0": 118.797,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 119.08,
+     "cut": 3562
+    },
+    {
+     "w": "T-A-K-E)",
+     "roma": "take",
+     "t0": 119.08,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 119.38,
+     "cut": 3571
+    }
+   ],
+   "t0": 114.85,
+   "t1": 119.38,
+   "cut": 3444
+  },
+  {
+   "i": 47,
+   "para": 7,
+   "text": "T-A-K-E, take me to the beach (Oh)",
+   "words": [
+    {
+     "w": "T-A-K-E,",
+     "roma": "take",
+     "t0": 119.38,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 119.95,
+     "cut": 3580
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 119.95,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 120.22,
+     "cut": 3597
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 120.22,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 120.53,
+     "cut": 3605
+    },
+    {
+     "w": "to",
+     "roma": "to",
+     "t0": 120.53,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 120.638,
+     "cut": 3614
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 120.638,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 120.8,
+     "cut": 3618
+    },
+    {
+     "w": "beach",
+     "roma": "beach",
+     "t0": 120.8,
+     "how": "snapped",
+     "conf": 0.8,
+     "t1": 121.1,
+     "cut": 3623
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 121.1,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 121.167,
+     "cut": 3632
+    },
+    {
+     "w": "Oh)",
+     "roma": "oh",
+     "t0": 121.167,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 121.233,
+     "cut": 3634
+    }
+   ],
+   "t0": 119.38,
+   "t1": 121.233,
+   "cut": 3580
+  },
+  {
+   "i": 48,
+   "para": 7,
+   "text": "Ah-ah-ah, you can have the mountains (Have the mountains)",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 121.233,
+     "how": "interpolated",
+     "conf": 0.17,
+     "t1": 121.37,
+     "cut": 3635
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 121.37,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 122.25,
+     "cut": 3640
+    },
+    {
+     "w": "can",
+     "roma": "can",
+     "t0": 122.25,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 122.97,
+     "cut": 3666
+    },
+    {
+     "w": "have",
+     "roma": "have",
+     "t0": 122.97,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 123.17,
+     "cut": 3688
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 123.17,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 123.4,
+     "cut": 3694
+    },
+    {
+     "w": "mountains",
+     "roma": "montains",
+     "t0": 123.4,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 123.73,
+     "cut": 3701
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 123.73,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 123.797,
+     "cut": 3710
+    },
+    {
+     "w": "Have",
+     "roma": "have",
+     "t0": 123.797,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 123.92,
+     "cut": 3712
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 123.92,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 124.0,
+     "cut": 3716
+    },
+    {
+     "w": "mountains)",
+     "roma": "montains",
+     "t0": 124.0,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 124.21,
+     "cut": 3719
+    }
+   ],
+   "t0": 121.233,
+   "t1": 124.21,
+   "cut": 3635
+  },
+  {
+   "i": 49,
+   "para": 7,
+   "text": "Ah-ah-ah, you take the snow",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 124.21,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 124.55,
+     "cut": 3725
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 124.55,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 124.69,
+     "cut": 3735
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 124.69,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 125.43,
+     "cut": 3739
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 125.43,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 125.7,
+     "cut": 3761
+    },
+    {
+     "w": "snow",
+     "roma": "snow",
+     "t0": 125.7,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 126.14,
+     "cut": 3770
+    }
+   ],
+   "t0": 124.21,
+   "t1": 126.14,
+   "cut": 3725
+  },
+  {
+   "i": 50,
+   "para": 7,
+   "text": "Ah-ah-ah, it's way too cold (It's way too cold)",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 126.14,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 126.86,
+     "cut": 3783
+    },
+    {
+     "w": "it's",
+     "roma": "its",
+     "t0": 126.86,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 127.45,
+     "cut": 3804
+    },
+    {
+     "w": "way",
+     "roma": "way",
+     "t0": 127.45,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 127.64,
+     "cut": 3822
+    },
+    {
+     "w": "too",
+     "roma": "to",
+     "t0": 127.64,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 127.97,
+     "cut": 3828
+    },
+    {
+     "w": "cold",
+     "roma": "cold",
+     "t0": 127.97,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 128.22,
+     "cut": 3838
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 128.22,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 128.287,
+     "cut": 3845
+    },
+    {
+     "w": "It's",
+     "roma": "its",
+     "t0": 128.287,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 128.59,
+     "cut": 3847
+    },
+    {
+     "w": "way",
+     "roma": "way",
+     "t0": 128.59,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 128.71,
+     "cut": 3856
+    },
+    {
+     "w": "too",
+     "roma": "to",
+     "t0": 128.71,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 128.86,
+     "cut": 3860
+    },
+    {
+     "w": "cold)",
+     "roma": "cold",
+     "t0": 128.86,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 129.1,
+     "cut": 3864
+    }
+   ],
+   "t0": 126.14,
+   "t1": 129.1,
+   "cut": 3783
+  },
+  {
+   "i": 51,
+   "para": 7,
+   "text": "My heart is cold enough (Oh)",
+   "words": [
+    {
+     "w": "My",
+     "roma": "my",
+     "t0": 129.1,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 129.36,
+     "cut": 3872
+    },
+    {
+     "w": "heart",
+     "roma": "heart",
+     "t0": 129.36,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 129.69,
+     "cut": 3879
+    },
+    {
+     "w": "is",
+     "roma": "is",
+     "t0": 129.69,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 129.93,
+     "cut": 3889
+    },
+    {
+     "w": "cold",
+     "roma": "cold",
+     "t0": 129.93,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 130.01,
+     "cut": 3896
+    },
+    {
+     "w": "enough",
+     "roma": "enogh",
+     "t0": 130.01,
+     "how": "snapped",
+     "conf": 0.8,
+     "t1": 130.59,
+     "cut": 3899
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 130.59,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 130.657,
+     "cut": 3916
+    },
+    {
+     "w": "Oh)",
+     "roma": "oh",
+     "t0": 130.657,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 130.85,
+     "cut": 3918
+    }
+   ],
+   "t0": 129.1,
+   "t1": 130.85,
+   "cut": 3872
+  },
+  {
+   "i": 52,
+   "para": 7,
+   "text": "Ah-ah-ah, push comes to shove",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 130.85,
+     "how": "interpolated",
+     "conf": 0.17,
+     "t1": 131.51,
+     "cut": 3924
+    },
+    {
+     "w": "push",
+     "roma": "push",
+     "t0": 131.51,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 131.99,
+     "cut": 3944
+    },
+    {
+     "w": "comes",
+     "roma": "comes",
+     "t0": 131.99,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 132.29,
+     "cut": 3958
+    },
+    {
+     "w": "to",
+     "roma": "to",
+     "t0": 132.29,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 132.56,
+     "cut": 3967
+    },
+    {
+     "w": "shove",
+     "roma": "shove",
+     "t0": 132.56,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 133.12,
+     "cut": 3975
+    }
+   ],
+   "t0": 130.85,
+   "t1": 133.12,
+   "cut": 3924
+  },
+  {
+   "i": 53,
+   "para": 7,
+   "text": "Ah-ah-ah, you can have the mountains",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 133.12,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 133.69,
+     "cut": 3992
+    },
+    {
+     "w": "you",
+     "roma": "yo",
+     "t0": 133.69,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 134.23,
+     "cut": 4009
+    },
+    {
+     "w": "can",
+     "roma": "can",
+     "t0": 134.23,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 134.39,
+     "cut": 4025
+    },
+    {
+     "w": "have",
+     "roma": "have",
+     "t0": 134.39,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 134.62,
+     "cut": 4030
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 134.62,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 134.82,
+     "cut": 4037
+    },
+    {
+     "w": "mountains",
+     "roma": "montains",
+     "t0": 134.82,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 135.51,
+     "cut": 4043
+    }
+   ],
+   "t0": 133.12,
+   "t1": 135.51,
+   "cut": 3992
+  },
+  {
+   "i": 54,
+   "para": 7,
+   "text": "Ah-ah-ah, I'll take the beach (I'll take the)",
+   "words": [
+    {
+     "w": "Ah-ah-ah,",
+     "roma": "ahahah",
+     "t0": 135.51,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 136.01,
+     "cut": 4064
+    },
+    {
+     "w": "I'll",
+     "roma": "ill",
+     "t0": 136.01,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 136.53,
+     "cut": 4079
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 136.53,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 136.84,
+     "cut": 4094
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 136.84,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 137.1,
+     "cut": 4104
+    },
+    {
+     "w": "beach",
+     "roma": "beach",
+     "t0": 137.1,
+     "how": "snapped",
+     "conf": 0.8,
+     "t1": 137.25,
+     "cut": 4112
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 137.25,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 137.467,
+     "cut": 4116
+    },
+    {
+     "w": "I'll",
+     "roma": "ill",
+     "t0": 137.467,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 137.65,
+     "cut": 4123
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 137.65,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 138.02,
+     "cut": 4128
+    },
+    {
+     "w": "the)",
+     "roma": "the",
+     "t0": 138.02,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 138.25,
+     "cut": 4139
+    }
+   ],
+   "t0": 135.51,
+   "t1": 138.25,
+   "cut": 4064
+  },
+  {
+   "i": 55,
+   "para": 7,
+   "text": "Take me to the (I'll take the)",
+   "words": [
+    {
+     "w": "Take",
+     "roma": "take",
+     "t0": 138.25,
+     "how": "interpolated",
+     "conf": 0.25,
+     "t1": 138.35,
+     "cut": 4146
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 138.35,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 138.5,
+     "cut": 4149
+    },
+    {
+     "w": "to",
+     "roma": "to",
+     "t0": 138.5,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 138.567,
+     "cut": 4154
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 138.567,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 138.8,
+     "cut": 4156
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 138.8,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 138.867,
+     "cut": 4163
+    },
+    {
+     "w": "I'll",
+     "roma": "ill",
+     "t0": 138.867,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 138.933,
+     "cut": 4165
+    },
+    {
+     "w": "take",
+     "roma": "take",
+     "t0": 138.933,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 139.07,
+     "cut": 4166
+    },
+    {
+     "w": "the)",
+     "roma": "the",
+     "t0": 139.07,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 139.37,
+     "cut": 4171
+    }
+   ],
+   "t0": 138.25,
+   "t1": 139.37,
+   "cut": 4146
+  },
+  {
+   "i": 56,
+   "para": 8,
+   "text": "I don't have no friends, ask anyone (そう何も)",
+   "words": [
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 139.37,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 139.67,
+     "cut": 4180
+    },
+    {
+     "w": "don't",
+     "roma": "dont",
+     "t0": 139.67,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 140.19,
+     "cut": 4189
+    },
+    {
+     "w": "have",
+     "roma": "have",
+     "t0": 140.19,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 140.4,
+     "cut": 4204
+    },
+    {
+     "w": "no",
+     "roma": "no",
+     "t0": 140.4,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 140.52,
+     "cut": 4211
+    },
+    {
+     "w": "friends,",
+     "roma": "friends",
+     "t0": 140.52,
+     "how": "snapped",
+     "conf": 0.86,
+     "t1": 141.1,
+     "cut": 4214
+    },
+    {
+     "w": "ask",
+     "roma": "ask",
+     "t0": 141.1,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 141.36,
+     "cut": 4232
+    },
+    {
+     "w": "anyone",
+     "roma": "anyone",
+     "t0": 141.36,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 141.94,
+     "cut": 4239
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 141.94,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 142.007,
+     "cut": 4257
+    },
+    {
+     "w": "そう",
+     "roma": "so",
+     "t0": 142.007,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 142.25,
+     "cut": 4259
+    },
+    {
+     "w": "何も)",
+     "roma": "nanimo",
+     "t0": 142.25,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 142.64,
+     "cut": 4266
+    }
+   ],
+   "t0": 139.37,
+   "t1": 142.64,
+   "cut": 4180
+  },
+  {
+   "i": 57,
+   "para": 8,
+   "text": "Got me 'til the end, my favorite one (最後まで)",
+   "words": [
+    {
+     "w": "Got",
+     "roma": "got",
+     "t0": 142.64,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 143.43,
+     "cut": 4278
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 143.43,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 143.96,
+     "cut": 4301
+    },
+    {
+     "w": "'til",
+     "roma": "til",
+     "t0": 143.96,
+     "how": "interpolated",
+     "conf": 0.33,
+     "t1": 144.86,
+     "cut": 4317
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 144.86,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 145.13,
+     "cut": 4344
+    },
+    {
+     "w": "end,",
+     "roma": "end",
+     "t0": 145.13,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 145.48,
+     "cut": 4352
+    },
+    {
+     "w": "my",
+     "roma": "my",
+     "t0": 145.48,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 145.82,
+     "cut": 4363
+    },
+    {
+     "w": "favorite",
+     "roma": "favorite",
+     "t0": 145.82,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 146.74,
+     "cut": 4373
+    },
+    {
+     "w": "one",
+     "roma": "one",
+     "t0": 146.74,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 147.15,
+     "cut": 4401
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 147.15,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 147.217,
+     "cut": 4413
+    },
+    {
+     "w": "最後まで)",
+     "roma": "saigomade",
+     "t0": 147.217,
+     "how": "interpolated",
+     "conf": 0.11,
+     "t1": 148.33,
+     "cut": 4415
+    }
+   ],
+   "t0": 142.64,
+   "t1": 148.33,
+   "cut": 4278
+  },
+  {
+   "i": 58,
+   "para": 8,
+   "text": "I don't have no friends, ask anyone (そう誰も)",
+   "words": [
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 148.33,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 148.68,
+     "cut": 4448
+    },
+    {
+     "w": "don't",
+     "roma": "dont",
+     "t0": 148.68,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 149.32,
+     "cut": 4459
+    },
+    {
+     "w": "have",
+     "roma": "have",
+     "t0": 149.32,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 149.43,
+     "cut": 4478
+    },
+    {
+     "w": "no",
+     "roma": "no",
+     "t0": 149.43,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 149.67,
+     "cut": 4481
+    },
+    {
+     "w": "friends,",
+     "roma": "friends",
+     "t0": 149.67,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 150.5,
+     "cut": 4489
+    },
+    {
+     "w": "ask",
+     "roma": "ask",
+     "t0": 150.5,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 150.83,
+     "cut": 4514
+    },
+    {
+     "w": "anyone",
+     "roma": "anyone",
+     "t0": 150.83,
+     "how": "snapped",
+     "conf": 0.83,
+     "t1": 151.15,
+     "cut": 4523
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 151.15,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 151.38,
+     "cut": 4533
+    },
+    {
+     "w": "そう",
+     "roma": "so",
+     "t0": 151.38,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 151.447,
+     "cut": 4540
+    },
+    {
+     "w": "誰も)",
+     "roma": "daremo",
+     "t0": 151.447,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 151.78,
+     "cut": 4542
+    }
+   ],
+   "t0": 148.33,
+   "t1": 151.78,
+   "cut": 4448
+  },
+  {
+   "i": 59,
+   "para": 8,
+   "text": "Got me 'til the end, my favorite one (最後まで)",
+   "words": [
+    {
+     "w": "Got",
+     "roma": "got",
+     "t0": 151.78,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 152.74,
+     "cut": 4552
+    },
+    {
+     "w": "me",
+     "roma": "me",
+     "t0": 152.74,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 153.19,
+     "cut": 4581
+    },
+    {
+     "w": "'til",
+     "roma": "til",
+     "t0": 153.19,
+     "how": "interpolated",
+     "conf": 0.33,
+     "t1": 154.0,
+     "cut": 4594
+    },
+    {
+     "w": "the",
+     "roma": "the",
+     "t0": 154.0,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 154.27,
+     "cut": 4619
+    },
+    {
+     "w": "end,",
+     "roma": "end",
+     "t0": 154.27,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 154.96,
+     "cut": 4627
+    },
+    {
+     "w": "my",
+     "roma": "my",
+     "t0": 154.96,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 155.4,
+     "cut": 4647
+    },
+    {
+     "w": "favorite",
+     "roma": "favorite",
+     "t0": 155.4,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 156.9,
+     "cut": 4661
+    },
+    {
+     "w": "one",
+     "roma": "one",
+     "t0": 157.11,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 157.82,
+     "cut": 4712
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 157.82,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 158.09,
+     "cut": 4733
+    },
+    {
+     "w": "最後まで)",
+     "roma": "saigomade",
+     "t0": 158.09,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 158.6,
+     "cut": 4741
+    }
+   ],
+   "t0": 151.78,
+   "t1": 158.6,
+   "cut": 4552
+  }
+ ]
+}
