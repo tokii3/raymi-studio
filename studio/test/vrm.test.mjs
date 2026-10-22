@@ -19,8 +19,8 @@ globalThis.fetch = async (u, o) => (String(u).startsWith('blob:') ? new Response
 const out = path.join(os.tmpdir(), `raymi-vrm-${process.pid}.mjs`);
 await build({entryPoints: [path.join(here, '..', 'src', 'three', 'VrmPuppet.tsx')], bundle: true, format: 'esm',
   platform: 'node', outfile: out, logLevel: 'error', jsx: 'automatic',
-  // the Mixamo retargeter's ESM build also writes to a CommonJS `exports` (webpack tolerates it, node does not)
-  banner: {js: 'var exports = {};'}});
+  // the Mixamo retargeter: its "main" is CommonJS in a type-module package - take its ESM build
+  mainFields: ['module', 'main']});
 const V = await import(pathToFileURL(out).href);
 fs.rmSync(out, {force: true});
 const POSES = ['stand', 'point', 'crouch', 'arms_up'];
