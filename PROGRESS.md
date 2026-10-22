@@ -1,5 +1,21 @@
 # PROGRESS - Raymi Studio (newest first, kept short)
 
+## 2026-10-22 - stage A of the 3D switch: Raymi as VRM (raymi5) sings, the camera travels, the 2D layer
+- Looked back at KING + FIRESTARTER (toki.md): liked = animation, transitions, effects, per-act grade; open = lyrics
+  (size / cut / behind assets - 3 rounds on Firestarter), main element readability, critics' placeholder props, dark
+  stretches, tako ears read as horns (VRM solves). The 2026-10-21 VRM edition was the 2D timeline with the model swapped
+  in: poses from sprite names, letter-based lip sync at 100 %, a hard clip switch, frontal linear cameras.
+- toki 2026-10-22: switch to 3D Raymi, she SINGS the lyrics by sound with natural (never 100 %) mouth shapes, fluid
+  natural motion, wilder camera angles / moves that are also the transitions, 3D assets but a 2D feel like her reference
+  MVs (memory: look-references-2d), 2D assets welcome. Next song: Take Me to the Beach (Imagine Dragons + Ado).
+- Built (studio, reusable): assets/vrm/raymi5.vrm; lip sync v2 (vrmLipSync.ts: phonemes, visemes incl. raw
+  Fcl_MTH_Close - the 2026-10-21 note "no closed-mouth viseme" was wrong, caps, loudness from the vocal stem,
+  coarticulation, lead, smoothing; emotions keep brows + eyes while she sings); clip cross-fade + motionMix;
+  camera v2 (spline, dolly zoom frameH, shake, orbit keys); spin / zoom camera transitions; Fx2D (duo poster look,
+  speed lines, impact frame, halftone); Raymi on twos + ink outline; VrmClip segments; clip.mjs variants + compare.
+- Test job jobs/2026-10-22_vrm3d-core-test (cloud): lip sync v1 | v2 side by side + a 10 s camera / 2D test.
+- Tests: studio 24 green (vrm test repaired: the Mixamo retargeter's CommonJS broke the bundle since 10-21).
+
 ## 2026-10-19 (later) - lyrics v2 is the studio default
 - Style frames rendered in the cloud (stills runs, 2 rounds, jobs/2026-10-19_lyrics-v2/boards), type-critic FAIL x2
   (verbatim in its reviews/) -> stop; toki: "Ja, v2 wird der Standard für Lyrics. Die offenen Punkte vom type-critic

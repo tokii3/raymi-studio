@@ -225,12 +225,18 @@ function lockColours(rig: Rig, lock: number) {
 }
 
 // ------------------------------------------------------------------ the state at a frame (pure, from the keys)
-type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; rollZ: number; height: number; squash: number; act: VrmKey['act']; motion?: string; local: number; f: number};
+type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; rollZ: number; height: number; squash: number; act: VrmKey['act']; motion?: string; prevMotion?: string; mixPrev: number; mixCur: number; local: number; f: number};
 
 function keyAt(keys: VrmKey[], f: number): number {
   let i = 0;
   for (let k = 0; k < keys.length; k++) if (keys[k].f <= f) i = k;
   return i;
+}
+
+/** The clip a key plays: its own, or the one it inherits from the keys before it (null = none, the pose only). */
+function motionOf(keys: VrmKey[], i: number): string | undefined {
+  for (let j = i; j >= 0; j--) if (keys[j].motion !== undefined) return keys[j].motion ?? undefined;
+  return undefined;
 }
 
 function stateAt(keys: VrmKey[], f: number, camPos: V3): State {
@@ -259,7 +265,9 @@ function stateAt(keys: VrmKey[], f: number, camPos: V3): State {
   if (k.act === 'bounce') lift = 0.055 * Math.abs(beat);
   if (k.act === 'float') lift = 0.12 + 0.05 * Math.sin((f / 30) * Math.PI * 0.7);
   pos[1] += lift;
-  return {a: pose(p.pose), b: pose(k.pose), t, pos, yaw: lerp(yawOf(p), yawOf(k)), motion: k.motion ?? p.motion,
+  const motion = motionOf(keys, i), prevMotion = i > 0 ? motionOf(keys, i - 1) : motion;
+  return {a: pose(p.pose), b: pose(k.pose), t, pos, yaw: lerp(yawOf(p), yawOf(k)), motion, prevMotion,
+    mixPrev: prevMotion ? (p.motionMix ?? 1) : 0, mixCur: motion ? (k.motionMix ?? 1) : 0,
     rollZ: lerp(p.rollZ ?? 0, k.rollZ ?? 0) + (k.act === 'tilt' ? 0.12 * ease('out', local / 8) : k.act === 'lean' ? -0.08 * ease('out', local / 10) : 0),
     height: lerp(p.height ?? DEFAULT_HEIGHT, k.height ?? DEFAULT_HEIGHT), squash, act: k.act, local, f};
 }
@@ -280,6 +288,18 @@ function moveAt(keys: VrmKey[], f: number): V3 {
 }
 
 const qa = new THREE.Quaternion(), qb = new THREE.Quaternion(), eu = new THREE.Euler();
+
+const BONES: VRMHumanBoneName[] = ['hips', 'spine', 'chest', 'upperChest', 'neck', 'head', 'leftShoulder', 'rightShoulder',
+  'leftUpperArm', 'rightUpperArm', 'leftLowerArm', 'rightLowerArm', 'leftHand', 'rightHand', 'leftUpperLeg', 'rightUpperLeg',
+  'leftLowerLeg', 'rightLowerLeg', 'leftFoot', 'rightFoot', 'leftToes', 'rightToes'];
+function savePose(vrm: VRM): [THREE.Object3D, THREE.Quaternion, THREE.Vector3][] {
+  const out: [THREE.Object3D, THREE.Quaternion, THREE.Vector3][] = [];
+  for (const n of BONES) {
+    const node = vrm.humanoid.getNormalizedBoneNode(n);
+    if (node) out.push([node, node.quaternion.clone(), node.position.clone()]);
+  }
+  return out;
+}
 function boneQ(out: THREE.Quaternion, r: [number, number, number] | undefined, mirror: boolean) {
   if (!r) return out.identity();
   return out.setFromEuler(eu.set(mirror ? -r[0] : r[0], r[1], mirror ? -r[2] : r[2], 'XYZ'));
@@ -322,19 +342,29 @@ function applyState(rig: Rig, s: State, fps: number) {
   if (s.act === 'shake') add('head', [0, 0, Math.sin(s.local * 1.7) * 0.16 * Math.exp(-s.local / 17)]);
   if (s.act === 'lean') add('spine', [0.08, 0, 0]);
   if (s.act === 'float') add('spine', [0.025 * Math.sin(t * Math.PI * 0.7), 0, 0.025 * Math.sin(t * Math.PI * 0.5)]);
-  // Sample a retargeted Mixamo clip at an absolute timestamp. This keeps arbitrary-order,
+  // Sample retargeted Mixamo clips at an absolute timestamp. This keeps arbitrary-order,
   // parallel Remotion frames deterministic and lets expression/spring-bone simulation stay local.
-  for (const [id, clip] of rig.motions) {
-    let action = rig.actions.get(id);
-    if (!action) { action = rig.mixer.clipAction(clip); action.play(); rig.actions.set(id, action); }
-    const weight = id === s.motion ? 1 : 0;
-    action.enabled = true;
-    action.setEffectiveWeight(weight);
-    if (weight > 0) {
-      action.time = ((s.f / fps) % clip.duration + clip.duration) % clip.duration;
+  // 2026-10-22: no hard switch any more - two clips cross-fade over the key's blend, and a clip is laid over the key
+  // pose by `motionMix` (1 = the clip alone, 0.5 = half clip half pose), also faded in / out when a key has none.
+  const a = s.prevMotion && rig.motions.has(s.prevMotion) ? s.prevMotion : undefined;
+  const b = s.motion && rig.motions.has(s.motion) ? s.motion : undefined;
+  const amount = (a ? s.mixPrev : 0) * (1 - s.t) + (b ? s.mixCur : 0) * s.t;
+  if (amount > 0.001) {
+    const wA = a && b ? (a === b ? 0 : 1 - s.t) : a ? 1 : 0;
+    const wB = a && b ? (a === b ? 1 : s.t) : b ? 1 : 0;
+    // the posed bones before the clip (the mixer overwrites them; the clip result is slerped back toward them)
+    const saved = savePose(vrm);
+    for (const [id, clip] of rig.motions) {
+      let action = rig.actions.get(id);
+      if (!action) { action = rig.mixer.clipAction(clip); action.play(); rig.actions.set(id, action); }
+      const weight = id === a ? wA : id === b ? wB : 0;
+      action.enabled = true;
+      action.setEffectiveWeight(weight);
+      if (weight > 0) action.time = ((s.f / fps) % clip.duration + clip.duration) % clip.duration;
     }
+    rig.mixer.update(0);
+    if (amount < 0.999) for (const [node, q, p] of saved) { node.quaternion.copy(q.slerp(node.quaternion, amount)); node.position.lerpVectors(p, node.position, amount); }
   }
-  if (s.motion && rig.motions.has(s.motion)) rig.mixer.update(0);
   vrm.humanoid.update();
   // feet on the floor: measure the posed rig unplaced, then place it
   root.position.set(0, 0, 0); root.rotation.set(0, 0, 0); root.scale.setScalar(1); ground.position.set(0, 0, 0);

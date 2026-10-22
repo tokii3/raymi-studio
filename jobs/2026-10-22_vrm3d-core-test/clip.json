@@ -20,25 +20,25 @@
   "materialStyle": "firestarter",
   "grain": 0.02,
   "keys": [
-    {"f": 0, "pose": "sing", "motion": "idle", "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0},
-    {"f": 75, "pose": "arms_up", "motion": "dance", "expr": {"joy": 0.6}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 14},
+    {"f": 0, "pose": "sing", "motion": "idle", "motionMix": 0.3, "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0},
+    {"f": 75, "pose": "arms_up", "motion": "dance", "motionMix": 0.45, "expr": {"joy": 0.6}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 14},
     {"f": 150, "pose": "sway", "motion": "dance", "expr": {"fun": 0.5}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 14},
     {"f": 225, "pose": "point", "motion": "dance", "expr": {"joy": 0.65}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 12}
   ],
   "variants": [
     {"name": "lip_v1", "output": "out/lip_v1.mp4", "props": {"lipsync": "v1", "keys": [
-      {"f": 0, "pose": "sing", "motion": "idle", "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0}]}},
+      {"f": 0, "pose": "sing", "motion": "idle", "motionMix": 0.3, "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0}]}},
     {"name": "lip_v2", "output": "out/lip_v2.mp4", "props": {"lipsync": "v2", "keys": [
-      {"f": 0, "pose": "sing", "motion": "idle", "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0}]}},
+      {"f": 0, "pose": "sing", "motion": "idle", "motionMix": 0.3, "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0}]}},
     {"name": "moves", "output": "boards/camera_2d_test.mp4", "props": {
       "width": 1280, "height": 720, "step": 2, "outline": 0.0035, "outlineColor": "#140a26",
       "segments": [
         {"from": 0, "to": 75, "set": "deep", "opts": {"grade": "vrm_fire", "snow": 0.25, "smoke": false, "fog_far": 20, "shadow": "#120b2b", "glow": "#a994ff",
           "fires": [{"pos": [1.2, 0.1, -1.9], "size": 0.38, "c": "#b45cff", "core": "#ffe2b8", "light": 0.12, "embers": 8}]},
           "camKeys": [
-            {"f": 0, "pos": [-1.2, 0.15, 0.6], "look": [0.3, 1.3, -0.6], "fov": 42, "shake": 0.15},
-            {"f": 40, "pos": [0.4, 0.2, 1.1], "look": [0.3, 1.25, -0.6], "fov": 41, "path": "spline", "ease": "linear", "shake": 0.15},
-            {"f": 75, "pos": [1.8, 0.3, 0.2], "look": [0.3, 1.2, -0.6], "fov": 40, "roll": -8, "path": "spline", "ease": "in", "shake": 0.15}],
+            {"f": 0, "pos": [-0.55, 0.2, 0.35], "look": [0.3, 1.3, -0.6], "fov": 44, "shake": 0.15},
+            {"f": 40, "pos": [0.38, 0.25, 0.6], "look": [0.3, 1.25, -0.6], "fov": 42, "path": "spline", "ease": "linear", "shake": 0.15},
+            {"f": 75, "pos": [1.15, 0.35, -0.05], "look": [0.3, 1.2, -0.6], "fov": 42, "roll": -8, "path": "spline", "ease": "in", "shake": 0.15}],
           "transition": {"kind": "spin", "frames": 12, "dir": 1}},
         {"from": 75, "to": 150, "set": "aquarium", "opts": {},
           "camKeys": [

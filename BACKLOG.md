@@ -81,3 +81,14 @@
     toki decides (VRM model, ear-shaped glow, or accept).
 
 - FIRESTARTER thumbs (reviews/thumbs_1.md, FAIL): S1 cold open's "UNDERWATER." line sits behind her horns/hair (move the title line in the Short cold open or a thumbnail-only text layer); only one MV candidate has a face (M3/M5 empty) - thumbnails need their own framing (close face + flame + one word), not film frames. Not looped (toki: lean, full package).
+
+- 3D switch, stage A leftovers (2026-10-22):
+  - Guards still read sprite anatomy: the film path (shots.json -> timeline.py -> check.ts) has no bone-based face /
+    figure / hero boxes for the VRM yet (vrmAnatomy exists). Needed before the first full VRM film.
+  - shots.json has no `vrm` keys yet (pose / motion / motionMix / expr per key, step, outline, fx per shot): the film
+    compiler must learn them for Beach; until then VrmClip proves the parts.
+  - Only two Mixamo clips (dance, idle) in the secret bundle. Beach needs walk, typing / desk, slump, throw, reach /
+    grab, free dance - toki downloads them only if there is no other way (CMU mocap BVH is a free alternative to test).
+  - Manga panel / split-screen layouts (several views of the same moment) need a second render pass - not built.
+  - Song analysis for Beach: instrument hits (guitar stabs ~4-5 s, can-open ~17 s) and who sings which line
+    (Ado / Dan Reynolds) are not in song.py yet.

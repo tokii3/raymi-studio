@@ -160,7 +160,8 @@ export type VrmKey = {
   blend?: number;            // frames the pose blends in from the previous key (default 8)
   look?: 'lens' | null;      // eyes follow the camera (default 'lens')
   act?: Act;
-  motion?: string;          // Mixamo clip id (filename without extension), e.g. "dance" or "idle"
+  motion?: string | null;   // Mixamo clip id (filename without extension), e.g. "dance" or "idle"; null = the pose only
+  motionMix?: number;        // how much of the clip over the pose: 1 = the clip alone, 0.4 = the pose swaying with it
   move?: number;             // original puppet travel duration in frames
   arc?: number;              // original hop arc in metres
   ease?: Ease;
