@@ -142,6 +142,89 @@ export const POSES: Record<string, VrmPose> = {
     leftUpperArm: [0, -0.35, 0.52], rightUpperArm: [0, 0.35, 0.42],
     leftUpperLeg: [-0.1, 0, 0.06], rightUpperLeg: [-0.72, 0, -0.04], rightLowerLeg: [0.5, 0, 0],
   },
+  // ---- Same Day (Take Me to the Beach, 2026-10-22): the routine and the breakout
+  // sitting on an office chair (seat ~0.45 m: her feet stay on the floor, the hips land on the seat)
+  sit: {
+    ...relaxedHands, hips: [0, 0, 0], spine: [0.06, 0, 0], chest: [0.02, 0, 0], head: [0.02, 0, 0],
+    leftUpperArm: [0, -0.35, -1.0], leftLowerArm: [0, -0.9, 0], rightUpperArm: [0, 0.35, 1.0], rightLowerArm: [0, 0.9, 0],
+    leftUpperLeg: [-1.5, 0, 0.08], rightUpperLeg: [-1.5, 0, -0.08], leftLowerLeg: [1.5, 0, 0], rightLowerLeg: [1.5, 0, 0],
+  },
+  // sitting, both hands forward on a keyboard
+  sit_type: {
+    ...curl('left', 0.5), ...curl('right', 0.5), spine: [0.12, 0, 0], chest: [0.04, 0, 0], head: [0.1, 0, 0],
+    leftUpperArm: [0, -0.75, -0.85], leftLowerArm: [0, -1.1, 0], leftHand: [0, 0, 0.2],
+    rightUpperArm: [0, 0.75, 0.85], rightLowerArm: [0, 1.1, 0], rightHand: [0, 0, -0.2],
+    leftUpperLeg: [-1.5, 0, 0.08], rightUpperLeg: [-1.5, 0, -0.08], leftLowerLeg: [1.5, 0, 0], rightLowerLeg: [1.5, 0, 0],
+  },
+  // sitting, collapsed forward: shoulders down, head hanging (the battery almost empty)
+  slump: {
+    ...relaxedHands, spine: [0.35, 0, 0], chest: [0.2, 0, 0], neck: [0.2, 0, 0], head: [0.3, 0, 0.12],
+    leftShoulder: [0, 0, -0.15], rightShoulder: [0, 0, 0.15],
+    leftUpperArm: [0, -0.2, -1.3], leftLowerArm: [0, -0.2, 0], rightUpperArm: [0, 0.2, 1.3], rightLowerArm: [0, 0.2, 0],
+    leftUpperLeg: [-1.45, 0, 0.12], rightUpperLeg: [-1.45, 0, -0.12], leftLowerLeg: [1.4, 0, 0], rightLowerLeg: [1.4, 0, 0],
+  },
+  // a marionette: both wrists hauled up above the shoulders by the strings, hands limp, head lolling, knees soft
+  puppet: {
+    ...curl('left', 0.15), ...curl('right', 0.15), spine: [0.06, 0, 0], neck: [0.1, 0, 0.12], head: [0.18, 0, 0.2],
+    leftUpperArm: [0, -0.1, 0.55], leftLowerArm: [0, -0.2, 0.5], leftHand: [0, 0, 0.9],
+    rightUpperArm: [0, 0.1, -0.55], rightLowerArm: [0, 0.2, -0.5], rightHand: [0, 0, -0.9],
+    leftUpperLeg: [-0.12, 0, 0.04], rightUpperLeg: [-0.05, 0, -0.04], leftLowerLeg: [0.2, 0, 0], rightLowerLeg: [0.1, 0, 0],
+  },
+  // sleepwalking: arms lifted forward by the strings, wrists dropping, head down, feet dragging
+  sleepwalk: {
+    ...curl('left', 0.2), ...curl('right', 0.2), spine: [0.08, 0, 0], neck: [0.12, 0, 0], head: [0.22, 0, 0.1],
+    leftUpperArm: [0, -1.05, -0.35], leftLowerArm: [0, -0.15, 0], leftHand: [0, 0, 0.8],
+    rightUpperArm: [0, 1.05, 0.35], rightLowerArm: [0, 0.15, 0], rightHand: [0, 0, -0.8],
+    leftUpperLeg: [-0.18, 0, 0.04], rightUpperLeg: [0.12, 0, -0.04], rightLowerLeg: [0.3, 0, 0],
+  },
+  // falling backwards: arms flung up, back arched, one knee up
+  fall_back: {
+    ...curl('left', 0.1), ...curl('right', 0.1), spine: [-0.3, 0, 0], chest: [-0.2, 0, 0], head: [-0.35, 0, 0],
+    leftUpperArm: [0, 0.35, 1.0], leftLowerArm: [0, -0.2, 0], rightUpperArm: [0, -0.35, -1.0], rightLowerArm: [0, 0.2, 0],
+    leftUpperLeg: [-0.7, 0, 0.1], leftLowerLeg: [0.9, 0, 0], rightUpperLeg: [-0.2, 0, -0.05],
+  },
+  // a shove: both arms straight forward, weight into it
+  push: {
+    ...curl('left', 0.1), ...curl('right', 0.1), hips: [0.06, 0, 0], spine: [0.22, 0, 0], chest: [0.08, 0, 0], head: [-0.1, 0, 0],
+    leftUpperArm: [0, -1.25, -0.15], leftLowerArm: [0, -0.05, 0], leftHand: [0, 0, -0.6],
+    rightUpperArm: [0, 1.25, 0.15], rightLowerArm: [0, 0.05, 0], rightHand: [0, 0, 0.6],
+    leftUpperLeg: [-0.5, 0, 0.06], leftLowerLeg: [0.4, 0, 0], rightUpperLeg: [0.25, 0, -0.04],
+  },
+  // giving something with both hands: forearms forward at waist height, palms up
+  give: {
+    ...curl('left', 0.25), ...curl('right', 0.25), spine: [0.1, 0, 0], head: [0.06, 0, 0],
+    leftUpperArm: [0, -0.55, -0.95], leftLowerArm: [0, -1.2, 0], leftHand: [-0.9, 0, 0],
+    rightUpperArm: [0, 0.55, 0.95], rightLowerArm: [0, 1.2, 0], rightHand: [-0.9, 0, 0],
+  },
+  // a sprint stride: one knee high, arms pumping
+  run: {
+    ...curl('left', 0.8), ...curl('right', 0.8), hips: [0.1, 0, 0], spine: [0.2, 0, 0], head: [-0.15, 0, 0],
+    leftUpperArm: [0, 0.7, -1.0], leftLowerArm: [0, -1.5, 0], rightUpperArm: [0, 0.7, 1.0], rightLowerArm: [0, 1.5, 0],
+    leftUpperLeg: [-1.1, 0, 0.05], leftLowerLeg: [1.3, 0, 0], rightUpperLeg: [0.45, 0, -0.04], rightLowerLeg: [0.6, 0, 0],
+  },
+  // a stomp on the beat: knee up, fists down, chin up
+  stomp: {
+    ...curl('left', 1.0), ...curl('right', 1.0), spine: [-0.04, 0, 0], head: [-0.12, 0, 0],
+    leftUpperArm: [0, -0.2, -0.9], leftLowerArm: [0, -0.6, 0], rightUpperArm: [0, 0.2, 0.9], rightLowerArm: [0, 0.6, 0],
+    leftUpperLeg: [-1.2, 0, 0.1], leftLowerLeg: [1.4, 0, 0],
+  },
+  // floating on her back in shallow water / lying in the sun: arms wide, everything loose (lie her down with rollZ)
+  float: {
+    ...relaxedHands, spine: [-0.04, 0, 0], head: [-0.05, 0, 0],
+    leftUpperArm: [0, 0, 0.1], leftLowerArm: [0, -0.1, 0], rightUpperArm: [0, 0, -0.1], rightLowerArm: [0, 0.1, 0],
+    leftUpperLeg: [0, 0, 0.12], rightUpperLeg: [0, 0, -0.12],
+  },
+  // two held dance keys to alternate on the beat (on twos they read like hand-drawn dance frames)
+  dance_a: {
+    ...curl('left', 0.3), ...curl('right', 0.6), hips: [0, 0.15, 0.12], spine: [0.02, -0.12, -0.1], head: [0, 0.15, 0.12],
+    leftUpperArm: [0, -0.3, 1.1], leftLowerArm: [0, -0.5, 0], rightUpperArm: [0, 0.6, 0.55], rightLowerArm: [0, 1.2, 0],
+    leftUpperLeg: [-0.08, 0, 0.18], rightUpperLeg: [-0.55, 0, -0.1], rightLowerLeg: [0.9, 0, 0],
+  },
+  dance_b: {
+    ...curl('left', 0.6), ...curl('right', 0.3), hips: [0, -0.15, -0.12], spine: [0.02, 0.12, 0.1], head: [0, -0.15, -0.12],
+    leftUpperArm: [0, -0.6, -0.55], leftLowerArm: [0, -1.2, 0], rightUpperArm: [0, 0.3, -1.1], rightLowerArm: [0, 0.5, 0],
+    leftUpperLeg: [-0.55, 0, 0.1], leftLowerLeg: [0.9, 0, 0], rightUpperLeg: [-0.08, 0, -0.18],
+  },
   recline: {
     ...relaxedHands, spine: [-0.06, 0, 0], chest: [-0.04, 0, 0], head: [0.05, 0, 0],
     leftUpperArm: [0, -0.1, 0.2], rightUpperArm: [0, 0.1, -0.2],
