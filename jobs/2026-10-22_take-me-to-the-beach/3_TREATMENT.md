@@ -1,4 +1,9 @@
-# TREATMENT - Take Me to the Beach (feat. Ado) (idea "Same Day", approved toki 2026-10-22) - v2
+# TREATMENT - Take Me to the Beach (feat. Ado) (idea "Same Day", approved toki 2026-10-22) - v3
+
+v3 (2026-10-22) = v2 (script-critic round 2: PASS, `reviews/treatment_2.md`) + its fixes: she SLEEPWALKS the nightmare
+(acts instead of lying), the first 3 s hold the thumbnail picture and get a flash at 2.0 s, ONE battery rule (one
+string = one dot) with a count table, chorus 1 shows mountains against beach, the outro is a dance with a last gag,
+the Short opens on a beach flash, every finale line has a surface, the office is a dry air dome at depth.
 
 v2 (2026-10-22) answers `reviews/treatment_1.md` (BLOCK: thin): the video now opens on its strongest full-colour
 picture (= the thumbnail); 0-17.65 is unambiguously the nightmare of the day she has not lived yet (no awake slap
@@ -34,15 +39,30 @@ Rules of this world:
 (a) **The loop.** Every day starts with the same twin-bell alarm clock on the riff and the same torn calendar page.
     The same three camera set-ups repeat (alarm macro, train doors, desk from above), so the viewer reads "again"
     without a word. Days shown: DAY 1 (verse 1), DAY 2 (after chorus 1), DAY 3-30 in a page blizzard (Ado), DAY 365
-    (the bridge) - the numbers jump because the days blur.
+    on the last page of the bridge ("and the days go on") - the numbers jump because the days blur.
 (b) **The strings.** Everybody who wants something from her is a white-gloved HAND from outside the frame with a string
     to her wrist: the alarm, the phone, the boss. When a string pulls, her arm moves FIRST and her body follows late
     (a marionette). One more string every day. Strings even reach into her dream and yank her back (chorus 1). She
     cuts the first one herself (Ado), the last ones at T-A-K-E.
-(c) **The battery is her body.** 灯闇 - a lamp in the dark: she glows. Five dots on her (raymi5's starry dress lights)
-    are her battery, and a flat 2D battery sign beside her head shows the SAME five dots (her manga reaction-icon
-    language, so it reads at phone size). Each loop one dot goes dark. At the bridge one is left - and when the office
-    lights go out, that last dot is the only light in the room. The beach (and dancing) relights them.
+(c) **The battery is her body - one string costs one dot.** 灯闇 - a lamp in the dark: she glows. Five dots on her
+    (raymi5's starry dress lights) are her battery, and a flat 2D battery sign beside her head shows the SAME five
+    dots (her manga reaction-icon language, so it reads at phone size). ONE rule the viewer learns in verse 1: every
+    string that attaches puts out one dot; every string that comes off (cut, snapped, shaken off) relights one; the
+    beach relights all. So the dots always equal 5 minus her strings - the two symbols explain each other. At the
+    bridge four strings hold her and one dot is left - when the office lights go out, that last dot is the only light
+    in the room.
+
+    | time | event | strings | dots |
+    |---|---|---|---|
+    | 17.65 | wakes, DAY 1 | 0 | 5 |
+    | 19.69 / 21.97 / 24.23 | alarm hand, phone hand, pointing hand attach | 1 / 2 / 3 | 4 / 3 / 2 |
+    | 33.39-41.68 | inside the postcard (the strings go slack, out of frame) | (3) | 5 |
+    | 41.68 | the strings yank her back | 3 | 2 |
+    | 54.41-67.55 | Ado: the boss's hand adds a 4th | 4 | 1 |
+    | 71.86 | she cuts one with her barb | 3 | 2 |
+    | 82.82 / 89.73 / 94.25 | chorus 2: strings snap while she dances | 2 / 1 / 0 | 3 / 4 / 5 |
+    | 105.53-108.55 | bridge: on each "down" a string re-attaches and yanks her into the chair | 1 / 2 / 3 / 4 | 4 / 3 / 2 / 1 |
+    | 119.38 | T-A-K-E: all strings fall | 0 | 5 |
 (d) **Snow globe vs postcard.** On her desk stand the two halves of the song: the boss's small SNOW GLOBE ("FORECAST:
     SNOW" on its base - grey mountains, falling snow: "you can have the mountains, you take the snow, it's way too
     cold") and her own BEACH POSTCARD pinned to the monitor. The globe stays one object, always on the desk. In the
@@ -52,6 +72,9 @@ Rules of this world:
     (the 2D layer), the beach is full colour, deep 3D, sun. Ado's rebellion is the blue -> red state. In chorus 2 the
     colour spreads out of her into the grey office.
 Fused with her sea - why it is HERS, not any office worker's:
+- The office, the train and her room are dry air-bubble domes on the deep-sea floor (people breathe, coffee steams,
+  windows frost); outside every window the water is cold and dark and marine snow drifts down. Her hair is only wet
+  after the postcard's water.
 - Her town is the deep sea: the office floor is far down, cold and grey, MARINE SNOW drifts past the windows all day
   (the real snow of the deep ocean - the same snow that falls in the boss's globe). The beach is the shallow, sunny
   edge of the same sea, where rays lie in warm sand. Going free = going up, from cold to warm, from deep to shallow.
@@ -86,15 +109,15 @@ Her face (kind `face`) is the fourth must-read at the sung key lines: 35.39, 63.
 ## Story (acts)
 | act | time | place | what she wants / does | what changes |
 |---|---|---|---|---|
-| 0 cold open | 0.0-1.2 | open office | the thumbnail picture: she dances on her desk, colour bursting from her feet into the grey office, fish coworkers staring | the promise |
-| 1 the nightmare | 1.2-17.65 | her bed travelling through the day | asleep, her bed rolls through the routine on its own (train, office); 3 colour flashes of the future; hands with speech bubbles close in | we learn the loop before she lives it |
-| 2 DAY 1 | 17.65-26.6 | bedroom, train, desk | the can opens -> she wakes, tail slaps the alarm; the routine for real, strings attach; she sticks "SUN" on the globe | battery 5 -> 3 dots |
-| 3 drifting | 26.6-33.4 | her desk | the office pulls away (dolly zoom), she stares at the postcard, a dot fades | 2 dots |
+| 0 cold open | 0.0-1.4 | open office | the thumbnail picture: she dances on her desk, colour bursting from her feet into the grey office, fish coworkers staring | the promise |
+| 1 the nightmare | 1.4-17.65 | sleepwalking through the day, then her bed | eyes shut, strings drag her through the routine; she dances in her sleep on the 3 colour flashes; back in bed the hands with speech bubbles close in, she swats at them | we learn the loop (and the string rule) before she lives it |
+| 2 DAY 1 | 17.65-26.6 | bedroom, train, desk | the can opens -> she wakes, tail slaps the alarm; the routine for real, strings attach; she sticks "SUN" on the globe | 3 strings, battery 5 -> 2 dots |
+| 3 drifting | 26.6-33.4 | her desk | the office pulls away (dolly zoom), she stares at the postcard | 2 dots |
 | 4 the escape that fails | 33.4-52.9 | the beach (8 s) -> back at the desk | falls into the postcard; at "way too cold" the strings yank her back out; the rest of the chorus at the desk | the dream is not enough |
 | 5 DAY 2 -> 30, fed up | 52.9-73.7 | desk, meeting, train (Ado) | she does it HER way: headphones, onigiri, "え？", cuts the first string with her barb | blue -> red; she acts instead of dreaming |
 | 6 standing up | 73.7-78.0 | office | she stands on her chair, the room goes quiet | everyone looks |
-| 7 dancing in public | 78.0-99.2 | office -> train | goal: get out of the office; obstacles: the boss's hands, the crowd, the closing train doors; she dances through all of it | colour spreads from her; she wins the door race; dots 2 -> 4 |
-| 8 trapped | 99.2-119.4 | beach <-> office, then inside the snow globe | every line flips; the loop strikes back, lights go out (she is the last lamp), she shrinks into the globe | 1 dot left - the tightest point |
+| 7 dancing in public | 78.0-99.2 | office -> train | goal: get out of the office; obstacles: the boss's hands, the crowd, the closing train doors; she dances through all of it | colour spreads from her; she wins the door race; strings snap, dots 2 -> 5 |
+| 8 trapped | 99.2-119.4 | beach <-> office, then inside the snow globe | every line flips; the loop strikes back, lights go out (she is the last lamp), she shrinks into the globe | 4 strings, 1 dot left - the tightest point |
 | 9 T-A-K-E | 118.7-139.4 | the globe -> office -> beach | four tail blows crack the glass; she grows back, strips the strings, hands back the globe, pulls the postcard: the office unfolds into the beach | loop broken, all dots lit |
 | 10 my favourite one | 139.4-167.1 | the beach | Salmon gag, the tail writes the Japanese echoes in the sand, crane up: the beach and, far away, the grey office | free; last shot rhymes with the first |
 Payoff: everything from the start comes back changed - the alarm silent in the sand, the calendar page blank, the
@@ -114,35 +137,37 @@ strings on the floor, the globe in the boss's hands, the postcard real, the "SUN
 | 10 outro | `warm` (late sun), crane up to dusk | low sun | rest, then the big view |
 
 ## Song map -> picture (measured times)
-### Cold open + nightmare (0-17.65)
+### Cold open + nightmare (0-17.65) - she sleepwalks the day she has not lived yet
 | time | music | picture | camera / transition | lyric surface |
 |---|---|---|---|---|
-| 0.0-1.2 | riff starts 0.28 | **THE THUMBNAIL**: Raymi mid-dance ON her desk in the open office, arms up, colour bursting out from her feet into the grey; three fish coworkers frozen with coffee | low angle, 360-orbit fragment | none |
-| 1.0-1.4 | stop | the picture freezes - the colour drains back into her - she falls backward... | a fall away from the lens | - |
-| 1.4-4.5 | riff | ...onto her bed: asleep. The bed rolls by itself through the routine like a ride: through the train (doors part for the bed), along the office aisle; hands reach in from the edges | the camera rides with the bed (one long tracking move, grey) | - |
-| **4.57 / 4.71 / 4.85-5.25** | the fast guitar figure | three colour flashes of the future, cropped so they tease without spoiling: her feet dancing on the desk (4 f) / snow swirling in a big hand (4 f) / sun on her closed eyes (12 f) | hard cuts on the stabs (toki's wish: "on timing") | - |
-| 5.25-9.0 | riff | the bed arrives at her desk; the files rise into a mountain around her | top-down crane | - |
+| 0.0-1.0 | riff starts 0.28 | **THE THUMBNAIL**: Raymi mid-dance ON her desk in the open office, arms up, colour bursting out from her feet into the grey; three fish coworkers frozen with coffee | low angle, a fast orbit fragment | none |
+| 1.0-1.4 | stop | freeze - the colour drains back into her - she topples backward out of the frame | a fall away from the lens | - |
+| 1.4-2.0 | riff | she lands on her bed - eyes shut - and is pulled straight up again by strings on her wrists: she SLEEPWALKS, arms first, body dragging after (the marionette) | cut on the beat, the camera tilts up with her | - |
+| **2.0-2.2** | riff | colour flash of the future: sun on her closed eyes (6 f) | hard cut | - |
+| 2.2-4.5 | riff | sleepwalking the routine in grey: the strings drag her through the train doors (they close on her jacket, she does not wake), along the office aisle; three cuts on the beats (0.58 s) | the camera whips with each drag - the move IS the cut | - |
+| **4.57 / 4.71 / 4.85-5.25** | the fast guitar figure | she DANCES in her sleep on the three stabs - three colour flashes: her feet on the desk (4 f) / snow swirling in a big hand (4 f) / her face laughing in the sun (12 f) | hard cuts on the stabs (toki: "on timing") | - |
+| 5.25-7.8 | riff | she slumps into her desk chair, still asleep; the file stack grows into a mountain around her | top-down crane | - |
 | 7.8-8.2 | stop | freeze: her sleeping face with a polite smile - a string pulls the corner of her mouth | macro | - |
-| 9.0-9.4 | stop | the hands appear in the dark around her bed (no black frame) | push-in starts | - |
-| 9.08-17.5 | verse 1 | the bed is back in her bedroom; the hands lean in one per line, each with a speech bubble holding an icon - **People-pleasin' planet** (a globe icon with a smiley), **how to plan it** (a planner), **no longer stand it** (she pulls the blanket over her head), **can it** (17.23: a hand cracks open a can at her ear) | a slow push-in from top-down to her face across the whole verse | each line printed on its bubble |
+| 8.2-9.4 | riff + stop | the desk tips over into darkness - she falls back into her bed (it was all a dream), the hands appear around the bed | the camera falls with her | - |
+| 9.08-17.5 | verse 1 | the hands lean in one per line, each with a speech bubble holding an icon; she reacts in her sleep - **People-pleasin' planet** (a globe icon with a smiley: she frowns), **how to plan it** (a planner: she rolls away), **no longer stand it** (she pulls the blanket over her head), **tellin' them to can it** (she swats a hand; 17.23 another hand cracks open a can at her ear) | push-in from top-down to her face, a cut per line (four set-ups) | each line printed on its bubble |
 ### DAY 1 (17.65-33.4)
 | time | music | picture | camera / transition | lyric surface |
 |---|---|---|---|---|
 | **17.65** | the can sound | SNAP: she wakes with a start, her tail slaps the twin-bell alarm; calendar: DAY 1; the battery sign pops in, 5 dots | zoom out of the can's opening into her opening eye | - |
-| 17.65-19.7 | "Each and to their own" | tears the page, pulls on her jacket - a hand from above helps (string 1 to her wrist) | alarm macro set-up (repeats each day) | the calendar page |
+| 17.65-19.7 | "Each and to their own" | tears the page, pulls on her jacket - a hand from above helps (string 1 to her wrist, a dot goes out: the rule, shown once clearly) | alarm macro set-up (repeats each day) | the calendar page |
 | 19.69-21.97 | "Got a salesman ringin' my phone" | in the train, squeezed; her shell phone rings, a hand comes out of it with string 2 | train-door set-up | phone screen |
 | 21.97-24.2 | "Tell me where to go" | a hand points - her feet walk where it points (string 3) | top-down on the platform | the floor arrows |
 | 24.23-26.62 | "No, I don't wanna hear the down low" | at the desk: she sticks a sticky note "SUN" on the boss's globe labelled "FORECAST: SNOW"; a hand removes it | desk-from-above set-up | the sticky note |
-| 26.62-29.35 | "I owe, oh-oh-oh" | the dissociation begins: the office stretches away from her desk (dolly zoom), halftone thickens, a dot fades (3 -> 2) | dolly zoom, 2.7 s | the "oh" written in the steam of her coffee |
+| 26.62-29.35 | "I owe, oh-oh-oh" | the dissociation begins: the office stretches away from her desk (dolly zoom), halftone thickens, (2 dots, she watches the sign) | dolly zoom, 2.7 s | the "oh" written in the steam of her coffee |
 | 29.35-32.04 | "Nothin', not a penny, never wanna hear you preach" | the strings tug her hands to type; she does not look at the screen - only at the postcard | slow arc around her toward the monitor | the monitor's text |
 | 32.04-33.39 | "No, oh-oh-oh" | the postcard fills the frame; Salmon in it waves | push-in to the card | - |
 ### Chorus 1 - the escape that fails (33.39-52.85)
 | time | music | picture | camera / transition | lyric surface |
 |---|---|---|---|---|
 | **33.39** | "(Take-take-take-take)" | the camera falls INTO the postcard: grey -> full colour on the four "take"s | zoom through the card | "TAKE" x4 stamped in the sky |
-| 35.39-36.66 | "Take me to the beach" | she lands in shallow sunny water, sings to the lens (face CU), her dots light up 2 -> 5 | crane down with her | written in the sand by a wave |
-| 36.66-39.44 | "you can have the mountains" | she floats on her back; Salmon in a tiny deck chair | top-down | clouds |
-| 39.44-41.68 | "you take the snow" | she buries herself in warm sand, only her eyes out (a ray's way to rest) | macro on the sand | - |
+| 35.39-36.66 | "Take me to the beach" | she lands in shallow sunny water, sings to the lens (face CU), her dots light up 2 -> 5, the strings hang slack out of the frame | crane down with her | written in the sand by a wave |
+| 36.66-39.44 | "you can have the mountains" | THE SPLIT: the camera pulls back and we see the postcard's edge - inside it the sunny beach with her, outside it her grey desk with the snow globe's mountains; she points out of the card at the globe | pull back across the card's border | "MOUNTAINS" on the globe's base, "BEACH" in the sand |
+| 39.44-41.68 | "you take the snow" | she turns her back on the snow and kicks sand at it - the sand flies out of the card onto the grey desk; then she buries herself in warm sand, only her eyes out (a ray's way to rest); Salmon waves from a tiny deck chair | over her shoulder toward the card's edge | written in the kicked sand |
 | **41.68-44.01** | "it's way too cold" | the strings snap tight - out of the sky - and yank her out of the sand, up, out of the postcard: smash back to her desk, grey, wet hair | the camera is yanked with her (whip up) | - |
 | 44.01-45.69 | "My heart is cold enough" | marine snow drifts past the office window; the globe's snow falls the same way | match cut window snow -> globe snow | frost on the window |
 | 45.69-48.57 | "push comes to shove" | the evening train: pushed by the crowd | train-door set-up | the train ticker |
@@ -183,7 +208,7 @@ strings on the floor, the globe in the boss's hands, the postcard real, the "SUN
 | 99.23-101.37 | I'm better off alone | BEACH | she alone on the sand, wide | top-down |
 | 101.37-103.96 | Like a rollin' stone | OFFICE | her chair spins her back to the desk, a new file stack lands | match cut on the spin |
 | 103.96-105.53 | Turnin' off my phone | BEACH | she buries the phone in the sand | macro |
-| 105.53-110.05 | No one bringin' me down, down, down, down | OFFICE | on each "down" a string yanks her into the chair and one row of office lights goes off - after the last "down" the room is black, only her last dot glows (灯闇) | locked to her, lights going out behind |
+| 105.53-110.05 | No one bringin' me down, down, down, down | OFFICE | on each "down" a new string hooks her wrist and yanks her into the chair (a dot goes out each time) and one row of office lights goes off - after the last "down" the room is black, only her last dot glows (灯闇) | locked to her, lights going out behind |
 | 110.62-112.76 | Just give me some space | BEACH | she stretches out, sky all around | crane up |
 | 112.76-114.85 | That sun in my face | OFFICE | the boss's desk lamp is shoved into her face (a fake sun) | the lamp swings into the lens |
 | **114.85-118.5** | And the days go on, and on, and on, and on | OFFICE -> the GLOBE | on each "on" she shrinks a step, the calendar pages fly by - on the last "on" she is tiny, standing in the snow globe on her own desk; the boss's hand picks it up and shakes it, paper snow everywhere | pull back on each "on", then inside the globe |
@@ -192,25 +217,27 @@ strings on the floor, the globe in the boss's hands, the postcard real, the "SUN
 |---|---|---|---|---|
 | **118.73-119.38** | (T-A-K-E, T-A-K-E) | inside the shaken globe she plants her feet - four tail blows on the glass, T / A / K / E, each a crack and a letter | inside the globe, the glass toward the lens | each crack IS the letter |
 | **119.38-121.23** | T-A-K-E, take me to the beach | the glass bursts - she slides out flat like a ray and grows back to full size on the desk, the strings fall off her like confetti, all dots light | spin transition carried by the shards | the shards carry "TAKE ME TO THE BEACH" |
-| 121.37-124.21 | you can have the mountains (have the mountains) | one sweep of her barb cuts every string at once | slow motion, low | - |
-| 124.21-126.14 | you take the snow | she walks through the paper snow - where it touches her it turns to sand | tracking | - |
+| 121.37-124.21 | you can have the mountains (have the mountains) | one sweep of her barb - the last loose strings fall | slow motion, low | the falling strings curl into the words in the air |
+| 124.21-126.14 | you take the snow | she walks through the paper snow - where it touches her it turns to sand | tracking | the snow-to-sand flakes form the line |
 | 126.14-129.1 | it's way too cold (it's way too cold) | the frosted window: she breathes on it, wipes it - warm light falls in | from outside the window | written in the frost |
-| 129.1-130.85 | My heart is cold enough (Oh) | she takes off her lanyard badge and drops it | macro on the badge | the badge |
-| 130.85-133.12 | push comes to shove | the boss's giant hand reaches - she pushes it away with one finger | worm's-eye | - |
+| 129.1-130.85 | My heart is cold enough (Oh) | she lays her hand on her chest - her dots flare warm (the cold is gone) | close, warm light from her | written in her glowing dots |
+| 130.85-133.12 | push comes to shove | the boss's giant hand reaches - she pushes it away with one finger | worm's-eye | her fingertip leaves the words on his glove |
 | **133.69-135.51** | you can have the mountains | she sets the cracked, empty snow globe into the boss's hands - "FORECAST: SNOW" - and he holds it | two-shot, the globe big in the foreground | the globe's label |
 | **136.01-137.25** | I'll take the beach | she pulls the postcard off the monitor - the whole office unfolds into the beach (walls fall outward like a paper box), sun pours in; face CU on "beach" | one move: pull up and out, from her face to the whole beach | the postcard: "SUN" (her forecast) |
-| 137.25-139.37 | Take me to the (I'll take the) | she lets herself fall backwards into the warm water | slow motion fall, camera under the surface | - |
-### Outro - my favourite one (139.37-167.13)
+| 137.25-139.37 | Take me to the (I'll take the) | she lets herself fall backwards into the warm water | slow motion fall, camera under the surface | written on the water surface as she breaks it |
+### Outro - my favourite one (139.37-167.13): the song is at its peak - so is she
 | time | line | picture | camera / transition | lyric surface |
 |---|---|---|---|---|
-| 139.37-142.64 | I don't have no friends, ask anyone (そう何も) | she surfaces; Salmon pops up next to her, offended at the line | water-level | the Japanese echo written by a wave + romaji / EN |
-| 142.64-148.33 | Got me 'til the end, my favorite one (最後まで) | she grins and pulls Salmon into a hug; then her tail writes 最後まで in the sand | top-down travel along the tail writing | the tail's writing |
-| 148.33-151.78 | I don't have no friends, ask anyone (そう誰も) | they lie in the sand, her phone sticking out of it, battery sign full, her dots bright | slow crane | sand |
-| 151.78-158.6 | Got me 'til the end, my favorite one (最後まで) | **the last wow**: the camera cranes up and away - the whole beach in the evening sun, and far out, deep in the blue, the tiny grey office she left; all her dots glow as the sun goes down | one long crane to the sky (dusk) | the sky |
-| 158.6-167.13 | end | top-down: the twin-bell alarm clock half buried in the sand, silent; a wave washes the last calendar page - blank | locked top-down (the rhyme with 0.28) | - |
+| 139.37-142.64 | I don't have no friends, ask anyone (そう何も) | she bursts out of the water INTO a dance on the wet sand; on "no friends" Salmon pops up, offended | cuts on the 8ths (0.29 s) between three angles | the echo そう何も written by a wave, romaji / EN under it |
+| 142.64-145.5 | Got me 'til the end, my favorite one | she grins, pulls Salmon in - they dance together | handheld circling them | - |
+| 145.5-148.33 | (最後まで) | her tail writes 最後まで huge in the sand on the beat, stroke by stroke, the sea fills the strokes and they shine | top-down travel along the tail | the tail's writing |
+| 148.33-151.78 | I don't have no friends, ask anyone (そう誰も) | the dance on the beach gets bigger: other fish from the train join in at the waterline | low wide, fast cuts | そう誰も in the foam |
+| **151.78-158.6** | Got me 'til the end, my favorite one (最後まで) | **the last wow**: the camera cranes up and away from the dancing beach - the whole bay in the evening sun, and far out, deep in the blue, the tiny grey office dome she left; all her dots glow as the sun goes down | one long crane to the sky (dusk) | the sky |
+| 158.6-163.5 | end | the final gag: the twin-bell alarm clock, half buried in the sand, rings ONE last time - without looking, she kicks sand over it. Silence. | macro on the clock, her foot enters | - |
+| 163.5-167.13 | end | a wave washes the last calendar page - blank - out to sea | top-down (the rhyme with the opening clock) | - |
 
 ## Wow budget (5, strongest last)
-1. **0.0-1.2** the thumbnail cold open: dancing on the desk while colour bursts into the grey office.
+1. **0.0-1.4** the thumbnail cold open: dancing on the desk while colour bursts into the grey office.
 2. **17.65** the snap: the can opens -> she wakes, the tail slaps the alarm (and 4.57-5.25: the three future flashes).
 3. **33.39 + 41.68** into the postcard - and yanked back out by the strings.
 4. **77.96-99.23** dancing in public: files as confetti, the hands tangle, she wins the door race.
@@ -242,7 +269,7 @@ strings on the floor, the globe in the boss's hands, the postcard real, the "SUN
 - **Inside the snow globe**: a glass dome, a grey paper mountain range, paper snow - big enough for her.
 - **Beach**: shallow turquoise water, white sand ripples, sun, Salmon's tiny deck chair.
 Physical sense: the strings run to hands anchored above the frame (we see their shadows); the globe always stands on
-her desk; the bed in the nightmare rolls on its own legs.
+her desk; in the nightmare the strings carry her (she sleepwalks), the bed stays in her room.
 
 ## Animation principles in this video
 - **Repetition with variation** (the loop): the same action and set-up each day, faster each time - shorter holds,
@@ -255,18 +282,20 @@ her desk; the bed in the nightmare rolls on its own legs.
 - **On twos** (VRM step 2) in the routine (mechanical), 30 fps in the dream, the dance and the finale (alive).
 - **Singing**: phonetic lip sync v2 throughout - quiet in the routine (gain 0.6), full in the dream, the dance and
   the finale.
-- Motions needed (Mixamo / own poses): sleep, wake up with a start, walk, squeezed, sit + type, slump, phone to ear,
-  stand on a chair, dance (3 takes: desk, slide, aisle), dodge-spin, door slide, tail swing, throw / set down, pull,
-  fall backwards, float, bury in sand, hug.
+- Motions needed (trimmed to what the shots use; Mixamo or own poses): sleepwalk (dragged walk), wake with a start,
+  walk, sit + type, slump, dance (2 takes: a desk dance, a beach / aisle dance - reused), dodge-spin, slide, tail
+  swing, set down / give, pull, fall backwards, float / bury (one pose), hug. Static key poses for the rest.
 
 ## The Short (window, frame 0, twist, CTA)
-- Window **26.62-45.69** (19.1 s): from "I owe, oh-oh-oh" to "My heart is cold enough".
-- Frame 0 (26.62): her grey desk, the battery sign at 2 dots (the MV's own value there), she stares at the postcard.
-  Hook text (3 words, top third, off her face): "battery: almost empty".
-- 0-6.8 s the drift, 6.8 s (33.39) the fall into the postcard - colour explodes; 41.68 the strings yank her out.
-- The cliffhanger: 44.0-45.69 she is back at the grey desk, wet hair, staring at the postcard again - "will she ever get
-  out?" -> the MV.
-- CTA readable from 42.5 to the end (>= 2.5 s before the end, after the yank, in the top band): "what's YOUR battery at?"
+- Window **29.35-45.69** (16.3 s): from "Nothin', not a penny" to "My heart is cold enough".
+- Frame 0 (29.35): a 0.5 s flash of the postcard's beach in full colour (her face in the sun) - then snap to her grey
+  desk, the battery sign at 2 dots, strings tugging her hands. Hook text (top third, off her face, 3 words):
+  "battery: almost empty".
+- 0.5-4.0 s the drift (short), 4.0 s (33.39) the fall into the postcard - colour explodes; 7.3 s (36.66) the split -
+  mountains against beach; 12.3 s (41.68) the strings yank her out.
+- The cliffhanger: 44.0-45.69 she is back at the grey desk, wet hair, staring at the postcard - "will she ever get
+  out?" -> the MV. A visual change every 2-4 s throughout.
+- CTA readable from 43.0 to the end (>= 2.5 s before the end, after the yank, in the top band): "what's YOUR battery at?"
 
 ## Ending check
 The last third (99-167 s) has the freshest place (inside the snow globe), the tightest cutting (every bridge line
@@ -279,7 +308,7 @@ STAYS. Every opening symbol pays off.
 Sets: bedroom, train car + platform, open office (repeating desks, light rows that switch off) + her desk, the inside
 of the snow globe, beach (shallow water, sand, sun, caustics, dusk). Props: twin-bell clock, tide calendar with day
 numbers + page blizzard, shell phone, snow globe (small) with label, postcard, files, file mountain, stamp, onigiri,
-headphones, sticky notes ("SUN"), lanyard badge, printer that spits pages, the boss's desk lamp. Figures: hands +
+headphones, sticky notes ("SUN"), printer that spits pages, the boss's desk lamp. Figures: hands +
 strings component, the boss (chest, tie, hands), fish commuters / coworkers (varied silhouettes), Salmon (exists).
 2D: battery sign (5 dots), speech bubbles with icons, impact frame, the colour-spread (duo mix as a radius from her).
 Motions: the list above (Mixamo clips need toki's download). Studio features: the film path with VRM keys per shot
