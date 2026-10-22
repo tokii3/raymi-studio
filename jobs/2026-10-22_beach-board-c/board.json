@@ -1,0 +1,196 @@
+{
+ "_why": "Beach idea C \"Paper Days\": reality is a flat two-colour manga page, only the dream has depth and full colour",
+ "composition": "VrmClip",
+ "width": 1920,
+ "height": 1080,
+ "fps": 30,
+ "durationInFrames": 600,
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [],
+ "sprites": [],
+ "set": "weather",
+ "opts": {},
+ "cam": {
+  "pos": [
+   0,
+   1.5,
+   4
+  ],
+  "look": [
+   0,
+   1,
+   0
+  ],
+  "fov": 35
+ },
+ "lock": 0.4,
+ "glowGain": 0.1,
+ "materialStyle": "none",
+ "grain": 0.02,
+ "outline": 0.0035,
+ "outlineColor": "#141024",
+ "keys": [
+  {
+   "f": 0,
+   "pose": "stand",
+   "pos": [
+    0.6,
+    0,
+    -1.2
+   ],
+   "rotY": 0,
+   "blend": 0,
+   "motion": null,
+   "height": 1.55,
+   "expr": {
+    "sorrow": 0.4
+   }
+  },
+  {
+   "f": 200,
+   "pose": "clutch",
+   "pos": [
+    0.3,
+    0,
+    -0.6
+   ],
+   "rotY": "lens",
+   "blend": 0,
+   "motion": null,
+   "height": 1.55,
+   "expr": {
+    "angry": 0.7
+   }
+  },
+  {
+   "f": 400,
+   "pose": "arms_up",
+   "pos": [
+    0.2,
+    0,
+    -0.2
+   ],
+   "rotY": "lens",
+   "blend": 0,
+   "motion": null,
+   "height": 1.55,
+   "expr": {
+    "joy": 0.9
+   }
+  }
+ ],
+ "segments": [
+  {
+   "from": 0,
+   "to": 200,
+   "set": "weather",
+   "opts": {
+    "map": "storm",
+    "ticker": "TO DO  -  TO DO  -  TO DO"
+   },
+   "camKeys": [
+    {
+     "f": 0,
+     "pos": [
+      0.6,
+      6.2,
+      -0.95
+     ],
+     "look": [
+      0.6,
+      0,
+      -1.25
+     ],
+     "fov": 30
+    }
+   ],
+   "fx": [
+    {
+     "kind": "duo",
+     "dark": "#05081e",
+     "light": "#7fa2ff",
+     "levels": 3,
+     "mix": 1,
+     "from": 0,
+     "to": 200
+    },
+    {
+     "kind": "halftone",
+     "opacity": 0.26,
+     "from": 0,
+     "to": 200
+    }
+   ]
+  },
+  {
+   "from": 200,
+   "to": 400,
+   "set": "deep",
+   "opts": {
+    "snow": 0.2,
+    "smoke": false,
+    "fog_far": 20
+   },
+   "camKeys": [
+    {
+     "f": 200,
+     "pos": [
+      0.55,
+      0.2,
+      0.35
+     ],
+     "look": [
+      0.3,
+      1.55,
+      -0.6
+     ],
+     "fov": 50,
+     "roll": 10
+    }
+   ],
+   "fx": [
+    {
+     "kind": "duo",
+     "dark": "#1a0206",
+     "light": "#ff4a3a",
+     "levels": 3,
+     "mix": 1,
+     "from": 200,
+     "to": 400
+    },
+    {
+     "kind": "speed",
+     "mode": "flow",
+     "angle": -20,
+     "opacity": 0.35,
+     "from": 200,
+     "to": 400
+    }
+   ]
+  },
+  {
+   "from": 400,
+   "to": 600,
+   "set": "aquarium",
+   "opts": {},
+   "camKeys": [
+    {
+     "f": 400,
+     "pos": [
+      0.9,
+      0.7,
+      1.35
+     ],
+     "look": [
+      0.2,
+      1.25,
+      -0.2
+     ],
+     "fov": 40,
+     "roll": -5
+    }
+   ],
+   "fx": []
+  }
+ ]
+}

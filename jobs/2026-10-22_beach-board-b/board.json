@@ -1,0 +1,201 @@
+{
+ "_why": "Beach idea B \"Office at 4000 m\": the grind is the cold abyss, the beach is the surface; built deep + night sea",
+ "composition": "VrmClip",
+ "width": 1920,
+ "height": 1080,
+ "fps": 30,
+ "durationInFrames": 600,
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [],
+ "sprites": [],
+ "set": "deep",
+ "opts": {},
+ "cam": {
+  "pos": [
+   0,
+   1.5,
+   4
+  ],
+  "look": [
+   0,
+   1,
+   0
+  ],
+  "fov": 35
+ },
+ "lock": 0.4,
+ "glowGain": 0.1,
+ "materialStyle": "none",
+ "grain": 0.02,
+ "outline": 0.0035,
+ "outlineColor": "#141024",
+ "keys": [
+  {
+   "f": 0,
+   "pose": "crouch",
+   "pos": [
+    0.3,
+    0,
+    -0.6
+   ],
+   "rotY": 0,
+   "blend": 0,
+   "motion": null,
+   "height": 1.55,
+   "expr": {
+    "sorrow": 0.5
+   }
+  },
+  {
+   "f": 200,
+   "pose": "stand",
+   "pos": [
+    0.3,
+    0,
+    -0.6
+   ],
+   "rotY": "lens",
+   "blend": 0,
+   "motion": null,
+   "height": 1.55,
+   "expr": {
+    "sorrow": 0.55
+   }
+  },
+  {
+   "f": 400,
+   "pose": "arms_up",
+   "pos": [
+    0,
+    -0.85,
+    0
+   ],
+   "rotY": "lens",
+   "blend": 0,
+   "motion": null,
+   "height": 1.55,
+   "expr": {
+    "joy": 0.9
+   }
+  }
+ ],
+ "segments": [
+  {
+   "from": 0,
+   "to": 200,
+   "set": "deep",
+   "opts": {
+    "snow": 0.35,
+    "smoke": false,
+    "fog_far": 22,
+    "shadow": "#0d0f1a"
+   },
+   "camKeys": [
+    {
+     "f": 0,
+     "pos": [
+      0.3,
+      8.5,
+      -0.3
+     ],
+     "look": [
+      0.3,
+      0,
+      -1.2
+     ],
+     "fov": 44,
+     "roll": 8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "duo",
+     "dark": "#121522",
+     "light": "#9aa1b8",
+     "levels": 4,
+     "mix": 0.92,
+     "from": 0,
+     "to": 200
+    }
+   ]
+  },
+  {
+   "from": 200,
+   "to": 400,
+   "set": "deep",
+   "opts": {
+    "snow": 0.6,
+    "smoke": false,
+    "fog_far": 9,
+    "shadow": "#0d0f1a"
+   },
+   "camKeys": [
+    {
+     "f": 200,
+     "pos": [
+      0.32,
+      1.42,
+      3.2
+     ],
+     "look": [
+      0.3,
+      1.36,
+      -0.6
+     ],
+     "fov": 12
+    }
+   ],
+   "fx": [
+    {
+     "kind": "duo",
+     "dark": "#0a0718",
+     "light": "#8f7fd6",
+     "levels": 4,
+     "mix": 0.85,
+     "from": 200,
+     "to": 400
+    },
+    {
+     "kind": "halftone",
+     "opacity": 0.2,
+     "from": 200,
+     "to": 400
+    }
+   ]
+  },
+  {
+   "from": 400,
+   "to": 600,
+   "set": "nightsea",
+   "opts": {},
+   "camKeys": [
+    {
+     "f": 400,
+     "pos": [
+      0.2,
+      0.75,
+      1.9
+     ],
+     "look": [
+      0,
+      0.75,
+      0
+     ],
+     "fov": 34,
+     "roll": -6
+    }
+   ],
+   "fx": [
+    {
+     "kind": "duo",
+     "dark": "#3a1236",
+     "light": "#ffd59a",
+     "levels": 5,
+     "mix": 0.6,
+     "from": 400,
+     "to": 600
+    }
+   ]
+  }
+ ]
+}

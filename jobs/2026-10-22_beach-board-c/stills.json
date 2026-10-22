@@ -1,0 +1,18 @@
+{
+ "format": "mv",
+ "frames": [
+  120,
+  320,
+  520
+ ],
+ "names": [
+  "C1",
+  "C2",
+  "C3"
+ ],
+ "scale": 1,
+ "to": "boards",
+ "dest": "jobs/2026-10-22_take-me-to-the-beach/boards",
+ "_why": "Beach idea C \"Paper Days\": reality is a flat two-colour manga page, only the dream has depth and full colour",
+ "round": 1
+}

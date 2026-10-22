@@ -1,0 +1,18 @@
+{
+ "format": "mv",
+ "frames": [
+  120,
+  320,
+  520
+ ],
+ "names": [
+  "B1",
+  "B2",
+  "B3"
+ ],
+ "scale": 1,
+ "to": "boards",
+ "dest": "jobs/2026-10-22_take-me-to-the-beach/boards",
+ "_why": "Beach idea B \"Office at 4000 m\": the grind is the cold abyss, the beach is the surface; built deep + night sea",
+ "round": 1
+}
