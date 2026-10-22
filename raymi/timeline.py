@@ -90,7 +90,8 @@ ICONS = {None, "!", "?", "heart", "sweat", "anger", "zz", "bulb", "sparkle", "mu
 DEFAULT_HEIGHT = 1.55   # Raymi's figure height in metres (ears to feet)
 # set options written in SONG seconds (the script's measured times); the compiler turns them into film frames so a
 # set event lands on the same beat in the MV, the Short and a pilot window
-TIME_OPTS = {"banks_off", "cap_lift", "cap_off", "cap_pick", "card_flutter", "card_pass_lens", "card_rain", "coin_drop",
+TIME_OPTS = {"lights_off", "window_break", "unfold", "shake", "cracks", "burst", "letters", "page", "beach_flash",
+             "banks_off", "cap_lift", "cap_off", "cap_pick", "card_flutter", "card_pass_lens", "card_rain", "coin_drop",
              "coin_rain", "crowd_in", "crowd_look", "crowd_out", "crown_from", "deck_slide", "deck_tip", "flash_seq",
              "glow_out", "hall_lights", "last_phone_down", "led_blink", "led_flip", "salmon_arrive", "salmon_coin",
              "swarm_beam", "taps", "warning_flash", "bulb_pop", "coin_flick", "coin_roll", "coin_spin", "collapse",
@@ -106,10 +107,10 @@ TIME_OPTS = {"banks_off", "cap_lift", "cap_off", "cap_pick", "card_flutter", "ca
 # options holding specs (a dict or a list of dicts) whose own fields are times / positions (three/fire.tsx,
 # three/creatures.tsx): "at" / "out" / "toss" / "*_at" = song seconds -> frames, "grow" / "fade" / "ember" = seconds ->
 # frame counts, "pos" / "from" / "to" = a mark or [x, y, z]
-NESTED_OPTS = {"fires", "sparks", "fish", "school", "sauna", "salmon", "props"}
-NESTED_TIME = {"at", "out", "toss"}
+NESTED_OPTS = {"fires", "sparks", "fish", "school", "sauna", "salmon", "props", "things", "strings", "boss", "crowd"}
+NESTED_TIME = {"at", "out", "toss", "snap", "tug", "spit", "land"}
 NESTED_FRAMES = {"grow", "fade", "ember"}
-NESTED_VEC = {"pos", "from", "to"}
+NESTED_VEC = {"pos", "from", "to", "anchor"}
 
 REL_OPTS = {"hands"}                               # set options in seconds from the shot start
 
@@ -730,6 +731,16 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             opts.update(short_opts)                        # the narrow frame's own set choices (e.g. a sign left out)
         for k in TIME_OPTS & opts.keys():
             opts[k] = time_opt(opts[k], fr)
+        for k in ("doors", "bed_drag"):                    # only the TIME of these is song seconds, the rest are values
+            v = opts.get(k)
+            if isinstance(v, list) and v and isinstance(v[0], list):
+                opts[k] = [[fr(x[0])] + list(x[1:]) for x in v]
+            elif isinstance(v, list) and v:
+                opts[k] = [fr(v[0])] + list(v[1:])
+        if isinstance(opts.get("battery"), list):           # her battery: [[seconds from the shot start, dots 0..5], ...]
+            opts["battery"] = [[fr(a + float(t)), int(n)] for t, n in opts["battery"]]
+        elif "battery" in opts:
+            opts["battery"] = [[fr(a), int(opts["battery"])]]
         for k in REL_OPTS & opts.keys():                   # seconds from this shot's start
             opts[k] = time_opt(opts[k], lambda t, a=a: fr(a + t))
         for k in NESTED_OPTS & opts.keys():               # flames, strikes, creatures, props: their times + places

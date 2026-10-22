@@ -19,6 +19,7 @@ import {Card, RaySwarm} from '../three/cards';
 import {flare, frames, since, stepValue} from '../three/events';
 import {useTexturesReady} from '../three/look';
 import {VrmPuppet, useVrmReady} from '../three/VrmPuppet';
+import {Strings} from '../three/routine';
 import {makeVrmMouthKeys} from '../three/vrmLipSync';
 import {vrmFilmKeys, vrmFilmWords} from '../three/vrmFilm';
 import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
@@ -73,6 +74,9 @@ export const Film: React.FC<FilmProps> = (props) => {
     : mouthKeys.map((k) => ({f: k.f, values: Object.fromEntries(Object.entries(k.values).map(([n, v]) => [n, n === 'close' ? v : (v ?? 0) * gain]))})),
   [mouthKeys, gain]);
   const fx = shot.fx ?? [];
+  // her battery (opts.battery = [[frame, dots], ...]): the five chest lights + the 2D sign beside her head
+  const bat = shot.opts.battery !== undefined ? stepValue<number>(shot.opts.battery, f, 6) : null;
+  const battery = bat && bat.to !== null ? {n: bat.to, prev: bat.from ?? bat.to, t: bat.t} : null;
   const aspect = W / H;
   const cam = makeCamera(shot, f, aspect, props.hits, fps);
   const camPos: [number, number, number] = [cam.position.x, cam.position.y, cam.position.z];
@@ -80,6 +84,8 @@ export const Film: React.FC<FilmProps> = (props) => {
   const herKey = actorKeys.length ? actorKeys.reduce((p, k) => (k.f <= f ? k : p), actorKeys[0]) : null;
   const herNdc = herKey ? new THREE.Vector3(herKey.pos[0], herKey.pos[1] + (herKey.height ?? 1.55) * 0.62, herKey.pos[2]).project(cam) : null;
   const herScreen: [number, number] = herNdc ? [herNdc.x * 0.5 + 0.5, -herNdc.y * 0.5 + 0.5] : [0.5, 0.5];
+  const headNdc = herKey ? new THREE.Vector3(herKey.pos[0], herKey.pos[1] + (herKey.height ?? 1.55) * 0.9, herKey.pos[2]).project(cam) : null;
+  const herHead: [number, number] = headNdc ? [headNdc.x * 0.5 + 0.5, -headNdc.y * 0.5 + 0.5] : [0.5, 0.3];
   const faults = props.vrm ? [] : visibleCutEdges(shot, f, aspect, props.hits, fps);
   if (faults.length) cancelRender(new Error(`cut sprite edge on screen: ${JSON.stringify(faults)} - reframe the shot (hard rule 9)`));
   const Set = SETS[shot.set];
@@ -185,11 +191,13 @@ export const Film: React.FC<FilmProps> = (props) => {
                 mouthKeys={shotMouth} lock={Number(shot.opts.lock ?? 0.38)} shadow={String(shot.opts.shadow ?? '#120b2b')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={0.12 * glowGain}
                 materialStyle={String(shot.opts.material ?? (shot.actor ? 'none' : 'firestarter'))}
-                step={shot.step ?? 1} outline={shot.outline ?? 0} />
+                step={shot.step ?? 1} outline={shot.outline ?? 0} battery={battery} />
             ) : (
               <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={glowGain} />
             )}
+            {/* the strings read her posed wrists: drawn after her */}
+            {props.vrm ? <Strings list={shot.opts.strings} vrm={staticFile(props.vrm)} f={f} /> : null}
             {rays}{ride}{lensPass}{anchored}
             {crownAt ? (
               <group position={[crownAt.x, crownAt.y, crownAt.z]} rotation={[0, Math.atan2(camPos[0] - crownAt.x, camPos[2] - crownAt.z), 0]}>
@@ -201,6 +209,7 @@ export const Film: React.FC<FilmProps> = (props) => {
         ) : null}
       </AbsoluteFill>
       <Fx2D fx={fx} f={f} />
+      {battery && shot.opts.battery_sign ? <BatterySign {...battery} x={herHead[0] * W} y={herHead[1] * H} h={H} f={f} side={shot.opts.battery_sign === 'left' ? -1 : 1} /> : null}
       {icon}
       <Transitions shots={props.shots} f={f} />
       <Grade grain={props.grain} tone={gradeAt(shot, f)} />
@@ -212,6 +221,27 @@ export const Film: React.FC<FilmProps> = (props) => {
       ) : null}
       {props.audio ? <Audio src={staticFile(props.audio.file)} trimBefore={Math.round(props.audio.from * fps)} /> : null}
     </AbsoluteFill>
+  );
+};
+
+/** The 2D battery sign beside her head: a flat graphic battery with five violet cells (the same count as her chest
+ *  lights). A cell that goes out blinks twice, then stays dark; the last cell turns red-violet. */
+const BatterySign: React.FC<{n: number; prev: number; t: number; x: number; y: number; h: number; f: number; side: number}> = ({n, prev, t, x, y, h, f, side}) => {
+  const w = h * 0.16, hh = w * 0.42;
+  const left = Math.min(Math.max(x + side * h * 0.16 - (side < 0 ? w : 0), h * 0.05), h * 1.7 - w);
+  const top = Math.max(y - hh * 1.6, h * 0.06);
+  const pop = t < 1 ? 1 + 0.12 * Math.sin(Math.PI * t) : 1;
+  return (
+    <svg viewBox="0 0 100 42" style={{position: 'absolute', left, top, width: w, height: hh, transform: `scale(${pop}) rotate(${side * -4}deg)`, overflow: 'visible'}}>
+      <rect x={2} y={3} width={88} height={36} rx={7} fill="#140c26" stroke="#f2ecff" strokeWidth={4} />
+      <rect x={91} y={14} width={7} height={14} rx={2} fill="#f2ecff" />
+      {[0, 1, 2, 3, 4].map((i) => {
+        const on = i < n, dying = !on && i < prev && t < 1;
+        const blink = dying ? (Math.floor(f / 3) % 2 === 0 ? 1 : 0.15) : on ? 1 : 0.12;
+        const c = n === 1 && on ? '#ff5a8a' : '#b98cff';
+        return <circle key={i} cx={14 + i * 16} cy={21} r={6.2} fill={c} opacity={blink} />;
+      })}
+    </svg>
   );
 };
 

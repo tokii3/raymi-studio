@@ -453,6 +453,35 @@ export function poseVrm(url: string, keys: VrmKey[], f: number, fps: number, fro
   return rig;
 }
 
+// Her battery (Beach 2026-10-22, "strings = 5 minus dots"): five violet lights in a row on her chest, riding the
+// upper-chest bone. A dot that changes flares (comes on) or fades (goes out) over the step's t (6 frames).
+const BATTERY_X = [-0.052, -0.026, 0, 0.026, 0.052];
+function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: string}, f: number): React.ReactNode {
+  const bone = rig.vrm.humanoid.getRawBoneNode('upperChest') ?? rig.vrm.humanoid.getRawBoneNode('chest');
+  if (!bone) return null;
+  const color = b.color ?? '#b98cff';
+  const s = rig.root.scale.x;
+  return BATTERY_X.map((x, i) => {
+    const on = i < b.n, was = i < b.prev;
+    let k = on ? 1 : 0;
+    if (on !== was) k = on ? Math.min(1, b.t * 1.3) : 1 - b.t;
+    const flare = on && !was ? Math.sin(Math.PI * Math.min(1, b.t)) * 1.6 : 0;
+    // a 1.55 m figure: the row sits ~11 cm in front of the bone, a little below it (her breastbone)
+    const p = new THREE.Vector3(x / s * 1.0, -0.045 / s, 0.105 / s).applyMatrix4(bone.matrixWorld);
+    const r = 0.0085 * (1 + 0.35 * flare) * (0.95 + 0.05 * Math.sin(f / 7 + i));
+    return (
+      <group key={`bat${i}`} position={[p.x, p.y, p.z]}>
+        <mesh renderOrder={3}><sphereGeometry args={[r, 12, 10]} />
+          <meshBasicMaterial color={k > 0.02 ? color : '#2a2440'} transparent opacity={0.35 + 0.65 * Math.max(k, 0.25)} toneMapped={false} /></mesh>
+        {k > 0.02 ? (
+          <mesh renderOrder={4}><sphereGeometry args={[r * (2.4 + flare), 12, 10]} />
+            <meshBasicMaterial color={color} transparent opacity={0.22 * k + 0.25 * flare} depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} /></mesh>
+        ) : null}
+      </group>
+    );
+  });
+}
+
 /** World points of her body at the current pose (for guards: face / figure / hero boxes from bones, not sprites). */
 export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
   const rig = rigs.get(url);
@@ -469,8 +498,9 @@ export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
  *  outline: ink line width in model metres (0 = none, ~0.004 = a cel drawing). */
 export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: number; from?: number; camPos: V3;
   mouthKeys?: VrmMouthKey[]; lock?: number; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string;
-  step?: number; outline?: number; outlineColor?: string}> = ({url, keys, mouthKeys = [], f: frame, fps, from = 0, camPos, lock = 0.6,
-  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030'}) => {
+  step?: number; outline?: number; outlineColor?: string;
+  battery?: {n: number; prev: number; t: number; color?: string} | null}> = ({url, keys, mouthKeys = [], f: frame, fps, from = 0, camPos, lock = 0.6,
+  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030', battery = null}) => {
   const f = step > 1 ? frame - ((((frame - from) % step) + step) % step) : frame;
   if (!keys.length || f < keys[0].f) return null;
   const rig = rigs.get(url);
@@ -483,8 +513,10 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
   const w = (posed.root.scale.x * posed.natural) * 0.42;
   const chest = posed.vrm.humanoid.getRawBoneNode('chest')?.getWorldPosition(new THREE.Vector3());
   const pulse = (0.85 + 0.15 * Math.sin(f / 9)) * glowGain;
+  const dots = battery ? batteryDots(posed, battery, frame) : null;
   return (
     <group>
+      {dots}
       <mesh position={[p.x, p.y + 0.035, p.z]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2}>
         <planeGeometry args={[w * 1.3, w * 0.7]} />
         <meshBasicMaterial map={blobTexture(shadow)} transparent depthWrite={false} opacity={0.8} toneMapped={false} />
