@@ -6,15 +6,29 @@
 //   speed    - anime speed lines: `radial` (focus burst to the centre) or `flow` (parallel streaks at `angle`)
 //   impact   - the impact frame: a few frames of high-contrast negative on a hit
 //   halftone - printed dots over the picture (manga / comic panel)
+//   spread   - (a duo with a hole) colour comes back in a circle around HER that grows from r0 to r1 (frame widths):
+//              the grey routine around her, her own colour spreading when she dances (Beach 1-2, 49-57)
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {rnd} from '../three/look';
 
 export type Fx =
-  | {kind: 'duo'; from: number; to: number; dark: string; light: string; levels?: number; mix?: number}
+  | {kind: 'duo' | 'spread'; from: number; to: number; dark: string; light: string; levels?: number; mix?: number;
+      r0?: number; r1?: number; soft?: number}
   | {kind: 'speed'; from: number; to: number; mode?: 'radial' | 'flow'; angle?: number; color?: string; density?: number; opacity?: number}
   | {kind: 'impact'; from: number; to: number}
   | {kind: 'halftone'; from: number; to: number; color?: string; size?: number; opacity?: number};
+
+type Duo = Extract<Fx, {kind: 'duo' | 'spread'}>;
+const isDuo = (x: Fx): x is Duo => x.kind === 'duo' || x.kind === 'spread';
+
+/** The colour hole of a spread at frame f: centre (frame fractions) + radius (fraction of the frame width). */
+function hole(d: Duo, f: number, center: [number, number]): {x: number; y: number; r: number; soft: number} | null {
+  if (d.kind !== 'spread') return null;
+  const t = Math.max(0, Math.min(1, (f - d.from) / Math.max(1, d.to - 1 - d.from)));
+  const e = 1 - (1 - t) ** 2;
+  return {x: center[0], y: center[1], r: (d.r0 ?? 0.05) + ((d.r1 ?? 1.4) - (d.r0 ?? 0.05)) * e, soft: d.soft ?? 0.12};
+}
 
 const live = (fx: Fx[] | undefined, f: number) => (fx ?? []).filter((x) => f >= x.from && f < x.to);
 
@@ -24,8 +38,8 @@ const hex = (c: string) => {
 };
 
 /** SVG filter definitions the 3D layer refers to by id (one per live duo effect). */
-export const Fx2DDefs: React.FC<{fx?: Fx[]; f: number}> = ({fx, f}) => {
-  const duos = live(fx, f).filter((x): x is Extract<Fx, {kind: 'duo'}> => x.kind === 'duo');
+export const Fx2DDefs: React.FC<{fx?: Fx[]; f: number; center?: [number, number]; aspect?: number}> = ({fx, f, center = [0.5, 0.5], aspect = 16 / 9}) => {
+  const duos = live(fx, f).filter(isDuo);
   if (!duos.length) return null;
   return (
     <svg width={0} height={0} style={{position: 'absolute'}}>
@@ -45,7 +59,23 @@ export const Fx2DDefs: React.FC<{fx?: Fx[]; f: number}> = ({fx, f}) => {
               <feComponentTransfer in="post" result="duo">
                 <feFuncR type="table" tableValues={`${dr} ${lr}`} /><feFuncG type="table" tableValues={`${dg} ${lg}`} /><feFuncB type="table" tableValues={`${db} ${lb}`} />
               </feComponentTransfer>
-              <feComposite in="duo" in2="SourceGraphic" operator="arithmetic" k1={0} k2={mix} k3={1 - mix} k4={0} />
+              <feComposite in="duo" in2="SourceGraphic" operator="arithmetic" k1={0} k2={mix} k3={1 - mix} k4={0} result="all" />
+              {(() => {
+                const h = hole(d, f, center);
+                if (!h) return null;
+                // mask: black (= her colour) inside the circle, white (= grey) outside; a soft rim
+                const rx = h.r * 100, ry = h.r * 100 * aspect, inner = Math.max(0, 1 - h.soft / Math.max(0.01, h.r));
+                const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'><defs><radialGradient id='g' cx='${h.x * 100}' cy='${h.y * 100}' r='${rx}' gradientUnits='userSpaceOnUse' gradientTransform='translate(${h.x * 100} ${h.y * 100}) scale(1 ${ry / rx}) translate(${-h.x * 100} ${-h.y * 100})'><stop offset='${inner}' stop-color='black'/><stop offset='1' stop-color='white'/></radialGradient></defs><rect width='100' height='100' fill='url(%23g)'/></svg>`;
+                return (
+                  <>
+                    <feImage href={`data:image/svg+xml;utf8,${svg}`} x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="mask" />
+                    <feComposite in="all" in2="mask" operator="arithmetic" k1={1} k2={0} k3={0} k4={0} result="greyPart" />
+                    <feComponentTransfer in="mask" result="inv"><feFuncR type="table" tableValues="1 0" /><feFuncG type="table" tableValues="1 0" /><feFuncB type="table" tableValues="1 0" /></feComponentTransfer>
+                    <feComposite in="SourceGraphic" in2="inv" operator="arithmetic" k1={1} k2={0} k3={0} k4={0} result="colourPart" />
+                    <feComposite in="greyPart" in2="colourPart" operator="arithmetic" k1={0} k2={1} k3={1} k4={0} />
+                  </>
+                );
+              })()}
             </filter>
           );
         })}
@@ -59,7 +89,7 @@ export function fxFilter(fx: Fx[] | undefined, f: number): string {
   const out: string[] = [];
   let duo = 0;
   for (const x of live(fx, f)) {
-    if (x.kind === 'duo') out.push(`url(#raymi-duo-${duo++})`);
+    if (isDuo(x)) out.push(`url(#raymi-duo-${duo++})`);
     if (x.kind === 'impact') out.push('grayscale(1) invert(1) contrast(2.4)');
   }
   return out.join(' ');

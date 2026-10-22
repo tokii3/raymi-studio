@@ -1,5 +1,8 @@
 // The film timeline: ONE data format for every music video and its Short (raymi/timeline.py compiles
 // jobs/<job>/shots.json into this; the studio only draws). Units: frames, metres, Y up, floor at y = 0.
+import type {VrmKey} from '../three/vrmPoses';
+import type {Fx} from './Fx2D';
+
 export type V3 = [number, number, number];
 export type Ease = 'linear' | 'in' | 'out' | 'inOut' | 'snap' | 'hold';
 
@@ -95,6 +98,12 @@ export type Shot = {
   noLens?: {name: string; min: V3; max: V3}[];                                // the camera may never be inside these
   solids?: {name: string; center: V3; size: V3}[];                            // props: lens never inside, face never hidden
   hero?: Hero[];           // the video's main element(s) this shot must show readably (treatment -> shots.json heroes)
+  // 3D Raymi (2026-10-22): her rig keys, her mouth, on twos, her ink line, the 2D layer of this shot
+  actor?: VrmKey[];
+  mouth?: {gain: number};  // lip sync v2 scale (0 = silent)
+  step?: number;
+  outline?: number;
+  fx?: Fx[];
 };
 
 export type FilmProps = {
@@ -112,5 +121,7 @@ export type FilmProps = {
   title?: string;
   heavy?: boolean;         // some lyric uses v2 (her heavy weight must be loaded)
   vrm?: string;            // replace the 2D actor with this model while keeping the exact same film timeline
+  motions?: string[];      // Mixamo clips (public paths) her keys may name
+  sung?: {w: string; roma?: string; t0: number; t1: number}[];   // every sung word, film seconds (lip sync)
   overlay?: {hook: {text: string; from: number; to: number}; cta: {text: string; from: number} | null} | null;   // the Short only
 };

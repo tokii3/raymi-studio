@@ -208,3 +208,31 @@ def test_heroes_are_named_once_and_marked_per_shot(tmp_path):
     assert h["crown"]["kind"] == "worn" and h["crown"]["size"] == [0.13, 0.07] and h["crown"]["min"] == 0.05 and h["KING"]["min"] == 0.08
     _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [{**SHOT, "at": "line:0", "hero": ["cape"]}]), "mv", cmap=EVERY)
     assert any("hero 'cape'" in e for e in errors)
+
+
+def test_vrm_actor_keys_mouth_fx_and_camera_v2(tmp_path):
+    """3D Raymi (2026-10-22): rig keys per shot, her mouth gain, on twos, the 2D layer, spline / orbit camera keys."""
+    shot = {"set": "aquarium", "at": "line:0",
+            "camera": [{"at": 0, "orbit": {"around": "center", "deg": 30, "radius": 2.5}},
+                       {"at": "end", "cam": "tank_front", "path": "spline", "shake": 0.4, "frameH": 1.2}],
+            "actor": [{"at": 0, "pose": "sing_soft", "motion": "idle", "motionMix": 0.3, "expr": {"joy": 0.4}, "pos": "center"},
+                      {"at": 0.5, "pose": "arms_up", "rotY": 20, "blend": 0.2}],
+            "mouth": {"gain": 0.6}, "step": 2, "outline": 0.0035,
+            "fx": [{"kind": "duo", "at": 0, "to": "end", "dark": "#2a2e3e", "light": "#d6dbe8"}],
+            "transition": {"kind": "spin", "frames": 12}}
+    p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot], vrm="vrm/raymi5.vrm"), "mv", cmap=ALL)
+    assert errors == []
+    s = p["shots"][0]
+    assert [k["pose"] for k in s["actor"]] == ["sing_soft", "arms_up"] and s["actor"][1]["f"] == 15 and s["actor"][1]["rotY"] == 20.0
+    assert s["actor"][0]["motionMix"] == 0.3 and s["actor"][1]["blend"] == 6
+    assert s["mouth"] == {"gain": 0.6} and s["step"] == 2 and s["fx"][0]["from"] == 0 and s["fx"][0]["to"] == s["to"] + 1
+    cam = s["camera"]
+    assert cam[1]["path"] == "spline" and cam[1]["shake"] == 0.4 and cam[1]["frameH"] == 1.2
+    c = T.load_sets()["aquarium"]["marks"]["center"]
+    assert abs(cam[0]["look"][1] - (c[1] + 1.0)) < 1e-9 and abs(cam[0]["pos"][1] - (c[1] + 1.2)) < 1e-9
+    assert p["vrm"] == "vrm/raymi5.vrm" and [w["w"] for w in p["sung"]][:2] == ["レフトサイド", "ライトサイド"]
+    bad = {**shot, "actor": [{"at": 0, "pose": "moonwalk"}]}
+    _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [bad], vrm="vrm/raymi5.vrm"), "mv", cmap=ALL)
+    assert any("moonwalk" in e for e in errors)
+    _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot]), "mv", cmap=ALL)
+    assert any("vrm" in e for e in errors)

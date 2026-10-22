@@ -24,6 +24,7 @@ import {vrmFilmKeys, vrmFilmWords} from '../three/vrmFilm';
 import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
 import {Transitions, whipStyle} from './Transitions';
+import {Fx2D, Fx2DDefs, fxFilter} from './Fx2D';
 import type {FilmProps, Shot} from './types';
 import {TONES, gradeName, mixTone, type LyricTone, type Tone} from './grade';
 
@@ -57,18 +58,28 @@ export const Film: React.FC<FilmProps> = (props) => {
   const fontReady = useRaymiFont(Boolean(props.heavy));
   const texReady = useTexturesReady(props.vrm ? [] : props.sprites.map((s) => staticFile(s)));
   const vrmReady = useVrmReady(props.vrm ? [staticFile(props.vrm)] : [],
-    props.vrm ? ['motions/dance.fbx', 'motions/idle.fbx'].map(staticFile) : []);
+    props.vrm ? (props.motions ?? ['motions/dance.fbx', 'motions/idle.fbx']).map(staticFile) : []);
   const ready = fontReady && texReady && vrmReady;
   const f = useCurrentFrame();
   const {width: W, height: H, fps} = useVideoConfig();
-  const mouthWords = useMemo(() => vrmFilmWords(props.shots, fps), [props.shots, fps]);
-  const mouthKeys = useMemo(() => makeVrmMouthKeys(mouthWords, fps, 0), [mouthWords, fps]);
+  const mouthWords = useMemo(() => props.sung ?? vrmFilmWords(props.shots, fps), [props.sung, props.shots, fps]);
+  const mouthKeys = useMemo(() => makeVrmMouthKeys(mouthWords, fps, 0, props.durationInFrames), [mouthWords, fps, props.durationInFrames]);
   const i = shotAt(props.shots, f);
   const shot = props.shots[i];
-  const actorKeys = useMemo(() => vrmFilmKeys(shot.puppets), [shot]);
+  // a 3D shot names her rig keys itself (shots.json "actor"); the 2026-10-21 VRM edition translated sprite keys
+  const actorKeys = useMemo(() => shot.actor?.length ? shot.actor : vrmFilmKeys(shot.puppets), [shot]);
+  const gain = shot.mouth?.gain ?? 1;
+  const shotMouth = useMemo(() => gain === 1 ? mouthKeys : gain <= 0 ? []
+    : mouthKeys.map((k) => ({f: k.f, values: Object.fromEntries(Object.entries(k.values).map(([n, v]) => [n, n === 'close' ? v : (v ?? 0) * gain]))})),
+  [mouthKeys, gain]);
+  const fx = shot.fx ?? [];
   const aspect = W / H;
   const cam = makeCamera(shot, f, aspect, props.hits, fps);
   const camPos: [number, number, number] = [cam.position.x, cam.position.y, cam.position.z];
+  // her place on screen (chest height of the current key): the centre of a colour spread
+  const herKey = actorKeys.length ? actorKeys.reduce((p, k) => (k.f <= f ? k : p), actorKeys[0]) : null;
+  const herNdc = herKey ? new THREE.Vector3(herKey.pos[0], herKey.pos[1] + (herKey.height ?? 1.55) * 0.62, herKey.pos[2]).project(cam) : null;
+  const herScreen: [number, number] = herNdc ? [herNdc.x * 0.5 + 0.5, -herNdc.y * 0.5 + 0.5] : [0.5, 0.5];
   const faults = props.vrm ? [] : visibleCutEdges(shot, f, aspect, props.hits, fps);
   if (faults.length) cancelRender(new Error(`cut sprite edge on screen: ${JSON.stringify(faults)} - reframe the shot (hard rule 9)`));
   const Set = SETS[shot.set];
@@ -162,7 +173,8 @@ export const Film: React.FC<FilmProps> = (props) => {
   }
   return (
     <AbsoluteFill style={{backgroundColor: '#0b0818', overflow: 'hidden'}}>
-      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter].filter(Boolean).join(' ')}}>
+      <Fx2DDefs fx={fx} f={f} center={herScreen} aspect={aspect} />
+      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter, fxFilter(fx, f)].filter(Boolean).join(' ')}}>
         {ready ? (
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>
@@ -170,8 +182,10 @@ export const Film: React.FC<FilmProps> = (props) => {
             {Set ? <Set f={f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} /> : null}
             {props.vrm ? (
               <VrmPuppet url={staticFile(props.vrm)} keys={actorKeys} f={f} fps={fps} from={shot.from} camPos={camPos}
-                mouthKeys={mouthKeys} lock={0.38} shadow={String(shot.opts.shadow ?? '#120b2b')}
-                glow={glowColor(shot.opts.glow, f)} glowGain={0.12 * glowGain} materialStyle="firestarter" />
+                mouthKeys={shotMouth} lock={Number(shot.opts.lock ?? 0.38)} shadow={String(shot.opts.shadow ?? '#120b2b')}
+                glow={glowColor(shot.opts.glow, f)} glowGain={0.12 * glowGain}
+                materialStyle={String(shot.opts.material ?? (shot.actor ? 'none' : 'firestarter'))}
+                step={shot.step ?? 1} outline={shot.outline ?? 0} />
             ) : (
               <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={glowGain} />
@@ -186,6 +200,7 @@ export const Film: React.FC<FilmProps> = (props) => {
           </ThreeCanvas>
         ) : null}
       </AbsoluteFill>
+      <Fx2D fx={fx} f={f} />
       {icon}
       <Transitions shots={props.shots} f={f} />
       <Grade grain={props.grain} tone={gradeAt(shot, f)} />

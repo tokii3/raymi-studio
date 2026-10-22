@@ -13,6 +13,13 @@ jobs/<job>/shots.json is the machine part of the shooting script (4_SCRIPT.md sa
        "kick": 1,                                  # camera punch on music hits (0..2)
        "raymi": [{"at": 0, "sprite": "WS_F_SMUG_WINK_UV_141", "pos": "throne" | [x, y, z], "act": "pop",
                   "icon": "heart", "height": 1.55, "move": 0.4, "arc": 0.5, "flip": false, "ease": "snap"}],
+       # 3D Raymi (top-level "vrm": "vrm/raymi5.vrm"): "actor" instead of "raymi" - held poses + clips on her rig
+       "actor": [{"at": 0, "pose": "sing_soft", "motion": "idle", "motionMix": 0.3, "expr": {"joy": 0.4},
+                  "pos": "desk", "rotY": "lens" | 20, "height": 1.55, "blend": 0.3, "act": "idle", "move": 0.4, "arc": 0,
+                  "look": "lens" | null}],
+       "mouth": {"gain": 0.6} | "silent",          # lip sync v2 from the sung words (gain 1 = full), or a closed mouth
+       "step": 2, "outline": 0.0035,               # she moves on twos (anime) / her ink line
+       "fx": [{"kind": "duo", "at": 0, "to": "end", "dark": "#2a2e3e", "light": "#d6dbe8"}],   # the 2D layer (Fx2D.tsx)
        "lyrics": {"kind": "sign", "anchor": "led" | [x, y, z], "rot": 0, "size": 0.3, "width": 4, "key": ["KING"],
                   "lines": [16, 18], "words": ["KING"],   # optional: only these lines / words become objects
                   "color": "#fff", "accent": "#ffcf6b", "outline": "#1a0b33", "lit": false},
@@ -37,6 +44,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 from pathlib import Path
 
 from . import plan as P
@@ -434,6 +442,60 @@ def act_grade(acts: list, t: float) -> str | None:
     return g
 
 
+def vrm_poses() -> set[str]:
+    """Pose names of the 3D Raymi (studio/src/three/vrmPoses.ts POSES) - a shot may only name these."""
+    src = (Path(__file__).resolve().parents[1] / "studio" / "src" / "three" / "vrmPoses.ts").read_text(encoding="utf-8")
+    body = src[src.index("export const POSES"):]
+    return set(re.findall(r"^  ([a-z_0-9]+): \{", body, re.M))
+
+
+FX_KINDS = {"duo", "speed", "impact", "halftone", "spread"}
+
+
+def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses: set[str], errors: list[str],
+                  tag: str) -> list[dict]:
+    """shots.json "actor" keys -> VrmKey frames (studio/src/three/vrmPoses.ts)."""
+    out = []
+    for k, r in enumerate(s.get("actor", [])):
+        ktag = f"{tag} actor key {k + 1}"
+        if fmt == "short" and isinstance(r.get("short"), dict):
+            r = {**r, **r["short"]}
+        if r.get("pose") not in poses:
+            errors.append(f"{ktag}: pose {r.get('pose')!r} is not in vrmPoses.ts ({sorted(poses)})")
+            continue
+        pos = _v3(r.get("pos", "center"), marks, errors, ktag)
+        if pos is None:
+            continue
+        if r.get("act", "idle") not in ACTS:
+            errors.append(f"{ktag}: act must be one of {sorted(ACTS)}")
+        rot = r.get("rotY", "lens")
+        key = {"f": fr(_key_time(r.get("at", 0), a, b)), "pose": r["pose"], "pos": pos,
+               "rotY": rot if rot in ("lens", "away") else float(rot),
+               "height": float(r.get("height", DEFAULT_HEIGHT)), "blend": round(float(r.get("blend", 0.27)) * FPS),
+               "act": r.get("act", "idle"), "move": round(float(r.get("move", 0.0)) * FPS), "arc": float(r.get("arc", 0.0)),
+               "ease": r.get("ease", "inOut")}
+        for opt in ("motion", "motionMix", "expr", "look"):
+            if opt in r:
+                key[opt] = r[opt]
+        if "rollZ" in r:
+            key["rollZ"] = math.radians(float(r["rollZ"]))
+        out.append(key)
+    if out and out[0]["f"] > fr(a):
+        out[0]["f"] = fr(a)                                # she is there from the first frame of the shot
+    return out
+
+
+def compile_fx(s: dict, a: float, b: float, fr, errors: list[str], tag: str) -> list[dict]:
+    out = []
+    for k, x in enumerate(s.get("fx", [])):
+        if x.get("kind") not in FX_KINDS:
+            errors.append(f"{tag} fx {k + 1}: kind must be one of {sorted(FX_KINDS)}")
+            continue
+        out.append({**{kk: v for kk, v in x.items() if kk not in ("at", "to")},
+                    "from": fr(_key_time(x.get("at", 0), a, b)), "to": fr(_key_time(x.get("to", "end"), a, b)) + 1})
+    return out
+
+
 def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None = None) -> tuple[dict, list[str], list[str]]:
     errors: list[str] = []
     warns: list[str] = []
@@ -467,6 +529,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         if a_.get("grade") not in GRADES:
             errors.append(f"acts: grade {a_.get('grade')!r} is not in the grade library {sorted(GRADES)} (studio/src/film/grade.ts)")
     heroes = spec.get("heroes") or {}
+    poses = vrm_poses() if spec.get("vrm") else set()
     heavy = False
     shots, sprites, screen_texts = [], set(), []
     for i, s in enumerate(shots_in):
@@ -701,7 +764,20 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                          "why_small": spec_h.get("why_small"), **({"uv": spec_h["uv"]} if "uv" in spec_h else {}),
                          **({"size": spec_h["size"]} if "size" in spec_h else {}),
                          **({"center": _v3(spec_h["center"], marks, errors, tag)} if "center" in spec_h else {})})
-        shots.append({"id": s.get("id", f"s{i + 1}"), "from": max(0, fr(a)), "to": min(total, fr(b)), "set": st, "hero": hero,
+        actor = compile_actor(s, fmt, a, b, fr, marks, poses, errors, tag) if s.get("actor") else []
+        if actor and not spec.get("vrm"):
+            errors.append(f"{tag}: actor keys need the top-level \"vrm\" model (e.g. \"vrm/raymi5.vrm\")")
+        extra = {}
+        if actor:
+            extra["actor"] = actor
+            m = s.get("mouth", {"gain": 1.0})
+            extra["mouth"] = {"gain": 0.0} if m == "silent" else {"gain": float(m.get("gain", 1.0))}
+        for opt in ("step", "outline"):
+            if opt in s:
+                extra[opt] = s[opt]
+        if s.get("fx"):
+            extra["fx"] = compile_fx(s, a, b, fr, errors, tag)
+        shots.append({**extra, "id": s.get("id", f"s{i + 1}"), "from": max(0, fr(a)), "to": min(total, fr(b)), "set": st, "hero": hero,
                       "opts": opts, "camera": ckeys, "kick": float(s.get("kick", 1.0)), "puppets": pkeys,
                       "lyrics": L, "words": words,
                       "transition": {"kind": tr.get("kind", "cut"), "frames": int(tr.get("frames", 0)),
@@ -738,6 +814,12 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
              "heavy": heavy}
     if spec.get("vrm"):
         props["vrm"] = spec["vrm"]
+        if spec.get("motions"):
+            props["motions"] = spec["motions"]
+        # every sung word for her lip sync (film seconds), not only the words a shot writes on screen
+        props["sung"] = [{"w": w["w"], "roma": w.get("roma", ""), "t0": round(w["t0"] - t_from, 3), "t1": round(w["t1"] - t_from, 3)}
+                         for ln in lyrics for w in ln.get("words", [])
+                         if w.get("t1", 0) > t_from and w.get("t0", 0) < t_to and not ln.get("backing")]
     return props, errors, warns
 
 
