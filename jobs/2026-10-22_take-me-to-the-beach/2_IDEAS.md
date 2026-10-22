@@ -4,6 +4,31 @@ Knowledge to open: `knowledge/CASEBOOK.md` (the top three), `knowledge/PRINCIPLE
 `knowledge/exemplars/renai_ANALYSIS.md`, `knowledge/studies/mv_study_12_videos.md`.
 Written 2026-10-22 from `1_DOSSIER.md` and toki's brief (2026-10-22).
 
+## Round 2 (2026-10-22) - after toki rejected A / B / C
+toki 2026-10-22 on round 1: "ich finde keins davon so richtig gut, sie wirken zu abstrakt, der zuschauer kann damit
+nichts anfangen, ausserdem ist an diesen 3 stills es schlecht zu bewerten. es muss abstrakter aber auf eine gute art
+sein, man muss die symbole und rethoriken und visuellen mittel auch verstehen koennen".
+Why round 1 failed: the worlds were CONCEPTS you must have explained (weather presenter, office in the abyss, a
+manga page), not symbols everyone knows from daily life; the boards showed stand-in sets (no beach, no people); three
+stills cannot show a story. Process change: every idea board is now a 12-frame storyboard along the song (time, line,
+what happens under each frame), built only after the needed studio parts exist.
+
+Three ideas built from everyday symbols (all on toki's story spine below):
+1. **The Strings (marionette)** - "people-pleasing" made literal: strings on her arms, hands from above pull them
+   (boss, ringing phone, salesman). She cuts the first string with her barb (Ado), the puppeteers tangle while she
+   dances, the strings cocoon her in the bridge, she rips them all at T-A-K-E.
+2. **The Snow Globe** - she lives inside a snow globe on her boss's desk: grey mini office, mountains, paper snow;
+   everyone who wants something shakes it; a beach postcard hangs outside. "You can have the mountains, you take the
+   snow" = the globe; at T-A-K-E the glass cracks.
+3. **Same Day (the loop)** - the same alarm, train, desk; a calendar page torn each loop, the loops get faster; her
+   glowing dots are her battery - one goes out each loop, all light up at the beach. She breaks the loop at T-A-K-E.
+
+approved: toki 2026-10-22 "ja also gerne idee 3, mit elementen aus 1 und 2" - Same Day (the loop) with the strings
+(the hands that pull her) and the snow globe (mountains + snow on her desk, the beach postcard).
+
+---
+# Round 1 (rejected by toki 2026-10-22, kept as history)
+
 ## toki's core, restated (her story is the spine of every idea - the ideas differ in WORLD and LOOK)
 **Raymi's grey daily routine squeezes tighter and tighter; the beach is everything she loves; she finally lets go -
 first in her head, then in public, and at the last "T-A-K-E" for real.** The story beats, on MEASURED times:
@@ -146,4 +171,3 @@ Usseewa states) - the song's words are a weather map, her lore is the forecast, 
 she must behave" toki asked for, and the TV graphics give the 2D feel naturally. B as the second choice if toki wants
 the vertical deep -> surface journey.
 
-approved: <toki writes here: date + idea + notes>
