@@ -107,6 +107,13 @@ export const POSES: Record<string, VrmPose> = {
     leftUpperArm: [0, -0.42, 0.52], leftLowerArm: [0, -0.22, 0], rightUpperArm: [0, 0.42, 0.18], rightLowerArm: [0, 0.75, 0],
     leftUpperLeg: [-0.03, 0, 0.04], rightUpperLeg: [0.03, 0, -0.04],
   },
+  // singing quietly to the lens: arms hang, one hand rests at her chest, chin a little up (close-ups, verses)
+  sing_soft: {
+    ...relaxedHands, hips: [0, 0, 0.02], spine: [0.02, 0, -0.01], chest: [-0.02, 0, 0], neck: [-0.04, 0, 0.02], head: [-0.06, 0.04, 0.04],
+    leftUpperArm: [0, -0.1, -1.2], leftLowerArm: [0, -0.35, 0], leftHand: [0, 0, -0.1],
+    rightUpperArm: [0, 0.55, 1.0], rightLowerArm: [0, 1.75, 0], rightHand: [0, 0, 0.25],
+    leftUpperLeg: [-0.04, 0, 0.04], rightUpperLeg: [0.02, 0, -0.02], leftLowerLeg: [0.08, 0, 0],
+  },
   jump: {
     ...relaxedHands, spine: [-0.08, 0, 0], chest: [-0.08, 0, 0], head: [-0.1, 0, 0],
     leftUpperArm: [0, -0.22, 0.82], rightUpperArm: [0, 0.22, -0.82], leftLowerArm: [0, -0.1, -0.2], rightLowerArm: [0, 0.1, 0.2],

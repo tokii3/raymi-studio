@@ -20,16 +20,16 @@
   "materialStyle": "firestarter",
   "grain": 0.02,
   "keys": [
-    {"f": 0, "pose": "sing", "motion": "idle", "motionMix": 0.3, "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0},
+    {"f": 0, "pose": "sing_soft", "motion": "idle", "motionMix": 0.3, "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0},
     {"f": 75, "pose": "arms_up", "motion": "dance", "motionMix": 0.45, "expr": {"joy": 0.6}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 14},
     {"f": 150, "pose": "sway", "motion": "dance", "expr": {"fun": 0.5}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 14},
     {"f": 225, "pose": "point", "motion": "dance", "expr": {"joy": 0.65}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 12}
   ],
   "variants": [
     {"name": "lip_v1", "output": "out/lip_v1.mp4", "props": {"lipsync": "v1", "keys": [
-      {"f": 0, "pose": "sing", "motion": "idle", "motionMix": 0.3, "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0}]}},
+      {"f": 0, "pose": "sing_soft", "motion": "idle", "motionMix": 0.3, "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0}]}},
     {"name": "lip_v2", "output": "out/lip_v2.mp4", "props": {"lipsync": "v2", "keys": [
-      {"f": 0, "pose": "sing", "motion": "idle", "motionMix": 0.3, "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0}]}},
+      {"f": 0, "pose": "sing_soft", "motion": "idle", "motionMix": 0.3, "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0}]}},
     {"name": "moves", "output": "boards/camera_2d_test.mp4", "props": {
       "width": 1280, "height": 720, "step": 2, "outline": 0.0035, "outlineColor": "#140a26",
       "segments": [
