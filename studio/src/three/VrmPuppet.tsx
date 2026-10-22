@@ -145,6 +145,17 @@ function lowestFoot(vrm: VRM): number {
   return low;
 }
 
+/** Mixamo clips that walk / run / dance across the floor would carry her out of the shot and jump back at the loop:
+ *  the hips keep their height (bounce, crouch) but not their travel - the shot's keys and camera decide where she goes. */
+export function inPlace(clip: THREE.AnimationClip): THREE.AnimationClip {
+  for (const t of clip.tracks) {
+    if (!t.name.endsWith('.position') || !/hips/i.test(t.name)) continue;
+    const v = t.values, x0 = v[0], z0 = v[2];
+    for (let i = 0; i < v.length; i += 3) { v[i] = x0; v[i + 2] = z0; }
+  }
+  return clip;
+}
+
 /** Load a model into the cache by hand (tests: the bytes of the file, no browser). */
 export async function preloadVrm(url: string, data?: ArrayBuffer): Promise<void> {
   if (!rigs.has(url)) rigs.set(url, await loadRig(url, data));
@@ -159,7 +170,7 @@ async function preloadMotion(url: string): Promise<void> {
     if (rig.motions.has(id)) continue;
     const clip = retargetAnimation(fbx, rig.vrm, {logWarnings: false});
     if (!clip) throw new Error(`Mixamo animation could not be retargeted: ${url}`);
-    rig.motions.set(id, clip);
+    rig.motions.set(id, inPlace(clip));
   }
 }
 

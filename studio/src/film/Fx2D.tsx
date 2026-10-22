@@ -39,7 +39,7 @@ const hex = (c: string) => {
 
 /** SVG filter definitions the 3D layer refers to by id (one per live duo effect). */
 export const Fx2DDefs: React.FC<{fx?: Fx[]; f: number; center?: [number, number]; aspect?: number}> = ({fx, f, center = [0.5, 0.5], aspect = 16 / 9}) => {
-  const duos = live(fx, f).filter(isDuo);
+  const duos = live(fx, f).filter((x): x is Duo => x.kind === 'duo');
   if (!duos.length) return null;
   return (
     <svg width={0} height={0} style={{position: 'absolute'}}>
@@ -59,23 +59,7 @@ export const Fx2DDefs: React.FC<{fx?: Fx[]; f: number; center?: [number, number]
               <feComponentTransfer in="post" result="duo">
                 <feFuncR type="table" tableValues={`${dr} ${lr}`} /><feFuncG type="table" tableValues={`${dg} ${lg}`} /><feFuncB type="table" tableValues={`${db} ${lb}`} />
               </feComponentTransfer>
-              <feComposite in="duo" in2="SourceGraphic" operator="arithmetic" k1={0} k2={mix} k3={1 - mix} k4={0} result="all" />
-              {(() => {
-                const h = hole(d, f, center);
-                if (!h) return null;
-                // mask: black (= her colour) inside the circle, white (= grey) outside; a soft rim
-                const rx = h.r * 100, ry = h.r * 100 * aspect, inner = Math.max(0, 1 - h.soft / Math.max(0.01, h.r));
-                const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'><defs><radialGradient id='g' cx='${h.x * 100}' cy='${h.y * 100}' r='${rx}' gradientUnits='userSpaceOnUse' gradientTransform='translate(${h.x * 100} ${h.y * 100}) scale(1 ${ry / rx}) translate(${-h.x * 100} ${-h.y * 100})'><stop offset='${inner}' stop-color='black'/><stop offset='1' stop-color='white'/></radialGradient></defs><rect width='100' height='100' fill='url(%23g)'/></svg>`;
-                return (
-                  <>
-                    <feImage href={`data:image/svg+xml;utf8,${svg}`} x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="mask" />
-                    <feComposite in="all" in2="mask" operator="arithmetic" k1={1} k2={0} k3={0} k4={0} result="greyPart" />
-                    <feComponentTransfer in="mask" result="inv"><feFuncR type="table" tableValues="1 0" /><feFuncG type="table" tableValues="1 0" /><feFuncB type="table" tableValues="1 0" /></feComponentTransfer>
-                    <feComposite in="SourceGraphic" in2="inv" operator="arithmetic" k1={1} k2={0} k3={0} k4={0} result="colourPart" />
-                    <feComposite in="greyPart" in2="colourPart" operator="arithmetic" k1={0} k2={1} k3={1} k4={0} />
-                  </>
-                );
-              })()}
+              <feComposite in="duo" in2="SourceGraphic" operator="arithmetic" k1={0} k2={mix} k3={1 - mix} k4={0} />
             </filter>
           );
         })}
@@ -89,20 +73,33 @@ export function fxFilter(fx: Fx[] | undefined, f: number): string {
   const out: string[] = [];
   let duo = 0;
   for (const x of live(fx, f)) {
-    if (isDuo(x)) out.push(`url(#raymi-duo-${duo++})`);
+    if (x.kind === 'duo') out.push(`url(#raymi-duo-${duo++})`);
     if (x.kind === 'impact') out.push('grayscale(1) invert(1) contrast(2.4)');
   }
   return out.join(' ');
 }
 
 /** Overlays drawn on top of the picture: speed lines and halftone. */
-export const Fx2D: React.FC<{fx?: Fx[]; f: number}> = ({fx, f}) => {
+export const Fx2D: React.FC<{fx?: Fx[]; f: number; center?: [number, number]; aspect?: number}> = ({fx, f, center = [0.5, 0.5], aspect = 16 / 9}) => {
   const items = live(fx, f);
   if (!items.length) return null;
   return (
     <>
       {items.map((x, i) => {
         if (x.kind === 'speed') return <Speed key={i} x={x} f={f} />;
+        if (x.kind === 'spread') {
+          // the grey world outside a circle around HER: desaturate + tint, with a soft hole that grows (CSS mask)
+          const h = hole(x, f, center)!;
+          const r = h.r * 100, soft = h.soft * 100;
+          const mask = `radial-gradient(ellipse ${r}% ${r * aspect}% at ${h.x * 100}% ${h.y * 100}%, transparent ${Math.max(0, r - soft) / r * 100}%, black 100%)`;
+          const st = {maskImage: mask, WebkitMaskImage: mask} as React.CSSProperties;
+          return (
+            <React.Fragment key={i}>
+              <AbsoluteFill style={{...st, background: '#808080', mixBlendMode: 'saturation', opacity: x.mix ?? 1}} />
+              <AbsoluteFill style={{...st, background: x.light, mixBlendMode: 'multiply', opacity: 0.35 * (x.mix ?? 1)}} />
+            </React.Fragment>
+          );
+        }
         if (x.kind === 'halftone') {
           const s = x.size ?? 9;
           return (

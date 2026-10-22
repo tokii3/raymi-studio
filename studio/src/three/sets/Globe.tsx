@@ -23,7 +23,12 @@ export const Globe: React.FC<SetProps> = ({f, opts, camPos}) => {
   for (const s of shakes) { const d = f - s; if (d >= 0 && d < 45) swirl = Math.max(swirl, 1 - d / 45); }
   const cracks = Array.isArray(opts.cracks) ? (opts.cracks as number[]).filter((t) => f >= t).length : 0;
   const burst = typeof opts.burst === 'number' ? f - opts.burst : -1;
-  const hit = (Array.isArray(opts.hit) ? opts.hit : [0, 1.4, R * 0.94]) as [number, number, number];
+  // where the tail strikes: given, or the glass where the lens looks at her (near side from outside, far side inside)
+  const c = new THREE.Vector3(0, 1.3, 0), cam = new THREE.Vector3(...(camPos ?? [0, 1.4, 6]));
+  const outside = cam.distanceTo(new THREE.Vector3(0, 0, 0)) > R;
+  const dirV = (outside ? cam.clone().sub(c) : c.clone().sub(cam)).normalize();
+  const auto = c.clone().add(dirV.multiplyScalar(R * 0.9));
+  const hit = (Array.isArray(opts.hit) ? opts.hit : [auto.x, auto.y, auto.z]) as [number, number, number];
   const letters = Array.isArray(opts.letters) ? (opts.letters as [number, string][]) : [];
   const lit = letters.filter(([t]) => f >= t).map(([, l]) => l).join('');
   const crackTex = canvasTexture(`globecracks${cracks}${lit}`, 1024, 1024, (ctx, w, h) => {

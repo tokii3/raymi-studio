@@ -1227,24 +1227,24 @@
     0.55
    ],
    "monitor": [
-    0,
+    -0.42,
     0.765,
     0.78
    ],
    "postcard": [
-    0.24,
+    -0.2,
     1.12,
     0.76
    ],
    "globe": [
-    -0.5,
+    0.55,
     0.765,
     0.5
    ],
    "files": [
-    0.5,
+    0.62,
     0.765,
-    0.42
+    0.82
    ],
    "phone": [
     0.28,
@@ -1300,16 +1300,16 @@
   "cams": {
    "front": {
     "pos": [
-     0,
-     1.35,
-     2.6
+     0.55,
+     1.5,
+     2.35
     ],
     "look": [
      0,
-     1.0,
+     1.05,
      0
     ],
-    "fov": 34
+    "fov": 36
    },
    "desk_above": {
     "pos": [
@@ -1376,22 +1376,7 @@
     ],
     "fov": 30
    }
-  },
-  "solids": [
-   {
-    "name": "her_desk",
-    "center": [
-     0,
-     0.4,
-     0.55
-    ],
-    "size": [
-     1.5,
-     0.8,
-     0.75
-    ]
-   }
-  ]
+  }
  },
  "bedroom": {
   "about": "Same Day: her small dry room in an air dome - shell bed (top y 0.48, head toward -z), coral nightstand (top y 0.48) with the alarm clock, tide calendar on the wall, a round window onto the sea, a shelf, a door.",
@@ -1485,22 +1470,7 @@
     ],
     "fov": 34
    }
-  },
-  "solids": [
-   {
-    "name": "bed",
-    "center": [
-     0,
-     0.25,
-     0
-    ],
-    "size": [
-     1.0,
-     0.5,
-     2.0
-    ]
-   }
-  ]
+  }
  },
  "train": {
   "about": "Same Day: the deep-sea commuter train car (origin; aisle along z, doors at x 1.3 around z 0) and its platform outside the doors (x > 1.6): LED band over the left windows, ad panels, poles, straps, departure board.",

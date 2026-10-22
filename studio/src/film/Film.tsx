@@ -208,7 +208,7 @@ export const Film: React.FC<FilmProps> = (props) => {
           </ThreeCanvas>
         ) : null}
       </AbsoluteFill>
-      <Fx2D fx={fx} f={f} />
+      <Fx2D fx={fx} f={f} center={herScreen} aspect={aspect} />
       {battery && shot.opts.battery_sign ? <BatterySign {...battery} x={herHead[0] * W} y={herHead[1] * H} h={H} f={f} side={shot.opts.battery_sign === 'left' ? -1 : 1} /> : null}
       {icon}
       <Transitions shots={props.shots} f={f} />
