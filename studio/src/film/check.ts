@@ -245,6 +245,8 @@ export function occluders(props: FilmProps, s: Shot, f: number, cam: THREE.Camer
     }));
     if (cells.length) out.push({name: 'her figure', boxes: cells});
   }
+  const ac = actorCells(s, f, cam);
+  if (ac.length) out.push({name: 'her figure', boxes: ac});
   for (const b of s.solids ?? []) {
     const box = new THREE.Box3().setFromCenterAndSize(new THREE.Vector3(...b.center), new THREE.Vector3(...b.size));
     if (box.distanceToPoint(cam.position) >= depth) continue;
@@ -253,6 +255,36 @@ export function occluders(props: FilmProps, s: Shot, f: number, cam: THREE.Camer
       pts.push(new THREE.Vector3(i ? box.max.x : box.min.x, j ? box.max.y : box.min.y, k ? box.max.z : box.min.z));
     const bx = toBox(pts);                              // reaching behind the lens: the lens guard owns that
     if (bx) out.push({name: `the ${b.name}`, boxes: [bx]});
+  }
+  return out;
+}
+
+// 3D Raymi (2026-10-23): the lyric guards knew only the sprite's silhouette, so words sat on the VRM body (Beach stills
+// 19b / 23). Her body from her rig key: a column of cells from the feet along her (rolled) body axis - legs, hips,
+// chest, head - in metres scaled by her height, projected to screen boxes like the sprite mask cells.
+const BODY: [number, number, number][] = [[0, 0.28, 0.16], [0.28, 0.5, 0.2], [0.5, 0.62, 0.24], [0.62, 0.8, 0.26], [0.8, 1.0, 0.2]];   // [t0, t1, half width] / 1.55 m
+export function actorCells(s: Shot, f: number, cam: THREE.Camera): [number, number, number, number][] {
+  const keys = s.actor;
+  if (!keys?.length || f < keys[0].f) return [];
+  let i = 0;
+  for (let k = 0; k < keys.length; k++) if (keys[k].f <= f) i = k;
+  const k = keys[i], nx = keys[i + 1];
+  let pos = new THREE.Vector3(...k.pos);
+  if (nx && nx.move && f >= nx.f - nx.move) pos = pos.lerp(new THREE.Vector3(...nx.pos), Math.min(1, (f - (nx.f - nx.move)) / nx.move));
+  const h = k.height ?? 1.55, sc = h / 1.55;
+  const yaw = k.rotY === 'away' ? Math.atan2(cam.position.x - pos.x, cam.position.z - pos.z) + Math.PI
+    : k.rotY === 'lens' || k.rotY === undefined ? Math.atan2(cam.position.x - pos.x, cam.position.z - pos.z) : (k.rotY * Math.PI) / 180;
+  const r = k.rollZ ?? 0;
+  const axis = new THREE.Vector3(-Math.sin(r) * Math.cos(yaw), Math.cos(r), Math.sin(r) * Math.sin(yaw));
+  const side = new THREE.Vector3(Math.cos(r) * Math.cos(yaw), Math.sin(r), -Math.cos(r) * Math.sin(yaw));
+  const out: [number, number, number, number][] = [];
+  for (const [t0, t1, hw] of BODY) {
+    const pts = [t0, t1].flatMap((t) => [-1, 1].map((sd) => pos.clone().addScaledVector(axis, t * h).addScaledVector(side, sd * hw * sc)));
+    const q = pts.map((p) => p.clone().project(cam));
+    if (q.some((p) => p.z >= 1 || p.z <= -1)) continue;
+    const bx: [number, number, number, number] = [Math.max(0, Math.min(...q.map((p) => (p.x + 1) / 2))), Math.max(0, Math.min(...q.map((p) => (1 - p.y) / 2))),
+      Math.min(1, Math.max(...q.map((p) => (p.x + 1) / 2))), Math.min(1, Math.max(...q.map((p) => (1 - p.y) / 2)))];
+    if (bx[2] > bx[0] && bx[3] > bx[1]) out.push(bx);
   }
   return out;
 }
@@ -756,6 +788,8 @@ export function heroBoxes(props: FilmProps, frames: number[]): HeroBox[] {
 // ---------------------------------------------------------------- lyrics into the frame's empty space (toki 2026-10-20)
 /** Her figure's screen box (0..1, y down) at frame f, or null. */
 function figureBox(props: FilmProps, s: Shot, f: number, cam: THREE.Camera): [number, number, number, number] | null {
+  const ac = actorCells(s, f, cam);
+  if (ac.length) return [Math.min(...ac.map((b) => b[0])), Math.min(...ac.map((b) => b[1])), Math.max(...ac.map((b) => b[2])), Math.max(...ac.map((b) => b[3]))];
   const p = puppetAt(s.puppets, f, props.fps);
   if (!p) return null;
   const m = puppetMatrix(p, [cam.position.x, cam.position.y, cam.position.z]);

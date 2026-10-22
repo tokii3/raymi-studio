@@ -479,13 +479,13 @@ function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: s
     const flare = on && !was ? Math.sin(Math.PI * Math.min(1, b.t)) * 1.6 : 0;
     // a 1.55 m figure: the row sits ~11 cm in front of the bone, a little below it (her breastbone)
     const p = new THREE.Vector3(x / s * 1.0, -0.045 / s, 0.105 / s).applyMatrix4(bone.matrixWorld);
-    const r = 0.0085 * (1 + 0.35 * flare) * (0.95 + 0.05 * Math.sin(f / 7 + i));
+    const r = 0.0125 * (1 + 0.35 * flare) * (0.95 + 0.05 * Math.sin(f / 7 + i));
     return (
       <group key={`bat${i}`} position={[p.x, p.y, p.z]}>
         <mesh renderOrder={3}><sphereGeometry args={[r, 12, 10]} />
           <meshBasicMaterial color={k > 0.02 ? color : '#2a2440'} transparent opacity={0.35 + 0.65 * Math.max(k, 0.25)} toneMapped={false} /></mesh>
         {k > 0.02 ? (
-          <mesh renderOrder={4}><sphereGeometry args={[r * (2.4 + flare), 12, 10]} />
+          <mesh renderOrder={4}><sphereGeometry args={[r * (3.2 + flare), 12, 10]} />
             <meshBasicMaterial color={color} transparent opacity={0.22 * k + 0.25 * flare} depthWrite={false} toneMapped={false} blending={THREE.AdditiveBlending} /></mesh>
         ) : null}
       </group>
