@@ -1,0 +1,67 @@
+{
+  "composition": "VrmClip",
+  "width": 720,
+  "height": 720,
+  "fps": 30,
+  "durationInFrames": 300,
+  "vrm": "vrm/raymi5.vrm",
+  "motions": ["motions/dance.fbx", "motions/idle.fbx"],
+  "sprites": [],
+  "lyrics": {"source": "jobs/2026-10-19_firestarter/lyrics_timed.json", "startSeconds": 28.6,
+    "vocals": "jobs/2026-10-19_firestarter/vocals.ogg"},
+  "audio": {"src": "jobs/2026-10-19_firestarter/song.webm", "file": "firestarter.webm", "startFrame": 858, "volume": 0.75},
+  "set": "deep",
+  "opts": {"grade": "vrm_fire", "ignite": 0.16, "origin": [0.6, -1], "snow": 0.25, "smoke": false, "vent_cap": 0.2, "fog_far": 20,
+    "fires": [{"pos": [1.2, 0.1, -1.9], "size": 0.38, "c": "#b45cff", "core": "#ffe2b8", "light": 0.12, "embers": 8}],
+    "shadow": "#120b2b", "glow": "#a994ff"},
+  "cam": {"pos": [0.34, 1.44, 0.55], "look": [0.3, 1.41, -0.6], "fov": 24},
+  "lock": 0.38,
+  "glowGain": 0.12,
+  "materialStyle": "firestarter",
+  "grain": 0.02,
+  "keys": [
+    {"f": 0, "pose": "sing", "motion": "idle", "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0},
+    {"f": 75, "pose": "arms_up", "motion": "dance", "expr": {"joy": 0.6}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 14},
+    {"f": 150, "pose": "sway", "motion": "dance", "expr": {"fun": 0.5}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 14},
+    {"f": 225, "pose": "point", "motion": "dance", "expr": {"joy": 0.65}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 12}
+  ],
+  "variants": [
+    {"name": "lip_v1", "output": "out/lip_v1.mp4", "props": {"lipsync": "v1", "keys": [
+      {"f": 0, "pose": "sing", "motion": "idle", "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0}]}},
+    {"name": "lip_v2", "output": "out/lip_v2.mp4", "props": {"lipsync": "v2", "keys": [
+      {"f": 0, "pose": "sing", "motion": "idle", "expr": {"joy": 0.35}, "pos": [0.3, 0, -0.6], "rotY": "lens", "blend": 0}]}},
+    {"name": "moves", "output": "boards/camera_2d_test.mp4", "props": {
+      "width": 1280, "height": 720, "step": 2, "outline": 0.0035, "outlineColor": "#140a26",
+      "segments": [
+        {"from": 0, "to": 75, "set": "deep", "opts": {"grade": "vrm_fire", "snow": 0.25, "smoke": false, "fog_far": 20, "shadow": "#120b2b", "glow": "#a994ff",
+          "fires": [{"pos": [1.2, 0.1, -1.9], "size": 0.38, "c": "#b45cff", "core": "#ffe2b8", "light": 0.12, "embers": 8}]},
+          "camKeys": [
+            {"f": 0, "pos": [-1.2, 0.15, 0.6], "look": [0.3, 1.3, -0.6], "fov": 42, "shake": 0.15},
+            {"f": 40, "pos": [0.4, 0.2, 1.1], "look": [0.3, 1.25, -0.6], "fov": 41, "path": "spline", "ease": "linear", "shake": 0.15},
+            {"f": 75, "pos": [1.8, 0.3, 0.2], "look": [0.3, 1.2, -0.6], "fov": 40, "roll": -8, "path": "spline", "ease": "in", "shake": 0.15}],
+          "transition": {"kind": "spin", "frames": 12, "dir": 1}},
+        {"from": 75, "to": 150, "set": "aquarium", "opts": {},
+          "camKeys": [
+            {"f": 75, "pos": [0.3, 4.2, -0.35], "look": [0.3, 0, -0.6], "fov": 40, "roll": 30},
+            {"f": 150, "pos": [0.7, 2.4, 0.4], "look": [0.3, 0.95, -0.6], "fov": 36, "roll": 0, "path": "spline", "ease": "out"}],
+          "fx": [{"kind": "duo", "from": 75, "to": 150, "dark": "#070a2e", "light": "#a8c8ff", "levels": 4, "mix": 0.9}],
+          "transition": {"kind": "zoom", "frames": 12}},
+        {"from": 150, "to": 225, "set": "deep", "opts": {"grade": "vrm_fire", "snow": 0.4, "smoke": false, "fog_far": 26, "shadow": "#120b2b", "glow": "#a994ff"},
+          "camKeys": [
+            {"f": 150, "pos": [0.3, 1.3, 4.8], "look": [0.3, 1.3, -0.6], "fov": 12, "frameH": 1.1},
+            {"f": 225, "pos": [0.32, 1.34, 0.65], "look": [0.3, 1.32, -0.6], "fov": 48, "frameH": 1.1, "ease": "inOut"}],
+          "fx": [{"kind": "speed", "from": 180, "to": 225, "mode": "radial", "opacity": 0.45},
+                 {"kind": "impact", "from": 186, "to": 188}],
+          "transition": {"kind": "whip", "frames": 10, "dir": 1}},
+        {"from": 225, "to": 300, "set": "aquarium", "opts": {},
+          "camKeys": [
+            {"f": 225, "pos": [1.4, 1.1, 0.9], "look": [0.3, 1.2, -0.6], "fov": 34, "shake": 0.7},
+            {"f": 262, "pos": [0.2, 0.9, 1.3], "look": [0.3, 1.25, -0.6], "fov": 33, "shake": 0.7, "path": "spline", "ease": "linear"},
+            {"f": 300, "pos": [-1.0, 1.4, 0.8], "look": [0.3, 1.2, -0.6], "fov": 34, "shake": 0.7, "path": "spline", "ease": "linear"}],
+          "fx": [{"kind": "duo", "from": 225, "to": 300, "dark": "#1a0206", "light": "#ff5a4a", "levels": 3, "mix": 0.85},
+                 {"kind": "halftone", "from": 225, "to": 300, "opacity": 0.18},
+                 {"kind": "speed", "from": 225, "to": 300, "mode": "flow", "angle": -12, "opacity": 0.3}]}
+      ]}}
+  ],
+  "compare": [{"of": ["lip_v1", "lip_v2"], "output": "boards/lipsync_v1_left_v2_right.mp4"}]
+}

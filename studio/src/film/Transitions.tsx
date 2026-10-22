@@ -26,6 +26,20 @@ const cover = (p: number) => 1 - Math.abs(p - 0.5) * 2;
 // whip blur 16 px (38 px smeared the words over the whip - final Short 1)
 export function whipStyle(shots: Shot[], f: number, W: number): React.CSSProperties {
   const a = active(shots, f);
+  if (a && a.shot.transition.kind === 'spin') {
+    // a barrel roll: out of shot A turning, into shot B still turning the same way - 180 deg over the transition
+    const dir = a.shot.transition.dir ?? 1, k = cover(a.p);
+    const deg = a.p < 0.5 ? 90 * ease('in', a.p * 2) : -90 + 90 * ease('out', (a.p - 0.5) * 2);
+    // the turned frame must still cover the picture (no corner of the void): cos + 16/9 sin of the angle
+    const r = (Math.abs(deg) * Math.PI) / 180, fill = Math.cos(r) + (16 / 9) * Math.sin(r);
+    return {transform: `rotate(${dir * deg}deg) scale(${(fill * 1.04).toFixed(3)})`, filter: `blur(${(k * 10).toFixed(1)}px)`};
+  }
+  if (a && a.shot.transition.kind === 'zoom') {
+    // a punch-in: shot A rushes into the lens, shot B lands from too close
+    const k = cover(a.p);
+    const s = a.p < 0.5 ? 1 + 1.6 * ease('in', a.p * 2) : 2.6 - 1.6 * ease('out', (a.p - 0.5) * 2);
+    return {transform: `scale(${s.toFixed(3)})`, filter: `blur(${(k * 12).toFixed(1)}px)`};
+  }
   if (!a || a.shot.transition.kind !== 'whip') return {};
   const dir = a.shot.transition.dir ?? 1;
   const k = cover(a.p);

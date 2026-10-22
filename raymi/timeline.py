@@ -73,7 +73,7 @@ LYRIC_KINDS = {"sign", "float", "stamp", "glass", "card", "ticker", "firework"}
 # what a lyric is MADE of on its object (Words3D): breath-fog, engraved brass, a phone's camera UI, a card's print,
 # the felt's gold print, light
 LYRIC_MATERIALS = {None, "fog", "engraved", "screen", "print", "felt", "light"}
-TRANSITIONS = {"cut", "bubbles", "ink", "whip", "flash", "pass", "rewind"}
+TRANSITIONS = {"cut", "bubbles", "ink", "whip", "flash", "pass", "rewind", "spin", "zoom"}
 GRADES = {"day", "closing", "night", "own", "warm", "clean", "ember", "vrm_fire"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
 LYRIC_STYLES = {"v1", "v2"}
 # a main element: worn on her head (crown, hat), her face, a lyric word, a prop box in the set (check.ts heroBox)
@@ -322,6 +322,21 @@ def _ndc(C, L, t, a, X):
     return sum(d[i] * r[i] for i in range(3)) / (z * t * a), sum(d[i] * u[i] for i in range(3)) / (z * t)
 
 
+def _cam_v2(c: dict, tag: str, errors: list) -> dict:
+    """Camera v2 key options (studio/src/film/types.ts CamKey): spline path, dolly-zoom frame height, handheld shake."""
+    out = {}
+    if "path" in c:
+        if c["path"] not in ("line", "spline"):
+            errors.append(f"{tag}: path must be line or spline")
+        else:
+            out["path"] = c["path"]
+    if "frameH" in c:
+        out["frameH"] = float(c["frameH"])
+    if "shake" in c:
+        out["shake"] = max(0.0, min(1.5, float(c["shake"])))
+    return out
+
+
 def frame_camera(c: dict, base: dict, pkeys: list[dict], kf: int, aspect: float, marks: dict,
                  errors: list[str], tag: str):
     size = c["frame"]
@@ -528,10 +543,20 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                     continue
                 pos, look, fov = fc
                 ckeys.append({"f": kf, "pos": pos, "look": look, "fov": fov, "roll": float(c.get("roll", 0)),
-                              "ease": c.get("ease", "inOut")})
+                              "ease": c.get("ease", "inOut"), **_cam_v2(c, ktag, errors)})
                 continue
-            pos = _v3(c.get("pos", base.get("pos")), marks, errors, ktag)
-            look = _v3(c.get("look", base.get("look")), marks, errors, ktag)
+            if "orbit" in c:                              # camera v2: a point on a circle around her / a mark
+                o = c["orbit"]
+                centre = _v3(o.get("around"), marks, errors, ktag)
+                if centre is None:
+                    continue
+                ang = math.radians(float(o.get("deg", 0)))
+                r, up = float(o.get("radius", 3.0)), float(o.get("height", 1.2))
+                pos = [centre[0] + r * math.sin(ang), centre[1] + up, centre[2] + r * math.cos(ang)]
+                look = [centre[0], centre[1] + float(o.get("look_y", 1.0)), centre[2]]
+            else:
+                pos = _v3(c.get("pos", base.get("pos")), marks, errors, ktag)
+                look = _v3(c.get("look", base.get("look")), marks, errors, ktag)
             if pos is None or look is None:
                 continue
             off = c.get("offset")
@@ -542,7 +567,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                 errors.append(f"{ktag}: ease must be one of {sorted(EASES)}")
             ckeys.append({"f": kf, "pos": pos, "look": look,
                           "fov": float(c.get("fov", base.get("fov", 35))), "roll": float(c.get("roll", 0)),
-                          "ease": c.get("ease", "inOut")})
+                          "ease": c.get("ease", "inOut"), **_cam_v2(c, ktag, errors)})
         if not ckeys:
             errors.append(f"{tag}: needs at least one camera key")
             continue

@@ -26,21 +26,42 @@ export type Cam = {pos: V3; look: V3; fov: number; roll: number};
 export const wobble = (t: number, seed: number) =>
   (Math.sin(t * 1.7 + seed) * 0.5 + Math.sin(t * 2.9 + seed * 2.1) * 0.3 + Math.sin(t * 5.3 + seed * 0.7) * 0.2);
 
-/** Camera at frame f (shot-local keys use film frames). Handheld drift + a kick on music hits make it alive. */
+// Catmull-Rom through p1..p2 with p0 / p3 as neighbours (centripetal enough for camera paths: no loops at keys)
+function cr(p0: V3, p1: V3, p2: V3, p3: V3, t: number): V3 {
+  const t2 = t * t, t3 = t2 * t;
+  return [0, 1, 2].map((i) => 0.5 * ((2 * p1[i]) + (-p0[i] + p2[i]) * t + (2 * p0[i] - 5 * p1[i] + 4 * p2[i] - p3[i]) * t2
+    + (-p0[i] + 3 * p1[i] - 3 * p2[i] + p3[i]) * t3)) as V3;
+}
+
+/** Camera at frame f (shot-local keys use film frames). Handheld drift + a kick on music hits make it alive.
+ *  v2: a key can be reached on a spline (`path`), keep the subject's size while the lens travels (`frameH`, the
+ *  dolly zoom of the dissociation moment) and shake like a hand-held camera (`shake`). */
 export function cameraAt(keys: CamKey[], f: number, hits: number[] = [], kick = 0, fps = 30): Cam {
   let c: Cam;
+  let shake = keys[0].shake ?? 0;
   if (f <= keys[0].f) c = {pos: keys[0].pos, look: keys[0].look, fov: keys[0].fov, roll: keys[0].roll ?? 0};
   else {
     let i = keys.length - 1;
     for (let k = 0; k < keys.length - 1; k++) if (f < keys[k + 1].f) { i = k; break; }
     const a = keys[i], b = keys[Math.min(i + 1, keys.length - 1)];
     const t = b.f === a.f ? 1 : ease(b.ease, (f - a.f) / (b.f - a.f));
-    c = {pos: lerp3(a.pos, b.pos, t), look: lerp3(a.look, b.look, t), fov: lerp(a.fov, b.fov, t),
-      roll: lerp(a.roll ?? 0, b.roll ?? 0, t)};
+    const spline = b.path === 'spline' && a !== b;
+    const p0 = keys[Math.max(0, i - 1)], p3 = keys[Math.min(keys.length - 1, i + 2)];
+    const pos = spline ? cr(p0.pos, a.pos, b.pos, p3.pos, t) : lerp3(a.pos, b.pos, t);
+    const look = spline ? cr(p0.look, a.look, b.look, p3.look, t) : lerp3(a.look, b.look, t);
+    let fov = lerp(a.fov, b.fov, t);
+    if (a.frameH && b.frameH) {
+      const h = lerp(a.frameH, b.frameH, t);
+      const d = Math.hypot(pos[0] - look[0], pos[1] - look[1], pos[2] - look[2]);
+      fov = (2 * Math.atan(h / 2 / Math.max(0.05, d)) * 180) / Math.PI;
+    }
+    c = {pos, look, fov, roll: lerp(a.roll ?? 0, b.roll ?? 0, t)};
+    shake = lerp(a.shake ?? 0, b.shake ?? 0, t);
   }
   const s = f / fps;
-  const drift = 0.012;                                  // a breathing lens, never a locked-off tripod
-  let pos: V3 = [c.pos[0] + wobble(s * 0.6, 1) * drift, c.pos[1] + wobble(s * 0.5, 2) * drift, c.pos[2]];
+  const drift = 0.012 * (1 + shake * 5);               // a breathing lens, never a locked-off tripod
+  let pos: V3 = [c.pos[0] + wobble(s * (0.6 + shake * 2.4), 1) * drift, c.pos[1] + wobble(s * (0.5 + shake * 2.6), 2) * drift, c.pos[2]];
+  const look: V3 = shake ? [c.look[0] + wobble(s * 3.1, 5) * 0.025 * shake, c.look[1] + wobble(s * 2.7, 6) * 0.02 * shake, c.look[2]] : c.look;
   let fov = c.fov;
   if (kick > 0) {
     for (const h of hits) {
@@ -52,7 +73,7 @@ export function cameraAt(keys: CamKey[], f: number, hits: number[] = [], kick = 
       }
     }
   }
-  return {pos, look: c.look, fov, roll: c.roll};
+  return {pos, look, fov, roll: c.roll + (shake ? wobble(s * 2.2, 7) * 1.4 * shake : 0)};
 }
 
 /** Vertical FOV for the real frame: keys are written for 16:9; a portrait frame keeps the subject across its width. */

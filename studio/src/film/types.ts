@@ -4,7 +4,12 @@ export type V3 = [number, number, number];
 export type Ease = 'linear' | 'in' | 'out' | 'inOut' | 'snap' | 'hold';
 
 /** A camera key: where the lens is, what it looks at, vertical field of view (degrees, for 16:9), roll (deg). */
-export type CamKey = {f: number; pos: V3; look: V3; fov: number; roll?: number; ease?: Ease};
+export type CamKey = {f: number; pos: V3; look: V3; fov: number; roll?: number; ease?: Ease;
+  // camera v2 (toki 2026-10-22: "ausgefallene Winkel und Kamerafahrten, die gleichzeitig Transitions sind"):
+  path?: 'line' | 'spline';  // how the lens travels INTO this key: a straight line or a smooth curve through the neighbours
+  frameH?: number;           // dolly zoom: the frame height (m) at the look point stays this size while the lens travels
+  shake?: number;            // handheld: 0 = the breathing tripod, 1 = a running camera (lerped between keys)
+};
 
 export type Act = 'idle' | 'pop' | 'hop' | 'bounce' | 'shake' | 'tilt' | 'lean' | 'shrink' | 'turn' | 'stomp' | 'float';
 
@@ -62,7 +67,9 @@ export type Lyrics = {
   mirror?: number | null;  // firework words: the water surface height they are mirrored in (null = no mirror)
 };
 
-export type TransitionKind = 'cut' | 'bubbles' | 'ink' | 'whip' | 'flash' | 'pass' | 'rewind';
+// spin / zoom (2026-10-22): the CAMERA carries the cut - a barrel roll or a punch-in that leaves one world at speed
+// and arrives in the next with the same motion (the move is the transition, not a cover laid on top)
+export type TransitionKind = 'cut' | 'bubbles' | 'ink' | 'whip' | 'flash' | 'pass' | 'rewind' | 'spin' | 'zoom';
 export type Transition = {kind: TransitionKind; frames: number; obj?: string; dir?: number};
 
 export type SetEvent = {f: number; kind: string; arg?: number | string};

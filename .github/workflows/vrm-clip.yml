@@ -9,7 +9,7 @@ on:
         required: true
   push:
     branches: [main]
-    paths: ["jobs/*/clip.json", "studio/clip.mjs", "studio/lib.mjs", "studio/restore-mixamo.mjs", "studio/src/VrmClip.tsx", "studio/src/film/Film.tsx", "studio/src/three/VrmPuppet.tsx", "studio/src/three/vrmFilm.ts", "studio/src/three/vrmPoses.ts", "studio/src/three/vrmLipSync.ts", ".github/workflows/vrm-clip.yml"]
+    paths: ["jobs/*/clip.json", "studio/clip.mjs", "studio/lib.mjs", "studio/restore-mixamo.mjs", "studio/src/VrmClip.tsx", "studio/src/film/Film.tsx", "studio/src/three/VrmPuppet.tsx", "studio/src/three/vrmFilm.ts", "studio/src/three/vrmPoses.ts", "studio/src/three/vrmLipSync.ts", "studio/src/film/Fx2D.tsx", "studio/src/film/motion.ts", "studio/src/film/Transitions.tsx", ".github/workflows/vrm-clip.yml"]
 
 permissions:
   contents: write
@@ -21,7 +21,7 @@ concurrency:
 jobs:
   clip:
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
+    timeout-minutes: 90   # a clip job may render several variants (lip sync v1 / v2 + a camera test)
     steps:
       - uses: actions/checkout@v4
         with:

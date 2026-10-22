@@ -24,7 +24,7 @@ const vrmBoard: VrmBoardProps = {composition: 'VrmBoard', width: 1920, height: 1
     keys: [{f: 0, pose: 'stand', pos: [0, 0, 0]}]}]};
 
 const vrmClip: VrmClipProps = {composition: 'VrmClip', width: 1280, height: 720, fps: 30, durationInFrames: 240,
-  vrm: 'vrm/raymi3.vrm', sprites: [], set: 'deep', opts: {grade: 'vrm_fire'},
+  vrm: 'vrm/raymi5.vrm', sprites: [], set: 'deep', opts: {grade: 'vrm_fire'},
   cam: {pos: [0, 1.55, 4.6], look: [0, 0.9, -0.3], fov: 38},
   keys: [{f: 0, pose: 'stand', pos: [0, 0, -0.6]}]};
 

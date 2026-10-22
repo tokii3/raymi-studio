@@ -18,7 +18,9 @@ globalThis.fetch = async (u, o) => (String(u).startsWith('blob:') ? new Response
 
 const out = path.join(os.tmpdir(), `raymi-vrm-${process.pid}.mjs`);
 await build({entryPoints: [path.join(here, '..', 'src', 'three', 'VrmPuppet.tsx')], bundle: true, format: 'esm',
-  platform: 'node', outfile: out, logLevel: 'error', jsx: 'automatic'});
+  platform: 'node', outfile: out, logLevel: 'error', jsx: 'automatic',
+  // the Mixamo retargeter's ESM build also writes to a CommonJS `exports` (webpack tolerates it, node does not)
+  banner: {js: 'var exports = {};'}});
 const V = await import(pathToFileURL(out).href);
 fs.rmSync(out, {force: true});
 const POSES = ['stand', 'point', 'crouch', 'arms_up'];
@@ -61,4 +63,20 @@ test('the pose blend moves her: arms up raises the hands above the head', () => 
   V.poseVrm('raymi', keys('stand'), 0, 30, 0, cam, 0.6);
   const s = V.vrmAnatomy('raymi');
   assert.ok(s.leftHand.y < s.hips.y + 0.1, `stand: hands hang (${s.leftHand.y.toFixed(2)} vs hips ${s.hips.y.toFixed(2)})`);
+});
+
+test('raymi5 sings: m / b / p press her lips (raw Fcl_MTH_Close), a joyful face keeps only brows + eyes while she sings', async () => {
+  const b5 = fs.readFileSync(path.join(here, '..', '..', 'assets', 'vrm', 'raymi5.vrm'));
+  await V.preloadVrm('raymi5', b5.buffer.slice(b5.byteOffset, b5.byteOffset + b5.byteLength));
+  const k = [{f: 0, pose: 'sing', pos: [0, 0, 0], rotY: 'lens', expr: {joy: 0.6}}];
+  const rig = V.poseVrm('raymi5', k, 0, 30, 0, cam, 0.6, [{f: 0, values: {close: 0.9, a: 0.05}}]);
+  const face = rig.morphs[0];
+  assert.ok(face, 'her face mesh with Fcl_MTH_Close');
+  const inf = (n) => face.mesh.morphTargetInfluences[face.dict[n]];
+  assert.ok(inf('Fcl_MTH_Close') > 0.85, `close ${inf('Fcl_MTH_Close')}`);
+  assert.ok(inf('Fcl_EYE_Joy') > 0.5 && inf('Fcl_BRW_Joy') > 0.5, 'joy lives on in brows + eyes');
+  assert.equal(inf('Fcl_ALL_Joy') ?? 0, 0, 'the whole-face joy (with its open mouth) is off while singing');
+  const rest = V.poseVrm('raymi5', k, 0, 30, 0, cam, 0.6, []);
+  assert.equal(inf('Fcl_MTH_Close'), 0, 'not singing: lips relaxed again');
+  assert.ok(rest.vrm.expressionManager.getValue('happy') > 0.5 || rest.vrm.expressionManager.getValue('joy') > 0.5);
 });

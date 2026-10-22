@@ -40,6 +40,8 @@ type Rig = {
   motions: Map<string, THREE.AnimationClip>;
   mixer: THREE.AnimationMixer;
   actions: Map<string, THREE.AnimationAction>;
+  morphs: {mesh: THREE.Mesh; dict: Record<string, number>}[];   // her raw face shape keys (Fcl_MTH_Close, Fcl_BRW_Joy ...)
+  outline: {width: number; color: string; meshes: THREE.Mesh[]} | null;
 };
 
 const rigs = new Map<string, Rig>();
@@ -72,9 +74,65 @@ async function loadRig(url: string, data?: ArrayBuffer): Promise<Rig> {
   }
   const rig: Rig = {vrm, root, ground, natural: box.max.y - box.min.y, floor: box.min.y, restLow: lowestFoot(vrm),
     mirror: vrm.meta?.metaVersion === '0', lock: null, materialStyle: null, materialBases,
-    motions: new Map(), mixer: new THREE.AnimationMixer(vrm.scene), actions: new Map()};
+    motions: new Map(), mixer: new THREE.AnimationMixer(vrm.scene), actions: new Map(), morphs: faceMorphs(vrm), outline: null};
   vrm.springBoneManager?.setInitState();
   return rig;
+}
+
+function faceMorphs(vrm: VRM): Rig['morphs'] {
+  const out: Rig['morphs'] = [];
+  vrm.scene.traverse((o) => {
+    const m = o as THREE.Mesh;
+    if (m.isMesh && m.morphTargetDictionary && 'Fcl_MTH_Close' in m.morphTargetDictionary) out.push({mesh: m, dict: m.morphTargetDictionary});
+  });
+  return out;
+}
+
+/** Write raw shape keys AFTER the expression manager (it owns the preset ones; these it never touches). */
+function setMorph(rig: Rig, name: string, v: number) {
+  for (const {mesh, dict} of rig.morphs) {
+    const i = dict[name];
+    if (i !== undefined && mesh.morphTargetInfluences) mesh.morphTargetInfluences[i] = Math.max(0, Math.min(1, v));
+  }
+}
+
+// 2D look (toki 2026-10-22: "mehr wie ein 2D-Video"): an ink line around her like a cel drawing - an inverted hull,
+// a back-face copy of each skinned mesh pushed out along its normals, sharing her skeleton and shape keys.
+function ensureOutline(rig: Rig, width: number, color: string) {
+  if ((rig.outline?.width ?? 0) === width && (!rig.outline || rig.outline.color === color)) return;
+  for (const m of rig.outline?.meshes ?? []) m.parent?.remove(m);
+  const meshes: THREE.Mesh[] = [];
+  if (width > 0) {
+    const mat = new THREE.MeshBasicMaterial({color, side: THREE.BackSide, toneMapped: false});
+    mat.onBeforeCompile = (sh) => {
+      sh.uniforms.outlineW = {value: width};
+      sh.vertexShader = 'uniform float outlineW;\n' + sh.vertexShader.replace('#include <begin_vertex>',
+        '#include <begin_vertex>\ntransformed += normalize(objectNormal) * outlineW;');
+    };
+    mat.customProgramCacheKey = () => `raymi-outline-${width}`;
+    const src: THREE.SkinnedMesh[] = [];
+    rig.vrm.scene.traverse((o) => { const s = o as THREE.SkinnedMesh; if (s.isSkinnedMesh && !s.userData.outline) src.push(s); });
+    for (const s of src) {
+      // her face mesh also holds eyes, lashes and brows (thin planes): a hull would draw black rims around them
+      if (/face/i.test(s.name) || /face/i.test(s.parent?.name ?? '')) continue;
+      const o = new THREE.SkinnedMesh(s.geometry, mat);
+      o.bind(s.skeleton, s.bindMatrix);
+      o.userData.outline = s;
+      o.frustumCulled = false;
+      o.castShadow = false;
+      s.parent?.add(o);
+      o.position.copy(s.position); o.quaternion.copy(s.quaternion); o.scale.copy(s.scale);
+      meshes.push(o);
+    }
+  }
+  rig.outline = {width, color, meshes};
+}
+
+function syncOutline(rig: Rig) {
+  for (const o of rig.outline?.meshes ?? []) {
+    const s = o.userData.outline as THREE.SkinnedMesh;
+    if (s.morphTargetInfluences && o.morphTargetInfluences) o.morphTargetInfluences.splice(0, s.morphTargetInfluences.length, ...s.morphTargetInfluences);
+  }
 }
 
 function lowestFoot(vrm: VRM): number {
@@ -299,17 +357,39 @@ function setExpressions(rig: Rig, k: VrmKey, f: number, fps: number, mouthKeys: 
     if (!em.getExpression(n)) cancelRender(new Error(`VRM has no expression ${name} (${n})`));
     em.setValue(n, v);
   }
-  // Apply tracked vowel presets on top of the expression; Raymi's VRM has native A/I/U/E/O morphs.
-  for (const [name, v] of Object.entries(vrmMouthAt(mouthKeys, f))) {
-    const n = EXPRESSION_ALIAS[name] ?? name;
-    if (em.getExpression(n)) em.setValue(n, v);
+  // Singing: the vowel presets on top. An emotion preset (joy, fun ...) also moves the MOUTH and would fight the
+  // vowels - while she sings, its brows + eyes come from her raw shape keys instead (written after the update).
+  const mouth = vrmMouthAt(mouthKeys, f);
+  const singing = Object.values(mouth).reduce((a, b) => a + (b ?? 0), 0) > 0.05;
+  // raw keys are never reset by the expression manager: every frame writes all of them (0 when unused)
+  const raw: Record<string, number> = Object.fromEntries(['Fcl_MTH_Close', ...Object.values(EMOTION_PARTS).flat()].map((k) => [k, 0]));
+  if (singing) {
+    for (const [name, v] of Object.entries(want)) {
+      const part = EMOTION_PARTS[name.toLowerCase()];
+      if (!part) continue;
+      em.setValue(EXPRESSION_ALIAS[name.toLowerCase()] ?? name, 0);
+      for (const k of part) raw[k] = Math.max(raw[k] ?? 0, v);
+    }
   }
+  for (const [name, v] of Object.entries(mouth)) {
+    if (name === 'close') { raw.Fcl_MTH_Close = v ?? 0; continue; }
+    const n = EXPRESSION_ALIAS[name] ?? name;
+    if (em.getExpression(n)) em.setValue(n, v ?? 0);
+  }
+  pendingRaw.set(rig, raw);
   // blinks: every ~3.4 s on fixed frames (no randomness between workers), 5 frames; never during a held blink / joy
   if (!('blink' in want) && !('blink_l' in want) && !('blink_r' in want) && !('joy' in want) && !('happy' in want)) {
     const period = Math.round(3.4 * fps), ph = f % period;
     if (ph < 5) em.setValue('blink', Math.sin((ph / 5) * Math.PI));
   }
 }
+
+const EMOTION_PARTS: Record<string, string[]> = {
+  joy: ['Fcl_BRW_Joy', 'Fcl_EYE_Joy'], happy: ['Fcl_BRW_Joy', 'Fcl_EYE_Joy'], fun: ['Fcl_BRW_Fun', 'Fcl_EYE_Fun'],
+  relaxed: ['Fcl_BRW_Fun', 'Fcl_EYE_Fun'], angry: ['Fcl_BRW_Angry', 'Fcl_EYE_Angry'], sorrow: ['Fcl_BRW_Sorrow', 'Fcl_EYE_Sorrow'],
+  sad: ['Fcl_BRW_Sorrow', 'Fcl_EYE_Sorrow'], surprised: ['Fcl_BRW_Surprised', 'Fcl_EYE_Surprised'],
+};
+const pendingRaw = new WeakMap<Rig, Record<string, number>>();
 
 const camV = new THREE.Vector3();
 /** Run the deterministic simulation and leave the rig posed for frame f. */
@@ -332,6 +412,7 @@ export function poseVrm(url: string, keys: VrmKey[], f: number, fps: number, fro
   const k = keys[keyAt(keys, f)];
   setExpressions(rig, k, f, fps, mouthKeys);
   vrm.expressionManager?.update();
+  for (const [name, v] of Object.entries(pendingRaw.get(rig) ?? {})) setMorph(rig, name, v);
   if (vrm.lookAt && (k.look ?? 'lens') === 'lens') {
     vrm.lookAt.autoUpdate = true;
     vrm.lookAt.lookAt(camV.set(...camPos));
@@ -354,14 +435,20 @@ export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
   return out;
 }
 
+/** step: 2 = she moves "on twos" (15 poses a second, the anime look) while the camera stays smooth at 30.
+ *  outline: ink line width in model metres (0 = none, ~0.004 = a cel drawing). */
 export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: number; from?: number; camPos: V3;
-  mouthKeys?: VrmMouthKey[]; lock?: number; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string}> = ({url, keys, mouthKeys = [], f, fps, from = 0, camPos, lock = 0.6,
-  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none'}) => {
+  mouthKeys?: VrmMouthKey[]; lock?: number; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string;
+  step?: number; outline?: number; outlineColor?: string}> = ({url, keys, mouthKeys = [], f: frame, fps, from = 0, camPos, lock = 0.6,
+  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030'}) => {
+  const f = step > 1 ? frame - ((((frame - from) % step) + step) % step) : frame;
   if (!keys.length || f < keys[0].f) return null;
   const rig = rigs.get(url);
   if (!rig) { cancelRender(new Error(`VRM not preloaded: ${url}`)); throw new Error('unreachable'); }
   styleMaterials(rig, materialStyle);
+  ensureOutline(rig, outline, outlineColor);
   const posed = poseVrm(url, keys, f, fps, Math.max(from, keys[0].f), camPos, lock, mouthKeys);
+  syncOutline(posed);
   const p = posed.root.position;
   const w = (posed.root.scale.x * posed.natural) * 0.42;
   const chest = posed.vrm.humanoid.getRawBoneNode('chest')?.getWorldPosition(new THREE.Vector3());
