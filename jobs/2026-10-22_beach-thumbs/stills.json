@@ -1,5 +1,5 @@
 {
- "_why": "5 MV + 5 Short thumbnails, the feed view at 168 px",
+ "_why": "5 MV + 5 Short thumbnails, the feed view at 168 px (round 2)",
  "passes": [
   {
    "format": "mv",
@@ -12,9 +12,9 @@
    ],
    "names": [
     "thumb_mv_M1_dance",
-    "thumb_mv_M2_marionette",
+    "thumb_mv_M2_escape",
     "thumb_mv_M3_dream",
-    "thumb_mv_M4_take",
+    "thumb_mv_M4_puppet",
     "thumb_mv_M5_bye_boss"
    ]
   },
@@ -29,9 +29,9 @@
    ],
    "names": [
     "thumb_short_S1_dance",
-    "thumb_short_S2_marionette",
+    "thumb_short_S2_escape",
     "thumb_short_S3_dream",
-    "thumb_short_S4_take",
+    "thumb_short_S4_puppet",
     "thumb_short_S5_bye_boss"
    ]
   }
