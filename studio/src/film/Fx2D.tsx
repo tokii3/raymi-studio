@@ -51,7 +51,8 @@ export const Fx2DDefs: React.FC<{fx?: Fx[]; f: number; center?: [number, number]
           const mix = d.mix ?? 1;
           return (
             <filter key={i} id={`raymi-duo-${i}`} colorInterpolationFilters="sRGB">
-              <feColorMatrix in="SourceGraphic" type="matrix"
+              <feGaussianBlur in="SourceGraphic" stdDeviation="0.7" result="soft" />
+              <feColorMatrix in="soft" type="matrix"
                 values="0.30 0.59 0.11 0 0  0.30 0.59 0.11 0 0  0.30 0.59 0.11 0 0  0 0 0 1 0" result="lum" />
               <feComponentTransfer in="lum" result="post">
                 <feFuncR type="discrete" tableValues={steps} /><feFuncG type="discrete" tableValues={steps} /><feFuncB type="discrete" tableValues={steps} />

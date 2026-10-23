@@ -64,13 +64,13 @@ export const Globe: React.FC<SetProps> = ({f, opts, camPos}) => {
   });
   return (
     <group>
-      <SetLight sky="#eef2ff" ground="#8a90a6" fill={1.3} key="#ffffff" keyI={1.4} keyPos={[2, 6, 4]} target={[0, 0, 0]} shadowSize={5}
+      <SetLight sky="#dfe6ff" ground="#4a5680" fill={0.8} key="#ffffff" keyI={1.4} keyPos={[2, 6, 4]} target={[0, 0, 0]} shadowSize={5}
         fog="#6a6f82" fogNear={6} fogFar={22} bg="#4a4e60" />
       {/* the office outside, huge and soft through the glass */}
       <mesh position={[0, 4, -12]} scale={[40, 20, 1]}><planeGeometry args={[1, 1]} /><meshBasicMaterial map={sky} toneMapped={false} /></mesh>
       {/* the paper ground (a disc) and the file towers, slightly tilting while it is shaken */}
       <group rotation={[0.06 * swirl * Math.sin(f * 0.7), 0, 0.08 * swirl * Math.sin(f * 0.9)]}>
-        <mesh rotation={[-Math.PI / 2, 0, 0]} material={toonSurface('#e4e6ee', 'paper', [6, 6])} receiveShadow><circleGeometry args={[R, 48]} /></mesh>
+        <mesh rotation={[-Math.PI / 2, 0, 0]} material={toonSurface('#8fa6d8', 'paper', [6, 6])} receiveShadow><circleGeometry args={[R, 48]} /></mesh>
         {[[-1.8, -1.6, 2.4], [1.6, -1.9, 2.0], [0.2, -2.5, 3.0], [-2.4, 0.4, 1.4], [2.3, 0.6, 1.2]].map(([x, z, hgt], i) => (
           <group key={i} position={[x, 0, z]} rotation={[0, rnd(i) * 1.5, 0]}>
             {/* a tower of files, each folder a little askew, a cap of paper snow on top */}

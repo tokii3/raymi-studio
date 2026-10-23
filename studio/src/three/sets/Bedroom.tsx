@@ -11,6 +11,7 @@ import * as THREE from 'three';
 import {RBox, Sign, drawText} from '../parts';
 import {SetLight, canvasTexture, rnd, toon, toonSurface} from '../look';
 import {RoutineLife} from '../routine';
+import {RoomClutter} from '../clutter';
 import {SalmonBody} from '../creatures';
 import {ease} from '../../film/motion';
 import type {SetProps} from './index';
@@ -95,6 +96,7 @@ export const Bedroom: React.FC<SetProps> = ({f, opts, camPos}) => {
         ctx.fillStyle = '#4b4f70'; ctx.fillRect(0, 0, w, h); drawText(ctx, 'DOME 7 - RAYMI', w / 2, h / 2, h * 0.55, '#e7e2ff', {maxW: w * 0.9});
       }} />
       {power > 0.2 ? <pointLight position={[0.8, 1.2, -0.6]} color="#ffe6c4" intensity={3 * power} distance={4} decay={1.5} /> : null}
+      <RoomClutter f={f} />
       <RoutineLife opts={opts} f={f} camPos={camPos} />
     </group>
   );

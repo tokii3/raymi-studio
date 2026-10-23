@@ -335,7 +335,11 @@ export const SnowGlobe: React.FC<{t: ThingSpec; f: number}> = ({t, f}) => {
             return <mesh key={`s${i}`} position={[Math.cos(a) * r, y, Math.sin(a) * r]}><planeGeometry args={[0.008, 0.008]} /><meshBasicMaterial color="#ffffff" side={THREE.DoubleSide} toneMapped={false} /></mesh>;
           })}
           <mesh renderOrder={6}><sphereGeometry args={[0.11, 28, 20]} />
-            <meshToonMaterial color="#dff2ff" transparent opacity={0.22} depthWrite={false} /></mesh>
+            <meshToonMaterial color="#dff2ff" transparent opacity={0.3} depthWrite={false} /></mesh>
+          {/* a glass rim + a bright specular streak + its own cold glow: it reads as a snow globe at phone size */}
+          <mesh rotation={[Math.PI / 2, 0, 0]} position={[0, -0.075, 0]} renderOrder={7}><torusGeometry args={[0.085, 0.01, 8, 28]} /><meshToonMaterial color="#e8f6ff" /></mesh>
+          <mesh position={[-0.045, 0.05, 0.085]} rotation={[0, -0.4, 0.6]} renderOrder={8}><planeGeometry args={[0.018, 0.07]} /><meshBasicMaterial color="#ffffff" transparent opacity={0.85} toneMapped={false} /></mesh>
+          <pointLight position={[0, 0.02, -0.05]} color="#cfe8ff" intensity={0.9} distance={0.7} decay={1.6} />
           {crack > 0 ? Array.from({length: 9}, (_, i) => {
             const a = (i / 9) * Math.PI * 2;
             return <mesh key={`c${i}`} position={[Math.cos(a) * 0.04 * crack, Math.sin(a) * 0.04 * crack, 0.105]} rotation={[0, 0, a]} renderOrder={7}>

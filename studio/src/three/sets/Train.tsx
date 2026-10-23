@@ -48,12 +48,12 @@ export const Train: React.FC<SetProps> = ({f, opts, camPos}) => {
             if (side > 0 && Math.abs(z) < 1.2) return null;           // the doors
             return (
               <group key={w} position={[side * 1.31, 1.35, z]} rotation={[0, -side * Math.PI / 2, 0]}>
-                <mesh><planeGeometry args={[2.2, 0.9]} /><meshBasicMaterial color={flash ? '#7fe6e0' : '#0d1730'} toneMapped={false} /></mesh>
+                <mesh><planeGeometry args={[2.2, 0.9]} /><meshBasicMaterial color={flash ? '#ffe2a8' : '#3a6aa8'} toneMapped={false} /></mesh>
                 {flash ? <mesh position={[0, -0.25, 0.005]}><planeGeometry args={[2.2, 0.4]} /><meshBasicMaterial color="#f4dfae" toneMapped={false} /></mesh> : null}
                 {!flash ? Array.from({length: 10}, (_, i) => {
                   const x = ((rnd(i + w * 7) * 2.6 - run * (0.6 + rnd(i * 3))) % 2.6 + 2.6) % 2.6 - 1.3;
                   return <mesh key={i} position={[x, (rnd(i * 2.3) - 0.5) * 0.8, 0.004]}><planeGeometry args={[0.12 + 0.2 * rnd(i * 5), 0.012]} />
-                    <meshBasicMaterial color="#7fa2e0" transparent opacity={0.7} toneMapped={false} /></mesh>;
+                    <meshBasicMaterial color="#cfe6ff" transparent opacity={0.8} toneMapped={false} /></mesh>;
                 }) : null}
                 <mesh position={[0, 0, 0.01]}><planeGeometry args={[2.2, 0.9]} /><meshBasicMaterial color="#cfe0ff" transparent opacity={0.12} toneMapped={false} /></mesh>
               </group>
@@ -70,6 +70,18 @@ export const Train: React.FC<SetProps> = ({f, opts, camPos}) => {
           ))}
         </group>
       ))}
+      {/* the route map strip over the doors (Dome 1 ... Dome 7, a dot for each stop) */}
+      <mesh position={[1.27, 2.15, 0]} rotation={[0, -Math.PI / 2, 0]}><planeGeometry args={[2.0, 0.22]} />
+        <meshToonMaterial map={canvasTexture('train_routemap', 1024, 112, (ctx, w, h) => {
+          ctx.fillStyle = '#f2efe6'; ctx.fillRect(0, 0, w, h);
+          ctx.strokeStyle = '#2f6fd0'; ctx.lineWidth = 10; ctx.beginPath(); ctx.moveTo(40, h * 0.42); ctx.lineTo(w - 40, h * 0.42); ctx.stroke();
+          ['HOME', 'DOME 2', 'DOME 3', 'MARKET', 'DOME 5', 'REEF', 'DOME 7'].forEach((t, i) => {
+            const x = 40 + i * (w - 80) / 6; ctx.fillStyle = i === 2 ? '#e0533c' : '#ffffff'; ctx.strokeStyle = '#2f6fd0'; ctx.lineWidth = 6;
+            ctx.beginPath(); ctx.arc(x, h * 0.42, 14, 0, Math.PI * 2); ctx.fill(); ctx.stroke(); drawText(ctx, t, x, h * 0.82, 22, '#2a2c38');
+          });
+        })} /></mesh>
+      {/* floor stripes + a warm accent on the door edges */}
+      {[-0.7, 0.7].map((x) => <mesh key={`fs${x}`} rotation={[-Math.PI / 2, 0, 0]} position={[x, 0.003, 0]}><planeGeometry args={[0.04, 16]} /><meshBasicMaterial color="#f2c94c" toneMapped={false} /></mesh>)}
       {/* the LED band over the windows on the left wall */}
       <mesh position={[-1.27, 2.2, 0]} rotation={[0, Math.PI / 2, 0]}><planeGeometry args={[9, 0.2]} /><meshBasicMaterial map={led} toneMapped={false} /></mesh>
       {/* poles and straps */}

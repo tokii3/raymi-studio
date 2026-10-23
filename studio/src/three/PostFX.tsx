@@ -18,7 +18,7 @@ export const PostFX: React.FC<{spec?: PostSpec}> = ({spec = {}}) => {
   const effects: React.ReactElement[] = [];
   if (ao > 0) effects.push(<N8AO key="ao" aoRadius={0.55} distanceFalloff={0.7} intensity={2.4 * ao} quality="low" halfRes color={new THREE.Color('#0d0820')} />);
   if (typeof spec.dof === 'number') effects.push(<DepthOfField key="dof" worldFocusDistance={spec.dof} worldFocusRange={spec.dofRange ?? 0.6} bokehScale={3} />);
-  if (bloom > 0) effects.push(<Bloom key="bloom" intensity={bloom} luminanceThreshold={0.62} luminanceSmoothing={0.25} mipmapBlur radius={0.7} />);
+  if (bloom > 0) effects.push(<Bloom key="bloom" intensity={bloom} luminanceThreshold={0.86} luminanceSmoothing={0.12} mipmapBlur radius={0.65} />);
   if (chroma > 0) effects.push(<ChromaticAberration key="ca" offset={new THREE.Vector2(chroma, chroma)} radialModulation modulationOffset={0.35} blendFunction={BlendFunction.NORMAL} />);
   return <EffectComposer multisampling={0} enableNormalPass={false}>{effects}</EffectComposer>;
 };

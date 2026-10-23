@@ -16,6 +16,7 @@ import {SetLight, canvasTexture, rnd, toon, toonSurface} from '../look';
 import {DeepLife, SalmonBody} from '../creatures';
 import {Headphones, RoutineLife} from '../routine';
 import {RBox} from '../parts';
+import {Coral} from '../clutter';
 import type {SetProps} from './index';
 
 type P3 = [number, number, number];
@@ -80,8 +81,8 @@ export const Dream: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       <mesh scale={[120, 80, 120]} position={[0, -20, 0]}><sphereGeometry args={[1, 32, 20]} />
         <meshBasicMaterial map={sky} side={THREE.BackSide} fog={false} toneMapped={false} /></mesh>
       {/* HER SUN: one warm light shaft from the surface onto the pile (the forecast she was right about) */}
-      <mesh position={[0, 12, -0.2]} renderOrder={3}>
-        <cylinderGeometry args={[1.0, 2.2, 24, 32, 1, true]} />
+      <mesh position={[0, 12, -1.3]} renderOrder={3}>
+        <cylinderGeometry args={[0.5, 1.2, 24, 32, 1, true]} />
         <meshBasicMaterial color={new THREE.Color('#ffd9a0').lerp(new THREE.Color('#c9a6ff'), night)} transparent opacity={0.11} depthWrite={false} blending={THREE.AdditiveBlending} side={THREE.DoubleSide} toneMapped={false} />
       </mesh>
       <spotLight position={[0, 14, -0.2]} target-position={[0, 0, -0.2]} angle={0.2} penumbra={0.6} intensity={(170 - 100 * night)} distance={40} decay={1.4}
@@ -108,7 +109,7 @@ export const Dream: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       {Array.from({length: 26}, (_, i) => {
         const a = rnd(i * 2.9) * Math.PI * 2, r = i < 8 ? rnd(i * 4.1) * 1.2 : 1.2 + rnd(i * 4.1) * 1.7;
         const sz = i < 8 ? 0.9 + rnd(i) * 0.5 : 0.45 + rnd(i * 6.3) * 0.5;
-        const cols = ['#8f86e8', '#f1c7d8', '#7fd6e8', '#ffd9a8', '#b9a6ff', '#ff9ab5'];
+        const cols = ['#9c8ff0', '#f7c8a8', '#6fc8d8'];
         return <mesh key={`pile${i}`} position={[Math.cos(a) * r, -0.32 + (i < 8 ? 0.05 : 0.15 * rnd(i * 7)), Math.sin(a) * r - 0.2]} scale={[sz, sz * 0.62, sz]}
           material={toonSurface(cols[i % cols.length], 'plush', [3, 3])} castShadow receiveShadow><sphereGeometry args={[0.62, 20, 14]} /></mesh>;
       })}
@@ -127,6 +128,11 @@ export const Dream: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
         const a = rnd(i * 3.7) * Math.PI * 2, r = Math.sqrt(rnd(i * 1.9)) * 1.4;
         return <mesh key={`dust${i}`} position={[Math.cos(a) * r, 0.25 + 0.02 * Math.sin(t * 2 + i), Math.sin(a) * r - 0.2]}>
           <sphereGeometry args={[0.012, 6, 4]} /><meshBasicMaterial color="#fff2c8" toneMapped={false} /></mesh>;
+      })}
+      {/* a soft reef ring around the pile: coral with glowing tips gives the dream a ground line and depth */}
+      {Array.from({length: 9}, (_, i) => {
+        const a = -0.4 + (i / 8) * (Math.PI + 0.8);
+        return <Coral key={`co${i}`} pos={[Math.cos(a) * 2.9, -0.2, -0.2 - Math.sin(a) * 2.9]} seed={i * 3 + 1} c={['#f79ac0', '#9c8ff0', '#6fc8d8'][i % 3]} glow={['#ffe0f0', '#e8e0ff', '#e0fbff'][i % 3]} />;
       })}
       {/* her motes: bioluminescent dots drifting up */}
       {Array.from({length: 70}, (_, i) => {

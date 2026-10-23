@@ -7160,7 +7160,32 @@
    "camera": [
     {
      "at": 0,
-     "cam": "doors_in"
+     "pos": [
+      -0.3,
+      1.35,
+      -1.6
+     ],
+     "look": [
+      1.6,
+      1,
+      0.4
+     ],
+     "fov": 40
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.2,
+      1.35,
+      -1.2
+     ],
+     "look": [
+      1,
+      1,
+      0.2
+     ],
+     "fov": 38,
+     "ease": "out"
     }
    ],
    "actor": [
@@ -7217,6 +7242,21 @@
    "transition": {
     "kind": "cut",
     "frames": 0
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.64,
+      0.91,
+      0.04
+     ],
+     "size": 0.128,
+     "width": 0.8,
+     "tilt": -10.9,
+     "roll": 0,
+     "rot": -124,
+     "key_scale": 1.8
+    }
    }
   },
   {
@@ -10181,11 +10221,31 @@
    "camera": [
     {
      "at": 0,
-     "cam": "low_wide"
+     "pos": [
+      -1.6,
+      1.4,
+      2.4
+     ],
+     "look": [
+      0,
+      1,
+      -0.1
+     ],
+     "fov": 40
     },
     {
      "at": "end",
-     "cam": "crane_high",
+     "pos": [
+      -2.6,
+      4.2,
+      4.4
+     ],
+     "look": [
+      0.5,
+      0.6,
+      -0.8
+     ],
+     "fov": 44,
      "ease": "inOut"
     }
    ],
@@ -10213,15 +10273,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      2.48,
-      2.3,
-      -2.62
+      4.74,
+      -0.23,
+      -7.12
      ],
-     "size": 0.449,
-     "width": 9.97,
-     "tilt": -30.6,
+     "size": 0.407,
+     "width": 13.07,
+     "tilt": -30.7,
      "roll": 0,
-     "rot": -31.4,
+     "rot": -32.5,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }

@@ -533,6 +533,11 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
         <meshBasicMaterial map={blobTexture(shadow)} transparent depthWrite={false} opacity={0.8} toneMapped={false} />
       </mesh>
       <primitive object={posed.root} />
+      {/* a cool rim light behind her, toward the lens: her silhouette separates from any background (look-critic) */}
+      {chest ? (() => {
+        const back = new THREE.Vector3(p.x - camPos[0], 0, p.z - camPos[2]).normalize().multiplyScalar(0.9);
+        return <pointLight position={[chest.x + back.x, chest.y + 0.45, chest.z + back.z]} color="#b9c8ff" intensity={2.2} distance={2.2} decay={1.6} />;
+      })() : null}
       {glow && chest && glowGain > 0.01 ? (    // 灯闇: she is the lamp in the dark (like Puppet3D)
         <pointLight position={[chest.x, chest.y, chest.z + 0.25]} color={glow} intensity={7 * pulse} distance={5} decay={1.4} />
       ) : null}
