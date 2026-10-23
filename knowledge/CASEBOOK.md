@@ -59,6 +59,19 @@ Verdicts are toki's words (old engine VIDEO_LEARNINGS / PROGRESS / catalog). Exe
   lit, on surfaces, romaji + English), the thumbnails stage, the catalog status, the grade library as the look step,
   the critic calibration (`knowledge/calibration/2026-10-19_KING.md`).
 
+- **POV Shorts week (2026-10-23/24, 7 talking 3D lore Shorts):** the lens is the viewer - she glares at you on the
+  train, bets on rain in Tokyo, covers the lens, taps back on the aquarium glass, plays rock paper scissors with
+  'stingray'. Voice line by line (edge-tts) + a Kevin MacLeod bed + own SFX; script-critic BLOCK x7 in round 1 (timing
+  written by hand), PASS x7 in round 2 once every time was computed from the bed map + the takes (`raymi pov`).
+  toki on the stills: "gefaellt mir schon ganz gut", then the finish ask (no burnt / loud colour, fg-mg-bg, depth +
+  motion blur). toki on the finals: "gefallen mir schon gut" - taken as they are; for next time: face more centred and
+  a little higher, Sashimi overexposed, hair sometimes flies, mouth half open when she is silent. What became studio
+  parts: kind pov, voice_lines + mix + bed maps + sfx, the timing check, worn props, POV fx (cover, pov hand, ripple,
+  algae, freeze, polaroid, stamps), act flatten, calm grades pov / pov_warm, DoF per close-up, camera motion blur, the
+  exposure check (+ washed), mouth closed when silent, calmer hair. Lessons: a pose sheet from a 3/4 view before a
+  build that relies on new poses; measure her head height on stills before framing a seated / crouched shot; the CI
+  ffmpeg install needs a fallback (apt hung for hours).
+
 ## Failed - and the root
 - **K/DA MORE v1 (2026-10-09):** "Raymi-Slideshow aus PowerPoint, bodenlos". Pretty 3D plates as stills + 2D zoom,
   even cuts, lyrics standing on top, no pilot. Every gate passed. v2 fixed it with a story of actions (one fan ->

@@ -118,6 +118,7 @@ jobs:
               fi
             done < "/tmp/stills/$J.passes"
             if [ "$(get thumbs False)" = "True" ]; then python -m raymi thumbs "$OUT"; fi   # boards/thumbs_168.jpg: the feed view
+            { echo "#### exposure $J"; python -m raymi exposure "$OUT" || true; } >> "$GITHUB_STEP_SUMMARY"   # burnt / washed / loud / flat (toki 2026-10-24)
             echo "$TO" > "/tmp/stills/$J.to"
           done
       - name: Publish

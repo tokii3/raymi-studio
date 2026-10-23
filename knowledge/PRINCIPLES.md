@@ -71,6 +71,12 @@ stronger effect with a written reason; real faults (section C) never.
     erkennbare krone müssen selber erkannt werden, das ist das main element"). The studio measures it; a written
     reason may keep one small on purpose.
 
+17. **The 3D Raymi on screen (toki 2026-10-24, POV Shorts).** Her face sits CENTRED and a little high in a close
+    framing (eyes around 38-40 % from the top, never drifting to the edge or the bottom) - aim the lens at her eyes,
+    measured on stills, not guessed (seated she is ~1.05 m, standing ~1.4 m). Her mouth is CLOSED whenever she does not
+    speak (emotions move brows + eyes only - VrmPuppet). Her hair swings, it never flings (spring damping floor). No
+    burnt white on her skin or clothes: `python -m raymi exposure` (washed <= 8 % of the centre) on every stills run.
+
 ## C. Real faults - always hard (code checks where possible)
 - Brand font only (a missing glyph is an error); spoken text clean (no kaomoji / digits / symbols to TTS).
 - No visible cut sprite edge; no broken sprite (extra tails, holes, green fringe) - only catalogued sprites.

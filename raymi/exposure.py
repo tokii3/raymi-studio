@@ -18,6 +18,9 @@ SAT_MEAN_MAX = 0.42    # the whole picture loud (Queencard "grell / uebersaturie
 SAT_P95_MAX = 0.85     # accents may be loud, not the whole top 5 %
 # saturation is measured as CHROMA (HSV saturation x value): a dark saturated blue is not loud, a bright one is
 SPREAD_MIN = 0.35      # a flat, washed-out picture
+# toki 2026-10-24 (POV Sashimi "noch ueberbelichtet"; clipping said 0.6 %): burnt-out WHITE in the frame centre - her
+# skin and clothes near white with the colour gone - not a bright blue sky. The well-lit Shorts measured 1-4 %, Sashimi 17.
+WASHED_MAX = 0.08
 
 
 def measure(img: np.ndarray) -> dict:
@@ -28,7 +31,9 @@ def measure(img: np.ndarray) -> dict:
     h, w = lum.shape
     centre = np.abs(lap[h // 4: 3 * h // 4, w // 4: 3 * w // 4]).mean()
     edge = np.concatenate([np.abs(lap[: h // 8]).ravel(), np.abs(lap[-h // 8:]).ravel()]).mean()
-    return {"clipped": float((lum > 0.985).mean()), "crushed": float((lum < 0.02).mean()),
+    c = hsv[h // 5: 4 * h // 5, w // 5: 4 * w // 5]
+    washed = float(((c[:, :, 2] > 0.9) & (c[:, :, 1] < 0.25)).mean())
+    return {"clipped": float((lum > 0.985).mean()), "crushed": float((lum < 0.02).mean()), "washed": washed,
             "sat_mean": float(sat.mean()), "sat_p95": float(np.percentile(sat, 95)),
             "spread": float(np.percentile(lum, 95) - np.percentile(lum, 5)), "depth": float(centre / max(edge, 1e-6))}
 
@@ -37,6 +42,8 @@ def faults(m: dict) -> list[str]:
     out = []
     if m["clipped"] > CLIP_MAX:
         out.append(f"overexposed ({m['clipped'] * 100:.1f} % clipped)")
+    if m["washed"] > WASHED_MAX:
+        out.append(f"washed out ({m['washed'] * 100:.0f} % of the centre burnt to colourless white)")
     if m["sat_mean"] > SAT_MEAN_MAX or m["sat_p95"] > SAT_P95_MAX:
         out.append(f"oversaturated (mean {m['sat_mean']:.2f}, p95 {m['sat_p95']:.2f})")
     if m["spread"] < SPREAD_MIN:
@@ -48,7 +55,7 @@ def report(paths: list[Path]) -> tuple[list[str], int]:
     files = []
     for p in paths:
         files += sorted(p.glob("*.jpg")) + sorted(p.glob("*.png")) if p.is_dir() else [p]
-    lines = ["| image | clipped | crushed | sat mean | sat p95 | spread | depth | faults |", "|---|---|---|---|---|---|---|---|"]
+    lines = ["| image | clipped | washed | crushed | sat mean | sat p95 | spread | depth | faults |", "|---|---|---|---|---|---|---|---|---|"]
     bad = 0
     for f in files:
         img = cv2.imread(str(f))
@@ -57,6 +64,6 @@ def report(paths: list[Path]) -> tuple[list[str], int]:
         m = measure(img)
         fl = faults(m)
         bad += bool(fl)
-        lines.append(f"| {f.parent.parent.name}/{f.name} | {m['clipped'] * 100:.1f} % | {m['crushed'] * 100:.1f} % | {m['sat_mean']:.2f} | "
+        lines.append(f"| {f.parent.parent.name}/{f.name} | {m['clipped'] * 100:.1f} % | {m['washed'] * 100:.0f} % | {m['crushed'] * 100:.1f} % | {m['sat_mean']:.2f} | "
                      f"{m['sat_p95']:.2f} | {m['spread']:.2f} | {m['depth']:.1f} | {'; '.join(fl) or 'ok'} |")
     return lines, bad

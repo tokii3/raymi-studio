@@ -26,6 +26,7 @@ import {wornProps} from './wearables';
 export const DEFAULT_HEIGHT = 1.55;       // ears to feet, like the sprite puppet (raymi/timeline.py DEFAULT_HEIGHT)
 const WINDOW = 90;                         // frames of history simulated before f (springs forget faster than that)
 const SETTLE = 30;                         // frames the start state is held so the springs hang at rest
+const HAIR_DRAG = 0.6, HAIR_STIFF = 1.1;   // the least damping / spring of every hair joint (VRoid exports ~0.4 / ~1)
 
 type Rig = {
   vrm: VRM;
@@ -77,6 +78,12 @@ async function loadRig(url: string, data?: ArrayBuffer): Promise<Rig> {
   const rig: Rig = {vrm, root, ground, natural: box.max.y - box.min.y, floor: box.min.y, restLow: lowestFoot(vrm),
     mirror: vrm.meta?.metaVersion === '0', lock: null, materialStyle: null, materialBases,
     motions: new Map(), mixer: new THREE.AnimationMixer(vrm.scene), actions: new Map(), morphs: faceMorphs(vrm), outline: null};
+  // calmer hair (toki 2026-10-24: "manchmal fliegen die haare komisch rum"): every spring joint gets at least this
+  // drag and stiffness, so a fast turn or a jump in a shot swings her hair instead of flinging it
+  for (const j of vrm.springBoneManager?.joints ?? []) {
+    j.settings.dragForce = Math.max(j.settings.dragForce, HAIR_DRAG);
+    j.settings.stiffness = Math.max(j.settings.stiffness, HAIR_STIFF);
+  }
   vrm.springBoneManager?.setInitState();
   return rig;
 }
@@ -447,19 +454,17 @@ function setExpressions(rig: Rig, k: VrmKey, f: number, fps: number, mouthKeys: 
     if (!em.getExpression(n)) cancelRender(new Error(`VRM has no expression ${name} (${n})`));
     em.setValue(n, v);
   }
-  // Singing: the vowel presets on top. An emotion preset (joy, fun ...) also moves the MOUTH and would fight the
-  // vowels - while she sings, its brows + eyes come from her raw shape keys instead (written after the update).
+  // An emotion preset (joy, fun, surprised ...) also opens the MOUTH. toki 2026-10-24 (POV Shorts): "mund muss
+  // geschlossen sein wenn sie nicht spricht" - so an emotion ALWAYS comes from her raw brow + eye shape keys, never
+  // from the preset; only her voice (the vowels below) opens the mouth.
   const mouth = vrmMouthAt(mouthKeys, f);
-  const singing = Object.values(mouth).reduce((a, b) => a + (b ?? 0), 0) > 0.05;
   // raw keys are never reset by the expression manager: every frame writes all of them (0 when unused)
   const raw: Record<string, number> = Object.fromEntries(['Fcl_MTH_Close', ...Object.values(EMOTION_PARTS).flat()].map((k) => [k, 0]));
-  if (singing) {
-    for (const [name, v] of Object.entries(want)) {
-      const part = EMOTION_PARTS[name.toLowerCase()];
-      if (!part) continue;
-      em.setValue(EXPRESSION_ALIAS[name.toLowerCase()] ?? name, 0);
-      for (const k of part) raw[k] = Math.max(raw[k] ?? 0, v);
-    }
+  for (const [name, v] of Object.entries(want)) {
+    const part = EMOTION_PARTS[name.toLowerCase()];
+    if (!part) continue;
+    em.setValue(EXPRESSION_ALIAS[name.toLowerCase()] ?? name, 0);
+    for (const k of part) raw[k] = Math.max(raw[k] ?? 0, v);
   }
   for (const [name, v] of Object.entries(mouth)) {
     if (name === 'close') { raw.Fcl_MTH_Close = v ?? 0; continue; }
