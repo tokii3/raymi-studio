@@ -52,7 +52,8 @@ def report(props: dict, smap: dict) -> dict:
         rows.append({"shot": s.get("id", str(i + 1)), "t": round(t, 3), "event": e[1] if e else None,
                      "event_t": round(e[0], 3) if e else None, "off_frames": off, "on": on})
     # loud hits the picture answers with a cut (within CUT_TOL + 1 frames)
-    hits = smap.get("hits", [])
+    t_end = t0 + props["shots"][-1]["to"] / FPS
+    hits = [h for h in smap.get("hits", []) if t0 <= h < t_end]   # the film's own window (a Short, a reel)
     answered = sum(1 for h in hits if any(abs((c - (h - 1 / FPS)) * FPS) <= CUT_TOL + 1 for c in cuts))
     lens = [(props["shots"][i]["to"] - props["shots"][i]["from"]) / FPS for i in range(len(props["shots"]))]
     runs, k = [], 0
