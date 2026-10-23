@@ -94,3 +94,12 @@
     (Ado / Dan Reynolds) are not in song.py yet.
 - Beach Short: shots 24 + 28 still fail the Short guards (portrait framing); the 0.5 s beach insert at the Short's
   frame 0 (4_SCRIPT S1) is not built.
+- Hero occlusion (Beach final round 1, 2026-10-23): the postcard hung 1 mm behind her monitor's glass (z .76, screen
+  face at .759) through stills, guards and the whole MV - all guards passed, only the post-render hero check
+  (sep 0.00) and five critics caught it. Needed: a guard that raycasts from the lens to each hero box and refuses
+  a hero that is hidden behind set or thing geometry (before any cloud render).
+- Beach critic FIXes not taken into the re-render (structural, toki decides; reviews/final_*_1.md): squash +
+  overshoot pops on hits and on icons / words (motion), picture change on >= 70% of hits in the peaks + cuts moved
+  onto hits (cut), every lyric line >= 6% frame height in the wides + romaji / English >= 70% of the JP size (type),
+  reaction icons (! ? sweat anger Zz heart) and face cut-ins at each plot turn, prop actions for the Ado verse
+  (story), the battery as a checked hero (vision).
