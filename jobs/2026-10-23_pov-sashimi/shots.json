@@ -649,19 +649,45 @@
    "actor": [
     {
      "at": 0,
-     "clip": "waving",
+     "pose": "float",
      "pos": [
-      0.3,
-      0.3,
-      -0.5
+      0.05,
+      0.5,
+      -0.2
      ],
-     "rotY": -120,
+     "rotY": -90,
+     "rollZ": -85,
      "look": [
       -1.68,
       1.8,
       -3.78
      ],
+     "expr": {
+      "joy": 0.9
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    },
+    {
+     "at": 0.3,
+     "pose": "float",
+     "pos": [
+      0.05,
+      0.5,
+      -0.2
+     ],
+     "rotY": -90,
+     "rollZ": -85,
      "act": "flatten",
+     "look": [
+      -1.68,
+      1.8,
+      -3.78
+     ],
      "expr": {
       "joy": 0.9
      },

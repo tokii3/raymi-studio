@@ -120,7 +120,7 @@ const Algae: React.FC<{x: Extract<PovFx, {kind: 'algae'}>; f: number; W: number;
   return (
     <svg width={W} height={H} style={{position: 'absolute', inset: 0}}>
       <defs>
-        <radialGradient id="alg"><stop offset="0%" stopColor="#5f8f3a" stopOpacity={0.55} /><stop offset="100%" stopColor="#5f8f3a" stopOpacity={0} /></radialGradient>
+        <radialGradient id="alg"><stop offset="0%" stopColor="#5f8f3a" stopOpacity={0.4} /><stop offset="100%" stopColor="#5f8f3a" stopOpacity={0} /></radialGradient>
         <mask id="wipe">
           <rect width={W} height={H} fill="white" />
           {x.text ? (
@@ -135,7 +135,7 @@ const Algae: React.FC<{x: Extract<PovFx, {kind: 'algae'}>; f: number; W: number;
           const edge = i % 2 ? [sx < 0.5 ? 0 : 1, sy] : [sx, sy < 0.5 ? 0 : 1];
           return <circle key={i} cx={edge[0] * W} cy={edge[1] * H} r={r * W * 2.2} fill="url(#alg)" />;
         })}
-        <ellipse cx={cx} cy={cy} rx={W * 0.36} ry={H * 0.13} fill="#5f8f3a" opacity={0.5} />
+        {x.text ? <rect x={cx - H * 0.17} y={cy - H * 0.11} width={H * 0.34} height={H * 0.22} rx={H * 0.05} fill="#6f9a3e" opacity={0.42} /> : null}
       </g>
     </svg>
   );

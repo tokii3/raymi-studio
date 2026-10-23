@@ -238,13 +238,13 @@ export const POSES: Record<string, VrmPose> = {
   // both hands clamped over her tako ears on top of her head, elbows out, chin down
   ears_cover: {
     ...curl('left', 0.2), ...curl('right', 0.2), spine: [0.04, 0, 0], neck: [0.06, 0, 0], head: [0.1, 0, 0],
-    leftUpperArm: [0, -0.35, 0.75], leftLowerArm: [0, -0.3, 1.9], leftHand: [0, 0, 0.3],
-    rightUpperArm: [0, 0.35, -0.75], rightLowerArm: [0, 0.3, -1.9], rightHand: [0, 0, -0.3],
+    leftUpperArm: [0, -0.75, 0.75], leftLowerArm: [0, -1.0, 1.6], leftHand: [0, 0, 0.3],
+    rightUpperArm: [0, 0.75, -0.75], rightLowerArm: [0, 1.0, -1.6], rightHand: [0, 0, -0.3],
   },
   // her right palm flat over the lens (arm straight at the camera at face height), leaning in
   cover_lens: {
     ...curl('left', 0.35), ...curl('right', 0.05), hips: [0.04, 0, 0], spine: [0.16, 0, 0], head: [-0.06, 0, 0],
-    rightUpperArm: [0, 1.25, -0.28], rightLowerArm: [0, 0.05, 0], rightHand: [0, 0, -0.5],
+    rightUpperArm: [0, 1.55, -0.25], rightLowerArm: [0, 0.05, 0], rightHand: [0, 0, -0.9],
     leftUpperArm: [0, -0.15, -1.15], leftLowerArm: [0, -0.4, 0],
   },
   // leaning toward the lens, chin up at it (the presenter whisper, the glare up close)
@@ -255,14 +255,14 @@ export const POSES: Record<string, VrmPose> = {
   // sitting, frozen with the chopsticks at her open mouth, the plate on her lap in the left hand
   sit_eat: {
     ...curl('left', 0.3), ...curl('right', 0.8, ['Ring', 'Little']), spine: [0.04, 0, 0], head: [-0.06, 0, 0],
-    rightUpperArm: [0, 0.9, 0.7], rightLowerArm: [0, 2.1, 0], rightHand: [0, 0, -0.2],
+    rightUpperArm: [0, 1.3, 0.15], rightLowerArm: [0, 2.35, 0], rightHand: [0, 0, -0.3],
     leftUpperArm: [0, -0.5, -1.0], leftLowerArm: [0, -1.2, 0], leftHand: [-0.9, 0, 0],
     leftUpperLeg: [-1.5, 0, 0.08], rightUpperLeg: [-1.5, 0, -0.08], leftLowerLeg: [1.5, 0, 0], rightLowerLeg: [1.5, 0, 0],
   },
   // sitting, holding the chopsticks out toward the lens ("look: purple sweet potato")
   sit_offer: {
     ...curl('left', 0.3), ...curl('right', 0.8, ['Ring', 'Little']), spine: [0.12, 0, 0], head: [-0.04, 0, 0.06],
-    rightUpperArm: [0, 1.15, 0.2], rightLowerArm: [0, 0.6, 0], rightHand: [0, 0, -0.1],
+    rightUpperArm: [0, 1.5, 0.05], rightLowerArm: [0, 0.4, 0], rightHand: [0, 0, -0.1],
     leftUpperArm: [0, -0.5, -1.0], leftLowerArm: [0, -1.2, 0], leftHand: [-0.9, 0, 0],
     leftUpperLeg: [-1.5, 0, 0.08], rightUpperLeg: [-1.5, 0, -0.08], leftLowerLeg: [1.5, 0, 0], rightLowerLeg: [1.5, 0, 0],
   },
@@ -270,7 +270,7 @@ export const POSES: Record<string, VrmPose> = {
   shh: {
     ...curl('left', 0.35), ...curl('right', 1.15, ['Middle', 'Ring', 'Little']), spine: [0.12, 0, 0], head: [-0.08, 0, 0.05],
     rightIndexProximal: [0, 0, 0.04], rightIndexIntermediate: [0, 0, 0], rightIndexDistal: [0, 0, 0],
-    rightUpperArm: [0, 0.75, 0.85], rightLowerArm: [0, 2.2, 0], rightHand: [0, 0, -0.4],
+    rightUpperArm: [0, 1.2, 0.3], rightLowerArm: [0, 2.45, 0], rightHand: [0, 0, -0.4],
     leftUpperArm: [0, -0.15, -1.15], leftLowerArm: [0, -0.4, 0],
   },
   // a fist raised beside her face (rock paper scissors), the other hand on her hip
@@ -288,14 +288,14 @@ export const POSES: Record<string, VrmPose> = {
   // her 'stingray' sign: the right hand flat, palm down, thrust at the lens like a ray wing
   ray_hand: {
     ...curl('left', 0.5), ...curl('right', 0.0), hips: [0.03, 0, 0], spine: [0.14, -0.08, 0], head: [-0.04, 0.06, 0],
-    rightUpperArm: [0, 1.2, -0.1], rightLowerArm: [0, 0.05, 0], rightHand: [0.15, 0, 0],
+    rightUpperArm: [0, 1.55, -0.05], rightLowerArm: [0, 0.05, 0], rightHand: [0.15, 0, 0],
     leftUpperArm: [0, 0.3, -0.95], leftLowerArm: [0, -1.7, 0], leftHand: [0, 0, 0.3],
   },
   // writing on the glass with her right index finger at chest height
   write_glass: {
     ...curl('left', 0.35), ...curl('right', 1.15, ['Middle', 'Ring', 'Little']), spine: [0.1, 0, 0], head: [0.06, 0, 0],
     rightIndexProximal: [0, 0, 0.04], rightIndexIntermediate: [0, 0, 0], rightIndexDistal: [0, 0, 0],
-    rightUpperArm: [0, 1.15, 0.35], rightLowerArm: [0, 0.35, 0], rightHand: [0, 0, 0],
+    rightUpperArm: [0, 1.5, 0.05], rightLowerArm: [0, 0.35, 0], rightHand: [0, 0, 0],
     leftUpperArm: [0, -0.15, -1.15], leftLowerArm: [0, -0.4, 0],
   },
   // costume flaps: both arms out like fins (up) and down at 45 deg (down), alternate on the beat

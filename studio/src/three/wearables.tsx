@@ -80,20 +80,20 @@ const Chopsticks: React.FC<{slice: boolean}> = ({slice}) => (
 const SalmonHood: React.FC = () => (
   <group position={[-0.02, 0.06, 0]}>
     {/* the head shell behind and over her head */}
-    <mesh material={toon(SALMON, '#000', 1, {side: THREE.DoubleSide})} scale={[1.05, 0.95, 1.0]} castShadow>
+    <mesh material={toon(SALMON, '#000', 1, {side: THREE.DoubleSide})} scale={[1.45, 1.25, 1.35]} position={[-0.05, 0.02, 0]} castShadow>
       <sphereGeometry args={[0.17, 24, 16, Math.PI * 1.35, Math.PI * 1.3]} />{/* the gap (her face) centred on +x */}
     </mesh>
     {/* the open mouth rim around her face (upper + lower lip) */}
-    <mesh position={[0.1, 0.0, 0]} rotation={[0, Math.PI / 2, 0]} material={toon(SALMON_DARK)}><torusGeometry args={[0.15, 0.025, 8, 28, Math.PI * 1.15]} /></mesh>
+    <mesh position={[0.1, 0.0, 0]} rotation={[0, Math.PI / 2, 0]} material={toon(SALMON_DARK)}><torusGeometry args={[0.17, 0.03, 8, 28]} /></mesh>
     <mesh position={[0.1, -0.11, 0]} rotation={[0, Math.PI / 2, Math.PI]} material={toon(SALMON_BELLY)} scale={[1, 0.45, 1]}><torusGeometry args={[0.13, 0.03, 8, 20, Math.PI * 0.9]} /></mesh>
     {/* big round eyes on top, the dorsal fin */}
     {[-1, 1].map((s) => (
-      <group key={s} position={[0.06, 0.15, s * 0.09]}>
+      <group key={s} position={[0.04, 0.22, s * 0.11]}>
         <mesh material={toon('#ffffff')}><sphereGeometry args={[0.04, 14, 10]} /></mesh>
         <mesh position={[0.03, 0.005, 0]} material={toon(INK)}><sphereGeometry args={[0.02, 10, 8]} /></mesh>
       </group>
     ))}
-    <mesh position={[-0.06, 0.2, 0]} rotation={[0, 0, 0.5]} material={toon(SALMON_DARK, '#000', 1, {side: THREE.DoubleSide})} scale={[0.12, 0.09, 1]}>
+    <mesh position={[-0.12, 0.27, 0]} rotation={[0, 0, 0.5]} material={toon(SALMON_DARK, '#000', 1, {side: THREE.DoubleSide})} scale={[0.12, 0.09, 1]}>
       <circleGeometry args={[0.5, 3]} />
     </mesh>
   </group>
