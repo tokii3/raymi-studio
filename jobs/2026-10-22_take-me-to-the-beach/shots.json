@@ -989,7 +989,7 @@
    "id": "11",
    "at": 5.25,
    "set": "office",
-   "why": "asleep at the desk, the file mountain grows around her on the beats - a 3/4 view on her face (blind viewer: the top-down read as a static shadow)",
+   "why": "asleep at the desk, the file mountain grows around her on the beats - a 3/4 view on her face (blind viewer: the top-down read as a static shadow); run 38: camera on her side of the MORE stack, her colour kept (spread)",
    "opts": {
     "grade": "closing",
     "things": [
@@ -1035,30 +1035,30 @@
     {
      "at": 0,
      "pos": [
-      0.8,
-      1.35,
-      1.5
+      -0.6,
+      1.32,
+      0.78
      ],
      "look": [
-      0,
+      0.05,
       0.95,
-      0.3
+      0.22
      ],
      "fov": 36
     },
     {
      "at": "end",
      "pos": [
-      0.5,
-      1.45,
-      1.15
+      -0.45,
+      1.25,
+      0.62
      ],
      "look": [
-      0,
+      0.05,
       0.95,
-      0.3
+      0.22
      ],
-     "fov": 34,
+     "fov": 33,
      "ease": "inOut"
     }
    ],
@@ -1080,18 +1080,19 @@
    "outline": 0.0035,
    "fx": [
     {
-     "kind": "duo",
+     "kind": "spread",
      "at": 0,
      "to": "end",
      "dark": "#2a2e3e",
      "light": "#d6dbe8",
-     "levels": 4
+     "r0": 0.22,
+     "r1": 0.42
     },
     {
      "kind": "halftone",
      "at": 0,
      "to": "end",
-     "opacity": 0.12
+     "opacity": 0.08
     }
    ],
    "transition": {
