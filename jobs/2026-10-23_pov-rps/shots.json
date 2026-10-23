@@ -97,7 +97,14 @@
     "type": "hook stamp 'rock paper scissors. you lose.' top band 0-2.9 s",
     "why": "a challenge straight at you"
    },
-   "opts": {},
+   "opts": {
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.2,
+     "dofRange": 0.77
+    }
+   },
    "camera": [
     {
      "at": 0,
@@ -161,7 +168,14 @@
     "type": "each word pops as a stamp beside her fist",
     "why": "the ritual everyone knows"
    },
-   "opts": {},
+   "opts": {
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.4,
+     "dofRange": 0.49
+    }
+   },
    "camera": [
     {
      "at": 0,
@@ -302,7 +316,12 @@
     "type": "stamp 'PAUSE. pick now.' centre (between the bands)",
     "why": "the interactive beat: you pick"
    },
-   "opts": {},
+   "opts": {
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
+   },
    "camera": [
     {
      "at": 0,
@@ -375,7 +394,14 @@
     "type": "stamp 'STINGRAY' (key word, angled)",
     "why": "her sign: she is the answer"
    },
-   "opts": {},
+   "opts": {
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.0,
+     "dofRange": 0.35
+    }
+   },
    "camera": [
     {
      "at": 0,
@@ -463,7 +489,13 @@
       ],
       "scale": 1.2
      }
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.48,
+     "dofRange": 0.52
+    }
    },
    "camera": [
     {
@@ -590,7 +622,13 @@
       ],
       "blow_at": 12.9
      }
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.9,
+     "dofRange": 0.67
+    }
    },
    "camera": [
     {
@@ -673,7 +711,13 @@
        0
       ]
      }
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.4,
+     "dofRange": 0.49
+    }
    },
    "camera": [
     {
@@ -804,7 +848,13 @@
        0
       ]
      }
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.2,
+     "dofRange": 0.77
+    }
    },
    "camera": [
     {

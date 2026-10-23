@@ -10,6 +10,7 @@
   finish <job>          loudness-normalise out/raw.mp4 -> out/final.mp4, then QC + contact sheet
   voice-lines <job>     a talking 3D Short: one take per spoken line of shots.json "voice" (raymi/voice_lines.py)
   mix    <job>          bed + takes + sfx -> jobs/<job>/out/mix.m4a (cloud prepare, before the timeline)
+  exposure <dir|img..>  overexposed / oversaturated / flat pictures (raymi/exposure.py)
   bed    <track>        a music bed's map (tempo, beats, accents) -> <track>.map.json (raymi/bed.py)
   pov    <job>          a talking Short's timing against the measured takes + bed map (raymi/pov.py), exit 1 on a fault
   sfx    build          synthesise the sound-effect library -> assets/sfx/<kind>.wav (raymi/sfx.py)
@@ -125,6 +126,12 @@ def main(argv: list[str]) -> int:
         for e in errs:
             print("ERROR", e)
         return 1 if errs else 0
+    if cmd == "exposure":    # exposure <dir|image...> -> over / undersaturation, clipping, depth per picture
+        from . import exposure
+
+        lines, bad = exposure.report([Path(x) for x in argv[1:]])
+        print("\n".join(lines))
+        return 1 if bad else 0
     if cmd == "bed":         # bed <track> -> <track>.map.json
         from . import bed
 

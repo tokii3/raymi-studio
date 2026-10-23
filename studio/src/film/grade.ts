@@ -32,6 +32,13 @@ export const TONES: Record<string, Tone & {lyric: LyricTone}> = {
   // neutral: a clean, bright picture (comedy, daylight on land)
   clean: {filter: 'contrast(1.12) saturate(1.12) brightness(1.0)', top: '#cfefff', bottom: '#1c1440', split: 0.25, vignette: 0.5,
     lyric: {color: '#ffffff', accent: '#ffcf4a', sub: '#e4ecff', shadow: 'rgba(16,10,40,0.8)'}},
+  // POV Shorts (toki 2026-10-23: "nichts ueberlichtet, uebersaturiert"): a calm, film-like grade - low contrast and
+  // saturation lift, highlights held under white, cool shadows; the picture's colour comes from the set's light
+  pov: {filter: 'contrast(1.06) saturate(1.02) brightness(0.95)', top: '#bcd6ff', bottom: '#1a1238', split: 0.28, vignette: 0.55,
+    lyric: {color: '#f6f2ff', accent: '#c9a8ff', sub: '#dcd6f0', shadow: 'rgba(14,8,34,0.84)'}},
+  // the same for warm interiors (her room at night, a lamp; Halloween)
+  pov_warm: {filter: 'contrast(1.06) saturate(1.04) brightness(0.95)', top: '#ffd2a8', bottom: '#22102e', split: 0.28, vignette: 0.58,
+    lyric: {color: '#fff6ec', accent: '#ffb86b', sub: '#f0dccc', shadow: 'rgba(30,10,24,0.84)'}},
   // VRM Firestarter look test: retain the deep-violet setting while keeping highlights on pale MToon materials.
   vrm_fire: {filter: 'contrast(1.08) saturate(1.08) brightness(0.92)', top: '#d39a82', bottom: '#180d31', split: 0.36, vignette: 0.62,
     lyric: {color: '#f3ecff', accent: '#ffc46b', sub: '#d8d2e8', shadow: 'rgba(12,5,30,0.84)'}},

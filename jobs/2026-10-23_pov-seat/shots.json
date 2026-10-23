@@ -85,7 +85,6 @@
    "opts": {
     "pair": true,
     "glass": true,
-    "grade": "closing",
     "chest_dots": true,
     "lock": 0.25,
     "lights_off": [
@@ -100,7 +99,13 @@
     ],
     "glow_flare": [
      9.0
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.5,
+     "dofRange": 0.35
+    }
    },
    "camera": [
     {
@@ -165,7 +170,6 @@
    "opts": {
     "pair": true,
     "glass": true,
-    "grade": "closing",
     "chest_dots": true,
     "lock": 0.25,
     "lights_off": [
@@ -180,7 +184,13 @@
     ],
     "glow_flare": [
      9.0
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.38,
+     "dofRange": 0.35
+    }
    },
    "camera": [
     {
@@ -278,7 +288,6 @@
    "opts": {
     "pair": true,
     "glass": true,
-    "grade": "closing",
     "chest_dots": true,
     "lock": 0.25,
     "lights_off": [
@@ -296,19 +305,41 @@
     ],
     "salmon": {
      "from": [
-      -1.6,
+      -1.7,
       1.2,
-      -2.2
+      -2.4
      ],
      "pos": [
-      -1.6,
+      -1.7,
       1.25,
-      1.4
+      1.6
      ],
-     "at": 5.3,
-     "dur_s": 2.4,
-     "scale": 1.3,
+     "at": 5.6,
+     "dur_s": 2.0,
+     "scale": 1.5,
      "yaw": 1.57
+    },
+    "school": {
+     "from": [
+      -2.6,
+      1.4,
+      -4.0
+     ],
+     "to": [
+      -2.6,
+      1.3,
+      4.0
+     ],
+     "at": 5.0,
+     "dur_s": 3.0,
+     "n": 9,
+     "spread": 0.6
+    },
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.5,
+     "dofRange": 0.35
     }
    },
    "camera": [
@@ -419,7 +450,6 @@
    "opts": {
     "pair": true,
     "glass": true,
-    "grade": "closing",
     "chest_dots": true,
     "lock": 0.25,
     "lights_off": [
@@ -434,7 +464,13 @@
     ],
     "glow_flare": [
      9.0
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.55,
+     "dofRange": 0.35
+    }
    },
    "camera": [
     {
@@ -502,7 +538,6 @@
    "opts": {
     "pair": true,
     "glass": true,
-    "grade": "closing",
     "chest_dots": true,
     "lock": 0.25,
     "lights_off": [
@@ -517,7 +552,13 @@
     ],
     "glow_flare": [
      9.0
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.5,
+     "dofRange": 0.35
+    }
    },
    "camera": [
     {
@@ -597,9 +638,9 @@
      "at": 0.75,
      "clip": "female-crouch-pose",
      "pos": [
-      -0.74,
-      0.4,
-      -0.36
+      -0.62,
+      0.3,
+      -0.02
      ],
      "move": 0.6,
      "rotY": "lens"
@@ -635,7 +676,6 @@
    "opts": {
     "pair": true,
     "glass": true,
-    "grade": "closing",
     "chest_dots": true,
     "lock": 0.25,
     "lights_off": [
@@ -667,6 +707,12 @@
      "scale": 1.3,
      "yaw": 0.0,
      "press_at": 13.9
+    },
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.5,
+     "dofRange": 0.35
     }
    },
    "camera": [
@@ -745,7 +791,6 @@
    "opts": {
     "pair": true,
     "glass": true,
-    "grade": "closing",
     "chest_dots": true,
     "lock": 0.25,
     "lights_off": [
@@ -769,6 +814,12 @@
      ],
      "scale": 1.3,
      "yaw": 0.0
+    },
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.4,
+     "dofRange": 0.35
     }
    },
    "camera": [

@@ -87,6 +87,18 @@ export const Film: React.FC<FilmProps> = (props) => {
   const aspect = W / H;
   const cam = makeCamera(shot, f, aspect, props.hits, fps);
   const camPos: [number, number, number] = [cam.position.x, cam.position.y, cam.position.z];
+  // motion blur (toki 2026-10-23 "depth und motion blur"): where does the world point at the frame centre go between
+  // the previous frame and this one? Its screen travel (px) becomes a directional blur on the 3D layer.
+  const blur = (() => {
+    if (f <= shot.from) return null;                                // a cut is never blurred across
+    const prev = makeCamera(shot, f - 1, aspect, props.hits, fps);
+    const p = new THREE.Vector3(0, 0, -4).applyQuaternion(cam.quaternion).add(cam.position);
+    const a = p.clone().project(prev), b = p.clone().project(cam);
+    const dx = Math.abs(b.x - a.x) * W / 2, dy = Math.abs(b.y - a.y) * H / 2;
+    const k = Number(shot.opts.motion_blur ?? 0.45);                 // share of the travel smeared (a 180-degree shutter ~0.5)
+    const sx = Math.min(28, dx * k), sy = Math.min(28, dy * k);
+    return sx < 1.2 && sy < 1.2 ? null : {sx: sx / 2, sy: sy / 2};
+  })();
   // her place on screen (chest height of the current key): the centre of a colour spread
   const herKey = actorKeys.length ? actorKeys.reduce((p, k) => (k.f <= f ? k : p), actorKeys[0]) : null;
   const herNdc = herKey ? new THREE.Vector3(herKey.pos[0], herKey.pos[1] + (herKey.height ?? 1.55) * 0.62, herKey.pos[2]).project(cam) : null;
@@ -191,7 +203,12 @@ export const Film: React.FC<FilmProps> = (props) => {
   return (
     <AbsoluteFill style={{backgroundColor: '#0b0818', overflow: 'hidden'}}>
       <Fx2DDefs fx={fx} f={f} center={herScreen} aspect={aspect} />
-      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter, fxFilter(fx, f), povFilter(fx, f)].filter(Boolean).join(' ')}}>
+      {blur ? (
+        <svg width={0} height={0} style={{position: 'absolute'}}><defs>
+          <filter id="raymi-mblur" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation={`${blur.sx.toFixed(2)} ${blur.sy.toFixed(2)}`} /></filter>
+        </defs></svg>
+      ) : null}
+      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter, fxFilter(fx, f), povFilter(fx, f), blur ? 'url(#raymi-mblur)' : ''].filter(Boolean).join(' ')}}>
         {ready ? (
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>

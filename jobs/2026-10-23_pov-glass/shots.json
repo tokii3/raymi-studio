@@ -102,8 +102,11 @@
     "dim": 0.5,
     "lock": 0.05,
     "post": {
-     "bloom": 0.25
-    }
+     "bloom": 0.25,
+     "dof": 1.1,
+     "dofRange": 0.39
+    },
+    "grade": "pov"
    },
    "camera": [
     {
@@ -214,9 +217,12 @@
     "dim": 0.5,
     "lock": 0.05,
     "post": {
-     "bloom": 0.25
+     "bloom": 0.25,
+     "dof": 1.55,
+     "dofRange": 0.54
     },
-    "warning": true
+    "warning": true,
+    "grade": "pov"
    },
    "camera": [
     {
@@ -316,8 +322,11 @@
     "dim": 0.5,
     "lock": 0.05,
     "post": {
-     "bloom": 0.25
-    }
+     "bloom": 0.25,
+     "dof": 1.1,
+     "dofRange": 0.39
+    },
+    "grade": "pov"
    },
    "camera": [
     {
@@ -448,8 +457,11 @@
     "dim": 0.5,
     "lock": 0.05,
     "post": {
-     "bloom": 0.25
-    }
+     "bloom": 0.25,
+     "dof": 0.95,
+     "dofRange": 0.35
+    },
+    "grade": "pov"
    },
    "camera": [
     {
@@ -563,8 +575,11 @@
     "dim": 0.5,
     "lock": 0.05,
     "post": {
-     "bloom": 0.25
-    }
+     "bloom": 0.25,
+     "dof": 1.45,
+     "dofRange": 0.51
+    },
+    "grade": "pov"
    },
    "camera": [
     {
@@ -675,7 +690,9 @@
     "dim": 0.5,
     "lock": 0.05,
     "post": {
-     "bloom": 0.25
+     "bloom": 0.25,
+     "dof": 1.65,
+     "dofRange": 0.58
     },
     "bury": [
      0.6,
@@ -689,7 +706,8 @@
      0.95
     ],
     "burst_at": 13.58,
-    "spot": false
+    "spot": false,
+    "grade": "pov"
    },
    "camera": [
     {
@@ -798,7 +816,9 @@
     "dim": 0.5,
     "lock": 0.05,
     "post": {
-     "bloom": 0.25
+     "bloom": 0.25,
+     "dof": 1.42,
+     "dofRange": 0.5
     },
     "bury": [
      0.6,
@@ -806,7 +826,8 @@
      0.95
     ],
     "bury_h": 0.16,
-    "spot": false
+    "spot": false,
+    "grade": "pov"
    },
    "camera": [
     {

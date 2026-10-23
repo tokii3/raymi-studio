@@ -153,7 +153,7 @@ export const Train: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       <mesh position={[0, 2.29, 0]} rotation={[Math.PI / 2, 0, 0]}><planeGeometry args={[0.35, 15]} /><meshBasicMaterial color={off > 0.5 ? '#0a0a10' : '#fff1d6'} toneMapped={false} /></mesh>
       {[-5, 0, 5].map((z) => <pointLight key={z} position={[0, 2.1, z]} color="#ffe2b8" intensity={3.2 * lit} distance={5} decay={1.6} />)}
       {opts.pair ? <SeatPair /> : null}
-      {opts.glass ? <mesh position={[-1.75, 1.3, 0]} rotation={[0, Math.PI / 2, 0]}><planeGeometry args={[16, 2.4]} />
+      {opts.glass ? <mesh position={[-3.4, 1.3, 0]} rotation={[0, Math.PI / 2, 0]}><planeGeometry args={[16, 4]} />
         <meshBasicMaterial color={flash ? '#ffe2a8' : '#17407a'} toneMapped={false} /></mesh> : null}
       <DeepLife opts={opts} f={f} fps={fps} camPos={camPos} />
       {/* passengers' things: bags, an umbrella, a newspaper, scuffs on the floor */}

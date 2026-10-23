@@ -107,7 +107,11 @@
     ],
     "glow_flare": [
      2.4
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
    },
    "camera": [
     {
@@ -216,7 +220,11 @@
     ],
     "glow_flare": [
      2.4
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
    },
    "camera": [
     {
@@ -306,7 +314,11 @@
     ],
     "glow_flare": [
      2.4
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
    },
    "camera": [
     {
@@ -398,7 +410,11 @@
     ],
     "glow_flare": [
      2.4
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
    },
    "camera": [
     {
@@ -546,7 +562,11 @@
     ],
     "glow_flare": [
      2.4
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
    },
    "camera": [
     {
@@ -668,7 +688,11 @@
     ],
     "glow_flare": [
      2.4
-    ]
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
    },
    "camera": [
     {

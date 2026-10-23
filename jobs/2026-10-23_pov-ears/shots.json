@@ -108,7 +108,13 @@
       ],
       "scale": 1.3
      }
-    ]
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.21,
+     "dofRange": 0.77
+    }
    },
    "camera": [
     {
@@ -195,7 +201,13 @@
       ],
       "scale": 1.3
      }
-    ]
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.21,
+     "dofRange": 0.77
+    }
    },
    "camera": [
     {
@@ -310,7 +322,13 @@
       ],
       "scale": 1.3
      }
-    ]
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.76,
+     "dofRange": 0.61
+    }
    },
    "camera": [
     {
@@ -396,7 +414,13 @@
       ],
       "scale": 1.3
      }
-    ]
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.76,
+     "dofRange": 0.61
+    }
    },
    "camera": [
     {
@@ -542,7 +566,13 @@
       ],
       "scale": 1.3
      }
-    ]
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.06,
+     "dofRange": 0.37
+    }
    },
    "camera": [
     {
@@ -645,7 +675,13 @@
       ],
       "scale": 1.3
      }
-    ]
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.66,
+     "dofRange": 0.35
+    }
    },
    "camera": [
     {
@@ -776,7 +812,13 @@
       ],
       "scale": 1.3
      }
-    ]
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.65,
+     "dofRange": 0.35
+    }
    },
    "camera": [
     {

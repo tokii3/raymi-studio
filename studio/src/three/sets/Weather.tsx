@@ -22,7 +22,7 @@ const TOKYO: [number, number] = [0.62, 0.65];          // map uv (x right, y dow
 const JP_DY = 0.18;                                    // the islands sit lower on the map to keep Tokyo at hand height
 function japanPaint(ctx: CanvasRenderingContext2D, w: number, h: number) {
   const land = (pts: [number, number, number][]) => {
-    ctx.fillStyle = '#3fc4a0';
+    ctx.fillStyle = '#5aa894';
     for (const [x, y, r] of pts) { ctx.beginPath(); ctx.ellipse(x * w, (y + JP_DY) * h, r * w, r * w * 0.8, 0.6, 0, Math.PI * 2); ctx.fill(); }
   };
   land([[0.78, 0.12, 0.05], [0.83, 0.15, 0.04], [0.75, 0.18, 0.035]]);
@@ -39,8 +39,8 @@ function japanPaint(ctx: CanvasRenderingContext2D, w: number, h: number) {
 function mapPaint(mode: string, warning: boolean) {
   return (ctx: CanvasRenderingContext2D, w: number, h: number) => {
     const g = ctx.createLinearGradient(0, 0, 0, h);
-    const top = mode === 'storm' ? '#203069' : mode === 'fire' ? '#2a1640' : '#1d6fb0';
-    const bot = mode === 'storm' ? '#141a44' : mode === 'fire' ? '#3a1220' : '#1a3f8a';
+    const top = mode === 'storm' ? '#203069' : mode === 'fire' ? '#2a1640' : mode === 'japan' ? '#24507e' : '#1d6fb0';
+    const bot = mode === 'storm' ? '#141a44' : mode === 'fire' ? '#3a1220' : mode === 'japan' ? '#172a58' : '#1a3f8a';
     g.addColorStop(0, top); g.addColorStop(1, bot);
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
     ctx.strokeStyle = 'rgba(255,255,255,0.12)'; ctx.lineWidth = 2;

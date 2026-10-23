@@ -3,3 +3,5 @@
 pilot: <toki YYYY-MM-DD her words>
 final: <toki YYYY-MM-DD her words>
 uploaded: <toki YYYY-MM-DD what went up>
+
+stills: toki 2026-10-23 "okay gefällt mir schon ganz gut alles auch darauf achten dass am ende das video farblich und visuell gut aussieht, after effects nutzen etc schauen dass nichts überlichtet ist, übersaturiert, klar vor hinter und mittelgrund trennung, depth und motion blur etc , bitte jetzt auch in richtung fertig stellung arbeiten"
