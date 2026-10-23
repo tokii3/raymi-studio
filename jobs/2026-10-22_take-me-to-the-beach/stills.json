@@ -1,4 +1,4 @@
 {"format": "mv",
- "frames": [18, 153, 369, 582, 858, 1158, 1278, 1905, 2175, 2418, 2859, 3294, 3576, 3618, 3705, 4032, 4098, 4680],
- "names": ["still_001", "still_010", "still_015", "still_19b", "still_023", "still_028", "still_030", "still_040", "still_045", "still_050", "still_056", "still_063", "still_067", "still_068", "still_070", "still_074", "still_075", "still_082"],
+ "frames": [18, 153, 369, 582, 858, 1158, 1278, 1905, 2175, 2418, 2610, 2680, 2859, 3294, 3576, 3618, 3705, 4032, 4098, 4680],
+ "names": ["still_001", "still_010", "still_015", "still_19b", "still_023", "still_028", "still_030", "still_040", "still_045", "still_050", "still_052", "still_053", "still_056", "still_063", "still_067", "still_068", "still_070", "still_074", "still_075", "still_082"],
  "scale": 0.75, "to": "boards"}
