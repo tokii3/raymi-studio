@@ -100,7 +100,6 @@
     "crowd": 0,
     "flashes": false,
     "dim": 0.5,
-    "chest_dots": true,
     "lock": 0.05,
     "post": {
      "bloom": 0.25
@@ -213,7 +212,6 @@
     "crowd": 0,
     "flashes": false,
     "dim": 0.5,
-    "chest_dots": true,
     "lock": 0.05,
     "post": {
      "bloom": 0.25
@@ -316,7 +314,6 @@
     "crowd": 0,
     "flashes": false,
     "dim": 0.5,
-    "chest_dots": true,
     "lock": 0.05,
     "post": {
      "bloom": 0.25
@@ -449,7 +446,6 @@
     "crowd": 0,
     "flashes": false,
     "dim": 0.5,
-    "chest_dots": true,
     "lock": 0.05,
     "post": {
      "bloom": 0.25
@@ -565,7 +561,6 @@
     "crowd": 0,
     "flashes": false,
     "dim": 0.5,
-    "chest_dots": true,
     "lock": 0.05,
     "post": {
      "bloom": 0.25
@@ -678,7 +673,6 @@
     "crowd": 0,
     "flashes": false,
     "dim": 0.5,
-    "chest_dots": true,
     "lock": 0.05,
     "post": {
      "bloom": 0.25
@@ -694,7 +688,8 @@
      0,
      0.95
     ],
-    "burst_at": 13.58
+    "burst_at": 13.58,
+    "spot": false
    },
    "camera": [
     {
@@ -801,7 +796,6 @@
     "crowd": 0,
     "flashes": false,
     "dim": 0.5,
-    "chest_dots": true,
     "lock": 0.05,
     "post": {
      "bloom": 0.25
@@ -811,7 +805,8 @@
      0,
      0.95
     ],
-    "bury_h": 0.16
+    "bury_h": 0.16,
+    "spot": false
    },
    "camera": [
     {

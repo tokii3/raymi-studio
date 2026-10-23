@@ -597,9 +597,9 @@
      "at": 0.75,
      "clip": "female-crouch-pose",
      "pos": [
-      -0.78,
-      0.05,
-      -0.42
+      -0.74,
+      0.4,
+      -0.36
      ],
      "move": 0.6,
      "rotY": "lens"
@@ -835,7 +835,7 @@
     },
     {
      "at": 1.4,
-     "clip": "sitting-thumbs-up",
+     "clip": "sitting-talking",
      "pos": [
       -0.98,
       0,
@@ -843,7 +843,7 @@
      ],
      "rotY": "lens",
      "expr": {
-      "joy": 0.6
+      "joy": 0.8
      }
     }
    ],

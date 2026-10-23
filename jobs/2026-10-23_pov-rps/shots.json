@@ -97,9 +97,7 @@
     "type": "hook stamp 'rock paper scissors. you lose.' top band 0-2.9 s",
     "why": "a challenge straight at you"
    },
-   "opts": {
-    "chest_dots": true
-   },
+   "opts": {},
    "camera": [
     {
      "at": 0,
@@ -163,9 +161,7 @@
     "type": "each word pops as a stamp beside her fist",
     "why": "the ritual everyone knows"
    },
-   "opts": {
-    "chest_dots": true
-   },
+   "opts": {},
    "camera": [
     {
      "at": 0,
@@ -306,9 +302,7 @@
     "type": "stamp 'PAUSE. pick now.' centre (between the bands)",
     "why": "the interactive beat: you pick"
    },
-   "opts": {
-    "chest_dots": true
-   },
+   "opts": {},
    "camera": [
     {
      "at": 0,
@@ -381,9 +375,7 @@
     "type": "stamp 'STINGRAY' (key word, angled)",
     "why": "her sign: she is the answer"
    },
-   "opts": {
-    "chest_dots": true
-   },
+   "opts": {},
    "camera": [
     {
      "at": 0,
@@ -461,7 +453,6 @@
     "why": "proof one, done to you"
    },
    "opts": {
-    "chest_dots": true,
     "things": [
      {
       "kind": "beach_rock",
@@ -589,7 +580,6 @@
     "why": "proof two: rays are flat"
    },
    "opts": {
-    "chest_dots": true,
     "things": [
      {
       "kind": "paper_sheet",
@@ -664,7 +654,6 @@
     "why": "proof three: the scissors are a creature of her world"
    },
    "opts": {
-    "chest_dots": true,
     "things": [
      {
       "kind": "crab",
@@ -790,7 +779,6 @@
     "why": "everyone comments their pick (and that the crab won)"
    },
    "opts": {
-    "chest_dots": true,
     "things": [
      {
       "kind": "crab",

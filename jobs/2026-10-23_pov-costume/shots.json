@@ -133,8 +133,7 @@
       "scale": 0.9,
       "light": false
      }
-    ],
-    "chest_dots": true
+    ]
    },
    "camera": [
     {
@@ -266,8 +265,7 @@
       "scale": 0.9,
       "light": false
      }
-    ],
-    "chest_dots": true
+    ]
    },
    "camera": [
     {
@@ -397,8 +395,7 @@
       "scale": 0.9,
       "light": false
      }
-    ],
-    "chest_dots": true
+    ]
    },
    "camera": [
     {
@@ -662,7 +659,6 @@
       "light": false
      }
     ],
-    "chest_dots": true,
     "salmon": {
      "from": [
       3.5,
@@ -815,7 +811,6 @@
       "light": false
      }
     ],
-    "chest_dots": true,
     "salmon": {
      "pos": [
       1.3,
@@ -994,7 +989,6 @@
       "light": false
      }
     ],
-    "chest_dots": true,
     "salmon": {
      "pos": [
       1.3,
@@ -1158,7 +1152,6 @@
       "light": false
      }
     ],
-    "chest_dots": true,
     "salmon": {
      "pos": [
       1.3,
