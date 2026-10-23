@@ -45,6 +45,7 @@ type Rig = {
 };
 
 const rigs = new Map<string, Rig>();
+export const _rig = (url: string): Rig | undefined => rigs.get(url);   // tests / diagnosis only
 const FEET: VRMHumanBoneName[] = ['leftFoot', 'rightFoot', 'leftToes', 'rightToes'];
 
 async function loadRig(url: string, data?: ArrayBuffer): Promise<Rig> {
@@ -159,6 +160,16 @@ export function inPlace(clip: THREE.AnimationClip): THREE.AnimationClip {
 /** Load a model into the cache by hand (tests: the bytes of the file, no browser). */
 export async function preloadVrm(url: string, data?: ArrayBuffer): Promise<void> {
   if (!rigs.has(url)) rigs.set(url, await loadRig(url, data));
+}
+
+/** Load a Mixamo clip into every cached rig from its bytes (tests: no browser, no fetch). */
+export function preloadMotionData(id: string, data: ArrayBuffer): void {
+  const fbx = new FBXLoader().parse(data, '');
+  for (const rig of rigs.values()) {
+    const clip = retargetAnimation(fbx, rig.vrm, {logWarnings: false});
+    if (!clip) throw new Error(`Mixamo animation could not be retargeted: ${id}`);
+    rig.motions.set(id, inPlace(clip));
+  }
 }
 
 async function preloadMotion(url: string): Promise<void> {
@@ -396,7 +407,9 @@ function applyState(rig: Rig, s: State, fps: number) {
     for (const [id, clip] of rig.motions) {
       let action = rig.actions.get(id);
       if (!action) { action = rig.mixer.clipAction(clip); action.play(); rig.actions.set(id, action); }
-      const weight = id === a ? wA : id === b ? wB : 0;
+      // the current clip first: when a key inherits the clip of the key before (a === b, the usual case) wA is 0 -
+      // asking `id === a` first gave the playing clip weight 0 and froze her in the pose (found 2026-10-23, toki "steif")
+      const weight = id === b ? wB : id === a ? wA : 0;
       action.enabled = true;
       action.setEffectiveWeight(weight);
       if (weight > 0) action.time = clipSeconds(id === b ? s.clipCur : s.clipPrev, s.f, fps, clip.duration);
