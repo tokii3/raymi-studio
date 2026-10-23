@@ -322,9 +322,12 @@ export const SnowGlobe: React.FC<{t: ThingSpec; f: number}> = ({t, f}) => {
         lines={[{t: t.text ?? 'FORECAST: SNOW', px: 0.6, c: '#f2ecff', y: 0.5}]} />
       {!t.empty ? (
         <group position={[0, 0.16, 0]}>
-          {/* paper mountains */}
-          {[[-0.04, 0.1, 0.07], [0.04, 0.08, 0.05], [0, 0.13, 0]].map(([x, h, z], i) => (
-            <mesh key={i} position={[x, -0.06 + h / 2, z - 0.02]} material={toon(['#9aa0b4', '#b8bdcc', '#7f879e'][i])}><coneGeometry args={[0.05, h, 4]} /></mesh>
+          {/* the boss's 'mountains': stacks of grey files under the snow (a metaphor - never a real mountain, toki 2026-10-23) */}
+          {[[-0.045, 7, 0.02], [0.04, 5, 0.03], [0, 10, -0.03], [0.05, 3, -0.04]].map(([x, n, z], i) => (
+            <group key={i} position={[x, -0.075, z]}>
+              {Array.from({length: n}, (_, k) => <mesh key={k} position={[0.003 * Math.sin(k * 2.1 + i), 0.006 + k * 0.012, 0]} rotation={[0, 0.2 * Math.sin(k * 3.7 + i), 0]}
+                material={toon(['#9aa0b4', '#b8bdcc', '#7f879e'][(k + i) % 3])}><boxGeometry args={[0.05, 0.01, 0.038]} /></mesh>)}
+            </group>
           ))}
           {Array.from({length: 22}, (_, i) => {
             const a = rnd(i * 2.3) * Math.PI * 2, r = rnd(i * 1.7) * 0.08;
@@ -349,13 +352,18 @@ export const SnowGlobe: React.FC<{t: ThingSpec; f: number}> = ({t, f}) => {
 /** The postcard of the beach (from above, Salmon waving) on the front; text on the back (handwriting). */
 export const Postcard: React.FC<{t: ThingSpec; f: number}> = ({t}) => {
   const front = canvasTexture('postcard_front', 512, 340, (ctx, w, h) => {
-    const g = ctx.createLinearGradient(0, 0, w, h);
-    g.addColorStop(0, '#2fd3d0'); g.addColorStop(0.55, '#7fe6d6'); g.addColorStop(0.56, '#f4dfae'); g.addColorStop(1, '#f7e9c4');
+    // her dream (the 'beach' as a metaphor, toki 2026-10-23): her luminous sea from above - light rays, her motes,
+    // her own ray silhouette with Salmon, a star; no sand, no sun
+    const g = ctx.createLinearGradient(0, 0, 0, h);
+    g.addColorStop(0, '#7fe9ff'); g.addColorStop(0.5, '#2a8fd0'); g.addColorStop(1, '#14306e');
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
-    ctx.strokeStyle = 'rgba(255,255,255,0.7)'; ctx.lineWidth = 6;
-    for (let k = 0; k < 5; k++) { ctx.beginPath(); ctx.moveTo(w * (0.25 + k * 0.08), 0); ctx.bezierCurveTo(w * (0.45 + k * 0.08), h * 0.3, w * (0.35 + k * 0.08), h * 0.6, w * (0.6 + k * 0.08), h); ctx.stroke(); }
-    ctx.fillStyle = '#ff8a5c'; ctx.beginPath(); ctx.ellipse(w * 0.3, h * 0.45, w * 0.05, h * 0.03, -0.4, 0, Math.PI * 2); ctx.fill();   // Salmon
-    ctx.fillStyle = '#ffe48a'; ctx.beginPath(); ctx.arc(w * 0.86, h * 0.14, h * 0.08, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = 'rgba(255,255,255,0.18)';
+    for (let k = 0; k < 6; k++) { ctx.beginPath(); ctx.moveTo(w * (0.1 + k * 0.15), 0); ctx.lineTo(w * (0.18 + k * 0.15), 0); ctx.lineTo(w * (0.05 + k * 0.17), h); ctx.lineTo(w * (-0.02 + k * 0.17), h); ctx.fill(); }
+    for (let k = 0; k < 40; k++) { ctx.fillStyle = k % 3 ? '#c9a6ff' : '#bff6ff'; ctx.beginPath(); ctx.arc(rnd(k) * w, rnd(k + 9) * h, 2 + rnd(k + 3) * 4, 0, Math.PI * 2); ctx.fill(); }
+    ctx.fillStyle = '#3a2a8a'; ctx.beginPath(); ctx.moveTo(w * 0.42, h * 0.5); ctx.lineTo(w * 0.52, h * 0.38); ctx.lineTo(w * 0.62, h * 0.5); ctx.lineTo(w * 0.52, h * 0.6); ctx.closePath(); ctx.fill();   // her ray shape
+    ctx.strokeStyle = '#3a2a8a'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(w * 0.52, h * 0.6); ctx.lineTo(w * 0.5, h * 0.78); ctx.stroke();
+    ctx.fillStyle = '#ff8a5c'; ctx.beginPath(); ctx.ellipse(w * 0.3, h * 0.42, w * 0.05, h * 0.03, -0.4, 0, Math.PI * 2); ctx.fill();   // Salmon
+    ctx.fillStyle = '#ffd34d'; ctx.beginPath(); for (let k = 0; k < 10; k++) { const a = (k / 10) * Math.PI * 2, r = k % 2 ? 9 : 22; ctx.lineTo(w * 0.8 + Math.cos(a) * r, h * 0.22 + Math.sin(a) * r); } ctx.fill();
     ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 14; ctx.strokeRect(7, 7, w - 14, h - 14);
   });
   return (

@@ -1,4 +1,18 @@
-# SHOOTING SCRIPT - Take Me to the Beach (feat. Ado) - v2
+# SHOOTING SCRIPT - Take Me to the Beach (feat. Ado) - v3
+
+v3 (2026-10-23, toki: "kein echter Berg bzw. Strand - es soll eine Metapher sein"): mountain and beach are METAPHORS,
+never a literal place and never a word on a prop.
+- **The beach** = everything she loves and her freedom: every row whose set says `beach` is now the set `dream` - her own
+  luminous open sea (no sand, no shoreline, no sun disc): deep water lit from above, light rays, her bioluminescence, and
+  floating in it the things she loves - Salmon, her microphone, her headphones, a game controller, a stingray plush,
+  stars, music. "Lands in shallow water" = she lands floating in this light; "written in the sand / by a wave" = written in
+  light in the water; "buries herself" = she curls up in a pile of her plush things; Salmon's deck chair = Salmon on a
+  floating cushion; the dusk crane = the dream sea turning to night glow, far below the tiny grey office dome.
+- **The postcard** shows this dream sea (her silhouette + Salmon in the light), not a beach.
+- **The mountains** = her burden: the snow globe holds a mountain of FILES under its snow (no paper landscape); "the
+  globe's mountains" in rows 28 / 66-68 are those file stacks; the file mountain on her desk stays.
+- No word "MOUNTAINS" / "BEACH" on any prop; the lyrics still write every sung word, without key emphasis on the two.
+
 
 v2 (2026-10-22) after `reviews/script_1.md` (PASS): its FIXes 1-8 are written in - the last chorus is full-body and
 travelling (69 dropped, 70-73 rewritten), the payoff's beach wide lands on "beach" 137.10 and holds, verse 1 moves

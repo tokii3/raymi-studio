@@ -6,6 +6,7 @@ import {Beach} from './Beach';
 import {Bedroom} from './Bedroom';
 import {CardTable} from './CardTable';
 import {Deep} from './Deep';
+import {Dream} from './Dream';
 import {Globe} from './Globe';
 import {NightSea} from './NightSea';
 import {Office} from './Office';
@@ -21,6 +22,7 @@ export const SETS: Record<string, React.FC<SetProps>> = {
   bedroom: Bedroom,
   cardtable: CardTable,
   deep: Deep,
+  dream: Dream,
   globe: Globe,
   nightsea: NightSea,
   office: Office,

@@ -1,4 +1,5 @@
-// SET globe - "Same Day": INSIDE the boss's snow globe. She stands tiny on a paper landscape of grey cut-out mountains;
+// SET globe - "Same Day": INSIDE the boss's snow globe. She stands tiny among towering stacks of grey files (his
+// 'mountains' - a metaphor, never a real mountain, toki 2026-10-23), snow-capped with paper snow;
 // the glass dome curves around and over her; paper snow swirls when the hand shakes it. Through the glass, huge and
 // blurred: the grey office and the boss's fingers. The T-A-K-E: her tail cracks the glass (a star of cracks), and the
 // crack lines light up letter by letter with the vocal, then the glass bursts into shards.
@@ -67,13 +68,17 @@ export const Globe: React.FC<SetProps> = ({f, opts, camPos}) => {
         fog="#6a6f82" fogNear={6} fogFar={22} bg="#4a4e60" />
       {/* the office outside, huge and soft through the glass */}
       <mesh position={[0, 4, -12]} scale={[40, 20, 1]}><planeGeometry args={[1, 1]} /><meshBasicMaterial map={sky} toneMapped={false} /></mesh>
-      {/* the paper ground (a disc) and the cut-out mountains, slightly tilting while it is shaken */}
+      {/* the paper ground (a disc) and the file towers, slightly tilting while it is shaken */}
       <group rotation={[0.06 * swirl * Math.sin(f * 0.7), 0, 0.08 * swirl * Math.sin(f * 0.9)]}>
         <mesh rotation={[-Math.PI / 2, 0, 0]} material={toon('#e4e6ee')} receiveShadow><circleGeometry args={[R, 48]} /></mesh>
-        {[[-1.8, -1.6, 2.4, '#9aa0b4'], [1.6, -1.9, 2.0, '#b8bdcc'], [0.2, -2.5, 3.0, '#7f879e'], [-2.4, 0.4, 1.4, '#a9aec0'], [2.3, 0.6, 1.2, '#8d94aa']].map(([x, z, hgt, c], i) => (
-          <group key={i} position={[x as number, 0, z as number]}>
-            <mesh position={[0, (hgt as number) / 2, 0]} rotation={[0, rnd(i) * 1.5, 0]} material={toon(c as string)} castShadow><coneGeometry args={[(hgt as number) * 0.5, hgt as number, 4]} /></mesh>
-            <mesh position={[0, (hgt as number) * 0.88, 0]} rotation={[0, rnd(i) * 1.5, 0]} material={toon('#ffffff')}><coneGeometry args={[(hgt as number) * 0.13, (hgt as number) * 0.26, 4]} /></mesh>
+        {[[-1.8, -1.6, 2.4], [1.6, -1.9, 2.0], [0.2, -2.5, 3.0], [-2.4, 0.4, 1.4], [2.3, 0.6, 1.2]].map(([x, z, hgt], i) => (
+          <group key={i} position={[x, 0, z]} rotation={[0, rnd(i) * 1.5, 0]}>
+            {/* a tower of files, each folder a little askew, a cap of paper snow on top */}
+            {Array.from({length: Math.round(hgt / 0.12)}, (_, k) => (
+              <mesh key={k} position={[0.04 * Math.sin(k * 2.3 + i), 0.06 + k * 0.12, 0.03 * Math.cos(k * 1.7 + i)]} rotation={[0, 0.18 * Math.sin(k * 3.1 + i), 0.02 * Math.sin(k)]}
+                material={toon(['#9aa0b4', '#b8bdcc', '#7f879e', '#a7acbf'][(k + i) % 4])} castShadow><boxGeometry args={[0.95, 0.11, 0.7]} /></mesh>
+            ))}
+            <mesh position={[0, hgt + 0.08, 0]} material={toon('#ffffff')} scale={[1, 0.25, 0.75]}><sphereGeometry args={[0.5, 12, 8]} /></mesh>
           </group>
         ))}
       </group>

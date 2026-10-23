@@ -1743,5 +1743,112 @@
     "fov": 46
    }
   }
+ },
+ "dream": {
+  "about": "Same Day v3 (toki 2026-10-23: the beach is a metaphor): her own luminous open sea of the things she loves - water lit from above, light rays, her motes, a glowing cushion of light at y 0 (radius 4.5) where she lands / floats / curls up, her favourite things floating around (Salmon, mic, headphones, controller, ray plush, stars). Same mark names as the old beach set.",
+  "marks": {
+   "shore": [
+    0,
+    0,
+    0.2
+   ],
+   "sand": [
+    -1.2,
+    0,
+    0.6
+   ],
+   "water": [
+    1.0,
+    0,
+    0.4
+   ],
+   "chair": [
+    -1.6,
+    1.4,
+    -1.2
+   ],
+   "sand_text": [
+    -0.6,
+    0.03,
+    1.6
+   ],
+   "sky": [
+    0,
+    6,
+    -12
+   ],
+   "float": [
+    0.6,
+    0.35,
+    0.5
+   ]
+  },
+  "cams": {
+   "low_wide": {
+    "pos": [
+     -2.6,
+     1.2,
+     4.2
+    ],
+    "look": [
+     0.2,
+     1.2,
+     -0.6
+    ],
+    "fov": 44
+   },
+   "face": {
+    "pos": [
+     0.25,
+     1.5,
+     1.4
+    ],
+    "look": [
+     0,
+     1.38,
+     0
+    ],
+    "fov": 30
+   },
+   "above": {
+    "pos": [
+     0,
+     7,
+     0.4
+    ],
+    "look": [
+     0,
+     0,
+     0
+    ],
+    "fov": 46
+   },
+   "water_level": {
+    "pos": [
+     2.2,
+     0.6,
+     1.8
+    ],
+    "look": [
+     0.2,
+     0.9,
+     0
+    ],
+    "fov": 40
+   },
+   "crane_high": {
+    "pos": [
+     -4,
+     9,
+     8
+    ],
+    "look": [
+     2,
+     0,
+     -6
+    ],
+    "fov": 48
+   }
+  }
  }
 }

@@ -1,6 +1,6 @@
 {
  "title": "Take Me to the Beach - Raymi (Same Day)",
- "_why": "The shooting script 4_SCRIPT.md v2 (script-critic PASS) as data. Row numbers in ids. 3D Raymi (raymi5) with rig keys; 2D states: grey / colour / blue / red / own / clean / warm (4_SCRIPT 'What this script settles' 5).",
+ "_why": "The shooting script 4_SCRIPT.md v2 (script-critic PASS) as data. Row numbers in ids. 3D Raymi (raymi5) with rig keys; 2D states: grey / colour / blue / red / own / clean / warm (4_SCRIPT 'What this script settles' 5). v3 (toki 2026-10-23): the beach is her dream sea (set dream), the mountains are files - both metaphors.",
  "audio": {
   "file": "song.webm",
   "from": 0,
@@ -421,7 +421,7 @@
   {
    "id": "04",
    "at": 2,
-   "set": "beach",
+   "set": "dream",
    "why": "colour flash 1 inside the first 3 s (treatment_2 FIX 2)",
    "opts": {
     "grade": "warm"
@@ -934,7 +934,7 @@
   {
    "id": "10",
    "at": 4.85,
-   "set": "beach",
+   "set": "dream",
    "why": "stab 3: she laughs in the sun - held 12 frames so it reads",
    "opts": {
     "grade": "warm"
@@ -3180,7 +3180,7 @@
   {
    "id": "26",
    "at": 33.46,
-   "set": "beach",
+   "set": "dream",
    "why": "wow 3: grey -> colour in one move, falling through warm air",
    "opts": {
     "grade": "warm"
@@ -3292,7 +3292,7 @@
   {
    "id": "27",
    "at": 35.39,
-   "set": "beach",
+   "set": "dream",
    "why": "the hook line sung to us; all five dots light",
    "opts": {
     "grade": "warm",
@@ -3368,7 +3368,7 @@
    "outline": 0.0035,
    "lyrics": {
     "kind": "sign",
-    "material": "print",
+    "material": "light",
     "lines": [
      11
     ],
@@ -3559,16 +3559,15 @@
   {
    "id": "29",
    "at": 39.44,
-   "set": "beach",
-   "why": "her ray nature: she kicks sand at the snow, then buries herself; Salmon waves",
+   "set": "dream",
+   "why": "her ray nature: she kicks the cold away and curls up in the light; Salmon waves",
    "opts": {
     "grade": "warm",
-    "deckchair": true,
     "salmon": {
      "pos": [
-      -1.8,
-      0.35,
-      -2.4
+      -1.6,
+      1.2,
+      -1.4
      ],
      "icon": "heart",
      "icon_at": 40.4
@@ -3624,7 +3623,7 @@
    "outline": 0.0035,
    "lyrics": {
     "kind": "sign",
-    "material": "print",
+    "material": "light",
     "lines": [
      13
     ],
@@ -7311,8 +7310,8 @@
   {
    "id": "58",
    "at": 99.23,
-   "set": "beach",
-   "why": "a rich wide so we WANT it: alone on the sand, arms spread",
+   "set": "dream",
+   "why": "a rich wide so we WANT it: alone on the light, arms spread",
    "opts": {
     "grade": "warm"
    },
@@ -7344,7 +7343,7 @@
    "outline": 0.0035,
    "lyrics": {
     "kind": "sign",
-    "material": "print",
+    "material": "light",
     "lines": [
      40
     ],
@@ -7367,17 +7366,16 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.72,
+      1.17,
       0.03,
-      -0.29
+      -0.05
      ],
-     "size": 0.401,
-     "width": 4.28,
+     "size": 0.367,
+     "width": 3.5,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
-     "key_scale": 1,
-     "small": "fitter: the free space beside her is small in this frame"
+     "key_scale": 1
     }
    }
   },
@@ -7494,16 +7492,16 @@
   {
    "id": "60",
    "at": 103.96,
-   "set": "beach",
-   "why": "beach - she switches off: buries the phone",
+   "set": "dream",
+   "why": "dream - she switches off: buries the phone",
    "opts": {
     "grade": "warm",
     "things": [
      {
       "kind": "phone",
       "pos": [
-       -1.5,
-       0.04,
+       -1.2,
+       0.05,
        0.6
       ],
       "rot": [
@@ -7535,7 +7533,7 @@
    ],
    "lyrics": {
     "kind": "sign",
-    "material": "print",
+    "material": "light",
     "lines": [
      42
     ],
@@ -8202,8 +8200,8 @@
   {
    "id": "64",
    "at": 110.62,
-   "set": "beach",
-   "why": "beach: space - the second rich wide; Salmon floating",
+   "set": "dream",
+   "why": "dream: space - the second rich wide; Salmon floating",
    "opts": {
     "grade": "warm",
     "salmon": {
@@ -8279,15 +8277,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      3.13,
-      -1.79,
-      -5.69
+      6.34,
+      -5.79,
+      -8.4
      ],
-     "size": 0.33,
-     "width": 9.97,
-     "tilt": -36.8,
+     "size": 1.069,
+     "width": 32.29,
+     "tilt": -30.6,
      "roll": 0,
-     "rot": -28.3,
+     "rot": -32.2,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
@@ -9492,8 +9490,8 @@
   {
    "id": "75b",
    "at": 137.1,
-   "set": "beach",
-   "why": "the FULL beach wide lands exactly on 'beach' and holds",
+   "set": "dream",
+   "why": "the FULL dream wide lands exactly on 'dream' and holds",
    "opts": {
     "grade": "warm",
     "salmon": {
@@ -9532,15 +9530,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -5.01,
-      12.1,
-      -0.11
+      -4.95,
+      6.35,
+      -2.08
      ],
-     "size": 0.917,
-     "width": 11.55,
-     "tilt": -25.3,
+     "size": 0.962,
+     "width": 12.11,
+     "tilt": -30.6,
      "roll": 0,
-     "rot": -5.6,
+     "rot": 5.4,
      "key_scale": 1.8
     }
    }
@@ -9548,7 +9546,7 @@
   {
    "id": "76",
    "at": 137.25,
-   "set": "beach",
+   "set": "dream",
    "why": "release: she lets herself fall backwards into the warm water",
    "opts": {
     "grade": "warm"
@@ -9591,7 +9589,7 @@
    "outline": 0.0035,
    "lyrics": {
     "kind": "sign",
-    "material": "print",
+    "material": "light",
     "lines": [
      55
     ],
@@ -9611,15 +9609,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.22,
-      0.03,
-      0.01
+      1.4,
+      0.93,
+      0.92
      ],
-     "size": 0.14,
-     "width": 1.49,
-     "tilt": -90,
+     "size": 0.035,
+     "width": 1.32,
+     "tilt": 6.3,
      "roll": 0,
-     "rot": 0,
+     "rot": 41.8,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
@@ -9628,7 +9626,7 @@
   {
    "id": "77",
    "at": 139.37,
-   "set": "beach",
+   "set": "dream",
    "why": "the outro is a peak - so is she",
    "opts": {
     "grade": "warm"
@@ -9678,15 +9676,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.61,
-      1.05,
-      -3.41
+      0.32,
+      1.44,
+      0.37
      ],
-     "size": 0.228,
-     "width": 3.38,
-     "tilt": 0,
+     "size": 0.024,
+     "width": 0.29,
+     "tilt": -5.2,
      "roll": 0,
-     "rot": -12.6,
+     "rot": -3.8,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
@@ -9695,7 +9693,7 @@
   {
    "id": "78",
    "at": 140.8,
-   "set": "beach",
+   "set": "dream",
    "why": "her lore gag: Salmon IS her friend - offended at the line",
    "opts": {
     "grade": "warm",
@@ -9732,7 +9730,7 @@
    "outline": 0.0035,
    "lyrics": {
     "kind": "sign",
-    "material": "print",
+    "material": "light",
     "lines": [
      56
     ],
@@ -9755,23 +9753,24 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.48,
-      0.4,
-      0.61
+      -0.82,
+      0.03,
+      -2.07
      ],
-     "size": 0.051,
-     "width": 0.44,
-     "tilt": 8.1,
+     "size": 0.181,
+     "width": 2.69,
+     "tilt": -90,
      "roll": 0,
-     "rot": 36.1,
-     "key_scale": 1.8
+     "rot": 0,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    }
   },
   {
    "id": "79",
    "at": 142.64,
-   "set": "beach",
+   "set": "dream",
    "why": "my favourite one: she pulls Salmon in, they dance",
    "opts": {
     "grade": "warm",
@@ -9833,7 +9832,7 @@
    },
    "lyrics": {
     "kind": "sign",
-    "material": "print",
+    "material": "light",
     "lines": [
      57
     ],
@@ -9849,12 +9848,12 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.21,
+      3.78,
       0.03,
-      1.19
+      -1.58
      ],
-     "size": 0.216,
-     "width": 6.53,
+     "size": 0.307,
+     "width": 12.91,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
@@ -9866,8 +9865,8 @@
   {
    "id": "80",
    "at": 145.5,
-   "set": "beach",
-   "why": "type made by her body: 最後まで in the sand",
+   "set": "dream",
+   "why": "type made by her body: 最後まで in the light",
    "opts": {
     "grade": "warm"
    },
@@ -9944,12 +9943,12 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.21,
+      -0.34,
       0.03,
-      1.32
+      1.16
      ],
-     "size": 0.423,
-     "width": 14.52,
+     "size": 0.369,
+     "width": 12.68,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
@@ -9961,7 +9960,7 @@
   {
    "id": "81",
    "at": 148.33,
-   "set": "beach",
+   "set": "dream",
    "why": "the staring commuters now dance with her",
    "opts": {
     "grade": "warm",
@@ -10013,7 +10012,7 @@
    "outline": 0.0035,
    "lyrics": {
     "kind": "sign",
-    "material": "print",
+    "material": "light",
     "lines": [
      58
     ],
@@ -10036,15 +10035,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.93,
-      0.03,
-      0.71
+      -0.19,
+      2.01,
+      0.33
      ],
-     "size": 0.272,
-     "width": 4.35,
-     "tilt": -90,
+     "size": 0.184,
+     "width": 4.26,
+     "tilt": 0.1,
      "roll": 0,
-     "rot": 0,
+     "rot": -31.9,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
@@ -10053,18 +10052,18 @@
   {
    "id": "82",
    "at": 151.78,
-   "set": "beach",
+   "set": "dream",
    "why": "the last wow: the size of her freedom - dusk, and far out the tiny grey office dome",
    "opts": {
     "grade": "warm",
-    "dusk": 0.8,
     "dome": true,
     "battery": [
      [
       0,
       5
      ]
-    ]
+    ],
+    "night": 0.8
    },
    "camera": [
     {
@@ -10101,15 +10100,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      4.11,
-      2.28,
-      -8.48
+      2.33,
+      1.66,
+      -2.27
      ],
-     "size": 0.896,
-     "width": 16.3,
-     "tilt": -25.2,
+     "size": 0.499,
+     "width": 9.97,
+     "tilt": -30.6,
      "roll": 0,
-     "rot": -28.7,
+     "rot": -31.7,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
@@ -10118,11 +10117,10 @@
   {
    "id": "83",
    "at": 158.6,
-   "set": "beach",
-   "why": "the last gag: the half-buried clock rings once more - she kicks sand over it",
+   "set": "dream",
+   "why": "the last gag: the half-buried clock rings once more - she kicks light over it",
    "opts": {
     "grade": "warm",
-    "dusk": 0.9,
     "things": [
      {
       "kind": "clock",
@@ -10140,7 +10138,8 @@
        159
       ]
      }
-    ]
+    ],
+    "night": 0.9
    },
    "camera": [
     {
@@ -10166,12 +10165,12 @@
   {
    "id": "84",
    "at": 163.5,
-   "set": "beach",
+   "set": "dream",
    "why": "the first and last images rhyme: a blank page washes out to sea",
    "opts": {
     "grade": "warm",
-    "dusk": 1,
-    "page": 163.6
+    "page": 163.6,
+    "night": 1
    },
    "camera": [
     {
