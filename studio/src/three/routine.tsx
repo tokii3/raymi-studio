@@ -371,6 +371,8 @@ export const Postcard: React.FC<{t: ThingSpec; f: number}> = ({t}) => {
   });
   return (
     <group position={t.pos} rotation={t.rot ?? [0, 0, 0]} scale={t.scale ?? 1}>
+      {/* the only warm thing in the grey office: a warm glow rim behind the card (it must read at phone size) */}
+      <mesh position={[0, 0, -0.002]}><planeGeometry args={[0.172, 0.122]} /><meshBasicMaterial color="#ffc46b" toneMapped={false} /></mesh>
       <mesh><planeGeometry args={[0.15, 0.1]} /><meshBasicMaterial map={front} toneMapped={false} /></mesh>
       {t.text ? <Printed id={`pcback${t.text}`} size={[0.15, 0.1]} pos={[0, 0, -0.001]} rot={[0, Math.PI, 0]} bg="#f7f1e2"
         lines={[{t: t.text, px: 0.22, c: '#3a3aa0', y: 0.5}]} /> : null}

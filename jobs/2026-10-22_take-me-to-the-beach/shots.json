@@ -49,7 +49,7 @@
    "center": [
     -0.2,
     1.12,
-    0.76
+    0.74
    ]
   },
   "globe": {
@@ -2873,7 +2873,10 @@
     "width": 1.4
    },
    "hero": [
-    "postcard"
+    {
+     "name": "postcard",
+     "why_small": "the card hangs on her side of the monitor, the lens is on the far side; it is shown full frame in 25 and 34"
+    }
    ],
    "fx": [
     {
@@ -3043,9 +3046,7 @@
    "hero": [
     {
      "name": "postcard",
-     "short": {
-      "why_small": "the Short frames her face over the desk; the card returns big in S2b (25)"
-     }
+     "why_small": "the card hangs on her side of the monitor, the lens is on the far side; it is shown full frame in 25 and 34"
     }
    ],
    "fx": [
@@ -3157,7 +3158,7 @@
      "center": [
       -0.2,
       1.12,
-      0.76
+      0.74
      ]
     }
    ],
@@ -3491,7 +3492,7 @@
       "pos": [
        -0.2,
        1.12,
-       0.76
+       0.74
       ],
       "rot": [
        0,
@@ -3589,7 +3590,7 @@
      "center": [
       -0.2,
       1.12,
-      0.76
+      0.74
      ],
      "short": {
       "why_small": "portrait: the split card and the globe share a narrow frame"
@@ -4470,7 +4471,7 @@
      "center": [
       -0.2,
       1.12,
-      0.76
+      0.74
      ]
     }
    ],
@@ -4671,9 +4672,9 @@
      "kind": "duo",
      "at": 0,
      "to": "end",
-     "dark": "#0c1650",
-     "light": "#b4c8ff",
-     "levels": 3
+     "dark": "#050826",
+     "light": "#e4ecff",
+     "levels": 4
     },
     {
      "kind": "halftone",
@@ -4759,9 +4760,9 @@
      "kind": "duo",
      "at": 0,
      "to": "end",
-     "dark": "#0c1650",
-     "light": "#b4c8ff",
-     "levels": 3
+     "dark": "#050826",
+     "light": "#e4ecff",
+     "levels": 4
     },
     {
      "kind": "halftone",
@@ -4903,9 +4904,9 @@
      "kind": "duo",
      "at": 0,
      "to": "end",
-     "dark": "#0c1650",
-     "light": "#b4c8ff",
-     "levels": 3
+     "dark": "#050826",
+     "light": "#e4ecff",
+     "levels": 4
     },
     {
      "kind": "halftone",
@@ -5090,9 +5091,9 @@
      "kind": "duo",
      "at": 0,
      "to": "end",
-     "dark": "#0c1650",
-     "light": "#b4c8ff",
-     "levels": 3
+     "dark": "#050826",
+     "light": "#e4ecff",
+     "levels": 4
     },
     {
      "kind": "halftone",
@@ -5183,9 +5184,9 @@
      "kind": "duo",
      "at": 0,
      "to": "end",
-     "dark": "#0c1650",
-     "light": "#b4c8ff",
-     "levels": 3
+     "dark": "#050826",
+     "light": "#e4ecff",
+     "levels": 4
     },
     {
      "kind": "halftone",
@@ -5384,9 +5385,9 @@
      "kind": "duo",
      "at": 0,
      "to": "end",
-     "dark": "#0c1650",
-     "light": "#b4c8ff",
-     "levels": 3
+     "dark": "#050826",
+     "light": "#e4ecff",
+     "levels": 4
     },
     {
      "kind": "halftone",
@@ -5504,9 +5505,9 @@
      "kind": "duo",
      "at": 0,
      "to": "end",
-     "dark": "#0c1650",
-     "light": "#b4c8ff",
-     "levels": 3
+     "dark": "#050826",
+     "light": "#e4ecff",
+     "levels": 4
     },
     {
      "kind": "halftone",
@@ -5610,9 +5611,9 @@
      "kind": "duo",
      "at": 0,
      "to": "end",
-     "dark": "#0c1650",
-     "light": "#b4c8ff",
-     "levels": 3
+     "dark": "#050826",
+     "light": "#e4ecff",
+     "levels": 4
     },
     {
      "kind": "halftone",
@@ -5703,9 +5704,9 @@
      "kind": "duo",
      "at": 0,
      "to": "end",
-     "dark": "#0c1650",
-     "light": "#b4c8ff",
-     "levels": 3
+     "dark": "#050826",
+     "light": "#e4ecff",
+     "levels": 4
     },
     {
      "kind": "halftone",
@@ -9677,7 +9678,7 @@
      "center": [
       -0.2,
       1.12,
-      0.76
+      0.74
      ],
      "why_small": "the card leaves the frame as the office unfolds - the beach wide is the payoff"
     }
@@ -10518,18 +10519,34 @@
      "fov": 24
     },
     {
-     "at": "end",
+     "at": 3.2,
      "pos": [
-      0.06,
-      1.66,
-      1.05
+      0.08,
+      1.67,
+      1.1
      ],
      "look": [
       0,
       1.62,
       0
      ],
-     "fov": 22
+     "fov": 23
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.6,
+      3.4,
+      4.6
+     ],
+     "look": [
+      0,
+      1.5,
+      0
+     ],
+     "fov": 40,
+     "ease": "inOut",
+     "path": "spline"
     }
    ],
    "transition": {
