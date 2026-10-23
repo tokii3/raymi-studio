@@ -121,7 +121,7 @@ jobs:
             echo "$TO" > "/tmp/stills/$J.to"
           done
       - name: Publish
-        if: steps.which.outputs.jobs != ''
+        if: always() && steps.which.outputs.jobs != ''   # stills already made are kept even when a later job fails
         run: |
           git config user.name "raymi-stills-bot"
           git config user.email "actions@users.noreply.github.com"
