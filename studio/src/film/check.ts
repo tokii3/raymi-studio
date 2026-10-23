@@ -616,6 +616,24 @@ export function overlayOnFace(props: FilmProps): {shot: string; frame: number; w
   return out;
 }
 
+/** Share of the frame (0..1) covered by the part of a box within 0.6 m in front of the lens: a 6x6x6 grid of points on
+ *  the box, those near and in front projected, their bounding rect clipped to the frame. */
+function nearCover(box: THREE.Box3, cam: THREE.PerspectiveCamera): number {
+  const fwd = new THREE.Vector3(0, 0, -1).applyQuaternion(cam.quaternion);
+  let x0 = 1, y0 = 1, x1 = -1, y1 = -1, any = false;
+  const p = new THREE.Vector3(), d = new THREE.Vector3();
+  for (let i = 0; i <= 5; i++) for (let j = 0; j <= 5; j++) for (let k = 0; k <= 5; k++) {
+    p.set(box.min.x + (box.max.x - box.min.x) * i / 5, box.min.y + (box.max.y - box.min.y) * j / 5, box.min.z + (box.max.z - box.min.z) * k / 5);
+    d.copy(p).sub(cam.position);
+    if (d.length() >= 0.6 || d.dot(fwd) <= 0.05) continue;
+    const n = p.clone().project(cam);
+    x0 = Math.min(x0, Math.max(-1, n.x)); x1 = Math.max(x1, Math.min(1, n.x));
+    y0 = Math.min(y0, Math.max(-1, n.y)); y1 = Math.max(y1, Math.min(1, n.y));
+    any = true;
+  }
+  return any && x1 > x0 && y1 > y0 ? ((x1 - x0) * (y1 - y0)) / 4 : 0;
+}
+
 /** Solid props: the lens is never inside one (or within 0.2 m of it), and her face never hides behind one for 0.4 s
  *  (stills run 19: the lens inside a coin tower; the shell throne between the lens and her). */
 export function solidFaults(props: FilmProps): {shot: string; frame: number; why: string}[] {
@@ -630,8 +648,9 @@ export function solidFaults(props: FilmProps): {shot: string; frame: number; why
       const inside = boxes.find((b) => b.box.clone().expandByScalar(0.2).containsPoint(cam.position));
       if (inside) { out.push({shot: s.id, frame: f, why: `lens inside the ${inside.name}`}); bad = 'x'; break; }
       // a prop right at the lens fills the frame as a flat mass (final 1: a coin tower for 1.5 s)
-      const fwd = new THREE.Vector3(0, 0, -1).applyQuaternion(cam.quaternion);
-      const near = boxes.find((b) => b.box.distanceToPoint(cam.position) < 0.6 && b.box.getCenter(new THREE.Vector3()).sub(cam.position).dot(fwd) > 0);
+      // (2026-10-24: only what is IN the picture counts - a lens at her eye line 0.4 m above a desk that lies outside the
+      // frame is fine; the part of the box within 0.6 m must cover >= 20 % of the frame)
+      const near = boxes.find((b) => b.box.distanceToPoint(cam.position) < 0.6 && nearCover(b.box, cam) >= 0.2);
       close = near ? close + 1 : 0;
       if (close >= Math.round(props.fps * 0.4)) { out.push({shot: s.id, frame: f - close + 1, why: `the ${near!.name} fills the lens`}); bad = 'x'; break; }
       const p = puppetAt(s.puppets, f, props.fps);
