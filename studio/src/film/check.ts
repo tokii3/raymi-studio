@@ -360,6 +360,11 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
         // Short, toki 2026-10-20 "abgeschnitten": its glow still touched the edge -> 8 % of each side)
         const bad = (s.lyrics.style !== 'v2' || !whipping(s, f, aspect, props)) && corners.some((c) => { const n = c.clone().project(cam); return n.z >= 1 || Math.abs(n.x) > SAFE || Math.abs(n.y) > SAFE; });
         if (bad) { out.push({shot: s.id, frame: f, line, text: ws.map((w) => w.w).join(' '), why: 'leaves the frame'}); break; }
+        // seen from behind (Beach stills 2026-10-23: an orbit round her read "oj gm"): the line's start must stay left of its end
+        // (the winding of start -> end -> below, so a rolled camera or a block lying on the floor is not a fault)
+        const [c0, c1, c2] = [0, 1, 2].map((k) => corners[k].clone().project(cam));
+        const wind = (c1.x - c0.x) * (c2.y - c0.y) - (c1.y - c0.y) * (c2.x - c0.x);
+        if (c0.z < 1 && c1.z < 1 && c2.z < 1 && wind > 1e-4) { out.push({shot: s.id, frame: f, line, text: ws.map((w) => w.w).join(' '), why: 'is seen from behind (mirrored)'}); break; }
         // v2 (toki 2026-10-20 "hinter raymi / assets oder clippen in assets"): a settled line sits in free space - not on
         // her figure, not on a prop / solid / creature (more than 10 % of the block for 6 frames in a row)
         if (s.lyrics.style === 'v2' && !s.lyrics.over) {
