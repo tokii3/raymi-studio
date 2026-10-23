@@ -350,6 +350,9 @@ export type VrmKey = {
   speed?: number;            // playback speed (1 = as captured)
   once?: boolean;            // play once and hold the last frame (one-shot actions); default loops
   restart?: boolean;         // start the same clip again at this key
+  // the observer effect (toki 2026-10-24): she notices the one who watches - head + neck turn this share toward the
+  // lens on top of any clip (eyes follow anyway); from behind only a glance over the shoulder now and then. 0 = off.
+  aware?: number;
   move?: number;             // original puppet travel duration in frames
   arc?: number;              // original hop arc in metres
   ease?: Ease;

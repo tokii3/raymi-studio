@@ -269,7 +269,7 @@ function lockColours(rig: Rig, lock: number) {
 
 // ------------------------------------------------------------------ the state at a frame (pure, from the keys)
 type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; rollZ: number; height: number; squash: number; flat: number; act: VrmKey['act']; motion?: string; prevMotion?: string; mixPrev: number; mixCur: number; local: number; f: number;
-  clipCur: VrmKey; clipPrev: VrmKey};
+  clipCur: VrmKey; clipPrev: VrmKey; aware: number; lensYaw: number; lensPitch: number; keyF: number};
 
 function keyAt(keys: VrmKey[], f: number): number {
   let i = 0;
@@ -331,7 +331,11 @@ function stateAt(keys: VrmKey[], f: number, camPos: V3): State {
     mixPrev: prevMotion ? (p.motionMix ?? 1) : 0, mixCur: motion ? (k.motionMix ?? 1) : 0,
     rollZ: lerp(p.rollZ ?? 0, k.rollZ ?? 0) + (k.act === 'tilt' ? 0.12 * ease('out', local / 8) : k.act === 'lean' ? -0.08 * ease('out', local / 10) : 0),
     height: lerp(p.height ?? DEFAULT_HEIGHT, k.height ?? DEFAULT_HEIGHT), squash, flat, act: k.act, local, f,
-    clipCur: keys[clipStart(keys, i)], clipPrev: keys[clipStart(keys, Math.max(0, i - 1))]};
+    clipCur: keys[clipStart(keys, i)], clipPrev: keys[clipStart(keys, Math.max(0, i - 1))],
+    aware: lerp(p.aware ?? 0, k.aware ?? 0), keyF: k.f,
+    // where the lens is, seen from her: yaw relative to the way she faces, pitch from her head height
+    lensYaw: Math.atan2(camPos[0] - pos[0], camPos[2] - pos[2]),
+    lensPitch: Math.atan2(camPos[1] - (pos[1] + 1.38 * ((k.height ?? DEFAULT_HEIGHT) / DEFAULT_HEIGHT)), Math.hypot(camPos[0] - pos[0], camPos[2] - pos[2]))};
 }
 
 /** Reuse the timeline's keyed floor travel and hop arcs, rather than easing the actor to a new spot after each cut. */
@@ -365,6 +369,29 @@ function savePose(vrm: VRM): [THREE.Object3D, THREE.Quaternion, THREE.Vector3][]
 function boneQ(out: THREE.Quaternion, r: [number, number, number] | undefined, mirror: boolean) {
   if (!r) return out.identity();
   return out.setFromEuler(eu.set(mirror ? -r[0] : r[0], r[1], mirror ? -r[2] : r[2], 'XYZ'));
+}
+
+/** The observer effect: neck + head turn a share toward the lens, after the clip (a clip would overwrite it). From the
+ *  front she meets the viewer; from behind (lens > ~95 deg off her facing) she only glances over her shoulder for
+ *  ~1.2 s every ~4.5 s - she senses the watcher, she does not perform for them. Pure in f (parallel workers agree). */
+function noticeLens(rig: Rig, s: State, fps: number) {
+  const wrap = (a: number) => Math.atan2(Math.sin(a), Math.cos(a));
+  const rel = wrap(s.lensYaw - s.yaw);
+  const back = Math.abs(rel) > 1.65;
+  let env = 1;
+  if (back) {
+    const t = ((s.f - s.keyF) / fps + 0.8) % 4.5;           // a glance every 4.5 s, the first soon after the key
+    env = t < 1.2 ? Math.sin((t / 1.2) * Math.PI) : 0;
+  }
+  const amt = s.aware * env;
+  if (amt < 0.001) return;
+  const yaw = Math.max(-1.05, Math.min(1.05, rel)) * amt;  // never past ~60 deg: a turn of the head, not the body
+  const pitch = Math.max(-0.35, Math.min(0.35, s.lensPitch)) * amt * (back ? 0.3 : 1);
+  const turn = (n: VRMHumanBoneName, k: number) => {
+    const node = rig.vrm.humanoid.getNormalizedBoneNode(n);
+    if (node) node.quaternion.premultiply(qb.setFromEuler(eu.set(-pitch * k, (rig.mirror ? -1 : 1) * yaw * k, 0, 'YXZ')));
+  };
+  turn('neck', 0.4); turn('head', 0.6);
 }
 
 /** Pose + breathing + placement for one simulation step. */
@@ -431,6 +458,7 @@ function applyState(rig: Rig, s: State, fps: number) {
     rig.mixer.update(0);
     if (amount < 0.999) for (const [node, q, p] of saved) { node.quaternion.copy(q.slerp(node.quaternion, amount)); node.position.lerpVectors(p, node.position, amount); }
   }
+  if (s.aware > 0.001) noticeLens(rig, s, fps);
   vrm.humanoid.update();
   // feet on the floor: measure the posed rig unplaced, then place it
   root.position.set(0, 0, 0); root.rotation.set(0, 0, 0); root.scale.setScalar(1); ground.position.set(0, 0, 0);

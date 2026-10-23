@@ -361,8 +361,11 @@ def _camera_list(s: dict, length: float, fmt: str, marks: dict, errors: list[str
         if P is None:
             continue
         P = [P[0], P[1] + float(m.get("h", 1.35)), P[2]]
+        last = (s.get("actor") or [{}])[-1].get("pos")      # where she ends (a follow move travels with her)
+        E = _v3(last, marks, errors, ktag) if last is not None else None
+        E = [E[0], E[1] + float(m.get("h", 1.35)), E[2]] if E else None
         try:
-            keys = CM.expand(m, length, P, obj)
+            keys = CM.expand(m, length, P, obj, E)
         except ValueError as e:
             errors.append(f"{ktag}: {e}")
             continue
@@ -558,7 +561,7 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
             errors.append(f"{ktag}: icon must be one of {sorted(x for x in ICONS if x)}")
         elif r.get("icon"):
             key["icon"] = r["icon"]
-        for opt in ("motion", "motionMix", "expr", "once", "restart"):
+        for opt in ("motion", "motionMix", "expr", "once", "restart", "aware"):
             if opt in r:
                 key[opt] = r[opt]
         if "look" in r:                                    # "lens" | null | a mark / [x, y, z] she looks at
@@ -738,6 +741,16 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         if not ckeys:
             errors.append(f"{tag}: needs at least one camera key")
             continue
+        # the observer (toki 2026-10-24): a person watching her, not a tripod - the film's default, a shot may set 0
+        obs = s.get("observer", spec.get("observer"))
+        if obs is not None:
+            for ck in ckeys:
+                ck["observer"] = float(obs)
+        # she notices the watcher: the film's default share of a head turn toward the lens (a key may set its own)
+        aw = s.get("aware", spec.get("aware"))
+        if aw is not None:
+            for ak in s.get("actor") or []:
+                ak.setdefault("aware", float(aw))
         # lyrics living in this shot
         lyr = s.get("lyrics")
         if lyr is None and job_style == "v2" and spec.get("all_lyrics", True) and not s.get("text")                 and not s.get("acted") and any(round(a * FPS) <= w["cut"] < round(b * FPS) and t_from <= w["t0"] < t_to
@@ -907,9 +920,10 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                                 if (not tx.get("opt") or opts.get(tx["opt"])) and opts.get(tx.get("unless", ""), True) is not False
                                 and not (tx.get("blank") and opts.get(tx["blank"]) == "")],
                       "noLens": sets[st].get("no_lens", []),
-                      "solids": [{k: v for k, v in so.items() if k not in ("opt", "unless")} for so in sets[st].get("solids", [])
+                      # a macro / a close-up AT a prop may sit close to it: "lens_near": {"monitor": "<why>"} lifts that solid
+                      "solids": [x for x in [{k: v for k, v in so.items() if k not in ("opt", "unless")} for so in sets[st].get("solids", [])
                                  if (not so.get("opt") or opts.get(so["opt"])) and opts.get(so.get("unless", ""), True) is not False]
-                      + thing_solids(opts.get("things") or [], marks)})
+                                 + thing_solids(opts.get("things") or [], marks) if x["name"] not in (s.get("lens_near") or {})]})
     if shots and shots[0]["from"] != 0:
         errors.append(f"the first shot must start at the window start ({t_from:.2f} s)")
     overlay = None

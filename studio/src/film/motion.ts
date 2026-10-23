@@ -73,7 +73,24 @@ export function cameraAt(keys: CamKey[], f: number, hits: number[] = [], kick = 
       }
     }
   }
-  return {pos, look, fov, roll: c.roll + (shake ? wobble(s * 2.2, 7) * 1.4 * shake : 0)};
+  let roll = c.roll + (shake ? wobble(s * 2.2, 7) * 1.4 * shake : 0);
+  const o = keys[0].observer ?? 0;
+  let lookOut = look;
+  if (o > 0) {
+    // a person watching: breath lifts the lens (~4 s), the body sways, the head drifts a fraction of a degree and
+    // after the cut the gaze settles onto her (an eye finding its subject) - pure sines, the same in every worker
+    const l = Math.max(0, f - keys[0].f);
+    const settle = Math.exp(-l / 7);
+    pos = [pos[0] + wobble(s * 0.33, 21) * 0.014 * o, pos[1] + Math.sin(s * Math.PI * 0.5) * 0.007 * o, pos[2] + wobble(s * 0.27, 22) * 0.01 * o];
+    const dx = look[0] - pos[0], dy = look[1] - pos[1], dz = look[2] - pos[2];
+    const dist = Math.hypot(dx, dy, dz);
+    const yaw = ((wobble(s * 0.41, 23) * 0.7 + 1.3 * settle) * o * Math.PI) / 180;
+    const pitch = ((wobble(s * 0.37, 24) * 0.45 - 0.5 * settle) * o * Math.PI) / 180;
+    const h = Math.hypot(dx, dz) || 1;
+    lookOut = [look[0] + (-dz / h) * Math.tan(yaw) * dist, look[1] + Math.tan(pitch) * dist, look[2] + (dx / h) * Math.tan(yaw) * dist];
+    roll += wobble(s * 0.3, 25) * 0.5 * o;
+  }
+  return {pos, look: lookOut, fov, roll};
 }
 
 /** Vertical FOV for the real frame: keys are written for 16:9; a portrait frame keeps the subject across its width. */

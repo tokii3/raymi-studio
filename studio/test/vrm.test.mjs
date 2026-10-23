@@ -78,5 +78,20 @@ test('raymi5 sings: m / b / p press her lips (raw Fcl_MTH_Close), a joyful face 
   assert.equal(inf('Fcl_ALL_Joy') ?? 0, 0, 'the whole-face joy (with its open mouth) is off while singing');
   const rest = V.poseVrm('raymi5', k, 0, 30, 0, cam, 0.6, []);
   assert.equal(inf('Fcl_MTH_Close'), 0, 'not singing: lips relaxed again');
-  assert.ok(rest.vrm.expressionManager.getValue('happy') > 0.5 || rest.vrm.expressionManager.getValue('joy') > 0.5);
+  // toki 2026-10-24 (POV Shorts): not singing, joy still lives in brows + eyes - the mouth-opening preset stays off
+  assert.ok(inf('Fcl_EYE_Joy') > 0.5, 'not singing: joy in the eyes');
+  assert.equal(rest.vrm.expressionManager.getValue('happy') ?? 0, 0, 'the preset (it opens her mouth) stays off');
+});
+
+test('the observer effect: her head turns toward the lens, from behind only in glances (toki 2026-10-24)', async () => {
+  const THREE = await import('three');
+  const facing = (rig) => new THREE.Vector3(0, 0, 1).applyQuaternion(rig.vrm.humanoid.getRawBoneNode('head').getWorldQuaternion(new THREE.Quaternion()));
+  const k = (aware) => [{f: 0, pose: 'stand', pos: [0, 0, 0], rotY: 0, aware}];
+  const right = [2, 1.4, 1.2];
+  const off = facing(V.poseVrm('raymi', k(0), 30, 30, 0, right, 0.6)).x;
+  const on = facing(V.poseVrm('raymi', k(1), 30, 30, 0, right, 0.6)).x;
+  assert.ok(on > off + 0.25, `head toward the lens: x ${off.toFixed(2)} -> ${on.toFixed(2)}`);
+  const behind = [0.4, 1.4, -2.5];
+  const xs = [0, 8, 16, 24, 32, 40, 60, 80, 100, 120].map((f) => facing(V.poseVrm('raymi', k(1), f, 30, 0, behind, 0.6)).x);
+  assert.ok(Math.max(...xs) - Math.min(...xs) > 0.1 && Math.min(...xs.map(Math.abs)) < 0.12, `glances from behind: ${xs.map((x) => x.toFixed(2)).join(' ')}`);
 });

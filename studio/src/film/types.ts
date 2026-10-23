@@ -12,6 +12,9 @@ export type CamKey = {f: number; pos: V3; look: V3; fov: number; roll?: number; 
   path?: 'line' | 'spline';  // how the lens travels INTO this key: a straight line or a smooth curve through the neighbours
   frameH?: number;           // dolly zoom: the frame height (m) at the look point stays this size while the lens travels
   shake?: number;            // handheld: 0 = the breathing tripod, 1 = a running camera (lerped between keys)
+  // the observer (toki 2026-10-24: "die Kamera imitiert den Viewer"): a person watching her - breathes, sways, the gaze
+  // drifts a little and finds her again after a cut. 0 = off (a dead-still beat on purpose), 1 = a calm watcher.
+  observer?: number;
 };
 
 export type Act = 'idle' | 'pop' | 'hop' | 'bounce' | 'shake' | 'tilt' | 'lean' | 'shrink' | 'turn' | 'stomp' | 'float' | 'flatten';

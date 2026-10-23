@@ -631,7 +631,10 @@ export function solidFaults(props: FilmProps): {shot: string; frame: number; why
       if (inside) { out.push({shot: s.id, frame: f, why: `lens inside the ${inside.name}`}); bad = 'x'; break; }
       // a prop right at the lens fills the frame as a flat mass (final 1: a coin tower for 1.5 s)
       const fwd = new THREE.Vector3(0, 0, -1).applyQuaternion(cam.quaternion);
-      const near = boxes.find((b) => b.box.distanceToPoint(cam.position) < 0.6 && b.box.getCenter(new THREE.Vector3()).sub(cam.position).dot(fwd) > 0);
+      // the prop must sit IN the line of sight (the frame centre), not merely near the lens: a desk edge under a seated
+      // close-up was refused before (Beach rebuild 2026-10-24) though the frame showed her over it
+      const sight = new THREE.Ray(cam.position.clone(), fwd);
+      const near = boxes.find((b) => { const hit = sight.intersectBox(b.box, new THREE.Vector3()); return hit !== null && hit.distanceTo(cam.position) < 0.6; });
       close = near ? close + 1 : 0;
       if (close >= Math.round(props.fps * 0.4)) { out.push({shot: s.id, frame: f - close + 1, why: `the ${near!.name} fills the lens`}); bad = 'x'; break; }
       const p = puppetAt(s.puppets, f, props.fps);
@@ -656,7 +659,9 @@ export function solidFaults(props: FilmProps): {shot: string; frame: number; why
       if (!p && s.actor?.length) {
         const k = s.actor.reduce((q, x) => (x.f <= f ? x : q), s.actor[0]);
         const hh = k.height ?? 1.55;
-        const blocked = [0.66, 0.88].map((r) => {
+        // seated her head is ~1.05 m, standing ~1.40 m (measured on the POV stills, 2026-10-24)
+        const rows = /^(sit|slump)/.test(k.pose) ? [0.5, 0.68] : [0.66, 0.88];
+        const blocked = rows.map((r) => {
           const pt = new THREE.Vector3(k.pos[0], k.pos[1] + r * hh, k.pos[2]);
           const n = pt.clone().project(cam);
           if (!(n.z < 1 && Math.abs(n.x) < 1 && Math.abs(n.y) < 1)) return null;
