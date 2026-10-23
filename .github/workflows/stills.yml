@@ -105,6 +105,9 @@ jobs:
             DEST=$(get dest ""); [ -n "$DEST" ] && OUT="$PWD/$DEST"   # e.g. a board job writes into the song job's boards/
             python -m raymi stills-passes "$J" > "/tmp/stills/$J.passes"   # one pass per format (thumbs: mv + short)
             while IFS=$'\t' read -r FMT FR NAMES; do
+              if [ -f "jobs/$J/shots.json" ] && grep -q '"voice"' "jobs/$J/shots.json"; then   # a talking Short: its sound exists before the timeline
+                python -m raymi voice-lines "$J" < /dev/null && python -m raymi mix "$J" < /dev/null
+              fi
               if [ -f "jobs/$J/shots.json" ]; then python -m raymi timeline "$J" "$FMT" < /dev/null; fi
               START=$(date +%s)
               (cd studio && node stills.mjs "$J" "$FR" --scale "$SC" --out "$OUT" ${NAMES:+--names "$NAMES"}) < /dev/null

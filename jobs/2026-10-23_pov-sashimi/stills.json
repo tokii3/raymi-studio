@@ -1,1 +1,1 @@
-{"format": "short", "frames": [5, 100, 180, 240, 320, 380, 470], "names": ["still_01", "still_02", "still_03", "still_04", "still_05", "still_06", "still_07"], "scale": 0.6, "to": "boards", "_why": "first stills board of the POV Short (rerun after the apt hang)"}
+{"format": "short", "frames": [5, 100, 180, 240, 320, 380, 470], "names": ["still_01", "still_02", "still_03", "still_04", "still_05", "still_06", "still_07"], "scale": 0.6, "to": "boards", "_why": "first stills board of the POV Short (rerun: mix before the timeline)"}
