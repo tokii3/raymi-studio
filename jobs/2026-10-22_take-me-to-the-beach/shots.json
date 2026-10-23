@@ -931,30 +931,30 @@
     {
      "at": 0,
      "pos": [
-      -0.75,
-      1.76,
-      1.05
+      -1.25,
+      1.85,
+      1.25
      ],
      "look": [
       0.2,
-      1.02,
+      1.0,
       0.3
      ],
-     "fov": 40
+     "fov": 34
     },
     {
      "at": "end",
      "pos": [
-      -0.62,
-      1.7,
-      0.9
+      -1.08,
+      1.78,
+      1.1
      ],
      "look": [
       0.2,
-      1.02,
+      1.0,
       0.3
      ],
-     "fov": 37,
+     "fov": 31,
      "ease": "inOut"
     }
    ],
@@ -3350,7 +3350,10 @@
      "small": "fitter: the free space beside her is small in this frame"
     }
    },
-   "kick": 2.5
+   "kick": 2.5,
+   "lens_near": {
+    "globe": "the antithesis in one frame: the card and the globe's file mountain side by side (portrait: the globe in the foreground)"
+   }
   },
   {
    "id": "29",

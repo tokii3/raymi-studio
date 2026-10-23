@@ -1,0 +1,32 @@
+{
+ "text": "you said you're not cute?",
+ "duration": 2.016,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "you",
+   "start": 0.093,
+   "end": 0.264
+  },
+  {
+   "w": "said",
+   "start": 0.274,
+   "end": 0.509
+  },
+  {
+   "w": "you're",
+   "start": 0.52,
+   "end": 0.627
+  },
+  {
+   "w": "not",
+   "start": 0.638,
+   "end": 0.894
+  },
+  {
+   "w": "cute?",
+   "start": 0.905,
+   "end": 1.268
+  }
+ ]
+}

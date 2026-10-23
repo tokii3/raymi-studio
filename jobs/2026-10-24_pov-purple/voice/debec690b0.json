@@ -1,0 +1,32 @@
+{
+ "text": "your color? wrong answers only.",
+ "duration": 3.456,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "your",
+   "start": 0.093,
+   "end": 0.306
+  },
+  {
+   "w": "color?",
+   "start": 0.317,
+   "end": 0.712
+  },
+  {
+   "w": "wrong",
+   "start": 1.442,
+   "end": 1.773
+  },
+  {
+   "w": "answers",
+   "start": 1.784,
+   "end": 2.286
+  },
+  {
+   "w": "only.",
+   "start": 2.297,
+   "end": 2.703
+  }
+ ]
+}

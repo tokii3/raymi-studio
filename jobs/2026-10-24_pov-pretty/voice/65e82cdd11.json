@@ -1,0 +1,42 @@
+{
+ "text": "so you're cute too. that's the rule.",
+ "duration": 3.576,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "so",
+   "start": 0.093,
+   "end": 0.338
+  },
+  {
+   "w": "you're",
+   "start": 0.349,
+   "end": 0.563
+  },
+  {
+   "w": "cute",
+   "start": 0.574,
+   "end": 0.905
+  },
+  {
+   "w": "too.",
+   "start": 0.915,
+   "end": 1.236
+  },
+  {
+   "w": "that's",
+   "start": 1.966,
+   "end": 2.297
+  },
+  {
+   "w": "the",
+   "start": 2.308,
+   "end": 2.425
+  },
+  {
+   "w": "rule.",
+   "start": 2.436,
+   "end": 2.821
+  }
+ ]
+}

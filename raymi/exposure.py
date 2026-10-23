@@ -19,8 +19,9 @@ SAT_P95_MAX = 0.85     # accents may be loud, not the whole top 5 %
 # saturation is measured as CHROMA (HSV saturation x value): a dark saturated blue is not loud, a bright one is
 SPREAD_MIN = 0.35      # a flat, washed-out picture
 # toki 2026-10-24 (POV Sashimi "noch ueberbelichtet"; clipping said 0.6 %): burnt-out WHITE in the frame centre - her
-# skin and clothes near white with the colour gone - not a bright blue sky. The well-lit Shorts measured 1-4 %, Sashimi 17.
-WASHED_MAX = 0.08
+# skin and clothes near white with the colour gone - not a bright blue sky, and not her pale grey-blue skin (hard rule 9)
+# filling a close-up. Calibrated 2026-10-24: v > 0.95 and s < 0.12 - Sashimi 5-8 %, the well-lit Shorts <= 0.6 %.
+WASHED_MAX = 0.02
 
 
 def measure(img: np.ndarray) -> dict:
@@ -32,7 +33,7 @@ def measure(img: np.ndarray) -> dict:
     centre = np.abs(lap[h // 4: 3 * h // 4, w // 4: 3 * w // 4]).mean()
     edge = np.concatenate([np.abs(lap[: h // 8]).ravel(), np.abs(lap[-h // 8:]).ravel()]).mean()
     c = hsv[h // 5: 4 * h // 5, w // 5: 4 * w // 5]
-    washed = float(((c[:, :, 2] > 0.9) & (c[:, :, 1] < 0.25)).mean())
+    washed = float(((c[:, :, 2] > 0.95) & (c[:, :, 1] < 0.12)).mean())
     return {"clipped": float((lum > 0.985).mean()), "crushed": float((lum < 0.02).mean()), "washed": washed,
             "sat_mean": float(sat.mean()), "sat_p95": float(np.percentile(sat, 95)),
             "spread": float(np.percentile(lum, 95) - np.percentile(lum, 5)), "depth": float(centre / max(edge, 1e-6))}

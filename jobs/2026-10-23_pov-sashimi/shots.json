@@ -87,9 +87,10 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.42,
+    "lit": 0.5,
+    "lamp": 0.4,
     "post": {
-     "bloom": 0.15,
+     "bloom": 0.1,
      "dof": 2.21,
      "dofRange": 0.77
     },
@@ -205,9 +206,10 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.42,
+    "lit": 0.5,
+    "lamp": 0.4,
     "post": {
-     "bloom": 0.15,
+     "bloom": 0.1,
      "dof": 2.21,
      "dofRange": 0.77
     },
@@ -316,9 +318,10 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.42,
+    "lit": 0.5,
+    "lamp": 0.4,
     "post": {
-     "bloom": 0.15,
+     "bloom": 0.1,
      "dof": 2.01,
      "dofRange": 0.7
     },
@@ -452,9 +455,10 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.42,
+    "lit": 0.5,
+    "lamp": 0.4,
     "post": {
-     "bloom": 0.15
+     "bloom": 0.1
     },
     "glow_flare": [
      7.72
@@ -587,9 +591,10 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.42,
+    "lit": 0.5,
+    "lamp": 0.4,
     "post": {
-     "bloom": 0.15,
+     "bloom": 0.1,
      "dof": 1.94,
      "dofRange": 0.68
     },
@@ -737,9 +742,10 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.42,
+    "lit": 0.5,
+    "lamp": 0.4,
     "post": {
-     "bloom": 0.15,
+     "bloom": 0.1,
      "dof": 1.03,
      "dofRange": 0.36
     },
@@ -874,9 +880,10 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.42,
+    "lit": 0.5,
+    "lamp": 0.4,
     "post": {
-     "bloom": 0.15,
+     "bloom": 0.1,
      "dof": 2.21,
      "dofRange": 0.77
     },

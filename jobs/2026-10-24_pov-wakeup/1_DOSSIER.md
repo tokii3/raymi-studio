@@ -1,41 +1,16 @@
-# DOSSIER - <song> (<artist>)
+# DOSSIER - POV: You Woke Up A Stingray At 6am (POV Short)
 
-Knowledge to open: `knowledge/CASEBOOK.md`, `knowledge/craft/07_Ton_und_Musik.md`, `knowledge/craft/10_*`,
-`knowledge/studies/mv_study_12_videos.md`. Done when every open marker in this file is filled.
+Series dossier: `knowledge/studies/pov_shorts_series_2026-10.md`; lessons: `knowledge/HANDOFF_2026-10-24_studio_learnings.md`.
+Upload slot Mon 2026-11-02. Bed: `assets/music/wallpaper.mp3` (Kevin MacLeod, CC BY 4.0, measured map
+`assets/music/wallpaper.map.json`). Voice: one edge-tts take per line (`voice/`).
 
-## 1. Facts
-- Official upload: TODO (url, channel, upload date, views)
-- Credits: TODO (music, lyrics, vocal / synth, illustration, video)
-- Length, tempo, key (measured): TODO
-- Audio file in the job: TODO (source, format, loudness of the source)
-- Rights: TODO (Content ID expected? who owns it? reach vs income - toki decides)
+## The bit
+You wake her up at six: she glares from the pillow, sits up, the alarm starts beeping louder and louder, she smacks it and goes flat into the mattress like a ray into sand - and asks you from there what time is too early.
 
-## 2. What the song says
-Story of the song in 5 sentences (who, wants what, what happens, how it ends): TODO
+## Why only Raymi
+- her sleepy baseline (canon/01 2: relaxed / sleepy demeanour)
+- she goes flat into the mattress like a ray burying in the sand, on 'rules' (her body)
+- 'ray rules' - her running rule bit; the alarm's loud beeps are her canon fear of sudden noise
 
-| # | JP | romaji | literal EN | what it MEANS / subtext | weight (1-3) |
-|---|---|---|---|---|---|
-| 1 | TODO | | | | |
-
-Risky lines (keep JP on screen, use a safe own translation): TODO
-
-## 3. What exists already (derive, never copy)
-- Original MV: world, colours, motifs, what it is famous for: TODO
-- Fan animations / covers / VTuber versions (top 5-10, views, what each does): TODO
-- The gap (what nobody did yet that Raymi can): TODO
-
-## 4. Who loves this song and why
-Audience, memes, quotes from comments, references fans expect to see: TODO
-
-## 5. Song map (MEASURED, never guessed)
-| time | section | energy (calm / story / dance) | what happens in the music (turn, drop, pause, solo, stop) |
-|---|---|---|---|
-| TODO | | | |
-Lyric line times: from the vocal stem (file: TODO).
-
-## 6. Where Raymi meets this song
-Her name 灯闇 (lamp in the dark), body (tail, tako ears, flat ray shape, glowing dots, burying in sand), lore (Salmon,
-Sumi, the spoon, rain predictions, `canon/01_character.md`), her voice and attitude. Brainstorm, at least 10: TODO
-
-## 7. Short windows (12-20 s, start and end on phrase edges)
-TODO
+## Who it is for
+New viewers from the Shorts feed; the CTA asks for a two-word answer (comment fuel).

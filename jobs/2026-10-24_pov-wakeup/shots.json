@@ -1,0 +1,621 @@
+{
+ "title": "POV: You Woke Up A Stingray At 6am",
+ "_why": "POV Short (kind pov), built in one pass from proven parts (gen_v3, 2026-10-24).",
+ "audio": {
+  "file": "../../assets/music/wallpaper.mp3",
+  "from": 0.0,
+  "to": 15.36
+ },
+ "song_map": "../../assets/music/wallpaper.map.json",
+ "bed": {
+  "db": -15,
+  "duck": true
+ },
+ "voice": [
+  {
+   "at": 0.05,
+   "text": "you woke me up. at six."
+  },
+  {
+   "at": 2.914,
+   "text": "why are you awake."
+  },
+  {
+   "at": 4.864,
+   "text": "why am i awake."
+  },
+  {
+   "at": 7.815,
+   "text": "no."
+  },
+  {
+   "at": 9.416,
+   "text": "five more minutes. ray rules."
+  },
+  {
+   "at": 12.666,
+   "text": "what time is too early?"
+  }
+ ],
+ "sfx": [
+  {
+   "at": 6.258,
+   "kind": "beep"
+  },
+  {
+   "at": 6.908,
+   "kind": "beep"
+  },
+  {
+   "at": 7.558,
+   "kind": "grab",
+   "off_grid": "the smack lands on the beat"
+  },
+  {
+   "at": 9.509,
+   "kind": "whoosh"
+  },
+  {
+   "at": 11.459,
+   "kind": "pop"
+  }
+ ],
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [],
+ "grain": 0.04,
+ "all_lyrics": false,
+ "short": {
+  "hook": "you woke me up. at six.",
+  "hook_to": 2.6,
+  "cta": "what time is too early?",
+  "cta_from": 12.726
+ },
+ "shots": [
+  {
+   "id": "p1",
+   "at": 0.0,
+   "set": "bedroom",
+   "opts": {
+    "grade": "pov_warm",
+    "dark": 0.35,
+    "lamp": 0.6,
+    "post": {
+     "bloom": 0.15,
+     "dof": 0.78,
+     "dofRange": 0.35
+    },
+    "things": [
+     {
+      "kind": "clock",
+      "pos": [
+       0.85,
+       0.49,
+       -0.75
+      ],
+      "rot": [
+       0,
+       -0.6,
+       0
+      ],
+      "ring_at": [
+       6.258,
+       6.908,
+       7.558
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.35,
+      1.25,
+      -0.3
+     ],
+     "look": [
+      0.0,
+      0.62,
+      -0.6
+     ],
+     "fov": 18,
+     "shake": 0.08
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.3,
+      1.15,
+      -0.4
+     ],
+     "look": [
+      0.0,
+      0.62,
+      -0.6
+     ],
+     "fov": 18,
+     "shake": 0.08
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "waking",
+     "pos": "bed",
+     "rotY": 0,
+     "clipFrom": 0.0,
+     "speed": 0.6,
+     "expr": {
+      "angry": 0.6,
+      "blink_r": 0.8
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "CU from above: she lies on her pillow, one eye open, glaring up at you"
+   }
+  },
+  {
+   "id": "p2",
+   "at": 2.974,
+   "set": "bedroom",
+   "opts": {
+    "grade": "pov_warm",
+    "dark": 0.35,
+    "lamp": 0.6,
+    "post": {
+     "bloom": 0.15,
+     "dof": 0.84,
+     "dofRange": 0.35
+    },
+    "things": [
+     {
+      "kind": "clock",
+      "pos": [
+       0.85,
+       0.49,
+       -0.75
+      ],
+      "rot": [
+       0,
+       -0.6,
+       0
+      ],
+      "ring_at": [
+       6.258,
+       6.908,
+       7.558
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      1.2,
+      -0.15
+     ],
+     "look": [
+      0.0,
+      0.62,
+      -0.6
+     ],
+     "fov": 20,
+     "shake": 0.08
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "waking",
+     "pos": "bed",
+     "rotY": 0,
+     "clipFrom": 0.4,
+     "speed": 0.4,
+     "expr": {
+      "sorrow": 0.5
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "MCU: still lying, both eyes on you now, deadpan"
+   }
+  },
+  {
+   "id": "p3",
+   "at": 4.924,
+   "set": "bedroom",
+   "opts": {
+    "grade": "pov_warm",
+    "dark": 0.35,
+    "lamp": 0.6,
+    "post": {
+     "bloom": 0.15,
+     "dof": 1.29,
+     "dofRange": 0.45
+    },
+    "things": [
+     {
+      "kind": "clock",
+      "pos": [
+       0.85,
+       0.49,
+       -0.75
+      ],
+      "rot": [
+       0,
+       -0.6,
+       0
+      ],
+      "ring_at": [
+       6.258,
+       6.908,
+       7.558
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.25,
+      1.5,
+      0.75
+     ],
+     "look": [
+      0.55,
+      0.99,
+      -0.2
+     ],
+     "fov": 22,
+     "shake": 0.1
+    },
+    {
+     "at": 1.4,
+     "pos": [
+      1.25,
+      1.5,
+      0.75
+     ],
+     "look": [
+      0.55,
+      0.99,
+      -0.2
+     ],
+     "fov": 22,
+     "shake": 0.1
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.95,
+      1.2,
+      0.3
+     ],
+     "look": [
+      0.55,
+      0.99,
+      -0.2
+     ],
+     "fov": 22,
+     "shake": 0.15
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sit",
+     "clip": "sitting-idle",
+     "motionMix": 0.2,
+     "pos": [
+      0.55,
+      0,
+      -0.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "sorrow": 0.6,
+      "blink": 0.4
+     }
+    },
+    {
+     "at": 1.5,
+     "pose": "sit",
+     "clip": "sitting-idle",
+     "motionMix": 0.2,
+     "pos": [
+      0.55,
+      0,
+      -0.2
+     ],
+     "rotY": -60,
+     "look": [
+      0.85,
+      0.65,
+      -0.75
+     ],
+     "expr": {
+      "angry": 0.4
+     },
+     "icon": "!"
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "she sits up on the bed edge; the alarm starts beeping (6.3 s) - the lens pushes in to her half-closed eye as she slowly turns her head to the clock"
+   }
+  },
+  {
+   "id": "p4",
+   "at": 7.525,
+   "set": "bedroom",
+   "opts": {
+    "grade": "pov_warm",
+    "dark": 0.35,
+    "lamp": 0.6,
+    "post": {
+     "bloom": 0.15,
+     "dof": 0.75,
+     "dofRange": 0.35
+    },
+    "things": [
+     {
+      "kind": "clock",
+      "pos": [
+       0.85,
+       0.49,
+       -0.75
+      ],
+      "rot": [
+       0,
+       -0.6,
+       0
+      ],
+      "ring_at": [
+       6.258,
+       6.908,
+       7.558
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.0,
+      1.0,
+      -0.1
+     ],
+     "look": [
+      0.85,
+      0.65,
+      -0.75
+     ],
+     "fov": 30,
+     "shake": 0.1
+    },
+    {
+     "at": 0.05,
+     "pos": [
+      1.0,
+      1.0,
+      -0.1
+     ],
+     "look": [
+      0.85,
+      0.65,
+      -0.75
+     ],
+     "fov": 30,
+     "shake": 0.7
+    },
+    {
+     "at": 0.3,
+     "pos": [
+      1.0,
+      1.0,
+      -0.1
+     ],
+     "look": [
+      0.85,
+      0.65,
+      -0.75
+     ],
+     "fov": 30,
+     "shake": 0.1
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sit_offer",
+     "pos": [
+      0.55,
+      0,
+      -0.2
+     ],
+     "rotY": -120,
+     "blend": 0.1,
+     "act": "shake",
+     "look": [
+      0.85,
+      0.65,
+      -0.75
+     ],
+     "expr": {
+      "angry": 0.8
+     },
+     "icon": "anger"
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "the ringing clock on the nightstand: her hand swings in and smacks it on the beat (the frame jolts), 'no.'"
+   }
+  },
+  {
+   "id": "p5",
+   "at": 9.476,
+   "set": "bedroom",
+   "opts": {
+    "grade": "pov_warm",
+    "dark": 0.35,
+    "lamp": 0.6,
+    "post": {
+     "bloom": 0.15,
+     "dof": 1.55,
+     "dofRange": 0.54
+    },
+    "things": [
+     {
+      "kind": "clock",
+      "pos": [
+       0.85,
+       0.49,
+       -0.75
+      ],
+      "rot": [
+       0,
+       -0.6,
+       0
+      ],
+      "ring_at": [
+       6.258,
+       6.908,
+       7.558
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.8,
+      1.9,
+      0.4
+     ],
+     "look": [
+      0.5,
+      0.5,
+      -0.2
+     ],
+     "fov": 30,
+     "shake": 0.08
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "crouch",
+     "pos": [
+      0.5,
+      0.48,
+      -0.2
+     ],
+     "rotY": -90,
+     "expr": {
+      "relaxed": 0.7
+     }
+    },
+    {
+     "at": 2.2,
+     "pose": "crouch",
+     "pos": [
+      0.5,
+      0.48,
+      -0.2
+     ],
+     "rotY": -90,
+     "act": "flatten",
+     "expr": {
+      "relaxed": 0.9
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "from above: she flops back onto the bed at the same spot, and on 'rules' goes FLAT into the mattress like a ray into sand"
+   }
+  },
+  {
+   "id": "p6",
+   "at": 12.726,
+   "set": "bedroom",
+   "opts": {
+    "grade": "pov_warm",
+    "dark": 0.35,
+    "lamp": 0.6,
+    "post": {
+     "bloom": 0.15,
+     "dof": 1.33,
+     "dofRange": 0.46
+    },
+    "things": [
+     {
+      "kind": "clock",
+      "pos": [
+       0.85,
+       0.49,
+       -0.75
+      ],
+      "rot": [
+       0,
+       -0.6,
+       0
+      ],
+      "ring_at": [
+       6.258,
+       6.908,
+       7.558
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.7,
+      1.75,
+      0.2
+     ],
+     "look": [
+      0.5,
+      0.5,
+      -0.2
+     ],
+     "fov": 28,
+     "shake": 0.06
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "crouch",
+     "pos": [
+      0.5,
+      0.48,
+      -0.2
+     ],
+     "rotY": -90,
+     "act": "flatten",
+     "expr": {
+      "relaxed": 0.9
+     },
+     "icon": "bubbles"
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "still flat on the bed from above, snore bubbles rising - she asks you from there"
+   }
+  }
+ ]
+}

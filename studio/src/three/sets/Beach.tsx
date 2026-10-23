@@ -4,6 +4,7 @@
 // deep blue the tiny grey office dome she left. The water is shallow: lying at "float" she is half in it.
 // Options:
 //   dusk: 0..1          day -> evening sun (warm orange, long shadows, her dots glow)
+//   dusk_to: [[t, v]] + dusk_s   the light runs from dusk to v over dusk_s seconds, starting at t (song s)
 //   salmon / fish / props    creatures (creatures.tsx DeepLife: Salmon waves, floats, dances)
 //   deckchair: true     Salmon's tiny deck chair + parasol at the "chair" mark
 //   dome: true          the tiny office dome far out at sea (shot 82)
@@ -20,7 +21,13 @@ import type {SetProps} from './index';
 const num = (v: unknown, d = 0) => (typeof v === 'number' ? v : d);
 
 export const Beach: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
-  const dusk = num(opts.dusk);
+  // dusk_to: [[frame, value]] = the light runs from `dusk` to value over dusk_s seconds (the sky turns while you watch)
+  let dusk = num(opts.dusk);
+  if (Array.isArray(opts.dusk_to) && Array.isArray(opts.dusk_to[0])) {
+    const [at, v] = opts.dusk_to[0] as [number, number];
+    const k = Math.max(0, Math.min(1, (f - at) / (num(opts.dusk_s, 1.5) * 30)));
+    dusk += (v - dusk) * (k * k * (3 - 2 * k));
+  }
   const sunC = new THREE.Color('#fff4d6').lerp(new THREE.Color('#ff9a52'), dusk);
   const skyTop = new THREE.Color('#5fc4f0').lerp(new THREE.Color('#5a4a9a'), dusk);
   const skyLow = new THREE.Color('#d9f6ff').lerp(new THREE.Color('#ffb27a'), dusk);

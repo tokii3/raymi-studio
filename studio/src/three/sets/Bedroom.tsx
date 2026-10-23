@@ -8,6 +8,7 @@
 //   things / strings / crowd / boss  -> routine.tsx
 //   lamp_at: frame       you switch the light on: before it the room is dark (dark, default 0.85), after it lit (lit,
 //                        default 0.15) with a 4-frame flare (POV Shorts)
+//   lamp: 0..1           the bedside lamp's strength (it stands right next to the bed: 0.4 keeps her skin from burning)
 //   window_view: true    the round window is real glass: behind it the dark sea and whatever swims there (salmon)
 //   salmon / fish        creatures (creatures.tsx DeepLife) - e.g. the salmon outside the window, pressing his face on it
 import React from 'react';
@@ -109,7 +110,7 @@ export const Bedroom: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       <Sign id="bedroomsign" pos={[-0.2, 2.35, -3.95]} size={[0.9, 0.22]} paint={(ctx, w, h) => {
         ctx.fillStyle = '#4b4f70'; ctx.fillRect(0, 0, w, h); drawText(ctx, 'DOME 7 - RAYMI', w / 2, h / 2, h * 0.55, '#e7e2ff', {maxW: w * 0.9});
       }} />
-      {power > 0.2 ? <pointLight position={[0.8, 1.2, -0.6]} color="#ffe6c4" intensity={3 * power} distance={4} decay={1.5} /> : null}
+      {power > 0.2 ? <pointLight position={[0.8, 1.2, -0.6]} color="#ffe6c4" intensity={3 * power * num(opts.lamp, 1)} distance={4} decay={1.5} /> : null}
       <RoomClutter f={f} />
       <RoutineLife opts={opts} f={f} camPos={camPos} />
       <DeepLife opts={opts} f={f} fps={fps} camPos={camPos} />

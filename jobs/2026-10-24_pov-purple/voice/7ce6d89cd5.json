@@ -1,0 +1,37 @@
+{
+ "text": "name a better color. you can't.",
+ "duration": 3.312,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "name",
+   "start": 0.093,
+   "end": 0.392
+  },
+  {
+   "w": "a",
+   "start": 0.403,
+   "end": 0.477
+  },
+  {
+   "w": "better",
+   "start": 0.488,
+   "end": 0.787
+  },
+  {
+   "w": "color.",
+   "start": 0.798,
+   "end": 1.193
+  },
+  {
+   "w": "you",
+   "start": 1.923,
+   "end": 2.094
+  },
+  {
+   "w": "can't.",
+   "start": 2.105,
+   "end": 2.553
+  }
+ ]
+}

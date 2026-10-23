@@ -110,7 +110,7 @@ TIME_OPTS = {"lights_off", "window_break", "unfold", "shake", "cracks", "burst",
              "pool_at", "sea_glow_at", "pulse_at", "dots_at", "path_at", "cloud_at", "rain_at", "rain_end_at", "fireworks",
              "glow", "whip", "grade_at",
              # POV Shorts (2026-10-23): her chest dots flare, a room lamp / the train lights, the live studio camera
-             "glow_flare", "lamp_at", "live", "door_at"}
+             "glow_flare", "lamp_at", "live", "door_at", "dusk_to"}
 # options holding specs (a dict or a list of dicts) whose own fields are times / positions (three/fire.tsx,
 # three/creatures.tsx): "at" / "out" / "toss" / "*_at" = song seconds -> frames, "grow" / "fade" / "ember" = seconds ->
 # frame counts, "pos" / "from" / "to" = a mark or [x, y, z]

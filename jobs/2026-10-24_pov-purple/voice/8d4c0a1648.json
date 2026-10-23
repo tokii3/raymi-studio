@@ -1,0 +1,27 @@
+{
+ "text": "wrong answers only. go.",
+ "duration": 3.168,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "wrong",
+   "start": 0.093,
+   "end": 0.424
+  },
+  {
+   "w": "answers",
+   "start": 0.435,
+   "end": 0.937
+  },
+  {
+   "w": "only.",
+   "start": 0.947,
+   "end": 1.353
+  },
+  {
+   "w": "go.",
+   "start": 2.083,
+   "end": 2.425
+  }
+ ]
+}

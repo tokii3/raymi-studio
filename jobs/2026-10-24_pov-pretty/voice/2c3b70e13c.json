@@ -1,0 +1,37 @@
+{
+ "text": "flat is cute. so are you.",
+ "duration": 3.312,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "flat",
+   "start": 0.093,
+   "end": 0.467
+  },
+  {
+   "w": "is",
+   "start": 0.477,
+   "end": 0.638
+  },
+  {
+   "w": "cute.",
+   "start": 0.648,
+   "end": 1.054
+  },
+  {
+   "w": "so",
+   "start": 1.784,
+   "end": 2.083
+  },
+  {
+   "w": "are",
+   "start": 2.094,
+   "end": 2.265
+  },
+  {
+   "w": "you.",
+   "start": 2.276,
+   "end": 2.553
+  }
+ ]
+}
