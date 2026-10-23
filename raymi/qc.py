@@ -26,8 +26,9 @@ def normalize(src: Path, dst: Path) -> None:
     m = loudness(src)
     af = (f"loudnorm=I={TARGET_LUFS}:TP=-1.5:LRA=11:measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
           f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true"
-          # a true-peak safety net (FIRESTARTER pilot 2026-10-19: -0.82 dBTP after AAC): a 4x oversampled limiter at -2 dBFS
-          ",aresample=192000,alimiter=limit=0.79:attack=1:release=50:level=disabled,aresample=48000")
+          # a true-peak safety net (FIRESTARTER pilot 2026-10-19: -0.82 dBTP after AAC; Beach MV 2026-10-23: -0.69 at -2 dBFS):
+          # a 4x oversampled limiter at -3.1 dBFS
+          ",aresample=192000,alimiter=limit=0.7:attack=1:release=50:level=disabled,aresample=48000")
     _run(["ffmpeg", "-y", "-hide_banner", "-i", str(src), "-c:v", "copy", "-af", af, "-ar", "48000",
           "-c:a", "aac", "-b:a", "192k", str(dst)])
 
