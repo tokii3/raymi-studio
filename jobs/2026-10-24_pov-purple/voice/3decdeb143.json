@@ -1,0 +1,17 @@
+{
+ "text": "green? no.",
+ "duration": 2.376,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "green?",
+   "start": 0.093,
+   "end": 0.509
+  },
+  {
+   "w": "no.",
+   "start": 1.23,
+   "end": 1.626
+  }
+ ]
+}

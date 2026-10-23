@@ -1,0 +1,32 @@
+{
+ "text": "what time is too early?",
+ "duration": 2.112,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "what",
+   "start": 0.093,
+   "end": 0.317
+  },
+  {
+   "w": "time",
+   "start": 0.328,
+   "end": 0.595
+  },
+  {
+   "w": "is",
+   "start": 0.606,
+   "end": 0.744
+  },
+  {
+   "w": "too",
+   "start": 0.755,
+   "end": 0.98
+  },
+  {
+   "w": "early?",
+   "start": 0.99,
+   "end": 1.375
+  }
+ ]
+}

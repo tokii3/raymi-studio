@@ -1,0 +1,432 @@
+{
+ "title": "Name A Better Color. You Can't.",
+ "_why": "POV Short (kind pov), built in one pass from proven parts (gen_v3, 2026-10-24).",
+ "audio": {
+  "file": "../../assets/music/easy-lemon.mp3",
+  "from": 0.0,
+  "to": 17.392
+ },
+ "song_map": "../../assets/music/easy-lemon.map.json",
+ "bed": {
+  "db": -15,
+  "duck": true
+ },
+ "voice": [
+  {
+   "at": 0.05,
+   "text": "name a better color. you can't."
+  },
+  {
+   "at": 3.181,
+   "text": "blue? sad purple."
+  },
+  {
+   "at": 5.782,
+   "text": "pink? baby purple."
+  },
+  {
+   "at": 8.382,
+   "text": "green? no."
+  },
+  {
+   "at": 10.611,
+   "text": "look. even the sky agrees."
+  },
+  {
+   "at": 14.698,
+   "text": "wrong answers only. go."
+  }
+ ],
+ "sfx": [
+  {
+   "at": 3.274,
+   "kind": "pop"
+  },
+  {
+   "at": 5.875,
+   "kind": "pop"
+  },
+  {
+   "at": 8.475,
+   "kind": "pop"
+  },
+  {
+   "at": 10.704,
+   "kind": "whoosh"
+  },
+  {
+   "at": 14.791,
+   "kind": "chime"
+  }
+ ],
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [],
+ "grain": 0.04,
+ "all_lyrics": false,
+ "short": {
+  "hook": "name a better color. you can't.",
+  "hook_to": 2.7,
+  "cta": "wrong answers only. go.",
+  "cta_from": 14.758
+ },
+ "shots": [
+  {
+   "id": "p1",
+   "at": 0.0,
+   "set": "beach",
+   "opts": {
+    "grade": "pov",
+    "dusk": 0.35,
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.1,
+     "dofRange": 0.74
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.0,
+      1.36,
+      2.6
+     ],
+     "look": [
+      -1.0,
+      1.33,
+      0.5
+     ],
+     "fov": 13,
+     "shake": 0.12
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "point_self",
+     "clip": "idle",
+     "motionMix": 0.15,
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.7
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "MCU on the sand: she points at herself (all purple), smug, the sea and a warm low sun behind"
+   }
+  },
+  {
+   "id": "p2",
+   "at": 3.241,
+   "set": "beach",
+   "opts": {
+    "grade": "pov",
+    "dusk": 0.35,
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.5,
+     "dofRange": 0.53
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.0,
+      1.35,
+      2.0
+     ],
+     "look": [
+      -1.0,
+      1.33,
+      0.5
+     ],
+     "fov": 13,
+     "shake": 0.12
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "gestures-pack-basic-dismissing-gesture",
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "fun": 0.5
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "CU: your suggestion BLUE? pops up beside her; she rolls her eyes"
+   },
+   "fx": [
+    {
+     "kind": "stamp",
+     "at": 0.0,
+     "to": "end",
+     "text": "BLUE?",
+     "x": 0.72,
+     "y": 0.55,
+     "size": 0.055,
+     "rot": 8
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "at": 5.842,
+   "set": "beach",
+   "opts": {
+    "grade": "pov",
+    "dusk": 0.35,
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.65,
+     "dofRange": 0.58
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.6,
+      1.35,
+      2.1
+     ],
+     "look": [
+      -1.0,
+      1.33,
+      0.5
+     ],
+     "fov": 13,
+     "shake": 0.12
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "gestures-pack-basic-annoyed-head-shake",
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "fun": 0.4
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "CU, the other side: PINK? pops up; she waves it off"
+   },
+   "fx": [
+    {
+     "kind": "stamp",
+     "at": 0.0,
+     "to": "end",
+     "text": "PINK?",
+     "x": 0.28,
+     "y": 0.55,
+     "size": 0.055,
+     "rot": -8
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "at": 8.442,
+   "set": "beach",
+   "opts": {
+    "grade": "pov",
+    "dusk": 0.35,
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.05,
+     "dofRange": 0.37
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.0,
+      1.36,
+      1.55
+     ],
+     "look": [
+      -1.0,
+      1.33,
+      0.5
+     ],
+     "fov": 13,
+     "shake": 0.1
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "stand",
+     "clip": "idle",
+     "motionMix": 0.15,
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.5
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "ECU: GREEN? pops up; she just stares at you, flat, and says no"
+   },
+   "fx": [
+    {
+     "kind": "stamp",
+     "at": 0.0,
+     "to": "end",
+     "text": "GREEN?",
+     "x": 0.5,
+     "y": 0.72,
+     "size": 0.055,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "at": 10.671,
+   "set": "beach",
+   "opts": {
+    "grade": "pov",
+    "dusk": 0.85,
+    "post": {
+     "bloom": 0.3
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.4,
+      1.3,
+      3.2
+     ],
+     "look": [
+      -1.0,
+      1.2,
+      0.5
+     ],
+     "fov": 26,
+     "shake": 0.12
+    },
+    {
+     "at": 1.6,
+     "pos": [
+      -1.4,
+      1.3,
+      3.2
+     ],
+     "look": [
+      -0.4,
+      4.5,
+      -6.0
+     ],
+     "fov": 34,
+     "shake": 0.12,
+     "path": "spline"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "point",
+     "clip": "idle",
+     "motionMix": 0.15,
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": 200,
+     "expr": {
+      "joy": 0.8
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "WIDE: she points up; the lens tilts up from her to the sky going ultraviolet over the sea (dusk deepens)"
+   }
+  },
+  {
+   "id": "p6",
+   "at": 14.758,
+   "set": "beach",
+   "opts": {
+    "grade": "pov",
+    "dusk": 0.85,
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.1,
+     "dofRange": 0.74
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.0,
+      1.36,
+      2.6
+     ],
+     "look": [
+      -1.0,
+      1.33,
+      0.5
+     ],
+     "fov": 13,
+     "shake": 0.12
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "point_self",
+     "clip": "idle",
+     "motionMix": 0.15,
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.8
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "MCU back on her, the sky purple behind, smug grin - frame 0's framing"
+   }
+  }
+ ]
+}

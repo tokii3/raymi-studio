@@ -1,35 +1,9 @@
-# IDEAS - <song>
+# IDEAS - Name A Better Color. You Can't.
 
-Knowledge to open: `knowledge/CASEBOOK.md` (the top three), `knowledge/PRINCIPLES.md` A,
-`knowledge/exemplars/renai_ANALYSIS.md`, `knowledge/studies/mv_study_12_videos.md`.
-Three REALLY different worlds (not one idea in three colours). Each gets 3 key frames in `boards/` (images for toki).
+- **The one sentence:** On her beach at dusk she dares you to name a better colour than purple; every colour you suggest pops up and she knocks it down, until the sky itself turns purple behind her.
+- **Hook (spoken + stamp):** "name a better color. you can't."
+- **CTA (spoken + stamp, >= 2.5 s before the end):** "wrong answers only. go."
+- **Main element:** her face at the lens (camera = you).
+- **Why only Raymi:** purple / ultraviolet is her favourite colour and her whole design (canon/01 1); competitive about nothing: every suggestion is shot down with a one-liner; her sea and sky at dusk turn ultraviolet - her world agrees with her.
 
-## Idea A - <name>
-- **The one sentence:** TODO (like "something lives in the dark inside your screen - and she brought a lamp")
-- **World** (one place / medium, built - what it is made of): TODO
-- **Why only Raymi** (name / body / lore / voice): TODO
-- **Story of actions, muted** (5 sentences: wants -> does -> goes wrong / turns -> payoff): TODO
-- **Main element** (the ONE thing the viewer must read in every key frame - an object, her face, a word): TODO
-- **Lyric medium** (where the words live in this world): TODO
-- **5 wows** (time + what, strongest last): TODO
-- **The Short** (window + its own twist): TODO
-- **Risk** (what could make it weak): TODO
-- **Key frames:** boards/A1.jpg, A2, A3
-
-## Idea B - <name>
-TODO (same fields)
-
-## Idea C - <name>
-TODO (same fields)
-
-## Compared
-| | A | B | C |
-|---|---|---|---|
-| as strong as Renai / LGW / POP IN 2? | | | |
-| story understood muted? | | | |
-| could another VTuber do it? | | | |
-| built from what exists + what we can build | | | |
-
-My recommendation and why: TODO
-
-approved: <toki writes here: date + idea + notes>
+approved: toki 2026-10-24 "okay bitte noch das fehlende short + short sashimi neu machen mit den fixes, dann noch bitte 3 weitere shorts, nutze dein wissen damit du nicht so viele qc runden brauchst" (ideas picked by Claude: two reserves from the 2026-10-23 plan toki saw + one new; toki may swap any)

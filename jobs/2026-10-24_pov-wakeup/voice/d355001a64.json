@@ -1,0 +1,27 @@
+{
+ "text": "why am i awake.",
+ "duration": 1.896,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "why",
+   "start": 0.093,
+   "end": 0.371
+  },
+  {
+   "w": "am",
+   "start": 0.381,
+   "end": 0.531
+  },
+  {
+   "w": "i",
+   "start": 0.541,
+   "end": 0.691
+  },
+  {
+   "w": "awake.",
+   "start": 0.702,
+   "end": 1.161
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "text": "pink? baby purple.",
+ "duration": 2.784,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "pink?",
+   "start": 0.093,
+   "end": 0.499
+  },
+  {
+   "w": "baby",
+   "start": 1.218,
+   "end": 1.538
+  },
+  {
+   "w": "purple.",
+   "start": 1.549,
+   "end": 2.03
+  }
+ ]
+}

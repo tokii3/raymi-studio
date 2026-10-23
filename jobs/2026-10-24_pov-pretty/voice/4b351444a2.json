@@ -1,0 +1,42 @@
+{
+ "text": "one thing you like about yourself. go.",
+ "duration": 3.624,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "one",
+   "start": 0.093,
+   "end": 0.381
+  },
+  {
+   "w": "thing",
+   "start": 0.392,
+   "end": 0.584
+  },
+  {
+   "w": "you",
+   "start": 0.595,
+   "end": 0.734
+  },
+  {
+   "w": "like",
+   "start": 0.744,
+   "end": 0.947
+  },
+  {
+   "w": "about",
+   "start": 0.958,
+   "end": 1.215
+  },
+  {
+   "w": "yourself.",
+   "start": 1.225,
+   "end": 1.802
+  },
+  {
+   "w": "go.",
+   "start": 2.532,
+   "end": 2.874
+  }
+ ]
+}

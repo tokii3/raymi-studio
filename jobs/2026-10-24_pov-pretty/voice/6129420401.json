@@ -1,0 +1,42 @@
+{
+ "text": "i'm a stingray. i'm flat. i'm adorable.",
+ "duration": 4.776,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "i'm",
+   "start": 0.093,
+   "end": 0.296
+  },
+  {
+   "w": "a",
+   "start": 0.306,
+   "end": 0.37
+  },
+  {
+   "w": "stingray.",
+   "start": 0.381,
+   "end": 0.979
+  },
+  {
+   "w": "i'm",
+   "start": 1.709,
+   "end": 1.934
+  },
+  {
+   "w": "flat.",
+   "start": 1.944,
+   "end": 2.393
+  },
+  {
+   "w": "i'm",
+   "start": 3.13,
+   "end": 3.333
+  },
+  {
+   "w": "adorable.",
+   "start": 3.344,
+   "end": 4.017
+  }
+ ]
+}
