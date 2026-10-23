@@ -43,12 +43,20 @@
    "kind": "pop"
   },
   {
-   "at": 7.933,
+   "at": 9.791,
    "kind": "chime"
+  },
+  {
+   "at": 11.184,
+   "kind": "pop"
   },
   {
    "at": 14.435,
    "kind": "tap"
+  },
+  {
+   "at": 17.686,
+   "kind": "pop"
   }
  ],
  "vrm": "vrm/raymi5.vrm",
@@ -84,27 +92,11 @@
       "text": "chat: i'm not cute lol"
      },
      {
-      "kind": "phone",
-      "pos": [
-       0.32,
-       0.765,
-       0.45
-      ]
-     },
-     {
-      "kind": "can",
-      "pos": [
-       -0.42,
-       0.765,
-       0.5
-      ]
-     },
-     {
       "kind": "postcard",
       "pos": [
        -0.3,
        1.12,
-       0.78
+       0.92
       ],
       "rot": [
        0,
@@ -115,7 +107,7 @@
     ],
     "post": {
      "bloom": 0.3,
-     "dof": 0.75,
+     "dof": 0.55,
      "dofRange": 0.35
     }
    },
@@ -123,31 +115,31 @@
     {
      "at": 0,
      "pos": [
-      0.0,
-      1.42,
-      0.62
+      0.08,
+      1.4,
+      0.36
      ],
      "look": [
       0,
       0.99,
       0.0
      ],
-     "fov": 24,
+     "fov": 26,
      "shake": 0.05
     },
     {
      "at": "end",
      "pos": [
-      0,
+      0.06,
       1.4,
-      0.56
+      0.3
      ],
      "look": [
       0,
       0.99,
       0.0
      ],
-     "fov": 24,
+     "fov": 26,
      "shake": 0.05
     }
    ],
@@ -164,14 +156,27 @@
      "clip": "sitting-talking",
      "motionMix": 0.2,
      "expr": {
-      "angry": 0.4
+      "angry": 0.3
      }
     }
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "CU through YOUR webcam on her monitor: she leans in, squinting at you, her stream room soft behind"
-   }
+    "see": "CU, low in the monitor's glow: she leans in, squinting at you; your chat line 'i'm not cute lol' is on screen as a chat overlay from frame 0"
+   },
+   "fx": [
+    {
+     "kind": "stamp",
+     "at": 0.0,
+     "to": "end",
+     "text": "chat: i'm not cute lol",
+     "x": 0.5,
+     "y": 0.6,
+     "size": 0.038,
+     "rot": -3,
+     "color": "#e9eeff"
+    }
+   ]
   },
   {
    "id": "p2",
@@ -195,27 +200,11 @@
       "text": "chat: i'm not cute lol"
      },
      {
-      "kind": "phone",
-      "pos": [
-       0.32,
-       0.765,
-       0.45
-      ]
-     },
-     {
-      "kind": "can",
-      "pos": [
-       -0.42,
-       0.765,
-       0.5
-      ]
-     },
-     {
       "kind": "postcard",
       "pos": [
        -0.3,
        1.12,
-       0.78
+       0.92
       ],
       "rot": [
        0,
@@ -226,8 +215,8 @@
     ],
     "post": {
      "bloom": 0.3,
-     "dof": 1.59,
-     "dofRange": 0.56
+     "dof": 1.68,
+     "dofRange": 0.59
     }
    },
    "camera": [
@@ -241,9 +230,24 @@
      "look": [
       0,
       1.15,
-      0.8
+      0.9
      ],
      "fov": 26,
+     "shake": 0.08
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.36,
+      1.42,
+      -0.5
+     ],
+     "look": [
+      0,
+      1.15,
+      0.9
+     ],
+     "fov": 24,
      "shake": 0.08
     }
    ],
@@ -264,7 +268,7 @@
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "over her shoulder onto the monitor: your chat line 'i'm not cute lol' big on the screen, her hand pointing at it"
+    "see": "over her shoulder onto the monitor: your chat line big on the screen, her hand reaching at it"
    }
   },
   {
@@ -289,27 +293,11 @@
       "text": "chat: i'm not cute lol"
      },
      {
-      "kind": "phone",
-      "pos": [
-       0.32,
-       0.765,
-       0.45
-      ]
-     },
-     {
-      "kind": "can",
-      "pos": [
-       -0.42,
-       0.765,
-       0.5
-      ]
-     },
-     {
       "kind": "postcard",
       "pos": [
        -0.3,
        1.12,
-       0.78
+       0.92
       ],
       "rot": [
        0,
@@ -320,7 +308,7 @@
     ],
     "post": {
      "bloom": 0.3,
-     "dof": 0.75,
+     "dof": 0.69,
      "dofRange": 0.35
     }
    },
@@ -328,24 +316,24 @@
     {
      "at": 0,
      "pos": [
-      0.0,
+      0.2,
       1.42,
-      0.62
+      0.5
      ],
      "look": [
       0,
       0.99,
       0.0
      ],
-     "fov": 24,
-     "shake": 0.08
+     "fov": 28,
+     "shake": 0.1
     },
     {
-     "at": 0.6,
+     "at": "end",
      "pos": [
-      0,
+      0.05,
       1.4,
-      0.56
+      0.28
      ],
      "look": [
       0,
@@ -353,8 +341,8 @@
       0.0
      ],
      "fov": 24,
-     "shake": 0.2,
-     "ease": "out"
+     "shake": 0.15,
+     "roll": 6
     }
    ],
    "actor": [
@@ -370,14 +358,29 @@
      "clip": "sitting-angry",
      "motionMix": 0.2,
      "expr": {
-      "angry": 0.7
+      "angry": 0.6
+     }
+    },
+    {
+     "at": 1.6,
+     "pose": "sit",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "clip": "sitting-angry",
+     "motionMix": 0.2,
+     "expr": {
+      "surprised": 0.6
      },
-     "icon": "anger"
+     "icon": "?"
     }
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "CU webcam: she turns back to you, leans in, offended for you"
+    "see": "push to an ECU with a tilt: she turns back to you, offended for you, a '?' on 'who'"
    }
   },
   {
@@ -402,139 +405,11 @@
       "text": "chat: i'm not cute lol"
      },
      {
-      "kind": "phone",
-      "pos": [
-       0.32,
-       0.765,
-       0.45
-      ]
-     },
-     {
-      "kind": "can",
-      "pos": [
-       -0.42,
-       0.765,
-       0.5
-      ]
-     },
-     {
       "kind": "postcard",
       "pos": [
        -0.3,
        1.12,
-       0.78
-      ],
-      "rot": [
-       0,
-       3.141592653589793,
-       0
-      ]
-     }
-    ],
-    "post": {
-     "bloom": 0.3,
-     "dof": 0.82,
-     "dofRange": 0.35
-    }
-   },
-   "camera": [
-    {
-     "at": 0,
-     "pos": [
-      0,
-      1.42,
-      0.7
-     ],
-     "look": [
-      0,
-      0.99,
-      0.0
-     ],
-     "fov": 28,
-     "shake": 0.06
-    }
-   ],
-   "actor": [
-    {
-     "at": 0,
-     "pose": "sit",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "clip": "sitting-laughing",
-     "motionMix": 0.2,
-     "expr": {
-      "joy": 0.7
-     }
-    },
-    {
-     "at": 2.2,
-     "pose": "sit",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "clip": "sitting-laughing",
-     "motionMix": 0.2,
-     "expr": {
-      "joy": 0.9
-     },
-     "icon": "sparkle"
-    }
-   ],
-   "outline": 0.0035,
-   "doc": {
-    "see": "MCU webcam, a touch wider: hair flip, proud, chin up - the confident one"
-   }
-  },
-  {
-   "id": "p5",
-   "at": 12.08,
-   "set": "office",
-   "opts": {
-    "grade": "pov",
-    "things": [
-     {
-      "kind": "monitor",
-      "pos": [
-       0,
-       0.765,
-       0.95
-      ],
-      "rot": [
-       0,
-       3.141592653589793,
-       0
-      ],
-      "text": "chat: i'm not cute lol"
-     },
-     {
-      "kind": "phone",
-      "pos": [
-       0.32,
-       0.765,
-       0.45
-      ]
-     },
-     {
-      "kind": "can",
-      "pos": [
-       -0.42,
-       0.765,
-       0.5
-      ]
-     },
-     {
-      "kind": "postcard",
-      "pos": [
-       -0.3,
-       1.12,
-       0.78
+       0.92
       ],
       "rot": [
        0,
@@ -562,38 +437,211 @@
       0.99,
       0.0
      ],
-     "fov": 24,
+     "fov": 26,
      "shake": 0.06
+    },
+    {
+     "at": 1.65,
+     "pos": [
+      0.0,
+      1.42,
+      0.62
+     ],
+     "look": [
+      0,
+      0.99,
+      0.0
+     ],
+     "fov": 26,
+     "shake": 0.06
+    },
+    {
+     "at": 1.95,
+     "pos": [
+      0.02,
+      2.05,
+      0.38
+     ],
+     "look": [
+      0,
+      0.55,
+      0.0
+     ],
+     "fov": 34,
+     "shake": 0.12,
+     "ease": "out"
+    },
+    {
+     "at": 3.15,
+     "pos": [
+      0.02,
+      2.05,
+      0.38
+     ],
+     "look": [
+      0,
+      0.55,
+      0.0
+     ],
+     "fov": 34,
+     "shake": 0.1
+    },
+    {
+     "at": 3.3,
+     "pos": [
+      0.0,
+      1.42,
+      0.62
+     ],
+     "look": [
+      0,
+      0.99,
+      0.0
+     ],
+     "fov": 26,
+     "shake": 0.3,
+     "ease": "snap"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sit",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "clip": "sitting-laughing",
+     "motionMix": 0.2,
+     "expr": {
+      "joy": 0.7
+     }
+    },
+    {
+     "at": 1.85,
+     "pose": "sit",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "act": "flatten",
+     "expr": {
+      "joy": 0.9
+     }
+    },
+    {
+     "at": 3.25,
+     "pose": "sit",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "clip": "sitting-laughing",
+     "motionMix": 0.2,
+     "act": "pop",
+     "expr": {
+      "joy": 0.9
+     },
+     "icon": "sparkle"
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "the webcam, then the lens rises to a top-down over the desk: on 'flat' she goes FLAT in her chair like a ray on the sand (chime), on 'adorable' she pops back up with a sparkle and the lens snaps back"
+   }
+  },
+  {
+   "id": "p5",
+   "at": 12.08,
+   "set": "office",
+   "opts": {
+    "grade": "pov",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       0,
+       0.765,
+       0.95
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ],
+      "text": "chat: i'm not cute lol"
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.3,
+       1.12,
+       0.92
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ]
+     }
+    ],
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.69,
+     "dofRange": 0.35
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.42,
+      0.45
+     ],
+     "look": [
+      0,
+      0.99,
+      0.0
+     ],
+     "fov": 26,
+     "shake": 0.25
     },
     {
      "at": 2.33,
      "pos": [
-      0.0,
+      0.3,
       1.42,
-      0.62
+      0.45
      ],
      "look": [
       0,
       0.99,
       0.0
      ],
-     "fov": 24,
-     "shake": 0.5
+     "fov": 26,
+     "shake": 0.6
     },
     {
      "at": 2.45,
      "pos": [
-      0.0,
+      0.3,
       1.42,
-      0.62
+      0.45
      ],
      "look": [
       0,
       0.99,
       0.0
      ],
-     "fov": 24,
-     "shake": 0.06
+     "fov": 26,
+     "shake": 0.2
     }
    ],
    "actor": [
@@ -628,7 +676,7 @@
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "ECU webcam: she reaches at the lens and taps it with one finger (the frame bumps), smiling"
+    "see": "a handheld lens-side angle: she reaches out and taps YOUR lens on 'rule' (the frame bumps)"
    }
   },
   {
@@ -653,27 +701,11 @@
       "text": "chat: i'm not cute lol"
      },
      {
-      "kind": "phone",
-      "pos": [
-       0.32,
-       0.765,
-       0.45
-      ]
-     },
-     {
-      "kind": "can",
-      "pos": [
-       -0.42,
-       0.765,
-       0.5
-      ]
-     },
-     {
       "kind": "postcard",
       "pos": [
        -0.3,
        1.12,
-       0.78
+       0.92
       ],
       "rot": [
        0,
@@ -684,7 +716,7 @@
     ],
     "post": {
      "bloom": 0.3,
-     "dof": 0.75,
+     "dof": 0.55,
      "dofRange": 0.35
     }
    },
@@ -692,16 +724,31 @@
     {
      "at": 0,
      "pos": [
-      0.0,
-      1.42,
-      0.62
+      0.08,
+      1.4,
+      0.36
      ],
      "look": [
       0,
       0.99,
       0.0
      ],
-     "fov": 24,
+     "fov": 26,
+     "shake": 0.05
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.06,
+      1.4,
+      0.3
+     ],
+     "look": [
+      0,
+      0.99,
+      0.0
+     ],
+     "fov": 26,
      "shake": 0.05
     }
    ],
@@ -720,11 +767,28 @@
      "expr": {
       "joy": 0.7
      }
+    },
+    {
+     "at": 2.45,
+     "pose": "sit",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "clip": "sitting-talking",
+     "motionMix": 0.2,
+     "act": "pop",
+     "expr": {
+      "joy": 1.0
+     },
+     "icon": "heart"
     }
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "CU webcam: she sits back, warm smile, waits for your answer - frame 0's framing again"
+    "see": "frame 0's low close-up again: she waits for your answer, and on 'go.' she leans in with a heart"
    }
   }
  ]

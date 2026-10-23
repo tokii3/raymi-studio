@@ -10,7 +10,7 @@ On her beach at dusk she dares you to name a better colour than purple; every co
 ## Why only Raymi
 - purple / ultraviolet is her favourite colour and her whole design (canon/01 1)
 - competitive about nothing: every suggestion is shot down with a one-liner
-- her sea and sky at dusk turn ultraviolet - her world agrees with her
+- her sky turns ultraviolet while you watch - her world agrees with her; her chest lights flare on the last question
 
 ## Who it is for
 New viewers from the Shorts feed; the CTA asks for a two-word answer (comment fuel).

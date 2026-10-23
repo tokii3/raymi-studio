@@ -7,17 +7,17 @@ the pose sheet, clips under a pose at mix <= 0.2, sitting = pose sit, grade pov,
 ## Shots
 | # | from-to | set | what we see (camera = you) |
 |---|---|---|---|
-| 1 | 0.00-1.86 | office | CU through YOUR webcam on her monitor: she leans in, squinting at you, her stream room soft behind |
-| 2 | 1.86-4.65 | office | over her shoulder onto the monitor: your chat line 'i'm not cute lol' big on the screen, her hand pointing at it |
-| 3 | 4.65-7.90 | office | CU webcam: she turns back to you, leans in, offended for you |
-| 4 | 7.90-12.08 | office | MCU webcam, a touch wider: hair flip, proud, chin up - the confident one |
-| 5 | 12.08-15.33 | office | ECU webcam: she reaches at the lens and taps it with one finger (the frame bumps), smiling |
-| 6 | 15.33-18.61 | office | CU webcam: she sits back, warm smile, waits for your answer - frame 0's framing again |
+| 1 | 0.00-1.86 | office | CU, low in the monitor's glow: she leans in, squinting at you; your chat line 'i'm not cute lol' is on screen as a chat overlay from frame 0 |
+| 2 | 1.86-4.65 | office | over her shoulder onto the monitor: your chat line big on the screen, her hand reaching at it |
+| 3 | 4.65-7.90 | office | push to an ECU with a tilt: she turns back to you, offended for you, a '?' on 'who' |
+| 4 | 7.90-12.08 | office | the webcam, then the lens rises to a top-down over the desk: on 'flat' she goes FLAT in her chair like a ray on the sand (chime), on 'adorable' she pops back up with a sparkle and the lens snaps back |
+| 5 | 12.08-15.33 | office | a handheld lens-side angle: she reaches out and taps YOUR lens on 'rule' (the frame bumps) |
+| 6 | 15.33-18.61 | office | frame 0's low close-up again: she waits for your answer, and on 'go.' she leans in with a heart |
 
 ## Only Raymi
-- confidence is cute: she is never falsely modest and hypes chat up (canon/01 2, her real value)
-- her proof is her own ray body: 'i'm a stingray. i'm flat. i'm adorable.'
-- she makes a rule ('that's the rule') - her running 'rays have rules' bit from the seat Short
+- confidence is cute: she hypes chat up, never falsely modest (canon/01 2)
+- her proof is her ray body: on 'flat' she goes flat like a ray on the sand, on 'adorable' she pops back up
+- she makes a rule ('that's the rule') - her running 'rays have rules' bit
 
 ## Loop
 The last shot returns to frame 0's framing.
@@ -38,8 +38,10 @@ The last shot returns to frame 0's framing.
 | voice 'so you're cute too. that's the rule.' | 12.020 | words 12.11-14.84: 'so' 12.11, 'you're' 12.37, 'cute' 12.59, 'too.' 12.93, 'that's' 13.99, 'the' 14.33, 'rule.' 14.46 | yes |
 | voice 'one thing you like about yourself. go.' | 15.271 | words 15.36-18.14: 'one' 15.36, 'thing' 15.66, 'you' 15.87, 'like' 16.02, 'about' 16.23, 'yourself.' 16.50, 'go.' 17.80 | yes |
 | sfx pop | 1.896 | beat 1.896 (+0 ms) | yes |
-| sfx chime | 7.933 | beat 7.933 (+0 ms) | yes |
+| sfx chime | 9.791 | beat 9.791 (+0 ms) | yes |
+| sfx pop | 11.184 | beat 11.184 (+0 ms) | yes |
 | sfx tap | 14.435 | beat 14.435 (+0 ms) | yes |
+| sfx pop | 17.686 | beat 17.686 (+0 ms) | yes |
 | hook stamp 'you said you're not cute?' | 0.00-1.60 | first line ends 1.32 | yes |
 | CTA stamp 'one thing you like about yourself. go.' | 15.33-18.61 | 3.28 s on screen | yes |
 | end | 18.615 | length 18.61 s | yes |

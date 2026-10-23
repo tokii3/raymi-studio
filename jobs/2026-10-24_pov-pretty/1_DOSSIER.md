@@ -5,12 +5,12 @@ Upload slot Tue 2026-11-03. Bed: `assets/music/wholesome.mp3` (Kevin MacLeod, CC
 `assets/music/wholesome.map.json`). Voice: one edge-tts take per line (`voice/`).
 
 ## The bit
-You are the webcam on her stream monitor: she reads your comment 'i'm not cute lol', leans into the camera and talks you out of it - a stingray who is flat and adorable makes the rules.
+You are the webcam on her stream monitor: she reads your comment 'i'm not cute lol', leans into the camera and talks you out of it - and proves it with her own body: a stingray, flat, adorable.
 
 ## Why only Raymi
-- confidence is cute: she is never falsely modest and hypes chat up (canon/01 2, her real value)
-- her proof is her own ray body: 'i'm a stingray. i'm flat. i'm adorable.'
-- she makes a rule ('that's the rule') - her running 'rays have rules' bit from the seat Short
+- confidence is cute: she hypes chat up, never falsely modest (canon/01 2)
+- her proof is her ray body: on 'flat' she goes flat like a ray on the sand, on 'adorable' she pops back up
+- she makes a rule ('that's the rule') - her running 'rays have rules' bit
 
 ## Who it is for
 New viewers from the Shorts feed; the CTA asks for a two-word answer (comment fuel).

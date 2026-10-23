@@ -1,0 +1,37 @@
+{
+ "text": "you woke me up. at six.",
+ "duration": 3.192,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "you",
+   "start": 0.093,
+   "end": 0.285
+  },
+  {
+   "w": "woke",
+   "start": 0.296,
+   "end": 0.531
+  },
+  {
+   "w": "me",
+   "start": 0.541,
+   "end": 0.723
+  },
+  {
+   "w": "up.",
+   "start": 0.734,
+   "end": 0.979
+  },
+  {
+   "w": "at",
+   "start": 1.709,
+   "end": 1.902
+  },
+  {
+   "w": "six.",
+   "start": 1.912,
+   "end": 2.436
+  }
+ ]
+}

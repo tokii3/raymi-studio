@@ -4,7 +4,7 @@
  "audio": {
   "file": "../../assets/music/easy-lemon.mp3",
   "from": 0.0,
-  "to": 17.392
+  "to": 18.135
  },
  "song_map": "../../assets/music/easy-lemon.map.json",
  "bed": {
@@ -34,7 +34,7 @@
   },
   {
    "at": 14.698,
-   "text": "wrong answers only. go."
+   "text": "your color? wrong answers only."
   }
  ],
  "sfx": [
@@ -66,7 +66,7 @@
  "short": {
   "hook": "name a better color. you can't.",
   "hook_to": 2.7,
-  "cta": "wrong answers only. go.",
+  "cta": "your color? wrong answers only.",
   "cta_from": 14.758
  },
  "shots": [
@@ -98,6 +98,22 @@
      ],
      "fov": 13,
      "shake": 0.12
+    },
+    {
+     "at": 1.5,
+     "pos": [
+      -1.0,
+      1.36,
+      2.2
+     ],
+     "look": [
+      -1.0,
+      1.33,
+      0.5
+     ],
+     "fov": 11,
+     "shake": 0.12,
+     "ease": "out"
     }
    ],
    "actor": [
@@ -119,7 +135,7 @@
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "MCU on the sand: she points at herself (all purple), smug, the sea and a warm low sun behind"
+    "see": "MCU snapping in to a CU on 'name': she points at herself (all purple), smug, the sea and a warm low sun behind"
    }
   },
   {
@@ -169,7 +185,7 @@
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "CU: your suggestion BLUE? pops up beside her; she rolls her eyes"
+    "see": "CU: your suggestion BLUE? pops up beside her in blue; she waves it off"
    },
    "fx": [
     {
@@ -177,10 +193,11 @@
      "at": 0.0,
      "to": "end",
      "text": "BLUE?",
-     "x": 0.72,
-     "y": 0.55,
-     "size": 0.055,
-     "rot": 8
+     "x": 0.7,
+     "y": 0.52,
+     "size": 0.07,
+     "rot": 8,
+     "color": "#6aa8ff"
     }
    ]
   },
@@ -231,7 +248,7 @@
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "CU, the other side: PINK? pops up; she waves it off"
+    "see": "CU, the other side: PINK? pops up in pink; she shakes her head"
    },
    "fx": [
     {
@@ -239,10 +256,11 @@
      "at": 0.0,
      "to": "end",
      "text": "PINK?",
-     "x": 0.28,
-     "y": 0.55,
-     "size": 0.055,
-     "rot": -8
+     "x": 0.3,
+     "y": 0.52,
+     "size": 0.07,
+     "rot": -8,
+     "color": "#ff8ad8"
     }
    ]
   },
@@ -295,7 +313,7 @@
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "ECU: GREEN? pops up; she just stares at you, flat, and says no"
+    "see": "ECU: GREEN? pops up in green; she just stares at you, flat, and says no"
    },
    "fx": [
     {
@@ -304,9 +322,10 @@
      "to": "end",
      "text": "GREEN?",
      "x": 0.5,
-     "y": 0.72,
-     "size": 0.055,
-     "rot": -4
+     "y": 0.58,
+     "size": 0.07,
+     "rot": -4,
+     "color": "#5fd38a"
     }
    ]
   },
@@ -316,7 +335,14 @@
    "set": "beach",
    "opts": {
     "grade": "pov",
-    "dusk": 0.85,
+    "dusk": 0.35,
+    "dusk_to": [
+     [
+      11.004000000000001,
+      0.92
+     ]
+    ],
+    "dusk_s": 1.6,
     "post": {
      "bloom": 0.3
     }
@@ -341,15 +367,15 @@
      "at": 1.6,
      "pos": [
       -1.4,
-      1.3,
+      1.2,
       3.2
      ],
      "look": [
       -0.4,
-      4.5,
+      7.0,
       -6.0
      ],
-     "fov": 34,
+     "fov": 36,
      "shake": 0.12,
      "path": "spline"
     }
@@ -373,7 +399,7 @@
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "WIDE: she points up; the lens tilts up from her to the sky going ultraviolet over the sea (dusk deepens)"
+    "see": "WIDE: she points up; the lens tilts up from her to the sky - and the sky turns ultraviolet while we watch"
    }
   },
   {
@@ -382,7 +408,12 @@
    "set": "beach",
    "opts": {
     "grade": "pov",
-    "dusk": 0.85,
+    "dusk": 0.92,
+    "chest_dots": true,
+    "glow_flare": [
+     15.091000000000001,
+     15.906
+    ],
     "post": {
      "bloom": 0.3,
      "dof": 2.1,
@@ -425,7 +456,7 @@
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "MCU back on her, the sky purple behind, smug grin - frame 0's framing"
+    "see": "MCU back on her under the purple sky, smug grin, her chest lights flare on the question"
    }
   }
  ]

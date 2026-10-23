@@ -120,7 +120,14 @@ def chime() -> np.ndarray:
     return (a + b) * 0.45
 
 
-KINDS = {"tap": tap, "step": step, "whoosh": whoosh, "pop": pop, "scratch": scratch, "sting": sting, "boing": boing,
+def beep() -> np.ndarray:
+    """An alarm clock: four quick high beeps (one second, loop it by placing several)."""
+    t = _t(1.0)
+    gate = ((t % 0.25) < 0.09).astype(float)
+    return np.sin(2 * np.pi * 2900 * t) * gate * 0.6
+
+
+KINDS = {"beep": beep, "tap": tap, "step": step, "whoosh": whoosh, "pop": pop, "scratch": scratch, "sting": sting, "boing": boing,
          "grab": grab, "click": click, "chime": chime}
 
 
