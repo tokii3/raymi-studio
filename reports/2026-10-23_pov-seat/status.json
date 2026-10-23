@@ -1,7 +1,7 @@
 {
- "run": 44,
+ "run": 46,
  "quality": "final",
- "state": "done",
- "release": "render-2026-10-23_pov-seat-44",
- "commit": "c0f59fcaca4a832afd4857d85f7882e28680f96d"
+ "state": "failed",
+ "release": "render-2026-10-23_pov-seat-46",
+ "commit": "8f0eed1182f859adb3b2d1e699b509ba339ac233"
 }
