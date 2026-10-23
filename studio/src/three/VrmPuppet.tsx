@@ -191,15 +191,17 @@ export function useVrmReady(urls: string[], motionUrls: string[] = []): boolean 
   const [ready, setReady] = useState(() => urls.every((u) => rigs.has(u)));
   useEffect(() => {
     const todo = urls.filter((u) => !rigs.has(u));
-    const motionTodo = motionUrls.filter((u) => {
+    // which clips a rig still lacks - asked AFTER the models load: asked before (no rig yet) `some` over no rigs was
+    // false, no clip was ever loaded and every film froze her in the poses (found 2026-10-23, toki "steif")
+    const missing = () => motionUrls.filter((u) => {
       const id = decodeURIComponent(new URL(u, 'https://raymi.invalid').pathname.split('/').pop() ?? u).replace(/\.[^.]+$/, '');
       return [...rigs.values()].some((rig) => !rig.motions.has(id));
     });
-    if (!todo.length && !motionTodo.length) { setReady(true); return; }
+    if (!todo.length && !missing().length) { setReady(true); return; }
     // a 25 MB model + its textures under software GL: far longer than the 30 s default
-    const handle = delayRender(`vrm ${todo.join(',')}`, {timeoutInMilliseconds: 110000});
+    const handle = delayRender(`vrm ${todo.join(',')}`, {timeoutInMilliseconds: 240000});   // + every clip of the film
     Promise.all(todo.map((u) => preloadVrm(u)))
-      .then(() => Promise.all(motionTodo.map((u) => preloadMotion(u))))
+      .then(() => Promise.all(missing().map((u) => preloadMotion(u))))
       .then(() => { setReady(true); continueRender(handle); })
       .catch((e) => cancelRender(e));
   }, [key]);   // eslint-disable-line react-hooks/exhaustive-deps
@@ -396,6 +398,8 @@ function applyState(rig: Rig, s: State, fps: number) {
   // parallel Remotion frames deterministic and lets expression/spring-bone simulation stay local.
   // 2026-10-22: no hard switch any more - two clips cross-fade over the key's blend, and a clip is laid over the key
   // pose by `motionMix` (1 = the clip alone, 0.5 = half clip half pose), also faded in / out when a key has none.
+  // a key that asks for a clip the rig does not have is an error, never a silent freeze in the pose
+  for (const m of [s.prevMotion, s.motion]) if (m && !rig.motions.has(m)) cancelRender(new Error(`clip ${m} is not loaded (props.motions)`));
   const a = s.prevMotion && rig.motions.has(s.prevMotion) ? s.prevMotion : undefined;
   const b = s.motion && rig.motions.has(s.motion) ? s.motion : undefined;
   const amount = (a ? s.mixPrev : 0) * (1 - s.t) + (b ? s.mixCur : 0) * s.t;
