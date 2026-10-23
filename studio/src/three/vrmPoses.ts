@@ -238,8 +238,8 @@ export const POSES: Record<string, VrmPose> = {
   // both hands clamped over her tako ears on top of her head, elbows out, chin down
   ears_cover: {
     ...curl('left', 0.2), ...curl('right', 0.2), spine: [0.04, 0, 0], neck: [0.06, 0, 0], head: [0.1, 0, 0],
-    leftUpperArm: [0, -0.75, 0.75], leftLowerArm: [0, -1.0, 1.6], leftHand: [0, 0, 0.3],
-    rightUpperArm: [0, 0.75, -0.75], rightLowerArm: [0, 1.0, -1.6], rightHand: [0, 0, -0.3],
+    leftUpperArm: [0, -1.05, 0.65], leftLowerArm: [0, -1.4, 1.25], leftHand: [0, 0, 0.3],
+    rightUpperArm: [0, 1.05, -0.65], rightLowerArm: [0, 1.4, -1.25], rightHand: [0, 0, -0.3],
   },
   // her right palm flat over the lens (arm straight at the camera at face height), leaning in
   cover_lens: {
@@ -255,7 +255,7 @@ export const POSES: Record<string, VrmPose> = {
   // sitting, frozen with the chopsticks at her open mouth, the plate on her lap in the left hand
   sit_eat: {
     ...curl('left', 0.3), ...curl('right', 0.8, ['Ring', 'Little']), spine: [0.04, 0, 0], head: [-0.06, 0, 0],
-    rightUpperArm: [0, 1.3, 0.15], rightLowerArm: [0, 2.35, 0], rightHand: [0, 0, -0.3],
+    rightUpperArm: [0, 1.25, -0.3], rightLowerArm: [0, 2.35, 0], rightHand: [0, 0, -0.3],
     leftUpperArm: [0, -0.5, -1.0], leftLowerArm: [0, -1.2, 0], leftHand: [-0.9, 0, 0],
     leftUpperLeg: [-1.5, 0, 0.08], rightUpperLeg: [-1.5, 0, -0.08], leftLowerLeg: [1.5, 0, 0], rightLowerLeg: [1.5, 0, 0],
   },
@@ -270,7 +270,7 @@ export const POSES: Record<string, VrmPose> = {
   shh: {
     ...curl('left', 0.35), ...curl('right', 1.15, ['Middle', 'Ring', 'Little']), spine: [0.12, 0, 0], head: [-0.08, 0, 0.05],
     rightIndexProximal: [0, 0, 0.04], rightIndexIntermediate: [0, 0, 0], rightIndexDistal: [0, 0, 0],
-    rightUpperArm: [0, 1.2, 0.3], rightLowerArm: [0, 2.45, 0], rightHand: [0, 0, -0.4],
+    rightUpperArm: [0, 1.2, -0.3], rightLowerArm: [0, 2.45, 0], rightHand: [0, 0, -0.4],
     leftUpperArm: [0, -0.15, -1.15], leftLowerArm: [0, -0.4, 0],
   },
   // a fist raised beside her face (rock paper scissors), the other hand on her hip
