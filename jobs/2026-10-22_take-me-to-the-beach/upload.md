@@ -7,7 +7,8 @@
 |---|---|---|
 | MV 16:9, 2:47, 1080p, -14 LUFS | final.mp4 | render-2026-10-22_take-me-to-the-beach-<run> (filled in when the cloud render is screened) |
 | Short 9:16, 16.3 s, 1080x1920 | final.mp4 | render-2026-10-22_take-me-to-the-beach-<run> |
-Thumbnails: boards/thumb_mv_M1..M5, boards/thumb_short_S1..S5 (feed view boards/thumbs_168.jpg); pick in 5_THUMBS.md.
+Thumbnails: boards/thumb_mv_M1..M5, boards/thumb_short_S1..S5 (feed view boards/thumbs_168.jpg); pick in 5_THUMBS.md
+(thumb-critic best: MV M5 bye boss, Short S5 bye boss).
 
 Research (1_DOSSIER.md, 2026-10-22): the official upload is a lyric video only ("Imagine Dragons - Take Me To The
 Beach (feat. Ado) (Official Lyric Video)", 48 M views); no fan animation of the Ado version exists in the top results
