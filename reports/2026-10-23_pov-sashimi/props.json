@@ -82,7 +82,13 @@
     "window_view": true,
     "lamp_at": 0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.5,
+    "lamp": 0.4,
+    "post": {
+     "bloom": 0.1,
+     "dof": 2.21,
+     "dofRange": 0.77
+    },
     "glow_flare": [
      232
     ],
@@ -114,12 +120,7 @@
       ]
      }
     ],
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3,
-     "dof": 2.21,
-     "dofRange": 0.77
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
@@ -131,7 +132,7 @@
      ],
      "look": [
       0.55,
-      1.05,
+      0.99,
       -0.6
      ],
      "fov": 10.0,
@@ -210,7 +211,13 @@
     "window_view": true,
     "lamp_at": 0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.5,
+    "lamp": 0.4,
+    "post": {
+     "bloom": 0.1,
+     "dof": 2.21,
+     "dofRange": 0.77
+    },
     "glow_flare": [
      232
     ],
@@ -242,12 +249,7 @@
       ]
      }
     ],
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3,
-     "dof": 2.21,
-     "dofRange": 0.77
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
@@ -259,7 +261,7 @@
      ],
      "look": [
       0.55,
-      1.05,
+      0.99,
       -0.6
      ],
      "fov": 13.0,
@@ -270,13 +272,13 @@
     {
      "f": 133,
      "pos": [
-      1.716,
-      1.46,
-      1.031
+      1.717,
+      1.455,
+      1.032
      ],
      "look": [
       0.55,
-      1.05,
+      0.99,
       -0.6
      ],
      "fov": 13.0,
@@ -383,7 +385,13 @@
     "window_view": true,
     "lamp_at": 0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.5,
+    "lamp": 0.4,
+    "post": {
+     "bloom": 0.1,
+     "dof": 2.01,
+     "dofRange": 0.7
+    },
     "glow_flare": [
      232
     ],
@@ -415,24 +423,19 @@
       ]
      }
     ],
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3,
-     "dof": 2.01,
-     "dofRange": 0.7
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
      "f": 133,
      "pos": [
-      1.716,
-      1.46,
-      1.031
+      1.717,
+      1.455,
+      1.032
      ],
      "look": [
       0.55,
-      1.05,
+      0.99,
       -0.6
      ],
      "fov": 11.0,
@@ -444,12 +447,12 @@
      "f": 220,
      "pos": [
       1.773,
-      1.48,
-      1.11
+      1.477,
+      1.111
      ],
      "look": [
       0.55,
-      1.05,
+      0.99,
       -0.6
      ],
      "fov": 11.0,
@@ -559,7 +562,11 @@
     "window_view": true,
     "lamp_at": 0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.5,
+    "lamp": 0.4,
+    "post": {
+     "bloom": 0.1
+    },
     "glow_flare": [
      232
     ],
@@ -608,10 +615,7 @@
      "yaw": -1.17,
      "press_at": 232
     },
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
@@ -735,7 +739,13 @@
     "window_view": true,
     "lamp_at": 0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.5,
+    "lamp": 0.4,
+    "post": {
+     "bloom": 0.1,
+     "dof": 1.94,
+     "dofRange": 0.68
+    },
     "glow_flare": [
      232
     ],
@@ -777,12 +787,7 @@
      "yaw": -1.17,
      "press_at": 0
     },
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3,
-     "dof": 1.94,
-     "dofRange": 0.68
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
@@ -900,7 +905,13 @@
     "window_view": true,
     "lamp_at": 0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.5,
+    "lamp": 0.4,
+    "post": {
+     "bloom": 0.1,
+     "dof": 1.03,
+     "dofRange": 0.36
+    },
     "glow_flare": [
      232
     ],
@@ -932,12 +943,7 @@
       ]
      }
     ],
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3,
-     "dof": 1.03,
-     "dofRange": 0.36
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
@@ -1089,7 +1095,13 @@
     "window_view": true,
     "lamp_at": 0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.5,
+    "lamp": 0.4,
+    "post": {
+     "bloom": 0.1,
+     "dof": 2.21,
+     "dofRange": 0.77
+    },
     "glow_flare": [
      232
     ],
@@ -1130,12 +1142,7 @@
      "scale": 1.2,
      "yaw": -0.6
     },
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3,
-     "dof": 2.21,
-     "dofRange": 0.77
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
@@ -1147,7 +1154,7 @@
      ],
      "look": [
       0.55,
-      1.05,
+      0.99,
       -0.6
      ],
      "fov": 10.0,
