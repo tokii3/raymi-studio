@@ -1,0 +1,620 @@
+{
+ "title": "POV pose sheet (new VRM poses + worn props, no clips)",
+ "_why": "check every new pose before the POV Shorts use it",
+ "window": {
+  "short": {
+   "from": 0,
+   "to": 14.0
+  }
+ },
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [],
+ "all_lyrics": false,
+ "grain": 0.0,
+ "shots": [
+  {
+   "id": "ears_cover",
+   "at": 0.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.2,
+      3.4
+     ],
+     "look": [
+      0.3,
+      1.0,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "ears_cover",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "cover_lens",
+   "at": 1.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.2,
+      3.4
+     ],
+     "look": [
+      0.3,
+      1.0,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "cover_lens",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "lean_in",
+   "at": 2.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.2,
+      3.4
+     ],
+     "look": [
+      0.3,
+      1.0,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "lean_in",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "sit_eat",
+   "at": 3.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.0,
+      3.4
+     ],
+     "look": [
+      0.3,
+      0.75,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sit_eat",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "sit_offer",
+   "at": 4.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.0,
+      3.4
+     ],
+     "look": [
+      0.3,
+      0.75,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sit_offer",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "shh",
+   "at": 5.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.2,
+      3.4
+     ],
+     "look": [
+      0.3,
+      1.0,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "shh",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "fist",
+   "at": 6.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.2,
+      3.4
+     ],
+     "look": [
+      0.3,
+      1.0,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "fist",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "fist_down",
+   "at": 7.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.2,
+      3.4
+     ],
+     "look": [
+      0.3,
+      1.0,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "fist_down",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "ray_hand",
+   "at": 8.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.2,
+      3.4
+     ],
+     "look": [
+      0.3,
+      1.0,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "ray_hand",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "write_glass",
+   "at": 9.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.2,
+      3.4
+     ],
+     "look": [
+      0.3,
+      1.0,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "write_glass",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "fins_up",
+   "at": 10.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.2,
+      3.4
+     ],
+     "look": [
+      0.3,
+      1.0,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "fins_up",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "fins_down",
+   "at": 11.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.2,
+      3.4
+     ],
+     "look": [
+      0.3,
+      1.0,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "fins_down",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "ta_da",
+   "at": 12.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.2,
+      3.4
+     ],
+     "look": [
+      0.3,
+      1.0,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "ta_da",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  },
+  {
+   "id": "point_self",
+   "at": 13.0,
+   "set": "bedroom",
+   "opts": {
+    "dark": 0.1
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.2,
+      3.4
+     ],
+     "look": [
+      0.3,
+      1.0,
+      0.6
+     ],
+     "fov": 22
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "point_self",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": "silent"
+  }
+ ]
+}

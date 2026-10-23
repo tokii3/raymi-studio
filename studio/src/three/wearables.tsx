@@ -81,7 +81,7 @@ const SalmonHood: React.FC = () => (
   <group position={[-0.02, 0.06, 0]}>
     {/* the head shell behind and over her head */}
     <mesh material={toon(SALMON, '#000', 1, {side: THREE.DoubleSide})} scale={[1.05, 0.95, 1.0]} castShadow>
-      <sphereGeometry args={[0.17, 24, 16, Math.PI * 0.35, Math.PI * 1.3]} />
+      <sphereGeometry args={[0.17, 24, 16, Math.PI * 1.35, Math.PI * 1.3]} />{/* the gap (her face) centred on +x */}
     </mesh>
     {/* the open mouth rim around her face (upper + lower lip) */}
     <mesh position={[0.1, 0.0, 0]} rotation={[0, Math.PI / 2, 0]} material={toon(SALMON_DARK)}><torusGeometry args={[0.15, 0.025, 8, 28, Math.PI * 1.15]} /></mesh>

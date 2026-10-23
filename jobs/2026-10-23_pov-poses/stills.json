@@ -1,0 +1,1 @@
+{"format": "short", "frames": [15, 45, 75, 105, 135, 165, 195, 225, 255, 285, 315, 345, 375, 405], "names": ["pose_ears_cover", "pose_cover_lens", "pose_lean_in", "pose_sit_eat", "pose_sit_offer", "pose_shh", "pose_fist", "pose_fist_down", "pose_ray_hand", "pose_write_glass", "pose_fins_up", "pose_fins_down", "pose_ta_da", "pose_point_self"], "scale": 0.5, "to": "boards"}
