@@ -47,6 +47,7 @@ import math
 import re
 from pathlib import Path
 
+from . import camera_moves as CM
 from . import plan as P
 
 REPO = Path(__file__).resolve().parents[1]
@@ -331,6 +332,38 @@ def _ndc(C, L, t, a, X):
     return sum(d[i] * r[i] for i in range(3)) / (z * t * a), sum(d[i] * u[i] for i in range(3)) / (z * t)
 
 
+def _camera_list(s: dict, length: float, fmt: str, marks: dict, errors: list[str], tag: str) -> list[dict]:
+    """The shot's camera keys with every {"move": ...} expanded into plain keys (raymi/camera_moves.py)."""
+    out = []
+    for k, c in enumerate(s.get("camera", [])):
+        if "move" not in c:
+            out.append(c)
+            continue
+        m = c["move"]
+        if fmt == "short" and isinstance(m.get("short"), dict):
+            m = {**m, **m["short"]}                       # the portrait frame: its own distance / bearing
+        ktag = f"{tag} camera move {k + 1}"
+        if m.get("kind") not in CM.KINDS:
+            errors.append(f"{ktag}: kind must be one of {sorted(CM.KINDS)}")
+            continue
+        around = m.get("around", "her")
+        if around == "her":
+            first = (s.get("actor") or [{}])[0]
+            around = first.get("pos", "center")
+        P = _v3(around, marks, errors, ktag)
+        obj = _v3(m["obj"], marks, errors, ktag) if "obj" in m else None
+        if P is None:
+            continue
+        P = [P[0], P[1] + float(m.get("h", 1.35)), P[2]]
+        try:
+            keys = CM.expand(m, length, P, obj)
+        except ValueError as e:
+            errors.append(f"{ktag}: {e}")
+            continue
+        out += keys
+    return out
+
+
 def _cam_v2(c: dict, tag: str, errors: list) -> dict:
     """Camera v2 key options (studio/src/film/types.ts CamKey): spline path, dolly-zoom frame height, handheld shake."""
     out = {}
@@ -612,7 +645,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                           "ease": r.get("ease", "inOut")})
         # camera keys
         ckeys = []
-        for k, c in enumerate(s.get("camera", [])):
+        for k, c in enumerate(_camera_list(s, b - a, fmt, marks, errors, tag)):
             ktag = f"{tag} camera key {k + 1}"
             base = cams.get(c["cam"]) if "cam" in c else {}
             if "cam" in c and base is None:

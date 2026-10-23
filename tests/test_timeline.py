@@ -253,3 +253,24 @@ def test_vrm_clip_keys_timing_and_catalog(tmp_path):
     bad = {**shot, "actor": [{"at": 0, "clip": "moonwalk-deluxe"}]}
     _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [bad], vrm="vrm/raymi5.vrm"), "mv", cmap=ALL)
     assert any("moonwalk-deluxe" in e and "clips.json" in e for e in errors)
+
+
+def test_camera_moves_expand_into_plain_keys(tmp_path):
+    """toki 2026-10-23 ("Kamera Standard"): {"move": ...} keys become ordinary camera keys around her."""
+    for kind in ("crash", "push_dutch", "orbit_roll", "crane_up", "drop", "track", "vertigo", "whip_out", "spiral", "handheld"):
+        shot = {"set": "aquarium", "at": "line:0", "camera": [{"move": {"kind": kind, "dist": 1.4, "deg": 15}}],
+                "actor": [{"at": 0, "clip": "idle", "pos": "center"}]}
+        p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot], vrm="vrm/raymi5.vrm"), "mv", cmap=ALL)
+        assert errors == [], (kind, errors)
+        cam = p["shots"][0]["camera"]
+        assert len(cam) >= 2 and all(len(k["pos"]) == 3 for k in cam), kind
+        c = T.load_sets()["aquarium"]["marks"]["center"]
+        if kind != "whip_out":
+            assert abs(cam[-1]["look"][1] - (c[1] + 1.35)) < 1e-6, kind
+    shot = {"set": "aquarium", "at": "line:0", "camera": [{"move": {"kind": "through", "obj": [0, 1.2, 2.0]}}],
+            "actor": [{"at": 0, "clip": "idle", "pos": "center"}]}
+    p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot], vrm="vrm/raymi5.vrm"), "mv", cmap=ALL)
+    assert errors == [] and p["shots"][0]["camera"][0]["pos"][2] > 2.0     # it starts beyond the object
+    bad = {**shot, "camera": [{"move": {"kind": "barrel_roll"}}]}
+    _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [bad], vrm="vrm/raymi5.vrm"), "mv", cmap=ALL)
+    assert any("barrel_roll" in e or "kind must be" in e for e in errors)
