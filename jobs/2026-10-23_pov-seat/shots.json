@@ -142,7 +142,9 @@
    "actor": [
     {
      "at": 0,
+     "pose": "sit",
      "clip": "sitting-talking",
+     "motionMix": 0.2,
      "pos": [
       -0.5,
       0,
@@ -245,7 +247,9 @@
    "actor": [
     {
      "at": 0,
+     "pose": "sit",
      "clip": "sitting-talking",
+     "motionMix": 0.2,
      "pos": [
       -0.5,
       0,
@@ -259,7 +263,9 @@
     },
     {
      "at": 0.27,
+     "pose": "sit",
      "clip": "sitting-talking",
+     "motionMix": 0.2,
      "pos": [
       -0.62,
       0,
@@ -409,7 +415,9 @@
    "actor": [
     {
      "at": 0,
+     "pose": "sit",
      "clip": "sitting-and-pointing",
+     "motionMix": 0.2,
      "pos": [
       -0.5,
       0,
@@ -422,7 +430,9 @@
     },
     {
      "at": 2.55,
+     "pose": "sit",
      "clip": "sitting-talking",
+     "motionMix": 0.2,
      "pos": [
       -0.5,
       0,
@@ -509,7 +519,9 @@
    "actor": [
     {
      "at": 0,
+     "pose": "sit",
      "clip": "sitting-angry",
+     "motionMix": 0.2,
      "pos": [
       -0.5,
       0,
@@ -626,7 +638,9 @@
    "actor": [
     {
      "at": 0,
+     "pose": "sit",
      "clip": "sitting-idle",
+     "motionMix": 0.2,
      "pos": [
       -0.5,
       0,
@@ -647,7 +661,9 @@
     },
     {
      "at": 1.45,
+     "pose": "sit",
      "clip": "sitting-idle",
+     "motionMix": 0.2,
      "pos": [
       -0.98,
       0,
@@ -750,7 +766,9 @@
    "actor": [
     {
      "at": 0,
+     "pose": "sit",
      "clip": "sitting-laughing",
+     "motionMix": 0.2,
      "pos": [
       -0.98,
       0,
@@ -763,7 +781,9 @@
     },
     {
      "at": 1.15,
+     "pose": "sit",
      "clip": "sitting-talking",
+     "motionMix": 0.2,
      "pos": [
       -0.98,
       0,
@@ -873,7 +893,9 @@
    "actor": [
     {
      "at": 0,
+     "pose": "sit",
      "clip": "sitting-talking",
+     "motionMix": 0.2,
      "pos": [
       -0.98,
       0,
@@ -886,7 +908,9 @@
     },
     {
      "at": 1.4,
+     "pose": "sit",
      "clip": "sitting-talking",
+     "motionMix": 0.2,
      "pos": [
       -0.98,
       0,
