@@ -92,10 +92,5 @@
   - Manga panel / split-screen layouts (several views of the same moment) need a second render pass - not built.
   - Song analysis for Beach: instrument hits (guitar stabs ~4-5 s, can-open ~17 s) and who sings which line
     (Ado / Dan Reynolds) are not in song.py yet.
-- Beach lyric placement parked (2026-10-23, two fix rounds): shots 24 (over-the-shoulder, the wall screen is behind the
-  lens; a block on the monitor side still overflows - "words" did not shorten the block), 72 (orbit: a fixed block is seen
-  from behind half the orbit; --fit-lyrics put it 20 m away), 79 (orbit on the beach: sand words too small). Next idea:
-  the orbit shots write the line on a surface that turns with the lens (kind float) or the camera keeps one side; 24
-  writes on the monitor screen with the camera from the front. Must pass before the final render.
 - Beach Short: shots 24 + 28 still fail the Short guards (portrait framing); the 0.5 s beach insert at the Short's
   frame 0 (4_SCRIPT S1) is not built.
