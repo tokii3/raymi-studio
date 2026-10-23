@@ -236,3 +236,20 @@ def test_vrm_actor_keys_mouth_fx_and_camera_v2(tmp_path):
     assert any("moonwalk" in e for e in errors)
     _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot]), "mv", cmap=ALL)
     assert any("vrm" in e for e in errors)
+
+
+def test_vrm_clip_keys_timing_and_catalog(tmp_path):
+    """toki 2026-10-23 ("steif"): a clip drives her without a pose, starts on its key, one-shots hold; every used clip
+    is loaded, and a clip the catalog does not know is refused instead of freezing her in the pose."""
+    shot = {"set": "aquarium", "at": "line:0", "camera": [{"at": 0, "cam": "tank_front"}],
+            "actor": [{"at": 0, "clip": "yawn", "once": True, "speed": 0.8, "clip_from": 0.4, "pos": "center"},
+                      {"at": 0.5, "clip": "typing", "restart": True}]}
+    p, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [shot], vrm="vrm/raymi5.vrm"), "mv", cmap=ALL)
+    assert errors == []
+    k0, k1 = p["shots"][0]["actor"]
+    assert k0["pose"] == "stand" and k0["motion"] == "yawn" and k0["once"] is True and k0["speed"] == 0.8 and k0["clipFrom"] == 0.4
+    assert k1["motion"] == "typing" and k1["restart"] is True
+    assert {"motions/yawn.fbx", "motions/typing.fbx"} <= set(p["motions"])
+    bad = {**shot, "actor": [{"at": 0, "clip": "moonwalk-deluxe"}]}
+    _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [bad], vrm="vrm/raymi5.vrm"), "mv", cmap=ALL)
+    assert any("moonwalk-deluxe" in e and "clips.json" in e for e in errors)

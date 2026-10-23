@@ -9,6 +9,7 @@
   props  <job>          write jobs/<job>/out/props.json for the renderer
   finish <job>          loudness-normalise out/raw.mp4 -> out/final.mp4, then QC + contact sheet
   timeline <job> [mv|short]  shots.json (shooting script data) -> out/props.json for the MV / MVShort film
+  cuts   <job> [--apply]  every cut against hits / sung lines / sections (one frame early); --apply moves them
   font ensure <job>     build every on-screen glyph her font lacks, in her marker style (raymi/font.py)
   font add <chars>      the same for given characters
   font heavy            build / update her heavy weight (Raymi-Heavy.ttf, lyrics v2) from Raymi-Regular.ttf
@@ -127,6 +128,10 @@ def main(argv: list[str]) -> int:
         res = make_voice(plan["script"], d)
         print(f"voice: {res['duration']} s, timing from {res['timing_source']}")
         return 0
+    if cmd == "cuts":        # cuts <job> [--apply]: every cut against the song's hits / lines / sections (needs out/props.json)
+        from . import cuts as C
+
+        return C.main(d, "--apply" in argv)
     if cmd == "timeline":    # timeline <job> [mv|short] -> out/props.json for the film compositions
         from . import timeline as T
 

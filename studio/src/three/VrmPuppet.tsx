@@ -247,7 +247,8 @@ function lockColours(rig: Rig, lock: number) {
 }
 
 // ------------------------------------------------------------------ the state at a frame (pure, from the keys)
-type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; rollZ: number; height: number; squash: number; act: VrmKey['act']; motion?: string; prevMotion?: string; mixPrev: number; mixCur: number; local: number; f: number};
+type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; rollZ: number; height: number; squash: number; act: VrmKey['act']; motion?: string; prevMotion?: string; mixPrev: number; mixCur: number; local: number; f: number;
+  clipCur: VrmKey; clipPrev: VrmKey};
 
 function keyAt(keys: VrmKey[], f: number): number {
   let i = 0;
@@ -259,6 +260,21 @@ function keyAt(keys: VrmKey[], f: number): number {
 function motionOf(keys: VrmKey[], i: number): string | undefined {
   for (let j = i; j >= 0; j--) if (keys[j].motion !== undefined) return keys[j].motion ?? undefined;
   return undefined;
+}
+
+/** The key that started the clip key i plays: walk back while the clip stays the same and nothing restarts it. */
+function clipStart(keys: VrmKey[], i: number): number {
+  const m = motionOf(keys, i);
+  let j = i;
+  while (j > 0 && !keys[j].restart && motionOf(keys, j - 1) === m) j--;
+  return j;
+}
+
+/** Seconds into the clip at frame f, from the key that started it (looping, or held on the last frame for a one-shot). */
+export function clipSeconds(s: VrmKey, f: number, fps: number, duration: number): number {
+  const t = (s.clipFrom ?? 0) + ((f - s.f) / fps) * (s.speed ?? 1);
+  if (s.once) return Math.max(0, Math.min(duration - 1e-3, t));
+  return ((t % duration) + duration) % duration;
 }
 
 function stateAt(keys: VrmKey[], f: number, camPos: V3): State {
@@ -291,7 +307,8 @@ function stateAt(keys: VrmKey[], f: number, camPos: V3): State {
   return {a: pose(p.pose), b: pose(k.pose), t, pos, yaw: lerp(yawOf(p), yawOf(k)), motion, prevMotion,
     mixPrev: prevMotion ? (p.motionMix ?? 1) : 0, mixCur: motion ? (k.motionMix ?? 1) : 0,
     rollZ: lerp(p.rollZ ?? 0, k.rollZ ?? 0) + (k.act === 'tilt' ? 0.12 * ease('out', local / 8) : k.act === 'lean' ? -0.08 * ease('out', local / 10) : 0),
-    height: lerp(p.height ?? DEFAULT_HEIGHT, k.height ?? DEFAULT_HEIGHT), squash, act: k.act, local, f};
+    height: lerp(p.height ?? DEFAULT_HEIGHT, k.height ?? DEFAULT_HEIGHT), squash, act: k.act, local, f,
+    clipCur: keys[clipStart(keys, i)], clipPrev: keys[clipStart(keys, Math.max(0, i - 1))]};
 }
 
 /** Reuse the timeline's keyed floor travel and hop arcs, rather than easing the actor to a new spot after each cut. */
@@ -382,7 +399,7 @@ function applyState(rig: Rig, s: State, fps: number) {
       const weight = id === a ? wA : id === b ? wB : 0;
       action.enabled = true;
       action.setEffectiveWeight(weight);
-      if (weight > 0) action.time = ((s.f / fps) % clip.duration + clip.duration) % clip.duration;
+      if (weight > 0) action.time = clipSeconds(id === b ? s.clipCur : s.clipPrev, s.f, fps, clip.duration);
     }
     rig.mixer.update(0);
     if (amount < 0.999) for (const [node, q, p] of saved) { node.quaternion.copy(q.slerp(node.quaternion, amount)); node.position.lerpVectors(p, node.position, amount); }

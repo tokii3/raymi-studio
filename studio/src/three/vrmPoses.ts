@@ -252,6 +252,12 @@ export type VrmKey = {
   act?: Act;
   motion?: string | null;   // Mixamo clip id (filename without extension), e.g. "dance" or "idle"; null = the pose only
   motionMix?: number;        // how much of the clip over the pose: 1 = the clip alone, 0.4 = the pose swaying with it
+  // clip timing (2026-10-23, toki "steif"): a clip starts at the key that starts it (not at song time), so a yawn, a
+  // fall or sit-to-type plays from its first frame on the action; keys that inherit the same clip continue it
+  clipFrom?: number;         // seconds into the clip at its start key
+  speed?: number;            // playback speed (1 = as captured)
+  once?: boolean;            // play once and hold the last frame (one-shot actions); default loops
+  restart?: boolean;         // start the same clip again at this key
   move?: number;             // original puppet travel duration in frames
   arc?: number;              // original hop arc in metres
   ease?: Ease;

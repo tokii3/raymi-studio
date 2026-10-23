@@ -450,17 +450,29 @@ def vrm_poses() -> set[str]:
     return set(re.findall(r"^  ([a-z_0-9]+): \{", body, re.M))
 
 
+def clip_names() -> set[str]:
+    """Mixamo clip ids the studio can load (studio/catalog/clips.json; the files live in the private assets repo)."""
+    p = Path(__file__).resolve().parents[1] / "studio" / "catalog" / "clips.json"
+    return set(json.loads(p.read_text(encoding="utf-8"))["clips"]) if p.exists() else set()
+
+
 FX_KINDS = {"duo", "speed", "impact", "halftone", "spread"}
 
 
 def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses: set[str], errors: list[str],
-                  tag: str) -> list[dict]:
+                  tag: str, clips: set[str] | None = None) -> list[dict]:
     """shots.json "actor" keys -> VrmKey frames (studio/src/three/vrmPoses.ts)."""
     out = []
     for k, r in enumerate(s.get("actor", [])):
         ktag = f"{tag} actor key {k + 1}"
         if fmt == "short" and isinstance(r.get("short"), dict):
             r = {**r, **r["short"]}
+        if "clip" in r:                                    # "clip" = the Mixamo clip that drives her (alias of motion)
+            r = {**r, "motion": r["clip"]}
+        if r.get("motion") and "pose" not in r:
+            r = {**r, "pose": "stand"}                     # a clip at full mix needs no pose; stand is its fallback
+        if r.get("motion") and clips is not None and r["motion"] not in clips:
+            errors.append(f"{ktag}: clip {r['motion']!r} is not in studio/catalog/clips.json - she would freeze in the pose")
         if r.get("pose") not in poses:
             errors.append(f"{ktag}: pose {r.get('pose')!r} is not in vrmPoses.ts ({sorted(poses)})")
             continue
@@ -475,9 +487,13 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
                "height": float(r.get("height", DEFAULT_HEIGHT)), "blend": round(float(r.get("blend", 0.27)) * FPS),
                "act": r.get("act", "idle"), "move": round(float(r.get("move", 0.0)) * FPS), "arc": float(r.get("arc", 0.0)),
                "ease": r.get("ease", "inOut")}
-        for opt in ("motion", "motionMix", "expr", "look"):
+        for opt in ("motion", "motionMix", "expr", "look", "once", "restart"):
             if opt in r:
                 key[opt] = r[opt]
+        if "clip_from" in r:
+            key["clipFrom"] = float(r["clip_from"])
+        if "speed" in r:
+            key["speed"] = float(r["speed"])
         if "rollZ" in r:
             key["rollZ"] = math.radians(float(r["rollZ"]))
         out.append(key)
@@ -531,6 +547,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             errors.append(f"acts: grade {a_.get('grade')!r} is not in the grade library {sorted(GRADES)} (studio/src/film/grade.ts)")
     heroes = spec.get("heroes") or {}
     poses = vrm_poses() if spec.get("vrm") else set()
+    clips = clip_names() if spec.get("vrm") else None
+    used_clips: set[str] = set()
     heavy = False
     shots, sprites, screen_texts = [], set(), []
     for i, s in enumerate(shots_in):
@@ -777,7 +795,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                          "why_small": spec_h.get("why_small"), **({"uv": spec_h["uv"]} if "uv" in spec_h else {}),
                          **({"size": spec_h["size"]} if "size" in spec_h else {}),
                          **({"center": _v3(spec_h["center"], marks, errors, tag)} if "center" in spec_h else {})})
-        actor = compile_actor(s, fmt, a, b, fr, marks, poses, errors, tag) if s.get("actor") else []
+        actor = compile_actor(s, fmt, a, b, fr, marks, poses, errors, tag, clips) if s.get("actor") else []
+        used_clips |= {k["motion"] for k in actor if k.get("motion")}
         if actor and not spec.get("vrm"):
             errors.append(f"{tag}: actor keys need the top-level \"vrm\" model (e.g. \"vrm/raymi5.vrm\")")
         extra = {}
@@ -827,8 +846,10 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
              "heavy": heavy}
     if spec.get("vrm"):
         props["vrm"] = spec["vrm"]
-        if spec.get("motions"):
-            props["motions"] = spec["motions"]
+        # every clip a key names is loaded (a clip missing from the list froze her silently before 2026-10-23)
+        listed = list(spec.get("motions") or [])
+        have = {Path(m).stem for m in listed}
+        props["motions"] = listed + [f"motions/{c}.fbx" for c in sorted(used_clips - have)]
         # every sung word for her lip sync (film seconds), not only the words a shot writes on screen
         props["sung"] = [{"w": w["w"], "roma": w.get("roma", ""), "t0": round(w["t0"] - t_from, 3), "t1": round(w["t1"] - t_from, 3)}
                          for ln in lyrics for w in ln.get("words", [])
