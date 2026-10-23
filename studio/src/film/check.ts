@@ -262,7 +262,7 @@ export function occluders(props: FilmProps, s: Shot, f: number, cam: THREE.Camer
 // 3D Raymi (2026-10-23): the lyric guards knew only the sprite's silhouette, so words sat on the VRM body (Beach stills
 // 19b / 23). Her body from her rig key: a column of cells from the feet along her (rolled) body axis - legs, hips,
 // chest, head - in metres scaled by her height, projected to screen boxes like the sprite mask cells.
-const BODY: [number, number, number][] = [[0, 0.28, 0.16], [0.28, 0.5, 0.2], [0.5, 0.62, 0.24], [0.62, 0.8, 0.26], [0.8, 1.0, 0.2]];   // [t0, t1, half width] / 1.55 m
+const BODY: [number, number, number][] = [[0, 0.28, 0.16], [0.28, 0.5, 0.21], [0.5, 0.62, 0.25], [0.62, 0.8, 0.27], [0.8, 1.04, 0.23]];   // her long hair widens head + back   // [t0, t1, half width] / 1.55 m
 export function actorCells(s: Shot, f: number, cam: THREE.Camera): [number, number, number, number][] {
   const keys = s.actor;
   if (!keys?.length || f < keys[0].f) return [];

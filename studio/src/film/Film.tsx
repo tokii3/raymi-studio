@@ -189,9 +189,9 @@ export const Film: React.FC<FilmProps> = (props) => {
             {Set ? <Set f={f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} /> : null}
             {props.vrm ? (
               <VrmPuppet url={staticFile(props.vrm)} keys={actorKeys} f={f} fps={fps} from={shot.from} camPos={camPos}
-                mouthKeys={shotMouth} lock={Number(shot.opts.lock ?? (shot.actor ? 0.16 : 0.38))} shadow={String(shot.opts.shadow ?? '#120b2b')}
+                mouthKeys={shotMouth} lock={Number(shot.opts.lock ?? (shot.actor ? 0.1 : 0.38))} shadow={String(shot.opts.shadow ?? '#120b2b')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={0.12 * glowGain}
-                materialStyle={String(shot.opts.material ?? (shot.actor ? 'none' : 'firestarter'))}
+                materialStyle={String(shot.opts.material ?? (shot.actor ? 'routine' : 'firestarter'))}
                 step={shot.step ?? 1} outline={shot.outline ?? 0} battery={battery} />
             ) : (
               <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}

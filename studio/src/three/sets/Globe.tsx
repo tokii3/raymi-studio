@@ -100,8 +100,8 @@ export const Globe: React.FC<SetProps> = ({f, opts, camPos}) => {
           <mesh position={[-1.2, 2.2, R * 0.72]} rotation={[0, -0.4, 0.5]} renderOrder={10}><planeGeometry args={[0.18, 1.6]} />
             <meshBasicMaterial color="#ffffff" transparent opacity={0.35} depthWrite={false} toneMapped={false} /></mesh>
           {cracks > 0 || lit ? (
-            <mesh position={hit} rotation={[0, camPos ? Math.atan2(camPos[0] - hit[0], camPos[2] - hit[2]) : 0, 0]} renderOrder={11}>
-              <planeGeometry args={[3.6, 3.6]} /><meshBasicMaterial map={crackTex} transparent depthWrite={false} toneMapped={false} />
+            <mesh position={[hit[0], hit[1] + 0.85, hit[2]]} rotation={[0, camPos ? Math.atan2(camPos[0] - hit[0], camPos[2] - hit[2]) : 0, 0]} renderOrder={11}>
+              <planeGeometry args={[2.0, 2.0]} /><meshBasicMaterial map={crackTex} transparent depthWrite={false} toneMapped={false} />
             </mesh>
           ) : null}
           {lit ? <pointLight position={[hit[0], hit[1], hit[2] - 0.4]} color="#d9b8ff" intensity={6} distance={6} decay={1.5} /> : null}

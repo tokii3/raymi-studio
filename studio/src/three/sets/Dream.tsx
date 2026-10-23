@@ -15,7 +15,7 @@ import * as THREE from 'three';
 import {SetLight, canvasTexture, rnd, toon, toonSurface} from '../look';
 import {DeepLife, SalmonBody} from '../creatures';
 import {Headphones, RoutineLife} from '../routine';
-import {RBox} from '../parts';
+import {Kelp, RBox, Rock} from '../parts';
 import {Coral} from '../clutter';
 import type {SetProps} from './index';
 
@@ -31,8 +31,9 @@ const Mic: React.FC<{pos: P3; rot: P3}> = ({pos, rot}) => (
 
 const Controller: React.FC<{pos: P3; rot: P3}> = ({pos, rot}) => (
   <group position={pos} rotation={rot} scale={1.5}>
-    <RBox size={[0.2, 0.05, 0.1]} r={0.025} c="#5a4fc8" />
-    {[-1, 1].map((s) => <mesh key={s} position={[s * 0.09, -0.005, 0.03]} material={toon('#5a4fc8')}><sphereGeometry args={[0.045, 12, 10]} /></mesh>)}
+    <RBox size={[0.22, 0.045, 0.1]} r={0.02} c="#5a4fc8" />
+    {[-1, 1].map((s) => <RBox key={s} size={[0.07, 0.04, 0.11]} pos={[s * 0.1, -0.006, 0.035]} rot={[0, s * 0.35, 0]} r={0.018} c="#4a40b0" />)}
+    {[-1, 1].map((s) => <mesh key={`stk${s}`} position={[s * 0.035, 0.03, 0.025]} material={toon('#2a2440')}><cylinderGeometry args={[0.012, 0.014, 0.018, 10]} /></mesh>)}
     {[[0.05, 0.03], [0.07, 0.01], [0.03, 0.01], [0.05, -0.01]].map(([x, z], i) => (
       <mesh key={i} position={[x, 0.028, z]}><sphereGeometry args={[0.009, 8, 6]} /><meshBasicMaterial color={['#ff6f9b', '#7fe6ff', '#ffd34d', '#9bff8a'][i]} toneMapped={false} /></mesh>
     ))}
@@ -61,8 +62,8 @@ const Star: React.FC<{pos: P3; s: number; c: string}> = ({pos, s, c}) => {
 
 export const Dream: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const night = num(opts.night);
-  const top = new THREE.Color('#7fe9ff').lerp(new THREE.Color('#5a3aa8'), night);
-  const mid = new THREE.Color('#2a8fd0').lerp(new THREE.Color('#24145a'), night);
+  const top = new THREE.Color('#6cc6d6').lerp(new THREE.Color('#5a3aa8'), night);
+  const mid = new THREE.Color('#25648e').lerp(new THREE.Color('#24145a'), night);
   const deep = new THREE.Color('#14306e').lerp(new THREE.Color('#0a0620'), night);
   const sky = canvasTexture(`dreamwater${night.toFixed(2)}`, 64, 512, (ctx, w, h) => {
     const g = ctx.createLinearGradient(0, 0, 0, h);
@@ -113,8 +114,21 @@ export const Dream: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
         return <mesh key={`pile${i}`} position={[Math.cos(a) * r, -0.32 + (i < 8 ? 0.05 : 0.15 * rnd(i * 7)), Math.sin(a) * r - 0.2]} scale={[sz, sz * 0.62, sz]}
           material={toonSurface(cols[i % cols.length], 'plush', [3, 3])} castShadow receiveShadow><sphereGeometry args={[0.62, 20, 14]} /></mesh>;
       })}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.235, -0.2]} receiveShadow material={toonSurface(new THREE.Color('#fff0d8').lerp(new THREE.Color('#b9a6ff'), night).getStyle(), 'carpet', [4, 4], '#ffcf8a', 0.18 * (1 - night))}>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.235, -0.2]} receiveShadow material={toonSurface(new THREE.Color('#9fcfca').lerp(new THREE.Color('#7a66c8'), night).getStyle(), 'carpet', [5, 5])}>
         <circleGeometry args={[1.45, 40]} /></mesh>
+      {/* shells on the plateau, rocks + weed on the sea floor around: the place has a ground */}
+      {Array.from({length: 12}, (_, i) => {
+        const a = rnd(i * 5.1) * Math.PI * 2, r = 0.3 + rnd(i * 2.3) * 1.05;
+        return <mesh key={`shell${i}`} position={[Math.cos(a) * r, 0.25, Math.sin(a) * r - 0.2]} rotation={[-Math.PI / 2, 0, a]} scale={[1, 0.8, 1]}>
+          <circleGeometry args={[0.035 + 0.02 * rnd(i), 7]} /><meshToonMaterial color={['#f7e6d0', '#f1c7d8', '#ffffff'][i % 3]} /></mesh>;
+      })}
+      {Array.from({length: 10}, (_, i) => {
+        const a = rnd(i * 7.7) * Math.PI * 2, r = 3.6 + rnd(i * 3.1) * 3;
+        return <group key={`rk${i}`}>
+          <Rock pos={[Math.cos(a) * r, -0.5, Math.sin(a) * r - 1]} size={[0.6 + rnd(i) * 0.8, 0.5 + rnd(i * 2) * 0.6, 0.6 + rnd(i * 3) * 0.7]} seed={i + 40} c={new THREE.Color('#2a4a6a').lerp(new THREE.Color('#1a1440'), night).getStyle()} />
+          <Kelp pos={[Math.cos(a) * (r - 0.4), -0.4, Math.sin(a) * (r - 0.4) - 1]} h={1.4 + rnd(i * 5) * 1.6} f={f} seed={i + 3} c="#2f7a6a" />
+        </group>;
+      })}
       {/* the deep floor far below the pile, so nothing ends in a void */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -3, 0]} material={toon(new THREE.Color('#123060').lerp(new THREE.Color('#0a0620'), night).getStyle())}><circleGeometry args={[60, 40]} /></mesh>
       {Array.from({length: 4}, (_, k) => {

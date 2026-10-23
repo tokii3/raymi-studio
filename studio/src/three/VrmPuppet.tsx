@@ -206,6 +206,17 @@ function styleMaterials(rig: Rig, style: string) {
     if (base?.emissive && m.emissive) m.emissive.copy(base.emissive);
     if (base && m.emissiveMap !== undefined) m.emissiveMap = base.emissiveMap ?? null;
     if (!m.isMToonMaterial || !m.color) continue;
+    if (style === 'routine') {
+      // look-critic 2026-10-23 (twice): skin, face and the white skirt clipped to paper white under the set lights +
+      // bloom. Lowering the lights did not hold (anti-loop) - so her own colours carry the headroom: skin pale grey-blue
+      // at ~80 % value, fabric and hair a step down, the lit side can never reach white.
+      const name = m.name ?? '';
+      if (name.includes('SKIN')) { m.color.multiply(new THREE.Color('#b3bedc')); m.shadeColorFactor?.multiply(new THREE.Color('#8f9cc4')); }
+      else if (name.includes('CLOTH')) m.color.multiply(new THREE.Color('#aeb0c8'));
+      else if (name.includes('HAIR')) m.color.multiply(new THREE.Color('#c4c8e6'));
+      else if (name.includes('FACE') || name.includes('Face')) m.color.multiply(new THREE.Color('#c0c8e2'));
+      continue;
+    }
     if (style !== 'firestarter') continue;
     const name = m.name ?? '';
     // A cool, slightly darker finish keeps the original textures but gives hair, skin and pale fabric
@@ -529,8 +540,8 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
     <group>
       {dots}
       <mesh position={[p.x, p.y + 0.035, p.z]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2}>
-        <planeGeometry args={[w * 1.3, w * 0.7]} />
-        <meshBasicMaterial map={blobTexture(shadow)} transparent depthWrite={false} opacity={0.8} toneMapped={false} />
+        <planeGeometry args={[w * 1.6, w * 0.9]} />
+        <meshBasicMaterial map={blobTexture(shadow)} transparent depthWrite={false} opacity={0.95} toneMapped={false} />
       </mesh>
       <primitive object={posed.root} />
       {/* a cool rim light behind her, toward the lens: her silhouette separates from any background (look-critic) */}

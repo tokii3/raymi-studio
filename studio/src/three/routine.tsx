@@ -17,7 +17,7 @@ import {ease} from '../film/motion';
 
 type P3 = [number, number, number];
 const since = (t: unknown, f: number) => (typeof t === 'number' ? f - t : -1);
-const GLOVE = '#f6f3fb', STRING = '#ffffff', INK = '#1a1030';
+const GLOVE = '#d9d6e4', STRING = '#f2f2f8', INK = '#1a1030';
 
 // ---------------------------------------------------------------- printed things (her font only, hard rule 5)
 function printTex(id: string, w: number, h: number, bg: string, lines: {t: string; px: number; c: string; y: number}[]) {

@@ -32,7 +32,7 @@ export const Train: React.FC<SetProps> = ({f, opts, camPos}) => {
   });
   return (
     <group>
-      <SetLight sky="#d6dcf0" ground="#2a2c3a" fill={0.65} key="#f6f7ff" keyI={2.3} keyPos={[0, 4, 2]} target={[0, 0.5, 0]} shadowSize={6}
+      <SetLight sky="#b8c2e0" ground="#1e2030" fill={0.45} key="#ffe8c8" keyI={1.6} keyPos={[0, 4, 2]} target={[0, 0.5, 0]} shadowSize={6}
         fog="#3a3e52" fogNear={10} fogFar={26} bg="#1c2033" />
       {/* the car body */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} material={toonSurface('#5e6274', 'rubber', [6, 36])} receiveShadow><planeGeometry args={[2.6, 16]} /></mesh>
@@ -40,15 +40,15 @@ export const Train: React.FC<SetProps> = ({f, opts, camPos}) => {
       {[-1, 1].map((side) => (
         <group key={side}>
           {/* wall below + above the windows */}
-          <mesh position={[side * 1.3, 0.45, 0]} rotation={[0, -side * Math.PI / 2, 0]} material={toon('#8d92a6')}><planeGeometry args={[16, 0.9]} /></mesh>
-          <mesh position={[side * 1.3, 2.05, 0]} rotation={[0, -side * Math.PI / 2, 0]} material={toon('#9aa0b4')}><planeGeometry args={[16, 0.5]} /></mesh>
+          <mesh position={[side * 1.3, 0.45, 0]} rotation={[0, -side * Math.PI / 2, 0]} material={toonSurface('#6f7690', 'metal', [16, 1])} receiveShadow><planeGeometry args={[16, 0.9]} /></mesh>
+          <mesh position={[side * 1.3, 2.05, 0]} rotation={[0, -side * Math.PI / 2, 0]} material={toonSurface('#7c839c', 'metal', [16, 1])}><planeGeometry args={[16, 0.5]} /></mesh>
           {/* windows: the sea (or the beach) streaming past */}
           {Array.from({length: 5}, (_, w) => {
             const z = -6 + w * 3;
             if (side > 0 && Math.abs(z) < 1.2) return null;           // the doors
             return (
               <group key={w} position={[side * 1.31, 1.35, z]} rotation={[0, -side * Math.PI / 2, 0]}>
-                <mesh><planeGeometry args={[2.2, 0.9]} /><meshBasicMaterial color={flash ? '#ffe2a8' : '#3a6aa8'} toneMapped={false} /></mesh>
+                <mesh><planeGeometry args={[2.2, 0.9]} /><meshBasicMaterial color={flash ? '#ffe2a8' : '#1c3460'} toneMapped={false} /></mesh>
                 {flash ? <mesh position={[0, -0.25, 0.005]}><planeGeometry args={[2.2, 0.4]} /><meshBasicMaterial color="#f4dfae" toneMapped={false} /></mesh> : null}
                 {!flash ? Array.from({length: 10}, (_, i) => {
                   const x = ((rnd(i + w * 7) * 2.6 - run * (0.6 + rnd(i * 3))) % 2.6 + 2.6) % 2.6 - 1.3;
@@ -124,7 +124,20 @@ export const Train: React.FC<SetProps> = ({f, opts, camPos}) => {
         </group>
         <mesh position={[8, 1.7, 0]} rotation={[0, -Math.PI / 2, 0]} material={toon('#5a5f74')}><planeGeometry args={[16, 3.4]} /></mesh>
       </group>
-      <pointLight position={[0, 2.1, 0]} color="#f2f6ff" intensity={4} distance={8} decay={1.4} />
+      {/* the warm ceiling strip: the car's light source, pools along the aisle */}
+      <mesh position={[0, 2.29, 0]} rotation={[Math.PI / 2, 0, 0]}><planeGeometry args={[0.35, 15]} /><meshBasicMaterial color="#fff1d6" toneMapped={false} /></mesh>
+      {[-5, 0, 5].map((z) => <pointLight key={z} position={[0, 2.1, z]} color="#ffe2b8" intensity={3.2} distance={5} decay={1.6} />)}
+      {/* passengers' things: bags, an umbrella, a newspaper, scuffs on the floor */}
+      {[[-1.0, -4.0, '#7a4a8a'], [1.0, -5.2, '#3f6f8a'], [-1.0, 4.6, '#8a5a3a'], [1.0, 3.6, '#4a5a7a']].map(([x, z, c], i) => (
+        <RBox key={`bag${i}`} size={[0.3, 0.26, 0.18]} pos={[x as number, 0.59, z as number]} rot={[0, 0.4 * i, 0]} r={0.05} c={c as string} t="fabric" />
+      ))}
+      <group position={[-1.05, 0.46, -3.2]} rotation={[0, 0, -0.35]}>
+        <mesh material={toon('#2a2c38')} position={[0, 0.35, 0]}><cylinderGeometry args={[0.012, 0.012, 0.75, 6]} /></mesh>
+        <mesh material={toon('#d04a6a')} position={[0, 0.5, 0]}><coneGeometry args={[0.07, 0.5, 8]} /></mesh>
+      </group>
+      <mesh position={[1.0, 0.465, 4.9]} rotation={[-Math.PI / 2, 0, 0.3]} material={toonSurface('#ece8dc', 'paper')}><planeGeometry args={[0.4, 0.3]} /></mesh>
+      {Array.from({length: 14}, (_, i) => <mesh key={`sc${i}`} rotation={[-Math.PI / 2, 0, rnd(i) * 3]} position={[(rnd(i * 2) - 0.5) * 1.6, 0.004, (rnd(i * 3) - 0.5) * 14]}>
+        <planeGeometry args={[0.18 + 0.2 * rnd(i * 4), 0.02]} /><meshBasicMaterial color="#4a4e5e" transparent opacity={0.5} toneMapped={false} /></mesh>)}
       <RoutineLife opts={opts} f={f} camPos={camPos} />
     </group>
   );
