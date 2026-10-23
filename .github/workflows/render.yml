@@ -67,7 +67,7 @@ jobs:
         if: steps.nm.outputs.cache-hit != 'true'
         run: cd studio && npm ci --no-audit --no-fund
       - name: Tests (nothing renders when a guard is broken)
-        run: python -m pytest -q tests
+        run: timeout 600 python -m pytest -q tests < /dev/null
       - name: Which jobs
         id: which
         run: |

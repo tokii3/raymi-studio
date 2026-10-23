@@ -1,1 +1,1 @@
-{"format": "short", "frames": [20, 125, 200, 255, 310, 370, 430, 520], "names": ["still_01", "still_02", "still_03", "still_04", "still_05", "still_06", "still_07", "still_08"], "scale": 0.6, "to": "boards", "_why": "first stills board of the POV Short (rerun: mix before the timeline)"}
+{"format": "short", "frames": [20, 125, 200, 255, 310, 370, 430, 520], "names": ["still_01", "still_02", "still_03", "still_04", "still_05", "still_06", "still_07", "still_08"], "scale": 0.6, "to": "boards", "_why": "first stills board of the POV Short (rerun: ffmpeg never reads stdin)"}

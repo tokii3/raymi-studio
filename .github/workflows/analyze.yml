@@ -51,7 +51,7 @@ jobs:
             ~/.cache/torch
           key: models-htdemucs-whisper-large-v3-v1
       - name: Tests
-        run: python -m pytest -q tests
+        run: timeout 600 python -m pytest -q tests < /dev/null
       - name: Which jobs
         id: which
         run: |

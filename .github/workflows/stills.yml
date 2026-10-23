@@ -56,7 +56,7 @@ jobs:
         run: cd studio && npm ci --no-audit --no-fund
       - name: Tests (python + studio typecheck + guards)
         run: |
-          python -m pytest -q tests
+          timeout 600 python -m pytest -q tests < /dev/null
           cd studio && npx tsc --noEmit && node --test test/check.test.mjs
       - name: Browser
         run: cd studio && npx remotion browser ensure
