@@ -3379,9 +3379,6 @@
      "the",
      "beach"
     ],
-    "key": [
-     "beach"
-    ],
     "anchor": [
      0,
      0.04,
@@ -3446,7 +3443,7 @@
       "kind": "globe",
       "pos": "globe",
       "scale": 1.6,
-      "text": "MOUNTAINS"
+      "text": "URGENT"
      }
     ]
    },
@@ -3505,9 +3502,6 @@
     "material": "print",
     "lines": [
      12
-    ],
-    "key": [
-     "mountains"
     ],
     "anchor": [
      0,
@@ -4173,7 +4167,7 @@
       "kind": "files",
       "pos": "files",
       "n": 6,
-      "text": "MOUNTAINS",
+      "text": "URGENT",
       "land": [
        49.1,
        49.7,
@@ -4233,10 +4227,7 @@
     ],
     "size": 0.12,
     "width": 1.4,
-    "tilt": -90,
-    "key": [
-     "mountains"
-    ]
+    "tilt": -90
    },
    "fx": [
     {
@@ -4298,8 +4289,7 @@
        0,
        3.1416,
        0
-      ],
-      "text": "I'll take the beach"
+      ]
      }
     ]
    },
@@ -4332,10 +4322,7 @@
     ],
     "size": 0.06,
     "width": 0.5,
-    "rot": 180,
-    "key": [
-     "beach"
-    ]
+    "rot": 180
    },
    "fx": [
     {
@@ -6203,7 +6190,7 @@
        0.6
       ],
       "at": 79.2,
-      "text": "TAKE ME TO THE BEACH"
+      "text": "TAKE"
      },
      {
       "kind": "page",
@@ -6213,7 +6200,7 @@
        0.6
       ],
       "at": 79.7,
-      "text": "TAKE ME TO THE BEACH"
+      "text": "TAKE"
      },
      {
       "kind": "page",
@@ -6223,7 +6210,7 @@
        0.6
       ],
       "at": 80.2,
-      "text": "TAKE ME TO THE BEACH"
+      "text": "TAKE"
      },
      {
       "kind": "page",
@@ -6233,7 +6220,7 @@
        0.6
       ],
       "at": 80.7,
-      "text": "TAKE ME TO THE BEACH"
+      "text": "TAKE"
      },
      {
       "kind": "page",
@@ -6243,7 +6230,7 @@
        0.6
       ],
       "at": 81.2,
-      "text": "TAKE ME TO THE BEACH"
+      "text": "TAKE"
      }
     ],
     "crowd": [
@@ -6348,9 +6335,6 @@
     ],
     "size": 0.24,
     "width": 3.4,
-    "key": [
-     "beach"
-    ],
     "words": [
      "Take",
      "me",
@@ -6424,7 +6408,7 @@
        0.5
       ],
       "at": 82.9,
-      "text": "MOUNTAINS"
+      "text": "URGENT"
      },
      {
       "kind": "page",
@@ -6434,7 +6418,7 @@
        0.5
       ],
       "at": 82.95,
-      "text": "MOUNTAINS"
+      "text": "URGENT"
      },
      {
       "kind": "page",
@@ -6444,7 +6428,7 @@
        0.5
       ],
       "at": 83,
-      "text": "MOUNTAINS"
+      "text": "URGENT"
      },
      {
       "kind": "page",
@@ -6454,7 +6438,7 @@
        0.5
       ],
       "at": 83.05000000000001,
-      "text": "MOUNTAINS"
+      "text": "URGENT"
      },
      {
       "kind": "page",
@@ -6464,7 +6448,7 @@
        0.5
       ],
       "at": 83.10000000000001,
-      "text": "MOUNTAINS"
+      "text": "URGENT"
      },
      {
       "kind": "page",
@@ -6474,7 +6458,7 @@
        0.5
       ],
       "at": 83.15,
-      "text": "MOUNTAINS"
+      "text": "URGENT"
      }
     ],
     "strings": [
@@ -6534,10 +6518,7 @@
      0.2
     ],
     "size": 0.18,
-    "width": 2.4,
-    "key": [
-     "mountains"
-    ]
+    "width": 2.4
    },
    "fx": [
     {
@@ -7195,10 +7176,7 @@
     ],
     "size": 0.08,
     "width": 0.6,
-    "rot": -90,
-    "key": [
-     "mountains"
-    ]
+    "rot": -90
    },
    "transition": {
     "kind": "cut",
@@ -7308,10 +7286,7 @@
     "anchor": "ad_left",
     "size": 0.12,
     "width": 1.5,
-    "rot": 90,
-    "key": [
-     "beach"
-    ]
+    "rot": 90
    },
    "transition": {
     "kind": "cut",
@@ -8833,10 +8808,7 @@
      0.3
     ],
     "size": 0.26,
-    "width": 3,
-    "key": [
-     "beach"
-    ]
+    "width": 3
    },
    "fx": [
     {
@@ -8953,10 +8925,7 @@
     ],
     "size": 0.28,
     "width": 4,
-    "rot": 60,
-    "key": [
-     "mountains"
-    ]
+    "rot": 60
    },
    "transition": {
     "kind": "cut",
@@ -9357,10 +9326,7 @@
     ],
     "size": 0.14,
     "width": 1.8,
-    "rot": 90,
-    "key": [
-     "mountains"
-    ]
+    "rot": 90
    },
    "hero": [
     {
@@ -9497,9 +9463,6 @@
     "material": "light",
     "lines": [
      54
-    ],
-    "key": [
-     "beach"
     ],
     "anchor": [
      -0.5,
