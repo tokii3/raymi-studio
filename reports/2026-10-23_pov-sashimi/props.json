@@ -1,0 +1,1458 @@
+{
+ "composition": "MVShort",
+ "width": 1080,
+ "height": 1920,
+ "fps": 30,
+ "durationInFrames": 501,
+ "audio": {
+  "file": "audio.m4a",
+  "from": 0.0,
+  "to": 16.713,
+  "src": "jobs/2026-10-23_pov-sashimi/out/mix.m4a"
+ },
+ "shots": [
+  {
+   "actor": [
+    {
+     "f": 0,
+     "pose": "sit_eat",
+     "pos": [
+      0.55,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-idle",
+     "motionMix": 0.12,
+     "expr": {
+      "surprised": 0.9
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    },
+    {
+     "f": 18,
+     "pose": "sit_eat",
+     "pos": [
+      0.55,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-idle",
+     "motionMix": 0.12,
+     "expr": {
+      "surprised": 0.5,
+      "sorrow": 0.4
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p1",
+   "from": 0,
+   "to": 69,
+   "set": "bedroom",
+   "hero": [],
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "glow_flare": [
+     232
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.21,
+     "dofRange": 0.77
+    }
+   },
+   "camera": [
+    {
+     "f": 0,
+     "pos": [
+      1.83,
+      1.5,
+      1.19
+     ],
+     "look": [
+      0.55,
+      1.05,
+      -0.6
+     ],
+     "fov": 10.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.1
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "bed",
+     "center": [
+      0,
+      0.24,
+      0
+     ],
+     "size": [
+      1.0,
+      0.48,
+      2.0
+     ]
+    }
+   ]
+  },
+  {
+   "actor": [
+    {
+     "f": 69,
+     "pose": "sit_offer",
+     "pos": [
+      0.55,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-talking",
+     "motionMix": 0.12,
+     "expr": {
+      "joy": 0.4
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p2",
+   "from": 69,
+   "to": 133,
+   "set": "bedroom",
+   "hero": [],
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "glow_flare": [
+     232
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.21,
+     "dofRange": 0.77
+    }
+   },
+   "camera": [
+    {
+     "f": 69,
+     "pos": [
+      1.83,
+      1.5,
+      1.19
+     ],
+     "look": [
+      0.55,
+      1.05,
+      -0.6
+     ],
+     "fov": 13.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.1
+    },
+    {
+     "f": 133,
+     "pos": [
+      1.716,
+      1.46,
+      1.031
+     ],
+     "look": [
+      0.55,
+      1.05,
+      -0.6
+     ],
+     "fov": 13.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.1
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "bed",
+     "center": [
+      0,
+      0.24,
+      0
+     ],
+     "size": [
+      1.0,
+      0.48,
+      2.0
+     ]
+    }
+   ]
+  },
+  {
+   "actor": [
+    {
+     "f": 133,
+     "pose": "sit_offer",
+     "pos": [
+      0.55,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "icon": "sweat",
+     "motion": "sitting-talking",
+     "motionMix": 0.12,
+     "expr": {
+      "joy": 0.5
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    },
+    {
+     "f": 145,
+     "pose": "sit_offer",
+     "pos": [
+      0.6198001572453197,
+      0.0,
+      -0.5023888426022483
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 9,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-talking",
+     "motionMix": 0.12,
+     "expr": {
+      "joy": 0.7
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p3",
+   "from": 133,
+   "to": 220,
+   "set": "bedroom",
+   "hero": [],
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "glow_flare": [
+     232
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.01,
+     "dofRange": 0.7
+    }
+   },
+   "camera": [
+    {
+     "f": 133,
+     "pos": [
+      1.716,
+      1.46,
+      1.031
+     ],
+     "look": [
+      0.55,
+      1.05,
+      -0.6
+     ],
+     "fov": 11.0,
+     "roll": -5.0,
+     "ease": "inOut",
+     "shake": 0.15
+    },
+    {
+     "f": 220,
+     "pos": [
+      1.773,
+      1.48,
+      1.11
+     ],
+     "look": [
+      0.55,
+      1.05,
+      -0.6
+     ],
+     "fov": 11.0,
+     "roll": -6.0,
+     "ease": "inOut",
+     "shake": 0.15
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "bed",
+     "center": [
+      0,
+      0.24,
+      0
+     ],
+     "size": [
+      1.0,
+      0.48,
+      2.0
+     ]
+    }
+   ]
+  },
+  {
+   "actor": [
+    {
+     "f": 220,
+     "pose": "sit_eat",
+     "pos": [
+      0.55,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-idle",
+     "motionMix": 0.12,
+     "expr": {
+      "fun": 0.3
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    },
+    {
+     "f": 233,
+     "pose": "stand",
+     "pos": [
+      0.55,
+      0.0,
+      -0.6
+     ],
+     "rotY": -140.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-talking",
+     "expr": {
+      "surprised": 0.8
+     },
+     "look": [
+      -1.68,
+      1.8,
+      -3.78
+     ],
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p4",
+   "from": 220,
+   "to": 284,
+   "set": "bedroom",
+   "hero": [],
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "glow_flare": [
+     232
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ],
+    "salmon": {
+     "from": [
+      -2.4,
+      1.6,
+      -3.95
+     ],
+     "pos": [
+      -1.68,
+      1.8,
+      -3.78
+     ],
+     "at": 222,
+     "dur_s": 0.3,
+     "scale": 1.2,
+     "yaw": -1.17,
+     "press_at": 232
+    },
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3
+    }
+   },
+   "camera": [
+    {
+     "f": 220,
+     "pos": [
+      2.13,
+      1.5,
+      1.69
+     ],
+     "look": [
+      -0.4,
+      1.3,
+      -2.0
+     ],
+     "fov": 20.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.1
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "bed",
+     "center": [
+      0,
+      0.24,
+      0
+     ],
+     "size": [
+      1.0,
+      0.48,
+      2.0
+     ]
+    }
+   ]
+  },
+  {
+   "actor": [
+    {
+     "f": 284,
+     "pose": "crouch",
+     "pos": [
+      0.2,
+      0.48,
+      -0.4
+     ],
+     "rotY": -120.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "expr": {
+      "joy": 0.9
+     },
+     "look": [
+      -1.68,
+      1.8,
+      -3.78
+     ],
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    },
+    {
+     "f": 293,
+     "pose": "crouch",
+     "pos": [
+      0.2,
+      0.48,
+      -0.4
+     ],
+     "rotY": -120.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "flatten",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "expr": {
+      "joy": 0.9
+     },
+     "look": [
+      -1.68,
+      1.8,
+      -3.78
+     ],
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p5",
+   "from": 284,
+   "to": 360,
+   "set": "bedroom",
+   "hero": [],
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "glow_flare": [
+     232
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ],
+    "salmon": {
+     "pos": [
+      -1.68,
+      1.8,
+      -3.78
+     ],
+     "scale": 1.2,
+     "yaw": -1.17,
+     "press_at": 0
+    },
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.94,
+     "dofRange": 0.68
+    }
+   },
+   "camera": [
+    {
+     "f": 284,
+     "pos": [
+      1.53,
+      2.1,
+      0.99
+     ],
+     "look": [
+      0.05,
+      0.55,
+      -0.2
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.15
+    },
+    {
+     "f": 290,
+     "pos": [
+      1.68,
+      2.1,
+      1.19
+     ],
+     "look": [
+      0.05,
+      0.55,
+      -0.2
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "out",
+     "shake": 0.35
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "bed",
+     "center": [
+      0,
+      0.24,
+      0
+     ],
+     "size": [
+      1.0,
+      0.48,
+      2.0
+     ]
+    }
+   ]
+  },
+  {
+   "actor": [
+    {
+     "f": 360,
+     "pose": "shh",
+     "pos": [
+      1.25,
+      0.0,
+      0.35
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "idle",
+     "motionMix": 0.12,
+     "expr": {
+      "fun": 0.5
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "pov_hand",
+     "pose": "open",
+     "x": 0.5,
+     "y": 0.75,
+     "from": 360,
+     "to": 370
+    }
+   ],
+   "id": "p6",
+   "from": 360,
+   "to": 403,
+   "set": "bedroom",
+   "hero": [],
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "glow_flare": [
+     232
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.03,
+     "dofRange": 0.36
+    }
+   },
+   "camera": [
+    {
+     "f": 360,
+     "pos": [
+      1.83,
+      1.5,
+      1.19
+     ],
+     "look": [
+      1.3,
+      1.35,
+      0.4
+     ],
+     "fov": 22.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.2
+    },
+    {
+     "f": 362,
+     "pos": [
+      1.61,
+      1.438,
+      0.862
+     ],
+     "look": [
+      1.3,
+      1.35,
+      0.4
+     ],
+     "fov": 22.0,
+     "roll": 0.0,
+     "ease": "snap",
+     "shake": 0.6
+    },
+    {
+     "f": 403,
+     "pos": [
+      1.61,
+      1.438,
+      0.862
+     ],
+     "look": [
+      1.3,
+      1.35,
+      0.4
+     ],
+     "fov": 22.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.2
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "bed",
+     "center": [
+      0,
+      0.24,
+      0
+     ],
+     "size": [
+      1.0,
+      0.48,
+      2.0
+     ]
+    }
+   ]
+  },
+  {
+   "actor": [
+    {
+     "f": 403,
+     "pose": "sit_offer",
+     "pos": [
+      0.55,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-idle",
+     "motionMix": 0.12,
+     "expr": {
+      "fun": 0.5
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    },
+    {
+     "f": 445,
+     "pose": "sit_eat",
+     "pos": [
+      0.55,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 36,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-idle",
+     "motionMix": 0.12,
+     "expr": {
+      "surprised": 0.9
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p7",
+   "from": 403,
+   "to": 501,
+   "set": "bedroom",
+   "hero": [],
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "glow_flare": [
+     232
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ],
+    "salmon": {
+     "pos": [
+      -1.68,
+      1.8,
+      -3.78
+     ],
+     "scale": 1.2,
+     "yaw": -0.6
+    },
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.21,
+     "dofRange": 0.77
+    }
+   },
+   "camera": [
+    {
+     "f": 403,
+     "pos": [
+      1.83,
+      1.5,
+      1.19
+     ],
+     "look": [
+      0.55,
+      1.05,
+      -0.6
+     ],
+     "fov": 10.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.1
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "bed",
+     "center": [
+      0,
+      0.24,
+      0
+     ],
+     "size": [
+      1.0,
+      0.48,
+      2.0
+     ]
+    }
+   ]
+  }
+ ],
+ "hits": [
+  253,
+  361,
+  383,
+  393,
+  404,
+  426
+ ],
+ "beats": [
+  5,
+  16,
+  26,
+  37,
+  48,
+  59,
+  70,
+  80,
+  91,
+  102,
+  113,
+  123,
+  134,
+  145,
+  156,
+  167,
+  177,
+  188,
+  199,
+  210,
+  221,
+  231,
+  242,
+  253,
+  264,
+  275,
+  285,
+  296,
+  307,
+  318,
+  329,
+  339,
+  350,
+  361,
+  372,
+  383,
+  393,
+  404,
+  415,
+  426,
+  437,
+  447,
+  458,
+  469,
+  480,
+  491
+ ],
+ "sprites": [],
+ "grain": 0.04,
+ "title": "POV: you caught her eating salmon sashimi",
+ "overlay": {
+  "hook": {
+   "text": "this is not what it looks like.",
+   "from": 0,
+   "to": 66
+  },
+  "cta": {
+   "text": "should i tell him? yes / no",
+   "from": 403
+  }
+ },
+ "heavy": false,
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [
+  "motions/idle.fbx",
+  "motions/sitting-idle.fbx",
+  "motions/sitting-talking.fbx"
+ ],
+ "sung": [
+  {
+   "w": "this",
+   "roma": "",
+   "t0": 0.243,
+   "t1": 0.488
+  },
+  {
+   "w": "is",
+   "roma": "",
+   "t0": 0.499,
+   "t1": 0.627
+  },
+  {
+   "w": "not",
+   "roma": "",
+   "t0": 0.638,
+   "t1": 0.916
+  },
+  {
+   "w": "what",
+   "roma": "",
+   "t0": 0.926,
+   "t1": 1.055
+  },
+  {
+   "w": "it",
+   "roma": "",
+   "t0": 1.065,
+   "t1": 1.183
+  },
+  {
+   "w": "looks",
+   "roma": "",
+   "t0": 1.194,
+   "t1": 1.429
+  },
+  {
+   "w": "like.",
+   "roma": "",
+   "t0": 1.439,
+   "t1": 1.792
+  },
+  {
+   "w": "it's",
+   "roma": "",
+   "t0": 2.317,
+   "t1": 2.52
+  },
+  {
+   "w": "purple",
+   "roma": "",
+   "t0": 2.53,
+   "t1": 2.904
+  },
+  {
+   "w": "sweet",
+   "roma": "",
+   "t0": 2.915,
+   "t1": 3.236
+  },
+  {
+   "w": "potato.",
+   "roma": "",
+   "t0": 3.246,
+   "t1": 3.77
+  },
+  {
+   "w": "very",
+   "roma": "",
+   "t0": 4.476,
+   "t1": 4.86
+  },
+  {
+   "w": "orange",
+   "roma": "",
+   "t0": 4.871,
+   "t1": 5.234
+  },
+  {
+   "w": "purple",
+   "roma": "",
+   "t0": 5.245,
+   "t1": 5.598
+  },
+  {
+   "w": "sweet",
+   "roma": "",
+   "t0": 5.608,
+   "t1": 5.918
+  },
+  {
+   "w": "potato.",
+   "roma": "",
+   "t0": 5.929,
+   "t1": 6.463
+  },
+  {
+   "w": "oh",
+   "roma": "",
+   "t0": 7.893,
+   "t1": 8.074
+  },
+  {
+   "w": "no.",
+   "roma": "",
+   "t0": 8.085,
+   "t1": 8.416
+  },
+  {
+   "w": "my",
+   "roma": "",
+   "t0": 8.555,
+   "t1": 8.694
+  },
+  {
+   "w": "best",
+   "roma": "",
+   "t0": 8.705,
+   "t1": 9.036
+  },
+  {
+   "w": "friend.",
+   "roma": "",
+   "t0": 9.047,
+   "t1": 9.463
+  },
+  {
+   "w": "nothing",
+   "roma": "",
+   "t0": 9.515,
+   "t1": 9.921
+  },
+  {
+   "w": "here!",
+   "roma": "",
+   "t0": 9.931,
+   "t1": 10.284
+  },
+  {
+   "w": "just",
+   "roma": "",
+   "t0": 11.014,
+   "t1": 11.334
+  },
+  {
+   "w": "rice!",
+   "roma": "",
+   "t0": 11.345,
+   "t1": 11.794
+  },
+  {
+   "w": "you",
+   "roma": "",
+   "t0": 12.06,
+   "t1": 12.252
+  },
+  {
+   "w": "saw",
+   "roma": "",
+   "t0": 12.263,
+   "t1": 12.508
+  },
+  {
+   "w": "nothing.",
+   "roma": "",
+   "t0": 12.519,
+   "t1": 13.032
+  },
+  {
+   "w": "should",
+   "roma": "",
+   "t0": 13.474,
+   "t1": 13.687
+  },
+  {
+   "w": "i",
+   "roma": "",
+   "t0": 13.698,
+   "t1": 13.784
+  },
+  {
+   "w": "tell",
+   "roma": "",
+   "t0": 13.794,
+   "t1": 14.029
+  },
+  {
+   "w": "him?",
+   "roma": "",
+   "t0": 14.04,
+   "t1": 14.296
+  }
+ ]
+}

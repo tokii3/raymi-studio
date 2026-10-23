@@ -1,0 +1,72 @@
+[
+ {
+  "id": "p1",
+  "from_s": 0.0,
+  "to_s": 3.13,
+  "set": "aquarium",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p2",
+  "from_s": 3.13,
+  "to_s": 4.63,
+  "set": "aquarium",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p3",
+  "from_s": 4.63,
+  "to_s": 6.87,
+  "set": "aquarium",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p4",
+  "from_s": 6.87,
+  "to_s": 9.1,
+  "set": "aquarium",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p5",
+  "from_s": 9.1,
+  "to_s": 12.8,
+  "set": "aquarium",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p6",
+  "from_s": 12.8,
+  "to_s": 15.03,
+  "set": "aquarium",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p7",
+  "from_s": 15.03,
+  "to_s": 18.03,
+  "set": "aquarium",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ }
+]

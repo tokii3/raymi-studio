@@ -1,0 +1,72 @@
+[
+ {
+  "id": "p1",
+  "from_s": 0.0,
+  "to_s": 3.1,
+  "set": "deep",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p2",
+  "from_s": 3.1,
+  "to_s": 4.8,
+  "set": "deep",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p3",
+  "from_s": 4.8,
+  "to_s": 7.33,
+  "set": "deep",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p4",
+  "from_s": 7.33,
+  "to_s": 9.9,
+  "set": "deep",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p5",
+  "from_s": 9.9,
+  "to_s": 11.6,
+  "set": "deep",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p6",
+  "from_s": 11.6,
+  "to_s": 14.13,
+  "set": "deep",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p7",
+  "from_s": 14.13,
+  "to_s": 16.7,
+  "set": "deep",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ }
+]

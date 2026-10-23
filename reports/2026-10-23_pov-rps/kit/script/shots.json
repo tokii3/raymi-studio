@@ -1,0 +1,82 @@
+[
+ {
+  "id": "p1",
+  "from_s": 0.0,
+  "to_s": 2.9,
+  "set": "beach",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p2",
+  "from_s": 2.9,
+  "to_s": 6.23,
+  "set": "beach",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p3",
+  "from_s": 6.23,
+  "to_s": 7.9,
+  "set": "beach",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p4",
+  "from_s": 7.9,
+  "to_s": 9.17,
+  "set": "beach",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p5",
+  "from_s": 9.17,
+  "to_s": 11.67,
+  "set": "beach",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p6",
+  "from_s": 11.67,
+  "to_s": 13.77,
+  "set": "beach",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p7",
+  "from_s": 13.77,
+  "to_s": 15.83,
+  "set": "beach",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p8",
+  "from_s": 15.83,
+  "to_s": 18.8,
+  "set": "beach",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ }
+]

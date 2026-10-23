@@ -1,0 +1,62 @@
+[
+ {
+  "id": "p1",
+  "from_s": 0.0,
+  "to_s": 3.77,
+  "set": "weather",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p2",
+  "from_s": 3.77,
+  "to_s": 5.93,
+  "set": "weather",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p3",
+  "from_s": 5.93,
+  "to_s": 8.13,
+  "set": "weather",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p4",
+  "from_s": 8.13,
+  "to_s": 12.47,
+  "set": "weather",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p5",
+  "from_s": 12.47,
+  "to_s": 14.67,
+  "set": "weather",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p6",
+  "from_s": 14.67,
+  "to_s": 18.53,
+  "set": "weather",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ }
+]

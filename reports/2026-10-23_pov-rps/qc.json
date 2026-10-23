@@ -1,0 +1,25 @@
+{
+ "file": "final.mp4",
+ "width": 1080,
+ "height": 1920,
+ "duration": 18.8,
+ "fps": "30/1",
+ "checks": {
+  "portrait_9x16": true,
+  "has_audio": true,
+  "loudness_-14": true,
+  "true_peak_<=-1": true,
+  "duration_matches_plan": true,
+  "no_frozen_picture_>1.2s": false
+ },
+ "full_res": true,
+ "lufs": -14.28,
+ "true_peak": -2.74,
+ "frozen_spans": [
+  [
+   6.53333,
+   1.26667
+  ]
+ ],
+ "pass": false
+}

@@ -1,0 +1,72 @@
+[
+ {
+  "id": "p1",
+  "from_s": 0.0,
+  "to_s": 2.9,
+  "set": "train",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p2",
+  "from_s": 2.9,
+  "to_s": 4.97,
+  "set": "train",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p3",
+  "from_s": 4.97,
+  "to_s": 8.4,
+  "set": "train",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p4",
+  "from_s": 8.4,
+  "to_s": 10.43,
+  "set": "train",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p5",
+  "from_s": 10.43,
+  "to_s": 12.5,
+  "set": "train",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p6",
+  "from_s": 12.5,
+  "to_s": 15.23,
+  "set": "train",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p7",
+  "from_s": 15.23,
+  "to_s": 18.7,
+  "set": "train",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ }
+]

@@ -1,0 +1,1779 @@
+{
+ "composition": "MVShort",
+ "width": 1080,
+ "height": 1920,
+ "fps": 30,
+ "durationInFrames": 501,
+ "audio": {
+  "file": "audio.m4a",
+  "from": 0.0,
+  "to": 16.703,
+  "src": "jobs/2026-10-23_pov-costume/out/mix.m4a"
+ },
+ "shots": [
+  {
+   "actor": [
+    {
+     "f": 0,
+     "pose": "ta_da",
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "pop",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "idle",
+     "motionMix": 0.12,
+     "expr": {
+      "joy": 0.9
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p1",
+   "from": 0,
+   "to": 93,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0.0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0.0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0.0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.3,
+     "dofRange": 0.46
+    }
+   },
+   "camera": [
+    {
+     "f": 0,
+     "pos": [
+      0.3,
+      1.42,
+      0.7
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 14.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.35
+    },
+    {
+     "f": 3,
+     "pos": [
+      0.3,
+      1.42,
+      0.7
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 14.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.15
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 93,
+     "pose": "stand",
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "catwalk-walk-stop-twist-r",
+     "expr": {
+      "joy": 0.8
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p2",
+   "from": 93,
+   "to": 144,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0.0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0.0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0.0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.3,
+     "dofRange": 0.46
+    }
+   },
+   "camera": [
+    {
+     "f": 93,
+     "pos": [
+      0.3,
+      1.42,
+      0.7
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 14.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.15
+    },
+    {
+     "f": 144,
+     "pos": [
+      0.3,
+      1.3,
+      1.6
+     ],
+     "look": [
+      0.3,
+      0.9,
+      -0.6
+     ],
+     "fov": 22.0,
+     "roll": 0.0,
+     "ease": "out",
+     "shake": 0.15
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 144,
+     "pose": "fins_down",
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "expr": {
+      "joy": 0.7
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    },
+    {
+     "f": 156,
+     "pose": "fins_up",
+     "pos": [
+      0.3,
+      0.0,
+      -0.3
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 12,
+     "arc": 0.0,
+     "ease": "inOut",
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    },
+    {
+     "f": 171,
+     "pose": "fins_down",
+     "pos": [
+      0.3,
+      0.0,
+      -0.09999999999999998
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 12,
+     "arc": 0.0,
+     "ease": "inOut",
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    },
+    {
+     "f": 183,
+     "pose": "fins_up",
+     "pos": [
+      0.3,
+      0.0,
+      -0.09999999999999998
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    },
+    {
+     "f": 196,
+     "pose": "fins_down",
+     "pos": [
+      0.3,
+      0.0,
+      -0.09999999999999998
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "expr": {
+      "joy": 0.9
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p3",
+   "from": 144,
+   "to": 220,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0.0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0.0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0.0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.6,
+     "dofRange": 0.56
+    }
+   },
+   "camera": [
+    {
+     "f": 144,
+     "pos": [
+      0.3,
+      1.35,
+      1.0
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 18.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.15
+    },
+    {
+     "f": 170,
+     "pos": [
+      0.3,
+      1.35,
+      1.2
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 18.0,
+     "roll": 0.0,
+     "ease": "out",
+     "shake": 0.45
+    },
+    {
+     "f": 195,
+     "pos": [
+      0.3,
+      1.35,
+      1.35
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 18.0,
+     "roll": 0.0,
+     "ease": "out",
+     "shake": 0.45
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 220,
+     "pose": "stand",
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "rotY": 60.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "look-over-shoulder",
+     "expr": {
+      "surprised": 0.8
+     },
+     "look": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p4",
+   "from": 220,
+   "to": 297,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0.0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0.0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0.0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "salmon": {
+     "from": [
+      3.5,
+      1.3,
+      -1.6
+     ],
+     "pos": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "at": 246,
+     "dur_s": 0.9,
+     "scale": 1.6,
+     "costume": "raymi",
+     "yaw": 3.14
+    },
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.01,
+     "dofRange": 0.7
+    }
+   },
+   "camera": [
+    {
+     "f": 220,
+     "pos": [
+      0.1,
+      1.35,
+      1.4
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 24.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.15
+    },
+    {
+     "f": 238,
+     "pos": [
+      0.1,
+      1.35,
+      1.4
+     ],
+     "look": [
+      1.2,
+      1.1,
+      -0.6
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "path": "spline",
+     "shake": 0.2
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 297,
+     "pose": "stand",
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "rotY": 70.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "angry",
+     "expr": {
+      "angry": 0.7
+     },
+     "look": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p5",
+   "from": 297,
+   "to": 348,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0.0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0.0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0.0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "salmon": {
+     "pos": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "scale": 1.6,
+     "costume": "raymi",
+     "yaw": 3.14
+    },
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.68,
+     "dofRange": 0.59
+    }
+   },
+   "camera": [
+    {
+     "f": 297,
+     "pos": [
+      0.8,
+      1.3,
+      1.0
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 22.0,
+     "roll": -8.0,
+     "ease": "inOut",
+     "shake": 0.2
+    },
+    {
+     "f": 299,
+     "pos": [
+      0.8,
+      1.3,
+      1.0
+     ],
+     "look": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "fov": 22.0,
+     "roll": 0.0,
+     "ease": "snap",
+     "shake": 0.3
+    },
+    {
+     "f": 322,
+     "pos": [
+      0.8,
+      1.3,
+      1.0
+     ],
+     "look": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "fov": 22.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.2
+    },
+    {
+     "f": 324,
+     "pos": [
+      0.8,
+      1.3,
+      1.0
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 22.0,
+     "roll": 8.0,
+     "ease": "snap",
+     "shake": 0.3
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 348,
+     "pose": "stand",
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "shrugging",
+     "expr": {
+      "fun": 0.6
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    },
+    {
+     "f": 375,
+     "pose": "stand",
+     "pos": [
+      0.75,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 12,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "gestures-pack-basic-happy-hand-gesture",
+     "expr": {
+      "joy": 0.9
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "polaroid",
+     "from": 399,
+     "to": 425
+    }
+   ],
+   "id": "p6",
+   "from": 348,
+   "to": 424,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0.0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0.0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0.0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "salmon": {
+     "pos": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "scale": 1.6,
+     "costume": "raymi",
+     "yaw": 2.6
+    },
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.26,
+     "dofRange": 0.79
+    }
+   },
+   "camera": [
+    {
+     "f": 348,
+     "pos": [
+      0.8,
+      1.3,
+      1.6
+     ],
+     "look": [
+      0.8,
+      1.0,
+      -0.55
+     ],
+     "fov": 24.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.15
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 424,
+     "pose": "point_self",
+     "pos": [
+      0.75,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "idle",
+     "motionMix": 0.2,
+     "expr": {
+      "joy": 0.9
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    },
+    {
+     "f": 475,
+     "pose": "ta_da",
+     "pos": [
+      0.3,
+      0.0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "pop",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "idle",
+     "motionMix": 0.12,
+     "expr": {
+      "joy": 0.9
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "polaroid",
+     "flash": false,
+     "from": 424,
+     "to": 476
+    }
+   ],
+   "id": "p7",
+   "from": 424,
+   "to": 501,
+   "set": "deep",
+   "hero": [],
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0.0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0.0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0.0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "salmon": {
+     "pos": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "scale": 1.6,
+     "costume": "raymi",
+     "yaw": 2.6
+    },
+    "grade": "pov_warm",
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.2,
+     "dofRange": 0.77
+    }
+   },
+   "camera": [
+    {
+     "f": 424,
+     "pos": [
+      0.8,
+      1.3,
+      1.6
+     ],
+     "look": [
+      0.8,
+      1.0,
+      -0.55
+     ],
+     "fov": 24.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 475,
+     "pos": [
+      0.8,
+      1.3,
+      1.6
+     ],
+     "look": [
+      0.8,
+      1.0,
+      -0.55
+     ],
+     "fov": 24.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 475,
+     "pos": [
+      0.3,
+      1.42,
+      0.7
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 14.0,
+     "roll": 0.0,
+     "ease": "snap"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [
+    {
+     "name": "under the sea floor",
+     "min": [
+      -17,
+      -3,
+      -16
+     ],
+     "max": [
+      17,
+      0.02,
+      10
+     ]
+    }
+   ],
+   "solids": []
+  }
+ ],
+ "hits": [
+  120,
+  145,
+  171,
+  196,
+  221,
+  247,
+  272
+ ],
+ "beats": [
+  18,
+  43,
+  69,
+  94,
+  120,
+  145,
+  171,
+  196,
+  221,
+  247,
+  272,
+  298,
+  323,
+  349,
+  374,
+  399,
+  425,
+  450,
+  476
+ ],
+ "sprites": [],
+ "grain": 0.04,
+ "title": "Rate my Halloween costume (I went as my best friend)",
+ "overlay": {
+  "hook": {
+   "text": "rate my halloween costume.",
+   "from": 0,
+   "to": 72
+  },
+  "cta": {
+   "text": "who wore it better?",
+   "from": 424
+  }
+ },
+ "heavy": false,
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [
+  "motions/angry.fbx",
+  "motions/catwalk-walk-stop-twist-r.fbx",
+  "motions/gestures-pack-basic-happy-hand-gesture.fbx",
+  "motions/idle.fbx",
+  "motions/look-over-shoulder.fbx",
+  "motions/shrugging.fbx"
+ ],
+ "sung": [
+  {
+   "w": "rate",
+   "roma": "",
+   "t0": 0.193,
+   "t1": 0.471
+  },
+  {
+   "w": "my",
+   "roma": "",
+   "t0": 0.481,
+   "t1": 0.631
+  },
+  {
+   "w": "halloween",
+   "roma": "",
+   "t0": 0.641,
+   "t1": 1.176
+  },
+  {
+   "w": "costume.",
+   "roma": "",
+   "t0": 1.186,
+   "t1": 1.785
+  },
+  {
+   "w": "i'm",
+   "roma": "",
+   "t0": 3.143,
+   "t1": 3.335
+  },
+  {
+   "w": "going",
+   "roma": "",
+   "t0": 3.346,
+   "t1": 3.688
+  },
+  {
+   "w": "as",
+   "roma": "",
+   "t0": 3.698,
+   "t1": 3.826
+  },
+  {
+   "w": "my",
+   "roma": "",
+   "t0": 3.837,
+   "t1": 3.976
+  },
+  {
+   "w": "best",
+   "roma": "",
+   "t0": 3.987,
+   "t1": 4.307
+  },
+  {
+   "w": "friend.",
+   "roma": "",
+   "t0": 4.318,
+   "t1": 4.735
+  },
+  {
+   "w": "the",
+   "roma": "",
+   "t0": 4.838,
+   "t1": 4.987
+  },
+  {
+   "w": "fins",
+   "roma": "",
+   "t0": 4.998,
+   "t1": 5.351
+  },
+  {
+   "w": "are",
+   "roma": "",
+   "t0": 5.361,
+   "t1": 5.564
+  },
+  {
+   "w": "real.",
+   "roma": "",
+   "t0": 5.575,
+   "t1": 5.927
+  },
+  {
+   "w": "kind",
+   "roma": "",
+   "t0": 6.657,
+   "t1": 6.978
+  },
+  {
+   "w": "of.",
+   "roma": "",
+   "t0": 6.989,
+   "t1": 7.256
+  },
+  {
+   "w": "wait.",
+   "roma": "",
+   "t0": 8.043,
+   "t1": 8.438
+  },
+  {
+   "w": "is",
+   "roma": "",
+   "t0": 9.157,
+   "t1": 9.317
+  },
+  {
+   "w": "that",
+   "roma": "",
+   "t0": 9.328,
+   "t1": 9.531
+  },
+  {
+   "w": "me?",
+   "roma": "",
+   "t0": 9.542,
+   "t1": 9.788
+  },
+  {
+   "w": "he",
+   "roma": "",
+   "t0": 9.923,
+   "t1": 10.104
+  },
+  {
+   "w": "copied",
+   "roma": "",
+   "t0": 10.115,
+   "t1": 10.532
+  },
+  {
+   "w": "me.",
+   "roma": "",
+   "t0": 10.542,
+   "t1": 10.788
+  },
+  {
+   "w": "fine.",
+   "roma": "",
+   "t0": 11.62,
+   "t1": 12.079
+  },
+  {
+   "w": "couples",
+   "roma": "",
+   "t0": 12.796,
+   "t1": 13.202
+  },
+  {
+   "w": "costume.",
+   "roma": "",
+   "t0": 13.213,
+   "t1": 13.843
+  },
+  {
+   "w": "who",
+   "roma": "",
+   "t0": 14.161,
+   "t1": 14.332
+  },
+  {
+   "w": "wore",
+   "roma": "",
+   "t0": 14.342,
+   "t1": 14.567
+  },
+  {
+   "w": "it",
+   "roma": "",
+   "t0": 14.577,
+   "t1": 14.706
+  },
+  {
+   "w": "better?",
+   "roma": "",
+   "t0": 14.716,
+   "t1": 15.069
+  }
+ ]
+}
