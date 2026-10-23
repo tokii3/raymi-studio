@@ -19,7 +19,9 @@
    look step: one grade per act), `heroes` + per shot `hero` (the main element), `lyric_style`, `translation`.
 7. **Stills board** (toki 2026-10-22: no pilot any more - it ate time and was too short to judge the video): >= 12 cloud
    stills across the WHOLE MV (every act, every key moment, the Short's hook) as `boards/still_<nn>.jpg` -> toki
-   (`toki.md` line `stills: toki <date> ...`). Then straight to the full MV.
+   (`toki.md` line `stills: toki <date> ...`). Then straight to the full MV. The board goes to toki only AFTER the
+   look-critic has judged it (answer verbatim in `reviews/stills_look-critic_<n>.md`) and its faults are fixed - 2026-10-23
+   toki saw a board that was "billig, flach, leer, lieblos" before any critic had looked at it.
 8. **Final** MV + Short (cut from the MV) in the cloud -> screening -> toki. Upload texts follow
    `canon/12_titles_descriptions.md` + `raymi/channel_rules.py`; toki uploads.
 9. **Thumbnails** (`5_THUMBS.md`): 5 candidates for the MV AND 5 for the Short, rendered in the cloud from the
