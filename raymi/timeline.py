@@ -534,6 +534,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
     heavy = False
     shots, sprites, screen_texts = [], set(), []
     for i, s in enumerate(shots_in):
+        if fmt == "short" and isinstance(s.get("short_shot"), dict):
+            s = {**s, **s["short_shot"]}                   # the Short's own version of this shot (e.g. no lyric under the hook)
         tag = f"shot {i + 1}"
         a = starts[i]
         b = starts[i + 1] if i + 1 < len(starts) else t_to
