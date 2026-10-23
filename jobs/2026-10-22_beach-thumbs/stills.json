@@ -1,0 +1,42 @@
+{
+ "_why": "5 MV + 5 Short thumbnails, the feed view at 168 px",
+ "passes": [
+  {
+   "format": "mv",
+   "frames": [
+    15,
+    45,
+    75,
+    105,
+    135
+   ],
+   "names": [
+    "thumb_mv_M1_dance",
+    "thumb_mv_M2_marionette",
+    "thumb_mv_M3_dream",
+    "thumb_mv_M4_take",
+    "thumb_mv_M5_bye_boss"
+   ]
+  },
+  {
+   "format": "short",
+   "frames": [
+    15,
+    45,
+    75,
+    105,
+    135
+   ],
+   "names": [
+    "thumb_short_S1_dance",
+    "thumb_short_S2_marionette",
+    "thumb_short_S3_dream",
+    "thumb_short_S4_take",
+    "thumb_short_S5_bye_boss"
+   ]
+  }
+ ],
+ "scale": 1,
+ "dest": "jobs/2026-10-22_take-me-to-the-beach/boards",
+ "thumbs": true
+}

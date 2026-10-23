@@ -1,0 +1,1042 @@
+{
+ "title": "Take Me to the Beach - thumbnails",
+ "_why": "5 MV + 5 Short designed thumbnail stills (toki 2026-10-22: 5 per format) from the studio's sets",
+ "audio": {
+  "file": "../2026-10-22_take-me-to-the-beach/song.webm",
+  "from": 0,
+  "to": 10
+ },
+ "window": {
+  "short": {
+   "from": 5,
+   "to": 10
+  }
+ },
+ "all_lyrics": false,
+ "grain": 0.03,
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [
+  "motions/dance.fbx",
+  "motions/idle.fbx"
+ ],
+ "shots": [
+  {
+   "id": "mv1",
+   "at": 0,
+   "set": "office",
+   "why": "the cold open: she dances on her desk, colour bursts into the grey office",
+   "opts": {
+    "grade": "clean",
+    "post": {
+     "bloom": 0.5,
+     "dof": 1.6
+    },
+    "crowd": [
+     {
+      "pos": [
+       -1,
+       0,
+       -1.4
+      ],
+      "yaw": 0.4,
+      "seed": 0,
+      "hold": "coffee",
+      "look_at": 0
+     },
+     {
+      "pos": [
+       1.1,
+       0,
+       -1.8
+      ],
+      "yaw": -0.5,
+      "seed": 2,
+      "look_at": 0
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      1.75,
+      1.75
+     ],
+     "look": [
+      0.05,
+      1.75,
+      0.5
+     ],
+     "fov": 30
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "dance_a",
+     "pos": "on_desk",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.95
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "spread",
+     "at": 0,
+     "to": "end",
+     "dark": "#2a2e3e",
+     "light": "#d6dbe8",
+     "r0": 0.32,
+     "r1": 0.32
+    }
+   ],
+   "text": {
+    "say": [
+     [
+      "FREE?",
+      0
+     ]
+    ],
+    "until": 1,
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     -0.75,
+     2.05,
+     0.4
+    ],
+    "rot": 0,
+    "tilt": 0,
+    "size": 0.06,
+    "width": 0.6,
+    "key_scale": 2.2,
+    "key": [
+     "FREE?"
+    ],
+    "color": "#ffffff",
+    "accent": "#ffcf6b"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.21,
+      1.48,
+      -0.12
+     ],
+     "size": 0.058,
+     "width": 1.57,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": 20.6,
+     "key_scale": 1.8
+    }
+   }
+  },
+  {
+   "id": "mv2",
+   "at": 1,
+   "set": "office",
+   "why": "the marionette: strings on both wrists, one battery dot left",
+   "opts": {
+    "grade": "closing",
+    "battery": [
+     [
+      0,
+      1
+     ]
+    ],
+    "battery_sign": "right",
+    "post": {
+     "dof": 1.3
+    },
+    "strings": [
+     {
+      "hand": "left",
+      "anchor": [
+       -0.45,
+       2.7,
+       0.3
+      ]
+     },
+     {
+      "hand": "right",
+      "anchor": [
+       0.45,
+       2.7,
+       0.3
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.45,
+      1.45,
+      1.35
+     ],
+     "look": [
+      0,
+      1.25,
+      0
+     ],
+     "fov": 32
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "puppet",
+     "pos": "chair",
+     "rotY": 0,
+     "expr": {
+      "sorrow": 0.6
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "duo",
+     "at": 0,
+     "to": "end",
+     "dark": "#2a2e3e",
+     "light": "#d6dbe8",
+     "levels": 4
+    }
+   ],
+   "text": {
+    "say": [
+     [
+      "1%",
+      0
+     ]
+    ],
+    "until": 1,
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     -0.6,
+     1.4,
+     0.4
+    ],
+    "rot": 0,
+    "tilt": 0,
+    "size": 0.07,
+    "width": 0.6,
+    "key_scale": 2.2,
+    "key": [
+     "1%"
+    ],
+    "color": "#ffffff",
+    "accent": "#ff6f8a"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.3,
+      1.39,
+      0.25
+     ],
+     "size": 0.073,
+     "width": 1.1,
+     "tilt": -7.9,
+     "roll": 0,
+     "rot": 34.3,
+     "key_scale": 1.8
+    }
+   }
+  },
+  {
+   "id": "mv3",
+   "at": 2,
+   "set": "dream",
+   "why": "the dream: her face in her own sun, eyes closed, smiling",
+   "opts": {
+    "grade": "warm",
+    "battery": [
+     [
+      0,
+      5
+     ]
+    ],
+    "post": {
+     "bloom": 0.45,
+     "dof": 1
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.35,
+      1.68,
+      1.05
+     ],
+     "look": [
+      0,
+      1.6,
+      0
+     ],
+     "fov": 26
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sing_soft",
+     "pos": "shore",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.5,
+      "blink": 1
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035,
+   "text": {
+    "say": [
+     [
+      "DREAM",
+      0
+     ]
+    ],
+    "until": 1,
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     -0.42,
+     1.75,
+     0.3
+    ],
+    "rot": 0,
+    "tilt": 0,
+    "size": 0.05,
+    "width": 0.6,
+    "key_scale": 2.2,
+    "key": [
+     "DREAM"
+    ],
+    "color": "#ffffff",
+    "accent": "#ffcf6b"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.29,
+      1.62,
+      0
+     ],
+     "size": 0.031,
+     "width": 0.84,
+     "tilt": -4.2,
+     "roll": 0,
+     "rot": 31.4,
+     "key_scale": 1
+    }
+   }
+  },
+  {
+   "id": "mv4",
+   "at": 3,
+   "set": "globe",
+   "why": "T-A-K-E: she cracks the snow globe from inside",
+   "opts": {
+    "grade": "clean",
+    "cracks": [
+     3,
+     3.05
+    ],
+    "letters": [
+     [
+      3,
+      "T"
+     ],
+     [
+      3,
+      "A"
+     ],
+     [
+      3,
+      "K"
+     ],
+     [
+      3,
+      "E"
+     ]
+    ],
+    "post": {
+     "bloom": 0.6
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.3,
+      2.4
+     ],
+     "look": [
+      0,
+      1.15,
+      0.6
+     ],
+     "fov": 38
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "kick",
+     "pos": "center",
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.8
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "mv5",
+   "at": 4,
+   "set": "office",
+   "why": "the escape: she hands the cracked globe back to the giant boss",
+   "opts": {
+    "grade": "warm",
+    "warm": 0.8,
+    "boss": {
+     "pos": [
+      0,
+      0,
+      1.75
+     ],
+     "rotY": 3.1416,
+     "hands": "hold",
+     "scale": 0.85
+    },
+    "things": [
+     {
+      "kind": "globe",
+      "pos": [
+       0,
+       0.95,
+       0.62
+      ],
+      "scale": 1.6,
+      "crack": 1,
+      "empty": true
+     }
+    ],
+    "post": {
+     "bloom": 0.5
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.4,
+      1.5,
+      0.3
+     ],
+     "look": [
+      0,
+      1.25,
+      0.75
+     ],
+     "fov": 34
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "give",
+     "pos": [
+      0,
+      0,
+      0.4
+     ],
+     "rotY": 0,
+     "expr": {
+      "fun": 0.7
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035,
+   "text": {
+    "say": [
+     [
+      "BYE BOSS",
+      0
+     ]
+    ],
+    "until": 1,
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     -0.4,
+     2.05,
+     0.9
+    ],
+    "rot": 0,
+    "tilt": 0,
+    "size": 0.05,
+    "width": 0.6,
+    "key_scale": 2.2,
+    "key": [
+     "BYE BOSS"
+    ],
+    "color": "#ffffff",
+    "accent": "#ffcf6b"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.21,
+      1.44,
+      1.14
+     ],
+     "size": 0.13,
+     "width": 0.87,
+     "tilt": -9.4,
+     "roll": 0,
+     "rot": 117.6,
+     "key_scale": 1.8
+    }
+   }
+  },
+  {
+   "id": "short1",
+   "at": 5,
+   "set": "office",
+   "why": "the cold open: she dances on her desk, colour bursts into the grey office",
+   "opts": {
+    "grade": "clean",
+    "post": {
+     "bloom": 0.5,
+     "dof": 1.6
+    },
+    "crowd": [
+     {
+      "pos": [
+       -1,
+       0,
+       -1.4
+      ],
+      "yaw": 0.4,
+      "seed": 0,
+      "hold": "coffee",
+      "look_at": 0
+     },
+     {
+      "pos": [
+       1.1,
+       0,
+       -1.8
+      ],
+      "yaw": -0.5,
+      "seed": 2,
+      "look_at": 0
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.45,
+      1.55,
+      2.3
+     ],
+     "look": [
+      0.05,
+      1.55,
+      0.5
+     ],
+     "fov": 44
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "dance_a",
+     "pos": "on_desk",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.95
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "spread",
+     "at": 0,
+     "to": "end",
+     "dark": "#2a2e3e",
+     "light": "#d6dbe8",
+     "r0": 0.32,
+     "r1": 0.32
+    }
+   ],
+   "text": {
+    "say": [
+     [
+      "FREE?",
+      0
+     ]
+    ],
+    "until": 1,
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     0.26,
+     0.69,
+     0.45
+    ],
+    "rot": 0,
+    "tilt": 0,
+    "size": 0.063,
+    "width": 0.75,
+    "key_scale": 2.2,
+    "key": [
+     "FREE?"
+    ],
+    "color": "#ffffff",
+    "accent": "#ffcf6b"
+   }
+  },
+  {
+   "id": "short2",
+   "at": 6,
+   "set": "office",
+   "why": "the marionette: strings on both wrists, one battery dot left",
+   "opts": {
+    "grade": "closing",
+    "battery": [
+     [
+      0,
+      1
+     ]
+    ],
+    "battery_sign": "right",
+    "post": {
+     "dof": 1.3
+    },
+    "strings": [
+     {
+      "hand": "left",
+      "anchor": [
+       -0.45,
+       2.7,
+       0.3
+      ]
+     },
+     {
+      "hand": "right",
+      "anchor": [
+       0.45,
+       2.7,
+       0.3
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.2,
+      1.5,
+      1.6
+     ],
+     "look": [
+      0,
+      1.25,
+      0
+     ],
+     "fov": 40
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "puppet",
+     "pos": "chair",
+     "rotY": 0,
+     "expr": {
+      "sorrow": 0.6
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "duo",
+     "at": 0,
+     "to": "end",
+     "dark": "#2a2e3e",
+     "light": "#d6dbe8",
+     "levels": 4
+    }
+   ],
+   "text": {
+    "say": [
+     [
+      "1%",
+      0
+     ]
+    ],
+    "until": 1,
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     0,
+     2.05,
+     0.5
+    ],
+    "rot": 0,
+    "tilt": 0,
+    "size": 0.08,
+    "width": 0.6,
+    "key_scale": 2.2,
+    "key": [
+     "1%"
+    ],
+    "color": "#ffffff",
+    "accent": "#ff6f8a"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.45,
+      1.46,
+      0.35
+     ],
+     "size": 0.087,
+     "width": 1.32,
+     "tilt": -9,
+     "roll": 0,
+     "rot": -11.1,
+     "key_scale": 1.8
+    },
+    "short": {
+     "anchor": [
+      -0.18,
+      1.64,
+      0.4
+     ],
+     "size": 0.091,
+     "width": 0.71,
+     "tilt": -8.7,
+     "roll": 0,
+     "rot": 17.8,
+     "key_scale": 1
+    }
+   }
+  },
+  {
+   "id": "short3",
+   "at": 7,
+   "set": "dream",
+   "why": "the dream: her face in her own sun, eyes closed, smiling",
+   "opts": {
+    "grade": "warm",
+    "battery": [
+     [
+      0,
+      5
+     ]
+    ],
+    "post": {
+     "bloom": 0.45,
+     "dof": 1
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.15,
+      1.7,
+      1.2
+     ],
+     "look": [
+      0,
+      1.6,
+      0
+     ],
+     "fov": 34
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sing_soft",
+     "pos": "shore",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.5,
+      "blink": 1
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035,
+   "text": {
+    "say": [
+     [
+      "DREAM",
+      0
+     ]
+    ],
+    "until": 1,
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     -0.1,
+     2.08,
+     0.3
+    ],
+    "rot": 0,
+    "tilt": 0,
+    "size": 0.06,
+    "width": 0.6,
+    "key_scale": 2.2,
+    "key": [
+     "DREAM"
+    ],
+    "color": "#ffffff",
+    "accent": "#ffcf6b"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.36,
+      1.63,
+      0.06
+     ],
+     "size": 0.041,
+     "width": 1.11,
+     "tilt": -5.3,
+     "roll": 0,
+     "rot": 24.4,
+     "key_scale": 1.3
+    },
+    "short": {
+     "anchor": [
+      -0.05,
+      1.82,
+      0.41
+     ],
+     "size": 0.099,
+     "width": 0.14,
+     "tilt": -4.8,
+     "roll": 0,
+     "rot": 14.3,
+     "key_scale": 1.8
+    }
+   }
+  },
+  {
+   "id": "short4",
+   "at": 8,
+   "set": "globe",
+   "why": "T-A-K-E: she cracks the snow globe from inside",
+   "opts": {
+    "grade": "clean",
+    "cracks": [
+     8,
+     8.05
+    ],
+    "letters": [
+     [
+      8,
+      "T"
+     ],
+     [
+      8,
+      "A"
+     ],
+     [
+      8,
+      "K"
+     ],
+     [
+      8,
+      "E"
+     ]
+    ],
+    "post": {
+     "bloom": 0.6
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.1,
+      1.35,
+      2.6
+     ],
+     "look": [
+      0,
+      1.15,
+      0.6
+     ],
+     "fov": 46
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "kick",
+     "pos": "center",
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.8
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "short5",
+   "at": 9,
+   "set": "office",
+   "why": "the escape: she hands the cracked globe back to the giant boss",
+   "opts": {
+    "grade": "warm",
+    "warm": 0.8,
+    "boss": {
+     "pos": [
+      0,
+      0,
+      1.75
+     ],
+     "rotY": 3.1416,
+     "hands": "hold",
+     "scale": 0.85
+    },
+    "things": [
+     {
+      "kind": "globe",
+      "pos": [
+       0,
+       0.95,
+       0.62
+      ],
+      "scale": 1.6,
+      "crack": 1,
+      "empty": true
+     }
+    ],
+    "post": {
+     "bloom": 0.5
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.2,
+      1.55,
+      0.2
+     ],
+     "look": [
+      0,
+      1.25,
+      0.75
+     ],
+     "fov": 42
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "give",
+     "pos": [
+      0,
+      0,
+      0.4
+     ],
+     "rotY": 0,
+     "expr": {
+      "fun": 0.7
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035,
+   "text": {
+    "say": [
+     [
+      "BYE BOSS",
+      0
+     ]
+    ],
+    "until": 1,
+    "kind": "sign",
+    "material": "light",
+    "anchor": [
+     -0.1,
+     2.35,
+     0.9
+    ],
+    "rot": 0,
+    "tilt": 0,
+    "size": 0.06,
+    "width": 0.6,
+    "key_scale": 2.2,
+    "key": [
+     "BYE BOSS"
+    ],
+    "color": "#ffffff",
+    "accent": "#ffcf6b"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.11,
+      1.46,
+      1.03
+     ],
+     "size": 0.139,
+     "width": 0.93,
+     "tilt": -12.7,
+     "roll": 0,
+     "rot": 122.5,
+     "key_scale": 1.8
+    },
+    "short": {
+     "anchor": [
+      -0.16,
+      1.41,
+      0.87
+     ],
+     "size": 0.235,
+     "width": 0.72,
+     "tilt": -12.5,
+     "roll": 0,
+     "rot": 116.3,
+     "key_scale": 1.8
+    }
+   }
+  }
+ ]
+}
