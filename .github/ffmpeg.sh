@@ -13,7 +13,7 @@ sudo sed -i 's#http://azure.archive.ubuntu.com#http://archive.ubuntu.com#g' /etc
 if try_apt; then exit 0; fi
 echo "::warning::apt-get failed twice - using a static ffmpeg build (BtbN)"
 d=$(mktemp -d)
-curl -fsSL --retry 3 --max-time 240 -o "$d/ff.tar.xz" https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n7.1-latest-linux64-gpl-7.1.tar.xz
+curl -fsSL --retry 3 --max-time 240 -o "$d/ff.tar.xz" https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz
 tar -xJf "$d/ff.tar.xz" -C "$d"
 sudo mkdir -p /opt/ffmpeg && sudo cp "$d"/ffmpeg-*/bin/ffmpeg "$d"/ffmpeg-*/bin/ffprobe /opt/ffmpeg/
 printf '#!/bin/sh\nexec /opt/ffmpeg/ffmpeg -nostdin "$@" < /dev/null\n' | sudo tee /usr/local/bin/ffmpeg > /dev/null
