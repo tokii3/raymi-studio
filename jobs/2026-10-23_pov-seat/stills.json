@@ -1,1 +1,1 @@
-{"format": "short", "frames": [10, 60, 100, 150, 192, 250, 300, 420, 470, 540], "names": ["still_01", "still_02", "still_03", "still_04", "still_05", "still_06", "still_07", "still_08", "still_09", "still_10"], "scale": 0.6, "to": "boards", "_why": "seat fix 3"}
+{"format": "short", "frames": [10, 100, 300, 420, 470], "names": ["thumb_short_S1", "thumb_short_S2", "thumb_short_S3", "thumb_short_S4", "thumb_short_S5"], "scale": 1, "to": "boards", "thumbs": true, "_why": "5 thumbnail candidates per Short (frames of the final) + the feed view"}

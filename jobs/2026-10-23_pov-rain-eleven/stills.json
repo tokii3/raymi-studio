@@ -1,1 +1,1 @@
-{"format": "short", "frames": [10, 150, 200, 315, 428, 500], "names": ["still_01", "still_02", "still_03", "still_04", "still_05", "still_06"], "scale": 0.6, "to": "boards", "_why": "stills round 5 (look pass), rerun: BtbN asset name"}
+{"format": "short", "frames": [10, 200, 320, 470, 520], "names": ["thumb_short_S1", "thumb_short_S2", "thumb_short_S3", "thumb_short_S4", "thumb_short_S5"], "scale": 1, "to": "boards", "thumbs": true, "_why": "5 thumbnail candidates per Short (frames of the final) + the feed view"}
