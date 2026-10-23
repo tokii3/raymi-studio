@@ -1,0 +1,22 @@
+{
+ "text": "i saw that!",
+ "duration": 1.632,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "i",
+   "start": 0.093,
+   "end": 0.242
+  },
+  {
+   "w": "saw",
+   "start": 0.253,
+   "end": 0.52
+  },
+  {
+   "w": "that!",
+   "start": 0.531,
+   "end": 0.883
+  }
+ ]
+}

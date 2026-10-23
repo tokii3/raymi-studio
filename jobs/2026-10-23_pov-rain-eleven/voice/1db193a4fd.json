@@ -1,0 +1,47 @@
+{
+ "text": "and if i'm wrong, you never saw this.",
+ "duration": 3.0,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "and",
+   "start": 0.093,
+   "end": 0.264
+  },
+  {
+   "w": "if",
+   "start": 0.274,
+   "end": 0.424
+  },
+  {
+   "w": "i'm",
+   "start": 0.435,
+   "end": 0.627
+  },
+  {
+   "w": "wrong,",
+   "start": 0.638,
+   "end": 0.947
+  },
+  {
+   "w": "you",
+   "start": 1.182,
+   "end": 1.279
+  },
+  {
+   "w": "never",
+   "start": 1.289,
+   "end": 1.61
+  },
+  {
+   "w": "saw",
+   "start": 1.621,
+   "end": 1.866
+  },
+  {
+   "w": "this.",
+   "start": 1.877,
+   "end": 2.251
+  }
+ ]
+}

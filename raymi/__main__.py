@@ -8,6 +8,11 @@
   check  <job>          plan + words against every hard rule (exit 1 on errors)
   props  <job>          write jobs/<job>/out/props.json for the renderer
   finish <job>          loudness-normalise out/raw.mp4 -> out/final.mp4, then QC + contact sheet
+  voice-lines <job>     a talking 3D Short: one take per spoken line of shots.json "voice" (raymi/voice_lines.py)
+  mix    <job>          bed + takes + sfx -> jobs/<job>/out/mix.m4a (cloud prepare, before the timeline)
+  bed    <track>        a music bed's map (tempo, beats, accents) -> <track>.map.json (raymi/bed.py)
+  pov    <job>          a talking Short's timing against the measured takes + bed map (raymi/pov.py), exit 1 on a fault
+  sfx    build          synthesise the sound-effect library -> assets/sfx/<kind>.wav (raymi/sfx.py)
   timeline <job> [mv|short]  shots.json (shooting script data) -> out/props.json for the MV / MVShort film
   cuts   <job> [--apply]  every cut against hits / sung lines / sections (one frame early); --apply moves them
   font ensure <job>     build every on-screen glyph her font lacks, in her marker style (raymi/font.py)
@@ -109,6 +114,38 @@ def main(argv: list[str]) -> int:
                                    json.loads((d / "whisper_words.json").read_text(encoding="utf-8")), d / "vocals.ogg")
             song.resection(d)
             print(json.dumps(res["stats"]))
+        return 0
+    if cmd == "pov":         # pov <job> -> measured timing table + faults
+        from . import pov
+
+        table, errs, warns = pov.check(P.job_dir(job))
+        print("\n".join(table))
+        for w in warns:
+            print("WARN ", w)
+        for e in errs:
+            print("ERROR", e)
+        return 1 if errs else 0
+    if cmd == "bed":         # bed <track> -> <track>.map.json
+        from . import bed
+
+        print("bed map ->", bed.write(Path(job)))
+        return 0
+    if cmd == "sfx":         # sfx build -> assets/sfx/*.wav
+        from . import sfx
+
+        for f in sfx.build_all():
+            print("sfx ->", f.name)
+        return 0
+    if cmd in ("voice-lines", "mix"):   # a talking 3D Short (kind "pov")
+        from . import voice_lines as VL
+
+        d = P.job_dir(job)
+        spec = json.loads((d / "shots.json").read_text(encoding="utf-8"))
+        if cmd == "voice-lines":
+            for tk in VL.make_all(d, spec):
+                print(f"{tk['at']:6.2f} +{tk['duration']:.2f} s  [{tk['timing_source']}]  {tk['text']}")
+            return 0
+        print("mix ->", VL.mix(d, spec))
         return 0
     if cmd in ("new", "next"):
         from . import room

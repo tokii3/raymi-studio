@@ -1,0 +1,32 @@
+{
+ "text": "fine. i'm a rock now.",
+ "duration": 2.928,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "fine.",
+   "start": 0.095,
+   "end": 0.554
+  },
+  {
+   "w": "i'm",
+   "start": 1.271,
+   "end": 1.464
+  },
+  {
+   "w": "a",
+   "start": 1.474,
+   "end": 1.528
+  },
+  {
+   "w": "rock",
+   "start": 1.538,
+   "end": 1.859
+  },
+  {
+   "w": "now.",
+   "start": 1.87,
+   "end": 2.179
+  }
+ ]
+}

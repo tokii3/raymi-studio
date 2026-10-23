@@ -1,0 +1,37 @@
+{
+ "text": "hehe. thanks for warming it up.",
+ "duration": 3.216,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "hehe.",
+   "start": 0.093,
+   "end": 0.552
+  },
+  {
+   "w": "thanks",
+   "start": 1.271,
+   "end": 1.592
+  },
+  {
+   "w": "for",
+   "start": 1.603,
+   "end": 1.752
+  },
+  {
+   "w": "warming",
+   "start": 1.763,
+   "end": 2.115
+  },
+  {
+   "w": "it",
+   "start": 2.126,
+   "end": 2.212
+  },
+  {
+   "w": "up.",
+   "start": 2.222,
+   "end": 2.468
+  }
+ ]
+}

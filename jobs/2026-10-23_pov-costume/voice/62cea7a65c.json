@@ -1,0 +1,27 @@
+{
+ "text": "rate my halloween costume.",
+ "duration": 2.424,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "rate",
+   "start": 0.093,
+   "end": 0.371
+  },
+  {
+   "w": "my",
+   "start": 0.381,
+   "end": 0.531
+  },
+  {
+   "w": "halloween",
+   "start": 0.541,
+   "end": 1.076
+  },
+  {
+   "w": "costume.",
+   "start": 1.086,
+   "end": 1.685
+  }
+ ]
+}

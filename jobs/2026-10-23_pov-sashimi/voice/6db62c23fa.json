@@ -1,0 +1,27 @@
+{
+ "text": "oh no. hi buddy!",
+ "duration": 2.136,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "oh",
+   "start": 0.093,
+   "end": 0.274
+  },
+  {
+   "w": "no.",
+   "start": 0.285,
+   "end": 0.638
+  },
+  {
+   "w": "hi",
+   "start": 0.766,
+   "end": 0.99
+  },
+  {
+   "w": "buddy!",
+   "start": 1.001,
+   "end": 1.396
+  }
+ ]
+}

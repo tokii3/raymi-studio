@@ -21,6 +21,7 @@ import {ease} from '../film/motion';
 import {EXPRESSION_ALIAS, POSES, exprOf, type VrmKey, type VrmPose} from './vrmPoses';
 import {vrmMouthAt, type VrmMouthKey} from './vrmLipSync';
 import type {V3} from '../film/types';
+import {wornProps} from './wearables';
 
 export const DEFAULT_HEIGHT = 1.55;       // ears to feet, like the sprite puppet (raymi/timeline.py DEFAULT_HEIGHT)
 const WINDOW = 90;                         // frames of history simulated before f (springs forget faster than that)
@@ -247,7 +248,7 @@ function lockColours(rig: Rig, lock: number) {
 }
 
 // ------------------------------------------------------------------ the state at a frame (pure, from the keys)
-type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; rollZ: number; height: number; squash: number; act: VrmKey['act']; motion?: string; prevMotion?: string; mixPrev: number; mixCur: number; local: number; f: number;
+type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; rollZ: number; height: number; squash: number; flat: number; act: VrmKey['act']; motion?: string; prevMotion?: string; mixPrev: number; mixCur: number; local: number; f: number;
   clipCur: VrmKey; clipPrev: VrmKey};
 
 function keyAt(keys: VrmKey[], f: number): number {
@@ -303,11 +304,13 @@ function stateAt(keys: VrmKey[], f: number, camPos: V3): State {
   if (k.act === 'bounce') lift = 0.055 * Math.abs(beat);
   if (k.act === 'float') lift = 0.12 + 0.05 * Math.sin((f / 30) * Math.PI * 0.7);
   pos[1] += lift;
+  // flatten (POV Shorts 2026-10-23): she goes flat like a ray on the sand - thin and wide, with a little overshoot
+  const flat = k.act === 'flatten' ? Math.min(1, ease('out', local / 6) * (1 + 0.08 * Math.exp(-local / 5) * Math.sin(local))) : 0;
   const motion = motionOf(keys, i), prevMotion = i > 0 ? motionOf(keys, i - 1) : motion;
   return {a: pose(p.pose), b: pose(k.pose), t, pos, yaw: lerp(yawOf(p), yawOf(k)), motion, prevMotion,
     mixPrev: prevMotion ? (p.motionMix ?? 1) : 0, mixCur: motion ? (k.motionMix ?? 1) : 0,
     rollZ: lerp(p.rollZ ?? 0, k.rollZ ?? 0) + (k.act === 'tilt' ? 0.12 * ease('out', local / 8) : k.act === 'lean' ? -0.08 * ease('out', local / 10) : 0),
-    height: lerp(p.height ?? DEFAULT_HEIGHT, k.height ?? DEFAULT_HEIGHT), squash, act: k.act, local, f,
+    height: lerp(p.height ?? DEFAULT_HEIGHT, k.height ?? DEFAULT_HEIGHT), squash, flat, act: k.act, local, f,
     clipCur: keys[clipStart(keys, i)], clipPrev: keys[clipStart(keys, Math.max(0, i - 1))]};
 }
 
@@ -412,7 +415,8 @@ function applyState(rig: Rig, s: State, fps: number) {
   root.position.set(...s.pos);
   root.rotation.set(0, s.yaw + (s.act === 'turn' ? Math.PI * ease('out', s.local / 8) : 0), s.rollZ, 'YXZ');
   const size = (s.height / rig.natural) * s.squash;
-  root.scale.set(size, size * (s.act === 'hop' && s.local < 10 ? 1.06 : 1), size);
+  const wide = 1 + 0.3 * s.flat;
+  root.scale.set(size * wide, size * (s.act === 'hop' && s.local < 10 ? 1.06 : 1) * (1 - 0.86 * s.flat), size * wide);
   root.updateMatrixWorld(true);
 }
 
@@ -482,9 +486,10 @@ export function poseVrm(url: string, keys: VrmKey[], f: number, fps: number, fro
   setExpressions(rig, k, f, fps, mouthKeys);
   vrm.expressionManager?.update();
   for (const [name, v] of Object.entries(pendingRaw.get(rig) ?? {})) setMorph(rig, name, v);
-  if (vrm.lookAt && (k.look ?? 'lens') === 'lens') {
+  const look = k.look === undefined ? 'lens' : k.look;
+  if (vrm.lookAt && look) {                // her eyes on the lens (you) or on a point of the set (the salmon)
     vrm.lookAt.autoUpdate = true;
-    vrm.lookAt.lookAt(camV.set(...camPos));
+    vrm.lookAt.lookAt(look === 'lens' ? camV.set(...camPos) : camV.set(...look));
     vrm.lookAt.update(dt);
     vrm.humanoid.update();                 // the eyes are humanoid bones: normalized -> raw
   }
@@ -495,7 +500,7 @@ export function poseVrm(url: string, keys: VrmKey[], f: number, fps: number, fro
 // Her battery (Beach 2026-10-22, "strings = 5 minus dots"): five violet lights in a row on her chest, riding the
 // upper-chest bone. A dot that changes flares (comes on) or fades (goes out) over the step's t (6 frames).
 const BATTERY_X = [-0.052, -0.026, 0, 0.026, 0.052];
-function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: string}, f: number): React.ReactNode {
+function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: string; boost?: number}, f: number): React.ReactNode {
   const bone = rig.vrm.humanoid.getRawBoneNode('upperChest') ?? rig.vrm.humanoid.getRawBoneNode('chest');
   if (!bone) return null;
   const color = b.color ?? '#b98cff';
@@ -504,7 +509,7 @@ function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: s
     const on = i < b.n, was = i < b.prev;
     let k = on ? 1 : 0;
     if (on !== was) k = on ? Math.min(1, b.t * 1.3) : 1 - b.t;
-    const flare = on && !was ? Math.sin(Math.PI * Math.min(1, b.t)) * 1.6 : 0;
+    const flare = (on && !was ? Math.sin(Math.PI * Math.min(1, b.t)) * 1.6 : 0) + (on ? 1.4 * (b.boost ?? 0) : 0);
     // a 1.55 m figure: the row sits ~11 cm in front of the bone, a little below it (her breastbone)
     const p = new THREE.Vector3(x / s * 1.0, -0.045 / s, 0.105 / s).applyMatrix4(bone.matrixWorld);
     const r = 0.0125 * (1 + 0.35 * flare) * (0.95 + 0.05 * Math.sin(f / 7 + i));
@@ -538,7 +543,7 @@ export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
 export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: number; from?: number; camPos: V3;
   mouthKeys?: VrmMouthKey[]; lock?: number; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string;
   step?: number; outline?: number; outlineColor?: string;
-  battery?: {n: number; prev: number; t: number; color?: string} | null}> = ({url, keys, mouthKeys = [], f: frame, fps, from = 0, camPos, lock = 0.6,
+  battery?: {n: number; prev: number; t: number; color?: string; boost?: number} | null}> = ({url, keys, mouthKeys = [], f: frame, fps, from = 0, camPos, lock = 0.6,
   shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030', battery = null}) => {
   const f = step > 1 ? frame - ((((frame - from) % step) + step) % step) : frame;
   if (!keys.length || f < keys[0].f) return null;
@@ -553,9 +558,13 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
   const chest = posed.vrm.humanoid.getRawBoneNode('chest')?.getWorldPosition(new THREE.Vector3());
   const pulse = (0.85 + 0.15 * Math.sin(f / 9)) * glowGain;
   const dots = battery ? batteryDots(posed, battery, frame) : null;
+  const curKey = keys[keyAt(keys, f)];
+  const facing = new THREE.Vector3(Math.sin(posed.root.rotation.y), 0, Math.cos(posed.root.rotation.y));
+  const worn = wornProps(posed.vrm, curKey.props, facing, (curKey.height ?? DEFAULT_HEIGHT) / DEFAULT_HEIGHT);
   return (
     <group>
       {dots}
+      {worn}
       <mesh position={[p.x, p.y + 0.035, p.z]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2}>
         <planeGeometry args={[w * 1.6, w * 0.9]} />
         <meshBasicMaterial map={blobTexture(shadow)} transparent depthWrite={false} opacity={0.95} toneMapped={false} />

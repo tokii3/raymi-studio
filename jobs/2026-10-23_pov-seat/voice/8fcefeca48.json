@@ -1,0 +1,32 @@
+{
+ "text": "window or aisle? choose wisely.",
+ "duration": 3.528,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "window",
+   "start": 0.093,
+   "end": 0.574
+  },
+  {
+   "w": "or",
+   "start": 0.584,
+   "end": 0.776
+  },
+  {
+   "w": "aisle?",
+   "start": 0.787,
+   "end": 1.118
+  },
+  {
+   "w": "choose",
+   "start": 1.848,
+   "end": 2.19
+  },
+  {
+   "w": "wisely.",
+   "start": 2.201,
+   "end": 2.767
+  }
+ ]
+}

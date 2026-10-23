@@ -14,7 +14,7 @@ export type CamKey = {f: number; pos: V3; look: V3; fov: number; roll?: number; 
   shake?: number;            // handheld: 0 = the breathing tripod, 1 = a running camera (lerped between keys)
 };
 
-export type Act = 'idle' | 'pop' | 'hop' | 'bounce' | 'shake' | 'tilt' | 'lean' | 'shrink' | 'turn' | 'stomp' | 'float';
+export type Act = 'idle' | 'pop' | 'hop' | 'bounce' | 'shake' | 'tilt' | 'lean' | 'shrink' | 'turn' | 'stomp' | 'float' | 'flatten';
 
 /** A held key pose of Raymi: from frame f on she shows this sprite at pos (feet), doing act. */
 export type PuppetKey = {

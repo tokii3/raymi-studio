@@ -1,0 +1,173 @@
+{
+ "title": "POV: you keep tapping her aquarium glass",
+ "_why": "POV Short (kind pov): the lens is the viewer. Times = seconds of the bed excerpt, computed from assets/music/fluffing-a-duck.map.json + the voice takes (python -m raymi pov checks them).",
+ "audio": {
+  "file": "../../assets/music/fluffing-a-duck.mp3",
+  "from": 0.0,
+  "to": 18.034
+ },
+ "song_map": "../../assets/music/fluffing-a-duck.map.json",
+ "bed": {
+  "db": -15,
+  "duck": true
+ },
+ "voice": [
+  {
+   "at": 0.3,
+   "text": "stop tapping the glass."
+  },
+  {
+   "at": 3.08,
+   "text": "it says it right there."
+  },
+  {
+   "at": 6.053,
+   "text": "how do you like it?"
+  },
+  {
+   "at": 8.287,
+   "text": "no."
+  },
+  {
+   "at": 9.768,
+   "text": "okay. one more and i'm gone."
+  },
+  {
+   "at": 12.84,
+   "text": "fine. i'm a rock now."
+  },
+  {
+   "at": 14.969,
+   "text": "how many taps did you count?"
+  }
+ ],
+ "sfx": [
+  {
+   "at": 0.0,
+   "kind": "tap",
+   "off_grid": "your tap IS frame 0"
+  },
+  {
+   "at": 4.659,
+   "kind": "tap"
+  },
+  {
+   "at": 5.4,
+   "kind": "tap",
+   "off_grid": "her tap back, on the hit"
+  },
+  {
+   "at": 9.12,
+   "kind": "tap"
+  },
+  {
+   "at": 9.49,
+   "kind": "tap",
+   "off_grid": "the double tap's second knock, half a beat later on purpose"
+  },
+  {
+   "at": 12.833,
+   "kind": "tap"
+  },
+  {
+   "at": 13.576,
+   "kind": "whoosh"
+  }
+ ],
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [],
+ "grain": 0.04,
+ "all_lyrics": false,
+ "short": {
+  "hook": "stop tapping the glass.",
+  "hook_to": 2.4,
+  "cta": "how many taps did you count?",
+  "cta_from": 15.029
+ },
+ "shots": [
+  {
+   "id": "p1",
+   "at": 0.0,
+   "set": "aquarium",
+   "doc": {
+    "see": "CU at the glass: YOUR knuckle enters from the bottom edge and TAPS (frame 0) - a ring ripple on the glass; she is right behind it, flinches (ears jump), then glares, arms crossed against the glass, face 45 % of the frame.",
+    "you": "your knuckle in frame (POV hand), a 2-frame knock shake",
+    "does": "clip angry -> arms crossed; 'stop tapping the glass.' (0.39-1.80)",
+    "type": "hook stamp 'stop tapping the glass.' top band 0-2.4 s",
+    "why": "her face + your crime at frame 0"
+   }
+  },
+  {
+   "id": "p2",
+   "at": 3.14,
+   "set": "aquarium",
+   "doc": {
+    "see": "MS: hands on hips, she points at the placard DO NOT TAP THE GLASS in her tank.",
+    "you": "your head turns to the placard (pan 25 deg) and back",
+    "does": "clip pointing; 'it says it right there.' (3.17-4.36)",
+    "type": "the placard is the type",
+    "why": "the rule in her world's own sign"
+   }
+  },
+  {
+   "id": "p3",
+   "at": 4.626,
+   "set": "aquarium",
+   "doc": {
+    "see": "CU: you TAP again (4.66, she flinches, a fin twitches) - she TAPS BACK from inside on the hit 5.40: her knuckle meets the glass at the lens, a bigger ripple from her side.",
+    "you": "your knuckle; her knock shakes the lens harder (0.5)",
+    "does": "clip pointing-forward (the poke) from its action key; 'how do you like it?' (6.15-6.99)",
+    "type": "-",
+    "why": "she fights back"
+   }
+  },
+  {
+   "id": "p4",
+   "at": 6.856,
+   "set": "aquarium",
+   "doc": {
+    "see": "CU: she wipes N-O into the green ALGAE FILM on the inside of the glass with her finger, MIRRORED so you can read it (6.9-8.2).",
+    "you": "slow push-in 0.15 m to the letters",
+    "does": "pose write_glass with stroke keys; 'no.' on the hit 8.38",
+    "type": "'NO' wiped into the algae film (fx algae_write, stroke reveal)",
+    "why": "her answer, written by her finger on her world"
+   }
+  },
+  {
+   "id": "p5",
+   "at": 9.085,
+   "set": "aquarium",
+   "doc": {
+    "see": "MS: TAP TAP (9.12, 9.49): she is shoved half a step back by each knock, sighs, holds up one finger.",
+    "you": "two knocks, your knuckle twice",
+    "does": "clip gestures-pack-basic-annoyed-head-shake; 'okay. one more and i'm gone.' (9.86-12.38)",
+    "type": "-",
+    "why": "the last warning"
+   }
+  },
+  {
+   "id": "p6",
+   "at": 12.8,
+   "set": "aquarium",
+   "doc": {
+    "see": "TAP (12.83): she DIVES and BURIES herself in the sand like a ray - a sand burst on 13.58, the mound settles, only her eyes and tako ears show.",
+    "you": "you look down with her (tilt 25 deg)",
+    "does": "clip jumping-down -> buried (set bury + burst); 'fine. i'm a rock now.' (12.89-15.02) muffled",
+    "type": "-",
+    "why": "the payoff only a ray can do"
+   }
+  },
+  {
+   "id": "p7",
+   "at": 15.029,
+   "set": "aquarium",
+   "doc": {
+    "see": "CU on the sand mound: her eyes blink, her ears twitch on each beat (she is counting too). At 17.3 your knuckle rises toward the glass again - her eyes go wide - and the Short loops into the frame 0 TAP.",
+    "you": "still, then your knuckle rises into frame",
+    "does": "buried, look lens; 'how many taps did you count?' (15.06-16.48)",
+    "type": "CTA stamp 'how many taps did you count?' 15.03-18.03 (3.0 s)",
+    "why": "a number comment; 5 or 6 (does her tap count?) starts a debate"
+   }
+  }
+ ]
+}

@@ -110,6 +110,10 @@ jobs:
               python -m raymi check "$J"
               python -m raymi props "$J"
             elif [ -f "jobs/$J/shots.json" ]; then
+              if grep -q '"voice"' "jobs/$J/shots.json"; then   # a talking Short (kind pov): takes, then bed + takes + sfx
+                python -m raymi voice-lines "$J"
+                python -m raymi mix "$J"
+              fi
               python -m raymi timeline "$J" "${{ steps.which.outputs.format }}"   # a film job (MV / its Short)
               (cd studio && node guard.mjs "$J" --hero-boxes every:15 > "../jobs/$J/out/hero_boxes.json")   # main element boxes
             fi
@@ -124,7 +128,7 @@ jobs:
         run: |
           git config user.name "raymi-render-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add jobs/*/voice.mp3 jobs/*/words.json 2>/dev/null || true
+          git add jobs/*/voice.mp3 jobs/*/words.json jobs/*/voice/ 2>/dev/null || true
           git diff --cached --quiet || (git commit -m "voice take for ${{ steps.which.outputs.jobs }} [skip ci]" && git pull --rebase -q && git push -q)
       - name: Stage what the workers need (prep/<job>/... so the artifact keeps the job folder level)
         if: steps.which.outputs.jobs != ''

@@ -76,7 +76,8 @@ def _silhouette(file: str) -> list[str]:
 
 FORMATS = {"mv": ("MV", 1920, 1080), "short": ("MVShort", 1080, 1920),
            "pilot": ("MV", 1920, 1080)}   # pilot = the MV frame over shots.json window.pilot (a 20-40 s section)
-ACTS = {"idle", "pop", "hop", "bounce", "shake", "tilt", "lean", "shrink", "turn", "stomp", "float"}
+ACTS = {"idle", "pop", "hop", "bounce", "shake", "tilt", "lean", "shrink", "turn", "stomp", "float",
+        "flatten"}   # flatten: she goes flat like a ray (3D only, VrmPuppet)
 EASES = {"linear", "in", "out", "inOut", "snap", "hold"}
 LYRIC_KINDS = {"sign", "float", "stamp", "glass", "card", "ticker", "firework"}
 # what a lyric is MADE of on its object (Words3D): breath-fog, engraved brass, a phone's camera UI, a card's print,
@@ -87,7 +88,10 @@ GRADES = {"day", "closing", "night", "own", "warm", "clean", "ember", "vrm_fire"
 LYRIC_STYLES = {"v1", "v2"}
 # a main element: worn on her head (crown, hat), her face, a lyric word, a prop box in the set (check.ts heroBox)
 HERO_KINDS = {"worn", "face", "word", "prop"}
-ICONS = {None, "!", "?", "heart", "sweat", "anger", "zz", "bulb", "sparkle", "music"}
+ICONS = {None, "!", "?", "heart", "sweat", "anger", "zz", "bulb", "sparkle", "music", "bubbles"}
+# things on her bones (studio/src/three/wearables.tsx WEARABLES - a test keeps them equal) and the bones they ride
+WEARABLES = {"chopsticks", "chopsticks_slice", "salmon_hood", "salmon_fin", "salmon_tail"}
+WEAR_AT = {"hand_r", "hand_l", "head", "forearm_r", "forearm_l", "hips"}
 DEFAULT_HEIGHT = 1.55   # Raymi's figure height in metres (ears to feet)
 # set options written in SONG seconds (the script's measured times); the compiler turns them into film frames so a
 # set event lands on the same beat in the MV, the Short and a pilot window
@@ -104,12 +108,14 @@ TIME_OPTS = {"lights_off", "window_break", "unfold", "shake", "cracks", "burst",
              "rewind_at", "dark_at", "kill_at", "vents_at", "flares", "shells", "current_at", "tint_at",
              "cliff_ignite_at", "cliff_steps", "column_at", "column_bend_at", "column_unbend_at", "column_pulse",
              "pool_at", "sea_glow_at", "pulse_at", "dots_at", "path_at", "cloud_at", "rain_at", "rain_end_at", "fireworks",
-             "glow", "whip", "grade_at"}
+             "glow", "whip", "grade_at",
+             # POV Shorts (2026-10-23): her chest dots flare, a room lamp / the train lights, the live studio camera
+             "glow_flare", "lamp_at", "live", "door_at"}
 # options holding specs (a dict or a list of dicts) whose own fields are times / positions (three/fire.tsx,
 # three/creatures.tsx): "at" / "out" / "toss" / "*_at" = song seconds -> frames, "grow" / "fade" / "ember" = seconds ->
 # frame counts, "pos" / "from" / "to" = a mark or [x, y, z]
 NESTED_OPTS = {"fires", "sparks", "fish", "school", "sauna", "salmon", "props", "things", "strings", "boss", "crowd"}
-NESTED_TIME = {"at", "out", "toss", "snap", "tug", "spit", "land"}
+NESTED_TIME = {"at", "out", "toss", "snap", "tug", "spit", "land", "blow_at", "press_at"}
 NESTED_FRAMES = {"grow", "fade", "ember"}
 NESTED_VEC = {"pos", "from", "to", "anchor"}
 
@@ -520,9 +526,22 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
                "height": float(r.get("height", DEFAULT_HEIGHT)), "blend": round(float(r.get("blend", 0.27)) * FPS),
                "act": r.get("act", "idle"), "move": round(float(r.get("move", 0.0)) * FPS), "arc": float(r.get("arc", 0.0)),
                "ease": r.get("ease", "inOut")}
-        for opt in ("motion", "motionMix", "expr", "look", "once", "restart"):
+        if r.get("icon") not in ICONS:
+            errors.append(f"{ktag}: icon must be one of {sorted(x for x in ICONS if x)}")
+        elif r.get("icon"):
+            key["icon"] = r["icon"]
+        for opt in ("motion", "motionMix", "expr", "once", "restart"):
             if opt in r:
                 key[opt] = r[opt]
+        if "look" in r:                                    # "lens" | null | a mark / [x, y, z] she looks at
+            key["look"] = r["look"] if r["look"] in ("lens", None) else _v3(r["look"], marks, errors, ktag)
+        for j, w in enumerate(r.get("props", [])):         # things on her bones (studio/src/three/wearables.tsx)
+            if w.get("item") not in WEARABLES:
+                errors.append(f"{ktag} prop {j + 1}: item {w.get('item')!r} is not a wearable ({sorted(WEARABLES)})")
+            if w.get("at") not in WEAR_AT:
+                errors.append(f"{ktag} prop {j + 1}: at must be one of {sorted(WEAR_AT)}")
+        if "props" in r:
+            key["props"] = r["props"]
         if "clip_from" in r:
             key["clipFrom"] = float(r["clip_from"])
         if "speed" in r:
@@ -887,6 +906,18 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         props["sung"] = [{"w": w["w"], "roma": w.get("roma", ""), "t0": round(w["t0"] - t_from, 3), "t1": round(w["t1"] - t_from, 3)}
                          for ln in lyrics for w in ln.get("words", [])
                          if w.get("t1", 0) > t_from and w.get("t0", 0) < t_to and not ln.get("backing")]
+    if spec.get("voice"):
+        # a talking Short (kind pov, raymi/voice_lines.py): her spoken words drive the mouth, and the sound under the
+        # picture is the mix of bed + takes + sfx (python -m raymi mix, cloud prepare) - it starts at the window start
+        from . import voice_lines as VL
+
+        takes = VL.load_takes(job, spec, errors)
+        props["sung"] = VL.spoken_words(takes, t_from, t_to)
+        props["audio"] = {"file": "audio.m4a", "from": 0.0, "to": round(t_to - t_from, 3),
+                          "src": _repo_path(job / "out" / "mix.m4a")}
+        for k, s_ in enumerate(spec.get("sfx", [])):
+            if not (VL.SFX_DIR / f"{s_.get('kind')}.wav").is_file():
+                errors.append(f"sfx {k + 1}: unknown kind {s_.get('kind')!r} (assets/sfx, python -m raymi sfx build)")
     return props, errors, warns
 
 

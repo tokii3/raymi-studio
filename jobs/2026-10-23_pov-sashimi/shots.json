@@ -1,0 +1,160 @@
+{
+ "title": "POV: you caught her eating salmon sashimi",
+ "_why": "POV Short (kind pov): the lens is the viewer. Times = seconds of the bed excerpt, computed from assets/music/scheming-weasel-faster.map.json + the voice takes (python -m raymi pov checks them).",
+ "audio": {
+  "file": "../../assets/music/scheming-weasel-faster.mp3",
+  "from": 0.0,
+  "to": 16.713
+ },
+ "song_map": "../../assets/music/scheming-weasel-faster.map.json",
+ "bed": {
+  "db": -15,
+  "duck": true
+ },
+ "voice": [
+  {
+   "at": 0.15,
+   "text": "this is not what it looks like."
+  },
+  {
+   "at": 2.224,
+   "text": "it's purple sweet potato."
+  },
+  {
+   "at": 4.383,
+   "text": "very orange purple sweet potato."
+  },
+  {
+   "at": 7.8,
+   "text": "oh no. my best friend."
+  },
+  {
+   "at": 9.422,
+   "text": "nothing here! just rice!"
+  },
+  {
+   "at": 11.967,
+   "text": "you saw nothing."
+  },
+  {
+   "at": 13.381,
+   "text": "should i tell him?"
+  }
+ ],
+ "sfx": [
+  {
+   "at": 0.0,
+   "kind": "click",
+   "off_grid": "you switch the light on at frame 0"
+  },
+  {
+   "at": 7.716,
+   "kind": "boing"
+  },
+  {
+   "at": 12.03,
+   "kind": "grab",
+   "off_grid": "she grabs your collar on the hit"
+  },
+  {
+   "at": 15.993,
+   "kind": "pop"
+  }
+ ],
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [],
+ "grain": 0.04,
+ "all_lyrics": false,
+ "short": {
+  "hook": "this is not what it looks like.",
+  "hook_to": 2.2,
+  "cta": "should i tell him? yes / no",
+  "cta_from": 13.441
+ },
+ "shots": [
+  {
+   "id": "p1",
+   "at": 0.0,
+   "set": "bedroom",
+   "doc": {
+    "see": "MCU from the door, eye height 1.5 m - YOU switched the light on (click, a 4-frame flare): she sits on the edge of her shell bed, chopsticks with an ORANGE salmon slice at her open mouth, frozen, eyes wide at you. Beside her face on the shelf: the salmon plush and a framed drawing of her and the salmon with a heart (BFF).",
+    "you": "you stand in the door; still",
+    "does": "pose eat_freeze (chopsticks + slice in her right hand) held to 0.6 s, then her ears droop and the slice wobbles on the chopsticks; 'this is not what it looks like.' (0.24-1.79)",
+    "type": "hook stamp 'this is not what it looks like.' top band 0-2.2 s",
+    "why": "caught in the act + who the victim is, in one frame"
+   }
+  },
+  {
+   "id": "p2",
+   "at": 2.284,
+   "set": "bedroom",
+   "doc": {
+    "see": "CU: she holds the slice UP into the lens, big, saturated orange against her purple light.",
+    "you": "you lean in 0.2 m to look",
+    "does": "pose offer (arm toward the lens with the chopsticks), nervous smile; 'it's purple sweet potato.' (2.32-3.78)",
+    "type": "-",
+    "why": "the evidence, big, while she lies about it"
+   }
+  },
+  {
+   "id": "p3",
+   "at": 4.443,
+   "set": "bedroom",
+   "doc": {
+    "see": "ECU: she pushes it even closer, sweat icon, grin cracking.",
+    "you": "you lean back 0.1 m (it is too close)",
+    "does": "pose offer, closer; sweat icon; 'very orange purple sweet potato.' (4.48-6.47)",
+    "type": "-",
+    "why": "the lie gets worse"
+   }
+  },
+  {
+   "id": "p4",
+   "at": 7.323,
+   "set": "bedroom",
+   "doc": {
+    "see": "From YOUR door view: behind her, the SALMON swims up to the round window and presses his face to the glass on the beat 7.72; she turns, sees him, her chest dots flash.",
+    "you": "your view, still; the salmon in the back left",
+    "does": "clip look-over-shoulder; 'oh no. my best friend.' (7.89-9.46)",
+    "type": "-",
+    "why": "the victim arrives"
+   }
+  },
+  {
+   "id": "p5",
+   "at": 9.482,
+   "set": "bedroom",
+   "doc": {
+    "see": "MS: she slides the plate onto the bed and FLATTENS herself over it like a ray on the sand (her body squashes flat, covering it), grinning at the window, waving one hand.",
+    "you": "you flinch back 0.15 m as she moves",
+    "does": "clip joyful-jump (short) -> act flatten over the plate + waving; 'nothing here! just rice!' (9.52-11.80)",
+    "type": "-",
+    "why": "a hiding move only a ray can do"
+   }
+  },
+  {
+   "id": "p6",
+   "at": 12.001,
+   "set": "bedroom",
+   "doc": {
+    "see": "She grabs YOUR collar (her hand comes at the lens) and pulls you close: CU, finger on her lips.",
+    "you": "the lens is YANKED 0.4 m toward her on the hit 12.03 (grab sfx), shake 0.4",
+    "does": "pose shh after a reach; 'you saw nothing.' (12.06-13.12)",
+    "type": "-",
+    "why": "you are her accomplice now"
+   }
+  },
+  {
+   "id": "p7",
+   "at": 13.441,
+   "set": "bedroom",
+   "doc": {
+    "see": "MCU: the salmon at the window squints; while she asks you, her hand sneaks the slice back up toward her mouth - and on the last beat she is frozen again exactly as in frame 0 (chopsticks at the open mouth, eyes wide at you).",
+    "you": "still",
+    "does": "pose eat_freeze returning over 1.2 s; 'should i tell him?' (13.47-14.30)",
+    "type": "CTA stamp 'should i tell him? yes / no' 13.44-16.71 (3.27 s)",
+    "why": "yes / no is the lowest-effort comment; the sneak keeps the joke going"
+   }
+  }
+ ]
+}

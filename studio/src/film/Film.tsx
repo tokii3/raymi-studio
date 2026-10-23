@@ -77,7 +77,10 @@ export const Film: React.FC<FilmProps> = (props) => {
   const fx = shot.fx ?? [];
   // her battery (opts.battery = [[frame, dots], ...]): the five chest lights + the 2D sign beside her head
   const bat = shot.opts.battery !== undefined ? stepValue<number>(shot.opts.battery, f, 6) : null;
-  const battery = bat && bat.to !== null ? {n: bat.to, prev: bat.from ?? bat.to, t: bat.t} : null;
+  // chest_dots (POV Shorts): her five chest lights always on; glow_flare (frames) makes them flare (she senses you)
+  const dotBoost = flare(shot.opts.glow_flare, f, 8);
+  const battery = bat && bat.to !== null ? {n: bat.to, prev: bat.from ?? bat.to, t: bat.t, boost: dotBoost}
+    : shot.opts.chest_dots ? {n: 5, prev: 5, t: 1, boost: dotBoost} : null;
   const aspect = W / H;
   const cam = makeCamera(shot, f, aspect, props.hits, fps);
   const camPos: [number, number, number] = [cam.position.x, cam.position.y, cam.position.z];
@@ -113,6 +116,7 @@ export const Film: React.FC<FilmProps> = (props) => {
   let glowGain = 1;
   if (o.glow_pulse === 'beats') glowGain *= 1 + 0.9 * flare(props.beats, f, 6);
   if (typeof o.glow_out === 'number' && f >= o.glow_out) glowGain *= Math.max(0, 1 - (f - o.glow_out) / 4);
+  glowGain *= 1 + 2.5 * dotBoost;
   // the rays: a ring around her head (swarm_ring 'head'), rising and widening into a beam after swarm_beam (frame)
   let rays: React.ReactNode = null;
   const headTop = pose ? figurePoint(shot, f, fps, camPos, ...crownUV(pose.key)) : null;
@@ -177,6 +181,9 @@ export const Film: React.FC<FilmProps> = (props) => {
   if (pose?.key.icon && head) {
     const n = head.clone().project(cam);
     if (n.z < 1) icon = <ReactionIcon kind={pose.key.icon} x={(n.x * 0.5 + 0.5) * W + W * 0.04} y={(-n.y * 0.5 + 0.5) * H} local={pose.local} accent="#b56bff" />;
+  } else if (herKey?.icon && headNdc && headNdc.z < 1) {    // the 3D Raymi: an icon beside her head for 1.5 s
+    const local = f - herKey.f;
+    if (local < 45) icon = <ReactionIcon kind={herKey.icon} x={herHead[0] * W + W * 0.12} y={herHead[1] * H - H * 0.03} local={local} accent="#b56bff" />;
   }
   return (
     <AbsoluteFill style={{backgroundColor: '#0b0818', overflow: 'hidden'}}>

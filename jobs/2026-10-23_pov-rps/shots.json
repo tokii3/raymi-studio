@@ -1,0 +1,186 @@
+{
+ "title": "Rock paper scissors against a stingray",
+ "_why": "POV Short (kind pov): the lens is the viewer. Times = seconds of the bed excerpt, computed from assets/music/monkeys-spinning-monkeys.map.json + the voice takes (python -m raymi pov checks them).",
+ "audio": {
+  "file": "../../assets/music/monkeys-spinning-monkeys.mp3",
+  "from": 0.0,
+  "to": 18.799
+ },
+ "song_map": "../../assets/music/monkeys-spinning-monkeys.map.json",
+ "bed": {
+  "db": -15,
+  "duck": true,
+  "mute": [
+   [
+    6.261,
+    7.9
+   ]
+  ]
+ },
+ "voice": [
+  {
+   "at": 0.05,
+   "text": "rock paper scissors. you lose."
+  },
+  {
+   "at": 2.824,
+   "text": "rock. paper. scissors!"
+  },
+  {
+   "at": 7.84,
+   "text": "stingray."
+  },
+  {
+   "at": 9.093,
+   "text": "rock? i glide over it."
+  },
+  {
+   "at": 11.601,
+   "text": "paper? i'm flatter."
+  },
+  {
+   "at": 13.691,
+   "text": "scissors? too slow."
+  },
+  {
+   "at": 16.4,
+   "text": "that didn't count!"
+  },
+  {
+   "at": 17.453,
+   "text": "what did you pick?"
+  }
+ ],
+ "sfx": [
+  {
+   "at": 6.261,
+   "kind": "scratch"
+  },
+  {
+   "at": 7.933,
+   "kind": "pop"
+  },
+  {
+   "at": 9.186,
+   "kind": "whoosh"
+  },
+  {
+   "at": 14.202,
+   "kind": "grab",
+   "off_grid": "the crab snaps at your fingers"
+  },
+  {
+   "at": 16.29,
+   "kind": "boing",
+   "off_grid": "the crab pinches her tail on the hit"
+  }
+ ],
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [],
+ "grain": 0.04,
+ "all_lyrics": false,
+ "short": {
+  "hook": "rock paper scissors. you lose.",
+  "hook_to": 2.9,
+  "cta": "what did you pick?",
+  "cta_from": 16.259
+ },
+ "shots": [
+  {
+   "id": "p1",
+   "at": 0.0,
+   "set": "beach",
+   "doc": {
+    "see": "MCU, frame 0 at the TOP of her pop-up: her face 45 % of the frame, fist raised BESIDE her face, sand and sea behind.",
+    "you": "you stand; a bump on her arrival",
+    "does": "clip jump (once, from its apex key) -> pose fist; smug; 'rock paper scissors. you lose.' (0.14-2.78)",
+    "type": "hook stamp 'rock paper scissors. you lose.' top band 0-2.9 s",
+    "why": "a challenge straight at you"
+   }
+  },
+  {
+   "id": "p2",
+   "at": 2.884,
+   "set": "beach",
+   "doc": {
+    "see": "CU, lower and closer: her fist pumps down on 'rock' (2.92), 'paper' (4.06), 'scissors' (5.26).",
+    "you": "a camera kick on each word",
+    "does": "pose keys fist_up / fist_down on the three words; 'rock. paper. scissors!' (2.92-5.95)",
+    "type": "each word pops as a stamp beside her fist",
+    "why": "the ritual everyone knows"
+   }
+  },
+  {
+   "id": "p3",
+   "at": 6.228,
+   "set": "beach",
+   "doc": {
+    "see": "FREEZE: the picture holds on her hand mid-reveal (motion-blurred), desaturated 70 %, a slow 2 % push, stamp 'PAUSE. pick now.'; the music stops, a low tick on each beat.",
+    "you": "frozen, slow push",
+    "does": "- (scratch on 6.26)",
+    "type": "stamp 'PAUSE. pick now.' centre (between the bands)",
+    "why": "the interactive beat: you pick"
+   }
+  },
+  {
+   "id": "p4",
+   "at": 7.9,
+   "set": "beach",
+   "doc": {
+    "see": "ECU: her flat RAY HAND thrusts at the lens and fills half the frame, undulating like a ray wing; stamp STINGRAY big and angled with the hand.",
+    "you": "you FLINCH back 0.2 m",
+    "does": "pose ray_hand + wave keys; 'stingray.' (7.93-8.57)",
+    "type": "stamp 'STINGRAY' (key word, angled)",
+    "why": "her sign: she is the answer"
+   }
+  },
+  {
+   "id": "p5",
+   "at": 9.153,
+   "set": "beach",
+   "doc": {
+    "see": "She grabs YOUR hand (your POV hand in frame) and drags you to the water's edge; a rock lies at your feet - she glides over it, belly-flat, inches above the sand.",
+    "you": "a lurch forward 0.8 m (you are dragged), then you look down 35 deg at the rock",
+    "does": "clip goofy-running (drag) -> pose glide over the rock; 'rock? i glide over it.' (9.19-11.34)",
+    "type": "-",
+    "why": "proof one, done to you"
+   }
+  },
+  {
+   "id": "p6",
+   "at": 11.661,
+   "set": "beach",
+   "doc": {
+    "see": "You look DOWN: she lies on the sand next to a sheet of paper and goes FLAT (squash to paper thickness); the wind lifts the paper and blows it away over her.",
+    "you": "your top-down look (you are standing over her)",
+    "does": "pose lie + act flatten; 'paper? i'm flatter.' (11.69-13.60)",
+    "type": "-",
+    "why": "proof two: rays are flat"
+   }
+  },
+  {
+   "id": "p7",
+   "at": 13.751,
+   "set": "beach",
+   "doc": {
+    "see": "A small crab snaps its claws at YOUR fingers (13.78); she swats it away with her tail barb (15.0).",
+    "you": "your hand jerks back (shake), then still",
+    "does": "clip standing-dodge-backward -> swat; 'scissors? too slow.' (13.78-15.82)",
+    "type": "-",
+    "why": "proof three: the scissors are a creature of her world"
+   }
+  },
+  {
+   "id": "p8",
+   "at": 15.841,
+   "set": "beach",
+   "doc": {
+    "see": "LOW hero MCU: she flexes - and the crab pinches her tail on the hit 16.29: she jumps (squash and stretch), tsundere pout, then raises her fist again toward the lens.",
+    "you": "you stand; a bump on her jump",
+    "does": "clip being-cocky -> joyful-jump (pinch) -> pose fist; 'that didn't count!' (16.49-17.48); 'what did you pick?' (17.55-18.47)",
+    "type": "CTA stamp 'what did you pick?' 16.26-18.80 (2.54 s)",
+    "why": "everyone comments their pick (and that the crab won)"
+   }
+  }
+ ]
+}

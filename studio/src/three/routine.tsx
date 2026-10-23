@@ -14,6 +14,7 @@ import {RBox, drawText} from './parts';
 import {canvasTexture, rnd, toon} from './look';
 import {vrmAnatomy} from './VrmPuppet';
 import {ease} from '../film/motion';
+import {PovThing, type PovThingSpec} from './pov_things';
 
 type P3 = [number, number, number];
 const since = (t: unknown, f: number) => (typeof t === 'number' ? f - t : -1);
@@ -533,7 +534,7 @@ export const Things: React.FC<{list: unknown; f: number}> = ({list, f}) => {
           case 'monitor': return <Monitor key={i} t={t} f={f} />;
           case 'chair': return <Chair key={i} t={t} f={f} />;
           case 'glove': return <Glove key={i} pos={t.pos} rot={t.rot} scale={t.scale ?? 1} pose={(t.text as 'hold' | 'point' | 'open' | 'grab') ?? 'open'} />;
-          default: return null;
+          default: return <PovThing key={i} t={t as unknown as PovThingSpec} f={f} />;   // pov_things.tsx kinds
         }
       })}
     </group>

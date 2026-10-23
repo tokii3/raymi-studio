@@ -1,0 +1,27 @@
+{
+ "text": "wait. is that me?",
+ "duration": 2.592,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "wait.",
+   "start": 0.093,
+   "end": 0.488
+  },
+  {
+   "w": "is",
+   "start": 1.207,
+   "end": 1.367
+  },
+  {
+   "w": "that",
+   "start": 1.378,
+   "end": 1.581
+  },
+  {
+   "w": "me?",
+   "start": 1.592,
+   "end": 1.838
+  }
+ ]
+}

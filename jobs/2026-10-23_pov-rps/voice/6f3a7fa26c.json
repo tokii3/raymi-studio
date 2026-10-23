@@ -1,0 +1,22 @@
+{
+ "text": "scissors? too slow.",
+ "duration": 2.88,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "scissors?",
+   "start": 0.093,
+   "end": 0.723
+  },
+  {
+   "w": "too",
+   "start": 1.442,
+   "end": 1.688
+  },
+  {
+   "w": "slow.",
+   "start": 1.699,
+   "end": 2.126
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "text": "should i tell him?",
+ "duration": 1.872,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "should",
+   "start": 0.093,
+   "end": 0.306
+  },
+  {
+   "w": "i",
+   "start": 0.317,
+   "end": 0.403
+  },
+  {
+   "w": "tell",
+   "start": 0.413,
+   "end": 0.648
+  },
+  {
+   "w": "him?",
+   "start": 0.659,
+   "end": 0.915
+  }
+ ]
+}

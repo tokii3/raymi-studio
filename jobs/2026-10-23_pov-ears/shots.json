@@ -1,0 +1,163 @@
+{
+ "title": "POV: you try to touch her tako ears",
+ "_why": "POV Short (kind pov): the lens is the viewer. Times = seconds of the bed excerpt, computed from assets/music/investigations.map.json + the voice takes (python -m raymi pov checks them).",
+ "audio": {
+  "file": "../../assets/music/investigations.mp3",
+  "from": 0.0,
+  "to": 15.242
+ },
+ "song_map": "../../assets/music/investigations.map.json",
+ "bed": {
+  "db": -15,
+  "duck": true
+ },
+ "voice": [
+  {
+   "at": 0.1,
+   "text": "don't touch my ears. i mean it."
+  },
+  {
+   "at": 3.238,
+   "text": "i'm watching you."
+  },
+  {
+   "at": 5.118,
+   "text": "i saw that!"
+  },
+  {
+   "at": 8.253,
+   "text": "closer? really?"
+  },
+  {
+   "at": 11.388,
+   "text": "nope."
+  },
+  {
+   "at": 12.015,
+   "text": "how close did you get?"
+  }
+ ],
+ "sfx": [
+  {
+   "at": 4.584,
+   "kind": "step"
+  },
+  {
+   "at": 5.211,
+   "kind": "pop",
+   "off_grid": "the dots flare as she whips round"
+  },
+  {
+   "at": 7.092,
+   "kind": "step"
+  },
+  {
+   "at": 7.719,
+   "kind": "step"
+  },
+  {
+   "at": 10.854,
+   "kind": "whoosh"
+  },
+  {
+   "at": 11.481,
+   "kind": "grab"
+  }
+ ],
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [],
+ "grain": 0.04,
+ "all_lyrics": false,
+ "short": {
+  "hook": "don't touch my ears. i mean it.",
+  "hook_to": 3.0,
+  "cta": "how close did you get?",
+  "cta_from": 12.075
+ },
+ "shots": [
+  {
+   "id": "p1",
+   "at": 0.0,
+   "set": "bedroom",
+   "doc": {
+    "see": "MCU at 2.2 m, eye height 1.45 m: she faces you, both hands clamped over her tako ears (pose ears_cover), shelf with the salmon plush + the round sea window behind her. On the hit 1.45 she squeezes the ears tighter.",
+    "you": "you stand still, handheld breath",
+    "does": "pose ears_cover over clip unarmed-idle-01 (mix 0.4), expression angry 0.5; 'don't touch my ears. i mean it.' (0.19-2.75)",
+    "type": "hook stamp 'don't touch my ears. i mean it.' top band 0-3.0 s",
+    "why": "her design + her canon fear in one picture"
+   }
+  },
+  {
+   "id": "p2",
+   "at": 3.298,
+   "set": "bedroom",
+   "doc": {
+    "see": "She turns her back to you and arranges her knick-knacks on the shelf: she lifts the salmon plush and sets it straight.",
+    "you": "GREEN LIGHT: one STEP on 4.58 - the lens jumps 2.2 -> 1.75 m in 4 frames (snap), step sfx",
+    "does": "clip farming-pick-fruit (a reach to the shelf); 'i'm watching you.' (3.33-4.19) - she is not",
+    "type": "-",
+    "why": "your move: the creep game"
+   }
+  },
+  {
+   "id": "p3",
+   "at": 5.178,
+   "set": "bedroom",
+   "doc": {
+    "see": "She WHIPS round to face you, her chest dots flare, a burst of air bubbles pops off her head (the '!' of a sea creature).",
+    "you": "RED LIGHT: the lens freezes dead, a 3-frame shake (you got caught)",
+    "does": "clip look-over-shoulder from its turn key, expression surprised -> angry; dots flare 5.21; 'i saw that!' (5.21-6.00)",
+    "type": "-",
+    "why": "caught: you feel it as the camera"
+   }
+  },
+  {
+   "id": "p4",
+   "at": 6.432,
+   "set": "bedroom",
+   "doc": {
+    "see": "She turns back to the shelf and polishes a second figurine (a little glass ray).",
+    "you": "TWO STEPS on 7.09 and 7.72 - 1.75 -> 1.40 -> 1.05 m; her ears now big in frame",
+    "does": "clip farming-pick-fruit-2 (reach + handle)",
+    "type": "-",
+    "why": "you get greedy"
+   }
+  },
+  {
+   "id": "p5",
+   "at": 8.313,
+   "set": "bedroom",
+   "doc": {
+    "see": "ECU: she spins round AND leans in - her face 0.55 m from the lens, eyes huge, anger icon.",
+    "you": "you recoil 0.1 m, shake 0.3",
+    "does": "clip standing-react-large-from-left -> angry, lean 0.5 m toward the lens; 'closer? really?' (8.35-10.05)",
+    "type": "-",
+    "why": "the scare: she is suddenly right there"
+   }
+  },
+  {
+   "id": "p6",
+   "at": 10.821,
+   "set": "bedroom",
+   "doc": {
+    "see": "She turns away and steps 0.3 m off; you LUNGE at her ears (11.48) - her hand slaps over the lens (11.60): the frame goes dark except light through her fingers and one eye in a gap, glaring.",
+    "you": "the lunge 0.5 m to ear height in 6 frames, whoosh; then her hand's cover with a finger gap (fx cover, gap)",
+    "does": "clip look-over-shoulder -> pose cover_lens; 'nope.' (11.48-11.96) spoken through her fingers",
+    "type": "-",
+    "why": "the game's payoff: she wins"
+   }
+  },
+  {
+   "id": "p7",
+   "at": 12.075,
+   "set": "bedroom",
+   "doc": {
+    "see": "Her hand lifts off the lens: MCU, she leans toward you, both hands back over her ears, smug, eyes narrowed - the frame 0 picture again.",
+    "you": "she shoves you back: the lens slides from 0.55 m back to 2.2 m over 10 frames (ease out), then still - the frame 0 distance",
+    "does": "pose ears_cover, smug -> narrowed eyes; 'how close did you get?' (12.11-13.20)",
+    "type": "CTA stamp 'how close did you get?' 12.08-15.24 (3.16 s)",
+    "why": "the question is about the viewer's own play"
+   }
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "text": "stop tapping the glass.",
+ "duration": 2.256,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "stop",
+   "start": 0.093,
+   "end": 0.52
+  },
+  {
+   "w": "tapping",
+   "start": 0.531,
+   "end": 0.915
+  },
+  {
+   "w": "the",
+   "start": 0.926,
+   "end": 1.012
+  },
+  {
+   "w": "glass.",
+   "start": 1.022,
+   "end": 1.503
+  }
+ ]
+}

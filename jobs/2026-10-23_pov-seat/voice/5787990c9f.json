@@ -1,0 +1,27 @@
+{
+ "text": "rays have rules, okay?",
+ "duration": 2.448,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "rays",
+   "start": 0.093,
+   "end": 0.424
+  },
+  {
+   "w": "have",
+   "start": 0.435,
+   "end": 0.67
+  },
+  {
+   "w": "rules,",
+   "start": 0.68,
+   "end": 1.097
+  },
+  {
+   "w": "okay?",
+   "start": 1.3,
+   "end": 1.706
+  }
+ ]
+}

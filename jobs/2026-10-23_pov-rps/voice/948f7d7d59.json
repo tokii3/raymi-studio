@@ -1,0 +1,27 @@
+{
+ "text": "what did you pick?",
+ "duration": 1.872,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "what",
+   "start": 0.093,
+   "end": 0.306
+  },
+  {
+   "w": "did",
+   "start": 0.317,
+   "end": 0.456
+  },
+  {
+   "w": "you",
+   "start": 0.467,
+   "end": 0.563
+  },
+  {
+   "w": "pick?",
+   "start": 0.574,
+   "end": 0.915
+  }
+ ]
+}

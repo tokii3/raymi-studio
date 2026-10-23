@@ -1,0 +1,32 @@
+{
+ "text": "oh no. my best friend.",
+ "duration": 2.4,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "oh",
+   "start": 0.093,
+   "end": 0.274
+  },
+  {
+   "w": "no.",
+   "start": 0.285,
+   "end": 0.616
+  },
+  {
+   "w": "my",
+   "start": 0.755,
+   "end": 0.894
+  },
+  {
+   "w": "best",
+   "start": 0.905,
+   "end": 1.236
+  },
+  {
+   "w": "friend.",
+   "start": 1.247,
+   "end": 1.663
+  }
+ ]
+}

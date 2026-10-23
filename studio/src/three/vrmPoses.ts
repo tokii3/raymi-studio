@@ -10,6 +10,9 @@ import type {Act, Ease} from '../film/types';
 // head up = x < 0; head tilt = z; finger curl = z -1 (left) / +1 (right).
 
 export type Euler3 = [number, number, number];
+/** A thing on one of her bones: chopsticks in her hand, a salmon hood on her head (wearables.tsx WEARABLES). */
+export type WornProp = {item: string; at: 'hand_r' | 'hand_l' | 'head' | 'forearm_r' | 'forearm_l' | 'hips'; off?: [number, number, number];
+  rot?: [number, number, number]; scale?: number};
 export type VrmPose = Record<string, Euler3>;
 
 const curl = (side: 'left' | 'right', a: number, fingers = ['Index', 'Middle', 'Ring', 'Little']): VrmPose => {
@@ -230,6 +233,93 @@ export const POSES: Record<string, VrmPose> = {
     leftUpperArm: [0, -0.1, 0.2], rightUpperArm: [0, 0.1, -0.2],
     leftUpperLeg: [-0.15, 0, 0.04], rightUpperLeg: [0.12, 0, -0.04],
   },
+  // ---- POV Shorts (2026-10-23): she talks to YOU, the lens. The forearm folds in the frontal plane with z (left +,
+  // right -), forward with y. Checked on the pose sheet (jobs/2026-10-23_pov-poses).
+  // both hands clamped over her tako ears on top of her head, elbows out, chin down
+  ears_cover: {
+    ...curl('left', 0.2), ...curl('right', 0.2), spine: [0.04, 0, 0], neck: [0.06, 0, 0], head: [0.1, 0, 0],
+    leftUpperArm: [0, -0.35, 0.75], leftLowerArm: [0, -0.3, 1.9], leftHand: [0, 0, 0.3],
+    rightUpperArm: [0, 0.35, -0.75], rightLowerArm: [0, 0.3, -1.9], rightHand: [0, 0, -0.3],
+  },
+  // her right palm flat over the lens (arm straight at the camera at face height), leaning in
+  cover_lens: {
+    ...curl('left', 0.35), ...curl('right', 0.05), hips: [0.04, 0, 0], spine: [0.16, 0, 0], head: [-0.06, 0, 0],
+    rightUpperArm: [0, 1.25, -0.28], rightLowerArm: [0, 0.05, 0], rightHand: [0, 0, -0.5],
+    leftUpperArm: [0, -0.15, -1.15], leftLowerArm: [0, -0.4, 0],
+  },
+  // leaning toward the lens, chin up at it (the presenter whisper, the glare up close)
+  lean_in: {
+    ...relaxedHands, hips: [0.04, 0, 0], spine: [0.24, 0, 0], chest: [0.1, 0, 0], neck: [-0.08, 0, 0], head: [-0.16, 0, 0.04],
+    leftUpperArm: [0, -0.3, -1.05], leftLowerArm: [0, -0.5, 0], rightUpperArm: [0, 0.3, 1.05], rightLowerArm: [0, 0.5, 0],
+  },
+  // sitting, frozen with the chopsticks at her open mouth, the plate on her lap in the left hand
+  sit_eat: {
+    ...curl('left', 0.3), ...curl('right', 0.8, ['Ring', 'Little']), spine: [0.04, 0, 0], head: [-0.06, 0, 0],
+    rightUpperArm: [0, 0.9, 0.7], rightLowerArm: [0, 2.1, 0], rightHand: [0, 0, -0.2],
+    leftUpperArm: [0, -0.5, -1.0], leftLowerArm: [0, -1.2, 0], leftHand: [-0.9, 0, 0],
+    leftUpperLeg: [-1.5, 0, 0.08], rightUpperLeg: [-1.5, 0, -0.08], leftLowerLeg: [1.5, 0, 0], rightLowerLeg: [1.5, 0, 0],
+  },
+  // sitting, holding the chopsticks out toward the lens ("look: purple sweet potato")
+  sit_offer: {
+    ...curl('left', 0.3), ...curl('right', 0.8, ['Ring', 'Little']), spine: [0.12, 0, 0], head: [-0.04, 0, 0.06],
+    rightUpperArm: [0, 1.15, 0.2], rightLowerArm: [0, 0.6, 0], rightHand: [0, 0, -0.1],
+    leftUpperArm: [0, -0.5, -1.0], leftLowerArm: [0, -1.2, 0], leftHand: [-0.9, 0, 0],
+    leftUpperLeg: [-1.5, 0, 0.08], rightUpperLeg: [-1.5, 0, -0.08], leftLowerLeg: [1.5, 0, 0], rightLowerLeg: [1.5, 0, 0],
+  },
+  // index finger on her lips (shh), leaning to the lens
+  shh: {
+    ...curl('left', 0.35), ...curl('right', 1.15, ['Middle', 'Ring', 'Little']), spine: [0.12, 0, 0], head: [-0.08, 0, 0.05],
+    rightIndexProximal: [0, 0, 0.04], rightIndexIntermediate: [0, 0, 0], rightIndexDistal: [0, 0, 0],
+    rightUpperArm: [0, 0.75, 0.85], rightLowerArm: [0, 2.2, 0], rightHand: [0, 0, -0.4],
+    leftUpperArm: [0, -0.15, -1.15], leftLowerArm: [0, -0.4, 0],
+  },
+  // a fist raised beside her face (rock paper scissors), the other hand on her hip
+  fist: {
+    ...curl('left', 0.7), ...curl('right', 1.5), spine: [0.02, 0.06, 0], head: [0, -0.06, 0.04],
+    rightUpperArm: [0, 0.4, -0.3], rightLowerArm: [0, 0.3, -1.8], rightHand: [0, 0, 0.1],
+    leftUpperArm: [0, 0.3, -0.95], leftLowerArm: [0, -1.7, 0], leftHand: [0, 0, 0.3],
+  },
+  // the fist pumped down in front of her chest (the 'rock / paper / scissors' count)
+  fist_down: {
+    ...curl('left', 0.7), ...curl('right', 1.5), spine: [0.08, 0.04, 0], head: [0.04, -0.04, 0],
+    rightUpperArm: [0, 0.9, 0.5], rightLowerArm: [0, 0.9, 0], rightHand: [0, 0, 0.2],
+    leftUpperArm: [0, 0.3, -0.95], leftLowerArm: [0, -1.7, 0], leftHand: [0, 0, 0.3],
+  },
+  // her 'stingray' sign: the right hand flat, palm down, thrust at the lens like a ray wing
+  ray_hand: {
+    ...curl('left', 0.5), ...curl('right', 0.0), hips: [0.03, 0, 0], spine: [0.14, -0.08, 0], head: [-0.04, 0.06, 0],
+    rightUpperArm: [0, 1.2, -0.1], rightLowerArm: [0, 0.05, 0], rightHand: [0.15, 0, 0],
+    leftUpperArm: [0, 0.3, -0.95], leftLowerArm: [0, -1.7, 0], leftHand: [0, 0, 0.3],
+  },
+  // writing on the glass with her right index finger at chest height
+  write_glass: {
+    ...curl('left', 0.35), ...curl('right', 1.15, ['Middle', 'Ring', 'Little']), spine: [0.1, 0, 0], head: [0.06, 0, 0],
+    rightIndexProximal: [0, 0, 0.04], rightIndexIntermediate: [0, 0, 0], rightIndexDistal: [0, 0, 0],
+    rightUpperArm: [0, 1.15, 0.35], rightLowerArm: [0, 0.35, 0], rightHand: [0, 0, 0],
+    leftUpperArm: [0, -0.15, -1.15], leftLowerArm: [0, -0.4, 0],
+  },
+  // costume flaps: both arms out like fins (up) and down at 45 deg (down), alternate on the beat
+  fins_up: {
+    ...curl('left', 0.1), ...curl('right', 0.1), head: [-0.06, 0, 0],
+    leftUpperArm: [0, -0.15, 0.15], leftLowerArm: [0, -0.1, 0], rightUpperArm: [0, 0.15, -0.15], rightLowerArm: [0, 0.1, 0],
+  },
+  fins_down: {
+    ...curl('left', 0.1), ...curl('right', 0.1), head: [0.02, 0, 0],
+    leftUpperArm: [0, -0.15, -0.65], leftLowerArm: [0, -0.1, 0], rightUpperArm: [0, 0.15, 0.65], rightLowerArm: [0, 0.1, 0],
+  },
+  // ta-da: both arms up and out, hands open, chin up (the costume reveal)
+  ta_da: {
+    ...curl('left', 0.05), ...curl('right', 0.05), spine: [-0.05, 0, 0], head: [-0.1, 0, 0.06],
+    leftUpperArm: [0, -0.2, 0.7], leftLowerArm: [0, -0.2, 0.25], rightUpperArm: [0, 0.2, -0.7], rightLowerArm: [0, 0.2, -0.25],
+    leftUpperLeg: [0, 0, 0.08], rightUpperLeg: [0, 0, -0.08],
+  },
+  // pointing at herself ("me"), chin up
+  point_self: {
+    ...curl('left', 0.35), ...curl('right', 1.15, ['Middle', 'Ring', 'Little']), head: [-0.08, 0.06, 0.04],
+    rightIndexProximal: [0, 0, 0.04], rightIndexIntermediate: [0, 0, 0], rightIndexDistal: [0, 0, 0],
+    rightUpperArm: [0, 0.55, 0.95], rightLowerArm: [0, 1.95, 0], rightHand: [0, 0, 0.2],
+    leftUpperArm: [0, 0.3, -0.95], leftLowerArm: [0, -1.7, 0], leftHand: [0, 0, 0.3],
+  },
 };
 
 /** Expression names: the VRM 0.x names (her VRoid export) -> three-vrm's preset names; anything else is custom. */
@@ -248,8 +338,10 @@ export type VrmKey = {
   rollZ?: number;            // radians in the picture plane for the existing lean / float acting
   height?: number;           // figure height incl. ears (m), default 1.55
   blend?: number;            // frames the pose blends in from the previous key (default 8)
-  look?: 'lens' | null;      // eyes follow the camera (default 'lens')
+  look?: 'lens' | [number, number, number] | null;   // eyes follow the camera (default 'lens'), a set point, or nothing
+  props?: WornProp[];        // things in her hands / on her body for this key (studio/src/three/wearables.tsx)
   act?: Act;
+  icon?: string | null;      // a reaction icon beside her head (Icons.tsx), from this key on for 1.5 s
   motion?: string | null;   // Mixamo clip id (filename without extension), e.g. "dance" or "idle"; null = the pose only
   motionMix?: number;        // how much of the clip over the pose: 1 = the clip alone, 0.4 = the pose swaying with it
   // clip timing (2026-10-23, toki "steif"): a clip starts at the key that starts it (not at song time), so a yawn, a

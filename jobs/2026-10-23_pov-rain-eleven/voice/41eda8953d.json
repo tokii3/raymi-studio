@@ -1,0 +1,42 @@
+{
+ "text": "right or wrong? bet in the comments.",
+ "duration": 3.624,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "right",
+   "start": 0.093,
+   "end": 0.424
+  },
+  {
+   "w": "or",
+   "start": 0.435,
+   "end": 0.595
+  },
+  {
+   "w": "wrong?",
+   "start": 0.606,
+   "end": 0.969
+  },
+  {
+   "w": "bet",
+   "start": 1.699,
+   "end": 1.934
+  },
+  {
+   "w": "in",
+   "start": 1.944,
+   "end": 2.073
+  },
+  {
+   "w": "the",
+   "start": 2.083,
+   "end": 2.169
+  },
+  {
+   "w": "comments.",
+   "start": 2.179,
+   "end": 2.863
+  }
+ ]
+}

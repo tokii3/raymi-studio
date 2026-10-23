@@ -1,0 +1,32 @@
+{
+ "text": "undefeated. what did you pick?",
+ "duration": 3.144,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "undefeated.",
+   "start": 0.093,
+   "end": 0.841
+  },
+  {
+   "w": "what",
+   "start": 1.56,
+   "end": 1.773
+  },
+  {
+   "w": "did",
+   "start": 1.784,
+   "end": 1.923
+  },
+  {
+   "w": "you",
+   "start": 1.934,
+   "end": 2.03
+  },
+  {
+   "w": "pick?",
+   "start": 2.041,
+   "end": 2.382
+  }
+ ]
+}

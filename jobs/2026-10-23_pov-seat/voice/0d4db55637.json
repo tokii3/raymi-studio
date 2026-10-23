@@ -1,0 +1,32 @@
+{
+ "text": "you sat in my seat.",
+ "duration": 2.016,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "you",
+   "start": 0.093,
+   "end": 0.285
+  },
+  {
+   "w": "sat",
+   "start": 0.296,
+   "end": 0.584
+  },
+  {
+   "w": "in",
+   "start": 0.595,
+   "end": 0.691
+  },
+  {
+   "w": "my",
+   "start": 0.702,
+   "end": 0.862
+  },
+  {
+   "w": "seat.",
+   "start": 0.873,
+   "end": 1.268
+  }
+ ]
+}
