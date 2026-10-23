@@ -4,14 +4,37 @@
 // banner on the map), onair (true), ticker (text), flood (0..1 water rising in the studio), lightning (true = white
 // flashes on music hits), tally (0 | 1 | 2 = which camera is live). map 'fire' = the FIRE ALERT map (burning islands, red
 // fronts); fires = flames anywhere in the studio (three/fire.tsx).
+// POV Shorts (2026-10-23): map 'japan' (the islands of Japan, TOKYO marked), rain_at (frame) = a fat rain cloud with
+// '100%' stamps onto Tokyo and drops fall down the map; live: [[frame, 1 | 2 | 3]] = which studio camera's tally light
+// is on over time (3 = the map camera); podium: true = a presenter counter in front of her mark.
 import React from 'react';
 import * as THREE from 'three';
 import {Beam, Bubbles, RBox, Sign, drawText} from '../parts';
 import {SetLight, canvasTexture, rnd, toon} from '../look';
 import {Fires} from '../fire';
+import {stepValue} from '../events';
 import type {SetProps} from './index';
 
 const FLOOR = '#1c2350', WALL = '#141a3c', TRIM = '#2fd1d6', TRIM2 = '#9b5cff';
+
+// the islands of Japan as rounded blobs along the arc (Hokkaido, Honshu, Shikoku, Kyushu), TOKYO with a dot + label
+const TOKYO: [number, number] = [0.62, 0.65];          // map uv (x right, y down): low enough for her hand to reach
+const JP_DY = 0.18;                                    // the islands sit lower on the map to keep Tokyo at hand height
+function japanPaint(ctx: CanvasRenderingContext2D, w: number, h: number) {
+  const land = (pts: [number, number, number][]) => {
+    ctx.fillStyle = '#3fc4a0';
+    for (const [x, y, r] of pts) { ctx.beginPath(); ctx.ellipse(x * w, (y + JP_DY) * h, r * w, r * w * 0.8, 0.6, 0, Math.PI * 2); ctx.fill(); }
+  };
+  land([[0.78, 0.12, 0.05], [0.83, 0.15, 0.04], [0.75, 0.18, 0.035]]);
+  land([[0.7, 0.28, 0.03], [0.68, 0.35, 0.032], [0.65, 0.42, 0.035], [0.6, 0.48, 0.036], [0.54, 0.52, 0.035],
+    [0.47, 0.55, 0.032], [0.41, 0.58, 0.03], [0.36, 0.61, 0.026]]);
+  land([[0.43, 0.66, 0.025], [0.47, 0.67, 0.022]]);
+  land([[0.3, 0.68, 0.03], [0.29, 0.75, 0.026]]);
+  const [tx, ty] = TOKYO;
+  ctx.fillStyle = '#ff5a3c'; ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 6;
+  ctx.beginPath(); ctx.arc(tx * w, ty * h, h * 0.018, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+  drawText(ctx, 'TOKYO', tx * w + w * 0.075, ty * h + h * 0.01, h * 0.065, '#ffffff', {outline: '#0d1030', ow: 8});
+}
 
 function mapPaint(mode: string, warning: boolean) {
   return (ctx: CanvasRenderingContext2D, w: number, h: number) => {
@@ -23,6 +46,7 @@ function mapPaint(mode: string, warning: boolean) {
     ctx.strokeStyle = 'rgba(255,255,255,0.12)'; ctx.lineWidth = 2;
     for (let i = 1; i < 8; i++) { ctx.beginPath(); ctx.moveTo((i / 8) * w, 0); ctx.lineTo((i / 8) * w, h); ctx.stroke(); }
     for (let i = 1; i < 5; i++) { ctx.beginPath(); ctx.moveTo(0, (i / 5) * h); ctx.lineTo(w, (i / 5) * h); ctx.stroke(); }
+    if (mode === 'japan') { japanPaint(ctx, w, h); return; }
     const isl = [[0.2, 0.62, 0.13, 0.09], [0.31, 0.4, 0.07, 0.05], [0.72, 0.68, 0.16, 0.1], [0.83, 0.32, 0.09, 0.07], [0.55, 0.22, 0.05, 0.04]];
     for (const [x, y, rx, ry] of isl) {
       ctx.fillStyle = mode === 'fire' ? '#2f8f80' : '#3fc4a0';
@@ -114,12 +138,35 @@ const Softbox: React.FC<{pos: [number, number, number]; rotY: number; c?: string
   </group>
 );
 
+/** The bet on the map: a fat rain cloud slams onto Tokyo with '100%', drops falling below it (d = frames since). */
+const RainStamp: React.FC<{d: number}> = ({d}) => {
+  const x = (TOKYO[0] - 0.5) * 8, y = 2.3 + (0.5 - TOKYO[1]) * 4.5 + 0.55;
+  const s = d < 6 ? 1.6 - 0.6 * (d / 6) + 0.12 * Math.sin(d) : 1;
+  return (
+    <group position={[x, y, -2.85]} scale={s}>
+      {[[-0.32, 0, 0.3], [0, 0.12, 0.4], [0.33, 0, 0.3], [0.12, -0.1, 0.32], [-0.14, -0.1, 0.3]].map(([dx, dy, r], i) => (
+        <mesh key={i} position={[dx, dy, 0]} scale={[1, 0.8, 0.3]}><sphereGeometry args={[r, 16, 10]} /><meshBasicMaterial color="#e9f1ff" toneMapped={false} /></mesh>
+      ))}
+      <Sign id="rain100" pos={[0, 0.0, 0.14]} size={[0.62, 0.3]} glow paint={(ctx, w, h) => {
+        ctx.clearRect(0, 0, w, h); drawText(ctx, '100%', w / 2, h / 2, h * 0.8, '#1d6fb0');
+      }} />
+      {Array.from({length: 9}, (_, i) => {
+        const fall = ((d * 0.035 + i * 0.37) % 1.2);
+        return <mesh key={`r${i}`} position={[-0.5 + (i % 5) * 0.25 + (i > 4 ? 0.12 : 0), -0.4 - fall, 0.05]}>
+          <capsuleGeometry args={[0.025, 0.12, 4, 8]} /><meshBasicMaterial color="#7fd8ff" toneMapped={false} /></mesh>;
+      })}
+    </group>
+  );
+};
+
 export const Weather: React.FC<SetProps> = ({f, opts, hits}) => {
   const mode = String(opts.map ?? 'sunny');
   const warning = Boolean(opts.warning);
   const flood = Number(opts.flood ?? 0);
   const onair = opts.onair !== false;
-  const tally = Number(opts.tally ?? 1);
+  const liveStep = stepValue<number>(opts.live, f, 1);
+  const tally = liveStep.to ?? Number(opts.tally ?? 1);
+  const rainAt = typeof opts.rain_at === 'number' ? opts.rain_at : null;
   const power = Number(opts.power ?? 1);          // 0 = power cut: only screens on battery and her glow
   const ticker = String(opts.ticker ?? 'WEATHER WITH RAYMI');
   let flash = 0;
@@ -167,6 +214,7 @@ export const Weather: React.FC<SetProps> = ({f, opts, hits}) => {
       </group>
       <StudioCamera pos={[0.4, 0, 4.3]} rotY={Math.PI} live={tally === 1} />
       <StudioCamera pos={[3.6, 0, 3.4]} rotY={Math.PI + 0.55} live={tally === 2} />
+      {opts.live !== undefined ? <StudioCamera pos={[-1.0, 0, 1.6]} rotY={Math.PI} live={tally === 3} /> : null}
       <Softbox pos={[-2.4, 0, 2.6]} rotY={2.6} />
       <Softbox pos={[3.8, 0, 1.2]} rotY={-2.2} c="#ffe1f4" />
       {/* the lighting truss */}
@@ -194,6 +242,8 @@ export const Weather: React.FC<SetProps> = ({f, opts, hits}) => {
           ))}
         </group>
       ) : null}
+      {opts.podium ? <RBox size={[1.0, 1.0, 0.5]} pos={[0.6, 0.5, -0.6]} r={0.08} c="#2b2a5e" /> : null}
+      {mode === 'japan' && rainAt !== null && f >= rainAt ? <RainStamp d={f - rainAt} /> : null}
       <Fires list={opts.fires} f={f} />
       {mode === 'fire' ? <pointLight position={[0, 2.4, -1.6]} color="#ff7a3d" intensity={9 * power} distance={8} decay={1.5} /> : null}
       {flash > 0 ? <ambientLight intensity={flash * 3} color="#e8ecff" /> : null}

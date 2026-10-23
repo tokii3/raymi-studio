@@ -495,7 +495,10 @@ def clip_names() -> set[str]:
     return set(json.loads(p.read_text(encoding="utf-8"))["clips"]) if p.exists() else set()
 
 
-FX_KINDS = {"duo", "speed", "impact", "halftone", "spread"}
+FX_KINDS = {"duo", "speed", "impact", "halftone", "spread",
+            # the POV layer (studio/src/film/PovFx.tsx): on the lens / the glass in front of it
+            "cover", "pov_hand", "ripple", "algae", "freeze", "polaroid", "stamp"}
+FX_TIMES = {"taps", "big", "write0", "write1"}   # fx fields in song seconds -> film frames
 
 
 def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses: set[str], errors: list[str],
@@ -560,8 +563,11 @@ def compile_fx(s: dict, a: float, b: float, fr, errors: list[str], tag: str) -> 
         if x.get("kind") not in FX_KINDS:
             errors.append(f"{tag} fx {k + 1}: kind must be one of {sorted(FX_KINDS)}")
             continue
-        out.append({**{kk: v for kk, v in x.items() if kk not in ("at", "to")},
-                    "from": fr(_key_time(x.get("at", 0), a, b)), "to": fr(_key_time(x.get("to", "end"), a, b)) + 1})
+        item = {kk: v for kk, v in x.items() if kk not in ("at", "to")}
+        for kk in FX_TIMES & set(item):                    # taps / write times: song seconds like the shot times
+            v = item[kk]
+            item[kk] = [fr(float(t)) for t in v] if isinstance(v, list) else fr(float(v))
+        out.append({**item, "from": fr(_key_time(x.get("at", 0), a, b)), "to": fr(_key_time(x.get("to", "end"), a, b)) + 1})
     return out
 
 
@@ -861,6 +867,10 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                 extra[opt] = s[opt]
         if s.get("fx"):
             extra["fx"] = compile_fx(s, a, b, fr, errors, tag)
+            for x in extra["fx"]:                          # a stamp word is screen text in her heavy weight
+                if x.get("kind") == "stamp" and x.get("text"):
+                    screen_texts.append(str(x["text"]))
+                    heavy = True
         shots.append({**extra, "id": s.get("id", f"s{i + 1}"), "from": max(0, fr(a)), "to": min(total, fr(b)), "set": st, "hero": hero,
                       "opts": opts, "camera": ckeys, "kick": float(s.get("kick", 1.0)), "puppets": pkeys,
                       "lyrics": L, "words": words,

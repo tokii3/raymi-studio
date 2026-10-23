@@ -95,7 +95,104 @@
     "does": "clip angry -> arms crossed; 'stop tapping the glass.' (0.39-1.80)",
     "type": "hook stamp 'stop tapping the glass.' top band 0-2.4 s",
     "why": "her face + your crime at frame 0"
-   }
+   },
+   "opts": {
+    "crowd": 0,
+    "flashes": false,
+    "dim": 0.25,
+    "chest_dots": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      1.3,
+      2.25
+     ],
+     "look": [
+      0.6,
+      1.38,
+      1.15
+     ],
+     "fov": 14,
+     "shake": 0.4
+    },
+    {
+     "at": 0.07,
+     "pos": [
+      0.6,
+      1.3,
+      2.25
+     ],
+     "look": [
+      0.6,
+      1.38,
+      1.15
+     ],
+     "fov": 14,
+     "shake": 0.12
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "angry",
+     "pos": [
+      0.6,
+      0,
+      1.15
+     ],
+     "rotY": "lens",
+     "act": "shake",
+     "expr": {
+      "surprised": 0.6
+     }
+    },
+    {
+     "at": 0.35,
+     "clip": "angry",
+     "pos": [
+      0.6,
+      0,
+      1.15
+     ],
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.8
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "pov_hand",
+     "at": 0,
+     "to": 0.7,
+     "taps": [
+      0.0
+     ],
+     "x": 0.42,
+     "y": 0.6
+    },
+    {
+     "kind": "ripple",
+     "at": 0,
+     "to": 0.8,
+     "taps": [
+      0.0
+     ],
+     "x": 0.42,
+     "y": 0.6
+    },
+    {
+     "kind": "algae",
+     "at": 0,
+     "to": "end",
+     "x": 0.5,
+     "y": 0.48
+    }
+   ]
   },
   {
    "id": "p2",
@@ -107,7 +204,94 @@
     "does": "clip pointing; 'it says it right there.' (3.17-4.36)",
     "type": "the placard is the type",
     "why": "the rule in her world's own sign"
-   }
+   },
+   "opts": {
+    "crowd": 0,
+    "flashes": false,
+    "dim": 0.25,
+    "chest_dots": true,
+    "warning": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      1.3,
+      2.7
+     ],
+     "look": [
+      0.6,
+      1.0,
+      1.15
+     ],
+     "fov": 24,
+     "shake": 0.12
+    },
+    {
+     "at": 0.45,
+     "pos": [
+      0.6,
+      1.3,
+      2.7
+     ],
+     "look": [
+      2.0,
+      0.6,
+      1.6
+     ],
+     "fov": 24,
+     "shake": 0.12,
+     "path": "spline"
+    },
+    {
+     "at": 0.95,
+     "pos": [
+      0.6,
+      1.3,
+      2.7
+     ],
+     "look": [
+      2.0,
+      0.6,
+      1.6
+     ],
+     "fov": 24,
+     "shake": 0.12
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.6,
+      1.3,
+      2.7
+     ],
+     "look": [
+      0.6,
+      1.0,
+      1.15
+     ],
+     "fov": 24,
+     "shake": 0.12
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pointing",
+     "pos": [
+      0.6,
+      0,
+      1.15
+     ],
+     "rotY": -35,
+     "look": "lens",
+     "expr": {
+      "angry": 0.5
+     }
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p3",
@@ -119,7 +303,124 @@
     "does": "clip pointing-forward (the poke) from its action key; 'how do you like it?' (6.15-6.99)",
     "type": "-",
     "why": "she fights back"
-   }
+   },
+   "opts": {
+    "crowd": 0,
+    "flashes": false,
+    "dim": 0.25,
+    "chest_dots": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      1.3,
+      2.25
+     ],
+     "look": [
+      0.6,
+      1.38,
+      1.15
+     ],
+     "fov": 14,
+     "shake": 0.12
+    },
+    {
+     "at": 0.75,
+     "pos": [
+      0.6,
+      1.3,
+      2.25
+     ],
+     "look": [
+      0.6,
+      1.38,
+      1.15
+     ],
+     "fov": 14,
+     "shake": 0.55
+    },
+    {
+     "at": 0.85,
+     "pos": [
+      0.6,
+      1.3,
+      2.25
+     ],
+     "look": [
+      0.6,
+      1.38,
+      1.15
+     ],
+     "fov": 14,
+     "shake": 0.12
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "angry",
+     "pos": [
+      0.6,
+      0,
+      1.15
+     ],
+     "rotY": "lens",
+     "act": "shake",
+     "expr": {
+      "surprised": 0.5
+     }
+    },
+    {
+     "at": 0.5,
+     "clip": "pointing-forward",
+     "pos": [
+      0.6,
+      0,
+      1.35
+     ],
+     "move": 0.25,
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.9
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "pov_hand",
+     "at": 0,
+     "to": 0.4,
+     "taps": [
+      4.66
+     ],
+     "x": 0.4,
+     "y": 0.62
+    },
+    {
+     "kind": "ripple",
+     "at": 0,
+     "to": "end",
+     "taps": [
+      4.66,
+      5.4
+     ],
+     "big": [
+      5.4
+     ],
+     "x": 0.48,
+     "y": 0.55
+    },
+    {
+     "kind": "algae",
+     "at": 0,
+     "to": "end",
+     "x": 0.5,
+     "y": 0.48
+    }
+   ]
   },
   {
    "id": "p4",
@@ -131,7 +432,107 @@
     "does": "pose write_glass with stroke keys; 'no.' on the hit 8.38",
     "type": "'NO' wiped into the algae film (fx algae_write, stroke reveal)",
     "why": "her answer, written by her finger on her world"
-   }
+   },
+   "opts": {
+    "crowd": 0,
+    "flashes": false,
+    "dim": 0.25,
+    "chest_dots": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      1.3,
+      2.25
+     ],
+     "look": [
+      0.6,
+      1.2,
+      1.15
+     ],
+     "fov": 16,
+     "shake": 0.1
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.6,
+      1.286,
+      2.101
+     ],
+     "look": [
+      0.6,
+      1.2,
+      1.15
+     ],
+     "fov": 16,
+     "shake": 0.1
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "write_glass",
+     "clip": "idle",
+     "motionMix": 0.3,
+     "pos": [
+      0.6,
+      0,
+      1.3
+     ],
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.6
+     }
+    },
+    {
+     "at": 0.5,
+     "pose": "write_glass",
+     "clip": "idle",
+     "motionMix": 0.3,
+     "pos": [
+      0.55,
+      0,
+      1.3
+     ],
+     "move": 0.4,
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.6
+     }
+    },
+    {
+     "at": 1.2,
+     "pose": "write_glass",
+     "clip": "idle",
+     "motionMix": 0.3,
+     "pos": [
+      0.68,
+      0,
+      1.3
+     ],
+     "move": 0.5,
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.7
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "algae",
+     "at": 0,
+     "to": "end",
+     "x": 0.5,
+     "y": 0.55,
+     "text": "NO",
+     "write0": 6.95,
+     "write1": 8.2
+    }
+   ]
   },
   {
    "id": "p5",
@@ -143,7 +544,104 @@
     "does": "clip gestures-pack-basic-annoyed-head-shake; 'okay. one more and i'm gone.' (9.86-12.38)",
     "type": "-",
     "why": "the last warning"
-   }
+   },
+   "opts": {
+    "crowd": 0,
+    "flashes": false,
+    "dim": 0.25,
+    "chest_dots": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      1.3,
+      2.6
+     ],
+     "look": [
+      0.6,
+      1.1,
+      1.15
+     ],
+     "fov": 22,
+     "shake": 0.12
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "gestures-pack-basic-annoyed-head-shake",
+     "pos": [
+      0.6,
+      0,
+      1.15
+     ],
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.4
+     }
+    },
+    {
+     "at": 0.03,
+     "clip": "gestures-pack-basic-annoyed-head-shake",
+     "pos": [
+      0.6,
+      0,
+      1.05
+     ],
+     "move": 0.1,
+     "rotY": "lens",
+     "act": "shake"
+    },
+    {
+     "at": 0.4,
+     "clip": "gestures-pack-basic-annoyed-head-shake",
+     "pos": [
+      0.6,
+      0,
+      0.95
+     ],
+     "move": 0.1,
+     "rotY": "lens",
+     "act": "shake",
+     "expr": {
+      "angry": 0.7
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "pov_hand",
+     "at": 0,
+     "to": 0.9,
+     "taps": [
+      9.12,
+      9.49
+     ],
+     "x": 0.4,
+     "y": 0.6
+    },
+    {
+     "kind": "ripple",
+     "at": 0,
+     "to": 1.2,
+     "taps": [
+      9.12,
+      9.49
+     ],
+     "x": 0.4,
+     "y": 0.6
+    },
+    {
+     "kind": "algae",
+     "at": 0,
+     "to": "end",
+     "x": 0.5,
+     "y": 0.48
+    }
+   ]
   },
   {
    "id": "p6",
@@ -155,7 +653,114 @@
     "does": "clip jumping-down -> buried (set bury + burst); 'fine. i'm a rock now.' (12.89-15.02) muffled",
     "type": "-",
     "why": "the payoff only a ray can do"
-   }
+   },
+   "opts": {
+    "crowd": 0,
+    "flashes": false,
+    "dim": 0.25,
+    "chest_dots": true,
+    "bury": [
+     0.6,
+     0,
+     0.95
+    ],
+    "bury_h": 0.16,
+    "burst": [
+     0.6,
+     0,
+     0.95
+    ],
+    "burst_at": 13.58
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      1.3,
+      2.6
+     ],
+     "look": [
+      0.6,
+      0.9,
+      0.95
+     ],
+     "fov": 22,
+     "shake": 0.12
+    },
+    {
+     "at": 1.2,
+     "pos": [
+      0.6,
+      1.25,
+      2.5
+     ],
+     "look": [
+      0.6,
+      0.2,
+      0.95
+     ],
+     "fov": 22,
+     "shake": 0.2
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "jumping-down",
+     "pos": [
+      0.6,
+      0,
+      0.95
+     ],
+     "rotY": "lens",
+     "once": true,
+     "expr": {
+      "angry": 0.6
+     }
+    },
+    {
+     "at": 0.75,
+     "clip": "jumping-down",
+     "pos": [
+      0.6,
+      -1.18,
+      0.95
+     ],
+     "move": 0.25,
+     "rotY": "lens"
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "pov_hand",
+     "at": 0,
+     "to": 0.6,
+     "taps": [
+      12.83
+     ],
+     "x": 0.4,
+     "y": 0.6
+    },
+    {
+     "kind": "ripple",
+     "at": 0,
+     "to": 0.8,
+     "taps": [
+      12.83
+     ],
+     "x": 0.4,
+     "y": 0.6
+    },
+    {
+     "kind": "algae",
+     "at": 0,
+     "to": "end",
+     "x": 0.5,
+     "y": 0.48
+    }
+   ]
   },
   {
    "id": "p7",
@@ -167,7 +772,88 @@
     "does": "buried, look lens; 'how many taps did you count?' (15.06-16.48)",
     "type": "CTA stamp 'how many taps did you count?' 15.03-18.03 (3.0 s)",
     "why": "a number comment; 5 or 6 (does her tap count?) starts a debate"
-   }
+   },
+   "opts": {
+    "crowd": 0,
+    "flashes": false,
+    "dim": 0.25,
+    "chest_dots": true,
+    "bury": [
+     0.6,
+     0,
+     0.95
+    ],
+    "bury_h": 0.16
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      0.85,
+      2.2
+     ],
+     "look": [
+      0.6,
+      0.25,
+      0.95
+     ],
+     "fov": 14,
+     "shake": 0.1
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "stand",
+     "clip": "idle",
+     "motionMix": 0.2,
+     "pos": [
+      0.6,
+      -1.18,
+      0.95
+     ],
+     "rotY": "lens",
+     "expr": {
+      "fun": 0.4
+     }
+    },
+    {
+     "at": 2.3,
+     "pose": "stand",
+     "clip": "idle",
+     "motionMix": 0.2,
+     "pos": [
+      0.6,
+      -1.12,
+      0.95
+     ],
+     "rotY": "lens",
+     "expr": {
+      "surprised": 0.9
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "pov_hand",
+     "at": 2.2,
+     "to": "end",
+     "taps": [
+      18.05
+     ],
+     "x": 0.42,
+     "y": 0.6
+    },
+    {
+     "kind": "algae",
+     "at": 0,
+     "to": "end",
+     "x": 0.5,
+     "y": 0.48
+    }
+   ]
   }
  ]
 }

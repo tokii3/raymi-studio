@@ -26,6 +26,7 @@ import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
 import {Transitions, whipStyle} from './Transitions';
 import {Fx2D, Fx2DDefs, fxFilter} from './Fx2D';
+import {PovLayer, povFilter, sceneFrame} from './PovFx';
 import {PostFX, type PostSpec} from '../three/PostFX';
 import type {FilmProps, Shot} from './types';
 import {TONES, gradeName, mixTone, type LyricTone, type Tone} from './grade';
@@ -62,12 +63,14 @@ export const Film: React.FC<FilmProps> = (props) => {
   const vrmReady = useVrmReady(props.vrm ? [staticFile(props.vrm)] : [],
     props.vrm ? (props.motions ?? ['motions/dance.fbx', 'motions/idle.fbx']).map(staticFile) : []);
   const ready = fontReady && texReady && vrmReady;
-  const f = useCurrentFrame();
+  const fNow = useCurrentFrame();
   const {width: W, height: H, fps} = useVideoConfig();
   const mouthWords = useMemo(() => props.sung ?? vrmFilmWords(props.shots, fps), [props.sung, props.shots, fps]);
   const mouthKeys = useMemo(() => makeVrmMouthKeys(mouthWords, fps, 0, props.durationInFrames), [mouthWords, fps, props.durationInFrames]);
-  const i = shotAt(props.shots, f);
+  const i = shotAt(props.shots, fNow);
   const shot = props.shots[i];
+  // a freeze / polaroid holds the 3D world on one frame while the 2D layer above keeps time (PovFx.tsx)
+  const f = sceneFrame(shot.fx, fNow);
   // a 3D shot names her rig keys itself (shots.json "actor"); the 2026-10-21 VRM edition translated sprite keys
   const actorKeys = useMemo(() => shot.actor?.length ? shot.actor : vrmFilmKeys(shot.puppets), [shot]);
   const gain = shot.mouth?.gain ?? 1;
@@ -188,7 +191,7 @@ export const Film: React.FC<FilmProps> = (props) => {
   return (
     <AbsoluteFill style={{backgroundColor: '#0b0818', overflow: 'hidden'}}>
       <Fx2DDefs fx={fx} f={f} center={herScreen} aspect={aspect} />
-      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter, fxFilter(fx, f)].filter(Boolean).join(' ')}}>
+      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter, fxFilter(fx, f), povFilter(fx, f)].filter(Boolean).join(' ')}}>
         {ready ? (
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>
@@ -218,10 +221,11 @@ export const Film: React.FC<FilmProps> = (props) => {
           </ThreeCanvas>
         ) : null}
       </AbsoluteFill>
-      <Fx2D fx={fx} f={f} center={herScreen} aspect={aspect} />
+      <Fx2D fx={fx} f={fNow} center={herScreen} aspect={aspect} />
+      <PovLayer fx={fx as never} f={fNow} W={W} H={H} />
       {battery && shot.opts.battery_sign ? <BatterySign {...battery} x={herHead[0] * W} y={herHead[1] * H} h={H} f={f} side={shot.opts.battery_sign === 'left' ? -1 : 1} /> : null}
       {icon}
-      <Transitions shots={props.shots} f={f} />
+      <Transitions shots={props.shots} f={fNow} />
       <Grade grain={props.grain} tone={gradeAt(shot, f)} />
       {props.overlay ? (
         <>

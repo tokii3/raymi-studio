@@ -96,7 +96,61 @@
     "does": "clip jump (once, from its apex key) -> pose fist; smug; 'rock paper scissors. you lose.' (0.14-2.78)",
     "type": "hook stamp 'rock paper scissors. you lose.' top band 0-2.9 s",
     "why": "a challenge straight at you"
-   }
+   },
+   "opts": {
+    "chest_dots": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.0,
+      1.42,
+      2.4
+     ],
+     "look": [
+      -1.0,
+      1.38,
+      0.5
+     ],
+     "fov": 12,
+     "shake": 0.3
+    },
+    {
+     "at": 0.1,
+     "pos": [
+      -1.0,
+      1.42,
+      2.4
+     ],
+     "look": [
+      -1.0,
+      1.38,
+      0.5
+     ],
+     "fov": 12,
+     "shake": 0.12
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "fist",
+     "clip": "idle",
+     "motionMix": 0.3,
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "act": "pop",
+     "expr": {
+      "joy": 0.6
+     }
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p2",
@@ -108,7 +162,138 @@
     "does": "pose keys fist_up / fist_down on the three words; 'rock. paper. scissors!' (2.92-5.95)",
     "type": "each word pops as a stamp beside her fist",
     "why": "the ritual everyone knows"
-   }
+   },
+   "opts": {
+    "chest_dots": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.0,
+      1.3,
+      1.9
+     ],
+     "look": [
+      -1.0,
+      1.25,
+      0.5
+     ],
+     "fov": 14,
+     "shake": 0.12
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "fist",
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "blend": 0.1,
+     "expr": {
+      "joy": 0.5
+     }
+    },
+    {
+     "at": 0.03,
+     "pose": "fist_down",
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "blend": 0.1,
+     "act": "stomp"
+    },
+    {
+     "at": 0.6,
+     "pose": "fist",
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "blend": 0.15
+    },
+    {
+     "at": 1.17,
+     "pose": "fist_down",
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "blend": 0.1,
+     "act": "stomp"
+    },
+    {
+     "at": 1.8,
+     "pose": "fist",
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "blend": 0.15
+    },
+    {
+     "at": 2.37,
+     "pose": "fist_down",
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "blend": 0.1,
+     "act": "stomp",
+     "expr": {
+      "joy": 0.8
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "stamp",
+     "at": 0.03,
+     "to": 1.14,
+     "text": "ROCK",
+     "x": 0.72,
+     "y": 0.5,
+     "size": 0.07,
+     "rot": -8
+    },
+    {
+     "kind": "stamp",
+     "at": 1.17,
+     "to": 2.34,
+     "text": "PAPER",
+     "x": 0.72,
+     "y": 0.5,
+     "size": 0.07,
+     "rot": -8
+    },
+    {
+     "kind": "stamp",
+     "at": 2.37,
+     "to": "end",
+     "text": "SCISSORS",
+     "x": 0.72,
+     "y": 0.5,
+     "size": 0.06,
+     "rot": -8
+    }
+   ],
+   "kick": 1.4
   },
   {
    "id": "p3",
@@ -120,7 +305,60 @@
     "does": "- (scratch on 6.26)",
     "type": "stamp 'PAUSE. pick now.' centre (between the bands)",
     "why": "the interactive beat: you pick"
-   }
+   },
+   "opts": {
+    "chest_dots": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.0,
+      1.3,
+      1.9
+     ],
+     "look": [
+      -1.0,
+      1.25,
+      0.5
+     ],
+     "fov": 14
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "ray_hand",
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.6
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "freeze",
+     "at": 0,
+     "to": "end",
+     "desat": 0.7
+    },
+    {
+     "kind": "stamp",
+     "at": 0.05,
+     "to": "end",
+     "text": "PAUSE. pick now.",
+     "x": 0.5,
+     "y": 0.5,
+     "size": 0.065,
+     "rot": -4
+    }
+   ]
   },
   {
    "id": "p4",
@@ -132,7 +370,74 @@
     "does": "pose ray_hand + wave keys; 'stingray.' (7.93-8.57)",
     "type": "stamp 'STINGRAY' (key word, angled)",
     "why": "her sign: she is the answer"
-   }
+   },
+   "opts": {
+    "chest_dots": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.0,
+      1.35,
+      1.5
+     ],
+     "look": [
+      -1.0,
+      1.3,
+      0.5
+     ],
+     "fov": 18,
+     "shake": 0.12
+    },
+    {
+     "at": 0.1,
+     "pos": [
+      -1.0,
+      1.38,
+      1.7
+     ],
+     "look": [
+      -1.0,
+      1.3,
+      0.5
+     ],
+     "fov": 18,
+     "shake": 0.4,
+     "ease": "out"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "ray_hand",
+     "clip": "idle",
+     "motionMix": 0.25,
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "act": "pop",
+     "expr": {
+      "joy": 0.9
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "stamp",
+     "at": 0.08,
+     "to": "end",
+     "text": "STINGRAY",
+     "x": 0.5,
+     "y": 0.74,
+     "size": 0.085,
+     "rot": -10
+    }
+   ]
   },
   {
    "id": "p5",
@@ -144,7 +449,123 @@
     "does": "clip goofy-running (drag) -> pose glide over the rock; 'rock? i glide over it.' (9.19-11.34)",
     "type": "-",
     "why": "proof one, done to you"
-   }
+   },
+   "opts": {
+    "chest_dots": true,
+    "things": [
+     {
+      "kind": "beach_rock",
+      "pos": [
+       -0.35,
+       0,
+       0.35
+      ],
+      "scale": 1.2
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.4,
+      1.42,
+      1.6
+     ],
+     "look": [
+      -0.6,
+      1.2,
+      0.2
+     ],
+     "fov": 26,
+     "shake": 0.25
+    },
+    {
+     "at": 0.5,
+     "pos": [
+      -0.7,
+      1.4,
+      1.0
+     ],
+     "look": [
+      -0.3,
+      0.3,
+      0.4
+     ],
+     "fov": 26,
+     "shake": 0.6,
+     "path": "spline"
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.6,
+      1.4,
+      0.9
+     ],
+     "look": [
+      -0.35,
+      0.2,
+      0.3
+     ],
+     "fov": 26,
+     "shake": 0.2
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "goofy-running",
+     "pos": [
+      -0.7,
+      0,
+      0.6
+     ],
+     "rotY": 120
+    },
+    {
+     "at": 0.6,
+     "pose": "glide",
+     "clip": "flying",
+     "motionMix": 0.6,
+     "pos": [
+      -0.9,
+      0.25,
+      0.2
+     ],
+     "rotY": 90,
+     "act": "float"
+    },
+    {
+     "at": 1.6,
+     "pose": "glide",
+     "clip": "flying",
+     "motionMix": 0.6,
+     "pos": [
+      0.1,
+      0.25,
+      0.3
+     ],
+     "move": 1.0,
+     "rotY": 90,
+     "act": "float",
+     "expr": {
+      "joy": 0.7
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "pov_hand",
+     "at": 0,
+     "to": 0.6,
+     "pose": "open",
+     "x": 0.6,
+     "y": 0.7,
+     "side": "right"
+    }
+   ]
   },
   {
    "id": "p6",
@@ -156,7 +577,70 @@
     "does": "pose lie + act flatten; 'paper? i'm flatter.' (11.69-13.60)",
     "type": "-",
     "why": "proof two: rays are flat"
-   }
+   },
+   "opts": {
+    "chest_dots": true,
+    "things": [
+     {
+      "kind": "paper_sheet",
+      "pos": [
+       -0.55,
+       0.01,
+       0.45
+      ],
+      "blow_at": 12.9
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.9,
+      2.3,
+      0.75
+     ],
+     "look": [
+      -1.0,
+      0,
+      0.4
+     ],
+     "fov": 30,
+     "shake": 0.1
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "float",
+     "pos": [
+      -1.2,
+      0.05,
+      0.4
+     ],
+     "rotY": 0,
+     "rollZ": -90,
+     "expr": {
+      "joy": 0.4
+     }
+    },
+    {
+     "at": 1.15,
+     "pose": "float",
+     "pos": [
+      -1.2,
+      0.05,
+      0.4
+     ],
+     "rotY": 0,
+     "rollZ": -90,
+     "act": "flatten",
+     "expr": {
+      "joy": 0.8
+     }
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p7",
@@ -168,7 +652,121 @@
     "does": "clip standing-dodge-backward -> swat; 'scissors? too slow.' (13.78-15.82)",
     "type": "-",
     "why": "proof three: the scissors are a creature of her world"
-   }
+   },
+   "opts": {
+    "chest_dots": true,
+    "things": [
+     {
+      "kind": "crab",
+      "pos": [
+       -1.0,
+       0,
+       1.2
+      ],
+      "snap": [
+       13.78,
+       14.1
+      ],
+      "scale": 1.6,
+      "rot": [
+       0,
+       1.57,
+       0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.0,
+      1.35,
+      1.9
+     ],
+     "look": [
+      -1.0,
+      0.85,
+      0.8
+     ],
+     "fov": 30,
+     "shake": 0.15
+    },
+    {
+     "at": 0.1,
+     "pos": [
+      -1.0,
+      1.38,
+      2.0
+     ],
+     "look": [
+      -1.0,
+      0.85,
+      0.8
+     ],
+     "fov": 30,
+     "shake": 0.5,
+     "ease": "out"
+    },
+    {
+     "at": 0.85,
+     "pos": [
+      -1.0,
+      1.38,
+      2.0
+     ],
+     "look": [
+      -1.0,
+      1.0,
+      0.6
+     ],
+     "fov": 30,
+     "shake": 0.4,
+     "path": "spline"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "standing-dodge-backward",
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "once": true,
+     "expr": {
+      "surprised": 0.5
+     }
+    },
+    {
+     "at": 0.84,
+     "pose": "kick",
+     "clip": "idle",
+     "motionMix": 0.3,
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.6
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "pov_hand",
+     "at": 0,
+     "to": 0.4,
+     "pose": "open",
+     "x": 0.5,
+     "y": 0.75
+    }
+   ]
   },
   {
    "id": "p8",
@@ -180,7 +778,145 @@
     "does": "clip being-cocky -> joyful-jump (pinch) -> pose fist; 'that didn't count!' (16.49-17.48); 'what did you pick?' (17.55-18.47)",
     "type": "CTA stamp 'what did you pick?' 16.26-18.80 (2.54 s)",
     "why": "everyone comments their pick (and that the crab won)"
-   }
+   },
+   "opts": {
+    "chest_dots": true,
+    "things": [
+     {
+      "kind": "crab",
+      "pos": [
+       -1.25,
+       0,
+       0.35
+      ],
+      "from": [
+       -1.6,
+       0,
+       0.9
+      ],
+      "at": 15.9,
+      "dur_s": 0.35,
+      "snap": [
+       16.29
+      ],
+      "scale": 1.4,
+      "rot": [
+       0,
+       0.6,
+       0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.0,
+      1.42,
+      2.4
+     ],
+     "look": [
+      -1.0,
+      1.38,
+      0.5
+     ],
+     "fov": 12,
+     "shake": 0.12
+    },
+    {
+     "at": 0.5,
+     "pos": [
+      -1.0,
+      1.42,
+      2.4
+     ],
+     "look": [
+      -1.0,
+      1.38,
+      0.5
+     ],
+     "fov": 12,
+     "shake": 0.4
+    },
+    {
+     "at": 0.65,
+     "pos": [
+      -1.0,
+      1.42,
+      2.4
+     ],
+     "look": [
+      -1.0,
+      1.38,
+      0.5
+     ],
+     "fov": 12,
+     "shake": 0.12
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "gestures-pack-basic-being-cocky",
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.8
+     }
+    },
+    {
+     "at": 0.45,
+     "clip": "joyful-jump",
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "once": true,
+     "act": "hop",
+     "expr": {
+      "surprised": 0.9
+     },
+     "icon": "anger"
+    },
+    {
+     "at": 0.95,
+     "pose": "fist",
+     "clip": "angry",
+     "motionMix": 0.4,
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.6
+     }
+    },
+    {
+     "at": 2.1,
+     "pose": "fist",
+     "clip": "idle",
+     "motionMix": 0.3,
+     "pos": [
+      -1.0,
+      0,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.6
+     }
+    }
+   ],
+   "outline": 0.0035
   }
  ]
 }

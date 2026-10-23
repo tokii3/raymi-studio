@@ -81,7 +81,75 @@
     "does": "clip sitting-disapproval from its glare key, expression angry 0.4, eyes narrowed; 'you sat in my seat.' (0.19-1.37)",
     "type": "hook stamp 'you sat in MY seat.' in the top band 0-2.9 s",
     "why": "her face + a claim at frame 0"
-   }
+   },
+   "opts": {
+    "pair": true,
+    "glass": true,
+    "grade": "closing",
+    "chest_dots": true,
+    "lock": 0.25,
+    "lights_off": [
+     [
+      10.44,
+      1
+     ],
+     [
+      12.5,
+      0
+     ]
+    ],
+    "glow_flare": [
+     9.0
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.98,
+      1.12,
+      0.02
+     ],
+     "look": [
+      -0.5,
+      1.05,
+      -0.12
+     ],
+     "fov": 34,
+     "shake": 0.15
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.866,
+      1.103,
+      -0.013
+     ],
+     "look": [
+      -0.5,
+      1.05,
+      -0.12
+     ],
+     "fov": 34,
+     "shake": 0.15
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "sitting-disapproval",
+     "pos": [
+      -0.5,
+      0,
+      -0.05
+     ],
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.45
+     }
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p2",
@@ -93,7 +161,108 @@
     "does": "clip sitting-talking, actor move 0.2 m toward the lens over 8 frames, smug; 'this is the window seat.' (2.94-4.20)",
     "type": "-",
     "why": "your body reacts: the camera is you"
-   }
+   },
+   "opts": {
+    "pair": true,
+    "glass": true,
+    "grade": "closing",
+    "chest_dots": true,
+    "lock": 0.25,
+    "lights_off": [
+     [
+      10.44,
+      1
+     ],
+     [
+      12.5,
+      0
+     ]
+    ],
+    "glow_flare": [
+     9.0
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.866,
+      1.103,
+      -0.013
+     ],
+     "look": [
+      -0.5,
+      1.05,
+      -0.12
+     ],
+     "fov": 34,
+     "shake": 0.15
+    },
+    {
+     "at": 0.27,
+     "pos": [
+      -1.11,
+      1.09,
+      0.06
+     ],
+     "look": [
+      -0.5,
+      1.05,
+      -0.12
+     ],
+     "fov": 34,
+     "roll": 6,
+     "shake": 0.35,
+     "ease": "out"
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.11,
+      1.09,
+      0.06
+     ],
+     "look": [
+      -0.5,
+      1.05,
+      -0.12
+     ],
+     "fov": 34,
+     "roll": 4,
+     "shake": 0.15
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "sitting-talking",
+     "pos": [
+      -0.5,
+      0,
+      -0.05
+     ],
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.2,
+      "joy": 0.2
+     }
+    },
+    {
+     "at": 0.27,
+     "clip": "sitting-talking",
+     "pos": [
+      -0.62,
+      0,
+      -0.08
+     ],
+     "move": 0.27,
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.35
+     }
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p3",
@@ -105,7 +274,136 @@
     "does": "clip sitting-and-pointing (she points past you at the sea); 'i saw the sea first. so it's mine.' (5.00-7.95, 'mine' 7.57)",
     "type": "-",
     "why": "her reason, in her world: she is FROM the sea outside"
-   }
+   },
+   "opts": {
+    "pair": true,
+    "glass": true,
+    "grade": "closing",
+    "chest_dots": true,
+    "lock": 0.25,
+    "lights_off": [
+     [
+      10.44,
+      1
+     ],
+     [
+      12.5,
+      0
+     ]
+    ],
+    "glow_flare": [
+     9.0
+    ],
+    "salmon": {
+     "from": [
+      -1.6,
+      1.2,
+      -2.2
+     ],
+     "pos": [
+      -1.6,
+      1.25,
+      1.4
+     ],
+     "at": 5.3,
+     "dur_s": 2.4,
+     "scale": 1.3,
+     "yaw": 1.57
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.98,
+      1.12,
+      0.02
+     ],
+     "look": [
+      -0.5,
+      1.05,
+      -0.12
+     ],
+     "fov": 36,
+     "shake": 0.15
+    },
+    {
+     "at": 1.1,
+     "pos": [
+      -0.98,
+      1.12,
+      0.02
+     ],
+     "look": [
+      -1.31,
+      1.25,
+      -0.35
+     ],
+     "fov": 36,
+     "shake": 0.15,
+     "path": "spline"
+    },
+    {
+     "at": 2.3,
+     "pos": [
+      -0.98,
+      1.12,
+      0.02
+     ],
+     "look": [
+      -1.31,
+      1.2,
+      -0.25
+     ],
+     "fov": 36,
+     "shake": 0.15
+    },
+    {
+     "at": 2.55,
+     "pos": [
+      -0.98,
+      1.12,
+      0.02
+     ],
+     "look": [
+      -0.5,
+      1.05,
+      -0.12
+     ],
+     "fov": 36,
+     "shake": 0.25,
+     "ease": "snap"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "sitting-and-pointing",
+     "pos": [
+      -0.5,
+      0,
+      -0.05
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    },
+    {
+     "at": 2.55,
+     "clip": "sitting-talking",
+     "pos": [
+      -0.5,
+      0,
+      -0.05
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.6
+     }
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p4",
@@ -117,7 +415,78 @@
     "does": "clip sitting-angry, expression angry 0.5, dots flare (glow_flare) on 'rules' 9.00; 'rays have rules, okay?' (8.42-9.98)",
     "type": "-",
     "why": "she wins arguments by declaring rules"
-   }
+   },
+   "opts": {
+    "pair": true,
+    "glass": true,
+    "grade": "closing",
+    "chest_dots": true,
+    "lock": 0.25,
+    "lights_off": [
+     [
+      10.44,
+      1
+     ],
+     [
+      12.5,
+      0
+     ]
+    ],
+    "glow_flare": [
+     9.0
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.03,
+      1.1,
+      0.04
+     ],
+     "look": [
+      -0.5,
+      1.05,
+      -0.12
+     ],
+     "fov": 30,
+     "shake": 0.2,
+     "roll": -3
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.06,
+      1.1,
+      0.06
+     ],
+     "look": [
+      -0.5,
+      1.05,
+      -0.12
+     ],
+     "fov": 30,
+     "shake": 0.2,
+     "roll": -4
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "sitting-angry",
+     "pos": [
+      -0.5,
+      0,
+      -0.05
+     ],
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.6
+     },
+     "icon": "anger"
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p5",
@@ -129,6 +498,127 @@
     "does": "actor move from the aisle seat to the window seat behind the lens over 1.4 s in the black (dots only, material dark); 'oh. a tunnel.' (10.47-11.96) - an innocent cover line in the dark",
     "type": "-",
     "why": "the twist told by her body alone: only a bioluminescent ray can do this gag"
+   },
+   "opts": {
+    "pair": true,
+    "glass": true,
+    "grade": "closing",
+    "chest_dots": true,
+    "lock": 0.25,
+    "lights_off": [
+     [
+      10.44,
+      1
+     ],
+     [
+      12.5,
+      0
+     ]
+    ],
+    "glow_flare": [
+     9.0
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.98,
+      1.12,
+      0.02
+     ],
+     "look": [
+      -0.5,
+      1.05,
+      -0.12
+     ],
+     "fov": 34,
+     "shake": 0.1
+    },
+    {
+     "at": 1.38,
+     "pos": [
+      -0.98,
+      1.12,
+      0.02
+     ],
+     "look": [
+      -0.5,
+      1.05,
+      -0.12
+     ],
+     "fov": 34,
+     "shake": 0.1
+    },
+    {
+     "at": 1.5,
+     "pos": [
+      -0.88,
+      1.1,
+      0.02
+     ],
+     "look": [
+      -0.6,
+      1.05,
+      -0.25
+     ],
+     "fov": 34,
+     "shake": 0.6,
+     "ease": "out"
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.5,
+      1.12,
+      0.02
+     ],
+     "look": [
+      -1.2,
+      1.05,
+      -0.2
+     ],
+     "fov": 34,
+     "shake": 0.15
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "sitting-idle",
+     "pos": [
+      -0.5,
+      0,
+      -0.05
+     ],
+     "rotY": "lens"
+    },
+    {
+     "at": 0.75,
+     "clip": "female-crouch-pose",
+     "pos": [
+      -0.8,
+      0.35,
+      0.25
+     ],
+     "move": 0.6,
+     "rotY": "lens"
+    },
+    {
+     "at": 1.45,
+     "clip": "sitting-idle",
+     "pos": [
+      -0.98,
+      0,
+      -0.05
+     ],
+     "move": 0.4,
+     "rotY": 180
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": {
+    "gain": 0.8
    }
   },
   {
@@ -141,7 +631,105 @@
     "does": "clip gestures-pack-basic-being-cocky (seated mix 0.5) -> she pats HER window-seat cushion (sitting-talking); 'hehe. thanks for warming it up.' (12.53-14.91)",
     "type": "-",
     "why": "payoff: the seat changed owner, her friend agrees"
-   }
+   },
+   "opts": {
+    "pair": true,
+    "glass": true,
+    "grade": "closing",
+    "chest_dots": true,
+    "lock": 0.25,
+    "lights_off": [
+     [
+      10.44,
+      1
+     ],
+     [
+      12.5,
+      0
+     ]
+    ],
+    "glow_flare": [
+     9.0
+    ],
+    "salmon": {
+     "from": [
+      -1.6,
+      1.25,
+      -2.4
+     ],
+     "pos": [
+      -1.45,
+      1.22,
+      -0.35
+     ],
+     "at": 13.35,
+     "dur_s": 0.5,
+     "scale": 1.3,
+     "yaw": 0.0,
+     "press_at": 13.9
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.5,
+      1.12,
+      0.02
+     ],
+     "look": [
+      -0.98,
+      1.05,
+      -0.12
+     ],
+     "fov": 34,
+     "shake": 0.15
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.595,
+      1.106,
+      -0.008
+     ],
+     "look": [
+      -0.98,
+      1.05,
+      -0.12
+     ],
+     "fov": 34,
+     "shake": 0.15
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "sitting-laughing",
+     "pos": [
+      -0.98,
+      0,
+      -0.05
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.7
+     }
+    },
+    {
+     "at": 1.15,
+     "clip": "sitting-talking",
+     "pos": [
+      -0.98,
+      0,
+      -0.05
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.5
+     }
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p7",
@@ -153,7 +741,113 @@
     "does": "clip pointing-forward, smug; 'window or aisle? choose wisely.' (15.27-17.96)",
     "type": "CTA stamp 'window or aisle? choose wisely.' 15.24-18.69 (3.45 s)",
     "why": "a pick-one question: everybody has an answer"
-   }
+   },
+   "opts": {
+    "pair": true,
+    "glass": true,
+    "grade": "closing",
+    "chest_dots": true,
+    "lock": 0.25,
+    "lights_off": [
+     [
+      10.44,
+      1
+     ],
+     [
+      12.5,
+      0
+     ]
+    ],
+    "glow_flare": [
+     9.0
+    ],
+    "salmon": {
+     "pos": [
+      -1.45,
+      1.22,
+      -0.35
+     ],
+     "scale": 1.3,
+     "yaw": 0.0
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.595,
+      1.106,
+      -0.008
+     ],
+     "look": [
+      -0.98,
+      1.05,
+      -0.12
+     ],
+     "fov": 32,
+     "shake": 0.15
+    },
+    {
+     "at": 2.05,
+     "pos": [
+      -0.671,
+      1.095,
+      -0.03
+     ],
+     "look": [
+      -0.98,
+      1.05,
+      -0.12
+     ],
+     "fov": 32,
+     "shake": 0.15
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.671,
+      1.095,
+      -0.03
+     ],
+     "look": [
+      -1.31,
+      1.25,
+      0.6
+     ],
+     "fov": 32,
+     "shake": 0.4,
+     "ease": "in"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "sitting-and-pointing",
+     "pos": [
+      -0.98,
+      0,
+      -0.05
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.5
+     }
+    },
+    {
+     "at": 1.4,
+     "clip": "sitting-thumbs-up",
+     "pos": [
+      -0.98,
+      0,
+      -0.05
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.6
+     }
+    }
+   ],
+   "outline": 0.0035
   }
  ]
 }

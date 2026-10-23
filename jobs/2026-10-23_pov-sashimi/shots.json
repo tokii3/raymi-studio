@@ -82,7 +82,108 @@
     "does": "pose eat_freeze (chopsticks + slice in her right hand) held to 0.6 s, then her ears droop and the slice wobbles on the chopsticks; 'this is not what it looks like.' (0.24-1.79)",
     "type": "hook stamp 'this is not what it looks like.' top band 0-2.2 s",
     "why": "caught in the act + who the victim is, in one frame"
-   }
+   },
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0.0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "chest_dots": true,
+    "glow_flare": [
+     7.72
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.83,
+      1.5,
+      1.19
+     ],
+     "look": [
+      0.55,
+      1.05,
+      -0.6
+     ],
+     "fov": 10,
+     "shake": 0.1
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sit_eat",
+     "clip": "sitting-idle",
+     "motionMix": 0.25,
+     "pos": [
+      0.55,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "surprised": 0.9
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    },
+    {
+     "at": 0.6,
+     "pose": "sit_eat",
+     "clip": "sitting-idle",
+     "motionMix": 0.25,
+     "pos": [
+      0.55,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "surprised": 0.5,
+      "sorrow": 0.4
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p2",
@@ -94,7 +195,101 @@
     "does": "pose offer (arm toward the lens with the chopsticks), nervous smile; 'it's purple sweet potato.' (2.32-3.78)",
     "type": "-",
     "why": "the evidence, big, while she lies about it"
-   }
+   },
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0.0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "chest_dots": true,
+    "glow_flare": [
+     7.72
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.83,
+      1.5,
+      1.19
+     ],
+     "look": [
+      0.55,
+      1.05,
+      -0.6
+     ],
+     "fov": 13,
+     "shake": 0.1
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.716,
+      1.46,
+      1.031
+     ],
+     "look": [
+      0.55,
+      1.05,
+      -0.6
+     ],
+     "fov": 13,
+     "shake": 0.1
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sit_offer",
+     "clip": "sitting-talking",
+     "motionMix": 0.3,
+     "pos": [
+      0.55,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.4
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p3",
@@ -106,7 +301,126 @@
     "does": "pose offer, closer; sweat icon; 'very orange purple sweet potato.' (4.48-6.47)",
     "type": "-",
     "why": "the lie gets worse"
-   }
+   },
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0.0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "chest_dots": true,
+    "glow_flare": [
+     7.72
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.716,
+      1.46,
+      1.031
+     ],
+     "look": [
+      0.55,
+      1.05,
+      -0.6
+     ],
+     "fov": 11,
+     "shake": 0.15,
+     "roll": -5
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.773,
+      1.48,
+      1.11
+     ],
+     "look": [
+      0.55,
+      1.05,
+      -0.6
+     ],
+     "fov": 11,
+     "shake": 0.15,
+     "roll": -6
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sit_offer",
+     "clip": "sitting-talking",
+     "motionMix": 0.3,
+     "pos": [
+      0.55,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.5
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ],
+     "icon": "sweat"
+    },
+    {
+     "at": 0.4,
+     "pose": "sit_offer",
+     "clip": "sitting-talking",
+     "motionMix": 0.3,
+     "pos": [
+      0.6198001572453197,
+      0.0,
+      -0.5023888426022483
+     ],
+     "move": 0.3,
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.7
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p4",
@@ -118,7 +432,127 @@
     "does": "clip look-over-shoulder; 'oh no. my best friend.' (7.89-9.46)",
     "type": "-",
     "why": "the victim arrives"
-   }
+   },
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0.0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "chest_dots": true,
+    "glow_flare": [
+     7.72
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ],
+    "salmon": {
+     "from": [
+      -2.4,
+      1.6,
+      -3.95
+     ],
+     "pos": [
+      -1.68,
+      1.8,
+      -3.78
+     ],
+     "at": 7.4,
+     "dur_s": 0.3,
+     "scale": 1.2,
+     "yaw": -1.17,
+     "press_at": 7.72
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      2.13,
+      1.5,
+      1.69
+     ],
+     "look": [
+      -0.4,
+      1.3,
+      -2.0
+     ],
+     "fov": 20,
+     "shake": 0.1
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sit_eat",
+     "clip": "sitting-idle",
+     "motionMix": 0.25,
+     "pos": [
+      0.55,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "fun": 0.3
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    },
+    {
+     "at": 0.45,
+     "clip": "sitting-talking",
+     "pos": [
+      0.55,
+      0,
+      -0.6
+     ],
+     "rotY": -140,
+     "look": [
+      -1.68,
+      1.8,
+      -3.78
+     ],
+     "expr": {
+      "surprised": 0.8
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p5",
@@ -130,7 +564,116 @@
     "does": "clip joyful-jump (short) -> act flatten over the plate + waving; 'nothing here! just rice!' (9.52-11.80)",
     "type": "-",
     "why": "a hiding move only a ray can do"
-   }
+   },
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0.0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "chest_dots": true,
+    "glow_flare": [
+     7.72
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ],
+    "salmon": {
+     "pos": [
+      -1.68,
+      1.8,
+      -3.78
+     ],
+     "scale": 1.2,
+     "yaw": -1.17,
+     "press_at": 0.0
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.98,
+      1.45,
+      1.54
+     ],
+     "look": [
+      0.3,
+      0.8,
+      -0.8
+     ],
+     "fov": 20,
+     "shake": 0.15
+    },
+    {
+     "at": 0.2,
+     "pos": [
+      2.13,
+      1.45,
+      1.69
+     ],
+     "look": [
+      0.3,
+      0.8,
+      -0.8
+     ],
+     "fov": 20,
+     "shake": 0.35,
+     "ease": "out"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "waving",
+     "pos": [
+      0.3,
+      0.3,
+      -0.5
+     ],
+     "rotY": -120,
+     "look": [
+      -1.68,
+      1.8,
+      -3.78
+     ],
+     "act": "flatten",
+     "expr": {
+      "joy": 0.9
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p6",
@@ -142,7 +685,127 @@
     "does": "pose shh after a reach; 'you saw nothing.' (12.06-13.12)",
     "type": "-",
     "why": "you are her accomplice now"
-   }
+   },
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0.0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "chest_dots": true,
+    "glow_flare": [
+     7.72
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.83,
+      1.5,
+      1.19
+     ],
+     "look": [
+      1.3,
+      1.35,
+      0.4
+     ],
+     "fov": 22,
+     "shake": 0.2
+    },
+    {
+     "at": 0.05,
+     "pos": [
+      1.61,
+      1.438,
+      0.862
+     ],
+     "look": [
+      1.3,
+      1.35,
+      0.4
+     ],
+     "fov": 22,
+     "shake": 0.6,
+     "ease": "snap"
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.61,
+      1.438,
+      0.862
+     ],
+     "look": [
+      1.3,
+      1.35,
+      0.4
+     ],
+     "fov": 22,
+     "shake": 0.2
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "shh",
+     "clip": "idle",
+     "motionMix": 0.3,
+     "pos": [
+      1.25,
+      0,
+      0.35
+     ],
+     "rotY": "lens",
+     "expr": {
+      "fun": 0.5
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "pov_hand",
+     "at": 0,
+     "to": 0.3,
+     "pose": "open",
+     "x": 0.5,
+     "y": 0.75
+    }
+   ]
   },
   {
    "id": "p7",
@@ -154,7 +817,117 @@
     "does": "pose eat_freeze returning over 1.2 s; 'should i tell him?' (13.47-14.30)",
     "type": "CTA stamp 'should i tell him? yes / no' 13.44-16.71 (3.27 s)",
     "why": "yes / no is the lowest-effort comment; the sneak keeps the joke going"
-   }
+   },
+   "opts": {
+    "window_view": true,
+    "lamp_at": 0.0,
+    "dark": 0.9,
+    "lit": 0.2,
+    "chest_dots": true,
+    "glow_flare": [
+     7.72
+    ],
+    "things": [
+     {
+      "kind": "plate_sashimi",
+      "pos": [
+       0.25,
+       0.49,
+       -0.45
+      ],
+      "rot": [
+       0,
+       0.4,
+       0
+      ]
+     },
+     {
+      "kind": "bff_drawing",
+      "pos": [
+       0.88,
+       0.63,
+       -0.85
+      ],
+      "rot": [
+       0,
+       0.45,
+       0
+      ]
+     }
+    ],
+    "salmon": {
+     "pos": [
+      -1.68,
+      1.8,
+      -3.78
+     ],
+     "scale": 1.2,
+     "yaw": -0.6
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.83,
+      1.5,
+      1.19
+     ],
+     "look": [
+      0.55,
+      1.05,
+      -0.6
+     ],
+     "fov": 10,
+     "shake": 0.1
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sit_offer",
+     "clip": "sitting-idle",
+     "motionMix": 0.25,
+     "pos": [
+      0.55,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "fun": 0.5
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    },
+    {
+     "at": 1.4,
+     "pose": "sit_eat",
+     "clip": "sitting-idle",
+     "motionMix": 0.25,
+     "pos": [
+      0.55,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "blend": 1.2,
+     "expr": {
+      "surprised": 0.9
+     },
+     "props": [
+      {
+       "item": "chopsticks_slice",
+       "at": "hand_r"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035
   }
  ]
 }

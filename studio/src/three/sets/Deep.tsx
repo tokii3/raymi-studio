@@ -33,6 +33,7 @@ import {Bubbles, Ground, RBox, Rock} from '../parts';
 import {SetLight, blobTexture, canvasTexture, rnd, toon} from '../look';
 import {Fires, Flame, Sparks, add, glowTex} from '../fire';
 import {DeepLife} from '../creatures';
+import {Things} from '../routine';
 import {flare, frames} from '../events';
 import type {SetProps} from './index';
 
@@ -525,6 +526,7 @@ export const Deep: React.FC<SetProps> = ({f, fps, opts, beats, camPos}) => {
       <Fires list={o.fires} f={f} bend={cur} dir={cdir} kill={live} />
       <Sparks list={o.sparks} f={f} />
       <DeepLife opts={o} f={f} fps={fps} camPos={camPos} />
+      <Things list={o.things} f={f} />
     </group>
   );
 };

@@ -83,7 +83,128 @@
     "does": "clip joyful-jump from its landing key -> pose ta_da; 'rate my halloween costume.' (0.19-1.79)",
     "type": "hook stamp 'rate my halloween costume.' top band 0-2.4 s",
     "why": "costume reveal at frame 0"
-   }
+   },
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "chest_dots": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.42,
+      0.7
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 14,
+     "shake": 0.35
+    },
+    {
+     "at": 0.1,
+     "pos": [
+      0.3,
+      1.42,
+      0.7
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 14,
+     "shake": 0.15
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "ta_da",
+     "clip": "idle",
+     "motionMix": 0.25,
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "act": "pop",
+     "expr": {
+      "joy": 0.9
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p2",
@@ -95,7 +216,126 @@
     "does": "clip catwalk-walk-stop-twist-r; 'i'm going as my best friend.' (3.14-4.74)",
     "type": "-",
     "why": "the costume walk"
-   }
+   },
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "chest_dots": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.42,
+      0.7
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 14,
+     "shake": 0.15
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.3,
+      1.3,
+      1.6
+     ],
+     "look": [
+      0.3,
+      0.9,
+      -0.6
+     ],
+     "fov": 22,
+     "shake": 0.15,
+     "ease": "out"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "catwalk-walk-stop-twist-r",
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.8
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p3",
@@ -107,7 +347,259 @@
     "does": "pose keys fins_up / fins_down on 5.69 and 6.53; proud; 'the fins are real. kind of.' (4.84-7.26)",
     "type": "-",
     "why": "confidence is cute"
-   }
+   },
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "chest_dots": true
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      1.35,
+      1.0
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 18,
+     "shake": 0.15
+    },
+    {
+     "at": 0.85,
+     "pos": [
+      0.3,
+      1.35,
+      1.2
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 18,
+     "shake": 0.45,
+     "ease": "out"
+    },
+    {
+     "at": 1.69,
+     "pos": [
+      0.3,
+      1.35,
+      1.35
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 18,
+     "shake": 0.45,
+     "ease": "out"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "fins_down",
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.7
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    },
+    {
+     "at": 0.4,
+     "pose": "fins_up",
+     "pos": [
+      0.3,
+      0.0,
+      -0.3
+     ],
+     "move": 0.4,
+     "rotY": "lens",
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    },
+    {
+     "at": 0.88,
+     "pose": "fins_down",
+     "pos": [
+      0.3,
+      0.0,
+      -0.09999999999999998
+     ],
+     "move": 0.4,
+     "rotY": "lens",
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    },
+    {
+     "at": 1.3,
+     "pose": "fins_up",
+     "pos": [
+      0.3,
+      0.0,
+      -0.09999999999999998
+     ],
+     "rotY": "lens",
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    },
+    {
+     "at": 1.72,
+     "pose": "fins_down",
+     "pos": [
+      0.3,
+      0.0,
+      -0.09999999999999998
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.9
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p4",
@@ -119,7 +611,148 @@
     "does": "she turns (look-over-shoulder); 'wait. is that me?' (8.04-9.79)",
     "type": "-",
     "why": "the twist: her friend as HER"
-   }
+   },
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "chest_dots": true,
+    "salmon": {
+     "from": [
+      3.5,
+      1.3,
+      -1.6
+     ],
+     "pos": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "at": 8.2,
+     "dur_s": 0.9,
+     "scale": 1.6,
+     "costume": "raymi",
+     "yaw": 3.14
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.1,
+      1.35,
+      1.4
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 24,
+     "shake": 0.15
+    },
+    {
+     "at": 0.6,
+     "pos": [
+      0.1,
+      1.35,
+      1.4
+     ],
+     "look": [
+      1.2,
+      1.1,
+      -0.6
+     ],
+     "fov": 30,
+     "shake": 0.2,
+     "path": "spline"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "look-over-shoulder",
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "rotY": 60,
+     "look": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "expr": {
+      "surprised": 0.8
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p5",
@@ -131,7 +764,174 @@
     "does": "she glares at him (look at the salmon); 'he copied me.' (9.92-10.79)",
     "type": "-",
     "why": "a stare-down"
-   }
+   },
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "chest_dots": true,
+    "salmon": {
+     "pos": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "scale": 1.6,
+     "costume": "raymi",
+     "yaw": 3.14
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.8,
+      1.3,
+      1.0
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 22,
+     "shake": 0.2,
+     "roll": -8
+    },
+    {
+     "at": 0.06,
+     "pos": [
+      0.8,
+      1.3,
+      1.0
+     ],
+     "look": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "fov": 22,
+     "shake": 0.3,
+     "ease": "snap"
+    },
+    {
+     "at": 0.85,
+     "pos": [
+      0.8,
+      1.3,
+      1.0
+     ],
+     "look": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "fov": 22,
+     "shake": 0.2
+    },
+    {
+     "at": 0.9,
+     "pos": [
+      0.8,
+      1.3,
+      1.0
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 22,
+     "shake": 0.3,
+     "ease": "snap",
+     "roll": 8
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "angry",
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "rotY": 70,
+     "look": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "expr": {
+      "angry": 0.7
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p6",
@@ -143,7 +943,159 @@
     "does": "clip shrugging -> gestures-pack-basic-happy-hand-gesture; 'fine. couples costume.' (11.62-13.85)",
     "type": "the polaroid's white border is the frame (a real object)",
     "why": "best friends; you made the photo"
-   }
+   },
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "chest_dots": true,
+    "salmon": {
+     "pos": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "scale": 1.6,
+     "costume": "raymi",
+     "yaw": 2.6
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.8,
+      1.3,
+      1.6
+     ],
+     "look": [
+      0.8,
+      1.0,
+      -0.55
+     ],
+     "fov": 24,
+     "shake": 0.15
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "shrugging",
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "fun": 0.6
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    },
+    {
+     "at": 0.9,
+     "clip": "gestures-pack-basic-happy-hand-gesture",
+     "pos": [
+      0.75,
+      0,
+      -0.6
+     ],
+     "move": 0.4,
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.9
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "polaroid",
+     "at": 1.72,
+     "to": "end"
+    }
+   ]
   },
   {
    "id": "p7",
@@ -155,7 +1107,192 @@
     "does": "pose point-to-self; 'who wore it better?' (14.16-14.91); clip joyful-jump at 15.86 -> ta_da",
     "type": "CTA stamp 'who wore it better?' 14.13-16.70 (2.57 s)",
     "why": "a pick-one between two costumes: everyone votes"
-   }
+   },
+   "opts": {
+    "vents": false,
+    "smoke": false,
+    "snow": 0.5,
+    "dip": true,
+    "things": [
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.9,
+       0,
+       -1.3
+      ],
+      "rot": [
+       0,
+       0.5,
+       0
+      ],
+      "scale": 1.6
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       1.6,
+       0,
+       -1.6
+      ],
+      "rot": [
+       0,
+       -0.5,
+       0
+      ],
+      "scale": 1.3
+     },
+     {
+      "kind": "pumpkin",
+      "pos": [
+       -0.4,
+       0,
+       0.3
+      ],
+      "rot": [
+       0,
+       0.2,
+       0
+      ],
+      "scale": 0.9,
+      "light": false
+     }
+    ],
+    "chest_dots": true,
+    "salmon": {
+     "pos": [
+      1.3,
+      1.05,
+      -0.5
+     ],
+     "scale": 1.6,
+     "costume": "raymi",
+     "yaw": 2.6
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.8,
+      1.3,
+      1.6
+     ],
+     "look": [
+      0.8,
+      1.0,
+      -0.55
+     ],
+     "fov": 24
+    },
+    {
+     "at": 1.69,
+     "pos": [
+      0.8,
+      1.3,
+      1.6
+     ],
+     "look": [
+      0.8,
+      1.0,
+      -0.55
+     ],
+     "fov": 24
+    },
+    {
+     "at": 1.72,
+     "pos": [
+      0.3,
+      1.42,
+      0.7
+     ],
+     "look": [
+      0.3,
+      1.38,
+      -0.6
+     ],
+     "fov": 14,
+     "ease": "snap"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "point_self",
+     "clip": "idle",
+     "motionMix": 0.2,
+     "pos": [
+      0.75,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.9
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    },
+    {
+     "at": 1.72,
+     "pose": "ta_da",
+     "clip": "idle",
+     "motionMix": 0.25,
+     "pos": [
+      0.3,
+      0,
+      -0.6
+     ],
+     "rotY": "lens",
+     "act": "pop",
+     "expr": {
+      "joy": 0.9
+     },
+     "props": [
+      {
+       "item": "salmon_hood",
+       "at": "head"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_l"
+      },
+      {
+       "item": "salmon_fin",
+       "at": "forearm_r"
+      },
+      {
+       "item": "salmon_tail",
+       "at": "hips"
+      }
+     ]
+    }
+   ],
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "polaroid",
+     "at": 0,
+     "to": 1.72,
+     "flash": false
+    }
+   ]
   }
  ]
 }

@@ -77,7 +77,105 @@
     "does": "clip gestures-pack-basic-hard-head-nod over pose lean, confident; 'rain tomorrow. one hundred percent.' (0.14-3.01)",
     "type": "hook stamp 'rain tomorrow. 100%.' top band 0-3.1 s (digits on screen only, never in the voice)",
     "why": "a bold call in your face: personal_fact hook"
-   }
+   },
+   "opts": {
+    "map": "japan",
+    "ticker": "RAIN RECORD: 3 RIGHT / 10",
+    "podium": true,
+    "chest_dots": true,
+    "rain_at": 10.21,
+    "live": [
+     [
+      0,
+      1
+     ],
+     [
+      3.79,
+      2
+     ],
+     [
+      5.94,
+      1
+     ],
+     [
+      8.12,
+      3
+     ],
+     [
+      12.48,
+      1
+     ]
+    ],
+    "glow_flare": [
+     2.4
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      1.45,
+      4.0
+     ],
+     "look": [
+      0.6,
+      1.42,
+      -1.2
+     ],
+     "fov": 3.4,
+     "shake": 0.05
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.41,
+      1.449,
+      3.75
+     ],
+     "look": [
+      0.6,
+      1.42,
+      -1.2
+     ],
+     "fov": 3.4,
+     "shake": 0.05
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "lean_in",
+     "clip": "gestures-pack-basic-hard-head-nod",
+     "motionMix": 0.5,
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.4
+     }
+    },
+    {
+     "at": 2.3,
+     "pose": "lean_in",
+     "clip": "gestures-pack-basic-hard-head-nod",
+     "motionMix": 0.5,
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.7
+     },
+     "icon": "sparkle"
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p2",
@@ -89,7 +187,86 @@
     "does": "clip pointing toward the ticker, sweat on 'three'; 'my record is three out of ten.' (3.79-5.60)",
     "type": "the ticker (the set's own type): 'RAIN RECORD: 3 RIGHT / 10'",
     "why": "the counter = the series' stakes"
-   }
+   },
+   "opts": {
+    "map": "japan",
+    "ticker": "RAIN RECORD: 3 RIGHT / 10",
+    "podium": true,
+    "chest_dots": true,
+    "rain_at": 10.21,
+    "live": [
+     [
+      0,
+      1
+     ],
+     [
+      3.79,
+      2
+     ],
+     [
+      5.94,
+      1
+     ],
+     [
+      8.12,
+      3
+     ],
+     [
+      12.48,
+      1
+     ]
+    ],
+    "glow_flare": [
+     2.4
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      3.5,
+      1.6,
+      3.3
+     ],
+     "look": [
+      0.0,
+      1.3,
+      -1.6
+     ],
+     "fov": 30,
+     "shake": 0.03
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pointing",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    },
+    {
+     "at": 0.85,
+     "clip": "pointing",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "sorrow": 0.3
+     },
+     "icon": "sweat"
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p3",
@@ -101,7 +278,88 @@
     "does": "clip gestures-pack-basic-being-cocky; 'that's basically a streak.' (5.97-7.37)",
     "type": "-",
     "why": "confidence is cute: 30 % called a streak"
-   }
+   },
+   "opts": {
+    "map": "japan",
+    "ticker": "RAIN RECORD: 3 RIGHT / 10",
+    "podium": true,
+    "chest_dots": true,
+    "rain_at": 10.21,
+    "live": [
+     [
+      0,
+      1
+     ],
+     [
+      3.79,
+      2
+     ],
+     [
+      5.94,
+      1
+     ],
+     [
+      8.12,
+      3
+     ],
+     [
+      12.48,
+      1
+     ]
+    ],
+    "glow_flare": [
+     2.4
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      1.45,
+      4.0
+     ],
+     "look": [
+      0.6,
+      1.42,
+      -1.2
+     ],
+     "fov": 4.8,
+     "shake": 0.05
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.408,
+      1.449,
+      3.8
+     ],
+     "look": [
+      0.6,
+      1.42,
+      -1.2
+     ],
+     "fov": 4.8,
+     "shake": 0.05
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "gestures-pack-basic-being-cocky",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.8
+     },
+     "icon": "sparkle"
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p4",
@@ -113,7 +371,144 @@
     "does": "clip pro-magic-standing-1h-cast-spell-01 (the slap) -> hard-head-nod; 'tomorrow in tokyo. rain. trust me.' ('rain.' 10.33 on the beat, ends 12.13)",
     "type": "the map: 'TOKYO' label + '100%' on the cloud",
     "why": "the bet becomes concrete and checkable"
-   }
+   },
+   "opts": {
+    "map": "japan",
+    "ticker": "RAIN RECORD: 3 RIGHT / 10",
+    "podium": true,
+    "chest_dots": true,
+    "rain_at": 10.21,
+    "live": [
+     [
+      0,
+      1
+     ],
+     [
+      3.79,
+      2
+     ],
+     [
+      5.94,
+      1
+     ],
+     [
+      8.12,
+      3
+     ],
+     [
+      12.48,
+      1
+     ]
+    ],
+    "glow_flare": [
+     2.4
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.2,
+      1.55,
+      0.9
+     ],
+     "look": [
+      1.0,
+      1.55,
+      -2.9
+     ],
+     "fov": 30,
+     "shake": 0.03
+    },
+    {
+     "at": 2.05,
+     "pos": [
+      -0.2,
+      1.55,
+      0.9
+     ],
+     "look": [
+      1.0,
+      1.55,
+      -2.9
+     ],
+     "fov": 30,
+     "shake": 0.03
+    },
+    {
+     "at": 2.12,
+     "pos": [
+      -0.2,
+      1.55,
+      0.9
+     ],
+     "look": [
+      1.0,
+      1.52,
+      -2.9
+     ],
+     "fov": 30,
+     "shake": 0.5,
+     "ease": "out"
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.2,
+      1.55,
+      0.9
+     ],
+     "look": [
+      1.1,
+      1.45,
+      -2.6
+     ],
+     "fov": 30,
+     "shake": 0.05
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pointing-gesture",
+     "pos": [
+      1.25,
+      0,
+      -2.45
+     ],
+     "rotY": -160,
+     "expr": {
+      "joy": 0.4
+     }
+    },
+    {
+     "at": 1.7,
+     "clip": "pro-magic-standing-1h-cast-spell-01",
+     "pos": [
+      1.25,
+      0,
+      -2.45
+     ],
+     "rotY": -170,
+     "expr": {
+      "joy": 0.6
+     }
+    },
+    {
+     "at": 3.2,
+     "clip": "gestures-pack-basic-hard-head-nod",
+     "pos": [
+      1.25,
+      0,
+      -2.45
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.7
+     }
+    }
+   ],
+   "outline": 0.0035
   },
   {
    "id": "p5",
@@ -125,6 +520,117 @@
     "does": "clip leaning -> act flatten (y-scale to 0.12 over 6 frames) + drop 0.9 m (14.3-14.6); 'and if i'm wrong, you never saw this.' (12.52-14.68)",
     "type": "-",
     "why": "she hides from YOU with her own body: a ray flattening out of sight"
+   },
+   "opts": {
+    "map": "japan",
+    "ticker": "RAIN RECORD: 3 RIGHT / 10",
+    "podium": true,
+    "chest_dots": true,
+    "rain_at": 10.21,
+    "live": [
+     [
+      0,
+      1
+     ],
+     [
+      3.79,
+      2
+     ],
+     [
+      5.94,
+      1
+     ],
+     [
+      8.12,
+      3
+     ],
+     [
+      12.48,
+      1
+     ]
+    ],
+    "glow_flare": [
+     2.4
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      1.45,
+      4.0
+     ],
+     "look": [
+      0.6,
+      1.42,
+      -1.2
+     ],
+     "fov": 3.4,
+     "shake": 0.04
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.4,
+      1.45,
+      4.0
+     ],
+     "look": [
+      0.6,
+      1.3,
+      -1.2
+     ],
+     "fov": 3.4,
+     "shake": 0.04
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "lean_in",
+     "clip": "idle",
+     "motionMix": 0.3,
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "fun": 0.6
+     }
+    },
+    {
+     "at": 1.75,
+     "pose": "lean_in",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "act": "flatten",
+     "expr": {
+      "joy": 0.4
+     }
+    },
+    {
+     "at": 1.95,
+     "pose": "lean_in",
+     "pos": [
+      0.6,
+      -1.3,
+      -1.2
+     ],
+     "move": 0.2,
+     "rotY": "lens",
+     "act": "flatten"
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": {
+    "gain": 0.7
    }
   },
   {
@@ -137,7 +643,101 @@
     "does": "act pop from below; clip hard-head-nod; 'right or wrong? bet in the comments.' (15.24-18.10)",
     "type": "CTA stamp 'right or wrong? bet in the comments.' 15.21-18.52 (3.31 s); ticker stays 'RAIN RECORD: 3 RIGHT / 10'",
     "why": "the bet is the easiest comment, and a reason to come back tomorrow (result in the pinned comment)"
-   }
+   },
+   "opts": {
+    "map": "japan",
+    "ticker": "RAIN RECORD: 3 RIGHT / 10      BET #11: PENDING",
+    "podium": true,
+    "chest_dots": true,
+    "rain_at": 10.21,
+    "live": [
+     [
+      0,
+      1
+     ],
+     [
+      3.79,
+      2
+     ],
+     [
+      5.94,
+      1
+     ],
+     [
+      8.12,
+      3
+     ],
+     [
+      12.48,
+      1
+     ]
+    ],
+    "glow_flare": [
+     2.4
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      1.45,
+      4.0
+     ],
+     "look": [
+      0.6,
+      1.42,
+      -1.2
+     ],
+     "fov": 3.4,
+     "shake": 0.05
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "lean_in",
+     "pos": [
+      0.6,
+      -1.4,
+      -1.2
+     ],
+     "rotY": "lens"
+    },
+    {
+     "at": 0.57,
+     "pose": "lean_in",
+     "clip": "gestures-pack-basic-hard-head-nod",
+     "motionMix": 0.5,
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "move": 0.15,
+     "rotY": "lens",
+     "act": "pop",
+     "expr": {
+      "joy": 0.6
+     }
+    },
+    {
+     "at": 2.2,
+     "pose": "lean_in",
+     "clip": "gestures-pack-basic-hard-head-nod",
+     "motionMix": 0.5,
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.4
+     }
+    }
+   ],
+   "outline": 0.0035
   }
  ]
 }
