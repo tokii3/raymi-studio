@@ -530,9 +530,9 @@ function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: s
     // a 1.55 m figure: the row sits ~11 cm in front of the bone, a little below it (her breastbone)
     const yaw = rig.root.rotation.y;                     // her facing in the world, not the bone's own axes
     const fwd = new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw)), side = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw));
-    const k = (s * rig.natural) / 1.55;                  // her size against the 1.55 m the offsets were measured on
-    const p = bone.getWorldPosition(new THREE.Vector3()).addScaledVector(fwd, 0.105 * k)
-      .addScaledVector(side, x * k).add(new THREE.Vector3(0, -0.045 * k, 0));
+    const sz = (s * rig.natural) / 1.55;                 // her size against the 1.55 m the offsets were measured on
+    const p = bone.getWorldPosition(new THREE.Vector3()).addScaledVector(fwd, 0.105 * sz)
+      .addScaledVector(side, x * sz).add(new THREE.Vector3(0, -0.045 * sz, 0));
     const r = 0.0125 * (1 + 0.35 * flare) * (0.95 + 0.05 * Math.sin(f / 7 + i));
     return (
       <group key={`bat${i}`} position={[p.x, p.y, p.z]}>
