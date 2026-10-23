@@ -82,9 +82,9 @@ export const Dream: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       {/* HER SUN: one warm light shaft from the surface onto the pile (the forecast she was right about) */}
       <mesh position={[0, 12, -0.2]} renderOrder={3}>
         <cylinderGeometry args={[1.0, 2.2, 24, 32, 1, true]} />
-        <meshBasicMaterial color={new THREE.Color('#ffd9a0').lerp(new THREE.Color('#c9a6ff'), night)} transparent opacity={0.16} depthWrite={false} blending={THREE.AdditiveBlending} side={THREE.DoubleSide} toneMapped={false} />
+        <meshBasicMaterial color={new THREE.Color('#ffd9a0').lerp(new THREE.Color('#c9a6ff'), night)} transparent opacity={0.11} depthWrite={false} blending={THREE.AdditiveBlending} side={THREE.DoubleSide} toneMapped={false} />
       </mesh>
-      <spotLight position={[0, 14, -0.2]} target-position={[0, 0, -0.2]} angle={0.2} penumbra={0.6} intensity={(260 - 160 * night)} distance={40} decay={1.4}
+      <spotLight position={[0, 14, -0.2]} target-position={[0, 0, -0.2]} angle={0.2} penumbra={0.6} intensity={(170 - 100 * night)} distance={40} decay={1.4}
         color={new THREE.Color('#ffd9a0').lerp(new THREE.Color('#c9a6ff'), night)} castShadow shadow-mapSize-width={1024} shadow-mapSize-height={1024} shadow-bias={-0.0006} />
       {/* the surface far above: a bright rippling ceiling of light (where the shaft comes from) */}
       <mesh position={[0, 14, 0]} rotation={[Math.PI / 2, 0, 0]}><planeGeometry args={[90, 90]} />

@@ -426,7 +426,7 @@
    "opts": {
     "grade": "warm",
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -945,7 +945,7 @@
    "opts": {
     "grade": "warm",
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -3200,7 +3200,7 @@
    "opts": {
     "grade": "warm",
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -3333,7 +3333,7 @@
      ]
     ],
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -3594,7 +3594,7 @@
      "icon_at": 40.4
     },
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -7352,7 +7352,7 @@
    "opts": {
     "grade": "warm",
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -7556,7 +7556,7 @@
      }
     ],
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -8285,7 +8285,7 @@
      ]
     },
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -9587,7 +9587,7 @@
      ]
     },
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -9639,7 +9639,7 @@
    "opts": {
     "grade": "warm",
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -9722,7 +9722,7 @@
    "opts": {
     "grade": "warm",
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -9778,15 +9778,15 @@
     "grade": "warm",
     "salmon": {
      "pos": [
-      0.7,
-      0.25,
-      0.5
+      0.95,
+      0.6,
+      0.35
      ],
      "icon": "!",
      "icon_at": 141.4
     },
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -9866,7 +9866,7 @@
      "icon_at": 143
     },
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -9965,7 +9965,7 @@
    "opts": {
     "grade": "warm",
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -10094,7 +10094,7 @@
      }
     ],
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -10175,7 +10175,7 @@
     ],
     "night": 0.8,
     "post": {
-     "bloom": 0.8
+     "bloom": 0.45
     }
    },
    "camera": [
@@ -10236,7 +10236,7 @@
     "grade": "warm",
     "night": 0.9,
     "post": {
-     "bloom": 0.8,
+     "bloom": 0.45,
      "dof": 0.6
     },
     "things": [
@@ -10332,7 +10332,7 @@
      ]
     ],
     "post": {
-     "bloom": 1,
+     "bloom": 0.45,
      "dof": 1.2
     },
     "dome": true
