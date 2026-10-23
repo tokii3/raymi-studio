@@ -30,7 +30,7 @@
   },
   {
    "at": 12.02,
-   "text": "so you're cute too. that's the rule."
+   "text": "flat is cute. so are you."
   },
   {
    "at": 15.271,
@@ -107,7 +107,7 @@
     ],
     "post": {
      "bloom": 0.3,
-     "dof": 0.55,
+     "dof": 0.45,
      "dofRange": 0.35
     }
    },
@@ -115,13 +115,13 @@
     {
      "at": 0,
      "pos": [
-      0.08,
-      1.4,
-      0.36
+      0.06,
+      1.16,
+      0.42
      ],
      "look": [
       0,
-      0.99,
+      1.0,
       0.0
      ],
      "fov": 26,
@@ -130,13 +130,13 @@
     {
      "at": "end",
      "pos": [
-      0.06,
-      1.4,
-      0.3
+      0.05,
+      1.15,
+      0.36
      ],
      "look": [
       0,
-      0.99,
+      1.0,
       0.0
      ],
      "fov": 26,
@@ -262,7 +262,8 @@
      ],
      "rotY": 0,
      "expr": {
-      "sorrow": 0.3
+      "angry": 0.3,
+      "surprised": 0.3
      }
     }
    ],
@@ -308,7 +309,7 @@
     ],
     "post": {
      "bloom": 0.3,
-     "dof": 0.69,
+     "dof": 0.57,
      "dofRange": 0.35
     }
    },
@@ -317,12 +318,12 @@
      "at": 0,
      "pos": [
       0.2,
-      1.42,
+      1.18,
       0.5
      ],
      "look": [
       0,
-      0.99,
+      1.0,
       0.0
      ],
      "fov": 28,
@@ -331,13 +332,13 @@
     {
      "at": "end",
      "pos": [
-      0.05,
-      1.4,
-      0.28
+      0.04,
+      1.12,
+      0.27
      ],
      "look": [
       0,
-      0.99,
+      1.0,
       0.0
      ],
      "fov": 24,
@@ -420,7 +421,7 @@
     ],
     "post": {
      "bloom": 0.3,
-     "dof": 0.75,
+     "dof": 0.65,
      "dofRange": 0.35
     }
    },
@@ -429,12 +430,12 @@
      "at": 0,
      "pos": [
       0.0,
-      1.42,
+      1.2,
       0.62
      ],
      "look": [
       0,
-      0.99,
+      1.0,
       0.0
      ],
      "fov": 26,
@@ -444,12 +445,12 @@
      "at": 1.65,
      "pos": [
       0.0,
-      1.42,
+      1.2,
       0.62
      ],
      "look": [
       0,
-      0.99,
+      1.0,
       0.0
      ],
      "fov": 26,
@@ -490,12 +491,12 @@
      "at": 3.3,
      "pos": [
       0.0,
-      1.42,
+      1.2,
       0.62
      ],
      "look": [
       0,
-      0.99,
+      1.0,
       0.0
      ],
      "fov": 26,
@@ -593,7 +594,7 @@
     ],
     "post": {
      "bloom": 0.3,
-     "dof": 0.69,
+     "dof": 0.56,
      "dofRange": 0.35
     }
    },
@@ -602,12 +603,12 @@
      "at": 0,
      "pos": [
       0.3,
-      1.42,
+      1.16,
       0.45
      ],
      "look": [
       0,
-      0.99,
+      1.0,
       0.0
      ],
      "fov": 26,
@@ -616,13 +617,13 @@
     {
      "at": 2.33,
      "pos": [
-      0.3,
-      1.42,
-      0.45
+      0.26,
+      1.15,
+      0.4
      ],
      "look": [
       0,
-      0.99,
+      1.0,
       0.0
      ],
      "fov": 26,
@@ -631,13 +632,13 @@
     {
      "at": 2.45,
      "pos": [
-      0.3,
-      1.42,
-      0.45
+      0.26,
+      1.15,
+      0.4
      ],
      "look": [
       0,
-      0.99,
+      1.0,
       0.0
      ],
      "fov": 26,
@@ -676,8 +677,20 @@
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "a handheld lens-side angle: she reaches out and taps YOUR lens on 'rule' (the frame bumps)"
-   }
+    "see": "a handheld lens-side angle: she reaches out and taps YOUR lens on 'you' (the frame bumps, a ring spreads on the glass)"
+   },
+   "fx": [
+    {
+     "kind": "ripple",
+     "at": 2.2,
+     "to": "end",
+     "taps": [
+      14.435
+     ],
+     "x": 0.5,
+     "y": 0.5
+    }
+   ]
   },
   {
    "id": "p6",
@@ -716,7 +729,7 @@
     ],
     "post": {
      "bloom": 0.3,
-     "dof": 0.55,
+     "dof": 0.45,
      "dofRange": 0.35
     }
    },
@@ -724,32 +737,63 @@
     {
      "at": 0,
      "pos": [
-      0.08,
-      1.4,
-      0.36
+      0.06,
+      1.16,
+      0.42
      ],
      "look": [
       0,
-      0.99,
+      1.0,
       0.0
      ],
      "fov": 26,
      "shake": 0.05
     },
     {
-     "at": "end",
+     "at": 1.0,
      "pos": [
       0.06,
-      1.4,
-      0.3
+      1.16,
+      0.42
      ],
      "look": [
       0,
-      0.99,
+      1.0,
       0.0
      ],
      "fov": 26,
      "shake": 0.05
+    },
+    {
+     "at": 2.3,
+     "pos": [
+      0.03,
+      1.1,
+      0.25
+     ],
+     "look": [
+      0,
+      1.0,
+      0.0
+     ],
+     "fov": 24,
+     "shake": 0.08,
+     "ease": "out"
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.03,
+      1.1,
+      0.24
+     ],
+     "look": [
+      0,
+      1.0,
+      0.0
+     ],
+     "fov": 24,
+     "shake": 0.06
     }
    ],
    "actor": [
@@ -788,7 +832,7 @@
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "frame 0's low close-up again: she waits for your answer, and on 'go.' she leans in with a heart"
+    "see": "frame 0's close-up at her eyes again: on 'yourself' the lens pushes in to her face, and on 'go.' she pops with a heart"
    }
   }
  ]

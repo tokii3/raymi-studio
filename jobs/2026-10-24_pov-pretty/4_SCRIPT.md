@@ -11,13 +11,13 @@ the pose sheet, clips under a pose at mix <= 0.2, sitting = pose sit, grade pov,
 | 2 | 1.86-4.65 | office | over her shoulder onto the monitor: your chat line big on the screen, her hand reaching at it |
 | 3 | 4.65-7.90 | office | push to an ECU with a tilt: she turns back to you, offended for you, a '?' on 'who' |
 | 4 | 7.90-12.08 | office | the webcam, then the lens rises to a top-down over the desk: on 'flat' she goes FLAT in her chair like a ray on the sand (chime), on 'adorable' she pops back up with a sparkle and the lens snaps back |
-| 5 | 12.08-15.33 | office | a handheld lens-side angle: she reaches out and taps YOUR lens on 'rule' (the frame bumps) |
-| 6 | 15.33-18.61 | office | frame 0's low close-up again: she waits for your answer, and on 'go.' she leans in with a heart |
+| 5 | 12.08-15.33 | office | a handheld lens-side angle: she reaches out and taps YOUR lens on 'you' (the frame bumps, a ring spreads on the glass) |
+| 6 | 15.33-18.61 | office | frame 0's close-up at her eyes again: on 'yourself' the lens pushes in to her face, and on 'go.' she pops with a heart |
 
 ## Only Raymi
 - confidence is cute: she hypes chat up, never falsely modest (canon/01 2)
 - her proof is her ray body: on 'flat' she goes flat like a ray on the sand, on 'adorable' she pops back up
-- she makes a rule ('that's the rule') - her running 'rays have rules' bit
+- her ray logic as the argument: 'flat is cute. so are you.'
 
 ## Loop
 The last shot returns to frame 0's framing.
@@ -35,7 +35,7 @@ The last shot returns to frame 0's framing.
 | voice 'i read it. right there.' | 1.803 | words 1.90-3.89: 'i' 1.90, 'read' 2.07, 'it.' 2.32, 'right' 3.27, 'there.' 3.58 | yes |
 | voice 'excuse me. who told you that?' | 4.590 | words 4.68-7.10: 'excuse' 4.68, 'me.' 5.23, 'who' 6.21, 'told' 6.40, 'you' 6.68, 'that?' 6.80 | yes |
 | voice 'i'm a stingray. i'm flat. i'm adorable.' | 7.840 | words 7.93-11.86: 'i'm' 7.93, 'a' 8.15, 'stingray.' 8.22, 'i'm' 9.55, 'flat.' 9.78, 'i'm' 10.97, 'adorable.' 11.18 | yes |
-| voice 'so you're cute too. that's the rule.' | 12.020 | words 12.11-14.84: 'so' 12.11, 'you're' 12.37, 'cute' 12.59, 'too.' 12.93, 'that's' 13.99, 'the' 14.33, 'rule.' 14.46 | yes |
+| voice 'flat is cute. so are you.' | 12.020 | words 12.11-14.57: 'flat' 12.11, 'is' 12.50, 'cute.' 12.67, 'so' 13.80, 'are' 14.11, 'you.' 14.30 | yes |
 | voice 'one thing you like about yourself. go.' | 15.271 | words 15.36-18.14: 'one' 15.36, 'thing' 15.66, 'you' 15.87, 'like' 16.02, 'about' 16.23, 'yourself.' 16.50, 'go.' 17.80 | yes |
 | sfx pop | 1.896 | beat 1.896 (+0 ms) | yes |
 | sfx chime | 9.791 | beat 9.791 (+0 ms) | yes |

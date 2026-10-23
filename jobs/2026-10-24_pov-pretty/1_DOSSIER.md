@@ -10,7 +10,7 @@ You are the webcam on her stream monitor: she reads your comment 'i'm not cute l
 ## Why only Raymi
 - confidence is cute: she hypes chat up, never falsely modest (canon/01 2)
 - her proof is her ray body: on 'flat' she goes flat like a ray on the sand, on 'adorable' she pops back up
-- she makes a rule ('that's the rule') - her running 'rays have rules' bit
+- her ray logic as the argument: 'flat is cute. so are you.'
 
 ## Who it is for
 New viewers from the Shorts feed; the CTA asks for a two-word answer (comment fuel).

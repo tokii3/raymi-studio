@@ -76,7 +76,7 @@
    "set": "beach",
    "opts": {
     "grade": "pov",
-    "dusk": 0.35,
+    "dusk": 0.55,
     "post": {
      "bloom": 0.3,
      "dof": 2.1,
@@ -144,7 +144,7 @@
    "set": "beach",
    "opts": {
     "grade": "pov",
-    "dusk": 0.35,
+    "dusk": 0.55,
     "post": {
      "bloom": 0.3,
      "dof": 1.5,
@@ -207,7 +207,7 @@
    "set": "beach",
    "opts": {
     "grade": "pov",
-    "dusk": 0.35,
+    "dusk": 0.55,
     "post": {
      "bloom": 0.3,
      "dof": 1.65,
@@ -270,7 +270,7 @@
    "set": "beach",
    "opts": {
     "grade": "pov",
-    "dusk": 0.35,
+    "dusk": 0.55,
     "post": {
      "bloom": 0.3,
      "dof": 1.05,
@@ -335,7 +335,7 @@
    "set": "beach",
    "opts": {
     "grade": "pov",
-    "dusk": 0.35,
+    "dusk": 0.55,
     "dusk_to": [
      [
       11.004000000000001,
