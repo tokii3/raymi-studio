@@ -50,7 +50,7 @@ jobs:
           cache: pip
       - name: Tools
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          bash .github/ffmpeg.sh   # apt with a time limit, else a static build (never hangs the job)
           pip install -q -r requirements.txt
       # node for the main element's boxes (guard.mjs --hero-boxes needs esbuild + three): without it every film render
       # died in prepare (FIRESTARTER pilot 2026-10-19, ERR_MODULE_NOT_FOUND esbuild)
@@ -220,7 +220,7 @@ jobs:
           cache: pip
       - name: Tools
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          bash .github/ffmpeg.sh   # apt with a time limit, else a static build (never hangs the job)
           pip install -q -r requirements.txt
       - uses: actions/download-artifact@v4
         with:

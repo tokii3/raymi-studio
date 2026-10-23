@@ -43,7 +43,7 @@ jobs:
           node-version: "22"
       - name: Tools
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          bash .github/ffmpeg.sh   # apt with a time limit, else a static build (never hangs the job)
           pip install -q -r requirements.txt
       - name: Node modules (cached)
         id: nm

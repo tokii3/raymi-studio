@@ -32,7 +32,7 @@ jobs:
           node-version: "22"
       - name: Browser and media tools
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          bash .github/ffmpeg.sh   # apt with a time limit, else a static build (never hangs the job)
       - name: Node modules (cached)
         id: nm
         uses: actions/cache@v4
