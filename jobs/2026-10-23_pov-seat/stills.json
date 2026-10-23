@@ -1,1 +1,1 @@
-{"format": "short", "frames": [10, 100, 300, 420, 470], "names": ["thumb_short_S1", "thumb_short_S2", "thumb_short_S3", "thumb_short_S4", "thumb_short_S5"], "scale": 1, "to": "boards", "thumbs": true, "_why": "5 thumbnail candidates per Short (frames of the final) + the feed view"}
+{"format": "short", "frames": [10, 100, 180, 300, 420, 470], "names": ["check_01", "check_02", "check_03", "check_04", "check_05", "check_06"], "scale": 0.6, "to": "renders", "_why": "check with the fixes (mouth, hair, framing, exposure) before the final"}

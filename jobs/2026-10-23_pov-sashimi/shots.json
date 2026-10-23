@@ -87,7 +87,12 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.42,
+    "post": {
+     "bloom": 0.15,
+     "dof": 2.21,
+     "dofRange": 0.77
+    },
     "glow_flare": [
      7.72
     ],
@@ -119,12 +124,7 @@
       ]
      }
     ],
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3,
-     "dof": 2.21,
-     "dofRange": 0.77
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
@@ -136,7 +136,7 @@
      ],
      "look": [
       0.55,
-      1.05,
+      0.99,
       -0.6
      ],
      "fov": 10,
@@ -205,7 +205,12 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.42,
+    "post": {
+     "bloom": 0.15,
+     "dof": 2.21,
+     "dofRange": 0.77
+    },
     "glow_flare": [
      7.72
     ],
@@ -237,12 +242,7 @@
       ]
      }
     ],
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3,
-     "dof": 2.21,
-     "dofRange": 0.77
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
@@ -254,7 +254,7 @@
      ],
      "look": [
       0.55,
-      1.05,
+      0.99,
       -0.6
      ],
      "fov": 13,
@@ -263,13 +263,13 @@
     {
      "at": "end",
      "pos": [
-      1.716,
-      1.46,
-      1.031
+      1.717,
+      1.455,
+      1.032
      ],
      "look": [
       0.55,
-      1.05,
+      0.99,
       -0.6
      ],
      "fov": 13,
@@ -316,7 +316,12 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.42,
+    "post": {
+     "bloom": 0.15,
+     "dof": 2.01,
+     "dofRange": 0.7
+    },
     "glow_flare": [
      7.72
     ],
@@ -348,24 +353,19 @@
       ]
      }
     ],
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3,
-     "dof": 2.01,
-     "dofRange": 0.7
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      1.716,
-      1.46,
-      1.031
+      1.717,
+      1.455,
+      1.032
      ],
      "look": [
       0.55,
-      1.05,
+      0.99,
       -0.6
      ],
      "fov": 11,
@@ -376,12 +376,12 @@
      "at": "end",
      "pos": [
       1.773,
-      1.48,
-      1.11
+      1.477,
+      1.111
      ],
      "look": [
       0.55,
-      1.05,
+      0.99,
       -0.6
      ],
      "fov": 11,
@@ -452,7 +452,10 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.42,
+    "post": {
+     "bloom": 0.15
+    },
     "glow_flare": [
      7.72
     ],
@@ -501,10 +504,7 @@
      "yaw": -1.17,
      "press_at": 7.72
     },
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
@@ -587,7 +587,12 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.42,
+    "post": {
+     "bloom": 0.15,
+     "dof": 1.94,
+     "dofRange": 0.68
+    },
     "glow_flare": [
      7.72
     ],
@@ -629,12 +634,7 @@
      "yaw": -1.17,
      "press_at": 0.0
     },
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3,
-     "dof": 1.94,
-     "dofRange": 0.68
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
@@ -737,7 +737,12 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.42,
+    "post": {
+     "bloom": 0.15,
+     "dof": 1.03,
+     "dofRange": 0.36
+    },
     "glow_flare": [
      7.72
     ],
@@ -769,12 +774,7 @@
       ]
      }
     ],
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3,
-     "dof": 1.03,
-     "dofRange": 0.36
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
@@ -874,7 +874,12 @@
     "window_view": true,
     "lamp_at": 0.0,
     "dark": 0.9,
-    "lit": 0.2,
+    "lit": 0.42,
+    "post": {
+     "bloom": 0.15,
+     "dof": 2.21,
+     "dofRange": 0.77
+    },
     "glow_flare": [
      7.72
     ],
@@ -915,12 +920,7 @@
      "scale": 1.2,
      "yaw": -0.6
     },
-    "grade": "pov_warm",
-    "post": {
-     "bloom": 0.3,
-     "dof": 2.21,
-     "dofRange": 0.77
-    }
+    "grade": "pov_warm"
    },
    "camera": [
     {
@@ -932,7 +932,7 @@
      ],
      "look": [
       0.55,
-      1.05,
+      0.99,
       -0.6
      ],
      "fov": 10,
