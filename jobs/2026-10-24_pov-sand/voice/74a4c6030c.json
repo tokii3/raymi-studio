@@ -1,0 +1,52 @@
+{
+ "text": "rays hide in the sand. it's our whole thing.",
+ "duration": 3.96,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "rays",
+   "start": 0.093,
+   "end": 0.424
+  },
+  {
+   "w": "hide",
+   "start": 0.435,
+   "end": 0.776
+  },
+  {
+   "w": "in",
+   "start": 0.787,
+   "end": 0.883
+  },
+  {
+   "w": "the",
+   "start": 0.894,
+   "end": 0.969
+  },
+  {
+   "w": "sand.",
+   "start": 0.98,
+   "end": 1.46
+  },
+  {
+   "w": "it's",
+   "start": 2.19,
+   "end": 2.382
+  },
+  {
+   "w": "our",
+   "start": 2.393,
+   "end": 2.585
+  },
+  {
+   "w": "whole",
+   "start": 2.596,
+   "end": 2.853
+  },
+  {
+   "w": "thing.",
+   "start": 2.863,
+   "end": 3.216
+  }
+ ]
+}

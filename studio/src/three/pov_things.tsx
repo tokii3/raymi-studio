@@ -6,15 +6,18 @@
 //   beach_rock     - a rounded rock on the sand
 //   paper_sheet    - a sheet of paper lying flat; blow_at (frame) = the wind lifts it and it flies away
 //   crab           - a small red crab; snap: [frames] its claws snap; from + at + dur_s = it scuttles from there to pos
+//   sand_mound     - props.tsx SandMound (the aquarium bury): a ray hiding in the sand - she stands sunk below the ground
+//                    behind it, only the eyes peek out; h / r size, c colour, burst_at blows it apart, rise_at heaps it up again
 // Matte toon like every built prop (look.tsx); positions in set metres; frames from raymi/timeline.py.
 import React from 'react';
 import * as THREE from 'three';
 import {Rock, drawText} from './parts';
 import {canvasTexture, toon} from './look';
+import {SandMound} from './props';
 
 type P3 = [number, number, number];
 export type PovThingSpec = {kind: string; pos: P3; rot?: P3; scale?: number; at?: number; blow_at?: number; snap?: number[];
-  from?: P3; to?: P3; dur_s?: number; light?: boolean; c?: string};
+  from?: P3; to?: P3; dur_s?: number; light?: boolean; c?: string; burst_at?: number; rise_at?: number; h?: number; r?: number};
 
 const SALMON_SLICE = '#ff7a3d', FAT = '#fff1e6', INK = '#1a1030';
 
@@ -143,6 +146,14 @@ const Crab: React.FC<{t: PovThingSpec; f: number}> = ({t, f}) => {
   );
 };
 
+/** props.tsx SandMound (the aquarium bury, proven) as a thing for any set: she stands sunk below the ground behind it so
+ *  only her eyes peek out; burst_at blows it apart in 10 frames, rise_at heaps it up again over 12. */
+const SandMoundThing: React.FC<{t: PovThingSpec; f: number}> = ({t, f}) => {
+  let burst = typeof t.burst_at === 'number' ? Math.max(0, (f - t.burst_at) / 10) : 0;
+  if (typeof t.rise_at === 'number' && f >= t.rise_at) burst = Math.max(0, 1 - (f - t.rise_at) / 12);
+  return <SandMound pos={t.pos} h={t.h ?? 0.2} r={t.r ?? 0.6} c={t.c ?? '#efd29e'} f={f} burst={burst} />;
+};
+
 /** One of the POV things by kind (null for kinds this file does not know). */
 export const PovThing: React.FC<{t: PovThingSpec; f: number}> = ({t, f}) => {
   switch (t.kind) {
@@ -153,8 +164,9 @@ export const PovThing: React.FC<{t: PovThingSpec; f: number}> = ({t, f}) => {
     case 'beach_rock': return <Rock pos={t.pos} size={[0.22 * (t.scale ?? 1), 0.14 * (t.scale ?? 1), 0.18 * (t.scale ?? 1)]} seed={7} c={t.c ?? '#7e7a8c'} />;
     case 'paper_sheet': return <PaperSheet t={t} f={f} />;
     case 'crab': return <Crab t={t} f={f} />;
+    case 'sand_mound': return <SandMoundThing t={t} f={f} />;
     default: return null;
   }
 };
 
-export const POV_THINGS = ['plate_sashimi', 'bff_drawing', 'glass_ray', 'pumpkin', 'beach_rock', 'paper_sheet', 'crab'];
+export const POV_THINGS = ['plate_sashimi', 'bff_drawing', 'glass_ray', 'pumpkin', 'beach_rock', 'paper_sheet', 'crab', 'sand_mound'];

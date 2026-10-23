@@ -1,0 +1,583 @@
+{
+ "title": "POV: You Almost Stepped On A Stingray",
+ "_why": "POV Short (kind pov), built in one pass from proven parts (gen_v3, 2026-10-24).",
+ "audio": {
+  "file": "../../assets/music/wallpaper.mp3",
+  "from": 0.0,
+  "to": 14.71
+ },
+ "song_map": "../../assets/music/wallpaper.map.json",
+ "bed": {
+  "db": -15,
+  "duck": true
+ },
+ "voice": [
+  {
+   "at": 0.05,
+   "text": "you almost stepped on me."
+  },
+  {
+   "at": 2.264,
+   "text": "rays hide in the sand. it's our whole thing."
+  },
+  {
+   "at": 5.515,
+   "text": "shuffle your feet. like this."
+  },
+  {
+   "at": 8.115,
+   "text": "we feel it and swim away. no drama."
+  },
+  {
+   "at": 11.366,
+   "text": "did you know the shuffle? yes or no."
+  }
+ ],
+ "sfx": [
+  {
+   "at": 0.0,
+   "kind": "step",
+   "off_grid": true
+  },
+  {
+   "at": 2.357,
+   "kind": "whoosh"
+  },
+  {
+   "at": 8.858,
+   "kind": "whoosh"
+  },
+  {
+   "at": 11.459,
+   "kind": "pop"
+  }
+ ],
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [],
+ "grain": 0.04,
+ "all_lyrics": false,
+ "short": {
+  "hook": "you almost stepped on me.",
+  "hook_to": 1.9,
+  "cta": "did you know the shuffle? yes or no.",
+  "cta_from": 11.426
+ },
+ "shots": [
+  {
+   "id": "p1",
+   "at": 0.0,
+   "set": "beach",
+   "opts": {
+    "grade": "pov",
+    "dusk": 0.45,
+    "things": [
+     {
+      "kind": "sand_mound",
+      "pos": [
+       -1.5,
+       0.02,
+       0.55
+      ],
+      "h": 0.085,
+      "r": 0.5
+     }
+    ],
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.74,
+     "dofRange": 0.61
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.45,
+      1.25,
+      1.85
+     ],
+     "look": [
+      -1.5,
+      0.1,
+      0.55
+     ],
+     "fov": 24,
+     "shake": 0.6
+    },
+    {
+     "at": 0.25,
+     "pos": [
+      -1.45,
+      1.22,
+      1.8
+     ],
+     "look": [
+      -1.5,
+      0.1,
+      0.55
+     ],
+     "fov": 24,
+     "shake": 0.12
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.46,
+      1.12,
+      1.55
+     ],
+     "look": [
+      -1.5,
+      0.1,
+      0.55
+     ],
+     "fov": 22,
+     "shake": 0.1
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      -1.28,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "blink": 1.0
+     }
+    },
+    {
+     "at": 0.25,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      -1.28,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.6
+     },
+     "icon": "!"
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "you, standing, look down at your next step: a mound of sand right under your foot - two purple eyes snap open in it and glare up at you (a step sound, your view jolts)"
+   }
+  },
+  {
+   "id": "p2",
+   "at": 2.324,
+   "set": "beach",
+   "opts": {
+    "grade": "pov",
+    "dusk": 0.45,
+    "things": [
+     {
+      "kind": "sand_mound",
+      "pos": [
+       -1.5,
+       0.02,
+       0.55
+      ],
+      "h": 0.085,
+      "r": 0.5,
+      "burst_at": 2.444
+     }
+    ],
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.43,
+     "dofRange": 0.5
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.45,
+      1.12,
+      1.55
+     ],
+     "look": [
+      -1.5,
+      0.1,
+      0.55
+     ],
+     "fov": 26,
+     "shake": 0.2
+    },
+    {
+     "at": 0.55,
+     "pos": [
+      -1.4,
+      1.0,
+      2.4
+     ],
+     "look": [
+      -1.5,
+      1.33,
+      0.5
+     ],
+     "fov": 26,
+     "shake": 0.15,
+     "ease": "out"
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.4,
+      1.02,
+      2.25
+     ],
+     "look": [
+      -1.5,
+      1.33,
+      0.5
+     ],
+     "fov": 24,
+     "shake": 0.1
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      -1.28,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "angry": 0.6
+     }
+    },
+    {
+     "at": 0.12,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      0.0,
+      0.5
+     ],
+     "rotY": "lens",
+     "move": 0.3,
+     "ease": "out",
+     "act": "pop",
+     "clip": "gestures-pack-basic-angry-gesture",
+     "expr": {
+      "angry": 0.5
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "she BURSTS up out of the sand (the mound blows apart, sand flies), the lens tilts up with her to a low medium shot: hands-on-hips annoyed"
+   }
+  },
+  {
+   "id": "p3",
+   "at": 5.575,
+   "set": "beach",
+   "opts": {
+    "grade": "pov",
+    "dusk": 0.45,
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.47,
+     "dofRange": 0.87
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -2.1,
+      0.95,
+      2.9
+     ],
+     "look": [
+      -1.5,
+      1.0,
+      0.5
+     ],
+     "fov": 30,
+     "shake": 0.12
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.9,
+      0.9,
+      2.8
+     ],
+     "look": [
+      -1.5,
+      1.0,
+      0.5
+     ],
+     "fov": 28,
+     "shake": 0.12
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      0.0,
+      0.5
+     ],
+     "rotY": "lens",
+     "clip": "gestures-pack-basic-happy-hand-gesture",
+     "expr": {
+      "joy": 0.5
+     }
+    },
+    {
+     "at": 1.72,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      0.0,
+      0.5
+     ],
+     "rotY": "lens",
+     "clip": "twist-dance",
+     "expr": {
+      "joy": 0.9
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "a wider shot at hip height circling her a little: on 'like this' she does the shuffle - a goofy twisting foot dance in the sand"
+   }
+  },
+  {
+   "id": "p4",
+   "at": 8.175,
+   "set": "beach",
+   "opts": {
+    "grade": "pov",
+    "dusk": 0.45,
+    "post": {
+     "bloom": 0.3,
+     "dof": 2.27,
+     "dofRange": 0.8
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.9,
+      1.3,
+      2.7
+     ],
+     "look": [
+      -1.5,
+      0.9,
+      0.5
+     ],
+     "fov": 28,
+     "shake": 0.1
+    },
+    {
+     "at": 0.82,
+     "pos": [
+      -1.9,
+      1.3,
+      2.7
+     ],
+     "look": [
+      -1.5,
+      0.6,
+      0.5
+     ],
+     "fov": 30,
+     "shake": 0.1
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.7,
+      1.35,
+      2.8
+     ],
+     "look": [
+      0.5,
+      0.1,
+      0.4
+     ],
+     "fov": 32,
+     "shake": 0.12,
+     "ease": "inOut"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      0.0,
+      0.5
+     ],
+     "rotY": "lens",
+     "clip": "gestures-pack-basic-head-nod-yes",
+     "expr": {
+      "joy": 0.6
+     }
+    },
+    {
+     "at": 0.82,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      0.0,
+      0.5
+     ],
+     "rotY": 90,
+     "act": "flatten",
+     "expr": {
+      "joy": 0.8
+     }
+    },
+    {
+     "at": 2.3,
+     "pose": "stand",
+     "pos": [
+      0.6,
+      0.0,
+      0.4
+     ],
+     "rotY": 90,
+     "move": 1.4,
+     "ease": "inOut",
+     "act": "flatten",
+     "expr": {
+      "joy": 0.8
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "on 'swim away' she goes FLAT like a ray and glides off over the sand into the shallow water, the lens panning after her"
+   }
+  },
+  {
+   "id": "p5",
+   "at": 11.426,
+   "set": "beach",
+   "opts": {
+    "grade": "pov",
+    "dusk": 0.45,
+    "things": [
+     {
+      "kind": "sand_mound",
+      "pos": [
+       -1.5,
+       0.02,
+       0.55
+      ],
+      "h": 0.085,
+      "r": 0.5,
+      "rise_at": 11.526
+     }
+    ],
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.58,
+     "dofRange": 0.55
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.45,
+      1.18,
+      1.7
+     ],
+     "look": [
+      -1.5,
+      0.1,
+      0.55
+     ],
+     "fov": 24,
+     "shake": 0.1
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.45,
+      1.22,
+      1.8
+     ],
+     "look": [
+      -1.5,
+      0.1,
+      0.55
+     ],
+     "fov": 24,
+     "shake": 0.08
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      -0.35,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "fun": 0.5
+     }
+    },
+    {
+     "at": 0.45,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      -1.28,
+      0.5
+     ],
+     "rotY": "lens",
+     "move": 0.4,
+     "ease": "out",
+     "expr": {
+      "fun": 0.6
+     }
+    },
+    {
+     "at": 1.6,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      -1.28,
+      0.5
+     ],
+     "rotY": "lens",
+     "expr": {
+      "fun": 0.4,
+      "blink": 0.5
+     }
+    }
+   ],
+   "outline": 0.0035,
+   "doc": {
+    "see": "back to frame 0: you look down at the same spot - she sinks back into the sand (it heaps up over her again), only her eyes peek out, waiting for your answer"
+   }
+  }
+ ]
+}
