@@ -47,23 +47,23 @@ export const Glove: React.FC<{pos?: P3; rot?: P3; scale?: number; pose?: 'hold' 
   const curl = pose === 'grab' ? 1.3 : pose === 'hold' ? 0.9 : pose === 'point' ? 1.4 : 0.15;
   return (
     <group position={pos} rotation={rot} scale={scale}>
-      <mesh material={m} scale={[1, 1.1, 0.5]} castShadow><sphereGeometry args={[0.1, 16, 12]} /></mesh>
+      <mesh material={m} scale={[1, 1.1, 0.5]} castShadow><sphereGeometry args={[0.1, 36, 28]} /></mesh>
       {/* cuff with the three seams of a cartoon glove */}
-      <mesh material={m} position={[0, 0.13, 0]} castShadow><cylinderGeometry args={[0.085, 0.07, 0.07, 16]} /></mesh>
+      <mesh material={m} position={[0, 0.13, 0]} castShadow><cylinderGeometry args={[0.085, 0.07, 0.07, 32]} /></mesh>
       {[-0.03, 0, 0.03].map((x, i) => <mesh key={i} position={[x, 0.02, 0.047]} material={toon('#cfc8e0')} scale={[0.006, 0.05, 0.004]}><boxGeometry args={[1, 1, 1]} /></mesh>)}
       {[-0.065, -0.022, 0.022, 0.065].map((x, i) => {
         const c2 = pose === 'point' && i === 1 ? 0 : curl * (1 - i * 0.05);
         return (
           <group key={i} position={[x, -0.09, 0]} rotation={[c2 * 0.9, 0, (i - 1.5) * 0.06]}>
-            <mesh material={m} position={[0, -0.045, 0]} castShadow><capsuleGeometry args={[0.024, 0.06, 4, 8]} /></mesh>
+            <mesh material={m} position={[0, -0.045, 0]} castShadow><capsuleGeometry args={[0.024, 0.06, 8, 18]} /></mesh>
             <group position={[0, -0.09, 0]} rotation={[c2, 0, 0]}>
-              <mesh material={m} position={[0, -0.03, 0]}><capsuleGeometry args={[0.022, 0.04, 4, 8]} /></mesh>
+              <mesh material={m} position={[0, -0.03, 0]}><capsuleGeometry args={[0.022, 0.04, 8, 18]} /></mesh>
             </group>
           </group>
         );
       })}
       <group position={[0.095, -0.02, 0.02]} rotation={[0, 0, -0.9 - (pose === 'open' ? 0 : 0.4)]}>
-        <mesh material={m} position={[0, -0.04, 0]}><capsuleGeometry args={[0.025, 0.06, 4, 8]} /></mesh>
+        <mesh material={m} position={[0, -0.04, 0]}><capsuleGeometry args={[0.025, 0.06, 8, 18]} /></mesh>
       </group>
     </group>
   );
@@ -150,7 +150,7 @@ export const Boss: React.FC<{s: BossSpec; f: number}> = ({s, f}) => {
     const base: P3 = handPose === 'up' ? [side * 0.75, 1.9, 0.3] : handPose === 'hold' ? [side * 0.25, 1.0, 0.75]
       : handPose === 'lips' ? [side * 0.6, 0.9, 0.4] : [side * 0.7, 0.78, 0.7];
     const p: P3 = [base[0] * (1 - 0.6 * reach), base[1] + 0.1 * reach, base[2] + 0.9 * reach];
-    return <Glove key={side} pos={p} rot={[handPose === 'up' ? 0 : -1.2 + 0.4 * reach, 0, side * 0.2]} scale={2.6}
+    return <Glove key={side} pos={p} rot={[handPose === 'up' ? 0 : -1.2 + 0.4 * reach, 0, side * 0.2]} scale={2.2} c="#b9b4c9"
       pose={handPose === 'reach' || reach > 0 ? 'grab' : handPose === 'hold' ? 'open' : 'open'} />;
   };
   return (
@@ -335,11 +335,10 @@ export const SnowGlobe: React.FC<{t: ThingSpec; f: number}> = ({t, f}) => {
             return <mesh key={`s${i}`} position={[Math.cos(a) * r, y, Math.sin(a) * r]}><planeGeometry args={[0.008, 0.008]} /><meshBasicMaterial color="#ffffff" side={THREE.DoubleSide} toneMapped={false} /></mesh>;
           })}
           <mesh renderOrder={6}><sphereGeometry args={[0.11, 28, 20]} />
-            <meshToonMaterial color="#dff2ff" transparent opacity={0.3} depthWrite={false} /></mesh>
+            <meshToonMaterial color="#b9d6ee" transparent opacity={0.22} depthWrite={false} /></mesh>
           {/* a glass rim + a bright specular streak + its own cold glow: it reads as a snow globe at phone size */}
           <mesh rotation={[Math.PI / 2, 0, 0]} position={[0, -0.075, 0]} renderOrder={7}><torusGeometry args={[0.085, 0.01, 8, 28]} /><meshToonMaterial color="#e8f6ff" /></mesh>
           <mesh position={[-0.045, 0.05, 0.085]} rotation={[0, -0.4, 0.6]} renderOrder={8}><planeGeometry args={[0.018, 0.07]} /><meshBasicMaterial color="#ffffff" transparent opacity={0.85} toneMapped={false} /></mesh>
-          <pointLight position={[0, 0.02, -0.05]} color="#cfe8ff" intensity={0.9} distance={0.7} decay={1.6} />
           {crack > 0 ? Array.from({length: 9}, (_, i) => {
             const a = (i / 9) * Math.PI * 2;
             return <mesh key={`c${i}`} position={[Math.cos(a) * 0.04 * crack, Math.sin(a) * 0.04 * crack, 0.105]} rotation={[0, 0, a]} renderOrder={7}>
