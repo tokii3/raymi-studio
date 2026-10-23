@@ -1,0 +1,2437 @@
+{
+ "composition": "MV",
+ "width": 1920,
+ "height": 1080,
+ "fps": 30,
+ "durationInFrames": 1251,
+ "audio": {
+  "file": "audio.webm",
+  "from": 77.336,
+  "to": 119.04,
+  "src": "jobs/2026-10-22_take-me-to-the-beach/song.webm"
+ },
+ "shots": [
+  {
+   "actor": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "typing"
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r01",
+   "from": 0,
+   "to": 69,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "clean",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       -0.42,
+       0.765,
+       0.78
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.2,
+       1.12,
+       0.74
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "files",
+      "pos": [
+       0.62,
+       0.765,
+       0.82
+      ],
+      "n": 8,
+      "text": "URGENT"
+     }
+    ],
+    "crowd": [
+     {
+      "pos": [
+       -1.6,
+       0.0,
+       -1.6
+      ],
+      "yaw": 0.4,
+      "seed": 0,
+      "hold": "coffee"
+     },
+     {
+      "pos": [
+       1.7,
+       0.0,
+       -2.0
+      ],
+      "yaw": -0.5,
+      "seed": 2,
+      "hold": "coffee"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 0,
+     "pos": [
+      0.79,
+      1.13,
+      1.695
+     ],
+     "look": [
+      0.0,
+      1.05,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 69,
+     "pos": [
+      0.631,
+      1.05,
+      0.901
+     ],
+     "look": [
+      0.0,
+      1.05,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": -10.0,
+     "ease": "inOut"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 69,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.48,
+      0
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "waking",
+     "once": true
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r02",
+   "from": 69,
+   "to": 130,
+   "set": "bedroom",
+   "hero": [],
+   "opts": {
+    "grade": "closing",
+    "dark": 0.15
+   },
+   "camera": [
+    {
+     "f": 69,
+     "pos": [
+      0.125,
+      3.58,
+      0.217
+     ],
+     "look": [
+      0.0,
+      0.78,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 105,
+     "pos": [
+      0.6,
+      1.68,
+      1.039
+     ],
+     "look": [
+      0.0,
+      0.78,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "in",
+     "path": "spline"
+    },
+    {
+     "f": 130,
+     "pos": [
+      0.75,
+      0.83,
+      1.299
+     ],
+     "look": [
+      0.0,
+      0.78,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "out",
+     "path": "spline"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 130,
+     "pose": "stand",
+     "pos": [
+      0.3,
+      0,
+      0.6
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "getting-up",
+     "once": true
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r03",
+   "from": 130,
+   "to": 164,
+   "set": "bedroom",
+   "hero": [],
+   "opts": {
+    "grade": "closing",
+    "dark": 0.15
+   },
+   "camera": [
+    {
+     "f": 130,
+     "pos": [
+      0.793,
+      0.3,
+      1.953
+     ],
+     "look": [
+      0.3,
+      1.1,
+      0.6
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 148,
+     "pos": [
+      1.089,
+      1.1,
+      2.083
+     ],
+     "look": [
+      0.3,
+      1.1,
+      0.6
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "path": "spline"
+    },
+    {
+     "f": 164,
+     "pos": [
+      1.553,
+      2.2,
+      2.457
+     ],
+     "look": [
+      0.3,
+      1.1,
+      0.6
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "path": "spline"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 164,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "texting-while-standing"
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r04",
+   "from": 164,
+   "to": 231,
+   "set": "train",
+   "hero": [],
+   "opts": {
+    "grade": "closing",
+    "crowd": [
+     {
+      "pos": [
+       -0.6,
+       0.0,
+       -1.5
+      ],
+      "yaw": 0.5,
+      "seed": 3,
+      "hold": "phone"
+     },
+     {
+      "pos": [
+       0.5,
+       0.0,
+       -2.6
+      ],
+      "yaw": -0.3,
+      "seed": 1,
+      "hold": "paper"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 164,
+     "pos": [
+      1.23,
+      1.4,
+      1.299
+     ],
+     "look": [
+      0.0,
+      1.4,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 231,
+     "pos": [
+      1.778,
+      1.4,
+      -0.205
+     ],
+     "look": [
+      0.0,
+      1.4,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "linear"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 231,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sad-idle"
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r05",
+   "from": 231,
+   "to": 302,
+   "set": "train",
+   "hero": [],
+   "opts": {
+    "grade": "closing",
+    "crowd": [
+     {
+      "pos": [
+       -0.6,
+       0.0,
+       -1.5
+      ],
+      "yaw": 0.5,
+      "seed": 3,
+      "hold": "phone"
+     },
+     {
+      "pos": [
+       0.5,
+       0.0,
+       -2.6
+      ],
+      "yaw": -0.3,
+      "seed": 1,
+      "hold": "paper"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 231,
+     "pos": [
+      0.226,
+      1.4,
+      1.28
+     ],
+     "look": [
+      0.0,
+      1.4,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.45
+    },
+    {
+     "f": 302,
+     "pos": [
+      0.302,
+      1.37,
+      1.211
+     ],
+     "look": [
+      0.0,
+      1.4,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "linear",
+     "shake": 0.45
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 302,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      -3.5
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "defeated"
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r06",
+   "from": 302,
+   "to": 371,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "clean",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       -0.42,
+       0.765,
+       0.78
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.2,
+       1.12,
+       0.74
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "files",
+      "pos": [
+       0.62,
+       0.765,
+       0.82
+      ],
+      "n": 8,
+      "text": "URGENT"
+     }
+    ],
+    "crowd": [
+     {
+      "pos": [
+       -1.6,
+       0.0,
+       -1.6
+      ],
+      "yaw": 0.4,
+      "seed": 0,
+      "hold": "coffee"
+     },
+     {
+      "pos": [
+       1.7,
+       0.0,
+       -2.0
+      ],
+      "yaw": -0.5,
+      "seed": 2,
+      "hold": "coffee"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 302,
+     "pos": [
+      0.0,
+      1.2,
+      0.34
+     ],
+     "look": [
+      0.0,
+      1.2,
+      -3.5
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "frameH": 1.1
+    },
+    {
+     "f": 371,
+     "pos": [
+      0.0,
+      1.2,
+      -1.9
+     ],
+     "look": [
+      0.0,
+      1.2,
+      -3.5
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "frameH": 1.1
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 371,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-angry"
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r07",
+   "from": 371,
+   "to": 421,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "clean",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       -0.42,
+       0.765,
+       0.78
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.2,
+       1.12,
+       0.74
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "files",
+      "pos": [
+       0.62,
+       0.765,
+       0.82
+      ],
+      "n": 8,
+      "text": "URGENT"
+     }
+    ],
+    "crowd": [
+     {
+      "pos": [
+       -1.6,
+       0.0,
+       -1.6
+      ],
+      "yaw": 0.4,
+      "seed": 0,
+      "hold": "coffee"
+     },
+     {
+      "pos": [
+       1.7,
+       0.0,
+       -2.0
+      ],
+      "yaw": -0.5,
+      "seed": 2,
+      "hold": "coffee"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 371,
+     "pos": [
+      -0.787,
+      1.05,
+      2.161
+     ],
+     "look": [
+      0.0,
+      1.05,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 371,
+     "pos": [
+      -0.787,
+      1.05,
+      2.161
+     ],
+     "look": [
+      0.0,
+      1.05,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 377,
+     "pos": [
+      -0.342,
+      1.05,
+      0.94
+     ],
+     "look": [
+      0.0,
+      1.05,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "snap",
+     "shake": 0.35
+    },
+    {
+     "f": 421,
+     "pos": [
+      -0.318,
+      1.05,
+      0.874
+     ],
+     "look": [
+      0.0,
+      1.05,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "out"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 421,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      -3.5
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "shoved-reaction-with-spin",
+     "once": true
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r08",
+   "from": 421,
+   "to": 480,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "clean",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       -0.42,
+       0.765,
+       0.78
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.2,
+       1.12,
+       0.74
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "files",
+      "pos": [
+       0.62,
+       0.765,
+       0.82
+      ],
+      "n": 8,
+      "text": "URGENT"
+     }
+    ],
+    "crowd": [
+     {
+      "pos": [
+       -1.6,
+       0.0,
+       -1.6
+      ],
+      "yaw": 0.4,
+      "seed": 0,
+      "hold": "coffee"
+     },
+     {
+      "pos": [
+       1.7,
+       0.0,
+       -2.0
+      ],
+      "yaw": -0.5,
+      "seed": 2,
+      "hold": "coffee"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 421,
+     "pos": [
+      1.012,
+      1.2,
+      0.277
+     ],
+     "look": [
+      0.0,
+      1.2,
+      -3.5
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 421,
+     "pos": [
+      1.012,
+      1.2,
+      0.277
+     ],
+     "look": [
+      0.0,
+      1.2,
+      -3.5
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 427,
+     "pos": [
+      0.44,
+      1.2,
+      -1.858
+     ],
+     "look": [
+      0.0,
+      1.2,
+      -3.5
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "snap",
+     "shake": 0.35
+    },
+    {
+     "f": 480,
+     "pos": [
+      0.409,
+      1.2,
+      -1.973
+     ],
+     "look": [
+      0.0,
+      1.2,
+      -3.5
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "out"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 480,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.79,
+      0.55
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "hip-hop-dancing"
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r09",
+   "from": 480,
+   "to": 531,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "clean",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       -0.42,
+       0.765,
+       0.78
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.2,
+       1.12,
+       0.74
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "files",
+      "pos": [
+       0.62,
+       0.765,
+       0.82
+      ],
+      "n": 8,
+      "text": "URGENT"
+     }
+    ],
+    "crowd": [
+     {
+      "pos": [
+       -1.6,
+       0.0,
+       -1.6
+      ],
+      "yaw": 0.4,
+      "seed": 0,
+      "hold": "coffee"
+     },
+     {
+      "pos": [
+       1.7,
+       0.0,
+       -2.0
+      ],
+      "yaw": -0.5,
+      "seed": 2,
+      "hold": "coffee"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 480,
+     "pos": [
+      -1.221,
+      2.19,
+      2.005
+     ],
+     "look": [
+      0.0,
+      2.09,
+      0.55
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 505,
+     "pos": [
+      0.467,
+      2.24,
+      2.293
+     ],
+     "look": [
+      0.0,
+      2.09,
+      0.55
+     ],
+     "fov": 34.0,
+     "roll": 6.0,
+     "ease": "inOut",
+     "path": "spline"
+    },
+    {
+     "f": 531,
+     "pos": [
+      1.785,
+      2.14,
+      1.2
+     ],
+     "look": [
+      0.0,
+      2.09,
+      0.55
+     ],
+     "fov": 34.0,
+     "roll": 12.0,
+     "ease": "inOut",
+     "path": "spline"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 531,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      -3.5
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "silly-dancing"
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r10",
+   "from": 531,
+   "to": 585,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "clean",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       -0.42,
+       0.765,
+       0.78
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.2,
+       1.12,
+       0.74
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "files",
+      "pos": [
+       0.62,
+       0.765,
+       0.82
+      ],
+      "n": 8,
+      "text": "URGENT"
+     }
+    ],
+    "crowd": [
+     {
+      "pos": [
+       -1.6,
+       0.0,
+       -1.6
+      ],
+      "yaw": 0.4,
+      "seed": 0,
+      "hold": "coffee"
+     },
+     {
+      "pos": [
+       1.7,
+       0.0,
+       -2.0
+      ],
+      "yaw": -0.5,
+      "seed": 2,
+      "hold": "coffee"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 531,
+     "pos": [
+      2.2,
+      1.2,
+      -2.3
+     ],
+     "look": [
+      0.0,
+      1.2,
+      -3.5
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 585,
+     "pos": [
+      2.2,
+      1.2,
+      -4.7
+     ],
+     "look": [
+      0.0,
+      1.2,
+      -3.5
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "linear"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 585,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      -3.5
+     ],
+     "rotY": 180.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "running"
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r11",
+   "from": 585,
+   "to": 656,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "clean",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       -0.42,
+       0.765,
+       0.78
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.2,
+       1.12,
+       0.74
+      ],
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "files",
+      "pos": [
+       0.62,
+       0.765,
+       0.82
+      ],
+      "n": 8,
+      "text": "URGENT"
+     }
+    ],
+    "crowd": [
+     {
+      "pos": [
+       -1.6,
+       0.0,
+       -1.6
+      ],
+      "yaw": 0.4,
+      "seed": 0,
+      "hold": "coffee"
+     },
+     {
+      "pos": [
+       1.7,
+       0.0,
+       -2.0
+      ],
+      "yaw": -0.5,
+      "seed": 2,
+      "hold": "coffee"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "f": 585,
+     "pos": [
+      1.8,
+      1.1,
+      -1.9
+     ],
+     "look": [
+      0.0,
+      1.1,
+      -3.5
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 656,
+     "pos": [
+      1.8,
+      1.1,
+      -5.1
+     ],
+     "look": [
+      0.0,
+      1.1,
+      -3.5
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "linear"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 656,
+     "pose": "stand",
+     "pos": [
+      0.3,
+      0.32,
+      0.1
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "falling",
+     "expr": {
+      "joy": 0.5
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r12",
+   "from": 656,
+   "to": 704,
+   "set": "dream",
+   "hero": [],
+   "opts": {
+    "grade": "warm",
+    "post": {
+     "bloom": 0.4
+    }
+   },
+   "camera": [
+    {
+     "f": 656,
+     "pos": [
+      0.3,
+      4.12,
+      0.35
+     ],
+     "look": [
+      0.3,
+      1.32,
+      0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 685,
+     "pos": [
+      0.3,
+      2.22,
+      1.7
+     ],
+     "look": [
+      0.3,
+      1.32,
+      0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "in",
+     "path": "spline"
+    },
+    {
+     "f": 704,
+     "pos": [
+      0.3,
+      1.37,
+      2.1
+     ],
+     "look": [
+      0.3,
+      1.32,
+      0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "out",
+     "path": "spline"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 704,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.24,
+      -0.1
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "twist-dance",
+     "expr": {
+      "joy": 0.5
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r13",
+   "from": 704,
+   "to": 745,
+   "set": "dream",
+   "hero": [],
+   "opts": {
+    "grade": "warm",
+    "post": {
+     "bloom": 0.4
+    }
+   },
+   "camera": [
+    {
+     "f": 704,
+     "pos": [
+      0.93,
+      1.14,
+      2.456
+     ],
+     "look": [
+      0.0,
+      1.44,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 725,
+     "pos": [
+      1.997,
+      1.64,
+      -0.827
+     ],
+     "look": [
+      0.0,
+      1.44,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 6.0,
+     "ease": "inOut",
+     "path": "spline"
+    },
+    {
+     "f": 745,
+     "pos": [
+      -0.581,
+      1.99,
+      -1.697
+     ],
+     "look": [
+      0.0,
+      1.44,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "path": "spline"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 745,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.24,
+      -0.1
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "joyful-jump",
+     "expr": {
+      "joy": 0.5
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r14",
+   "from": 745,
+   "to": 789,
+   "set": "dream",
+   "hero": [],
+   "opts": {
+    "grade": "warm",
+    "post": {
+     "bloom": 0.4
+    }
+   },
+   "camera": [
+    {
+     "f": 745,
+     "pos": [
+      -0.419,
+      0.3,
+      1.465
+     ],
+     "look": [
+      0.0,
+      1.44,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 770,
+     "pos": [
+      -0.23,
+      1.44,
+      1.776
+     ],
+     "look": [
+      0.0,
+      1.44,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "path": "spline"
+    },
+    {
+     "f": 789,
+     "pos": [
+      -0.044,
+      2.54,
+      2.42
+     ],
+     "look": [
+      0.0,
+      1.44,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "path": "spline"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 789,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.24,
+      -0.1
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "standing-cheering",
+     "expr": {
+      "joy": 0.5
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r15",
+   "from": 789,
+   "to": 839,
+   "set": "dream",
+   "hero": [],
+   "opts": {
+    "grade": "warm",
+    "post": {
+     "bloom": 0.4
+    }
+   },
+   "camera": [
+    {
+     "f": 789,
+     "pos": [
+      0.519,
+      1.59,
+      2.845
+     ],
+     "look": [
+      0.0,
+      1.59,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 789,
+     "pos": [
+      0.519,
+      1.59,
+      2.845
+     ],
+     "look": [
+      0.0,
+      1.59,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 795,
+     "pos": [
+      0.226,
+      1.59,
+      1.18
+     ],
+     "look": [
+      0.0,
+      1.59,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "snap",
+     "shake": 0.35
+    },
+    {
+     "f": 839,
+     "pos": [
+      0.21,
+      1.59,
+      1.091
+     ],
+     "look": [
+      0.0,
+      1.59,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "out"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 839,
+     "pose": "stand",
+     "pos": [
+      0.3,
+      0.32,
+      0.1
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "flying",
+     "expr": {
+      "joy": 0.5
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r16",
+   "from": 839,
+   "to": 998,
+   "set": "dream",
+   "hero": [],
+   "opts": {
+    "grade": "warm",
+    "post": {
+     "bloom": 0.4
+    }
+   },
+   "camera": [
+    {
+     "f": 839,
+     "pos": [
+      2.205,
+      1.62,
+      1.2
+     ],
+     "look": [
+      0.3,
+      1.52,
+      0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 919,
+     "pos": [
+      1.901,
+      1.67,
+      -1.243
+     ],
+     "look": [
+      0.3,
+      1.52,
+      0.1
+     ],
+     "fov": 34.0,
+     "roll": 7.5,
+     "ease": "inOut",
+     "path": "spline"
+    },
+    {
+     "f": 998,
+     "pos": [
+      -0.452,
+      1.57,
+      -1.967
+     ],
+     "look": [
+      0.3,
+      1.52,
+      0.1
+     ],
+     "fov": 34.0,
+     "roll": 15.0,
+     "ease": "inOut",
+     "path": "spline"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 998,
+     "pose": "stand",
+     "pos": [
+      0.7,
+      0.24,
+      0.0
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "paddling",
+     "expr": {
+      "joy": 0.5
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r17",
+   "from": 998,
+   "to": 1062,
+   "set": "dream",
+   "hero": [],
+   "opts": {
+    "grade": "warm",
+    "post": {
+     "bloom": 0.4
+    }
+   },
+   "camera": [
+    {
+     "f": 998,
+     "pos": [
+      -2.624,
+      0.6,
+      -0.814
+     ],
+     "look": [
+      0.7,
+      1.24,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 1020,
+     "pos": [
+      -1.672,
+      0.55,
+      -0.581
+     ],
+     "look": [
+      0.7,
+      1.24,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "in",
+     "path": "spline"
+    },
+    {
+     "f": 1062,
+     "pos": [
+      -0.854,
+      1.29,
+      -0.381
+     ],
+     "look": [
+      0.7,
+      1.24,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "out",
+     "path": "spline"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 1062,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.24,
+      -0.1
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "excited",
+     "expr": {
+      "joy": 0.5
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r18",
+   "from": 1062,
+   "to": 1131,
+   "set": "dream",
+   "hero": [],
+   "opts": {
+    "grade": "warm",
+    "post": {
+     "bloom": 0.4
+    }
+   },
+   "camera": [
+    {
+     "f": 1062,
+     "pos": [
+      0.0,
+      1.59,
+      1.3
+     ],
+     "look": [
+      0.0,
+      1.59,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 1125,
+     "pos": [
+      0.0,
+      1.59,
+      1.3
+     ],
+     "look": [
+      0.0,
+      1.59,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 1131,
+     "pos": [
+      0.0,
+      1.59,
+      1.3
+     ],
+     "look": [
+      -1.879,
+      1.59,
+      0.616
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "in"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  },
+  {
+   "actor": [
+    {
+     "f": 1131,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.24,
+      -0.1
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "happy",
+     "expr": {
+      "joy": 0.5
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 0.0
+   },
+   "outline": 0.0035,
+   "id": "r19",
+   "from": 1131,
+   "to": 1251,
+   "set": "dream",
+   "hero": [],
+   "opts": {
+    "grade": "warm",
+    "post": {
+     "bloom": 0.4
+    }
+   },
+   "camera": [
+    {
+     "f": 1131,
+     "pos": [
+      -1.28,
+      1.24,
+      2.117
+     ],
+     "look": [
+      0.0,
+      1.54,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut"
+    },
+    {
+     "f": 1191,
+     "pos": [
+      1.732,
+      1.74,
+      0.9
+     ],
+     "look": [
+      0.0,
+      1.54,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 6.0,
+     "ease": "inOut",
+     "path": "spline"
+    },
+    {
+     "f": 1251,
+     "pos": [
+      0.8,
+      2.09,
+      -1.486
+     ],
+     "look": [
+      0.0,
+      1.54,
+      -0.1
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "path": "spline"
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": []
+  }
+ ],
+ "hits": [
+  1,
+  10,
+  70,
+  131,
+  232,
+  422,
+  481,
+  532,
+  705,
+  721,
+  746,
+  790,
+  840,
+  859,
+  1132,
+  1159,
+  1193,
+  1201
+ ],
+ "beats": [
+  2,
+  20,
+  37,
+  55,
+  71,
+  89,
+  106,
+  122,
+  140,
+  157,
+  174,
+  191,
+  209,
+  226,
+  243,
+  260,
+  277,
+  294,
+  311,
+  328,
+  346,
+  363,
+  380,
+  397,
+  414,
+  432,
+  448,
+  466,
+  483,
+  500,
+  517,
+  535,
+  551,
+  569,
+  586,
+  603,
+  620,
+  637,
+  654,
+  671,
+  689,
+  706,
+  723,
+  740,
+  757,
+  774,
+  792,
+  808,
+  826,
+  843,
+  860,
+  877,
+  894,
+  911,
+  928,
+  945,
+  962,
+  980,
+  997,
+  1015,
+  1031,
+  1049,
+  1065,
+  1083,
+  1100,
+  1117,
+  1134,
+  1151,
+  1168,
+  1185,
+  1203,
+  1220,
+  1237
+ ],
+ "sprites": [],
+ "grain": 0.04,
+ "title": "Motion reel - Raymi clips + camera moves",
+ "overlay": null,
+ "heavy": false,
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [
+  "motions/defeated.fbx",
+  "motions/excited.fbx",
+  "motions/falling.fbx",
+  "motions/flying.fbx",
+  "motions/getting-up.fbx",
+  "motions/happy.fbx",
+  "motions/hip-hop-dancing.fbx",
+  "motions/joyful-jump.fbx",
+  "motions/paddling.fbx",
+  "motions/running.fbx",
+  "motions/sad-idle.fbx",
+  "motions/shoved-reaction-with-spin.fbx",
+  "motions/silly-dancing.fbx",
+  "motions/sitting-angry.fbx",
+  "motions/standing-cheering.fbx",
+  "motions/texting-while-standing.fbx",
+  "motions/twist-dance.fbx",
+  "motions/typing.fbx",
+  "motions/waking.fbx"
+ ],
+ "sung": []
+}

@@ -1,0 +1,192 @@
+[
+ {
+  "id": "r01",
+  "from_s": 0.0,
+  "to_s": 2.3,
+  "set": "office",
+  "why": "typing at her desk, the horizon tilts",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r02",
+  "from_s": 2.3,
+  "to_s": 4.33,
+  "set": "bedroom",
+  "why": "waking up on the bed, the lens drops from above",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r03",
+  "from_s": 4.33,
+  "to_s": 5.47,
+  "set": "bedroom",
+  "why": "getting up off the floor, the lens rises with her",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r04",
+  "from_s": 5.47,
+  "to_s": 7.7,
+  "set": "train",
+  "why": "texting in the train, tracked past the poles",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r05",
+  "from_s": 7.7,
+  "to_s": 10.07,
+  "set": "train",
+  "why": "sad in the train, handheld",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r06",
+  "from_s": 10.07,
+  "to_s": 12.37,
+  "set": "office",
+  "why": "defeated in the aisle, the room breathes (dolly zoom)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r07",
+  "from_s": 12.37,
+  "to_s": 14.03,
+  "set": "office",
+  "why": "angry at her desk, crash zoom on the line",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r08",
+  "from_s": 14.03,
+  "to_s": 16.0,
+  "set": "office",
+  "why": "push comes to shove: shoved, spins",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r09",
+  "from_s": 16.0,
+  "to_s": 17.7,
+  "set": "office",
+  "why": "dancing on her desk, the lens circles and rolls",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r10",
+  "from_s": 17.7,
+  "to_s": 19.5,
+  "set": "office",
+  "why": "silly dance down the aisle, tracked",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r11",
+  "from_s": 19.5,
+  "to_s": 21.87,
+  "set": "office",
+  "why": "running out, the desks fly past",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r12",
+  "from_s": 21.87,
+  "to_s": 23.47,
+  "set": "dream",
+  "why": "falling into her own sea",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r13",
+  "from_s": 23.47,
+  "to_s": 24.83,
+  "set": "dream",
+  "why": "twist dance, spiral",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r14",
+  "from_s": 24.83,
+  "to_s": 26.3,
+  "set": "dream",
+  "why": "joyful jump, crane",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r15",
+  "from_s": 26.3,
+  "to_s": 27.97,
+  "set": "dream",
+  "why": "cheering, crash zoom on the hit",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r16",
+  "from_s": 27.97,
+  "to_s": 33.27,
+  "set": "dream",
+  "why": "flying in her sea",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r17",
+  "from_s": 33.27,
+  "to_s": 35.4,
+  "set": "dream",
+  "why": "paddling - the lens flies through her chair onto her",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r18",
+  "from_s": 35.4,
+  "to_s": 37.7,
+  "set": "dream",
+  "why": "excited, the lens whips off her",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "r19",
+  "from_s": 37.7,
+  "to_s": 41.7,
+  "set": "dream",
+  "why": "happy, spiral up",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ }
+]
