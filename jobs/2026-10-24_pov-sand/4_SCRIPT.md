@@ -7,15 +7,15 @@ the pose sheet, clips under a pose at mix <= 0.2, sitting = pose sit, grade pov,
 ## Shots
 | # | from-to | set | what we see (camera = you) |
 |---|---|---|---|
-| 1 | 0.00-2.32 | beach | you, standing, look down at your next step: a mound of sand right under your foot - two purple eyes snap open in it and glare up at you (a step sound, your view jolts) |
-| 2 | 2.32-5.58 | beach | she BURSTS up out of the sand (the mound blows apart, sand flies), the lens tilts up with her to a low medium shot: hands-on-hips annoyed |
-| 3 | 5.58-8.18 | beach | a wider shot at hip height circling her a little: on 'like this' she does the shuffle - a goofy twisting foot dance in the sand |
-| 4 | 8.18-11.43 | beach | on 'swim away' she goes FLAT like a ray and glides off over the sand into the shallow water, the lens panning after her |
-| 5 | 11.43-14.71 | beach | back to frame 0: you look down at the same spot - she sinks back into the sand (it heaps up over her again), only her eyes peek out, waiting for your answer |
+| 1 | 0.00-2.32 | beach | you, standing, look straight down at your next step - a mound of sand right under your foot, and in it two purple eyes, open, glaring up at you (the step lands on frame 0: a thud, your view jolts) |
+| 2 | 2.32-5.58 | beach | she BURSTS up out of the sand (the mound blows apart), the lens tilts up with her; after 'sand.' the lens dips to the hole she left, then pushes back up to her proud face on 'it's our whole thing' |
+| 3 | 5.58-8.18 | beach | down at her feet, low over the sand: she SHUFFLES - feet sliding sideways through the sand, the lens tracking along; on 'like this' it rises to her proud face while she keeps shuffling |
+| 4 | 8.18-11.43 | beach | on 'swim' she goes FLAT like a ray and glides off over the sand into the shallow water, the lens panning after her; she slips under the surface and only the water is left |
+| 5 | 11.43-14.71 | beach | frame 0 again, looking down at the same spot: she sinks back into the sand (it heaps up over her), the lens creeps in on her eyes; on 'yes or' her eyes dart left and right after your foot, and on 'no.' they lock on you |
 
 ## Only Raymi
 - she hides in the sand like a real ray - only her eyes peek out (her body, canon/01: a stingray)
-- the stingray shuffle is a real beach-safety fact, told by the ray herself - and she does it as a dance ('like this')
+- the stingray shuffle is a real beach-safety fact, told by the ray herself - and she shows it: feet sliding sideways through the sand ('like this')
 - on 'swim away' she goes flat and glides off over the sand into the water like a ray (her body)
 - bossy-helpful about ocean things (canon/01 2), never mean: 'no drama'
 
@@ -37,7 +37,8 @@ The last shot returns to frame 0's framing.
 | voice 'did you know the shuffle? yes or no.' | 11.366 | words 11.46-14.08: 'did' 11.46, 'you' 11.64, 'know' 11.77, 'the' 11.95, 'shuffle?' 12.05, 'yes' 13.24, 'or' 13.61, 'no.' 13.77 | yes |
 | sfx step | 0.000 | beat 0.406 (-406 ms) | off grid |
 | sfx whoosh | 2.357 | beat 2.357 (+0 ms) | yes |
-| sfx whoosh | 8.858 | beat 8.858 (+0 ms) | yes |
+| sfx whoosh | 9.075 | beat 8.858 (+217 ms) | off grid |
+| sfx pop | 13.410 | beat 13.410 (+0 ms) | yes |
 | sfx pop | 11.459 | beat 11.459 (+0 ms) | yes |
 | hook stamp 'you almost stepped on me.' | 0.00-1.90 | first line ends 1.55 | yes |
 | CTA stamp 'did you know the shuffle? yes or no.' | 11.43-14.71 | 3.28 s on screen | yes |

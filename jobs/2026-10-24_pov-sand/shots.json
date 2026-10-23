@@ -44,8 +44,13 @@
    "kind": "whoosh"
   },
   {
-   "at": 8.858,
-   "kind": "whoosh"
+   "at": 9.075,
+   "kind": "whoosh",
+   "off_grid": true
+  },
+  {
+   "at": 13.41,
+   "kind": "pop"
   },
   {
    "at": 11.459,
@@ -84,17 +89,17 @@
     ],
     "post": {
      "bloom": 0.3,
-     "dof": 1.74,
-     "dofRange": 0.61
+     "dof": 0.69,
+     "dofRange": 0.35
     }
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      -1.45,
-      1.25,
-      1.85
+      -1.48,
+      0.62,
+      1.0
      ],
      "look": [
       -1.5,
@@ -102,14 +107,14 @@
       0.55
      ],
      "fov": 24,
-     "shake": 0.6
+     "shake": 0.9
     },
     {
-     "at": 0.25,
+     "at": 0.2,
      "pos": [
-      -1.45,
-      1.22,
-      1.8
+      -1.48,
+      0.6,
+      0.98
      ],
      "look": [
       -1.5,
@@ -117,14 +122,14 @@
       0.55
      ],
      "fov": 24,
-     "shake": 0.12
+     "shake": 0.15
     },
     {
      "at": "end",
      "pos": [
-      -1.46,
-      1.12,
-      1.55
+      -1.48,
+      0.55,
+      0.92
      ],
      "look": [
       -1.5,
@@ -146,27 +151,14 @@
      ],
      "rotY": "lens",
      "expr": {
-      "blink": 1.0
-     }
-    },
-    {
-     "at": 0.25,
-     "pose": "stand",
-     "pos": [
-      -1.5,
-      -1.28,
-      0.5
-     ],
-     "rotY": "lens",
-     "expr": {
-      "angry": 0.6
+      "angry": 0.7
      },
      "icon": "!"
     }
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "you, standing, look down at your next step: a mound of sand right under your foot - two purple eyes snap open in it and glare up at you (a step sound, your view jolts)"
+    "see": "you, standing, look straight down at your next step - a mound of sand right under your foot, and in it two purple eyes, open, glaring up at you (the step lands on frame 0: a thud, your view jolts)"
    }
   },
   {
@@ -191,17 +183,17 @@
     ],
     "post": {
      "bloom": 0.3,
-     "dof": 1.43,
-     "dofRange": 0.5
+     "dof": 0.58,
+     "dofRange": 0.35
     }
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      -1.45,
-      1.12,
-      1.55
+      -1.48,
+      0.55,
+      0.92
      ],
      "look": [
       -1.5,
@@ -228,11 +220,73 @@
      "ease": "out"
     },
     {
-     "at": "end",
+     "at": 1.0,
      "pos": [
       -1.4,
-      1.02,
-      2.25
+      1.0,
+      2.4
+     ],
+     "look": [
+      -1.5,
+      1.33,
+      0.5
+     ],
+     "fov": 26,
+     "shake": 0.1
+    },
+    {
+     "at": 1.4,
+     "pos": [
+      -1.35,
+      0.95,
+      1.85
+     ],
+     "look": [
+      -1.5,
+      0.0,
+      0.6
+     ],
+     "fov": 30,
+     "shake": 0.12,
+     "ease": "out"
+    },
+    {
+     "at": 1.95,
+     "pos": [
+      -1.35,
+      0.95,
+      1.8
+     ],
+     "look": [
+      -1.5,
+      0.0,
+      0.6
+     ],
+     "fov": 30,
+     "shake": 0.1
+    },
+    {
+     "at": 2.4,
+     "pos": [
+      -1.45,
+      1.3,
+      1.55
+     ],
+     "look": [
+      -1.5,
+      1.33,
+      0.5
+     ],
+     "fov": 24,
+     "shake": 0.12,
+     "ease": "out"
+    },
+    {
+     "at": "end",
+     "pos": [
+      -1.45,
+      1.31,
+      1.45
      ],
      "look": [
       -1.5,
@@ -273,11 +327,25 @@
      "expr": {
       "angry": 0.5
      }
+    },
+    {
+     "at": 2.1,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      0.0,
+      0.5
+     ],
+     "rotY": "lens",
+     "clip": "gestures-pack-basic-being-cocky",
+     "expr": {
+      "joy": 0.6
+     }
     }
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "she BURSTS up out of the sand (the mound blows apart, sand flies), the lens tilts up with her to a low medium shot: hands-on-hips annoyed"
+    "see": "she BURSTS up out of the sand (the mound blows apart), the lens tilts up with her; after 'sand.' the lens dips to the hole she left, then pushes back up to her proud face on 'it's our whole thing'"
    }
   },
   {
@@ -289,40 +357,71 @@
     "dusk": 0.45,
     "post": {
      "bloom": 0.3,
-     "dof": 2.47,
-     "dofRange": 0.87
+     "dof": 1.24,
+     "dofRange": 0.44
     }
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      -2.1,
-      0.95,
-      2.9
+      -1.7,
+      0.25,
+      1.7
      ],
      "look": [
-      -1.5,
-      1.0,
+      -1.4,
+      0.12,
       0.5
      ],
-     "fov": 30,
+     "fov": 34,
      "shake": 0.12
+    },
+    {
+     "at": 1.6,
+     "pos": [
+      -1.05,
+      0.25,
+      1.7
+     ],
+     "look": [
+      -0.8,
+      0.12,
+      0.5
+     ],
+     "fov": 34,
+     "shake": 0.12
+    },
+    {
+     "at": 2.3,
+     "pos": [
+      -1.05,
+      1.0,
+      2.3
+     ],
+     "look": [
+      -0.65,
+      1.3,
+      0.5
+     ],
+     "fov": 28,
+     "shake": 0.12,
+     "ease": "out"
     },
     {
      "at": "end",
      "pos": [
-      -0.9,
-      0.9,
-      2.8
+      -1.0,
+      1.05,
+      2.2
      ],
      "look": [
-      -1.5,
-      1.0,
+      -0.5,
+      1.3,
       0.5
      ],
      "fov": 28,
-     "shake": 0.12
+     "shake": 0.1
     }
    ],
    "actor": [
@@ -335,21 +434,37 @@
       0.5
      ],
      "rotY": "lens",
-     "clip": "gestures-pack-basic-happy-hand-gesture",
+     "clip": "walk-strafe-left",
      "expr": {
       "joy": 0.5
      }
     },
     {
-     "at": 1.72,
+     "at": 1.6,
      "pose": "stand",
      "pos": [
-      -1.5,
+      -0.8,
       0.0,
       0.5
      ],
      "rotY": "lens",
-     "clip": "twist-dance",
+     "move": 1.55,
+     "clip": "walk-strafe-left",
+     "expr": {
+      "joy": 0.7
+     }
+    },
+    {
+     "at": 2.6,
+     "pose": "stand",
+     "pos": [
+      -0.5,
+      0.0,
+      0.5
+     ],
+     "rotY": "lens",
+     "move": 0.9,
+     "clip": "walk-strafe-left",
      "expr": {
       "joy": 0.9
      }
@@ -357,7 +472,7 @@
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "a wider shot at hip height circling her a little: on 'like this' she does the shuffle - a goofy twisting foot dance in the sand"
+    "see": "down at her feet, low over the sand: she SHUFFLES - feet sliding sideways through the sand, the lens tracking along; on 'like this' it rises to her proud face while she keeps shuffling"
    }
   },
   {
@@ -377,12 +492,12 @@
     {
      "at": 0,
      "pos": [
-      -1.9,
+      -0.9,
       1.3,
       2.7
      ],
      "look": [
-      -1.5,
+      -0.5,
       0.9,
       0.5
      ],
@@ -390,35 +505,50 @@
      "shake": 0.1
     },
     {
-     "at": 0.82,
+     "at": 0.85,
      "pos": [
-      -1.9,
+      -0.9,
       1.3,
       2.7
      ],
      "look": [
-      -1.5,
-      0.6,
+      -0.5,
+      0.3,
       0.5
      ],
      "fov": 30,
      "shake": 0.1
     },
     {
-     "at": "end",
+     "at": 2.6,
      "pos": [
-      -1.7,
+      -0.55,
       1.35,
       2.8
      ],
      "look": [
-      0.5,
+      0.9,
       0.1,
       0.4
      ],
      "fov": 32,
      "shake": 0.12,
      "ease": "inOut"
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.5,
+      1.35,
+      2.8
+     ],
+     "look": [
+      0.95,
+      0.05,
+      0.4
+     ],
+     "fov": 32,
+     "shake": 0.08
     }
    ],
    "actor": [
@@ -426,7 +556,7 @@
      "at": 0,
      "pose": "stand",
      "pos": [
-      -1.5,
+      -0.5,
       0.0,
       0.5
      ],
@@ -437,10 +567,10 @@
      }
     },
     {
-     "at": 0.82,
+     "at": 0.83,
      "pose": "stand",
      "pos": [
-      -1.5,
+      -0.5,
       0.0,
       0.5
      ],
@@ -451,16 +581,31 @@
      }
     },
     {
-     "at": 2.3,
+     "at": 2.55,
      "pose": "stand",
      "pos": [
-      0.6,
+      0.9,
       0.0,
       0.4
      ],
      "rotY": 90,
-     "move": 1.4,
+     "move": 1.65,
      "ease": "inOut",
+     "act": "flatten",
+     "expr": {
+      "joy": 0.8
+     }
+    },
+    {
+     "at": 2.8,
+     "pose": "stand",
+     "pos": [
+      0.95,
+      -0.35,
+      0.4
+     ],
+     "rotY": 90,
+     "move": 0.25,
      "act": "flatten",
      "expr": {
       "joy": 0.8
@@ -469,7 +614,7 @@
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "on 'swim away' she goes FLAT like a ray and glides off over the sand into the shallow water, the lens panning after her"
+    "see": "on 'swim' she goes FLAT like a ray and glides off over the sand into the shallow water, the lens panning after her; she slips under the surface and only the water is left"
    }
   },
   {
@@ -494,17 +639,17 @@
     ],
     "post": {
      "bloom": 0.3,
-     "dof": 1.58,
-     "dofRange": 0.55
+     "dof": 0.69,
+     "dofRange": 0.35
     }
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      -1.45,
-      1.18,
-      1.7
+      -1.48,
+      0.62,
+      1.0
      ],
      "look": [
       -1.5,
@@ -517,16 +662,16 @@
     {
      "at": "end",
      "pos": [
-      -1.45,
-      1.22,
-      1.8
+      -1.49,
+      0.42,
+      0.83
      ],
      "look": [
       -1.5,
       0.1,
       0.55
      ],
-     "fov": 24,
+     "fov": 22,
      "shake": 0.08
     }
    ],
@@ -560,7 +705,43 @@
      }
     },
     {
-     "at": 1.6,
+     "at": 1.81,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      -1.28,
+      0.5
+     ],
+     "rotY": "lens",
+     "look": [
+      -2.7,
+      0.0,
+      1.5
+     ],
+     "expr": {
+      "fun": 0.5
+     }
+    },
+    {
+     "at": 2.0,
+     "pose": "stand",
+     "pos": [
+      -1.5,
+      -1.28,
+      0.5
+     ],
+     "rotY": "lens",
+     "look": [
+      -0.30000000000000004,
+      0.0,
+      1.5
+     ],
+     "expr": {
+      "fun": 0.5
+     }
+    },
+    {
+     "at": 2.34,
      "pose": "stand",
      "pos": [
       -1.5,
@@ -569,14 +750,14 @@
      ],
      "rotY": "lens",
      "expr": {
-      "fun": 0.4,
-      "blink": 0.5
-     }
+      "angry": 0.8
+     },
+     "icon": "!"
     }
    ],
    "outline": 0.0035,
    "doc": {
-    "see": "back to frame 0: you look down at the same spot - she sinks back into the sand (it heaps up over her again), only her eyes peek out, waiting for your answer"
+    "see": "frame 0 again, looking down at the same spot: she sinks back into the sand (it heaps up over her), the lens creeps in on her eyes; on 'yes or' her eyes dart left and right after your foot, and on 'no.' they lock on you"
    }
   }
  ]

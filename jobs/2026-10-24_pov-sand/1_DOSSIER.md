@@ -9,7 +9,7 @@ On her beach you nearly step on a mound of sand - two purple eyes open in it: sh
 
 ## Why only Raymi
 - she hides in the sand like a real ray - only her eyes peek out (her body, canon/01: a stingray)
-- the stingray shuffle is a real beach-safety fact, told by the ray herself - and she does it as a dance ('like this')
+- the stingray shuffle is a real beach-safety fact, told by the ray herself - and she shows it: feet sliding sideways through the sand ('like this')
 - on 'swim away' she goes flat and glides off over the sand into the water like a ray (her body)
 - bossy-helpful about ocean things (canon/01 2), never mean: 'no drama'
 
