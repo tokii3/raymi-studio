@@ -489,6 +489,31 @@ def vrm_poses() -> set[str]:
     return set(re.findall(r"^  ([a-z_0-9]+): \{", body, re.M))
 
 
+# the solid size of a desk thing (studio/src/three/routine.tsx) - the lens may not fly through it, nor may it hide her
+# face (motion reel 2026-10-23: a crash zoom ran through her monitor's back and the frame was one dark mass)
+THING_BOX = {"monitor": ([0.0, 0.42, 0.0], [0.64, 0.42, 0.08]), "globe": ([0.0, 0.2, 0.0], [0.34, 0.42, 0.34]),
+             "printer": ([0.0, 0.5, 0.0], [0.6, 1.0, 0.5])}
+
+
+def thing_solids(things: list[dict], marks: dict) -> list[dict]:
+    out = []
+    for t in things:
+        kind = t.get("kind")
+        pos = marks.get(t["pos"]) if isinstance(t.get("pos"), str) else t.get("pos")
+        if not isinstance(pos, list) or len(pos) != 3:
+            continue
+        sc = float(t.get("scale", 1.0))
+        if kind == "files":
+            h = 0.044 * int(t.get("n", 6)) + 0.03
+            c, sz = [0.0, h / 2, 0.0], [0.36, h, 0.28]
+        elif kind in THING_BOX:
+            c, sz = THING_BOX[kind]
+        else:
+            continue
+        out.append({"name": kind, "center": [round(pos[i] + c[i] * sc, 3) for i in range(3)], "size": [round(v * sc, 3) for v in sz]})
+    return out
+
+
 def clip_names() -> set[str]:
     """Mixamo clip ids the studio can load (studio/catalog/clips.json; the files live in the private assets repo)."""
     p = Path(__file__).resolve().parents[1] / "studio" / "catalog" / "clips.json"
@@ -883,7 +908,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                                 and not (tx.get("blank") and opts.get(tx["blank"]) == "")],
                       "noLens": sets[st].get("no_lens", []),
                       "solids": [{k: v for k, v in so.items() if k not in ("opt", "unless")} for so in sets[st].get("solids", [])
-                                 if (not so.get("opt") or opts.get(so["opt"])) and opts.get(so.get("unless", ""), True) is not False]})
+                                 if (not so.get("opt") or opts.get(so["opt"])) and opts.get(so.get("unless", ""), True) is not False]
+                      + thing_solids(opts.get("things") or [], marks)})
     if shots and shots[0]["from"] != 0:
         errors.append(f"the first shot must start at the window start ({t_from:.2f} s)")
     overlay = None

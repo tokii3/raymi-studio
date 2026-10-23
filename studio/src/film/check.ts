@@ -651,6 +651,21 @@ export function solidFaults(props: FilmProps): {shot: string; frame: number; why
           }
         }
       }
+      // the 3D Raymi (actor keys): her head and chest height on her spot - both behind a solid = she is hidden
+      // (motion reel 2026-10-23: a crash zoom flew through her monitor's back, one dark mass on screen)
+      if (!p && s.actor?.length) {
+        const k = s.actor.reduce((q, x) => (x.f <= f ? x : q), s.actor[0]);
+        const hh = k.height ?? 1.55;
+        const blocked = [0.66, 0.88].map((r) => {
+          const pt = new THREE.Vector3(k.pos[0], k.pos[1] + r * hh, k.pos[2]);
+          const n = pt.clone().project(cam);
+          if (!(n.z < 1 && Math.abs(n.x) < 1 && Math.abs(n.y) < 1)) return null;
+          const dir = pt.clone().sub(cam.position), dist = dir.length();
+          const ray = new THREE.Ray(cam.position.clone(), dir.normalize());
+          return boxes.find((b) => { const hit = ray.intersectBox(b.box, new THREE.Vector3()); return hit && hit.distanceTo(cam.position) < dist - 0.15 && !b.box.containsPoint(pt); })?.name ?? null;
+        });
+        if (blocked[0] && blocked[1]) hidden = blocked[1];
+      }
       run = hidden ? run + 1 : 0;
       if (run >= Math.round(props.fps * 0.4)) { out.push({shot: s.id, frame: f - run + 1, why: `her face hidden behind the ${hidden}`}); break; }
     }

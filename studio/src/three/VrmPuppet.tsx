@@ -46,6 +46,7 @@ type Rig = {
 };
 
 const rigs = new Map<string, Rig>();
+export const _rig = (url: string): Rig | undefined => rigs.get(url);   // tests / diagnosis only
 const FEET: VRMHumanBoneName[] = ['leftFoot', 'rightFoot', 'leftToes', 'rightToes'];
 
 async function loadRig(url: string, data?: ArrayBuffer): Promise<Rig> {
@@ -162,6 +163,16 @@ export async function preloadVrm(url: string, data?: ArrayBuffer): Promise<void>
   if (!rigs.has(url)) rigs.set(url, await loadRig(url, data));
 }
 
+/** Load a Mixamo clip into every cached rig from its bytes (tests: no browser, no fetch). */
+export function preloadMotionData(id: string, data: ArrayBuffer): void {
+  const fbx = new FBXLoader().parse(data, '');
+  for (const rig of rigs.values()) {
+    const clip = retargetAnimation(fbx, rig.vrm, {logWarnings: false});
+    if (!clip) throw new Error(`Mixamo animation could not be retargeted: ${id}`);
+    rig.motions.set(id, inPlace(clip));
+  }
+}
+
 async function preloadMotion(url: string): Promise<void> {
   const id = decodeURIComponent(new URL(url, 'https://raymi.invalid').pathname.split('/').pop() ?? url).replace(/\.[^.]+$/, '');
   if ([...rigs.values()].every((rig) => rig.motions.has(id))) return;
@@ -181,15 +192,17 @@ export function useVrmReady(urls: string[], motionUrls: string[] = []): boolean 
   const [ready, setReady] = useState(() => urls.every((u) => rigs.has(u)));
   useEffect(() => {
     const todo = urls.filter((u) => !rigs.has(u));
-    const motionTodo = motionUrls.filter((u) => {
+    // which clips a rig still lacks - asked AFTER the models load: asked before (no rig yet) `some` over no rigs was
+    // false, no clip was ever loaded and every film froze her in the poses (found 2026-10-23, toki "steif")
+    const missing = () => motionUrls.filter((u) => {
       const id = decodeURIComponent(new URL(u, 'https://raymi.invalid').pathname.split('/').pop() ?? u).replace(/\.[^.]+$/, '');
       return [...rigs.values()].some((rig) => !rig.motions.has(id));
     });
-    if (!todo.length && !motionTodo.length) { setReady(true); return; }
+    if (!todo.length && !missing().length) { setReady(true); return; }
     // a 25 MB model + its textures under software GL: far longer than the 30 s default
-    const handle = delayRender(`vrm ${todo.join(',')}`, {timeoutInMilliseconds: 110000});
+    const handle = delayRender(`vrm ${todo.join(',')}`, {timeoutInMilliseconds: 240000});   // + every clip of the film
     Promise.all(todo.map((u) => preloadVrm(u)))
-      .then(() => Promise.all(motionTodo.map((u) => preloadMotion(u))))
+      .then(() => Promise.all(missing().map((u) => preloadMotion(u))))
       .then(() => { setReady(true); continueRender(handle); })
       .catch((e) => cancelRender(e));
   }, [key]);   // eslint-disable-line react-hooks/exhaustive-deps
@@ -388,6 +401,8 @@ function applyState(rig: Rig, s: State, fps: number) {
   // parallel Remotion frames deterministic and lets expression/spring-bone simulation stay local.
   // 2026-10-22: no hard switch any more - two clips cross-fade over the key's blend, and a clip is laid over the key
   // pose by `motionMix` (1 = the clip alone, 0.5 = half clip half pose), also faded in / out when a key has none.
+  // a key that asks for a clip the rig does not have is an error, never a silent freeze in the pose
+  for (const m of [s.prevMotion, s.motion]) if (m && !rig.motions.has(m)) cancelRender(new Error(`clip ${m} is not loaded (props.motions)`));
   const a = s.prevMotion && rig.motions.has(s.prevMotion) ? s.prevMotion : undefined;
   const b = s.motion && rig.motions.has(s.motion) ? s.motion : undefined;
   const amount = (a ? s.mixPrev : 0) * (1 - s.t) + (b ? s.mixCur : 0) * s.t;
@@ -399,7 +414,9 @@ function applyState(rig: Rig, s: State, fps: number) {
     for (const [id, clip] of rig.motions) {
       let action = rig.actions.get(id);
       if (!action) { action = rig.mixer.clipAction(clip); action.play(); rig.actions.set(id, action); }
-      const weight = id === a ? wA : id === b ? wB : 0;
+      // the current clip first: when a key inherits the clip of the key before (a === b, the usual case) wA is 0 -
+      // asking `id === a` first gave the playing clip weight 0 and froze her in the pose (found 2026-10-23, toki "steif")
+      const weight = id === b ? wB : id === a ? wA : 0;
       action.enabled = true;
       action.setEffectiveWeight(weight);
       if (weight > 0) action.time = clipSeconds(id === b ? s.clipCur : s.clipPrev, s.f, fps, clip.duration);
