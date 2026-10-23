@@ -58,14 +58,9 @@
   "hits": 18,
   "changed": 13,
   "share": 0.72,
-  "threshold": 7.4
+  "threshold": 8.4
  },
- "still_spans_s": [
-  [
-   35.43,
-   37.53
-  ]
- ],
+ "still_spans_s": [],
  "audio": {
   "input_i": "-14.10",
   "input_tp": "-2.83"
