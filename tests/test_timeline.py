@@ -119,6 +119,14 @@ def test_set_times_become_film_frames_and_a_window_drops_shots(tmp_path):
     assert p["durationInFrames"] == round(13.9 * 30) - 345
 
 
+def test_value_pairs_convert_only_their_time(tmp_path):
+    # 2026-10-24: dusk_to [[11.0, 0.92]] became [[frames, 28]] - the beach sky went blood red in the purple Short
+    a = {**SHOT, "at": "line:0", "opts": {"dusk_to": [[10.5, 0.92]]}}
+    spec = job(tmp_path, [a, {**SHOT, "at": "line:1"}])
+    p, errors, _ = T.compile_shots(tmp_path, spec, "mv", cmap=ALL)
+    assert p["shots"][0]["opts"]["dusk_to"] == [[315 - 299, 0.92]]
+
+
 def test_frame_camera_keeps_cut_edges_out_and_the_head_in(tmp_path):
     shot = {**SHOT, "at": "line:0", "camera": [{"at": 0, "frame": "close", "cam": "tank_front"}],
             "raymi": [{"at": 0, "sprite": "WS_F_PANIC_LUNGE_UV_203", "pos": "center"}]}

@@ -110,7 +110,7 @@ TIME_OPTS = {"lights_off", "window_break", "unfold", "shake", "cracks", "burst",
              "pool_at", "sea_glow_at", "pulse_at", "dots_at", "path_at", "cloud_at", "rain_at", "rain_end_at", "fireworks",
              "glow", "whip", "grade_at",
              # POV Shorts (2026-10-23): her chest dots flare, a room lamp / the train lights, the live studio camera
-             "glow_flare", "lamp_at", "live", "door_at", "dusk_to"}
+             "glow_flare", "lamp_at", "live", "door_at"}
 # options holding specs (a dict or a list of dicts) whose own fields are times / positions (three/fire.tsx,
 # three/creatures.tsx): "at" / "out" / "toss" / "*_at" = song seconds -> frames, "grow" / "fade" / "ember" = seconds ->
 # frame counts, "pos" / "from" / "to" = a mark or [x, y, z]
@@ -847,7 +847,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             opts.update(short_opts)                        # the narrow frame's own set choices (e.g. a sign left out)
         for k in TIME_OPTS & opts.keys():
             opts[k] = time_opt(opts[k], fr)
-        for k in ("doors", "bed_drag"):                    # only the TIME of these is song seconds, the rest are values
+        for k in ("doors", "bed_drag", "dusk_to"):         # only the TIME of these is song seconds, the rest are values
             v = opts.get(k)
             if isinstance(v, list) and v and isinstance(v[0], list):
                 opts[k] = [[fr(x[0])] + list(x[1:]) for x in v]

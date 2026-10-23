@@ -1,1 +1,1 @@
-{"format": "short", "frames": [10, 95, 200, 300, 380, 420, 500], "names": ["still_01", "still_02", "still_03", "still_04", "still_05", "still_06", "still_07"], "scale": 0.6, "to": "boards", "_why": "stills v3: sky dusk 0.55 (was washed 4 %)"}
+{"format": "short", "frames": [10, 95, 200, 300, 380, 420, 500], "names": ["still_01", "still_02", "still_03", "still_04", "still_05", "still_06", "still_07"], "scale": 0.6, "to": "boards", "_why": "stills v4: dusk_to target was compiled to frames (sky red) - fixed in timeline.py"}
