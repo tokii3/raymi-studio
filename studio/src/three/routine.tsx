@@ -157,7 +157,7 @@ export const Boss: React.FC<{s: BossSpec; f: number}> = ({s, f}) => {
     <group position={s.pos} rotation={[0, s.rotY ?? 0, 0]} scale={s.scale ?? 1}>
       {/* the chest: a suit torso cut at the top of the frame - no head on purpose */}
       <group scale={[puff, 1, puff]}>
-        <RBox size={[1.5, 1.7, 0.75]} pos={[0, 1.55, 0]} r={0.28} c={suit} />
+        <RBox size={[1.5, 1.7, 0.75]} pos={[0, 1.55, 0]} r={0.28} c={suit} t="fabric" />
         <mesh position={[0, 1.75, 0.38]} rotation={[0, 0, Math.PI]} material={toon(shirt)}><circleGeometry args={[0.32, 3]} /></mesh>
         {/* lapels */}
         {[-1, 1].map((sd) => <mesh key={sd} position={[sd * 0.2, 1.72, 0.39]} rotation={[0, 0, sd * 0.35]} material={toon('#262a3b')} scale={[0.18, 0.75, 1]}><planeGeometry args={[1, 1]} /></mesh>)}
@@ -389,7 +389,7 @@ export const Files: React.FC<{t: ThingSpec; f: number}> = ({t, f}) => {
         const drop = dl < 6 ? (1 - dl / 6) * 0.3 : 0;
         return (
           <group key={i} position={[0.01 * Math.sin(i * 2.1), 0.022 + i * 0.044 + drop, 0.01 * Math.cos(i * 1.3)]} rotation={[0, 0.12 * Math.sin(i * 3.7), 0]}>
-            <RBox size={[0.34, 0.04, 0.26]} r={0.006} c={['#8d93a8', '#a3a7b8', '#7d8399'][i % 3]} />
+            <RBox size={[0.34, 0.04, 0.26]} r={0.006} c={['#8d93a8', '#a3a7b8', '#7d8399'][i % 3]} t="paper" />
             {label && i % 3 === 1 ? <Printed id={`file${label}`} size={[0.2, 0.034]} pos={[0, 0, 0.131]} bg="#e9e6dc" lines={[{t: label, px: 0.75, c: INK, y: 0.5}]} /> : null}
           </group>
         );
@@ -486,8 +486,8 @@ export const Monitor: React.FC<{t: ThingSpec; f: number}> = ({t}) => (
 /** An office chair (spins with rot). */
 export const Chair: React.FC<{t: ThingSpec; f: number}> = ({t}) => (
   <group position={t.pos} rotation={t.rot ?? [0, 0, 0]} scale={t.scale ?? 1}>
-    <RBox size={[0.5, 0.08, 0.48]} pos={[0, 0.46, 0]} r={0.03} c={t.c ?? '#4a4e66'} />
-    <RBox size={[0.48, 0.55, 0.07]} pos={[0, 0.8, -0.22]} r={0.04} c={t.c ?? '#4a4e66'} />
+    <RBox size={[0.5, 0.08, 0.48]} pos={[0, 0.46, 0]} r={0.03} c={t.c ?? '#4a4e66'} t="fabric" />
+    <RBox size={[0.48, 0.55, 0.07]} pos={[0, 0.8, -0.22]} r={0.04} c={t.c ?? '#4a4e66'} t="fabric" />
     <mesh position={[0, 0.24, 0]} material={toon('#2a2c3a')}><cylinderGeometry args={[0.03, 0.03, 0.42, 10]} /></mesh>
     {Array.from({length: 5}, (_, i) => <mesh key={i} position={[Math.cos(i * 1.256) * 0.2, 0.03, Math.sin(i * 1.256) * 0.2]} rotation={[0, -i * 1.256, Math.PI / 2]} material={toon('#2a2c3a')}><cylinderGeometry args={[0.018, 0.018, 0.4, 6]} /></mesh>)}
   </group>
@@ -496,8 +496,8 @@ export const Chair: React.FC<{t: ThingSpec; f: number}> = ({t}) => (
 /** A grey office desk with drawers. */
 export const Desk: React.FC<{pos: P3; rotY?: number; c?: string; w?: number}> = ({pos, rotY = 0, c = '#9ca0b2', w = 1.4}) => (
   <group position={pos} rotation={[0, rotY, 0]}>
-    <RBox size={[w, 0.05, 0.75]} pos={[0, 0.74, 0]} r={0.015} c={c} />
-    <RBox size={[0.4, 0.68, 0.7]} pos={[w / 2 - 0.22, 0.36, 0]} r={0.02} c="#878b9e" />
+    <RBox size={[w, 0.05, 0.75]} pos={[0, 0.74, 0]} r={0.015} c={c} t="wood" />
+    <RBox size={[0.4, 0.68, 0.7]} pos={[w / 2 - 0.22, 0.36, 0]} r={0.02} c="#878b9e" t="metal" />
     {[0, 1, 2].map((k) => <mesh key={k} position={[w / 2 - 0.22, 0.58 - k * 0.2, 0.352]} material={toon('#c6c9d6')}><boxGeometry args={[0.12, 0.015, 0.01]} /></mesh>)}
     <mesh position={[-w / 2 + 0.04, 0.37, 0]} material={toon('#878b9e')}><boxGeometry args={[0.04, 0.72, 0.68]} /></mesh>
   </group>

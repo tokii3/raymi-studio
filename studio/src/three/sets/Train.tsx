@@ -12,7 +12,7 @@
 import React from 'react';
 import * as THREE from 'three';
 import {RBox, Sign, drawText} from '../parts';
-import {SetLight, canvasTexture, rnd, toon} from '../look';
+import {SetLight, canvasTexture, rnd, toon, toonSurface} from '../look';
 import {RoutineLife} from '../routine';
 import {stepValue} from '../events';
 import type {SetProps} from './index';
@@ -32,10 +32,10 @@ export const Train: React.FC<SetProps> = ({f, opts, camPos}) => {
   });
   return (
     <group>
-      <SetLight sky="#d6dcf0" ground="#3a3c4c" fill={1.0} key="#f6f7ff" keyI={1.4} keyPos={[0, 4, 2]} target={[0, 0.5, 0]} shadowSize={6}
+      <SetLight sky="#d6dcf0" ground="#2a2c3a" fill={0.65} key="#f6f7ff" keyI={2.3} keyPos={[0, 4, 2]} target={[0, 0.5, 0]} shadowSize={6}
         fog="#3a3e52" fogNear={10} fogFar={26} bg="#1c2033" />
       {/* the car body */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} material={toon('#5e6274')} receiveShadow><planeGeometry args={[2.6, 16]} /></mesh>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} material={toonSurface('#5e6274', 'rubber', [6, 36])} receiveShadow><planeGeometry args={[2.6, 16]} /></mesh>
       <mesh position={[0, 2.3, 0]} rotation={[Math.PI / 2, 0, 0]} material={toon('#c9ccd8')}><planeGeometry args={[2.6, 16]} /></mesh>
       {[-1, 1].map((side) => (
         <group key={side}>
@@ -60,7 +60,7 @@ export const Train: React.FC<SetProps> = ({f, opts, camPos}) => {
             );
           })}
           {/* benches */}
-          {[-4.5, 4.5].map((z) => <RBox key={z} size={[0.45, 0.45, 3]} pos={[side * 1.05, 0.23, z]} r={0.05} c="#4f5aa0" />)}
+          {[-4.5, 4.5].map((z) => <RBox key={z} size={[0.45, 0.45, 3]} pos={[side * 1.05, 0.23, z]} r={0.05} c="#4f5aa0" t="fabric" />)}
           {/* ad panels above the benches (lyric surfaces) */}
           {[-4.5, 4.5].map((z) => (
             <Sign key={`ad${z}`} id={`trainad${side}${z}`} pos={[side * 1.28, 1.98, z]} rot={[0, -side * Math.PI / 2, 0]} size={[1.6, 0.34]} paint={(ctx, w, h) => {

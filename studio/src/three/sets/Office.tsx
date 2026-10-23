@@ -12,7 +12,7 @@
 import React from 'react';
 import * as THREE from 'three';
 import {RBox, Sign, drawText} from '../parts';
-import {SetLight, canvasTexture, rnd, toon} from '../look';
+import {SetLight, canvasTexture, rnd, toon, toonSurface} from '../look';
 import {Desk, RoutineLife} from '../routine';
 import {ease} from '../../film/motion';
 import type {SetProps} from './index';
@@ -48,12 +48,12 @@ export const Office: React.FC<SetProps> = ({f, opts, camPos}) => {
   });
   return (
     <group>
-      <SetLight sky={new THREE.Color('#c9cfe2').lerp(new THREE.Color('#ffd9a8'), warm).getStyle()} ground="#3a3d4c" fill={1.15 * power + 0.15 * warm}
-        key={warm > 0.3 ? '#ffe2b5' : '#f2f4ff'} keyI={1.7 * power + 1.2 * warm} keyPos={[3, 6, 5]} target={[0, 0, -2]} shadowSize={9}
+      <SetLight sky={new THREE.Color('#c9cfe2').lerp(new THREE.Color('#ffd9a8'), warm).getStyle()} ground="#2a2c38" fill={0.7 * power + 0.2 * warm}
+        key={warm > 0.3 ? '#ffe2b5' : '#f2f4ff'} keyI={2.6 * power + 1.4 * warm} keyPos={[3.5, 6.5, 4]} target={[0, 0, -2]} shadowSize={9}
         fog={new THREE.Color('#5a5f72').lerp(new THREE.Color('#05060c'), dark).getStyle()} fogNear={9} fogFar={34}
         bg={new THREE.Color('#4d5163').lerp(new THREE.Color('#030308'), dark).getStyle()} />
       {/* floor: carpet tiles */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -12]} material={toon(FLOOR)} receiveShadow><planeGeometry args={[24, 44]} /></mesh>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -12]} material={toonSurface(FLOOR, 'carpet', [24, 44])} receiveShadow><planeGeometry args={[24, 44]} /></mesh>
       {Array.from({length: 22}, (_, i) => (
         <mesh key={`ct${i}`} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.002, 6 - i * 2]}><planeGeometry args={[24, 0.02]} />
           <meshBasicMaterial color="#4c505f" toneMapped={false} /></mesh>
@@ -63,8 +63,8 @@ export const Office: React.FC<SetProps> = ({f, opts, camPos}) => {
         <group key={`d${r}${c}`} position={[x, 0, -1.6 - r * 2.2]}>
           <Desk pos={[0, 0, 0]} rotY={Math.PI} />
           <RBox size={[0.5, 0.34, 0.03]} pos={[0, 1.12, -0.12]} r={0.015} c="#2b2e3c" e={r + 1 >= offRows ? '#4a5a8a' : '#000000'} ei={0.35} />
-          <RBox size={[0.5, 0.08, 0.48]} pos={[0, 0.46, -0.6]} r={0.03} c="#4a4e66" />
-          <RBox size={[0.48, 0.5, 0.07]} pos={[0, 0.78, -0.82]} r={0.04} c="#4a4e66" />
+          <RBox size={[0.5, 0.08, 0.48]} pos={[0, 0.46, -0.6]} r={0.03} c="#4a4e66" t="fabric" />
+          <RBox size={[0.48, 0.5, 0.07]} pos={[0, 0.78, -0.82]} r={0.04} c="#4a4e66" t="fabric" />
         </group>
       )))}
       {/* the ceiling and its light rows (each row a long panel; rows die from the front on lights_off) */}
@@ -82,7 +82,7 @@ export const Office: React.FC<SetProps> = ({f, opts, camPos}) => {
       })}
       {litRows > 0 ? <pointLight position={[0, 3, 0]} color="#eef1ff" intensity={4 * power} distance={9} decay={1.4} /> : null}
       {/* back wall with the big screen (a lyric surface) */}
-      <RBox size={[24, 3.4, 0.3]} pos={[0, 1.7, -4.4 - rows * 2.2]} r={0.02} c={WALL} cast={false} />
+      <RBox size={[24, 3.4, 0.3]} pos={[0, 1.7, -4.4 - rows * 2.2]} r={0.02} c={WALL} cast={false} t="plaster" />
       <group position={[0, 2.25, -3.6]}>
         <RBox size={[5.4, 1.62, 0.12]} r={0.04} c="#151824" />
         <mesh position={[0, 0, 0.065]}><planeGeometry args={[5.2, 1.5]} />
@@ -91,7 +91,7 @@ export const Office: React.FC<SetProps> = ({f, opts, camPos}) => {
       {/* side wall with frosted windows: marine snow drifts in the dark sea outside */}
       {[-1, 1].map((side) => (
         <group key={side} position={[side * 6, 0, 0]} rotation={[0, side * -Math.PI / 2, side * unfold * 0.9]}>
-          <RBox size={[44, 3.4, 0.25]} pos={[-12 * side, 1.7, 0]} r={0.02} c={WALL} cast={false} />
+          <RBox size={[44, 3.4, 0.25]} pos={[-12 * side, 1.7, 0]} r={0.02} c={WALL} cast={false} t="plaster" />
           {Array.from({length: 7}, (_, w) => {
             const x = 3 - w * 3.2;
             const broken = side < 0 && w === 1 && brk >= 0;

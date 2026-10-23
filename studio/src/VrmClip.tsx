@@ -15,6 +15,7 @@ import {TONES, gradeName} from './film/grade';
 import {cameraAt, fovFor, type Cam} from './film/motion';
 import {Transitions, whipStyle} from './film/Transitions';
 import {Fx2D, Fx2DDefs, fxFilter, type Fx} from './film/Fx2D';
+import {PostFX, type PostSpec} from './three/PostFX';
 import type {CamKey, Shot, Transition, V3} from './film/types';
 import type {VrmKey} from './three/vrmPoses';
 import {makeVrmMouthKeys, type TimedLyricWord} from './three/vrmLipSync';
@@ -93,6 +94,7 @@ export const VrmClip: React.FC<VrmClipProps> = (props) => {
               lock={props.lock ?? 0.25} shadow={String(seg.opts.shadow ?? '#120b2b')} glow={String(seg.opts.glow ?? '') || undefined}
               glowGain={props.glowGain ?? 0} materialStyle={props.materialStyle ?? 'firestarter'}
               step={props.step ?? 1} outline={props.outline ?? 0} outlineColor={props.outlineColor} />
+            <PostFX spec={(seg.opts.post ?? {}) as PostSpec} />
           </ThreeCanvas>
         ) : null}
       </AbsoluteFill>

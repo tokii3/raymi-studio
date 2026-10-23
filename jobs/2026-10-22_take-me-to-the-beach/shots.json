@@ -424,7 +424,10 @@
    "set": "dream",
    "why": "colour flash 1 inside the first 3 s (treatment_2 FIX 2)",
    "opts": {
-    "grade": "warm"
+    "grade": "warm",
+    "post": {
+     "bloom": 0.8
+    }
    },
    "camera": [
     {
@@ -441,7 +444,7 @@
      "motionMix": 0.3,
      "pos": [
       0,
-      0.02,
+      0.26,
       0
      ],
      "rotY": "lens",
@@ -907,7 +910,10 @@
       "scale": 2.4,
       "text": "open"
      }
-    ]
+    ],
+    "post": {
+     "dof": 0.9
+    }
    },
    "camera": [
     {
@@ -937,7 +943,10 @@
    "set": "dream",
    "why": "stab 3: she laughs in the sun - held 12 frames so it reads",
    "opts": {
-    "grade": "warm"
+    "grade": "warm",
+    "post": {
+     "bloom": 0.8
+    }
    },
    "camera": [
     {
@@ -959,7 +968,7 @@
      "motionMix": 0.4,
      "pos": [
       0,
-      0.02,
+      0.26,
       0
      ],
      "rotY": "lens",
@@ -1109,7 +1118,10 @@
        7.85
       ]
      }
-    ]
+    ],
+    "post": {
+     "dof": 0.66
+    }
    },
    "camera": [
     {
@@ -2021,7 +2033,10 @@
       "scale": 1,
       "text": "grab"
      }
-    ]
+    ],
+    "post": {
+     "dof": 0.49
+    }
    },
    "camera": [
     {
@@ -3183,7 +3198,10 @@
    "set": "dream",
    "why": "wow 3: grey -> colour in one move, falling through warm air",
    "opts": {
-    "grade": "warm"
+    "grade": "warm",
+    "post": {
+     "bloom": 0.8
+    }
    },
    "camera": [
     {
@@ -3235,7 +3253,7 @@
      "at": "end",
      "pose": "glide",
      "pos": [
-      1.2,
+      1.19,
       0.6,
       0.2
      ],
@@ -3313,7 +3331,10 @@
       0.7,
       5
      ]
-    ]
+    ],
+    "post": {
+     "bloom": 0.8
+    }
    },
    "camera": [
     {
@@ -3351,9 +3372,9 @@
      "at": 0,
      "pose": "float",
      "pos": [
-      1.2,
-      0.12,
-      1.1
+      0.85,
+      0.36,
+      0.72
      ],
      "rotY": 0,
      "rollZ": -88,
@@ -3395,16 +3416,16 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.13,
+      1.02,
       0.03,
-      0.08
+      -0.09
      ],
-     "size": 0.094,
-     "width": 1.04,
+     "size": 0.12,
+     "width": 1.13,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
-     "key_scale": 1.8
+     "key_scale": 1.3
     }
    }
   },
@@ -3571,6 +3592,9 @@
      ],
      "icon": "heart",
      "icon_at": 40.4
+    },
+    "post": {
+     "bloom": 0.8
     }
    },
    "camera": [
@@ -3605,16 +3629,17 @@
      "at": 1.1,
      "pose": "float",
      "pos": [
-      -1.5,
-      -0.05,
-      0.6
+      -0.7,
+      0.12,
+      0.2
      ],
      "rotY": 90,
      "rollZ": -88,
      "blend": 0.3,
      "expr": {
       "joy": 0.5
-     }
+     },
+     "why": "bury: flat in the light-dust, only her eyes out"
     }
    ],
    "mouth": {
@@ -3646,16 +3671,16 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -2.32,
+      -2.41,
       0.03,
-      -3.58
+      -1.73
      ],
-     "size": 0.617,
-     "width": 3.29,
+     "size": 0.326,
+     "width": 2.42,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
-     "key_scale": 1.8
+     "key_scale": 1.3
     }
    }
   },
@@ -3878,7 +3903,10 @@
       "pos": "globe",
       "scale": 1.6
      }
-    ]
+    ],
+    "post": {
+     "dof": 1.17
+    }
    },
    "camera": [
     {
@@ -4996,7 +5024,10 @@
    "set": "office",
    "why": "a held beat = the joke lands",
    "opts": {
-    "grade": "closing"
+    "grade": "closing",
+    "post": {
+     "dof": 1.16
+    }
    },
    "camera": [
     {
@@ -5313,7 +5344,10 @@
        68.4
       ]
      }
-    ]
+    ],
+    "post": {
+     "dof": 1.3
+    }
    },
    "camera": [
     {
@@ -7313,7 +7347,10 @@
    "set": "dream",
    "why": "a rich wide so we WANT it: alone on the light, arms spread",
    "opts": {
-    "grade": "warm"
+    "grade": "warm",
+    "post": {
+     "bloom": 0.8
+    }
    },
    "camera": [
     {
@@ -7366,16 +7403,17 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.17,
+      1.59,
       0.03,
-      -0.05
+      0.2
      ],
-     "size": 0.367,
-     "width": 3.5,
+     "size": 0.334,
+     "width": 3.57,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
-     "key_scale": 1
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    }
   },
@@ -7513,7 +7551,10 @@
       "text": "OFF",
       "empty": false
      }
-    ]
+    ],
+    "post": {
+     "bloom": 0.8
+    }
    },
    "camera": [
     {
@@ -8160,7 +8201,10 @@
      107.7,
      108.09,
      108.55
-    ]
+    ],
+    "post": {
+     "dof": 0.86
+    }
    },
    "camera": [
     {
@@ -8210,6 +8254,9 @@
       0.1,
       0.8
      ]
+    },
+    "post": {
+     "bloom": 0.8
     }
    },
    "camera": [
@@ -8238,9 +8285,9 @@
      "at": 0,
      "pose": "float",
      "pos": [
-      -1.5,
-      0.04,
-      0.4
+      -1.16,
+      0.28,
+      0.26
      ],
      "rotY": 90,
      "rollZ": -88,
@@ -8277,15 +8324,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      6.34,
+      4.24,
       -5.79,
-      -8.4
+      -9.3
      ],
      "size": 1.069,
      "width": 32.29,
      "tilt": -30.6,
      "roll": 0,
-     "rot": -32.2,
+     "rot": -25.5,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
@@ -8314,7 +8361,10 @@
       "scale": 1.6,
       "text": "SUN"
      }
-    ]
+    ],
+    "post": {
+     "dof": 1.26
+    }
    },
    "camera": [
     {
@@ -9500,6 +9550,9 @@
       0.1,
       1
      ]
+    },
+    "post": {
+     "bloom": 0.8
     }
    },
    "camera": [
@@ -9549,7 +9602,10 @@
    "set": "dream",
    "why": "release: she lets herself fall backwards into the warm water",
    "opts": {
-    "grade": "warm"
+    "grade": "warm",
+    "post": {
+     "bloom": 0.8
+    }
    },
    "camera": [
     {
@@ -9629,7 +9685,10 @@
    "set": "dream",
    "why": "the outro is a peak - so is she",
    "opts": {
-    "grade": "warm"
+    "grade": "warm",
+    "post": {
+     "bloom": 0.8
+    }
    },
    "camera": [
     {
@@ -9673,22 +9732,7 @@
     "kind": "cut",
     "frames": 0
    },
-   "lyrics_fit": {
-    "mv": {
-     "anchor": [
-      0.32,
-      1.44,
-      0.37
-     ],
-     "size": 0.024,
-     "width": 0.29,
-     "tilt": -5.2,
-     "roll": 0,
-     "rot": -3.8,
-     "key_scale": 1,
-     "small": "fitter: the free space beside her is small in this frame"
-    }
-   }
+   "acted": "three cuts on the 8ths (0.29 s): the dance burst onto the ledge carries the line; row 78 writes its echo"
   },
   {
    "id": "78",
@@ -9705,6 +9749,9 @@
      ],
      "icon": "!",
      "icon_at": 141.4
+    },
+    "post": {
+     "bloom": 0.8
     }
    },
    "camera": [
@@ -9753,12 +9800,12 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.82,
+      -1.06,
       0.03,
-      -2.07
+      -1.79
      ],
-     "size": 0.181,
-     "width": 2.69,
+     "size": 0.249,
+     "width": 2.66,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
@@ -9771,7 +9818,7 @@
    "id": "79",
    "at": 142.64,
    "set": "dream",
-   "why": "my favourite one: she pulls Salmon in, they dance",
+   "why": "my favourite one: she dances with Salmon on the ledge, then flips her mic out of the pile and sings into it",
    "opts": {
     "grade": "warm",
     "salmon": {
@@ -9782,6 +9829,9 @@
      ],
      "icon": "heart",
      "icon_at": 143
+    },
+    "post": {
+     "bloom": 0.8
     }
    },
    "camera": [
@@ -9820,6 +9870,16 @@
      "rotY": "lens",
      "motion": "twist-dance",
      "motionMix": 0.8
+    },
+    {
+     "at": 1.36,
+     "pose": "sing",
+     "pos": "shore",
+     "rotY": "lens",
+     "blend": 0.2,
+     "expr": {
+      "joy": 0.9
+     }
     }
    ],
    "mouth": {
@@ -9848,12 +9908,12 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      3.78,
+      2.56,
       0.03,
-      -1.58
+      -0.41
      ],
-     "size": 0.307,
-     "width": 12.91,
+     "size": 0.24,
+     "width": 10.07,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
@@ -9868,7 +9928,10 @@
    "set": "dream",
    "why": "type made by her body: 最後まで in the light",
    "opts": {
-    "grade": "warm"
+    "grade": "warm",
+    "post": {
+     "bloom": 0.8
+    }
    },
    "camera": [
     {
@@ -9891,7 +9954,7 @@
      "pose": "float",
      "pos": [
       -0.5,
-      0.02,
+      0.26,
       0.3
      ],
      "rotY": 90,
@@ -9904,9 +9967,9 @@
      "at": "end",
      "pose": "float",
      "pos": [
-      -2,
-      0.02,
-      0.3
+      -1.21,
+      0.26,
+      0.1
      ],
      "rotY": 90,
      "rollZ": -88,
@@ -9961,15 +10024,15 @@
    "id": "81",
    "at": 148.33,
    "set": "dream",
-   "why": "the staring commuters now dance with her",
+   "why": "the staring commuters drift down the shaft and dance with her on the ledge",
    "opts": {
     "grade": "warm",
     "crowd": [
      {
       "pos": [
-       1.4,
-       0,
-       1.4
+       1,
+       0.24,
+       0.6
       ],
       "yaw": -0.8,
       "seed": 1,
@@ -9978,14 +10041,26 @@
      {
       "pos": [
        -1,
-       0,
-       1.8
+       0.24,
+       0.5
       ],
-      "yaw": 0.4,
+      "yaw": 0.6,
       "seed": 3,
       "dance": true
+     },
+     {
+      "pos": [
+       0.4,
+       1.8,
+       -0.6
+      ],
+      "yaw": 0,
+      "seed": 2
      }
-    ]
+    ],
+    "post": {
+     "bloom": 0.8
+    }
    },
    "camera": [
     {
@@ -10035,15 +10110,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.19,
-      2.01,
-      0.33
+      0.76,
+      0.03,
+      -0.29
      ],
-     "size": 0.184,
-     "width": 4.26,
-     "tilt": 0.1,
+     "size": 0.259,
+     "width": 5.18,
+     "tilt": -90,
      "roll": 0,
-     "rot": -31.9,
+     "rot": 0,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
@@ -10063,7 +10138,10 @@
       5
      ]
     ],
-    "night": 0.8
+    "night": 0.8,
+    "post": {
+     "bloom": 0.8
+    }
    },
    "camera": [
     {
@@ -10100,15 +10178,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      2.33,
-      1.66,
-      -2.27
+      2.48,
+      2.3,
+      -2.62
      ],
-     "size": 0.499,
+     "size": 0.449,
      "width": 9.97,
      "tilt": -30.6,
      "roll": 0,
-     "rot": -31.7,
+     "rot": -31.4,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
@@ -10118,16 +10196,21 @@
    "id": "83",
    "at": 158.6,
    "set": "dream",
-   "why": "the last gag: the half-buried clock rings once more - she kicks light over it",
+   "why": "the last gag, short: the clock rings once more among her things - her foot nudges a cushion over it",
    "opts": {
     "grade": "warm",
+    "night": 0.9,
+    "post": {
+     "bloom": 0.8,
+     "dof": 0.6
+    },
     "things": [
      {
       "kind": "clock",
       "pos": [
-       -1.2,
-       -0.05,
-       0.4
+       -0.6,
+       0.24,
+       0.5
       ],
       "rot": [
        0.3,
@@ -10135,24 +10218,23 @@
        0.2
       ],
       "ring_at": [
-       159
+       158.9
       ]
      }
-    ],
-    "night": 0.9
+    ]
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      -0.9,
-      0.35,
-      0.9
+      -0.3,
+      0.55,
+      1
      ],
      "look": [
-      -1.2,
-      0.1,
-      0.4
+      -0.6,
+      0.3,
+      0.5
      ],
      "fov": 32
     }
@@ -10160,28 +10242,93 @@
    "transition": {
     "kind": "cut",
     "frames": 0
-   }
+   },
+   "actor": [
+    {
+     "at": 0,
+     "pose": "kick",
+     "pos": [
+      -0.2,
+      0.24,
+      0.2
+     ],
+     "rotY": -120,
+     "expr": {
+      "fun": 0.4
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
   },
   {
    "id": "84",
-   "at": 163.5,
+   "at": 161.1,
    "set": "dream",
-   "why": "the first and last images rhyme: a blank page washes out to sea",
+   "why": "the first colour flash (4) was the future: the last image IS it - eyes closed, face in her sun, all five dots",
    "opts": {
     "grade": "warm",
-    "page": 163.6,
-    "night": 1
+    "night": 0.9,
+    "page": 161.4,
+    "battery": [
+     [
+      0,
+      5
+     ]
+    ],
+    "post": {
+     "bloom": 1,
+     "dof": 1.2
+    }
    },
    "camera": [
     {
      "at": 0,
-     "cam": "above"
+     "pos": [
+      0.1,
+      1.45,
+      1.3
+     ],
+     "look": [
+      0,
+      1.35,
+      0
+     ],
+     "fov": 24
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.05,
+      1.42,
+      1.05
+     ],
+     "look": [
+      0,
+      1.36,
+      0
+     ],
+     "fov": 22
     }
    ],
    "transition": {
     "kind": "cut",
     "frames": 0
-   }
+   },
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sing_soft",
+     "pos": "shore",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.45,
+      "blink": 1
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
   }
  ]
 }

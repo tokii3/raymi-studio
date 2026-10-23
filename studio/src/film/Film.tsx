@@ -26,6 +26,7 @@ import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
 import {Transitions, whipStyle} from './Transitions';
 import {Fx2D, Fx2DDefs, fxFilter} from './Fx2D';
+import {PostFX, type PostSpec} from '../three/PostFX';
 import type {FilmProps, Shot} from './types';
 import {TONES, gradeName, mixTone, type LyricTone, type Tone} from './grade';
 
@@ -205,6 +206,8 @@ export const Film: React.FC<FilmProps> = (props) => {
               </group>
             ) : null}
             {shot.lyrics ? <Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} /> : null}
+            {/* after effects (toki 2026-10-23): AO + bloom on every 3D-Raymi film shot, DoF where a shot asks for it */}
+            {props.vrm ? <PostFX spec={(shot.opts.post ?? {}) as PostSpec} /> : null}
           </ThreeCanvas>
         ) : null}
       </AbsoluteFill>

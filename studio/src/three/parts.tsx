@@ -3,7 +3,7 @@
 import React, {useMemo} from 'react';
 import * as THREE from 'three';
 import {RoundedBoxGeometry} from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
-import {blobTexture, canvasTexture, rnd, toon} from './look';
+import {blobTexture, canvasTexture, rnd, toon, toonSurface, type Surface} from './look';
 
 type P3 = [number, number, number];
 
@@ -14,11 +14,13 @@ function cachedGeo(key: string, make: () => THREE.BufferGeometry): THREE.BufferG
   return g;
 }
 
-export const RBox: React.FC<{size: P3; pos?: P3; rot?: P3; r?: number; c: string; e?: string; ei?: number; cast?: boolean; receive?: boolean}> = ({
-  size, pos = [0, 0, 0], rot = [0, 0, 0], r = 0.04, c, e, ei, cast = true, receive = true,
-}) => {
+export const RBox: React.FC<{size: P3; pos?: P3; rot?: P3; r?: number; c: string; e?: string; ei?: number; cast?: boolean; receive?: boolean;
+  t?: Surface}> = ({size, pos = [0, 0, 0], rot = [0, 0, 0], r = 0.04, c, e, ei, cast = true, receive = true, t}) => {
   const geo = cachedGeo(`rb${size}${r}`, () => new RoundedBoxGeometry(size[0], size[1], size[2], 3, Math.min(r, Math.min(...size) / 2 - 0.001)));
-  return <mesh geometry={geo} material={toon(c, e, ei)} position={pos} rotation={rot} castShadow={cast} receiveShadow={receive} />;
+  // a surface pattern (look.tsx toonSurface): roughly one tile per 0.5 m of the box's largest side
+  const n = Math.max(1, Math.round(Math.max(...size) * 2));
+  const mat = t ? toonSurface(c, t, [n, n], e, ei) : toon(c, e, ei);
+  return <mesh geometry={geo} material={mat} position={pos} rotation={rot} castShadow={cast} receiveShadow={receive} />;
 };
 
 /** A lumpy rock: a seeded, squashed icosphere (flat-ish bottom so it sits on the floor). */

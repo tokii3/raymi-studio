@@ -9,7 +9,7 @@
 import React from 'react';
 import * as THREE from 'three';
 import {RBox, Sign, drawText} from '../parts';
-import {SetLight, canvasTexture, rnd, toon} from '../look';
+import {SetLight, canvasTexture, rnd, toon, toonSurface} from '../look';
 import {RoutineLife} from '../routine';
 import {SalmonBody} from '../creatures';
 import {ease} from '../../film/motion';
@@ -33,7 +33,7 @@ export const Bedroom: React.FC<SetProps> = ({f, opts, camPos}) => {
   });
   return (
     <group>
-      <SetLight sky="#c6cde6" ground="#3a3550" fill={0.9 * power + 0.15} key="#fff1dc" keyI={1.6 * power} keyPos={[2, 4.5, 3]}
+      <SetLight sky="#c6cde6" ground="#2a2540" fill={0.6 * power + 0.12} key="#fff1dc" keyI={2.4 * power} keyPos={[2, 4.5, 3]}
         target={[0, 0.4, 0]} shadowSize={5} fog="#2a2c40" fogNear={8} fogFar={20} bg="#22243a" />
       {/* the dome: a curved wall with ribs */}
       <mesh position={[0, 0, -0.5]} material={toon('#5c6080', '#000', 1, {side: THREE.BackSide})}><sphereGeometry args={[4.2, 40, 24, 0, Math.PI * 2, 0, Math.PI / 2]} /></mesh>
@@ -42,8 +42,8 @@ export const Bedroom: React.FC<SetProps> = ({f, opts, camPos}) => {
           <torusGeometry args={[4.15, 0.04, 6, 40, Math.PI]} />
         </mesh>
       ))}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -0.5]} material={toon('#6a5f7c')} receiveShadow><circleGeometry args={[4.2, 40]} /></mesh>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0.3, 0.004, 0.6]} material={toon('#8b7aa6')} receiveShadow><circleGeometry args={[1.3, 32]} /></mesh>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -0.5]} material={toonSurface('#6a5f7c', 'wood', [8, 8])} receiveShadow><circleGeometry args={[4.2, 40]} /></mesh>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0.3, 0.004, 0.6]} material={toonSurface('#8b7aa6', 'carpet', [3, 3])} receiveShadow><circleGeometry args={[1.3, 32]} /></mesh>
       {/* the round window onto the sea, marine snow drifting */}
       <group position={[-1.6, 1.8, -3.6]} rotation={[0, 0.4, 0]}>
         <mesh material={toon('#3d4260')}><torusGeometry args={[0.72, 0.09, 10, 32]} /></mesh>
@@ -57,8 +57,8 @@ export const Bedroom: React.FC<SetProps> = ({f, opts, camPos}) => {
       {/* the shell bed (dragged by the strings) */}
       <group position={[drag[0], 0, drag[1]]}>
         <RBox size={[1.0, 0.28, 2.0]} pos={[0, 0.14, 0]} r={0.08} c="#d9c7e6" />
-        <RBox size={[0.92, 0.12, 1.9]} pos={[0, 0.34, 0.02]} r={0.06} c="#f4f0fa" />
-        <RBox size={[0.96, 0.08, 1.2]} pos={[0, 0.42, 0.35]} r={0.05} c="#8a7fd0" />
+        <RBox size={[0.92, 0.12, 1.9]} pos={[0, 0.34, 0.02]} r={0.06} c="#f4f0fa" t="fabric" />
+        <RBox size={[0.96, 0.08, 1.2]} pos={[0, 0.42, 0.35]} r={0.05} c="#8a7fd0" t="plush" />
         <RBox size={[0.5, 0.1, 0.32]} pos={[0, 0.45, -0.72]} r={0.05} c="#ffffff" />
         {/* scallop headboard */}
         <group position={[0, 0.65, -1.02]}>

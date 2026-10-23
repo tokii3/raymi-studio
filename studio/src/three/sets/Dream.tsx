@@ -12,7 +12,7 @@
 //   salmon / fish       creatures (creatures.tsx); things / crowd / strings -> routine.tsx
 import React from 'react';
 import * as THREE from 'three';
-import {SetLight, canvasTexture, rnd, toon} from '../look';
+import {SetLight, canvasTexture, rnd, toon, toonSurface} from '../look';
 import {DeepLife, SalmonBody} from '../creatures';
 import {Headphones, RoutineLife} from '../routine';
 import {RBox} from '../parts';
@@ -79,6 +79,20 @@ export const Dream: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       {/* the water all around: a gradient dome, bright from above */}
       <mesh scale={[120, 80, 120]} position={[0, -20, 0]}><sphereGeometry args={[1, 32, 20]} />
         <meshBasicMaterial map={sky} side={THREE.BackSide} fog={false} toneMapped={false} /></mesh>
+      {/* HER SUN: one warm light shaft from the surface onto the pile (the forecast she was right about) */}
+      <mesh position={[0, 12, -0.2]} renderOrder={3}>
+        <cylinderGeometry args={[1.0, 2.2, 24, 32, 1, true]} />
+        <meshBasicMaterial color={new THREE.Color('#ffd9a0').lerp(new THREE.Color('#c9a6ff'), night)} transparent opacity={0.16} depthWrite={false} blending={THREE.AdditiveBlending} side={THREE.DoubleSide} toneMapped={false} />
+      </mesh>
+      <spotLight position={[0, 14, -0.2]} target-position={[0, 0, -0.2]} angle={0.2} penumbra={0.6} intensity={(260 - 160 * night)} distance={40} decay={1.4}
+        color={new THREE.Color('#ffd9a0').lerp(new THREE.Color('#c9a6ff'), night)} castShadow shadow-mapSize-width={1024} shadow-mapSize-height={1024} shadow-bias={-0.0006} />
+      {/* the surface far above: a bright rippling ceiling of light (where the shaft comes from) */}
+      <mesh position={[0, 14, 0]} rotation={[Math.PI / 2, 0, 0]}><planeGeometry args={[90, 90]} />
+        <meshBasicMaterial map={canvasTexture('dreamsurface', 512, 512, (ctx, w, h) => {
+          ctx.fillStyle = '#9ff0ff'; ctx.fillRect(0, 0, w, h);
+          ctx.strokeStyle = 'rgba(255,255,255,0.75)'; ctx.lineWidth = 3;
+          for (let i = 0; i < 90; i++) { const x = rnd(i) * w, y = rnd(i + 50) * h, r = 8 + rnd(i + 90) * 26; ctx.beginPath(); ctx.ellipse(x, y, r, r * 0.6, rnd(i) * 3, 0, Math.PI * 1.6); ctx.stroke(); }
+        })} color={top} transparent opacity={0.85} fog={false} side={THREE.DoubleSide} toneMapped={false} /></mesh>
       {/* the surface glow far above */}
       <mesh position={[0, 30, 0]} rotation={[Math.PI / 2, 0, 0]}><circleGeometry args={[40, 40]} />
         <meshBasicMaterial color={top} transparent opacity={0.55} fog={false} depthWrite={false} toneMapped={false} side={THREE.DoubleSide} /></mesh>
@@ -89,14 +103,30 @@ export const Dream: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
           <meshBasicMaterial color={new THREE.Color('#ffffff').lerp(new THREE.Color('#c9a6ff'), night)} transparent opacity={0.08 + 0.05 * Math.sin(t * 0.7 + i)} depthWrite={false} blending={THREE.AdditiveBlending} toneMapped={false} side={THREE.DoubleSide} />
         </mesh>
       ))}
-      {/* the cushion of light under her (where she lands, floats, curls up): soft rings, not sand */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.02, 0]} material={toon(new THREE.Color('#5ec8e8').lerp(new THREE.Color('#4a2c9a'), night).getStyle(), '#3aa0ff', 0.25)} receiveShadow>
-        <circleGeometry args={[4.5, 48]} /></mesh>
+      {/* THE PILE (script v3): a soft hill + ledge of the things she loves, heaped like a reef - her floor. Plush mounds
+          (her floor at y ~0.25 inside r 1.4), cushions, a dusting of warm light-dust on top; she lands, dances, burrows. */}
+      {Array.from({length: 26}, (_, i) => {
+        const a = rnd(i * 2.9) * Math.PI * 2, r = i < 8 ? rnd(i * 4.1) * 1.2 : 1.2 + rnd(i * 4.1) * 1.7;
+        const sz = i < 8 ? 0.9 + rnd(i) * 0.5 : 0.45 + rnd(i * 6.3) * 0.5;
+        const cols = ['#8f86e8', '#f1c7d8', '#7fd6e8', '#ffd9a8', '#b9a6ff', '#ff9ab5'];
+        return <mesh key={`pile${i}`} position={[Math.cos(a) * r, -0.32 + (i < 8 ? 0.05 : 0.15 * rnd(i * 7)), Math.sin(a) * r - 0.2]} scale={[sz, sz * 0.62, sz]}
+          material={toonSurface(cols[i % cols.length], 'plush', [3, 3])} castShadow receiveShadow><sphereGeometry args={[0.62, 20, 14]} /></mesh>;
+      })}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.235, -0.2]} receiveShadow material={toonSurface(new THREE.Color('#fff0d8').lerp(new THREE.Color('#b9a6ff'), night).getStyle(), 'carpet', [4, 4], '#ffcf8a', 0.18 * (1 - night))}>
+        <circleGeometry args={[1.45, 40]} /></mesh>
+      {/* the deep floor far below the pile, so nothing ends in a void */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -3, 0]} material={toon(new THREE.Color('#123060').lerp(new THREE.Color('#0a0620'), night).getStyle())}><circleGeometry args={[60, 40]} /></mesh>
       {Array.from({length: 4}, (_, k) => {
         const r = ((t * 0.35 + k / 4) % 1);
-        return <mesh key={`ring${k}`} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.005, 0]}>
-          <ringGeometry args={[r * 4.4, r * 4.4 + 0.05, 64]} />
+        return <mesh key={`ring${k}`} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.24, -0.2]}>
+          <ringGeometry args={[r * 1.4, r * 1.4 + 0.03, 64]} />
           <meshBasicMaterial color="#e6fbff" transparent opacity={0.45 * (1 - r)} depthWrite={false} toneMapped={false} /></mesh>;
+      })}
+      {/* the light-dust on the pile, sparkling in the shaft */}
+      {Array.from({length: 40}, (_, i) => {
+        const a = rnd(i * 3.7) * Math.PI * 2, r = Math.sqrt(rnd(i * 1.9)) * 1.4;
+        return <mesh key={`dust${i}`} position={[Math.cos(a) * r, 0.25 + 0.02 * Math.sin(t * 2 + i), Math.sin(a) * r - 0.2]}>
+          <sphereGeometry args={[0.012, 6, 4]} /><meshBasicMaterial color="#fff2c8" toneMapped={false} /></mesh>;
       })}
       {/* her motes: bioluminescent dots drifting up */}
       {Array.from({length: 70}, (_, i) => {
@@ -108,8 +138,12 @@ export const Dream: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       {/* the things she loves, floating and bobbing around her */}
       {love ? (
         <group>
-          <group position={[-1.6, 1.6 + bob(1), -1.2]} rotation={[0, 0.6, 0.2 * Math.sin(t * 0.5)]} scale={0.45}><SalmonBody f={f} /></group>
-          <Mic pos={[1.4, 1.9 + bob(2), -0.8]} rot={[0.3, 0, -0.5 + 0.1 * Math.sin(t)]} />
+          <group position={[-1.75, 0.55 + bob(1, 0.04), -0.6]}>
+            {/* Salmon's floating cushion at the pile's left edge */}
+            <mesh position={[0, -0.12, 0]} scale={[1, 0.35, 0.8]} material={toonSurface('#ff9ab5', 'plush', [2, 2])} castShadow><sphereGeometry args={[0.32, 16, 10]} /></mesh>
+            <group position={[0, 0.06, 0]} rotation={[0, 0.6, 0.15 * Math.sin(t * 0.5)]} scale={0.42}><SalmonBody f={f} /></group>
+          </group>
+          <Mic pos={[1.25, 0.55, -0.7]} rot={[0.2, 0, -0.25]} />
           <Headphones t={{kind: 'headphones', pos: [-1.0, 0.9 + bob(3), 0.9], rot: [0.4, t * 0.3, 0.2], scale: 1.6}} f={f} />
           <Controller pos={[1.7, 0.8 + bob(4), 0.6]} rot={[0.5, t * 0.25, 0.3]} />
           <RayPlush pos={[0.9, 2.5 + bob(5), -1.8]} rot={[0.3, t * 0.2, 0.1]} />

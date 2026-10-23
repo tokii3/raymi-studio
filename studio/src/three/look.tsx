@@ -155,3 +155,60 @@ export const rnd = (seed: number) => {
   const x = Math.sin(seed * 127.1 + 311.7) * 43758.5453;
   return x - Math.floor(x);
 };
+
+// ---------------------------------------------------------------- materials (toki 2026-10-23: "keine Materialien")
+// A surface pattern under the toon colour: grey-scale detail (0.72..1) multiplied with the colour, tiled, so a desk
+// reads as laminate, the floor as carpet, a cushion as plush - still matte and painted, never photo-real.
+export type Surface = 'carpet' | 'wood' | 'paper' | 'fabric' | 'metal' | 'plush' | 'plaster' | 'rubber';
+const SURF_SEED: Record<Surface, number> = {carpet: 1, wood: 2, paper: 3, fabric: 4, metal: 5, plush: 6, plaster: 7, rubber: 8};
+
+function surfaceTexture(kind: Surface): THREE.CanvasTexture {
+  const t = canvasTexture(`surface_${kind}`, 256, 256, (ctx, w, h) => {
+    const shade = (v: number, a = 1) => `rgba(${Math.round(255 * v)},${Math.round(255 * v)},${Math.round(255 * v)},${a})`;
+    ctx.fillStyle = shade(0.93); ctx.fillRect(0, 0, w, h);
+    const s = SURF_SEED[kind] * 1000;
+    if (kind === 'carpet' || kind === 'plaster' || kind === 'paper') {
+      const n = kind === 'carpet' ? 5200 : kind === 'paper' ? 1400 : 2600;
+      for (let i = 0; i < n; i++) {
+        ctx.fillStyle = shade(0.74 + 0.26 * rnd(s + i * 3.1), kind === 'paper' ? 0.35 : 0.6);
+        const sz = kind === 'carpet' ? 1.6 : kind === 'paper' ? 0.8 + rnd(s + i) * 6 : 2.5;
+        ctx.fillRect(rnd(s + i) * w, rnd(s + i * 7.7) * h, sz, kind === 'paper' ? 0.8 : sz);
+      }
+    } else if (kind === 'wood') {
+      for (let y = 0; y < h; y += 2) {
+        ctx.strokeStyle = shade(0.78 + 0.18 * Math.abs(Math.sin(y * 0.11 + Math.sin(y * 0.031) * 3)), 0.7);
+        ctx.beginPath(); ctx.moveTo(0, y); for (let x = 0; x <= w; x += 16) ctx.lineTo(x, y + 2 * Math.sin(x * 0.03 + y * 0.2)); ctx.stroke();
+      }
+    } else if (kind === 'fabric') {
+      for (let i = 0; i < w; i += 4) { ctx.fillStyle = shade(0.82, 0.5); ctx.fillRect(i, 0, 1.5, h); ctx.fillRect(0, i, w, 1.5); }
+      for (let i = 0; i < 900; i++) { ctx.fillStyle = shade(0.75 + 0.2 * rnd(s + i), 0.4); ctx.fillRect(rnd(s + i * 2.3) * w, rnd(s + i * 5.9) * h, 2, 2); }
+    } else if (kind === 'metal') {
+      for (let y = 0; y < h; y++) { ctx.fillStyle = shade(0.82 + 0.16 * rnd(s + y * 1.3), 1); ctx.fillRect(0, y, w, 1); }
+    } else if (kind === 'plush') {
+      for (let i = 0; i < 2600; i++) {
+        const x = rnd(s + i) * w, y = rnd(s + i * 3.3) * h, r = 1.5 + rnd(s + i * 9.1) * 3;
+        const g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, shade(1, 0.5)); g.addColorStop(1, shade(0.8, 0));
+        ctx.fillStyle = g; ctx.fillRect(x - r, y - r, 2 * r, 2 * r);
+      }
+    } else if (kind === 'rubber') {
+      for (let y = 8; y < h; y += 16) for (let x = 8; x < w; x += 16) { ctx.fillStyle = shade(0.76, 0.8); ctx.beginPath(); ctx.arc(x + (y % 32 ? 8 : 0), y, 3.5, 0, Math.PI * 2); ctx.fill(); }
+    }
+  }).clone();
+  t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  t.needsUpdate = true;
+  return t;
+}
+
+const surfMats = new Map<string, THREE.MeshToonMaterial>();
+/** A matte toon material WITH a surface pattern; `repeat` = tiles per world metre on the geometry's own UVs. */
+export function toonSurface(color: string, kind: Surface, repeat: [number, number] = [1, 1], emissive = '#000000', ei = 1): THREE.MeshToonMaterial {
+  const k = `${color}|${kind}|${repeat}|${emissive}|${ei}`;
+  let m = surfMats.get(k);
+  if (!m) {
+    const map = surfaceTexture(kind).clone();
+    map.repeat.set(repeat[0], repeat[1]); map.wrapS = map.wrapT = THREE.RepeatWrapping; map.needsUpdate = true;
+    m = new THREE.MeshToonMaterial({color, map, gradientMap: toonRamp(), emissive, emissiveIntensity: ei});
+    surfMats.set(k, m);
+  }
+  return m;
+}
