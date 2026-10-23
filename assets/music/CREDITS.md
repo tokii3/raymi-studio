@@ -18,3 +18,6 @@ is its beat map (raymi/bed.py). Every video using one MUST carry the credit line
 | fluffing-a-duck.mp3 | Fluffing a Duck | 0:00-0:32 |
 | monkeys-spinning-monkeys.mp3 | Monkeys Spinning Monkeys | 0:00-0:32 |
 | danse-macabre.mp3 | Danse Macabre | 0:21.6-0:53.6 |
+| wholesome.mp3 | Wholesome | 0:00-0:32 |
+| easy-lemon.mp3 | Easy Lemon | 0:00-0:32 |
+| wallpaper.mp3 | Wallpaper | 0:00-0:32 |
