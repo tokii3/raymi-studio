@@ -99,8 +99,12 @@
    "opts": {
     "crowd": 0,
     "flashes": false,
-    "dim": 0.25,
-    "chest_dots": true
+    "dim": 0.5,
+    "chest_dots": true,
+    "lock": 0.05,
+    "post": {
+     "bloom": 0.25
+    }
    },
    "camera": [
     {
@@ -208,8 +212,12 @@
    "opts": {
     "crowd": 0,
     "flashes": false,
-    "dim": 0.25,
+    "dim": 0.5,
     "chest_dots": true,
+    "lock": 0.05,
+    "post": {
+     "bloom": 0.25
+    },
     "warning": true
    },
    "camera": [
@@ -307,8 +315,12 @@
    "opts": {
     "crowd": 0,
     "flashes": false,
-    "dim": 0.25,
-    "chest_dots": true
+    "dim": 0.5,
+    "chest_dots": true,
+    "lock": 0.05,
+    "post": {
+     "bloom": 0.25
+    }
    },
    "camera": [
     {
@@ -436,8 +448,12 @@
    "opts": {
     "crowd": 0,
     "flashes": false,
-    "dim": 0.25,
-    "chest_dots": true
+    "dim": 0.5,
+    "chest_dots": true,
+    "lock": 0.05,
+    "post": {
+     "bloom": 0.25
+    }
    },
    "camera": [
     {
@@ -476,7 +492,7 @@
      "at": 0,
      "pose": "write_glass",
      "clip": "idle",
-     "motionMix": 0.3,
+     "motionMix": 0.12,
      "pos": [
       0.6,
       0,
@@ -491,7 +507,7 @@
      "at": 0.5,
      "pose": "write_glass",
      "clip": "idle",
-     "motionMix": 0.3,
+     "motionMix": 0.12,
      "pos": [
       0.55,
       0,
@@ -507,7 +523,7 @@
      "at": 1.2,
      "pose": "write_glass",
      "clip": "idle",
-     "motionMix": 0.3,
+     "motionMix": 0.12,
      "pos": [
       0.68,
       0,
@@ -548,8 +564,12 @@
    "opts": {
     "crowd": 0,
     "flashes": false,
-    "dim": 0.25,
-    "chest_dots": true
+    "dim": 0.5,
+    "chest_dots": true,
+    "lock": 0.05,
+    "post": {
+     "bloom": 0.25
+    }
    },
    "camera": [
     {
@@ -657,8 +677,12 @@
    "opts": {
     "crowd": 0,
     "flashes": false,
-    "dim": 0.25,
+    "dim": 0.5,
     "chest_dots": true,
+    "lock": 0.05,
+    "post": {
+     "bloom": 0.25
+    },
     "bury": [
      0.6,
      0,
@@ -776,8 +800,12 @@
    "opts": {
     "crowd": 0,
     "flashes": false,
-    "dim": 0.25,
+    "dim": 0.5,
     "chest_dots": true,
+    "lock": 0.05,
+    "post": {
+     "bloom": 0.25
+    },
     "bury": [
      0.6,
      0,

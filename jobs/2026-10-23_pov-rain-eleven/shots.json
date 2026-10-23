@@ -590,7 +590,7 @@
      "at": 0,
      "pose": "lean_in",
      "clip": "idle",
-     "motionMix": 0.3,
+     "motionMix": 0.12,
      "pos": [
       0.6,
       0,

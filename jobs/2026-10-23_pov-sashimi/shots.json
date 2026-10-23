@@ -143,7 +143,7 @@
      "at": 0,
      "pose": "sit_eat",
      "clip": "sitting-idle",
-     "motionMix": 0.25,
+     "motionMix": 0.12,
      "pos": [
       0.55,
       0,
@@ -164,7 +164,7 @@
      "at": 0.6,
      "pose": "sit_eat",
      "clip": "sitting-idle",
-     "motionMix": 0.25,
+     "motionMix": 0.12,
      "pos": [
       0.55,
       0,
@@ -271,7 +271,7 @@
      "at": 0,
      "pose": "sit_offer",
      "clip": "sitting-talking",
-     "motionMix": 0.3,
+     "motionMix": 0.12,
      "pos": [
       0.55,
       0,
@@ -379,7 +379,7 @@
      "at": 0,
      "pose": "sit_offer",
      "clip": "sitting-talking",
-     "motionMix": 0.3,
+     "motionMix": 0.12,
      "pos": [
       0.55,
       0,
@@ -401,7 +401,7 @@
      "at": 0.4,
      "pose": "sit_offer",
      "clip": "sitting-talking",
-     "motionMix": 0.3,
+     "motionMix": 0.12,
      "pos": [
       0.6198001572453197,
       0.0,
@@ -510,7 +510,7 @@
      "at": 0,
      "pose": "sit_eat",
      "clip": "sitting-idle",
-     "motionMix": 0.25,
+     "motionMix": 0.12,
      "pos": [
       0.55,
       0,
@@ -617,31 +617,31 @@
     {
      "at": 0,
      "pos": [
-      1.98,
-      1.45,
-      1.54
+      1.53,
+      2.1,
+      0.99
      ],
      "look": [
-      0.3,
-      0.8,
-      -0.8
+      0.05,
+      0.55,
+      -0.2
      ],
-     "fov": 20,
+     "fov": 26,
      "shake": 0.15
     },
     {
      "at": 0.2,
      "pos": [
-      2.13,
-      1.45,
-      1.69
+      1.68,
+      2.1,
+      1.19
      ],
      "look": [
-      0.3,
-      0.8,
-      -0.8
+      0.05,
+      0.55,
+      -0.2
      ],
-     "fov": 20,
+     "fov": 26,
      "shake": 0.35,
      "ease": "out"
     }
@@ -803,7 +803,7 @@
      "at": 0,
      "pose": "shh",
      "clip": "idle",
-     "motionMix": 0.3,
+     "motionMix": 0.12,
      "pos": [
       1.25,
       0,
@@ -913,7 +913,7 @@
      "at": 0,
      "pose": "sit_offer",
      "clip": "sitting-idle",
-     "motionMix": 0.25,
+     "motionMix": 0.12,
      "pos": [
       0.55,
       0,
@@ -934,7 +934,7 @@
      "at": 1.4,
      "pose": "sit_eat",
      "clip": "sitting-idle",
-     "motionMix": 0.25,
+     "motionMix": 0.12,
      "pos": [
       0.55,
       0,

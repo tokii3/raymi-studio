@@ -132,7 +132,7 @@
      "at": 0,
      "pose": "ears_cover",
      "clip": "unarmed-idle-01",
-     "motionMix": 0.4,
+     "motionMix": 0.12,
      "pos": [
       1.56,
       0,
@@ -147,7 +147,7 @@
      "at": 1.42,
      "pose": "ears_cover",
      "clip": "unarmed-idle-01",
-     "motionMix": 0.4,
+     "motionMix": 0.12,
      "pos": [
       1.56,
       0,
@@ -831,7 +831,7 @@
      "at": 0,
      "pose": "ears_cover",
      "clip": "unarmed-idle-01",
-     "motionMix": 0.4,
+     "motionMix": 0.12,
      "pos": [
       1.56,
       0,
@@ -847,7 +847,7 @@
      "at": 0.84,
      "pose": "ears_cover",
      "clip": "unarmed-idle-01",
-     "motionMix": 0.4,
+     "motionMix": 0.12,
      "pos": [
       1.56,
       0,
@@ -863,7 +863,7 @@
      "at": 2.3,
      "pose": "ears_cover",
      "clip": "unarmed-idle-01",
-     "motionMix": 0.4,
+     "motionMix": 0.12,
      "pos": [
       1.56,
       0,

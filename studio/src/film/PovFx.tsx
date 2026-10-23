@@ -135,8 +135,12 @@ const Algae: React.FC<{x: Extract<PovFx, {kind: 'algae'}>; f: number; W: number;
           const edge = i % 2 ? [sx < 0.5 ? 0 : 1, sy] : [sx, sy < 0.5 ? 0 : 1];
           return <circle key={i} cx={edge[0] * W} cy={edge[1] * H} r={r * W * 2.2} fill="url(#alg)" />;
         })}
-        {x.text ? <rect x={cx - H * 0.17} y={cy - H * 0.11} width={H * 0.34} height={H * 0.22} rx={H * 0.05} fill="#6f9a3e" opacity={0.42} /> : null}
+        {x.text ? <rect x={cx - H * 0.17} y={cy - H * 0.11} width={H * 0.34} height={H * 0.22} rx={H * 0.05} fill="#4f7a2a" opacity={0.6} /> : null}
       </g>
+      {x.text ? (
+        <text x={cx} y={cy} textAnchor="middle" dominantBaseline="middle" fontFamily="RaymiHeavy, Raymi" fontSize={H * 0.16}
+          fill="#e9fff0" opacity={0.85} style={{clipPath: `inset(0 ${100 - p * 100}% 0 0)`}}>{x.text}</text>
+      ) : null}
     </svg>
   );
 };

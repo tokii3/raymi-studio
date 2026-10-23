@@ -137,7 +137,7 @@
    "actor": [
     {
      "at": 0,
-     "clip": "sitting-disapproval",
+     "clip": "sitting-talking",
      "pos": [
       -0.5,
       0,
@@ -145,7 +145,7 @@
      ],
      "rotY": "lens",
      "expr": {
-      "angry": 0.45
+      "angry": 0.6
      }
     }
    ],
@@ -822,7 +822,7 @@
    "actor": [
     {
      "at": 0,
-     "clip": "sitting-and-pointing",
+     "clip": "sitting-talking",
      "pos": [
       -0.98,
       0,

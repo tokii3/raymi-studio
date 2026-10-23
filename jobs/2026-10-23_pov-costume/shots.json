@@ -173,7 +173,7 @@
      "at": 0,
      "pose": "ta_da",
      "clip": "idle",
-     "motionMix": 0.25,
+     "motionMix": 0.12,
      "pos": [
       0.3,
       0,
@@ -1253,7 +1253,7 @@
      "at": 1.72,
      "pose": "ta_da",
      "clip": "idle",
-     "motionMix": 0.25,
+     "motionMix": 0.12,
      "pos": [
       0.3,
       0,
