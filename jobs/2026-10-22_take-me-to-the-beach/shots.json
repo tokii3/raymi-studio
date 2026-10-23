@@ -989,7 +989,7 @@
    "id": "11",
    "at": 5.25,
    "set": "office",
-   "why": "asleep at the desk, the file mountain grows around her on the beats - a 3/4 view on her face (blind viewer: the top-down read as a static shadow); run 38: camera on her side of the MORE stack, her colour kept (spread)",
+   "why": "asleep at the desk, the file mountain grows around her on the beats - a 3/4 view on her face (blind viewer: the top-down read as a static shadow); run 38: camera on her side of the MORE stack and high enough for the URGENT pile, her colour kept (spread)",
    "opts": {
     "grade": "closing",
     "things": [
@@ -1035,30 +1035,30 @@
     {
      "at": 0,
      "pos": [
-      -0.6,
-      1.32,
-      0.78
+      -0.75,
+      1.62,
+      1.05
      ],
      "look": [
-      0.05,
-      0.95,
-      0.22
+      0.2,
+      0.98,
+      0.3
      ],
-     "fov": 36
+     "fov": 40
     },
     {
      "at": "end",
      "pos": [
-      -0.45,
-      1.25,
-      0.62
+      -0.62,
+      1.55,
+      0.9
      ],
      "look": [
-      0.05,
-      0.95,
-      0.22
+      0.2,
+      0.98,
+      0.3
      ],
-     "fov": 33,
+     "fov": 37,
      "ease": "inOut"
     }
    ],
