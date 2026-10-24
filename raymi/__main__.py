@@ -19,6 +19,8 @@
   thumbs <boards dir>   thumbnail candidates at feed size (168 px, dark + light) -> thumbs_168.jpg (raymi/thumbs.py)
   analyze <job>         song tools (cloud, heavy): vocal stem, word-timed lyrics, song map (raymi/song.py)
   lyrics <job>          re-align lyrics_timed.json locally from the cached whisper_words.json + vocals.ogg
+  mashup <job> [--measure]  stems + tempo / bars / key per source (--measure, cloud: mashup.yml), else build
+                        jobs/<job>/mashup.json -> out/mashup.mp3 (raymi/mashup.py)
 """
 from __future__ import annotations
 
@@ -109,6 +111,13 @@ def main(argv: list[str]) -> int:
                                    json.loads((d / "whisper_words.json").read_text(encoding="utf-8")), d / "vocals.ogg")
             song.resection(d)
             print(json.dumps(res["stats"]))
+        return 0
+    if cmd == "mashup":
+        from . import mashup
+
+        d = P.job_dir(job)
+        res = mashup.measure(d) if "--measure" in argv else mashup.build(d)
+        print(json.dumps(res, indent=1))
         return 0
     if cmd in ("new", "next"):
         from . import room

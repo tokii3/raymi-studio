@@ -1,0 +1,12 @@
+{
+ "tempo": 128,
+ "key": "watchme",
+ "sources": {
+  "watchme": {"file": "watchme.webm", "from": "https://www.youtube.com/watch?v=VOCEZQSO3t4 (K/DA - Topic, official audio; toki's link vjehGOVmBQE is a fan lyric upload of the same song)"},
+  "circus": {"file": "circus.webm", "from": "https://www.youtube.com/watch?v=RcsUoC6DO-Y (Britney Spears - Topic)"},
+  "lovegame": {"file": "lovegame.webm", "from": "https://www.youtube.com/watch?v=EJilqoZ3ExY (Lady Gaga - Topic)"},
+  "firestarter": {"file": "firestarter.webm", "from": "https://www.youtube.com/watch?v=Mmw-PpWhKFg (copy of jobs/2026-10-19_firestarter/song.webm)"}
+ },
+ "parts": [],
+ "master": {"bass_db": 5, "bass_hz": 75, "duck_db": 4, "lufs": -14}
+}

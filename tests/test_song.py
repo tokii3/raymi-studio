@@ -185,3 +185,17 @@ def test_fast_runs_find_a_stab_triplet_between_beats():
     hits = [{"t": t, "cut": S.cut_frame(t)} for t in (0.29, 0.58, 0.87, 1.16, 4.57, 4.71, 4.85, 5.41, 6.0)]
     runs = S.fast_runs(hits)
     assert [r["times"] for r in runs] == [[4.57, 4.71, 4.85]]
+
+
+def test_mashup_key_and_bars():
+    import numpy as np
+    from raymi import mashup as M
+
+    assert M.shift_to("C", "D") == 2 and M.shift_to("C", "A#") == -2
+    assert M.shift_to("Am", "C") == 0                      # relative minor sits on its major
+    assert M.shift_to("F#m", "Am") == 3
+    prof = np.roll(M._MIN, 9)                               # A minor profile
+    assert M.key_of(prof)[0]["key"] == "Am"
+    kick = np.array([1, 0, 0.2, 0] * 8)[1:]                 # the 1 is on every 4th beat starting at index 3
+    assert M.downbeat_phase(kick) == 3
+    assert M.bar_time([0.0, 2.0, 4.0], 1.5, 2.0) == 3.0 and M.bar_time([0.0, 2.0], 3, 2.0) == 6.0
