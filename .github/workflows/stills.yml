@@ -112,6 +112,12 @@ jobs:
               fi
               if [ -f "jobs/$J/shots.json" ]; then python -m raymi timeline "$J" "$FMT" < /dev/null; fi
               START=$(date +%s)
+              PROBE=$(get probe 0)
+              if [ "$PROBE" != "0" ]; then   # the scene probe over the whole film (toki 2026-10-24: fault classes, not spots)
+                (cd studio && node probe.mjs "$J" --every "$PROBE" --out "../jobs/$J/boards/probe_$FMT.json") < /dev/null
+                { echo "#### probe $J $FMT"; echo '```'; python -m raymi probe "$J" "$FMT" < /dev/null || true; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+              fi
+              [ -n "$FR" ] || continue
               (cd studio && node stills.mjs "$J" "$FR" --scale "$SC" --out "$OUT" ${NAMES:+--names "$NAMES"}) < /dev/null
               echo "$J ($FMT): $(echo $FR | tr ',' ' ' | wc -w) stills in $(( $(date +%s) - START )) s -> $TO" >> "$GITHUB_STEP_SUMMARY"
               if [ -f "jobs/$J/shots.json" ] && grep -q '"hero"' "jobs/$J/shots.json"; then   # main element readable at phone size?

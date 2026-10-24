@@ -111,6 +111,7 @@ export type Shot = {
 
 export type FilmProps = {
   composition: 'MV' | 'MVShort';
+  probe?: boolean;          // the scene probe (film/Probe.tsx): log her / things faults per frame, cloud only
   width: number;
   height: number;
   fps: number;

@@ -581,6 +581,19 @@ function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: s
 }
 
 /** World points of her body at the current pose (for guards: face / figure / hero boxes from bones, not sprites). */
+/** Her placement root and the world position of her bones (the scene probe - film/Probe.tsx). */
+export function vrmBones(url: string): {root: THREE.Object3D; bones: Record<string, THREE.Vector3>} | null {
+  const rig = rigs.get(url);
+  if (!rig) return null;
+  const bones: Record<string, THREE.Vector3> = {};
+  for (const b of ['head', 'chest', 'hips', 'leftHand', 'rightHand', 'leftLowerArm', 'rightLowerArm', 'leftUpperLeg', 'rightUpperLeg',
+    'leftLowerLeg', 'rightLowerLeg', 'leftFoot', 'rightFoot'] as VRMHumanBoneName[]) {
+    const n = rig.vrm.humanoid.getRawBoneNode(b);
+    if (n) bones[b] = n.getWorldPosition(new THREE.Vector3());
+  }
+  return {root: rig.root, bones};
+}
+
 export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
   const rig = rigs.get(url);
   const out: Record<string, THREE.Vector3> = {};

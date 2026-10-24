@@ -16,6 +16,7 @@
   pov    <job>          a talking Short's timing against the measured takes + bed map (raymi/pov.py), exit 1 on a fault
   sfx    build          synthesise the sound-effect library -> assets/sfx/<kind>.wav (raymi/sfx.py)
   timeline <job> [mv|short]  shots.json (shooting script data) -> out/props.json for the MV / MVShort film
+  probe  <job> [mv|short]  the scene probe's fault classes (studio/probe.mjs, stills.json "probe": N)
   cuts   <job> [--apply]  every cut against hits / sung lines / sections (one frame early); --apply moves them
   font ensure <job>     build every on-screen glyph her font lacks, in her marker style (raymi/font.py)
   font add <chars>      the same for given characters
@@ -178,6 +179,10 @@ def main(argv: list[str]) -> int:
         res = make_voice(plan["script"], d)
         print(f"voice: {res['duration']} s, timing from {res['timing_source']}")
         return 0
+    if cmd == "probe":       # probe <job> [mv|short]: the scene probe's fault classes (limbs in furniture, floating, pops ...)
+        from . import probe as PR
+
+        return PR.main(d, argv[2] if len(argv) > 2 else "mv")
     if cmd == "cuts":        # cuts <job> [--apply]: every cut against the song's hits / lines / sections (needs out/props.json)
         from . import cuts as C
 

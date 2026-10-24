@@ -21,6 +21,7 @@ import {useTexturesReady} from '../three/look';
 import {VrmPuppet, useVrmReady} from '../three/VrmPuppet';
 import {Strings} from '../three/routine';
 import {makeVrmMouthKeys} from '../three/vrmLipSync';
+import {Probe} from './Probe';
 import {vrmFilmKeys, vrmFilmWords} from '../three/vrmFilm';
 import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
@@ -235,6 +236,7 @@ export const Film: React.FC<FilmProps> = (props) => {
             {shot.lyrics ? <Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} /> : null}
             {/* after effects (toki 2026-10-23): AO + bloom on every 3D-Raymi film shot, DoF where a shot asks for it */}
             {props.vrm ? <PostFX spec={(shot.opts.post ?? {}) as PostSpec} /> : null}
+            {props.probe ? <Probe f={f} vrm={props.vrm ? staticFile(props.vrm) : null} shot={shot.id} /> : null}
           </ThreeCanvas>
         ) : null}
       </AbsoluteFill>

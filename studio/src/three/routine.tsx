@@ -517,29 +517,35 @@ export const Things: React.FC<{list: unknown; f: number}> = ({list, f}) => {
       {(list as ThingSpec[]).map((t, i) => {
         if (typeof t.at === 'number' && f < t.at && t.kind !== 'page') return null;
         if (typeof t.out === 'number' && f >= t.out) return null;
-        switch (t.kind) {
-          case 'clock': return <AlarmClock key={i} t={t} f={f} />;
-          case 'calendar': return <Calendar key={i} t={t} f={f} />;
-          case 'page': return <Page key={i} t={t} f={f} />;
-          case 'phone': return <ShellPhone key={i} t={t} f={f} />;
-          case 'globe': return <SnowGlobe key={i} t={t} f={f} />;
-          case 'postcard': return <Postcard key={i} t={t} f={f} />;
-          case 'files': return <Files key={i} t={t} f={f} />;
-          case 'onigiri': return <Onigiri key={i} t={t} f={f} />;
-          case 'headphones': return <Headphones key={i} t={t} f={f} />;
-          case 'sticky': return <Sticky key={i} t={t} f={f} />;
-          case 'printer': return <Printer key={i} t={t} f={f} />;
-          case 'lamp': return <DeskLamp key={i} t={t} f={f} />;
-          case 'can': return <Can key={i} t={t} f={f} />;
-          case 'monitor': return <Monitor key={i} t={t} f={f} />;
-          case 'chair': return <Chair key={i} t={t} f={f} />;
-          case 'glove': return <Glove key={i} pos={t.pos} rot={t.rot} scale={t.scale ?? 1} pose={(t.text as 'hold' | 'point' | 'open' | 'grab') ?? 'open'} />;
-          default: return <PovThing key={i} t={t as unknown as PovThingSpec} f={f} />;   // pov_things.tsx kinds
-        }
+        // every thing is tagged for the scene probe (film/Probe.tsx: things inside things, things in the air)
+        return <group key={i} userData={{thing: t.kind, float: Boolean((t as {float?: boolean}).float) || t.kind === 'page'}}>{thing(t, i, f)}</group>;
       })}
     </group>
   );
 };
+
+/** One thing by its kind (Things wraps it in a group tagged for the scene probe). */
+function thing(t: ThingSpec, i: number, f: number): React.ReactNode {
+  switch (t.kind) {
+    case 'clock': return <AlarmClock key={i} t={t} f={f} />;
+    case 'calendar': return <Calendar key={i} t={t} f={f} />;
+    case 'page': return <Page key={i} t={t} f={f} />;
+    case 'phone': return <ShellPhone key={i} t={t} f={f} />;
+    case 'globe': return <SnowGlobe key={i} t={t} f={f} />;
+    case 'postcard': return <Postcard key={i} t={t} f={f} />;
+    case 'files': return <Files key={i} t={t} f={f} />;
+    case 'onigiri': return <Onigiri key={i} t={t} f={f} />;
+    case 'headphones': return <Headphones key={i} t={t} f={f} />;
+    case 'sticky': return <Sticky key={i} t={t} f={f} />;
+    case 'printer': return <Printer key={i} t={t} f={f} />;
+    case 'lamp': return <DeskLamp key={i} t={t} f={f} />;
+    case 'can': return <Can key={i} t={t} f={f} />;
+    case 'monitor': return <Monitor key={i} t={t} f={f} />;
+    case 'chair': return <Chair key={i} t={t} f={f} />;
+    case 'glove': return <Glove key={i} pos={t.pos} rot={t.rot} scale={t.scale ?? 1} pose={(t.text as 'hold' | 'point' | 'open' | 'grab') ?? 'open'} />;
+    default: return <PovThing key={i} t={t as unknown as PovThingSpec} f={f} />;   // pov_things.tsx kinds
+  }
+}
 
 /** All routine things a set draws from its options (the set adds its own architecture around them). */
 export const RoutineLife: React.FC<{opts: Record<string, unknown>; f: number; camPos?: P3}> = ({opts, f, camPos}) => (
