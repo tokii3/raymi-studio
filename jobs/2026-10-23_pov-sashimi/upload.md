@@ -5,7 +5,7 @@ Upload slot: **Thu 2026-10-29** (one Short per day, toki's fixed time). Series: 
 ## File (toki uploads)
 | what | file | release |
 |---|---|---|
-| Short 9:16, 1080x1920, -14 LUFS | final.mp4 | render-2026-10-23_pov-sashimi-<run> (filled in after the final render) |
+| Short 9:16, 1080x1920, -14 LUFS | final.mp4 | [render-2026-10-23_pov-sashimi-49](https://github.com/tokii3/raymi-studio/releases/tag/render-2026-10-23_pov-sashimi-49) (final with toki's fixes 2026-10-24) |
 
 ## Title options (<= 60 chars)
 1. POV: You Caught Her Eating Her Best Friend
