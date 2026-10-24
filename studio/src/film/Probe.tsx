@@ -7,6 +7,7 @@ import React, {useLayoutEffect} from 'react';
 import * as THREE from 'three';
 import {useThree} from '@react-three/fiber';
 import {vrmBones} from '../three/VrmPuppet';
+import {solid} from '../three/support';
 
 const BONES = ['head', 'chest', 'hips', 'leftHand', 'rightHand', 'leftLowerArm', 'rightLowerArm', 'leftUpperLeg', 'rightUpperLeg',
   'leftLowerLeg', 'rightLowerLeg', 'leftFoot', 'rightFoot'] as const;
@@ -40,10 +41,8 @@ export const Probe: React.FC<{f: number; vrm: string | null; shot: string}> = ({
     const supports: THREE.Mesh[] = [];
     scene.traverse((o) => {
       const m = o as THREE.Mesh;
-      if (!m.isMesh || !m.visible || under(m, herRoot)) return;
-      const mat = m.material as THREE.Material | THREE.Material[];
-      const mats = Array.isArray(mat) ? mat : [mat];
-      if (mats.every((x) => x.transparent && (x.opacity ?? 1) < 0.35)) return;   // glows, fog cards, light shafts
+      // the same idea of 'solid' as the fix (support.ts): no glows, lyrics, rays, held or hanging things
+      if (!solid(m) || under(m, herRoot)) return;
       const box = new THREE.Box3().setFromObject(m);
       if (box.isEmpty()) return;
       const s = box.getSize(new THREE.Vector3());

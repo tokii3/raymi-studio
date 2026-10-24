@@ -1,1 +1,1 @@
-{"_why": "probe check after the seated / step-ray / probe fixes (structural pass 2)", "probe": 15, "passes": [{"format": "mv", "frames": [], "names": []}], "to": "boards"}
+{"_why": "probe check 3: limbs pushed out of solids, held things + lyrics are no solids", "probe": 15, "passes": [{"format": "mv", "frames": [], "names": []}], "to": "boards"}

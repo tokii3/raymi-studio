@@ -23,7 +23,7 @@ import {vrmMouthAt, type VrmMouthKey} from './vrmLipSync';
 import type {V3} from '../film/types';
 import {wornProps} from './wearables';
 import {useThree} from '@react-three/fiber';
-import {supportBelow} from './support';
+import {solidBoxes, supportBelow} from './support';
 
 export const DEFAULT_HEIGHT = 1.55;       // ears to feet, like the sprite puppet (raymi/timeline.py DEFAULT_HEIGHT)
 const WINDOW = 90;                         // frames of history simulated before f (springs forget faster than that)
@@ -608,6 +608,43 @@ function groundOnSupport(rig: Rig, k: VrmKey, scene: THREE.Object3D) {
   if (Math.abs(d) > 0.004 && Math.abs(d) < 0.7) { rig.root.position.y += d; rig.root.updateMatrixWorld(true); }
 }
 
+/** Her limbs never stand inside furniture or a prop (probe run 3: hands and feet in the dream's rocks and cushions while
+ *  she flies / falls / kicks, legs in the boss's hand): every bone inside a solid's box pushes her the shortest way out
+ *  sideways (x / z, at most 0.4 m). Seated she stays - her chair and desk are meant to be close. */
+const CLEAR_BONES: VRMHumanBoneName[] = ['head', 'chest', 'hips', 'leftHand', 'rightHand', 'leftLowerArm', 'rightLowerArm',
+  'leftLowerLeg', 'rightLowerLeg', 'leftFoot', 'rightFoot'];
+function clearSolids(rig: Rig, k: VrmKey, scene: THREE.Object3D) {
+  if (k.ground === false || /^(sit|slump)/.test(k.pose)) return;
+  rig.root.updateMatrixWorld(true);
+  const hips = rig.vrm.humanoid.getRawBoneNode('hips')?.getWorldPosition(new THREE.Vector3());
+  if (!hips) return;
+  const boxes = solidBoxes(scene, hips, 1.6, [rig.root]);
+  if (!boxes.length) return;
+  const push = new THREE.Vector3();
+  for (let pass = 0; pass < 2; pass++) {
+    const step = new THREE.Vector3();
+    for (const b of CLEAR_BONES) {
+      const node = rig.vrm.humanoid.getRawBoneNode(b);
+      if (!node) continue;
+      const p = node.getWorldPosition(new THREE.Vector3());
+      for (const box of boxes) {
+        if (!box.containsPoint(p) || p.y > box.max.y - 0.02) continue;   // standing ON a box is fine
+        const dx1 = p.x - box.min.x, dx2 = box.max.x - p.x, dz1 = p.z - box.min.z, dz2 = box.max.z - p.z;
+        const m = Math.min(dx1, dx2, dz1, dz2) + 0.02;
+        const v = m === dx1 + 0.02 ? new THREE.Vector3(-m, 0, 0) : m === dx2 + 0.02 ? new THREE.Vector3(m, 0, 0)
+          : m === dz1 + 0.02 ? new THREE.Vector3(0, 0, -m) : new THREE.Vector3(0, 0, m);
+        if (v.length() > step.length()) step.copy(v);
+      }
+    }
+    if (step.lengthSq() === 0) break;
+    push.add(step);
+    if (push.length() > 0.4) push.setLength(0.4);
+    rig.root.position.add(step);
+    rig.root.updateMatrixWorld(true);
+    if (push.length() >= 0.4) break;
+  }
+}
+
 /** Her placement root and the world position of her bones (the scene probe - film/Probe.tsx). */
 export function vrmBones(url: string): {root: THREE.Object3D; bones: Record<string, THREE.Vector3>} | null {
   const rig = rigs.get(url);
@@ -648,6 +685,7 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
   ensureOutline(rig, outline, outlineColor);
   const posed = poseVrm(url, keys, f, fps, Math.max(from, keys[0].f), camPos, lock, mouthKeys);
   groundOnSupport(posed, keys[keyAt(keys, f)], scene);
+  clearSolids(posed, keys[keyAt(keys, f)], scene);
   syncOutline(posed);
   const p = posed.root.position;
   const w = (posed.root.scale.x * posed.natural) * 0.42;

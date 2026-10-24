@@ -229,14 +229,15 @@ export const Film: React.FC<FilmProps> = (props) => {
                 glow={glowColor(shot.opts.glow, f)} glowGain={glowGain} />
             )}
             {/* the strings read her posed wrists: drawn after her */}
-            {props.vrm ? <Strings list={shot.opts.strings} vrm={staticFile(props.vrm)} f={f} /> : null}
-            {rays}{ride}{lensPass}{anchored}
+            {props.vrm ? <group userData={{noSupport: true}}><Strings list={shot.opts.strings} vrm={staticFile(props.vrm)} f={f} /></group> : null}
+            {/* lyrics, light rays, lens passes, effects: drawn in the space, never stood on or pushed against (support.ts) */}
+            <group userData={{noSupport: true}}>{rays}{ride}{lensPass}{anchored}</group>
             {crownAt ? (
               <group position={[crownAt.x, crownAt.y, crownAt.z]} rotation={[0, Math.atan2(camPos[0] - crownAt.x, camPos[2] - crownAt.z), 0]}>
                 <CapCrown pos={[0, 0.0, 0]} rot={[0.12, 0, -0.18]} scale={0.62} />
               </group>
             ) : null}
-            {shot.lyrics ? <Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} /> : null}
+            {shot.lyrics ? <group userData={{noSupport: true}}><Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} /></group> : null}
             {/* after effects (toki 2026-10-23): AO + bloom on every 3D-Raymi film shot, DoF where a shot asks for it */}
             {props.vrm ? <PostFX spec={(shot.opts.post ?? {}) as PostSpec} /> : null}
             {props.probe ? <Probe f={f} vrm={props.vrm ? staticFile(props.vrm) : null} shot={shot.id} /> : null}
