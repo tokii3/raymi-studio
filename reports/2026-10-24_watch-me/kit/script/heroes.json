@@ -1,0 +1,26 @@
+{
+ "frame": {
+  "kind": "prop",
+  "size": [
+   1.8,
+   2.3
+  ],
+  "min": 0.06
+ },
+ "face": {
+  "kind": "face"
+ },
+ "billboard": {
+  "kind": "prop",
+  "center": [
+   0.4,
+   4.9,
+   -3.1
+  ],
+  "size": [
+   4.2,
+   1.9
+  ],
+  "min": 0.06
+ }
+}
