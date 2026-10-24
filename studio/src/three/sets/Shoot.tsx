@@ -6,11 +6,15 @@
 //   gel: "#hex"        the backdrop light's colour (the paper turns that colour; default warm white)
 //   flash: [t, ...]    studio flashes (song seconds -> frames): the whole set blinks white and decays in 5 frames
 //   dark: 0..1 | dark_at: [[t, v]] + dark_s   the studio blows a fuse - only her own light stays
+//   bulb: true         a bare bulb on its cord above her mark - the lamp's first form (灯闇: Watch Me plants it here,
+//                      it dies with the city at 117.6 and she clicks the last one off); it swings a little
+//   bulb_flicker: t    the bulb stutters off-on for 12 frames (the stop)
+//   bulb_swing: "frozen"  the bulb hangs still at the end of a swing (time stopped)
 //   stage / fish / salmon / props   three/staging.tsx, creatures.tsx (the Salmon as her photographer)
 import React from 'react';
 import * as THREE from 'three';
 import {RBox} from '../parts';
-import {SetLight, runTo, toon, toonSurface} from '../look';
+import {SetLight, blobTexture, runTo, toon, toonSurface} from '../look';
 import {DeepLife} from '../creatures';
 import {Stagings} from '../staging';
 import type {SetProps} from './index';
@@ -68,6 +72,13 @@ export const Shoot: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   spot.position.set(0.4, 4.6, 2.6);
   spot.target.position.set(0, 0.9, -0.4);
   const concrete = toonSurface('#2a2a33', 'plaster', [10, 10]);
+  // the bulb: lit unless the studio is dark; a flicker = a stutter pattern; frozen = held at the end of a swing
+  const fk = typeof opts.bulb_flicker === 'number' ? f - opts.bulb_flicker : -1;
+  const stutter = fk >= 0 && fk < 12 ? [0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0.4, 1][fk] : 1;
+  const bulbOn = on * stutter;
+  const swing = opts.bulb_swing === 'frozen' ? 0.32 : 0.07 * Math.sin(f / 21);
+  const bulbLight = React.useMemo(() => new THREE.PointLight('#ffcf8a', 0, 4.5, 1.6), []);
+  bulbLight.intensity = 2.2 * bulbOn;
   return (
     <group>
       <SetLight sky="#30304a" ground="#121218" fill={(0.7 + 0.5 * fl) * dim} key="#ffffff" keyI={(0.8 + 1.1 * fl) * dim} keyPos={[3, 6, 5]} target={[0, 1, 0]}
@@ -107,6 +118,17 @@ export const Shoot: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
         <mesh key={i} position={[x * 0.5, 0.012, (z0 + z1) / 2]} rotation={[-Math.PI / 2, 0, i ? 0.4 : -0.3]} material={toon('#0e0e12')}>
           <planeGeometry args={[0.025, 2.6]} /></mesh>
       ))}
+      {opts.bulb ? (
+        <group position={[-0.55, 4.6, 0.35]} rotation={[0.25 * swing, 0, swing]}>
+          <mesh position={[0, -0.85, 0]} material={toon('#141418')}><cylinderGeometry args={[0.006, 0.006, 1.7, 6]} /></mesh>
+          <mesh position={[0, -1.72, 0]} material={toon('#2a2a30')}><cylinderGeometry args={[0.03, 0.035, 0.07, 10]} /></mesh>
+          <mesh position={[0, -1.82, 0]}><sphereGeometry args={[0.055, 14, 10]} />
+            <meshBasicMaterial color={new THREE.Color('#3a3026').lerp(new THREE.Color('#ffe2b0'), bulbOn)} toneMapped={false} /></mesh>
+          {bulbOn > 0.05 ? <mesh position={[0, -1.82, 0]} renderOrder={5}><planeGeometry args={[0.5, 0.5]} />
+            <meshBasicMaterial map={blobTexture('#ffcf8a')} transparent opacity={0.55 * bulbOn} blending={THREE.AdditiveBlending} depthWrite={false} toneMapped={false} /></mesh> : null}
+          <primitive object={bulbLight} position={[0, -1.82, 0]} />
+        </group>
+      ) : null}
       <DeepLife opts={opts} f={f} fps={fps} camPos={camPos} />
       <Stagings opts={opts} f={f} camPos={camPos} />
     </group>

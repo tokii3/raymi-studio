@@ -62,7 +62,7 @@ real steps: rows 53 and 67). Poses = held frames of her clips ("clip held"). Col
 | 37 | 87.62-92.99 | "In my Loubs, breakin' hearts and breakin' news" | corner dutch slide along the TV window | track (move) | poses in front of the TV window - a new pose on each hit, the screens copy her a beat late (female-dance-pose-1 held, female-dance-pose-3 held, female-dynamic-pose held) | BREAKING ticker on the TVs | - | cut on the music | breakin' news |
 | 38 | 92.99-96.37 | "Hurricane when the forecast K/DA, ayy" | corner whip with the gust | whip_out (move) | the storm proper: rain sideways; the paparazzo blown into the newsstand (hip-hop-dancing-8) | HURRICANE neon flickers | - | cut on the music | the hurricane she (wrongly) called arrives anyway |
 | 39 | 96.37-99.81 | "On your radar, you can't look away (Watch me, " | corner top-down through rain | keys | her steps send ripple rings across the wet asphalt like sonar pings (step-hip-hop-dance) | RADAR road paint | - | cut on the music | on your radar |
-| 40 | 99.81-105.46 | "Watch me pose, always keep 'em on they toes (K" | corner crane to the billboard | crane_up (move) | the cover is the BILLBOARD now - she poses on it (cuts street / billboard on hits) (female-standing-pose-1 held, female-dance-pose-3 held, female-dance-pose-2 held) | POSE on the billboard | frame | cut on the music | watch me pose - bigger than act 1 |
+| 40 | 99.81-105.46 | "Watch me pose, always keep 'em on they toes (K" | corner crane to the billboard | keys: crane up + tilt to the billboard | the cover is the BILLBOARD now - she poses on it (cuts street / billboard on hits) (female-standing-pose-1 held, female-dance-pose-3 held, female-dance-pose-2 held) | POSE on the billboard | frame | cut on the music | watch me pose - bigger than act 1 |
 | 41 | 105.46-109.09 | "Centerfolds turn the sidewalk to a show (Watch" | corner low along the road, fast push | crash (move) | TREADMILL: she walks on the spot while road paint WATCH ME runs along the crossing toward her; light strips (catwalk-sequence-05) | road paint | - | cut on the music | the sidewalk is a show |
 | 42 | 109.09-113.29 | "Hurricane when the forecast K/DA, ayy" | corner his MS, focus pull | keys | the Salmon crawls out of the newsstand with HER cover stuck on his face (hip-hop-dancing-9) | - | - | cut on the music | the Salmon arc, act 2 |
 | 43 | 113.29-117.60 | "There's a hundred percent chance of slay (Slay" | corner rolling pull-out over the corner | keys: rolling pull-out | overload: every screen, sign, puddle of the corner shows her - sparks (female-dynamic-pose held) | SLAY on every screen | - | cut on the music | too much - the city cannot hold her |
@@ -110,6 +110,18 @@ choruses 6-8 shots per 17 s with poses on hits inside shots; the turn 4 shots in
   vertigo, track, whip_out, spiral, push_dutch, handheld), observer + aware, the lyric v2 objects and their fitter,
   PostFX depth, the Salmon actor, the blackout (`dark` / `dark_at`), stagings (cover, frame, mosaic, pins, post, news,
   radar), the three sets of the boards, world out / in. NEW here: everything runs around ONE spot and changes worlds.
+
+## Build status 2026-10-24 (night) - the must list is built, guards green for MV + Short
+- three/setfx.tsx (any set): wet mirror floor (SET_WET), rain / wind, splash, tail_slap, treadmill, freeze dust,
+  light writing, gold letters off the wall, the centerfold fold, her tail at the lens (tail_lens / barb_lens /
+  tail_twitch); Film: `freeze` stops the set's time. Shoot: the bulb (+ flicker, frozen swing). Corner: lamp_flick.
+  Exhibit: crossed. Salmon: the guard (flashlight + beam, cap, search, beam_on_her, reach, hat off, freeze to marble,
+  frozen) and the camera he drops. Transitions: `cover` (palm / hair / tail / frame_bar, full cover on the boundary
+  frames). Grades wm_paper / wm_night / wm_gold (one family). Lyrics: `cross` (close shots: over her body, never her
+  face) + blocks riding the lens (`lens`, the fitter's last tier for crash / orbit close shots); the face hero and the
+  staging heroes now work for the 3D rig; the Short has its own readable minimum (4 % cap).
+- Still open (nice / cut first): clapper, polaroid, embers, orbit_gear, track_lights, fountain, ripples, road_paint,
+  overload, worlds_in_frames, her_camera, the TVs copying her.
 
 ## Build list (what the studio does not have yet - in the treatment's priority: must / nice / cut first)
 | part | kind | used in shots | status |

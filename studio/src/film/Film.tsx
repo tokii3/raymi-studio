@@ -24,6 +24,7 @@ import {makeVrmMouthKeys} from '../three/vrmLipSync';
 import {Probe} from './Probe';
 import {QcMask} from './QcMask';
 import {WorldMotion, worldSpec} from '../three/world';
+import {SET_WET, SetFx} from '../three/setfx';
 import {vrmFilmKeys, vrmFilmWords} from '../three/vrmFilm';
 import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
@@ -228,7 +229,10 @@ export const Film: React.FC<FilmProps> = (props) => {
             <CameraRig cam={cam} />
             {/* the world around her may leave / arrive piece by piece (three/world.tsx, Watch Me) */}
             {Set ? <WorldMotion spec={worldSpec(shot.opts.world, fps)} f={f} centre={(actorKeys[0]?.pos as [number, number, number] | undefined) ?? [0, 0, 0]}>
-              <Set f={f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} />
+              {/* freeze: the set's own time stops at the shot's first frame (she still moves) */}
+              <Set f={shot.opts.freeze ? shot.from : f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} />
+              <SetFx opts={{wet: SET_WET[shot.set] ?? 0, ...shot.opts}} f={f} fps={fps} camPos={camPos} plain={Boolean(mask)}
+                her={(actorKeys[0]?.pos as [number, number, number] | undefined) ?? [0, 0, 0]} />
             </WorldMotion> : null}
             {props.vrm ? (
               <VrmPuppet url={staticFile(props.vrm)} keys={actorKeys} f={f} fps={fps} from={shot.from} camPos={camPos}
@@ -250,7 +254,7 @@ export const Film: React.FC<FilmProps> = (props) => {
                 <CapCrown pos={[0, 0.0, 0]} rot={[0.12, 0, -0.18]} scale={0.62} />
               </group>
             ) : null}
-            {shot.lyrics ? <group userData={{noSupport: true, qc: 'text'}}><Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} /></group> : null}
+            {shot.lyrics ? <group userData={{noSupport: true, qc: 'text'}}><Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} lens={cam} /></group> : null}
             {/* after effects (toki 2026-10-23): AO + bloom on every 3D-Raymi film shot, DoF where a shot asks for it */}
             {props.vrm && !mask ? <PostFX spec={(shot.opts.post ?? {}) as PostSpec} /> : null}
             {props.probe ? <Probe f={f} F={fNow} vrm={props.vrm ? staticFile(props.vrm) : null} shot={shot.id} /> : null}

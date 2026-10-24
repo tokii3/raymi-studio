@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import {cameraAt, fovFor, planeSize, puppetAt} from './motion';
 import type {FilmProps, PuppetKey, Shot, V3} from './types';
 import type {Pose} from './motion';
-import {SUB, blockLayout, blockRotation, subOf} from './lyricLayout';
+import {SUB, blockLayout, blockRotation, lensPlace, subOf} from './lyricLayout';
 
 export function makeCamera(shot: Shot, f: number, aspect: number, hits: number[], fps: number): THREE.PerspectiveCamera {
   const c = cameraAt(shot.camera, f, hits, shot.kick, fps);
@@ -196,6 +196,11 @@ const FIG_HOLD = 1.0;    // s of a settled line hiding > 60 % of her figure, for
 /** Lyrics v2 readable at phone size, measured on the CAP height: a normal word >= 5.4 % of the frame height (~ the
  *  10 % texture box), romaji / English >= 4 % (toki 2026-10-19 "zu klein, zu duenn"; FIRESTARTER pilots 1-3). */
 export const CAP_MIN = 0.054, SUB_CAP_MIN = 0.04;
+/** The Short is watched full-screen in portrait: caption guidance there is 55-85 px cap on a 1920 frame (3-4.5 %);
+ *  the 16:9 numbers above assume the MV small in the phone's inline player. Portrait: 4 % / 3 % (Watch Me build: the
+ *  landscape minimum stacked a long line one word per row in the Short). */
+export const capMin = (props: {width: number; height: number}) => (props.width < props.height ? 0.04 : CAP_MIN);
+export const subCapMin = (props: {width: number; height: number}) => (props.width < props.height ? 0.03 : SUB_CAP_MIN);
 
 /** Every frame a lyric line is fully shown (from its last word on, settled), all of it must be inside the frame. */
 const L0 = (s: Shot) => s.lyrics!;
@@ -245,8 +250,9 @@ export function occluders(props: FilmProps, s: Shot, f: number, cam: THREE.Camer
     }));
     if (cells.length) out.push({name: 'her figure', boxes: cells});
   }
+  // lyrics.cross (a close shot, toki 2026-10-19: lyrics may cover her for a while): only her head is kept free
   const ac = actorCells(s, f, cam);
-  if (ac.length) out.push({name: 'her figure', boxes: ac});
+  if (ac.length) out.push(s.lyrics?.cross ? {name: 'her face', boxes: actorCells(s, f, cam, true)} : {name: 'her figure', boxes: ac});
   for (const b of s.solids ?? []) {
     const box = new THREE.Box3().setFromCenterAndSize(new THREE.Vector3(...b.center), new THREE.Vector3(...b.size));
     if (box.distanceToPoint(cam.position) >= depth) continue;
@@ -263,7 +269,9 @@ export function occluders(props: FilmProps, s: Shot, f: number, cam: THREE.Camer
 // 19b / 23). Her body from her rig key: a column of cells from the feet along her (rolled) body axis - legs, hips,
 // chest, head - in metres scaled by her height, projected to screen boxes like the sprite mask cells.
 const BODY: [number, number, number][] = [[0, 0.28, 0.16], [0.28, 0.5, 0.21], [0.5, 0.62, 0.25], [0.62, 0.8, 0.27], [0.8, 1.04, 0.23]];   // her long hair widens head + back   // [t0, t1, half width] / 1.55 m
-export function actorCells(s: Shot, f: number, cam: THREE.Camera): [number, number, number, number][] {
+// her FACE alone (chin to brow, cheek to cheek - not the hair round it): what lyrics.cross keeps free and the face hero
+const FACE: [number, number, number][] = [[0.835, 0.975, 0.1]];
+export function actorCells(s: Shot, f: number, cam: THREE.Camera, headOnly = false): [number, number, number, number][] {
   const keys = s.actor;
   if (!keys?.length || f < keys[0].f) return [];
   let i = 0;
@@ -278,7 +286,7 @@ export function actorCells(s: Shot, f: number, cam: THREE.Camera): [number, numb
   const axis = new THREE.Vector3(-Math.sin(r) * Math.cos(yaw), Math.cos(r), Math.sin(r) * Math.sin(yaw));
   const side = new THREE.Vector3(Math.cos(r) * Math.cos(yaw), Math.sin(r), -Math.cos(r) * Math.sin(yaw));
   const out: [number, number, number, number][] = [];
-  for (const [t0, t1, hw] of BODY) {
+  for (const [t0, t1, hw] of headOnly ? FACE : BODY) {
     const pts = [t0, t1].flatMap((t) => [-1, 1].map((sd) => pos.clone().addScaledVector(axis, t * h).addScaledVector(side, sd * hw * sc)));
     const q = pts.map((p) => p.clone().project(cam));
     if (q.some((p) => p.z >= 1 || p.z <= -1)) continue;
@@ -294,6 +302,7 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
   const out: TextFault[] = [];
   for (const s of props.shots) {
     if (!s.lyrics || s.lyrics.kind === 'ticker') continue;   // tickers scroll through the frame on purpose
+    if (s.lyrics.lens) { out.push(...lensLyricFaults(props, s)); continue; }
     const float = s.lyrics.kind === 'float';                  // bubbles rise out - but must be read whole first (pilot 1)
     const lines = [...new Set(s.words.map((w) => w.line))];
     for (const line of lines) {
@@ -323,10 +332,10 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
         };
         const base = L0(s).size * (ws.every((w) => w.key) ? (v2 ? (L0(s).keyScale ?? 2.8) : 2.2) : 1);
         const main = px(base);
-        if (main < (v2 ? CAP_MIN : 0.044) * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `too small to read (${Math.round(main)} px)`}); continue; }
+        if (main < (v2 ? capMin(props) : 0.044) * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `too small to read (${Math.round(main)} px)`}); continue; }
         if (v2 && subOf(L0(s), line)) {
           const sp = px(L0(s).size * SUB);
-          if (sp < SUB_CAP_MIN * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `romaji / English too small to read (${Math.round(sp)} px)`}); continue; }
+          if (sp < subCapMin(props) * props.height) { out.push({shot: s.id, frame: a, line, text: ws.map((w) => w.w).join(' '), why: `romaji / English too small to read (${Math.round(sp)} px)`}); continue; }
         }
       }
       // a stamp slams in bigger than it lands: 2 frames after the last word it is still ~1.2x (final Short 1: clipped)
@@ -421,6 +430,38 @@ export function lyricsOutOfFrame(props: FilmProps): TextFault[] {
           out.push({shot: s.id, frame: a, line, text: ws.map((x) => x.w).join(' '), why: 'buries her figure the whole line'}); break;
         }
       }
+    }
+  }
+  return out;
+}
+
+/** A block riding the lens (lyrics.lens): every frame from its first word to the line's end it is placed for that
+ *  frame's camera (lensPlace, as Words3D draws it) - inside the safe area, readable, never parked on her face / a prop
+ *  in front (the same sitsOn rule as world blocks, 6 frames in a row). */
+function lensLyricFaults(props: FilmProps, s: Shot): TextFault[] {
+  const aspect = props.width / props.height, out: TextFault[] = [];
+  for (const line of [...new Set(s.words.map((w) => w.line))]) {
+    const ws = s.words.filter((w) => w.line === line), text = ws.map((w) => w.w).join(' ');
+    const next = s.words.find((w) => w.line > line);
+    const z = Math.min(s.to, next ? next.from : Math.max(...ws.map((w) => w.to)) + props.fps);
+    const f0 = Math.max(s.from, Math.min(...ws.map((w) => w.from)));
+    let sitRun = 0;
+    for (let f = f0; f < z; f++) {
+      const cam = makeCamera(s, f, aspect, props.hits, props.fps);
+      const L = lensPlace(s.lyrics!, cam), sh = {...s, lyrics: L};
+      const q = lineCorners(sh, line, f).map((c) => c.clone().project(cam));
+      if (!whipping(s, f, aspect, props) && q.some((n) => n.z >= 1 || Math.abs(n.x) > SAFE || Math.abs(n.y) > SAFE)) { out.push({shot: s.id, frame: f, line, text, why: 'leaves the frame'}); break; }
+      if (f === f0 && !L.small) {
+        const anc = new THREE.Vector3(...L.anchor), up = new THREE.Vector3(0, 1, 0).applyEuler(blockRotation(L));
+        const base = L.size * (ws.every((w) => w.key) ? (L.keyScale ?? 2.8) : 1);
+        const p0 = anc.clone().addScaledVector(up, -base / 2).project(cam), p1 = anc.clone().addScaledVector(up, base / 2).project(cam);
+        const px = Math.hypot(((p1.x - p0.x) / 2) * props.width, ((p1.y - p0.y) / 2) * props.height);
+        if (px < capMin(props) * props.height) { out.push({shot: s.id, frame: f, line, text, why: `too small to read (${Math.round(px)} px)`}); break; }
+      }
+      const lb: [number, number, number, number] = [(Math.min(...q.map((v) => v.x)) + 1) / 2, (1 - Math.max(...q.map((v) => v.y))) / 2, (Math.max(...q.map((v) => v.x)) + 1) / 2, (1 - Math.min(...q.map((v) => v.y))) / 2];
+      const hit = L.over ? undefined : occluders(props, sh, f, cam, cam.position.distanceTo(new THREE.Vector3(...L.anchor))).find((o) => sitsOn(o, lb));
+      sitRun = hit ? sitRun + 1 : 0;
+      if (hit && sitRun >= 6) { out.push({shot: s.id, frame: f - 5, line, text, why: `sits on ${hit.name}`}); break; }
     }
   }
   return out;
@@ -751,6 +792,10 @@ export function heroBox(props: FilmProps, s: Shot, f: number, h: NonNullable<Sho
   const right = new THREE.Vector3(1, 0, 0).applyQuaternion(cam.quaternion), up = new THREE.Vector3(0, 1, 0);
   const quad = (c: THREE.Vector3, w: number, hh: number) => [[-1, -1], [1, -1], [-1, 1], [1, 1]].map(([a, b]) =>
     c.clone().addScaledVector(right, (a * w) / 2).addScaledVector(up, (b * hh) / 2));
+  if (h.kind === 'face' && s.actor?.length) {           // 3D Raymi: her head cell from the rig key (actorCells) - the
+    const hc = actorCells(s, f, cam, true)[0];            // sprite-only version read 0 % on every VRM shot (Watch Me build)
+    return hc ?? null;
+  }
   if (h.kind === 'worn' || h.kind === 'face') {          // something she wears on her head / her face itself
     const p = puppetAt(s.puppets, f, props.fps);
     if (!p || !p.key.head) return null;
@@ -777,6 +822,14 @@ export function heroBox(props: FilmProps, s: Shot, f: number, h: NonNullable<Sho
   if (h.kind === 'prop' && h.center) {
     const [bw, bh] = h.size ?? [0.3, 0.3];
     return screenBox(quad(new THREE.Vector3(...h.center), bw, bh), cam);
+  }
+  if (h.kind === 'prop') {                                // a staging piece (three/staging.tsx: the gold frame, the cover)
+    const st = (Array.isArray(s.opts.stage) ? s.opts.stage : []) as {kind?: string; pos?: V3; h?: number; at?: number; out?: number}[];
+    const g = st.find((x) => (x.kind === h.name || (h.name === 'frame' && (x.kind === 'frame' || x.kind === 'cover'))) && Array.isArray(x.pos)
+      && (x.at === undefined || f >= x.at) && (x.out === undefined || f < x.out));
+    if (!g) return null;
+    const gh = g.h ?? (h.size ? h.size[1] : 2), gw = h.size ? (h.size[0] * gh) / h.size[1] : gh * 0.78;
+    return screenBox(quad(new THREE.Vector3(g.pos![0], g.pos![1] + gh / 2, g.pos![2]), gw, gh), cam);
   }
   if (h.kind === 'word' && s.lyrics) {                    // a key lyric word: its glyph height at the block's anchor
     const w = s.words.find((x) => x.w.toLowerCase() === (h.word ?? h.name).toLowerCase());
@@ -805,7 +858,10 @@ export function heroFaults(props: FilmProps): {shot: string; frame: number; name
         const b = heroBox(props, s, f, h);
         if (h.kind === 'word' && b === null && !s.words.some((x) => x.w.toLowerCase() === (h.word ?? h.name).toLowerCase() && x.from <= f)) continue;   // not sung yet
         n++;
-        const inside = b && b[0] >= 0 && b[2] <= 1 && b[1] >= 0 && b[3] <= 1;
+        // a staging piece that SURROUNDS her (the gold frame, the cover) or a sign the lens fills the frame with reads
+        // while it holds the screen centre - fully inside only for a thing she holds
+        const around = h.kind === 'prop' && !h.uv && b && b[0] < 0.5 && b[2] > 0.5 && b[1] < 0.5 && b[3] > 0.5;
+        const inside = b && ((b[0] >= 0 && b[2] <= 1 && b[1] >= 0 && b[3] <= 1) || around);
         const share = b ? b[3] - b[1] : 0;
         if (inside && share >= h.min) ok++;
         if (share < worst) { worst = share; wf = f; }
@@ -924,6 +980,25 @@ function fillAt(props: FilmProps, s: Shot, f: number): Fill | null {
         return {anchor, size: L.size, width: L.width, tilt: tl, roll: 0, rot, key_scale: ks, ...(small ? {small} : {})};
     }
   }
+  }
+  // last tier: a close shot whose camera crashes / orbits through the line - the block rides the lens beside her face
+  // (lyricLayout lensPlace), off her face, still drawn in the space; nearer than her so it never sinks into her
+  if (s.lyrics.cross) {
+    // nearer than her on EVERY frame of the shot (a crash ends much closer than it starts)
+    let near = Infinity;
+    for (let k = s.from; k < s.to; k += 3) near = Math.min(near, her.distanceTo(makeCamera(s, k, aspect, props.hits, props.fps).position));
+    const dl = Math.max(0.3, Math.min(1.2, near * 0.6));
+    const Hl = 2 * dl * Math.tan(((cam as THREE.PerspectiveCamera).fov * Math.PI) / 360);
+    const lspots: [number, number][] = [];
+    for (const y of [0.8, 0.72, 0.22, 0.3, 0.64, 0.4, 0.5, 0.84]) for (const x of [0.5, 0.32, 0.68, 0.24, 0.76]) lspots.push([x, y]);
+    // a long line in a tight (portrait) frame may go down to ~60 px cap - inside the Shorts caption range - as lyrics.small
+    const ltiers: [number[], string | undefined][] = [[[0.1, 0.085, 0.072, 0.062, 0.056, 0.048, 0.042], undefined], [[0.036, 0.032], 'fitter: a long line in a tight frame (>= 60 px cap)']];
+    for (const [fracs, small] of ltiers) for (const ks of [Math.min(s.lyrics.keyScale ?? 2.8, 1.8), 1.3, 1]) for (const frac of fracs) for (const wf of [0.74, 0.6, 0.45]) for (const [x, y] of lspots) {   // 0.74: a sung word swells 6 %, the safe area is 0.84
+      const L = {...s.lyrics, lens: [x, y, dl] as [number, number, number], keyScale: ks, small, size: Number((frac * Hl).toFixed(4)), width: Number((wf * Hl * aspect).toFixed(3))};
+      const pr = {...props, shots: [{...s, lyrics: L}]};
+      if (lyricsOutOfFrame(pr).length === 0 && heroFaults(pr).length === 0)
+        return {anchor: s.lyrics.anchor, size: L.size, width: L.width, tilt: 0, roll: 0, rot: 0, key_scale: ks, lens: L.lens, ...(small ? {small} : {})} as unknown as Fill;
+    }
   }
   return null;
 }

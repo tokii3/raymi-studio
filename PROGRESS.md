@@ -1,5 +1,15 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-24 (late night) - Watch Me build: the must list, lyric fitter for close shots, stills board 1
+- Built as reusable parts (4_SCRIPT "Build status"): three/setfx.tsx (wet floor, rain, wind, splash, slap, treadmill,
+  freeze, light writing, letters, centerfold, tail at the lens), the bulb / lamp flick / crossed sign, Salmon the guard
+  (beam, cap, search, freeze to marble), the `cover` transition, grades wm_*.
+- Structural guard fixes found on the way: the face / staging heroes read 0 % on every 3D-rig shot (sprite-only code);
+  close shots with a crash / orbit had no legal lyric place -> `cross` (over her body, never her face) + blocks riding
+  the lens as the fitter's last tier; the portrait Short used the landscape size minimum (now 4 % cap, Shorts range).
+- Guards green MV + Short, 121 py + 13 studio tests. stills.json round 1 (21 stills) pushed -> look at it + look-critic
+  before toki.
+
 ## 2026-10-24 (night) - Watch Me script PASS (round 2), v2.1 with its FIXes
 - script-critic round 2 on 4_SCRIPT v2: PASS (verbatim reviews/script_2.md). v2.1 takes its 8 FIXes into script +
   shots.json: sting planted 3x (20 / 52 / 57) and paid with a spin (64); camera column names every keyed move; the

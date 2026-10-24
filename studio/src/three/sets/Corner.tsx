@@ -7,6 +7,7 @@
 // Options:
 //   dark: 0..1 | dark_at: [[t, v]] + dark_s   the city blacks out (lamp, windows, TV, neon) - only her own light stays
 //   lamp: 0..1         the lamp's own strength (1)
+//   lamp_flick: t      she flicks the lamp like a switch: off, on, off, on over 10 frames (the rehearsal of the end)
 //   tv: "text"         what the TV window shows ("BREAKING NEWS")
 //   billboard: "text"  the billboard above the shop (empty paper without it)
 //   covers: true       the newsstand's magazines show her colour (the covers flipped to her)
@@ -29,7 +30,8 @@ export const Corner: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   // blackout: the set's whole light goes, not only its lamps (boards run 1: 'dark' left her lit as by day)
   const dim = 0.16 + 0.84 * on;   // blackout: the place stays readable (look-critic boards 1: 'a black void')
   const dimC = (c: string) => new THREE.Color(c).lerp(new THREE.Color('#010103'), dark).getStyle();
-  const lamp = num(opts.lamp, 1) * on;
+  const fk = typeof opts.lamp_flick === 'number' ? f - opts.lamp_flick : -1;
+  const lamp = num(opts.lamp, 1) * on * (fk >= 0 && fk < 10 ? [0, 0, 0, 1, 1, 0, 0, 1, 1, 1][fk] : 1);
   const lampC = '#ffc98a';
   const night = '#0a1030';
   // flicker: the old lamp breathes a little (never a strobe)

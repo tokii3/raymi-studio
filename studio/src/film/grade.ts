@@ -39,6 +39,15 @@ export const TONES: Record<string, Tone & {lyric: LyricTone}> = {
   // the same for warm interiors (her room at night, a lamp; Halloween)
   pov_warm: {filter: 'contrast(1.06) saturate(1.04) brightness(0.95)', top: '#ffd2a8', bottom: '#22102e', split: 0.28, vignette: 0.58,
     lyric: {color: '#fff6ec', accent: '#ffb86b', sub: '#f0dccc', shadow: 'rgba(30,10,24,0.84)'}},
+  // Watch Me (2026-10-24): ONE family for the three worlds - the same curve, saturation and pink + gold accent pair,
+  // only the light's tint changes (studio paper warm-white, the corner's night blue, the museum's gold); highlights
+  // held under white (toki: never burnt), shadows deep but never grey
+  wm_paper: {filter: 'contrast(1.14) saturate(1.1) brightness(0.95)', top: '#ffe6ef', bottom: '#1c1236', split: 0.32, vignette: 0.6,
+    lyric: {color: '#fff7fb', accent: '#ff3d7f', sub: '#f2dde8', shadow: 'rgba(28,10,40,0.84)'}},
+  wm_night: {filter: 'contrast(1.14) saturate(1.1) brightness(0.95)', top: '#9fb8ff', bottom: '#1a0c34', split: 0.36, vignette: 0.66,
+    lyric: {color: '#f2f6ff', accent: '#ff3d7f', sub: '#cfd8f4', shadow: 'rgba(10,6,36,0.86)'}},
+  wm_gold: {filter: 'contrast(1.14) saturate(1.1) brightness(0.95)', top: '#ffd08a', bottom: '#2a0a1e', split: 0.34, vignette: 0.64,
+    lyric: {color: '#fff6e6', accent: '#ff3d7f', sub: '#f2dcc0', shadow: 'rgba(36,8,20,0.86)'}},
   // VRM Firestarter look test: retain the deep-violet setting while keeping highlights on pale MToon materials.
   vrm_fire: {filter: 'contrast(1.08) saturate(1.08) brightness(0.92)', top: '#d39a82', bottom: '#180d31', split: 0.36, vignette: 0.62,
     lyric: {color: '#f3ecff', accent: '#ffc46b', sub: '#d8d2e8', shadow: 'rgba(12,5,30,0.84)'}},

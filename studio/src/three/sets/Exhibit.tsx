@@ -7,6 +7,7 @@
 //   dark: 0..1 | dark_at: [[t, v]] + dark_s   the museum lights go out - only her own light (and the exit sign) stays
 //   hers: true          every painting in the hall shows her colours (the frames became hers)
 //   plaque: "text"      the plinth's plaque ("RAYMI, 2026 - deep sea")
+//   crossed: t          her tail strikes a pink line through DO NOT TOUCH (drawn over 8 frames)
 //   visitors: n         fish-shaped visitors at the rope (parts Visitor silhouettes, phones up)
 //   stage / fish / salmon / props   three/staging.tsx, creatures.tsx
 import React from 'react';
@@ -89,6 +90,10 @@ export const Exhibit: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       <mesh position={[0, 0.82, 1.25]} rotation={[0, 0, Math.PI]}><torusGeometry args={[1.1, 0.025, 8, 24, Math.PI]} /><meshToonMaterial color="#8a1430" /></mesh>
       <Sign pos={[1.45, 0.85, 1.2]} rot={[0, -0.3, 0]} size={[0.42, 0.28]} id="ex_dont"
         paint={(ctx, w, h) => { ctx.fillStyle = '#f2ede2'; ctx.fillRect(0, 0, w, h); drawText(ctx, 'PLEASE', w / 2, h * 0.32, h * 0.26, '#3a1a1a'); drawText(ctx, 'DO NOT TOUCH', w / 2, h * 0.68, h * 0.22, '#3a1a1a', {maxW: w * 0.9}); }} />
+      {typeof opts.crossed === 'number' && f >= opts.crossed ? (
+        <mesh position={[1.45 - 0.2 * (1 - Math.min(1, (f - opts.crossed) / 8)) * 0.5, 0.85, 1.215]} rotation={[0, -0.3, 0.32]} renderOrder={4}>
+          <planeGeometry args={[0.46 * Math.min(1, (f - opts.crossed) / 8), 0.035]} /><meshBasicMaterial color="#ff3d7f" toneMapped={false} /></mesh>
+      ) : null}
       <mesh position={[1.45, 0.42, 1.2]} material={toon('#d9a441')}><cylinderGeometry args={[0.02, 0.02, 0.84, 8]} /></mesh>
       {/* a bench to the side, the exit sign (the one light that stays on) */}
       <RBox size={[1.6, 0.08, 0.5]} pos={[-3.4, 0.45, 0.8]} r={0.02} c="#3a2418" t="wood" />

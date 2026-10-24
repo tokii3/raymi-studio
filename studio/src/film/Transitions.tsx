@@ -123,7 +123,49 @@ export const Transitions: React.FC<{shots: Shot[]; f: number}> = ({shots, f}) =>
         </svg>
       );
     }
+    case 'cover': {
+      // Watch Me: something of HER fills the lens - her palm, a swing of her hair, her tail, a gold frame bar - out of
+      // focus right in front of the glass; it covers the whole frame on the boundary frames, the cut hides inside
+      const obj = t.obj ?? 'palm';
+      const C = COVER[obj] ?? COVER.palm;
+      const dir = t.dir ?? 1;
+      const go = a.p < 0.5 ? ease('out', a.p * 2) : 1 + ease('in', (a.p - 0.5) * 2);   // 0 off-frame -> 1 covering -> 2 gone
+      const shift = (1 - go) * 120 * dir;                                            // in from one side, out the other
+      return (
+        <svg viewBox="0 0 160 90" preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', filter: 'blur(5px)'}}>
+          <g transform={`translate(${shift.toFixed(2)} 0)`}>
+            {obj === 'palm' ? (<>
+              <ellipse cx={80} cy={58} rx={88} ry={70} fill={C[0]} />
+              {[0, 1, 2, 3].map((i) => <rect key={i} x={30 + i * 28} y={-40} width={24} height={90} rx={12} fill={C[0]} />)}
+              <path d="M 70 70 C 100 60 130 72 150 90" stroke={C[1]} strokeWidth={2} fill="none" opacity={0.6} />
+            </>) : obj === 'hair' ? (<>
+              <rect x={-20} y={-10} width={200} height={110} fill={C[0]} opacity={clamp01(k * 1.6)} />
+              {Array.from({length: 14}, (_, i) => <path key={i} d={`M ${-30 + i * 15} -10 C ${i * 15 + 10} 30 ${i * 15 - 15} 60 ${i * 15 + 20} 110`}
+                stroke={i % 3 ? C[0] : C[1]} strokeWidth={18} fill="none" strokeLinecap="round" />)}
+            </>) : obj === 'tail' ? (<>
+              <path d="M -40 120 C 20 60 90 50 210 -30 L 260 40 C 140 80 60 110 30 140 Z" fill={C[0]} />
+              <rect x={-20} y={-10} width={200} height={110} fill={C[0]} opacity={clamp01((k - 0.55) * 4)} />
+              <path d="M 150 18 L 196 4 L 176 40 Z" fill={C[1]} />
+            </>) : (<>
+              <rect x={-20} y={-30} width={200} height={150} fill={C[0]} />
+              <rect x={-20} y={8} width={200} height={6} fill={C[1]} opacity={0.7} />
+              <rect x={-20} y={70} width={200} height={4} fill="#5a3a10" opacity={0.5} />
+            </>)}
+          </g>
+          {/* the boundary frames are fully covered whatever the shape (QC: lens >= 90 % covered at the cut) */}
+          <rect x={0} y={0} width={160} height={90} fill={C[0]} opacity={k > 0.82 ? 1 : 0} />
+        </svg>
+      );
+    }
     default:
       return null;
   }
 };
+
+/** Cover-cut colours [body, accent]: her skin, her hair, her tail + barb, the gold of the exhibit frames. */
+export const COVER: Record<string, [string, string]> = {
+  palm: ['#aab8cf', '#8796b2'], hair: ['#191530', '#2d2650'], tail: ['#2a1f45', '#7a3cf0'], frame_bar: ['#d9a441', '#f5d48a'],
+};
+
+/** How much of the frame a cover transition hides at its peak (the boundary frame) - always the whole frame. */
+export const coverAt = (p: number) => (1 - Math.abs(p - 0.5) * 2 > 0.82 ? 1 : 0);

@@ -68,6 +68,21 @@ export function blockLayout(words: Word3[], sub: LyricSub | undefined, L: Lyrics
 }
 
 /** The block's rotation on its surface: facing (rotY), tilt (lie on a floor / lean back), roll (follow the diagonal). */
+/** A block that rides the lens (lyrics.lens = [x, y, d]): placed on the screen spot x, y at d metres along the view,
+ *  facing the lens - for close shots whose camera crashes / orbits through the line, where any place in the world
+ *  slides out of the frame or is seen from behind. It is still drawn in the space (scene light, depth of field), the
+ *  guards check it frame by frame on her face like any block. Same maths as the fitter's world spots. */
+export function lensPlace(L: Lyrics, cam: THREE.Camera): Lyrics {
+  if (!L.lens) return L;
+  const [x, y, d] = L.lens;
+  const fwd = new THREE.Vector3(0, 0, -1).applyQuaternion(cam.quaternion);
+  const ray = new THREE.Vector3(x * 2 - 1, 1 - y * 2, 0.5).unproject(cam).sub(cam.position).normalize();
+  const pt = cam.position.clone().addScaledVector(ray, d / Math.max(0.3, ray.dot(fwd)));
+  // the block takes the lens's own orientation (yaw, pitch AND roll): square to the picture even in a dutch / roll move
+  const e = new THREE.Euler().setFromQuaternion(cam.quaternion, 'YXZ'), deg = 180 / Math.PI;
+  return {...L, anchor: [pt.x, pt.y, pt.z], rotY: e.y * deg, tilt: e.x * deg, roll: e.z * deg};
+}
+
 export function blockRotation(L: Lyrics): THREE.Euler {
   const d = Math.PI / 180;
   return new THREE.Euler((L.tilt ?? 0) * d, L.rotY * d, (L.roll ?? 0) * d, 'YXZ');

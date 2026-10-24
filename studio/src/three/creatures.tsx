@@ -10,6 +10,10 @@
 //   sauna:  {pos, n?, r?, glow?}                                           fish round a vent in towels (+ eye shells on the boss)
 //   salmon: {pos, from?, at?, dur_s?, hold?, water?, tip_at?, spray_at?, spray_s?, jump_at?, singe_at?, cover_at?,
 //            toast_at?, icon?, icon_at?, yaw?, scale?}
+//           Watch Me guard (2026-10-24): hold 'flashlight' (+ a guard cap) | 'camera'; aim = [x, y, z] his beam points at
+//           (beam_on_her: aim at her chest), search = the beam sweeps the hall, reach_at = a fin reaches out, hat_off_at =
+//           the cap blows off, freeze_at = he stops dead and turns to marble (stinged into an exhibit), frozen = marble
+//           from the start; with hold 'camera', tip_at drops the camera to the floor
 //   props:  [{kind: bucket | extinguisher | towel, pos, rot?, scale?, buried?, water?}]
 import React from 'react';
 import * as THREE from 'three';
@@ -228,21 +232,23 @@ export const Sauna: React.FC<{pos: P3; f: number; n?: number; r?: number; glow?:
 
 // ---------------------------------------------------------------- Salmon, the fire fighter
 /** Salmon's body (the same salmon as in the aquarium: salmon-coloured, pale belly). Head = +x, 0.42 m long. */
-export const SalmonBody: React.FC<{f: number; cover?: number; jump?: number}> = ({f, cover = 0, jump = 0}) => {
-  const wig = Math.sin(f * 0.5) * 0.4 * (1 + jump);
+export const SalmonBody: React.FC<{f: number; cover?: number; jump?: number; stone?: number}> = ({f, cover = 0, jump = 0, stone = 0}) => {
+  const wig = Math.sin(f * 0.5) * 0.4 * (1 + jump) * (1 - stone);
+  // stone: he turns into a marble exhibit (Watch Me 64-65) - every colour runs to the plinth's marble
+  const c = (hex: string) => (stone > 0 ? `#${new THREE.Color(hex).lerp(new THREE.Color('#e9e2d6'), stone).getHexString()}` : hex);
   return (
     <group>
-      <mesh material={toon('#ff8f6b')} castShadow scale={[1, 0.5, 0.3]}><sphereGeometry args={[0.5, 16, 12]} /></mesh>
-      <mesh material={toon('#ffc3a8')} position={[0, -0.08, 0]} scale={[0.85, 0.25, 0.28]}><sphereGeometry args={[0.5, 12, 8]} /></mesh>
+      <mesh material={toon(c('#ff8f6b'))} castShadow scale={[1, 0.5, 0.3]}><sphereGeometry args={[0.5, 16, 12]} /></mesh>
+      <mesh material={toon(c('#ffc3a8'))} position={[0, -0.08, 0]} scale={[0.85, 0.25, 0.28]}><sphereGeometry args={[0.5, 12, 8]} /></mesh>
       <group position={[-0.48, 0, 0]} rotation={[0, wig, 0]}>
-        <mesh position={[-0.16, 0, 0]} rotation={[0, 0, Math.PI / 2]} material={toon('#e86d52')} scale={[1, 1, 0.25]}><coneGeometry args={[0.24, 0.34, 3]} /></mesh>
+        <mesh position={[-0.16, 0, 0]} rotation={[0, 0, Math.PI / 2]} material={toon(c('#e86d52'))} scale={[1, 1, 0.25]}><coneGeometry args={[0.24, 0.34, 3]} /></mesh>
       </group>
-      <mesh position={[0.32, 0.06, 0.13]} material={toon('#140b24')}><sphereGeometry args={[0.04, 8, 6]} /></mesh>
-      <mesh position={[0.32, 0.06, -0.13]} material={toon('#140b24')}><sphereGeometry args={[0.04, 8, 6]} /></mesh>
+      <mesh position={[0.32, 0.06, 0.13]} material={toon(c('#140b24'))}><sphereGeometry args={[0.04, 8, 6]} /></mesh>
+      <mesh position={[0.32, 0.06, -0.13]} material={toon(c('#140b24'))}><sphereGeometry args={[0.04, 8, 6]} /></mesh>
       {/* pectoral fins: down at rest, raised over the eyes when it covers them */}
       {[1, -1].map((side) => (
         <mesh key={side} position={[0.18 + 0.1 * cover, -0.06 + 0.14 * cover, side * 0.15]}
-          rotation={[side * (0.4 + 0.9 * cover), 0, -0.6 + 1.5 * cover]} material={toon('#e86d52', '#000000', 1, {side: THREE.DoubleSide})} scale={[0.16, 0.1, 1]}>
+          rotation={[side * (0.4 + 0.9 * cover), 0, -0.6 + 1.5 * cover]} material={toon(c('#e86d52'), '#000000', 1, {side: THREE.DoubleSide})} scale={[0.16, 0.1, 1]}>
           <circleGeometry args={[0.5, 3]} />
         </mesh>
       ))}
@@ -250,12 +256,14 @@ export const SalmonBody: React.FC<{f: number; cover?: number; jump?: number}> = 
   );
 };
 
-export type SalmonSpec = {pos: P3; from?: P3; at?: number; dur_s?: number; hold?: 'bucket' | 'extinguisher' | null; water?: string | null;
+export type SalmonSpec = {pos: P3; from?: P3; at?: number; dur_s?: number; hold?: 'bucket' | 'extinguisher' | 'flashlight' | 'camera' | null; water?: string | null;
   tip_at?: number; spray_at?: number; spray_s?: number; jump_at?: number; singe_at?: number; cover_at?: number[]; toast_at?: number;
   icon?: string; icon_at?: number; yaw?: number; scale?: number;
   // POV Shorts (2026-10-23): press_at (frame) = he presses his face to the glass in front of him (squish + a bump);
   // costume 'raymi' = he is dressed as HER (oversized tako ears, a stingray-barb tail, an ultraviolet ruffle)
-  press_at?: number; costume?: 'raymi' | null};
+  press_at?: number; costume?: 'raymi' | null;
+  // Watch Me guard (2026-10-24)
+  aim?: P3; beam_on_her?: boolean; search?: boolean; reach_at?: number; hat_off_at?: number; freeze_at?: number; frozen?: boolean; hat?: boolean};
 
 /** Salmon dressed as Raymi (Halloween): oversized tako ears on his head, her ultraviolet ruffle around his middle,
  *  a thin tail with a stingray barb (in SalmonBody units: head at +x, up +y). */
@@ -300,7 +308,11 @@ function iconTex(kind: string): THREE.CanvasTexture {
   });
 }
 
-export const SalmonActor: React.FC<{s: SalmonSpec; f: number; fps: number; camPos?: P3}> = ({s, f, fps, camPos}) => {
+export const SalmonActor: React.FC<{s: SalmonSpec; f: number; fps: number; camPos?: P3}> = ({s, f: fNow, fps, camPos}) => {
+  // frozen (stung into an exhibit): his time stops and the colour runs to marble over 8 frames
+  const fz = s.frozen ? 0 : typeof s.freeze_at === 'number' ? s.freeze_at : Infinity;
+  const f = Math.min(fNow, fz);
+  const stone = s.frozen ? 1 : Math.max(0, Math.min(1, (fNow - fz) / 8));
   let p: P3 = s.pos, yaw = s.yaw ?? 0;
   if (s.from) {
     const a = along(s.from, s.pos, s.at ?? 0, (s.dur_s ?? 1) * fps, f);
@@ -322,16 +334,55 @@ export const SalmonActor: React.FC<{s: SalmonSpec; f: number; fps: number; camPo
   const sc = s.scale ?? 1;
   const dp = since(s.press_at);
   const press = dp >= 0 ? Math.min(1, dp / 4) * (dp < 8 ? 1 + 0.2 * Math.sin((dp / 8) * Math.PI) : 1) : 0;
+  // the guard: the beam aims at a point (her chest) or sweeps the hall; a fin reaches out; the cap blows away
+  const aim = s.aim ?? (s.beam_on_her ? [0, 1.25, 0] as P3 : null);
+  const toAim = aim ? Math.atan2(-(aim[2] - p[2]), aim[0] - p[0]) : null;
+  if (toAim !== null && s.yaw === undefined) yaw = toAim;
+  if (s.search) yaw += 0.7 * Math.sin(f / 17);
+  const pitch = aim ? Math.atan2(aim[1] - p[1], Math.hypot(aim[0] - p[0], aim[2] - p[2])) : -0.12;
+  const dr = since(s.reach_at);
+  const reach = dr >= 0 ? Math.min(1, dr / 6) : 0;
+  const dh = since(s.hat_off_at);
+  const capped = s.hold === 'flashlight' || s.hat;
+  const dc = since(s.tip_at);
   return (
     <group position={[p[0], p[1] + 0.04 * Math.sin(f / 13) + 0.35 * jump, p[2]]} scale={sc}>
-      <group rotation={[0, yaw, 0.25 * jump - 0.25 * tip]}>
+      <group rotation={[0, yaw, 0.25 * jump - 0.25 * tip - 0.18 * reach]} position={[0, 0, 0]}>
         <group scale={0.42}>
-          <group scale={[1 - 0.12 * press, 1 + 0.08 * press, 1 + 0.1 * press]} position={[0.06 * press, 0, 0]}><SalmonBody f={f} cover={cov} jump={jump} /></group>
+          <group scale={[1 - 0.12 * press, 1 + 0.08 * press, 1 + 0.1 * press]} position={[0.06 * press, 0, 0]}><SalmonBody f={f} cover={cov} jump={jump} stone={stone} /></group>
           {s.costume === 'raymi' ? <RaymiCostume f={f} /> : null}
         </group>
         {/* the held prop rides in front of its pectoral fins */}
         {s.hold === 'bucket' ? <Bucket pos={[0.17, -0.2 + 0.12 * toast, 0.0]} rot={[0, 0, 0]} scale={0.75} water={s.water ?? null} tip={tip} /> : null}
         {s.hold === 'extinguisher' ? <Extinguisher pos={[0.13, -0.24, 0.04]} rot={[0, 0, -0.5]} scale={0.6} spray={spray} f={f} /> : null}
+        {s.hold === 'flashlight' ? (
+          <group position={[0.17 + 0.08 * reach, -0.06, 0.08]} rotation={[0, 0, pitch]}>
+            <mesh rotation={[0, 0, -Math.PI / 2]} material={toon(stone > 0.5 ? '#d8d0c2' : '#2a2a34')}><cylinderGeometry args={[0.025, 0.02, 0.16, 10]} /></mesh>
+            <mesh position={[0.085, 0, 0]} rotation={[0, 0, -Math.PI / 2]}><cylinderGeometry args={[0.032, 0.032, 0.02, 12]} />
+              <meshBasicMaterial color={stone > 0.5 ? '#e9e2d6' : '#fff6dc'} toneMapped={false} /></mesh>
+            {/* the beam: a long soft cone (frozen mid-sweep when he turns to marble) */}
+            <mesh position={[0.095 + 1.6, 0, 0]} rotation={[0, 0, Math.PI / 2]} renderOrder={5}>
+              <coneGeometry args={[0.42, 3.2, 24, 1, true]} />
+              <meshBasicMaterial color="#fff2c8" transparent opacity={0.11 * (1 - 0.6 * stone)} side={THREE.DoubleSide} blending={THREE.AdditiveBlending} depthWrite={false} toneMapped={false} />
+            </mesh>
+          </group>
+        ) : null}
+        {s.hold === 'camera' && (dc < 0 || dc < 14) ? (
+          <group position={[0.17, -0.12 - (dc >= 0 ? 0.6 * (dc / 14) ** 2 : 0), 0.05]} rotation={[dc >= 0 ? dc * 0.3 : 0, 0, dc >= 0 ? -dc * 0.2 : 0]}>
+            <RBox size={[0.1, 0.07, 0.06]} r={0.01} c="#1c1c24" />
+            <mesh position={[0.06, 0, 0]} rotation={[0, 0, -Math.PI / 2]} material={toon('#101016')}><cylinderGeometry args={[0.025, 0.028, 0.05, 12]} /></mesh>
+          </group>
+        ) : null}
+        {s.hold === 'camera' && dc >= 14 ? (
+          <group position={[0.3, -p[1] + 0.035, 0.1]} rotation={[0, 0.6, Math.PI / 2]}><RBox size={[0.1, 0.07, 0.06]} r={0.01} c="#1c1c24" /></group>
+        ) : null}
+        {capped && (dh < 0 || dh < 24) ? (
+          <group position={[0.06 - (dh >= 0 ? 0.5 * dh / 24 : 0), 0.13 + (dh >= 0 ? 0.9 * Math.sin(Math.PI * dh / 24) * 0.6 + dh * 0.01 : 0), 0]} rotation={[dh >= 0 ? dh * 0.35 : 0, 0, 0.15 + (dh >= 0 ? dh * 0.25 : 0)]}>
+            <mesh material={toon(stone > 0.5 ? '#e0d8ca' : '#1d2440')} scale={[1, 0.55, 1]}><sphereGeometry args={[0.085, 14, 8, 0, Math.PI * 2, 0, Math.PI / 2]} /></mesh>
+            <mesh position={[0.07, 0, 0]} rotation={[0, 0, -0.2]} material={toon(stone > 0.5 ? '#d6cec0' : '#141a30')} scale={[1, 0.15, 1]}><cylinderGeometry args={[0.06, 0.06, 0.04, 14, 1, false, -Math.PI / 2, Math.PI]} /></mesh>
+            <mesh position={[0.075, 0.035, 0]} rotation={[0, Math.PI / 2, 0]}><circleGeometry args={[0.018, 8]} /><meshBasicMaterial color={stone > 0.5 ? '#cfc6b6' : '#d9a441'} side={THREE.DoubleSide} /></mesh>
+          </group>
+        ) : null}
       </group>
       {/* singed fin: a thread of smoke from the tail */}
       {ds >= 0 && ds < 60 ? Array.from({length: 6}, (_, i) => {

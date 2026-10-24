@@ -32,6 +32,19 @@
   },
   "face": {
    "kind": "face"
+  },
+  "billboard": {
+   "kind": "prop",
+   "center": [
+    0.4,
+    4.9,
+    -3.1
+   ],
+   "size": [
+    4.2,
+    1.9
+   ],
+   "min": 0.06
   }
  },
  "short": {
@@ -44,15 +57,15 @@
  "acts": [
   {
    "at": 0,
-   "grade": "clean"
+   "grade": "wm_paper"
   },
   {
    "at": 57.79,
-   "grade": "night"
+   "grade": "wm_night"
   },
   {
    "at": 127.7,
-   "grade": "warm"
+   "grade": "wm_gold"
   }
  ],
  "shots": [
@@ -63,7 +76,7 @@
    "why": "the strongest picture first: her face, lit, looking at us (thumbnail frame 0-42)",
    "size": "ECU",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "flash": [
@@ -122,7 +135,7 @@
    "why": "chop 1 - a new pose, lit and held >= 8 frames",
    "size": "FS low 3/4",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "flash": [
@@ -164,7 +177,7 @@
    "why": "chop 2",
    "size": "MS high dutch",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "flash": [
@@ -207,7 +220,7 @@
    "why": "chop 3",
    "size": "MCU profile",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "flash": [
@@ -249,7 +262,7 @@
    "why": "chop 4",
    "size": "MS straight",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "flash": [
@@ -306,7 +319,7 @@
    "why": "the kiss on the stop - the studio revealed; the bulb flickers: the lamp's first form (it dies at 117.6, she clicks it off at the end)",
    "size": "MCU -> FS",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "salmon": {
@@ -315,7 +328,8 @@
       0.6,
       1.2
      ],
-     "tip_at": 8.04
+     "tip_at": 8.04,
+     "hold": "camera"
     },
     "bulb_flicker": 7.5
    },
@@ -365,7 +379,7 @@
    "why": "her character beyond confident (canon/01)",
    "size": "MCU",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "clapper": [
@@ -407,7 +421,28 @@
      "CAMERA"
     ],
     "material": "print",
-    "key_scale": 3.2
+    "key_scale": 3.2,
+    "cross": "MCU shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -1.15,
+      1.55,
+      -0.3
+     ],
+     "size": 0.045,
+     "width": 1.04,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.3,
+     "lens": [
+      0.5,
+      0.78,
+      1.2
+     ]
+    }
    }
   },
   {
@@ -417,7 +452,7 @@
    "why": "everybody sees the same mosaic",
    "size": "WS",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "stage": [
@@ -488,7 +523,7 @@
    "why": "flame so hot - the picture burns",
    "size": "MS back",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "embers": 12.13
@@ -550,7 +585,7 @@
    "why": "the Louvre gon' hang it - act 3 planted",
    "size": "MS through frame",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "stage": [
@@ -596,11 +631,32 @@
     "key": [
      "LOUVRE"
     ],
-    "material": "print"
+    "material": "print",
+    "cross": "MS through frame shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
    },
    "hero": [
     "frame"
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0,
+      0.45,
+      0.45
+     ],
+     "size": 0.031,
+     "width": 0.71,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.8,
+     "lens": [
+      0.5,
+      0.72,
+      0.8218651770253484
+     ]
+    }
+   }
   },
   {
    "id": "11",
@@ -609,7 +665,7 @@
    "why": "hold your breath: one dead-still beat before the walk - even the bulb hangs frozen mid-swing",
    "size": "MCU still",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "freeze": true,
@@ -666,7 +722,7 @@
    "why": "a pin drop when she walks in",
    "size": "FS low track-back",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "treadmill": 0.9
@@ -745,7 +801,7 @@
    "why": "pins dropping on every word",
    "size": "top-down",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "treadmill": 0.9,
@@ -820,7 +876,7 @@
    "why": "the arrival lands",
    "size": "FS orbit",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "stage": [
@@ -877,7 +933,7 @@
    "why": "she likes what she sees",
    "size": "MS dolly",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "polaroid": 24.83
@@ -939,7 +995,7 @@
    "why": "only one way to know - come closer",
    "size": "MS -> ECU",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true
    },
@@ -969,7 +1025,32 @@
    ],
    "hero": [
     "face"
-   ]
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "cross": "MS -> ECU shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
+    "anchor": [
+     0,
+     1,
+     0.3
+    ]
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.04,
+      1.19,
+      -0.64
+     ],
+     "size": 0.036,
+     "width": 0.74,
+     "tilt": 0.8,
+     "roll": 0,
+     "rot": 1.8,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "17",
@@ -978,7 +1059,7 @@
    "why": "COVER-CUT 1 (toki): the hand hides the change",
    "size": "palm ECU",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true
    },
@@ -1014,7 +1095,16 @@
      "WATCH ME"
     ],
     "material": "print",
-    "small": "printed small and pink on her palm, the whole line"
+    "small": "printed small and pink on her palm, the whole line",
+    "over": true,
+    "lens": [
+     0.5,
+     0.6,
+     0.22
+    ],
+    "size": 0.012,
+    "width": 0.3,
+    "why_over": "her palm covers the lens in this shot (cover-cut 1): the line is printed on the palm in front of her face"
    }
   },
   {
@@ -1024,7 +1114,7 @@
    "why": "runnin' circles round these dudes",
    "size": "MS orbit 360",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "orbit_gear": true
@@ -1061,12 +1151,33 @@
      "WATCH ME"
     ],
     "material": "print",
-    "key_scale": 3.4
+    "key_scale": 3.4,
+    "cross": "MS orbit 360 shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
    },
    "transition": {
     "kind": "cover",
     "frames": 4,
     "obj": "palm"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0,
+      2.35,
+      -0.8
+     ],
+     "size": 0.018,
+     "width": 0.34,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.8,
+     "lens": [
+      0.5,
+      0.72,
+      0.5271757847220846
+     ]
+    }
    }
   },
   {
@@ -1076,7 +1187,7 @@
    "why": "the circle closes",
    "size": "WS low",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "orbit_gear": true
@@ -1124,7 +1235,7 @@
    "why": "a detail of HER, not a brand shoe; the plant for the sting",
    "size": "ECU tail barb",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true
    },
@@ -1191,7 +1302,7 @@
    "why": "breakin' hearts and breakin' news",
    "size": "MCU",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "stage": [
@@ -1236,7 +1347,24 @@
     "key": [
      "BREAKING"
     ],
-    "material": "print"
+    "material": "print",
+    "cross": "MCU shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.28,
+      1.11,
+      -0.32
+     ],
+     "size": 0.036,
+     "width": 0.48,
+     "tilt": -0.3,
+     "roll": 0,
+     "rot": 6.5,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -1246,12 +1374,14 @@
    "why": "her forecasts are wrong (canon) - hurricane",
    "size": "WS low handheld",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "wind": [
-     41.39,
-     2
+     [
+      41.39,
+      2
+     ]
     ],
     "salmon": {
      "pos": [
@@ -1318,7 +1448,7 @@
    "why": "on your radar - the lights cannot look away",
    "size": "top-down crane",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "track_lights": true
@@ -1402,7 +1532,7 @@
    "why": "watch me pose - she becomes the magazine",
    "size": "push to cover",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "gel": "#ffc2dc",
@@ -1472,12 +1602,52 @@
     "key": [
      "POSE"
     ],
-    "material": "print"
+    "material": "print",
+    "cross": "push to cover shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
    },
    "hero": [
     "frame",
     "face"
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0,
+      0.3,
+      0.5
+     ],
+     "size": 0.044,
+     "width": 1.11,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.3,
+     "lens": [
+      0.5,
+      0.72,
+      1.2
+     ]
+    },
+    "short": {
+     "anchor": [
+      0,
+      0.3,
+      0.5
+     ],
+     "size": 0.0421,
+     "width": 0.548,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.8,
+     "lens": [
+      0.5,
+      0.72,
+      1.2
+     ],
+     "small": "fitter: a long line in a tight frame (>= 60 px cap)"
+    }
+   }
   },
   {
    "id": "25",
@@ -1486,7 +1656,7 @@
    "why": "centerfolds turn the sidewalk to a show (rays are flat)",
    "size": "tilt down with the fold",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "stage": [
@@ -1579,6 +1749,20 @@
      "rot": -2.5,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
+    },
+    "short": {
+     "anchor": [
+      -0.05,
+      0.7,
+      1.38
+     ],
+     "size": 0.097,
+     "width": 0.61,
+     "tilt": -53.9,
+     "roll": 0,
+     "rot": 3.9,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    }
   },
@@ -1589,7 +1773,7 @@
    "why": "the second world builds itself",
    "size": "WS low crane up",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "world": {
      "in": "assemble",
@@ -1652,6 +1836,20 @@
      "roll": 0,
      "rot": 11.4,
      "key_scale": 1.8
+    },
+    "short": {
+     "anchor": [
+      -0.1,
+      1.82,
+      -0.36
+     ],
+     "size": 0.108,
+     "width": 1.44,
+     "tilt": -2,
+     "roll": 0,
+     "rot": 18.3,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    }
   },
@@ -1662,11 +1860,13 @@
    "why": "100 % chance of slay - and the drop",
    "size": "crane down to MCU",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "rain": [
-     64.03999999999999,
-     0.2
+     [
+      64.04,
+      0.2
+     ]
     ]
    },
    "camera": [
@@ -1720,7 +1920,8 @@
      "SLAY"
     ],
     "material": "light",
-    "key_scale": 3.4
+    "key_scale": 3.4,
+    "cross": "crane down to MCU in the narrow Short frame: she fills it - the line may cross her, never her face"
    },
    "lyrics_fit": {
     "mv": {
@@ -1736,6 +1937,25 @@
      "rot": 7.5,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
+    },
+    "short": {
+     "anchor": [
+      1.2,
+      2.1,
+      -0.6
+     ],
+     "size": 0.0372,
+     "width": 0.484,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.3,
+     "lens": [
+      0.5,
+      0.72,
+      1.2
+     ],
+     "small": "fitter: a long line in a tight frame (>= 60 px cap)"
     }
    }
   },
@@ -1746,7 +1966,7 @@
    "why": "I post a pic and the app crash",
    "size": "MS through the phone",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "stage": [
      {
@@ -1814,7 +2034,7 @@
    "why": "the flex - fashion",
    "size": "profile CU",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "covers": 69.3
    },
@@ -1879,7 +2099,7 @@
    "why": "water my money, it grow (her sea in the street)",
    "size": "macro puddle rising",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "fountain": 69.79
    },
@@ -1932,9 +2152,30 @@
     "key": [
      "GROW"
     ],
-    "material": "light"
+    "material": "light",
+    "cross": "macro puddle rising shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
    },
-   "low_ok": "a puddle macro that rises to her waist, looking at the puddle, not up"
+   "low_ok": "a puddle macro that rises to her waist, looking at the puddle, not up",
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.2,
+      0.6,
+      0.6
+     ],
+     "size": 0.049,
+     "width": 0.7,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.8,
+     "lens": [
+      0.5,
+      0.62,
+      0.7576706193828681
+     ]
+    }
+   }
   },
   {
    "id": "31",
@@ -1943,11 +2184,13 @@
    "why": "bring your coat",
    "size": "OTS -> she turns",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "wind": [
-     71.36,
-     1
+     [
+      71.36,
+      1
+     ]
     ]
    },
    "camera": [
@@ -2009,7 +2252,7 @@
    "why": "baddie so bad - tantrum / anthem",
    "size": "worm's eye 2.8 m -> crane",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "billboard": "WATCH ME",
     "splash": 73.95
@@ -2070,7 +2313,7 @@
    "why": "pins dropping when she walks in",
    "size": "top-down treadmill",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "treadmill": 1,
     "salmon": {
@@ -2147,7 +2390,7 @@
    "why": "competitive about nothing - she out-shoots the paparazzo",
    "size": "his POV",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "flash": [
      81.76
@@ -2202,11 +2445,13 @@
    "why": "chorus 2 - wilder",
    "size": "vertigo up the lamp",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "rain": [
-     83.38,
-     0.6
+     [
+      83.38,
+      0.6
+     ]
     ]
    },
    "camera": [
@@ -2271,11 +2516,13 @@
    "why": "runnin' circles",
    "size": "low orbit fast",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "rain": [
-     83.38,
-     0.6
+     [
+      83.38,
+      0.6
+     ]
     ]
    },
    "camera": [
@@ -2323,12 +2570,14 @@
    "why": "breakin' news",
    "size": "dutch slide along the TV window",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "tv": "BREAKING NEWS",
     "rain": [
-     83.38,
-     0.6
+     [
+      83.38,
+      0.6
+     ]
     ]
    },
    "camera": [
@@ -2392,15 +2641,19 @@
    "why": "the hurricane she (wrongly) called arrives anyway",
    "size": "whip with the gust",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "rain": [
-     92.99,
-     1
+     [
+      92.99,
+      1
+     ]
     ],
     "wind": [
-     92.99,
-     1.6
+     [
+      92.99,
+      1.6
+     ]
     ],
     "salmon": {
      "pos": [
@@ -2441,7 +2694,28 @@
     "key": [
      "HURRICANE"
     ],
-    "material": "light"
+    "material": "light",
+    "cross": "whip with the gust shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -1.4,
+      2.6,
+      -2.9
+     ],
+     "size": 0.045,
+     "width": 1.04,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.3,
+     "lens": [
+      0.5,
+      0.78,
+      1.2
+     ]
+    }
    }
   },
   {
@@ -2451,11 +2725,13 @@
    "why": "on your radar",
    "size": "top-down through rain",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "rain": [
-     83.38,
-     1
+     [
+      83.38,
+      1
+     ]
     ],
     "ripples": 96.37,
     "stage": [
@@ -2529,22 +2805,45 @@
    "why": "watch me pose - bigger than act 1",
    "size": "crane to the billboard",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "billboard": "WATCH ME",
     "rain": [
-     83.38,
-     0.8
+     [
+      83.38,
+      0.8
+     ]
     ]
    },
    "camera": [
     {
-     "move": {
-      "kind": "crane_up",
-      "around": "her",
-      "deg": 0,
-      "dist": 2.8
-     }
+     "at": 0,
+     "pos": [
+      0,
+      1,
+      4.6
+     ],
+     "look": [
+      0.4,
+      4.3,
+      -3.1
+     ],
+     "fov": 44
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.35,
+      2.4,
+      5.4
+     ],
+     "look": [
+      0.4,
+      4.3,
+      -3.1
+     ],
+     "fov": 40,
+     "ease": "inOut"
     }
    ],
    "actor": [
@@ -2580,17 +2879,37 @@
     "kind": "sign",
     "anchor": [
      0.4,
-     4.9,
+     4.85,
      -2.95
     ],
     "key": [
      "POSE"
     ],
-    "material": "light"
+    "material": "light",
+    "size": 0.37,
+    "width": 4,
+    "key_scale": 1.6,
+    "cross": "the crane rises past her to the billboard - the long line may cross her, never her face"
    },
    "hero": [
-    "frame"
-   ]
+    "billboard"
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.23,
+      3.01,
+      -2.48
+     ],
+     "size": 0.251,
+     "width": 4.56,
+     "tilt": 12.7,
+     "roll": 0,
+     "rot": -6.3,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
+   }
   },
   {
    "id": "41",
@@ -2599,7 +2918,7 @@
    "why": "the sidewalk is a show",
    "size": "low along the road, fast push",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "road_paint": 105.46,
     "treadmill": 0.6
@@ -2661,7 +2980,7 @@
    "why": "the Salmon arc, act 2",
    "size": "his MS, focus pull",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "salmon": {
      "pos": [
@@ -2674,8 +2993,10 @@
      ]
     },
     "rain": [
-     83.38,
-     0.6
+     [
+      83.38,
+      0.6
+     ]
     ]
    },
    "camera": [
@@ -2716,7 +3037,37 @@
      "pos": "lamp_circle",
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "cross": "his MS, focus pull shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
+    "anchor": [
+     0,
+     1,
+     0.3
+    ]
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0,
+      1,
+      0.3
+     ],
+     "size": 0.062,
+     "width": 1.04,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.8,
+     "lens": [
+      0.5,
+      0.7,
+      1.2
+     ]
+    }
+   }
   },
   {
    "id": "43",
@@ -2725,7 +3076,7 @@
    "why": "too much - the city cannot hold her",
    "size": "rolling pull-out over the corner",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "overload": 113.29,
     "covers": 113.29,
@@ -2812,7 +3163,7 @@
    "why": "the world goes dark",
    "size": "locked wide",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "dark_at": [
      [
@@ -2877,7 +3228,7 @@
    "why": "灯闇 - she is the only light",
    "size": "MS slow push",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "dark": 1,
     "glow": "#bfe6ff",
@@ -2938,7 +3289,7 @@
    "why": "unbothered by the dark (canon: sleepy)",
    "size": "CU still",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "dark": 1,
     "glow": "#bfe6ff"
@@ -2973,7 +3324,33 @@
      "pos": "lamp_circle",
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "cross": "CU still shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
+    "anchor": [
+     0,
+     1,
+     0.3
+    ]
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.26,
+      1.26,
+      0.07
+     ],
+     "size": 0.015,
+     "width": 0.65,
+     "tilt": -0.5,
+     "roll": 0,
+     "rot": -7,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
+   }
   },
   {
    "id": "47",
@@ -2982,7 +3359,7 @@
    "why": "the turn's last beat - the lamp is about to come back",
    "size": "push to her hand",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "dark": 1,
     "glow": "#bfe6ff"
@@ -3007,7 +3384,33 @@
      "pos": "lamp_circle",
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "cross": "push to her hand shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
+    "anchor": [
+     0,
+     1,
+     0.3
+    ]
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.41,
+      1.13,
+      -0.34
+     ],
+     "size": 0.034,
+     "width": 1.04,
+     "tilt": -0.2,
+     "roll": 0,
+     "rot": 26,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
+   }
   },
   {
    "id": "48",
@@ -3016,7 +3419,7 @@
    "why": "the lamp is back - and it is hers",
    "size": "high wide, crane down",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "world": {
      "in": "rise",
@@ -3084,7 +3487,7 @@
    "why": "on your radar",
    "size": "dutch, beam across",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "salmon": {
      "pos": [
@@ -3159,7 +3562,7 @@
    "why": "I got it like that",
    "size": "low from beyond the rope",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "salmon": {
      "pos": [
@@ -3233,7 +3636,7 @@
    "why": "the gag turns: she is no statue any more",
    "size": "side profile",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "salmon": {
      "pos": [
@@ -3299,7 +3702,7 @@
    "why": "only one way to know",
    "size": "macro sign -> rack to her",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "crossed": 137.24,
     "barb_lens": 137.6
@@ -3379,7 +3782,7 @@
    "why": "COVER-CUT 3 - the tail (only a ray has one)",
    "size": "tail fills the lens",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45
    },
    "camera": [
@@ -3402,7 +3805,32 @@
      "pos": "plinth",
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "cross": "tail fills the lens shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
+    "anchor": [
+     0,
+     1.42,
+     0.3
+    ]
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.5,
+      1.6,
+      0.61
+     ],
+     "size": 0.039,
+     "width": 1.04,
+     "tilt": 0.6,
+     "roll": 0,
+     "rot": -148.2,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "54",
@@ -3411,7 +3839,7 @@
    "why": "watch me move - his beam becomes her spotlight",
    "size": "orbit at floor height",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "salmon": {
      "pos": [
@@ -3420,9 +3848,9 @@
       1.9
      ],
      "hold": "flashlight",
-     "yaw": -2.6
-    },
-    "beam_on_her": true
+     "yaw": -2.6,
+     "beam_on_her": true
+    }
    },
    "camera": [
     {
@@ -3457,12 +3885,29 @@
      "MOVE"
     ],
     "material": "engraved",
-    "key_scale": 3.2
+    "key_scale": 3.2,
+    "cross": "orbit at floor height shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
    },
    "transition": {
     "kind": "cover",
     "frames": 4,
     "obj": "tail"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.74,
+      1.2,
+      0.53
+     ],
+     "size": 0.097,
+     "width": 1.54,
+     "tilt": -1.4,
+     "roll": 0,
+     "rot": 150.7,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -3472,7 +3917,7 @@
    "why": "breakin' news - act 1 returns as a picture",
    "size": "macro plaque -> fly-through",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "hers": true,
     "worlds_in_frames": true,
@@ -3533,7 +3978,28 @@
     "key": [
      "NEWS"
     ],
-    "material": "engraved"
+    "material": "engraved",
+    "cross": "macro plaque -> fly-through shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -3.2,
+      1.35,
+      -4.3
+     ],
+     "size": 0.01,
+     "width": 0.23,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.3,
+     "lens": [
+      0.5,
+      0.72,
+      0.3
+     ]
+    }
    }
   },
   {
@@ -3543,12 +4009,14 @@
    "why": "hurricane - act 2 returns",
    "size": "fly-through then whip",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "hers": true,
     "wind": [
-     152.3,
-     1.4
+     [
+      152.3,
+      1.4
+     ]
     ],
     "letters_off": 152.3,
     "salmon": {
@@ -3592,7 +4060,28 @@
      "HURRICANE"
     ],
     "material": "engraved",
-    "rot": 90
+    "rot": 90,
+    "cross": "fly-through then whip shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -5.3,
+      2.8,
+      0.2
+     ],
+     "size": 0.045,
+     "width": 1.04,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.3,
+     "lens": [
+      0.5,
+      0.78,
+      1.2
+     ]
+    }
    }
   },
   {
@@ -3602,12 +4091,20 @@
    "why": "on your radar - he can't look away either; his hand comes near her and the barb twitches (sting plant 3)",
    "size": "his POV, beam as spotlight",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
-    "beam_on_her": true,
     "hers": true,
-    "salmon_reach": 157.6,
-    "tail_twitch": 158.2
+    "tail_twitch": 158.2,
+    "salmon": {
+     "pos": [
+      2,
+      0.6,
+      2
+     ],
+     "hold": "flashlight",
+     "beam_on_her": true,
+     "reach_at": 157.6
+    }
    },
    "camera": [
     {
@@ -3687,7 +4184,7 @@
    "why": "watch me pose - the biggest cover",
    "size": "wide -> push to the stacked cover",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "hers": true,
     "stage": [
@@ -3759,12 +4256,33 @@
      "POSE"
     ],
     "material": "engraved",
-    "key_scale": 3.4
+    "key_scale": 3.4,
+    "cross": "wide -> push to the stacked cover shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
    },
    "hero": [
     "frame",
     "face"
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0,
+      3.1,
+      -0.6
+     ],
+     "size": 0.046,
+     "width": 1.18,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.3,
+     "lens": [
+      0.5,
+      0.72,
+      1.2
+     ]
+    }
+   }
   },
   {
    "id": "59",
@@ -3773,7 +4291,7 @@
    "why": "world 1 returns: she slaps the paper with her tail - the studio is hers to hit",
    "size": "crash",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "hers": false,
@@ -3812,7 +4330,23 @@
     "key": [
      "CENTERFOLDS"
     ],
-    "material": "print"
+    "material": "print",
+    "cross": "crash shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.36,
+      1.08,
+      -0.64
+     ],
+     "size": 0.06,
+     "width": 1.23,
+     "tilt": 0.4,
+     "roll": 0,
+     "rot": 21.5,
+     "key_scale": 1
+    }
    }
   },
   {
@@ -3822,7 +4356,7 @@
    "why": "world 2 returns: her heel in the puddle - the rain she forecast wrong is her stage now",
    "size": "whip",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "hers": false,
     "splash": 166.7
@@ -3860,12 +4394,33 @@
      "SHOW"
     ],
     "material": "light",
-    "tilt": -90
+    "tilt": -90,
+    "cross": "whip shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
    },
    "transition": {
     "kind": "cover",
     "frames": 4,
     "obj": "hair"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0,
+      0.02,
+      2.4
+     ],
+     "size": 0.045,
+     "width": 1.04,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.8,
+     "lens": [
+      0.5,
+      0.78,
+      1.2
+     ]
+    }
    }
   },
   {
@@ -3875,7 +4430,7 @@
    "why": "world 3 returns: the gold letters blow off again and she catches one - the hurricane obeys her",
    "size": "top-down roll",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "hers": true,
     "letters_off": 167.62
@@ -3971,7 +4526,7 @@
    "why": "back in the studio: a flash goes off in her face and she does not blink - the paparazzi lost",
    "size": "vertigo",
    "opts": {
-    "grade": "clean",
+    "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
     "hers": false,
@@ -4041,7 +4596,7 @@
    "why": "the corner: she flicks the lamp like a switch - the rehearsal of the last click",
    "size": "dutch orbit",
    "opts": {
-    "grade": "night",
+    "grade": "wm_night",
     "lock": 0.45,
     "hers": false,
     "lamp_flick": 170.9
@@ -4110,7 +4665,7 @@
    "why": "the plant of row 20 pays off - only a ray has a sting",
    "size": "CU on the sting",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "salmon": {
      "pos": [
@@ -4176,7 +4731,7 @@
    "why": "the Salmon arc pays off: he is the exhibit now",
    "size": "wide tableau",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "salmon": {
      "pos": [
@@ -4256,7 +4811,7 @@
    "why": "everything but her goes - her tail sweeps the lens while the walls fall",
    "size": "spiral to wide",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "world": {
      "out": "dissolve",
@@ -4327,7 +4882,7 @@
    "why": "let's go - the room breathes around her as she steps into the frame",
    "size": "MS, frame in the foreground",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "stage": [
      {
@@ -4365,7 +4920,32 @@
    ],
    "hero": [
     "frame"
-   ]
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "cross": "MS, frame in the foreground shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
+    "anchor": [
+     0,
+     1.42,
+     0.3
+    ]
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.24,
+      2.14,
+      0.71
+     ],
+     "size": 0.097,
+     "width": 2.03,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": 16.3,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "68",
@@ -4374,7 +4954,7 @@
    "why": "she switches us off - the opposite of the opening flash",
    "size": "push to ECU",
    "opts": {
-    "grade": "warm",
+    "grade": "wm_gold",
     "lock": 0.45,
     "stage": [
      {
@@ -4434,7 +5014,37 @@
    "hero": [
     "face",
     "frame"
-   ]
+   ],
+   "lyrics": {
+    "kind": "sign",
+    "material": "light",
+    "cross": "push to ECU shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
+    "anchor": [
+     0,
+     1.42,
+     0.3
+    ]
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0,
+      1.42,
+      0.3
+     ],
+     "size": 0.016,
+     "width": 0.23,
+     "tilt": 0,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1.8,
+     "lens": [
+      0.5,
+      0.8,
+      0.3
+     ]
+    }
+   }
   }
  ]
 }

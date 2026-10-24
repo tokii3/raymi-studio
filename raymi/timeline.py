@@ -33,7 +33,9 @@ jobs/<job>/shots.json is the machine part of the shooting script (4_SCRIPT.md sa
 
 Lyrics v2 fields (shot "lyrics"): "style" (per shot), "tilt" / "roll" (deg: lie on a surface, follow a diagonal),
 "key_scale" (key word size, default 2.8), "sub": false (no romaji / English on purpose - write why in "why"),
-"small": "<reason>" (smaller than the readable default on purpose). Colours come from the shot's grade unless the
+"small": "<reason>" (smaller than the readable default on purpose), "cross": "<reason>" (a close shot: the words
+may lie over her figure - toki 2026-10-19 "auch wenn lyrics sie mal überdecken" - but never on her face; the guard and
+the fitter then avoid only her head). Colours come from the shot's grade unless the
 lyric names "color". These are principles with defaults (PRINCIPLES 11), a written reason may break them.
 
 compile() refuses (errors) anything that would reach the screen broken: unknown set / mark / camera / sprite, glyphs
@@ -85,7 +87,7 @@ LYRIC_KINDS = {"sign", "float", "stamp", "glass", "card", "ticker", "firework"}
 LYRIC_MATERIALS = {None, "fog", "engraved", "screen", "print", "felt", "light"}
 TRANSITIONS = {"cut", "bubbles", "ink", "whip", "flash", "pass", "rewind", "spin", "zoom",
                "cover"}   # cover: her palm / hair / tail or a frame bar fills the lens, the cut hides inside (Watch Me)
-GRADES = {"day", "closing", "night", "own", "warm", "clean", "ember", "vrm_fire", "pov", "pov_warm"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
+GRADES = {"day", "closing", "night", "own", "warm", "clean", "ember", "vrm_fire", "pov", "pov_warm", "wm_paper", "wm_night", "wm_gold"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
 LYRIC_STYLES = {"v1", "v2"}
 # a main element: worn on her head (crown, hat), her face, a lyric word, a prop box in the set (check.ts heroBox)
 HERO_KINDS = {"worn", "face", "word", "prop"}
@@ -112,8 +114,10 @@ TIME_OPTS = {"lights_off", "window_break", "unfold", "shake", "cracks", "burst",
              "glow", "whip", "grade_at",
              # POV Shorts (2026-10-23): her chest dots flare, a room lamp / the train lights, the live studio camera
              "glow_flare", "lamp_at", "live", "door_at",
-             # Watch Me sets (three/sets/Shoot, Corner, Exhibit): studio flashes
-             "flash"}
+             # Watch Me sets (three/sets/Shoot, Corner, Exhibit): studio flashes, the bulb, the lamp, the crossed sign
+             "flash", "bulb_flicker", "lamp_flick", "crossed",
+             # three/setfx.tsx (any set): rain / wind as [[t, v]], floor events, light writing, letters, her tail at the lens
+             "rain", "wind", "splash", "tail_slap", "lightwriting", "letters_off", "tail_lens", "barb_lens", "tail_twitch", "fold"}
 # options holding specs (a dict or a list of dicts) whose own fields are times / positions (three/fire.tsx,
 # three/creatures.tsx): "at" / "out" / "toss" / "*_at" = song seconds -> frames, "grow" / "fade" / "ember" = seconds ->
 # frame counts, "pos" / "from" / "to" = a mark or [x, y, z]
@@ -121,7 +125,7 @@ NESTED_OPTS = {"fires", "sparks", "fish", "school", "sauna", "salmon", "props", 
                "stage", "world"}   # world: three/world.tsx (a set leaves / arrives piece by piece); stage: three/staging.tsx (Watch Me: covers, frames, forecast, radar assemble around her)
 NESTED_TIME = {"at", "out", "toss", "snap", "tug", "spit", "land", "blow_at", "press_at"}
 NESTED_FRAMES = {"grow", "fade", "ember"}
-NESTED_VEC = {"pos", "from", "to", "anchor"}
+NESTED_VEC = {"pos", "from", "to", "anchor", "aim"}
 
 REL_OPTS = {"hands"}                               # set options in seconds from the shot start
 
@@ -826,6 +830,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                  "color": lyr.get("color", "#ffffff"), "accent": lyr.get("accent", "#ffcf6b"),
                  "outline": lyr.get("outline", "#1a0b33"), "lit": bool(lyr.get("lit", False)),
                  "over": bool(lyr.get("over", False)),       # true = the words cross her face ON PURPOSE (written why)
+                 "cross": lyr.get("cross"),
+                 "lens": lyr.get("lens"),                    # [x, y, d]: the block rides the lens (fitter, crash / orbit close shots)                  # "<why>": the words may cross her figure, never her face (close shots)
                  "material": lyr.get("material")}             # what the words are made of (Words3D): fog, screen ...
             style = lyr.get("style", job_style)
             if style not in LYRIC_STYLES:

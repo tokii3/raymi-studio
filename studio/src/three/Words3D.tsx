@@ -7,7 +7,7 @@ import * as THREE from 'three';
 import {canvasTexture, rnd, toonRamp} from './look';
 import {ease} from '../film/motion';
 import {flare} from './events';
-import {PAD_EM, TEX_EM, blockLayout, blockRotation, romaShown, subOf, type Item} from '../film/lyricLayout';
+import {PAD_EM, TEX_EM, blockLayout, blockRotation, lensPlace, romaShown, subOf, type Item} from '../film/lyricLayout';
 import type {LyricTone} from '../film/grade';
 import type {LyricMaterial, Lyrics, Word3} from '../film/types';
 
@@ -141,7 +141,8 @@ const WordMesh: React.FC<{p: Placed; L: Lyrics; f: number; fps: number; out: num
   );
 };
 
-export const Words3D: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: number; tone?: LyricTone; beats?: number[]; cam?: [number, number, number]}> = ({L, words, f, fps, tone, beats, cam}) => {
+export const Words3D: React.FC<{L: Lyrics; words: Word3[]; f: number; fps: number; tone?: LyricTone; beats?: number[]; cam?: [number, number, number]; lens?: THREE.Camera}> = ({L: L0, words, f, fps, tone, beats, cam, lens}) => {
+  const L = L0.lens && lens ? lensPlace(L0, lens) : L0;     // a block riding the lens (lyricLayout lensPlace)
   if (L.style === 'v2' || L.kind === 'firework') return <WordsV2 L={L} words={words} f={f} fps={fps} tone={tone} beats={beats ?? []} cam={cam} />;
   const card = L.kind === 'card';
   const started = words.filter((w) => w.from <= f);

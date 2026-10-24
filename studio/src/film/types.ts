@@ -59,6 +59,8 @@ export type Lyrics = {
   outline: string;
   lit: boolean;            // true = painted on a surface (takes the set light), false = emits (neon, screen)
   over?: boolean;          // true = the words cross her face on purpose (the script says why)
+  cross?: string | null;
+  lens?: [number, number, number] | null;   // the block rides the lens: [x, y] on screen (0..1, y down), d metres in front (lyricLayout lensPlace)   // close shots: the words may cross her figure, never her face (the reason why)
   material?: LyricMaterial | null;   // what the words are made of on their object (default: painted ink)
   // ---- lyrics v2 (style 'v2'; 'v1' = the KING-era flat outlined marker, kept until toki approves v2 as the default)
   style?: 'v1' | 'v2';
@@ -75,7 +77,7 @@ export type Lyrics = {
 
 // spin / zoom (2026-10-22): the CAMERA carries the cut - a barrel roll or a punch-in that leaves one world at speed
 // and arrives in the next with the same motion (the move is the transition, not a cover laid on top)
-export type TransitionKind = 'cut' | 'bubbles' | 'ink' | 'whip' | 'flash' | 'pass' | 'rewind' | 'spin' | 'zoom';
+export type TransitionKind = 'cut' | 'bubbles' | 'ink' | 'whip' | 'flash' | 'pass' | 'rewind' | 'spin' | 'zoom' | 'cover';
 export type Transition = {kind: TransitionKind; frames: number; obj?: string; dir?: number};
 
 export type SetEvent = {f: number; kind: string; arg?: number | string};
