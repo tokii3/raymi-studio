@@ -52,7 +52,7 @@ export const Shoot: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const dark = Math.max(0, Math.min(1, runTo(num(opts.dark), opts.dark_at, num(opts.dark_s, 0.2), f)));
   const on = 1 - dark;
   // blackout: the set's whole light goes, not only its lamps (boards run 1: 'dark' left her lit as by day)
-  const dim = 0.1 + 0.9 * on;
+  const dim = 0.03 + 0.97 * on;
   const dimC = (c: string) => new THREE.Color(c).lerp(new THREE.Color('#010103'), dark).getStyle();
   const flashes = (Array.isArray(opts.flash) ? opts.flash : []) as number[];
   const fl = flashes.reduce((m, t) => (f >= t && f - t < 6 ? Math.max(m, 1 - (f - t) / 6) : m), 0) * on;
