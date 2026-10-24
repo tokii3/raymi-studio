@@ -12,6 +12,7 @@
 import React, {useEffect, useState} from 'react';
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {fixModel} from './vrmFix';
 import {FBXLoader} from 'three/examples/jsm/loaders/FBXLoader.js';
 import {VRMLoaderPlugin, VRMUtils, type VRM, type VRMHumanBoneName} from '@pixiv/three-vrm';
 import {retargetAnimation} from 'vrm-mixamo-retarget';
@@ -60,6 +61,7 @@ async function loadRig(url: string, data?: ArrayBuffer): Promise<Rig> {
   if (!vrm) throw new Error(`not a VRM: ${url}`);
   VRMUtils.removeUnnecessaryVertices(gltf.scene);
   VRMUtils.combineSkeletons(gltf.scene);
+  fixModel(gltf.scene);                    // load-time model fixes (vrmFix.ts): the sleeve caps ride the upper arm
   VRMUtils.rotateVRM0(vrm);                // VRM 0.x faces -Z: turn her to +Z like every VRM 1.0
   vrm.scene.traverse((o) => {
     const m = o as THREE.Mesh;

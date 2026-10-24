@@ -26,5 +26,6 @@
  ],
  "scale": 1,
  "to": "boards",
- "_why": "model sheet (toki 2026-10-25: face overlit, skirt white in the dark, sleeve pieces sit / move wrong, look at ALL parts): new per-part materials, the shoulders / sleeves from front, side, arms up"
+ "_why": "model sheet round 2: raymi6 (texfix: clean blends) + per-part materials + sleeve caps riding the upper arm (vrmFix.ts)",
+ "round": 2
 }
