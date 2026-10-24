@@ -15,12 +15,17 @@ on:
       job:
         description: "job folder under jobs/"
         required: true
+      reuse_run:
+        description: "run id whose measured pieces (qc-*) to judge again - skips the measuring (qc run 4: the publish lost the eye stills)"
+        required: false
+        default: ""
   push:
     branches: [main]
     paths: ["jobs/*/qc.json"]
 
 permissions:
   contents: write
+  actions: read      # reuse_run: download another run's pieces
 
 concurrency:
   group: qc-${{ github.run_id }}
@@ -107,7 +112,7 @@ jobs:
 
   measure:
     needs: prepare
-    if: needs.prepare.outputs.job != ''
+    if: needs.prepare.outputs.job != '' && github.event.inputs.reuse_run == ''
     runs-on: ubuntu-24.04
     timeout-minutes: 180
     strategy:
@@ -168,7 +173,7 @@ jobs:
 
   judge:
     needs: [prepare, measure]
-    if: always() && needs.prepare.outputs.job != ''
+    if: always() && needs.prepare.outputs.job != '' && needs.measure.result != 'failure'
     runs-on: ubuntu-24.04
     timeout-minutes: 120
     steps:
@@ -203,6 +208,8 @@ jobs:
         with:
           pattern: qc-*
           path: parts
+          run-id: ${{ github.event.inputs.reuse_run || github.run_id }}
+          github-token: ${{ github.token }}
       - name: Private assets
         uses: actions/checkout@v4
         with:
@@ -233,4 +240,11 @@ jobs:
           git config user.name "raymi-qc-bot"
           git config user.email "actions@users.noreply.github.com"
           git add "jobs/$J/boards" 2>/dev/null || true
-          git diff --cached --quiet || { git commit -qm "qc v2 for $J [skip ci]"; for t in 1 2 3 4; do git pull --rebase -q && git push -q && break; sleep 10; done; }
+          # --autostash: the runner's staged fonts / props are unstaged changes (qc run 4 lost its eye stills here)
+          git diff --cached --quiet || { git commit -qm "qc v2 for $J [skip ci]"; for t in 1 2 3 4; do git pull --rebase --autostash -q && git push -q && break; sleep 10; done; }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qc-result
+          path: jobs/${{ needs.prepare.outputs.job }}/boards/
+          retention-days: 14
