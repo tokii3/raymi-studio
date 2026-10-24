@@ -5,7 +5,7 @@ Upload slot: **Wed 2026-11-04** (one Short per day, toki's fixed time).
 ## File (toki uploads)
 | what | file | release |
 |---|---|---|
-| Short 9:16, 1080x1920, -14 LUFS | final.mp4 | render-2026-10-24_pov-purple-<run> (filled in after the final render) |
+| Short 9:16, 1080x1920, -14 LUFS | final.mp4 | [render-2026-10-24_pov-purple-53](https://github.com/tokii3/raymi-studio/releases/tag/render-2026-10-24_pov-purple-53) (final 2026-10-24) |
 
 ## Title options (<= 60 chars)
 1. Name A Better Color Than Purple. You Can't.
