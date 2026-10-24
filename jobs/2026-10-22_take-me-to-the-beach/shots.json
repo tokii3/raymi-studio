@@ -3044,7 +3044,7 @@
    "id": "27",
    "at": 35.39,
    "set": "dream",
-   "why": "the hook line sung to us; all five dots light",
+   "why": "the hook line sung to us, face to the lens in her warm light; all five dots light (rebuild: the floating-on-her-back version hid her face)",
    "opts": {
     "grade": "pov_warm",
     "battery": [
@@ -3066,56 +3066,53 @@
      ]
     ],
     "post": {
-     "bloom": 0.3
+     "bloom": 0.2,
+     "dof": 2.2,
+     "dofRange": 0.8
     }
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      1.2,
-      2,
-      1.5
+      0.75,
+      1.5,
+      2.3
      ],
      "look": [
-      1.2,
-      0.2,
-      0.3
+      -0.35,
+      1.35,
+      -0.1
      ],
      "fov": 36
     },
     {
      "at": "end",
      "pos": [
-      1.2,
-      1.15,
-      1.25
+      0.6,
+      1.5,
+      2
      ],
      "look": [
-      1.2,
-      0.2,
-      0.3
+      -0.35,
+      1.35,
+      -0.1
      ],
-     "fov": 32,
+     "fov": 34,
      "ease": "out"
     }
    ],
    "actor": [
     {
      "at": 0,
-     "pose": "float",
-     "pos": [
-      0.85,
-      0.36,
-      0.72
-     ],
-     "rotY": 0,
-     "rollZ": -88,
+     "pose": "sing_soft",
+     "pos": "shore",
+     "rotY": "lens",
      "expr": {
       "joy": 0.8
      },
-     "clip": "idle",
-     "motionMix": 0.12
+     "clip": "happy",
+     "motionMix": 0.25
     }
    ],
    "mouth": {
@@ -3148,35 +3145,35 @@
     "kind": "cut",
     "frames": 0
    },
+   "kick": 2.5,
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.02,
+      -3.14,
       0.03,
-      -0.09
+      -3.43
      ],
-     "size": 0.12,
-     "width": 1.13,
+     "size": 0.416,
+     "width": 3.08,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
-     "key_scale": 1.3
+     "key_scale": 1
     },
     "short": {
      "anchor": [
-      1.1,
-      0.03,
-      -0.28
+      -0.39,
+      1.2,
+      0.25
      ],
-     "size": 0.31,
-     "width": 0.44,
-     "tilt": -90,
+     "size": 0.252,
+     "width": 0.53,
+     "tilt": -3.8,
      "roll": 0,
-     "rot": 0,
+     "rot": 29.7,
      "key_scale": 1.8
     }
-   },
-   "kick": 2.5
+   }
   },
   {
    "id": "28",
@@ -7178,37 +7175,37 @@
      }
     ],
     "post": {
-     "bloom": 0.3
+     "bloom": 0.12
     }
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      -0.55,
-      1.05,
-      1.65
+      -0.15,
+      1.7,
+      2.3
+     ],
+     "look": [
+      -1.2,
+      0.15,
+      0.6
+     ],
+     "fov": 26
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.35,
+      1.5,
+      2
      ],
      "look": [
       -1.2,
       0.1,
       0.6
      ],
-     "fov": 30
-    },
-    {
-     "at": "end",
-     "pos": [
-      -0.75,
-      0.85,
-      1.35
-     ],
-     "look": [
-      -1.2,
-      0.08,
-      0.6
-     ],
-     "fov": 28,
+     "fov": 24,
      "ease": "inOut"
     }
    ],
@@ -7234,22 +7231,22 @@
     "kind": "cut",
     "frames": 0
    },
+   "kick": 1.5,
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.32,
+      -1.42,
       0.03,
-      0.48
+      0.56
      ],
-     "size": 0.093,
-     "width": 0.49,
+     "size": 0.118,
+     "width": 0.74,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
      "key_scale": 1.8
     }
-   },
-   "kick": 1.5
+   }
   },
   {
    "id": "61",

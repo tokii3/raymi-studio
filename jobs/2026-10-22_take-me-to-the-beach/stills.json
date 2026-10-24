@@ -1,36 +1,30 @@
 {
- "_why": "Beach rebuild: the three shots fixed after my look at the whole-MV stills + the Short pass",
+ "_why": "Beach rebuild: 27 + 60 restaged (check before the final)",
  "passes": [
   {
    "format": "mv",
    "frames": [
+    1068,
     1081,
-    2518,
+    3116,
     3134
    ],
    "names": [
-    "rb_27",
-    "rb_51",
-    "rb_60"
+    "rb2_27a",
+    "rb2_27b",
+    "rb2_60a",
+    "rb2_60b"
    ]
   },
   {
    "format": "short",
    "frames": [
-    30,
-    120,
-    210,
-    300,
-    390,
-    470
+    200,
+    215
    ],
    "names": [
-    "rb_short_0",
-    "rb_short_1",
-    "rb_short_2",
-    "rb_short_3",
-    "rb_short_4",
-    "rb_short_5"
+    "rb2_short_27a",
+    "rb2_short_27b"
    ]
   }
  ],
