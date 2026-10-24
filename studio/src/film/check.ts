@@ -462,6 +462,15 @@ function lensLyricFaults(props: FilmProps, s: Shot): TextFault[] {
       const hit = L.over ? undefined : occluders(props, sh, f, cam, cam.position.distanceTo(new THREE.Vector3(...L.anchor))).find((o) => sitsOn(o, lb));
       sitRun = hit ? sitRun + 1 : 0;
       if (hit && sitRun >= 6) { out.push({shot: s.id, frame: f - 5, line, text, why: `sits on ${hit.name}`}); break; }
+      // text on text: a readable set prop / a staging cover's type under the block (stills 1: the line over the cover)
+      const on = L.over ? undefined : (s.texts ?? []).find((tx) => {
+        const r = new THREE.Matrix4().makeRotationY((tx.rot * Math.PI) / 180);
+        const sp = [[-1, -1], [1, -1], [-1, 1], [1, 1]].map(([a, b]) => new THREE.Vector3((a * tx.size[0]) / 2, (b * tx.size[1]) / 2, 0).applyMatrix4(r).add(new THREE.Vector3(...tx.center)).project(cam));
+        if (sp.some((v) => v.z >= 1 || v.z <= -1)) return false;
+        const tb = [(Math.min(...sp.map((v) => v.x)) + 1) / 2, (1 - Math.max(...sp.map((v) => v.y))) / 2, (Math.max(...sp.map((v) => v.x)) + 1) / 2, (1 - Math.min(...sp.map((v) => v.y))) / 2];
+        return boxOverlap(lb, tb) > 0.2 * Math.min(area(lb), area(tb));
+      });
+      if (on) { out.push({shot: s.id, frame: f, line, text, why: `covers the ${on.name}`}); break; }
     }
   }
   return out;
@@ -596,6 +605,7 @@ export function setTextCuts(props: FilmProps): {shot: string; frame: number; tex
   const out: {shot: string; frame: number; text: string}[] = [];
   for (const s of props.shots) {
     for (const t of s.texts ?? []) {
+      if (t.cut_ok) continue;                             // a staging cover the lens pushes into: only text-on-text counts
       const r = new THREE.Matrix4().makeRotationY((t.rot * Math.PI) / 180);
       const [w, h] = t.size;
       const pts = [[-w / 2, -h / 2], [w / 2, -h / 2], [-w / 2, h / 2], [w / 2, h / 2], [0, 0]].map(([x, y]) =>
@@ -999,6 +1009,59 @@ function fillAt(props: FilmProps, s: Shot, f: number): Fill | null {
       if (lyricsOutOfFrame(pr).length === 0 && heroFaults(pr).length === 0)
         return {anchor: s.lyrics.anchor, size: L.size, width: L.width, tilt: 0, roll: 0, rot: 0, key_scale: ks, lens: L.lens, ...(small ? {small} : {})} as unknown as Fill;
     }
+  }
+  return null;
+}
+
+
+// ---------------------------------------------------------------- the creatures of the script (Watch Me stills 1)
+/** Salmon (her photographer, the guard) was off screen in 14 of 15 shots that script him: his spot was typed blind.
+ *  A scripted creature must be in the picture for most of its shot (>= 50 % of the sampled frames, its centre inside
+ *  the frame) - `salmon.off: "<why>"` when he is meant to be out of view. */
+const salmonOf = (s: Shot) => (s.opts.salmon && typeof s.opts.salmon === 'object' ? s.opts.salmon as {pos?: V3; off?: string; scale?: number; hold?: string} : null);
+export function creatureFaults(props: FilmProps): {shot: string; frame: number; why: string}[] {
+  const out: {shot: string; frame: number; why: string}[] = [];
+  const aspect = props.width / props.height;
+  for (const s of props.shots) {
+    const sal = salmonOf(s);
+    if (!sal?.pos || sal.off) continue;
+    let ok = 0, n = 0, bad = s.from;
+    for (let f = s.from; f < s.to; f += 4) {
+      const n3 = new THREE.Vector3(...sal.pos).project(makeCamera(s, f, aspect, [], props.fps));
+      n++;
+      if (n3.z < 1 && Math.abs(n3.x) < 0.85 && Math.abs(n3.y) < 0.85) ok++; else bad = f;
+    }
+    if (n && ok / n < 0.5) out.push({shot: s.id, frame: bad, why: `Salmon on screen in ${Math.round((100 * ok) / n)} % of the shot`});
+  }
+  return out;
+}
+
+/** A spot for Salmon inside the picture for the whole shot: beside her (not on her figure, not on her lyric block), at
+ *  about her depth, 0.45-1.7 m above her floor - the free side of the frame first. null = no spot (reframe). */
+export function placeCreature(props: FilmProps, index: number): V3 | null {
+  const s = props.shots[index];
+  const sal = salmonOf(s);
+  if (!sal) return null;
+  const aspect = props.width / props.height;
+  const her = new THREE.Vector3(...((s.actor?.[0]?.pos as V3 | undefined) ?? [0, 0, 0]));
+  const floor = her.y > 0.3 ? 0 : her.y;                       // on the plinth: the hall floor
+  const fm = Math.round((s.from + s.to) / 2);
+  const camM = makeCamera(s, fm, aspect, [], props.fps);
+  const dHer = her.distanceTo(camM.position);
+  const fr = [s.from, Math.round(s.from + (s.to - s.from) * 0.25), fm, Math.round(s.from + (s.to - s.from) * 0.75), s.to - 1];
+  const fwd = new THREE.Vector3(0, 0, -1).applyQuaternion(camM.quaternion);
+  for (const k of [1, 0.75, 1.25, 0.55]) for (const y of [0.62, 0.55, 0.7, 0.45]) for (const x of [0.22, 0.78, 0.3, 0.7, 0.16, 0.84]) {
+    const ray = new THREE.Vector3(x * 2 - 1, 1 - y * 2, 0.5).unproject(camM).sub(camM.position).normalize();
+    const pt = camM.position.clone().addScaledVector(ray, (dHer * k) / Math.max(0.3, ray.dot(fwd)));
+    if (pt.y < floor + 0.45 || pt.y > floor + 1.7 || pt.distanceTo(her) < 0.55) continue;
+    const okAll = fr.filter((f) => {
+      const cam = makeCamera(s, f, aspect, [], props.fps);
+      const n = pt.clone().project(cam);
+      if (!(n.z < 1 && Math.abs(n.x) < 0.8 && Math.abs(n.y) < 0.8)) return false;
+      const sx = (n.x + 1) / 2, sy = (1 - n.y) / 2;
+      return actorCells(s, f, cam).every((b) => sx < b[0] - 0.04 || sx > b[2] + 0.04 || sy < b[1] - 0.04 || sy > b[3] + 0.04);
+    }).length >= 4;                                             // a moving lens may lose him for a moment (guard: >= 50 %)
+    if (okAll) return [Number(pt.x.toFixed(2)), Number(pt.y.toFixed(2)), Number(pt.z.toFixed(2))];
   }
   return null;
 }

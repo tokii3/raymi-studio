@@ -97,7 +97,7 @@ jobs:
         if: steps.which.outputs.jobs != ''
         run: |
           set -e
-          mkdir -p /tmp/stills
+          mkdir -p /tmp/stills; FITTED=""
           for J in ${{ steps.which.outputs.jobs }}; do
             S="jobs/$J/stills.json"
             get() { python -c "import json,sys;v=json.load(open(sys.argv[1])).get(sys.argv[2],sys.argv[3]);print(','.join(map(str,v)) if isinstance(v,list) else v)" "$S" "$1" "$2"; }
@@ -118,6 +118,16 @@ jobs:
                 (cd studio && node probe.mjs "$J" --every "$PROBE" --out "../jobs/$J/out/probe_$FMT.json") < /dev/null
                 { echo "#### probe $J $FMT"; echo '```'; python -m raymi probe "$J" "$FMT" < /dev/null || true; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
               fi
+              # frame fit (raymi/frame.py, Watch Me stills 1): close shots onto her MEASURED head, then the lyric fitter
+              # and the guards again on the moved lenses - the stills below show the corrected film, shots.json is kept
+              if [ "$(get frame_fit False)" = "True" ] && [ -f "jobs/$J/out/probe_$FMT.json" ]; then
+                { echo "#### frame fit $J $FMT"; echo '```'; python -m raymi frame "$J" "$FMT" < /dev/null; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+                python -m raymi timeline "$J" "$FMT" < /dev/null
+                (cd studio && node guard.mjs "$J" --fill-all) < /dev/null >> "$GITHUB_STEP_SUMMARY" || true
+                python -m raymi timeline "$J" "$FMT" < /dev/null
+                { echo "#### guards $J $FMT"; (cd studio && node guard.mjs "$J") < /dev/null || true; } >> "$GITHUB_STEP_SUMMARY"
+                FITTED="$FITTED jobs/$J/shots.json"
+              fi
               [ -n "$FR" ] || continue
               (cd studio && node stills.mjs "$J" "$FR" --scale "$SC" --out "$OUT" ${NAMES:+--names "$NAMES"}) < /dev/null
               echo "$J ($FMT): $(echo $FR | tr ',' ' ' | wc -w) stills in $(( $(date +%s) - START )) s -> $TO" >> "$GITHUB_STEP_SUMMARY"
@@ -129,6 +139,7 @@ jobs:
             if [ "$(get thumbs False)" = "True" ]; then python -m raymi thumbs "$OUT"; fi   # boards/thumbs_168.jpg: the feed view
             { echo "#### exposure $J"; python -m raymi exposure "$OUT" || true; } >> "$GITHUB_STEP_SUMMARY"   # burnt / washed / loud / flat (toki 2026-10-24)
             echo "$TO" > "/tmp/stills/$J.to"
+            [ -n "$FITTED" ] && echo "$FITTED" > /tmp/stills/fitted
           done
       - name: Publish
         if: always() && steps.which.outputs.jobs != ''   # stills already made are kept even when a later job fails
@@ -136,6 +147,7 @@ jobs:
           git config user.name "raymi-stills-bot"
           git config user.email "actions@users.noreply.github.com"
           for P in jobs/*/boards studio/catalog; do [ -e "$P" ] && git add "$P"; done   # one missing path must not drop the others
+          [ -f /tmp/stills/fitted ] && for P in $(cat /tmp/stills/fitted); do git add "$P"; done   # frame fit: the moved lenses
           # a parallel render may push (its font commit) between our pull and push: retry (FIRESTARTER thumbs lost twice)
           git diff --cached --quiet || { git commit -qm "stills for ${{ steps.which.outputs.jobs }} [skip ci]"; for t in 1 2 3 4; do git pull --rebase -q && git push -q && break; sleep 10; done; }
           if ls /tmp/stills/*/ > /dev/null 2>&1; then

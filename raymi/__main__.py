@@ -17,6 +17,7 @@
   sfx    build          synthesise the sound-effect library -> assets/sfx/<kind>.wav (raymi/sfx.py)
   timeline <job> [mv|short]  shots.json (shooting script data) -> out/props.json for the MV / MVShort film
   probe  <job> [mv|short]  the scene probe's fault classes (studio/probe.mjs, stills.json "probe": N)
+  frame  <job> [mv|short]  close shots onto her MEASURED head (probe -> shots.json frame_fit; stills.json "frame_fit")
   qc2    <job> [mv|short]  picture QC v2: the mask pass measured (pierced, lyric on face / hidden, face cut, pop)
   qc2-join <job> <parts dir> [mv|short]  join the parallel QC workers' probe rows + mask frames (qc.yml)
   qc2-frames <job> [mv|short] [dense_s]  the stills the eye level needs (every flagged frame + one a second), comma list
@@ -183,6 +184,10 @@ def main(argv: list[str]) -> int:
         res = make_voice(plan["script"], d)
         print(f"voice: {res['duration']} s, timing from {res['timing_source']}")
         return 0
+    if cmd == "frame":       # frame <job> [mv|short]: close shots onto her measured head (raymi/frame.py)
+        from . import frame as FR
+
+        return FR.main(d, argv[2] if len(argv) > 2 else "mv")
     if cmd == "probe":       # probe <job> [mv|short]: the scene probe's fault classes (limbs in furniture, floating, pops ...)
         from . import probe as PR
 

@@ -142,6 +142,23 @@ def time_opt(v, fr):
     return v
 
 
+def stage_texts(opts: dict) -> list[dict]:
+    """The printed type of a staging cover (three/staging.tsx Cover: masthead + line plates) as readable texts, so the
+    text-on-text guard keeps a lyric off them (Watch Me stills 1: the line sat on THE MASTERPIECE / ON YOUR RADAR).
+    cut_ok: the lens may push past a cover's edge - only covering it with a lyric counts."""
+    out = []
+    for st in opts.get("stage") or []:
+        if not isinstance(st, dict) or st.get("kind") != "cover" or not isinstance(st.get("pos"), list):
+            continue
+        x, y, z = st["pos"]
+        H = float(st.get("h", 2.3)); W = H * 0.76
+        out.append({"name": "cover masthead", "center": [x, y + H * 0.88, z + 0.32], "size": [W, H * 0.2], "rot": 0, "cut_ok": True})
+        for i, _ in enumerate((st.get("lines") or ["", ""])[:4]):
+            out.append({"name": "cover line", "center": [x + (1 if i % 2 else -1) * W * 0.62, y + H * (0.56 - 0.13 * (i // 2)), z + 0.1],
+                        "size": [W * 0.34, H * 0.12], "rot": 0, "cut_ok": True})
+    return out
+
+
 def nested_opt(v, fr, marks: dict, errors: list[str], tag: str):
     """A spec option (dict or list of dicts): its times to film frames, its positions to [x, y, z]."""
     if isinstance(v, list):
@@ -787,6 +804,12 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         if not ckeys:
             errors.append(f"{tag}: needs at least one camera key")
             continue
+        # frame_fit (raymi/frame.py): the whole lens shifted onto her MEASURED head (probe) - close shots only
+        ff = s.get("frame_fit")
+        if isinstance(ff, list) and len(ff) == 3:
+            for ck in ckeys:
+                ck["pos"] = [round(p + o, 4) for p, o in zip(ck["pos"], ff)]
+                ck["look"] = [round(p + o, 4) for p, o in zip(ck["look"], ff)]
         # the observer (toki 2026-10-24): a person watching her, not a tripod - the film's default, a shot may set 0
         obs = s.get("observer", spec.get("observer"))
         if obs is not None:
@@ -914,6 +937,12 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             opts["battery"] = [[fr(a), int(opts["battery"])]]
         for k in REL_OPTS & opts.keys():                   # seconds from this shot's start
             opts[k] = time_opt(opts[k], lambda t, a=a: fr(a + t))
+        sal = opts.get("salmon")                          # the narrow Short frame may need Salmon elsewhere (guard --place-creatures)
+        if isinstance(sal, dict) and "short_pos" in sal:
+            sal = {k: v for k, v in sal.items() if k != "short_pos"}
+            if fmt == "short":
+                sal["pos"] = opts["salmon"]["short_pos"]
+            opts["salmon"] = sal
         for k in NESTED_OPTS & opts.keys():               # flames, strikes, creatures, props: their times + places
             if k in ("fires", "sparks") and isinstance(opts[k], list):   # a flame on HER (uv) needs no world place
                 opts[k] = [{**x, "pos": x.get("pos", [0, 0, 0])} if isinstance(x, dict) else x for x in opts[k]]
@@ -975,7 +1004,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                       # readable set props (guard: never cut by the frame edge) + places the lens may never be
                       "texts": [{k: v for k, v in tx.items() if k not in ("opt", "unless", "blank")} for tx in sets[st].get("texts", [])
                                 if (not tx.get("opt") or opts.get(tx["opt"])) and opts.get(tx.get("unless", ""), True) is not False
-                                and not (tx.get("blank") and opts.get(tx["blank"]) == "")],
+                                and not (tx.get("blank") and opts.get(tx["blank"]) == "")] + stage_texts(opts),
                       "noLens": sets[st].get("no_lens", []),
                       # a macro / a close-up AT a prop may sit close to it: "lens_near": {"monitor": "<why>"} lifts that solid
                       "solids": [x for x in [{k: v for k, v in so.items() if k not in ("opt", "unless")} for so in sets[st].get("solids", [])

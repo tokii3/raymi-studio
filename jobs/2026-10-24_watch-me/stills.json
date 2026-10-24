@@ -48,6 +48,8 @@
  ],
  "scale": 1,
  "to": "boards",
- "_why": "stills board 1 after the build (2026-10-24): every act + each new studio part on screen (bulb, freeze, treadmill, palm cover-cut, wind, fold, rain, splash, storm, light writing, the guard + beam, letters, sting / marble, tail at the lens, the final); wet floor in all three worlds; grade family wm_*",
- "round": 1
+ "_why": "stills board 2 (same 21 frames): fault classes of board 1 fixed in the shared parts - close shots onto her measured head (probe -> raymi frame), Salmon placed in the picture (guard + placer, guard scale 1.8), the room walls as no-lens zones (55 / 66 had the lens in the back wall), cover type as texts (no lyric on it), stronger wet floor / rain / splash / tail / letters, the bulb at 2.05 m, a smaller toned centerfold, cover-cuts 8-10 frames",
+ "round": 2,
+ "probe": 6,
+ "frame_fit": true
 }

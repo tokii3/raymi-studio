@@ -119,14 +119,15 @@ export const Shoot: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
           <planeGeometry args={[0.025, 2.6]} /></mesh>
       ))}
       {opts.bulb ? (
-        <group position={[-0.55, 4.6, 0.35]} rotation={[0.25 * swing, 0, swing]}>
-          <mesh position={[0, -0.85, 0]} material={toon('#141418')}><cylinderGeometry args={[0.006, 0.006, 1.7, 6]} /></mesh>
-          <mesh position={[0, -1.72, 0]} material={toon('#2a2a30')}><cylinderGeometry args={[0.03, 0.035, 0.07, 10]} /></mesh>
-          <mesh position={[0, -1.82, 0]}><sphereGeometry args={[0.055, 14, 10]} />
+        <group position={[-0.5, 4.6, 0.3]} rotation={[0.25 * swing, 0, swing]}>
+          {/* the bulb hangs at 2.05 m, beside her head - in the close frames too (stills 1: at 2.8 m it was never seen) */}
+          <mesh position={[0, -1.22, 0]} material={toon('#141418')}><cylinderGeometry args={[0.006, 0.006, 2.44, 6]} /></mesh>
+          <mesh position={[0, -2.46, 0]} material={toon('#2a2a30')}><cylinderGeometry args={[0.03, 0.035, 0.07, 10]} /></mesh>
+          <mesh position={[0, -2.55, 0]}><sphereGeometry args={[0.055, 14, 10]} />
             <meshBasicMaterial color={new THREE.Color('#3a3026').lerp(new THREE.Color('#ffe2b0'), bulbOn)} toneMapped={false} /></mesh>
-          {bulbOn > 0.05 ? <mesh position={[0, -1.82, 0]} renderOrder={5}><planeGeometry args={[0.5, 0.5]} />
+          {bulbOn > 0.05 ? <mesh position={[0, -2.55, 0]} renderOrder={5}><planeGeometry args={[0.5, 0.5]} />
             <meshBasicMaterial map={blobTexture('#ffcf8a')} transparent opacity={0.55 * bulbOn} blending={THREE.AdditiveBlending} depthWrite={false} toneMapped={false} /></mesh> : null}
-          <primitive object={bulbLight} position={[0, -1.82, 0]} />
+          <primitive object={bulbLight} position={[0, -2.55, 0]} />
         </group>
       ) : null}
       <DeepLife opts={opts} f={f} fps={fps} camPos={camPos} />

@@ -331,7 +331,8 @@ export const SalmonActor: React.FC<{s: SalmonSpec; f: number; fps: number; camPo
   const dto = since(s.toast_at);
   const toast = dto >= 0 && dto < 16 ? Math.sin((dto / 16) * Math.PI) : 0;
   const di = s.icon ? since(s.icon_at ?? -Infinity) : -1;
-  const sc = s.scale ?? 1;
+  // the guard reads at a hall's scale (stills 1: a 0.42 m fish vanished in an 11 m museum); his own soft rim light below
+  const sc = s.scale ?? (s.hold === 'flashlight' ? 1.8 : 1);
   const dp = since(s.press_at);
   const press = dp >= 0 ? Math.min(1, dp / 4) * (dp < 8 ? 1 + 0.2 * Math.sin((dp / 8) * Math.PI) : 1) : 0;
   // the guard: the beam aims at a point (her chest) or sweeps the hall; a fin reaches out; the cap blows away
@@ -363,7 +364,7 @@ export const SalmonActor: React.FC<{s: SalmonSpec; f: number; fps: number; camPo
             {/* the beam: a long soft cone (frozen mid-sweep when he turns to marble) */}
             <mesh position={[0.095 + 1.6, 0, 0]} rotation={[0, 0, Math.PI / 2]} renderOrder={5}>
               <coneGeometry args={[0.42, 3.2, 24, 1, true]} />
-              <meshBasicMaterial color="#fff2c8" transparent opacity={0.11 * (1 - 0.6 * stone)} side={THREE.DoubleSide} blending={THREE.AdditiveBlending} depthWrite={false} toneMapped={false} />
+              <meshBasicMaterial color="#fff2c8" transparent opacity={0.2 * (1 - 0.6 * stone)} side={THREE.DoubleSide} blending={THREE.AdditiveBlending} depthWrite={false} toneMapped={false} />
             </mesh>
           </group>
         ) : null}
@@ -384,6 +385,12 @@ export const SalmonActor: React.FC<{s: SalmonSpec; f: number; fps: number; camPo
           </group>
         ) : null}
       </group>
+      {s.hold === 'flashlight' && stone < 0.5 ? (
+        <mesh position={[0, 0.02, -0.12]} rotation={[0, camPos ? Math.atan2(camPos[0] - p[0], camPos[2] - p[2]) : 0, 0]} renderOrder={1}>
+          <planeGeometry args={[0.9, 0.6]} />
+          <meshBasicMaterial map={blobTexture('#ffe2b0')} transparent opacity={0.35} blending={THREE.AdditiveBlending} depthWrite={false} toneMapped={false} />
+        </mesh>
+      ) : null}
       {/* singed fin: a thread of smoke from the tail */}
       {ds >= 0 && ds < 60 ? Array.from({length: 6}, (_, i) => {
         const t = ((ds + i * 6) % 36) / 36;

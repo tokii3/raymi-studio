@@ -1,5 +1,15 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-24 (later) - Watch Me stills round 2: board 1's fault classes fixed in shared parts
+- Close shots onto her MEASURED head: raymi/frame.py (`raymi frame`, probe -> shots.json frame_fit, face centred and
+  10 % high); stills.yml runs probe -> frame -> lyric fitter -> guards before the stills when stills.json has
+  "frame_fit" (the moved lenses are committed back).
+- New guards + fixers: Salmon in the picture (check.ts creatureFaults / placeCreature, `guard --place-creatures`, a
+  Short-only `short_pos`) - he was off screen in 14 of 15 shots; room walls as no-lens zones in sets.json (55 and 66 had
+  the lens in the back wall); a staging cover's type as texts (no lyric on it, lens-riding blocks checked too).
+- Visibility: guard scale 1.8 + halo + stronger beam, wet floor 0.3-0.48, rain / splash / tail / letters bigger, bulb at
+  2.05 m, smaller toned centerfold, cover-cuts 8-10 frames. Guards green MV + Short, 124 py + 13 studio tests.
+
 ## 2026-10-24 (late night) - Watch Me build: the must list, lyric fitter for close shots, stills board 1
 - Built as reusable parts (4_SCRIPT "Build status"): three/setfx.tsx (wet floor, rain, wind, splash, slap, treadmill,
   freeze, light writing, letters, centerfold, tail at the lens), the bulb / lamp flick / crossed sign, Salmon the guard

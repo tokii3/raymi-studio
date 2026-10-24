@@ -99,7 +99,7 @@ export type Shot = {
   words: Word3[];
   transition: Transition;  // into the NEXT shot
   events: SetEvent[];
-  texts?: {name: string; center: V3; size: [number, number]; rot: number}[];   // readable props: never cut by the frame
+  texts?: {name: string; center: V3; size: [number, number]; rot: number; cut_ok?: boolean}[];   // cut_ok: a staging piece the lens may push past (only text-on-text counts)   // readable props: never cut by the frame
   noLens?: {name: string; min: V3; max: V3}[];                                // the camera may never be inside these
   solids?: {name: string; center: V3; size: V3}[];                            // props: lens never inside, face never hidden
   hero?: Hero[];           // the video's main element(s) this shot must show readably (treatment -> shots.json heroes)

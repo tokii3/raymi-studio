@@ -69,7 +69,7 @@ export const WetFloor: React.FC<{size: [number, number]; pos?: P3; amount: numbe
 
 // ---------------------------------------------------------------- rain + wind
 const Rain: React.FC<{v: number; her: P3; f: number; wind: number; dir: number}> = ({v, her, f, wind, dir}) => {
-  const n = Math.round(160 * v);
+  const n = Math.round(280 * v);   // stills 1: 160 thin streaks read as nothing
   return (
     <group>
       {Array.from({length: n}, (_, i) => {
@@ -78,8 +78,8 @@ const Rain: React.FC<{v: number; her: P3; f: number; wind: number; dir: number}>
         const y = 5 - ((f * fall + rnd(i * 3.1) * 5) % 5);
         const drift = dir * wind * 0.25 * (5 - y);
         return <mesh key={i} position={[x0 + drift, her[1] + y, z0]} rotation={[0, 0, -dir * wind * 0.25]} renderOrder={6}>
-          <boxGeometry args={[0.006, 0.34, 0.006]} />
-          <meshBasicMaterial color="#cfe4ff" transparent opacity={0.45} depthWrite={false} toneMapped={false} /></mesh>;
+          <boxGeometry args={[0.011, 0.42, 0.011]} />
+          <meshBasicMaterial color="#d8ebff" transparent opacity={0.62} depthWrite={false} toneMapped={false} /></mesh>;
       })}
       {/* rings where drops land */}
       {Array.from({length: Math.round(26 * v)}, (_, i) => {
@@ -114,11 +114,11 @@ const Wind: React.FC<{v: number; her: P3; f: number; dir: number}> = ({v, her, f
 // ---------------------------------------------------------------- floor events at her feet
 const Splash: React.FC<{d: number; her: P3}> = ({d, her}) => d < 0 || d > 24 ? null : (
   <group position={her}>
-    {Array.from({length: 22}, (_, i) => {
-      const a = rnd(i * 3.3) * Math.PI * 2, sp = 0.05 + rnd(i * 1.9) * 0.05, up = 0.09 + rnd(i * 4.1) * 0.08;
+    {Array.from({length: 40}, (_, i) => {
+      const a = rnd(i * 3.3) * Math.PI * 2, sp = 0.07 + rnd(i * 1.9) * 0.06, up = 0.11 + rnd(i * 4.1) * 0.09;
       const t = d;
       return <mesh key={i} position={[Math.cos(a) * sp * t * 0.5, up * t - 0.0045 * t * t, Math.sin(a) * sp * t * 0.5]} renderOrder={6}>
-        <sphereGeometry args={[0.018 + rnd(i) * 0.02, 6, 5]} />
+        <sphereGeometry args={[0.03 + rnd(i) * 0.035, 6, 5]} />
         <meshBasicMaterial color="#cfe8ff" transparent opacity={0.8 * (1 - d / 24)} depthWrite={false} toneMapped={false} /></mesh>;
     })}
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, 0]} scale={0.1 + d * 0.06} renderOrder={4}>
@@ -211,7 +211,7 @@ const LettersOff: React.FC<{d: number; her: P3; text: string; dir: number}> = ({
         const t = Math.max(0, d - i * 2) / 60, x0 = her[0] - dir * 0.9 * (i - text.length / 2) * 0.32;
         return <mesh key={i} position={[x0 + dir * 6 * ease('in', t), her[1] + 2.6 - 0.8 * t + 0.4 * Math.sin(t * 6 + i), her[2] - 3.6 + 5.5 * t]}
           rotation={[t * 4 + i, t * 6 * dir, t * 3]} renderOrder={7}>
-          <planeGeometry args={[0.36, 0.45]} /><meshToonMaterial map={tex} transparent side={THREE.DoubleSide} />
+          <planeGeometry args={[0.62, 0.78]} /><meshToonMaterial map={tex} transparent side={THREE.DoubleSide} />
         </mesh>;
       })}
     </group>
@@ -227,13 +227,13 @@ export const TailNearLens: React.FC<{camPos: P3; her: P3; pts: [number, number, 
   const W = (p: [number, number, number]) => new THREE.Vector3(...camPos).addScaledVector(rt, p[0]).addScaledVector(up, p[1]).addScaledVector(fw, p[2]);
   const ws = pts.map(W);
   const curve = new THREE.CatmullRomCurve3(ws);
-  const geo = new THREE.TubeGeometry(curve, 24, 0.012, 8, false);
+  const geo = new THREE.TubeGeometry(curve, 24, 0.03, 10, false);   // stills 1: 1.2 cm read as a hair
   const tip = ws[ws.length - 1], dirTip = tip.clone().sub(ws[ws.length - 2]).normalize();
   const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), dirTip);
   return (
     <group renderOrder={11} userData={{noSupport: true}}>
       <mesh geometry={geo} material={toon('#2a1f45')} />
-      <mesh position={tip} quaternion={q} scale={[1, 1, 0.35]} material={toon('#7a3cf0', '#5a22c8', 0.5)}><coneGeometry args={[0.035, 0.11, 4]} /></mesh>
+      <mesh position={tip} quaternion={q} scale={[1, 1, 0.35]} material={toon('#7a3cf0', '#5a22c8', 0.5)}><coneGeometry args={[0.075, 0.22, 4]} /></mesh>
     </group>
   );
 };
@@ -269,11 +269,11 @@ const Centerfold: React.FC<{d: number; her: P3; camPos: P3; title: string; fps: 
   const away = new THREE.Vector3(her[0] - camPos[0], 0, her[2] - camPos[2]).normalize();
   const hinge = new THREE.Vector3(her[0], her[1] + 0.005, her[2]).addScaledVector(away, 0.55);
   const yaw = Math.atan2(-away.x, -away.z);
-  const W = 2.4, H = 3.3;
+  const W = 1.7, H = 2.3;   // stills 1: a 2.4 x 3.3 page filled the frame as a white slab
   return (
     <group position={hinge} rotation={[0, yaw, 0]}>
       <group rotation={[-(Math.PI / 2) * t, 0, 0]}>
-        <mesh position={[0, H / 2, 0]} renderOrder={2}><planeGeometry args={[W, H]} /><meshToonMaterial map={tex} side={THREE.DoubleSide} /></mesh>
+        <mesh position={[0, H / 2, 0]} renderOrder={2}><planeGeometry args={[W, H]} /><meshToonMaterial map={tex} color="#c9bcc4" side={THREE.DoubleSide} /></mesh>
       </group>
     </group>
   );
@@ -306,4 +306,4 @@ export const SetFx: React.FC<{opts: Record<string, unknown>; f: number; fps: num
 };
 
 /** The wet floor each set has by default (Watch Me: one shared look - a wet mirror floor in all three worlds). */
-export const SET_WET: Record<string, number> = {shoot: 0.18, corner: 0.36, exhibit: 0.26};
+export const SET_WET: Record<string, number> = {shoot: 0.3, corner: 0.48, exhibit: 0.4};   // stills 1: 0.18-0.36 read as no floor at all
