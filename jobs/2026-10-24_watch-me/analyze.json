@@ -3,6 +3,9 @@
  "lyrics": "lyrics.txt",
  "language": "en",
  "model": "large-v3",
- "gap_languages": ["en", "ko"],
- "_why": "K/DA Watch Me (official audio, K/DA - Topic VOCEZQSO3t4, taken from the mashup job). English with possible Korean lines: gap windows retried in en / ko. No official text yet: the run writes lyrics_heard.txt; the official text replaces it before the script step (python -m raymi lyrics re-aligns locally)."
+ "gap_languages": [
+  "en",
+  "ko"
+ ],
+ "_why": "K/DA Watch Me (official audio, K/DA - Topic VOCEZQSO3t4). Run 2 (2026-10-24): toki pasted the lyrics -> lyrics.txt; the first run had no text (lyrics_heard), so whisper had no prompt and a local re-align left 165 of 428 words interpolated - transcribe again WITH the official text as prompt, gaps in en / ko."
 }

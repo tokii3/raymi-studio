@@ -39,8 +39,12 @@ Verdicts are toki's words (old engine VIDEO_LEARNINGS / PROGRESS / catalog). Exe
   battery, her dream sea as the beach metaphor, the office unfolding) held; the execution failed on structural
   faults: clips that never played, hand-guessed heights (floating / sinking / clipping), no chair, a damped mouth,
   flat even light, black frames. The structural pass (run 58 / 59) fixed them as classes (scene probe, support
-  rays, push-out, chair, vocal envelope, light depth, textures v2, 8-bit post) - not yet judged by her. Lesson: a
-  3D film needs its bodies in the space measured, not guessed; fix classes, not shots.
+  rays, push-out, chair, vocal envelope, light depth, textures v2, 8-bit post). toki's final verdict 2026-10-24 on
+  run 58: "raymi ist immernoch in gegenstände geklippt, animationen nicht flüssig, raymi fällt immernoch vom himmel
+  ... es wirkte alles nicht stimmig, zusammengeklatscht ... keine farbliche abstimmung, keine materialien" - parked,
+  a lesson for Watch Me. Lessons: a 3D film needs its bodies in the space measured, not guessed; fix classes, not
+  shots; a probe every 15th frame on 13 bone points is NOT a screening (QC v2); many sets with separate looks read
+  "zusammengeklatscht" - one place, one colour script, one material set (Watch Me).
 - **YOASOBI Idol (2026-10-01/02, 5 versions):** "schon sehr gut" at v5. Lessons: a rule-based director cannot
   choreograph (hand-written shot list was the turn), measure tempo / sections, cut one frame before the syllable,
   save the finale's set pieces.

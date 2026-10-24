@@ -1,20 +1,58 @@
 {
  "fps": 30,
  "source": {
-  "lyrics": "HEARD by the recogniser (lyrics_heard.txt), not official",
+  "lyrics": "official text (YouTube description)",
   "timing": "vocal stem: demucs htdemucs + faster-whisper word times, romaji letter match, snapped to vocal onsets"
  },
  "stats": {
-  "snapped": 296,
-  "measured": 7,
-  "interpolated": 14,
-  "words": 317
+  "snapped": 258,
+  "measured": 5,
+  "interpolated": 165,
+  "words": 428
  },
  "lines": [
   {
    "i": 0,
    "para": 0,
-   "text": "Camera on, camera off See the same mosaic, back it up Flipped",
+   "text": "Ah-ah",
+   "words": [
+    {
+     "w": "Ah-ah",
+     "roma": "ahah",
+     "t0": 6.49,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 6.9,
+     "cut": 193
+    }
+   ],
+   "t0": 6.49,
+   "t1": 6.9,
+   "cut": 193
+  },
+  {
+   "i": 1,
+   "para": 0,
+   "text": "Mwah",
+   "words": [
+    {
+     "w": "Mwah",
+     "roma": "mwah",
+     "t0": 7.25,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 8.13,
+     "cut": 216
+    }
+   ],
+   "t0": 7.25,
+   "t1": 8.13,
+   "cut": 216
+  },
+  {
+   "i": 2,
+   "para": 1,
+   "text": "Camera on, camera off",
    "words": [
     {
      "w": "Camera",
@@ -40,18 +78,28 @@
      "t0": 9.19,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 10.22,
+     "t1": 10.33,
      "cut": 274
     },
     {
      "w": "off",
      "roma": "off",
-     "t0": 10.22,
-     "how": "measured",
+     "t0": 10.33,
+     "how": "snapped",
      "conf": 1.0,
      "t1": 10.65,
-     "cut": 305
-    },
+     "cut": 308
+    }
+   ],
+   "t0": 8.13,
+   "t1": 10.65,
+   "cut": 242
+  },
+  {
+   "i": 3,
+   "para": 1,
+   "text": "See the same mosaic",
+   "words": [
     {
      "w": "See",
      "roma": "se",
@@ -80,16 +128,26 @@
      "cut": 343
     },
     {
-     "w": "mosaic,",
+     "w": "mosaic",
      "roma": "mosaic",
      "t0": 11.73,
      "how": "snapped",
      "conf": 1.0,
      "t1": 12.3,
      "cut": 350
-    },
+    }
+   ],
+   "t0": 10.65,
+   "t1": 12.3,
+   "cut": 318
+  },
+  {
+   "i": 4,
+   "para": 1,
+   "text": "Back it up, flame so hot",
+   "words": [
     {
-     "w": "back",
+     "w": "Back",
      "roma": "back",
      "t0": 12.3,
      "how": "snapped",
@@ -107,53 +165,53 @@
      "cut": 378
     },
     {
-     "w": "up",
+     "w": "up,",
      "roma": "up",
      "t0": 12.89,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 13.69,
+     "t1": 13.23,
      "cut": 385
     },
     {
-     "w": "Flipped",
-     "roma": "flipped",
-     "t0": 13.69,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 14.26,
-     "cut": 409
-    }
-   ],
-   "t0": 8.13,
-   "t1": 14.26,
-   "cut": 242
-  },
-  {
-   "i": 1,
-   "para": 0,
-   "text": "so high, but the glue gone I want your breath, you're a",
-   "words": [
+     "w": "flame",
+     "roma": "flame",
+     "t0": 13.23,
+     "how": "interpolated",
+     "conf": 0.4,
+     "t1": 14.17,
+     "cut": 395
+    },
     {
      "w": "so",
      "roma": "so",
-     "t0": 14.26,
+     "t0": 14.17,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 14.53,
-     "cut": 426
+     "t1": 14.43,
+     "cut": 424
     },
     {
-     "w": "high,",
-     "roma": "high",
-     "t0": 14.53,
-     "how": "snapped",
-     "conf": 1.0,
+     "w": "hot",
+     "roma": "hot",
+     "t0": 14.43,
+     "how": "interpolated",
+     "conf": 0.33,
      "t1": 14.89,
-     "cut": 434
-    },
+     "cut": 431
+    }
+   ],
+   "t0": 12.3,
+   "t1": 14.89,
+   "cut": 368
+  },
+  {
+   "i": 5,
+   "para": 1,
+   "text": "But the Louvre gon' hang it",
+   "words": [
     {
-     "w": "but",
+     "w": "But",
      "roma": "but",
      "t0": 14.89,
      "how": "snapped",
@@ -171,17 +229,17 @@
      "cut": 463
     },
     {
-     "w": "glue",
-     "roma": "glue",
+     "w": "Louvre",
+     "roma": "lovre",
      "t0": 15.57,
-     "how": "snapped",
-     "conf": 1.0,
+     "how": "interpolated",
+     "conf": 0.2,
      "t1": 15.83,
      "cut": 466
     },
     {
-     "w": "gone",
-     "roma": "gone",
+     "w": "gon'",
+     "roma": "gon",
      "t0": 15.83,
      "how": "snapped",
      "conf": 1.0,
@@ -189,22 +247,41 @@
      "cut": 473
     },
     {
-     "w": "I",
-     "roma": "i",
+     "w": "hang",
+     "roma": "hang",
      "t0": 15.98,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 16.19,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 16.4,
      "cut": 478
     },
     {
-     "w": "want",
-     "roma": "want",
-     "t0": 16.19,
-     "how": "snapped",
-     "conf": 1.0,
+     "w": "it",
+     "roma": "it",
+     "t0": 16.4,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 16.467,
+     "cut": 490
+    }
+   ],
+   "t0": 14.89,
+   "t1": 16.467,
+   "cut": 445
+  },
+  {
+   "i": 6,
+   "para": 1,
+   "text": "Hold your breath (Huh)",
+   "words": [
+    {
+     "w": "Hold",
+     "roma": "hold",
+     "t0": 16.467,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 16.78,
-     "cut": 484
+     "cut": 493
     },
     {
      "w": "your",
@@ -216,22 +293,50 @@
      "cut": 502
     },
     {
-     "w": "breath,",
+     "w": "breath",
      "roma": "breath",
      "t0": 17.5,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 18.0,
+     "conf": 0.83,
+     "t1": 18.14,
      "cut": 524
     },
     {
-     "w": "you're",
-     "roma": "yore",
-     "t0": 18.0,
-     "how": "measured",
-     "conf": 1.0,
+     "w": "(",
+     "roma": "",
+     "t0": 18.14,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 18.207,
+     "cut": 543
+    },
+    {
+     "w": "Huh)",
+     "roma": "huh",
+     "t0": 18.207,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 18.38,
+     "cut": 545
+    }
+   ],
+   "t0": 16.467,
+   "t1": 18.38,
+   "cut": 493
+  },
+  {
+   "i": 7,
+   "para": 1,
+   "text": "Hear a pin drop when I walk in",
+   "words": [
+    {
+     "w": "Hear",
+     "roma": "hear",
+     "t0": 18.38,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 18.7,
-     "cut": 539
+     "cut": 550
     },
     {
      "w": "a",
@@ -241,17 +346,7 @@
      "conf": 1.0,
      "t1": 18.767,
      "cut": 560
-    }
-   ],
-   "t0": 14.26,
-   "t1": 18.767,
-   "cut": 426
-  },
-  {
-   "i": 2,
-   "para": 0,
-   "text": "pin drop when I walk in Pin stop droppin', pin stop droppin'",
-   "words": [
+    },
     {
      "w": "pin",
      "roma": "pin",
@@ -267,17 +362,17 @@
      "t0": 18.833,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 19.04,
+     "t1": 19.17,
      "cut": 563
     },
     {
      "w": "when",
      "roma": "when",
-     "t0": 19.04,
+     "t0": 19.17,
      "how": "snapped",
      "conf": 1.0,
      "t1": 19.35,
-     "cut": 570
+     "cut": 574
     },
     {
      "w": "I",
@@ -285,17 +380,17 @@
      "t0": 19.35,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 19.56,
+     "t1": 19.57,
      "cut": 579
     },
     {
      "w": "walk",
      "roma": "walk",
-     "t0": 19.56,
+     "t0": 19.57,
      "how": "snapped",
      "conf": 1.0,
      "t1": 20.13,
-     "cut": 585
+     "cut": 586
     },
     {
      "w": "in",
@@ -303,85 +398,95 @@
      "t0": 20.13,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 20.63,
+     "t1": 20.65,
      "cut": 602
-    },
+    }
+   ],
+   "t0": 18.38,
+   "t1": 20.65,
+   "cut": 550
+  },
+  {
+   "i": 8,
+   "para": 1,
+   "text": "Pins are dropping, pins are dropping",
+   "words": [
     {
-     "w": "Pin",
-     "roma": "pin",
-     "t0": 20.63,
+     "w": "Pins",
+     "roma": "pins",
+     "t0": 20.65,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 20.84,
-     "cut": 617
+     "t1": 20.85,
+     "cut": 618
     },
     {
-     "w": "stop",
-     "roma": "stop",
-     "t0": 20.84,
-     "how": "snapped",
-     "conf": 1.0,
+     "w": "are",
+     "roma": "are",
+     "t0": 20.85,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 21.13,
      "cut": 624
     },
     {
-     "w": "droppin',",
-     "roma": "droppin",
+     "w": "dropping,",
+     "roma": "dropping",
      "t0": 21.13,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.88,
      "t1": 21.87,
      "cut": 632
     },
     {
-     "w": "pin",
-     "roma": "pin",
+     "w": "pins",
+     "roma": "pins",
      "t0": 21.87,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 21.986,
+     "t1": 22.024,
      "cut": 655
     },
     {
-     "w": "stop",
-     "roma": "stop",
-     "t0": 21.986,
+     "w": "are",
+     "roma": "are",
+     "t0": 22.024,
      "how": "interpolated",
-     "conf": 1.0,
+     "conf": 0.0,
      "t1": 22.14,
-     "cut": 658
+     "cut": 659
     },
     {
-     "w": "droppin'",
-     "roma": "droppin",
+     "w": "dropping",
+     "roma": "dropping",
      "t0": 22.14,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 22.66,
+     "conf": 0.88,
+     "t1": 22.78,
      "cut": 663
     }
    ],
-   "t0": 18.767,
-   "t1": 22.66,
-   "cut": 562
+   "t0": 20.65,
+   "t1": 22.78,
+   "cut": 618
   },
   {
-   "i": 3,
-   "para": 0,
-   "text": "When I'm walkin', when I'm walkin' I kinda like that, if you",
+   "i": 9,
+   "para": 1,
+   "text": "When I walk in, when I walk in",
    "words": [
     {
      "w": "When",
      "roma": "when",
-     "t0": 22.66,
+     "t0": 22.78,
      "how": "snapped",
      "conf": 1.0,
      "t1": 22.95,
-     "cut": 678
+     "cut": 682
     },
     {
-     "w": "I'm",
-     "roma": "im",
+     "w": "I",
+     "roma": "i",
      "t0": 22.95,
      "how": "snapped",
      "conf": 1.0,
@@ -389,41 +494,69 @@
      "cut": 687
     },
     {
-     "w": "walkin',",
-     "roma": "walkin",
+     "w": "walk",
+     "roma": "walk",
      "t0": 23.37,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 23.95,
+     "t1": 23.66,
      "cut": 700
+    },
+    {
+     "w": "in,",
+     "roma": "in",
+     "t0": 23.66,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 23.96,
+     "cut": 708
     },
     {
      "w": "when",
      "roma": "when",
-     "t0": 23.95,
+     "t0": 23.96,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 24.123,
+     "t1": 24.16,
      "cut": 717
     },
     {
-     "w": "I'm",
-     "roma": "im",
-     "t0": 24.123,
+     "w": "I",
+     "roma": "i",
+     "t0": 24.16,
      "how": "interpolated",
      "conf": 1.0,
-     "t1": 24.21,
-     "cut": 722
+     "t1": 24.227,
+     "cut": 723
     },
     {
-     "w": "walkin'",
-     "roma": "walkin",
-     "t0": 24.21,
+     "w": "walk",
+     "roma": "walk",
+     "t0": 24.227,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 24.73,
+     "cut": 725
+    },
+    {
+     "w": "in",
+     "roma": "in",
+     "t0": 24.73,
      "how": "snapped",
      "conf": 1.0,
      "t1": 25.34,
-     "cut": 725
-    },
+     "cut": 740
+    }
+   ],
+   "t0": 22.78,
+   "t1": 25.34,
+   "cut": 682
+  },
+  {
+   "i": 10,
+   "para": 2,
+   "text": "I got it like that (Ah)",
+   "words": [
     {
      "w": "I",
      "roma": "i",
@@ -434,13 +567,22 @@
      "cut": 759
     },
     {
-     "w": "kinda",
-     "roma": "kinda",
+     "w": "got",
+     "roma": "got",
      "t0": 25.44,
      "how": "interpolated",
-     "conf": 1.0,
-     "t1": 25.66,
+     "conf": 0.0,
+     "t1": 25.507,
      "cut": 762
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 25.507,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 25.66,
+     "cut": 764
     },
     {
      "w": "like",
@@ -452,18 +594,46 @@
      "cut": 768
     },
     {
-     "w": "that,",
+     "w": "that",
      "roma": "that",
      "t0": 26.08,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 26.82,
+     "t1": 26.49,
      "cut": 781
     },
     {
-     "w": "if",
+     "w": "(",
+     "roma": "",
+     "t0": 26.49,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 26.557,
+     "cut": 793
+    },
+    {
+     "w": "Ah)",
+     "roma": "ah",
+     "t0": 26.557,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 26.83,
+     "cut": 795
+    }
+   ],
+   "t0": 25.34,
+   "t1": 26.83,
+   "cut": 759
+  },
+  {
+   "i": 11,
+   "para": 2,
+   "text": "If you wanna like that (Ah)",
+   "words": [
+    {
+     "w": "If",
      "roma": "if",
-     "t0": 26.82,
+     "t0": 26.83,
      "how": "snapped",
      "conf": 1.0,
      "t1": 27.25,
@@ -477,17 +647,7 @@
      "conf": 1.0,
      "t1": 27.37,
      "cut": 816
-    }
-   ],
-   "t0": 22.66,
-   "t1": 27.37,
-   "cut": 678
-  },
-  {
-   "i": 4,
-   "para": 0,
-   "text": "wanna like that There's only one way to know",
-   "words": [
+    },
     {
      "w": "wanna",
      "roma": "wanna",
@@ -512,9 +672,37 @@
      "t0": 28.01,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 28.58,
+     "t1": 28.31,
      "cut": 839
     },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 28.31,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 28.48,
+     "cut": 848
+    },
+    {
+     "w": "Ah)",
+     "roma": "ah",
+     "t0": 28.48,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 28.58,
+     "cut": 853
+    }
+   ],
+   "t0": 26.83,
+   "t1": 28.58,
+   "cut": 803
+  },
+  {
+   "i": 12,
+   "para": 2,
+   "text": "There's only one way to know",
+   "words": [
     {
      "w": "There's",
      "roma": "theres",
@@ -539,13 +727,13 @@
      "t0": 29.83,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 30.17,
+     "t1": 30.18,
      "cut": 893
     },
     {
      "w": "way",
      "roma": "way",
-     "t0": 30.17,
+     "t0": 30.18,
      "how": "snapped",
      "conf": 1.0,
      "t1": 30.36,
@@ -557,45 +745,82 @@
      "t0": 30.36,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 30.64,
+     "t1": 30.63,
      "cut": 909
     },
     {
      "w": "know",
      "roma": "know",
-     "t0": 30.64,
+     "t0": 30.63,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 32.14,
-     "cut": 918
+     "conf": 0.75,
+     "t1": 31.12,
+     "cut": 917
     }
    ],
-   "t0": 27.37,
-   "t1": 32.14,
-   "cut": 820
+   "t0": 28.58,
+   "t1": 31.12,
+   "cut": 856
   },
   {
-   "i": 5,
-   "para": 0,
-   "text": "Watch me move, run in circles around these dudes Keep my loose,",
+   "i": 13,
+   "para": 2,
+   "text": "(Watch me)",
+   "words": [
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 31.12,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 31.33,
+     "cut": 932
+    },
+    {
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 31.33,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 31.95,
+     "cut": 938
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 31.95,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 32.18,
+     "cut": 957
+    }
+   ],
+   "t0": 31.12,
+   "t1": 32.18,
+   "cut": 932
+  },
+  {
+   "i": 14,
+   "para": 3,
+   "text": "Watch me move, runnin' circles 'round these dudes (Watch me)",
    "words": [
     {
      "w": "Watch",
      "roma": "watch",
-     "t0": 32.19,
+     "t0": 32.18,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 32.82,
+     "t1": 32.7,
      "cut": 964
     },
     {
      "w": "me",
      "roma": "me",
-     "t0": 32.82,
+     "t0": 32.7,
      "how": "snapped",
      "conf": 1.0,
      "t1": 33.07,
-     "cut": 983
+     "cut": 980
     },
     {
      "w": "move,",
@@ -603,26 +828,17 @@
      "t0": 33.07,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 34.48,
+     "t1": 34.47,
      "cut": 991
     },
     {
-     "w": "run",
-     "roma": "run",
-     "t0": 34.48,
+     "w": "runnin'",
+     "roma": "runnin",
+     "t0": 34.47,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 34.81,
-     "cut": 1033
-    },
-    {
-     "w": "in",
-     "roma": "in",
-     "t0": 34.81,
-     "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.83,
      "t1": 34.92,
-     "cut": 1043
+     "cut": 1033
     },
     {
      "w": "circles",
@@ -634,22 +850,22 @@
      "cut": 1046
     },
     {
-     "w": "around",
-     "roma": "arond",
+     "w": "'round",
+     "roma": "rond",
      "t0": 35.45,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 35.93,
+     "t1": 35.78,
      "cut": 1062
     },
     {
      "w": "these",
      "roma": "these",
-     "t0": 35.93,
+     "t0": 35.78,
      "how": "snapped",
      "conf": 1.0,
      "t1": 36.1,
-     "cut": 1076
+     "cut": 1072
     },
     {
      "w": "dudes",
@@ -657,17 +873,54 @@
      "t0": 36.1,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 36.45,
+     "t1": 36.66,
      "cut": 1082
     },
     {
-     "w": "Keep",
-     "roma": "kep",
-     "t0": 36.45,
-     "how": "snapped",
-     "conf": 1.0,
+     "w": "(",
+     "roma": "",
+     "t0": 36.66,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 36.79,
+     "cut": 1098
+    },
+    {
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 36.79,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 37.27,
+     "cut": 1102
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 37.27,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 37.56,
+     "cut": 1117
+    }
+   ],
+   "t0": 32.18,
+   "t1": 37.56,
+   "cut": 964
+  },
+  {
+   "i": 15,
+   "para": 3,
+   "text": "In my Loubs, breakin' hearts and breakin' news (Breakin', breakin', watch me)",
+   "words": [
+    {
+     "w": "In",
+     "roma": "in",
+     "t0": 37.56,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 37.74,
-     "cut": 1092
+     "cut": 1125
     },
     {
      "w": "my",
@@ -679,24 +932,14 @@
      "cut": 1131
     },
     {
-     "w": "loose,",
-     "roma": "lose",
+     "w": "Loubs,",
+     "roma": "lobs",
      "t0": 38.03,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.5,
      "t1": 38.57,
      "cut": 1139
-    }
-   ],
-   "t0": 32.19,
-   "t1": 38.57,
-   "cut": 964
-  },
-  {
-   "i": 6,
-   "para": 0,
-   "text": "breakin' hearts, I'm breakin' loose",
-   "words": [
+    },
     {
      "w": "breakin'",
      "roma": "breakin",
@@ -707,68 +950,113 @@
      "cut": 1156
     },
     {
-     "w": "hearts,",
+     "w": "hearts",
      "roma": "hearts",
      "t0": 39.26,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.83,
      "t1": 39.43,
      "cut": 1176
     },
     {
-     "w": "I'm",
-     "roma": "im",
+     "w": "and",
+     "roma": "and",
      "t0": 39.43,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 39.72,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 39.497,
      "cut": 1181
     },
     {
      "w": "breakin'",
      "roma": "breakin",
-     "t0": 39.72,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 40.07,
+     "t0": 39.497,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 39.58,
+     "cut": 1183
+    },
+    {
+     "w": "news",
+     "roma": "news",
+     "t0": 39.58,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 39.647,
+     "cut": 1186
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 39.647,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 39.713,
+     "cut": 1188
+    },
+    {
+     "w": "Breakin',",
+     "roma": "breakin",
+     "t0": 39.713,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 39.78,
      "cut": 1190
     },
     {
-     "w": "loose",
-     "roma": "lose",
-     "t0": 40.07,
+     "w": "breakin',",
+     "roma": "breakin",
+     "t0": 39.78,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 41.39,
+     "t1": 40.07,
+     "cut": 1192
+    },
+    {
+     "w": "watch",
+     "roma": "watch",
+     "t0": 40.07,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 40.37,
      "cut": 1201
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 40.37,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 41.39,
+     "cut": 1210
     }
    ],
-   "t0": 38.57,
+   "t0": 37.56,
    "t1": 41.39,
-   "cut": 1156
+   "cut": 1125
   },
   {
-   "i": 7,
-   "para": 0,
-   "text": "Hurricane, when the fuck is KDA?",
+   "i": 16,
+   "para": 3,
+   "text": "Hurricane when the forecast K/DA, ayy",
    "words": [
     {
-     "w": "Hurricane,",
+     "w": "Hurricane",
      "roma": "hurricane",
      "t0": 41.39,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 42.54,
+     "t1": 42.68,
      "cut": 1240
     },
     {
      "w": "when",
      "roma": "when",
-     "t0": 42.54,
+     "t0": 42.68,
      "how": "snapped",
      "conf": 1.0,
      "t1": 42.89,
-     "cut": 1275
+     "cut": 1279
     },
     {
      "w": "the",
@@ -776,45 +1064,45 @@
      "t0": 42.89,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 43.15,
+     "t1": 43.37,
      "cut": 1285
     },
     {
-     "w": "fuck",
-     "roma": "fuck",
-     "t0": 43.15,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 43.53,
-     "cut": 1293
+     "w": "forecast",
+     "roma": "forecast",
+     "t0": 43.37,
+     "how": "interpolated",
+     "conf": 0.12,
+     "t1": 44.45,
+     "cut": 1300
     },
     {
-     "w": "is",
-     "roma": "is",
-     "t0": 43.53,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 43.66,
-     "cut": 1304
-    },
-    {
-     "w": "KDA?",
+     "w": "K/DA,",
      "roma": "kda",
-     "t0": 43.66,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 45.16,
-     "cut": 1308
+     "t0": 44.45,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 44.78,
+     "cut": 1332
+    },
+    {
+     "w": "ayy",
+     "roma": "ayy",
+     "t0": 44.78,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 45.24,
+     "cut": 1342
     }
    ],
    "t0": 41.39,
-   "t1": 45.16,
+   "t1": 45.24,
    "cut": 1240
   },
   {
-   "i": 8,
-   "para": 0,
-   "text": "On your radar, you can't look away",
+   "i": 17,
+   "para": 3,
+   "text": "On your radar, you can't look away (Watch me)",
    "words": [
     {
      "w": "On",
@@ -822,17 +1110,17 @@
      "t0": 45.24,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 45.93,
+     "t1": 45.94,
      "cut": 1356
     },
     {
      "w": "your",
      "roma": "yor",
-     "t0": 45.93,
+     "t0": 45.94,
      "how": "snapped",
      "conf": 1.0,
      "t1": 46.22,
-     "cut": 1376
+     "cut": 1377
     },
     {
      "w": "radar,",
@@ -849,26 +1137,26 @@
      "t0": 46.75,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 47.1,
+     "t1": 46.95,
      "cut": 1401
     },
     {
      "w": "can't",
      "roma": "cant",
-     "t0": 47.1,
+     "t0": 46.95,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 47.55,
-     "cut": 1412
+     "t1": 47.38,
+     "cut": 1407
     },
     {
      "w": "look",
      "roma": "lok",
-     "t0": 47.55,
+     "t0": 47.38,
      "how": "snapped",
      "conf": 1.0,
      "t1": 47.79,
-     "cut": 1425
+     "cut": 1420
     },
     {
      "w": "away",
@@ -876,36 +1164,63 @@
      "t0": 47.79,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 49.29,
+     "t1": 48.27,
      "cut": 1432
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 48.27,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 48.59,
+     "cut": 1447
+    },
+    {
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 48.59,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 49.12,
+     "cut": 1456
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 49.12,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 49.49,
+     "cut": 1472
     }
    ],
    "t0": 45.24,
-   "t1": 49.29,
+   "t1": 49.49,
    "cut": 1356
   },
   {
-   "i": 9,
-   "para": 0,
-   "text": "Watch me pose, always keep them on their toes",
+   "i": 18,
+   "para": 3,
+   "text": "Watch me pose, always keep 'em on they toes (Oh, bae, watch me)",
    "words": [
     {
      "w": "Watch",
      "roma": "watch",
-     "t0": 49.5,
+     "t0": 49.49,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 50.08,
-     "cut": 1484
+     "t1": 50.2,
+     "cut": 1483
     },
     {
      "w": "me",
      "roma": "me",
-     "t0": 50.08,
+     "t0": 50.2,
      "how": "snapped",
      "conf": 1.0,
      "t1": 50.34,
-     "cut": 1501
+     "cut": 1505
     },
     {
      "w": "pose,",
@@ -931,33 +1246,33 @@
      "t0": 51.36,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 51.6,
+     "t1": 51.87,
      "cut": 1539
     },
     {
-     "w": "them",
-     "roma": "them",
-     "t0": 51.6,
+     "w": "'em",
+     "roma": "em",
+     "t0": 51.87,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 51.87,
-     "cut": 1547
+     "t1": 52.13,
+     "cut": 1555
     },
     {
      "w": "on",
      "roma": "on",
-     "t0": 51.87,
-     "how": "snapped",
+     "t0": 52.13,
+     "how": "interpolated",
      "conf": 1.0,
      "t1": 52.23,
-     "cut": 1555
+     "cut": 1562
     },
     {
-     "w": "their",
-     "roma": "their",
+     "w": "they",
+     "roma": "they",
      "t0": 52.23,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.75,
      "t1": 52.38,
      "cut": 1565
     },
@@ -967,27 +1282,72 @@
      "t0": 52.38,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 53.88,
+     "t1": 52.66,
      "cut": 1570
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 52.66,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 53.02,
+     "cut": 1578
+    },
+    {
+     "w": "Oh,",
+     "roma": "oh",
+     "t0": 53.02,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 53.087,
+     "cut": 1589
+    },
+    {
+     "w": "bae,",
+     "roma": "bae",
+     "t0": 53.087,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 53.43,
+     "cut": 1591
+    },
+    {
+     "w": "watch",
+     "roma": "watch",
+     "t0": 53.43,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 53.87,
+     "cut": 1601
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 53.87,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 54.09,
+     "cut": 1615
     }
    ],
-   "t0": 49.5,
-   "t1": 53.88,
-   "cut": 1484
+   "t0": 49.49,
+   "t1": 54.09,
+   "cut": 1483
   },
   {
-   "i": 10,
-   "para": 0,
-   "text": "Centerfold, turn the sidewalk to a show",
+   "i": 19,
+   "para": 3,
+   "text": "Centerfolds turn the sidewalk to a show (Watch me)",
    "words": [
     {
-     "w": "Centerfold,",
-     "roma": "centerfold",
-     "t0": 54.1,
+     "w": "Centerfolds",
+     "roma": "centerfolds",
+     "t0": 54.09,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.91,
      "t1": 55.04,
-     "cut": 1622
+     "cut": 1621
     },
     {
      "w": "turn",
@@ -995,13 +1355,13 @@
      "t0": 55.04,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 55.25,
+     "t1": 55.24,
      "cut": 1650
     },
     {
      "w": "the",
      "roma": "the",
-     "t0": 55.25,
+     "t0": 55.24,
      "how": "snapped",
      "conf": 1.0,
      "t1": 55.47,
@@ -1039,22 +1399,49 @@
      "roma": "show",
      "t0": 56.46,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 57.8,
+     "conf": 0.75,
+     "t1": 56.95,
      "cut": 1692
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 56.95,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 57.017,
+     "cut": 1707
+    },
+    {
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 57.017,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 57.67,
+     "cut": 1709
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 57.67,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 57.8,
+     "cut": 1729
     }
    ],
-   "t0": 54.1,
+   "t0": 54.09,
    "t1": 57.8,
-   "cut": 1622
+   "cut": 1621
   },
   {
-   "i": 11,
-   "para": 0,
-   "text": "Hurricane, when the forecast made the eight",
+   "i": 20,
+   "para": 3,
+   "text": "Hurricane when the forecast K/DA, ayy",
    "words": [
     {
-     "w": "Hurricane,",
+     "w": "Hurricane",
      "roma": "hurricane",
      "t0": 57.8,
      "how": "snapped",
@@ -1066,7 +1453,7 @@
      "w": "when",
      "roma": "when",
      "t0": 59.0,
-     "how": "measured",
+     "how": "snapped",
      "conf": 1.0,
      "t1": 59.37,
      "cut": 1769
@@ -1086,54 +1473,45 @@
      "t0": 59.6,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 60.05,
+     "t1": 60.86,
      "cut": 1787
     },
     {
-     "w": "made",
-     "roma": "made",
-     "t0": 60.05,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 60.49,
-     "cut": 1800
+     "w": "K/DA,",
+     "roma": "kda",
+     "t0": 60.86,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 61.35,
+     "cut": 1824
     },
     {
-     "w": "the",
-     "roma": "the",
-     "t0": 60.49,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 60.6,
-     "cut": 1813
-    },
-    {
-     "w": "eight",
-     "roma": "eight",
-     "t0": 60.6,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 62.04,
-     "cut": 1817
+     "w": "ayy",
+     "roma": "ayy",
+     "t0": 61.35,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 61.91,
+     "cut": 1839
     }
    ],
    "t0": 57.8,
-   "t1": 62.04,
+   "t1": 61.91,
    "cut": 1733
   },
   {
-   "i": 12,
-   "para": 0,
-   "text": "There's a hundred percent chance of sleep I'm supposed to pick in",
+   "i": 21,
+   "para": 3,
+   "text": "There's a hundred percent chance of slay (Watch me)",
    "words": [
     {
      "w": "There's",
      "roma": "theres",
-     "t0": 62.04,
+     "t0": 61.91,
      "how": "snapped",
      "conf": 1.0,
      "t1": 62.68,
-     "cut": 1860
+     "cut": 1856
     },
     {
      "w": "a",
@@ -1168,57 +1546,94 @@
      "t0": 63.68,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 64.39,
+     "t1": 64.36,
      "cut": 1909
     },
     {
      "w": "of",
      "roma": "of",
-     "t0": 64.39,
-     "how": "snapped",
+     "t0": 64.36,
+     "how": "measured",
      "conf": 1.0,
      "t1": 64.68,
-     "cut": 1930
+     "cut": 1929
     },
     {
-     "w": "sleep",
-     "roma": "slep",
+     "w": "slay",
+     "roma": "slay",
      "t0": 64.68,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.5,
      "t1": 65.13,
      "cut": 1939
     },
     {
-     "w": "I'm",
-     "roma": "im",
+     "w": "(",
+     "roma": "",
      "t0": 65.13,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 66.11,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 65.22,
      "cut": 1952
     },
     {
-     "w": "supposed",
-     "roma": "supposed",
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 65.22,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 65.84,
+     "cut": 1955
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 65.84,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 65.92,
+     "cut": 1974
+    }
+   ],
+   "t0": 61.91,
+   "t1": 65.92,
+   "cut": 1856
+  },
+  {
+   "i": 22,
+   "para": 4,
+   "text": "I post a pic and the app crash (Yeah)",
+   "words": [
+    {
+     "w": "I",
+     "roma": "i",
+     "t0": 65.92,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 66.11,
+     "cut": 1976
+    },
+    {
+     "w": "post",
+     "roma": "post",
      "t0": 66.11,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.75,
      "t1": 66.278,
      "cut": 1982
     },
     {
-     "w": "to",
-     "roma": "to",
+     "w": "a",
+     "roma": "a",
      "t0": 66.278,
      "how": "interpolated",
-     "conf": 1.0,
+     "conf": 0.0,
      "t1": 66.345,
      "cut": 1987
     },
     {
-     "w": "pick",
-     "roma": "pick",
+     "w": "pic",
+     "roma": "pic",
      "t0": 66.345,
      "how": "snapped",
      "conf": 1.0,
@@ -1226,46 +1641,27 @@
      "cut": 1989
     },
     {
-     "w": "in",
-     "roma": "in",
+     "w": "and",
+     "roma": "and",
      "t0": 66.48,
-     "how": "snapped",
-     "conf": 1.0,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 66.65,
      "cut": 1993
-    }
-   ],
-   "t0": 62.04,
-   "t1": 66.65,
-   "cut": 1860
-  },
-  {
-   "i": 13,
-   "para": 0,
-   "text": "the half -crash Bucket Chanel with a snapback What'll my money grow?",
-   "words": [
+    },
     {
      "w": "the",
      "roma": "the",
      "t0": 66.65,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 66.83,
+     "t1": 66.98,
      "cut": 1998
     },
     {
-     "w": "half",
-     "roma": "half",
-     "t0": 66.83,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 66.99,
-     "cut": 2003
-    },
-    {
-     "w": "-",
-     "roma": "",
-     "t0": 66.99,
+     "w": "app",
+     "roma": "app",
+     "t0": 66.98,
      "how": "interpolated",
      "conf": 0.0,
      "t1": 67.25,
@@ -1276,23 +1672,51 @@
      "roma": "crash",
      "t0": 67.25,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 67.45,
+     "conf": 0.8,
+     "t1": 67.54,
      "cut": 2016
     },
     {
-     "w": "Bucket",
-     "roma": "bucket",
-     "t0": 67.45,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 68.18,
-     "cut": 2022
+     "w": "(",
+     "roma": "",
+     "t0": 67.54,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 67.607,
+     "cut": 2025
+    },
+    {
+     "w": "Yeah)",
+     "roma": "yeah",
+     "t0": 67.607,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 67.79,
+     "cut": 2027
+    }
+   ],
+   "t0": 65.92,
+   "t1": 67.79,
+   "cut": 1976
+  },
+  {
+   "i": 23,
+   "para": 4,
+   "text": "Rockin' Chanel with a snap-back (Yeah)",
+   "words": [
+    {
+     "w": "Rockin'",
+     "roma": "rockin",
+     "t0": 67.79,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 68.17,
+     "cut": 2032
     },
     {
      "w": "Chanel",
      "roma": "chanel",
-     "t0": 68.18,
+     "t0": 68.17,
      "how": "snapped",
      "conf": 1.0,
      "t1": 68.56,
@@ -1313,26 +1737,54 @@
      "t0": 68.85,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 69.07,
+     "t1": 68.97,
      "cut": 2064
     },
     {
-     "w": "snapback",
+     "w": "snap-back",
      "roma": "snapback",
-     "t0": 69.07,
+     "t0": 68.97,
      "how": "interpolated",
      "conf": 1.0,
-     "t1": 69.32,
-     "cut": 2071
+     "t1": 69.6,
+     "cut": 2068
     },
     {
-     "w": "What'll",
-     "roma": "whatll",
-     "t0": 69.32,
-     "how": "snapped",
-     "conf": 1.0,
+     "w": "(",
+     "roma": "",
+     "t0": 69.6,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 69.667,
+     "cut": 2087
+    },
+    {
+     "w": "Yeah)",
+     "roma": "yeah",
+     "t0": 69.667,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 69.79,
+     "cut": 2089
+    }
+   ],
+   "t0": 67.79,
+   "t1": 69.79,
+   "cut": 2032
+  },
+  {
+   "i": 24,
+   "para": 4,
+   "text": "Water my money, it grow",
+   "words": [
+    {
+     "w": "Water",
+     "roma": "water",
+     "t0": 69.79,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 70.22,
-     "cut": 2078
+     "cut": 2092
     },
     {
      "w": "my",
@@ -1340,58 +1792,76 @@
      "t0": 70.22,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 70.41,
+     "t1": 70.42,
      "cut": 2105
     },
     {
-     "w": "money",
+     "w": "money,",
      "roma": "money",
-     "t0": 70.41,
+     "t0": 70.42,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 70.75,
+     "t1": 70.6,
      "cut": 2111
     },
     {
-     "w": "grow?",
+     "w": "it",
+     "roma": "it",
+     "t0": 70.6,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 70.75,
+     "cut": 2117
+    },
+    {
+     "w": "grow",
      "roma": "grow",
      "t0": 70.75,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 71.62,
+     "t1": 71.4,
      "cut": 2121
     }
    ],
-   "t0": 66.65,
-   "t1": 71.62,
-   "cut": 1998
+   "t0": 69.79,
+   "t1": 71.4,
+   "cut": 2092
   },
   {
-   "i": 14,
-   "para": 0,
-   "text": "Steal my wristband or go? Daddy's so bad through a tantrum Daddy's",
+   "i": 25,
+   "para": 4,
+   "text": "Still on my wrist, bring your coat",
    "words": [
     {
-     "w": "Steal",
-     "roma": "steal",
-     "t0": 71.62,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 72.26,
-     "cut": 2147
+     "w": "Still",
+     "roma": "still",
+     "t0": 71.4,
+     "how": "interpolated",
+     "conf": 0.4,
+     "t1": 71.95,
+     "cut": 2141
+    },
+    {
+     "w": "on",
+     "roma": "on",
+     "t0": 71.95,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 72.27,
+     "cut": 2157
     },
     {
      "w": "my",
      "roma": "my",
-     "t0": 72.26,
+     "t0": 72.27,
      "how": "snapped",
      "conf": 1.0,
      "t1": 72.43,
-     "cut": 2166
+     "cut": 2167
     },
     {
-     "w": "wristband",
-     "roma": "wristband",
+     "w": "wrist,",
+     "roma": "wrist",
      "t0": 72.43,
      "how": "snapped",
      "conf": 1.0,
@@ -1399,29 +1869,48 @@
      "cut": 2171
     },
     {
-     "w": "or",
-     "roma": "or",
+     "w": "bring",
+     "roma": "bring",
      "t0": 72.83,
-     "how": "snapped",
-     "conf": 1.0,
+     "how": "interpolated",
+     "conf": 0.2,
      "t1": 73.13,
      "cut": 2183
     },
     {
-     "w": "go?",
-     "roma": "go",
+     "w": "your",
+     "roma": "yor",
      "t0": 73.13,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 73.68,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 73.45,
      "cut": 2192
     },
     {
-     "w": "Daddy's",
-     "roma": "daddys",
+     "w": "coat",
+     "roma": "coat",
+     "t0": 73.45,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 73.68,
+     "cut": 2202
+    }
+   ],
+   "t0": 71.4,
+   "t1": 73.68,
+   "cut": 2141
+  },
+  {
+   "i": 26,
+   "para": 4,
+   "text": "Baddie so bad, throw a tantrum",
+   "words": [
+    {
+     "w": "Baddie",
+     "roma": "baddie",
      "t0": 73.68,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.5,
      "t1": 74.34,
      "cut": 2209
     },
@@ -1435,7 +1924,7 @@
      "cut": 2229
     },
     {
-     "w": "bad",
+     "w": "bad,",
      "roma": "bad",
      "t0": 74.51,
      "how": "snapped",
@@ -1444,11 +1933,11 @@
      "cut": 2234
     },
     {
-     "w": "through",
-     "roma": "throgh",
+     "w": "throw",
+     "roma": "throw",
      "t0": 74.79,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.8,
      "t1": 74.91,
      "cut": 2242
     },
@@ -1458,37 +1947,37 @@
      "t0": 74.91,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 75.07,
+     "t1": 75.06,
      "cut": 2246
     },
     {
      "w": "tantrum",
      "roma": "tantrum",
-     "t0": 75.07,
+     "t0": 75.06,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 75.56,
-     "cut": 2251
-    },
-    {
-     "w": "Daddy's",
-     "roma": "daddys",
-     "t0": 75.56,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 76.46,
-     "cut": 2265
+     "t1": 75.81,
+     "cut": 2250
     }
    ],
-   "t0": 71.62,
-   "t1": 76.46,
-   "cut": 2147
+   "t0": 73.68,
+   "t1": 75.81,
+   "cut": 2209
   },
   {
-   "i": 15,
-   "para": 0,
-   "text": "so bad, need an anthem Pants are droppin', pants are droppin' When",
+   "i": 27,
+   "para": 4,
+   "text": "Baddie so bad, need an anthem",
    "words": [
+    {
+     "w": "Baddie",
+     "roma": "baddie",
+     "t0": 75.81,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 76.46,
+     "cut": 2273
+    },
     {
      "w": "so",
      "roma": "so",
@@ -1531,17 +2020,27 @@
      "t0": 77.27,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 77.56,
+     "t1": 77.57,
      "cut": 2317
-    },
+    }
+   ],
+   "t0": 75.81,
+   "t1": 77.57,
+   "cut": 2273
+  },
+  {
+   "i": 28,
+   "para": 4,
+   "text": "Pins are dropping, pins are dropping",
+   "words": [
     {
-     "w": "Pants",
-     "roma": "pants",
-     "t0": 77.56,
+     "w": "Pins",
+     "roma": "pins",
+     "t0": 77.57,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.5,
      "t1": 78.57,
-     "cut": 2325
+     "cut": 2326
     },
     {
      "w": "are",
@@ -1553,20 +2052,20 @@
      "cut": 2356
     },
     {
-     "w": "droppin',",
-     "roma": "droppin",
+     "w": "dropping,",
+     "roma": "dropping",
      "t0": 78.75,
      "how": "interpolated",
-     "conf": 1.0,
-     "t1": 79.07,
+     "conf": 0.88,
+     "t1": 79.08,
      "cut": 2361
     },
     {
-     "w": "pants",
-     "roma": "pants",
-     "t0": 79.07,
-     "how": "snapped",
-     "conf": 1.0,
+     "w": "pins",
+     "roma": "pins",
+     "t0": 79.08,
+     "how": "interpolated",
+     "conf": 0.25,
      "t1": 79.3,
      "cut": 2371
     },
@@ -1580,14 +2079,24 @@
      "cut": 2378
     },
     {
-     "w": "droppin'",
-     "roma": "droppin",
+     "w": "dropping",
+     "roma": "dropping",
      "t0": 79.58,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.88,
      "t1": 80.1,
      "cut": 2386
-    },
+    }
+   ],
+   "t0": 77.57,
+   "t1": 80.1,
+   "cut": 2326
+  },
+  {
+   "i": 29,
+   "para": 4,
+   "text": "When I walk in, when I walk in (Watch me)",
+   "words": [
     {
      "w": "When",
      "roma": "when",
@@ -1596,20 +2105,10 @@
      "conf": 1.0,
      "t1": 80.37,
      "cut": 2402
-    }
-   ],
-   "t0": 76.46,
-   "t1": 80.37,
-   "cut": 2292
-  },
-  {
-   "i": 16,
-   "para": 0,
-   "text": "I'm walkin', when I'm walkin'",
-   "words": [
+    },
     {
-     "w": "I'm",
-     "roma": "im",
+     "w": "I",
+     "roma": "i",
      "t0": 80.37,
      "how": "snapped",
      "conf": 1.0,
@@ -1617,13 +2116,22 @@
      "cut": 2410
     },
     {
-     "w": "walkin',",
-     "roma": "walkin",
+     "w": "walk",
+     "roma": "walk",
      "t0": 80.81,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 81.39,
+     "t1": 81.09,
      "cut": 2423
+    },
+    {
+     "w": "in,",
+     "roma": "in",
+     "t0": 81.09,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 81.39,
+     "cut": 2431
     },
     {
      "w": "when",
@@ -1631,75 +2139,93 @@
      "t0": 81.39,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 81.62,
+     "t1": 81.64,
      "cut": 2440
     },
     {
-     "w": "I'm",
-     "roma": "im",
-     "t0": 81.62,
+     "w": "I",
+     "roma": "i",
+     "t0": 81.64,
      "how": "interpolated",
      "conf": 1.0,
-     "t1": 81.8,
-     "cut": 2447
+     "t1": 81.79,
+     "cut": 2448
     },
     {
-     "w": "walkin'",
-     "roma": "walkin",
-     "t0": 81.8,
-     "how": "measured",
+     "w": "walk",
+     "roma": "walk",
+     "t0": 81.79,
+     "how": "snapped",
      "conf": 1.0,
-     "t1": 83.3,
-     "cut": 2453
-    }
-   ],
-   "t0": 80.37,
-   "t1": 83.3,
-   "cut": 2410
-  },
-  {
-   "i": 17,
-   "para": 0,
-   "text": "Watch me Watch me move Running circles, run these dudes In my",
-   "words": [
+     "t1": 82.12,
+     "cut": 2452
+    },
+    {
+     "w": "in",
+     "roma": "in",
+     "t0": 82.12,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 83.03,
+     "cut": 2462
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 83.03,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 83.55,
+     "cut": 2489
+    },
     {
      "w": "Watch",
      "roma": "watch",
      "t0": 83.55,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 84.08,
+     "t1": 84.25,
      "cut": 2505
     },
     {
-     "w": "me",
+     "w": "me)",
      "roma": "me",
-     "t0": 84.08,
+     "t0": 84.25,
      "how": "snapped",
      "conf": 1.0,
      "t1": 84.35,
-     "cut": 2521
-    },
+     "cut": 2526
+    }
+   ],
+   "t0": 80.1,
+   "t1": 84.35,
+   "cut": 2402
+  },
+  {
+   "i": 30,
+   "para": 5,
+   "text": "Watch me move, runnin' circles 'round these dudes (Watch me)",
+   "words": [
     {
      "w": "Watch",
      "roma": "watch",
      "t0": 84.35,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 85.03,
+     "t1": 84.94,
      "cut": 2529
     },
     {
      "w": "me",
      "roma": "me",
-     "t0": 85.03,
+     "t0": 84.94,
      "how": "snapped",
      "conf": 1.0,
      "t1": 85.24,
-     "cut": 2549
+     "cut": 2547
     },
     {
-     "w": "move",
+     "w": "move,",
      "roma": "move",
      "t0": 85.24,
      "how": "snapped",
@@ -1708,40 +2234,40 @@
      "cut": 2556
     },
     {
-     "w": "Running",
-     "roma": "running",
+     "w": "runnin'",
+     "roma": "runnin",
      "t0": 85.63,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 86.26,
+     "t1": 86.27,
      "cut": 2567
     },
     {
-     "w": "circles,",
+     "w": "circles",
      "roma": "circles",
-     "t0": 86.26,
+     "t0": 86.27,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 86.87,
-     "cut": 2586
+     "t1": 86.73,
+     "cut": 2587
     },
     {
-     "w": "run",
-     "roma": "run",
-     "t0": 86.87,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 87.1,
-     "cut": 2605
+     "w": "'round",
+     "roma": "rond",
+     "t0": 86.73,
+     "how": "interpolated",
+     "conf": 0.25,
+     "t1": 86.99,
+     "cut": 2600
     },
     {
      "w": "these",
      "roma": "these",
-     "t0": 87.1,
+     "t0": 86.99,
      "how": "snapped",
      "conf": 1.0,
      "t1": 87.35,
-     "cut": 2612
+     "cut": 2608
     },
     {
      "w": "dudes",
@@ -1749,17 +2275,54 @@
      "t0": 87.35,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 87.54,
+     "t1": 87.423,
      "cut": 2619
     },
     {
+     "w": "(",
+     "roma": "",
+     "t0": 87.423,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 87.49,
+     "cut": 2621
+    },
+    {
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 87.49,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 87.556,
+     "cut": 2623
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 87.556,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 87.623,
+     "cut": 2625
+    }
+   ],
+   "t0": 84.35,
+   "t1": 87.623,
+   "cut": 2529
+  },
+  {
+   "i": 31,
+   "para": 5,
+   "text": "In my Loubs, breakin' hearts and breakin' news (Breakin', breakin', watch me)",
+   "words": [
+    {
      "w": "In",
      "roma": "in",
-     "t0": 87.54,
+     "t0": 87.623,
      "how": "snapped",
      "conf": 1.0,
      "t1": 88.91,
-     "cut": 2625
+     "cut": 2627
     },
     {
      "w": "my",
@@ -1767,31 +2330,21 @@
      "t0": 88.91,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 89.3,
+     "t1": 89.31,
      "cut": 2666
-    }
-   ],
-   "t0": 83.55,
-   "t1": 89.3,
-   "cut": 2505
-  },
-  {
-   "i": 18,
-   "para": 0,
-   "text": "loops, breaking hearts and breaking news",
-   "words": [
+    },
     {
-     "w": "loops,",
-     "roma": "lops",
-     "t0": 89.3,
+     "w": "Loubs,",
+     "roma": "lobs",
+     "t0": 89.31,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.75,
      "t1": 89.9,
      "cut": 2678
     },
     {
-     "w": "breaking",
-     "roma": "breaking",
+     "w": "breakin'",
+     "roma": "breakin",
      "t0": 89.9,
      "how": "snapped",
      "conf": 1.0,
@@ -1817,46 +2370,91 @@
      "cut": 2720
     },
     {
-     "w": "breaking",
-     "roma": "breaking",
+     "w": "breakin'",
+     "roma": "breakin",
      "t0": 90.87,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 91.2,
+     "t1": 91.12,
      "cut": 2725
     },
     {
      "w": "news",
      "roma": "news",
-     "t0": 91.2,
+     "t0": 91.12,
      "how": "snapped",
      "conf": 1.0,
+     "t1": 91.36,
+     "cut": 2732
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 91.36,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 91.427,
+     "cut": 2739
+    },
+    {
+     "w": "Breakin',",
+     "roma": "breakin",
+     "t0": 91.427,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 91.85,
+     "cut": 2741
+    },
+    {
+     "w": "breakin',",
+     "roma": "breakin",
+     "t0": 91.85,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 92.27,
+     "cut": 2754
+    },
+    {
+     "w": "watch",
+     "roma": "watch",
+     "t0": 92.27,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 92.56,
+     "cut": 2767
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 92.56,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 92.67,
-     "cut": 2735
+     "cut": 2775
     }
    ],
-   "t0": 89.3,
+   "t0": 87.623,
    "t1": 92.67,
-   "cut": 2678
+   "cut": 2627
   },
   {
-   "i": 19,
-   "para": 0,
-   "text": "Hurricane, when the forecast KDA",
+   "i": 32,
+   "para": 5,
+   "text": "Hurricane when the forecast K/DA, ayy",
    "words": [
     {
-     "w": "Hurricane,",
+     "w": "Hurricane",
      "roma": "hurricane",
      "t0": 92.67,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 93.83,
+     "t1": 93.82,
      "cut": 2779
     },
     {
      "w": "when",
      "roma": "when",
-     "t0": 93.83,
+     "t0": 93.82,
      "how": "snapped",
      "conf": 1.0,
      "t1": 94.24,
@@ -1881,13 +2479,22 @@
      "cut": 2831
     },
     {
-     "w": "KDA",
+     "w": "K/DA,",
      "roma": "kda",
      "t0": 94.92,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 96.37,
+     "conf": 0.67,
+     "t1": 95.6,
      "cut": 2846
+    },
+    {
+     "w": "ayy",
+     "roma": "ayy",
+     "t0": 95.6,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 96.37,
+     "cut": 2867
     }
    ],
    "t0": 92.67,
@@ -1895,9 +2502,9 @@
    "cut": 2779
   },
   {
-   "i": 20,
-   "para": 0,
-   "text": "On your radar, you can't step away Watch me pose, always keep",
+   "i": 33,
+   "para": 5,
+   "text": "On your radar, you can't look away (Watch me, watch me)",
    "words": [
     {
      "w": "On",
@@ -1905,51 +2512,51 @@
      "t0": 96.37,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 97.04,
+     "t1": 97.07,
      "cut": 2890
     },
     {
      "w": "your",
      "roma": "yor",
-     "t0": 97.04,
+     "t0": 97.07,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 97.51,
-     "cut": 2910
+     "t1": 97.54,
+     "cut": 2911
     },
     {
      "w": "radar,",
      "roma": "radar",
-     "t0": 97.51,
+     "t0": 97.54,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 98.04,
-     "cut": 2924
+     "t1": 98.03,
+     "cut": 2925
     },
     {
      "w": "you",
      "roma": "yo",
-     "t0": 98.04,
+     "t0": 98.03,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 98.38,
-     "cut": 2940
+     "t1": 98.37,
+     "cut": 2939
     },
     {
      "w": "can't",
      "roma": "cant",
-     "t0": 98.38,
+     "t0": 98.37,
      "how": "snapped",
      "conf": 1.0,
      "t1": 98.77,
      "cut": 2950
     },
     {
-     "w": "step",
-     "roma": "step",
+     "w": "look",
+     "roma": "lok",
      "t0": 98.77,
-     "how": "snapped",
-     "conf": 1.0,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 99.06,
      "cut": 2962
     },
@@ -1959,22 +2566,77 @@
      "t0": 99.06,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 99.83,
+     "t1": 99.38,
      "cut": 2970
     },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 99.38,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 99.447,
+     "cut": 2980
+    },
+    {
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 99.447,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 99.513,
+     "cut": 2982
+    },
+    {
+     "w": "me,",
+     "roma": "me",
+     "t0": 99.513,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 99.58,
+     "cut": 2984
+    },
+    {
+     "w": "watch",
+     "roma": "watch",
+     "t0": 99.58,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 99.647,
+     "cut": 2986
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 99.647,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 99.83,
+     "cut": 2988
+    }
+   ],
+   "t0": 96.37,
+   "t1": 99.83,
+   "cut": 2890
+  },
+  {
+   "i": 34,
+   "para": 5,
+   "text": "Watch me pose, always keep 'em on they toes (Keep 'em on they, watch me)",
+   "words": [
     {
      "w": "Watch",
      "roma": "watch",
      "t0": 99.83,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 100.73,
+     "t1": 100.72,
      "cut": 2993
     },
     {
      "w": "me",
      "roma": "me",
-     "t0": 100.73,
+     "t0": 100.72,
      "how": "snapped",
      "conf": 1.0,
      "t1": 101.27,
@@ -1986,13 +2648,13 @@
      "t0": 101.27,
      "how": "interpolated",
      "conf": 1.0,
-     "t1": 102.23,
+     "t1": 102.22,
      "cut": 3037
     },
     {
      "w": "always",
      "roma": "always",
-     "t0": 102.23,
+     "t0": 102.22,
      "how": "snapped",
      "conf": 1.0,
      "t1": 102.64,
@@ -2004,43 +2666,33 @@
      "t0": 102.64,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 103.03,
+     "t1": 103.16,
      "cut": 3078
-    }
-   ],
-   "t0": 96.37,
-   "t1": 103.03,
-   "cut": 2890
-  },
-  {
-   "i": 21,
-   "para": 0,
-   "text": "them on their toes Send a post from the sidewalk to a",
-   "words": [
+    },
     {
-     "w": "them",
-     "roma": "them",
-     "t0": 103.03,
+     "w": "'em",
+     "roma": "em",
+     "t0": 103.16,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 103.15,
-     "cut": 3089
+     "t1": 103.37,
+     "cut": 3093
     },
     {
      "w": "on",
      "roma": "on",
-     "t0": 103.15,
-     "how": "snapped",
+     "t0": 103.37,
+     "how": "interpolated",
      "conf": 1.0,
      "t1": 103.51,
-     "cut": 3093
+     "cut": 3100
     },
     {
-     "w": "their",
-     "roma": "their",
+     "w": "they",
+     "roma": "they",
      "t0": 103.51,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.75,
      "t1": 103.62,
      "cut": 3104
     },
@@ -2050,49 +2702,104 @@
      "t0": 103.62,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 104.16,
+     "t1": 103.89,
      "cut": 3107
     },
     {
-     "w": "Send",
-     "roma": "send",
-     "t0": 104.16,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 105.56,
-     "cut": 3123
+     "w": "(",
+     "roma": "",
+     "t0": 103.89,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 103.957,
+     "cut": 3115
     },
     {
-     "w": "a",
-     "roma": "a",
-     "t0": 105.56,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 105.7,
-     "cut": 3165
+     "w": "Keep",
+     "roma": "kep",
+     "t0": 103.957,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 104.31,
+     "cut": 3117
     },
     {
-     "w": "post",
-     "roma": "post",
-     "t0": 105.7,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 105.98,
-     "cut": 3170
+     "w": "'em",
+     "roma": "em",
+     "t0": 104.31,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 104.377,
+     "cut": 3128
     },
     {
-     "w": "from",
-     "roma": "from",
-     "t0": 105.98,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 106.55,
-     "cut": 3178
+     "w": "on",
+     "roma": "on",
+     "t0": 104.377,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 104.49,
+     "cut": 3130
+    },
+    {
+     "w": "they,",
+     "roma": "they",
+     "t0": 104.49,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 104.86,
+     "cut": 3133
+    },
+    {
+     "w": "watch",
+     "roma": "watch",
+     "t0": 104.86,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 105.31,
+     "cut": 3144
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 105.31,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 105.45,
+     "cut": 3158
+    }
+   ],
+   "t0": 99.83,
+   "t1": 105.45,
+   "cut": 2993
+  },
+  {
+   "i": 35,
+   "para": 5,
+   "text": "Centerfolds turn the sidewalk to a show (Watch me)",
+   "words": [
+    {
+     "w": "Centerfolds",
+     "roma": "centerfolds",
+     "t0": 105.45,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 106.26,
+     "cut": 3162
+    },
+    {
+     "w": "turn",
+     "roma": "turn",
+     "t0": 106.26,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 106.56,
+     "cut": 3186
     },
     {
      "w": "the",
      "roma": "the",
-     "t0": 106.55,
+     "t0": 106.56,
      "how": "snapped",
      "conf": 1.0,
      "t1": 106.72,
@@ -2113,49 +2820,66 @@
      "t0": 107.22,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 107.55,
+     "t1": 107.56,
      "cut": 3215
     },
     {
      "w": "a",
      "roma": "a",
-     "t0": 107.55,
+     "t0": 107.56,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 107.77,
+     "t1": 107.76,
      "cut": 3225
-    }
-   ],
-   "t0": 103.03,
-   "t1": 107.77,
-   "cut": 3089
-  },
-  {
-   "i": 22,
-   "para": 0,
-   "text": "show",
-   "words": [
+    },
     {
      "w": "show",
      "roma": "show",
-     "t0": 107.77,
+     "t0": 107.76,
      "how": "snapped",
-     "conf": 1.0,
+     "conf": 0.75,
+     "t1": 108.2,
+     "cut": 3231
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 108.2,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 108.267,
+     "cut": 3245
+    },
+    {
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 108.267,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 108.78,
+     "cut": 3247
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 108.78,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 109.09,
-     "cut": 3232
+     "cut": 3262
     }
    ],
-   "t0": 107.77,
+   "t0": 105.45,
    "t1": 109.09,
-   "cut": 3232
+   "cut": 3162
   },
   {
-   "i": 23,
-   "para": 0,
-   "text": "Hurricane, when the forecast KDA There's a hundred percent chance of slaying",
+   "i": 36,
+   "para": 5,
+   "text": "Hurricane when the forecast K/DA, ayy",
    "words": [
     {
-     "w": "Hurricane,",
+     "w": "Hurricane",
      "roma": "hurricane",
      "t0": 109.09,
      "how": "snapped",
@@ -2169,17 +2893,17 @@
      "t0": 110.28,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 110.58,
+     "t1": 110.65,
      "cut": 3307
     },
     {
      "w": "the",
      "roma": "the",
-     "t0": 110.58,
+     "t0": 110.65,
      "how": "snapped",
      "conf": 1.0,
      "t1": 110.86,
-     "cut": 3316
+     "cut": 3318
     },
     {
      "w": "forecast",
@@ -2187,26 +2911,45 @@
      "t0": 110.86,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 111.22,
+     "t1": 111.35,
      "cut": 3324
     },
     {
-     "w": "KDA",
+     "w": "K/DA,",
      "roma": "kda",
-     "t0": 111.22,
+     "t0": 111.35,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 112.05,
-     "cut": 3335
+     "conf": 0.67,
+     "t1": 111.66,
+     "cut": 3339
     },
+    {
+     "w": "ayy",
+     "roma": "ayy",
+     "t0": 111.66,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 112.15,
+     "cut": 3348
+    }
+   ],
+   "t0": 109.09,
+   "t1": 112.15,
+   "cut": 3271
+  },
+  {
+   "i": 37,
+   "para": 5,
+   "text": "There's a hundred percent chance of slay (Slay, watch me)",
+   "words": [
     {
      "w": "There's",
      "roma": "theres",
-     "t0": 112.05,
+     "t0": 112.15,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 113.55,
-     "cut": 3360
+     "t1": 113.65,
+     "cut": 3363
     },
     {
      "w": "a",
@@ -2214,62 +2957,98 @@
      "t0": 113.97,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 114.1,
+     "t1": 114.12,
      "cut": 3418
     },
     {
      "w": "hundred",
      "roma": "hundred",
-     "t0": 114.1,
+     "t0": 114.12,
      "how": "interpolated",
      "conf": 1.0,
-     "t1": 114.34,
+     "t1": 114.48,
      "cut": 3422
     },
     {
      "w": "percent",
      "roma": "percent",
-     "t0": 114.34,
+     "t0": 114.48,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 114.95,
-     "cut": 3429
+     "t1": 114.97,
+     "cut": 3433
     },
     {
      "w": "chance",
      "roma": "chance",
-     "t0": 114.95,
+     "t0": 114.97,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 115.67,
-     "cut": 3447
+     "t1": 115.68,
+     "cut": 3448
     },
     {
      "w": "of",
      "roma": "of",
-     "t0": 115.67,
+     "t0": 115.68,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 115.97,
+     "t1": 115.84,
      "cut": 3469
     },
     {
-     "w": "slaying",
-     "roma": "slaying",
-     "t0": 115.97,
+     "w": "slay",
+     "roma": "slay",
+     "t0": 115.84,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 115.907,
+     "cut": 3474
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 115.907,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 115.973,
+     "cut": 3476
+    },
+    {
+     "w": "Slay,",
+     "roma": "slay",
+     "t0": 115.973,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 117.47,
+     "t1": 116.95,
      "cut": 3478
+    },
+    {
+     "w": "watch",
+     "roma": "watch",
+     "t0": 116.95,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 118.0,
+     "cut": 3507
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 118.07,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 118.53,
+     "cut": 3541
     }
    ],
-   "t0": 109.09,
-   "t1": 117.47,
-   "cut": 3271
+   "t0": 112.15,
+   "t1": 118.53,
+   "cut": 3363
   },
   {
-   "i": 24,
-   "para": 0,
+   "i": 38,
+   "para": 6,
    "text": "Watch me",
    "words": [
     {
@@ -2296,32 +3075,42 @@
    "cut": 3554
   },
   {
-   "i": 25,
-   "para": 0,
-   "text": "It's KDF Watch me On your radar, you can't look away You're",
+   "i": 39,
+   "para": 6,
+   "text": "It's K/DA",
    "words": [
     {
      "w": "It's",
      "roma": "its",
-     "t0": 122.17,
-     "how": "snapped",
+     "t0": 122.26,
+     "how": "measured",
      "conf": 1.0,
      "t1": 123.18,
-     "cut": 3664
+     "cut": 3666
     },
     {
-     "w": "KDF",
-     "roma": "kdf",
+     "w": "K/DA",
+     "roma": "kda",
      "t0": 123.18,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 124.04,
+     "conf": 0.67,
+     "t1": 124.05,
      "cut": 3694
-    },
+    }
+   ],
+   "t0": 122.26,
+   "t1": 124.05,
+   "cut": 3666
+  },
+  {
+   "i": 40,
+   "para": 6,
+   "text": "Watch me",
+   "words": [
     {
      "w": "Watch",
      "roma": "watch",
-     "t0": 124.04,
+     "t0": 124.05,
      "how": "snapped",
      "conf": 1.0,
      "t1": 125.5,
@@ -2335,7 +3124,17 @@
      "conf": 1.0,
      "t1": 127.48,
      "cut": 3778
-    },
+    }
+   ],
+   "t0": 124.05,
+   "t1": 127.48,
+   "cut": 3720
+  },
+  {
+   "i": 41,
+   "para": 6,
+   "text": "On your radar, you can't look away (way)",
+   "words": [
     {
      "w": "On",
      "roma": "on",
@@ -2351,13 +3150,13 @@
      "t0": 130.08,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 130.36,
+     "t1": 130.35,
      "cut": 3901
     },
     {
      "w": "radar,",
      "roma": "radar",
-     "t0": 130.36,
+     "t0": 130.35,
      "how": "snapped",
      "conf": 1.0,
      "t1": 130.85,
@@ -2378,17 +3177,17 @@
      "t0": 131.09,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 131.65,
+     "t1": 131.69,
      "cut": 3931
     },
     {
      "w": "look",
      "roma": "lok",
-     "t0": 131.65,
+     "t0": 131.69,
      "how": "snapped",
      "conf": 1.0,
      "t1": 131.88,
-     "cut": 3948
+     "cut": 3949
     },
     {
      "w": "away",
@@ -2396,72 +3195,136 @@
      "t0": 131.88,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 132.65,
+     "t1": 132.55,
      "cut": 3955
     },
     {
-     "w": "You're",
-     "roma": "yore",
-     "t0": 132.65,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 134.15,
-     "cut": 3978
+     "w": "(",
+     "roma": "",
+     "t0": 132.55,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 132.8,
+     "cut": 3975
+    },
+    {
+     "w": "way)",
+     "roma": "way",
+     "t0": 132.8,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 133.34,
+     "cut": 3983
     }
    ],
-   "t0": 122.17,
-   "t1": 134.15,
-   "cut": 3664
+   "t0": 128.23,
+   "t1": 133.34,
+   "cut": 3845
   },
   {
-   "i": 26,
-   "para": 0,
-   "text": "gonna like me If you wanna like that There's only one way",
+   "i": 42,
+   "para": 7,
+   "text": "I got it like that (Oh yeah)",
    "words": [
     {
-     "w": "gonna",
-     "roma": "gonna",
-     "t0": 134.16,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 134.34,
-     "cut": 4023
+     "w": "I",
+     "roma": "i",
+     "t0": 133.34,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 133.56,
+     "cut": 3999
+    },
+    {
+     "w": "got",
+     "roma": "got",
+     "t0": 133.56,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 134.06,
+     "cut": 4005
+    },
+    {
+     "w": "it",
+     "roma": "it",
+     "t0": 134.06,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 134.39,
+     "cut": 4020
     },
     {
      "w": "like",
      "roma": "like",
-     "t0": 134.34,
+     "t0": 134.39,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 134.8,
-     "cut": 4029
+     "t1": 134.561,
+     "cut": 4030
     },
     {
-     "w": "me",
-     "roma": "me",
+     "w": "that",
+     "roma": "that",
+     "t0": 134.561,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 134.8,
+     "cut": 4035
+    },
+    {
+     "w": "(",
+     "roma": "",
      "t0": 134.8,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 135.03,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 134.867,
      "cut": 4043
     },
+    {
+     "w": "Oh",
+     "roma": "oh",
+     "t0": 134.867,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 134.933,
+     "cut": 4045
+    },
+    {
+     "w": "yeah)",
+     "roma": "yeah",
+     "t0": 134.933,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 135.03,
+     "cut": 4046
+    }
+   ],
+   "t0": 133.34,
+   "t1": 135.03,
+   "cut": 3999
+  },
+  {
+   "i": 43,
+   "para": 7,
+   "text": "If you wanna like that (Oh)",
+   "words": [
     {
      "w": "If",
      "roma": "if",
      "t0": 135.03,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 135.83,
+     "t1": 135.73,
      "cut": 4049
     },
     {
      "w": "you",
      "roma": "yo",
-     "t0": 135.83,
+     "t0": 135.73,
      "how": "snapped",
      "conf": 1.0,
      "t1": 136.08,
-     "cut": 4073
+     "cut": 4070
     },
     {
      "w": "wanna",
@@ -2469,27 +3332,55 @@
      "t0": 136.08,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 136.38,
+     "t1": 136.36,
      "cut": 4081
     },
     {
      "w": "like",
      "roma": "like",
-     "t0": 136.38,
+     "t0": 136.36,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 136.64,
-     "cut": 4090
+     "t1": 136.73,
+     "cut": 4089
     },
     {
      "w": "that",
      "roma": "that",
-     "t0": 136.64,
+     "t0": 136.73,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 137.24,
-     "cut": 4098
+     "t1": 137.05,
+     "cut": 4100
     },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 137.05,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 137.117,
+     "cut": 4110
+    },
+    {
+     "w": "Oh)",
+     "roma": "oh",
+     "t0": 137.117,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 137.24,
+     "cut": 4112
+    }
+   ],
+   "t0": 135.03,
+   "t1": 137.24,
+   "cut": 4049
+  },
+  {
+   "i": 44,
+   "para": 7,
+   "text": "There's only one way to know",
+   "words": [
     {
      "w": "There's",
      "roma": "theres",
@@ -2514,28 +3405,18 @@
      "t0": 138.56,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 138.9,
+     "t1": 138.91,
      "cut": 4155
     },
     {
      "w": "way",
      "roma": "way",
-     "t0": 138.9,
+     "t0": 138.91,
      "how": "snapped",
      "conf": 1.0,
      "t1": 139.09,
      "cut": 4166
-    }
-   ],
-   "t0": 134.16,
-   "t1": 139.09,
-   "cut": 4023
-  },
-  {
-   "i": 27,
-   "para": 0,
-   "text": "to know",
-   "words": [
+    },
     {
      "w": "to",
      "roma": "to",
@@ -2550,19 +3431,56 @@
      "roma": "know",
      "t0": 139.34,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 140.84,
+     "conf": 0.75,
+     "t1": 140.67,
      "cut": 4179
     }
    ],
-   "t0": 139.09,
-   "t1": 140.84,
-   "cut": 4171
+   "t0": 137.24,
+   "t1": 140.67,
+   "cut": 4116
   },
   {
-   "i": 28,
-   "para": 0,
-   "text": "Watch me move, run in circles, run these dudes Can I lose,",
+   "i": 45,
+   "para": 7,
+   "text": "(Watch me)",
+   "words": [
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 140.67,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 140.96,
+     "cut": 4219
+    },
+    {
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 140.96,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 142.46,
+     "cut": 4227
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 142.63,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 143.14,
+     "cut": 4277
+    }
+   ],
+   "t0": 140.67,
+   "t1": 143.14,
+   "cut": 4219
+  },
+  {
+   "i": 46,
+   "para": 8,
+   "text": "Watch me move (Watch me), runnin' circles 'round these dudes (Watch me)",
    "words": [
     {
      "w": "Watch",
@@ -2570,71 +3488,89 @@
      "t0": 143.14,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 143.83,
+     "t1": 144.01,
      "cut": 4293
     },
     {
      "w": "me",
      "roma": "me",
-     "t0": 143.83,
+     "t0": 144.01,
      "how": "snapped",
      "conf": 1.0,
      "t1": 144.72,
-     "cut": 4313
+     "cut": 4319
     },
     {
-     "w": "move,",
+     "w": "move",
      "roma": "move",
      "t0": 144.72,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 145.14,
+     "conf": 0.75,
+     "t1": 144.82,
      "cut": 4340
     },
     {
-     "w": "run",
-     "roma": "run",
-     "t0": 145.14,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 145.56,
-     "cut": 4353
+     "w": "(",
+     "roma": "",
+     "t0": 144.82,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 144.887,
+     "cut": 4343
     },
     {
-     "w": "in",
-     "roma": "in",
-     "t0": 145.56,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 145.74,
-     "cut": 4365
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 144.887,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 144.97,
+     "cut": 4345
     },
     {
-     "w": "circles,",
+     "w": "me),",
+     "roma": "me",
+     "t0": 144.97,
+     "how": "snapped",
+     "conf": 0.5,
+     "t1": 145.12,
+     "cut": 4348
+    },
+    {
+     "w": "runnin'",
+     "roma": "runnin",
+     "t0": 145.12,
+     "how": "snapped",
+     "conf": 0.83,
+     "t1": 145.68,
+     "cut": 4352
+    },
+    {
+     "w": "circles",
      "roma": "circles",
-     "t0": 145.74,
+     "t0": 145.68,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 146.4,
-     "cut": 4371
+     "t1": 146.22,
+     "cut": 4369
     },
     {
-     "w": "run",
-     "roma": "run",
-     "t0": 146.4,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 146.7,
-     "cut": 4391
+     "w": "'round",
+     "roma": "rond",
+     "t0": 146.22,
+     "how": "interpolated",
+     "conf": 0.25,
+     "t1": 146.4,
+     "cut": 4385
     },
     {
      "w": "these",
      "roma": "these",
-     "t0": 146.7,
-     "how": "interpolated",
+     "t0": 146.4,
+     "how": "snapped",
      "conf": 1.0,
      "t1": 146.85,
-     "cut": 4400
+     "cut": 4391
     },
     {
      "w": "dudes",
@@ -2642,49 +3578,76 @@
      "t0": 146.85,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 147.22,
+     "t1": 147.42,
      "cut": 4404
     },
     {
-     "w": "Can",
-     "roma": "can",
-     "t0": 147.22,
-     "how": "snapped",
-     "conf": 1.0,
+     "w": "(",
+     "roma": "",
+     "t0": 147.42,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 147.56,
+     "cut": 4421
+    },
+    {
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 147.56,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 148.22,
+     "cut": 4425
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 148.22,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 148.51,
-     "cut": 4415
-    },
-    {
-     "w": "I",
-     "roma": "i",
-     "t0": 148.51,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 148.8,
-     "cut": 4454
-    },
-    {
-     "w": "lose,",
-     "roma": "lose",
-     "t0": 148.8,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 149.34,
-     "cut": 4463
+     "cut": 4445
     }
    ],
    "t0": 143.14,
-   "t1": 149.34,
+   "t1": 148.51,
    "cut": 4293
   },
   {
-   "i": 29,
-   "para": 0,
-   "text": "breaking hearts and breaking news",
+   "i": 47,
+   "para": 8,
+   "text": "In my Loubs, breakin' hearts and breakin' news (Breakin', breakin', watch me)",
    "words": [
     {
-     "w": "breaking",
-     "roma": "breaking",
+     "w": "In",
+     "roma": "in",
+     "t0": 148.51,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 148.577,
+     "cut": 4454
+    },
+    {
+     "w": "my",
+     "roma": "my",
+     "t0": 148.577,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 148.8,
+     "cut": 4456
+    },
+    {
+     "w": "Loubs,",
+     "roma": "lobs",
+     "t0": 148.8,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 149.34,
+     "cut": 4463
+    },
+    {
+     "w": "breakin'",
+     "roma": "breakin",
      "t0": 149.34,
      "how": "snapped",
      "conf": 1.0,
@@ -2710,32 +3673,77 @@
      "cut": 4502
     },
     {
-     "w": "breaking",
-     "roma": "breaking",
+     "w": "breakin'",
+     "roma": "breakin",
      "t0": 150.36,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 150.71,
+     "t1": 150.59,
      "cut": 4509
     },
     {
      "w": "news",
      "roma": "news",
-     "t0": 150.71,
+     "t0": 150.59,
      "how": "snapped",
      "conf": 1.0,
+     "t1": 150.84,
+     "cut": 4516
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 150.84,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 150.907,
+     "cut": 4524
+    },
+    {
+     "w": "Breakin',",
+     "roma": "breakin",
+     "t0": 150.907,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 151.34,
+     "cut": 4526
+    },
+    {
+     "w": "breakin',",
+     "roma": "breakin",
+     "t0": 151.34,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 151.72,
+     "cut": 4539
+    },
+    {
+     "w": "watch",
+     "roma": "watch",
+     "t0": 151.72,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 152.06,
+     "cut": 4550
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 152.06,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 152.16,
-     "cut": 4520
+     "cut": 4560
     }
    ],
-   "t0": 149.34,
+   "t0": 148.51,
    "t1": 152.16,
-   "cut": 4479
+   "cut": 4454
   },
   {
-   "i": 30,
-   "para": 0,
-   "text": "Hurricane, when the forecast KDA",
+   "i": 48,
+   "para": 8,
+   "text": "Hurricane, when the forecast K/DA, ayy",
    "words": [
     {
      "w": "Hurricane,",
@@ -2743,26 +3751,26 @@
      "t0": 152.16,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 153.32,
+     "t1": 153.37,
      "cut": 4563
     },
     {
      "w": "when",
      "roma": "when",
-     "t0": 153.32,
+     "t0": 153.37,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 153.66,
-     "cut": 4598
+     "t1": 153.73,
+     "cut": 4600
     },
     {
      "w": "the",
      "roma": "the",
-     "t0": 153.66,
+     "t0": 153.73,
      "how": "snapped",
      "conf": 1.0,
      "t1": 153.93,
-     "cut": 4608
+     "cut": 4610
     },
     {
      "w": "forecast",
@@ -2774,32 +3782,41 @@
      "cut": 4616
     },
     {
-     "w": "KDA",
+     "w": "K/DA,",
      "roma": "kda",
      "t0": 154.43,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 155.85,
+     "conf": 0.67,
+     "t1": 155.11,
      "cut": 4631
+    },
+    {
+     "w": "ayy",
+     "roma": "ayy",
+     "t0": 155.11,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 155.87,
+     "cut": 4652
     }
    ],
    "t0": 152.16,
-   "t1": 155.85,
+   "t1": 155.87,
    "cut": 4563
   },
   {
-   "i": 31,
-   "para": 0,
-   "text": "On your radar, you can't look away",
+   "i": 49,
+   "para": 8,
+   "text": "On your radar, you can't look away (Watch me)",
    "words": [
     {
      "w": "On",
      "roma": "on",
-     "t0": 155.85,
+     "t0": 155.87,
      "how": "snapped",
      "conf": 1.0,
      "t1": 156.57,
-     "cut": 4674
+     "cut": 4675
     },
     {
      "w": "your",
@@ -2852,18 +3869,45 @@
      "t0": 158.71,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 160.21,
+     "t1": 159.33,
      "cut": 4760
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 159.33,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 159.397,
+     "cut": 4778
+    },
+    {
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 159.397,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 159.87,
+     "cut": 4780
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 159.87,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 160.25,
+     "cut": 4795
     }
    ],
-   "t0": 155.85,
-   "t1": 160.21,
-   "cut": 4674
+   "t0": 155.87,
+   "t1": 160.25,
+   "cut": 4675
   },
   {
-   "i": 32,
-   "para": 0,
-   "text": "Watch me pose, always keep them on their toes",
+   "i": 50,
+   "para": 8,
+   "text": "Watch me pose (Oh), always keep 'em on they toes (Keep 'em on they, watch me)",
    "words": [
     {
      "w": "Watch",
@@ -2871,26 +3915,44 @@
      "t0": 160.25,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 160.99,
+     "t1": 160.91,
      "cut": 4806
     },
     {
      "w": "me",
      "roma": "me",
-     "t0": 160.99,
+     "t0": 160.91,
      "how": "snapped",
      "conf": 1.0,
      "t1": 161.11,
-     "cut": 4828
+     "cut": 4826
     },
     {
-     "w": "pose,",
+     "w": "pose",
      "roma": "pose",
      "t0": 161.11,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 161.87,
+     "t1": 161.55,
      "cut": 4832
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 161.55,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 161.65,
+     "cut": 4845
+    },
+    {
+     "w": "Oh),",
+     "roma": "oh",
+     "t0": 161.65,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 161.87,
+     "cut": 4848
     },
     {
      "w": "always",
@@ -2907,17 +3969,71 @@
      "t0": 162.14,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 162.52,
+     "t1": 162.37,
      "cut": 4863
     },
     {
-     "w": "them",
-     "roma": "them",
-     "t0": 162.52,
+     "w": "'em",
+     "roma": "em",
+     "t0": 162.37,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 162.437,
+     "cut": 4870
+    },
+    {
+     "w": "on",
+     "roma": "on",
+     "t0": 162.437,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 162.503,
+     "cut": 4872
+    },
+    {
+     "w": "they",
+     "roma": "they",
+     "t0": 162.503,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 162.57,
+     "cut": 4874
+    },
+    {
+     "w": "toes",
+     "roma": "toes",
+     "t0": 162.57,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 162.637,
+     "cut": 4876
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 162.637,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 162.703,
+     "cut": 4878
+    },
+    {
+     "w": "Keep",
+     "roma": "kep",
+     "t0": 162.703,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 162.77,
+     "cut": 4880
+    },
+    {
+     "w": "'em",
+     "roma": "em",
+     "t0": 162.77,
      "how": "snapped",
      "conf": 1.0,
      "t1": 162.86,
-     "cut": 4874
+     "cut": 4882
     },
     {
      "w": "on",
@@ -2929,50 +4045,59 @@
      "cut": 4884
     },
     {
-     "w": "their",
-     "roma": "their",
+     "w": "they,",
+     "roma": "they",
      "t0": 163.0,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 163.11,
+     "conf": 0.75,
+     "t1": 163.8,
      "cut": 4889
     },
     {
-     "w": "toes",
-     "roma": "toes",
-     "t0": 163.11,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 164.61,
-     "cut": 4892
+     "w": "watch",
+     "roma": "watch",
+     "t0": 163.8,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 164.64,
+     "cut": 4913
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 164.64,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 165.19,
+     "cut": 4938
     }
    ],
    "t0": 160.25,
-   "t1": 164.61,
+   "t1": 165.19,
    "cut": 4806
   },
   {
-   "i": 33,
-   "para": 0,
-   "text": "Centerfolds, from the sidewalk to a show Hurricane,",
+   "i": 51,
+   "para": 8,
+   "text": "Centerfolds turn the sidewalk to a show (Watch me)",
    "words": [
     {
-     "w": "Centerfolds,",
+     "w": "Centerfolds",
      "roma": "centerfolds",
      "t0": 165.19,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 165.89,
+     "t1": 165.8,
      "cut": 4954
     },
     {
-     "w": "from",
-     "roma": "from",
-     "t0": 165.89,
-     "how": "snapped",
-     "conf": 1.0,
+     "w": "turn",
+     "roma": "turn",
+     "t0": 165.8,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 166.02,
-     "cut": 4975
+     "cut": 4973
     },
     {
      "w": "the",
@@ -3015,29 +4140,56 @@
      "roma": "show",
      "t0": 167.24,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 167.53,
+     "conf": 0.75,
+     "t1": 167.337,
      "cut": 5016
     },
     {
-     "w": "Hurricane,",
-     "roma": "hurricane",
-     "t0": 167.53,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 169.03,
-     "cut": 5024
+     "w": "(",
+     "roma": "",
+     "t0": 167.337,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 167.403,
+     "cut": 5019
+    },
+    {
+     "w": "Watch",
+     "roma": "watch",
+     "t0": 167.403,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 167.482,
+     "cut": 5021
+    },
+    {
+     "w": "me)",
+     "roma": "me",
+     "t0": 167.482,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 167.548,
+     "cut": 5023
     }
    ],
    "t0": 165.19,
-   "t1": 169.03,
+   "t1": 167.548,
    "cut": 4954
   },
   {
-   "i": 34,
-   "para": 0,
-   "text": "when the forecast made the end There's a hundred percent chance of",
+   "i": 52,
+   "para": 8,
+   "text": "Hurricane, when the forecast K/DA, ayy (Ayy, ayy)",
    "words": [
+    {
+     "w": "Hurricane,",
+     "roma": "hurricane",
+     "t0": 167.548,
+     "how": "snapped",
+     "conf": 1.0,
+     "t1": 169.048,
+     "cut": 5025
+    },
     {
      "w": "when",
      "roma": "when",
@@ -3066,40 +4218,68 @@
      "cut": 5109
     },
     {
-     "w": "made",
-     "roma": "made",
+     "w": "K/DA,",
+     "roma": "kda",
      "t0": 170.83,
-     "how": "snapped",
-     "conf": 1.0,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 171.15,
      "cut": 5123
     },
     {
-     "w": "the",
-     "roma": "the",
+     "w": "ayy",
+     "roma": "ayy",
      "t0": 171.15,
-     "how": "snapped",
-     "conf": 1.0,
+     "how": "interpolated",
+     "conf": 0.0,
      "t1": 171.37,
      "cut": 5133
     },
     {
-     "w": "end",
-     "roma": "end",
+     "w": "(",
+     "roma": "",
      "t0": 171.37,
-     "how": "snapped",
-     "conf": 1.0,
-     "t1": 171.93,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.62,
      "cut": 5140
     },
     {
+     "w": "Ayy,",
+     "roma": "ayy",
+     "t0": 171.62,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 171.75,
+     "cut": 5147
+    },
+    {
+     "w": "ayy)",
+     "roma": "ayy",
+     "t0": 171.75,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 172.0,
+     "cut": 5151
+    }
+   ],
+   "t0": 167.548,
+   "t1": 172.0,
+   "cut": 5025
+  },
+  {
+   "i": 53,
+   "para": 8,
+   "text": "There's a hundred percent chance of slay (Watch me)",
+   "words": [
+    {
      "w": "There's",
      "roma": "theres",
-     "t0": 171.93,
+     "t0": 172.0,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 173.43,
-     "cut": 5156
+     "t1": 173.45,
+     "cut": 5159
     },
     {
      "w": "a",
@@ -3125,13 +4305,13 @@
      "t0": 173.84,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 174.46,
+     "t1": 174.45,
      "cut": 5214
     },
     {
      "w": "chance",
      "roma": "chance",
-     "t0": 174.46,
+     "t0": 174.45,
      "how": "snapped",
      "conf": 1.0,
      "t1": 174.99,
@@ -3145,70 +4325,79 @@
      "conf": 1.0,
      "t1": 175.45,
      "cut": 5248
-    }
-   ],
-   "t0": 169.72,
-   "t1": 175.45,
-   "cut": 5090
-  },
-  {
-   "i": 35,
-   "para": 0,
-   "text": "sledding Watch me Let's go",
-   "words": [
+    },
     {
-     "w": "sledding",
-     "roma": "sledding",
+     "w": "slay",
+     "roma": "slay",
      "t0": 175.45,
      "how": "snapped",
-     "conf": 1.0,
-     "t1": 176.16,
+     "conf": 0.5,
+     "t1": 176.04,
      "cut": 5262
+    },
+    {
+     "w": "(",
+     "roma": "",
+     "t0": 176.04,
+     "how": "interpolated",
+     "conf": 0.0,
+     "t1": 176.29,
+     "cut": 5280
     },
     {
      "w": "Watch",
      "roma": "watch",
-     "t0": 176.16,
+     "t0": 176.29,
      "how": "snapped",
      "conf": 1.0,
      "t1": 176.4,
-     "cut": 5283
+     "cut": 5287
     },
     {
-     "w": "me",
+     "w": "me)",
      "roma": "me",
      "t0": 176.4,
      "how": "snapped",
      "conf": 1.0,
      "t1": 176.67,
      "cut": 5291
-    },
+    }
+   ],
+   "t0": 172.0,
+   "t1": 176.67,
+   "cut": 5159
+  },
+  {
+   "i": 54,
+   "para": 9,
+   "text": "Let's go",
+   "words": [
     {
      "w": "Let's",
      "roma": "lets",
      "t0": 176.67,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 178.02,
+     "t1": 178.03,
      "cut": 5299
     },
     {
      "w": "go",
      "roma": "go",
-     "t0": 178.02,
+     "t0": 178.03,
      "how": "snapped",
      "conf": 1.0,
      "t1": 179.3,
      "cut": 5339
     }
    ],
-   "t0": 175.45,
+   "t0": 176.67,
    "t1": 179.3,
-   "cut": 5262
+   "cut": 5299
   },
   {
-   "i": 36,
-   "para": 0,
+   "i": 55,
+   "para": 9,
    "text": "Watch me",
    "words": [
     {
@@ -3217,17 +4406,17 @@
      "t0": 179.3,
      "how": "snapped",
      "conf": 1.0,
-     "t1": 180.39,
+     "t1": 180.2,
      "cut": 5378
     },
     {
      "w": "me",
      "roma": "me",
-     "t0": 180.39,
+     "t0": 180.2,
      "how": "snapped",
      "conf": 1.0,
      "t1": 181.1,
-     "cut": 5410
+     "cut": 5405
     }
    ],
    "t0": 179.3,

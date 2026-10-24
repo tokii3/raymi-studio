@@ -76,13 +76,26 @@ per beat whose expression fits the line, shot / side / act / icon / key words, `
   type-critic WEIGHT + SIZE first; calibration: `knowledge/calibration/`. Their answers go VERBATIM into `jobs/<job>/reviews/<stage>_<critic>.md`; only
   `BLOCK: fault|slop` stops; everything else goes to toki as notes. The builder never writes or edits a review.
 
-## Scene probe before every 3D final (toki 2026-10-24: "hör auf punktuell zu fixen, das sind Strukturfehler")
-- `stills.json` `"probe": 15` runs `studio/probe.mjs` over the whole film in the real scene graph (`film/Probe.tsx`);
-  `python -m raymi probe <job> [mv|short]` prints the FAULT CLASSES: limb_in (her bones inside furniture / props),
-  float / sink (her feet against the surface really under her), pop (her hips jump), thing_in / thing_air.
+## QC v2 before every 3D final - three levels (toki 2026-10-24: "mehr Frames, auf mehreren Ebenen ... der Code zeigt
+## keine Fehler, aber visuell sieht man sie - das Endergebnis zählt")
+- Start: push `jobs/<job>/qc.json` `{"format": "mv", "every": 2, "scale": 0.25, "dense": 1, "eye_scale": 0.5,
+  "workers": 12, "_take": 1}` -> `.github/workflows/qc.yml` (parallel workers, like the render). Result on main in
+  `jobs/<job>/boards/`: `probe_<fmt>.txt`, `qc_<fmt>.txt` (the classes), `*_flags.json`, `qc_<fmt>_eye/`.
+- 1 GEOMETRY - the scene probe v2 (`film/Probe.tsx`, `raymi/probe.py`), every 2nd frame (v1 ran every 15th on Beach:
+  335 of ~5000 frames): her real skinned SURFACE against each solid's oriented box + the mesh itself; limb_in,
+  self_in / hair_in (through her own torso), leg_cross, text_in (a lyric in her or in a prop), lens_in / near_cut,
+  head_cut, float / sink, drop (comes down at a shot start or falls - airborne shots are reported too, marked),
+  pop, jerk (a hitch: not fluid), slide (a planted foot skates), thing_in / thing_air.
+- 2 PICTURE - the mask pass (`film/QcMask.tsx`, `studio/qcmask.mjs`, `raymi/qcv2.py`): the frame drawn as flat ID
+  colours three times (all / her only / text only): pierced (something covers a patch INSIDE her outline - a thing in
+  front of her always crosses her outline, a clip never does), text_face, text_hid (per word), face_cut, her_pop.
+- 3 EYE - full stills of every flagged frame + one a second: `qc_<fmt>_eye/NN_<class>_<shot>.jpg` (frame + 2x crop on
+  the fault point), `qc_sheet_NN.jpg`, `dense_NN.jpg` (the whole film, 1 fps). I look at them myself first - a fault no
+  measurement names is still seen - then the look / motion critic.
 - A class that appears in several shots is fixed in the PART that makes it (support.ts grounding + resting things,
-  the push-out in VrmPuppet, a set's chair / solids), never shot by shot. Then probe again; render only when the
-  classes are empty or the rest is measured small and named to toki.
+  the push-out in VrmPuppet, a set's chair / solids, the lyric layout), never shot by shot. Then one more QC run;
+  render only when the classes are empty or the rest is measured small and named to toki.
+- `stills.json` `"probe": N` still runs the probe alone on one runner (quick check of a few shots).
 - The QC also refuses black picture (`no_black_picture_>0.25s`; Beach shot 31: bloom / DoF / AO spread one invalid
   pixel into black frames - the post buffer is 8-bit since).
 

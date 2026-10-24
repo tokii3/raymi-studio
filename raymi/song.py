@@ -817,7 +817,8 @@ def time_lyrics(job_dir: Path, text: str, asr: list[dict], vocals: Path) -> dict
     stats = {k: sum(1 for w in flat if w["how"] == k) for k in ("snapped", "measured", "interpolated")}
     stats["words"] = len(flat)
     res = {"fps": FPS, "source": {"lyrics": ("HEARD by the recogniser (lyrics_heard.txt), not official" if text.startswith("# heard")
-           else "official text (YouTube description)"), "timing": "vocal stem: demucs "
+           else text.splitlines()[0].lstrip("# ").strip() if text.startswith("#") else "official text (YouTube description)"),
+           "timing": "vocal stem: demucs "
            "htdemucs + faster-whisper word times, romaji letter match, snapped to vocal onsets"},
            "stats": stats, "lines": timed}
     (job_dir / "lyrics_timed.json").write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")

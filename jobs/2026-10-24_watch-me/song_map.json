@@ -462,11 +462,11 @@
   {
    "t0": 0.0,
    "t1": 7.5,
-   "kind": "intro",
+   "kind": "peak",
    "loud_db": -2.3,
    "sung": 0.59,
-   "part": null,
-   "first_line": null
+   "part": "A",
+   "first_line": "Ah-ah"
   },
   {
    "t0": 7.5,
@@ -475,12 +475,12 @@
    "loud_db": -20.3,
    "sung": 0.0,
    "part": null,
-   "first_line": null
+   "first_line": "Mwah"
   },
   {
    "t0": 7.9,
    "t1": 8.1,
-   "kind": "intro",
+   "kind": "calm",
    "loud_db": -26.8,
    "sung": 0.5,
    "part": null,
@@ -493,25 +493,25 @@
    "loud_db": -18.6,
    "sung": 1.0,
    "part": null,
-   "first_line": "Camera on, camera off See the same mosaic, back it up Flipped"
+   "first_line": "Camera on, camera off"
   },
   {
    "t0": 8.5,
-   "t1": 25.5,
+   "t1": 25.34,
    "kind": "high",
    "loud_db": -2.8,
    "sung": 1.0,
-   "part": "A",
-   "first_line": "so high, but the glue gone I want your breath, you're a"
+   "part": "B",
+   "first_line": "See the same mosaic"
   },
   {
-   "t0": 25.5,
+   "t0": 25.34,
    "t1": 32.3,
    "kind": "calm",
    "loud_db": -8.7,
    "sung": 1.0,
-   "part": "A",
-   "first_line": "wanna like that There's only one way to know"
+   "part": "C",
+   "first_line": "I got it like that (Ah)"
   },
   {
    "t0": 32.3,
@@ -520,7 +520,7 @@
    "loud_db": -15.4,
    "sung": 1.0,
    "part": null,
-   "first_line": "Watch me move, run in circles around these dudes Keep my loose,"
+   "first_line": "Watch me move, runnin' circles 'round these dudes (Watch me)"
   },
   {
    "t0": 32.7,
@@ -528,8 +528,8 @@
    "kind": "high",
    "loud_db": -2.8,
    "sung": 1.0,
-   "part": "A",
-   "first_line": "breakin' hearts, I'm breakin' loose"
+   "part": "D",
+   "first_line": "In my Loubs, breakin' hearts and breakin' news (Breakin', breakin', watch me)"
   },
   {
    "t0": 66.3,
@@ -546,8 +546,8 @@
    "kind": "high",
    "loud_db": -3.0,
    "sung": 1.0,
-   "part": "A",
-   "first_line": "the half -crash Bucket Chanel with a snapback What'll my money grow?"
+   "part": "E",
+   "first_line": "Rockin' Chanel with a snap-back (Yeah)"
   },
   {
    "t0": 69.5,
@@ -564,8 +564,8 @@
    "kind": "high",
    "loud_db": -2.8,
    "sung": 1.0,
-   "part": "A",
-   "first_line": "Steal my wristband or go? Daddy's so bad through a tantrum Daddy's"
+   "part": "E",
+   "first_line": "Water my money, it grow"
   },
   {
    "t0": 73.2,
@@ -592,7 +592,7 @@
    "loud_db": -11.3,
    "sung": 1.0,
    "part": null,
-   "first_line": null
+   "first_line": "Baddie so bad, throw a tantrum"
   },
   {
    "t0": 74.2,
@@ -600,8 +600,8 @@
    "kind": "high",
    "loud_db": -2.9,
    "sung": 1.0,
-   "part": "A",
-   "first_line": "so bad, need an anthem Pants are droppin', pants are droppin' When"
+   "part": "E",
+   "first_line": "Baddie so bad, need an anthem"
   },
   {
    "t0": 83.4,
@@ -610,7 +610,7 @@
    "loud_db": -13.2,
    "sung": 1.0,
    "part": null,
-   "first_line": "Watch me Watch me move Running circles, run these dudes In my"
+   "first_line": null
   },
   {
    "t0": 84.4,
@@ -618,8 +618,8 @@
    "kind": "high",
    "loud_db": -2.8,
    "sung": 1.0,
-   "part": "A",
-   "first_line": "loops, breaking hearts and breaking news"
+   "part": "F",
+   "first_line": "Watch me move, runnin' circles 'round these dudes (Watch me)"
   },
   {
    "t0": 117.6,
@@ -636,35 +636,44 @@
    "kind": "high",
    "loud_db": -3.8,
    "sung": 0.43,
-   "part": "A",
+   "part": "G",
    "first_line": "Watch me"
   },
   {
    "t0": 127.7,
-   "t1": 142.94,
-   "kind": "calm",
-   "loud_db": -6.3,
-   "sung": 0.95,
-   "part": "A",
-   "first_line": "gonna like me If you wanna like that There's only one way"
+   "t1": 133.34,
+   "kind": "high",
+   "loud_db": -3.8,
+   "sung": 0.88,
+   "part": "G",
+   "first_line": "On your radar, you can't look away (way)"
   },
   {
-   "t0": 142.94,
-   "t1": 177.28,
+   "t0": 133.34,
+   "t1": 143.14,
+   "kind": "calm",
+   "loud_db": -8.5,
+   "sung": 1.0,
+   "part": "H",
+   "first_line": "I got it like that (Oh yeah)"
+  },
+  {
+   "t0": 143.14,
+   "t1": 176.67,
    "kind": "high",
    "loud_db": -3.1,
    "sung": 1.0,
-   "part": "A",
-   "first_line": "Watch me move, run in circles, run these dudes Can I lose,"
+   "part": "I",
+   "first_line": "Watch me move (Watch me), runnin' circles 'round these dudes (Watch me)"
   },
   {
-   "t0": 177.28,
+   "t0": 176.67,
    "t1": 182.49,
    "kind": "peak",
    "loud_db": -2.7,
-   "sung": 0.73,
-   "part": "A",
-   "first_line": "Watch me"
+   "sung": 0.76,
+   "part": "J",
+   "first_line": "Let's go"
   }
  ],
  "stops": [
