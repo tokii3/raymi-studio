@@ -83,7 +83,8 @@ LYRIC_KINDS = {"sign", "float", "stamp", "glass", "card", "ticker", "firework"}
 # what a lyric is MADE of on its object (Words3D): breath-fog, engraved brass, a phone's camera UI, a card's print,
 # the felt's gold print, light
 LYRIC_MATERIALS = {None, "fog", "engraved", "screen", "print", "felt", "light"}
-TRANSITIONS = {"cut", "bubbles", "ink", "whip", "flash", "pass", "rewind", "spin", "zoom"}
+TRANSITIONS = {"cut", "bubbles", "ink", "whip", "flash", "pass", "rewind", "spin", "zoom",
+               "cover"}   # cover: her palm / hair / tail or a frame bar fills the lens, the cut hides inside (Watch Me)
 GRADES = {"day", "closing", "night", "own", "warm", "clean", "ember", "vrm_fire", "pov", "pov_warm"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
 LYRIC_STYLES = {"v1", "v2"}
 # a main element: worn on her head (crown, hat), her face, a lyric word, a prop box in the set (check.ts heroBox)
