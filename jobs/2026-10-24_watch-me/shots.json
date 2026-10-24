@@ -421,7 +421,7 @@
     }
    ],
    "lyrics": {
-    "kind": "card",
+    "kind": "sign",
     "anchor": [
      -1.15,
      1.55,
@@ -434,6 +434,11 @@
     "key_scale": 3.2,
     "cross": "MCU shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
    },
+   "frame_fit": [
+    -0.008,
+    0.051,
+    0.001
+   ],
    "lyrics_fit": {
     "mv": {
      "anchor": [
@@ -441,24 +446,19 @@
       1.55,
       -0.3
      ],
-     "size": 0.045,
-     "width": 1.04,
+     "size": 0.0429,
+     "width": 0.909,
      "tilt": 0,
      "roll": 0,
      "rot": 0,
      "key_scale": 1.3,
      "lens": [
       0.5,
-      0.78,
-      1.2
+      0.8,
+      1.1304857837334574
      ]
     }
-   },
-   "frame_fit": [
-    -0.008,
-    0.051,
-    0.001
-   ]
+   }
   },
   {
    "id": "08",
@@ -642,7 +642,7 @@
     }
    ],
    "lyrics": {
-    "kind": "card",
+    "kind": "sign",
     "anchor": [
      0,
      0.45,
@@ -657,6 +657,11 @@
    "hero": [
     "frame"
    ],
+   "frame_fit": [
+    -0.021,
+    -0.319,
+    0
+   ],
    "lyrics_fit": {
     "mv": {
      "anchor": [
@@ -664,8 +669,8 @@
       0.45,
       0.45
      ],
-     "size": 0.031,
-     "width": 0.71,
+     "size": 0.0314,
+     "width": 0.574,
      "tilt": 0,
      "roll": 0,
      "rot": 0,
@@ -673,15 +678,10 @@
      "lens": [
       0.5,
       0.72,
-      0.8218651770253484
+      0.7133414622697224
      ]
     }
-   },
-   "frame_fit": [
-    -0.021,
-    -0.319,
-    0
-   ]
+   }
   },
   {
    "id": "11",
@@ -1182,7 +1182,7 @@
     }
    ],
    "lyrics": {
-    "kind": "card",
+    "kind": "sign",
     "anchor": [
      0,
      2.35,
@@ -1207,8 +1207,8 @@
       2.35,
       -0.8
      ],
-     "size": 0.018,
-     "width": 0.34,
+     "size": 0.0232,
+     "width": 0.424,
      "tilt": 0,
      "roll": 0,
      "rot": 0,
@@ -1379,7 +1379,7 @@
     }
    ],
    "lyrics": {
-    "kind": "card",
+    "kind": "sign",
     "anchor": [
      1,
      1.9,
@@ -1634,7 +1634,7 @@
     }
    ],
    "lyrics": {
-    "kind": "card",
+    "kind": "sign",
     "anchor": [
      0,
      0.3,
@@ -4415,7 +4415,7 @@
     }
    ],
    "lyrics": {
-    "kind": "card",
+    "kind": "sign",
     "anchor": [
      -1.15,
      1.55,
@@ -4430,16 +4430,16 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.36,
-      1.08,
-      -0.64
+      -0.58,
+      1.14,
+      -0.58
      ],
-     "size": 0.06,
-     "width": 1.23,
+     "size": 0.077,
+     "width": 0.57,
      "tilt": 0.4,
      "roll": 0,
-     "rot": 21.5,
-     "key_scale": 1
+     "rot": 28.7,
+     "key_scale": 1.8
     }
    }
   },
@@ -4780,16 +4780,16 @@
     {
      "at": 0,
      "pos": [
+      1.6,
       1.5,
-      1.25,
-      2
+      2.5
      ],
      "look": [
       -0.17,
-      0.95,
+      1.3,
       0.43
      ],
-     "fov": 40
+     "fov": 42
     }
    ],
    "actor": [
@@ -4810,15 +4810,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.01,
-      1.3,
-      1.05
+      0,
+      1.68,
+      1.26
      ],
-     "size": 0.151,
-     "width": 1.91,
-     "tilt": -7.4,
+     "size": 0.181,
+     "width": 2.27,
+     "tilt": -4.2,
      "roll": 0,
-     "rot": 58,
+     "rot": 52.4,
      "key_scale": 1.8
     }
    }

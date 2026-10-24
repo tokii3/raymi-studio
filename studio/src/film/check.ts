@@ -252,7 +252,9 @@ export function occluders(props: FilmProps, s: Shot, f: number, cam: THREE.Camer
   }
   // lyrics.cross (a close shot, toki 2026-10-19: lyrics may cover her for a while): only her head is kept free
   const ac = actorCells(s, f, cam);
-  if (ac.length) out.push(s.lyrics?.cross ? {name: 'her face', boxes: actorCells(s, f, cam, true)} : {name: 'her figure', boxes: ac});
+  // an opaque card never crosses her (look-critic stills 4: a pink card over her torso read as a censor bar)
+  const crossOk = Boolean(s.lyrics?.cross) && s.lyrics?.kind !== 'card';
+  if (ac.length) out.push(crossOk ? {name: 'her face', boxes: actorCells(s, f, cam, true)} : {name: 'her figure', boxes: ac});
   for (const b of s.solids ?? []) {
     const box = new THREE.Box3().setFromCenterAndSize(new THREE.Vector3(...b.center), new THREE.Vector3(...b.size));
     if (box.distanceToPoint(cam.position) >= depth) continue;

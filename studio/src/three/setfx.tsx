@@ -69,7 +69,7 @@ export const WetFloor: React.FC<{size: [number, number]; pos?: P3; amount: numbe
 
 // ---------------------------------------------------------------- rain + wind
 const Rain: React.FC<{v: number; her: P3; f: number; wind: number; dir: number}> = ({v, her, f, wind, dir}) => {
-  const n = Math.round(280 * v);   // stills 1: 160 thin streaks read as nothing
+  const n = Math.round(200 * v);   // stills 1: 160 read as nothing; look-critic stills 4: 280 buried her
   return (
     <group>
       {Array.from({length: n}, (_, i) => {
@@ -114,11 +114,11 @@ const Wind: React.FC<{v: number; her: P3; f: number; dir: number}> = ({v, her, f
 // ---------------------------------------------------------------- floor events at her feet
 const Splash: React.FC<{d: number; her: P3}> = ({d, her}) => d < 0 || d > 24 ? null : (
   <group position={her}>
-    {Array.from({length: 40}, (_, i) => {
-      const a = rnd(i * 3.3) * Math.PI * 2, sp = 0.07 + rnd(i * 1.9) * 0.06, up = 0.11 + rnd(i * 4.1) * 0.09;
+    {Array.from({length: 34}, (_, i) => {   // a splash stays at her feet (look-critic stills 4: drops up to her chest read as bubble stickers)
+      const a = rnd(i * 3.3) * Math.PI * 2, sp = 0.08 + rnd(i * 1.9) * 0.06, up = 0.06 + rnd(i * 4.1) * 0.05;
       const t = d;
       return <mesh key={i} position={[Math.cos(a) * sp * t * 0.5, up * t - 0.0045 * t * t, Math.sin(a) * sp * t * 0.5]} renderOrder={6}>
-        <sphereGeometry args={[0.03 + rnd(i) * 0.035, 6, 5]} />
+        <sphereGeometry args={[0.02 + rnd(i) * 0.022, 6, 5]} />
         <meshBasicMaterial color="#cfe8ff" transparent opacity={0.8 * (1 - d / 24)} depthWrite={false} toneMapped={false} /></mesh>;
     })}
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, 0]} scale={0.1 + d * 0.06} renderOrder={4}>
@@ -308,4 +308,4 @@ export const SetFx: React.FC<{opts: Record<string, unknown>; f: number; fps: num
 };
 
 /** The wet floor each set has by default (Watch Me: one shared look - a wet mirror floor in all three worlds). */
-export const SET_WET: Record<string, number> = {shoot: 0.22, corner: 0.42, exhibit: 0.12};   // stills 1: too faint; look-critic stills 3: the museum's mirror made ghost legs, a reflected lyric and black floor patches
+export const SET_WET: Record<string, number> = {shoot: 0.15, corner: 0.42, exhibit: 0};   // look-critic stills 4: the museum mirror put her legs in front of the plinth as see-through ghosts - a wet street yes, a mirror under a plinth no;   // stills 1: too faint; look-critic stills 3: the museum's mirror made ghost legs, a reflected lyric and black floor patches

@@ -238,13 +238,20 @@ export const SalmonBody: React.FC<{f: number; cover?: number; jump?: number; sto
   const c = (hex: string) => (stone > 0 ? `#${new THREE.Color(hex).lerp(new THREE.Color('#e9e2d6'), stone).getHexString()}` : hex);
   return (
     <group>
-      <mesh material={toon(c('#ff8f6b'))} castShadow scale={[1, 0.5, 0.3]}><sphereGeometry args={[0.5, 16, 12]} /></mesh>
-      <mesh material={toon(c('#ffc3a8'))} position={[0, -0.08, 0]} scale={[0.85, 0.25, 0.28]}><sphereGeometry args={[0.5, 12, 8]} /></mesh>
+      {/* look-critic stills 4: a faceted clip-art blob next to her painted face - smooth body, a soft belly, a back stripe */}
+      <mesh material={toon(c('#ff8f6b'))} castShadow scale={[1, 0.5, 0.3]}><sphereGeometry args={[0.5, 40, 28]} /></mesh>
+      <mesh material={toon(c('#ffc3a8'))} position={[0, -0.08, 0]} scale={[0.85, 0.25, 0.28]}><sphereGeometry args={[0.5, 32, 20]} /></mesh>
+      <mesh material={toon(c('#e8664a'))} position={[0, 0.06, 0]} scale={[0.82, 0.3, 0.2]}><sphereGeometry args={[0.5, 32, 20]} /></mesh>
       <group position={[-0.48, 0, 0]} rotation={[0, wig, 0]}>
         <mesh position={[-0.16, 0, 0]} rotation={[0, 0, Math.PI / 2]} material={toon(c('#e86d52'))} scale={[1, 1, 0.25]}><coneGeometry args={[0.24, 0.34, 3]} /></mesh>
       </group>
-      <mesh position={[0.32, 0.06, 0.13]} material={toon(c('#140b24'))}><sphereGeometry args={[0.04, 8, 6]} /></mesh>
-      <mesh position={[0.32, 0.06, -0.13]} material={toon(c('#140b24'))}><sphereGeometry args={[0.04, 8, 6]} /></mesh>
+      {[1, -1].map((sd) => (
+        <group key={`eye${sd}`} position={[0.31, 0.06, sd * 0.13]}>
+          <mesh material={toon(c('#fff8f0'))}><sphereGeometry args={[0.062, 20, 14]} /></mesh>
+          <mesh position={[0.025, 0, sd * 0.03]} material={toon(c('#140b24'))}><sphereGeometry args={[0.042, 20, 14]} /></mesh>
+          {stone < 0.5 ? <mesh position={[0.05, 0.02, sd * 0.055]}><sphereGeometry args={[0.012, 8, 6]} /><meshBasicMaterial color="#ffffff" toneMapped={false} /></mesh> : null}
+        </group>
+      ))}
       {/* pectoral fins: down at rest, raised over the eyes when it covers them */}
       {[1, -1].map((side) => (
         <mesh key={side} position={[0.18 + 0.1 * cover, -0.06 + 0.14 * cover, side * 0.15]}
