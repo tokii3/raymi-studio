@@ -234,10 +234,21 @@ function styleMaterials(rig: Rig, style: string) {
       // bloom. Lowering the lights did not hold (anti-loop) - so her own colours carry the headroom: skin pale grey-blue
       // at ~80 % value, fabric and hair a step down, the lit side can never reach white.
       const name = m.name ?? '';
-      if (name.includes('SKIN')) { m.color.multiply(new THREE.Color('#b3bedc')); m.shadeColorFactor?.multiply(new THREE.Color('#8f9cc4')); }
-      else if (name.includes('CLOTH')) m.color.multiply(new THREE.Color('#aeb0c8'));
+      // toki 2026-10-25: "ihr gesicht ist immer überlichtet, ihr rock ... in dunklen scenen komplett weiß, so verhält stoff
+      // sich nicht" - fabric gets a real cool shade, a sharper terminator and the scene's ambient (it falls into shadow);
+      // the face (VRoid exports it with shade = base, i.e. never shaded) gets a shade a step down too
+      const mt = m as typeof m & {shadingToonyFactor?: number; shadingShiftFactor?: number; giEqualizationFactor?: number};
+      if (name.includes('FACE') || name.includes('Face')) {
+        m.color.multiply(new THREE.Color('#b3bedc'));
+        m.shadeColorFactor?.copy(m.color).multiply(new THREE.Color('#9aa2c8'));
+      }
+      else if (name.includes('SKIN')) { m.color.multiply(new THREE.Color('#b3bedc')); m.shadeColorFactor?.multiply(new THREE.Color('#8f9cc4')); }
+      else if (name.includes('CLOTH')) {
+        m.color.multiply(new THREE.Color('#a9abc4'));
+        m.shadeColorFactor?.copy(m.color).multiply(new THREE.Color('#5c5a80'));     // white tulle in shade: violet grey, never white
+        mt.shadingToonyFactor = 0.82; mt.shadingShiftFactor = -0.12; mt.giEqualizationFactor = 0.95;
+      }
       else if (name.includes('HAIR')) m.color.multiply(new THREE.Color('#c4c8e6'));
-      else if (name.includes('FACE') || name.includes('Face')) m.color.multiply(new THREE.Color('#c0c8e2'));
       continue;
     }
     if (style !== 'firestarter') continue;
@@ -259,14 +270,26 @@ function lockColours(rig: Rig, lock: number) {
     const m = mat as THREE.Material & {isMToonMaterial?: boolean; color?: THREE.Color; shadeColorFactor?: THREE.Color;
       emissive?: THREE.Color; emissiveMap?: THREE.Texture | null; map?: THREE.Texture | null};
     if (!m.isMToonMaterial || !m.color || !m.emissive) continue;
-    const k = (1 - lock) / Math.max(1e-3, 1 - from);     // undo the previous lock, apply the new one
+    // the lock is for her SKIN's hue (hard rule 9), not for everything: a self-lit white skirt stayed white in the dark
+    // and the face (self-lit + key + bloom) burnt (toki 2026-10-25). Skin / face / eyes keep 0.8 of it, hair a third,
+    // fabric none - it takes the set's light and her own glow like cloth does
+    const share = lockShare(m.name ?? '');
+    const a = from * share, b = lock * share;
+    const k = (1 - b) / Math.max(1e-3, 1 - a);           // undo the previous lock, apply the new one
     m.color.multiplyScalar(k);
     m.shadeColorFactor?.multiplyScalar(k);
-    m.emissiveMap = m.map ?? null;
-    m.emissive.setScalar(lock);
+    m.emissiveMap = b > 0 ? m.map ?? null : null;
+    m.emissive.setScalar(b);
     m.needsUpdate = true;
   }
   rig.lock = lock;
+}
+
+/** How much of the colour lock a material takes (VRoid names: ..._SKIN, Face..., Eye..., ..._HAIR, ..._CLOTH). */
+export function lockShare(name: string): number {
+  if (/SKIN|Face|FACE|Eye|EYE|Mouth/.test(name)) return 0.8;
+  if (/HAIR/.test(name)) return 0.33;
+  return 0;
 }
 
 // ------------------------------------------------------------------ the state at a frame (pure, from the keys)

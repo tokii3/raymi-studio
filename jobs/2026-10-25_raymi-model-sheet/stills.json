@@ -1,0 +1,30 @@
+{
+ "format": "mv",
+ "frames": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "names": [
+  "front",
+  "back",
+  "side",
+  "shoulders_front",
+  "shoulders_arms_up",
+  "shoulder_side_close",
+  "face_close",
+  "dark_full",
+  "night_skirt",
+  "museum_mid"
+ ],
+ "scale": 1,
+ "to": "boards",
+ "_why": "model sheet (toki 2026-10-25: face overlit, skirt white in the dark, sleeve pieces sit / move wrong, look at ALL parts): new per-part materials, the shoulders / sleeves from front, side, arms up"
+}
