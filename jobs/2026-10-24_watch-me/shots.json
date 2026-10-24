@@ -58,7 +58,7 @@
  "shots": [
   {
    "id": "01",
-   "at": 0.0,
+   "at": 0,
    "set": "shoot",
    "why": "the strongest picture first: her face, lit, looking at us (thumbnail frame 0-42)",
    "size": "ECU",
@@ -67,7 +67,7 @@
     "lock": 0.45,
     "bulb": true,
     "flash": [
-     0.0
+     0
     ],
     "gel": "#ffd2e6"
    },
@@ -93,6 +93,19 @@
      "motionMix": 1,
      "expr": {
       "joy": 0.5
+     },
+     "pos": "paper",
+     "rotY": "lens"
+    },
+    {
+     "at": 1.6,
+     "clip": "female-standing-pose-1",
+     "clip_from": 0.5,
+     "speed": 0,
+     "motionMix": 1,
+     "expr": {
+      "joy": 0.6,
+      "blink_l": 1
      },
      "pos": "paper",
      "rotY": "lens"
@@ -269,13 +282,28 @@
      "pos": "paper",
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.49,
+      1.51,
+      0.23
+     ],
+     "size": 0.152,
+     "width": 1.92,
+     "tilt": -1.3,
+     "roll": 0,
+     "rot": 13.4,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "06",
    "at": 7.5,
    "set": "shoot",
-   "why": "the kiss on the stop - the studio revealed",
+   "why": "the kiss on the stop - the studio revealed; the bulb flickers: the lamp's first form (it dies at 117.6, she clicks it off at the end)",
    "size": "MCU -> FS",
    "opts": {
     "grade": "clean",
@@ -288,7 +316,8 @@
       1.2
      ],
      "tip_at": 8.04
-    }
+    },
+    "bulb_flicker": 7.5
    },
    "camera": [
     {
@@ -296,7 +325,7 @@
       "kind": "crash",
       "around": "her",
       "deg": -8,
-      "dist": 1.0,
+      "dist": 1,
       "fov": 38
      }
     }
@@ -312,7 +341,22 @@
      "pos": "paper",
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.51,
+      1.38,
+      -0.2
+     ],
+     "size": 0.051,
+     "width": 1.25,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": -29.2,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "07",
@@ -420,6 +464,21 @@
      "MOSAIC"
     ],
     "material": "print"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -1.01,
+      1.31,
+      -0.1
+     ],
+     "size": 0.25,
+     "width": 1.34,
+     "tilt": 0.1,
+     "roll": 0,
+     "rot": 22.6,
+     "key_scale": 1.8
+    }
    }
   },
   {
@@ -458,7 +517,7 @@
    "lyrics": {
     "kind": "card",
     "anchor": [
-     -1.0,
+     -1,
      1.9,
      -0.6
     ],
@@ -466,6 +525,22 @@
      "HOT"
     ],
     "material": "print"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.23,
+      1.49,
+      0.38
+     ],
+     "size": 0.029,
+     "width": 0.39,
+     "tilt": -1.7,
+     "roll": 0,
+     "rot": -95.5,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -531,13 +606,14 @@
    "id": "11",
    "at": "line:6",
    "set": "shoot",
-   "why": "hold your breath: one dead-still beat before the walk",
+   "why": "hold your breath: one dead-still beat before the walk - even the bulb hangs frozen mid-swing",
    "size": "MCU still",
    "opts": {
     "grade": "clean",
     "lock": 0.45,
     "bulb": true,
-    "freeze": true
+    "freeze": true,
+    "bulb_swing": "frozen"
    },
    "camera": [
     {
@@ -566,7 +642,22 @@
      "pos": "paper",
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.36,
+      1.57,
+      0.08
+     ],
+     "size": 0.046,
+     "width": 0.39,
+     "tilt": -1.4,
+     "roll": 0,
+     "rot": -2.1,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "12",
@@ -630,6 +721,21 @@
      "PIN"
     ],
     "material": "print"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.74,
+      0.89,
+      0.33
+     ],
+     "size": 0.127,
+     "width": 1.09,
+     "tilt": 5.1,
+     "roll": 0,
+     "rot": -10.4,
+     "key_scale": 1.8
+    }
    }
   },
   {
@@ -689,6 +795,22 @@
     ],
     "material": "print",
     "tilt": -90
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.13,
+      0.03,
+      0.73
+     ],
+     "size": 0.218,
+     "width": 3.97,
+     "tilt": -90,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -731,7 +853,22 @@
      "pos": "paper",
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.79,
+      0.98,
+      -0.12
+     ],
+     "size": 0.096,
+     "width": 0.82,
+     "tilt": -0.7,
+     "roll": 0,
+     "rot": 13,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "15",
@@ -778,6 +915,21 @@
     ],
     "material": "print",
     "key_scale": 2.2
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.5,
+      1.32,
+      0.21
+     ],
+     "size": 0.096,
+     "width": 0.6,
+     "tilt": -0.8,
+     "roll": 0,
+     "rot": -23.5,
+     "key_scale": 1.8
+    }
    }
   },
   {
@@ -883,7 +1035,7 @@
       "kind": "orbit_roll",
       "around": "her",
       "deg": 0,
-      "dist": 2.0,
+      "dist": 2,
       "sweep": 360,
       "roll": 6
      }
@@ -935,7 +1087,7 @@
       "kind": "track",
       "around": "her",
       "deg": -35,
-      "dist": 3.0,
+      "dist": 3,
       "width": 0.8
      }
     }
@@ -948,7 +1100,22 @@
      "pos": "paper",
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.08,
+      1.73,
+      0.3
+     ],
+     "size": 0.145,
+     "width": 2.58,
+     "tilt": -0.2,
+     "roll": 0,
+     "rot": -21.7,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "20",
@@ -989,17 +1156,33 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.3,
-     0.7,
-     -0.6
+     0,
+     1.6,
+     -1.4
     ],
     "key": [
-     "LOUBS"
+     "LOUBS",
+     "NEWS"
     ],
-    "material": "light",
-    "small": "a tiny neon beside the barb"
+    "material": "print",
+    "key_scale": 2.2
    },
-   "low_ok": "the lens is BEHIND her at her tail, looking down-back - no view under the skirt"
+   "low_ok": "the lens is BEHIND her at her tail, looking down-back - no view under the skirt",
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.57,
+      0.23,
+      0.1
+     ],
+     "size": 0.079,
+     "width": 0.76,
+     "tilt": -6.3,
+     "roll": 0,
+     "rot": 132.7,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "21",
@@ -1046,7 +1229,7 @@
    "lyrics": {
     "kind": "card",
     "anchor": [
-     1.0,
+     1,
      1.9,
      0.1
     ],
@@ -1068,7 +1251,7 @@
     "bulb": true,
     "wind": [
      41.39,
-     2.0
+     2
     ],
     "salmon": {
      "pos": [
@@ -1085,7 +1268,7 @@
       "kind": "handheld",
       "around": "her",
       "deg": 20,
-      "dist": 3.0,
+      "dist": 3,
       "shake": 0.6
      }
     }
@@ -1103,14 +1286,29 @@
     "kind": "card",
     "anchor": [
      -1.2,
-     2.0,
+     2,
      -0.3
     ],
     "key": [
      "HURRICANE"
     ],
     "material": "print",
-    "key_scale": 3.0
+    "key_scale": 3
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.97,
+      1.45,
+      -0.19
+     ],
+     "size": 0.151,
+     "width": 1.12,
+     "tilt": 0.3,
+     "roll": 0,
+     "rot": 36.5,
+     "key_scale": 1.8
+    }
    }
   },
   {
@@ -1179,6 +1377,22 @@
     ],
     "material": "print",
     "tilt": -90
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.52,
+      0.03,
+      0.56
+     ],
+     "size": 0.18,
+     "width": 3.28,
+     "tilt": -90,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -1215,7 +1429,7 @@
       "deg": 0,
       "dist": 2.6,
       "fov": 36,
-      "hit": 0.0
+      "hit": 0
      }
     }
    ],
@@ -1239,7 +1453,7 @@
      "rotY": "lens"
     },
     {
-     "at": 3.0,
+     "at": 3,
      "clip": "female-dance-pose-1",
      "clip_from": 0.6,
      "speed": 0,
@@ -1350,6 +1564,22 @@
      "CENTERFOLD"
     ],
     "material": "print"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.05,
+      0.93,
+      1.07
+     ],
+     "size": 0.071,
+     "width": 1.64,
+     "tilt": -54.3,
+     "roll": 0,
+     "rot": -2.5,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -1370,7 +1600,7 @@
      "pos": [
       1.6,
       0.5,
-      1.0
+      1
      ],
      "at": 60.29
     }
@@ -1408,6 +1638,21 @@
      "HURRICANE"
     ],
     "material": "light"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.18,
+      1.16,
+      -2.77
+     ],
+     "size": 0.224,
+     "width": 1.92,
+     "tilt": -17.8,
+     "roll": 0,
+     "rot": 11.4,
+     "key_scale": 1.8
+    }
    }
   },
   {
@@ -1476,6 +1721,22 @@
     ],
     "material": "light",
     "key_scale": 3.4
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.04,
+      1.64,
+      0.19
+     ],
+     "size": 0.023,
+     "width": 0.73,
+     "tilt": -5.9,
+     "roll": 0,
+     "rot": 7.5,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -1529,6 +1790,21 @@
     ],
     "material": "light",
     "key_scale": 3.2
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.69,
+      1.39,
+      -0.78
+     ],
+     "size": 0.09,
+     "width": 0.77,
+     "tilt": -0.2,
+     "roll": 0,
+     "rot": -15.7,
+     "key_scale": 1
+    }
    }
   },
   {
@@ -1572,12 +1848,28 @@
     "anchor": [
      2.4,
      1.9,
-     -1.0
+     -1
     ],
     "key": [
      "SNAP-BACK"
     ],
     "material": "light"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.13,
+      1.56,
+      -0.34
+     ],
+     "size": 0.038,
+     "width": 0.4,
+     "tilt": -1.8,
+     "roll": 0,
+     "rot": 68.5,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -1655,7 +1947,7 @@
     "lock": 0.45,
     "wind": [
      71.36,
-     1.0
+     1
     ]
    },
    "camera": [
@@ -1684,7 +1976,7 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -1.0,
+     -1,
      1.6,
      -0.7
     ],
@@ -1692,11 +1984,27 @@
      "COAT"
     ],
     "material": "light"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.86,
+      1.36,
+      -0.27
+     ],
+     "size": 0.052,
+     "width": 0.94,
+     "tilt": -5.7,
+     "roll": 0,
+     "rot": 101.4,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
    "id": "32",
-   "at": "line:26",
+   "at": 73.667,
    "set": "corner",
    "why": "baddie so bad - tantrum / anthem",
    "size": "worm's eye 2.8 m -> crane",
@@ -1736,7 +2044,23 @@
      "ANTHEM"
     ],
     "material": "light",
-    "key_scale": 3.0
+    "key_scale": 3
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.51,
+      1.99,
+      -2.75
+     ],
+     "size": 0.145,
+     "width": 6.09,
+     "tilt": -15.6,
+     "roll": 0,
+     "rot": -7.9,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -1748,7 +2072,7 @@
    "opts": {
     "grade": "night",
     "lock": 0.45,
-    "treadmill": 1.0,
+    "treadmill": 1,
     "salmon": {
      "pos": [
       1.6,
@@ -1766,7 +2090,7 @@
      "at": 0,
      "pos": [
       0.2,
-      5.0,
+      5,
       1.4
      ],
      "look": [
@@ -1791,13 +2115,29 @@
     "anchor": [
      -1.2,
      0.02,
-     1.0
+     1
     ],
     "key": [
      "PINS"
     ],
     "material": "light",
     "tilt": -90
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -1.08,
+      0.03,
+      1.03
+     ],
+     "size": 0.245,
+     "width": 3.26,
+     "tilt": -90,
+     "roll": 0,
+     "rot": 0,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -1838,7 +2178,22 @@
      "pos": "lamp_circle",
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.23,
+      1.58,
+      0.15
+     ],
+     "size": 0.064,
+     "width": 1.32,
+     "tilt": 11.6,
+     "roll": 0,
+     "rot": 45.5,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "35",
@@ -1891,6 +2246,22 @@
     "kind": "cover",
     "frames": 4,
     "obj": "hair"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.29,
+      1.8,
+      -0.2
+     ],
+     "size": 0.093,
+     "width": 3.18,
+     "tilt": -0.1,
+     "roll": 0,
+     "rot": -32.8,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -1927,7 +2298,23 @@
      "pos": "lamp_circle",
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.52,
+      1.42,
+      -0.15
+     ],
+     "size": 0.053,
+     "width": 0.64,
+     "tilt": -1.4,
+     "roll": 0,
+     "rot": -25.8,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
+   }
   },
   {
    "id": "37",
@@ -1951,7 +2338,7 @@
       "around": "her",
       "deg": -60,
       "dist": 1.9,
-      "width": 1.0,
+      "width": 1,
       "fov": 36
      }
     }
@@ -2009,7 +2396,7 @@
     "lock": 0.45,
     "rain": [
      92.99,
-     1.0
+     1
     ],
     "wind": [
      92.99,
@@ -2068,7 +2455,7 @@
     "lock": 0.45,
     "rain": [
      83.38,
-     1.0
+     1
     ],
     "ripples": 96.37,
     "stage": [
@@ -2117,6 +2504,22 @@
     ],
     "material": "light",
     "tilt": -90
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.98,
+      2.15,
+      0.38
+     ],
+     "size": 0.088,
+     "width": 1.07,
+     "tilt": -79.7,
+     "roll": 0,
+     "rot": -64.6,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -2207,7 +2610,7 @@
       "kind": "crash",
       "around": "her",
       "deg": 0,
-      "dist": 2.0,
+      "dist": 2,
       "fov": 40,
       "hit": 0.3
      }
@@ -2234,6 +2637,21 @@
     ],
     "material": "light",
     "tilt": -90
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.37,
+      1.44,
+      0.56
+     ],
+     "size": 0.053,
+     "width": 0.5,
+     "tilt": -0.6,
+     "roll": 0,
+     "rot": 15.7,
+     "key_scale": 1.3
+    }
    }
   },
   {
@@ -2271,7 +2689,7 @@
      "look": [
       2.5,
       0.6,
-      -1.0
+      -1
      ],
      "fov": 34
     },
@@ -2369,6 +2787,22 @@
     ],
     "material": "light",
     "key_scale": 3.4
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.52,
+      1.75,
+      -0.69
+     ],
+     "size": 0.066,
+     "width": 2.01,
+     "tilt": -5.3,
+     "roll": 0,
+     "rot": -3.1,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -2390,7 +2824,7 @@
     "world": {
      "out": "melt",
      "out_at": 117.65,
-     "out_s": 1.0
+     "out_s": 1
     }
    },
    "camera": [
@@ -2419,7 +2853,22 @@
      "pos": "lamp_circle",
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.45,
+      2.08,
+      0.82
+     ],
+     "size": 0.476,
+     "width": 6,
+     "tilt": -4.2,
+     "roll": 0,
+     "rot": -43.9,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "45",
@@ -2465,6 +2914,21 @@
      "WATCH ME"
     ],
     "material": "light"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.39,
+      1.33,
+      0.42
+     ],
+     "size": 0.072,
+     "width": 0.53,
+     "tilt": -1,
+     "roll": 0,
+     "rot": -8,
+     "key_scale": 1.8
+    }
    }
   },
   {
@@ -2581,7 +3045,7 @@
      ],
      "look": [
       0,
-      1.0,
+      1,
       0
      ],
      "fov": 44
@@ -2591,7 +3055,7 @@
      "pos": [
       -0.8,
       2.4,
-      3.0
+      3
      ],
      "look": [
       0,
@@ -2624,7 +3088,7 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      2.0,
+      2,
       0.6,
       1.6
      ],
@@ -2664,13 +3128,28 @@
     "kind": "sign",
     "anchor": [
      -1.3,
-     2.0,
+     2,
      -0.9
     ],
     "key": [
      "RADAR"
     ],
     "material": "engraved"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -1.55,
+      1.72,
+      -0.17
+     ],
+     "size": 0.157,
+     "width": 1.5,
+     "tilt": -4,
+     "roll": 0,
+     "rot": 52.6,
+     "key_scale": 1
+    }
    }
   },
   {
@@ -2684,7 +3163,7 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      2.0,
+      2,
       0.6,
       1.6
      ],
@@ -2710,7 +3189,7 @@
      "rotY": "lens"
     },
     {
-     "at": 1.0,
+     "at": 1,
      "clip": "female-dance-pose-1",
      "clip_from": 0.6,
      "speed": 0,
@@ -2730,6 +3209,21 @@
      "LIKE THAT"
     ],
     "material": "engraved"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.26,
+      1.9,
+      0.82
+     ],
+     "size": 0.144,
+     "width": 1.96,
+     "tilt": 16.3,
+     "roll": 0,
+     "rot": 11.9,
+     "key_scale": 1.8
+    }
    }
   },
   {
@@ -2743,7 +3237,7 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      2.0,
+      2,
       0.6,
       1.6
      ],
@@ -2781,7 +3275,22 @@
      ],
      "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.24,
+      1.8,
+      -0.11
+     ],
+     "size": 0.141,
+     "width": 1.36,
+     "tilt": -1.5,
+     "roll": 0,
+     "rot": 74.7,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "52",
@@ -2792,7 +3301,8 @@
    "opts": {
     "grade": "warm",
     "lock": 0.45,
-    "crossed": 137.24
+    "crossed": 137.24,
+    "barb_lens": 137.6
    },
    "camera": [
     {
@@ -2844,6 +3354,22 @@
      "ONE WAY"
     ],
     "material": "engraved"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -9.61,
+      0.11,
+      -20.25
+     ],
+     "size": 0.517,
+     "width": 7.65,
+     "tilt": 6,
+     "roll": 0,
+     "rot": 26.9,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -2907,7 +3433,7 @@
       "dist": 2.4,
       "sweep": 140,
       "roll": 8,
-      "h": 1.0
+      "h": 1
      }
     }
    ],
@@ -2949,13 +3475,22 @@
     "grade": "warm",
     "lock": 0.45,
     "hers": true,
-    "worlds_in_frames": true
+    "worlds_in_frames": true,
+    "salmon": {
+     "pos": [
+      1.6,
+      0.6,
+      1
+     ],
+     "hold": "flashlight",
+     "search": true
+    }
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      -3.0,
+      -3,
       1.6,
       -3.9
      ],
@@ -3015,7 +3550,16 @@
      152.3,
      1.4
     ],
-    "letters_off": 152.3
+    "letters_off": 152.3,
+    "salmon": {
+     "pos": [
+      1.6,
+      0.6,
+      1
+     ],
+     "hold": "flashlight",
+     "hat_off_at": 153.1
+    }
    },
    "camera": [
     {
@@ -3023,7 +3567,7 @@
       "kind": "whip_out",
       "around": "her",
       "deg": 30,
-      "dist": 2.0,
+      "dist": 2,
       "turn": -70
      }
     }
@@ -3055,19 +3599,21 @@
    "id": "57",
    "at": "line:49",
    "set": "exhibit",
-   "why": "on your radar - he can't look away either",
+   "why": "on your radar - he can't look away either; his hand comes near her and the barb twitches (sting plant 3)",
    "size": "his POV, beam as spotlight",
    "opts": {
     "grade": "warm",
     "lock": 0.45,
     "beam_on_her": true,
-    "hers": true
+    "hers": true,
+    "salmon_reach": 157.6,
+    "tail_twitch": 158.2
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      2.0,
+      2,
       1.2,
       2.2
      ],
@@ -3077,6 +3623,21 @@
       0
      ],
      "fov": 34
+    },
+    {
+     "at": "end",
+     "pos": [
+      1.5,
+      1.35,
+      1.6
+     ],
+     "look": [
+      0,
+      1.6,
+      0
+     ],
+     "fov": 32,
+     "ease": "inOut"
     }
    ],
    "actor": [
@@ -3094,13 +3655,29 @@
     "kind": "sign",
     "anchor": [
      -1.3,
-     2.0,
+     2,
      -0.9
     ],
     "key": [
      "RADAR"
     ],
     "material": "engraved"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -1.36,
+      2.16,
+      -0.33
+     ],
+     "size": 0.087,
+     "width": 1.05,
+     "tilt": 6.5,
+     "roll": 0,
+     "rot": 55.9,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -3193,13 +3770,14 @@
    "id": "59",
    "at": "line:51",
    "set": "shoot",
-   "why": "the worlds return one per beat, each the real place - every change a COVER-CUT",
+   "why": "world 1 returns: she slaps the paper with her tail - the studio is hers to hit",
    "size": "crash",
    "opts": {
     "grade": "clean",
     "lock": 0.45,
     "bulb": true,
-    "hers": false
+    "hers": false,
+    "tail_slap": 165.5
    },
    "camera": [
     {
@@ -3241,12 +3819,13 @@
    "id": "60",
    "at": 166.534,
    "set": "corner",
-   "why": "the worlds return one per beat, each the real place - every change a COVER-CUT",
+   "why": "world 2 returns: her heel in the puddle - the rain she forecast wrong is her stage now",
    "size": "whip",
    "opts": {
     "grade": "night",
     "lock": 0.45,
-    "hers": false
+    "hers": false,
+    "splash": 166.7
    },
    "camera": [
     {
@@ -3293,12 +3872,13 @@
    "id": "61",
    "at": "line:52",
    "set": "exhibit",
-   "why": "the worlds return one per beat, each the real place - every change a COVER-CUT",
+   "why": "world 3 returns: the gold letters blow off again and she catches one - the hurricane obeys her",
    "size": "top-down roll",
    "opts": {
     "grade": "warm",
     "lock": 0.45,
-    "hers": true
+    "hers": true,
+    "letters_off": 167.62
    },
    "camera": [
     {
@@ -3340,6 +3920,13 @@
      "motionMix": 1,
      "pos": "plinth",
      "rotY": "lens"
+    },
+    {
+     "at": 0.9,
+     "clip": "pointing-gesture",
+     "motionMix": 1,
+     "pos": "plinth",
+     "rotY": "lens"
     }
    ],
    "lyrics": {
@@ -3359,19 +3946,38 @@
     "kind": "cover",
     "frames": 4,
     "obj": "tail"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.35,
+      -0.43,
+      -1.45
+     ],
+     "size": 0.222,
+     "width": 6.7,
+     "tilt": -81.5,
+     "roll": 0,
+     "rot": -29.2,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
    "id": "62",
    "at": 169.25,
    "set": "shoot",
-   "why": "the worlds return one per beat, each the real place - every change a COVER-CUT",
+   "why": "back in the studio: a flash goes off in her face and she does not blink - the paparazzi lost",
    "size": "vertigo",
    "opts": {
     "grade": "clean",
     "lock": 0.45,
     "bulb": true,
-    "hers": false
+    "hers": false,
+    "flash": [
+     169.6
+    ]
    },
    "camera": [
     {
@@ -3411,18 +4017,34 @@
     "kind": "cover",
     "frames": 4,
     "obj": "palm"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.42,
+      1.42,
+      -1.07
+     ],
+     "size": 0.165,
+     "width": 1.04,
+     "tilt": -0.2,
+     "roll": 0,
+     "rot": -1.7,
+     "key_scale": 1.8
+    }
    }
   },
   {
    "id": "63",
    "at": 170.318,
    "set": "corner",
-   "why": "the worlds return one per beat, each the real place - every change a COVER-CUT",
+   "why": "the corner: she flicks the lamp like a switch - the rehearsal of the last click",
    "size": "dutch orbit",
    "opts": {
     "grade": "night",
     "lock": 0.45,
-    "hers": false
+    "hers": false,
+    "lamp_flick": 170.9
    },
    "camera": [
     {
@@ -3463,6 +4085,22 @@
     "kind": "cover",
     "frames": 4,
     "obj": "frame_bar"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.06,
+      1.73,
+      0.41
+     ],
+     "size": 0.035,
+     "width": 0.52,
+     "tilt": -1.3,
+     "roll": 0,
+     "rot": -82.9,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    }
    }
   },
   {
@@ -3503,7 +4141,7 @@
    "actor": [
     {
      "at": 0,
-     "clip": "sword-and-shield-sword-and-shield-kick",
+     "clip": "spin-in-place",
      "motionMix": 1,
      "pos": "plinth",
      "rotY": "lens"
@@ -3514,6 +4152,21 @@
     "kind": "cover",
     "frames": 4,
     "obj": "hair"
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.27,
+      0.87,
+      0.57
+     ],
+     "size": 0.083,
+     "width": 1.04,
+     "tilt": -9.1,
+     "roll": 0,
+     "rot": 76.7,
+     "key_scale": 1.8
+    }
    }
   },
   {
@@ -3527,9 +4180,9 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      0.0,
+      0,
       0.62,
-      0.0
+      0
      ],
      "hold": "flashlight",
      "frozen": true
@@ -3579,13 +4232,28 @@
     ],
     "material": "engraved",
     "key_scale": 3.4
+   },
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.09,
+      1.44,
+      -4.12
+     ],
+     "size": 0.473,
+     "width": 4.45,
+     "tilt": -9.9,
+     "roll": 0,
+     "rot": -9.7,
+     "key_scale": 1.8
+    }
    }
   },
   {
    "id": "66",
-   "at": 175.0,
+   "at": 175,
    "set": "exhibit",
-   "why": "everything but her goes",
+   "why": "everything but her goes - her tail sweeps the lens while the walls fall",
    "size": "spiral to wide",
    "opts": {
     "grade": "warm",
@@ -3593,7 +4261,7 @@
     "world": {
      "out": "dissolve",
      "out_at": 175.05,
-     "out_s": 2.0
+     "out_s": 2
     },
     "stage": [
      {
@@ -3607,7 +4275,8 @@
       "h": 2.2,
       "text": "RAYMI"
      }
-    ]
+    ],
+    "tail_lens": 176
    },
    "camera": [
     {
@@ -3615,7 +4284,7 @@
       "kind": "spiral",
       "around": "her",
       "deg": 180,
-      "dist": 3.0
+      "dist": 3
      }
     }
    ],
@@ -3626,14 +4295,36 @@
      "motionMix": 1,
      "pos": "plinth",
      "rotY": "lens"
+    },
+    {
+     "at": 0.7,
+     "clip": "spin-in-place",
+     "motionMix": 1,
+     "pos": "plinth",
+     "rotY": "lens"
     }
-   ]
+   ],
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      0.62,
+      1.89,
+      0.29
+     ],
+     "size": 0.168,
+     "width": 0.89,
+     "tilt": -10.6,
+     "roll": 0,
+     "rot": -12.9,
+     "key_scale": 1.8
+    }
+   }
   },
   {
    "id": "67",
    "at": "line:54",
    "set": "exhibit",
-   "why": "let's go",
+   "why": "let's go - the room breathes around her as she steps into the frame",
    "size": "MS, frame in the foreground",
    "opts": {
     "grade": "warm",
@@ -3654,18 +4345,13 @@
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      0.4,
-      1.5,
-      2.6
-     ],
-     "look": [
-      0,
-      1.4,
-      -1.2
-     ],
-     "fov": 36
+     "move": {
+      "kind": "vertigo",
+      "around": "her",
+      "deg": 10,
+      "dist": 2.6,
+      "frameH": 1.6
+     }
     }
    ],
    "actor": [

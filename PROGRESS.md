@@ -1,5 +1,16 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-24 (night) - Watch Me script PASS (round 2), v2.1 with its FIXes
+- script-critic round 2 on 4_SCRIPT v2: PASS (verbatim reviews/script_2.md). v2.1 takes its 8 FIXes into script +
+  shots.json: sting planted 3x (20 / 52 / 57) and paid with a spin (64); camera column names every keyed move; the
+  guard stays in the hall (55 / 56); outro acts (66 / 67 vertigo); bulb = the lamp's first form (06 / 11); one
+  micro-action per finale world (59-63); row 01 flash + wink; stomp on the measured inst hit 73.70 (song_map has no
+  `stops` - the old 73.8 was not measured).
+- guard --fill-all: 40 lyric blocks fitted (lyrics_fit in shots.json); 22 close shots still have NO free space
+  (07 10 16 17 18 21 24 30 38 40 42 46 47 53 54 55 56 58 59 60 67 68) - the build's lyric task.
+- NEXT: the build (must list in 4_SCRIPT "Build list", incl. the new v2.1 set options) -> stills board -> qc.json.
+  Tooling note: `python` on toki's PC is 3.7 and cannot run raymi; use `py -3.12 -m raymi ...`.
+
 ## 2026-10-24 (evening) - Watch Me started, QC v2, two structural bugs (knowledge/HANDOFF_2026-10-24_watchme_qc2.md)
 - toki: K/DA Watch Me as a one-place 3D "TikTok" of self-staging; stills must be checked on more frames and levels;
   one QC run, then she fixes herself. Beach parked as a lesson (toki.md of both jobs).
