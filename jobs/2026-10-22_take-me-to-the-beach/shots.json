@@ -4295,8 +4295,8 @@
      "expr": {
       "fun": 0.4
      },
-     "clip": "sitting-talking",
-     "motionMix": 0.2
+     "clip": "sitting-disapproval",
+     "motionMix": 0.3
     }
    ],
    "mouth": {
@@ -4337,7 +4337,8 @@
      "key_scale": 1.8
     }
    },
-   "kick": 1.5
+   "kick": 1.5,
+   "aware": 0.6
   },
   {
    "id": "37",
@@ -10173,7 +10174,7 @@
    "id": "84",
    "at": 160.1,
    "set": "dream",
-   "why": "the first colour flash (4) was the future: the last image IS it - eyes closed, face in her sun, all five dots",
+   "why": "the first colour flash (4) was the future: the last image IS it - eyes closed, face in her sun, all five dots; rebuild: as the lens leaves she notices it and waves goodbye to the watcher (toki 2026-10-24: the observer)",
    "opts": {
     "grade": "pov_warm",
     "night": 0.9,
@@ -10274,17 +10275,17 @@
      "motionMix": 0.2
     },
     {
-     "at": 4.9,
-     "pose": "sing_soft",
+     "at": 3.2,
+     "pose": "stand",
      "pos": "shore",
      "rotY": "lens",
-     "blend": 0.15,
+     "blend": 0.3,
      "expr": {
-      "joy": 0.6,
-      "blink_l": 1
+      "joy": 0.7
      },
-     "clip": "happy",
-     "motionMix": 0.2
+     "clip": "waving",
+     "motionMix": 1,
+     "aware": 0.8
     }
    ],
    "mouth": "silent",

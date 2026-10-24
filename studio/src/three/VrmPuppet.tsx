@@ -380,7 +380,7 @@ function noticeLens(rig: Rig, s: State, fps: number) {
   const back = Math.abs(rel) > 1.65;
   let env = 1;
   if (back) {
-    const t = ((s.f - s.keyF) / fps + 0.8) % 4.5;           // a glance every 4.5 s, the first soon after the key
+    const t = ((((s.f - s.keyF) / fps - 0.5) % 4.5) + 4.5) % 4.5;   // a glance every 4.5 s, the first 0.5 s after the key
     env = t < 1.2 ? Math.sin((t / 1.2) * Math.PI) : 0;
   }
   const amt = s.aware * env;
