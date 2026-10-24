@@ -1,0 +1,32 @@
+{
+ "text": "you almost stepped on me.",
+ "duration": 2.256,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "you",
+   "start": 0.093,
+   "end": 0.274
+  },
+  {
+   "w": "almost",
+   "start": 0.285,
+   "end": 0.702
+  },
+  {
+   "w": "stepped",
+   "start": 0.712,
+   "end": 1.065
+  },
+  {
+   "w": "on",
+   "start": 1.076,
+   "end": 1.236
+  },
+  {
+   "w": "me.",
+   "start": 1.247,
+   "end": 1.503
+  }
+ ]
+}

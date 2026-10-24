@@ -1,0 +1,22 @@
+{
+ "text": "i'm watching you.",
+ "duration": 1.872,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "i'm",
+   "start": 0.093,
+   "end": 0.285
+  },
+  {
+   "w": "watching",
+   "start": 0.296,
+   "end": 0.68
+  },
+  {
+   "w": "you.",
+   "start": 0.691,
+   "end": 0.947
+  }
+ ]
+}

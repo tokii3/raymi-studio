@@ -32,7 +32,7 @@ jobs:
           node-version: "22"
       - name: Browser and media tools
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          bash .github/ffmpeg.sh   # apt with a time limit, else a static build (never hangs the job)
       - name: Node modules (cached)
         id: nm
         uses: actions/cache@v4
@@ -66,6 +66,8 @@ jobs:
             JOBS="$JOB_INPUT"
           else
             BEFORE="$EVENT_BEFORE"
+            # a push of several commits: the base is outside the shallow checkout - fetch it (2026-10-24: stills ran nothing)
+            [ -n "$BEFORE" ] && ! git cat-file -e "$BEFORE" 2>/dev/null && git fetch -q --depth=1 origin "$BEFORE" 2>/dev/null || true
             if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
               BEFORE=$(git rev-parse -q --verify HEAD~1 || git hash-object -t tree /dev/null)
             fi

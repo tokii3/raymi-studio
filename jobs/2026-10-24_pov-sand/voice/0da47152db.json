@@ -1,0 +1,32 @@
+{
+ "text": "shuffle your feet. like this.",
+ "duration": 3.216,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "shuffle",
+   "start": 0.093,
+   "end": 0.52
+  },
+  {
+   "w": "your",
+   "start": 0.531,
+   "end": 0.702
+  },
+  {
+   "w": "feet.",
+   "start": 0.712,
+   "end": 1.076
+  },
+  {
+   "w": "like",
+   "start": 1.806,
+   "end": 2.083
+  },
+  {
+   "w": "this.",
+   "start": 2.094,
+   "end": 2.468
+  }
+ ]
+}

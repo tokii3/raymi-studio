@@ -103,3 +103,19 @@
   onto hits (cut), every lyric line >= 6% frame height in the wides + romaji / English >= 70% of the JP size (type),
   reaction icons (! ? sweat anger Zz heart) and face cut-ins at each plot turn, prop actions for the Ado verse
   (story), the battery as a checked hero (vision).
+- Beach rebuild 2026-10-24 (screening reviews/final_*_2.md), parked for toki:
+  - Lyric type at phone size (blind viewer BLOCK, type critic round 1): the 3-language Ado block (JP + romaji + EN)
+    and the dream-wide lines are thin and small. Needs a type rule (min height per frame, one language at a time?)
+    - a decision for toki, not a per-shot patch.
+  - Shot 11 (0:05-0:08, asleep behind the file pile): tried 3x (top-down, 3/4 over the monitor, wider + higher) - the
+    blind viewer still reads "half hidden, near static". Anti-loop: parked; next idea a cut-in on her face instead.
+  - Lyric words pop without overshoot (motion critic FIX 3): a Words3D option (0 -> 1.2 -> 1 in 3 frames).
+  - The hero check counts the postcard in shots 23 / 24 / 75 where it is hidden by her monitor or leaves the frame on
+    purpose (why_small) - the kit's hero.json should skip rows with a why_small.
+- Beach structural pass 2026-10-24 (knowledge/HANDOFF_2026-10-24_beach_3d_film.md), open:
+  - Airborne clipping: in the dream she flies / falls / kicks into cushions and rocks from above (~119 probe frames,
+    mostly < 0.15 m) - clearSolids pushes only in x / z; airborne keys need a vertical push (or a lifted path).
+  - Rooms: light depth + textures v2 are in; the props / detail pass (lived-in objects per set, toki "leer, lieblos,
+    ohne Details") is not built.
+  - The scene probe is a process step (stills.json "probe"), not an automatic gate in render.yml yet.
+  - Runs 58 / 59 unscreened (no critic, no toki verdict).

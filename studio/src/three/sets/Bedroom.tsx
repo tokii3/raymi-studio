@@ -6,21 +6,29 @@
 //   dark: 0..1         night (only the window's sea glow) - 0 = the morning lamp on
 //   bed_drag: [frame, dx, dz, frames]   the bed slides away (dragged by the strings) by (dx, dz) over frames
 //   things / strings / crowd / boss  -> routine.tsx
+//   lamp_at: frame       you switch the light on: before it the room is dark (dark, default 0.85), after it lit (lit,
+//                        default 0.15) with a 4-frame flare (POV Shorts)
+//   lamp: 0..1           the bedside lamp's strength (it stands right next to the bed: 0.4 keeps her skin from burning)
+//   window_view: true    the round window is real glass: behind it the dark sea and whatever swims there (salmon)
+//   salmon / fish        creatures (creatures.tsx DeepLife) - e.g. the salmon outside the window, pressing his face on it
 import React from 'react';
 import * as THREE from 'three';
 import {RBox, Sign, drawText} from '../parts';
 import {SetLight, canvasTexture, rnd, toon, toonSurface} from '../look';
 import {RoutineLife} from '../routine';
 import {RoomClutter} from '../clutter';
-import {SalmonBody} from '../creatures';
+import {DeepLife, SalmonBody} from '../creatures';
+import {flare} from '../events';
 import {ease} from '../../film/motion';
 import type {SetProps} from './index';
 
 const num = (v: unknown, d = 0) => (typeof v === 'number' ? v : d);
 
-export const Bedroom: React.FC<SetProps> = ({f, opts, camPos}) => {
-  const dark = num(opts.dark);
-  const power = Math.max(0.08, 1 - dark);
+export const Bedroom: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
+  const lampAt = typeof opts.lamp_at === 'number' ? opts.lamp_at : null;
+  const dark = lampAt === null ? num(opts.dark) : f < lampAt ? num(opts.dark, 0.85) : num(opts.lit, 0.15);
+  const power = Math.max(0.08, 1 - dark) + (lampAt === null ? 0 : 0.6 * flare(lampAt, f, 4));
+  const view = Boolean(opts.window_view);
   let drag: [number, number] = [0, 0];
   if (Array.isArray(opts.bed_drag)) {
     const [at, dx, dz, n] = opts.bed_drag as number[];
@@ -34,7 +42,7 @@ export const Bedroom: React.FC<SetProps> = ({f, opts, camPos}) => {
   });
   return (
     <group>
-      <SetLight sky="#c6cde6" ground="#2a2540" fill={0.6 * power + 0.12} key="#fff1dc" keyI={2.4 * power} keyPos={[2, 4.5, 3]}
+      <SetLight depth={typeof opts.depth === 'number' ? opts.depth : 0} sky="#c6cde6" ground="#2a2540" fill={0.6 * power + 0.12} key="#fff1dc" keyI={2.4 * power} keyPos={[2, 4.5, 3]}
         target={[0, 0.4, 0]} shadowSize={5} fog="#2a2c40" fogNear={8} fogFar={20} bg="#22243a" />
       {/* the dome: a curved wall with ribs */}
       <mesh position={[0, 0, -0.5]} material={toon('#5c6080', '#000', 1, {side: THREE.BackSide})}><sphereGeometry args={[4.2, 40, 24, 0, Math.PI * 2, 0, Math.PI / 2]} /></mesh>
@@ -48,7 +56,14 @@ export const Bedroom: React.FC<SetProps> = ({f, opts, camPos}) => {
       {/* the round window onto the sea, marine snow drifting */}
       <group position={[-1.6, 1.8, -3.6]} rotation={[0, 0.4, 0]}>
         <mesh material={toon('#3d4260')}><torusGeometry args={[0.72, 0.09, 10, 32]} /></mesh>
-        <mesh><circleGeometry args={[0.7, 32]} /><meshBasicMaterial map={sea} toneMapped={false} /></mesh>
+        {view ? (
+          <>
+            {/* real glass: the sea far behind (a backdrop disk deep in the wall), a faint tint + a glint on the pane */}
+            <mesh position={[0, 0, -0.42]}><circleGeometry args={[0.95, 32]} /><meshBasicMaterial map={sea} toneMapped={false} /></mesh>
+            <mesh position={[0, 0, 0.005]}><circleGeometry args={[0.7, 32]} /><meshBasicMaterial color="#9fd0ff" transparent opacity={0.12} toneMapped={false} depthWrite={false} /></mesh>
+            <mesh position={[0.25, 0.3, 0.006]} rotation={[0, 0, -0.7]}><planeGeometry args={[0.04, 0.35]} /><meshBasicMaterial color="#ffffff" transparent opacity={0.25} toneMapped={false} depthWrite={false} /></mesh>
+          </>
+        ) : <mesh><circleGeometry args={[0.7, 32]} /><meshBasicMaterial map={sea} toneMapped={false} /></mesh>}
         {Array.from({length: 18}, (_, i) => (
           <mesh key={i} position={[(rnd(i) - 0.5) * 1.2, ((rnd(i * 2.7) * 1.3 - f * 0.003 * (0.6 + rnd(i))) % 1.3 + 1.3) % 1.3 - 0.65, 0.01]}>
             <circleGeometry args={[0.01 + 0.01 * rnd(i * 4), 6]} /><meshBasicMaterial color="#dfe8ff" toneMapped={false} /></mesh>
@@ -95,9 +110,10 @@ export const Bedroom: React.FC<SetProps> = ({f, opts, camPos}) => {
       <Sign id="bedroomsign" pos={[-0.2, 2.35, -3.95]} size={[0.9, 0.22]} paint={(ctx, w, h) => {
         ctx.fillStyle = '#4b4f70'; ctx.fillRect(0, 0, w, h); drawText(ctx, 'DOME 7 - RAYMI', w / 2, h / 2, h * 0.55, '#e7e2ff', {maxW: w * 0.9});
       }} />
-      {power > 0.2 ? <pointLight position={[0.8, 1.2, -0.6]} color="#ffe6c4" intensity={3 * power} distance={4} decay={1.5} /> : null}
+      {power > 0.2 ? <pointLight position={[0.8, 1.2, -0.6]} color="#ffe6c4" intensity={3 * power * num(opts.lamp, 1)} distance={4} decay={1.5} /> : null}
       <RoomClutter f={f} />
       <RoutineLife opts={opts} f={f} camPos={camPos} />
+      <DeepLife opts={opts} f={f} fps={fps} camPos={camPos} />
     </group>
   );
 };

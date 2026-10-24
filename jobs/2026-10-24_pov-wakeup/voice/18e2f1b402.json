@@ -1,0 +1,32 @@
+{
+ "text": "it's six in the morning.",
+ "duration": 2.088,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "it's",
+   "start": 0.093,
+   "end": 0.328
+  },
+  {
+   "w": "six",
+   "start": 0.338,
+   "end": 0.648
+  },
+  {
+   "w": "in",
+   "start": 0.659,
+   "end": 0.776
+  },
+  {
+   "w": "the",
+   "start": 0.787,
+   "end": 0.851
+  },
+  {
+   "w": "morning.",
+   "start": 0.862,
+   "end": 1.353
+  }
+ ]
+}

@@ -38,7 +38,14 @@ export const Toon: React.FC<{c: string; e?: string; ei?: number; side?: THREE.Si
 export const SetLight: React.FC<{
   sky: string; ground: string; fill?: number; key: string; keyI?: number; keyPos: [number, number, number];
   target?: [number, number, number]; shadowSize?: number; fog?: string; fogNear?: number; fogFar?: number; bg?: string;
-}> = ({sky, ground, fill = 1.1, key, keyI = 2.2, keyPos, target = [0, 0, 0], shadowSize = 8, fog, fogNear = 8, fogFar = 30, bg}) => {
+  // depth (toki 2026-10-24: "Räume nicht belichtet, hinten genauso hell wie vorne"): 0 = the flat even light of before,
+  // 1 = the even fill and key give way to her own key + the set's practical pools, the distance falls into dark fog
+  depth?: number;
+}> = ({sky, ground, fill: fill0 = 1.1, key, keyI: keyI0 = 2.2, keyPos, target = [0, 0, 0], shadowSize = 8, fog: fog0, fogNear: near0 = 8, fogFar: far0 = 30, bg, depth = 0}) => {
+  const d = Math.max(0, Math.min(1, depth));
+  const fill = fill0 * (1 - 0.62 * d), keyI = keyI0 * (1 - 0.45 * d);
+  const fog = fog0 && d > 0 ? new THREE.Color(fog0).lerp(new THREE.Color('#05060b'), 0.7 * d).getStyle() : fog0;
+  const fogNear = near0 * (1 - 0.55 * d), fogFar = far0 * (1 - 0.4 * d);
   const light = useMemo(() => {
     const l = new THREE.DirectionalLight(key, keyI);
     l.position.set(...keyPos);
@@ -163,10 +170,34 @@ export type Surface = 'carpet' | 'wood' | 'paper' | 'fabric' | 'metal' | 'plush'
 const SURF_SEED: Record<Surface, number> = {carpet: 1, wood: 2, paper: 3, fabric: 4, metal: 5, plush: 6, plaster: 7, rubber: 8};
 
 function surfaceTexture(kind: Surface): THREE.CanvasTexture {
-  const t = canvasTexture(`surface_${kind}`, 256, 256, (ctx, w, h) => {
+  const t = canvasTexture(`surface_v2_${kind}`, 256, 256, (ctx, w, h) => {
     const shade = (v: number, a = 1) => `rgba(${Math.round(255 * v)},${Math.round(255 * v)},${Math.round(255 * v)},${a})`;
     ctx.fillStyle = shade(0.93); ctx.fillRect(0, 0, w, h);
     const s = SURF_SEED[kind] * 1000;
+    // v2 (toki 2026-10-24: "keine Textur, alles flach"): a large-scale layer first - soft blotches of wear and tone, so
+    // a surface varies across a whole wall / floor and not only in a fine noise the picture averages away
+    for (let i = 0; i < 26; i++) {
+      const x = rnd(s + i * 13.1) * w, y = rnd(s + i * 17.3) * h, r = 18 + rnd(s + i * 5.7) * 46;
+      const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+      const v = 0.66 + 0.3 * rnd(s + i * 2.9);      // look stills 2026-10-24: 0.78..0.98 still read flat at video size
+      g.addColorStop(0, shade(v, 0.7)); g.addColorStop(1, shade(v, 0));
+      ctx.fillStyle = g; ctx.fillRect(x - r, y - r, 2 * r, 2 * r);
+    }
+    if (kind === 'carpet') {           // carpet TILES: a seam grid, each tile its own slight tone
+      for (let ty = 0; ty < 4; ty++) for (let tx = 0; tx < 4; tx++) {
+        ctx.fillStyle = shade(0.86 + 0.12 * rnd(s + tx * 7 + ty * 31), 0.45); ctx.fillRect(tx * 64, ty * 64, 64, 64);
+      }
+      ctx.fillStyle = shade(0.6, 0.6); for (let k = 0; k <= 4; k++) { ctx.fillRect(k * 64 - 1, 0, 2, h); ctx.fillRect(0, k * 64 - 1, w, 2); }
+    } else if (kind === 'wood') {      // planks with dark joints
+      ctx.fillStyle = shade(0.55, 0.7); for (let k = 0; k <= 4; k++) ctx.fillRect(0, k * 64 - 1, w, 2);
+    } else if (kind === 'plaster') {   // hairline cracks
+      ctx.strokeStyle = shade(0.6, 0.5); ctx.lineWidth = 1;
+      for (let i = 0; i < 5; i++) { let x = rnd(s + i * 3) * w, y = rnd(s + i * 9) * h; ctx.beginPath(); ctx.moveTo(x, y);
+        for (let k = 0; k < 8; k++) { x += (rnd(s + i * 40 + k) - 0.5) * 22; y += rnd(s + i * 50 + k) * 12; ctx.lineTo(x, y); } ctx.stroke(); }
+    } else if (kind === 'metal') {     // scuffs
+      ctx.strokeStyle = shade(1, 0.35); for (let i = 0; i < 40; i++) { const x = rnd(s + i) * w, y = rnd(s + i * 4) * h;
+        ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + 6 + rnd(s + i * 6) * 20, y + (rnd(s + i * 8) - 0.5) * 4); ctx.stroke(); }
+    }
     if (kind === 'carpet' || kind === 'plaster' || kind === 'paper') {
       const n = kind === 'carpet' ? 5200 : kind === 'paper' ? 1400 : 2600;
       for (let i = 0; i < n; i++) {
@@ -207,7 +238,8 @@ export function toonSurface(color: string, kind: Surface, repeat: [number, numbe
   if (!m) {
     const map = surfaceTexture(kind).clone();
     map.repeat.set(repeat[0], repeat[1]); map.wrapS = map.wrapT = THREE.RepeatWrapping; map.needsUpdate = true;
-    m = new THREE.MeshToonMaterial({color, map, gradientMap: toonRamp(), emissive, emissiveIntensity: ei});
+    // the same pattern as relief: the set light rakes across it (a carpet seam, a plank joint, plaster) - v2 2026-10-24
+    m = new THREE.MeshToonMaterial({color, map, bumpMap: map, bumpScale: kind === 'paper' ? 0.8 : 2.6, gradientMap: toonRamp(), emissive, emissiveIntensity: ei});
     surfMats.set(k, m);
   }
   return m;

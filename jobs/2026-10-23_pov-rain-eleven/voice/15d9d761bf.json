@@ -1,0 +1,32 @@
+{
+ "text": "rain tomorrow. one hundred percent.",
+ "duration": 3.72,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "rain",
+   "start": 0.093,
+   "end": 0.445
+  },
+  {
+   "w": "tomorrow.",
+   "start": 0.456,
+   "end": 1.022
+  },
+  {
+   "w": "one",
+   "start": 1.752,
+   "end": 1.987
+  },
+  {
+   "w": "hundred",
+   "start": 1.998,
+   "end": 2.425
+  },
+  {
+   "w": "percent.",
+   "start": 2.436,
+   "end": 2.959
+  }
+ ]
+}

@@ -18,7 +18,7 @@ from __future__ import annotations
 import math
 
 KINDS = {"crash", "push_dutch", "orbit_roll", "crane_up", "drop", "through", "track", "vertigo", "whip_out",
-         "spiral", "handheld"}
+         "spiral", "handheld", "follow"}
 
 
 def _at(P, deg, dist, dy=0.0):
@@ -30,7 +30,7 @@ def _r(v):
     return [round(x, 3) for x in v]
 
 
-def expand(m: dict, length: float, P: list[float], obj: list[float] | None) -> list[dict]:
+def expand(m: dict, length: float, P: list[float], obj: list[float] | None, P_end: list[float] | None = None) -> list[dict]:
     """The camera keys of one move (times relative to the shot start, seconds)."""
     kind = m["kind"]
     deg = float(m.get("deg", 0.0))
@@ -89,6 +89,10 @@ def expand(m: dict, length: float, P: list[float], obj: list[float] | None) -> l
     if kind == "spiral":                      # half a turn, rising and closing in (the dream, the release)
         return [K(t0, _at(P, deg, d * 1.6, -0.3)), K(t0 + dur / 2, _at(P, deg + 90, d * 1.25, 0.2), path="spline", roll=6),
                 K(t1, _at(P, deg + 180, d, 0.55), path="spline", ease="inOut")]
+    if kind == "follow":                      # beside her while she travels (a run, a slide): her start to her end spot
+        E = P_end or P
+        a0, a1 = _at(P, deg, d, float(m.get("dy", 0.0))), _at(E, deg + float(m.get("sweep", 0)), d, float(m.get("dy", 0.0)))
+        return [K(t0, a0, look=_r(P)), K(t1, a1, look=_r(E), ease="linear")]
     if kind == "handheld":                    # a person holding the camera: drift + shake (documentary, the grey days)
         return [K(t0, _at(P, deg, d), shake=float(m.get("shake", 0.45))),
                 K(t1, _at(P, deg + 4, d * 0.96, -0.03), shake=float(m.get("shake", 0.45)), ease="linear")]

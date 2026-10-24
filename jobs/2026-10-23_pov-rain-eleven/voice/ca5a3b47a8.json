@@ -1,0 +1,42 @@
+{
+ "text": "my record is three out of ten.",
+ "duration": 2.64,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "my",
+   "start": 0.093,
+   "end": 0.285
+  },
+  {
+   "w": "record",
+   "start": 0.296,
+   "end": 0.702
+  },
+  {
+   "w": "is",
+   "start": 0.712,
+   "end": 0.905
+  },
+  {
+   "w": "three",
+   "start": 0.915,
+   "end": 1.215
+  },
+  {
+   "w": "out",
+   "start": 1.225,
+   "end": 1.385
+  },
+  {
+   "w": "of",
+   "start": 1.396,
+   "end": 1.503
+  },
+  {
+   "w": "ten.",
+   "start": 1.514,
+   "end": 1.898
+  }
+ ]
+}

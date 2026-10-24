@@ -23,13 +23,13 @@ permissions:
   contents: write
 
 concurrency:
-  group: stills-${{ github.ref }}
+  group: stills-${{ github.run_id }}   # one group per run: a pending run is never dropped by a newer push (2026-10-24: two POV finals lost)
   cancel-in-progress: false
 
 jobs:
   stills:
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
+    timeout-minutes: 90   # a scene probe over a whole film (stills.json "probe") takes longer than a still board
     steps:
       - uses: actions/checkout@v4
         with:
@@ -43,7 +43,7 @@ jobs:
           node-version: "22"
       - name: Tools
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          bash .github/ffmpeg.sh   # apt with a time limit, else a static build (never hangs the job)
           pip install -q -r requirements.txt
       - name: Node modules (cached)
         id: nm
@@ -56,7 +56,7 @@ jobs:
         run: cd studio && npm ci --no-audit --no-fund
       - name: Tests (python + studio typecheck + guards)
         run: |
-          python -m pytest -q tests
+          timeout 600 python -m pytest -q -v tests < /dev/null
           cd studio && npx tsc --noEmit && node --test test/check.test.mjs
       - name: Browser
         run: cd studio && npx remotion browser ensure
@@ -67,6 +67,8 @@ jobs:
             JOBS="${{ github.event.inputs.job }}"
           else
             BEFORE="${{ github.event.before }}"
+            # a push of several commits: the base is outside the shallow checkout - fetch it (2026-10-24: stills ran nothing)
+            [ -n "$BEFORE" ] && ! git cat-file -e "$BEFORE" 2>/dev/null && git fetch -q --depth=1 origin "$BEFORE" 2>/dev/null || true
             if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
               BEFORE=$(git rev-parse -q --verify HEAD~1 || git hash-object -t tree /dev/null)
             fi
@@ -105,8 +107,17 @@ jobs:
             DEST=$(get dest ""); [ -n "$DEST" ] && OUT="$PWD/$DEST"   # e.g. a board job writes into the song job's boards/
             python -m raymi stills-passes "$J" > "/tmp/stills/$J.passes"   # one pass per format (thumbs: mv + short)
             while IFS=$'\t' read -r FMT FR NAMES; do
+              if [ -f "jobs/$J/shots.json" ] && grep -q '"voice"' "jobs/$J/shots.json"; then   # a talking Short: its sound exists before the timeline
+                python -m raymi voice-lines "$J" < /dev/null && python -m raymi mix "$J" < /dev/null
+              fi
               if [ -f "jobs/$J/shots.json" ]; then python -m raymi timeline "$J" "$FMT" < /dev/null; fi
               START=$(date +%s)
+              PROBE=$(get probe 0)
+              if [ "$PROBE" != "0" ]; then   # the scene probe over the whole film (toki 2026-10-24: fault classes, not spots)
+                (cd studio && node probe.mjs "$J" --every "$PROBE" --out "../jobs/$J/boards/probe_$FMT.json") < /dev/null
+                { echo "#### probe $J $FMT"; echo '```'; python -m raymi probe "$J" "$FMT" < /dev/null || true; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+              fi
+              [ -n "$FR" ] || continue
               (cd studio && node stills.mjs "$J" "$FR" --scale "$SC" --out "$OUT" ${NAMES:+--names "$NAMES"}) < /dev/null
               echo "$J ($FMT): $(echo $FR | tr ',' ' ' | wc -w) stills in $(( $(date +%s) - START )) s -> $TO" >> "$GITHUB_STEP_SUMMARY"
               if [ -f "jobs/$J/shots.json" ] && grep -q '"hero"' "jobs/$J/shots.json"; then   # main element readable at phone size?
@@ -115,10 +126,11 @@ jobs:
               fi
             done < "/tmp/stills/$J.passes"
             if [ "$(get thumbs False)" = "True" ]; then python -m raymi thumbs "$OUT"; fi   # boards/thumbs_168.jpg: the feed view
+            { echo "#### exposure $J"; python -m raymi exposure "$OUT" || true; } >> "$GITHUB_STEP_SUMMARY"   # burnt / washed / loud / flat (toki 2026-10-24)
             echo "$TO" > "/tmp/stills/$J.to"
           done
       - name: Publish
-        if: steps.which.outputs.jobs != ''
+        if: always() && steps.which.outputs.jobs != ''   # stills already made are kept even when a later job fails
         run: |
           git config user.name "raymi-stills-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -130,5 +142,5 @@ jobs:
             if git rev-parse -q --verify origin/renders > /dev/null; then git worktree add -q -B renders /tmp/rb origin/renders;
             else git worktree add -q --orphan -b renders /tmp/rb; fi
             for D in /tmp/stills/*/; do J=$(basename "$D"); mkdir -p "/tmp/rb/reports/$J/stills"; cp "$D"*.jpg "/tmp/rb/reports/$J/stills/" 2>/dev/null || true; done
-            cd /tmp/rb && git add reports && (git diff --cached --quiet || git commit -qm "stills run ${{ github.run_number }}") && git push -q origin renders
+            cd /tmp/rb && git add reports && (git diff --cached --quiet || git commit -qm "stills run ${{ github.run_number }}") && { for t in 1 2 3 4 5; do git push -q origin renders && break; git pull --rebase -q origin renders; sleep 8; done; }
           fi

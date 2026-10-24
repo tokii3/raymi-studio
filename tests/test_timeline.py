@@ -119,6 +119,14 @@ def test_set_times_become_film_frames_and_a_window_drops_shots(tmp_path):
     assert p["durationInFrames"] == round(13.9 * 30) - 345
 
 
+def test_value_pairs_convert_only_their_time(tmp_path):
+    # 2026-10-24: dusk_to [[11.0, 0.92]] became [[frames, 28]] - the beach sky went blood red in the purple Short
+    a = {**SHOT, "at": "line:0", "opts": {"dusk_to": [[10.5, 0.92]]}}
+    spec = job(tmp_path, [a, {**SHOT, "at": "line:1"}])
+    p, errors, _ = T.compile_shots(tmp_path, spec, "mv", cmap=ALL)
+    assert p["shots"][0]["opts"]["dusk_to"] == [[315 - 299, 0.92]]
+
+
 def test_frame_camera_keeps_cut_edges_out_and_the_head_in(tmp_path):
     shot = {**SHOT, "at": "line:0", "camera": [{"at": 0, "frame": "close", "cam": "tank_front"}],
             "raymi": [{"at": 0, "sprite": "WS_F_PANIC_LUNGE_UV_203", "pos": "center"}]}
@@ -274,3 +282,12 @@ def test_camera_moves_expand_into_plain_keys(tmp_path):
     bad = {**shot, "camera": [{"move": {"kind": "barrel_roll"}}]}
     _, errors, _ = T.compile_shots(tmp_path, job(tmp_path, [bad], vrm="vrm/raymi5.vrm"), "mv", cmap=ALL)
     assert any("barrel_roll" in e or "kind must be" in e for e in errors)
+
+
+def test_desk_things_become_solids_the_lens_cannot_pass():
+    """motion reel 2026-10-23: a crash zoom flew through her monitor - desk things are solids for the guards."""
+    marks = {"monitor": [-0.42, 0.765, 0.78], "files": [0.62, 0.765, 0.82]}
+    sol = T.thing_solids([{"kind": "monitor", "pos": "monitor", "rot": [0, 3.14, 0]}, {"kind": "files", "pos": "files", "n": 8},
+                          {"kind": "postcard", "pos": [0, 1, 0]}], marks)
+    assert [s["name"] for s in sol] == ["monitor", "files"]
+    assert sol[0]["center"] == [-0.42, 1.185, 0.78] and abs(sol[1]["size"][1] - (0.044 * 8 + 0.03)) < 1e-9

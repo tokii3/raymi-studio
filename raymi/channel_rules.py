@@ -171,3 +171,27 @@ def store_counter(script: dict, job_name: str) -> None:
         return
     ser["counter"].update(right=int(new[0]), total=int(new[1]), by_job=job_name)
     SERIES_PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def delivery_name(job_dir: Path, fmt: str = "short") -> str:
+    """The file name toki downloads (toki 2026-10-24: "dateien bitte benennen, nicht immer nur final"):
+    <upload day>_Raymi_<recommended title>_<Short|MV>.mp4 from the job's upload.md (else the job date and the script's
+    title). Only letters, digits and dashes, so a GitHub release keeps it as it is."""
+    job_dir = Path(job_dir)
+    up = job_dir / "upload.md"
+    text = up.read_text(encoding="utf-8") if up.exists() else ""
+    m = re.search(r"Upload slot:\s*\**\s*(?:\w+\s+)?(\d{4}-\d{2}-\d{2})", text)
+    day = m.group(1) if m else job_dir.name[:10]
+    title = ""
+    rec = re.search(r"^Recommended:\s*(\d+)", text, re.M)
+    if rec:
+        opt = re.search(rf"^{rec.group(1)}\.\s+(.+)$", text, re.M)
+        title = opt.group(1) if opt else ""
+    if not title:
+        for f in ("shots.json", "plan.json"):
+            if (job_dir / f).exists():
+                title = json.loads((job_dir / f).read_text(encoding="utf-8")).get("title", "")
+                break
+    words = re.findall(r"[A-Za-z0-9]+", title.replace("'", "")) or [job_dir.name]
+    slug = "-".join(w[:1].upper() + w[1:] for w in words)
+    return f"{day}_Raymi_{slug}_{'MV' if fmt == 'mv' else 'Short'}.mp4"

@@ -1,0 +1,22 @@
+{
+ "text": "blue? sad purple.",
+ "duration": 2.784,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "blue?",
+   "start": 0.093,
+   "end": 0.456
+  },
+  {
+   "w": "sad",
+   "start": 1.175,
+   "end": 1.549
+  },
+  {
+   "w": "purple.",
+   "start": 1.56,
+   "end": 2.019
+  }
+ ]
+}

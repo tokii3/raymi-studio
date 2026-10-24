@@ -1,0 +1,27 @@
+{
+ "text": "why are you awake.",
+ "duration": 1.872,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "why",
+   "start": 0.093,
+   "end": 0.371
+  },
+  {
+   "w": "are",
+   "start": 0.381,
+   "end": 0.499
+  },
+  {
+   "w": "you",
+   "start": 0.509,
+   "end": 0.627
+  },
+  {
+   "w": "awake.",
+   "start": 0.638,
+   "end": 1.086
+  }
+ ]
+}

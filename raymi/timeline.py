@@ -76,18 +76,22 @@ def _silhouette(file: str) -> list[str]:
 
 FORMATS = {"mv": ("MV", 1920, 1080), "short": ("MVShort", 1080, 1920),
            "pilot": ("MV", 1920, 1080)}   # pilot = the MV frame over shots.json window.pilot (a 20-40 s section)
-ACTS = {"idle", "pop", "hop", "bounce", "shake", "tilt", "lean", "shrink", "turn", "stomp", "float"}
+ACTS = {"idle", "pop", "hop", "bounce", "shake", "tilt", "lean", "shrink", "turn", "stomp", "float",
+        "flatten"}   # flatten: she goes flat like a ray (3D only, VrmPuppet)
 EASES = {"linear", "in", "out", "inOut", "snap", "hold"}
 LYRIC_KINDS = {"sign", "float", "stamp", "glass", "card", "ticker", "firework"}
 # what a lyric is MADE of on its object (Words3D): breath-fog, engraved brass, a phone's camera UI, a card's print,
 # the felt's gold print, light
 LYRIC_MATERIALS = {None, "fog", "engraved", "screen", "print", "felt", "light"}
 TRANSITIONS = {"cut", "bubbles", "ink", "whip", "flash", "pass", "rewind", "spin", "zoom"}
-GRADES = {"day", "closing", "night", "own", "warm", "clean", "ember", "vrm_fire"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
+GRADES = {"day", "closing", "night", "own", "warm", "clean", "ember", "vrm_fire", "pov", "pov_warm"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
 LYRIC_STYLES = {"v1", "v2"}
 # a main element: worn on her head (crown, hat), her face, a lyric word, a prop box in the set (check.ts heroBox)
 HERO_KINDS = {"worn", "face", "word", "prop"}
-ICONS = {None, "!", "?", "heart", "sweat", "anger", "zz", "bulb", "sparkle", "music"}
+ICONS = {None, "!", "?", "heart", "sweat", "anger", "zz", "bulb", "sparkle", "music", "bubbles"}
+# things on her bones (studio/src/three/wearables.tsx WEARABLES - a test keeps them equal) and the bones they ride
+WEARABLES = {"chopsticks", "chopsticks_slice", "salmon_hood", "salmon_fin", "salmon_tail"}
+WEAR_AT = {"hand_r", "hand_l", "head", "forearm_r", "forearm_l", "hips"}
 DEFAULT_HEIGHT = 1.55   # Raymi's figure height in metres (ears to feet)
 # set options written in SONG seconds (the script's measured times); the compiler turns them into film frames so a
 # set event lands on the same beat in the MV, the Short and a pilot window
@@ -104,12 +108,14 @@ TIME_OPTS = {"lights_off", "window_break", "unfold", "shake", "cracks", "burst",
              "rewind_at", "dark_at", "kill_at", "vents_at", "flares", "shells", "current_at", "tint_at",
              "cliff_ignite_at", "cliff_steps", "column_at", "column_bend_at", "column_unbend_at", "column_pulse",
              "pool_at", "sea_glow_at", "pulse_at", "dots_at", "path_at", "cloud_at", "rain_at", "rain_end_at", "fireworks",
-             "glow", "whip", "grade_at"}
+             "glow", "whip", "grade_at",
+             # POV Shorts (2026-10-23): her chest dots flare, a room lamp / the train lights, the live studio camera
+             "glow_flare", "lamp_at", "live", "door_at"}
 # options holding specs (a dict or a list of dicts) whose own fields are times / positions (three/fire.tsx,
 # three/creatures.tsx): "at" / "out" / "toss" / "*_at" = song seconds -> frames, "grow" / "fade" / "ember" = seconds ->
 # frame counts, "pos" / "from" / "to" = a mark or [x, y, z]
 NESTED_OPTS = {"fires", "sparks", "fish", "school", "sauna", "salmon", "props", "things", "strings", "boss", "crowd"}
-NESTED_TIME = {"at", "out", "toss", "snap", "tug", "spit", "land"}
+NESTED_TIME = {"at", "out", "toss", "snap", "tug", "spit", "land", "blow_at", "press_at"}
 NESTED_FRAMES = {"grow", "fade", "ember"}
 NESTED_VEC = {"pos", "from", "to", "anchor"}
 
@@ -355,8 +361,11 @@ def _camera_list(s: dict, length: float, fmt: str, marks: dict, errors: list[str
         if P is None:
             continue
         P = [P[0], P[1] + float(m.get("h", 1.35)), P[2]]
+        last = (s.get("actor") or [{}])[-1].get("pos")      # where she ends (a follow move travels with her)
+        E = _v3(last, marks, errors, ktag) if last is not None else None
+        E = [E[0], E[1] + float(m.get("h", 1.35)), E[2]] if E else None
         try:
-            keys = CM.expand(m, length, P, obj)
+            keys = CM.expand(m, length, P, obj, E)
         except ValueError as e:
             errors.append(f"{ktag}: {e}")
             continue
@@ -483,13 +492,60 @@ def vrm_poses() -> set[str]:
     return set(re.findall(r"^  ([a-z_0-9]+): \{", body, re.M))
 
 
+# the solid size of a desk thing (studio/src/three/routine.tsx) - the lens may not fly through it, nor may it hide her
+# face (motion reel 2026-10-23: a crash zoom ran through her monitor's back and the frame was one dark mass)
+THING_BOX = {"monitor": ([0.0, 0.42, 0.0], [0.64, 0.42, 0.08]), "globe": ([0.0, 0.2, 0.0], [0.34, 0.42, 0.34]),
+             "printer": ([0.0, 0.5, 0.0], [0.6, 1.0, 0.5])}
+
+
+def thing_solids(things: list[dict], marks: dict) -> list[dict]:
+    out = []
+    for t in things:
+        kind = t.get("kind")
+        pos = marks.get(t["pos"]) if isinstance(t.get("pos"), str) else t.get("pos")
+        if not isinstance(pos, list) or len(pos) != 3:
+            continue
+        sc = float(t.get("scale", 1.0))
+        if kind == "files":
+            h = 0.044 * int(t.get("n", 6)) + 0.03
+            c, sz = [0.0, h / 2, 0.0], [0.36, h, 0.28]
+        elif kind in THING_BOX:
+            c, sz = THING_BOX[kind]
+        else:
+            continue
+        out.append({"name": kind, "center": [round(pos[i] + c[i] * sc, 3) for i in range(3)], "size": [round(v * sc, 3) for v in sz]})
+    return out
+
+
+def vocal_envelope(path: Path, start: float, frames: int, fps: int = FPS) -> list[float]:
+    """Loudness of the vocal stem per film frame, 0..1 (-42 dB .. the 95th percentile) - studio/clip.mjs's measure."""
+    import subprocess
+
+    import numpy as np
+
+    rate = 8000
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{start:.3f}", "-t", f"{frames / fps + 0.5:.3f}", "-i", str(path),
+                          "-ac", "1", "-ar", str(rate), "-f", "f32le", "-"], capture_output=True, check=True).stdout
+    pcm = np.frombuffer(raw, dtype=np.float32)
+    per = rate / fps
+    db = []
+    for f in range(frames):
+        x = pcm[int(f * per):int((f + 1) * per)]
+        db.append(10 * np.log10(float(np.mean(x * x)) + 1e-12) if x.size else -120.0)
+    top = sorted(db)[int(len(db) * 0.95)] if db else -10.0
+    return [round(max(0.0, min(1.0, (d + 42) / max(6.0, top + 42))), 2) for d in db]
+
+
 def clip_names() -> set[str]:
     """Mixamo clip ids the studio can load (studio/catalog/clips.json; the files live in the private assets repo)."""
     p = Path(__file__).resolve().parents[1] / "studio" / "catalog" / "clips.json"
     return set(json.loads(p.read_text(encoding="utf-8"))["clips"]) if p.exists() else set()
 
 
-FX_KINDS = {"duo", "speed", "impact", "halftone", "spread"}
+FX_KINDS = {"duo", "speed", "impact", "halftone", "spread",
+            # the POV layer (studio/src/film/PovFx.tsx): on the lens / the glass in front of it
+            "cover", "pov_hand", "ripple", "algae", "freeze", "polaroid", "stamp"}
+FX_TIMES = {"taps", "big", "write0", "write1"}   # fx fields in song seconds -> film frames
 
 
 def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses: set[str], errors: list[str],
@@ -520,9 +576,22 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
                "height": float(r.get("height", DEFAULT_HEIGHT)), "blend": round(float(r.get("blend", 0.27)) * FPS),
                "act": r.get("act", "idle"), "move": round(float(r.get("move", 0.0)) * FPS), "arc": float(r.get("arc", 0.0)),
                "ease": r.get("ease", "inOut")}
-        for opt in ("motion", "motionMix", "expr", "look", "once", "restart"):
+        if r.get("icon") not in ICONS:
+            errors.append(f"{ktag}: icon must be one of {sorted(x for x in ICONS if x)}")
+        elif r.get("icon"):
+            key["icon"] = r["icon"]
+        for opt in ("motion", "motionMix", "expr", "once", "restart", "aware"):
             if opt in r:
                 key[opt] = r[opt]
+        if "look" in r:                                    # "lens" | null | a mark / [x, y, z] she looks at
+            key["look"] = r["look"] if r["look"] in ("lens", None) else _v3(r["look"], marks, errors, ktag)
+        for j, w in enumerate(r.get("props", [])):         # things on her bones (studio/src/three/wearables.tsx)
+            if w.get("item") not in WEARABLES:
+                errors.append(f"{ktag} prop {j + 1}: item {w.get('item')!r} is not a wearable ({sorted(WEARABLES)})")
+            if w.get("at") not in WEAR_AT:
+                errors.append(f"{ktag} prop {j + 1}: at must be one of {sorted(WEAR_AT)}")
+        if "props" in r:
+            key["props"] = r["props"]
         if "clip_from" in r:
             key["clipFrom"] = float(r["clip_from"])
         if "speed" in r:
@@ -541,8 +610,11 @@ def compile_fx(s: dict, a: float, b: float, fr, errors: list[str], tag: str) -> 
         if x.get("kind") not in FX_KINDS:
             errors.append(f"{tag} fx {k + 1}: kind must be one of {sorted(FX_KINDS)}")
             continue
-        out.append({**{kk: v for kk, v in x.items() if kk not in ("at", "to")},
-                    "from": fr(_key_time(x.get("at", 0), a, b)), "to": fr(_key_time(x.get("to", "end"), a, b)) + 1})
+        item = {kk: v for kk, v in x.items() if kk not in ("at", "to")}
+        for kk in FX_TIMES & set(item):                    # taps / write times: song seconds like the shot times
+            v = item[kk]
+            item[kk] = [fr(float(t)) for t in v] if isinstance(v, list) else fr(float(v))
+        out.append({**item, "from": fr(_key_time(x.get("at", 0), a, b)), "to": fr(_key_time(x.get("to", "end"), a, b)) + 1})
     return out
 
 
@@ -688,6 +760,16 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         if not ckeys:
             errors.append(f"{tag}: needs at least one camera key")
             continue
+        # the observer (toki 2026-10-24): a person watching her, not a tripod - the film's default, a shot may set 0
+        obs = s.get("observer", spec.get("observer"))
+        if obs is not None:
+            for ck in ckeys:
+                ck["observer"] = float(obs)
+        # she notices the watcher: the film's default share of a head turn toward the lens (a key may set its own)
+        aw = s.get("aware", spec.get("aware"))
+        if aw is not None:
+            for ak in s.get("actor") or []:
+                ak.setdefault("aware", float(aw))
         # lyrics living in this shot
         lyr = s.get("lyrics")
         if lyr is None and job_style == "v2" and spec.get("all_lyrics", True) and not s.get("text")                 and not s.get("acted") and any(round(a * FPS) <= w["cut"] < round(b * FPS) and t_from <= w["t0"] < t_to
@@ -780,11 +862,18 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         if "grade" in opts and opts["grade"] not in GRADES:
             errors.append(f"{tag}: grade {opts['grade']!r} is not in the grade library {sorted(GRADES)}")
         short_opts = opts.pop("short", None)
+        if "depth" not in opts and spec.get("depth") is not None:
+            opts["depth"] = float(spec["depth"])           # the film's light depth (look.tsx SetLight): a shot may set its own
+        # her chair (office set): rolled back when she is at her place in this shot and never seated in it
+        at_place = [k for k in s.get("actor") or [] if k.get("pos") == "chair"]
+        if st == "office" and "chair_out" not in opts and at_place and not any(
+                str(k.get("pose", "")).startswith(("sit", "slump")) for k in at_place):
+            opts["chair_out"] = True
         if fmt == "short" and isinstance(short_opts, dict):
             opts.update(short_opts)                        # the narrow frame's own set choices (e.g. a sign left out)
         for k in TIME_OPTS & opts.keys():
             opts[k] = time_opt(opts[k], fr)
-        for k in ("doors", "bed_drag"):                    # only the TIME of these is song seconds, the rest are values
+        for k in ("doors", "bed_drag", "dusk_to"):         # only the TIME of these is song seconds, the rest are values
             v = opts.get(k)
             if isinstance(v, list) and v and isinstance(v[0], list):
                 opts[k] = [[fr(x[0])] + list(x[1:]) for x in v]
@@ -842,6 +931,10 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                 extra[opt] = s[opt]
         if s.get("fx"):
             extra["fx"] = compile_fx(s, a, b, fr, errors, tag)
+            for x in extra["fx"]:                          # a stamp word is screen text in her heavy weight
+                if x.get("kind") == "stamp" and x.get("text"):
+                    screen_texts.append(str(x["text"]))
+                    heavy = True
         shots.append({**extra, "id": s.get("id", f"s{i + 1}"), "from": max(0, fr(a)), "to": min(total, fr(b)), "set": st, "hero": hero,
                       "opts": opts, "camera": ckeys, "kick": float(s.get("kick", 1.0)), "puppets": pkeys,
                       "lyrics": L, "words": words,
@@ -853,8 +946,10 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                                 if (not tx.get("opt") or opts.get(tx["opt"])) and opts.get(tx.get("unless", ""), True) is not False
                                 and not (tx.get("blank") and opts.get(tx["blank"]) == "")],
                       "noLens": sets[st].get("no_lens", []),
-                      "solids": [{k: v for k, v in so.items() if k not in ("opt", "unless")} for so in sets[st].get("solids", [])
-                                 if (not so.get("opt") or opts.get(so["opt"])) and opts.get(so.get("unless", ""), True) is not False]})
+                      # a macro / a close-up AT a prop may sit close to it: "lens_near": {"monitor": "<why>"} lifts that solid
+                      "solids": [x for x in [{k: v for k, v in so.items() if k not in ("opt", "unless")} for so in sets[st].get("solids", [])
+                                 if (not so.get("opt") or opts.get(so["opt"])) and opts.get(so.get("unless", ""), True) is not False]
+                                 + thing_solids(opts.get("things") or [], marks) if x["name"] not in (s.get("lens_near") or {})]})
     if shots and shots[0]["from"] != 0:
         errors.append(f"the first shot must start at the window start ({t_from:.2f} s)")
     overlay = None
@@ -883,10 +978,26 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         listed = list(spec.get("motions") or [])
         have = {Path(m).stem for m in listed}
         props["motions"] = listed + [f"motions/{c}.fbx" for c in sorted(used_clips - have)]
+        # her vocal stem's loudness per film frame opens the mouth (toki 2026-10-24: "keine Mundsynchro")
+        vocals = job / "vocals.ogg"
+        if vocals.exists():
+            props["mouthEnv"] = vocal_envelope(vocals, t_from, total)
         # every sung word for her lip sync (film seconds), not only the words a shot writes on screen
         props["sung"] = [{"w": w["w"], "roma": w.get("roma", ""), "t0": round(w["t0"] - t_from, 3), "t1": round(w["t1"] - t_from, 3)}
                          for ln in lyrics for w in ln.get("words", [])
                          if w.get("t1", 0) > t_from and w.get("t0", 0) < t_to and not ln.get("backing")]
+    if spec.get("voice"):
+        # a talking Short (kind pov, raymi/voice_lines.py): her spoken words drive the mouth, and the sound under the
+        # picture is the mix of bed + takes + sfx (python -m raymi mix, cloud prepare) - it starts at the window start
+        from . import voice_lines as VL
+
+        takes = VL.load_takes(job, spec, errors)
+        props["sung"] = VL.spoken_words(takes, t_from, t_to)
+        props["audio"] = {"file": "audio.m4a", "from": 0.0, "to": round(t_to - t_from, 3),
+                          "src": _repo_path(job / "out" / "mix.m4a")}
+        for k, s_ in enumerate(spec.get("sfx", [])):
+            if not (VL.SFX_DIR / f"{s_.get('kind')}.wav").is_file():
+                errors.append(f"sfx {k + 1}: unknown kind {s_.get('kind')!r} (assets/sfx, python -m raymi sfx build)")
     return props, errors, warns
 
 

@@ -1,0 +1,32 @@
+{
+ "text": "five more minutes. ray rules.",
+ "duration": 3.552,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "five",
+   "start": 0.095,
+   "end": 0.468
+  },
+  {
+   "w": "more",
+   "start": 0.479,
+   "end": 0.704
+  },
+  {
+   "w": "minutes.",
+   "start": 0.714,
+   "end": 1.259
+  },
+  {
+   "w": "ray",
+   "start": 1.987,
+   "end": 2.254
+  },
+  {
+   "w": "rules.",
+   "start": 2.265,
+   "end": 2.788
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "text": "fine. couples costume.",
+ "duration": 3.072,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "fine.",
+   "start": 0.095,
+   "end": 0.554
+  },
+  {
+   "w": "couples",
+   "start": 1.271,
+   "end": 1.677
+  },
+  {
+   "w": "costume.",
+   "start": 1.688,
+   "end": 2.318
+  }
+ ]
+}

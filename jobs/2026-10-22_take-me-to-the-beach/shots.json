@@ -1,6 +1,6 @@
 {
  "title": "Take Me to the Beach - Raymi (Same Day)",
- "_why": "The shooting script 4_SCRIPT.md v2 (script-critic PASS) as data. Row numbers in ids. 3D Raymi (raymi5) with rig keys; 2D states: grey / colour / blue / red / own / clean / warm (4_SCRIPT 'What this script settles' 5). v3 (toki 2026-10-23): the beach is her dream sea (set dream), the mountains are files - both metaphors.",
+ "_why": "The shooting script 4_SCRIPT.md v2 (script-critic PASS) as data. Row numbers in ids. 3D Raymi (raymi5) with rig keys; 2D states: grey / colour / blue / red / own / clean / warm (4_SCRIPT 'What this script settles' 5). v3 (toki 2026-10-23): the beach is her dream sea (set dream), the mountains are files - both metaphors. REBUILD 2026-10-24 (toki: steif / random cuts / Effekte / Kamera Standard): real clips, camera moves, no posterize, calm grades, cuts on the music.",
  "audio": {
   "file": "song.webm",
   "from": 0,
@@ -8,8 +8,8 @@
  },
  "window": {
   "short": {
-   "from": 29.35,
-   "to": 45.69
+   "from": 29.642,
+   "to": 45.617
   }
  },
  "lyrics": "lyrics_timed.json",
@@ -18,26 +18,7 @@
  "lyric_style": "v2",
  "grain": 0.05,
  "vrm": "vrm/raymi5.vrm",
- "motions": [
-  "motions/dance.fbx",
-  "motions/idle.fbx",
-  "motions/silly-dancing.fbx",
-  "motions/twist-dance.fbx",
-  "motions/rumba-dancing.fbx",
-  "motions/zombie-walk.fbx",
-  "motions/reaction.fbx",
-  "motions/defeated.fbx",
-  "motions/falling.fbx",
-  "motions/running.fbx",
-  "motions/standing-dodge-backward.fbx",
-  "motions/shoved-reaction-with-spin.fbx",
-  "motions/joyful-jump.fbx",
-  "motions/spin-in-place.fbx",
-  "motions/mma-kick.fbx",
-  "motions/taunt.fbx",
-  "motions/petting-animal.fbx",
-  "motions/sitting-laughing.fbx"
- ],
+ "motions": [],
  "heroes": {
   "postcard": {
    "kind": "prop",
@@ -80,7 +61,7 @@
    "set": "office",
    "why": "THE thumbnail: she dances on her desk, colour bursting into the grey office (P6)",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -148,51 +129,27 @@
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      -1.1,
-      1.45,
-      2
-     ],
-     "look": [
-      0,
-      1.75,
-      0.5
-     ],
-     "fov": 42,
-     "roll": -8,
-     "shake": 0.2
-    },
-    {
-     "at": "end",
-     "pos": [
-      1.1,
-      1.5,
-      1.9
-     ],
-     "look": [
-      0,
-      1.75,
-      0.5
-     ],
-     "fov": 40,
-     "roll": 8,
-     "path": "spline",
-     "ease": "linear",
-     "shake": 0.2
+     "move": {
+      "kind": "orbit_roll",
+      "h": 1.38,
+      "deg": -25,
+      "dist": 1.9,
+      "sweep": 60,
+      "roll": 8
+     }
     }
    ],
    "actor": [
     {
      "at": 0,
      "pose": "dance_a",
-     "motion": "silly-dancing",
-     "motionMix": 0.75,
      "pos": "on_desk",
      "rotY": "lens",
      "expr": {
       "joy": 0.9
-     }
+     },
+     "clip": "hip-hop-dancing",
+     "motionMix": 1
     }
    ],
    "mouth": "silent",
@@ -218,7 +175,8 @@
    "transition": {
     "kind": "cut",
     "frames": 0
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "02",
@@ -226,7 +184,7 @@
    "set": "office",
    "why": "the stop = the dream breaking: the colour drains back into her, she topples",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "monitor",
@@ -284,7 +242,9 @@
      "rotY": "lens",
      "expr": {
       "surprised": 0.6
-     }
+     },
+     "clip": "hip-hop-dancing",
+     "motionMix": 1
     },
     {
      "at": 0.15,
@@ -292,7 +252,10 @@
      "pos": "on_desk",
      "rotY": "lens",
      "rollZ": 25,
-     "blend": 0.2
+     "blend": 0.2,
+     "clip": "fall-flat",
+     "motionMix": 1,
+     "once": true
     }
    ],
    "mouth": "silent",
@@ -312,7 +275,8 @@
     "kind": "whip",
     "frames": 8,
     "dir": -1
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "03",
@@ -320,7 +284,7 @@
    "set": "bedroom",
    "why": "the marionette rule is shown before any word: strings pull her up from the bed",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "dark": 0.3,
     "strings": [
      {
@@ -381,7 +345,9 @@
      "rollZ": -85,
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "zombie-idle",
+     "motionMix": 0.1
     },
     {
      "at": 0.2,
@@ -391,42 +357,30 @@
      "blend": 0.35,
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "zombie-idle",
+     "motionMix": 0.1
     }
    ],
    "mouth": "silent",
    "step": 2,
    "outline": 0.0035,
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
-   }
+   },
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "04",
-   "at": 2,
+   "at": 1.917,
    "set": "dream",
    "why": "colour flash 1 inside the first 3 s (treatment_2 FIX 2)",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
@@ -440,8 +394,6 @@
     {
      "at": 0,
      "pose": "sing_soft",
-     "motion": "idle",
-     "motionMix": 0.3,
      "pos": [
       0,
       0.26,
@@ -451,7 +403,9 @@
      "expr": {
       "joy": 0.4,
       "blink": 1
-     }
+     },
+     "clip": "happy",
+     "motionMix": 1
     }
    ],
    "mouth": "silent",
@@ -459,7 +413,8 @@
    "transition": {
     "kind": "cut",
     "frames": 0
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "05",
@@ -467,7 +422,7 @@
    "set": "train",
    "why": "the routine as a ride - she is moved, not moving: dragged through the closing doors",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "doors": [
      [
       2.2,
@@ -529,27 +484,19 @@
    },
    "camera": [
     {
-     "at": 0,
-     "cam": "doors_in"
-    },
-    {
-     "at": "end",
-     "cam": "doors_in",
-     "offset": [
-      0,
-      0,
-      -0.6
-     ],
-     "ease": "in",
-     "shake": 0.3
+     "move": {
+      "kind": "track",
+      "h": 1.38,
+      "deg": 0,
+      "dist": 1.7,
+      "width": 0.6
+     }
     }
    ],
    "actor": [
     {
      "at": 0,
      "pose": "sleepwalk",
-     "motion": "zombie-walk",
-     "motionMix": 0.5,
      "pos": [
       0.1,
       0,
@@ -558,7 +505,9 @@
      "rotY": 90,
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "zombie-walk",
+     "motionMix": 1
     },
     {
      "at": 0.8,
@@ -572,33 +521,20 @@
      "rotY": 90,
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "zombie-walk",
+     "motionMix": 1
     }
    ],
    "mouth": "silent",
    "step": 2,
    "outline": 0.0035,
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "whip",
     "frames": 8,
     "dir": 1
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "06",
@@ -606,7 +542,7 @@
    "set": "office",
    "why": "identical desks to the horizon = the loop in space",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "strings": [
      {
       "hand": "left",
@@ -648,41 +584,19 @@
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      0,
-      1.4,
-      -1
-     ],
-     "look": [
-      0,
-      1,
-      -4.5
-     ],
-     "fov": 40
-    },
-    {
-     "at": "end",
-     "pos": [
-      0,
-      1.4,
-      0.2
-     ],
-     "look": [
-      0,
-      1,
-      -3.5
-     ],
-     "fov": 40,
-     "ease": "linear"
+     "move": {
+      "kind": "track",
+      "h": 1.38,
+      "deg": 90,
+      "dist": 2.2,
+      "width": 1
+     }
     }
    ],
    "actor": [
     {
      "at": 0,
      "pose": "sleepwalk",
-     "motion": "zombie-walk",
-     "motionMix": 0.6,
      "pos": [
       0,
       0,
@@ -691,7 +605,9 @@
      "rotY": 0,
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "zombie-walk",
+     "motionMix": 1
     },
     {
      "at": "end",
@@ -705,33 +621,20 @@
      "rotY": 0,
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "zombie-walk",
+     "motionMix": 1
     }
    ],
    "mouth": "silent",
    "step": 2,
    "outline": 0.0035,
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "whip",
     "frames": 8,
     "dir": -1
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "07",
@@ -739,7 +642,7 @@
    "set": "office",
    "why": "the strings sit her down; one beat of stillness before the stabs",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "monitor",
@@ -799,43 +702,33 @@
      "rotY": 0,
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "zombie-idle",
+     "motionMix": 0.1
     },
     {
      "at": 0.15,
-     "pose": "slump",
+     "pose": "sit",
      "pos": "chair",
      "rotY": 0,
      "blend": 0.12,
      "act": "stomp",
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": "silent",
    "step": 2,
    "outline": 0.0035,
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
-   }
+   },
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "08",
@@ -843,7 +736,7 @@
    "set": "office",
    "why": "stab 1: a flash of the future - her feet dancing on the desk (toki: on timing)",
    "opts": {
-    "grade": "clean"
+    "grade": "pov"
    },
    "camera": [
     {
@@ -865,10 +758,10 @@
     {
      "at": 0,
      "pose": "stomp",
-     "motion": "silly-dancing",
-     "motionMix": 0.6,
      "pos": "on_desk",
-     "rotY": "lens"
+     "rotY": "lens",
+     "clip": "silly-dancing",
+     "motionMix": 1
     }
    ],
    "mouth": "silent",
@@ -876,7 +769,8 @@
    "transition": {
     "kind": "cut",
     "frames": 0
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "09",
@@ -884,7 +778,7 @@
    "set": "office",
    "why": "stab 2: the boss's hand with swirling snow - teases the payoff",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "things": [
      {
       "kind": "globe",
@@ -935,7 +829,8 @@
    "transition": {
     "kind": "cut",
     "frames": 0
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "10",
@@ -943,9 +838,9 @@
    "set": "dream",
    "why": "stab 3: she laughs in the sun - held 12 frames so it reads",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
@@ -964,8 +859,6 @@
     {
      "at": 0,
      "pose": "arms_up",
-     "motion": "joyful-jump",
-     "motionMix": 0.4,
      "pos": [
       0,
       0.26,
@@ -975,7 +868,9 @@
      "expr": {
       "joy": 0.95,
       "blink": 1
-     }
+     },
+     "clip": "joyful-jump",
+     "motionMix": 1
     }
    ],
    "mouth": "silent",
@@ -983,15 +878,16 @@
    "transition": {
     "kind": "cut",
     "frames": 0
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "11",
-   "at": 5.25,
+   "at": 5.354,
    "set": "office",
    "why": "asleep at the desk, the file mountain grows around her on the beats - a 3/4 view on her face (blind viewer: the top-down read as a static shadow); run 38: camera on her side of the MORE stack and high enough for the URGENT pile, her colour kept (spread)",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "monitor",
@@ -1035,30 +931,30 @@
     {
      "at": 0,
      "pos": [
-      -0.75,
-      1.62,
-      1.05
+      -1.25,
+      1.85,
+      1.25
      ],
      "look": [
       0.2,
-      0.98,
+      1,
       0.3
      ],
-     "fov": 40
+     "fov": 34
     },
     {
      "at": "end",
      "pos": [
-      -0.62,
-      1.55,
-      0.9
+      -1.08,
+      1.78,
+      1.1
      ],
      "look": [
       0.2,
-      0.98,
+      1,
       0.3
      ],
-     "fov": 37,
+     "fov": 31,
      "ease": "inOut"
     }
    ],
@@ -1066,39 +962,24 @@
     {
      "at": 0,
      "pose": "slump",
-     "motion": "defeated",
-     "motionMix": 0.25,
      "pos": "chair",
      "rotY": 0,
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.12
     }
    ],
    "mouth": "silent",
    "step": 2,
    "outline": 0.0035,
-   "fx": [
-    {
-     "kind": "spread",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "r0": 0.22,
-     "r1": 0.42
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.08
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
-   }
+   },
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "12",
@@ -1106,7 +987,7 @@
    "set": "office",
    "why": "the stop: a string pulls her mouth into a polite smile that is not hers",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "strings": [
      {
       "hand": "right",
@@ -1149,32 +1030,19 @@
      "expr": {
       "joy": 0.7,
       "sorrow": 0.4
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": "silent",
    "step": 2,
    "outline": 0.0035,
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "13",
@@ -1182,7 +1050,7 @@
    "set": "bedroom",
    "why": "no black frame: she falls back onto her bed (it was a dream); on the stop the hands appear in the dark",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "dark": 0.6,
     "things": [
      {
@@ -1278,7 +1146,10 @@
      "rotY": "lens",
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "lying-down",
+     "motionMix": 1,
+     "once": true
     },
     {
      "at": 0.35,
@@ -1293,28 +1164,14 @@
      "blend": 0.2,
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "laying-breathless",
+     "motionMix": 1
     }
    ],
    "mouth": "silent",
    "step": 2,
    "outline": 0.0035,
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -1333,15 +1190,17 @@
      "rot": 10.7,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "14",
-   "at": 9.08,
+   "at": 8.967,
    "set": "bedroom",
    "why": "the hands drag her bed out of the room; the first bubble is the first word",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "dark": 0.4,
     "bed_drag": [
      9.6,
@@ -1417,7 +1276,9 @@
      "expr": {
       "sorrow": 0.3,
       "blink": 1
-     }
+     },
+     "clip": "laying-breathless",
+     "motionMix": 1
     },
     {
      "at": 0.52,
@@ -1434,7 +1295,9 @@
      "expr": {
       "sorrow": 0.3,
       "blink": 1
-     }
+     },
+     "clip": "laying-breathless",
+     "motionMix": 1
     }
    ],
    "mouth": "silent",
@@ -1458,22 +1321,6 @@
     "size": 0.16,
     "width": 2.2
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "whip",
     "frames": 8,
@@ -1482,26 +1329,28 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.76,
-      0.03,
-      0.62
+      -5.43,
+      -10.5,
+      -1.31
      ],
-     "size": 0.242,
-     "width": 5.9,
-     "tilt": -90,
+     "size": 0.666,
+     "width": 6.34,
+     "tilt": -65.1,
      "roll": 0,
-     "rot": 0,
+     "rot": 55.3,
      "key_scale": 1.3
     }
-   }
+   },
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "15",
-   "at": 10.76,
+   "at": 10.532,
    "set": "train",
    "why": "a million voices = a new hand with a bubble on every hit",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "doors": 0,
     "things": [
      {
@@ -1589,41 +1438,18 @@
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      -0.75,
-      1.5,
-      -0.4
-     ],
-     "look": [
-      0,
-      1.2,
-      1.4
-     ],
-     "fov": 38
-    },
-    {
-     "at": "end",
-     "pos": [
-      -0.75,
-      1.5,
-      -4
-     ],
-     "look": [
-      0,
-      1.2,
-      -2.2
-     ],
-     "fov": 38,
-     "ease": "linear"
+     "move": {
+      "kind": "handheld",
+      "h": 1.38,
+      "deg": 10,
+      "dist": 1.5
+     }
     }
    ],
    "actor": [
     {
      "at": 0,
      "pose": "sleepwalk",
-     "motion": "zombie-walk",
-     "motionMix": 0.5,
      "pos": [
       0,
       0,
@@ -1632,7 +1458,9 @@
      "rotY": 180,
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "zombie-walk",
+     "motionMix": 1
     },
     {
      "at": "end",
@@ -1647,7 +1475,9 @@
      "rotY": 180,
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "zombie-walk",
+     "motionMix": 1
     }
    ],
    "mouth": "silent",
@@ -1670,22 +1500,6 @@
     "size": 0.14,
     "width": 2
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "whip",
     "frames": 8,
@@ -1694,26 +1508,27 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.05,
-      0.38,
-      8.12
+      -0.65,
+      2.02,
+      -1.59
      ],
-     "size": 0.446,
-     "width": 3.31,
-     "tilt": -8.7,
+     "size": 0.207,
+     "width": 4.34,
+     "tilt": 0.1,
      "roll": 0,
-     "rot": -175.1,
+     "rot": 12.5,
      "key_scale": 1
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "16",
-   "at": 13.38,
+   "at": 13.667,
    "set": "office",
    "why": "the first thing she does by herself - in her sleep: the blanket over her head",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "crowd": [
      {
       "pos": [
@@ -1782,7 +1597,9 @@
      "expr": {
       "sorrow": 0.4,
       "blink": 1
-     }
+     },
+     "clip": "sad-idle",
+     "motionMix": 0.12
     },
     {
      "at": "end",
@@ -1798,7 +1615,9 @@
      "expr": {
       "sorrow": 0.4,
       "blink": 1
-     }
+     },
+     "clip": "sad-idle",
+     "motionMix": 0.12
     }
    ],
    "mouth": "silent",
@@ -1821,22 +1640,6 @@
     "size": 0.16,
     "width": 2.4
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "whip",
     "frames": 8,
@@ -1856,7 +1659,9 @@
      "rot": -7.4,
      "key_scale": 1.3
     }
-   }
+   },
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "17",
@@ -1864,7 +1669,7 @@
    "set": "bedroom",
    "why": "she already refuses - asleep: her tail swats the hand away",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "dark": 0.3,
     "things": [
      {
@@ -1919,7 +1724,9 @@
      "rollZ": -85,
      "expr": {
       "blink": 1
-     }
+     },
+     "clip": "laying-breathless",
+     "motionMix": 1
     },
     {
      "at": 1.1,
@@ -1935,7 +1742,9 @@
      "expr": {
       "angry": 0.3,
       "blink": 1
-     }
+     },
+     "clip": "laying-breathless",
+     "motionMix": 1
     }
    ],
    "mouth": "silent",
@@ -1958,22 +1767,6 @@
     "size": 0.1,
     "width": 1.4
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -1993,7 +1786,9 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "18",
@@ -2001,7 +1796,7 @@
    "set": "bedroom",
    "why": "the measured can sound is the snap (toki's brief)",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "dark": 0.3,
     "things": [
      {
@@ -2017,7 +1812,8 @@
        0
       ],
       "scale": 2,
-      "open_at": 17.65
+      "open_at": 17.65,
+      "float": true
      },
      {
       "kind": "glove",
@@ -2074,7 +1870,9 @@
      "rot": 50.6,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5,
+   "cut_lock": "the can macro: 17.23 (end of 'can it') -> the measured can sound 17.65 (shot 19a)"
   },
   {
    "id": "19a",
@@ -2082,7 +1880,7 @@
    "set": "bedroom",
    "why": "the wake and the slap are one action - one read",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "clock",
@@ -2128,8 +1926,6 @@
     {
      "at": 0,
      "pose": "sit",
-     "motion": "reaction",
-     "motionMix": 0.7,
      "pos": [
       0.25,
       0.48,
@@ -2138,28 +1934,15 @@
      "rotY": 30,
      "expr": {
       "surprised": 0.8
-     }
+     },
+     "clip": "waking",
+     "motionMix": 1,
+     "once": true
     }
    ],
    "mouth": "silent",
    "step": 2,
    "outline": 0.0035,
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "whip",
     "frames": 8,
@@ -2168,18 +1951,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.69,
-      0.56,
-      -0.59
+      0.64,
+      1.23,
+      -0.6
      ],
-     "size": 0.171,
-     "width": 2.16,
+     "size": 0.162,
+     "width": 2.04,
      "tilt": -11.3,
      "roll": 0,
-     "rot": 17.2,
+     "rot": 18.5,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "19b",
@@ -2187,7 +1971,7 @@
    "set": "bedroom",
    "why": "THE RULE, once, alone and readable: a string is hooked - a dot fades",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -2230,18 +2014,13 @@
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      0.65,
-      1.35,
-      1.55
-     ],
-     "look": [
-      0.1,
-      1.15,
-      0
-     ],
-     "fov": 34
+     "move": {
+      "kind": "push_dutch",
+      "h": 1.38,
+      "deg": 15,
+      "dist": 1.3,
+      "roll": -10
+     }
     }
    ],
    "actor": [
@@ -2252,7 +2031,9 @@
      "rotY": "lens",
      "expr": {
       "sorrow": 0.3
-     }
+     },
+     "clip": "sad-idle",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -2260,21 +2041,12 @@
    },
    "step": 2,
    "outline": 0.0035,
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
    },
-   "acted": "4_SCRIPT 19b: the rule is shown ALONE (a string hooks her, a dot fades, DAY 1) - no lyric competes with it; \"their own\" is the action"
+   "acted": "4_SCRIPT 19b: the rule is shown ALONE (a string hooks her, a dot fades, DAY 1) - no lyric competes with it; \"their own\" is the action",
+   "kick": 1.5
   },
   {
    "id": "20",
@@ -2282,7 +2054,7 @@
    "set": "train",
    "why": "the phone literally reaches out to her: string 2",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "doors": 0,
     "battery": [
      [
@@ -2312,7 +2084,8 @@
       "text": "SALESMAN|calling",
       "ring_at": [
        19.8
-      ]
+      ],
+      "float": true
      }
     ],
     "strings": [
@@ -2379,13 +2152,13 @@
     {
      "at": 0,
      "pose": "sing_soft",
-     "motion": "idle",
-     "motionMix": 0.3,
      "pos": "aisle",
      "rotY": "lens",
      "expr": {
       "sorrow": 0.3
-     }
+     },
+     "clip": "texting-while-standing",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -2407,22 +2180,6 @@
     "size": 0.12,
     "width": 4
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -2442,15 +2199,16 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "21",
-   "at": 21.97,
+   "at": 22.188,
    "set": "train",
    "why": "told where to go = arrows on the floor; string 3",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "arrows": true,
     "battery": [
      [
@@ -2522,14 +2280,14 @@
     {
      "at": 0,
      "pose": "sleepwalk",
-     "motion": "zombie-walk",
-     "motionMix": 0.6,
      "pos": [
       2.6,
       0,
       0
      ],
-     "rotY": 90
+     "rotY": 90,
+     "clip": "zombie-walk",
+     "motionMix": 1
     },
     {
      "at": "end",
@@ -2541,7 +2299,9 @@
      ],
      "move": 2.2,
      "ease": "linear",
-     "rotY": 90
+     "rotY": 90,
+     "clip": "zombie-walk",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -2568,22 +2328,6 @@
     "size": 0.32,
     "width": 4.2
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -2602,7 +2346,8 @@
      "rot": 0,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "22",
@@ -2610,7 +2355,7 @@
    "set": "office",
    "why": "her rain-forecast lore: SUN on the boss's SNOW globe, peeled off",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -2686,7 +2431,9 @@
      "rotY": 0,
      "expr": {
       "fun": 0.3
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -2711,22 +2458,6 @@
    "hero": [
     "globe"
    ],
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -2734,18 +2465,20 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.78,
-      0.53,
-      -2.1
+      0.48,
+      1.49,
+      -2.44
      ],
-     "size": 0.199,
-     "width": 1.72,
+     "size": 0.119,
+     "width": 1.59,
      "tilt": -10.4,
      "roll": 0,
-     "rot": 27.6,
-     "key_scale": 1.8
+     "rot": 0.7,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "23",
@@ -2753,7 +2486,7 @@
    "set": "office",
    "why": "the dissociation: dolly zoom - the desk stays, the room recedes",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -2851,7 +2584,9 @@
      "rotY": 0,
      "expr": {
       "sorrow": 0.2
-     }
+     },
+     "clip": "typing",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -2879,22 +2614,6 @@
      "why_small": "the card hangs on her side of the monitor, the lens is on the far side; it is shown full frame in 25 and 34"
     }
    ],
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#22263a",
-     "light": "#c9cfe0",
-     "levels": 3
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.2
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -2902,26 +2621,27 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.76,
-      -0.42,
-      -8.5
+      0.65,
+      1.21,
+      -3.56
      ],
-     "size": 0.237,
-     "width": 1.76,
-     "tilt": -3.2,
+     "size": 0.152,
+     "width": 1.13,
+     "tilt": -3.4,
      "roll": 0,
-     "rot": -1.1,
+     "rot": -1,
      "key_scale": 1
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "24",
-   "at": 29.35,
+   "at": 29.642,
    "set": "office",
    "why": "the postcard is the only warm thing - she types without looking",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -3023,7 +2743,9 @@
      "rotY": 0,
      "expr": {
       "sorrow": 0.3
-     }
+     },
+     "clip": "typing",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -3050,22 +2772,6 @@
      "why_small": "the card hangs on her side of the monitor, the lens is on the far side; it is shown full frame in 25 and 34"
     }
    ],
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -3089,15 +2795,16 @@
     "lyrics": null,
     "lyrics_fit": null,
     "acted": "the Short opens on this shot under its hook overlay (battery: almost empty) - the hook is the read for 2.5 s; the next shot writes again"
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "25",
-   "at": 32.04,
+   "at": 32.173,
    "set": "office",
    "why": "her finger touches the card; the fall starts on the last oh",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "monitor",
@@ -3163,17 +2870,6 @@
      ]
     }
    ],
-   "fx": [
-    {
-     "kind": "spread",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "r0": 0.12,
-     "r1": 0.35
-    }
-   ],
    "transition": {
     "kind": "zoom",
     "frames": 10
@@ -3181,15 +2877,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.15,
-      1.32,
+      -0.19,
+      0.89,
       1.55
      ],
      "size": 0.044,
      "width": 1.32,
-     "tilt": 0.8,
+     "tilt": 0,
      "roll": 0,
-     "rot": -178.3,
+     "rot": 179.6,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     },
@@ -3206,6 +2902,10 @@
      "rot": -178.1,
      "key_scale": 1.8
     }
+   },
+   "kick": 1.5,
+   "lens_near": {
+    "monitor": "the postcard close-up: the card on her monitor fills the frame on purpose (the hero)"
    }
   },
   {
@@ -3214,9 +2914,9 @@
    "set": "dream",
    "why": "wow 3: grey -> colour in one move, falling through warm air",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
@@ -3263,7 +2963,9 @@
      "rollZ": 70,
      "expr": {
       "joy": 0.7
-     }
+     },
+     "clip": "falling",
+     "motionMix": 1
     },
     {
      "at": "end",
@@ -3279,7 +2981,9 @@
      "rollZ": 70,
      "expr": {
       "joy": 0.8
-     }
+     },
+     "clip": "falling",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -3334,15 +3038,17 @@
      "rot": -1.3,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 2.5,
+   "aware": 0
   },
   {
    "id": "27",
    "at": 35.39,
    "set": "dream",
-   "why": "the hook line sung to us; all five dots light",
+   "why": "the hook line sung to us, face to the lens in her warm light; all five dots light (rebuild: the floating-on-her-back version hid her face)",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "battery": [
      [
       0,
@@ -3362,54 +3068,53 @@
      ]
     ],
     "post": {
-     "bloom": 0.45
+     "bloom": 0.2,
+     "dof": 2.2,
+     "dofRange": 0.8
     }
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      1.2,
-      2,
-      1.5
+      0.75,
+      1.5,
+      2.3
      ],
      "look": [
-      1.2,
-      0.2,
-      0.3
+      -0.35,
+      1.35,
+      -0.1
      ],
      "fov": 36
     },
     {
      "at": "end",
      "pos": [
-      1.2,
-      1.15,
-      1.25
+      0.6,
+      1.5,
+      2
      ],
      "look": [
-      1.2,
-      0.2,
-      0.3
+      -0.35,
+      1.35,
+      -0.1
      ],
-     "fov": 32,
+     "fov": 34,
      "ease": "out"
     }
    ],
    "actor": [
     {
      "at": 0,
-     "pose": "float",
-     "pos": [
-      0.85,
-      0.36,
-      0.72
-     ],
-     "rotY": 0,
-     "rollZ": -88,
+     "pose": "sing_soft",
+     "pos": "shore",
+     "rotY": "lens",
      "expr": {
       "joy": 0.8
-     }
+     },
+     "clip": "happy",
+     "motionMix": 0.25
     }
    ],
    "mouth": {
@@ -3442,31 +3147,32 @@
     "kind": "cut",
     "frames": 0
    },
+   "kick": 2.5,
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.02,
+      -3.14,
       0.03,
-      -0.09
+      -3.43
      ],
-     "size": 0.12,
-     "width": 1.13,
+     "size": 0.416,
+     "width": 3.08,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
-     "key_scale": 1.3
+     "key_scale": 1
     },
     "short": {
      "anchor": [
-      1.1,
-      0.03,
-      -0.11
+      -0.39,
+      1.2,
+      0.25
      ],
-     "size": 0.288,
-     "width": 0.4,
-     "tilt": -90,
+     "size": 0.252,
+     "width": 0.53,
+     "tilt": -3.8,
      "roll": 0,
-     "rot": 0,
+     "rot": 29.7,
      "key_scale": 1.8
     }
    }
@@ -3477,7 +3183,7 @@
    "set": "office",
    "why": "the song's antithesis in ONE frame: inside the card the beach, outside her grey desk with the globe's mountains",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "monitor",
@@ -3609,17 +3315,6 @@
      }
     }
    ],
-   "fx": [
-    {
-     "kind": "spread",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "r0": 0.3,
-     "r1": 0.3
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -3627,18 +3322,36 @@
    "lyrics_fit": {
     "short": {
      "anchor": [
-      0.1,
-      0.03,
-      2
+      0.08,
+      0.83,
+      2.09
      ],
-     "size": 0.296,
-     "width": 1.13,
+     "size": 0.182,
+     "width": 0.7,
+     "tilt": -23.4,
+     "roll": 0,
+     "rot": 178.1,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
+    },
+    "mv": {
+     "anchor": [
+      -0.69,
+      0.03,
+      3.01
+     ],
+     "size": 0.205,
+     "width": 2.48,
      "tilt": -90,
      "roll": 0,
      "rot": 180,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
+   },
+   "kick": 2.5,
+   "lens_near": {
+    "globe": "the antithesis in one frame: the card and the globe's file mountain side by side (portrait: the globe in the foreground)"
    }
   },
   {
@@ -3647,7 +3360,7 @@
    "set": "dream",
    "why": "her ray nature: she kicks the cold away and curls up in the light; Salmon waves",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "salmon": {
      "pos": [
       -1.6,
@@ -3658,7 +3371,7 @@
      "icon_at": 40.4
     },
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
@@ -3681,13 +3394,14 @@
     {
      "at": 0,
      "pose": "kick",
-     "motion": "mma-kick",
-     "motionMix": 0.5,
      "pos": "sand",
      "rotY": 200,
      "expr": {
       "fun": 0.6
-     }
+     },
+     "clip": "mma-kick",
+     "motionMix": 1,
+     "once": true
     },
     {
      "at": 1.1,
@@ -3703,7 +3417,9 @@
      "expr": {
       "joy": 0.5
      },
-     "why": "bury: flat in the light-dust, only her eyes out"
+     "why": "bury: flat in the light-dust, only her eyes out",
+     "clip": "flying",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -3759,7 +3475,8 @@
      "rot": 0,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "30",
@@ -3767,7 +3484,7 @@
    "set": "office",
    "why": "the dream cannot last: the strings yank her back into the chair, wet hair",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -3868,7 +3585,9 @@
      "rotY": 0,
      "expr": {
       "surprised": 0.7
-     }
+     },
+     "clip": "zombie-idle",
+     "motionMix": 0.1
     },
     {
      "at": 0.3,
@@ -3880,7 +3599,9 @@
      "act": "stomp",
      "expr": {
       "surprised": 0.5
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -3906,22 +3627,6 @@
     "size": 0.2,
     "width": 2.2
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "whip",
     "frames": 8,
@@ -3930,40 +3635,42 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.03,
-      0.71,
-      -0.63
+      0.73,
+      1.27,
+      -0.92
      ],
-     "size": 0.157,
-     "width": 1.16,
-     "tilt": -10.6,
+     "size": 0.113,
+     "width": 1.08,
+     "tilt": -10.2,
      "roll": 0,
-     "rot": 28,
+     "rot": -3,
      "key_scale": 1.8
     },
     "short": {
      "anchor": [
-      0.35,
-      -0.17,
-      -1.03
+      0.43,
+      1.49,
+      0.43
      ],
-     "size": 0.142,
-     "width": 0.67,
-     "tilt": -10.7,
+     "size": 0.074,
+     "width": 0.35,
+     "tilt": -10.4,
      "roll": 0,
-     "rot": 3.4,
+     "rot": 3.9,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 2.5,
+   "aware": 0
   },
   {
    "id": "31",
-   "at": 44.01,
+   "at": 43.667,
    "set": "office",
    "why": "the same snow outside and in the globe; she stares at the postcard - the Short's cliffhanger",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -4043,7 +3750,9 @@
      "rotY": 0,
      "expr": {
       "sorrow": 0.5
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.12
     }
    ],
    "mouth": {
@@ -4070,22 +3779,11 @@
     "width": 5
    },
    "hero": [
-    "globe"
-   ],
-   "fx": [
     {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
+     "name": "globe",
+     "short": {
+      "why_small": "the Short's last shot: the lens drifts to her face for the CTA question; the globe was established big in 28"
+     }
     }
    ],
    "transition": {
@@ -4095,40 +3793,36 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -10.79,
-      -2.32,
-      -19.34
+      0.51,
+      0.73,
+      -6.91
      ],
-     "size": 0.873,
-     "width": 8.32,
-     "tilt": -10.7,
+     "size": 0.211,
+     "width": 3.12,
+     "tilt": -10.8,
      "roll": 0,
-     "rot": 27.6,
-     "key_scale": 1.3
-    },
-    "short": {
-     "anchor": [
-      0.25,
-      0.05,
-      -0.78
-     ],
-     "size": 0.102,
-     "width": 0.35,
-     "tilt": -10.1,
-     "roll": 0,
-     "rot": 15.2,
+     "rot": 0.3,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
+   },
+   "kick": 2.5,
+   "aware": 0,
+   "lens_near": {
+    "globe": "the same snow in the globe as outside: the globe in the foreground on purpose (globe hero shot)"
+   },
+   "short_shot": {
+    "acted": "the Short's last shot carries the CTA question; the globe, her and the desk fill the portrait frame",
+    "lyrics": null
    }
   },
   {
    "id": "32",
-   "at": 45.69,
+   "at": 45.617,
    "set": "train",
    "why": "the routine repeats - evening: pushed by the crowd",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "doors": 0,
     "battery": [
      [
@@ -4189,9 +3883,13 @@
    },
    "camera": [
     {
-     "at": 0,
-     "cam": "aisle_long",
-     "shake": 0.4
+     "move": {
+      "kind": "crash",
+      "h": 1.38,
+      "deg": 15,
+      "dist": 1.6,
+      "hit": 0
+     }
     }
    ],
    "actor": [
@@ -4200,11 +3898,12 @@
      "pose": "sing_soft",
      "pos": "aisle",
      "rotY": "lens",
-     "motion": "shoved-reaction-with-spin",
-     "motionMix": 0.35,
      "expr": {
       "sorrow": 0.3
-     }
+     },
+     "clip": "shoved-reaction-with-spin",
+     "motionMix": 1,
+     "once": true
     }
    ],
    "mouth": {
@@ -4226,22 +3925,6 @@
      "shove"
     ]
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -4249,18 +3932,20 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.46,
-      1.16,
-      0.4
+      -0.18,
+      1.77,
+      -0.39
      ],
-     "size": 0.372,
-     "width": 1.99,
-     "tilt": -3.1,
+     "size": 0.058,
+     "width": 1.76,
+     "tilt": 0,
      "roll": 0,
-     "rot": 15.9,
-     "key_scale": 1.8
+     "rot": 17,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "33",
@@ -4268,7 +3953,7 @@
    "set": "office",
    "why": "the mountains are her workload",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -4333,11 +4018,11 @@
      "pose": "slump",
      "pos": "chair",
      "rotY": 0,
-     "motion": "defeated",
-     "motionMix": 0.3,
      "expr": {
       "sorrow": 0.5
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.12
     }
    ],
    "mouth": {
@@ -4360,22 +4045,6 @@
     "width": 1.4,
     "tilt": -90
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -4383,26 +4052,29 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.11,
-      0.03,
-      0.65
+      1.23,
+      0.34,
+      0.24
      ],
-     "size": 0.185,
-     "width": 3.82,
-     "tilt": -90,
+     "size": 0.094,
+     "width": 1.13,
+     "tilt": -84.2,
      "roll": 0,
-     "rot": 0,
-     "key_scale": 1
+     "rot": -72.9,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "34",
-   "at": 51.09,
+   "at": 50.795,
    "set": "office",
    "why": "the wish, small and private - it pays off at 136",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "monitor",
@@ -4455,17 +4127,6 @@
     "width": 0.5,
     "rot": 180
    },
-   "fx": [
-    {
-     "kind": "spread",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "r0": 0.2,
-     "r1": 0.2
-    }
-   ],
    "hero": [
     {
      "name": "postcard",
@@ -4484,16 +4145,20 @@
     "mv": {
      "anchor": [
       -0.2,
-      0.89,
-      1.65
+      1.36,
+      1.66
      ],
-     "size": 0.045,
+     "size": 0.041,
      "width": 1.11,
-     "tilt": 0,
+     "tilt": -0.9,
      "roll": 0,
-     "rot": -179.4,
+     "rot": -179.6,
      "key_scale": 1
     }
+   },
+   "kick": 1.5,
+   "lens_near": {
+    "monitor": "the postcard close-up: the card on her monitor fills the frame on purpose (the hero)"
    }
   },
   {
@@ -4502,7 +4167,7 @@
    "set": "bedroom",
    "why": "the loop restarts - DAY 2",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "clock",
@@ -4539,22 +4204,6 @@
      "cam": "clock_macro"
     }
    ],
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -4562,18 +4211,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.6,
-      0.42,
-      -1.58
+      0.57,
+      0.44,
+      -1.57
      ],
      "size": 0.077,
      "width": 0.97,
-     "tilt": -10.8,
+     "tilt": -9.7,
      "roll": 0,
-     "rot": 17.3,
+     "rot": 19.4,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "36",
@@ -4581,7 +4231,7 @@
    "set": "office",
    "why": "Ado's verse = she stops obeying: headphones on",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -4646,7 +4296,9 @@
      "rotY": 0,
      "expr": {
       "fun": 0.4
-     }
+     },
+     "clip": "sitting-disapproval",
+     "motionMix": 0.3
     }
    ],
    "mouth": {
@@ -4668,22 +4320,6 @@
     "width": 1.6,
     "rot": 90
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#050826",
-     "light": "#e4ecff",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.1
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -4702,7 +4338,9 @@
      "rot": 98.7,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5,
+   "aware": 0.6
   },
   {
    "id": "37",
@@ -4710,7 +4348,7 @@
    "set": "office",
    "why": "the puffed-up one, never a face",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "boss": {
      "pos": [
       0,
@@ -4727,7 +4365,7 @@
      "at": 0,
      "pos": [
       0,
-      0.95,
+      1.02,
       0.15
      ],
      "look": [
@@ -4756,22 +4394,6 @@
      "胸を"
     ]
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#050826",
-     "light": "#e4ecff",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.1
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -4780,25 +4402,26 @@
     "mv": {
      "anchor": [
       -0.05,
-      2.06,
-      1.48
+      1.96,
+      1.35
      ],
-     "size": 0.125,
-     "width": 1.7,
-     "tilt": 40.5,
+     "size": 0.11,
+     "width": 1.5,
+     "tilt": 38.7,
      "roll": 0,
-     "rot": 178.1,
+     "rot": 178.4,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "38",
-   "at": 58.8,
+   "at": 58.528,
    "set": "office",
    "why": "she eats anyway; a 4th string - dots 2 -> 1",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -4866,14 +4489,14 @@
    "actor": [
     {
      "at": 0,
-     "pose": "give",
+     "pose": "sit",
      "pos": "chair",
      "rotY": 0,
-     "motion": "taunt",
-     "motionMix": 0.3,
      "expr": {
       "fun": 0.5
-     }
+     },
+     "clip": "sitting-drinking",
+     "motionMix": 0.25
     }
    ],
    "mouth": {
@@ -4900,22 +4523,6 @@
     "over": true,
     "why_over": "4_SCRIPT row 38: she HOLDS the onigiri wrapper strip up to the lens - the line is printed on it, in front of her on purpose"
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#050826",
-     "light": "#e4ecff",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.1
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -4935,15 +4542,16 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "39",
-   "at": 61.08,
+   "at": 60.803,
    "set": "office",
    "why": "the days blur: DAY 3 ... DAY 30 tear past her",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "page",
@@ -5066,7 +4674,9 @@
      "rotY": 0,
      "expr": {
       "angry": 0.3
-     }
+     },
+     "clip": "sitting-disapproval",
+     "motionMix": 0.25
     }
    ],
    "mouth": {
@@ -5087,22 +4697,6 @@
     "size": 0.1,
     "width": 2.4
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#050826",
-     "light": "#e4ecff",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.1
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -5110,27 +4704,28 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.63,
-      1.48,
-      -1.01
+      -0.64,
+      1.35,
+      -0.87
      ],
-     "size": 0.099,
-     "width": 1.2,
-     "tilt": -6.1,
+     "size": 0.108,
+     "width": 1.15,
+     "tilt": -5.7,
      "roll": 0,
-     "rot": 2.7,
+     "rot": 2.9,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "40",
-   "at": 63.29,
+   "at": 63.102,
    "set": "office",
    "why": "a held beat = the joke lands",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "post": {
      "dof": 1.16
     }
@@ -5159,7 +4754,9 @@
      "rotY": 0,
      "expr": {
       "blink": 0.4
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -5180,22 +4777,6 @@
     "size": 0.16,
     "width": 0.4
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#050826",
-     "light": "#e4ecff",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.1
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -5215,7 +4796,9 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 1.5,
+   "observer": 0
   },
   {
    "id": "41",
@@ -5223,7 +4806,7 @@
    "set": "office",
    "why": "mocking the judges - hands, never religious imagery",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -5356,11 +4939,11 @@
      "pose": "sit",
      "pos": "chair",
      "rotY": 0,
-     "motion": "taunt",
-     "motionMix": 0.25,
      "expr": {
       "fun": 0.3
-     }
+     },
+     "clip": "sitting-laughing",
+     "motionMix": 0.25
     }
    ],
    "mouth": {
@@ -5381,22 +4964,6 @@
     "size": 0.16,
     "width": 2.6
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#050826",
-     "light": "#e4ecff",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.1
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -5416,15 +4983,16 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "42",
-   "at": 67.55,
+   "at": 67.305,
    "set": "office",
    "why": "the pressure is inside her head",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "strings": [
      {
       "hand": "left",
@@ -5480,7 +5048,9 @@
      "rotY": 0,
      "expr": {
       "sorrow": 0.5
-     }
+     },
+     "clip": "sitting-angry",
+     "motionMix": 0.12
     }
    ],
    "mouth": {
@@ -5501,22 +5071,6 @@
     "size": 0.09,
     "width": 0.6
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#050826",
-     "light": "#e4ecff",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.1
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -5524,19 +5078,20 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.36,
-      1.38,
-      0.13
+      -9.08,
+      1.8,
+      -22.1
      ],
-     "size": 0.025,
-     "width": 1.04,
-     "tilt": -2.1,
+     "size": 0.495,
+     "width": 20.8,
+     "tilt": -2.6,
      "roll": 0,
-     "rot": 21.6,
+     "rot": 21.4,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "43",
@@ -5544,7 +5099,7 @@
    "set": "office",
    "why": "first push - the build to the cut",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "glove",
@@ -5583,7 +5138,9 @@
      "rotY": 0,
      "expr": {
       "angry": 0.5
-     }
+     },
+     "clip": "sitting-angry",
+     "motionMix": 0.12
     }
    ],
    "mouth": {
@@ -5607,22 +5164,6 @@
      "alone"
     ]
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#050826",
-     "light": "#e4ecff",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.1
-    }
-   ],
    "transition": {
     "kind": "whip",
     "frames": 8,
@@ -5632,17 +5173,18 @@
     "mv": {
      "anchor": [
       1.03,
-      1.21,
-      0.53
+      1.29,
+      0.68
      ],
-     "size": 0.101,
-     "width": 0.95,
-     "tilt": -10.3,
+     "size": 0.078,
+     "width": 0.86,
+     "tilt": -10.6,
      "roll": 0,
-     "rot": 3.8,
+     "rot": 3.7,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "44",
@@ -5650,7 +5192,7 @@
    "set": "office",
    "why": "who should she be - she sees herself in the dark monitor",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "monitor",
@@ -5678,7 +5220,9 @@
      "rotY": 0,
      "expr": {
       "sorrow": 0.2
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -5700,22 +5244,6 @@
     "width": 0.5,
     "rot": 180
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#050826",
-     "light": "#e4ecff",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.1
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -5734,15 +5262,16 @@
      "rot": 178,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "45",
-   "at": 71.86,
+   "at": 71.624,
    "set": "office",
    "why": "her body does the plot: the tail cuts string 4; blue -> red (Usseewa)",
    "opts": {
-    "grade": "closing",
+    "grade": "ember",
     "battery": [
      [
       0,
@@ -5795,19 +5324,22 @@
      "rotY": 0,
      "expr": {
       "angry": 0.4
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     },
     {
      "at": 0.2,
      "pose": "kick",
      "pos": "chair",
      "rotY": 0,
-     "motion": "mma-kick",
-     "motionMix": 0.6,
      "blend": 0.15,
      "expr": {
       "angry": 0.7
-     }
+     },
+     "clip": "mma-kick",
+     "motionMix": 1,
+     "once": true
     }
    ],
    "mouth": {
@@ -5834,25 +5366,9 @@
    },
    "fx": [
     {
-     "kind": "duo",
-     "at": 0,
-     "to": 0.33,
-     "dark": "#0c1650",
-     "light": "#b4c8ff",
-     "levels": 3
-    },
-    {
      "kind": "impact",
      "at": 0.33,
      "to": 0.43
-    },
-    {
-     "kind": "duo",
-     "at": 0.43,
-     "to": "end",
-     "dark": "#1a0206",
-     "light": "#ff4a3a",
-     "levels": 3
     },
     {
      "kind": "speed",
@@ -5869,18 +5385,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.84,
-      1.22,
-      0.04
+      0.24,
+      1.23,
+      0.8
      ],
-     "size": 0.221,
-     "width": 0.98,
+     "size": 0.096,
+     "width": 0.92,
      "tilt": -5.9,
      "roll": 0,
-     "rot": -12.3,
+     "rot": -42.4,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "46",
@@ -5888,7 +5405,7 @@
    "set": "office",
    "why": "standing up = the turn",
    "opts": {
-    "grade": "closing",
+    "grade": "ember",
     "battery": [
      [
       0,
@@ -5929,29 +5446,16 @@
      "expr": {
       "angry": 0.3
      },
-     "act": "pop"
+     "act": "pop",
+     "clip": "standing-up",
+     "motionMix": 1,
+     "once": true
     }
    ],
    "mouth": {
     "gain": 1
    },
    "outline": 0.0035,
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#1a0206",
-     "light": "#ff4a3a",
-     "levels": 3
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.1
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -5971,7 +5475,8 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "47",
@@ -5979,7 +5484,7 @@
    "set": "office",
    "why": "Ado's 'can it': she shuts HIM up",
    "opts": {
-    "grade": "closing",
+    "grade": "ember",
     "boss": {
      "pos": [
       0,
@@ -6018,7 +5523,10 @@
      "rotY": 0,
      "expr": {
       "fun": 0.4
-     }
+     },
+     "clip": "pointing-gesture",
+     "motionMix": 1,
+     "once": true
     }
    ],
    "mouth": {
@@ -6040,22 +5548,6 @@
     "width": 1.8,
     "rot": 150
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#1a0206",
-     "light": "#ff4a3a",
-     "levels": 3
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.1
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -6074,15 +5566,16 @@
      "rot": -126.5,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "48",
-   "at": 77.52,
+   "at": 77.638,
    "set": "office",
    "why": "everyone stares: the public is set",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "crowd": [
      {
       "pos": [
@@ -6183,28 +5676,13 @@
      "ease": "snap"
     }
    ],
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "whip",
     "frames": 6,
     "dir": 1
    },
-   "acted": "a 13-frame whip across six staring fish: their heads turning IS the line (No, oh-oh-oh); the next shot writes TAKE"
+   "acted": "a 13-frame whip across six staring fish: their heads turning IS the line (No, oh-oh-oh); the next shot writes TAKE",
+   "kick": 1.5
   },
   {
    "id": "49",
@@ -6212,7 +5690,7 @@
    "set": "office",
    "why": "chorus 2: the cold-open picture comes true - stomps burst colour",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "things": [
      {
       "kind": "monitor",
@@ -6238,8 +5716,13 @@
    },
    "camera": [
     {
-     "at": 0,
-     "cam": "low"
+     "move": {
+      "kind": "crash",
+      "h": 1.38,
+      "deg": 10,
+      "dist": 1.7,
+      "hit": 0
+     }
     }
    ],
    "actor": [
@@ -6248,11 +5731,11 @@
      "pose": "stomp",
      "pos": "on_desk",
      "rotY": "lens",
-     "motion": "silly-dancing",
-     "motionMix": 0.4,
      "expr": {
       "joy": 0.8
-     }
+     },
+     "clip": "silly-dancing",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -6294,18 +5777,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.35,
-      1.16,
-      1.13
+      -0.29,
+      2.4,
+      0.81
      ],
-     "size": 0.149,
-     "width": 0.66,
-     "tilt": 3.9,
+     "size": 0.085,
+     "width": 0.45,
+     "tilt": 0.2,
      "roll": 0,
-     "rot": 28.7,
+     "rot": 24,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "50",
@@ -6313,7 +5797,7 @@
    "set": "office",
    "why": "wow 4: dancing in public, a 360 orbit",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -6450,11 +5934,11 @@
      "pose": "dance_a",
      "pos": "on_desk",
      "rotY": "lens",
-     "motion": "silly-dancing",
-     "motionMix": 0.85,
      "expr": {
       "joy": 0.9
-     }
+     },
+     "clip": "hip-hop-dancing",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -6510,18 +5994,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.29,
-      1.55,
-      -0.35
+      -0.13,
+      1.56,
+      -0.26
      ],
-     "size": 0.1,
-     "width": 0.96,
-     "tilt": 0.1,
+     "size": 0.094,
+     "width": 0.89,
+     "tilt": 0.5,
      "roll": 0,
      "rot": 63.2,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "51",
@@ -6529,7 +6014,7 @@
    "set": "office",
    "why": "the mountains (= files) kicked away; string 3 snaps",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -6619,14 +6104,14 @@
     {
      "at": 0,
      "pos": [
-      0.8,
-      1.2,
-      1.6
+      1.3,
+      1.95,
+      2.2
      ],
      "look": [
       0,
-      1.3,
-      0.5
+      1.65,
+      0.55
      ],
      "fov": 40
     }
@@ -6637,11 +6122,12 @@
      "pose": "kick",
      "pos": "on_desk",
      "rotY": "lens",
-     "motion": "mma-kick",
-     "motionMix": 0.5,
      "expr": {
       "joy": 0.8
-     }
+     },
+     "clip": "mma-kick",
+     "motionMix": 1,
+     "once": true
     }
    ],
    "mouth": {
@@ -6680,26 +6166,27 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.09,
-      1.07,
-      -0.18
+      -0.81,
+      1.46,
+      0.69
      ],
-     "size": 0.075,
-     "width": 0.71,
-     "tilt": 4.2,
+     "size": 0.132,
+     "width": 0.98,
+     "tilt": -8,
      "roll": 0,
-     "rot": 21.7,
+     "rot": 54.4,
      "key_scale": 1
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "52",
-   "at": 85.33,
+   "at": 85.022,
    "set": "office",
    "why": "obstacle 1: the hands grab - she spins out of reach",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "boss": {
      "pos": [
       0,
@@ -6730,11 +6217,12 @@
      "pose": "spin",
      "pos": "on_desk",
      "rotY": "lens",
-     "motion": "spin-in-place",
-     "motionMix": 0.7,
      "expr": {
       "joy": 0.7
-     }
+     },
+     "clip": "spin-in-place",
+     "motionMix": 1,
+     "once": true
     }
    ],
    "mouth": {
@@ -6778,18 +6266,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.37,
-      0.8,
-      0.2
+      -0.32,
+      1,
+      0.22
      ],
-     "size": 0.111,
-     "width": 2.71,
-     "tilt": -84.2,
+     "size": 0.092,
+     "width": 1.89,
+     "tilt": -84.1,
      "roll": 0,
-     "rot": 46.8,
-     "key_scale": 1.8
+     "rot": 44.8,
+     "key_scale": 1.3
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "53",
@@ -6797,7 +6286,7 @@
    "set": "office",
    "why": "the colour follows her through the grey: she slides down the row",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "crowd": [
      {
       "pos": [
@@ -6863,7 +6352,9 @@
      "rotY": 180,
      "expr": {
       "joy": 0.8
-     }
+     },
+     "clip": "running",
+     "motionMix": 0.12
     },
     {
      "at": "end",
@@ -6878,7 +6369,9 @@
      "ease": "linear",
      "expr": {
       "joy": 0.8
-     }
+     },
+     "clip": "running",
+     "motionMix": 0.12
     }
    ],
    "mouth": {
@@ -6932,7 +6425,8 @@
      "rot": -93.9,
      "key_scale": 1.3
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "54",
@@ -6940,7 +6434,7 @@
    "set": "office",
    "why": "the puppeteers trip over their own strings; string 2 snaps",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -6997,18 +6491,14 @@
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      0.2,
-      1.3,
-      2.2
-     ],
-     "look": [
-      0,
-      1.2,
-      0
-     ],
-     "fov": 36
+     "move": {
+      "kind": "orbit_roll",
+      "h": 1.38,
+      "deg": 20,
+      "dist": 1.9,
+      "sweep": 100,
+      "roll": 12
+     }
     }
    ],
    "actor": [
@@ -7017,11 +6507,11 @@
      "pose": "dance_b",
      "pos": "chair",
      "rotY": "lens",
-     "motion": "silly-dancing",
-     "motionMix": 0.7,
      "expr": {
       "joy": 0.8
-     }
+     },
+     "clip": "twist-dance",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -7063,18 +6553,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.53,
-      1.39,
-      0.57
+      -0.05,
+      1.52,
+      -0.49
      ],
-     "size": 0.064,
+     "size": 0.058,
      "width": 0.55,
-     "tilt": -2.3,
+     "tilt": -1.1,
      "roll": 0,
-     "rot": -11.5,
+     "rot": 105.1,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "55",
@@ -7082,7 +6573,7 @@
    "set": "train",
    "why": "obstacle 2: she dances THROUGH the crowd",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "board": "PUSH COMES TO SHOVE",
     "crowd": [
      {
@@ -7167,11 +6658,12 @@
       0.8
      ],
      "rotY": "lens",
-     "motion": "standing-dodge-backward",
-     "motionMix": 0.6,
      "expr": {
       "joy": 0.8
-     }
+     },
+     "clip": "standing-dodge-backward",
+     "motionMix": 1,
+     "once": true
     },
     {
      "at": "end",
@@ -7185,24 +6677,15 @@
      "move": 2.6,
      "expr": {
       "joy": 0.9
-     }
+     },
+     "clip": "rumba-dancing",
+     "motionMix": 1
     }
    ],
    "mouth": {
     "gain": 1
    },
    "outline": 0.0035,
-   "fx": [
-    {
-     "kind": "spread",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "r0": 0.4,
-     "r1": 0.6
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -7210,18 +6693,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      3.91,
-      1.14,
-      0.17
+      3.96,
+      1.17,
+      0.28
      ],
-     "size": 0.139,
-     "width": 0.74,
-     "tilt": -7.2,
+     "size": 0.13,
+     "width": 0.69,
+     "tilt": -6.8,
      "roll": 0,
-     "rot": 21.2,
+     "rot": 20.7,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "56",
@@ -7229,7 +6713,7 @@
    "set": "train",
    "why": "the door race she lost every morning - now she WINS; the last string snaps",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "doors": [
      [
       94.25,
@@ -7304,11 +6788,11 @@
       0
      ],
      "rotY": -90,
-     "motion": "running",
-     "motionMix": 0.6,
      "expr": {
       "joy": 0.7
-     }
+     },
+     "clip": "running",
+     "motionMix": 1
     },
     {
      "at": 1.4,
@@ -7323,7 +6807,10 @@
      "ease": "in",
      "expr": {
       "joy": 0.9
-     }
+     },
+     "clip": "joyful-jump",
+     "motionMix": 1,
+     "once": true
     }
    ],
    "mouth": {
@@ -7363,7 +6850,8 @@
      "rot": -72.2,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "57",
@@ -7371,7 +6859,7 @@
    "set": "train",
    "why": "public, staring, one convert - and the beach flashes past",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "doors": 0,
     "battery": [
      [
@@ -7428,18 +6916,13 @@
    },
    "camera": [
     {
-     "at": 0,
-     "cam": "aisle_long"
-    },
-    {
-     "at": "end",
-     "cam": "aisle_long",
-     "offset": [
-      0,
-      0,
-      -2.4
-     ],
-     "ease": "linear"
+     "move": {
+      "kind": "track",
+      "h": 1.38,
+      "deg": 0,
+      "dist": 1.8,
+      "width": 0.7
+     }
     }
    ],
    "actor": [
@@ -7448,11 +6931,11 @@
      "pose": "dance_a",
      "pos": "aisle",
      "rotY": "lens",
-     "motion": "twist-dance",
-     "motionMix": 0.85,
      "expr": {
       "joy": 0.9
-     }
+     },
+     "clip": "twist-dance",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -7477,18 +6960,20 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.99,
-      1.03,
-      -3.83
+      0.11,
+      2.34,
+      -4.01
      ],
-     "size": 0.508,
-     "width": 2.71,
-     "tilt": -3,
+     "size": 0.172,
+     "width": 1.83,
+     "tilt": 0.1,
      "roll": 0,
-     "rot": 16,
-     "key_scale": 1.8
+     "rot": 5.7,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "58",
@@ -7496,20 +6981,19 @@
    "set": "dream",
    "why": "a rich wide so we WANT it: alone on the light, arms spread",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
     {
-     "at": 0,
-     "cam": "above"
-    },
-    {
-     "at": "end",
-     "cam": "low_wide",
-     "ease": "inOut"
+     "move": {
+      "kind": "spiral",
+      "h": 1.25,
+      "deg": 0,
+      "dist": 2.2
+     }
     }
    ],
    "actor": [
@@ -7520,7 +7004,9 @@
      "rotY": "lens",
      "expr": {
       "joy": 0.7
-     }
+     },
+     "clip": "excited",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -7552,19 +7038,20 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      1.59,
-      0.03,
-      0.2
+      -1.09,
+      1.91,
+      -0.12
      ],
-     "size": 0.334,
-     "width": 3.57,
-     "tilt": -90,
+     "size": 0.057,
+     "width": 0.61,
+     "tilt": -14.1,
      "roll": 0,
-     "rot": 0,
+     "rot": 168.3,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "59",
@@ -7572,7 +7059,7 @@
    "set": "office",
    "why": "office - the loop strikes back: the chair spins her to the desk",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -7611,7 +7098,9 @@
      "at": 0,
      "pose": "spin",
      "pos": "chair",
-     "rotY": 200
+     "rotY": 200,
+     "clip": "spin-in-place",
+     "motionMix": 0.12
     },
     {
      "at": 0.6,
@@ -7622,7 +7111,9 @@
      "act": "turn",
      "expr": {
       "sorrow": 0.3
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -7640,22 +7131,6 @@
     "size": 0.24,
     "width": 4.6
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -7663,26 +7138,27 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.77,
-      0.15,
-      -2.03
+      0.58,
+      1.13,
+      -2.4
      ],
-     "size": 0.274,
-     "width": 1.72,
+     "size": 0.255,
+     "width": 1.6,
      "tilt": -10.6,
      "roll": 0,
-     "rot": 27.9,
+     "rot": -0.5,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "60",
-   "at": 103.96,
+   "at": 103.667,
    "set": "dream",
    "why": "dream - she switches off: buries the phone",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "things": [
      {
       "kind": "phone",
@@ -7702,23 +7178,23 @@
      }
     ],
     "post": {
-     "bloom": 0.45
+     "bloom": 0.12
     }
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      -1.3,
-      0.5,
-      1.1
+      -0.15,
+      1.7,
+      2.3
      ],
      "look": [
-      -1.5,
-      0.05,
+      -1.2,
+      0.15,
       0.6
      ],
-     "fov": 34
+     "fov": 26
     }
    ],
    "lyrics": {
@@ -7743,15 +7219,16 @@
     "kind": "cut",
     "frames": 0
    },
+   "kick": 1.5,
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.52,
+      -1.42,
       0.03,
-      0.5
+      0.56
      ],
-     "size": 0.081,
-     "width": 0.54,
+     "size": 0.118,
+     "width": 0.74,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
@@ -7761,11 +7238,11 @@
   },
   {
    "id": "61",
-   "at": 105.53,
+   "at": 105.316,
    "set": "office",
    "why": "office again: the phone is back on her desk, ringing",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -7841,7 +7318,9 @@
      "rotY": 0,
      "expr": {
       "sorrow": 0.3
-     }
+     },
+     "clip": "sitting-angry",
+     "motionMix": 0.25
     },
     {
      "at": 1.4,
@@ -7852,7 +7331,9 @@
      "act": "stomp",
      "expr": {
       "angry": 0.4
-     }
+     },
+     "clip": "sitting-angry",
+     "motionMix": 0.12
     }
    ],
    "mouth": {
@@ -7860,35 +7341,23 @@
    },
    "outline": 0.0035,
    "step": 2,
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
    },
-   "acted": "a 1.8 s push on the buzzing phone: its crawl to the edge is \"no one bringin me\"; the four DOWNs (62a-d) write the rest"
+   "acted": "a 1.8 s push on the buzzing phone: its crawl to the edge is \"no one bringin me\"; the four DOWNs (62a-d) write the rest",
+   "kick": 1.5,
+   "lens_near": {
+    "desk": "a macro of the ringing phone lying on her desk"
+   }
   },
   {
    "id": "62a",
-   "at": 107.3,
+   "at": 107.406,
    "set": "office",
    "why": "each 'down' its own held beat: a string, a light row, a dot",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -7930,7 +7399,9 @@
      "act": "stomp",
      "expr": {
       "sorrow": 0.3
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -7955,22 +7426,6 @@
      "down,"
     ]
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -7989,7 +7444,9 @@
      "rot": -1.4,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "62b",
@@ -7997,7 +7454,7 @@
    "set": "office",
    "why": "each 'down' its own held beat: a string, a light row, a dot",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -8048,7 +7505,9 @@
      "act": "stomp",
      "expr": {
       "sorrow": 0.4
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -8073,22 +7532,6 @@
      "down,"
     ]
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -8096,18 +7539,20 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.65,
-      0.19,
-      -1.69
+      0.6,
+      1.35,
+      -1.63
      ],
-     "size": 0.123,
-     "width": 3.31,
-     "tilt": -10.4,
+     "size": 0.115,
+     "width": 3.1,
+     "tilt": -10.6,
      "roll": 0,
-     "rot": -1.4,
+     "rot": -0.8,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "62c",
@@ -8115,7 +7560,7 @@
    "set": "office",
    "why": "each 'down' its own held beat: a string, a light row, a dot",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -8175,7 +7620,9 @@
      "act": "stomp",
      "expr": {
       "sorrow": 0.5
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -8200,22 +7647,6 @@
      "down,"
     ]
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -8223,18 +7654,20 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.18,
-      0.19,
-      -1.27
+      -1.3,
+      1.34,
+      -1.16
      ],
-     "size": 0.263,
-     "width": 3.31,
-     "tilt": -10.5,
+     "size": 0.204,
+     "width": 3.08,
+     "tilt": -10.9,
      "roll": 0,
-     "rot": 25.4,
+     "rot": 27.7,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "62d",
@@ -8242,7 +7675,7 @@
    "set": "office",
    "why": "each 'down' its own held beat: a string, a light row, a dot",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -8311,7 +7744,9 @@
      "act": "stomp",
      "expr": {
       "sorrow": 0.6000000000000001
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -8336,34 +7771,20 @@
      "down"
     ]
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
-   }
+   },
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "63",
-   "at": 109,
+   "at": 108.822,
    "set": "office",
    "why": "the darkest point - her name: only her last dot glows (灯闇)",
    "opts": {
-    "grade": "own",
+    "grade": "pov_warm",
     "dark": 0.88,
     "battery": [
      [
@@ -8378,7 +7799,8 @@
      108.55
     ],
     "post": {
-     "dof": 0.86
+     "dof": 0.86,
+     "bloom": 0.3
     }
    },
    "camera": [
@@ -8405,7 +7827,9 @@
      "rotY": 0,
      "expr": {
       "sorrow": 0.4
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": "silent",
@@ -8414,7 +7838,9 @@
     "kind": "cut",
     "frames": 0
    },
-   "acted": "the breath after the last \"down\": the black room and her one light ARE the moment - no word"
+   "acted": "the breath after the last \"down\": the black room and her one light ARE the moment - no word",
+   "kick": 1.5,
+   "aware": 0
   },
   {
    "id": "64",
@@ -8422,7 +7848,7 @@
    "set": "dream",
    "why": "dream: space - the second rich wide; Salmon floating",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "salmon": {
      "pos": [
       1.8,
@@ -8431,28 +7857,19 @@
      ]
     },
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      -1,
-      1.6,
-      2
-     ],
-     "look": [
-      -1.5,
-      0.2,
-      0.4
-     ],
-     "fov": 40
-    },
-    {
-     "at": "end",
-     "cam": "crane_high",
-     "ease": "inOut"
+     "move": {
+      "kind": "orbit_roll",
+      "h": 1.2,
+      "deg": 30,
+      "dist": 2.4,
+      "sweep": 90,
+      "roll": 10
+     }
     }
    ],
    "actor": [
@@ -8468,7 +7885,9 @@
      "rollZ": -88,
      "expr": {
       "joy": 0.6
-     }
+     },
+     "clip": "flying",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -8499,19 +7918,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      4.24,
-      -5.79,
-      -9.3
+      -3.92,
+      1.4,
+      0.55
      ],
-     "size": 1.069,
-     "width": 32.29,
-     "tilt": -30.6,
+     "size": 0.257,
+     "width": 1.61,
+     "tilt": -0.9,
      "roll": 0,
-     "rot": -25.5,
-     "key_scale": 1,
-     "small": "fitter: the free space beside her is small in this frame"
+     "rot": 107.1,
+     "key_scale": 1
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "65",
@@ -8519,7 +7938,7 @@
    "set": "office",
    "why": "the office's sun is an interrogation lamp",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "lamp",
@@ -8566,7 +7985,9 @@
      "expr": {
       "sorrow": 0.3,
       "blink": 0.5
-     }
+     },
+     "clip": "sitting-disapproval",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -8591,22 +8012,6 @@
      "sun"
     ]
    },
-   "fx": [
-    {
-     "kind": "duo",
-     "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
-    },
-    {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
-    }
-   ],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -8614,26 +8019,27 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.37,
+      0.38,
       1.27,
-      0.03
+      0.02
      ],
      "size": 0.05,
      "width": 0.37,
-     "tilt": -4.4,
+     "tilt": -4.1,
      "roll": 0,
-     "rot": -10.3,
+     "rot": -10.7,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5
   },
   {
-   "id": "66",
-   "at": 114.85,
+   "id": "66a",
+   "at": 115.045,
    "set": "office",
-   "why": "the days go on: a step smaller on each 'on' - into the globe",
+   "why": "the days go on: on each 'on' she is a step smaller - in her chair (front)",
    "opts": {
-    "grade": "closing",
+    "grade": "pov",
     "things": [
      {
       "kind": "globe",
@@ -8685,48 +8091,12 @@
    "camera": [
     {
      "at": 0,
-     "cam": "front"
-    },
-    {
-     "at": 1.1,
      "cam": "front",
      "offset": [
       0,
-      0,
-      0.6
+      0.3,
+      0
      ]
-    },
-    {
-     "at": 1.82,
-     "cam": "front",
-     "offset": [
-      0,
-      0,
-      1.2
-     ]
-    },
-    {
-     "at": 2.52,
-     "cam": "front",
-     "offset": [
-      0,
-      0.2,
-      1.8
-     ]
-    },
-    {
-     "at": "end",
-     "pos": [
-      0.55,
-      1.2,
-      1.6
-     ],
-     "look": [
-      0.55,
-      0.95,
-      0.5
-     ],
-     "fov": 26
     }
    ],
    "actor": [
@@ -8738,7 +8108,9 @@
      "height": 1.55,
      "expr": {
       "sorrow": 0.4
-     }
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     },
     {
      "at": 1.1,
@@ -8746,39 +8118,9 @@
      "pos": "chair",
      "rotY": 0,
      "height": 1.1,
-     "blend": 0.2
-    },
-    {
-     "at": 1.82,
-     "pose": "sit",
-     "pos": "chair",
-     "rotY": 0,
-     "height": 0.7,
-     "blend": 0.2
-    },
-    {
-     "at": 2.52,
-     "pose": "stand",
-     "pos": [
-      0.55,
-      0.81,
-      0.5
-     ],
-     "rotY": 0,
-     "height": 0.35,
-     "blend": 0.2
-    },
-    {
-     "at": 3.09,
-     "pose": "stand",
-     "pos": [
-      0.55,
-      0.81,
-      0.5
-     ],
-     "rotY": "lens",
-     "height": 0.12,
-     "blend": 0.2
+     "blend": 0.2,
+     "clip": "sitting-idle",
+     "motionMix": 0.2
     }
    ],
    "mouth": {
@@ -8796,22 +8138,282 @@
     "size": 0.24,
     "width": 4.6
    },
-   "fx": [
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "kick": 1.5,
+   "cut_lock": "one shot per sung 'on' (116.67 / 117.37) - 4_SCRIPT 66",
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.94,
+      1.56,
+      -2.8
+     ],
+     "size": 0.413,
+     "width": 5.21,
+     "tilt": -10.8,
+     "roll": 0,
+     "rot": 16.1,
+     "key_scale": 1.8
+    }
+   }
+  },
+  {
+   "id": "66b",
+   "at": 116.637,
+   "set": "office",
+   "why": "smaller again - seen from behind and above, the desk in front of her like a wall",
+   "opts": {
+    "grade": "pov",
+    "things": [
+     {
+      "kind": "globe",
+      "pos": "globe",
+      "scale": 1.6
+     },
+     {
+      "kind": "page",
+      "pos": [
+       -1,
+       1.6,
+       0.9
+      ],
+      "at": 115.95,
+      "text": "DAY 100"
+     },
+     {
+      "kind": "page",
+      "pos": [
+       -1,
+       1.6,
+       0.9
+      ],
+      "at": 116.67,
+      "text": "DAY 200"
+     },
+     {
+      "kind": "page",
+      "pos": [
+       -1,
+       1.6,
+       0.9
+      ],
+      "at": 117.37,
+      "text": "DAY 300"
+     },
+     {
+      "kind": "page",
+      "pos": [
+       -1,
+       1.6,
+       0.9
+      ],
+      "at": 117.94,
+      "text": "DAY 365"
+     }
+    ]
+   },
+   "camera": [
     {
-     "kind": "duo",
      "at": 0,
-     "to": "end",
-     "dark": "#2a2e3e",
-     "light": "#d6dbe8",
-     "levels": 4
+     "pos": [
+      -0.75,
+      2.25,
+      -0.85
+     ],
+     "look": [
+      0.05,
+      0.42,
+      0.2
+     ],
+     "fov": 32
     },
     {
-     "kind": "halftone",
-     "at": 0,
-     "to": "end",
-     "opacity": 0.12
+     "at": "end",
+     "pos": [
+      -0.62,
+      2.35,
+      -0.7
+     ],
+     "look": [
+      0.05,
+      0.4,
+      0.2
+     ],
+     "fov": 30
     }
    ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "sit",
+     "pos": "chair",
+     "rotY": 0,
+     "height": 0.7,
+     "blend": 0.15,
+     "clip": "sitting-idle",
+     "motionMix": 0.2
+    }
+   ],
+   "mouth": {
+    "gain": 0.8
+   },
+   "outline": 0.0035,
+   "step": 2,
+   "lyrics": {
+    "kind": "sign",
+    "material": "print",
+    "lines": [
+     46
+    ],
+    "anchor": "screen",
+    "size": 0.24,
+    "width": 4.6
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "kick": 1.5,
+   "cut_lock": "one shot per sung 'on' (116.67 / 117.37) - 4_SCRIPT 66",
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      -0.01,
+      1.21,
+      -0.12
+     ],
+     "size": 0.092,
+     "width": 1.16,
+     "tilt": -59.2,
+     "roll": 0,
+     "rot": -133.5,
+     "key_scale": 1.8
+    }
+   }
+  },
+  {
+   "id": "66c",
+   "at": 117.337,
+   "set": "office",
+   "why": "and on - she is a speck inside the snow globe on her desk",
+   "opts": {
+    "grade": "pov",
+    "things": [
+     {
+      "kind": "globe",
+      "pos": "globe",
+      "scale": 1.6
+     },
+     {
+      "kind": "page",
+      "pos": [
+       -1,
+       1.6,
+       0.9
+      ],
+      "at": 115.95,
+      "text": "DAY 100"
+     },
+     {
+      "kind": "page",
+      "pos": [
+       -1,
+       1.6,
+       0.9
+      ],
+      "at": 116.67,
+      "text": "DAY 200"
+     },
+     {
+      "kind": "page",
+      "pos": [
+       -1,
+       1.6,
+       0.9
+      ],
+      "at": 117.37,
+      "text": "DAY 300"
+     },
+     {
+      "kind": "page",
+      "pos": [
+       -1,
+       1.6,
+       0.9
+      ],
+      "at": 117.94,
+      "text": "DAY 365"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.55,
+      1.75,
+      1.9
+     ],
+     "look": [
+      0.55,
+      0.95,
+      0.5
+     ],
+     "fov": 30
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.55,
+      1.2,
+      1.6
+     ],
+     "look": [
+      0.55,
+      0.95,
+      0.5
+     ],
+     "fov": 34
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "stand",
+     "pos": [
+      0.55,
+      0.81,
+      0.5
+     ],
+     "rotY": 0,
+     "height": 0.35,
+     "blend": 0.1,
+     "clip": "sad-idle",
+     "motionMix": 1
+    },
+    {
+     "at": 0.57,
+     "pose": "stand",
+     "pos": [
+      0.55,
+      0.81,
+      0.5
+     ],
+     "rotY": "lens",
+     "height": 0.12,
+     "blend": 0.2,
+     "clip": "sad-idle",
+     "motionMix": 1
+    }
+   ],
+   "mouth": {
+    "gain": 0.8
+   },
+   "outline": 0.0035,
+   "step": 2,
    "hero": [
     "globe"
    ],
@@ -8819,22 +8421,9 @@
     "kind": "cut",
     "frames": 0
    },
-   "lyrics_fit": {
-    "mv": {
-     "anchor": [
-      -1.14,
-      -1.17,
-      -20.02
-     ],
-     "size": 0.686,
-     "width": 12.48,
-     "tilt": -10.6,
-     "roll": 0,
-     "rot": 4,
-     "key_scale": 1,
-     "small": "fitter: the free space beside her is small in this frame"
-    }
-   }
+   "kick": 1.5,
+   "cut_lock": "one shot per sung 'on' (116.67 / 117.37) - 4_SCRIPT 66",
+   "acted": "the last 'and on' is acted: she shrinks to a speck in the globe on each 'on' (the line is written in 66a / 66b)"
   },
   {
    "id": "67",
@@ -8842,7 +8431,7 @@
    "set": "globe",
    "why": "T-A-K-E: two tail blows crack the glass; the cracks light letter by letter",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "shake": [
      118.5
     ],
@@ -8883,19 +8472,24 @@
      "rotY": "lens",
      "expr": {
       "angry": 0.6
-     }
+     },
+     "clip": "mma-kick",
+     "motionMix": 1,
+     "once": true
     },
     {
      "at": 0.1,
      "pose": "kick",
      "pos": "center",
      "rotY": "lens",
-     "motion": "mma-kick",
-     "motionMix": 0.6,
      "blend": 0.08,
      "expr": {
       "angry": 0.8
-     }
+     },
+     "clip": "mma-kick",
+     "motionMix": 1,
+     "once": true,
+     "restart": true
     }
    ],
    "mouth": "silent",
@@ -8919,7 +8513,8 @@
      "rot": 16.1,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 1.5
   },
   {
    "id": "68",
@@ -8927,7 +8522,7 @@
    "set": "office",
    "why": "the glass bursts: she slides out, grows back, all five dots flare on",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "battery": [
      [
       0,
@@ -9000,7 +8595,9 @@
      ],
      "rotY": "lens",
      "height": 0.15,
-     "rollZ": 80
+     "rollZ": 80,
+     "clip": "falling",
+     "motionMix": 1
     },
     {
      "at": 0.5,
@@ -9012,7 +8609,9 @@
      "move": 0.5,
      "expr": {
       "joy": 0.9
-     }
+     },
+     "clip": "standing-cheering",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -9050,17 +8649,19 @@
     "mv": {
      "anchor": [
       0.57,
-      1.32,
-      0.3
+      1.59,
+      0.48
      ],
-     "size": 0.105,
-     "width": 0.9,
-     "tilt": 4,
+     "size": 0.063,
+     "width": 0.84,
+     "tilt": 3.6,
      "roll": 0,
-     "rot": -1.8,
-     "key_scale": 1.8
+     "rot": -1.9,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "70",
@@ -9068,38 +8669,18 @@
    "set": "office",
    "why": "she sprints through the office; snow turns to sand where it touches her",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "warm": 0.3
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      1.4,
-      1.1,
-      -1
-     ],
-     "look": [
-      0,
-      1,
-      -2
-     ],
-     "fov": 40
-    },
-    {
-     "at": "end",
-     "pos": [
-      1.4,
-      1.6,
-      -8
-     ],
-     "look": [
-      0,
-      1,
-      -9.5
-     ],
-     "fov": 42,
-     "ease": "linear"
+     "move": {
+      "kind": "follow",
+      "h": 1.3,
+      "deg": 75,
+      "dist": 2,
+      "sweep": 10
+     }
     }
    ],
    "actor": [
@@ -9112,11 +8693,11 @@
       -1.5
      ],
      "rotY": 180,
-     "motion": "running",
-     "motionMix": 0.8,
      "expr": {
       "joy": 0.8
-     }
+     },
+     "clip": "running",
+     "motionMix": 1
     },
     {
      "at": "end",
@@ -9124,11 +8705,13 @@
      "pos": [
       0,
       0,
-      -9
+      -6
      ],
      "rotY": 180,
-     "move": 4.9,
-     "ease": "linear"
+     "move": 2.95,
+     "ease": "linear",
+     "clip": "running",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -9157,20 +8740,114 @@
     "kind": "cut",
     "frames": 0
    },
+   "kick": 2.5,
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -13.19,
-      -1.24,
-      -27.4
+      -12.26,
+      1.17,
+      -3.73
      ],
-     "size": 0.921,
-     "width": 9.82,
-     "tilt": -16.3,
+     "size": 0.616,
+     "width": 4.57,
+     "tilt": 0.2,
      "roll": 0,
-     "rot": 36.9,
-     "key_scale": 1,
-     "small": "fitter: the free space beside her is small in this frame"
+     "rot": 98.2,
+     "key_scale": 1.8
+    }
+   }
+  },
+  {
+   "id": "70b",
+   "at": 124.177,
+   "set": "office",
+   "why": "she sprints on - the lens on her other side now, snow turning to sand behind her",
+   "opts": {
+    "grade": "pov",
+    "warm": 0.3
+   },
+   "camera": [
+    {
+     "move": {
+      "kind": "follow",
+      "h": 1.3,
+      "deg": -110,
+      "dist": 2.2,
+      "sweep": -20
+     }
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "run",
+     "pos": [
+      0,
+      0,
+      -6
+     ],
+     "rotY": 180,
+     "expr": {
+      "joy": 0.8
+     },
+     "clip": "running",
+     "motionMix": 1
+    },
+    {
+     "at": "end",
+     "pose": "run",
+     "pos": [
+      0,
+      0,
+      -9
+     ],
+     "rotY": 180,
+     "move": 1.96,
+     "ease": "linear",
+     "clip": "running",
+     "motionMix": 1
+    }
+   ],
+   "mouth": {
+    "gain": 1
+   },
+   "outline": 0.0035,
+   "lyrics": {
+    "kind": "sign",
+    "material": "print",
+    "lines": [
+     48
+    ],
+    "anchor": [
+     -1.2,
+     1.4,
+     -5
+    ],
+    "size": 0.28,
+    "width": 4,
+    "rot": 60,
+    "key": [
+     "snow"
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "kick": 2.5,
+   "lyrics_fit": {
+    "mv": {
+     "anchor": [
+      1.17,
+      1.24,
+      -6.22
+     ],
+     "size": 0.183,
+     "width": 1.58,
+     "tilt": 0,
+     "roll": 0,
+     "rot": -145.3,
+     "key_scale": 1.8
     }
    }
   },
@@ -9180,7 +8857,7 @@
    "set": "office",
    "why": "warmth broken in: she kicks the frosted window - it breaks outward",
    "opts": {
-    "grade": "clean",
+    "grade": "pov",
     "warm": 0.6,
     "window_break": 126.9
    },
@@ -9225,11 +8902,12 @@
       0
      ],
      "rotY": -90,
-     "motion": "mma-kick",
-     "motionMix": 0.6,
      "expr": {
       "angry": 0.4
-     }
+     },
+     "clip": "mma-kick",
+     "motionMix": 1,
+     "once": true
     }
    ],
    "mouth": {
@@ -9273,7 +8951,8 @@
      "rot": 77.9,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "72",
@@ -9281,34 +8960,28 @@
    "set": "office",
    "why": "her heart is not cold any more - shown wide: the warm light spreads from her dots",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "warm": 1,
     "battery": [
      [
       0,
       5
      ]
-    ]
+    ],
+    "post": {
+     "bloom": 0.3
+    }
    },
    "camera": [
     {
-     "at": 0,
-     "orbit": {
-      "around": "aisle",
-      "deg": -45,
-      "radius": 3,
-      "height": 1
+     "move": {
+      "kind": "orbit_roll",
+      "h": 1.38,
+      "deg": -20,
+      "dist": 2.2,
+      "sweep": 120,
+      "roll": 10
      }
-    },
-    {
-     "at": "end",
-     "orbit": {
-      "around": "aisle",
-      "deg": 45,
-      "radius": 3,
-      "height": 1
-     },
-     "path": "spline"
     }
    ],
    "actor": [
@@ -9317,11 +8990,11 @@
      "pose": "spin",
      "pos": "aisle",
      "rotY": "lens",
-     "motion": "spin-in-place",
-     "motionMix": 0.6,
      "expr": {
       "joy": 0.9
-     }
+     },
+     "clip": "spin-in-place",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -9353,27 +9026,27 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.67,
-      0.5,
-      -3.46
+      -0.64,
+      1.47,
+      -4.17
      ],
-     "size": 0.063,
-     "width": 0.84,
-     "tilt": 0.2,
+     "size": 0.103,
+     "width": 0.88,
+     "tilt": -1.2,
      "roll": 0,
-     "rot": -34.6,
-     "key_scale": 1,
-     "small": "fitter: the free space beside her is small in this frame"
+     "rot": 84,
+     "key_scale": 1
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "73",
-   "at": 130.85,
+   "at": 131.02,
    "set": "office",
    "why": "the hands lose: she shoves the boss's giant hand away",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "warm": 0.8,
     "boss": {
      "pos": [
@@ -9384,6 +9057,9 @@
      "rotY": 3.1416,
      "hands": "reach",
      "reach_at": 130.9
+    },
+    "post": {
+     "bloom": 0.3
     }
    },
    "camera": [
@@ -9428,7 +9104,9 @@
      "rotY": 0,
      "expr": {
       "angry": 0.5
-     }
+     },
+     "clip": "jab-cross",
+     "motionMix": 0.12
     }
    ],
    "mouth": {
@@ -9471,7 +9149,8 @@
      "rot": 124.8,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "74",
@@ -9479,7 +9158,7 @@
    "set": "office",
    "why": "the payoff: the cracked, empty globe handed back",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "warm": 0.8,
     "boss": {
      "pos": [
@@ -9501,9 +9180,13 @@
       ],
       "scale": 1.6,
       "crack": 1,
-      "empty": true
+      "empty": true,
+      "float": true
      }
-    ]
+    ],
+    "post": {
+     "bloom": 0.3
+    }
    },
    "camera": [
     {
@@ -9533,7 +9216,9 @@
      "rotY": 0,
      "expr": {
       "fun": 0.5
-     }
+     },
+     "clip": "idle",
+     "motionMix": 0.12
     }
    ],
    "mouth": {
@@ -9572,18 +9257,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.22,
-      1.2,
-      1.41
+      0.01,
+      1.15,
+      1.48
      ],
-     "size": 0.156,
-     "width": 1.25,
-     "tilt": -9.5,
+     "size": 0.122,
+     "width": 0.76,
+     "tilt": -9.1,
      "roll": 0,
-     "rot": 114.5,
+     "rot": 118.3,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "75",
@@ -9591,7 +9277,7 @@
    "set": "office",
    "why": "she grabs the postcard - the office unfolds into the beach",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "warm": 1,
     "unfold": 136,
     "things": [
@@ -9604,7 +9290,10 @@
        0
       ]
      }
-    ]
+    ],
+    "post": {
+     "bloom": 0.3
+    }
    },
    "camera": [
     {
@@ -9666,7 +9355,9 @@
      "rotY": 0,
      "expr": {
       "joy": 0.7
-     }
+     },
+     "clip": "idle",
+     "motionMix": 0.12
     }
    ],
    "mouth": {
@@ -9706,18 +9397,19 @@
     "mv": {
      "anchor": [
       -0.46,
-      1.23,
+      1.28,
       0.43
      ],
      "size": 0.038,
-     "width": 1.15,
-     "tilt": -13.2,
+     "width": 1.14,
+     "tilt": -12.9,
      "roll": 0,
-     "rot": 87.3,
+     "rot": 87.2,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "75b",
@@ -9725,7 +9417,7 @@
    "set": "dream",
    "why": "the FULL dream wide lands exactly on 'dream' and holds",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "salmon": {
      "pos": [
       1.6,
@@ -9734,7 +9426,7 @@
      ]
     },
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
@@ -9751,7 +9443,9 @@
      "rotY": "lens",
      "expr": {
       "joy": 0.9
-     }
+     },
+     "clip": "standing-cheering",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -9765,18 +9459,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -4.95,
-      6.35,
-      -2.08
+      -4.9,
+      6.29,
+      -2.07
      ],
      "size": 0.962,
      "width": 12.11,
-     "tilt": -30.6,
+     "tilt": -30.9,
      "roll": 0,
-     "rot": 5.4,
+     "rot": 5.1,
      "key_scale": 1.8
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "76",
@@ -9784,9 +9479,9 @@
    "set": "dream",
    "why": "release: she lets herself fall backwards into the warm water",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
@@ -9806,11 +9501,11 @@
      "pose": "fall_back",
      "pos": "water",
      "rotY": "lens",
-     "motion": "falling",
-     "motionMix": 0.4,
      "expr": {
       "joy": 0.7
-     }
+     },
+     "clip": "falling",
+     "motionMix": 1
     },
     {
      "at": 1.3,
@@ -9818,7 +9513,9 @@
      "pos": "float",
      "rotY": 90,
      "rollZ": -88,
-     "blend": 0.4
+     "blend": 0.4,
+     "clip": "flying",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -9859,7 +9556,8 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "77",
@@ -9867,30 +9565,21 @@
    "set": "dream",
    "why": "the outro is a peak - so is she",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
     {
-     "at": 0,
-     "cam": "low_wide"
-    },
-    {
-     "at": 0.29,
-     "cam": "water_level",
-     "ease": "hold"
-    },
-    {
-     "at": 0.58,
-     "cam": "face",
-     "ease": "hold"
-    },
-    {
-     "at": 0.87,
-     "cam": "low_wide",
-     "ease": "hold"
+     "move": {
+      "kind": "orbit_roll",
+      "h": 1.38,
+      "deg": 0,
+      "dist": 2,
+      "sweep": 80,
+      "roll": 8
+     }
     }
    ],
    "actor": [
@@ -9899,11 +9588,11 @@
      "pose": "dance_a",
      "pos": "shore",
      "rotY": "lens",
-     "motion": "rumba-dancing",
-     "motionMix": 0.85,
      "expr": {
       "joy": 0.95
-     }
+     },
+     "clip": "rumba-dancing",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -9914,7 +9603,8 @@
     "kind": "cut",
     "frames": 0
    },
-   "acted": "three cuts on the 8ths (0.29 s): the dance burst onto the ledge carries the line; row 78 writes its echo"
+   "acted": "three cuts on the 8ths (0.29 s): the dance burst onto the ledge carries the line; row 78 writes its echo",
+   "kick": 2.5
   },
   {
    "id": "78",
@@ -9922,7 +9612,7 @@
    "set": "dream",
    "why": "her lore gag: Salmon IS her friend - offended at the line",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "salmon": {
      "pos": [
       0.95,
@@ -9933,7 +9623,7 @@
      "icon_at": 141.4
     },
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
@@ -9950,7 +9640,9 @@
      "rotY": "lens",
      "expr": {
       "fun": 0.6
-     }
+     },
+     "clip": "taunt",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -9982,19 +9674,20 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.06,
+      -1.27,
       0.03,
-      -1.79
+      -1.98
      ],
-     "size": 0.249,
-     "width": 2.66,
+     "size": 0.232,
+     "width": 2.81,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "79",
@@ -10002,7 +9695,7 @@
    "set": "dream",
    "why": "my favourite one: she dances with Salmon on the ledge, then flips her mic out of the pile and sings into it",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "salmon": {
      "pos": [
       0.5,
@@ -10013,7 +9706,7 @@
      "icon_at": 143
     },
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
@@ -10039,19 +9732,19 @@
      "pose": "dance_b",
      "pos": "shore",
      "rotY": "lens",
-     "motion": "petting-animal",
-     "motionMix": 0.5,
      "expr": {
       "joy": 0.9
-     }
+     },
+     "clip": "petting-animal",
+     "motionMix": 1
     },
     {
      "at": 1.4,
      "pose": "dance_a",
      "pos": "shore",
      "rotY": "lens",
-     "motion": "twist-dance",
-     "motionMix": 0.8
+     "clip": "twist-dance",
+     "motionMix": 1
     },
     {
      "at": 1.36,
@@ -10061,7 +9754,9 @@
      "blend": 0.2,
      "expr": {
       "joy": 0.9
-     }
+     },
+     "clip": "idle",
+     "motionMix": 0.15
     }
    ],
    "mouth": {
@@ -10090,19 +9785,20 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      2.56,
+      2.55,
       0.03,
-      -0.41
+      -0.43
      ],
      "size": 0.24,
-     "width": 10.07,
+     "width": 10.08,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "80",
@@ -10110,9 +9806,9 @@
    "set": "dream",
    "why": "type made by her body: 最後まで in the light",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
@@ -10143,7 +9839,9 @@
      "rollZ": -88,
      "expr": {
       "joy": 0.6
-     }
+     },
+     "clip": "flying",
+     "motionMix": 1
     },
     {
      "at": "end",
@@ -10156,7 +9854,9 @@
      "rotY": 90,
      "rollZ": -88,
      "move": 2.8,
-     "ease": "linear"
+     "ease": "linear",
+     "clip": "flying",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -10190,17 +9890,18 @@
      "anchor": [
       -0.34,
       0.03,
-      1.16
+      1.15
      ],
-     "size": 0.369,
-     "width": 12.68,
+     "size": 0.336,
+     "width": 12.69,
      "tilt": -90,
      "roll": 0,
      "rot": 0,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "81",
@@ -10208,7 +9909,7 @@
    "set": "dream",
    "why": "the staring commuters drift down the shaft and dance with her on the ledge",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "crowd": [
      {
       "pos": [
@@ -10241,13 +9942,17 @@
      }
     ],
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
     {
-     "at": 0,
-     "cam": "low_wide"
+     "move": {
+      "kind": "crane_up",
+      "h": 1.38,
+      "deg": 10,
+      "dist": 2.2
+     }
     }
    ],
    "actor": [
@@ -10256,11 +9961,11 @@
      "pose": "dance_a",
      "pos": "shore",
      "rotY": "lens",
-     "motion": "rumba-dancing",
-     "motionMix": 0.85,
      "expr": {
       "joy": 0.95
-     }
+     },
+     "clip": "rumba-dancing",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -10292,27 +9997,28 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.76,
-      0.03,
-      -0.29
+      0.09,
+      1.95,
+      -0.71
      ],
-     "size": 0.259,
-     "width": 5.18,
-     "tilt": -90,
+     "size": 0.089,
+     "width": 1.79,
+     "tilt": -19.6,
      "roll": 0,
-     "rot": 0,
+     "rot": 18.7,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "82",
-   "at": 151.78,
+   "at": 151.64,
    "set": "dream",
    "why": "the last wow: the size of her freedom - dusk, and far out the tiny grey office dome",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "dome": true,
     "battery": [
      [
@@ -10322,7 +10028,7 @@
     ],
     "night": 0.8,
     "post": {
-     "bloom": 0.45
+     "bloom": 0.3
     }
    },
    "camera": [
@@ -10362,11 +10068,11 @@
      "pose": "arms_up",
      "pos": "shore",
      "rotY": "lens",
-     "motion": "joyful-jump",
-     "motionMix": 0.4,
      "expr": {
       "joy": 0.9
-     }
+     },
+     "clip": "joyful-jump",
+     "motionMix": 1
     }
    ],
    "mouth": {
@@ -10380,19 +10086,20 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      4.74,
-      -0.23,
-      -7.12
+      10.1,
+      -3.43,
+      -15.26
      ],
-     "size": 0.407,
-     "width": 13.07,
-     "tilt": -30.7,
+     "size": 0.698,
+     "width": 15.51,
+     "tilt": -30.8,
      "roll": 0,
-     "rot": -32.5,
+     "rot": -32.8,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "kick": 2.5
   },
   {
    "id": "83",
@@ -10400,10 +10107,10 @@
    "set": "dream",
    "why": "the last gag, short: the clock rings once more among her things - her foot nudges a cushion over it",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "night": 0.9,
     "post": {
-     "bloom": 0.45,
+     "bloom": 0.3,
      "dof": 0.6
     },
     "things": [
@@ -10457,19 +10164,22 @@
      "rotY": -120,
      "expr": {
       "fun": 0.4
-     }
+     },
+     "clip": "idle",
+     "motionMix": 0.12
     }
    ],
    "mouth": "silent",
-   "outline": 0.0035
+   "outline": 0.0035,
+   "kick": 1.5
   },
   {
    "id": "84",
    "at": 160.1,
    "set": "dream",
-   "why": "the first colour flash (4) was the future: the last image IS it - eyes closed, face in her sun, all five dots",
+   "why": "the first colour flash (4) was the future: the last image IS it - eyes closed, face in her sun, all five dots; rebuild: as the lens leaves she notices it and waves goodbye to the watcher (toki 2026-10-24: the observer)",
    "opts": {
-    "grade": "warm",
+    "grade": "pov_warm",
     "night": 0.9,
     "page": 161.4,
     "battery": [
@@ -10499,7 +10209,7 @@
      ]
     ],
     "post": {
-     "bloom": 0.45,
+     "bloom": 0.3,
      "dof": 1.2
     },
     "dome": true
@@ -10563,22 +10273,30 @@
      "expr": {
       "joy": 0.45,
       "blink": 1
-     }
+     },
+     "clip": "happy",
+     "motionMix": 0.2
     },
     {
-     "at": 4.9,
-     "pose": "sing_soft",
+     "at": 3.2,
+     "pose": "stand",
      "pos": "shore",
      "rotY": "lens",
-     "blend": 0.15,
+     "blend": 0.3,
      "expr": {
-      "joy": 0.6,
-      "blink_l": 1
-     }
+      "joy": 0.7
+     },
+     "clip": "waving",
+     "motionMix": 1,
+     "aware": 0.8
     }
    ],
    "mouth": "silent",
-   "outline": 0.0035
+   "outline": 0.0035,
+   "kick": 1.5
   }
- ]
+ ],
+ "observer": 1,
+ "aware": 0.35,
+ "depth": 0.8
 }

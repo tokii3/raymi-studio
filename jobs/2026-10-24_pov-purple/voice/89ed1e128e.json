@@ -1,0 +1,32 @@
+{
+ "text": "look. even the sky agrees.",
+ "duration": 3.216,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "look.",
+   "start": 0.093,
+   "end": 0.467
+  },
+  {
+   "w": "even",
+   "start": 1.188,
+   "end": 1.465
+  },
+  {
+   "w": "the",
+   "start": 1.476,
+   "end": 1.562
+  },
+  {
+   "w": "sky",
+   "start": 1.572,
+   "end": 1.904
+  },
+  {
+   "w": "agrees.",
+   "start": 1.914,
+   "end": 2.47
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "text": "he copied me.",
+ "duration": 1.872,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "he",
+   "start": 0.093,
+   "end": 0.274
+  },
+  {
+   "w": "copied",
+   "start": 0.285,
+   "end": 0.702
+  },
+  {
+   "w": "me.",
+   "start": 0.712,
+   "end": 0.958
+  }
+ ]
+}

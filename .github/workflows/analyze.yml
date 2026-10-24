@@ -39,7 +39,7 @@ jobs:
           cache: pip
       - name: Tools
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          bash .github/ffmpeg.sh   # apt with a time limit, else a static build (never hangs the job)
           pip install -q -r requirements.txt
           pip install -q --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-analyze.txt
           pip install -q --no-deps demucs==4.0.1
@@ -51,7 +51,7 @@ jobs:
             ~/.cache/torch
           key: models-htdemucs-whisper-large-v3-v1
       - name: Tests
-        run: python -m pytest -q tests
+        run: timeout 600 python -m pytest -q -v tests < /dev/null
       - name: Which jobs
         id: which
         run: |
@@ -59,6 +59,8 @@ jobs:
             JOBS="${{ github.event.inputs.job }}"
           else
             BEFORE="${{ github.event.before }}"
+            # a push of several commits: the base is outside the shallow checkout - fetch it (2026-10-24: stills ran nothing)
+            [ -n "$BEFORE" ] && ! git cat-file -e "$BEFORE" 2>/dev/null && git fetch -q --depth=1 origin "$BEFORE" 2>/dev/null || true
             if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
               BEFORE=$(git rev-parse -q --verify HEAD~1 || git hash-object -t tree /dev/null)
             fi

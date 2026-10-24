@@ -1,0 +1,37 @@
+{
+ "text": "excuse me. who told you that?",
+ "duration": 3.264,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "excuse",
+   "start": 0.093,
+   "end": 0.627
+  },
+  {
+   "w": "me.",
+   "start": 0.638,
+   "end": 0.894
+  },
+  {
+   "w": "who",
+   "start": 1.624,
+   "end": 1.795
+  },
+  {
+   "w": "told",
+   "start": 1.806,
+   "end": 2.083
+  },
+  {
+   "w": "you",
+   "start": 2.094,
+   "end": 2.201
+  },
+  {
+   "w": "that?",
+   "start": 2.212,
+   "end": 2.511
+  }
+ ]
+}

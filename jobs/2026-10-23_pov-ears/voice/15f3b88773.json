@@ -1,0 +1,17 @@
+{
+ "text": "closer? really?",
+ "duration": 2.544,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "closer?",
+   "start": 0.093,
+   "end": 0.627
+  },
+  {
+   "w": "really?",
+   "start": 1.346,
+   "end": 1.795
+  }
+ ]
+}

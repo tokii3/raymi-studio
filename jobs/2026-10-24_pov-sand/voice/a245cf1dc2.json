@@ -1,0 +1,47 @@
+{
+ "text": "did you know the shuffle? yes or no.",
+ "duration": 3.456,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "did",
+   "start": 0.093,
+   "end": 0.264
+  },
+  {
+   "w": "you",
+   "start": 0.274,
+   "end": 0.392
+  },
+  {
+   "w": "know",
+   "start": 0.403,
+   "end": 0.574
+  },
+  {
+   "w": "the",
+   "start": 0.584,
+   "end": 0.67
+  },
+  {
+   "w": "shuffle?",
+   "start": 0.68,
+   "end": 1.14
+  },
+  {
+   "w": "yes",
+   "start": 1.87,
+   "end": 2.233
+  },
+  {
+   "w": "or",
+   "start": 2.244,
+   "end": 2.393
+  },
+  {
+   "w": "no.",
+   "start": 2.404,
+   "end": 2.714
+  }
+ ]
+}

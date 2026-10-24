@@ -1,0 +1,22 @@
+{
+ "text": "oh. a tunnel.",
+ "duration": 2.424,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "oh.",
+   "start": 0.096,
+   "end": 0.374
+  },
+  {
+   "w": "a",
+   "start": 1.093,
+   "end": 1.222
+  },
+  {
+   "w": "tunnel.",
+   "start": 1.232,
+   "end": 1.681
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "text": "it's purple sweet potato.",
+ "duration": 2.28,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "it's",
+   "start": 0.093,
+   "end": 0.296
+  },
+  {
+   "w": "purple",
+   "start": 0.306,
+   "end": 0.68
+  },
+  {
+   "w": "sweet",
+   "start": 0.691,
+   "end": 1.012
+  },
+  {
+   "w": "potato.",
+   "start": 1.022,
+   "end": 1.546
+  }
+ ]
+}

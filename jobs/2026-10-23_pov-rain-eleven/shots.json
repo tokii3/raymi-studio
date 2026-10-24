@@ -1,0 +1,761 @@
+{
+ "title": "Rain Prediction Record #11: rain in Tokyo tomorrow",
+ "_why": "POV Short (kind pov): the lens is the viewer. Times = seconds of the bed excerpt, computed from assets/music/local-forecast-elevator.map.json + the voice takes (python -m raymi pov checks them).",
+ "audio": {
+  "file": "../../assets/music/local-forecast-elevator.mp3",
+  "from": 0.0,
+  "to": 18.519
+ },
+ "song_map": "../../assets/music/local-forecast-elevator.map.json",
+ "bed": {
+  "db": -15,
+  "duck": true
+ },
+ "voice": [
+  {
+   "at": 0.05,
+   "text": "rain tomorrow. one hundred percent."
+  },
+  {
+   "at": 3.693,
+   "text": "my record is three out of ten."
+  },
+  {
+   "at": 5.875,
+   "text": "that's basically a streak."
+  },
+  {
+   "at": 8.126,
+   "text": "tomorrow in tokyo. rain. trust me."
+  },
+  {
+   "at": 12.423,
+   "text": "and if i'm wrong, you never saw this."
+  },
+  {
+   "at": 15.152,
+   "text": "right or wrong? bet in the comments."
+  }
+ ],
+ "sfx": [
+  {
+   "at": 3.786,
+   "kind": "chime",
+   "off_grid": "camera 2 goes live"
+  },
+  {
+   "at": 10.334,
+   "kind": "pop"
+  },
+  {
+   "at": 14.699,
+   "kind": "whoosh"
+  },
+  {
+   "at": 15.245,
+   "kind": "boing"
+  }
+ ],
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [],
+ "grain": 0.04,
+ "all_lyrics": false,
+ "short": {
+  "hook": "rain tomorrow. 100%.",
+  "hook_to": 3.1,
+  "cta": "right or wrong? bet in the comments.",
+  "cta_from": 15.212
+ },
+ "shots": [
+  {
+   "id": "p1",
+   "at": 0.0,
+   "set": "weather",
+   "doc": {
+    "see": "ECU through studio CAMERA 1 (the lens = your TV): she leans into the lens, face 50 % of the frame, the red tally light of camera 1 glowing at the frame's top edge, the map soft behind her. On 'percent' her tako ears perk and her chest dots flare.",
+    "you": "camera 1, locked off (a studio camera, a faint breath)",
+    "does": "clip gestures-pack-basic-hard-head-nod over pose lean, confident; 'rain tomorrow. one hundred percent.' (0.14-3.01)",
+    "type": "hook stamp 'rain tomorrow. 100%.' top band 0-3.1 s (digits on screen only, never in the voice)",
+    "why": "a bold call in your face: personal_fact hook"
+   },
+   "opts": {
+    "map": "japan",
+    "ticker": "RAIN RECORD: 3 RIGHT / 10",
+    "podium": true,
+    "rain_at": 10.21,
+    "live": [
+     [
+      0,
+      1
+     ],
+     [
+      3.79,
+      2
+     ],
+     [
+      5.94,
+      1
+     ],
+     [
+      8.12,
+      3
+     ],
+     [
+      12.48,
+      1
+     ]
+    ],
+    "glow_flare": [
+     2.4
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      1.45,
+      3.1
+     ],
+     "look": [
+      0.6,
+      1.42,
+      -1.2
+     ],
+     "fov": 3.4,
+     "shake": 0.05
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.412,
+      1.448,
+      2.85
+     ],
+     "look": [
+      0.6,
+      1.42,
+      -1.2
+     ],
+     "fov": 3.4,
+     "shake": 0.05
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "lean_in",
+     "clip": "gestures-pack-basic-hard-head-nod",
+     "motionMix": 0.5,
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.4
+     }
+    },
+    {
+     "at": 2.3,
+     "pose": "lean_in",
+     "clip": "gestures-pack-basic-hard-head-nod",
+     "motionMix": 0.5,
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.7
+     },
+     "icon": "sparkle"
+    }
+   ],
+   "outline": 0.0035
+  },
+  {
+   "id": "p2",
+   "at": 3.753,
+   "set": "weather",
+   "doc": {
+    "see": "CAMERA 2 (wide) goes live: its tally light flips on, 1 goes dark; she whips her head to find the new live camera and points at the ticker: 'RAIN RECORD: 3 RIGHT / 10'.",
+    "you": "camera 2, locked wide (studio_wide)",
+    "does": "clip pointing toward the ticker, sweat on 'three'; 'my record is three out of ten.' (3.79-5.60)",
+    "type": "the ticker (the set's own type): 'RAIN RECORD: 3 RIGHT / 10'",
+    "why": "the counter = the series' stakes"
+   },
+   "opts": {
+    "map": "japan",
+    "ticker": "RAIN RECORD: 3 RIGHT / 10",
+    "podium": true,
+    "rain_at": 10.21,
+    "live": [
+     [
+      0,
+      1
+     ],
+     [
+      3.79,
+      2
+     ],
+     [
+      5.94,
+      1
+     ],
+     [
+      8.12,
+      3
+     ],
+     [
+      12.48,
+      1
+     ]
+    ],
+    "glow_flare": [
+     2.4
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      3.0,
+      1.6,
+      2.15
+     ],
+     "look": [
+      0.0,
+      1.3,
+      -1.6
+     ],
+     "fov": 30,
+     "shake": 0.03
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pointing",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.3
+     }
+    },
+    {
+     "at": 0.85,
+     "clip": "pointing",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "sorrow": 0.3
+     },
+     "icon": "sweat"
+    }
+   ],
+   "outline": 0.0035
+  },
+  {
+   "id": "p3",
+   "at": 5.935,
+   "set": "weather",
+   "doc": {
+    "see": "CAMERA 1 again (cut-in reaction): CU, she flips her hair, tako ears up, proud.",
+    "you": "camera 1 CU",
+    "does": "clip gestures-pack-basic-being-cocky; 'that's basically a streak.' (5.97-7.37)",
+    "type": "-",
+    "why": "confidence is cute: 30 % called a streak"
+   },
+   "opts": {
+    "map": "japan",
+    "ticker": "RAIN RECORD: 3 RIGHT / 10",
+    "podium": true,
+    "rain_at": 10.21,
+    "live": [
+     [
+      0,
+      1
+     ],
+     [
+      3.79,
+      2
+     ],
+     [
+      5.94,
+      1
+     ],
+     [
+      8.12,
+      3
+     ],
+     [
+      12.48,
+      1
+     ]
+    ],
+    "glow_flare": [
+     2.4
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      1.45,
+      3.1
+     ],
+     "look": [
+      0.6,
+      1.42,
+      -1.2
+     ],
+     "fov": 4.8,
+     "shake": 0.05
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.409,
+      1.449,
+      2.9
+     ],
+     "look": [
+      0.6,
+      1.42,
+      -1.2
+     ],
+     "fov": 4.8,
+     "shake": 0.05
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "gestures-pack-basic-being-cocky",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.8
+     },
+     "icon": "sparkle"
+    }
+   ],
+   "outline": 0.0035
+  },
+  {
+   "id": "p4",
+   "at": 8.118,
+   "set": "weather",
+   "doc": {
+    "see": "CAMERA 3 on the map: the islands of Japan with TOKYO marked; she SLAPS the map one frame before 'rain.' - a fat rain cloud stamps onto Tokyo with '100%' and drops start falling on the map; on 'trust me' she leans to camera 3.",
+    "you": "camera 3 (map_close), locked; a 3-frame knock on the slap",
+    "does": "clip pro-magic-standing-1h-cast-spell-01 (the slap) -> hard-head-nod; 'tomorrow in tokyo. rain. trust me.' ('rain.' 10.33 on the beat, ends 12.13)",
+    "type": "the map: 'TOKYO' label + '100%' on the cloud",
+    "why": "the bet becomes concrete and checkable"
+   },
+   "opts": {
+    "map": "japan",
+    "ticker": "RAIN RECORD: 3 RIGHT / 10",
+    "podium": true,
+    "rain_at": 10.21,
+    "live": [
+     [
+      0,
+      1
+     ],
+     [
+      3.79,
+      2
+     ],
+     [
+      5.94,
+      1
+     ],
+     [
+      8.12,
+      3
+     ],
+     [
+      12.48,
+      1
+     ]
+    ],
+    "glow_flare": [
+     2.4
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.2,
+      1.55,
+      0.9
+     ],
+     "look": [
+      1.0,
+      1.55,
+      -2.9
+     ],
+     "fov": 30,
+     "shake": 0.03
+    },
+    {
+     "at": 2.05,
+     "pos": [
+      -0.2,
+      1.55,
+      0.9
+     ],
+     "look": [
+      1.0,
+      1.55,
+      -2.9
+     ],
+     "fov": 30,
+     "shake": 0.03
+    },
+    {
+     "at": 2.12,
+     "pos": [
+      -0.2,
+      1.55,
+      0.9
+     ],
+     "look": [
+      1.0,
+      1.52,
+      -2.9
+     ],
+     "fov": 30,
+     "shake": 0.5,
+     "ease": "out"
+    },
+    {
+     "at": "end",
+     "pos": [
+      -0.2,
+      1.55,
+      0.9
+     ],
+     "look": [
+      1.1,
+      1.45,
+      -2.6
+     ],
+     "fov": 30,
+     "shake": 0.05
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pointing-gesture",
+     "pos": [
+      1.25,
+      0,
+      -2.45
+     ],
+     "rotY": -160,
+     "expr": {
+      "joy": 0.4
+     }
+    },
+    {
+     "at": 1.7,
+     "clip": "pro-magic-standing-1h-cast-spell-01",
+     "pos": [
+      1.25,
+      0,
+      -2.45
+     ],
+     "rotY": -170,
+     "expr": {
+      "joy": 0.6
+     }
+    },
+    {
+     "at": 3.2,
+     "clip": "gestures-pack-basic-hard-head-nod",
+     "pos": [
+      1.25,
+      0,
+      -2.45
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.7
+     }
+    }
+   ],
+   "outline": 0.0035
+  },
+  {
+   "id": "p5",
+   "at": 12.483,
+   "set": "weather",
+   "doc": {
+    "see": "CAMERA 1 ECU: she whispers into the lens - and on 'this' she goes FLAT like a ray (her body squashes thin) and drops behind the desk out of frame, the way a ray vanishes into sand.",
+    "you": "camera 1, locked; the desk edge rises into the bottom of the frame as she drops",
+    "does": "clip leaning -> act flatten (y-scale to 0.12 over 6 frames) + drop 0.9 m (14.3-14.6); 'and if i'm wrong, you never saw this.' (12.52-14.68)",
+    "type": "-",
+    "why": "she hides from YOU with her own body: a ray flattening out of sight"
+   },
+   "opts": {
+    "map": "japan",
+    "ticker": "RAIN RECORD: 3 RIGHT / 10",
+    "podium": true,
+    "rain_at": 10.21,
+    "live": [
+     [
+      0,
+      1
+     ],
+     [
+      3.79,
+      2
+     ],
+     [
+      5.94,
+      1
+     ],
+     [
+      8.12,
+      3
+     ],
+     [
+      12.48,
+      1
+     ]
+    ],
+    "glow_flare": [
+     2.4
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      1.45,
+      3.1
+     ],
+     "look": [
+      0.6,
+      1.42,
+      -1.2
+     ],
+     "fov": 3.4,
+     "shake": 0.04
+    },
+    {
+     "at": "end",
+     "pos": [
+      0.4,
+      1.45,
+      3.1
+     ],
+     "look": [
+      0.6,
+      1.3,
+      -1.2
+     ],
+     "fov": 3.4,
+     "shake": 0.04
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "lean_in",
+     "clip": "idle",
+     "motionMix": 0.12,
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "fun": 0.6
+     }
+    },
+    {
+     "at": 1.75,
+     "pose": "lean_in",
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "act": "flatten",
+     "expr": {
+      "joy": 0.4
+     }
+    },
+    {
+     "at": 1.95,
+     "pose": "lean_in",
+     "pos": [
+      0.6,
+      -1.3,
+      -1.2
+     ],
+     "move": 0.2,
+     "rotY": "lens",
+     "act": "flatten"
+    }
+   ],
+   "outline": 0.0035,
+   "mouth": {
+    "gain": 0.7
+   }
+  },
+  {
+   "id": "p6",
+   "at": 14.666,
+   "set": "weather",
+   "doc": {
+    "see": "CAMERA 1: the empty desk for 0.5 s - then she POPS back up into the same lean ECU as frame 0 (pop on 15.24), ears perked, and nods hard.",
+    "you": "camera 1 locked (the same framing as frame 0)",
+    "does": "act pop from below; clip hard-head-nod; 'right or wrong? bet in the comments.' (15.24-18.10)",
+    "type": "CTA stamp 'right or wrong? bet in the comments.' 15.21-18.52 (3.31 s); ticker stays 'RAIN RECORD: 3 RIGHT / 10'",
+    "why": "the bet is the easiest comment, and a reason to come back tomorrow (result in the pinned comment)"
+   },
+   "opts": {
+    "map": "japan",
+    "ticker": "RAIN RECORD: 3 RIGHT / 10      BET #11: PENDING",
+    "podium": true,
+    "rain_at": 10.21,
+    "live": [
+     [
+      0,
+      1
+     ],
+     [
+      3.79,
+      2
+     ],
+     [
+      5.94,
+      1
+     ],
+     [
+      8.12,
+      3
+     ],
+     [
+      12.48,
+      1
+     ]
+    ],
+    "glow_flare": [
+     2.4
+    ],
+    "grade": "pov",
+    "post": {
+     "bloom": 0.3
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.4,
+      1.45,
+      3.1
+     ],
+     "look": [
+      0.6,
+      1.42,
+      -1.2
+     ],
+     "fov": 3.4,
+     "shake": 0.05
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "lean_in",
+     "pos": [
+      0.6,
+      -1.4,
+      -1.2
+     ],
+     "rotY": "lens"
+    },
+    {
+     "at": 0.57,
+     "pose": "lean_in",
+     "clip": "gestures-pack-basic-hard-head-nod",
+     "motionMix": 0.5,
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "move": 0.15,
+     "rotY": "lens",
+     "act": "pop",
+     "expr": {
+      "joy": 0.6
+     }
+    },
+    {
+     "at": 2.2,
+     "pose": "lean_in",
+     "clip": "gestures-pack-basic-hard-head-nod",
+     "motionMix": 0.5,
+     "pos": [
+      0.6,
+      0,
+      -1.2
+     ],
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.4
+     }
+    }
+   ],
+   "outline": 0.0035
+  }
+ ]
+}

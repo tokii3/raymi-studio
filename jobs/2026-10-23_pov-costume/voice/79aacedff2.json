@@ -1,0 +1,27 @@
+{
+ "text": "who wore it better?",
+ "duration": 1.872,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "who",
+   "start": 0.093,
+   "end": 0.264
+  },
+  {
+   "w": "wore",
+   "start": 0.274,
+   "end": 0.499
+  },
+  {
+   "w": "it",
+   "start": 0.509,
+   "end": 0.638
+  },
+  {
+   "w": "better?",
+   "start": 0.648,
+   "end": 1.001
+  }
+ ]
+}

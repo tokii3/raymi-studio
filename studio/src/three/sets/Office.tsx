@@ -13,7 +13,7 @@ import React from 'react';
 import * as THREE from 'three';
 import {RBox, Sign, drawText} from '../parts';
 import {SetLight, canvasTexture, rnd, toon, toonSurface} from '../look';
-import {Desk, RoutineLife} from '../routine';
+import {Chair, Desk, RoutineLife} from '../routine';
 import {CoatRack, DeskClutter, FilingCabinet, FloorPlant, OfficeWall, WaterCooler} from '../clutter';
 import {ease} from '../../film/motion';
 import type {SetProps} from './index';
@@ -67,7 +67,7 @@ export const Office: React.FC<SetProps> = ({f, opts, camPos}) => {
   });
   return (
     <group>
-      <SetLight sky={new THREE.Color('#c9cfe2').lerp(new THREE.Color('#ffd9a8'), warm).getStyle()} ground="#2a2c38" fill={0.7 * power + 0.2 * warm}
+      <SetLight depth={typeof opts.depth === 'number' ? opts.depth : 0} sky={new THREE.Color('#c9cfe2').lerp(new THREE.Color('#ffd9a8'), warm).getStyle()} ground="#2a2c38" fill={0.7 * power + 0.2 * warm}
         key={warm > 0.3 ? '#ffe2b5' : '#cfe0ff'} keyI={1.9 * power + 1.4 * warm} keyPos={[-6, 5.5, 2.5]} target={[0, 0, -1.5]} shadowSize={9}
         fog={new THREE.Color('#2e3346').lerp(new THREE.Color('#05060c'), dark).getStyle()} fogNear={5} fogFar={26}
         bg={new THREE.Color('#4d5163').lerp(new THREE.Color('#030308'), dark).getStyle()} />
@@ -102,6 +102,11 @@ export const Office: React.FC<SetProps> = ({f, opts, camPos}) => {
         );
       })}
       {litRows > 0 ? <pointLight position={[0, 3, 0]} color="#eef1ff" intensity={4 * power} distance={9} decay={1.4} /> : null}
+      {/* depth: the lit rows nearest her throw pools on the desks; the far rows are only their panels in the dark */}
+      {num(opts.depth) > 0 ? [1, 2, 3].filter((r) => r >= offRows).map((r) => (
+        <pointLight key={`pool${r}`} position={[0, 3.1, 2 - r * 2.2]} color={warm > 0.4 ? '#ffe9c8' : '#e8eeff'}
+          intensity={5 * power * num(opts.depth)} distance={5.5} decay={1.6} />
+      )) : null}
       {/* back wall with the big screen (a lyric surface) */}
       <RBox size={[24, 3.4, 0.3]} pos={[0, 1.7, -4.4 - rows * 2.2]} r={0.02} c={WALL} cast={false} t="plaster" />
       <group position={[0, 2.25, -3.6]}>
@@ -148,6 +153,11 @@ export const Office: React.FC<SetProps> = ({f, opts, camPos}) => {
         ctx.fillStyle = '#d8dbe6'; ctx.fillRect(0, 0, w, h); drawText(ctx, 'RAYMI', w / 2, h / 2, h * 0.6, '#3a3e58', {maxW: w * 0.9});
       }} />
       <Desk pos={[0, 0, 0.55]} rotY={Math.PI} w={1.5} />
+      {/* HER chair is part of her desk (toki 2026-10-24: "es fehlt Raymis Stuhl"): she sits on it; when she stands at
+          her place the compiler rolls it back (opts.chair_out) - nobody stands inside a chair */}
+      {opts.chair === false ? null : (
+        <Chair t={{kind: 'chair', pos: opts.chair_out ? [0.25, 0, -0.75] : [0, 0, 0], rot: [0, opts.chair_out ? 0.5 : 0, 0]}} f={f} />
+      )}
       {/* the room is lived in: walls dressed, cabinets, a water cooler, plants, coats (seeded, the same every frame) */}
       <OfficeWall pos={[-2.8, 0, -3.62]} />
       <OfficeWall pos={[2.9, 0, -3.62]} />

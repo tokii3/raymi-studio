@@ -1,0 +1,32 @@
+{
+ "text": "how do you like it?",
+ "duration": 1.872,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "how",
+   "start": 0.093,
+   "end": 0.264
+  },
+  {
+   "w": "do",
+   "start": 0.274,
+   "end": 0.36
+  },
+  {
+   "w": "you",
+   "start": 0.37,
+   "end": 0.477
+  },
+  {
+   "w": "like",
+   "start": 0.488,
+   "end": 0.702
+  },
+  {
+   "w": "it?",
+   "start": 0.712,
+   "end": 0.926
+  }
+ ]
+}

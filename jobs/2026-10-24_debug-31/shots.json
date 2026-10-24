@@ -1,0 +1,367 @@
+{
+ "vrm": "vrm/raymi5.vrm",
+ "observer": 1,
+ "aware": 0.35,
+ "depth": 0.8,
+ "title": "debug shot 31 black frames",
+ "_why": "Beach shot 31 renders black on most frames: AO / DoF / post off variants",
+ "audio": {
+  "file": "../2026-10-22_take-me-to-the-beach/song.webm",
+  "from": 43.667,
+  "to": 47.667
+ },
+ "song_map": "../2026-10-22_take-me-to-the-beach/song_map.json",
+ "all_lyrics": false,
+ "motions": [],
+ "shots": [
+  {
+   "id": "A_asis",
+   "at": 43.667,
+   "set": "office",
+   "why": "the same snow outside and in the globe; she stares at the postcard - the Short's cliffhanger",
+   "opts": {
+    "grade": "pov",
+    "battery": [
+     [
+      0,
+      2
+     ]
+    ],
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": "monitor",
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "postcard",
+      "pos": "postcard",
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "globe",
+      "pos": "globe",
+      "scale": 1.6
+     }
+    ],
+    "post": {
+     "dof": 1.17
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      1.15,
+      1.6
+     ],
+     "look": [
+      0.55,
+      0.95,
+      0.5
+     ],
+     "fov": 26
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "slump",
+     "pos": "chair",
+     "rotY": 0,
+     "expr": {
+      "sorrow": 0.5
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.12
+    }
+   ],
+   "mouth": {
+    "gain": 0.6
+   },
+   "step": 2,
+   "outline": 0.0035,
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "kick": 2.5,
+   "aware": 0,
+   "acted": "debug",
+   "lens_near": {
+    "globe": "debug copy of Beach 31"
+   }
+  },
+  {
+   "id": "B_noao",
+   "at": 44.667,
+   "set": "office",
+   "why": "the same snow outside and in the globe; she stares at the postcard - the Short's cliffhanger",
+   "opts": {
+    "grade": "pov",
+    "battery": [
+     [
+      0,
+      2
+     ]
+    ],
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": "monitor",
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "postcard",
+      "pos": "postcard",
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "globe",
+      "pos": "globe",
+      "scale": 1.6
+     }
+    ],
+    "post": {
+     "ao": 0,
+     "dof": 1.17
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      1.15,
+      1.6
+     ],
+     "look": [
+      0.55,
+      0.95,
+      0.5
+     ],
+     "fov": 26
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "slump",
+     "pos": "chair",
+     "rotY": 0,
+     "expr": {
+      "sorrow": 0.5
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.12
+    }
+   ],
+   "mouth": {
+    "gain": 0.6
+   },
+   "step": 2,
+   "outline": 0.0035,
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "kick": 2.5,
+   "aware": 0,
+   "acted": "debug",
+   "lens_near": {
+    "globe": "debug copy of Beach 31"
+   }
+  },
+  {
+   "id": "C_nodof",
+   "at": 45.667,
+   "set": "office",
+   "why": "the same snow outside and in the globe; she stares at the postcard - the Short's cliffhanger",
+   "opts": {
+    "grade": "pov",
+    "battery": [
+     [
+      0,
+      2
+     ]
+    ],
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": "monitor",
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "postcard",
+      "pos": "postcard",
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "globe",
+      "pos": "globe",
+      "scale": 1.6
+     }
+    ],
+    "post": {
+     "dof": null
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      1.15,
+      1.6
+     ],
+     "look": [
+      0.55,
+      0.95,
+      0.5
+     ],
+     "fov": 26
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "slump",
+     "pos": "chair",
+     "rotY": 0,
+     "expr": {
+      "sorrow": 0.5
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.12
+    }
+   ],
+   "mouth": {
+    "gain": 0.6
+   },
+   "step": 2,
+   "outline": 0.0035,
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "kick": 2.5,
+   "aware": 0,
+   "acted": "debug",
+   "lens_near": {
+    "globe": "debug copy of Beach 31"
+   }
+  },
+  {
+   "id": "D_off",
+   "at": 46.667,
+   "set": "office",
+   "why": "the same snow outside and in the globe; she stares at the postcard - the Short's cliffhanger",
+   "opts": {
+    "grade": "pov",
+    "battery": [
+     [
+      0,
+      2
+     ]
+    ],
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": "monitor",
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "postcard",
+      "pos": "postcard",
+      "rot": [
+       0,
+       3.1416,
+       0
+      ]
+     },
+     {
+      "kind": "globe",
+      "pos": "globe",
+      "scale": 1.6
+     }
+    ],
+    "post": {
+     "off": true
+    }
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      1.15,
+      1.6
+     ],
+     "look": [
+      0.55,
+      0.95,
+      0.5
+     ],
+     "fov": 26
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pose": "slump",
+     "pos": "chair",
+     "rotY": 0,
+     "expr": {
+      "sorrow": 0.5
+     },
+     "clip": "sitting-idle",
+     "motionMix": 0.12
+    }
+   ],
+   "mouth": {
+    "gain": 0.6
+   },
+   "step": 2,
+   "outline": 0.0035,
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "kick": 2.5,
+   "aware": 0,
+   "acted": "debug",
+   "lens_near": {
+    "globe": "debug copy of Beach 31"
+   }
+  }
+ ]
+}

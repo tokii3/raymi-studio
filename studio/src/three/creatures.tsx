@@ -252,7 +252,36 @@ export const SalmonBody: React.FC<{f: number; cover?: number; jump?: number}> = 
 
 export type SalmonSpec = {pos: P3; from?: P3; at?: number; dur_s?: number; hold?: 'bucket' | 'extinguisher' | null; water?: string | null;
   tip_at?: number; spray_at?: number; spray_s?: number; jump_at?: number; singe_at?: number; cover_at?: number[]; toast_at?: number;
-  icon?: string; icon_at?: number; yaw?: number; scale?: number};
+  icon?: string; icon_at?: number; yaw?: number; scale?: number;
+  // POV Shorts (2026-10-23): press_at (frame) = he presses his face to the glass in front of him (squish + a bump);
+  // costume 'raymi' = he is dressed as HER (oversized tako ears, a stingray-barb tail, an ultraviolet ruffle)
+  press_at?: number; costume?: 'raymi' | null};
+
+/** Salmon dressed as Raymi (Halloween): oversized tako ears on his head, her ultraviolet ruffle around his middle,
+ *  a thin tail with a stingray barb (in SalmonBody units: head at +x, up +y). */
+const RaymiCostume: React.FC<{f: number}> = ({f}) => {
+  const wag = Math.sin(f * 0.25) * 0.25;
+  return (
+    <group>
+      {[-1, 1].map((sd) => (
+        <group key={sd} position={[0.2, 0.26, sd * 0.1]}>
+          <mesh material={toon('#2a1748')} scale={[1, 0.85, 1]} castShadow><sphereGeometry args={[0.09, 14, 10]} /></mesh>
+          <mesh position={[0, 0.05, 0]} material={toon('#9b5cff', '#5a22c8', 0.6)}><sphereGeometry args={[0.03, 10, 8]} /></mesh>
+        </group>
+      ))}
+      {/* the ultraviolet ruffle: two stacked frills */}
+      {[0, 1].map((k) => (
+        <mesh key={k} position={[-0.05 - k * 0.04, -0.02 - k * 0.02, 0]} rotation={[0, 0, Math.PI / 2]} material={toon(k ? '#c9a8ff' : '#7a3cf0', '#000', 1, {side: THREE.DoubleSide})}>
+          <coneGeometry args={[0.2 - k * 0.03, 0.12, 14, 1, true]} />
+        </mesh>
+      ))}
+      <group position={[-0.5, 0, 0]} rotation={[0, wag, 0]}>
+        <mesh position={[-0.2, 0, 0]} rotation={[0, 0, Math.PI / 2]} material={toon('#2a1748')}><cylinderGeometry args={[0.012, 0.02, 0.4, 6]} /></mesh>
+        <mesh position={[-0.42, 0, 0]} rotation={[0, 0, Math.PI / 2]} material={toon('#9b5cff')} scale={[1, 1, 0.3]}><coneGeometry args={[0.05, 0.1, 3]} /></mesh>
+      </group>
+    </group>
+  );
+};
 
 /** A little 3D reaction mark over Salmon's head (sweat / heart / !), facing the lens. */
 function iconTex(kind: string): THREE.CanvasTexture {
@@ -291,10 +320,15 @@ export const SalmonActor: React.FC<{s: SalmonSpec; f: number; fps: number; camPo
   const toast = dto >= 0 && dto < 16 ? Math.sin((dto / 16) * Math.PI) : 0;
   const di = s.icon ? since(s.icon_at ?? -Infinity) : -1;
   const sc = s.scale ?? 1;
+  const dp = since(s.press_at);
+  const press = dp >= 0 ? Math.min(1, dp / 4) * (dp < 8 ? 1 + 0.2 * Math.sin((dp / 8) * Math.PI) : 1) : 0;
   return (
     <group position={[p[0], p[1] + 0.04 * Math.sin(f / 13) + 0.35 * jump, p[2]]} scale={sc}>
       <group rotation={[0, yaw, 0.25 * jump - 0.25 * tip]}>
-        <group scale={0.42}><SalmonBody f={f} cover={cov} jump={jump} /></group>
+        <group scale={0.42}>
+          <group scale={[1 - 0.12 * press, 1 + 0.08 * press, 1 + 0.1 * press]} position={[0.06 * press, 0, 0]}><SalmonBody f={f} cover={cov} jump={jump} /></group>
+          {s.costume === 'raymi' ? <RaymiCostume f={f} /> : null}
+        </group>
         {/* the held prop rides in front of its pectoral fins */}
         {s.hold === 'bucket' ? <Bucket pos={[0.17, -0.2 + 0.12 * toast, 0.0]} rot={[0, 0, 0]} scale={0.75} water={s.water ?? null} tip={tip} /> : null}
         {s.hold === 'extinguisher' ? <Extinguisher pos={[0.13, -0.24, 0.04]} rot={[0, 0, -0.5]} scale={0.6} spray={spray} f={f} /> : null}

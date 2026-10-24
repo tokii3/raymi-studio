@@ -8,12 +8,15 @@
 //   boss: {pos, rotY?, scale?, hands?: 'desk'|'reach'|'hold'|'up', puff_at?, reach_at?}
 //   crowd: [{pos, yaw?, seed?, scale?, hold?: 'coffee'|'phone'|'paper'|null, look_at?, tap?, dance?}]
 // Everything is matte toon (look.tsx), deterministic, and moves by the frame only.
-import React from 'react';
+import React, {useLayoutEffect, useRef} from 'react';
 import * as THREE from 'three';
+import {useThree} from '@react-three/fiber';
+import {supportBelow} from './support';
 import {RBox, drawText} from './parts';
 import {canvasTexture, rnd, toon} from './look';
 import {vrmAnatomy} from './VrmPuppet';
 import {ease} from '../film/motion';
+import {PovThing, type PovThingSpec} from './pov_things';
 
 type P3 = [number, number, number];
 const since = (t: unknown, f: number) => (typeof t === 'number' ? f - t : -1);
@@ -516,29 +519,61 @@ export const Things: React.FC<{list: unknown; f: number}> = ({list, f}) => {
       {(list as ThingSpec[]).map((t, i) => {
         if (typeof t.at === 'number' && f < t.at && t.kind !== 'page') return null;
         if (typeof t.out === 'number' && f >= t.out) return null;
-        switch (t.kind) {
-          case 'clock': return <AlarmClock key={i} t={t} f={f} />;
-          case 'calendar': return <Calendar key={i} t={t} f={f} />;
-          case 'page': return <Page key={i} t={t} f={f} />;
-          case 'phone': return <ShellPhone key={i} t={t} f={f} />;
-          case 'globe': return <SnowGlobe key={i} t={t} f={f} />;
-          case 'postcard': return <Postcard key={i} t={t} f={f} />;
-          case 'files': return <Files key={i} t={t} f={f} />;
-          case 'onigiri': return <Onigiri key={i} t={t} f={f} />;
-          case 'headphones': return <Headphones key={i} t={t} f={f} />;
-          case 'sticky': return <Sticky key={i} t={t} f={f} />;
-          case 'printer': return <Printer key={i} t={t} f={f} />;
-          case 'lamp': return <DeskLamp key={i} t={t} f={f} />;
-          case 'can': return <Can key={i} t={t} f={f} />;
-          case 'monitor': return <Monitor key={i} t={t} f={f} />;
-          case 'chair': return <Chair key={i} t={t} f={f} />;
-          case 'glove': return <Glove key={i} pos={t.pos} rot={t.rot} scale={t.scale ?? 1} pose={(t.text as 'hold' | 'point' | 'open' | 'grab') ?? 'open'} />;
-          default: return null;
-        }
+        return <Resting key={i} t={t} f={f}>{thing(t, i, f)}</Resting>;
       })}
     </group>
   );
 };
+
+// things that hang, are held or float by nature - never set onto a surface (a thing may also say "float": true)
+const HANGING = new Set(['postcard', 'glove', 'headphones', 'calendar', 'page', 'sticky']);
+
+/** A thing resting on what is really under it (toki 2026-10-24: the phone in the cushion, the onigiri in the desk):
+ *  after the frame's scene is built, one ray finds the surface below and the thing's lowest point is set onto it. The
+ *  group is also tagged for the scene probe (film/Probe.tsx). */
+const Resting: React.FC<{t: ThingSpec; f: number; children: React.ReactNode}> = ({t, f, children}) => {
+  const ref = useRef<THREE.Group>(null);
+  const scene = useThree((s) => s.scene);
+  const float = Boolean((t as {float?: boolean}).float) || HANGING.has(t.kind);
+  useLayoutEffect(() => {
+    const g = ref.current;
+    if (!g || float) return;
+    g.position.y = 0;
+    scene.updateMatrixWorld(true);
+    const box = new THREE.Box3().setFromObject(g);
+    if (box.isEmpty()) return;
+    const c = box.getCenter(new THREE.Vector3());
+    // from well above the thing: one sunk deep into a cushion starts its ray outside the cushion (probe run 2)
+    const sup = supportBelow(scene, c.x, c.z, box.max.y + 0.35, [g], 2.5);
+    if (sup === null) return;
+    const d = sup - box.min.y;
+    if (Math.abs(d) < 0.6) { g.position.y = d; g.updateMatrixWorld(true); }
+  });
+  return <group ref={ref} userData={{thing: t.kind, float}}>{children}</group>;
+};
+
+/** One thing by its kind (Things wraps it in a group tagged for the scene probe). */
+function thing(t: ThingSpec, i: number, f: number): React.ReactNode {
+  switch (t.kind) {
+    case 'clock': return <AlarmClock key={i} t={t} f={f} />;
+    case 'calendar': return <Calendar key={i} t={t} f={f} />;
+    case 'page': return <Page key={i} t={t} f={f} />;
+    case 'phone': return <ShellPhone key={i} t={t} f={f} />;
+    case 'globe': return <SnowGlobe key={i} t={t} f={f} />;
+    case 'postcard': return <Postcard key={i} t={t} f={f} />;
+    case 'files': return <Files key={i} t={t} f={f} />;
+    case 'onigiri': return <Onigiri key={i} t={t} f={f} />;
+    case 'headphones': return <Headphones key={i} t={t} f={f} />;
+    case 'sticky': return <Sticky key={i} t={t} f={f} />;
+    case 'printer': return <Printer key={i} t={t} f={f} />;
+    case 'lamp': return <DeskLamp key={i} t={t} f={f} />;
+    case 'can': return <Can key={i} t={t} f={f} />;
+    case 'monitor': return <Monitor key={i} t={t} f={f} />;
+    case 'chair': return <Chair key={i} t={t} f={f} />;
+    case 'glove': return <Glove key={i} pos={t.pos} rot={t.rot} scale={t.scale ?? 1} pose={(t.text as 'hold' | 'point' | 'open' | 'grab') ?? 'open'} />;
+    default: return <PovThing key={i} t={t as unknown as PovThingSpec} f={f} />;   // pov_things.tsx kinds
+  }
+}
 
 /** All routine things a set draws from its options (the set adds its own architecture around them). */
 export const RoutineLife: React.FC<{opts: Record<string, unknown>; f: number; camPos?: P3}> = ({opts, f, camPos}) => (

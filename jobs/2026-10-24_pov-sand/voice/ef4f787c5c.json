@@ -1,0 +1,47 @@
+{
+ "text": "we feel it and swim away. no drama.",
+ "duration": 3.84,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "we",
+   "start": 0.093,
+   "end": 0.274
+  },
+  {
+   "w": "feel",
+   "start": 0.285,
+   "end": 0.573
+  },
+  {
+   "w": "it",
+   "start": 0.584,
+   "end": 0.734
+  },
+  {
+   "w": "and",
+   "start": 0.744,
+   "end": 0.883
+  },
+  {
+   "w": "swim",
+   "start": 0.894,
+   "end": 1.204
+  },
+  {
+   "w": "away.",
+   "start": 1.215,
+   "end": 1.588
+  },
+  {
+   "w": "no",
+   "start": 2.318,
+   "end": 2.596
+  },
+  {
+   "w": "drama.",
+   "start": 2.607,
+   "end": 3.098
+  }
+ ]
+}

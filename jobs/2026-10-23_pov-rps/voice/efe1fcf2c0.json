@@ -1,0 +1,22 @@
+{
+ "text": "that didn't count!",
+ "duration": 1.872,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "that",
+   "start": 0.093,
+   "end": 0.349
+  },
+  {
+   "w": "didn't",
+   "start": 0.36,
+   "end": 0.638
+  },
+  {
+   "w": "count!",
+   "start": 0.648,
+   "end": 1.076
+  }
+ ]
+}

@@ -55,3 +55,12 @@ VIDEO_LEARNINGS, PROGRESS (repo tokii3/raymi-vtuber). Read once per session that
 | Thumbnails were an afterthought: 4 for the MV, none for the Short. | toki 2026-10-19 | A thumbs step in the writers' room (4-5 per format, cloud stills, 168 px feed view, thumb-critic, her pick). |
 | The per-act grade made the difference she noticed. | "nach der kritik mit den farben abmischen ... schon besser" | The grade library + shots.json acts are the default look step. |
 | Guards ended every mechanical fault class for good. | pilot + final screenings | Keep turning every mechanical fault into a guard - but as a principle with a default and a written exception, never a law that makes videos safe and dead (LESSONS 1.5). |
+
+## 6. The first 3D film (Take Me to the Beach, 2026-10-22..24) - knowledge/HANDOFF_2026-10-24_beach_3d_film.md
+| what happened | evidence | the studio now |
+|---|---|---|
+| "Raymi steif" - her Mixamo clips never played in a film; poses hid it for two videos. | Motion reel: she stood in the stand pose in every shot; a node test on the real rig: hips 0.88 with and without a clip. | Clips load after the model, a key asking for an unloaded clip fails the render, a clip test on the rig. Test the thing on the real path (film), not in a side tool. |
+| Fault after fault fixed shot by shot (shot 11 three times, 66 four times, the postcard, the phone...). | toki 2026-10-24: "hör auf alles punktuell zu fixen, das sind Strukturfehler". | The scene probe measures fault CLASSES over the whole film; a class is fixed in the shared part (support.ts, VrmPuppet, the set, the compiler) and re-measured. |
+| Heights by hand: she floated up to 0.55 m, sank 0.39 m, things sat inside cushions. | probe run 1 | Bodies stand on the surface a ray finds in the real scene; limbs pushed out of solids. |
+| A film shown to toki that the motion / cut critics had failed. | run 40 | A critic FAIL on motion / cut / look = not presentable (memory execution-over-checks). |
+| Black frames nobody saw: one invalid pixel spread by bloom / DoF / AO. | shot 31; post off = clean (debug job) | 8-bit post buffer; QC black-picture check; a tiny debug job with variants names the guilty part in one run. |

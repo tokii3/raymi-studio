@@ -1,0 +1,27 @@
+{
+ "text": "nothing here! just rice!",
+ "duration": 3.12,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "nothing",
+   "start": 0.093,
+   "end": 0.499
+  },
+  {
+   "w": "here!",
+   "start": 0.509,
+   "end": 0.862
+  },
+  {
+   "w": "just",
+   "start": 1.592,
+   "end": 1.912
+  },
+  {
+   "w": "rice!",
+   "start": 1.923,
+   "end": 2.372
+  }
+ ]
+}

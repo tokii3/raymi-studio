@@ -18,6 +18,7 @@ export const ReactionIcon: React.FC<{kind: string; x: number; y: number; local: 
     case 'zz': body = <text x={60} y={90} textAnchor="middle" fontSize={80} fontFamily="Raymi" fill="#c9b8ff" {...stroke}>Zz</text>; break;
     case 'bulb': body = <><circle cx={60} cy={50} r={36} fill="#fff27a" {...stroke} /><rect x={44} y={84} width={32} height={22} rx={6} fill="#c9c9d9" {...stroke} /></>; break;
     case 'sparkle': body = <path d="M60 4 L72 48 L116 60 L72 72 L60 116 L48 72 L4 60 L48 48Z" fill="#fff" {...stroke} />; break;
+    case 'bubbles': body = <>{[[38, 82, 20], [76, 60, 15], [50, 34, 11], [84, 22, 8]].map(([cx, cy, r], i) => <circle key={i} cx={cx} cy={cy} r={r} fill="#bdf2ff" fillOpacity={0.55} {...stroke} strokeWidth={5} />)}</>; break;
     case 'music': body = <><path d="M44 90 V24 L96 12 V78" fill="none" stroke={accent} strokeWidth={10} /><circle cx={36} cy={92} r={14} fill={accent} /><circle cx={88} cy={80} r={14} fill={accent} /></>; break;
     default: return null;
   }

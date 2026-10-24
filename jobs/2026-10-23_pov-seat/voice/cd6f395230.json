@@ -1,0 +1,47 @@
+{
+ "text": "i saw the sea first. so it's mine.",
+ "duration": 3.792,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "i",
+   "start": 0.093,
+   "end": 0.253
+  },
+  {
+   "w": "saw",
+   "start": 0.264,
+   "end": 0.52
+  },
+  {
+   "w": "the",
+   "start": 0.531,
+   "end": 0.659
+  },
+  {
+   "w": "sea",
+   "start": 0.67,
+   "end": 0.915
+  },
+  {
+   "w": "first.",
+   "start": 0.926,
+   "end": 1.439
+  },
+  {
+   "w": "so",
+   "start": 2.169,
+   "end": 2.447
+  },
+  {
+   "w": "it's",
+   "start": 2.457,
+   "end": 2.65
+  },
+  {
+   "w": "mine.",
+   "start": 2.66,
+   "end": 3.045
+  }
+ ]
+}

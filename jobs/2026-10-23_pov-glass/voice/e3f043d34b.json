@@ -1,0 +1,37 @@
+{
+ "text": "okay. one more and i'm gone.",
+ "duration": 3.36,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "okay.",
+   "start": 0.093,
+   "end": 0.531
+  },
+  {
+   "w": "one",
+   "start": 1.25,
+   "end": 1.528
+  },
+  {
+   "w": "more",
+   "start": 1.538,
+   "end": 1.88
+  },
+  {
+   "w": "and",
+   "start": 1.891,
+   "end": 2.051
+  },
+  {
+   "w": "i'm",
+   "start": 2.062,
+   "end": 2.222
+  },
+  {
+   "w": "gone.",
+   "start": 2.233,
+   "end": 2.607
+  }
+ ]
+}

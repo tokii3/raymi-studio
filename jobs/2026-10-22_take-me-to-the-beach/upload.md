@@ -5,8 +5,8 @@
 ## Files (toki uploads)
 | what | file | release |
 |---|---|---|
-| MV 16:9, 2:47, 1080p, -14.1 LUFS | final.mp4 | render-2026-10-22_take-me-to-the-beach-40 |
-| Short 9:16, 16.4 s, 1080x1920, -14.1 LUFS | final.mp4 | render-2026-10-22_take-me-to-the-beach-39 |
+| MV 16:9, 2:47, 1080p, -14.0 LUFS (structural pass 2026-10-24) | 2026-10-22_Raymi_Take-Me-To-The-Beach-Feat-Ado-Fan-Animation-Ft-Raymi_MV.mp4 | render-2026-10-22_take-me-to-the-beach-58 |
+| Short 9:16, 16.0 s, 1080x1920, -14.1 LUFS (structural pass 2026-10-24) | 2026-10-22_Raymi_Take-Me-To-The-Beach-Feat-Ado-Fan-Animation-Ft-Raymi_Short.mp4 | render-2026-10-22_take-me-to-the-beach-59 |
 Thumbnails: boards/thumb_mv_M1..M5, boards/thumb_short_S1..S5 (feed view boards/thumbs_168.jpg); pick in 5_THUMBS.md
 (thumb-critic best: MV M5 bye boss, Short S5 bye boss).
 

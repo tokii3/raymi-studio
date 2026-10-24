@@ -21,10 +21,14 @@ import {ease} from '../film/motion';
 import {EXPRESSION_ALIAS, POSES, exprOf, type VrmKey, type VrmPose} from './vrmPoses';
 import {vrmMouthAt, type VrmMouthKey} from './vrmLipSync';
 import type {V3} from '../film/types';
+import {wornProps} from './wearables';
+import {useThree} from '@react-three/fiber';
+import {solidBoxes, supportBelow} from './support';
 
 export const DEFAULT_HEIGHT = 1.55;       // ears to feet, like the sprite puppet (raymi/timeline.py DEFAULT_HEIGHT)
 const WINDOW = 90;                         // frames of history simulated before f (springs forget faster than that)
 const SETTLE = 30;                         // frames the start state is held so the springs hang at rest
+const HAIR_DRAG = 0.6, HAIR_STIFF = 1.1;   // the least damping / spring of every hair joint (VRoid exports ~0.4 / ~1)
 
 type Rig = {
   vrm: VRM;
@@ -45,6 +49,7 @@ type Rig = {
 };
 
 const rigs = new Map<string, Rig>();
+export const _rig = (url: string): Rig | undefined => rigs.get(url);   // tests / diagnosis only
 const FEET: VRMHumanBoneName[] = ['leftFoot', 'rightFoot', 'leftToes', 'rightToes'];
 
 async function loadRig(url: string, data?: ArrayBuffer): Promise<Rig> {
@@ -75,6 +80,12 @@ async function loadRig(url: string, data?: ArrayBuffer): Promise<Rig> {
   const rig: Rig = {vrm, root, ground, natural: box.max.y - box.min.y, floor: box.min.y, restLow: lowestFoot(vrm),
     mirror: vrm.meta?.metaVersion === '0', lock: null, materialStyle: null, materialBases,
     motions: new Map(), mixer: new THREE.AnimationMixer(vrm.scene), actions: new Map(), morphs: faceMorphs(vrm), outline: null};
+  // calmer hair (toki 2026-10-24: "manchmal fliegen die haare komisch rum"): every spring joint gets at least this
+  // drag and stiffness, so a fast turn or a jump in a shot swings her hair instead of flinging it
+  for (const j of vrm.springBoneManager?.joints ?? []) {
+    j.settings.dragForce = Math.max(j.settings.dragForce, HAIR_DRAG);
+    j.settings.stiffness = Math.max(j.settings.stiffness, HAIR_STIFF);
+  }
   vrm.springBoneManager?.setInitState();
   return rig;
 }
@@ -161,6 +172,16 @@ export async function preloadVrm(url: string, data?: ArrayBuffer): Promise<void>
   if (!rigs.has(url)) rigs.set(url, await loadRig(url, data));
 }
 
+/** Load a Mixamo clip into every cached rig from its bytes (tests: no browser, no fetch). */
+export function preloadMotionData(id: string, data: ArrayBuffer): void {
+  const fbx = new FBXLoader().parse(data, '');
+  for (const rig of rigs.values()) {
+    const clip = retargetAnimation(fbx, rig.vrm, {logWarnings: false});
+    if (!clip) throw new Error(`Mixamo animation could not be retargeted: ${id}`);
+    rig.motions.set(id, inPlace(clip));
+  }
+}
+
 async function preloadMotion(url: string): Promise<void> {
   const id = decodeURIComponent(new URL(url, 'https://raymi.invalid').pathname.split('/').pop() ?? url).replace(/\.[^.]+$/, '');
   if ([...rigs.values()].every((rig) => rig.motions.has(id))) return;
@@ -180,15 +201,17 @@ export function useVrmReady(urls: string[], motionUrls: string[] = []): boolean 
   const [ready, setReady] = useState(() => urls.every((u) => rigs.has(u)));
   useEffect(() => {
     const todo = urls.filter((u) => !rigs.has(u));
-    const motionTodo = motionUrls.filter((u) => {
+    // which clips a rig still lacks - asked AFTER the models load: asked before (no rig yet) `some` over no rigs was
+    // false, no clip was ever loaded and every film froze her in the poses (found 2026-10-23, toki "steif")
+    const missing = () => motionUrls.filter((u) => {
       const id = decodeURIComponent(new URL(u, 'https://raymi.invalid').pathname.split('/').pop() ?? u).replace(/\.[^.]+$/, '');
       return [...rigs.values()].some((rig) => !rig.motions.has(id));
     });
-    if (!todo.length && !motionTodo.length) { setReady(true); return; }
+    if (!todo.length && !missing().length) { setReady(true); return; }
     // a 25 MB model + its textures under software GL: far longer than the 30 s default
-    const handle = delayRender(`vrm ${todo.join(',')}`, {timeoutInMilliseconds: 110000});
+    const handle = delayRender(`vrm ${todo.join(',')}`, {timeoutInMilliseconds: 240000});   // + every clip of the film
     Promise.all(todo.map((u) => preloadVrm(u)))
-      .then(() => Promise.all(motionTodo.map((u) => preloadMotion(u))))
+      .then(() => Promise.all(missing().map((u) => preloadMotion(u))))
       .then(() => { setReady(true); continueRender(handle); })
       .catch((e) => cancelRender(e));
   }, [key]);   // eslint-disable-line react-hooks/exhaustive-deps
@@ -247,8 +270,8 @@ function lockColours(rig: Rig, lock: number) {
 }
 
 // ------------------------------------------------------------------ the state at a frame (pure, from the keys)
-type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; rollZ: number; height: number; squash: number; act: VrmKey['act']; motion?: string; prevMotion?: string; mixPrev: number; mixCur: number; local: number; f: number;
-  clipCur: VrmKey; clipPrev: VrmKey};
+type State = {a: VrmPose; b: VrmPose; t: number; pos: V3; yaw: number; rollZ: number; height: number; squash: number; flat: number; act: VrmKey['act']; motion?: string; prevMotion?: string; mixPrev: number; mixCur: number; local: number; f: number;
+  clipCur: VrmKey; clipPrev: VrmKey; aware: number; lensYaw: number; lensPitch: number; keyF: number};
 
 function keyAt(keys: VrmKey[], f: number): number {
   let i = 0;
@@ -303,12 +326,18 @@ function stateAt(keys: VrmKey[], f: number, camPos: V3): State {
   if (k.act === 'bounce') lift = 0.055 * Math.abs(beat);
   if (k.act === 'float') lift = 0.12 + 0.05 * Math.sin((f / 30) * Math.PI * 0.7);
   pos[1] += lift;
+  // flatten (POV Shorts 2026-10-23): she goes flat like a ray on the sand - thin and wide, with a little overshoot
+  const flat = k.act === 'flatten' ? Math.min(1, ease('out', local / 6) * (1 + 0.08 * Math.exp(-local / 5) * Math.sin(local))) : 0;
   const motion = motionOf(keys, i), prevMotion = i > 0 ? motionOf(keys, i - 1) : motion;
   return {a: pose(p.pose), b: pose(k.pose), t, pos, yaw: lerp(yawOf(p), yawOf(k)), motion, prevMotion,
     mixPrev: prevMotion ? (p.motionMix ?? 1) : 0, mixCur: motion ? (k.motionMix ?? 1) : 0,
     rollZ: lerp(p.rollZ ?? 0, k.rollZ ?? 0) + (k.act === 'tilt' ? 0.12 * ease('out', local / 8) : k.act === 'lean' ? -0.08 * ease('out', local / 10) : 0),
-    height: lerp(p.height ?? DEFAULT_HEIGHT, k.height ?? DEFAULT_HEIGHT), squash, act: k.act, local, f,
-    clipCur: keys[clipStart(keys, i)], clipPrev: keys[clipStart(keys, Math.max(0, i - 1))]};
+    height: lerp(p.height ?? DEFAULT_HEIGHT, k.height ?? DEFAULT_HEIGHT), squash, flat, act: k.act, local, f,
+    clipCur: keys[clipStart(keys, i)], clipPrev: keys[clipStart(keys, Math.max(0, i - 1))],
+    aware: lerp(p.aware ?? 0, k.aware ?? 0), keyF: k.f,
+    // where the lens is, seen from her: yaw relative to the way she faces, pitch from her head height
+    lensYaw: Math.atan2(camPos[0] - pos[0], camPos[2] - pos[2]),
+    lensPitch: Math.atan2(camPos[1] - (pos[1] + 1.38 * ((k.height ?? DEFAULT_HEIGHT) / DEFAULT_HEIGHT)), Math.hypot(camPos[0] - pos[0], camPos[2] - pos[2]))};
 }
 
 /** Reuse the timeline's keyed floor travel and hop arcs, rather than easing the actor to a new spot after each cut. */
@@ -342,6 +371,29 @@ function savePose(vrm: VRM): [THREE.Object3D, THREE.Quaternion, THREE.Vector3][]
 function boneQ(out: THREE.Quaternion, r: [number, number, number] | undefined, mirror: boolean) {
   if (!r) return out.identity();
   return out.setFromEuler(eu.set(mirror ? -r[0] : r[0], r[1], mirror ? -r[2] : r[2], 'XYZ'));
+}
+
+/** The observer effect: neck + head turn a share toward the lens, after the clip (a clip would overwrite it). From the
+ *  front she meets the viewer; from behind (lens > ~95 deg off her facing) she only glances over her shoulder for
+ *  ~1.2 s every ~4.5 s - she senses the watcher, she does not perform for them. Pure in f (parallel workers agree). */
+function noticeLens(rig: Rig, s: State, fps: number) {
+  const wrap = (a: number) => Math.atan2(Math.sin(a), Math.cos(a));
+  const rel = wrap(s.lensYaw - s.yaw);
+  const back = Math.abs(rel) > 1.65;
+  let env = 1;
+  if (back) {
+    const t = ((((s.f - s.keyF) / fps - 0.5) % 4.5) + 4.5) % 4.5;   // a glance every 4.5 s, the first 0.5 s after the key
+    env = t < 1.2 ? Math.sin((t / 1.2) * Math.PI) : 0;
+  }
+  const amt = s.aware * env;
+  if (amt < 0.001) return;
+  const yaw = Math.max(-1.05, Math.min(1.05, rel)) * amt;  // never past ~60 deg: a turn of the head, not the body
+  const pitch = Math.max(-0.35, Math.min(0.35, s.lensPitch)) * amt * (back ? 0.3 : 1);
+  const turn = (n: VRMHumanBoneName, k: number) => {
+    const node = rig.vrm.humanoid.getNormalizedBoneNode(n);
+    if (node) node.quaternion.premultiply(qb.setFromEuler(eu.set(-pitch * k, (rig.mirror ? -1 : 1) * yaw * k, 0, 'YXZ')));
+  };
+  turn('neck', 0.4); turn('head', 0.6);
 }
 
 /** Pose + breathing + placement for one simulation step. */
@@ -385,6 +437,8 @@ function applyState(rig: Rig, s: State, fps: number) {
   // parallel Remotion frames deterministic and lets expression/spring-bone simulation stay local.
   // 2026-10-22: no hard switch any more - two clips cross-fade over the key's blend, and a clip is laid over the key
   // pose by `motionMix` (1 = the clip alone, 0.5 = half clip half pose), also faded in / out when a key has none.
+  // a key that asks for a clip the rig does not have is an error, never a silent freeze in the pose
+  for (const m of [s.prevMotion, s.motion]) if (m && !rig.motions.has(m)) cancelRender(new Error(`clip ${m} is not loaded (props.motions)`));
   const a = s.prevMotion && rig.motions.has(s.prevMotion) ? s.prevMotion : undefined;
   const b = s.motion && rig.motions.has(s.motion) ? s.motion : undefined;
   const amount = (a ? s.mixPrev : 0) * (1 - s.t) + (b ? s.mixCur : 0) * s.t;
@@ -396,7 +450,9 @@ function applyState(rig: Rig, s: State, fps: number) {
     for (const [id, clip] of rig.motions) {
       let action = rig.actions.get(id);
       if (!action) { action = rig.mixer.clipAction(clip); action.play(); rig.actions.set(id, action); }
-      const weight = id === a ? wA : id === b ? wB : 0;
+      // the current clip first: when a key inherits the clip of the key before (a === b, the usual case) wA is 0 -
+      // asking `id === a` first gave the playing clip weight 0 and froze her in the pose (found 2026-10-23, toki "steif")
+      const weight = id === b ? wB : id === a ? wA : 0;
       action.enabled = true;
       action.setEffectiveWeight(weight);
       if (weight > 0) action.time = clipSeconds(id === b ? s.clipCur : s.clipPrev, s.f, fps, clip.duration);
@@ -404,6 +460,7 @@ function applyState(rig: Rig, s: State, fps: number) {
     rig.mixer.update(0);
     if (amount < 0.999) for (const [node, q, p] of saved) { node.quaternion.copy(q.slerp(node.quaternion, amount)); node.position.lerpVectors(p, node.position, amount); }
   }
+  if (s.aware > 0.001) noticeLens(rig, s, fps);
   vrm.humanoid.update();
   // feet on the floor: measure the posed rig unplaced, then place it
   root.position.set(0, 0, 0); root.rotation.set(0, 0, 0); root.scale.setScalar(1); ground.position.set(0, 0, 0);
@@ -412,7 +469,8 @@ function applyState(rig: Rig, s: State, fps: number) {
   root.position.set(...s.pos);
   root.rotation.set(0, s.yaw + (s.act === 'turn' ? Math.PI * ease('out', s.local / 8) : 0), s.rollZ, 'YXZ');
   const size = (s.height / rig.natural) * s.squash;
-  root.scale.set(size, size * (s.act === 'hop' && s.local < 10 ? 1.06 : 1), size);
+  const wide = 1 + 0.3 * s.flat;
+  root.scale.set(size * wide, size * (s.act === 'hop' && s.local < 10 ? 1.06 : 1) * (1 - 0.86 * s.flat), size * wide);
   root.updateMatrixWorld(true);
 }
 
@@ -426,19 +484,17 @@ function setExpressions(rig: Rig, k: VrmKey, f: number, fps: number, mouthKeys: 
     if (!em.getExpression(n)) cancelRender(new Error(`VRM has no expression ${name} (${n})`));
     em.setValue(n, v);
   }
-  // Singing: the vowel presets on top. An emotion preset (joy, fun ...) also moves the MOUTH and would fight the
-  // vowels - while she sings, its brows + eyes come from her raw shape keys instead (written after the update).
+  // An emotion preset (joy, fun, surprised ...) also opens the MOUTH. toki 2026-10-24 (POV Shorts): "mund muss
+  // geschlossen sein wenn sie nicht spricht" - so an emotion ALWAYS comes from her raw brow + eye shape keys, never
+  // from the preset; only her voice (the vowels below) opens the mouth.
   const mouth = vrmMouthAt(mouthKeys, f);
-  const singing = Object.values(mouth).reduce((a, b) => a + (b ?? 0), 0) > 0.05;
   // raw keys are never reset by the expression manager: every frame writes all of them (0 when unused)
   const raw: Record<string, number> = Object.fromEntries(['Fcl_MTH_Close', ...Object.values(EMOTION_PARTS).flat()].map((k) => [k, 0]));
-  if (singing) {
-    for (const [name, v] of Object.entries(want)) {
-      const part = EMOTION_PARTS[name.toLowerCase()];
-      if (!part) continue;
-      em.setValue(EXPRESSION_ALIAS[name.toLowerCase()] ?? name, 0);
-      for (const k of part) raw[k] = Math.max(raw[k] ?? 0, v);
-    }
+  for (const [name, v] of Object.entries(want)) {
+    const part = EMOTION_PARTS[name.toLowerCase()];
+    if (!part) continue;
+    em.setValue(EXPRESSION_ALIAS[name.toLowerCase()] ?? name, 0);
+    for (const k of part) raw[k] = Math.max(raw[k] ?? 0, v);
   }
   for (const [name, v] of Object.entries(mouth)) {
     if (name === 'close') { raw.Fcl_MTH_Close = v ?? 0; continue; }
@@ -482,9 +538,10 @@ export function poseVrm(url: string, keys: VrmKey[], f: number, fps: number, fro
   setExpressions(rig, k, f, fps, mouthKeys);
   vrm.expressionManager?.update();
   for (const [name, v] of Object.entries(pendingRaw.get(rig) ?? {})) setMorph(rig, name, v);
-  if (vrm.lookAt && (k.look ?? 'lens') === 'lens') {
+  const look = k.look === undefined ? 'lens' : k.look;
+  if (vrm.lookAt && look) {                // her eyes on the lens (you) or on a point of the set (the salmon)
     vrm.lookAt.autoUpdate = true;
-    vrm.lookAt.lookAt(camV.set(...camPos));
+    vrm.lookAt.lookAt(look === 'lens' ? camV.set(...camPos) : camV.set(...look));
     vrm.lookAt.update(dt);
     vrm.humanoid.update();                 // the eyes are humanoid bones: normalized -> raw
   }
@@ -495,7 +552,7 @@ export function poseVrm(url: string, keys: VrmKey[], f: number, fps: number, fro
 // Her battery (Beach 2026-10-22, "strings = 5 minus dots"): five violet lights in a row on her chest, riding the
 // upper-chest bone. A dot that changes flares (comes on) or fades (goes out) over the step's t (6 frames).
 const BATTERY_X = [-0.052, -0.026, 0, 0.026, 0.052];
-function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: string}, f: number): React.ReactNode {
+function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: string; boost?: number}, f: number): React.ReactNode {
   const bone = rig.vrm.humanoid.getRawBoneNode('upperChest') ?? rig.vrm.humanoid.getRawBoneNode('chest');
   if (!bone) return null;
   const color = b.color ?? '#b98cff';
@@ -504,9 +561,13 @@ function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: s
     const on = i < b.n, was = i < b.prev;
     let k = on ? 1 : 0;
     if (on !== was) k = on ? Math.min(1, b.t * 1.3) : 1 - b.t;
-    const flare = on && !was ? Math.sin(Math.PI * Math.min(1, b.t)) * 1.6 : 0;
+    const flare = (on && !was ? Math.sin(Math.PI * Math.min(1, b.t)) * 1.6 : 0) + (on ? 1.4 * (b.boost ?? 0) : 0);
     // a 1.55 m figure: the row sits ~11 cm in front of the bone, a little below it (her breastbone)
-    const p = new THREE.Vector3(x / s * 1.0, -0.045 / s, 0.105 / s).applyMatrix4(bone.matrixWorld);
+    const yaw = rig.root.rotation.y;                     // her facing in the world, not the bone's own axes
+    const fwd = new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw)), side = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw));
+    const sz = (s * rig.natural) / 1.55;                 // her size against the 1.55 m the offsets were measured on
+    const p = bone.getWorldPosition(new THREE.Vector3()).addScaledVector(fwd, 0.105 * sz)
+      .addScaledVector(side, x * sz).add(new THREE.Vector3(0, -0.045 * sz, 0));
     const r = 0.0125 * (1 + 0.35 * flare) * (0.95 + 0.05 * Math.sin(f / 7 + i));
     return (
       <group key={`bat${i}`} position={[p.x, p.y, p.z]}>
@@ -522,6 +583,81 @@ function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: s
 }
 
 /** World points of her body at the current pose (for guards: face / figure / hero boxes from bones, not sprites). */
+/** She stands / sits / lies on what is REALLY under her (toki 2026-10-24: "fällt aus dem Himmel, clippt überall rein";
+ *  the scene probe measured her feet up to 0.55 m above and 0.39 m inside the surface): the key's floor height was a
+ *  hand guess. A ray under her lowest foot finds the surface; she moves by the difference, so the foot keeps the height
+ *  above its support that the pose / clip gives it. A jump, a fall, a flight or a float keeps the key's height. */
+const AIRBORNE = /fall|fly|jump|float|glide|paddl|swim/;
+function groundOnSupport(rig: Rig, k: VrmKey, scene: THREE.Object3D) {
+  if (k.ground === false || AIRBORNE.test(k.motion ?? '') || AIRBORNE.test(k.pose) || k.act === 'hop' || k.act === 'float') return;
+  // seated, her chair carries her - her feet tuck under the seat and a ray from above them meets the SEAT (probe run 2)
+  if (/^(sit|slump)/.test(k.pose)) return;
+  rig.root.updateMatrixWorld(true);
+  let low: THREE.Vector3 | null = null;
+  for (const b of FEET) {
+    const node = rig.vrm.humanoid.getRawBoneNode(b);
+    if (!node) continue;
+    const p = node.getWorldPosition(new THREE.Vector3());
+    if (!low || p.y < low.y) low = p;
+  }
+  if (!low) return;
+  const floor = rig.root.position.y;                       // the key's floor (her feet's pose height sits above it)
+  const sup = supportBelow(scene, low.x, low.z, low.y + 0.35, [rig.root], 2.5);   // a step above her foot, not a seat
+  if (sup === null) return;
+  const d = sup - floor;
+  if (Math.abs(d) > 0.004 && Math.abs(d) < 0.7) { rig.root.position.y += d; rig.root.updateMatrixWorld(true); }
+}
+
+/** Her limbs never stand inside furniture or a prop (probe run 3: hands and feet in the dream's rocks and cushions while
+ *  she flies / falls / kicks, legs in the boss's hand): every bone inside a solid's box pushes her the shortest way out
+ *  sideways (x / z, at most 0.4 m). Seated she stays - her chair and desk are meant to be close. */
+const CLEAR_BONES: VRMHumanBoneName[] = ['head', 'chest', 'hips', 'leftHand', 'rightHand', 'leftLowerArm', 'rightLowerArm',
+  'leftLowerLeg', 'rightLowerLeg', 'leftFoot', 'rightFoot'];
+function clearSolids(rig: Rig, k: VrmKey, scene: THREE.Object3D) {
+  if (k.ground === false || /^(sit|slump)/.test(k.pose)) return;
+  rig.root.updateMatrixWorld(true);
+  const hips = rig.vrm.humanoid.getRawBoneNode('hips')?.getWorldPosition(new THREE.Vector3());
+  if (!hips) return;
+  const boxes = solidBoxes(scene, hips, 1.6, [rig.root]);
+  if (!boxes.length) return;
+  const push = new THREE.Vector3();
+  for (let pass = 0; pass < 2; pass++) {
+    const step = new THREE.Vector3();
+    for (const b of CLEAR_BONES) {
+      const node = rig.vrm.humanoid.getRawBoneNode(b);
+      if (!node) continue;
+      const p = node.getWorldPosition(new THREE.Vector3());
+      for (const box of boxes) {
+        if (!box.containsPoint(p) || p.y > box.max.y - 0.02) continue;   // standing ON a box is fine
+        const dx1 = p.x - box.min.x, dx2 = box.max.x - p.x, dz1 = p.z - box.min.z, dz2 = box.max.z - p.z;
+        const m = Math.min(dx1, dx2, dz1, dz2) + 0.02;
+        const v = m === dx1 + 0.02 ? new THREE.Vector3(-m, 0, 0) : m === dx2 + 0.02 ? new THREE.Vector3(m, 0, 0)
+          : m === dz1 + 0.02 ? new THREE.Vector3(0, 0, -m) : new THREE.Vector3(0, 0, m);
+        if (v.length() > step.length()) step.copy(v);
+      }
+    }
+    if (step.lengthSq() === 0) break;
+    push.add(step);
+    if (push.length() > 0.4) push.setLength(0.4);
+    rig.root.position.add(step);
+    rig.root.updateMatrixWorld(true);
+    if (push.length() >= 0.4) break;
+  }
+}
+
+/** Her placement root and the world position of her bones (the scene probe - film/Probe.tsx). */
+export function vrmBones(url: string): {root: THREE.Object3D; bones: Record<string, THREE.Vector3>} | null {
+  const rig = rigs.get(url);
+  if (!rig) return null;
+  const bones: Record<string, THREE.Vector3> = {};
+  for (const b of ['head', 'chest', 'hips', 'leftHand', 'rightHand', 'leftLowerArm', 'rightLowerArm', 'leftUpperLeg', 'rightUpperLeg',
+    'leftLowerLeg', 'rightLowerLeg', 'leftFoot', 'rightFoot'] as VRMHumanBoneName[]) {
+    const n = rig.vrm.humanoid.getRawBoneNode(b);
+    if (n) bones[b] = n.getWorldPosition(new THREE.Vector3());
+  }
+  return {root: rig.root, bones};
+}
+
 export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
   const rig = rigs.get(url);
   const out: Record<string, THREE.Vector3> = {};
@@ -537,9 +673,10 @@ export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
  *  outline: ink line width in model metres (0 = none, ~0.004 = a cel drawing). */
 export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: number; from?: number; camPos: V3;
   mouthKeys?: VrmMouthKey[]; lock?: number; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string;
-  step?: number; outline?: number; outlineColor?: string;
-  battery?: {n: number; prev: number; t: number; color?: string} | null}> = ({url, keys, mouthKeys = [], f: frame, fps, from = 0, camPos, lock = 0.6,
-  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030', battery = null}) => {
+  step?: number; outline?: number; outlineColor?: string; keyLight?: number;
+  battery?: {n: number; prev: number; t: number; color?: string; boost?: number} | null}> = ({url, keys, mouthKeys = [], f: frame, fps, from = 0, camPos, lock = 0.6,
+  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030', battery = null, keyLight = 0}) => {
+  const scene = useThree((s) => s.scene);
   const f = step > 1 ? frame - ((((frame - from) % step) + step) % step) : frame;
   if (!keys.length || f < keys[0].f) return null;
   const rig = rigs.get(url);
@@ -547,20 +684,33 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
   styleMaterials(rig, materialStyle);
   ensureOutline(rig, outline, outlineColor);
   const posed = poseVrm(url, keys, f, fps, Math.max(from, keys[0].f), camPos, lock, mouthKeys);
+  groundOnSupport(posed, keys[keyAt(keys, f)], scene);
+  clearSolids(posed, keys[keyAt(keys, f)], scene);
   syncOutline(posed);
   const p = posed.root.position;
   const w = (posed.root.scale.x * posed.natural) * 0.42;
   const chest = posed.vrm.humanoid.getRawBoneNode('chest')?.getWorldPosition(new THREE.Vector3());
   const pulse = (0.85 + 0.15 * Math.sin(f / 9)) * glowGain;
   const dots = battery ? batteryDots(posed, battery, frame) : null;
+  const curKey = keys[keyAt(keys, f)];
+  const facing = new THREE.Vector3(Math.sin(posed.root.rotation.y), 0, Math.cos(posed.root.rotation.y));
+  const worn = wornProps(posed.vrm, curKey.props, facing, (curKey.height ?? DEFAULT_HEIGHT) / DEFAULT_HEIGHT);
   return (
     <group>
       {dots}
+      {worn}
       <mesh position={[p.x, p.y + 0.035, p.z]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2}>
         <planeGeometry args={[w * 1.6, w * 0.9]} />
         <meshBasicMaterial map={blobTexture(shadow)} transparent depthWrite={false} opacity={0.95} toneMapped={false} />
       </mesh>
       <primitive object={posed.root} />
+      {/* her own key from the lens side, short reach (a depth set dims the room - she stays lit, the room falls off) */}
+      {chest && keyLight > 0 ? (() => {
+        const fwd = new THREE.Vector3(camPos[0] - p.x, 0, camPos[2] - p.z).normalize();
+        const side = new THREE.Vector3(fwd.z, 0, -fwd.x).multiplyScalar(0.55);
+        return <pointLight position={[chest.x + fwd.x * 1.1 + side.x, chest.y + 0.55, chest.z + fwd.z * 1.1 + side.z]} color="#f3f0ff"
+          intensity={3.2 * keyLight} distance={3.2} decay={1.7} />;
+      })() : null}
       {/* a cool rim light behind her, toward the lens: her silhouette separates from any background (look-critic) */}
       {chest ? (() => {
         const back = new THREE.Vector3(p.x - camPos[0], 0, p.z - camPos[2]).normalize().multiplyScalar(0.9);

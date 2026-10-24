@@ -11,13 +11,15 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {rnd} from '../three/look';
+import type {PovFx} from './PovFx';
 
 export type Fx =
   | {kind: 'duo' | 'spread'; from: number; to: number; dark: string; light: string; levels?: number; mix?: number;
       r0?: number; r1?: number; soft?: number}
   | {kind: 'speed'; from: number; to: number; mode?: 'radial' | 'flow'; angle?: number; color?: string; density?: number; opacity?: number}
   | {kind: 'impact'; from: number; to: number}
-  | {kind: 'halftone'; from: number; to: number; color?: string; size?: number; opacity?: number};
+  | {kind: 'halftone'; from: number; to: number; color?: string; size?: number; opacity?: number}
+  | PovFx;   // the POV layer (PovFx.tsx): cover, pov_hand, ripple, algae, freeze, polaroid, stamp
 
 type Duo = Extract<Fx, {kind: 'duo' | 'spread'}>;
 const isDuo = (x: Fx): x is Duo => x.kind === 'duo' || x.kind === 'spread';

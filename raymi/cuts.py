@@ -15,7 +15,7 @@ from pathlib import Path
 FPS = 30
 CUT_TOL = 2          # frames: a cut this close to (event - 1 frame) counts as on the music
 SNAP = 0.35          # seconds: the furthest a cut is moved to an event by --apply
-RANK = {"hit": 4, "section": 4, "stop": 4, "line": 3, "beat": 1}
+RANK = {"hit": 4, "stab": 4, "section": 4, "stop": 4, "line": 3, "onset": 2, "beat": 1}
 
 
 def events(smap: dict) -> list[tuple[float, str]]:
@@ -24,6 +24,8 @@ def events(smap: dict) -> list[tuple[float, str]]:
     ev += [(s["t0"], "section") for s in smap.get("sections", []) if s["t0"] > 0]
     ev += [(s["t0"], "stop") for s in smap.get("stops", [])]
     ev += [(v["t0"], "line") for v in smap.get("voices", [])]
+    ev += [(t, "stab") for run in smap.get("fast_runs", []) for t in run.get("times", [])]   # measured guitar stabs
+    ev += [(t, "onset") for t in smap.get("vocal_onsets", [])]                              # a sung syllable
     ev += [(t, "beat") for t in smap.get("beats", [])]
     return sorted(ev)
 
@@ -70,14 +72,22 @@ def report(props: dict, smap: dict) -> dict:
 
 
 def apply(spec: dict, rows: list[dict]) -> list[str]:
-    """Move numeric shot starts onto their event (one frame early). Shots timed by "line:N" stay as they are."""
-    by = {str(s.get("id")): s for s in spec["shots"]}
+    """Move numeric shot starts onto their event (one frame early). Shots timed by "line:N" stay as they are; a cut is
+    never moved onto a beat (only a real accent) nor within 0.12 s of its neighbours' starts."""
+    shots = spec["shots"]
+    by = {str(s.get("id")): s for s in shots}
+    order = [str(s.get("id")) for s in shots]
     done = []
     for r in rows:
         s = by.get(str(r["shot"]))
-        if s is None or r["on"] or r["event_t"] is None or not isinstance(s.get("at"), (int, float)):
+        if s is None or r["on"] or r["event_t"] is None or r["event"] == "beat" or not isinstance(s.get("at"), (int, float))                 or s.get("cut_lock"):                    # a cut placed by hand on a measured sound stays
             continue
         new = round(r["event_t"] - 1 / FPS, 3)
+        i = order.index(str(r["shot"]))
+        prev = shots[i - 1]["at"] if i > 0 and isinstance(shots[i - 1]["at"], (int, float)) else -1e9
+        nxt = shots[i + 1]["at"] if i + 1 < len(shots) and isinstance(shots[i + 1]["at"], (int, float)) else 1e9
+        if not (prev + 0.12 <= new <= nxt - 0.12):
+            continue
         done.append(f"shot {r['shot']}: {s['at']} -> {new} ({r['event']})")
         s["at"] = new
     return done

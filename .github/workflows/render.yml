@@ -29,7 +29,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: render-${{ github.ref }}
+  group: render-${{ github.run_id }}   # one group per run: a pending run is never dropped by a newer push (2026-10-24: two POV finals lost)
   cancel-in-progress: false
 
 jobs:
@@ -50,7 +50,7 @@ jobs:
           cache: pip
       - name: Tools
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          bash .github/ffmpeg.sh   # apt with a time limit, else a static build (never hangs the job)
           pip install -q -r requirements.txt
       # node for the main element's boxes (guard.mjs --hero-boxes needs esbuild + three): without it every film render
       # died in prepare (FIRESTARTER pilot 2026-10-19, ERR_MODULE_NOT_FOUND esbuild)
@@ -67,7 +67,7 @@ jobs:
         if: steps.nm.outputs.cache-hit != 'true'
         run: cd studio && npm ci --no-audit --no-fund
       - name: Tests (nothing renders when a guard is broken)
-        run: python -m pytest -q tests
+        run: timeout 600 python -m pytest -q -v tests < /dev/null
       - name: Which jobs
         id: which
         run: |
@@ -76,6 +76,8 @@ jobs:
             [ -f "jobs/$JOBS/render.json" ] && FORMAT=$(python -c "import json,sys;print(json.load(open(sys.argv[1])).get('format','mv'))" "jobs/$JOBS/render.json")
           else
             BEFORE="${{ github.event.before }}"
+            # a push of several commits: the base is outside the shallow checkout - fetch it (2026-10-24: stills ran nothing)
+            [ -n "$BEFORE" ] && ! git cat-file -e "$BEFORE" 2>/dev/null && git fetch -q --depth=1 origin "$BEFORE" 2>/dev/null || true
             if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
               BEFORE=$(git rev-parse -q --verify HEAD~1 || git hash-object -t tree /dev/null)
             fi
@@ -110,6 +112,10 @@ jobs:
               python -m raymi check "$J"
               python -m raymi props "$J"
             elif [ -f "jobs/$J/shots.json" ]; then
+              if grep -q '"voice"' "jobs/$J/shots.json"; then   # a talking Short (kind pov): takes, then bed + takes + sfx
+                python -m raymi voice-lines "$J"
+                python -m raymi mix "$J"
+              fi
               python -m raymi timeline "$J" "${{ steps.which.outputs.format }}"   # a film job (MV / its Short)
               (cd studio && node guard.mjs "$J" --hero-boxes every:15 > "../jobs/$J/out/hero_boxes.json")   # main element boxes
             fi
@@ -124,7 +130,7 @@ jobs:
         run: |
           git config user.name "raymi-render-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add jobs/*/voice.mp3 jobs/*/words.json 2>/dev/null || true
+          git add jobs/*/voice.mp3 jobs/*/words.json jobs/*/voice/ 2>/dev/null || true
           git diff --cached --quiet || (git commit -m "voice take for ${{ steps.which.outputs.jobs }} [skip ci]" && git pull --rebase -q && git push -q)
       - name: Stage what the workers need (prep/<job>/... so the artifact keeps the job folder level)
         if: steps.which.outputs.jobs != ''
@@ -216,7 +222,7 @@ jobs:
           cache: pip
       - name: Tools
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          bash .github/ffmpeg.sh   # apt with a time limit, else a static build (never hangs the job)
           pip install -q -r requirements.txt
       - uses: actions/download-artifact@v4
         with:
@@ -251,7 +257,11 @@ jobs:
             if [ -f "$O/final.mp4" ]; then
               STATE=done
               ffmpeg -y -loglevel error -i "$O/final.mp4" -vf scale=360:-2 -c:v libx264 -crf 30 -c:a aac -b:a 64k "$O/preview.mp4"
-              gh release create "render-$J-${{ github.run_number }}" "$O/final.mp4" "$O/sheet.jpg" "$O/qc.json" \
+              # the download carries its upload day + title (toki 2026-10-24: "nicht immer nur final")
+              F=mv; [ -f "jobs/$J/render.json" ] && F=$(python -c "import json,sys;print(json.load(open(sys.argv[1])).get('format','mv'))" "jobs/$J/render.json")
+              N=$(python -m raymi name "$J" "$F" 2>/dev/null || echo "$J.mp4")
+              cp "$O/final.mp4" "$O/$N"
+              gh release create "render-$J-${{ github.run_number }}" "$O/$N" "$O/sheet.jpg" "$O/qc.json" \
                 --prerelease --title "$J (${{ needs.prepare.outputs.quality }}, run ${{ github.run_number }})" \
                 --notes "QC: $(python -c "import json;print('PASS' if json.load(open('$O/qc.json'))['pass'] else 'FAIL')")"
               cp "$O/qc.json" "$O/sheet.jpg" "$O/preview.mp4" "$O/props.json" "/tmp/reports/$J/"
@@ -268,4 +278,4 @@ jobs:
           cd /tmp/rb
           for J in ${{ needs.prepare.outputs.jobs }}; do rm -rf "reports/$J/kit"; done
           mkdir -p reports && cp -r /tmp/reports/* reports/
-          git add reports && git commit -qm "reports run ${{ github.run_number }}" && git push -q origin renders
+          git add reports && git commit -qm "reports run ${{ github.run_number }}" && { for t in 1 2 3 4 5; do git push -q origin renders && break; git pull --rebase -q origin renders; sleep 8; done; }

@@ -20,5 +20,8 @@ export const PostFX: React.FC<{spec?: PostSpec}> = ({spec = {}}) => {
   if (typeof spec.dof === 'number') effects.push(<DepthOfField key="dof" worldFocusDistance={spec.dof} worldFocusRange={spec.dofRange ?? 0.6} bokehScale={3} />);
   if (bloom > 0) effects.push(<Bloom key="bloom" intensity={bloom} luminanceThreshold={0.86} luminanceSmoothing={0.12} mipmapBlur radius={0.65} />);
   if (chroma > 0) effects.push(<ChromaticAberration key="ca" offset={new THREE.Vector2(chroma, chroma)} radialModulation modulationOffset={0.35} blendFunction={BlendFunction.NORMAL} />);
-  return <EffectComposer multisampling={0} enableNormalPass={false}>{effects}</EffectComposer>;
+  // an 8-bit frame buffer (2026-10-24, Beach shot 31 black): in the default half-float buffer one invalid pixel (NaN /
+  // Inf) from the scene survives and every blur - bloom, DoF, AO - spreads it into black blocks or a black frame;
+  // 8 bits clamp it on write. Bloom keys on the LDR picture (threshold 0.86), which is what it did anyway.
+  return <EffectComposer multisampling={0} enableNormalPass={false} frameBufferType={THREE.UnsignedByteType}>{effects}</EffectComposer>;
 };

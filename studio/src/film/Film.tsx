@@ -21,11 +21,13 @@ import {useTexturesReady} from '../three/look';
 import {VrmPuppet, useVrmReady} from '../three/VrmPuppet';
 import {Strings} from '../three/routine';
 import {makeVrmMouthKeys} from '../three/vrmLipSync';
+import {Probe} from './Probe';
 import {vrmFilmKeys, vrmFilmWords} from '../three/vrmFilm';
 import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
 import {Transitions, whipStyle} from './Transitions';
 import {Fx2D, Fx2DDefs, fxFilter} from './Fx2D';
+import {PovLayer, povFilter, sceneFrame} from './PovFx';
 import {PostFX, type PostSpec} from '../three/PostFX';
 import type {FilmProps, Shot} from './types';
 import {TONES, gradeName, mixTone, type LyricTone, type Tone} from './grade';
@@ -62,12 +64,16 @@ export const Film: React.FC<FilmProps> = (props) => {
   const vrmReady = useVrmReady(props.vrm ? [staticFile(props.vrm)] : [],
     props.vrm ? (props.motions ?? ['motions/dance.fbx', 'motions/idle.fbx']).map(staticFile) : []);
   const ready = fontReady && texReady && vrmReady;
-  const f = useCurrentFrame();
+  const fNow = useCurrentFrame();
   const {width: W, height: H, fps} = useVideoConfig();
   const mouthWords = useMemo(() => props.sung ?? vrmFilmWords(props.shots, fps), [props.sung, props.shots, fps]);
-  const mouthKeys = useMemo(() => makeVrmMouthKeys(mouthWords, fps, 0, props.durationInFrames), [mouthWords, fps, props.durationInFrames]);
-  const i = shotAt(props.shots, f);
+  // the loudness of her vocal stem per film frame (raymi/timeline.py) opens the mouth wider where she sings loud
+  const mouthKeys = useMemo(() => makeVrmMouthKeys(mouthWords, fps, 0, props.durationInFrames, {env: props.mouthEnv ?? null}),
+    [mouthWords, fps, props.durationInFrames, props.mouthEnv]);
+  const i = shotAt(props.shots, fNow);
   const shot = props.shots[i];
+  // a freeze / polaroid holds the 3D world on one frame while the 2D layer above keeps time (PovFx.tsx)
+  const f = sceneFrame(shot.fx, fNow);
   // a 3D shot names her rig keys itself (shots.json "actor"); the 2026-10-21 VRM edition translated sprite keys
   const actorKeys = useMemo(() => shot.actor?.length ? shot.actor : vrmFilmKeys(shot.puppets), [shot]);
   const gain = shot.mouth?.gain ?? 1;
@@ -77,10 +83,26 @@ export const Film: React.FC<FilmProps> = (props) => {
   const fx = shot.fx ?? [];
   // her battery (opts.battery = [[frame, dots], ...]): the five chest lights + the 2D sign beside her head
   const bat = shot.opts.battery !== undefined ? stepValue<number>(shot.opts.battery, f, 6) : null;
-  const battery = bat && bat.to !== null ? {n: bat.to, prev: bat.from ?? bat.to, t: bat.t} : null;
+  // chest_dots (POV Shorts): her five chest lights always on; glow_flare (frames) makes them flare (she senses you)
+  const dotBoost = flare(shot.opts.glow_flare, f, 8);
+  const battery = bat && bat.to !== null ? {n: bat.to, prev: bat.from ?? bat.to, t: bat.t, boost: dotBoost}
+    : shot.opts.chest_dots ? {n: 5, prev: 5, t: 1, boost: dotBoost} : null;
   const aspect = W / H;
   const cam = makeCamera(shot, f, aspect, props.hits, fps);
   const camPos: [number, number, number] = [cam.position.x, cam.position.y, cam.position.z];
+  // motion blur (toki 2026-10-23 "depth und motion blur"): where does the world point at the frame centre go between
+  // the previous frame and this one? Its screen travel (px) becomes a directional blur on the 3D layer.
+  const blur = (() => {
+    if (f <= shot.from) return null;                                // a cut is never blurred across
+    const prev = makeCamera(shot, f - 1, aspect, props.hits, fps);
+    const p = new THREE.Vector3(0, 0, -4).applyQuaternion(cam.quaternion).add(cam.position);
+    const a = p.clone().project(prev), b = p.clone().project(cam);
+    const dx = Math.abs(b.x - a.x) * W / 2, dy = Math.abs(b.y - a.y) * H / 2;
+    if (!(dx < W / 3 && dy < H / 3)) return null;                     // a lens JUMP inside a shot (a hold key) is a cut, not a move
+    const k = Number(shot.opts.motion_blur ?? 0.45);                 // share of the travel smeared (a 180-degree shutter ~0.5)
+    const sx = Math.min(28, dx * k), sy = Math.min(28, dy * k);
+    return sx < 1.2 && sy < 1.2 ? null : {sx: sx / 2, sy: sy / 2};
+  })();
   // her place on screen (chest height of the current key): the centre of a colour spread
   const herKey = actorKeys.length ? actorKeys.reduce((p, k) => (k.f <= f ? k : p), actorKeys[0]) : null;
   const herNdc = herKey ? new THREE.Vector3(herKey.pos[0], herKey.pos[1] + (herKey.height ?? 1.55) * 0.62, herKey.pos[2]).project(cam) : null;
@@ -113,6 +135,7 @@ export const Film: React.FC<FilmProps> = (props) => {
   let glowGain = 1;
   if (o.glow_pulse === 'beats') glowGain *= 1 + 0.9 * flare(props.beats, f, 6);
   if (typeof o.glow_out === 'number' && f >= o.glow_out) glowGain *= Math.max(0, 1 - (f - o.glow_out) / 4);
+  glowGain *= 1 + 2.5 * dotBoost;
   // the rays: a ring around her head (swarm_ring 'head'), rising and widening into a beam after swarm_beam (frame)
   let rays: React.ReactNode = null;
   const headTop = pose ? figurePoint(shot, f, fps, camPos, ...crownUV(pose.key)) : null;
@@ -177,11 +200,19 @@ export const Film: React.FC<FilmProps> = (props) => {
   if (pose?.key.icon && head) {
     const n = head.clone().project(cam);
     if (n.z < 1) icon = <ReactionIcon kind={pose.key.icon} x={(n.x * 0.5 + 0.5) * W + W * 0.04} y={(-n.y * 0.5 + 0.5) * H} local={pose.local} accent="#b56bff" />;
+  } else if (herKey?.icon && headNdc && headNdc.z < 1) {    // the 3D Raymi: an icon beside her head for 1.5 s
+    const local = f - herKey.f;
+    if (local < 45) icon = <ReactionIcon kind={herKey.icon} x={herHead[0] * W + W * 0.12} y={herHead[1] * H - H * 0.03} local={local} accent="#b56bff" />;
   }
   return (
     <AbsoluteFill style={{backgroundColor: '#0b0818', overflow: 'hidden'}}>
       <Fx2DDefs fx={fx} f={f} center={herScreen} aspect={aspect} />
-      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter, fxFilter(fx, f)].filter(Boolean).join(' ')}}>
+      {blur ? (
+        <svg width={0} height={0} style={{position: 'absolute'}}><defs>
+          <filter id="raymi-mblur" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation={`${blur.sx.toFixed(2)} ${blur.sy.toFixed(2)}`} /></filter>
+        </defs></svg>
+      ) : null}
+      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter, fxFilter(fx, f), povFilter(fx, f), blur ? 'url(#raymi-mblur)' : ''].filter(Boolean).join(' ')}}>
         {ready ? (
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>
@@ -192,29 +223,33 @@ export const Film: React.FC<FilmProps> = (props) => {
                 mouthKeys={shotMouth} lock={Number(shot.opts.lock ?? (shot.actor ? 0.1 : 0.38))} shadow={String(shot.opts.shadow ?? '#120b2b')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={0.12 * glowGain}
                 materialStyle={String(shot.opts.material ?? (shot.actor ? 'routine' : 'firestarter'))}
-                step={shot.step ?? 1} outline={shot.outline ?? 0} battery={battery} />
+                step={shot.step ?? 1} outline={shot.outline ?? 0} battery={battery}
+                keyLight={Number(shot.opts.her_key ?? shot.opts.depth ?? 0)} />
             ) : (
               <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={glowGain} />
             )}
             {/* the strings read her posed wrists: drawn after her */}
-            {props.vrm ? <Strings list={shot.opts.strings} vrm={staticFile(props.vrm)} f={f} /> : null}
-            {rays}{ride}{lensPass}{anchored}
+            {props.vrm ? <group userData={{noSupport: true}}><Strings list={shot.opts.strings} vrm={staticFile(props.vrm)} f={f} /></group> : null}
+            {/* lyrics, light rays, lens passes, effects: drawn in the space, never stood on or pushed against (support.ts) */}
+            <group userData={{noSupport: true}}>{rays}{ride}{lensPass}{anchored}</group>
             {crownAt ? (
               <group position={[crownAt.x, crownAt.y, crownAt.z]} rotation={[0, Math.atan2(camPos[0] - crownAt.x, camPos[2] - crownAt.z), 0]}>
                 <CapCrown pos={[0, 0.0, 0]} rot={[0.12, 0, -0.18]} scale={0.62} />
               </group>
             ) : null}
-            {shot.lyrics ? <Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} /> : null}
+            {shot.lyrics ? <group userData={{noSupport: true}}><Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} /></group> : null}
             {/* after effects (toki 2026-10-23): AO + bloom on every 3D-Raymi film shot, DoF where a shot asks for it */}
             {props.vrm ? <PostFX spec={(shot.opts.post ?? {}) as PostSpec} /> : null}
+            {props.probe ? <Probe f={f} vrm={props.vrm ? staticFile(props.vrm) : null} shot={shot.id} /> : null}
           </ThreeCanvas>
         ) : null}
       </AbsoluteFill>
-      <Fx2D fx={fx} f={f} center={herScreen} aspect={aspect} />
+      <Fx2D fx={fx} f={fNow} center={herScreen} aspect={aspect} />
+      <PovLayer fx={fx as never} f={fNow} W={W} H={H} />
       {battery && shot.opts.battery_sign ? <BatterySign {...battery} x={herHead[0] * W} y={herHead[1] * H} h={H} f={f} side={shot.opts.battery_sign === 'left' ? -1 : 1} /> : null}
       {icon}
-      <Transitions shots={props.shots} f={f} />
+      <Transitions shots={props.shots} f={fNow} />
       <Grade grain={props.grain} tone={gradeAt(shot, f)} />
       {props.overlay ? (
         <>

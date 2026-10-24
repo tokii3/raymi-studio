@@ -1,0 +1,42 @@
+{
+ "text": "this is not what it looks like.",
+ "duration": 2.4,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "this",
+   "start": 0.093,
+   "end": 0.338
+  },
+  {
+   "w": "is",
+   "start": 0.349,
+   "end": 0.477
+  },
+  {
+   "w": "not",
+   "start": 0.488,
+   "end": 0.766
+  },
+  {
+   "w": "what",
+   "start": 0.776,
+   "end": 0.905
+  },
+  {
+   "w": "it",
+   "start": 0.915,
+   "end": 1.033
+  },
+  {
+   "w": "looks",
+   "start": 1.044,
+   "end": 1.279
+  },
+  {
+   "w": "like.",
+   "start": 1.289,
+   "end": 1.642
+  }
+ ]
+}

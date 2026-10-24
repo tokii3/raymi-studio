@@ -8,7 +8,15 @@
   check  <job>          plan + words against every hard rule (exit 1 on errors)
   props  <job>          write jobs/<job>/out/props.json for the renderer
   finish <job>          loudness-normalise out/raw.mp4 -> out/final.mp4, then QC + contact sheet
+  voice-lines <job>     a talking 3D Short: one take per spoken line of shots.json "voice" (raymi/voice_lines.py)
+  mix    <job>          bed + takes + sfx -> jobs/<job>/out/mix.m4a (cloud prepare, before the timeline)
+  name   <job> [short|mv]  the file name toki downloads: <upload day>_Raymi_<title>_<Short|MV>.mp4
+  exposure <dir|img..>  overexposed / oversaturated / flat pictures (raymi/exposure.py)
+  bed    <track>        a music bed's map (tempo, beats, accents) -> <track>.map.json (raymi/bed.py)
+  pov    <job>          a talking Short's timing against the measured takes + bed map (raymi/pov.py), exit 1 on a fault
+  sfx    build          synthesise the sound-effect library -> assets/sfx/<kind>.wav (raymi/sfx.py)
   timeline <job> [mv|short]  shots.json (shooting script data) -> out/props.json for the MV / MVShort film
+  probe  <job> [mv|short]  the scene probe's fault classes (studio/probe.mjs, stills.json "probe": N)
   cuts   <job> [--apply]  every cut against hits / sung lines / sections (one frame early); --apply moves them
   font ensure <job>     build every on-screen glyph her font lacks, in her marker style (raymi/font.py)
   font add <chars>      the same for given characters
@@ -110,6 +118,49 @@ def main(argv: list[str]) -> int:
             song.resection(d)
             print(json.dumps(res["stats"]))
         return 0
+    if cmd == "pov":         # pov <job> -> measured timing table + faults
+        from . import pov
+
+        table, errs, warns = pov.check(P.job_dir(job))
+        print("\n".join(table))
+        for w in warns:
+            print("WARN ", w)
+        for e in errs:
+            print("ERROR", e)
+        return 1 if errs else 0
+    if cmd == "name":        # name <job> [short|mv] -> the download file name (upload day, title, format)
+        from .channel_rules import delivery_name
+
+        print(delivery_name(P.job_dir(job), argv[2] if len(argv) > 2 else "short"))
+        return 0
+    if cmd == "exposure":    # exposure <dir|image...> -> over / undersaturation, clipping, depth per picture
+        from . import exposure
+
+        lines, bad = exposure.report([Path(x) for x in argv[1:]])
+        print("\n".join(lines))
+        return 1 if bad else 0
+    if cmd == "bed":         # bed <track> -> <track>.map.json
+        from . import bed
+
+        print("bed map ->", bed.write(Path(job)))
+        return 0
+    if cmd == "sfx":         # sfx build -> assets/sfx/*.wav
+        from . import sfx
+
+        for f in sfx.build_all():
+            print("sfx ->", f.name)
+        return 0
+    if cmd in ("voice-lines", "mix"):   # a talking 3D Short (kind "pov")
+        from . import voice_lines as VL
+
+        d = P.job_dir(job)
+        spec = json.loads((d / "shots.json").read_text(encoding="utf-8"))
+        if cmd == "voice-lines":
+            for tk in VL.make_all(d, spec):
+                print(f"{tk['at']:6.2f} +{tk['duration']:.2f} s  [{tk['timing_source']}]  {tk['text']}")
+            return 0
+        print("mix ->", VL.mix(d, spec))
+        return 0
     if cmd in ("new", "next"):
         from . import room
 
@@ -128,6 +179,10 @@ def main(argv: list[str]) -> int:
         res = make_voice(plan["script"], d)
         print(f"voice: {res['duration']} s, timing from {res['timing_source']}")
         return 0
+    if cmd == "probe":       # probe <job> [mv|short]: the scene probe's fault classes (limbs in furniture, floating, pops ...)
+        from . import probe as PR
+
+        return PR.main(d, argv[2] if len(argv) > 2 else "mv")
     if cmd == "cuts":        # cuts <job> [--apply]: every cut against the song's hits / lines / sections (needs out/props.json)
         from . import cuts as C
 

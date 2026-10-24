@@ -1,0 +1,37 @@
+{
+ "text": "tomorrow in tokyo. rain. trust me.",
+ "duration": 4.68,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "tomorrow",
+   "start": 0.093,
+   "end": 0.627
+  },
+  {
+   "w": "in",
+   "start": 0.638,
+   "end": 0.809
+  },
+  {
+   "w": "tokyo.",
+   "start": 0.819,
+   "end": 1.385
+  },
+  {
+   "w": "rain.",
+   "start": 2.115,
+   "end": 2.532
+  },
+  {
+   "w": "trust",
+   "start": 3.259,
+   "end": 3.654
+  },
+  {
+   "w": "me.",
+   "start": 3.665,
+   "end": 3.921
+  }
+ ]
+}

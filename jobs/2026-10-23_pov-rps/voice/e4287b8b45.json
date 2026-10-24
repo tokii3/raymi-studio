@@ -1,0 +1,22 @@
+{
+ "text": "paper? i'm flatter.",
+ "duration": 2.76,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "paper?",
+   "start": 0.093,
+   "end": 0.541
+  },
+  {
+   "w": "i'm",
+   "start": 1.261,
+   "end": 1.464
+  },
+  {
+   "w": "flatter.",
+   "start": 1.474,
+   "end": 1.998
+  }
+ ]
+}

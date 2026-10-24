@@ -1,0 +1,32 @@
+{
+ "text": "how close did you get?",
+ "duration": 1.92,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "how",
+   "start": 0.093,
+   "end": 0.296
+  },
+  {
+   "w": "close",
+   "start": 0.306,
+   "end": 0.627
+  },
+  {
+   "w": "did",
+   "start": 0.638,
+   "end": 0.776
+  },
+  {
+   "w": "you",
+   "start": 0.787,
+   "end": 0.883
+  },
+  {
+   "w": "get?",
+   "start": 0.894,
+   "end": 1.182
+  }
+ ]
+}

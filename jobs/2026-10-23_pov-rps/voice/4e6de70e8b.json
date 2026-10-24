@@ -1,0 +1,32 @@
+{
+ "text": "rock? i glide over it.",
+ "duration": 3.0,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "rock?",
+   "start": 0.093,
+   "end": 0.499
+  },
+  {
+   "w": "i",
+   "start": 1.218,
+   "end": 1.368
+  },
+  {
+   "w": "glide",
+   "start": 1.378,
+   "end": 1.763
+  },
+  {
+   "w": "over",
+   "start": 1.774,
+   "end": 2.041
+  },
+  {
+   "w": "it.",
+   "start": 2.051,
+   "end": 2.244
+  }
+ ]
+}

@@ -75,8 +75,8 @@
      "move": {
       "kind": "push_dutch",
       "h": 1.05,
-      "deg": 25,
-      "dist": 1.1,
+      "deg": 70,
+      "dist": 1.5,
       "roll": -10
      }
     }
@@ -106,9 +106,9 @@
     {
      "move": {
       "kind": "drop",
-      "h": 0.3,
+      "h": 0.8,
       "deg": 30,
-      "dist": 1.5
+      "dist": 1.8
      }
     }
    ],
@@ -192,9 +192,9 @@
      "move": {
       "kind": "track",
       "h": 1.4,
-      "deg": 70,
+      "deg": 0,
       "dist": 1.6,
-      "width": 0.8
+      "width": 0.7
      }
     }
    ],
@@ -401,9 +401,10 @@
      "move": {
       "kind": "crash",
       "h": 1.05,
-      "deg": -20,
-      "dist": 1.0,
-      "hit": 0.0
+      "deg": 0,
+      "dist": 1.65,
+      "hit": 0.0,
+      "fov": 28
      }
     }
    ],

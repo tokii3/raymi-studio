@@ -1,0 +1,1 @@
+{"format": "short", "frames": [10, 190, 300, 400, 470], "names": ["thumb_short_S1", "thumb_short_S2", "thumb_short_S3", "thumb_short_S4", "thumb_short_S5"], "scale": 1, "to": "boards", "thumbs": true, "_why": "5 thumbnail candidates per Short (frames of the final) + the feed view"}

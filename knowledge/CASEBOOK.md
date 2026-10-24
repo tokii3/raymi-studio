@@ -34,6 +34,13 @@ Verdicts are toki's words (old engine VIDEO_LEARNINGS / PROGRESS / catalog). Exe
   `exemplars/pop-in-2_STORY_and_AUDIT.md`: static, first idea = placeholder, overuse, sticker in front of wallpaper.
 
 ## Good, with limits
+- **Take Me to the Beach (2026-10-22..24, the first 3D film, MV + Short):** toki on the rebuild: "Sets / Idee /
+  Kameras / Effekte schon ganz gut, aber Umsetzung muss besser werden". The idea (grey routine as strings and a
+  battery, her dream sea as the beach metaphor, the office unfolding) held; the execution failed on structural
+  faults: clips that never played, hand-guessed heights (floating / sinking / clipping), no chair, a damped mouth,
+  flat even light, black frames. The structural pass (run 58 / 59) fixed them as classes (scene probe, support
+  rays, push-out, chair, vocal envelope, light depth, textures v2, 8-bit post) - not yet judged by her. Lesson: a
+  3D film needs its bodies in the space measured, not guessed; fix classes, not shots.
 - **YOASOBI Idol (2026-10-01/02, 5 versions):** "schon sehr gut" at v5. Lessons: a rule-based director cannot
   choreograph (hand-written shot list was the turn), measure tempo / sections, cut one frame before the syllable,
   save the finale's set pieces.
@@ -58,6 +65,19 @@ Verdicts are toki's words (old engine VIDEO_LEARNINGS / PROGRESS / catalog). Exe
   4-5 to choose from. What became studio parts: the hero guard + contrast check, lyrics v2 (heavy weight, scene colour,
   lit, on surfaces, romaji + English), the thumbnails stage, the catalog status, the grade library as the look step,
   the critic calibration (`knowledge/calibration/2026-10-19_KING.md`).
+
+- **POV Shorts week (2026-10-23/24, 7 talking 3D lore Shorts):** the lens is the viewer - she glares at you on the
+  train, bets on rain in Tokyo, covers the lens, taps back on the aquarium glass, plays rock paper scissors with
+  'stingray'. Voice line by line (edge-tts) + a Kevin MacLeod bed + own SFX; script-critic BLOCK x7 in round 1 (timing
+  written by hand), PASS x7 in round 2 once every time was computed from the bed map + the takes (`raymi pov`).
+  toki on the stills: "gefaellt mir schon ganz gut", then the finish ask (no burnt / loud colour, fg-mg-bg, depth +
+  motion blur). toki on the finals: "gefallen mir schon gut" - taken as they are; for next time: face more centred and
+  a little higher, Sashimi overexposed, hair sometimes flies, mouth half open when she is silent. What became studio
+  parts: kind pov, voice_lines + mix + bed maps + sfx, the timing check, worn props, POV fx (cover, pov hand, ripple,
+  algae, freeze, polaroid, stamps), act flatten, calm grades pov / pov_warm, DoF per close-up, camera motion blur, the
+  exposure check (+ washed), mouth closed when silent, calmer hair. Lessons: a pose sheet from a 3/4 view before a
+  build that relies on new poses; measure her head height on stills before framing a seated / crouched shot; the CI
+  ffmpeg install needs a fallback (apt hung for hours).
 
 ## Failed - and the root
 - **K/DA MORE v1 (2026-10-09):** "Raymi-Slideshow aus PowerPoint, bodenlos". Pretty 3D plates as stills + 2D zoom,

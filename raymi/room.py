@@ -14,7 +14,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 TEMPLATES = REPO / "writers_room" / "templates"
-KINDS = ("mv", "lore")
+KINDS = ("mv", "lore", "pov")
 
 # (step id, file, how it is proven done)
 STEPS = {
@@ -38,11 +38,24 @@ STEPS = {
         ("thumbs", "5_THUMBS.md", "thumbs"),
         ("upload", "upload.md", "upload"),
     ],
+    # a talking lore Short in 3D (toki 2026-10-23: "raymi 3d soll mit der kamera interagieren ... die kamera
+    # repraesentiert den zuschauer"): her voice + a known music bed, one shooting script, stills, the final
+    "pov": [
+        ("dossier", "1_DOSSIER.md", "filled"),
+        ("ideas", "2_IDEAS.md", "approved"),
+        ("script", "4_SCRIPT.md", "critic"),
+        ("build", "shots.json", "built"),
+        ("stills", "toki.md", "stills"),
+        ("final", "toki.md", "verdict"),
+        ("thumbs", "5_THUMBS.md", "thumbs"),
+        ("upload", "upload.md", "upload"),
+    ],
 }
 # toki 2026-10-19: thumbnails for the MV AND the Short, always 4-5 to choose from
-THUMB_FORMATS = {"mv": ("mv", "short"), "lore": ("short",)}
+THUMB_FORMATS = {"mv": ("mv", "short"), "lore": ("short",), "pov": ("short",)}
 THUMB_MIN = 5     # toki 2026-10-22: 5 thumbnails for the MV and 5 for the Short
 STILLS_MIN = 12   # the stills board that replaces the pilot: every act and key moment of the MV
+STILLS_MIN_KIND = {"pov": 4}   # a 15-20 s Short: hook, the turn, the payoff, the CTA
 
 APPROVED = re.compile(r"^approved:\s*toki\s+\d{4}-\d{2}-\d{2}\b", re.M)
 PICKED = re.compile(r"^picked:\s*toki\s+\d{4}-\d{2}-\d{2}\b", re.M)
@@ -103,8 +116,9 @@ def step_state(d: Path, step: str, fname: str | None, how: str, kind: str = "mv"
         return True, "done"
     if how == "stills":
         n = len(list((d / "boards").glob("still_*.jpg")))
-        if n < STILLS_MIN:
-            return False, f"{n} stills in boards/ - want >= {STILLS_MIN} across the whole MV (boards/still_<nn>.jpg, cloud stills)"
+        want = STILLS_MIN_KIND.get(kind, STILLS_MIN)
+        if n < want:
+            return False, f"{n} stills in boards/ - want >= {want} across the whole video (boards/still_<nn>.jpg, cloud stills)"
         if not f.is_file() or not toki_said(f.read_text(encoding="utf-8"), "stills"):
             return False, "waiting for toki's verdict on the stills (toki.md line `stills: toki YYYY-MM-DD <her words>`)"
         return True, "done"

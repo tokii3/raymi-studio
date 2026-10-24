@@ -1,0 +1,37 @@
+{
+ "text": "the fins are real. kind of.",
+ "duration": 3.264,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "the",
+   "start": 0.093,
+   "end": 0.242
+  },
+  {
+   "w": "fins",
+   "start": 0.253,
+   "end": 0.606
+  },
+  {
+   "w": "are",
+   "start": 0.616,
+   "end": 0.819
+  },
+  {
+   "w": "real.",
+   "start": 0.83,
+   "end": 1.182
+  },
+  {
+   "w": "kind",
+   "start": 1.912,
+   "end": 2.233
+  },
+  {
+   "w": "of.",
+   "start": 2.244,
+   "end": 2.511
+  }
+ ]
+}

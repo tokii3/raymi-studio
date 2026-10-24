@@ -1,0 +1,32 @@
+{
+ "text": "rock paper scissors. you lose.",
+ "duration": 3.48,
+ "timing_source": "edge-tts",
+ "words": [
+  {
+   "w": "rock",
+   "start": 0.093,
+   "end": 0.403
+  },
+  {
+   "w": "paper",
+   "start": 0.413,
+   "end": 0.766
+  },
+  {
+   "w": "scissors.",
+   "start": 0.776,
+   "end": 1.353
+  },
+  {
+   "w": "you",
+   "start": 2.083,
+   "end": 2.297
+  },
+  {
+   "w": "lose.",
+   "start": 2.308,
+   "end": 2.735
+  }
+ ]
+}
