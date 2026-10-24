@@ -23,7 +23,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: stills-${{ github.ref }}
+  group: stills-${{ github.run_id }}   # one group per run: a pending run is never dropped by a newer push (2026-10-24: two POV finals lost)
   cancel-in-progress: false
 
 jobs:
@@ -136,5 +136,5 @@ jobs:
             if git rev-parse -q --verify origin/renders > /dev/null; then git worktree add -q -B renders /tmp/rb origin/renders;
             else git worktree add -q --orphan -b renders /tmp/rb; fi
             for D in /tmp/stills/*/; do J=$(basename "$D"); mkdir -p "/tmp/rb/reports/$J/stills"; cp "$D"*.jpg "/tmp/rb/reports/$J/stills/" 2>/dev/null || true; done
-            cd /tmp/rb && git add reports && (git diff --cached --quiet || git commit -qm "stills run ${{ github.run_number }}") && git push -q origin renders
+            cd /tmp/rb && git add reports && (git diff --cached --quiet || git commit -qm "stills run ${{ github.run_number }}") && { for t in 1 2 3 4 5; do git push -q origin renders && break; git pull --rebase -q origin renders; sleep 8; done; }
           fi
