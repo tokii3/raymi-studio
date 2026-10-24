@@ -173,8 +173,10 @@ const LightWriting: React.FC<{d: number; her: P3; camPos: P3; text: string; fps:
   const p = Math.min(1, d / dur);
   const fadeOut = d > dur + 2.2 * fps ? Math.max(0, 1 - (d - dur - 2.2 * fps) / 15) : 1;
   const toCam = new THREE.Vector3(camPos[0] - her[0], 0, camPos[2] - her[2]).normalize();
-  const c = new THREE.Vector3(her[0], her[1] + 1.25, her[2]).addScaledVector(toCam, 0.45);
-  const yaw = Math.atan2(toCam.x, toCam.z), W = 1.5, H = W / 4;
+  const yaw = Math.atan2(toCam.x, toCam.z), W = 1.3, H = W / 4;
+  // beside and above her head, never across her face (look-critic stills 3: WATCH ME parked on her eyes)
+  const side = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw));
+  const c = new THREE.Vector3(her[0], her[1] + 1.78, her[2]).addScaledVector(toCam, 0.3).addScaledVector(side, 0.35);
   tex.repeat.set(p, 1); tex.offset.set(0, 0);
   const right = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw));
   const mid = c.clone().addScaledVector(right, -W / 2 + (W * p) / 2);
@@ -306,4 +308,4 @@ export const SetFx: React.FC<{opts: Record<string, unknown>; f: number; fps: num
 };
 
 /** The wet floor each set has by default (Watch Me: one shared look - a wet mirror floor in all three worlds). */
-export const SET_WET: Record<string, number> = {shoot: 0.3, corner: 0.48, exhibit: 0.4};   // stills 1: 0.18-0.36 read as no floor at all
+export const SET_WET: Record<string, number> = {shoot: 0.22, corner: 0.42, exhibit: 0.12};   // stills 1: too faint; look-critic stills 3: the museum's mirror made ghost legs, a reflected lyric and black floor patches

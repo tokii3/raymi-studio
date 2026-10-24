@@ -67,7 +67,10 @@ export function fixSleeveCaps(scene: THREE.Object3D): number {
 // only strands whose UVs use the texture's top - the bangs use its lower half and stayed bright blue (model sheet 3).
 // So the shader darkens by HEIGHT on her head in the bind pose: the top 16 cm off-black and matte, blending into the
 // painted ultraviolet by 42 cm below the crown - every strand the same, whatever part of the texture it uses.
-const ROOT_FULL = 0.16, ROOT_END = 0.42, ROOT_MIX = 0.88;   // sheet 4: 12 / 32 cm read as only the crown
+const ROOT_FULL = 0.16, ROOT_END = 0.42, ROOT_MIX = 0.8;    // sheet 4: 12 / 32 cm read as only the crown
+// look-critic stills 3: a pure black crown read as a hole - the roots go to a deep violet navy (a mid tone), and the
+// whole hair loses 20 % of its saturation ("neon-digital, the most saturated thing in every frame"; toki: too bright)
+const HAIR_SAT = 0.8;
 
 export function hairRoots(scene: THREE.Object3D): number {
   let top = -Infinity;
@@ -89,7 +92,8 @@ export function hairRoots(scene: THREE.Object3D): number {
   {
     float rootK = smoothstep(${(top - ROOT_END).toFixed(3)}, ${(top - ROOT_FULL).toFixed(3)}, vHairY) * ${ROOT_MIX.toFixed(2)};
     float lum = dot(diffuseColor.rgb, vec3(0.299, 0.587, 0.114));
-    diffuseColor.rgb = mix(diffuseColor.rgb, vec3(lum) * 0.22 + vec3(0.016, 0.012, 0.03), rootK);
+    diffuseColor.rgb = mix(vec3(lum), diffuseColor.rgb, ${HAIR_SAT.toFixed(2)});
+    diffuseColor.rgb = mix(diffuseColor.rgb, vec3(lum) * 0.42 + vec3(0.045, 0.035, 0.085), rootK);
   }`);
     };
     mat.customProgramCacheKey = () => `${key()},hairRoots${top.toFixed(3)}`;

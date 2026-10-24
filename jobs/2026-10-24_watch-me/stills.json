@@ -48,7 +48,7 @@
  ],
  "scale": 1,
  "to": "boards",
- "_why": "stills board 3 (same 21 frames): the measured frame fit of run 40137020666 (16 close shots onto her real head), Salmon in the picture, walls as no-lens zones, cover type kept free, stronger effects - and the model upgrade raymi7 (per-part materials, clean texture blends, off-black hair roots, the shoulder fins, hair colliders on her torso)",
- "round": 3,
+ "_why": "stills board 4 after look-critic FAIL (reviews/stills_look-critic_1.md): hair mid tone (violet-navy roots, -20 % saturation, violet rim), her own lights down + skin lock 0.6 (no clip, the set's light shows on her), museum mirror floor down (ghost legs, reflected lyric, black patches), museum + corner lighter, motion blur capped, lit lyrics brighter in the dark, light writing above her not on her face, 25 without the flatten squash, 59 a standing pose, 64 reframed on her + the guard",
+ "round": 4,
  "frame_fit": false
 }

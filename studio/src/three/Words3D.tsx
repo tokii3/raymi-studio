@@ -254,9 +254,10 @@ const ItemMesh: React.FC<{it: Item; L: Lyrics; color: string; shadow: string; ac
   const glow = L.material === 'light';
   const lit = !glow && L.material !== 'fog' && L.material !== 'screen';
   const mat = useMemo(() => (lit
-    // lit by the set; the emissive floor (40 % of its own colour) keeps it readable when the key light is behind it
+    // lit by the set; the emissive floor (65 % of its own colour) keeps it readable when the key light is behind it or the
+    // set is dark (look-critic stills 3: lit lines went muddy brown in the museum)
     ? new THREE.MeshToonMaterial({map: tex, gradientMap: toonRamp(), transparent: true, alphaTest: 0.04, side: THREE.DoubleSide,
-      emissive: new THREE.Color('#8a8a8a'), emissiveMap: tex, fog: false, depthTest: false, depthWrite: false})
+      emissive: new THREE.Color('#a6a6a6'), emissiveMap: tex, fog: false, depthTest: false, depthWrite: false})
     : new THREE.MeshBasicMaterial({map: tex, transparent: true, alphaTest: 0.02, toneMapped: false, side: THREE.DoubleSide, fog: false,
       blending: THREE.NormalBlending, depthTest: false, depthWrite: false})), [tex, lit, glow]);
   // toki 2026-10-20 (FIRESTARTER final): "oft abgeschnitten / hinter Assets" - a sung line is never hidden by the set,

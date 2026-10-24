@@ -44,7 +44,7 @@ export const Exhibit: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const dimC = (c: string) => new THREE.Color(c).lerp(new THREE.Color('#010103'), dark).getStyle();
   const hers = Boolean(opts.hers);
   const marble = toonSurface('#e9e2d6', 'plaster', [6, 6]);
-  const wallMat = toonSurface('#5a1424', 'fabric', [8, 3]);
+  const wallMat = toonSurface('#6c2238', 'fabric', [8, 3]);   // look-critic stills 3: the wall at ~10 % value swallowed her
   const spots = React.useMemo(() => [0, 1, 2].map(() => { const l = new THREE.SpotLight('#ffe2b0', 0, 9, 0.38, 0.6, 1.3); l.castShadow = true; l.shadow.mapSize.set(1024, 1024); return l; }), []);
   const spotPos: [number, number, number][] = [[0, 4.4, 0.8], [-3.2, 4.4, -2.6], [3.2, 4.4, -2.6]];
   const spotAim: [number, number, number][] = [[0, 1.2, 0], [-3.2, 1.9, -4.3], [3.2, 1.9, -4.3]];
@@ -52,7 +52,7 @@ export const Exhibit: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const frames = [[-3.2, -4.32, 0, 1.4, 1.8], [3.2, -4.32, 0, 1.4, 1.8], [0, -4.32, 0, 1.0, 1.3], [-5.3, -1.5, Math.PI / 2, 1.2, 1.5], [5.3, -1.5, -Math.PI / 2, 1.2, 1.5], [-5.3, 1.6, Math.PI / 2, 0.9, 1.2], [5.3, 1.6, -Math.PI / 2, 0.9, 1.2]];
   return (
     <group>
-      <SetLight sky="#4a2a2a" ground="#1a0e10" fill={0.65 * dim} key="#ffe6c0" keyI={0.7 * dim} keyPos={[2, 7, 4]} target={[0, 0, 0]}
+      <SetLight sky="#5a3448" ground="#241420" fill={0.9 * dim} key="#ffe6c0" keyI={0.85 * dim} keyPos={[2, 7, 4]} target={[0, 0, 0]}
         shadowSize={7} fog={dimC('#120609')} fogNear={9} fogFar={28} bg={dimC('#120609')} depth={num(opts.depth, 0.8)} />
       {spots.map((l, i) => <React.Fragment key={i}><primitive object={l} /><primitive object={l.target} /></React.Fragment>)}
       {/* marble floor (checker of two marbles), walls, ceiling */}

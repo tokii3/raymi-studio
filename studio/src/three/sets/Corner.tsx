@@ -59,7 +59,7 @@ export const Corner: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const road = toonSurface('#20222f', 'rubber', [10, 8]);
   return (
     <group>
-      <SetLight sky="#25336e" ground="#140f22" fill={0.75 * dim} key="#8fa8ff" keyI={0.9 * dim} keyPos={[-6, 9, 6]} target={[0, 0, 0]}
+      <SetLight sky="#2c3c80" ground="#1c1630" fill={0.95 * dim} key="#8fa8ff" keyI={0.9 * dim} keyPos={[-6, 9, 6]} target={[0, 0, 0]}
         shadowSize={7} fog={dimC(night)} fogNear={9} fogFar={34} bg={dimC(night)} depth={num(opts.depth, 0.8)} />
       <primitive object={spot} />
       <primitive object={spot.target} />

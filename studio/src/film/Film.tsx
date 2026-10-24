@@ -103,8 +103,8 @@ export const Film: React.FC<FilmProps> = (props) => {
     const a = p.clone().project(prev), b = p.clone().project(cam);
     const dx = Math.abs(b.x - a.x) * W / 2, dy = Math.abs(b.y - a.y) * H / 2;
     if (!(dx < W / 3 && dy < H / 3)) return null;                     // a lens JUMP inside a shot (a hold key) is a cut, not a move
-    const k = Number(shot.opts.motion_blur ?? 0.45);                 // share of the travel smeared (a 180-degree shutter ~0.5)
-    const sx = Math.min(28, dx * k), sy = Math.min(28, dy * k);
+    const k = Number(shot.opts.motion_blur ?? 0.3);                  // share of the travel smeared (look-critic stills 3: 0.45 / 28 px smeared her face and the lyric)
+    const sx = Math.min(16, dx * k), sy = Math.min(16, dy * k);
     return sx < 1.2 && sy < 1.2 ? null : {sx: sx / 2, sy: sy / 2};
   })();
   // her place on screen (chest height of the current key): the centre of a colour spread

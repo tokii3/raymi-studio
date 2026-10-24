@@ -251,7 +251,12 @@ function styleMaterials(rig: Rig, style: string) {
         m.shadeColorFactor?.copy(m.color).multiply(new THREE.Color('#6c6a92'));     // white tulle in shade: violet grey, never white (nor black)
         mt.shadingToonyFactor = 0.82; mt.shadingShiftFactor = -0.12; mt.giEqualizationFactor = 0.95;
       }
-      else if (name.includes('HAIR')) m.color.multiply(new THREE.Color('#c4c8e6'));
+      else if (name.includes('HAIR')) {
+        m.color.multiply(new THREE.Color('#c4c8e6'));
+        // look-critic stills 3: black + peak blue, no mid tone - a violet rim from the lens side gives the strands a middle
+        const mr = m as typeof m & {parametricRimColorFactor?: THREE.Color; rimLightingMixFactor?: number; parametricRimFresnelPowerFactor?: number; parametricRimLiftFactor?: number};
+        mr.parametricRimColorFactor?.set('#5a4a9a'); mr.rimLightingMixFactor = 0.6; mr.parametricRimFresnelPowerFactor = 2.5; mr.parametricRimLiftFactor = 0.05;
+      }
       continue;
     }
     if (style !== 'firestarter') continue;
@@ -290,7 +295,7 @@ function lockColours(rig: Rig, lock: number) {
 
 /** How much of the colour lock a material takes (VRoid names: ..._SKIN, Face..., Eye..., ..._HAIR, ..._CLOTH). */
 export function lockShare(name: string): number {
-  if (/SKIN|Face|FACE|Eye|EYE|Mouth/.test(name)) return 0.8;
+  if (/SKIN|Face|FACE|Eye|EYE|Mouth/.test(name)) return 0.6;   // look-critic stills 3: 0.8 + the key clipped her skin white
   if (/HAIR/.test(name)) return 0.1;                     // toki 2026-10-25: the hair glowed ("total am leuchten")
   if (/Bottoms|Onepiece_00_CLOTH_02/.test(name)) return 0.14;   // the white tulle: not black in a dark shot either
   return 0;
@@ -751,12 +756,12 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
         const fwd = new THREE.Vector3(camPos[0] - p.x, 0, camPos[2] - p.z).normalize();
         const side = new THREE.Vector3(fwd.z, 0, -fwd.x).multiplyScalar(0.55);
         return <pointLight position={[chest.x + fwd.x * 1.1 + side.x, chest.y + 0.55, chest.z + fwd.z * 1.1 + side.z]} color="#f3f0ff"
-          intensity={3.2 * keyLight} distance={3.2} decay={1.7} />;
+          intensity={2.3 * keyLight} distance={3.2} decay={1.7} />;   // look-critic stills 3: her own light drowned the set's - she looked pasted on
       })() : null}
       {/* a cool rim light behind her, toward the lens: her silhouette separates from any background (look-critic) */}
       {chest ? (() => {
         const back = new THREE.Vector3(p.x - camPos[0], 0, p.z - camPos[2]).normalize().multiplyScalar(0.9);
-        return <pointLight position={[chest.x + back.x, chest.y + 0.45, chest.z + back.z]} color="#b9c8ff" intensity={2.2} distance={2.2} decay={1.6} />;
+        return <pointLight position={[chest.x + back.x, chest.y + 0.45, chest.z + back.z]} color="#b9c8ff" intensity={1.5} distance={2.2} decay={1.6} />;
       })() : null}
       {glow && chest && glowGain > 0.01 ? (    // 灯闇: she is the lamp in the dark (like Puppet3D)
         <pointLight position={[chest.x, chest.y, chest.z + 0.25]} color={glow} intensity={7 * pulse} distance={5} decay={1.4} />
