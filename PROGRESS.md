@@ -1,5 +1,16 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-24 (evening) - Watch Me started, QC v2, two structural bugs (knowledge/HANDOFF_2026-10-24_watchme_qc2.md)
+- toki: K/DA Watch Me as a one-place 3D "TikTok" of self-staging; stills must be checked on more frames and levels;
+  one QC run, then she fixes herself. Beach parked as a lesson (toki.md of both jobs).
+- QC v2 (qc.yml, 20 workers): probe v2 (surface, self / lyric / lens / motion classes, every 2nd frame), mask pass
+  (pierced, lyric on face / hidden, face cut, pop), eye crops + dense sheets. Calibrated on Beach run 58: finds the
+  clipping, the falls and the hitches toki saw.
+- Bugs fixed as classes: three's mixer skipped unchanged clip values (no Mixamo pose / held frame ever showed, a pop on
+  shot starts); guard under_skirt (close worm's eye; Beach had 4).
+- Watch Me: dossier, ideas A / B / C (recommend B The Corner), boards round 5 after a look-critic FAIL; staging parts,
+  3 sets, 42 clips. NEXT: toki picks the idea.
+
 ## 2026-10-24 - CURRENT STATE (read this first; details in the two newest knowledge/HANDOFF_*.md)
 - Why this block: entries had been appended at the bottom and the POV week had none, so new sessions read an old
   NEXT and started from zero (toki 2026-10-24). A SessionStart hook (.claude/hooks/briefing.py) now prints: lag
@@ -11,6 +22,7 @@
   (face more centred / higher, Sashimi overexposed, hair flings, mouth open when silent -> fixed in the studio).
   pretty / purple finals released 10-24; sand parked (toki: ignore it). knowledge/HANDOFF_2026-10-24_studio_learnings.md.
 - In flight 10-24: branch claude/kds-britney-gaga-mashup-* (job 2026-10-24_watch-me-mashup) - check its state first.
+- Watch Me (original, jobs/2026-10-24_watch-me): ideas waiting for toki's pick; QC v2 is the screening (qc.yml).
 
 
 ## 2026-10-22 - stage A of the 3D switch: Raymi as VRM (raymi5) sings, the camera travels, the 2D layer
