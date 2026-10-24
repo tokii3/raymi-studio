@@ -1,20 +1,22 @@
 {
  "file": "final.mp4",
- "width": 1920,
- "height": 1080,
- "duration": 167.2,
+ "width": 1080,
+ "height": 1920,
+ "duration": 16.0,
  "fps": "30/1",
  "checks": {
-  "landscape_16x9": true,
+  "portrait_9x16": true,
   "has_audio": true,
   "loudness_-14": true,
   "true_peak_<=-1": true,
   "duration_matches_plan": true,
-  "no_frozen_picture_>1.2s": true
+  "no_frozen_picture_>1.2s": true,
+  "no_black_picture_>0.25s": true
  },
  "full_res": true,
- "lufs": -14.11,
- "true_peak": -1.89,
+ "lufs": -14.1,
+ "true_peak": -3.0,
  "frozen_spans": [],
+ "black_spans": [],
  "pass": true
 }
