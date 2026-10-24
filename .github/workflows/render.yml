@@ -29,7 +29,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: render-${{ github.ref }}
+  group: render-${{ github.run_id }}   # one group per run: a pending run is never dropped by a newer push (2026-10-24: two POV finals lost)
   cancel-in-progress: false
 
 jobs:
@@ -278,4 +278,4 @@ jobs:
           cd /tmp/rb
           for J in ${{ needs.prepare.outputs.jobs }}; do rm -rf "reports/$J/kit"; done
           mkdir -p reports && cp -r /tmp/reports/* reports/
-          git add reports && git commit -qm "reports run ${{ github.run_number }}" && git push -q origin renders
+          git add reports && git commit -qm "reports run ${{ github.run_number }}" && { for t in 1 2 3 4 5; do git push -q origin renders && break; git pull --rebase -q origin renders; sleep 8; done; }
