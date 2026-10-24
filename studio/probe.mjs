@@ -25,8 +25,8 @@ const composition = await selectComposition({serveUrl, id, inputProps, browserEx
 const rows = [];
 const t0 = Date.now();
 await renderFrames({serveUrl, composition, inputProps, imageFormat: 'none', everyNthFrame: every, ...(frameRange ? {frameRange} : {}), browserExecutable,
-  outputDir: fs.mkdtempSync(path.join(os.tmpdir(), 'probe-')), concurrency: Math.max(2, os.cpus().length), chromiumOptions: {gl: 'swangle'},
-  timeoutInMilliseconds: 120000, onStart: () => {}, onFrameUpdate: () => {},
+  outputDir: fs.mkdtempSync(path.join(os.tmpdir(), 'probe-')), concurrency: 2,   // 4 tabs on a 4-core runner starved one past the timeout (qc run 1) chromiumOptions: {gl: 'swangle'},
+  timeoutInMilliseconds: 240000, onStart: () => {}, onFrameUpdate: () => {},
   onBrowserLog: (l) => { const m = /^PROBE (.*)$/.exec(l.text ?? ''); if (m) rows.push(JSON.parse(m[1])); }});
 rows.sort((a, b) => a.f - b.f);
 const out = path.resolve(arg('--out') || path.join(jobDir, 'out', `probe_${props.width > props.height ? 'mv' : 'short'}.json`));

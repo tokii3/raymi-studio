@@ -29,8 +29,8 @@ for (const mode of ['all', 'her', 'text']) {
   const dir = path.join(out, mode);
   fs.mkdirSync(dir, {recursive: true});
   await renderFrames({serveUrl, composition, inputProps, imageFormat: 'png', everyNthFrame: every, ...(frameRange ? {frameRange} : {}), scale, browserExecutable,
-    outputDir: dir, concurrency: Math.max(2, os.cpus().length), chromiumOptions: {gl: 'swangle'},
-    timeoutInMilliseconds: 120000, onStart: () => {}, onFrameUpdate: () => {}});
+    outputDir: dir, concurrency: 2,   // 4 tabs on a 4-core runner starved one past the timeout (qc run 1) chromiumOptions: {gl: 'swangle'},
+    timeoutInMilliseconds: 240000, onStart: () => {}, onFrameUpdate: () => {}});
   // name every file by its film frame (renderFrames' own numbering is not promised across ranges / steps)
   const start = frameRange ? frameRange[0] : 0;
   const files = fs.readdirSync(dir).filter((x) => /^element-\d+\.png$/.test(x)).sort((a, b) => Number(a.match(/\d+/)[0]) - Number(b.match(/\d+/)[0]));

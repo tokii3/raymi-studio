@@ -1,2 +1,10 @@
-{"format": "mv", "every": 2, "scale": 0.25, "dense": 1, "eye_scale": 0.5, "workers": 12, "_take": 1,
- "_why": "QC v2 calibration (toki 2026-10-24): must find what toki saw in run 58 - clips into things, falls from the sky, not fluid. One run only; toki fixes herself after it."}
+{
+ "format": "mv",
+ "every": 2,
+ "scale": 0.25,
+ "dense": 1,
+ "eye_scale": 0.5,
+ "workers": 20,
+ "_take": 2,
+ "_why": "QC v2 calibration (toki 2026-10-24): must find what toki saw in run 58 - clips into things, falls from the sky, not fluid. Take 2: take 1 died on the workflow (4 tabs -> timeout, config not readable), not on a measurement."
+}

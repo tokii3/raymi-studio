@@ -6,7 +6,7 @@ name: qc
 #   picture   the mask pass (studio/qcmask.mjs): flat ID colours all / her / text -> pierced, lyric on face / hidden ...
 #   eye       full stills of every flagged frame + one a second -> boards/qc_<fmt>_eye/ (crops onto each fault, dense sheets)
 # Start: push jobs/<job>/qc.json  {"format": "mv" | "short", "every": 2, "scale": 0.25, "dense": 1, "eye_scale": 0.5,
-#                                  "workers": 12, "_take": 1}   (change _take to run again)
+#                                  "workers": 20, "_take": 1}   (change _take to run again)
 # Result on main: jobs/<job>/boards/probe_<fmt>.txt, qc_<fmt>.txt (the classes), *_flags.json, qc_<fmt>_eye/*.jpg
 
 on:
@@ -33,6 +33,7 @@ jobs:
     outputs:
       job: ${{ steps.which.outputs.job }}
       matrix: ${{ steps.split.outputs.matrix }}
+      cfg: ${{ steps.split.outputs.cfg }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -90,8 +91,10 @@ jobs:
           p=json.load(open(sys.argv[1])); n=p['durationInFrames']; e=int(sys.argv[2]); w=max(1,int(sys.argv[3]))
           size=-(-n//w); size+=(-size)%e    # every range starts on the probe step
           print(json.dumps([{'part':k,'range':f'{a}-{min(n,a+size)-1}'} for k,a in enumerate(range(0,n,size))]))" \
-            "jobs/$J/out/props.json" "$(get every 2)" "$(get workers 12)")
+            "jobs/$J/out/props.json" "$(get every 2)" "$(get workers 20)")
           echo "matrix=$M" >> "$GITHUB_OUTPUT"
+          # the settings travel as outputs (qc run 1: the workers could not read jobs/<job>/qc.json)
+          echo "cfg=$(python -c "import json,sys;c=json.load(open(sys.argv[1]));print(' '.join(str(c.get(k,d)) for k,d in [('format','mv'),('every',2),('scale',0.25),('dense',1),('eye_scale',0.5)]))" "jobs/$J/qc.json")" >> "$GITHUB_OUTPUT"
           mkdir -p prep/_font prep/$J/out && cp assets/fonts/Raymi-*.ttf prep/_font/ && cp jobs/$J/out/props.json prep/$J/out/
           A=$(python -c "import json,sys;a=json.load(open(sys.argv[1])).get('audio');print(a['src']+' '+a['file'] if a else '')" "jobs/$J/out/props.json")
           [ -n "$A" ] && cp $(echo $A | cut -d' ' -f1) "prep/$J/$(echo $A | cut -d' ' -f2)" || true
@@ -151,11 +154,11 @@ jobs:
         run: |
           set -e
           J="${{ needs.prepare.outputs.job }}"
-          get() { python -c "import json,sys;print(json.load(open(sys.argv[1])).get(sys.argv[2],sys.argv[3]))" "jobs/$J/qc.json" "$1" "$2"; }
+          read FMT EVERY SCALE DENSE EYES <<< "${{ needs.prepare.outputs.cfg }}"
           START=$(date +%s)
           mkdir -p piece/probe piece/mask
-          (cd studio && node probe.mjs "$J" --every "$(get every 2)" --range "${{ matrix.range }}" --out "../piece/probe/probe_part${{ matrix.part }}.json")
-          (cd studio && node qcmask.mjs "$J" --every "$(get every 2)" --scale "$(get scale 0.25)" --range "${{ matrix.range }}" --out ../piece/mask)
+          (cd studio && node probe.mjs "$J" --every "$EVERY" --range "${{ matrix.range }}" --out "../piece/probe/probe_part${{ matrix.part }}.json")
+          (cd studio && node qcmask.mjs "$J" --every "$EVERY" --scale "$SCALE" --range "${{ matrix.range }}" --out ../piece/mask)
           echo "part ${{ matrix.part }} (${{ matrix.range }}): $(( $(date +%s) - START )) s" >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:
@@ -210,8 +213,7 @@ jobs:
         run: |
           set -e
           J="${{ needs.prepare.outputs.job }}"
-          get() { python -c "import json,sys;print(json.load(open(sys.argv[1])).get(sys.argv[2],sys.argv[3]))" "jobs/$J/qc.json" "$1" "$2"; }
-          FMT=$(get format mv)
+          read FMT EVERY SCALE DENSE EYES <<< "${{ needs.prepare.outputs.cfg }}"
           mkdir -p studio/.motions assets/vrm "jobs/$J/out" "jobs/$J/boards"
           cp .private-assets/motions/*.fbx studio/.motions/ && cp .private-assets/vrm/*.vrm assets/vrm/
           cp prep/_font/Raymi-*.ttf assets/fonts/ && cp "prep/$J/out/props.json" "jobs/$J/out/"
@@ -220,10 +222,10 @@ jobs:
           python -m raymi probe "$J" "$FMT" | tee "jobs/$J/boards/probe_$FMT.txt"
           python -m raymi qc2 "$J" "$FMT" | tee "jobs/$J/boards/qc_$FMT.txt"
           { echo '```'; cat "jobs/$J/boards/probe_$FMT.txt" "jobs/$J/boards/qc_$FMT.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
-          EYE=$(python -m raymi qc2-frames "$J" "$FMT" "$(get dense 1)")
+          EYE=$(python -m raymi qc2-frames "$J" "$FMT" "$DENSE")
           mkdir -p /tmp/eye
-          [ -n "$EYE" ] && (cd studio && node stills.mjs "$J" "$EYE" --scale "$(get eye_scale 0.5)" --out /tmp/eye)
-          python -m raymi qc2-crops "$J" /tmp/eye "$FMT" "$(get dense 1)" | tee -a "$GITHUB_STEP_SUMMARY"
+          [ -n "$EYE" ] && (cd studio && node stills.mjs "$J" "$EYE" --scale "$EYES" --out /tmp/eye)
+          python -m raymi qc2-crops "$J" /tmp/eye "$FMT" "$DENSE" | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Publish
         if: always()
         run: |
