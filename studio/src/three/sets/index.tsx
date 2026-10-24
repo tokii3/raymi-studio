@@ -5,11 +5,14 @@ import {Aquarium} from './Aquarium';
 import {Beach} from './Beach';
 import {Bedroom} from './Bedroom';
 import {CardTable} from './CardTable';
+import {Corner} from './Corner';
 import {Deep} from './Deep';
 import {Dream} from './Dream';
+import {Exhibit} from './Exhibit';
 import {Globe} from './Globe';
 import {NightSea} from './NightSea';
 import {Office} from './Office';
+import {Shoot} from './Shoot';
 import {Train} from './Train';
 import {Weather} from './Weather';
 
@@ -21,11 +24,14 @@ export const SETS: Record<string, React.FC<SetProps>> = {
   beach: Beach,
   bedroom: Bedroom,
   cardtable: CardTable,
+  corner: Corner,
   deep: Deep,
   dream: Dream,
+  exhibit: Exhibit,
   globe: Globe,
   nightsea: NightSea,
   office: Office,
+  shoot: Shoot,
   train: Train,
   weather: Weather,
 };

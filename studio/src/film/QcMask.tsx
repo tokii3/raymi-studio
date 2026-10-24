@@ -86,6 +86,8 @@ export const QcMask: React.FC<{her: THREE.Object3D | null; mode: QcMode}> = ({he
         mat = flat(nm.includes('face') ? 'face' : nm.includes('hair') ? 'hair' : 'body', side);
       } else if (qcTag(m) === 'text') {
         mat = textMat(((mats[0] as THREE.MeshBasicMaterial).map) ?? null, side);
+      } else if (flag(m, 'stage')) {
+        mat = flat('thing', side);                             // a staging piece (three/staging.tsx): a prop to the eye
       } else if (flag(m, 'noSupport') || flag(m, 'float') && !thing(m)) {
         mat = null;                                            // light rays, lens passes, glows: not a surface
       } else if (mats.every((x) => x.transparent && (x.opacity ?? 1) < 0.35)) {

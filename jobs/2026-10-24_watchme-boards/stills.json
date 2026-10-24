@@ -1,0 +1,35 @@
+{
+ "format": "mv",
+ "frames": [
+  22,
+  80,
+  125,
+  170,
+  214,
+  260,
+  304,
+  350,
+  394,
+  440,
+  484,
+  530
+ ],
+ "names": [
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "B1",
+  "B2",
+  "B3",
+  "B4",
+  "C1",
+  "C2",
+  "C3",
+  "C4"
+ ],
+ "scale": 1,
+ "to": "boards",
+ "dest": "jobs/2026-10-24_watch-me/boards",
+ "_why": "Watch Me idea boards A1-4 / B1-4 / C1-4 (2_IDEAS.md), full resolution"
+}

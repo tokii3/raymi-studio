@@ -1,0 +1,524 @@
+{
+ "_why": "Watch Me idea boards (2_IDEAS.md): 3 one-place worlds x 4 key frames in the REAL film path (sets shoot / corner / exhibit, stagings, held animation frames as poses - toki 2026-10-24). Cloud stills only. No lyrics on the boards: they judge the place, the staging and her - the lyric layout comes with the script.",
+ "audio": {
+  "file": "../2026-10-24_watch-me/song.webm",
+  "from": 0.0,
+  "to": 18.0
+ },
+ "song_map": "../2026-10-24_watch-me/song_map.json",
+ "vrm": "vrm/raymi5.vrm",
+ "grain": 0.04,
+ "observer": 1,
+ "aware": 0.35,
+ "depth": 0.8,
+ "shots": [
+  {
+   "id": "A1",
+   "at": 0.0,
+   "set": "shoot",
+   "why": "camera on: the first flash, she is already posed",
+   "opts": {
+    "grade": "clean",
+    "gel": "#fff1e0",
+    "flash": [
+     0.55
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.35,
+      1.05,
+      3.0
+     ],
+     "look": [
+      0,
+      1.2,
+      0
+     ],
+     "fov": 36
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pos": "paper",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.65
+     },
+     "clip": "female-dance-pose",
+     "clip_from": 0.8,
+     "speed": 0,
+     "motionMix": 1
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "A2",
+   "at": 1.5,
+   "set": "shoot",
+   "why": "the magazine cover assembles around her",
+   "opts": {
+    "grade": "clean",
+    "gel": "#ffc2dc",
+    "stage": [
+     {
+      "kind": "cover",
+      "at": 1.55,
+      "pos": "paper",
+      "title": "WATCH ME",
+      "lines": [
+       "THE SLAY ISSUE",
+       "100% CHANCE",
+       "ON YOUR RADAR",
+       "DEEP SEA STAR"
+      ],
+      "color": "#ff3d7f"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "cover"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pos": "paper",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.65
+     },
+     "clip": "female-standing-pose-1",
+     "clip_from": 0.8,
+     "speed": 0,
+     "motionMix": 1
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "A3",
+   "at": 3.0,
+   "set": "shoot",
+   "why": "camera off: the studio blew a fuse, only her own light",
+   "opts": {
+    "grade": "clean",
+    "dark": 1,
+    "glow": "#8fe0ff",
+    "glow_pulse": "beats"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      1.35,
+      1.9
+     ],
+     "look": [
+      0,
+      1.3,
+      0
+     ],
+     "fov": 34
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pos": "paper",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.4
+     },
+     "clip": "female-dance-pose-3",
+     "clip_from": 0.8,
+     "speed": 0,
+     "motionMix": 1
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "A4",
+   "at": 4.5,
+   "set": "shoot",
+   "why": "worm's eye on the paper, the catwalk turn",
+   "opts": {
+    "grade": "clean",
+    "gel": "#bfe0ff"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "worms_eye"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pos": "paper",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.65
+     },
+     "clip": "catwalk-idle-twist-r",
+     "clip_from": 1.0,
+     "speed": 0,
+     "motionMix": 1
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "B1",
+   "at": 6.0,
+   "set": "corner",
+   "why": "she steps into the lamp's circle, worm's eye",
+   "opts": {
+    "grade": "night"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "worms_eye"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pos": "lamp_circle",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.65
+     },
+     "clip": "female-dance-pose-1",
+     "clip_from": 0.8,
+     "speed": 0,
+     "motionMix": 1
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "B2",
+   "at": 7.5,
+   "set": "corner",
+   "why": "the newsstand flips to her, the cover assembles in the lamp light",
+   "opts": {
+    "grade": "night",
+    "covers": true,
+    "billboard": "WATCH ME",
+    "stage": [
+     {
+      "kind": "cover",
+      "at": 7.55,
+      "pos": "lamp_circle",
+      "title": "WATCH ME",
+      "lines": [
+       "THE SLAY ISSUE",
+       "100% CHANCE",
+       "ON YOUR RADAR",
+       "DEEP SEA STAR"
+      ],
+      "color": "#ff3d7f",
+      "paper": "#f1e9df"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "cover"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pos": "lamp_circle",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.65
+     },
+     "clip": "female-standing-pose-2",
+     "clip_from": 0.8,
+     "speed": 0,
+     "motionMix": 1
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "B3",
+   "at": 9.0,
+   "set": "corner",
+   "why": "blackout: the city is off, she is the lamp",
+   "opts": {
+    "grade": "night",
+    "dark": 1,
+    "glow": "#8fe0ff",
+    "glow_pulse": "beats"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -0.9,
+      1.3,
+      2.0
+     ],
+     "look": [
+      0,
+      1.3,
+      0
+     ],
+     "fov": 34
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pos": "lamp_circle",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.45
+     },
+     "clip": "female-dance-pose-2",
+     "clip_from": 0.8,
+     "speed": 0,
+     "motionMix": 1
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "B4",
+   "at": 10.5,
+   "set": "corner",
+   "why": "top-down: the zebra crossing is her runway, the radar finds her",
+   "opts": {
+    "grade": "night",
+    "tv": "BREAKING NEWS",
+    "stage": [
+     {
+      "kind": "radar",
+      "at": 10.55,
+      "pos": "crossing"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      7.0,
+      6.6
+     ],
+     "look": [
+      0,
+      -0.12,
+      4.4
+     ],
+     "fov": 46
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pos": "crossing",
+     "rotY": 180,
+     "expr": {
+      "joy": 0.65
+     },
+     "clip": "catwalk-walk-forward",
+     "clip_from": 0.5,
+     "speed": 0,
+     "motionMix": 1
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "C1",
+   "at": 12.0,
+   "set": "exhibit",
+   "why": "frozen on the plinth like a statue, low angle, visitors at the rope (lens inside the rope: the guard saw the rope hide her face)",
+   "opts": {
+    "grade": "warm",
+    "visitors": 3
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      0.5,
+      0.95
+     ],
+     "look": [
+      0,
+      1.7,
+      0
+     ],
+     "fov": 46
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pos": "plinth",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.2
+     },
+     "clip": "female-standing-pose-2",
+     "clip_from": 0.8,
+     "speed": 0,
+     "motionMix": 1
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "C2",
+   "at": 13.5,
+   "set": "exhibit",
+   "why": "the gold frame closes around her: the Louvre gon' hang it",
+   "opts": {
+    "grade": "warm",
+    "stage": [
+     {
+      "kind": "frame",
+      "at": 13.55,
+      "pos": "plinth",
+      "h": 2.0,
+      "text": "RAYMI, 2026 - deep sea"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "cover"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pos": "plinth",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.65
+     },
+     "clip": "female-dance-pose",
+     "clip_from": 0.8,
+     "speed": 0,
+     "motionMix": 1
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "C3",
+   "at": 15.0,
+   "set": "exhibit",
+   "why": "lights out in the museum, the exhibit glows",
+   "opts": {
+    "grade": "warm",
+    "dark": 1,
+    "glow": "#8fe0ff",
+    "glow_pulse": "beats"
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      1.75,
+      1.9
+     ],
+     "look": [
+      0,
+      1.75,
+      0
+     ],
+     "fov": 34
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pos": "plinth",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.4
+     },
+     "clip": "female-dance-pose-3",
+     "clip_from": 0.8,
+     "speed": 0,
+     "motionMix": 1
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "C4",
+   "at": 16.5,
+   "set": "exhibit",
+   "why": "every painting in the hall is her now, wide",
+   "opts": {
+    "grade": "warm",
+    "hers": true,
+    "visitors": 4,
+    "stage": [
+     {
+      "kind": "forecast",
+      "at": 16.55,
+      "pos": "plinth",
+      "text": "CHANCE OF SLAY"
+     }
+    ]
+   },
+   "camera": [
+    {
+     "at": 0,
+     "cam": "wide"
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "pos": "plinth",
+     "rotY": "lens",
+     "expr": {
+      "joy": 0.65
+     },
+     "clip": "female-dance-pose-1",
+     "clip_from": 0.8,
+     "speed": 0,
+     "motionMix": 1
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  }
+ ]
+}

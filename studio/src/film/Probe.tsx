@@ -47,6 +47,11 @@ function under(o: THREE.Object3D, root: THREE.Object3D | null): boolean {
   return false;
 }
 
+function staged(o: THREE.Object3D): boolean {
+  for (let p: THREE.Object3D | null = o; p; p = p.parent) if (p.userData?.stage) return true;
+  return false;
+}
+
 function tagged(o: THREE.Object3D, key: string): string | null {
   for (let p: THREE.Object3D | null = o; p; p = p.parent) if (p.userData?.qc) return p.userData.qc === key ? key : null;
   return null;
@@ -134,6 +139,8 @@ export const Probe: React.FC<{f: number; F?: number; vrm: string | null; shot: s
     scene.traverse((o) => {
       const m = o as THREE.Mesh;
       if (m.isMesh && m.visible && tagged(m, 'text')) { texts.push(m); return; }
+      // a staging piece (three/staging.tsx) carries nobody, but her body must never pass through it either
+      if (m.isMesh && m.visible && staged(m) && !under(m, herRoot)) { const st = makeSolid(m); if (st) solids.push(st); return; }
       // the same idea of 'solid' as the fix (support.ts): no glows, lyrics, rays, held or hanging things
       if (!solid(m) || under(m, herRoot)) return;
       const box = new THREE.Box3().setFromObject(m);
