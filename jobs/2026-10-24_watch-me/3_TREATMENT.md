@@ -1,4 +1,4 @@
-# TREATMENT v2 - Watch Me (K/DA) (ideas A + B + C, approved 2026-10-24)
+# TREATMENT v2.1 - Watch Me (K/DA) (ideas A + B + C, approved 2026-10-24)
 
 Knowledge opened: `knowledge/exemplars/lets-get-weird_TREATMENT.md`, `knowledge/exemplars/pop-in-2_STORY_and_AUDIT.md`,
 `knowledge/PRINCIPLES.md`, `knowledge/CASEBOOK.md`, `canon/01_character.md`, `1_DOSSIER.md`, `2_IDEAS.md`.
@@ -8,6 +8,9 @@ and behind it the scene has changed.
 v2 answers script-critic BLOCK 1 (reviews/treatment_script-critic_1.md): lyric medium per act, a camera for every row,
 one shared look anchor, the spot rule made exact (treadmill), the 126-129 s gap, a readable cold open, stagings only
 where a line asks for them in THAT world, the Salmon gag escalates, her personality beyond "confident".
+v2.1 takes in the FIXes of script-critic PASS (reviews/treatment_script-critic_2.md): THE LAMP planted in all three
+worlds, new museum gags in 143-160 s, a cover-cut per beat in the finale, the Salmon freeze moved earlier with a
+cause, act 3 words on surfaces, her forecasts wrong (canon), a must / nice / cut-first list.
 
 ## The one idea
 **"Every camera in the world is pointed at one stingray - and she rebuilds the world around her until it is a
@@ -37,6 +40,10 @@ What stays IDENTICAL in all three worlds:
 - **The accent pair:** pink #ff3d7f and cyan #7fe0ff in every world (gel, neon, plates); gold #d9a441 joins only in
   act 3 and the end.
 - **Value plan:** background 15-35 %, her face 70-85 %, nothing clipped (look-critic boards 1).
+- **THE LAMP (灯闇 planted and paid off):** one warm practical lamp is in every world and reads as the same lamp: the
+  bare work bulb hanging above the studio backdrop (act 1), the streetlamp (act 2), the spot above the plinth (act 3).
+  At 117.6 s it goes OUT; at 127.7 s her finger snap lights it again (the museum spot); at 182.5 s her hand clicks it
+  off - the last thing in the film.
 - **Grain + one grade family:** a new grade `watchme` (same contrast / saturation for all acts) with three background
   tints only: studio warm grey, street night blue, museum deep red. The finale alternates ONLY the background tint and
   accent gel per beat - never the whole grade.
@@ -50,7 +57,7 @@ What stays IDENTICAL in all three worlds:
 ## Raymi's part (her whole character, canon/01)
 - **Show-off with a light tsundere streak:** after the blown kiss (8.0 s) she rolls her eyes and flicks her hair -
   "that wasn't for you" - then peeks back at the lens.
-- **Sleepy baseline:** in the black (118-126 s) she does one slow, heavy-lidded blink at us - calm, almost bored,
+- **Sleepy baseline:** in the black (118.79-126.4 s; the measured line start - the dossier's 118.5 was analysis run 1) she does one slow, heavy-lidded blink at us - calm, almost bored,
   totally unafraid of the dark. The stillness IS her.
 - **Competitive about nothing:** in the street the paparazzo Salmon flashes her - she grabs his camera and out-shoots
   him (she flashes HIM, 80.1 s).
@@ -83,7 +90,10 @@ the Salmon who held the camera in act 1 is the frozen exhibit in act 3.
 - **Turn:** no world - the words are drawn by her own light: her dots trace "WATCH ME" in the black (light-painting
   strokes, like a long exposure) - the only lyric that is her light.
 - **Act 3 The Exhibit - museum lettering:** gold vinyl wall text, brass plaques under frames, the banner above the hall
-  entrance, the "do not touch" sign (which she crosses out with her tail).
+  entrance, the "do not touch" sign (which she crosses out with her tail). Per line: RADAR stencilled on the wall by the
+  guard's beam (129.3), LIKE THAT on her plaque (133.4), the EXIT sign reads ONE WAY (137.2), MOVE on the banner (143.3),
+  NEWS on the swapped plaque (148.5), HURRICANE in gold wall letters that blow off (152.3), RADAR as the beam again
+  (155.9), POSE on the stacked cover's masthead (160.3), SLAY in gold vinyl behind the frozen guard (171.9).
 - **The biggest words (>= 12 % of the frame height, her heavy weight):** CAMERA (8.3), LOUVRE (14.7), PINS (20.6),
   WATCH ME (32.2 / 83.4 / 143.3), HURRICANE (41.4), RADAR (45.1), SLAY (62.0 / 113.3 / 171.9), CRASH (67.2).
   Fillers small (5-6 %); the ad-libs "(watch me)" as small pink neon echoes in a corner of the world; nothing parked
@@ -107,12 +117,12 @@ the Salmon who held the camera in act 1 is the frozen exhibit in act 3.
 | 31.12-32.15 | "(Watch me)" + stop 32.3 | her hand covers the lens -> black for 4 frames -> COVER-CUT | her palm fills the frame |
 | 32.15-37.46 | chorus 1 "Watch me move, runnin' circles" | studio full on: dance accent (hip-hop clip); softboxes and C-stands roll in circles the other way | full orbit 360 deg at chest height |
 | 37.46-41.39 | "In my Loubs, breakin' hearts and breakin' news" | her tail barb flicks at the lens (no brand shoe); a paper heart tears in front of the lens; the camera spits a Polaroid headline BREAKING | ECU tail barb -> whip to MCU |
-| 41.39-45.08 | "Hurricane when the forecast K/DA" | the studio WIND MACHINE blasts: her hair and skirt fly, paper and gels whirl, the Salmon tumbles out of frame | low wide, handheld shake |
+| 41.39-45.08 | "Hurricane when the forecast K/DA" | her forecast is wrong (canon): she smugly holds up a card NO WIND - the studio WIND MACHINE blasts her; hair and skirt fly, paper and gels whirl, the Salmon tumbles out of frame | low wide, handheld shake |
 | 45.08-49.45 | "On your radar, you can't look away" | every softbox turns its head to follow her (the lights cannot look away); she looks up | top-down crane, she in the centre of the lights' circle |
 | 49.45-54.09 | "Watch me pose, always keep 'em on they toes" | **WOW 2 - THE COVER**: the magazine cover assembles around her on the beat, 3 poses on 3 hits | push in to the cover framing, straight on |
 | 54.09-57.79 | "Centerfolds turn the sidewalk to a show" | LORE GAG + TRANSITION 1: she flattens to paper, the cover folds open like a centerfold and unfolds DOWN into a sidewalk; the studio flies away in paper pieces | the camera tilts down with the unfolding page to street level |
-| 57.79-62.04 | "Hurricane when the forecast K/DA, ayy" | the corner assembles in a gust: lamp post swings in, newsstand slides, building front rises; she points at the sky - she called it | wide low, crane up with the rising building |
-| 62.04-65.84 | "There's a hundred percent chance of slay" | first raindrops; the shop's neon writes SLAY | MCU from under the lamp, rain in the light cone |
+| 57.79-62.04 | "Hurricane when the forecast K/DA, ayy" | the corner assembles in a gust: lamp post swings in, newsstand slides, building front rises; she points at the sky and calls the rain - nothing; the first drop falls late, on the Salmon | wide low, crane up with the rising building |
+| 62.04-65.84 | "There's a hundred percent chance of slay" | she checks her wrist like a forecast watch - one fat raindrop hits her nose; the shop's neon writes SLAY | fast crane down the lamp post onto her, MCU |
 | 65.84-67.8 | verse 2 "I post a pic and the app crash" | a giant phone frame behind her; on "crash" it bursts into glitch bars and the street lights stutter | MS through the phone's frame -> glitch whip |
 | 67.8-69.79 | "Rockin' Chanel with a snap-back" + STOP 69.5 | pose 1: cap-tip side profile; the newsstand covers flip to her face (fashion mags) | profile CU, then 1-frame snap to the stand |
 | 69.79-71.36 | "Water my money, it grow" | she flicks the puddle with her tail: the splash freezes in the air like a fountain of coins (her sea + the money line) | macro at puddle level, rising |
@@ -137,15 +147,16 @@ the Salmon who held the camera in act 1 is the frozen exhibit in act 3.
 | 133.4-137.24 | "I got it like that / if you wanna like that" | statue gag: each time he turns away she changes the pose (2 changes); the plaque reads RAYMI, 2026 - deep sea | low from beyond the rope (2.9 m), then a side profile |
 | 137.24-140.81 | "There's only one way to know" | she crosses out the "DO NOT TOUCH" sign with her tail | macro on the sign, rack focus to her |
 | 140.81-143.32 | "(Watch me)" | she steps OFF the plinth (real step 1), her TAIL sweeps across the lens -> COVER-CUT | her tail fills the frame |
-| 143.32-148.51 | final chorus "Watch me move" | the hall is full of frames - each painting shows one of the earlier worlds (studio, street) - dance accent | orbit at floor height, frames passing in the foreground |
-| 148.51-152.3 | "Loubs / breakin' hearts and breakin' news" | THROUGH-THE-FRAME: the camera flies into the studio painting (one beat in act 1's world) and back out | fly-through the frame, in and out |
-| 152.3-155.85 | "Hurricane..." | into the street painting: one beat of rain - and back; the storm wind follows into the hall, frames swing | fly-through, then whip |
+| 143.32-148.51 | final chorus "Watch me move" | the guard Salmon tries to stop her - each time his flashlight finds her she poses INTO the beam (it becomes her spotlight); the gallery banner reads MOVE | orbit at floor height, his beam crossing the lens |
+| 148.51-152.3 | "Loubs / breakin' hearts and breakin' news" | she swaps a painting's brass plaque for one of her Polaroids (act 1) - the plaque now reads NEWS; THROUGH-THE-FRAME (2 s): the camera flies into the studio painting and back out | macro on the plaque -> fly-through |
+| 152.3-155.85 | "Hurricane..." | into the street painting (2 s): one beat of rain - and back; the storm follows into the hall, the gold wall letters HURRICANE blow off one by one | fly-through, then whip |
 | 155.85-160.25 | "On your radar" | the guard's flashlight finds her - and she poses INTO it | his POV, the beam as a spotlight |
 | 160.25-165.19 | "Watch me pose" | **WOW 5 builds**: every frame of the hall flies to her and stacks into one giant cover - 3 poses | wide -> push to the stacked cover |
-| 165.19-171.94 | "Centerfolds... / Hurricane" | behind her the worlds alternate per beat (studio / street / museum background tint + gel; the floor and her key stay) | locked MS, background changes on beats |
-| 171.94-177.25 | "There's a hundred percent chance of slay" | the walls fall away, all three sets dissolve at once into paper and water - only her, the gold frame and the frozen guard | spiral pull-out |
-| 177.25-179.55 | "Let's go" | she sets the guard Salmon on the plinth (he freezes, flashlight up: the new exhibit) and steps into the gold frame (real step 2) | MS, the frame in the foreground |
-| 179.55-182.5 | "Watch me" | **WOW 5**: inside the frame = the final cover; wink; her hand comes to the lens and switches it off - black - her dots - end | push to ECU, her palm covers the lens |
+| 165.19-171.94 | "Centerfolds... / Hurricane" | the worlds alternate per beat behind her - every change is a COVER-CUT: hair, tail, palm, a gold frame bar fill the lens for 3-4 frames and the world behind has changed (background tint + gel; floor, lamp and her key stay) | a new angle per beat: low, dutch, top-down, crash zoom - the wildest camera of the film |
+| 171.94-175.0 | "There's a hundred percent chance..." | the guard Salmon reaches for her - she taps him with her tail barb (a ray's sting) and he freezes mid-grab; she sets him on the plinth, flashlight up: the new exhibit (gold vinyl SLAY on the wall behind) | spiral pull-out begins |
+| 175.0-177.25 | "...of slay" | the walls fall away, all three sets dissolve at once into paper and water - only her, the lamp, the gold frame and the frozen guard | spiral pull-out to wide |
+| 177.25-179.55 | "Let's go" | she steps into the gold frame (real step 2) - nothing else | MS, the frame in the foreground |
+| 179.55-182.5 | "Watch me" | **WOW 5**: inside the frame = the final cover; wink (1.2 s held); her hand reaches up and clicks the lamp off (the same lamp) - black - only her dots - end | push to ECU, the lamp's click on the last hit |
 
 ## Wow budget (5, strongest last)
 1. 0-8.3 s - the lit thumbnail portrait at frame 0, then four power poses on the chops and the kiss.
@@ -177,6 +188,12 @@ the Salmon who held the camera in act 1 is the frozen exhibit in act 3.
 | cover-cut | toki's "Kamera bedecken" | her palm / hair / tail fills the lens | >= 90 % covered for 3-6 frames | build: a QC guard on the mask pass |
 | her light writing | "watch me" (turn) | her dots draw the words | light-painting strokes | build |
 | Salmon | her best friend | photographer / paparazzo / guard -> exhibit | escalating | creatures SalmonActor (exists; camera, cap, flashlight: build) |
+
+## Build priority (if time runs short, cut from the bottom)
+- **Must:** the lamp in three forms, the wet floor, the cover, the centerfold unfold, camera off + the melt, her light
+  writing, the plinth + statue gag, the gold frame, world out / in, the cover-cuts, the Salmon arc (camera, guard).
+- **Nice:** the wind machine, the rain, the flashlight beam, the softboxes that turn, the stacked-cover finale pieces.
+- **Cut first:** the coin fountain, the sonar ripples, the TVs copying her a beat late, the mosaic photo textures.
 
 ## Places make sense + love and detail
 - **The Shoot:** a working studio - paper roll on its bar, softboxes on stands with sandbags, a wind machine, cables
