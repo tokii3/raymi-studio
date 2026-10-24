@@ -117,7 +117,7 @@ TIME_OPTS = {"lights_off", "window_break", "unfold", "shake", "cracks", "burst",
 # three/creatures.tsx): "at" / "out" / "toss" / "*_at" = song seconds -> frames, "grow" / "fade" / "ember" = seconds ->
 # frame counts, "pos" / "from" / "to" = a mark or [x, y, z]
 NESTED_OPTS = {"fires", "sparks", "fish", "school", "sauna", "salmon", "props", "things", "strings", "boss", "crowd",
-               "stage"}   # stage: three/staging.tsx (Watch Me: covers, frames, forecast, radar assemble around her)
+               "stage", "world"}   # world: three/world.tsx (a set leaves / arrives piece by piece); stage: three/staging.tsx (Watch Me: covers, frames, forecast, radar assemble around her)
 NESTED_TIME = {"at", "out", "toss", "snap", "tug", "spit", "land", "blow_at", "press_at"}
 NESTED_FRAMES = {"grow", "fade", "ember"}
 NESTED_VEC = {"pos", "from", "to", "anchor"}

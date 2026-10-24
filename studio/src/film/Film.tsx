@@ -23,6 +23,7 @@ import {Strings} from '../three/routine';
 import {makeVrmMouthKeys} from '../three/vrmLipSync';
 import {Probe} from './Probe';
 import {QcMask} from './QcMask';
+import {WorldMotion, worldSpec} from '../three/world';
 import {vrmFilmKeys, vrmFilmWords} from '../three/vrmFilm';
 import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
@@ -225,7 +226,10 @@ export const Film: React.FC<FilmProps> = (props) => {
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>
             <CameraRig cam={cam} />
-            {Set ? <Set f={f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} /> : null}
+            {/* the world around her may leave / arrive piece by piece (three/world.tsx, Watch Me) */}
+            {Set ? <WorldMotion spec={worldSpec(shot.opts.world, fps)} f={f} centre={(actorKeys[0]?.pos as [number, number, number] | undefined) ?? [0, 0, 0]}>
+              <Set f={f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} />
+            </WorldMotion> : null}
             {props.vrm ? (
               <VrmPuppet url={staticFile(props.vrm)} keys={actorKeys} f={f} fps={fps} from={shot.from} camPos={camPos}
                 mouthKeys={shotMouth} lock={Number(shot.opts.lock ?? (shot.actor ? 0.1 : 0.38)) * (1 - darkNow) + 0.32 * darkNow} shadow={String(shot.opts.shadow ?? '#120b2b')}
