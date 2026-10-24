@@ -7142,12 +7142,12 @@
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
-     "motion": "sitting-talking",
-     "motionMix": 0.2,
+     "motion": "sitting-disapproval",
+     "motionMix": 0.3,
      "expr": {
       "fun": 0.4
      },
-     "aware": 0.35
+     "aware": 0.6
     }
    ],
    "mouth": {
@@ -18015,8 +18015,8 @@
      "aware": 0.35
     },
     {
-     "f": 4950,
-     "pose": "sing_soft",
+     "f": 4899,
+     "pose": "stand",
      "pos": [
       0,
       0.24,
@@ -18024,18 +18024,17 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 4,
+     "blend": 9,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
-     "motion": "happy",
-     "motionMix": 0.2,
+     "motion": "waving",
+     "motionMix": 1,
      "expr": {
-      "joy": 0.6,
-      "blink_l": 1
+      "joy": 0.7
      },
-     "aware": 0.35
+     "aware": 0.8
     }
    ],
    "mouth": {
@@ -18518,7 +18517,6 @@
   "motions/sitting-drinking.fbx",
   "motions/sitting-idle.fbx",
   "motions/sitting-laughing.fbx",
-  "motions/sitting-talking.fbx",
   "motions/spin-in-place.fbx",
   "motions/standing-cheering.fbx",
   "motions/standing-dodge-backward.fbx",
@@ -18528,6 +18526,7 @@
   "motions/twist-dance.fbx",
   "motions/typing.fbx",
   "motions/waking.fbx",
+  "motions/waving.fbx",
   "motions/zombie-idle.fbx",
   "motions/zombie-walk.fbx"
  ],

@@ -77,8 +77,8 @@
     0.8250047155633927
    ],
    "px": 80,
-   "sep": 0.008,
-   "detail": 0.459,
+   "sep": 0.009,
+   "detail": 0.458,
    "readable": true,
    "why": ""
   },
@@ -110,7 +110,7 @@
    ],
    "px": 27,
    "sep": 0.0,
-   "detail": 0.012,
+   "detail": 0.013,
    "readable": false,
    "why": "melts into what is behind it (low value contrast)"
   },
@@ -429,7 +429,7 @@
     0.41791425090857226
    ],
    "px": 17,
-   "sep": 0.042,
+   "sep": 0.041,
    "detail": 0.425,
    "readable": true,
    "why": ""
@@ -446,7 +446,7 @@
    ],
    "px": 77,
    "sep": 0.149,
-   "detail": 0.403,
+   "detail": 0.404,
    "readable": true,
    "why": ""
   },
@@ -526,7 +526,7 @@
    ],
    "px": 127,
    "sep": 0.42,
-   "detail": 0.625,
+   "detail": 0.624,
    "readable": true,
    "why": ""
   },
@@ -541,8 +541,8 @@
     0.777304034685033
    ],
    "px": 126,
-   "sep": 0.415,
-   "detail": 0.657,
+   "sep": 0.414,
+   "detail": 0.658,
    "readable": true,
    "why": ""
   },
@@ -717,8 +717,8 @@
     0.31644945980156447
    ],
    "px": 13,
-   "sep": 0.097,
-   "detail": 0.249,
+   "sep": 0.096,
+   "detail": 0.254,
    "readable": false,
    "why": "melts into what is behind it (low value contrast)"
   },
@@ -733,8 +733,8 @@
     0.5126103887531763
    ],
    "px": 7,
-   "sep": 0.089,
-   "detail": 0.354,
+   "sep": 0.079,
+   "detail": 0.373,
    "readable": false,
    "why": "too small at phone size"
   }

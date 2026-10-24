@@ -5,7 +5,7 @@
   1080
  ],
  "fps": 30.0,
- "duration_s": 167.13,
+ "duration_s": 167.2,
  "shot_starts_s": [
   0.0,
   1.0,
@@ -200,8 +200,8 @@
  },
  "picture_change_on_hits": {
   "hits": 88,
-  "changed": 73,
-  "share": 0.83,
+  "changed": 72,
+  "share": 0.82,
   "threshold": 6.7
  },
  "still_spans_s": [
@@ -211,8 +211,8 @@
   ]
  ],
  "audio": {
-  "input_i": "-14.04",
-  "input_tp": "-3.00"
+  "input_i": "-14.11",
+  "input_tp": "-1.89"
  },
  "hint": "Measured hints only. They never prove an effect - the critic describes what is REALLY there."
 }
