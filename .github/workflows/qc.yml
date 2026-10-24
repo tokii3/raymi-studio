@@ -1,0 +1,234 @@
+name: qc
+
+# Picture QC v2 over a whole film, in parallel (toki 2026-10-24: "die Stills müssen besser geprüft werden, mehr Frames,
+# auf mehreren Ebenen ... das Endergebnis zählt, egal wie der Code aussieht"). Three levels (raymi/qcv2.py):
+#   geometry  the scene probe v2 (studio/probe.mjs): her real surface, self / lyric / lens / motion classes
+#   picture   the mask pass (studio/qcmask.mjs): flat ID colours all / her / text -> pierced, lyric on face / hidden ...
+#   eye       full stills of every flagged frame + one a second -> boards/qc_<fmt>_eye/ (crops onto each fault, dense sheets)
+# Start: push jobs/<job>/qc.json  {"format": "mv" | "short", "every": 2, "scale": 0.25, "dense": 1, "eye_scale": 0.5,
+#                                  "workers": 12, "_take": 1}   (change _take to run again)
+# Result on main: jobs/<job>/boards/probe_<fmt>.txt, qc_<fmt>.txt (the classes), *_flags.json, qc_<fmt>_eye/*.jpg
+
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "job folder under jobs/"
+        required: true
+  push:
+    branches: [main]
+    paths: ["jobs/*/qc.json"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: qc-${{ github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      job: ${{ steps.which.outputs.job }}
+      matrix: ${{ steps.split.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Tools
+        run: |
+          bash .github/ffmpeg.sh
+          pip install -q -r requirements.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Node modules (cached)
+        id: nm
+        uses: actions/cache@v4
+        with:
+          path: studio/node_modules
+          key: nm-${{ runner.os }}-${{ hashFiles('studio/package-lock.json') }}-v1
+      - name: Install
+        if: steps.nm.outputs.cache-hit != 'true'
+        run: cd studio && npm ci --no-audit --no-fund
+      - name: Tests
+        run: timeout 600 python -m pytest -q tests < /dev/null
+      - name: Which job
+        id: which
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            J="${{ github.event.inputs.job }}"
+          else
+            BEFORE="${{ github.event.before }}"
+            [ -n "$BEFORE" ] && ! git cat-file -e "$BEFORE" 2>/dev/null && git fetch -q --depth=1 origin "$BEFORE" 2>/dev/null || true
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
+              BEFORE=$(git rev-parse -q --verify HEAD~1 || git hash-object -t tree /dev/null)
+            fi
+            J=$(git diff --name-only "$BEFORE" HEAD -- 'jobs/*/qc.json' | cut -d/ -f2 | sort -u | head -1)
+          fi
+          echo "job=$J" >> "$GITHUB_OUTPUT"
+          echo "QC v2: $J" >> "$GITHUB_STEP_SUMMARY"
+      - name: Font
+        if: steps.which.outputs.job != ''
+        run: bash .github/font_grow.sh ${{ steps.which.outputs.job }}
+      - name: Timeline + ranges
+        id: split
+        if: steps.which.outputs.job != ''
+        run: |
+          set -e
+          J="${{ steps.which.outputs.job }}"
+          get() { python -c "import json,sys;print(json.load(open(sys.argv[1])).get(sys.argv[2],sys.argv[3]))" "jobs/$J/qc.json" "$1" "$2"; }
+          python -m raymi timeline "$J" "$(get format mv)"
+          M=$(python -c "
+          import json,sys
+          p=json.load(open(sys.argv[1])); n=p['durationInFrames']; e=int(sys.argv[2]); w=max(1,int(sys.argv[3]))
+          size=-(-n//w); size+=(-size)%e    # every range starts on the probe step
+          print(json.dumps([{'part':k,'range':f'{a}-{min(n,a+size)-1}'} for k,a in enumerate(range(0,n,size))]))" \
+            "jobs/$J/out/props.json" "$(get every 2)" "$(get workers 12)")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+          mkdir -p prep/_font prep/$J/out && cp assets/fonts/Raymi-*.ttf prep/_font/ && cp jobs/$J/out/props.json prep/$J/out/
+          A=$(python -c "import json,sys;a=json.load(open(sys.argv[1])).get('audio');print(a['src']+' '+a['file'] if a else '')" "jobs/$J/out/props.json")
+          [ -n "$A" ] && cp $(echo $A | cut -d' ' -f1) "prep/$J/$(echo $A | cut -d' ' -f2)" || true
+      - uses: actions/upload-artifact@v4
+        if: steps.which.outputs.job != ''
+        with:
+          name: prep
+          path: prep/
+          retention-days: 3
+
+  measure:
+    needs: prepare
+    if: needs.prepare.outputs.job != ''
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        include: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Node modules (cached)
+        id: nm
+        uses: actions/cache@v4
+        with:
+          path: studio/node_modules
+          key: nm-${{ runner.os }}-${{ hashFiles('studio/package-lock.json') }}-v1
+      - name: Install
+        if: steps.nm.outputs.cache-hit != 'true'
+        run: cd studio && npm ci --no-audit --no-fund
+      - name: Browser
+        run: cd studio && npx remotion browser ensure
+      - uses: actions/download-artifact@v4
+        with:
+          name: prep
+          path: jobs
+      - name: Private assets (licensed motions + VRM models - never in this public repo)
+        uses: actions/checkout@v4
+        with:
+          repository: tokii3/raymi-private-assets
+          ssh-key: ${{ secrets.ASSETS_DEPLOY_KEY }}
+          path: .private-assets
+      - name: Stage private assets on the runner only
+        run: |
+          mkdir -p studio/.motions assets/vrm
+          cp .private-assets/motions/*.fbx studio/.motions/
+          cp .private-assets/vrm/*.vrm assets/vrm/
+          cp jobs/_font/Raymi-*.ttf assets/fonts/
+      - name: Probe + mask ${{ matrix.range }}
+        run: |
+          set -e
+          J="${{ needs.prepare.outputs.job }}"
+          get() { python -c "import json,sys;print(json.load(open(sys.argv[1])).get(sys.argv[2],sys.argv[3]))" "jobs/$J/qc.json" "$1" "$2"; }
+          START=$(date +%s)
+          mkdir -p piece/probe piece/mask
+          (cd studio && node probe.mjs "$J" --every "$(get every 2)" --range "${{ matrix.range }}" --out "../piece/probe/probe_part${{ matrix.part }}.json")
+          (cd studio && node qcmask.mjs "$J" --every "$(get every 2)" --scale "$(get scale 0.25)" --range "${{ matrix.range }}" --out ../piece/mask)
+          echo "part ${{ matrix.part }} (${{ matrix.range }}): $(( $(date +%s) - START )) s" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qc-${{ matrix.part }}
+          path: piece/
+          retention-days: 3
+
+  judge:
+    needs: [prepare, measure]
+    if: always() && needs.prepare.outputs.job != ''
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Tools
+        run: |
+          bash .github/ffmpeg.sh
+          pip install -q -r requirements.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Node modules (cached)
+        id: nm
+        uses: actions/cache@v4
+        with:
+          path: studio/node_modules
+          key: nm-${{ runner.os }}-${{ hashFiles('studio/package-lock.json') }}-v1
+      - name: Install
+        if: steps.nm.outputs.cache-hit != 'true'
+        run: cd studio && npm ci --no-audit --no-fund
+      - name: Browser
+        run: cd studio && npx remotion browser ensure
+      - uses: actions/download-artifact@v4
+        with:
+          name: prep
+          path: prep
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: qc-*
+          path: parts
+      - name: Private assets
+        uses: actions/checkout@v4
+        with:
+          repository: tokii3/raymi-private-assets
+          ssh-key: ${{ secrets.ASSETS_DEPLOY_KEY }}
+          path: .private-assets
+      - name: Join + geometry + picture + eye
+        run: |
+          set -e
+          J="${{ needs.prepare.outputs.job }}"
+          get() { python -c "import json,sys;print(json.load(open(sys.argv[1])).get(sys.argv[2],sys.argv[3]))" "jobs/$J/qc.json" "$1" "$2"; }
+          FMT=$(get format mv)
+          mkdir -p studio/.motions assets/vrm "jobs/$J/out" "jobs/$J/boards"
+          cp .private-assets/motions/*.fbx studio/.motions/ && cp .private-assets/vrm/*.vrm assets/vrm/
+          cp prep/_font/Raymi-*.ttf assets/fonts/ && cp "prep/$J/out/props.json" "jobs/$J/out/"
+          cp prep/$J/*.* "jobs/$J/" 2>/dev/null || true
+          python -m raymi qc2-join "$J" parts "$FMT"
+          python -m raymi probe "$J" "$FMT" | tee "jobs/$J/boards/probe_$FMT.txt"
+          python -m raymi qc2 "$J" "$FMT" | tee "jobs/$J/boards/qc_$FMT.txt"
+          { echo '```'; cat "jobs/$J/boards/probe_$FMT.txt" "jobs/$J/boards/qc_$FMT.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          EYE=$(python -m raymi qc2-frames "$J" "$FMT" "$(get dense 1)")
+          mkdir -p /tmp/eye
+          [ -n "$EYE" ] && (cd studio && node stills.mjs "$J" "$EYE" --scale "$(get eye_scale 0.5)" --out /tmp/eye)
+          python -m raymi qc2-crops "$J" /tmp/eye "$FMT" "$(get dense 1)" | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Publish
+        if: always()
+        run: |
+          J="${{ needs.prepare.outputs.job }}"
+          git config user.name "raymi-qc-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "jobs/$J/boards" 2>/dev/null || true
+          git diff --cached --quiet || { git commit -qm "qc v2 for $J [skip ci]"; for t in 1 2 3 4; do git pull --rebase -q && git push -q && break; sleep 10; done; }

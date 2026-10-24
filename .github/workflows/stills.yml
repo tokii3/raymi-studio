@@ -6,7 +6,8 @@ name: stills
 #    "passes": [{"format": "mv", "frames": [..], "names": [..]}, {"format": "short", ...}]  (instead of one format),
 #    "thumbs": true (thumbnail candidates: also boards/thumbs_168.jpg, every candidate at feed size - raymi/thumbs.py),
 #    "to": "renders" (default: reports/<job>/stills/ on branch renders) | "boards" (commit into jobs/<job>/boards/ on main)
-#          | "catalog" (commit into studio/catalog/ on main), "dest": "jobs/<song job>/boards" (with "to": "boards")}
+#          | "catalog" (commit into studio/catalog/ on main), "dest": "jobs/<song job>/boards" (with "to": "boards"),
+#    "probe": N (the scene probe on one runner - for a whole film use qc.yml: probe + mask pass + eye level in parallel)}
 # A job with shots.json is compiled first (python -m raymi timeline), so the stills show exactly the script.
 
 on:
@@ -114,7 +115,7 @@ jobs:
               START=$(date +%s)
               PROBE=$(get probe 0)
               if [ "$PROBE" != "0" ]; then   # the scene probe over the whole film (toki 2026-10-24: fault classes, not spots)
-                (cd studio && node probe.mjs "$J" --every "$PROBE" --out "../jobs/$J/boards/probe_$FMT.json") < /dev/null
+                (cd studio && node probe.mjs "$J" --every "$PROBE" --out "../jobs/$J/out/probe_$FMT.json") < /dev/null
                 { echo "#### probe $J $FMT"; echo '```'; python -m raymi probe "$J" "$FMT" < /dev/null || true; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
               fi
               [ -n "$FR" ] || continue

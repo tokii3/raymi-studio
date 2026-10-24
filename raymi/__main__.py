@@ -17,6 +17,10 @@
   sfx    build          synthesise the sound-effect library -> assets/sfx/<kind>.wav (raymi/sfx.py)
   timeline <job> [mv|short]  shots.json (shooting script data) -> out/props.json for the MV / MVShort film
   probe  <job> [mv|short]  the scene probe's fault classes (studio/probe.mjs, stills.json "probe": N)
+  qc2    <job> [mv|short]  picture QC v2: the mask pass measured (pierced, lyric on face / hidden, face cut, pop)
+  qc2-join <job> <parts dir> [mv|short]  join the parallel QC workers' probe rows + mask frames (qc.yml)
+  qc2-frames <job> [mv|short] [dense_s]  the stills the eye level needs (every flagged frame + one a second), comma list
+  qc2-crops <job> <stills dir> [mv|short] [dense_s]  zoomed crops of every flag + dense sheets -> boards/qc_<fmt>_eye/
   cuts   <job> [--apply]  every cut against hits / sung lines / sections (one frame early); --apply moves them
   font ensure <job>     build every on-screen glyph her font lacks, in her marker style (raymi/font.py)
   font add <chars>      the same for given characters
@@ -183,6 +187,29 @@ def main(argv: list[str]) -> int:
         from . import probe as PR
 
         return PR.main(d, argv[2] if len(argv) > 2 else "mv")
+    if cmd in ("qc2", "qc2-frames", "qc2-crops", "qc2-join"):   # picture QC v2 (raymi/qcv2.py, toki 2026-10-24)
+        from . import qcv2 as Q
+
+        if cmd == "qc2-join":     # qc2-join <job> <parts dir> [mv|short]: the parallel workers' pieces (qc.yml)
+            print(Q.join(Path(argv[2]), d, argv[3] if len(argv) > 3 else "mv"))
+            return 0
+
+        if cmd == "qc2":
+            return Q.main(d, argv[2] if len(argv) > 2 else "mv")
+        if cmd == "qc2-frames":
+            fmt = argv[2] if len(argv) > 2 else "mv"
+            props = json.loads((d / "out" / "props.json").read_text(encoding="utf-8")) if (d / "out" / "props.json").is_file() else {}
+            res = Q.frames(d, fmt, float(argv[3]) if len(argv) > 3 else 1.0, props.get("fps", 30), props.get("durationInFrames"))
+            print(",".join(str(f) for f in sorted(set(res["flagged"]) | set(res["dense"]))))
+            return 0
+        fmt = argv[3] if len(argv) > 3 else "mv"
+        props = json.loads((d / "out" / "props.json").read_text(encoding="utf-8")) if (d / "out" / "props.json").is_file() else {}
+        res = Q.frames(d, fmt, float(argv[4]) if len(argv) > 4 else 1.0, props.get("fps", 30), props.get("durationInFrames"))
+        eye = d / "boards" / f"qc_{fmt}_eye"
+        made = Q.crops(Path(argv[2]), res["flags"], eye)
+        sheets = Q.dense_sheets(Path(argv[2]), res["dense"], eye)
+        print(f"qc2 eye: {len(made)} of {len(res['flags'])} flags cropped, {len(sheets)} dense sheets -> boards/qc_{fmt}_eye/")
+        return 0
     if cmd == "cuts":        # cuts <job> [--apply]: every cut against the song's hits / lines / sections (needs out/props.json)
         from . import cuts as C
 

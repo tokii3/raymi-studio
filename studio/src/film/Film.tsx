@@ -18,10 +18,11 @@ import {CapCrown} from '../three/props';
 import {Card, RaySwarm} from '../three/cards';
 import {flare, frames, since, stepValue} from '../three/events';
 import {useTexturesReady} from '../three/look';
-import {VrmPuppet, useVrmReady} from '../three/VrmPuppet';
+import {VrmPuppet, useVrmReady, vrmBones} from '../three/VrmPuppet';
 import {Strings} from '../three/routine';
 import {makeVrmMouthKeys} from '../three/vrmLipSync';
 import {Probe} from './Probe';
+import {QcMask} from './QcMask';
 import {vrmFilmKeys, vrmFilmWords} from '../three/vrmFilm';
 import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
 import {planeSize, puppetAt} from './motion';
@@ -64,6 +65,7 @@ export const Film: React.FC<FilmProps> = (props) => {
   const vrmReady = useVrmReady(props.vrm ? [staticFile(props.vrm)] : [],
     props.vrm ? (props.motions ?? ['motions/dance.fbx', 'motions/idle.fbx']).map(staticFile) : []);
   const ready = fontReady && texReady && vrmReady;
+  const mask = props.qcMask ?? null;   // the QC mask pass: the picture as flat ID colours (raymi/qcv2.py)
   const fNow = useCurrentFrame();
   const {width: W, height: H, fps} = useVideoConfig();
   const mouthWords = useMemo(() => props.sung ?? vrmFilmWords(props.shots, fps), [props.sung, props.shots, fps]);
@@ -212,7 +214,7 @@ export const Film: React.FC<FilmProps> = (props) => {
           <filter id="raymi-mblur" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation={`${blur.sx.toFixed(2)} ${blur.sy.toFixed(2)}`} /></filter>
         </defs></svg>
       ) : null}
-      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter, fxFilter(fx, f), povFilter(fx, f), blur ? 'url(#raymi-mblur)' : ''].filter(Boolean).join(' ')}}>
+      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: mask ? 'none' : [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter, fxFilter(fx, f), povFilter(fx, f), blur ? 'url(#raymi-mblur)' : ''].filter(Boolean).join(' ')}}>
         {ready ? (
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>
@@ -238,13 +240,15 @@ export const Film: React.FC<FilmProps> = (props) => {
                 <CapCrown pos={[0, 0.0, 0]} rot={[0.12, 0, -0.18]} scale={0.62} />
               </group>
             ) : null}
-            {shot.lyrics ? <group userData={{noSupport: true}}><Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} /></group> : null}
+            {shot.lyrics ? <group userData={{noSupport: true, qc: 'text'}}><Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} /></group> : null}
             {/* after effects (toki 2026-10-23): AO + bloom on every 3D-Raymi film shot, DoF where a shot asks for it */}
-            {props.vrm ? <PostFX spec={(shot.opts.post ?? {}) as PostSpec} /> : null}
-            {props.probe ? <Probe f={f} vrm={props.vrm ? staticFile(props.vrm) : null} shot={shot.id} /> : null}
+            {props.vrm && !mask ? <PostFX spec={(shot.opts.post ?? {}) as PostSpec} /> : null}
+            {props.probe ? <Probe f={f} F={fNow} vrm={props.vrm ? staticFile(props.vrm) : null} shot={shot.id} /> : null}
+            {mask ? <QcMask her={props.vrm ? vrmBones(staticFile(props.vrm))?.root ?? null : null} mode={mask} /> : null}
           </ThreeCanvas>
         ) : null}
       </AbsoluteFill>
+      {mask ? null : (<>
       <Fx2D fx={fx} f={fNow} center={herScreen} aspect={aspect} />
       <PovLayer fx={fx as never} f={fNow} W={W} H={H} />
       {battery && shot.opts.battery_sign ? <BatterySign {...battery} x={herHead[0] * W} y={herHead[1] * H} h={H} f={f} side={shot.opts.battery_sign === 'left' ? -1 : 1} /> : null}
@@ -257,6 +261,7 @@ export const Film: React.FC<FilmProps> = (props) => {
           {props.overlay.cta ? <Stamp text={props.overlay.cta.text} from={props.overlay.cta.from} to={props.durationInFrames + 1} top={H * OVERLAY.ctaTop} accent="#b56bff" size={84} bubble /> : null}
         </>
       ) : null}
+      </>)}
       {props.audio ? <Audio src={staticFile(props.audio.file)} trimBefore={Math.round(props.audio.from * fps)} /> : null}
     </AbsoluteFill>
   );
