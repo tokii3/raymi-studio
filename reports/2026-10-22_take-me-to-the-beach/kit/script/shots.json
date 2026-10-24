@@ -1,11 +1,255 @@
 [
  {
-  "id": "24",
+  "id": "01",
   "from_s": 0.0,
-  "to_s": 2.53,
+  "to_s": 1.0,
+  "set": "office",
+  "why": "THE thumbnail: she dances on her desk, colour bursting into the grey office (P6)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "02",
+  "from_s": 1.0,
+  "to_s": 1.4,
+  "set": "office",
+  "why": "the stop = the dream breaking: the colour drains back into her, she topples",
+  "words": "",
+  "transition_out": "whip",
+  "hero": []
+ },
+ {
+  "id": "03",
+  "from_s": 1.4,
+  "to_s": 1.93,
+  "set": "bedroom",
+  "why": "the marionette rule is shown before any word: strings pull her up from the bed",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "04",
+  "from_s": 1.93,
+  "to_s": 2.2,
+  "set": "dream",
+  "why": "colour flash 1 inside the first 3 s (treatment_2 FIX 2)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "05",
+  "from_s": 2.2,
+  "to_s": 3.1,
+  "set": "train",
+  "why": "the routine as a ride - she is moved, not moving: dragged through the closing doors",
+  "words": "",
+  "transition_out": "whip",
+  "hero": []
+ },
+ {
+  "id": "06",
+  "from_s": 3.1,
+  "to_s": 3.93,
+  "set": "office",
+  "why": "identical desks to the horizon = the loop in space",
+  "words": "",
+  "transition_out": "whip",
+  "hero": []
+ },
+ {
+  "id": "07",
+  "from_s": 3.93,
+  "to_s": 4.57,
+  "set": "office",
+  "why": "the strings sit her down; one beat of stillness before the stabs",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "08",
+  "from_s": 4.57,
+  "to_s": 4.7,
+  "set": "office",
+  "why": "stab 1: a flash of the future - her feet dancing on the desk (toki: on timing)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "09",
+  "from_s": 4.7,
+  "to_s": 4.87,
+  "set": "office",
+  "why": "stab 2: the boss's hand with swirling snow - teases the payoff",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "10",
+  "from_s": 4.87,
+  "to_s": 5.37,
+  "set": "dream",
+  "why": "stab 3: she laughs in the sun - held 12 frames so it reads",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "11",
+  "from_s": 5.37,
+  "to_s": 7.8,
+  "set": "office",
+  "why": "asleep at the desk, the file mountain grows around her on the beats - a 3/4 view on her face (blind viewer: the top-down read as a static shadow); run 38: camera on her side of the MORE stack and high enough for the URGENT pile, her colour kept (spread)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "12",
+  "from_s": 7.8,
+  "to_s": 8.2,
+  "set": "office",
+  "why": "the stop: a string pulls her mouth into a polite smile that is not hers",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "13",
+  "from_s": 8.2,
+  "to_s": 8.97,
+  "set": "bedroom",
+  "why": "no black frame: she falls back onto her bed (it was a dream); on the stop the hands appear in the dark",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "14",
+  "from_s": 8.97,
+  "to_s": 10.53,
+  "set": "bedroom",
+  "why": "the hands drag her bed out of the room; the first bubble is the first word",
+  "words": "People-pleasin' planet",
+  "transition_out": "whip",
+  "hero": []
+ },
+ {
+  "id": "15",
+  "from_s": 10.53,
+  "to_s": 13.67,
+  "set": "train",
+  "why": "a million voices = a new hand with a bubble on every hit",
+  "words": "Got a million people sayin' how to plan it I",
+  "transition_out": "whip",
+  "hero": []
+ },
+ {
+  "id": "16",
+  "from_s": 13.67,
+  "to_s": 15.3,
+  "set": "office",
+  "why": "the first thing she does by herself - in her sleep: the blanket over her head",
+  "words": "can no longer stand it Gonna",
+  "transition_out": "whip",
+  "hero": []
+ },
+ {
+  "id": "17",
+  "from_s": 15.3,
+  "to_s": 17.23,
+  "set": "bedroom",
+  "why": "she already refuses - asleep: her tail swats the hand away",
+  "words": "spend my days tellin' them to can",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "18",
+  "from_s": 17.23,
+  "to_s": 17.67,
+  "set": "bedroom",
+  "why": "the measured can sound is the snap (toki's brief)",
+  "words": "it Each",
+  "transition_out": "zoom",
+  "hero": []
+ },
+ {
+  "id": "19a",
+  "from_s": 17.67,
+  "to_s": 18.6,
+  "set": "bedroom",
+  "why": "the wake and the slap are one action - one read",
+  "words": "and",
+  "transition_out": "whip",
+  "hero": []
+ },
+ {
+  "id": "19b",
+  "from_s": 18.6,
+  "to_s": 19.7,
+  "set": "bedroom",
+  "why": "THE RULE, once, alone and readable: a string is hooked - a dot fades",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "20",
+  "from_s": 19.7,
+  "to_s": 22.2,
+  "set": "train",
+  "why": "the phone literally reaches out to her: string 2",
+  "words": "a salesman ringin' my phone Tell",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "21",
+  "from_s": 22.2,
+  "to_s": 24.23,
+  "set": "train",
+  "why": "told where to go = arrows on the floor; string 3",
+  "words": "me where to go No,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "22",
+  "from_s": 24.23,
+  "to_s": 26.63,
+  "set": "office",
+  "why": "her rain-forecast lore: SUN on the boss's SNOW globe, peeled off",
+  "words": "I don't wanna hear the down low I",
+  "transition_out": "cut",
+  "hero": [
+   "globe"
+  ]
+ },
+ {
+  "id": "23",
+  "from_s": 26.63,
+  "to_s": 29.63,
+  "set": "office",
+  "why": "the dissociation: dolly zoom - the desk stays, the room recedes",
+  "words": "owe, oh-oh-oh Nothin',",
+  "transition_out": "cut",
+  "hero": [
+   "postcard"
+  ]
+ },
+ {
+  "id": "24",
+  "from_s": 29.63,
+  "to_s": 32.17,
   "set": "office",
   "why": "the postcard is the only warm thing - she types without looking",
-  "words": "",
+  "words": "not a penny, never wanna hear you preach No,",
   "transition_out": "cut",
   "hero": [
    "postcard"
@@ -13,8 +257,8 @@
  },
  {
   "id": "25",
-  "from_s": 2.53,
-  "to_s": 3.83,
+  "from_s": 32.17,
+  "to_s": 33.47,
   "set": "office",
   "why": "her finger touches the card; the fall starts on the last oh",
   "words": "oh-oh-oh ( Take-take-take-take)",
@@ -25,8 +269,8 @@
  },
  {
   "id": "26",
-  "from_s": 3.83,
-  "to_s": 5.77,
+  "from_s": 33.47,
+  "to_s": 35.4,
   "set": "dream",
   "why": "wow 3: grey -> colour in one move, falling through warm air",
   "words": "Take",
@@ -35,8 +279,8 @@
  },
  {
   "id": "27",
-  "from_s": 5.77,
-  "to_s": 7.03,
+  "from_s": 35.4,
+  "to_s": 36.67,
   "set": "dream",
   "why": "the hook line sung to us, face to the lens in her warm light; all five dots light (rebuild: the floating-on-her-back version hid her face)",
   "words": "me to the beach Ah-ah-ah,",
@@ -45,8 +289,8 @@
  },
  {
   "id": "28",
-  "from_s": 7.03,
-  "to_s": 9.8,
+  "from_s": 36.67,
+  "to_s": 39.43,
   "set": "office",
   "why": "the song's antithesis in ONE frame: inside the card the beach, outside her grey desk with the globe's mountains",
   "words": "you can have the mountains Ah-ah-ah,",
@@ -58,8 +302,8 @@
  },
  {
   "id": "29",
-  "from_s": 9.8,
-  "to_s": 12.03,
+  "from_s": 39.43,
+  "to_s": 41.67,
   "set": "dream",
   "why": "her ray nature: she kicks the cold away and curls up in the light; Salmon waves",
   "words": "you take the snow Ah-ah-ah,",
@@ -68,8 +312,8 @@
  },
  {
   "id": "30",
-  "from_s": 12.03,
-  "to_s": 14.03,
+  "from_s": 41.67,
+  "to_s": 43.67,
   "set": "office",
   "why": "the dream cannot last: the strings yank her back into the chair, wet hair",
   "words": "it's way too cold",
@@ -78,14 +322,612 @@
  },
  {
   "id": "31",
-  "from_s": 14.03,
-  "to_s": 16.0,
+  "from_s": 43.67,
+  "to_s": 45.63,
   "set": "office",
   "why": "the same snow outside and in the globe; she stares at the postcard - the Short's cliffhanger",
+  "words": "My heart is cold enough",
+  "transition_out": "cut",
+  "hero": [
+   "globe"
+  ]
+ },
+ {
+  "id": "32",
+  "from_s": 45.63,
+  "to_s": 48.57,
+  "set": "train",
+  "why": "the routine repeats - evening: pushed by the crowd",
+  "words": "Ah-ah-ah, push comes to shove Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "33",
+  "from_s": 48.57,
+  "to_s": 50.8,
+  "set": "office",
+  "why": "the mountains are her workload",
+  "words": "you can have the mountains",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "34",
+  "from_s": 50.8,
+  "to_s": 52.87,
+  "set": "office",
+  "why": "the wish, small and private - it pays off at 136",
+  "words": "Ah-ah-ah, I'll take the beach",
+  "transition_out": "cut",
+  "hero": [
+   "postcard"
+  ]
+ },
+ {
+  "id": "35",
+  "from_s": 52.87,
+  "to_s": 54.4,
+  "set": "bedroom",
+  "why": "the loop restarts - DAY 2",
+  "words": "聞く",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "36",
+  "from_s": 54.4,
+  "to_s": 56.73,
+  "set": "office",
+  "why": "Ado's verse = she stops obeying: headphones on",
+  "words": "耳断つ 奴が",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "37",
+  "from_s": 56.73,
+  "to_s": 58.53,
+  "set": "office",
+  "why": "the puffed-up one, never a face",
+  "words": "大層な 胸を 張る",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "38",
+  "from_s": 58.53,
+  "to_s": 60.8,
+  "set": "office",
+  "why": "she eats anyway; a 4th string - dots 2 -> 1",
+  "words": "また 構わずやる",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "39",
+  "from_s": 60.8,
+  "to_s": 63.1,
+  "set": "office",
+  "why": "the days blur: DAY 3 ... DAY 30 tear past her",
+  "words": "「 望まない」から 舌を 打つ",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "40",
+  "from_s": 63.1,
+  "to_s": 63.9,
+  "set": "office",
+  "why": "a held beat = the joke lands",
+  "words": "え？ あぁ、 神か",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "41",
+  "from_s": 63.9,
+  "to_s": 67.3,
+  "set": "office",
+  "why": "mocking the judges - hands, never religious imagery",
+  "words": "仏か？ ヒト 気取りか？",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "42",
+  "from_s": 67.3,
+  "to_s": 68.83,
+  "set": "office",
+  "why": "the pressure is inside her head",
+  "words": "頭の 中 Leave",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "43",
+  "from_s": 68.83,
+  "to_s": 70.0,
+  "set": "office",
+  "why": "first push - the build to the cut",
+  "words": "me alone 誰になればいいの？",
+  "transition_out": "whip",
+  "hero": []
+ },
+ {
+  "id": "44",
+  "from_s": 70.0,
+  "to_s": 71.63,
+  "set": "office",
+  "why": "who should she be - she sees herself in the dark monitor",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "45",
+  "from_s": 71.63,
+  "to_s": 73.73,
+  "set": "office",
+  "why": "her body does the plot: the tail cuts string 4; blue -> red (Usseewa)",
+  "words": "Take your hands off! I",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "46",
+  "from_s": 73.73,
+  "to_s": 75.07,
+  "set": "office",
+  "why": "standing up = the turn",
+  "words": "owe, oh-oh-oh 吐き",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "47",
+  "from_s": 75.07,
+  "to_s": 77.63,
+  "set": "office",
+  "why": "Ado's 'can it': she shuts HIM up",
+  "words": "出す 前に 口をとじろ No, oh-oh-oh",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "48",
+  "from_s": 77.63,
+  "to_s": 77.97,
+  "set": "office",
+  "why": "everyone stares: the public is set",
+  "words": "",
+  "transition_out": "whip",
+  "hero": []
+ },
+ {
+  "id": "49",
+  "from_s": 77.97,
+  "to_s": 79.1,
+  "set": "office",
+  "why": "chorus 2: the cold-open picture comes true - stomps burst colour",
+  "words": "Take-take-take-take) Take",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "50",
+  "from_s": 79.1,
+  "to_s": 82.83,
+  "set": "office",
+  "why": "wow 4: dancing in public, a 360 orbit",
+  "words": "me to the beach Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "51",
+  "from_s": 82.83,
+  "to_s": 85.03,
+  "set": "office",
+  "why": "the mountains (= files) kicked away; string 3 snaps",
+  "words": "you can have the mountains",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "52",
+  "from_s": 85.03,
+  "to_s": 87.43,
+  "set": "office",
+  "why": "obstacle 1: the hands grab - she spins out of reach",
+  "words": "Ah-ah-ah, you take the snow Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "53",
+  "from_s": 87.43,
+  "to_s": 89.73,
+  "set": "office",
+  "why": "the colour follows her through the grey: she slides down the row",
+  "words": "it's way too cold My",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "54",
+  "from_s": 89.73,
+  "to_s": 91.4,
+  "set": "office",
+  "why": "the puppeteers trip over their own strings; string 2 snaps",
+  "words": "heart is cold enough Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "55",
+  "from_s": 91.4,
+  "to_s": 94.27,
+  "set": "train",
+  "why": "obstacle 2: she dances THROUGH the crowd",
+  "words": "push comes to shove Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "56",
+  "from_s": 94.27,
+  "to_s": 96.87,
+  "set": "train",
+  "why": "the door race she lost every morning - now she WINS; the last string snaps",
+  "words": "you can have the mountains Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "57",
+  "from_s": 96.87,
+  "to_s": 99.23,
+  "set": "train",
+  "why": "public, staring, one convert - and the beach flashes past",
+  "words": "I'll take the beach I'm",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "58",
+  "from_s": 99.23,
+  "to_s": 101.37,
+  "set": "dream",
+  "why": "a rich wide so we WANT it: alone on the light, arms spread",
+  "words": "better off alone Like",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "59",
+  "from_s": 101.37,
+  "to_s": 103.67,
+  "set": "office",
+  "why": "office - the loop strikes back: the chair spins her to the desk",
+  "words": "a rollin' stone",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "60",
+  "from_s": 103.67,
+  "to_s": 105.3,
+  "set": "dream",
+  "why": "dream - she switches off: buries the phone",
+  "words": "Turnin' off my phone",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "61",
+  "from_s": 105.3,
+  "to_s": 107.4,
+  "set": "office",
+  "why": "office again: the phone is back on her desk, ringing",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "62a",
+  "from_s": 107.4,
+  "to_s": 107.7,
+  "set": "office",
+  "why": "each 'down' its own held beat: a string, a light row, a dot",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "62b",
+  "from_s": 107.7,
+  "to_s": 108.1,
+  "set": "office",
+  "why": "each 'down' its own held beat: a string, a light row, a dot",
+  "words": "down,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "62c",
+  "from_s": 108.1,
+  "to_s": 108.53,
+  "set": "office",
+  "why": "each 'down' its own held beat: a string, a light row, a dot",
+  "words": "down",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "62d",
+  "from_s": 108.53,
+  "to_s": 108.83,
+  "set": "office",
+  "why": "each 'down' its own held beat: a string, a light row, a dot",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "63",
+  "from_s": 108.83,
+  "to_s": 110.63,
+  "set": "office",
+  "why": "the darkest point - her name: only her last dot glows (灯闇)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "64",
+  "from_s": 110.63,
+  "to_s": 112.77,
+  "set": "dream",
+  "why": "dream: space - the second rich wide; Salmon floating",
+  "words": "give me some space That",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "65",
+  "from_s": 112.77,
+  "to_s": 115.03,
+  "set": "office",
+  "why": "the office's sun is an interrogation lamp",
+  "words": "sun in my face And",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "66a",
+  "from_s": 115.03,
+  "to_s": 116.63,
+  "set": "office",
+  "why": "the days go on: on each 'on' she is a step smaller - in her chair (front)",
+  "words": "the days go",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "66b",
+  "from_s": 116.63,
+  "to_s": 117.33,
+  "set": "office",
+  "why": "smaller again - seen from behind and above, the desk in front of her like a wall",
+  "words": "on, and",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "66c",
+  "from_s": 117.33,
+  "to_s": 118.5,
+  "set": "office",
+  "why": "and on - she is a speck inside the snow globe on her desk",
   "words": "",
   "transition_out": "cut",
   "hero": [
    "globe"
   ]
+ },
+ {
+  "id": "67",
+  "from_s": 118.5,
+  "to_s": 119.37,
+  "set": "globe",
+  "why": "T-A-K-E: two tail blows crack the glass; the cracks light letter by letter",
+  "words": "( T-A-K-E, T-A-K-E) T-A-K-E,",
+  "transition_out": "spin",
+  "hero": []
+ },
+ {
+  "id": "68",
+  "from_s": 119.37,
+  "to_s": 121.23,
+  "set": "office",
+  "why": "the glass bursts: she slides out, grows back, all five dots flare on",
+  "words": "take me to the beach ( Oh) Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "70",
+  "from_s": 121.23,
+  "to_s": 124.17,
+  "set": "office",
+  "why": "she sprints through the office; snow turns to sand where it touches her",
+  "words": "you can have the mountains ( Have the mountains)",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "70b",
+  "from_s": 124.17,
+  "to_s": 126.13,
+  "set": "office",
+  "why": "she sprints on - the lens on her other side now, snow turning to sand behind her",
+  "words": "Ah-ah-ah, you take the snow Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "71",
+  "from_s": 126.13,
+  "to_s": 129.1,
+  "set": "office",
+  "why": "warmth broken in: she kicks the frosted window - it breaks outward",
+  "words": "it's way too cold ( It's way too cold) My",
+  "transition_out": "whip",
+  "hero": []
+ },
+ {
+  "id": "72",
+  "from_s": 129.1,
+  "to_s": 131.03,
+  "set": "office",
+  "why": "her heart is not cold any more - shown wide: the warm light spreads from her dots",
+  "words": "heart is cold enough ( Oh) Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "73",
+  "from_s": 131.03,
+  "to_s": 133.13,
+  "set": "office",
+  "why": "the hands lose: she shoves the boss's giant hand away",
+  "words": "push comes to shove Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "74",
+  "from_s": 133.13,
+  "to_s": 135.5,
+  "set": "office",
+  "why": "the payoff: the cracked, empty globe handed back",
+  "words": "you can have the mountains Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": [
+   "globe"
+  ]
+ },
+ {
+  "id": "75",
+  "from_s": 135.5,
+  "to_s": 137.1,
+  "set": "office",
+  "why": "she grabs the postcard - the office unfolds into the beach",
+  "words": "I'll take the beach",
+  "transition_out": "cut",
+  "hero": [
+   "postcard"
+  ]
+ },
+ {
+  "id": "75b",
+  "from_s": 137.1,
+  "to_s": 137.27,
+  "set": "dream",
+  "why": "the FULL dream wide lands exactly on 'dream' and holds",
+  "words": "(",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "76",
+  "from_s": 137.27,
+  "to_s": 139.37,
+  "set": "dream",
+  "why": "release: she lets herself fall backwards into the warm water",
+  "words": "I'll take the) Take me to the ( I'll take the) I",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "77",
+  "from_s": 139.37,
+  "to_s": 140.8,
+  "set": "dream",
+  "why": "the outro is a peak - so is she",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "78",
+  "from_s": 140.8,
+  "to_s": 142.63,
+  "set": "dream",
+  "why": "her lore gag: Salmon IS her friend - offended at the line",
+  "words": "ask anyone ( そう 何も) Got",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "79",
+  "from_s": 142.63,
+  "to_s": 145.5,
+  "set": "dream",
+  "why": "my favourite one: she dances with Salmon on the ledge, then flips her mic out of the pile and sings into it",
+  "words": "me 'til the end, my",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "80",
+  "from_s": 145.5,
+  "to_s": 148.33,
+  "set": "dream",
+  "why": "type made by her body: 最後まで in the light",
+  "words": "favorite one ( 最後まで) I",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "81",
+  "from_s": 148.33,
+  "to_s": 151.63,
+  "set": "dream",
+  "why": "the staring commuters drift down the shaft and dance with her on the ledge",
+  "words": "don't have no friends, ask anyone ( そう 誰も)",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "82",
+  "from_s": 151.63,
+  "to_s": 158.6,
+  "set": "dream",
+  "why": "the last wow: the size of her freedom - dusk, and far out the tiny grey office dome",
+  "words": "Got me 'til the end, my favorite one ( 最後まで)",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "83",
+  "from_s": 158.6,
+  "to_s": 160.1,
+  "set": "dream",
+  "why": "the last gag, short: the clock rings once more among her things - her foot nudges a cushion over it",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "84",
+  "from_s": 160.1,
+  "to_s": 167.13,
+  "set": "dream",
+  "why": "the first colour flash (4) was the future: the last image IS it - eyes closed, face in her sun, all five dots; rebuild: as the lens leaves she notices it and waves goodbye to the watcher (toki 2026-10-24: the observer)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
  }
 ]

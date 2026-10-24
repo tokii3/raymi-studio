@@ -1,11 +1,11 @@
 {
  "file": "final.mp4",
- "width": 1080,
- "height": 1920,
- "duration": 16.0,
+ "width": 1920,
+ "height": 1080,
+ "duration": 167.2,
  "fps": "30/1",
  "checks": {
-  "portrait_9x16": true,
+  "landscape_16x9": true,
   "has_audio": true,
   "loudness_-14": true,
   "true_peak_<=-1": true,
@@ -14,8 +14,8 @@
   "no_black_picture_>0.25s": true
  },
  "full_res": true,
- "lufs": -14.1,
- "true_peak": -3.0,
+ "lufs": -14.11,
+ "true_peak": -1.89,
  "frozen_spans": [],
  "black_spans": [],
  "pass": true
