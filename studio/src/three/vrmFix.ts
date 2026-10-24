@@ -64,9 +64,9 @@ export function fixSleeveCaps(scene: THREE.Object3D): number {
 // Hair roots (toki 2026-10-25: "haare am ansatz die ersten ca 30% ... dunkler und weniger saturiert ... von off black eher
 // matt zu leuchtendem ultraviolett"; the 2D sprites: near-black roots). The texture pass (raymi/texfix.py roots) reaches
 // only strands whose UVs use the texture's top - the bangs use its lower half and stayed bright blue (model sheet 3).
-// So the shader darkens by HEIGHT on her head in the bind pose: the top 12 cm off-black and matte, blending into the
-// painted ultraviolet by 32 cm below the crown - every strand the same, whatever part of the texture it uses.
-const ROOT_FULL = 0.12, ROOT_END = 0.32, ROOT_MIX = 0.88;
+// So the shader darkens by HEIGHT on her head in the bind pose: the top 16 cm off-black and matte, blending into the
+// painted ultraviolet by 42 cm below the crown - every strand the same, whatever part of the texture it uses.
+const ROOT_FULL = 0.16, ROOT_END = 0.42, ROOT_MIX = 0.88;   // sheet 4: 12 / 32 cm read as only the crown
 
 export function hairRoots(scene: THREE.Object3D): number {
   let top = -Infinity;
