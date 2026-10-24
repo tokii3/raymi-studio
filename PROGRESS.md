@@ -1,4 +1,17 @@
-# PROGRESS - Raymi Studio (newest first, kept short)
+# PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
+
+## 2026-10-24 - CURRENT STATE (read this first; details in the two newest knowledge/HANDOFF_*.md)
+- Why this block: entries had been appended at the bottom and the POV week had none, so new sessions read an old
+  NEXT and started from zero (toki 2026-10-24). A SessionStart hook (.claude/hooks/briefing.py) now prints: lag
+  behind origin/main, the newest handoffs, claude/* branches in flight, jobs with an open toki verdict. Skill:
+  .claude/skills/raymi-video-production (start protocol + toki's acceptance list + craft notes).
+- Take Me to the Beach (first 3D film): structural pass done, MV run 58 / Short run 59 QC green, NOT judged by toki
+  or a critic yet. knowledge/HANDOFF_2026-10-24_beach_3d_film.md (root causes, scene probe, cuts, camera moves).
+- POV lore Shorts week (7 talking 3D Shorts, jobs/2026-10-23_pov-*): finals delivered, toki took them as they are
+  (face more centred / higher, Sashimi overexposed, hair flings, mouth open when silent -> fixed in the studio).
+  pretty / purple finals released 10-24; sand parked (toki: ignore it). knowledge/HANDOFF_2026-10-24_studio_learnings.md.
+- In flight 10-24: branch claude/kds-britney-gaga-mashup-* (job 2026-10-24_watch-me-mashup) - check its state first.
+
 
 ## 2026-10-22 - stage A of the 3D switch: Raymi as VRM (raymi5) sings, the camera travels, the 2D layer
 - Looked back at KING + FIRESTARTER (toki.md): liked = animation, transitions, effects, per-act grade; open = lyrics
@@ -136,5 +149,3 @@
   (New session -> Cloud). Actions is the main path anyway (0 tokens).
 - KING (jobs/2026-10-18_king): official GUMI audio (song.webm), 1_DOSSIER.md filled except lyric line times
   (need the vocal stem tool, phase 2).
-- 2026-10-24 Beach (first 3D film) stopped by toki after the structural pass - MV run 58, Short run 59, QC green.
-  Everything learned: knowledge/HANDOFF_2026-10-24_beach_3d_film.md (root causes, tools, process, open items).

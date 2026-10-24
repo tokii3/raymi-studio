@@ -10,7 +10,9 @@ Let's Get Weird) came from ONE strong idea and a deep hand-written treatment; th
 weak idea (`knowledge/CASEBOOK.md`, `knowledge/LESSONS.md`). So the effort goes into the WRITERS' ROOM, the studio
 turns the script into pictures with reusable components, and screening judges the real video, not proxies.
 
-Read at session start: this file -> `PRODUCTION.md` -> `knowledge/PRINCIPLES.md` -> `canon/01_character.md`.
+Read at session start: the SessionStart briefing (sync with origin/main first if it warns) -> this file -> the newest
+`knowledge/HANDOFF_*.md` -> the top of `PROGRESS.md` -> `PRODUCTION.md` -> `knowledge/PRINCIPLES.md` -> `canon/01_character.md`.
+toki's standing verdicts (the acceptance list) + start protocol: skill `raymi-video-production` (.claude/skills).
 Before planning a video also: `knowledge/CASEBOOK.md`, `canon/07_video_catalog.md` (no repeats), the newest
 `canon/10_kanal_puls*.md`. Then `python -m raymi next <job>` tells you the step and what to open.
 
