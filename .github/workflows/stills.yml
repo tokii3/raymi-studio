@@ -29,7 +29,7 @@ concurrency:
 jobs:
   stills:
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
+    timeout-minutes: 90   # a scene probe over a whole film (stills.json "probe") takes longer than a still board
     steps:
       - uses: actions/checkout@v4
         with:

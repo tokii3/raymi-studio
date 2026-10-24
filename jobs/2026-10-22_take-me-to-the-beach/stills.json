@@ -1,6 +1,6 @@
 {
  "_why": "structural pass 2026-10-24: the probe again (support raycast, resting things, sharpened probe) + look stills of every set (depth light, texture v2, her chair)",
- "probe": 10,
+ "probe": 15,
  "passes": [
   {
    "format": "mv",
