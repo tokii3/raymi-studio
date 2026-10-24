@@ -1,0 +1,62 @@
+[
+ {
+  "id": "p1",
+  "from_s": 0.0,
+  "to_s": 1.87,
+  "set": "office",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p2",
+  "from_s": 1.87,
+  "to_s": 4.67,
+  "set": "office",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p3",
+  "from_s": 4.67,
+  "to_s": 7.9,
+  "set": "office",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p4",
+  "from_s": 7.9,
+  "to_s": 12.07,
+  "set": "office",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p5",
+  "from_s": 12.07,
+  "to_s": 15.33,
+  "set": "office",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "p6",
+  "from_s": 15.33,
+  "to_s": 18.6,
+  "set": "office",
+  "why": "",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ }
+]

@@ -1,0 +1,1410 @@
+{
+ "composition": "MVShort",
+ "width": 1080,
+ "height": 1920,
+ "fps": 30,
+ "durationInFrames": 558,
+ "audio": {
+  "file": "audio.m4a",
+  "from": 0.0,
+  "to": 18.615,
+  "src": "jobs/2026-10-24_pov-pretty/out/mix.m4a"
+ },
+ "shots": [
+  {
+   "actor": [
+    {
+     "f": 0,
+     "pose": "sit",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-talking",
+     "motionMix": 0.2,
+     "expr": {
+      "angry": 0.3
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "stamp",
+     "text": "chat: i'm not cute lol",
+     "x": 0.5,
+     "y": 0.74,
+     "size": 0.038,
+     "rot": -3,
+     "color": "#e9eeff",
+     "from": 0,
+     "to": 57
+    }
+   ],
+   "id": "p1",
+   "from": 0,
+   "to": 56,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "pov",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       0.0,
+       0.765,
+       0.95
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ],
+      "text": "chat: i'm not cute lol"
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.3,
+       1.12,
+       0.92
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ]
+     }
+    ],
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.45,
+     "dofRange": 0.35
+    }
+   },
+   "camera": [
+    {
+     "f": 0,
+     "pos": [
+      0.06,
+      1.16,
+      0.42
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.05
+    },
+    {
+     "f": 56,
+     "pos": [
+      0.05,
+      1.15,
+      0.36
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.05
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "desk",
+     "center": [
+      0,
+      0.39,
+      0.55
+     ],
+     "size": [
+      1.5,
+      0.78,
+      0.75
+     ]
+    },
+    {
+     "name": "monitor",
+     "center": [
+      0.0,
+      1.185,
+      0.95
+     ],
+     "size": [
+      0.64,
+      0.42,
+      0.08
+     ]
+    }
+   ]
+  },
+  {
+   "actor": [
+    {
+     "f": 56,
+     "pose": "sit_offer",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotY": 0.0,
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "expr": {
+      "angry": 0.3,
+      "surprised": 0.3
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p2",
+   "from": 56,
+   "to": 140,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "pov",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       0.0,
+       0.765,
+       0.95
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ],
+      "text": "chat: i'm not cute lol"
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.3,
+       1.12,
+       0.92
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ]
+     }
+    ],
+    "post": {
+     "bloom": 0.3,
+     "dof": 1.68,
+     "dofRange": 0.59
+    }
+   },
+   "camera": [
+    {
+     "f": 56,
+     "pos": [
+      0.42,
+      1.45,
+      -0.7
+     ],
+     "look": [
+      0.0,
+      1.15,
+      0.9
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.08
+    },
+    {
+     "f": 140,
+     "pos": [
+      0.36,
+      1.42,
+      -0.5
+     ],
+     "look": [
+      0.0,
+      1.15,
+      0.9
+     ],
+     "fov": 24.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.08
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "desk",
+     "center": [
+      0,
+      0.39,
+      0.55
+     ],
+     "size": [
+      1.5,
+      0.78,
+      0.75
+     ]
+    },
+    {
+     "name": "monitor",
+     "center": [
+      0.0,
+      1.185,
+      0.95
+     ],
+     "size": [
+      0.64,
+      0.42,
+      0.08
+     ]
+    }
+   ]
+  },
+  {
+   "actor": [
+    {
+     "f": 140,
+     "pose": "sit",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-angry",
+     "motionMix": 0.2,
+     "expr": {
+      "angry": 0.6
+     }
+    },
+    {
+     "f": 188,
+     "pose": "sit",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "icon": "?",
+     "motion": "sitting-angry",
+     "motionMix": 0.2,
+     "expr": {
+      "surprised": 0.6
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p3",
+   "from": 140,
+   "to": 237,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "pov",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       0.0,
+       0.765,
+       0.95
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ],
+      "text": "chat: i'm not cute lol"
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.3,
+       1.12,
+       0.92
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ]
+     }
+    ],
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.57,
+     "dofRange": 0.35
+    }
+   },
+   "camera": [
+    {
+     "f": 140,
+     "pos": [
+      0.2,
+      1.18,
+      0.5
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 28.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.1
+    },
+    {
+     "f": 237,
+     "pos": [
+      0.04,
+      1.12,
+      0.27
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 24.0,
+     "roll": 6.0,
+     "ease": "inOut",
+     "shake": 0.15
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "desk",
+     "center": [
+      0,
+      0.39,
+      0.55
+     ],
+     "size": [
+      1.5,
+      0.78,
+      0.75
+     ]
+    },
+    {
+     "name": "monitor",
+     "center": [
+      0.0,
+      1.185,
+      0.95
+     ],
+     "size": [
+      0.64,
+      0.42,
+      0.08
+     ]
+    }
+   ]
+  },
+  {
+   "actor": [
+    {
+     "f": 237,
+     "pose": "sit",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-laughing",
+     "motionMix": 0.2,
+     "expr": {
+      "joy": 0.7
+     }
+    },
+    {
+     "f": 292,
+     "pose": "sit",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "flatten",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "expr": {
+      "joy": 0.9
+     }
+    },
+    {
+     "f": 334,
+     "pose": "sit",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "pop",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "icon": "sparkle",
+     "motion": "sitting-laughing",
+     "motionMix": 0.2,
+     "expr": {
+      "joy": 0.9
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p4",
+   "from": 237,
+   "to": 362,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "pov",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       0.0,
+       0.765,
+       0.95
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ],
+      "text": "chat: i'm not cute lol"
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.3,
+       1.12,
+       0.92
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ]
+     }
+    ],
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.65,
+     "dofRange": 0.35
+    }
+   },
+   "camera": [
+    {
+     "f": 237,
+     "pos": [
+      0.0,
+      1.2,
+      0.62
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.06
+    },
+    {
+     "f": 286,
+     "pos": [
+      0.0,
+      1.2,
+      0.62
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.06
+    },
+    {
+     "f": 296,
+     "pos": [
+      0.02,
+      2.05,
+      0.38
+     ],
+     "look": [
+      0.0,
+      0.55,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "out",
+     "shake": 0.12
+    },
+    {
+     "f": 332,
+     "pos": [
+      0.02,
+      2.05,
+      0.38
+     ],
+     "look": [
+      0.0,
+      0.55,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.1
+    },
+    {
+     "f": 336,
+     "pos": [
+      0.0,
+      1.2,
+      0.62
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "snap",
+     "shake": 0.3
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "desk",
+     "center": [
+      0,
+      0.39,
+      0.55
+     ],
+     "size": [
+      1.5,
+      0.78,
+      0.75
+     ]
+    },
+    {
+     "name": "monitor",
+     "center": [
+      0.0,
+      1.185,
+      0.95
+     ],
+     "size": [
+      0.64,
+      0.42,
+      0.08
+     ]
+    }
+   ]
+  },
+  {
+   "actor": [
+    {
+     "f": 362,
+     "pose": "sit",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-talking",
+     "motionMix": 0.2,
+     "expr": {
+      "joy": 0.6
+     }
+    },
+    {
+     "f": 427,
+     "pose": "sit_offer",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "expr": {
+      "joy": 0.8
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "ripple",
+     "taps": [
+      433
+     ],
+     "x": 0.5,
+     "y": 0.5,
+     "from": 428,
+     "to": 461
+    }
+   ],
+   "id": "p5",
+   "from": 362,
+   "to": 460,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "pov",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       0.0,
+       0.765,
+       0.95
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ],
+      "text": "chat: i'm not cute lol"
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.3,
+       1.12,
+       0.92
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ]
+     }
+    ],
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.56,
+     "dofRange": 0.35
+    }
+   },
+   "camera": [
+    {
+     "f": 362,
+     "pos": [
+      0.3,
+      1.16,
+      0.45
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.25
+    },
+    {
+     "f": 432,
+     "pos": [
+      0.26,
+      1.15,
+      0.4
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.6
+    },
+    {
+     "f": 436,
+     "pos": [
+      0.26,
+      1.15,
+      0.4
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.2
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "desk",
+     "center": [
+      0,
+      0.39,
+      0.55
+     ],
+     "size": [
+      1.5,
+      0.78,
+      0.75
+     ]
+    },
+    {
+     "name": "monitor",
+     "center": [
+      0.0,
+      1.185,
+      0.95
+     ],
+     "size": [
+      0.64,
+      0.42,
+      0.08
+     ]
+    }
+   ]
+  },
+  {
+   "actor": [
+    {
+     "f": 460,
+     "pose": "sit",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "sitting-talking",
+     "motionMix": 0.2,
+     "expr": {
+      "joy": 0.7
+     }
+    },
+    {
+     "f": 533,
+     "pose": "sit",
+     "pos": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 8,
+     "act": "pop",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "icon": "heart",
+     "motion": "sitting-talking",
+     "motionMix": 0.2,
+     "expr": {
+      "joy": 1.0
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "id": "p6",
+   "from": 460,
+   "to": 558,
+   "set": "office",
+   "hero": [],
+   "opts": {
+    "grade": "pov",
+    "things": [
+     {
+      "kind": "monitor",
+      "pos": [
+       0.0,
+       0.765,
+       0.95
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ],
+      "text": "chat: i'm not cute lol"
+     },
+     {
+      "kind": "postcard",
+      "pos": [
+       -0.3,
+       1.12,
+       0.92
+      ],
+      "rot": [
+       0,
+       3.141592653589793,
+       0
+      ]
+     }
+    ],
+    "post": {
+     "bloom": 0.3,
+     "dof": 0.45,
+     "dofRange": 0.35
+    }
+   },
+   "camera": [
+    {
+     "f": 460,
+     "pos": [
+      0.06,
+      1.16,
+      0.42
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.05
+    },
+    {
+     "f": 490,
+     "pos": [
+      0.06,
+      1.16,
+      0.42
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 26.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.05
+    },
+    {
+     "f": 529,
+     "pos": [
+      0.04,
+      1.12,
+      0.31
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 24.0,
+     "roll": 0.0,
+     "ease": "out",
+     "shake": 0.08
+    },
+    {
+     "f": 558,
+     "pos": [
+      0.04,
+      1.12,
+      0.3
+     ],
+     "look": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "fov": 24.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.06
+    }
+   ],
+   "kick": 1.0,
+   "puppets": [],
+   "lyrics": null,
+   "words": [],
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "events": [],
+   "texts": [],
+   "noLens": [],
+   "solids": [
+    {
+     "name": "desk",
+     "center": [
+      0,
+      0.39,
+      0.55
+     ],
+     "size": [
+      1.5,
+      0.78,
+      0.75
+     ]
+    },
+    {
+     "name": "monitor",
+     "center": [
+      0.0,
+      1.185,
+      0.95
+     ],
+     "size": [
+      0.64,
+      0.42,
+      0.08
+     ]
+    }
+   ]
+  }
+ ],
+ "hits": [
+  1,
+  57,
+  99,
+  127,
+  154,
+  168
+ ],
+ "beats": [
+  1,
+  15,
+  29,
+  43,
+  57,
+  71,
+  85,
+  99,
+  113,
+  127,
+  140,
+  154,
+  168,
+  182,
+  196,
+  210,
+  224,
+  238,
+  252,
+  266,
+  280,
+  294,
+  308,
+  322,
+  336,
+  349,
+  363,
+  377,
+  391,
+  405,
+  419,
+  433,
+  447,
+  461,
+  475,
+  489,
+  503,
+  517,
+  531,
+  544
+ ],
+ "sprites": [],
+ "grain": 0.04,
+ "title": "You Said You're Not Cute?",
+ "overlay": {
+  "hook": {
+   "text": "you said you're not cute?",
+   "from": 0,
+   "to": 48
+  },
+  "cta": {
+   "text": "one thing you like about yourself. go.",
+   "from": 460
+  }
+ },
+ "heavy": true,
+ "vrm": "vrm/raymi5.vrm",
+ "motions": [
+  "motions/sitting-angry.fbx",
+  "motions/sitting-laughing.fbx",
+  "motions/sitting-talking.fbx"
+ ],
+ "sung": [
+  {
+   "w": "you",
+   "roma": "",
+   "t0": 0.143,
+   "t1": 0.314
+  },
+  {
+   "w": "said",
+   "roma": "",
+   "t0": 0.324,
+   "t1": 0.559
+  },
+  {
+   "w": "you're",
+   "roma": "",
+   "t0": 0.57,
+   "t1": 0.677
+  },
+  {
+   "w": "not",
+   "roma": "",
+   "t0": 0.688,
+   "t1": 0.944
+  },
+  {
+   "w": "cute?",
+   "roma": "",
+   "t0": 0.955,
+   "t1": 1.318
+  },
+  {
+   "w": "i",
+   "roma": "",
+   "t0": 1.896,
+   "t1": 2.056
+  },
+  {
+   "w": "read",
+   "roma": "",
+   "t0": 2.067,
+   "t1": 2.312
+  },
+  {
+   "w": "it.",
+   "roma": "",
+   "t0": 2.323,
+   "t1": 2.537
+  },
+  {
+   "w": "right",
+   "roma": "",
+   "t0": 3.267,
+   "t1": 3.566
+  },
+  {
+   "w": "there.",
+   "roma": "",
+   "t0": 3.577,
+   "t1": 3.886
+  },
+  {
+   "w": "excuse",
+   "roma": "",
+   "t0": 4.683,
+   "t1": 5.217
+  },
+  {
+   "w": "me.",
+   "roma": "",
+   "t0": 5.228,
+   "t1": 5.484
+  },
+  {
+   "w": "who",
+   "roma": "",
+   "t0": 6.214,
+   "t1": 6.385
+  },
+  {
+   "w": "told",
+   "roma": "",
+   "t0": 6.396,
+   "t1": 6.673
+  },
+  {
+   "w": "you",
+   "roma": "",
+   "t0": 6.684,
+   "t1": 6.791
+  },
+  {
+   "w": "that?",
+   "roma": "",
+   "t0": 6.802,
+   "t1": 7.101
+  },
+  {
+   "w": "i'm",
+   "roma": "",
+   "t0": 7.933,
+   "t1": 8.136
+  },
+  {
+   "w": "a",
+   "roma": "",
+   "t0": 8.146,
+   "t1": 8.21
+  },
+  {
+   "w": "stingray.",
+   "roma": "",
+   "t0": 8.221,
+   "t1": 8.819
+  },
+  {
+   "w": "i'm",
+   "roma": "",
+   "t0": 9.549,
+   "t1": 9.774
+  },
+  {
+   "w": "flat.",
+   "roma": "",
+   "t0": 9.784,
+   "t1": 10.233
+  },
+  {
+   "w": "i'm",
+   "roma": "",
+   "t0": 10.97,
+   "t1": 11.173
+  },
+  {
+   "w": "adorable.",
+   "roma": "",
+   "t0": 11.184,
+   "t1": 11.857
+  },
+  {
+   "w": "flat",
+   "roma": "",
+   "t0": 12.113,
+   "t1": 12.487
+  },
+  {
+   "w": "is",
+   "roma": "",
+   "t0": 12.497,
+   "t1": 12.658
+  },
+  {
+   "w": "cute.",
+   "roma": "",
+   "t0": 12.668,
+   "t1": 13.074
+  },
+  {
+   "w": "so",
+   "roma": "",
+   "t0": 13.804,
+   "t1": 14.103
+  },
+  {
+   "w": "are",
+   "roma": "",
+   "t0": 14.114,
+   "t1": 14.285
+  },
+  {
+   "w": "you.",
+   "roma": "",
+   "t0": 14.296,
+   "t1": 14.573
+  },
+  {
+   "w": "one",
+   "roma": "",
+   "t0": 15.364,
+   "t1": 15.652
+  },
+  {
+   "w": "thing",
+   "roma": "",
+   "t0": 15.663,
+   "t1": 15.855
+  },
+  {
+   "w": "you",
+   "roma": "",
+   "t0": 15.866,
+   "t1": 16.005
+  },
+  {
+   "w": "like",
+   "roma": "",
+   "t0": 16.015,
+   "t1": 16.218
+  },
+  {
+   "w": "about",
+   "roma": "",
+   "t0": 16.229,
+   "t1": 16.486
+  },
+  {
+   "w": "yourself.",
+   "roma": "",
+   "t0": 16.496,
+   "t1": 17.073
+  },
+  {
+   "w": "go.",
+   "roma": "",
+   "t0": 17.803,
+   "t1": 18.145
+  }
+ ]
+}
