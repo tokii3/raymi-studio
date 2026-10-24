@@ -257,7 +257,11 @@ jobs:
             if [ -f "$O/final.mp4" ]; then
               STATE=done
               ffmpeg -y -loglevel error -i "$O/final.mp4" -vf scale=360:-2 -c:v libx264 -crf 30 -c:a aac -b:a 64k "$O/preview.mp4"
-              gh release create "render-$J-${{ github.run_number }}" "$O/final.mp4" "$O/sheet.jpg" "$O/qc.json" \
+              # the download carries its upload day + title (toki 2026-10-24: "nicht immer nur final")
+              F=mv; [ -f "jobs/$J/render.json" ] && F=$(python -c "import json,sys;print(json.load(open(sys.argv[1])).get('format','mv'))" "jobs/$J/render.json")
+              N=$(python -m raymi name "$J" "$F" 2>/dev/null || echo "$J.mp4")
+              cp "$O/final.mp4" "$O/$N"
+              gh release create "render-$J-${{ github.run_number }}" "$O/$N" "$O/sheet.jpg" "$O/qc.json" \
                 --prerelease --title "$J (${{ needs.prepare.outputs.quality }}, run ${{ github.run_number }})" \
                 --notes "QC: $(python -c "import json;print('PASS' if json.load(open('$O/qc.json'))['pass'] else 'FAIL')")"
               cp "$O/qc.json" "$O/sheet.jpg" "$O/preview.mp4" "$O/props.json" "/tmp/reports/$J/"

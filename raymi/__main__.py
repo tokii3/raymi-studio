@@ -10,6 +10,7 @@
   finish <job>          loudness-normalise out/raw.mp4 -> out/final.mp4, then QC + contact sheet
   voice-lines <job>     a talking 3D Short: one take per spoken line of shots.json "voice" (raymi/voice_lines.py)
   mix    <job>          bed + takes + sfx -> jobs/<job>/out/mix.m4a (cloud prepare, before the timeline)
+  name   <job> [short|mv]  the file name toki downloads: <upload day>_Raymi_<title>_<Short|MV>.mp4
   exposure <dir|img..>  overexposed / oversaturated / flat pictures (raymi/exposure.py)
   bed    <track>        a music bed's map (tempo, beats, accents) -> <track>.map.json (raymi/bed.py)
   pov    <job>          a talking Short's timing against the measured takes + bed map (raymi/pov.py), exit 1 on a fault
@@ -126,6 +127,11 @@ def main(argv: list[str]) -> int:
         for e in errs:
             print("ERROR", e)
         return 1 if errs else 0
+    if cmd == "name":        # name <job> [short|mv] -> the download file name (upload day, title, format)
+        from .channel_rules import delivery_name
+
+        print(delivery_name(P.job_dir(job), argv[2] if len(argv) > 2 else "short"))
+        return 0
     if cmd == "exposure":    # exposure <dir|image...> -> over / undersaturation, clipping, depth per picture
         from . import exposure
 
