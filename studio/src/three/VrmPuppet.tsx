@@ -247,7 +247,7 @@ function styleMaterials(rig: Rig, style: string) {
       else if (name.includes('SKIN')) { m.color.multiply(new THREE.Color('#b3bedc')); m.shadeColorFactor?.multiply(new THREE.Color('#8f9cc4')); }
       else if (name.includes('CLOTH')) {
         m.color.multiply(new THREE.Color('#a9abc4'));
-        m.shadeColorFactor?.copy(m.color).multiply(new THREE.Color('#5c5a80'));     // white tulle in shade: violet grey, never white
+        m.shadeColorFactor?.copy(m.color).multiply(new THREE.Color('#6c6a92'));     // white tulle in shade: violet grey, never white (nor black)
         mt.shadingToonyFactor = 0.82; mt.shadingShiftFactor = -0.12; mt.giEqualizationFactor = 0.95;
       }
       else if (name.includes('HAIR')) m.color.multiply(new THREE.Color('#c4c8e6'));
@@ -274,7 +274,7 @@ function lockColours(rig: Rig, lock: number) {
     if (!m.isMToonMaterial || !m.color || !m.emissive) continue;
     // the lock is for her SKIN's hue (hard rule 9), not for everything: a self-lit white skirt stayed white in the dark
     // and the face (self-lit + key + bloom) burnt (toki 2026-10-25). Skin / face / eyes keep 0.8 of it, hair a third,
-    // fabric none - it takes the set's light and her own glow like cloth does
+    // the white tulle a little, other fabric none - it takes the set's light and her own glow like cloth does
     const share = lockShare(m.name ?? '');
     const a = from * share, b = lock * share;
     const k = (1 - b) / Math.max(1e-3, 1 - a);           // undo the previous lock, apply the new one
@@ -290,7 +290,8 @@ function lockColours(rig: Rig, lock: number) {
 /** How much of the colour lock a material takes (VRoid names: ..._SKIN, Face..., Eye..., ..._HAIR, ..._CLOTH). */
 export function lockShare(name: string): number {
   if (/SKIN|Face|FACE|Eye|EYE|Mouth/.test(name)) return 0.8;
-  if (/HAIR/.test(name)) return 0.33;
+  if (/HAIR/.test(name)) return 0.1;                     // toki 2026-10-25: the hair glowed ("total am leuchten")
+  if (/Bottoms|Onepiece_00_CLOTH_02/.test(name)) return 0.14;   // the white tulle: not black in a dark shot either
   return 0;
 }
 

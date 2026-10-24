@@ -11,7 +11,7 @@ unchanged:
 The alpha / empty areas stay exactly as they were. Recipes per material name live in RECIPES.
 
     python -m raymi.texfix <in.vrm> <out.vrm> [--preview <dir>]    (before | after JPGs per texture; needs numpy + Pillow)
-raymi6.vrm (private assets) = raymi5.vrm through this, 2026-10-25.
+raymi6.vrm (private assets) = raymi5.vrm through this, 2026-10-25; raymi7.vrm = the same + the hair roots.
 """
 from __future__ import annotations
 
@@ -31,6 +31,11 @@ RECIPES = {
     "HairBack": ("soften", 0.4, 0),
     "Hair_00_HAIR": ("soften", 0.35, 0),
 }
+# a second pass per material: the hair roots (toki 2026-10-25: "haare am ansatz die ersten ca 30% ... dunkler und weniger
+# saturiert ... von off black eher matt zu leuchtendem ultraviolett"; the 2D sprites: near-black roots). Every strand
+# maps its texture root (top rows) -> tip (bottom rows), so one texture change gives every strand the same blend.
+ROOTS = ("HairBack", "Hair_00_HAIR")
+ROOT_FULL, ROOT_END = 0.16, 0.38       # share of the texture height: fully off-black down to here, blended out by here
 
 
 # ---------------------------------------------------------------- colour (sRGB <-> OKLab)
@@ -140,6 +145,24 @@ def clean(rgba: np.ndarray, mode: str, strength: float, axis: int = 0) -> np.nda
     return res
 
 
+def roots(rgba: np.ndarray) -> np.ndarray:
+    """Off-black, matte, low-chroma roots that blend into the painted colour lower down (details kept)."""
+    rgb, alpha = rgba[..., :3] / 255.0, rgba[..., 3] / 255.0
+    mask = alpha > 0.02
+    lab = to_lab(rgb)
+    h = rgba.shape[0]
+    v = (np.arange(h) / max(1, h - 1))[:, None]
+    k = np.clip((ROOT_END - v) / (ROOT_END - ROOT_FULL), 0, 1)
+    k = k * k * (3 - 2 * k)
+    out = lab.copy()
+    out[..., 0] = lab[..., 0] + k * (0.2 + 0.35 * (lab[..., 0] - 0.2) * 0.4 - lab[..., 0]) * 0.9   # towards L 0.2 (off-black)
+    out[..., 1:] = lab[..., 1:] * (1 - 0.72 * k)[..., None]                                       # most of the chroma goes
+    res = rgba.copy()
+    rgb2 = rgb.copy(); rgb2[mask] = to_rgb(out)[mask]
+    res[..., :3] = np.round(np.clip(rgb2, 0, 1) * 255).astype(np.uint8)
+    return res
+
+
 # ---------------------------------------------------------------- the VRM (glb) in and out
 def _read(path: Path):
     b = path.read_bytes()
@@ -187,6 +210,8 @@ def main(argv: list[str]) -> int:
         im = Image.open(io.BytesIO(views[vi])).convert("RGBA")
         a = np.array(im)
         b = clean(a, *rec)
+        if any(r in mp["name"] for r in ROOTS):
+            b = roots(b)
         out = io.BytesIO()
         Image.fromarray(b, "RGBA").save(out, "PNG", optimize=True)
         views[vi] = out.getvalue()

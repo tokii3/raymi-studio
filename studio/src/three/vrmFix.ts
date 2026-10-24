@@ -5,13 +5,16 @@
 // Sleeve caps (raymi5 / raymi6: material Onepiece_00_CLOTH_01, the frill on each shoulder past the arm joint): VRoid
 // weighted them ~63 % to the upper arm and the rest to shoulder / upper chest, so a raised arm sheared them and they
 // stayed hanging at the armpit; they also flared up to 10 cm forward of the arm. Now they ride the upper arm (fully
-// outside, blended at the joint) and sit 30 % closer to the arm's axis.
+// outside, blended at the joint), sit 30 % closer to the arm's axis and tilt UP like the fin of the 2D design.
 import * as THREE from 'three';
 
 type Region = {material: RegExp; minAbsX: number; minY: number};
 const CAPS: Region = {material: /Onepiece_00_CLOTH_01/, minAbsX: 0.09, minY: 1.08};
 const JOINT_X = 0.092, FULL_X = 0.115;   // the upper arm starts at |x| 0.092 (bind pose); fully on it from 0.115
 const ARM_Z = 0.027, PULL = 0.3;         // the arm's axis in z, and how far the flare is pulled toward it
+// the 2D design (sprites): the shoulder piece is a ruffle FIN standing up and out, not a cap over the shoulder (VRoid
+// could not shape it) - the further out a vertex, the higher it is lifted, so the piece tilts up from its root
+const LIFT = 1.5;                        // m of lift per m past the arm joint
 
 function materialName(m: THREE.Material | THREE.Material[]): string {
   return (Array.isArray(m) ? m.map((x) => x.name).join(' ') : m.name) ?? '';
@@ -48,6 +51,7 @@ export function fixSleeveCaps(scene: THREE.Object3D): number {
       sw.setXYZW(v, wUA, sh[side] >= 0 ? wSH : 0, 0, 0);
       if (sh[side] < 0) sw.setX(v, 1);
       pos.setZ(v, ARM_Z + (z - ARM_Z) * (1 - PULL * t));
+      pos.setY(v, y + Math.max(0, Math.abs(x) - JOINT_X) * LIFT);
       done.add(v);
       changed++;
     }
