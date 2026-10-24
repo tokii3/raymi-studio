@@ -136,4 +136,5 @@
   (New session -> Cloud). Actions is the main path anyway (0 tokens).
 - KING (jobs/2026-10-18_king): official GUMI audio (song.webm), 1_DOSSIER.md filled except lyric line times
   (need the vocal stem tool, phase 2).
-
+- 2026-10-24 Beach (first 3D film) stopped by toki after the structural pass - MV run 58, Short run 59, QC green.
+  Everything learned: knowledge/HANDOFF_2026-10-24_beach_3d_film.md (root causes, tools, process, open items).

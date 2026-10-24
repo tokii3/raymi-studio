@@ -34,6 +34,13 @@ Verdicts are toki's words (old engine VIDEO_LEARNINGS / PROGRESS / catalog). Exe
   `exemplars/pop-in-2_STORY_and_AUDIT.md`: static, first idea = placeholder, overuse, sticker in front of wallpaper.
 
 ## Good, with limits
+- **Take Me to the Beach (2026-10-22..24, the first 3D film, MV + Short):** toki on the rebuild: "Sets / Idee /
+  Kameras / Effekte schon ganz gut, aber Umsetzung muss besser werden". The idea (grey routine as strings and a
+  battery, her dream sea as the beach metaphor, the office unfolding) held; the execution failed on structural
+  faults: clips that never played, hand-guessed heights (floating / sinking / clipping), no chair, a damped mouth,
+  flat even light, black frames. The structural pass (run 58 / 59) fixed them as classes (scene probe, support
+  rays, push-out, chair, vocal envelope, light depth, textures v2, 8-bit post) - not yet judged by her. Lesson: a
+  3D film needs its bodies in the space measured, not guessed; fix classes, not shots.
 - **YOASOBI Idol (2026-10-01/02, 5 versions):** "schon sehr gut" at v5. Lessons: a rule-based director cannot
   choreograph (hand-written shot list was the turn), measure tempo / sections, cut one frame before the syllable,
   save the finale's set pieces.

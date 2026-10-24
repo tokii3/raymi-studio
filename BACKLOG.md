@@ -112,3 +112,10 @@
   - Lyric words pop without overshoot (motion critic FIX 3): a Words3D option (0 -> 1.2 -> 1 in 3 frames).
   - The hero check counts the postcard in shots 23 / 24 / 75 where it is hidden by her monitor or leaves the frame on
     purpose (why_small) - the kit's hero.json should skip rows with a why_small.
+- Beach structural pass 2026-10-24 (knowledge/HANDOFF_2026-10-24_beach_3d_film.md), open:
+  - Airborne clipping: in the dream she flies / falls / kicks into cushions and rocks from above (~119 probe frames,
+    mostly < 0.15 m) - clearSolids pushes only in x / z; airborne keys need a vertical push (or a lifted path).
+  - Rooms: light depth + textures v2 are in; the props / detail pass (lived-in objects per set, toki "leer, lieblos,
+    ohne Details") is not built.
+  - The scene probe is a process step (stills.json "probe"), not an automatic gate in render.yml yet.
+  - Runs 58 / 59 unscreened (no critic, no toki verdict).
