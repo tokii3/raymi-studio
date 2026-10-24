@@ -76,6 +76,16 @@ per beat whose expression fits the line, shot / side / act / icon / key words, `
   type-critic WEIGHT + SIZE first; calibration: `knowledge/calibration/`. Their answers go VERBATIM into `jobs/<job>/reviews/<stage>_<critic>.md`; only
   `BLOCK: fault|slop` stops; everything else goes to toki as notes. The builder never writes or edits a review.
 
+## Scene probe before every 3D final (toki 2026-10-24: "hör auf punktuell zu fixen, das sind Strukturfehler")
+- `stills.json` `"probe": 15` runs `studio/probe.mjs` over the whole film in the real scene graph (`film/Probe.tsx`);
+  `python -m raymi probe <job> [mv|short]` prints the FAULT CLASSES: limb_in (her bones inside furniture / props),
+  float / sink (her feet against the surface really under her), pop (her hips jump), thing_in / thing_air.
+- A class that appears in several shots is fixed in the PART that makes it (support.ts grounding + resting things,
+  the push-out in VrmPuppet, a set's chair / solids), never shot by shot. Then probe again; render only when the
+  classes are empty or the rest is measured small and named to toki.
+- The QC also refuses black picture (`no_black_picture_>0.25s`; Beach shot 31: bloom / DoF / AO spread one invalid
+  pixel into black frames - the post buffer is 8-bit since).
+
 ## Render (cloud, parallel - toki's PC stays free)
 - Private assets (toki 2026-10-23): this repo is PUBLIC (unlimited Actions minutes), so licensed / personal files live in
   the private `tokii3/raymi-private-assets`: Mixamo clips (`motions/<slug>.fbx`, toki's downloads) and her VRM models
