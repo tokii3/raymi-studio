@@ -1,0 +1,719 @@
+[
+ {
+  "cls": "pierced",
+  "shot": "84",
+  "F": 4950,
+  "xy": [
+   0.516,
+   0.94
+  ],
+  "frames": 116,
+  "worst": 0.00319,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "82",
+  "F": 4664,
+  "xy": [
+   0.52,
+   0.351
+  ],
+  "frames": 102,
+  "worst": 1.0,
+  "what": "lyric hidden by room"
+ },
+ {
+  "cls": "pierced",
+  "shot": "32",
+  "F": 1450,
+  "xy": [
+   0.497,
+   0.809
+  ],
+  "frames": 49,
+  "worst": 0.01175,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "70",
+  "F": 3724,
+  "xy": [
+   0.273,
+   0.51
+  ],
+  "frames": 42,
+  "worst": 1.0,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "pierced",
+  "shot": "81",
+  "F": 4492,
+  "xy": [
+   0.486,
+   0.921
+  ],
+  "frames": 40,
+  "worst": 0.00815,
+  "what": "room through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "38",
+  "F": 1792,
+  "xy": [
+   0.513,
+   0.96
+  ],
+  "frames": 39,
+  "worst": 0.00397,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "15",
+  "F": 344,
+  "xy": [
+   0.352,
+   0.241
+  ],
+  "frames": 39,
+  "worst": 1.0,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "pierced",
+  "shot": "57",
+  "F": 2926,
+  "xy": [
+   0.488,
+   0.958
+  ],
+  "frames": 32,
+  "worst": 0.00585,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "38",
+  "F": 1786,
+  "xy": [
+   0.243,
+   0.353
+  ],
+  "frames": 30,
+  "worst": 1.0,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "79",
+  "F": 4316,
+  "xy": [
+   0.553,
+   0.751
+  ],
+  "frames": 30,
+  "worst": 1.0,
+  "what": "lyric hidden by room"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "71",
+  "F": 3864,
+  "xy": [
+   0.493,
+   0.345
+  ],
+  "frames": 29,
+  "worst": 1.0,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "pierced",
+  "shot": "72",
+  "F": 3916,
+  "xy": [
+   0.459,
+   0.897
+  ],
+  "frames": 28,
+  "worst": 0.00283,
+  "what": "room through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "74",
+  "F": 4010,
+  "xy": [
+   0.27,
+   0.222
+  ],
+  "frames": 28,
+  "worst": 0.896,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "80",
+  "F": 4376,
+  "xy": [
+   0.301,
+   0.626
+  ],
+  "frames": 28,
+  "worst": 0.82,
+  "what": "lyric hidden by room"
+ },
+ {
+  "cls": "pierced",
+  "shot": "20",
+  "F": 638,
+  "xy": [
+   0.46,
+   0.365
+  ],
+  "frames": 27,
+  "worst": 0.00238,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "34",
+  "F": 1574,
+  "xy": [
+   0.811,
+   0.162
+  ],
+  "frames": 27,
+  "worst": 1.0,
+  "what": "lyric hidden by thing"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "81",
+  "F": 4478,
+  "xy": [
+   0.507,
+   0.324
+  ],
+  "frames": 25,
+  "worst": 1.0,
+  "what": "lyric hidden by her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "23",
+  "F": 870,
+  "xy": [
+   0.495,
+   0.975
+  ],
+  "frames": 24,
+  "worst": 0.00243,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "29",
+  "F": 1212,
+  "xy": [
+   0.344,
+   0.511
+  ],
+  "frames": 23,
+  "worst": 0.972,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "14",
+  "F": 314,
+  "xy": [
+   0.226,
+   0.59
+  ],
+  "frames": 22,
+  "worst": 1.0,
+  "what": "lyric hidden by room"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "57",
+  "F": 2946,
+  "xy": [
+   0.546,
+   0.185
+  ],
+  "frames": 22,
+  "worst": 1.0,
+  "what": "lyric hidden by room"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "60",
+  "F": 3156,
+  "xy": [
+   0.459,
+   0.465
+  ],
+  "frames": 21,
+  "worst": 1.0,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "78",
+  "F": 4276,
+  "xy": [
+   0.602,
+   0.822
+  ],
+  "frames": 21,
+  "worst": 1.0,
+  "what": "lyric hidden by room"
+ },
+ {
+  "cls": "pierced",
+  "shot": "54",
+  "F": 2728,
+  "xy": [
+   0.464,
+   0.946
+  ],
+  "frames": 20,
+  "worst": 0.00522,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "37",
+  "F": 1748,
+  "xy": [
+   0.53,
+   0.586
+  ],
+  "frames": 20,
+  "worst": 1.0,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "52",
+  "F": 2606,
+  "xy": [
+   0.449,
+   0.326
+  ],
+  "frames": 20,
+  "worst": 1.0,
+  "what": "lyric hidden by her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "50",
+  "F": 2380,
+  "xy": [
+   0.435,
+   0.498
+  ],
+  "frames": 19,
+  "worst": 0.00429,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "72",
+  "F": 3898,
+  "xy": [
+   0.473,
+   0.288
+  ],
+  "frames": 19,
+  "worst": 1.0,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "42",
+  "F": 2062,
+  "xy": [
+   0.214,
+   0.287
+  ],
+  "frames": 18,
+  "worst": 1.0,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "28",
+  "F": 1150,
+  "xy": [
+   0.577,
+   0.498
+  ],
+  "frames": 17,
+  "worst": 0.666,
+  "what": "lyric hidden by thing"
+ },
+ {
+  "cls": "pierced",
+  "shot": "56",
+  "F": 2878,
+  "xy": [
+   0.296,
+   0.459
+  ],
+  "frames": 16,
+  "worst": 0.02122,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "17",
+  "F": 516,
+  "xy": [
+   0.71,
+   0.729
+  ],
+  "frames": 16,
+  "worst": 1.0,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "25",
+  "F": 998,
+  "xy": [
+   0.48,
+   0.796
+  ],
+  "frames": 16,
+  "worst": 1.0,
+  "what": "lyric hidden by thing"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "50",
+  "F": 2416,
+  "xy": [
+   0.39,
+   0.414
+  ],
+  "frames": 16,
+  "worst": 0.912,
+  "what": "lyric hidden by her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "01",
+  "F": 18,
+  "xy": [
+   0.395,
+   0.985
+  ],
+  "frames": 15,
+  "worst": 0.0011,
+  "what": "set through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "55",
+  "F": 2810,
+  "xy": [
+   0.579,
+   0.647
+  ],
+  "frames": 15,
+  "worst": 0.00361,
+  "what": "room through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "27",
+  "F": 1098,
+  "xy": [
+   0.336,
+   0.764
+  ],
+  "frames": 14,
+  "worst": 1.0,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "pierced",
+  "shot": "68",
+  "F": 3612,
+  "xy": [
+   0.475,
+   0.272
+  ],
+  "frames": 13,
+  "worst": 0.00319,
+  "what": "set through her"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "68",
+  "F": 3636,
+  "xy": [
+   0.518,
+   0.038
+  ],
+  "frames": 13,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "pierced",
+  "shot": "51",
+  "F": 2534,
+  "xy": [
+   0.489,
+   0.563
+  ],
+  "frames": 12,
+  "worst": 0.00216,
+  "what": "set through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "27",
+  "F": 1078,
+  "xy": [
+   0.645,
+   0.452
+  ],
+  "frames": 11,
+  "worst": 0.00768,
+  "what": "set through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "42",
+  "F": 2050,
+  "xy": [
+   0.422,
+   0.92
+  ],
+  "frames": 10,
+  "worst": 0.0053,
+  "what": "room through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "61",
+  "F": 3202,
+  "xy": [
+   0.581,
+   0.272
+  ],
+  "frames": 10,
+  "worst": 0.00231,
+  "what": "set through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "77",
+  "F": 4222,
+  "xy": [
+   0.451,
+   0.923
+  ],
+  "frames": 10,
+  "worst": 0.00744,
+  "what": "set through her"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "56",
+  "F": 2904,
+  "xy": [
+   0.294,
+   0.087
+  ],
+  "frames": 9,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "pierced",
+  "shot": "19b",
+  "F": 562,
+  "xy": [
+   0.471,
+   0.939
+  ],
+  "frames": 8,
+  "worst": 0.00305,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "41",
+  "F": 1958,
+  "xy": [
+   0.606,
+   0.643
+  ],
+  "frames": 8,
+  "worst": 1.0,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "pierced",
+  "shot": "45",
+  "F": 2198,
+  "xy": [
+   0.493,
+   0.56
+  ],
+  "frames": 7,
+  "worst": 0.00067,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "75",
+  "F": 4102,
+  "xy": [
+   0.608,
+   0.215
+  ],
+  "frames": 7,
+  "worst": 1.0,
+  "what": "lyric hidden by her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "58",
+  "F": 3008,
+  "xy": [
+   0.492,
+   0.762
+  ],
+  "frames": 6,
+  "worst": 0.00236,
+  "what": "room through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "53",
+  "F": 2658,
+  "xy": [
+   0.291,
+   0.571
+  ],
+  "frames": 6,
+  "worst": 1.0,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "pierced",
+  "shot": "52",
+  "F": 2608,
+  "xy": [
+   0.514,
+   0.464
+  ],
+  "frames": 4,
+  "worst": 0.00048,
+  "what": "set through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "75",
+  "F": 4090,
+  "xy": [
+   0.734,
+   0.958
+  ],
+  "frames": 4,
+  "worst": 0.00233,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_face",
+  "shot": "56",
+  "F": 2862,
+  "xy": [
+   0.626,
+   0.284
+  ],
+  "frames": 4,
+  "worst": 1.0,
+  "what": "lyric on her face"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "47",
+  "F": 2278,
+  "xy": [
+   0.449,
+   0.646
+  ],
+  "frames": 4,
+  "worst": 0.867,
+  "what": "lyric hidden by set"
+ },
+ {
+  "cls": "pierced",
+  "shot": "36",
+  "F": 1668,
+  "xy": [
+   0.472,
+   0.978
+  ],
+  "frames": 3,
+  "worst": 0.00042,
+  "what": "set through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "49",
+  "F": 2360,
+  "xy": [
+   0.618,
+   0.962
+  ],
+  "frames": 3,
+  "worst": 0.00183,
+  "what": "room through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "71",
+  "F": 3842,
+  "xy": [
+   0.953,
+   0.91
+  ],
+  "frames": 3,
+  "worst": 0.00507,
+  "what": "set through her"
+ },
+ {
+  "cls": "text_hid",
+  "shot": "55",
+  "F": 2786,
+  "xy": [
+   0.408,
+   0.279
+  ],
+  "frames": 3,
+  "worst": 0.89,
+  "what": "lyric hidden by none"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "68",
+  "F": 3602,
+  "xy": null,
+  "frames": 3,
+  "worst": 0.74,
+  "what": "her figure jumps / vanishes"
+ }
+]

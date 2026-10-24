@@ -1,0 +1,109 @@
+qc2 picture 2026-10-22_take-me-to-the-beach (mv): 2507 mask frames, every 2, scale 0.25
+
+## pierced: 38 shots, 559 frames
+     84: 116 frames, worst 0.00319  (set through her x114, room through her x2)  F4950
+     32:  49 frames, worst 0.01175  (set through her x49)  F1450
+     81:  40 frames, worst 0.00815  (room through her x40)  F4492
+     38:  39 frames, worst 0.00397  (set through her x25, a prop in front of or through her (check) x14)  F1792
+     57:  32 frames, worst 0.00585  (set through her x25, room through her x7)  F2926
+     72:  28 frames, worst 0.00283  (room through her x16, set through her x12)  F3916
+     20:  27 frames, worst 0.00238  (set through her x19, none through her x8)  F638
+     23:  24 frames, worst 0.00243  (set through her x24)  F870
+     54:  20 frames, worst 0.00522  (set through her x14, room through her x6)  F2728
+     50:  19 frames, worst 0.00429  (set through her x15, room through her x4)  F2380
+     56:  16 frames, worst 0.02122  (set through her x15, room through her x1)  F2878
+     01:  15 frames, worst 0.0011  (set through her x12, room through her x3)  F18
+     55:  15 frames, worst 0.00361  (room through her x9, set through her x6)  F2810
+     68:  13 frames, worst 0.00319  (set through her x13)  F3612
+     51:  12 frames, worst 0.00216  (set through her x11, room through her x1)  F2534
+     27:  11 frames, worst 0.00768  (set through her x11)  F1078
+     42:  10 frames, worst 0.0053  (room through her x9, set through her x1)  F2050
+     61:  10 frames, worst 0.00231  (set through her x10)  F3202
+     77:  10 frames, worst 0.00744  (set through her x9, room through her x1)  F4222
+    19b:   8 frames, worst 0.00305  (set through her x8)  F562
+     45:   7 frames, worst 0.00067  (set through her x6, room through her x1)  F2198
+     58:   6 frames, worst 0.00236  (room through her x6)  F3008
+     52:   4 frames, worst 0.00048  (set through her x4)  F2608
+     75:   4 frames, worst 0.00233  (set through her x3, room through her x1)  F4090
+     36:   3 frames, worst 0.00042  (set through her x3)  F1668
+     49:   3 frames, worst 0.00183  (room through her x3)  F2360
+     71:   3 frames, worst 0.00507  (set through her x3)  F3842
+     05:   2 frames, worst 0.001  (room through her x2)  F66
+     15:   2 frames, worst 0.00543  (room through her x2)  F318
+    19a:   2 frames, worst 0.00156  (set through her x2)  F546
+     41:   2 frames, worst 0.00152  (set through her x2)  F1978
+     29:   1 frames, worst 0.00101  (room through her x1)  F1204
+     43:   1 frames, worst 0.00044  (room through her x1)  F2082
+     46:   1 frames, worst 0.00073  (set through her x1)  F2212
+     59:   1 frames, worst 0.00078  (set through her x1)  F3064
+     67:   1 frames, worst 0.00105  (set through her x1)  F3580
+    70b:   1 frames, worst 0.00064  (room through her x1)  F3726
+     74:   1 frames, worst 0.00063  (room through her x1)  F3994
+
+## text_face: 1 shots, 4 frames
+     56:   4 frames, worst 1.0  (lyric on her face x4)  F2862
+
+## text_hid: 37 shots, 685 frames
+     82: 102 frames, worst 1.0  (lyric hidden by room x53, lyric hidden by set x43, lyric hidden by her x6)  F4664
+     70:  42 frames, worst 1.0  (lyric hidden by set x32, lyric hidden by room x10)  F3724
+     15:  39 frames, worst 1.0  (lyric hidden by set x39)  F344
+     38:  30 frames, worst 1.0  (lyric hidden by set x30)  F1786
+     79:  30 frames, worst 1.0  (lyric hidden by room x30)  F4316
+     71:  29 frames, worst 1.0  (lyric hidden by set x17, lyric hidden by room x12)  F3864
+     74:  28 frames, worst 0.896  (lyric hidden by set x28)  F4010
+     80:  28 frames, worst 0.82  (lyric hidden by room x27, lyric hidden by set x1)  F4376
+     34:  27 frames, worst 1.0  (lyric hidden by thing x27)  F1574
+     81:  25 frames, worst 1.0  (lyric hidden by her x25)  F4478
+     29:  23 frames, worst 0.972  (lyric hidden by set x21, lyric hidden by her x2)  F1212
+     14:  22 frames, worst 1.0  (lyric hidden by room x16, lyric hidden by set x6)  F314
+     57:  22 frames, worst 1.0  (lyric hidden by room x22)  F2946
+     60:  21 frames, worst 1.0  (lyric hidden by set x20, lyric hidden by thing x1)  F3156
+     78:  21 frames, worst 1.0  (lyric hidden by room x18, lyric hidden by set x3)  F4276
+     37:  20 frames, worst 1.0  (lyric hidden by set x20)  F1748
+     52:  20 frames, worst 1.0  (lyric hidden by her x20)  F2606
+     72:  19 frames, worst 1.0  (lyric hidden by set x11, lyric hidden by her x8)  F3898
+     42:  18 frames, worst 1.0  (lyric hidden by set x18)  F2062
+     28:  17 frames, worst 0.666  (lyric hidden by thing x17)  F1150
+     17:  16 frames, worst 1.0  (lyric hidden by set x16)  F516
+     25:  16 frames, worst 1.0  (lyric hidden by thing x16)  F998
+     50:  16 frames, worst 0.912  (lyric hidden by her x16)  F2416
+     27:  14 frames, worst 1.0  (lyric hidden by set x14)  F1098
+     41:   8 frames, worst 1.0  (lyric hidden by set x7, lyric hidden by thing x1)  F1958
+     75:   7 frames, worst 1.0  (lyric hidden by her x7)  F4102
+     53:   6 frames, worst 1.0  (lyric hidden by set x6)  F2658
+     47:   4 frames, worst 0.867  (lyric hidden by set x4)  F2278
+     55:   3 frames, worst 0.89  (lyric hidden by none x1, lyric hidden by her x1, lyric hidden by set x1)  F2786
+     21:   2 frames, worst 0.831  (lyric hidden by set x2)  F708
+     30:   2 frames, worst 0.847  (lyric hidden by set x2)  F1270
+    70b:   2 frames, worst 0.675  (lyric hidden by her x2)  F3738
+     73:   2 frames, worst 0.36  (lyric hidden by set x2)  F3952
+     22:   1 frames, worst 0.417  (lyric hidden by set x1)  F766
+     32:   1 frames, worst 0.78  (lyric hidden by her x1)  F1404
+     46:   1 frames, worst 0.862  (lyric hidden by set x1)  F2218
+     67:   1 frames, worst 0.472  (lyric hidden by set x1)  F3562
+
+## face_cut: 7 shots, 29 frames
+     68:  13 frames, worst 1  (face cut by the frame edge x13)  F3636
+     56:   9 frames, worst 1  (face cut by the frame edge x9)  F2904
+     02:   2 frames, worst 1  (face cut by the frame edge x2)  F40
+     10:   2 frames, worst 1  (face cut by the frame edge x2)  F160
+     03:   1 frames, worst 1  (face cut by the frame edge x1)  F54
+     13:   1 frames, worst 1  (face cut by the frame edge x1)  F248
+     30:   1 frames, worst 1  (face cut by the frame edge x1)  F1258
+
+## her_pop: 15 shots, 25 frames
+     68:   3 frames, worst 0.74  (her figure jumps / vanishes x3)  F3602
+     71:   3 frames, worst 0.67  (her figure jumps / vanishes x3)  F3850
+     17:   2 frames, worst 0.99  (her figure jumps / vanishes x2)  F462
+    19a:   2 frames, worst 1.0  (her figure jumps / vanishes x2)  F542
+     26:   2 frames, worst 1.0  (her figure jumps / vanishes x2)  F1006
+     31:   2 frames, worst 0.92  (her figure jumps / vanishes x2)  F1312
+     46:   2 frames, worst 0.63  (her figure jumps / vanishes x2)  F2214
+    66c:   2 frames, worst 0.75  (her figure jumps / vanishes x2)  F3542
+     05:   1 frames, worst 0.48  (her figure jumps / vanishes x1)  F86
+     14:   1 frames, worst 0.63  (her figure jumps / vanishes x1)  F276
+     30:   1 frames, worst 0.47  (her figure jumps / vanishes x1)  F1258
+     44:   1 frames, worst 0.72  (her figure jumps / vanishes x1)  F2102
+     47:   1 frames, worst 1.0  (her figure jumps / vanishes x1)  F2260
+    66a:   1 frames, worst 0.46  (her figure jumps / vanishes x1)  F3490
+     67:   1 frames, worst 0.6  (her figure jumps / vanishes x1)  F3580

@@ -1,0 +1,722 @@
+[
+ {
+  "cls": "limb_in",
+  "shot": "23",
+  "F": 882,
+  "xy": [
+   0.505,
+   0.971
+  ],
+  "frames": 445,
+  "worst": 0.04,
+  "what": "hips in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "24",
+  "F": 962,
+  "xy": [
+   0.583,
+   1.194
+  ],
+  "frames": 371,
+  "worst": 0.04,
+  "what": "rightUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "22",
+  "F": 796,
+  "xy": [
+   0.49,
+   0.829
+  ],
+  "frames": 349,
+  "worst": 0.04,
+  "what": "rightUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "41",
+  "F": 2012,
+  "xy": [
+   0.564,
+   0.865
+  ],
+  "frames": 349,
+  "worst": 0.04,
+  "what": "leftHand in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "65",
+  "F": 3450,
+  "xy": [
+   0.573,
+   1.388
+  ],
+  "frames": 313,
+  "worst": 0.04,
+  "what": "rightUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "73",
+  "F": 3986,
+  "xy": [
+   0.676,
+   0.936
+  ],
+  "frames": 307,
+  "worst": 0.109,
+  "what": "hair leftUpperLeg in Sphere 0.53x0.55x0.56 @0.3,0.9,0.3"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "39",
+  "F": 1890,
+  "xy": [
+   0.529,
+   0.894
+  ],
+  "frames": 291,
+  "worst": 0.04,
+  "what": "rightUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "66a",
+  "F": 3498,
+  "xy": [
+   0.48,
+   0.975
+  ],
+  "frames": 279,
+  "worst": 0.04,
+  "what": "rightUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "36",
+  "F": 1640,
+  "xy": [
+   0.589,
+   1.171
+  ],
+  "frames": 278,
+  "worst": 0.04,
+  "what": "rightUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "63",
+  "F": 3318,
+  "xy": [
+   0.663,
+   1.923
+  ],
+  "frames": 260,
+  "worst": 0.04,
+  "what": "leftHand in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "44",
+  "F": 2140,
+  "xy": [
+   0.835,
+   1.74
+  ],
+  "frames": 258,
+  "worst": 0.04,
+  "what": "rightUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "11",
+  "F": 220,
+  "xy": [
+   0.342,
+   0.888
+  ],
+  "frames": 253,
+  "worst": 0.04,
+  "what": "leftLowerLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "text_in",
+  "shot": "37",
+  "F": 1754,
+  "xy": [
+   0.698,
+   0.761
+  ],
+  "frames": 251,
+  "worst": 9,
+  "what": "a lyric in Box 1.77x1.70x0.89 @0.0,1.5,1.6"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "30",
+  "F": 1304,
+  "xy": [
+   0.473,
+   0.829
+  ],
+  "frames": 242,
+  "worst": 0.04,
+  "what": "hair chest in Box 0.48x0.55x0.07 @0.0,0.8,-0.2"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "33",
+  "F": 1522,
+  "xy": [
+   0.534,
+   0.338
+  ],
+  "frames": 231,
+  "worst": 0.04,
+  "what": "leftLowerLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "61",
+  "F": 3192,
+  "xy": [
+   0.454,
+   0.882
+  ],
+  "frames": 220,
+  "worst": 0.04,
+  "what": "rightUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "31",
+  "F": 1358,
+  "xy": [
+   0.457,
+   0.83
+  ],
+  "frames": 211,
+  "worst": 0.04,
+  "what": "leftLowerLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "38",
+  "F": 1756,
+  "xy": [
+   0.413,
+   1.07
+  ],
+  "frames": 194,
+  "worst": 0.04,
+  "what": "hair leftUpperLeg in Box 0.48x0.55x0.07 @0.0,0.8,-0.2"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "59",
+  "F": 3106,
+  "xy": [
+   0.437,
+   0.893
+  ],
+  "frames": 192,
+  "worst": 0.04,
+  "what": "leftUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "80",
+  "F": 4374,
+  "xy": [
+   0.453,
+   0.453
+  ],
+  "frames": 190,
+  "worst": 0.252,
+  "what": "hair leftHand in Sphere 1.07x0.66x1.07 @-1.5,-0.2,0.5"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "17",
+  "F": 460,
+  "xy": [
+   0.489,
+   0.815
+  ],
+  "frames": 170,
+  "worst": 0.137,
+  "what": "leftHand in Box 0.96x0.08x1.20 @0.0,0.4,0.3"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "29",
+  "F": 1246,
+  "xy": [
+   0.335,
+   1.135
+  ],
+  "frames": 155,
+  "worst": 0.316,
+  "what": "leftHand in Sphere 1.07x0.66x1.07 @-1.5,-0.2,0.5"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "45",
+  "F": 2160,
+  "xy": [
+   0.465,
+   0.544
+  ],
+  "frames": 122,
+  "worst": 0.063,
+  "what": "hair chest in Box 0.48x0.55x0.07 @0.0,0.8,-0.2"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "40",
+  "F": 1904,
+  "xy": [
+   0.239,
+   1.468
+  ],
+  "frames": 110,
+  "worst": 0.04,
+  "what": "rightUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "64",
+  "F": 3330,
+  "xy": [
+   0.484,
+   1.578
+  ],
+  "frames": 109,
+  "worst": 0.189,
+  "what": "leftHand in Sphere 1.07x0.66x1.07 @-1.5,-0.2,0.5"
+ },
+ {
+  "cls": "pop",
+  "shot": "84",
+  "F": 4838,
+  "xy": [
+   0.504,
+   0.751
+  ],
+  "frames": 104,
+  "worst": 0.25,
+  "what": "hips jump"
+ },
+ {
+  "cls": "text_in",
+  "shot": "80",
+  "F": 4448,
+  "xy": [
+   0.591,
+   0.599
+  ],
+  "frames": 96,
+  "worst": 9,
+  "what": "a lyric in Sphere 1.07x0.66x1.07 @-1.5,-0.2,0.5"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "14",
+  "F": 270,
+  "xy": [
+   0.403,
+   0.432
+  ],
+  "frames": 92,
+  "worst": 0.059,
+  "what": "face head in Box 0.96x0.08x1.20 @0.0,0.4,2.8"
+ },
+ {
+  "cls": "text_in",
+  "shot": "74",
+  "F": 4062,
+  "xy": [
+   0.342,
+   0.599
+  ],
+  "frames": 87,
+  "worst": 7,
+  "what": "a lyric in Box 1.28x1.45x0.64 @0.0,1.3,1.8"
+ },
+ {
+  "cls": "slide",
+  "shot": "15",
+  "F": 318,
+  "xy": [
+   0.566,
+   1.487
+  ],
+  "frames": 84,
+  "worst": 0.172,
+  "what": "leftFoot slides"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "19a",
+  "F": 556,
+  "xy": [
+   0.408,
+   1.248
+  ],
+  "frames": 82,
+  "worst": 0.117,
+  "what": "rightUpperLeg in Box 0.92x0.12x1.90 @0.0,0.3,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "66b",
+  "F": 3518,
+  "xy": [
+   0.464,
+   0.556
+  ],
+  "frames": 80,
+  "worst": 0.04,
+  "what": "face head in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "jerk",
+  "shot": "82",
+  "F": 4736,
+  "xy": [
+   0.489,
+   0.492
+  ],
+  "frames": 72,
+  "worst": 0.135,
+  "what": "hips jumps"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "32",
+  "F": 1456,
+  "xy": [
+   0.499,
+   0.315
+  ],
+  "frames": 70,
+  "worst": 0.024,
+  "what": "hair head in Cylinder 0.05x2.30x0.05 @0.0,1.1,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "07",
+  "F": 134,
+  "xy": [
+   0.463,
+   0.257
+  ],
+  "frames": 69,
+  "worst": 0.038,
+  "what": "hair chest in Box 0.48x0.55x0.07 @0.0,0.8,-0.2"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "74",
+  "F": 4060,
+  "xy": [
+   0.861,
+   1.035
+  ],
+  "frames": 65,
+  "worst": 0.04,
+  "what": "rightLowerLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "slide",
+  "shot": "53",
+  "F": 2656,
+  "xy": [
+   0.652,
+   0.463
+  ],
+  "frames": 65,
+  "worst": 0.126,
+  "what": "leftFoot slides"
+ },
+ {
+  "cls": "text_in",
+  "shot": "17",
+  "F": 516,
+  "xy": [
+   0.732,
+   0.802
+  ],
+  "frames": 64,
+  "worst": 9,
+  "what": "a lyric in Box 0.50x0.10x0.32 @0.0,0.4,-0.7"
+ },
+ {
+  "cls": "text_in",
+  "shot": "79",
+  "F": 4364,
+  "xy": [
+   0.526,
+   0.772
+  ],
+  "frames": 63,
+  "worst": 9,
+  "what": "a lyric in Sphere 1.72x1.07x1.72 @0.7,-0.3,-0.6"
+ },
+ {
+  "cls": "text_in",
+  "shot": "47",
+  "F": 2322,
+  "xy": [
+   0.759,
+   0.569
+  ],
+  "frames": 60,
+  "worst": 6,
+  "what": "a lyric in Box 1.50x1.70x0.75 @0.0,1.5,1.8"
+ },
+ {
+  "cls": "jerk",
+  "shot": "47",
+  "F": 2312,
+  "xy": [
+   -0.351,
+   0.163
+  ],
+  "frames": 60,
+  "worst": 0.644,
+  "what": "rightHand jumps"
+ },
+ {
+  "cls": "slide",
+  "shot": "21",
+  "F": 668,
+  "xy": [
+   0.38,
+   0.635
+  ],
+  "frames": 60,
+  "worst": 0.087,
+  "what": "leftFoot slides"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "72",
+  "F": 3930,
+  "xy": [
+   0.545,
+   0.368
+  ],
+  "frames": 58,
+  "worst": 0.06,
+  "what": "hair head in Box 5.40x1.62x0.12 @0.0,2.3,-3.6"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "12",
+  "F": 238,
+  "xy": [
+   0.412,
+   2.047
+  ],
+  "frames": 56,
+  "worst": 0.04,
+  "what": "hips in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "75",
+  "F": 4068,
+  "xy": [
+   1.109,
+   2.067
+  ],
+  "frames": 56,
+  "worst": 0.04,
+  "what": "leftLowerLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "20",
+  "F": 594,
+  "xy": [
+   0.275,
+   0.83
+  ],
+  "frames": 54,
+  "worst": 0.175,
+  "what": "head in Cylinder 0.05x2.30x0.05 @0.0,1.1,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "62c",
+  "F": 3254,
+  "xy": [
+   0.512,
+   0.879
+  ],
+  "frames": 53,
+  "worst": 0.039,
+  "what": "rightUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "13",
+  "F": 266,
+  "xy": [
+   0.418,
+   0.834
+  ],
+  "frames": 52,
+  "worst": 0.057,
+  "what": "hair leftLowerArm in Box 0.92x0.12x1.90 @0.0,0.3,0.0"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "57",
+  "F": 2966,
+  "xy": [
+   0.504,
+   0.427
+  ],
+  "frames": 52,
+  "worst": 0.023,
+  "what": "hair head in Cylinder 0.05x2.30x0.05 @0.0,1.1,0.0"
+ },
+ {
+  "cls": "text_in",
+  "shot": "41",
+  "F": 2018,
+  "xy": [
+   0.575,
+   0.663
+  ],
+  "frames": 52,
+  "worst": 3,
+  "what": "a lyric in Box 0.48x0.55x0.07 @0.0,0.8,-0.2"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "62b",
+  "F": 3234,
+  "xy": [
+   0.527,
+   0.9
+  ],
+  "frames": 49,
+  "worst": 0.04,
+  "what": "rightUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "jerk",
+  "shot": "59",
+  "F": 3054,
+  "xy": [
+   0.502,
+   0.416
+  ],
+  "frames": 49,
+  "worst": 0.299,
+  "what": "rightHand jumps"
+ },
+ {
+  "cls": "slide",
+  "shot": "50",
+  "F": 2416,
+  "xy": [
+   0.353,
+   0.833
+  ],
+  "frames": 47,
+  "worst": 0.082,
+  "what": "leftFoot slides"
+ },
+ {
+  "cls": "slide",
+  "shot": "55",
+  "F": 2792,
+  "xy": [
+   0.604,
+   0.994
+  ],
+  "frames": 47,
+  "worst": 0.225,
+  "what": "leftFoot slides"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "62d",
+  "F": 3258,
+  "xy": [
+   0.462,
+   0.863
+  ],
+  "frames": 46,
+  "worst": 0.04,
+  "what": "rightUpperLeg in Box 0.50x0.08x0.48 @0.0,0.5,0.0"
+ },
+ {
+  "cls": "jerk",
+  "shot": "20",
+  "F": 594,
+  "xy": [
+   0.304,
+   0.527
+  ],
+  "frames": 45,
+  "worst": 0.552,
+  "what": "hips jumps"
+ },
+ {
+  "cls": "slide",
+  "shot": "16",
+  "F": 430,
+  "xy": [
+   0.46,
+   0.921
+  ],
+  "frames": 45,
+  "worst": 0.086,
+  "what": "rightFoot slides"
+ },
+ {
+  "cls": "slide",
+  "shot": "81",
+  "F": 4452,
+  "xy": [
+   0.474,
+   1.524
+  ],
+  "frames": 45,
+  "worst": 0.146,
+  "what": "leftFoot slides"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "53",
+  "F": 2656,
+  "xy": [
+   0.65,
+   0.052
+  ],
+  "frames": 44,
+  "worst": 0.06,
+  "what": "hips in Box 5.40x1.62x0.12 @0.0,2.3,-3.6"
+ },
+ {
+  "cls": "slide",
+  "shot": "32",
+  "F": 1392,
+  "xy": [
+   0.433,
+   1.738
+  ],
+  "frames": 44,
+  "worst": 0.083,
+  "what": "leftFoot slides"
+ }
+]
