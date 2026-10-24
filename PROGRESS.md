@@ -7,8 +7,10 @@
 - Structural guard fixes found on the way: the face / staging heroes read 0 % on every 3D-rig shot (sprite-only code);
   close shots with a crash / orbit had no legal lyric place -> `cross` (over her body, never her face) + blocks riding
   the lens as the fitter's last tier; the portrait Short used the landscape size minimum (now 4 % cap, Shorts range).
-- Guards green MV + Short, 121 py + 13 studio tests. stills.json round 1 (21 stills) pushed -> look at it + look-critic
-  before toki.
+- Guards green MV + Short, 121 py + 13 studio tests. Stills board 1 (21 stills, run 40129527020): my own look says
+  BELOW THE BAR (face cut in close shots incl. the thumbnail frame, the guard invisible, one black shot, the fold a white
+  slab, effects too subtle) - no critic spent, not shown to toki. Fault classes + NEXT:
+  knowledge/HANDOFF_2026-10-24_watchme_build.md.
 
 ## 2026-10-24 (night) - Watch Me script PASS (round 2), v2.1 with its FIXes
 - script-critic round 2 on 4_SCRIPT v2: PASS (verbatim reviews/script_2.md). v2.1 takes its 8 FIXes into script +
