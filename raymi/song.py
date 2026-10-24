@@ -766,7 +766,8 @@ def analyze(job_dir: Path) -> dict:
     ogg = job_dir / "vocals.ogg"            # small stem kept in the repo: local re-alignment + checks by ear
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(wav), "-ac", "1", "-c:a", "libopus", "-b:a", "48k",
                     str(ogg)], check=True)
-    text = (job_dir / cfg.get("lyrics", "lyrics.txt")).read_text(encoding="utf-8")
+    lyr = job_dir / cfg.get("lyrics", "lyrics.txt")
+    text = lyr.read_text(encoding="utf-8") if lyr.is_file() else ""
     cache = job_dir / "whisper_words.json"
     if cache.is_file():
         asr = json.loads(cache.read_text(encoding="utf-8"))
@@ -780,11 +781,29 @@ def analyze(job_dir: Path) -> dict:
         asr, log = fill_gaps(wav, asr, spans0, list(langs), " ".join(text.split()), cfg.get("model", "large-v3"))
         cache.write_text(json.dumps(asr, ensure_ascii=False, indent=0), encoding="utf-8", newline="\n")
         gap_log.write_text(json.dumps(log, indent=1), encoding="utf-8", newline="\n")
+    if not text:                          # no official text yet: what the recogniser heard, one line per phrase -
+        text = heard_lines(asr)           # toki replaces it with the official text, `raymi lyrics` re-aligns locally
+        (job_dir / "lyrics_heard.txt").write_text(text, encoding="utf-8", newline="\n")
     res = time_lyrics(job_dir, text, asr, wav)
     lines = res["lines"]
     sm = song_map(song, wav, lines, stems / "accomp.wav")
     (job_dir / "song_map.json").write_text(json.dumps(sm, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     return {"lines": len(lines), "stats": res["stats"], "sections": len(sm["sections"]), "bpm": sm["bpm"]}
+
+
+def heard_lines(asr: list[dict], gap: float = 0.7, max_words: int = 12) -> str:
+    """The recognised words as a draft lyric text: a new line after a pause >= gap s or max_words words. Only a
+    stand-in until the official text is in lyrics.txt (the source label says so)."""
+    out, cur, prev = [], [], None
+    for w in asr:
+        if cur and (w["t0"] - prev >= gap or len(cur) >= max_words):
+            out.append(" ".join(cur))
+            cur = []
+        cur.append(w["w"])
+        prev = w["t1"]
+    if cur:
+        out.append(" ".join(cur))
+    return "# heard by the recogniser, NOT the official text - replace before the script step\n" + "\n".join(out) + "\n"
 
 
 def time_lyrics(job_dir: Path, text: str, asr: list[dict], vocals: Path) -> dict:
@@ -797,7 +816,8 @@ def time_lyrics(job_dir: Path, text: str, asr: list[dict], vocals: Path) -> dict
     flat = [w for ln in timed for w in ln["words"]]
     stats = {k: sum(1 for w in flat if w["how"] == k) for k in ("snapped", "measured", "interpolated")}
     stats["words"] = len(flat)
-    res = {"fps": FPS, "source": {"lyrics": "official text (YouTube description)", "timing": "vocal stem: demucs "
+    res = {"fps": FPS, "source": {"lyrics": ("HEARD by the recogniser (lyrics_heard.txt), not official" if text.startswith("# heard")
+           else "official text (YouTube description)"), "timing": "vocal stem: demucs "
            "htdemucs + faster-whisper word times, romaji letter match, snapped to vocal onsets"},
            "stats": stats, "lines": timed}
     (job_dir / "lyrics_timed.json").write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")

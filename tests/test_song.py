@@ -185,3 +185,12 @@ def test_fast_runs_find_a_stab_triplet_between_beats():
     hits = [{"t": t, "cut": S.cut_frame(t)} for t in (0.29, 0.58, 0.87, 1.16, 4.57, 4.71, 4.85, 5.41, 6.0)]
     runs = S.fast_runs(hits)
     assert [r["times"] for r in runs] == [[4.57, 4.71, 4.85]]
+
+
+def test_heard_lines_break_on_pauses():
+    from raymi.song import heard_lines, parse_lyrics
+    asr = [{"w": "watch", "t0": 0.0, "t1": 0.3}, {"w": "me", "t0": 0.35, "t1": 0.6},
+           {"w": "now", "t0": 2.0, "t1": 2.3}]
+    text = heard_lines(asr)
+    assert text.startswith("# heard")
+    assert [ln["text"] for ln in parse_lyrics(text)] == ["watch me", "now"]
