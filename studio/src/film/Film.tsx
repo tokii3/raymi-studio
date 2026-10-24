@@ -17,7 +17,7 @@ import {Words3D} from '../three/Words3D';
 import {CapCrown} from '../three/props';
 import {Card, RaySwarm} from '../three/cards';
 import {flare, frames, since, stepValue} from '../three/events';
-import {useTexturesReady} from '../three/look';
+import {runTo, useTexturesReady} from '../three/look';
 import {VrmPuppet, useVrmReady, vrmBones} from '../three/VrmPuppet';
 import {Strings} from '../three/routine';
 import {makeVrmMouthKeys} from '../three/vrmLipSync';
@@ -138,6 +138,10 @@ export const Film: React.FC<FilmProps> = (props) => {
   if (o.glow_pulse === 'beats') glowGain *= 1 + 0.9 * flare(props.beats, f, 6);
   if (typeof o.glow_out === 'number' && f >= o.glow_out) glowGain *= Math.max(0, 1 - (f - o.glow_out) / 4);
   glowGain *= 1 + 2.5 * dotBoost;
+  // a blackout (sets Shoot / Corner / Exhibit "dark" / "dark_at"): her own key goes with the set's light and her dots
+  // become the light of the picture - the lamp in the dark (Watch Me, boards run 1: she stayed lit as by day)
+  const darkNow = Math.max(0, Math.min(1, runTo(Number(o.dark ?? 0), o.dark_at, Number(o.dark_s ?? 0.25), f)));
+  glowGain *= 1 + 5 * darkNow;
   // the rays: a ring around her head (swarm_ring 'head'), rising and widening into a beam after swarm_beam (frame)
   let rays: React.ReactNode = null;
   const headTop = pose ? figurePoint(shot, f, fps, camPos, ...crownUV(pose.key)) : null;
@@ -226,7 +230,7 @@ export const Film: React.FC<FilmProps> = (props) => {
                 glow={glowColor(shot.opts.glow, f)} glowGain={0.12 * glowGain}
                 materialStyle={String(shot.opts.material ?? (shot.actor ? 'routine' : 'firestarter'))}
                 step={shot.step ?? 1} outline={shot.outline ?? 0} battery={battery}
-                keyLight={Number(shot.opts.her_key ?? shot.opts.depth ?? 0)} />
+                keyLight={Number(shot.opts.her_key ?? shot.opts.depth ?? 0) * (1 - 0.85 * darkNow)} />
             ) : (
               <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={glowGain} />

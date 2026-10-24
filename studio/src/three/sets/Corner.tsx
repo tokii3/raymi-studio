@@ -14,29 +14,21 @@
 import React from 'react';
 import * as THREE from 'three';
 import {Beam, RBox, Sign, drawText} from '../parts';
-import {SetLight, blobTexture, canvasTexture, rnd, toon, toonSurface} from '../look';
+import {SetLight, blobTexture, canvasTexture, rnd, runTo, toon, toonSurface} from '../look';
 import {DeepLife} from '../creatures';
 import {Stagings} from '../staging';
 import type {SetProps} from './index';
 
 const num = (v: unknown, d = 0) => (typeof v === 'number' ? v : d);
 
-/** A value that runs from `base` to v over s seconds from frame t ([[t, v]] - the compiler made t a frame). */
-export function runTo(base: number, spec: unknown, s: number, f: number): number {
-  if (!Array.isArray(spec) || !Array.isArray(spec[0])) return base;
-  let v = base;
-  for (const [t, to] of spec as [number, number][]) {
-    const k = Math.max(0, Math.min(1, (f - t) / Math.max(1, s * 30)));
-    if (f >= t) v = v + (to - v) * (k * k * (3 - 2 * k));
-  }
-  return v;
-}
-
 const ROAD_Z = 1.6;
 
 export const Corner: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const dark = Math.max(0, Math.min(1, runTo(num(opts.dark), opts.dark_at, num(opts.dark_s, 0.25), f)));
   const on = 1 - dark;
+  // blackout: the set's whole light goes, not only its lamps (boards run 1: 'dark' left her lit as by day)
+  const dim = 0.1 + 0.9 * on;
+  const dimC = (c: string) => new THREE.Color(c).lerp(new THREE.Color('#010103'), dark).getStyle();
   const lamp = num(opts.lamp, 1) * on;
   const lampC = '#ffc98a';
   const night = '#0a1030';
@@ -65,8 +57,8 @@ export const Corner: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const road = toonSurface('#20222f', 'rubber', [10, 8]);
   return (
     <group>
-      <SetLight sky="#25336e" ground="#140f22" fill={0.75} key="#8fa8ff" keyI={0.9} keyPos={[-6, 9, 6]} target={[0, 0, 0]}
-        shadowSize={7} fog={night} fogNear={9} fogFar={34} bg={night} depth={num(opts.depth, 0.8)} />
+      <SetLight sky="#25336e" ground="#140f22" fill={0.75 * dim} key="#8fa8ff" keyI={0.9 * dim} keyPos={[-6, 9, 6]} target={[0, 0, 0]}
+        shadowSize={7} fog={dimC(night)} fogNear={9} fogFar={34} bg={dimC(night)} depth={num(opts.depth, 0.8)} />
       <primitive object={spot} />
       <primitive object={spot.target} />
       {/* the ground: sidewalk slabs (her level, y 0), the curb, the road 12 cm lower with the zebra crossing */}
@@ -129,9 +121,10 @@ export const Corner: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       {/* the billboard frame high above the shop */}
       <group position={[0.4, 4.9, -3.1]}>
         <RBox size={[4.2, 1.9, 0.12]} r={0.03} c="#1e1c2a" />
-        <Sign pos={[0, 0, 0.08]} size={[4.0, 1.7]} id={`corner_bb${opts.billboard ?? ''}`} glow={on > 0.05}
+        {/* an empty billboard is lit paper, not a light (boards run 1: a white glare above her) */}
+        <Sign pos={[0, 0, 0.08]} size={[4.0, 1.7]} id={`corner_bb${opts.billboard ?? ''}`} glow={on > 0.05 && typeof opts.billboard === 'string'}
           paint={(ctx, w, h) => {
-            ctx.fillStyle = on > 0.05 ? '#f1e9df' : '#1a1826'; ctx.fillRect(0, 0, w, h);
+            ctx.fillStyle = typeof opts.billboard === 'string' ? '#2a1838' : '#8a8478'; ctx.fillRect(0, 0, w, h);
             if (typeof opts.billboard === 'string') drawText(ctx, opts.billboard, w / 2, h / 2, h * 0.42, '#ff3d7f', {outline: '#16121f', ow: 8, maxW: w * 0.9});
           }} />
         {[-1.4, 0, 1.4].map((x) => <mesh key={x} position={[x, 1.05, 0.3]} rotation={[0.6, 0, 0]} material={toon('#26283a')}><cylinderGeometry args={[0.03, 0.05, 0.25, 8]} /></mesh>)}

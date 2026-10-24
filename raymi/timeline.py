@@ -551,6 +551,25 @@ FX_KINDS = {"duo", "speed", "impact", "halftone", "spread",
 FX_TIMES = {"taps", "big", "write0", "write1"}   # fx fields in song seconds -> film frames
 
 
+LOW_LENS = 0.45      # x her height: a lens below this, looking UP at her ...
+LOW_NEAR = 2.6       # ... closer than this many m (horizontal) looks under her skirt
+
+
+def under_skirt(ckeys: list[dict], actor: list[dict], tag: str) -> list[str]:
+    """A worm's eye close to her looks up her skirt (Watch Me boards 2026-10-24: B1 and C1 did). A low angle stays -
+    from further away or higher; a shot that really needs it says "low_ok": "<why>"."""
+    out = []
+    for ck in ckeys:
+        k = min(actor, key=lambda x: abs(x["f"] - ck["f"]))
+        p, h = k["pos"], float(k.get("height", DEFAULT_HEIGHT))
+        cam, look = ck["pos"], ck["look"]
+        dist = math.hypot(cam[0] - p[0], cam[2] - p[2])
+        if cam[1] - p[1] < LOW_LENS * h and dist < LOW_NEAR and look[1] > cam[1]:
+            out.append(f"{tag}: the lens at {cam[1] - p[1]:.2f} m, {dist:.1f} m from her, looks up her skirt - go wider "
+                       f"(>= {LOW_NEAR} m) or higher (>= {LOW_LENS * h:.2f} m), or \"low_ok\": \"<why>\"")
+    return out
+
+
 def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses: set[str], errors: list[str],
                   tag: str, clips: set[str] | None = None) -> list[dict]:
     """shots.json "actor" keys -> VrmKey frames (studio/src/three/vrmPoses.ts)."""
@@ -922,6 +941,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                          **({"center": _v3(spec_h["center"], marks, errors, tag)} if "center" in spec_h else {})})
         actor = compile_actor(s, fmt, a, b, fr, marks, poses, errors, tag, clips) if s.get("actor") else []
         used_clips |= {k["motion"] for k in actor if k.get("motion")}
+        if actor and not s.get("low_ok"):
+            errors += under_skirt(ckeys, actor, tag)
         if actor and not spec.get("vrm"):
             errors.append(f"{tag}: actor keys need the top-level \"vrm\" model (e.g. \"vrm/raymi5.vrm\")")
         extra = {}

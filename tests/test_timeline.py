@@ -291,3 +291,12 @@ def test_desk_things_become_solids_the_lens_cannot_pass():
                           {"kind": "postcard", "pos": [0, 1, 0]}], marks)
     assert [s["name"] for s in sol] == ["monitor", "files"]
     assert sol[0]["center"] == [-0.42, 1.185, 0.78] and abs(sol[1]["size"][1] - (0.044 * 8 + 0.03)) < 1e-9
+
+
+def test_low_lens_close_to_her_is_refused():
+    """Watch Me boards 2026-10-24: a worm's eye 1-2 m from her looked up her skirt (B1, C1; Beach had 4 such shots)."""
+    her = [{"f": 0, "pos": [0, 0.42, 0], "height": 1.55}]
+    near = [{"f": 0, "pos": [0.5, 0.5, 1.0], "look": [0, 1.8, 0]}]
+    far = [{"f": 0, "pos": [0.7, 0.9, 2.9], "look": [0, 1.75, 0]}]
+    high = [{"f": 0, "pos": [0.4, 1.6, 1.2], "look": [0, 1.8, 0]}]
+    assert T.under_skirt(near, her, "s") and not T.under_skirt(far, her, "s") and not T.under_skirt(high, her, "s")

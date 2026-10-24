@@ -45,3 +45,19 @@ test('a clip starts on its key: the same clip time at the same distance from its
   const a = at(k(10), 25), b = at(k(40), 55);
   assert.ok(Math.abs(a.head.y - b.head.y) < 1e-3, `head ${a.head.y.toFixed(3)} vs ${b.head.y.toFixed(3)}`);
 });
+
+// 2026-10-24 (Watch Me boards: she stood in every board): three's mixer writes a bone only when the clip value changed,
+// so a held frame (speed 0), a one-frame Mixamo pose and the first frame of every shot fell back to the key pose
+test('a held clip frame and a one-frame pose really pose her, also on the key frame itself', {skip: !have('silly-dancing') && 'no clips'}, () => {
+  load('silly-dancing');
+  const stand = at([{f: 0, pose: 'stand', pos: [0, 0, 0], rotY: 0}], 0).leftHand.y;
+  const k = (from, speed) => [{f: 0, pose: 'stand', pos: [0, 0, 0], rotY: 0, motion: 'silly-dancing', clipFrom: from, speed}];
+  const held = at(k(0.6, 0), 20).leftHand.y, first = at(k(0.6, 1), 0).leftHand.y, played = at(k(0, 1), 18).leftHand.y;
+  assert.ok(Math.abs(held - stand) > 0.1, `held ${held.toFixed(2)} vs stand ${stand.toFixed(2)}`);
+  assert.ok(Math.abs(first - played) < 0.02, `first frame ${first.toFixed(2)} vs the same clip time played ${played.toFixed(2)}`);
+  if (have('female-dance-pose-1')) {
+    load('female-dance-pose-1');
+    const p = at([{f: 0, pose: 'stand', pos: [0, 0, 0], rotY: 0, motion: 'female-dance-pose-1'}], 0).leftHand;
+    assert.ok(Math.abs(p.y - stand) > 0.1, `one-frame pose: left hand ${p.y.toFixed(2)} vs stand ${stand.toFixed(2)}`);
+  }
+});

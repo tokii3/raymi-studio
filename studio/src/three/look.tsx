@@ -244,3 +244,14 @@ export function toonSurface(color: string, kind: Surface, repeat: [number, numbe
   }
   return m;
 }
+
+/** A value that runs from `base` to v over s seconds from frame t ([[t, v]] - the compiler made t a frame). */
+export function runTo(base: number, spec: unknown, s: number, f: number): number {
+  if (!Array.isArray(spec) || !Array.isArray(spec[0])) return base;
+  let v = base;
+  for (const [t, to] of spec as [number, number][]) {
+    const k = Math.max(0, Math.min(1, (f - t) / Math.max(1, s * 30)));
+    if (f >= t) v = v + (to - v) * (k * k * (3 - 2 * k));
+  }
+  return v;
+}

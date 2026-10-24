@@ -54,7 +54,8 @@ def expand(m: dict, length: float, P: list[float], obj: list[float] | None, P_en
         return [K(t0, _at(P, deg, d, 0.1)), K(t0 + dur / 2, _at(P, deg + sw / 2, d * 0.95, 0.15), roll=roll / 2, path="spline"),
                 K(t1, _at(P, deg + sw, d, 0.05), roll=roll, path="spline", ease="inOut")]
     if kind == "crane_up":                    # from her feet up past her face to above her (a reveal / a rise)
-        return [K(t0, _at(P, deg, d * 0.9, -P[1] + 0.3)), K(t0 + dur * 0.55, _at(P, deg + 8, d * 1.05, 0.0), path="spline"),
+        # the low start stays >= 2.7 m away: a lens at her feet close by looks up her skirt (timeline under_skirt)
+        return [K(t0, _at(P, deg, max(d * 0.9, 2.7), -P[1] + 0.3)), K(t0 + dur * 0.55, _at(P, deg + 8, d * 1.05, 0.0), path="spline"),
                 K(t1, _at(P, deg + 14, d * 1.4, 1.1), path="spline", ease="inOut")]
     if kind == "drop":                        # straight down from above to her eye level (a fall, an arrival)
         return [K(t0, _at(P, deg, 0.25, 2.8)), K(t0 + dur * 0.6, _at(P, deg, d * 0.8, 0.9), path="spline", ease="in"),

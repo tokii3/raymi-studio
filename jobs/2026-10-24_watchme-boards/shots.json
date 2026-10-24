@@ -357,7 +357,7 @@
    "id": "C1",
    "at": 12.0,
    "set": "exhibit",
-   "why": "frozen on the plinth like a statue, low angle, visitors at the rope (lens inside the rope: the guard saw the rope hide her face)",
+   "why": "frozen on the plinth like a statue, low angle from beyond the rope, visitors at the rope (worm's eye from 2.9 m: the skirt guard)",
    "opts": {
     "grade": "warm",
     "visitors": 3
@@ -365,17 +365,7 @@
    "camera": [
     {
      "at": 0,
-     "pos": [
-      0.6,
-      0.5,
-      0.95
-     ],
-     "look": [
-      0,
-      1.7,
-      0
-     ],
-     "fov": 46
+     "cam": "low"
     }
    ],
    "actor": [

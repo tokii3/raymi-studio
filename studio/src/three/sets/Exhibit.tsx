@@ -12,10 +12,9 @@
 import React from 'react';
 import * as THREE from 'three';
 import {Beam, RBox, Sign, Visitor, drawText} from '../parts';
-import {SetLight, canvasTexture, rnd, toon, toonSurface} from '../look';
+import {SetLight, canvasTexture, rnd, runTo, toon, toonSurface} from '../look';
 import {DeepLife} from '../creatures';
 import {Stagings} from '../staging';
-import {runTo} from './Corner';
 import type {SetProps} from './index';
 
 const num = (v: unknown, d = 0) => (typeof v === 'number' ? v : d);
@@ -39,6 +38,9 @@ function painting(i: number, hers: boolean): THREE.CanvasTexture {
 export const Exhibit: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const dark = Math.max(0, Math.min(1, runTo(num(opts.dark), opts.dark_at, num(opts.dark_s, 0.3), f)));
   const on = 1 - dark;
+  // blackout: the set's whole light goes, not only its lamps (boards run 1: 'dark' left her lit as by day)
+  const dim = 0.1 + 0.9 * on;
+  const dimC = (c: string) => new THREE.Color(c).lerp(new THREE.Color('#010103'), dark).getStyle();
   const hers = Boolean(opts.hers);
   const marble = toonSurface('#e9e2d6', 'plaster', [6, 6]);
   const wallMat = toonSurface('#5a1424', 'fabric', [8, 3]);
@@ -49,8 +51,8 @@ export const Exhibit: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const frames = [[-3.2, -4.32, 0, 1.4, 1.8], [3.2, -4.32, 0, 1.4, 1.8], [0, -4.32, 0, 1.0, 1.3], [-5.3, -1.5, Math.PI / 2, 1.2, 1.5], [5.3, -1.5, -Math.PI / 2, 1.2, 1.5], [-5.3, 1.6, Math.PI / 2, 0.9, 1.2], [5.3, 1.6, -Math.PI / 2, 0.9, 1.2]];
   return (
     <group>
-      <SetLight sky="#4a2a2a" ground="#1a0e10" fill={0.65} key="#ffe6c0" keyI={0.7} keyPos={[2, 7, 4]} target={[0, 0, 0]}
-        shadowSize={7} fog="#120609" fogNear={9} fogFar={28} bg="#120609" depth={num(opts.depth, 0.8)} />
+      <SetLight sky="#4a2a2a" ground="#1a0e10" fill={0.65 * dim} key="#ffe6c0" keyI={0.7 * dim} keyPos={[2, 7, 4]} target={[0, 0, 0]}
+        shadowSize={7} fog={dimC('#120609')} fogNear={9} fogFar={28} bg={dimC('#120609')} depth={num(opts.depth, 0.8)} />
       {spots.map((l, i) => <React.Fragment key={i}><primitive object={l} /><primitive object={l.target} /></React.Fragment>)}
       {/* marble floor (checker of two marbles), walls, ceiling */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} material={marble} receiveShadow><planeGeometry args={[11, 10]} /></mesh>

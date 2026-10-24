@@ -1,7 +1,7 @@
 {
  "format": "mv",
  "frames": [
-  22,
+  19,
   80,
   125,
   170,
@@ -31,5 +31,6 @@
  "scale": 1,
  "to": "boards",
  "dest": "jobs/2026-10-24_watch-me/boards",
- "_why": "Watch Me idea boards A1-4 / B1-4 / C1-4 (2_IDEAS.md), full resolution"
+ "_why": "Watch Me idea boards round 2: held poses really pose her now (mixer fix), blackout dims the whole set + her key, her dots glow; colour cover cards; low lenses beyond 2.6 m (skirt guard)",
+ "round": 2
 }

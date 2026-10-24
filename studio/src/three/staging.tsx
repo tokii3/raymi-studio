@@ -69,23 +69,26 @@ const Cover: React.FC<{f: number; s: Spec}> = ({f, s}) => {
   const accent = s.color ?? '#ff3d7f', paper = s.paper ?? '#f3ede2', ink = s.ink ?? '#16121f';
   const id = `${s.title}|${(s.lines ?? []).join('|')}|${accent}|${paper}`;
   const back = card(`cv_back${id}`, W, H, (ctx, w, h) => {
+    // a saturated colour card, dark at the top: a white card under a lamp burnt out (boards run 1, B2) - the paper
+    // colour is only the type and the border
     const g = ctx.createLinearGradient(0, 0, 0, h);
-    g.addColorStop(0, paper); g.addColorStop(1, new THREE.Color(paper).lerp(new THREE.Color(accent), 0.35).getStyle());
+    g.addColorStop(0, new THREE.Color(accent).multiplyScalar(0.28).getStyle()); g.addColorStop(1, new THREE.Color(accent).multiplyScalar(0.7).getStyle());
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
-    ctx.globalAlpha = 0.12; ctx.fillStyle = accent;                                  // big soft shapes: depth, not noise
+    ctx.globalAlpha = 0.18; ctx.fillStyle = paper;                                   // big soft shapes: depth, not noise
     for (let i = 0; i < 5; i++) { ctx.beginPath(); ctx.arc(w * rnd(i + 3), h * (0.3 + 0.6 * rnd(i + 9)), w * (0.18 + 0.2 * rnd(i)), 0, 7); ctx.fill(); }
     ctx.globalAlpha = 1;
-    ctx.strokeStyle = ink; ctx.lineWidth = w * 0.012; ctx.strokeRect(w * 0.03, h * 0.02, w * 0.94, h * 0.96);
+    ctx.strokeStyle = paper; ctx.lineWidth = w * 0.012; ctx.strokeRect(w * 0.03, h * 0.02, w * 0.94, h * 0.96);
   });
   const mast = card(`cv_mast${s.title}${accent}`, W, H * 0.2, (ctx, w, h) => {
     ctx.clearRect(0, 0, w, h);
-    drawText(ctx, s.title ?? 'WATCH ME', w / 2, h * 0.55, h * 0.9, accent, {outline: ink, ow: h * 0.09, maxW: w * 0.96});
+    drawText(ctx, s.title ?? 'WATCH ME', w / 2, h * 0.55, h * 0.9, paper, {outline: ink, ow: h * 0.09, maxW: w * 0.96});
   });
   const lines = s.lines ?? ['THE SLAY ISSUE', '100% CHANCE'];
   const line = (t: string, i: number) => card(`cv_line${t}${accent}${i}`, W * 0.34, H * 0.12, (ctx, w, h) => {
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = i % 2 ? accent : ink; ctx.fillRect(0, h * 0.08, w * 0.06, h * 0.84);
-    drawText(ctx, t, w * 0.54, h * 0.5, h * 0.42, i % 2 ? ink : accent, {outline: paper, ow: h * 0.06, maxW: w * 0.86});
+    ctx.fillStyle = ink; ctx.globalAlpha = 0.82; ctx.fillRect(0, h * 0.08, w, h * 0.84); ctx.globalAlpha = 1;
+    ctx.fillStyle = accent; ctx.fillRect(0, h * 0.08, w * 0.06, h * 0.84);
+    drawText(ctx, t, w * 0.54, h * 0.5, h * 0.42, paper, {maxW: w * 0.86});
   });
   const code = card('cv_code', 0.3, 0.18, (ctx, w, h) => {
     ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, w, h);

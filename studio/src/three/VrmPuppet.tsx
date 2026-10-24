@@ -285,6 +285,20 @@ function motionOf(keys: VrmKey[], i: number): string | undefined {
   return undefined;
 }
 
+/** three's PropertyMixer writes a bone only when the clip value CHANGED since its last update (accu0 !== accu1). We pose
+ *  the bones from the key pose before every clip update, so an unchanged clip value lost to the pose: a held animation
+ *  frame (speed 0) never showed and the first frame of every shot (the window replays its first state twice) snapped
+ *  to the key pose - found 2026-10-24 (Watch Me boards: she stood in every board; a one-frame pop at every cut).
+ *  Poisoning the accu the mixer does NOT write this update makes every bone compare as changed. */
+function forceApply(mixer: THREE.AnimationMixer): void {
+  const m = mixer as unknown as {_accuIndex: number; _bindings: {valueSize: number; buffer: ArrayLike<unknown> & {[i: number]: unknown}}[]};
+  if (!Array.isArray(m._bindings)) return;
+  for (const b of m._bindings) {
+    const off = m._accuIndex * b.valueSize + b.valueSize;
+    for (let i = 0; i < b.valueSize; i++) b.buffer[off + i] = NaN;
+  }
+}
+
 /** The key that started the clip key i plays: walk back while the clip stays the same and nothing restarts it. */
 function clipStart(keys: VrmKey[], i: number): number {
   const m = motionOf(keys, i);
@@ -457,6 +471,7 @@ function applyState(rig: Rig, s: State, fps: number) {
       action.setEffectiveWeight(weight);
       if (weight > 0) action.time = clipSeconds(id === b ? s.clipCur : s.clipPrev, s.f, fps, clip.duration);
     }
+    forceApply(rig.mixer);
     rig.mixer.update(0);
     if (amount < 0.999) for (const [node, q, p] of saved) { node.quaternion.copy(q.slerp(node.quaternion, amount)); node.position.lerpVectors(p, node.position, amount); }
   }

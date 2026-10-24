@@ -10,10 +10,9 @@
 import React from 'react';
 import * as THREE from 'three';
 import {RBox} from '../parts';
-import {SetLight, toon, toonSurface} from '../look';
+import {SetLight, runTo, toon, toonSurface} from '../look';
 import {DeepLife} from '../creatures';
 import {Stagings} from '../staging';
-import {runTo} from './Corner';
 import type {SetProps} from './index';
 
 const num = (v: unknown, d = 0) => (typeof v === 'number' ? v : d);
@@ -52,14 +51,17 @@ const Stand: React.FC<{pos: [number, number, number]; h: number}> = ({pos, h}) =
 export const Shoot: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const dark = Math.max(0, Math.min(1, runTo(num(opts.dark), opts.dark_at, num(opts.dark_s, 0.2), f)));
   const on = 1 - dark;
+  // blackout: the set's whole light goes, not only its lamps (boards run 1: 'dark' left her lit as by day)
+  const dim = 0.1 + 0.9 * on;
+  const dimC = (c: string) => new THREE.Color(c).lerp(new THREE.Color('#010103'), dark).getStyle();
   const flashes = (Array.isArray(opts.flash) ? opts.flash : []) as number[];
   const fl = flashes.reduce((m, t) => (f >= t && f - t < 6 ? Math.max(m, 1 - (f - t) / 6) : m), 0) * on;
   const gel = typeof opts.gel === 'string' ? opts.gel : '#fff1e0';
   const geo = React.useMemo(() => sweepGeometry(7.5), []);
   const paper = React.useMemo(() => new THREE.MeshToonMaterial({color: '#f4f1ec', side: THREE.DoubleSide}), []);
-  paper.color.set('#f4f1ec').lerp(new THREE.Color(gel), 0.45);
+  paper.color.set('#d6d1c9').lerp(new THREE.Color(gel), 0.5);   // never a white wall: boards run 1 read flat and washed
   paper.emissive.set(gel);
-  paper.emissiveIntensity = 0.12 * on + 0.9 * fl;
+  paper.emissiveIntensity = 0.03 * on + 0.9 * fl;
   const spot = React.useMemo(() => { const l = new THREE.SpotLight('#ffffff', 0, 12, 0.7, 0.6, 1.2); l.castShadow = true; l.shadow.mapSize.set(1024, 1024); return l; }, []);
   spot.color.set(gel);
   spot.intensity = (18 + 120 * fl) * on;
@@ -68,8 +70,8 @@ export const Shoot: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const concrete = toonSurface('#2a2a33', 'plaster', [10, 10]);
   return (
     <group>
-      <SetLight sky="#30304a" ground="#121218" fill={0.7 + 0.8 * fl} key="#ffffff" keyI={0.8 + 2.5 * fl} keyPos={[3, 6, 5]} target={[0, 1, 0]}
-        shadowSize={6} fog="#0b0b12" fogNear={8} fogFar={26} bg="#0b0b12" depth={num(opts.depth, 0.8)} />
+      <SetLight sky="#30304a" ground="#121218" fill={(0.7 + 0.8 * fl) * dim} key="#ffffff" keyI={(0.8 + 2.5 * fl) * dim} keyPos={[3, 6, 5]} target={[0, 1, 0]}
+        shadowSize={6} fog={dimC('#0b0b12')} fogNear={8} fogFar={26} bg={dimC('#0b0b12')} depth={num(opts.depth, 0.8)} />
       <primitive object={spot} />
       <primitive object={spot.target} />
       {/* the dark studio floor, the paper sweep on it (her mark on the paper) */}
