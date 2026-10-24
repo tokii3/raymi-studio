@@ -1,0 +1,91 @@
+[
+ {
+  "id": "24",
+  "from_s": 0.0,
+  "to_s": 2.53,
+  "set": "office",
+  "why": "the postcard is the only warm thing - she types without looking",
+  "words": "",
+  "transition_out": "cut",
+  "hero": [
+   "postcard"
+  ]
+ },
+ {
+  "id": "25",
+  "from_s": 2.53,
+  "to_s": 3.83,
+  "set": "office",
+  "why": "her finger touches the card; the fall starts on the last oh",
+  "words": "oh-oh-oh ( Take-take-take-take)",
+  "transition_out": "zoom",
+  "hero": [
+   "postcard"
+  ]
+ },
+ {
+  "id": "26",
+  "from_s": 3.83,
+  "to_s": 5.77,
+  "set": "dream",
+  "why": "wow 3: grey -> colour in one move, falling through warm air",
+  "words": "Take",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "27",
+  "from_s": 5.77,
+  "to_s": 7.03,
+  "set": "dream",
+  "why": "the hook line sung to us, face to the lens in her warm light; all five dots light (rebuild: the floating-on-her-back version hid her face)",
+  "words": "me to the beach Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "28",
+  "from_s": 7.03,
+  "to_s": 9.8,
+  "set": "office",
+  "why": "the song's antithesis in ONE frame: inside the card the beach, outside her grey desk with the globe's mountains",
+  "words": "you can have the mountains Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": [
+   "postcard",
+   "globe"
+  ]
+ },
+ {
+  "id": "29",
+  "from_s": 9.8,
+  "to_s": 12.03,
+  "set": "dream",
+  "why": "her ray nature: she kicks the cold away and curls up in the light; Salmon waves",
+  "words": "you take the snow Ah-ah-ah,",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "30",
+  "from_s": 12.03,
+  "to_s": 14.03,
+  "set": "office",
+  "why": "the dream cannot last: the strings yank her back into the chair, wet hair",
+  "words": "it's way too cold",
+  "transition_out": "whip",
+  "hero": []
+ },
+ {
+  "id": "31",
+  "from_s": 14.03,
+  "to_s": 16.0,
+  "set": "office",
+  "why": "the same snow outside and in the globe; she stares at the postcard - the Short's cliffhanger",
+  "words": "",
+  "transition_out": "cut",
+  "hero": [
+   "globe"
+  ]
+ }
+]
