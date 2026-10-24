@@ -5,6 +5,6 @@
  "dense": 1,
  "eye_scale": 0.5,
  "workers": 20,
- "_take": 2,
- "_why": "QC v2 calibration (toki 2026-10-24): must find what toki saw in run 58 - clips into things, falls from the sky, not fluid. Take 2: take 1 died on the workflow (4 tabs -> timeout, config not readable), not on a measurement."
+ "_take": 3,
+ "_why": "QC v2 calibration (toki 2026-10-24): must find what toki saw in run 58 - clips into things, falls from the sky, not fluid. Take 2: take 1 died on the workflow (4 tabs -> timeout, config not readable), not on a measurement. Take 3: the probe's mesh-parity test capped per solid (a possible cause of the take 1 frame timeout)."
 }

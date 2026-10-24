@@ -24,6 +24,7 @@ const SHELL = 2.5;        // m: a box this big in two axes is a room shell (floo
                           // collider (run 1: the bedroom dome counted as furniture, 'inside' 1.5 m deep)
 const SKIN = 0.015;       // m: a point this deep inside a solid counts (thin contact is fine)
 const VERTS = 1600;       // sampled points of her surface per frame (all her skinned meshes together)
+const PARITY = 160;       // at most this many points per non-box solid get the mesh-parity test per frame
 const ARM: Bone[] = ['leftHand', 'rightHand', 'leftLowerArm', 'rightLowerArm'];
 
 function label(o: THREE.Object3D): string {
@@ -177,7 +178,12 @@ export const Probe: React.FC<{f: number; F?: number; vrm: string | null; shot: s
       const inside: {bone: string; part: string; in: string; depth: number; n: number; at: [number, number] | null}[] = [];
       for (const s of near) {
         const per = new Map<string, {depth: number; n: number; w: THREE.Vector3}>();
-        for (const p of pts) {
+        // the mesh-parity ray is the costly part (10k-triangle rocks x 1600 points - suspected in the qc run 1 frame timeout):
+        // test at most PARITY points per solid, spread over her surface
+        const cand = s.boxy ? pts : pts.filter((p) => s.world.containsPoint(p.w));
+        const step = s.boxy ? 1 : Math.max(1, Math.ceil(cand.length / PARITY));
+        for (let i = 0; i < cand.length; i += step) {
+          const p = cand[i];
           const d = depthIn(s, p.w);
           if (d <= SKIN) continue;
           const k = `${p.part}|${p.bone}`;
