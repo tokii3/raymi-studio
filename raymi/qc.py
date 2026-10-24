@@ -45,6 +45,12 @@ def freezes(path: Path, min_s: float = 1.2) -> list[tuple[float, float]]:
     return list(zip(starts, durs))
 
 
+def blacks(path: Path, min_s: float = 0.25) -> list[tuple[float, float]]:
+    """Black stretches (the picture lost, 2026-10-24 Beach shot 31: ~1 s of black nobody saw before toki would have)."""
+    out = _run(["ffmpeg", "-hide_banner", "-i", str(path), "-vf", f"blackdetect=d={min_s}:pix_th=0.08:pic_th=0.9", "-an", "-f", "null", "-"])
+    return [(float(a), round(float(b) - float(a), 2)) for a, b in re.findall(r"black_start:([\d.]+) black_end:([\d.]+)", out)]
+
+
 def sheet(path: Path, dst: Path, fps: float = 2.0) -> None:
     _run(["ffmpeg", "-y", "-hide_banner", "-i", str(path), "-vf",
           f"fps={fps},scale=270:-1,tile=8x5:padding=4:color=0x14141a", "-frames:v", "1", str(dst)])
@@ -76,5 +82,8 @@ def run(video: Path, expect_s: float | None = None, landscape: bool = False) -> 
     fr = freezes(video)
     res["frozen_spans"] = fr
     c["no_frozen_picture_>1.2s"] = not fr
+    bl = blacks(video)
+    res["black_spans"] = bl
+    c["no_black_picture_>0.25s"] = not bl
     res["pass"] = all(c.values())
     return res
