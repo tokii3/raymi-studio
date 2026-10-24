@@ -7,6 +7,7 @@
 // stayed hanging at the armpit; they also flared up to 10 cm forward of the arm. Now they ride the upper arm (fully
 // outside, blended at the joint), sit 30 % closer to the arm's axis and tilt UP like the fin of the 2D design.
 import * as THREE from 'three';
+import {VRMSpringBoneCollider, VRMSpringBoneColliderShapeCapsule, VRMSpringBoneColliderShapeSphere, type VRM} from '@pixiv/three-vrm';
 
 type Region = {material: RegExp; minAbsX: number; minY: number};
 const CAPS: Region = {material: /Onepiece_00_CLOTH_01/, minAbsX: 0.09, minY: 1.08};
@@ -101,4 +102,41 @@ export function hairRoots(scene: THREE.Object3D): number {
 export function fixModel(scene: THREE.Object3D): void {
   fixSleeveCaps(scene);
   hairRoots(scene);
+}
+
+// Hair against her body (probe on Watch Me, 2026-10-25: hair_in in 34 shots - strands through her chest and shoulders).
+// VRoid gave the hair springs head colliders only. Her torso gets a capsule on the chest and the upper chest and a
+// sphere on each shoulder, and every hair joint collides with them: the hair falls round her, not through her.
+const BODY_COLLIDERS: {bone: string; r: number; from?: [number, number, number]; to?: [number, number, number]}[] = [
+  {bone: 'J_Bip_C_Chest', r: 0.105, from: [0, 0.0, -0.01], to: [0, 0.09, -0.01]},
+  {bone: 'J_Bip_C_UpperChest', r: 0.11, from: [0, -0.02, -0.015], to: [0, 0.1, -0.015]},
+  {bone: 'J_Bip_L_UpperArm', r: 0.06},
+  {bone: 'J_Bip_R_UpperArm', r: 0.06},
+  {bone: 'J_Bip_C_Neck', r: 0.055},
+];
+
+export function hairColliders(vrm: VRM): number {
+  const mgr = vrm.springBoneManager;
+  if (!mgr) return 0;
+  const colliders: VRMSpringBoneCollider[] = [];
+  for (const c of BODY_COLLIDERS) {
+    let bone: THREE.Object3D | undefined;
+    vrm.scene.traverse((o) => { if (!bone && o.name === c.bone) bone = o; });
+    if (!bone) continue;
+    const shape = c.from && c.to
+      ? new VRMSpringBoneColliderShapeCapsule({radius: c.r, offset: new THREE.Vector3(...c.from), tail: new THREE.Vector3(...c.to)})
+      : new VRMSpringBoneColliderShapeSphere({radius: c.r});
+    const col = new VRMSpringBoneCollider(shape);
+    bone.add(col);
+    colliders.push(col);
+  }
+  if (!colliders.length) return 0;
+  const group = {name: 'body (vrmFix)', colliders};
+  let n = 0;
+  for (const j of mgr.joints) {
+    if (!/Hair/.test(j.bone.name)) continue;
+    j.colliderGroups = [...j.colliderGroups, group];
+    n++;
+  }
+  return n;
 }

@@ -12,7 +12,7 @@
 import React, {useEffect, useState} from 'react';
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
-import {fixModel} from './vrmFix';
+import {fixModel, hairColliders} from './vrmFix';
 import {FBXLoader} from 'three/examples/jsm/loaders/FBXLoader.js';
 import {VRMLoaderPlugin, VRMUtils, type VRM, type VRMHumanBoneName} from '@pixiv/three-vrm';
 import {retargetAnimation} from 'vrm-mixamo-retarget';
@@ -88,6 +88,7 @@ async function loadRig(url: string, data?: ArrayBuffer): Promise<Rig> {
     j.settings.dragForce = Math.max(j.settings.dragForce, HAIR_DRAG);
     j.settings.stiffness = Math.max(j.settings.stiffness, HAIR_STIFF);
   }
+  hairColliders(vrm);                      // vrmFix: her torso / shoulders as hair colliders (probe: hair_in in 34 shots)
   vrm.springBoneManager?.setInitState();
   return rig;
 }

@@ -48,8 +48,7 @@
  ],
  "scale": 1,
  "to": "boards",
- "_why": "stills board 2 (same 21 frames): fault classes of board 1 fixed in the shared parts - close shots onto her measured head (probe -> raymi frame), Salmon placed in the picture (guard + placer, guard scale 1.8), the room walls as no-lens zones (55 / 66 had the lens in the back wall), cover type as texts (no lyric on it), stronger wet floor / rain / splash / tail / letters, the bulb at 2.05 m, a smaller toned centerfold, cover-cuts 8-10 frames (re-run 2b: run 40132877144 measured, fitted and then refused shot 63's lyric - the fit was not kept; now the probe + fitted shots.json are published even on a refusal)",
- "round": "2b",
- "probe": 8,
- "frame_fit": true
+ "_why": "stills board 3 (same 21 frames): the measured frame fit of run 40137020666 (16 close shots onto her real head), Salmon in the picture, walls as no-lens zones, cover type kept free, stronger effects - and the model upgrade raymi7 (per-part materials, clean texture blends, off-black hair roots, the shoulder fins, hair colliders on her torso)",
+ "round": 3,
+ "frame_fit": false
 }
