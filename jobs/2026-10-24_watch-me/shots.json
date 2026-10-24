@@ -126,6 +126,11 @@
    ],
    "hero": [
     "face"
+   ],
+   "frame_fit": [
+    0.175,
+    -0.119,
+    -0.037
    ]
   },
   {
@@ -253,6 +258,11 @@
      "rotY": 200,
      "pos": "paper"
     }
+   ],
+   "frame_fit": [
+    0.001,
+    0.13,
+    0.043
    ]
   },
   {
@@ -443,7 +453,12 @@
       1.2
      ]
     }
-   }
+   },
+   "frame_fit": [
+    -0.008,
+    0.051,
+    0.001
+   ]
   },
   {
    "id": "08",
@@ -576,7 +591,12 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "frame_fit": [
+    -0.004,
+    -0.034,
+    0.016
+   ]
   },
   {
    "id": "10",
@@ -656,7 +676,12 @@
       0.8218651770253484
      ]
     }
-   }
+   },
+   "frame_fit": [
+    -0.021,
+    -0.319,
+    0
+   ]
   },
   {
    "id": "11",
@@ -702,18 +727,23 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.36,
-      1.57,
-      0.08
+      0.46,
+      1.37,
+      0.18
      ],
-     "size": 0.046,
-     "width": 0.39,
+     "size": 0.067,
+     "width": 0.36,
      "tilt": -1.4,
      "roll": 0,
-     "rot": -2.1,
+     "rot": 1,
      "key_scale": 1.8
     }
-   }
+   },
+   "frame_fit": [
+    0.176,
+    -0.062,
+    -0.033
+   ]
   },
   {
    "id": "12",
@@ -1039,18 +1069,24 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.04,
-      1.19,
+      0.09,
+      1.65,
       -0.64
      ],
-     "size": 0.036,
-     "width": 0.74,
+     "size": 0.028,
+     "width": 0.97,
      "tilt": 0.8,
      "roll": 0,
-     "rot": 1.8,
-     "key_scale": 1.8
+     "rot": -4.8,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "frame_fit": [
+    -0.005,
+    0.073,
+    0
+   ]
   },
   {
    "id": "17",
@@ -1105,7 +1141,12 @@
     "size": 0.012,
     "width": 0.3,
     "why_over": "her palm covers the lens in this shot (cover-cut 1): the line is printed on the palm in front of her face"
-   }
+   },
+   "frame_fit": [
+    -0.084,
+    -0.24,
+    0
+   ]
   },
   {
    "id": "18",
@@ -2084,19 +2125,24 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.13,
-      1.56,
-      -0.34
+      0.73,
+      1.34,
+      -0.12
      ],
-     "size": 0.038,
-     "width": 0.4,
+     "size": 0.021,
+     "width": 0.23,
      "tilt": -1.8,
      "roll": 0,
      "rot": 68.5,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "frame_fit": [
+    0.007,
+    -0.148,
+    -0.013
+   ]
   },
   {
    "id": "30",
@@ -2249,7 +2295,12 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "frame_fit": [
+    -0.012,
+    0.151,
+    0.014
+   ]
   },
   {
    "id": "32",
@@ -2501,19 +2552,23 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.29,
-      1.8,
-      -0.2
+      -0.35,
+      1.45,
+      -0.48
      ],
-     "size": 0.093,
-     "width": 3.18,
+     "size": 0.079,
+     "width": 0.75,
      "tilt": -0.1,
      "roll": 0,
-     "rot": -32.8,
-     "key_scale": 1,
-     "small": "fitter: the free space beside her is small in this frame"
+     "rot": -11.2,
+     "key_scale": 1
     }
-   }
+   },
+   "frame_fit": [
+    -0.004,
+    -0.123,
+    -0.002
+   ]
   },
   {
    "id": "36",
@@ -3356,7 +3411,12 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "frame_fit": [
+    0.177,
+    -0.081,
+    -0.028
+   ]
   },
   {
    "id": "47",
@@ -3416,7 +3476,12 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "frame_fit": [
+    -0.033,
+    -0.143,
+    0.006
+   ]
   },
   {
    "id": "48",
@@ -3825,18 +3890,23 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.5,
-      1.6,
-      0.61
+      0.3,
+      2.13,
+      0.67
      ],
-     "size": 0.039,
+     "size": 0.083,
      "width": 1.04,
      "tilt": 0.6,
      "roll": 0,
-     "rot": -148.2,
+     "rot": -158.5,
      "key_scale": 1.8
     }
-   }
+   },
+   "frame_fit": [
+    0.01,
+    0.198,
+    -0.004
+   ]
   },
   {
    "id": "54",
@@ -4681,7 +4751,12 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "frame_fit": [
+    0.014,
+    -0.086,
+    -0.04
+   ]
   },
   {
    "id": "64",
@@ -5069,7 +5144,12 @@
       0.3
      ]
     }
-   }
+   },
+   "frame_fit": [
+    0.071,
+    -0.112,
+    0
+   ]
   }
  ]
 }
