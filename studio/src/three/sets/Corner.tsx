@@ -27,7 +27,7 @@ export const Corner: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const dark = Math.max(0, Math.min(1, runTo(num(opts.dark), opts.dark_at, num(opts.dark_s, 0.25), f)));
   const on = 1 - dark;
   // blackout: the set's whole light goes, not only its lamps (boards run 1: 'dark' left her lit as by day)
-  const dim = 0.03 + 0.97 * on;
+  const dim = 0.16 + 0.84 * on;   // blackout: the place stays readable (look-critic boards 1: 'a black void')
   const dimC = (c: string) => new THREE.Color(c).lerp(new THREE.Color('#010103'), dark).getStyle();
   const lamp = num(opts.lamp, 1) * on;
   const lampC = '#ffc98a';

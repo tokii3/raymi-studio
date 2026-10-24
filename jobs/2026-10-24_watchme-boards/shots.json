@@ -22,7 +22,8 @@
     "gel": "#fff1e0",
     "flash": [
      0.55
-    ]
+    ],
+    "lock": 0.45
    },
    "camera": [
     {
@@ -79,7 +80,8 @@
       ],
       "color": "#ff3d7f"
      }
-    ]
+    ],
+    "lock": 0.45
    },
    "camera": [
     {
@@ -113,7 +115,8 @@
     "grade": "clean",
     "dark": 1,
     "glow": "#8fe0ff",
-    "glow_pulse": "beats"
+    "glow_pulse": "beats",
+    "lock": 0.45
    },
    "camera": [
     {
@@ -155,7 +158,8 @@
    "why": "worm's eye on the paper, the catwalk turn",
    "opts": {
     "grade": "clean",
-    "gel": "#bfe0ff"
+    "gel": "#bfe0ff",
+    "lock": 0.45
    },
    "camera": [
     {
@@ -186,12 +190,23 @@
    "set": "corner",
    "why": "she steps into the lamp's circle, worm's eye",
    "opts": {
-    "grade": "night"
+    "grade": "night",
+    "lock": 0.45
    },
    "camera": [
     {
      "at": 0,
-     "cam": "worms_eye"
+     "pos": [
+      0.8,
+      0.72,
+      2.8
+     ],
+     "look": [
+      0,
+      1.35,
+      0
+     ],
+     "fov": 40
     }
    ],
    "actor": [
@@ -202,7 +217,7 @@
      "expr": {
       "joy": 0.65
      },
-     "clip": "female-dance-pose-1",
+     "clip": "female-standing-pose-2",
      "clip_from": 0.8,
      "speed": 0,
      "motionMix": 1
@@ -235,7 +250,8 @@
       "color": "#ff3d7f",
       "paper": "#f1e9df"
      }
-    ]
+    ],
+    "lock": 0.45
    },
    "camera": [
     {
@@ -269,7 +285,8 @@
     "grade": "night",
     "dark": 1,
     "glow": "#8fe0ff",
-    "glow_pulse": "beats"
+    "glow_pulse": "beats",
+    "lock": 0.45
    },
    "camera": [
     {
@@ -308,7 +325,7 @@
    "id": "B4",
    "at": 10.5,
    "set": "corner",
-   "why": "top-down: the zebra crossing is her runway, the radar finds her",
+   "why": "top-down over the lamp circle: the radar finds her",
    "opts": {
     "grade": "night",
     "tv": "BREAKING NEWS",
@@ -316,30 +333,31 @@
      {
       "kind": "radar",
       "at": 10.55,
-      "pos": "crossing"
+      "pos": "lamp_circle"
      }
-    ]
+    ],
+    "lock": 0.45
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      0.3,
-      7.0,
-      6.6
+      0.15,
+      3.6,
+      1.0
      ],
      "look": [
       0,
-      -0.12,
-      4.4
+      0.2,
+      0
      ],
-     "fov": 46
+     "fov": 50
     }
    ],
    "actor": [
     {
      "at": 0,
-     "pos": "crossing",
+     "pos": "lamp_circle",
      "rotY": 180,
      "expr": {
       "joy": 0.65
@@ -360,7 +378,8 @@
    "why": "frozen on the plinth like a statue, low angle from beyond the rope, visitors at the rope (worm's eye from 2.9 m: the skirt guard)",
    "opts": {
     "grade": "warm",
-    "visitors": 3
+    "visitors": 3,
+    "lock": 0.45
    },
    "camera": [
     {
@@ -400,7 +419,8 @@
       "h": 2.0,
       "text": "RAYMI, 2026 - deep sea"
      }
-    ]
+    ],
+    "lock": 0.45
    },
    "camera": [
     {
@@ -434,7 +454,8 @@
     "grade": "warm",
     "dark": 1,
     "glow": "#8fe0ff",
-    "glow_pulse": "beats"
+    "glow_pulse": "beats",
+    "lock": 0.45
    },
    "camera": [
     {
@@ -477,7 +498,7 @@
    "opts": {
     "grade": "warm",
     "hers": true,
-    "visitors": 4,
+    "visitors": 2,
     "stage": [
      {
       "kind": "forecast",
@@ -485,12 +506,23 @@
       "pos": "plinth",
       "text": "CHANCE OF SLAY"
      }
-    ]
+    ],
+    "lock": 0.45
    },
    "camera": [
     {
      "at": 0,
-     "cam": "wide"
+     "pos": [
+      -2.4,
+      1.9,
+      3.2
+     ],
+     "look": [
+      0,
+      1.45,
+      0
+     ],
+     "fov": 42
     }
    ],
    "actor": [

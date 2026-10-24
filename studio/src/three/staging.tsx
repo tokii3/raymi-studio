@@ -74,9 +74,6 @@ const Cover: React.FC<{f: number; s: Spec}> = ({f, s}) => {
     const g = ctx.createLinearGradient(0, 0, 0, h);
     g.addColorStop(0, new THREE.Color(accent).multiplyScalar(0.28).getStyle()); g.addColorStop(1, new THREE.Color(accent).multiplyScalar(0.7).getStyle());
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
-    ctx.globalAlpha = 0.18; ctx.fillStyle = paper;                                   // big soft shapes: depth, not noise
-    for (let i = 0; i < 5; i++) { ctx.beginPath(); ctx.arc(w * rnd(i + 3), h * (0.3 + 0.6 * rnd(i + 9)), w * (0.18 + 0.2 * rnd(i)), 0, 7); ctx.fill(); }
-    ctx.globalAlpha = 1;
     ctx.strokeStyle = paper; ctx.lineWidth = w * 0.012; ctx.strokeRect(w * 0.03, h * 0.02, w * 0.94, h * 0.96);
   });
   const mast = card(`cv_mast${s.title}${accent}`, W, H * 0.2, (ctx, w, h) => {
@@ -90,21 +87,17 @@ const Cover: React.FC<{f: number; s: Spec}> = ({f, s}) => {
     ctx.fillStyle = accent; ctx.fillRect(0, h * 0.08, w * 0.06, h * 0.84);
     drawText(ctx, t, w * 0.54, h * 0.5, h * 0.42, paper, {maxW: w * 0.86});
   });
-  const code = card('cv_code', 0.3, 0.18, (ctx, w, h) => {
-    ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, w, h);
-    for (let x = 6; x < w - 6; x += 3 + Math.floor(rnd(x) * 5)) { ctx.fillStyle = ink; ctx.fillRect(x, 6, 1 + Math.floor(rnd(x + 1) * 3), h * 0.7); }
-  });
   return (
     <>
       <Piece f={f} s={s} k={0} place={[0, H / 2, -0.62]} from={[0, 0.2, -4]}><Print tex={back} w={W} h={H} /></Piece>
       <Piece f={f} s={s} k={1} place={[0, H * 0.88, 0.32]} from={[0, 3, 1]}><Print tex={mast} w={W * 1.02} h={H * 0.2} text /></Piece>
       {lines.slice(0, 4).map((t, i) => (
-        <Piece key={i} f={f} s={s} k={2 + i} place={[(i % 2 ? 1 : -1) * W * 0.36, H * (0.56 - 0.13 * Math.floor(i / 2)), 0.28]}
+        // beside her, never over her hair (look-critic boards 1: the plates at 0.36 W covered her shoulders)
+        <Piece key={i} f={f} s={s} k={2 + i} place={[(i % 2 ? 1 : -1) * W * 0.62, H * (0.56 - 0.13 * Math.floor(i / 2)), 0.1]}
           rot={[0, (i % 2 ? -1 : 1) * 0.12, 0]} from={[(i % 2 ? 1 : -1) * 3.5, 0.5, 0.5]}>
           <Print tex={line(t, i)} w={W * 0.34} h={H * 0.12} text />
         </Piece>
       ))}
-      <Piece f={f} s={s} k={6} place={[W * 0.38, H * 0.08, 0.2]} from={[2, -1, 0]}><Print tex={code} w={0.3} h={0.18} /></Piece>
     </>
   );
 };

@@ -1,7 +1,7 @@
 {
  "format": "mv",
  "frames": [
-  19,
+  21,
   80,
   125,
   170,
@@ -31,6 +31,6 @@
  "scale": 1,
  "to": "boards",
  "dest": "jobs/2026-10-24_watch-me/boards",
- "_why": "Watch Me idea boards round 4: in the blackout her glow light goes down (it painted the black set teal) and her own texture glows (colour lock 0.32)",
- "round": 4
+ "_why": "Watch Me idea boards round 5 after look-critic FAIL (reviews/boards_look-critic_1.md): skin lock 0.45, blackout keeps 16 % of the place, cover plates beside her + no blobs / barcode, no stray boom, B1 / B4 / C4 reframed, A1 later in the flash",
+ "round": 5
 }

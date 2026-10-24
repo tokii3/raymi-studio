@@ -1,6 +1,6 @@
 // SET shoot - Watch Me idea A "The Shoot": a photo studio at night. A white paper cyclorama (floor sweeping up into the
 // back wall without an edge) at the centre, her mark on the paper (origin); around it the dark working studio: concrete
-// floor, two softboxes on stands, a beauty dish on a boom above, C-stands with sandbags, cables on the floor, a camera on
+// floor, two softboxes on stands, C-stands with sandbags, cables on the floor, a camera on
 // a tripod, a rolling rack with clothes, a work light far back. The paper takes the colour of the gel light.
 // Options:
 //   gel: "#hex"        the backdrop light's colour (the paper turns that colour; default warm white)
@@ -52,7 +52,7 @@ export const Shoot: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const dark = Math.max(0, Math.min(1, runTo(num(opts.dark), opts.dark_at, num(opts.dark_s, 0.2), f)));
   const on = 1 - dark;
   // blackout: the set's whole light goes, not only its lamps (boards run 1: 'dark' left her lit as by day)
-  const dim = 0.03 + 0.97 * on;
+  const dim = 0.16 + 0.84 * on;   // blackout: the place stays readable (look-critic boards 1: 'a black void')
   const dimC = (c: string) => new THREE.Color(c).lerp(new THREE.Color('#010103'), dark).getStyle();
   const flashes = (Array.isArray(opts.flash) ? opts.flash : []) as number[];
   const fl = flashes.reduce((m, t) => (f >= t && f - t < 6 ? Math.max(m, 1 - (f - t) / 6) : m), 0) * on;
@@ -79,7 +79,7 @@ export const Shoot: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       <mesh geometry={geo} material={paper} position={[0, 0.003, -1.0]} receiveShadow />
       {/* the paper roll on its bar above the wall */}
       <mesh position={[0, 4.62, -2.65]} rotation={[0, 0, Math.PI / 2]} material={toon('#e8e3da')}><cylinderGeometry args={[0.12, 0.12, 7.8, 16]} /></mesh>
-      {/* softboxes left and right, the beauty dish on a boom above */}
+      {/* softboxes left and right (the beauty dish on its boom hung into every frame as a stray pole - boards 1) */}
       {[-1, 1].map((s) => (
         <group key={s} position={[s * 2.4, 0, 0.9]} rotation={[0, s * 0.75, 0]}>
           <Stand pos={[0, 0, 0]} h={1.9} />
@@ -88,11 +88,6 @@ export const Shoot: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
             <meshBasicMaterial color={new THREE.Color('#fff8ee').multiplyScalar(0.25 + 0.75 * on + fl)} toneMapped={false} /></mesh>
         </group>
       ))}
-      <group position={[-1.6, 0, 1.6]}>
-        <Stand pos={[0, 0, 0]} h={2.6} />
-        <mesh position={[0.9, 2.65, -0.8]} rotation={[0.7, 0.6, 0]} material={toon('#1d1e28')}><cylinderGeometry args={[0.02, 0.02, 2.4, 8]} /></mesh>
-        <mesh position={[1.55, 3.3, -1.45]} rotation={[Math.PI * 0.9, 0, 0]} material={toon('#c9c9d2', '#000', 1, {side: THREE.DoubleSide})}><cylinderGeometry args={[0.32, 0.12, 0.2, 20, 1, true]} /></mesh>
-      </group>
       {/* the camera on a tripod, off to the side (the lens of the film is the viewer, not this one) */}
       <group position={[1.9, 0, 2.6]} rotation={[0, -2.6, 0]}>
         {[0, 2.1, 4.2].map((a) => <mesh key={a} position={[Math.cos(a) * 0.22, 0.7, Math.sin(a) * 0.22]} rotation={[Math.sin(a) * 0.3, 0, -Math.cos(a) * 0.3]} material={toon('#1a1a22')}>
