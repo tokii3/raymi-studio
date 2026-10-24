@@ -20,14 +20,17 @@ ANKLE = 0.08      # m: the probe measures the ankle bone - standing, it sits thi
                   # standing shot read 'floating 0.077')
 FLOAT = 0.07      # m above the ankle's own height = floating
 SINK = 0.03       # m: the ankle this far below the support = the foot is inside it
-POP = 0.25        # m per probed step (default every 6 frames = 0.2 s) of hips travel the keys did not ask for
+POP = 0.045       # m of hips travel PER FRAME between two probed frames (x the probe step) the keys did not ask for
 
 
-def classify(report: dict, airborne: set[str] | None = None, moving: set[str] | None = None) -> dict[str, dict[str, dict]]:
+def classify(report: dict, airborne: set[str] | None = None, moving: set[str] | None = None,
+             seated: set[str] | None = None) -> dict[str, dict[str, dict]]:
     """{class: {shot: {"frames": n, "worst": ..., "detail": ...}}}. airborne = shots where she is meant to be off the
     ground (falling, flying, a jump); moving = shots whose keys move her (a pop there is checked against the move)."""
     airborne = airborne or set()
     moving = moving or set()
+    seated = seated or set()               # her chair carries her: her feet under the seat are no float / sink
+    pop = POP * report.get("every", 6)
     out: dict[str, dict[str, dict]] = defaultdict(dict)
 
     def add(cls, shot, worst, detail):
@@ -43,7 +46,7 @@ def classify(report: dict, airborne: set[str] | None = None, moving: set[str] | 
         if her:
             for x in her.get("inside", []):
                 add("limb_in", shot, x["depth"], f"{x['bone']} in {x['in']}")
-            if her.get("foot") is not None and her.get("support") is not None and shot not in airborne:
+            if her.get("foot") is not None and her.get("support") is not None and shot not in airborne and shot not in seated:
                 gap = her["foot"] - her["support"] - ANKLE
                 if gap > FLOAT:
                     add("float", shot, round(gap, 3), "above the support")
@@ -51,12 +54,12 @@ def classify(report: dict, airborne: set[str] | None = None, moving: set[str] | 
                     add("sink", shot, round(-(gap + ANKLE), 3), "below the support")
             if prev and prev.get("shot") == shot and prev.get("her") and her.get("hips") and prev["her"].get("hips") and shot not in moving and shot not in airborne:
                 d = sum((a - b) ** 2 for a, b in zip(her["hips"], prev["her"]["hips"])) ** 0.5
-                if d > POP:
+                if d > pop:
                     add("pop", shot, round(d, 3), "hips jump")
         for t in r.get("things", []):
             if t["with"] == "air":
                 add("thing_air", shot, t["gap"], t["thing"])
-            else:
+            elif not (t["thing"] == "page" and t["with"] == "thing:page"):   # falling pages pass each other on purpose
                 add("thing_in", shot, t["share"], f"{t['thing']} in {t['with']}")
         prev = r
     return {c: {s: {**v, "detail": dict(v["detail"])} for s, v in shots.items()} for c, shots in out.items()}
@@ -73,6 +76,10 @@ def airborne_shots(spec: dict) -> set[str]:
     return out
 
 
+def seated_shots(spec: dict) -> set[str]:
+    return {str(s["id"]) for s in spec.get("shots", []) if any(str(k.get("pose", "")).startswith(("sit", "slump")) for k in s.get("actor") or [])}
+
+
 def moving_shots(spec: dict) -> set[str]:
     return {str(s["id"]) for s in spec.get("shots", []) if any(k.get("move") for k in s.get("actor") or [])
             or len({json.dumps(k.get("pos")) for k in s.get("actor") or []}) > 1}
@@ -84,7 +91,7 @@ def main(job_dir: Path, fmt: str = "mv") -> int:
     if not p.exists():
         p = job_dir / "out" / f"probe_{fmt}.json"
     report = json.loads(p.read_text(encoding="utf-8"))
-    cls = classify(report, airborne_shots(spec), moving_shots(spec))
+    cls = classify(report, airborne_shots(spec), moving_shots(spec), seated_shots(spec))
     n = report["frames"]
     print(f"probe {job_dir.name} ({fmt}): {n} frames, every {report['every']}")
     for c in ("limb_in", "float", "sink", "pop", "thing_in", "thing_air"):

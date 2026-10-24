@@ -179,8 +179,8 @@ function surfaceTexture(kind: Surface): THREE.CanvasTexture {
     for (let i = 0; i < 26; i++) {
       const x = rnd(s + i * 13.1) * w, y = rnd(s + i * 17.3) * h, r = 18 + rnd(s + i * 5.7) * 46;
       const g = ctx.createRadialGradient(x, y, 0, x, y, r);
-      const v = 0.78 + 0.2 * rnd(s + i * 2.9);
-      g.addColorStop(0, shade(v, 0.55)); g.addColorStop(1, shade(v, 0));
+      const v = 0.66 + 0.3 * rnd(s + i * 2.9);      // look stills 2026-10-24: 0.78..0.98 still read flat at video size
+      g.addColorStop(0, shade(v, 0.7)); g.addColorStop(1, shade(v, 0));
       ctx.fillStyle = g; ctx.fillRect(x - r, y - r, 2 * r, 2 * r);
     }
     if (kind === 'carpet') {           // carpet TILES: a seam grid, each tile its own slight tone
@@ -239,7 +239,7 @@ export function toonSurface(color: string, kind: Surface, repeat: [number, numbe
     const map = surfaceTexture(kind).clone();
     map.repeat.set(repeat[0], repeat[1]); map.wrapS = map.wrapT = THREE.RepeatWrapping; map.needsUpdate = true;
     // the same pattern as relief: the set light rakes across it (a carpet seam, a plank joint, plaster) - v2 2026-10-24
-    m = new THREE.MeshToonMaterial({color, map, bumpMap: map, bumpScale: kind === 'paper' ? 0.6 : 1.6, gradientMap: toonRamp(), emissive, emissiveIntensity: ei});
+    m = new THREE.MeshToonMaterial({color, map, bumpMap: map, bumpScale: kind === 'paper' ? 0.8 : 2.6, gradientMap: toonRamp(), emissive, emissiveIntensity: ei});
     surfMats.set(k, m);
   }
   return m;

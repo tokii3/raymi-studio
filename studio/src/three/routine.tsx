@@ -543,7 +543,8 @@ const Resting: React.FC<{t: ThingSpec; f: number; children: React.ReactNode}> = 
     const box = new THREE.Box3().setFromObject(g);
     if (box.isEmpty()) return;
     const c = box.getCenter(new THREE.Vector3());
-    const sup = supportBelow(scene, c.x, c.z, box.max.y + 0.02, [g], 2.5);
+    // from well above the thing: one sunk deep into a cushion starts its ray outside the cushion (probe run 2)
+    const sup = supportBelow(scene, c.x, c.z, box.max.y + 0.35, [g], 2.5);
     if (sup === null) return;
     const d = sup - box.min.y;
     if (Math.abs(d) < 0.6) { g.position.y = d; g.updateMatrixWorld(true); }

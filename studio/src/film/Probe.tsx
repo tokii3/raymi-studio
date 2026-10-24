@@ -32,7 +32,9 @@ export const Probe: React.FC<{f: number; vrm: string | null; shot: string}> = ({
   const scene = useThree((s) => s.scene);
   useLayoutEffect(() => {
     scene.updateMatrixWorld(true);
-    const her = vrm ? vrmBones(vrm) : null;
+    // her rig stays cached between shots: measure her only when she is in THIS frame's scene (probe run 2: shot 60)
+    const rigged = vrm ? vrmBones(vrm) : null;
+    const her = rigged && under(rigged.root, scene) ? rigged : null;
     const herRoot = her?.root ?? null;
     const solids: {box: THREE.Box3; name: string; thing: boolean; mesh: THREE.Mesh}[] = [];
     const supports: THREE.Mesh[] = [];
@@ -52,7 +54,7 @@ export const Probe: React.FC<{f: number; vrm: string | null; shot: string}> = ({
     });
     const ray = new THREE.Raycaster();
     const supportBelow = (p: THREE.Vector3, skip?: THREE.Object3D) => {
-      ray.set(new THREE.Vector3(p.x, p.y + 0.6, p.z), new THREE.Vector3(0, -1, 0));
+      ray.set(new THREE.Vector3(p.x, p.y + 0.35, p.z), new THREE.Vector3(0, -1, 0));
       ray.far = 30;
       const hit = ray.intersectObjects(supports, false).find((h) => !skip || !under(h.object, skip));
       return hit ? hit.point.y : null;

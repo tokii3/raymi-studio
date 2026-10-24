@@ -590,6 +590,8 @@ function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: s
 const AIRBORNE = /fall|fly|jump|float|glide|paddl|swim/;
 function groundOnSupport(rig: Rig, k: VrmKey, scene: THREE.Object3D) {
   if (k.ground === false || AIRBORNE.test(k.motion ?? '') || AIRBORNE.test(k.pose) || k.act === 'hop' || k.act === 'float') return;
+  // seated, her chair carries her - her feet tuck under the seat and a ray from above them meets the SEAT (probe run 2)
+  if (/^(sit|slump)/.test(k.pose)) return;
   rig.root.updateMatrixWorld(true);
   let low: THREE.Vector3 | null = null;
   for (const b of FEET) {
@@ -600,7 +602,7 @@ function groundOnSupport(rig: Rig, k: VrmKey, scene: THREE.Object3D) {
   }
   if (!low) return;
   const floor = rig.root.position.y;                       // the key's floor (her feet's pose height sits above it)
-  const sup = supportBelow(scene, low.x, low.z, low.y + 0.6, [rig.root], 2.5);
+  const sup = supportBelow(scene, low.x, low.z, low.y + 0.35, [rig.root], 2.5);   // a step above her foot, not a seat
   if (sup === null) return;
   const d = sup - floor;
   if (Math.abs(d) > 0.004 && Math.abs(d) < 0.7) { rig.root.position.y += d; rig.root.updateMatrixWorld(true); }
