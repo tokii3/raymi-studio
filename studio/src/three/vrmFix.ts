@@ -61,7 +61,44 @@ export function fixSleeveCaps(scene: THREE.Object3D): number {
   return changed;
 }
 
+// Hair roots (toki 2026-10-25: "haare am ansatz die ersten ca 30% ... dunkler und weniger saturiert ... von off black eher
+// matt zu leuchtendem ultraviolett"; the 2D sprites: near-black roots). The texture pass (raymi/texfix.py roots) reaches
+// only strands whose UVs use the texture's top - the bangs use its lower half and stayed bright blue (model sheet 3).
+// So the shader darkens by HEIGHT on her head in the bind pose: the top 12 cm off-black and matte, blending into the
+// painted ultraviolet by 32 cm below the crown - every strand the same, whatever part of the texture it uses.
+const ROOT_FULL = 0.12, ROOT_END = 0.32, ROOT_MIX = 0.88;
+
+export function hairRoots(scene: THREE.Object3D): number {
+  let top = -Infinity;
+  const mats = new Set<THREE.Material>();
+  scene.traverse((o) => {
+    const m = o as THREE.Mesh;
+    if (!m.isMesh || !/HAIR/.test(materialName(m.material))) return;
+    m.geometry.computeBoundingBox();
+    top = Math.max(top, m.geometry.boundingBox!.max.y);
+    (Array.isArray(m.material) ? m.material : [m.material]).forEach((x) => { if (/HAIR/.test(x.name)) mats.add(x); });
+  });
+  if (!Number.isFinite(top)) return 0;
+  for (const mat of mats) {
+    const orig = mat.onBeforeCompile.bind(mat), key = mat.customProgramCacheKey.bind(mat);
+    mat.onBeforeCompile = (shader, renderer) => {
+      orig(shader, renderer);
+      shader.vertexShader = 'varying float vHairY;\n' + shader.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\n  vHairY = position.y;');
+      shader.fragmentShader = 'varying float vHairY;\n' + shader.fragmentShader.replace('#include <map_fragment>', `#include <map_fragment>
+  {
+    float rootK = smoothstep(${(top - ROOT_END).toFixed(3)}, ${(top - ROOT_FULL).toFixed(3)}, vHairY) * ${ROOT_MIX.toFixed(2)};
+    float lum = dot(diffuseColor.rgb, vec3(0.299, 0.587, 0.114));
+    diffuseColor.rgb = mix(diffuseColor.rgb, vec3(lum) * 0.22 + vec3(0.016, 0.012, 0.03), rootK);
+  }`);
+    };
+    mat.customProgramCacheKey = () => `${key()},hairRoots${top.toFixed(3)}`;
+    mat.needsUpdate = true;
+  }
+  return mats.size;
+}
+
 /** Every load-time model fix, in order. */
 export function fixModel(scene: THREE.Object3D): void {
   fixSleeveCaps(scene);
+  hairRoots(scene);
 }
