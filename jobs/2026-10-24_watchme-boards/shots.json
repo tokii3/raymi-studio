@@ -48,7 +48,7 @@
      "expr": {
       "joy": 0.65
      },
-     "clip": "female-dance-pose",
+     "clip": "female-dance-pose-2",
      "clip_from": 0.8,
      "speed": 0,
      "motionMix": 1
@@ -416,7 +416,7 @@
      "expr": {
       "joy": 0.65
      },
-     "clip": "female-dance-pose",
+     "clip": "female-standing-pose-1",
      "clip_from": 0.8,
      "speed": 0,
      "motionMix": 1

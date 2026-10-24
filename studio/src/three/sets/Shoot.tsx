@@ -61,16 +61,16 @@ export const Shoot: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const paper = React.useMemo(() => new THREE.MeshToonMaterial({color: '#f4f1ec', side: THREE.DoubleSide}), []);
   paper.color.set('#d6d1c9').lerp(new THREE.Color(gel), 0.5);   // never a white wall: boards run 1 read flat and washed
   paper.emissive.set(gel);
-  paper.emissiveIntensity = 0.03 * on + 0.9 * fl;
+  paper.emissiveIntensity = 0.03 * on + 0.3 * fl;
   const spot = React.useMemo(() => { const l = new THREE.SpotLight('#ffffff', 0, 12, 0.7, 0.6, 1.2); l.castShadow = true; l.shadow.mapSize.set(1024, 1024); return l; }, []);
   spot.color.set(gel);
-  spot.intensity = (18 + 120 * fl) * on;
+  spot.intensity = (18 + 45 * fl) * on;   // a flash you see, not a white-out (boards run 2: A1 burnt)
   spot.position.set(0.4, 4.6, 2.6);
   spot.target.position.set(0, 0.9, -0.4);
   const concrete = toonSurface('#2a2a33', 'plaster', [10, 10]);
   return (
     <group>
-      <SetLight sky="#30304a" ground="#121218" fill={(0.7 + 0.8 * fl) * dim} key="#ffffff" keyI={(0.8 + 2.5 * fl) * dim} keyPos={[3, 6, 5]} target={[0, 1, 0]}
+      <SetLight sky="#30304a" ground="#121218" fill={(0.7 + 0.5 * fl) * dim} key="#ffffff" keyI={(0.8 + 1.1 * fl) * dim} keyPos={[3, 6, 5]} target={[0, 1, 0]}
         shadowSize={6} fog={dimC('#0b0b12')} fogNear={8} fogFar={26} bg={dimC('#0b0b12')} depth={num(opts.depth, 0.8)} />
       <primitive object={spot} />
       <primitive object={spot.target} />
