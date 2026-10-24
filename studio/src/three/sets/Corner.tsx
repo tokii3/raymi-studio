@@ -120,7 +120,7 @@ export const Corner: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
         <mesh position={[0, 1.55, 0.16]}><planeGeometry args={[2.9, 2.1]} />
           <meshBasicMaterial color="#9fc8ff" transparent opacity={0.07} depthWrite={false} toneMapped={false} /></mesh>
         <Sign pos={[0, 2.85, 0.1]} size={[2.4, 0.36]} id="corner_shop" glow={on > 0.05}
-          paint={(ctx, w, h) => { ctx.fillStyle = '#141220'; ctx.fillRect(0, 0, w, h); drawText(ctx, 'TV  ·  RADIO  ·  24H', w / 2, h / 2, h * 0.55, on > 0.05 ? '#7fe0ff' : '#2a3040'); }} />
+          paint={(ctx, w, h) => { ctx.fillStyle = '#141220'; ctx.fillRect(0, 0, w, h); drawText(ctx, 'TV - RADIO - 24H', w / 2, h / 2, h * 0.55, on > 0.05 ? '#7fe0ff' : '#2a3040'); }} />
       </group>
       {/* the door + a neon fish above it */}
       <RBox size={[1.1, 2.3, 0.14]} pos={[-1.9, 1.15, -3.15]} r={0.03} c="#2b2236" />

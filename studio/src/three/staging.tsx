@@ -6,6 +6,10 @@
 //   frame     a gold picture frame closing around her + a brass plaque ("the Louvre gon' hang it")
 //   forecast  a weather card "100 % chance of slay" beside her + a hurricane spiral turning around her feet
 //   radar     a radar disc on the floor under her, the sweep passing her blip on the beat
+//   mosaic    a wall of tiles behind her arriving from the centre out ("see the same mosaic")
+//   pins      giant map pins dropping around her ("pins are dropping when I walk in")
+//   post      a giant phone frame behind her, hearts rising, crash bars from crash_at ("the app crash")
+//   news      a BREAKING bar + a running ticker behind her above her head ("breaking news")
 // Every piece keeps clear of her body by construction: back pieces stand >= 0.5 m behind her, front pieces only above
 // her head (standing head top ~1.62 m at 1.55 m) or beside her shoulders - never across her (Beach: "clippt rein").
 import React from 'react';
@@ -182,7 +186,100 @@ const Radar: React.FC<{f: number; s: Spec}> = ({f, s}) => {
   );
 };
 
-const KINDS: Record<string, React.FC<{f: number; s: Spec}>> = {cover: Cover, frame: Frame, forecast: Forecast, radar: Radar};
+/** "See the same mosaic": a wall of tiles behind her (her colours) that arrive one by one on the beat and flip. */
+const Mosaic: React.FC<{f: number; s: Spec}> = ({f, s}) => {
+  const cols = 7, rows = 6, H = s.h ?? 2.6, W = H * 1.2, tw = W / cols, th = H / rows;
+  const pal = [s.color ?? '#ff3d7f', '#bcd6ff', '#7fd8ff', '#f3ede2', '#b98cff', '#1b1840'];
+  return (
+    <>
+      {Array.from({length: cols * rows}, (_, i) => {
+        const cx = i % cols, cy = Math.floor(i / cols);
+        // the burst runs out from her: tiles near the centre first
+        const k = Math.round(Math.hypot(cx - (cols - 1) / 2, cy - rows / 2) * 1.6);
+        const c = pal[Math.floor(rnd(i + (s.seed ?? 0)) * pal.length)];
+        return (
+          <Piece key={i} f={f} s={s} k={k} place={[(cx - (cols - 1) / 2) * tw, th / 2 + cy * th, -0.7]} from={[(rnd(i) - 0.5) * 6, 2 + rnd(i + 1) * 2, -3]}>
+            <mesh material={toon(c)}><boxGeometry args={[tw * 0.94, th * 0.94, 0.04]} /></mesh>
+          </Piece>
+        );
+      })}
+    </>
+  );
+};
+
+/** "Pins are dropping when I walk in": giant map pins fall around her (never inside a 0.7 m circle) and stick. */
+const Pins: React.FC<{f: number; s: Spec}> = ({f, s}) => {
+  const n = 9, accent = s.color ?? '#ff3d55';
+  return (
+    <>
+      {Array.from({length: n}, (_, i) => {
+        const a = (i / n) * Math.PI * 2 + rnd(i) * 0.4, r = 0.9 + rnd(i + 3) * 1.4;
+        return (
+          <Piece key={i} f={f} s={s} k={i * 2} place={[Math.cos(a) * r, 0, Math.sin(a) * r - 0.3]} from={[0, 6, 0]}>
+            <group rotation={[0, 0, (rnd(i + 5) - 0.5) * 0.3]}>
+              <mesh position={[0, 0.32, 0]} material={toon('#d8d8e4')}><cylinderGeometry args={[0.012, 0.004, 0.64, 8]} /></mesh>
+              <mesh position={[0, 0.72, 0]} material={toon(i % 3 ? accent : '#ffd166', '#000')} castShadow><sphereGeometry args={[0.14, 16, 12]} /></mesh>
+            </group>
+          </Piece>
+        );
+      })}
+    </>
+  );
+};
+
+/** "I post a pic and the app crash": a giant phone frame stands behind her - her post, hearts rising, then the screen
+ *  glitches into crash bars at `crash` (song seconds -> frames, via the compiler's *_at rule: crash_at). */
+const Post: React.FC<{f: number; s: Spec & {crash_at?: number}}> = ({f, s}) => {
+  const H = s.h ?? 2.6, W = H * 0.5;
+  const crashed = typeof s.crash_at === 'number' && f >= s.crash_at;
+  const ui = card(`post_ui${crashed}${s.text}`, W, H, (ctx, w, h) => {
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = 'rgba(10,8,20,0.82)'; ctx.fillRect(0, 0, w, h * 0.08); ctx.fillRect(0, h * 0.86, w, h * 0.14);
+    drawText(ctx, s.text ?? '@raymi', w * 0.3, h * 0.04, h * 0.03, '#ffffff', {maxW: w * 0.5});
+    drawText(ctx, crashed ? 'APP NOT RESPONDING' : '99.9K LIKES', w / 2, h * 0.93, h * 0.04, crashed ? '#ff3d55' : '#ff7fb0', {maxW: w * 0.9});
+    if (crashed) for (let y = 0; y < h; y += h / 14) { ctx.fillStyle = ['#ff3d55', '#3fd0ff', '#ffd166', '#b98cff'][Math.floor(rnd(y) * 4)]; ctx.globalAlpha = 0.55; ctx.fillRect(0, y + rnd(y + 1) * 10, w, h * 0.02); }
+    ctx.globalAlpha = 1;
+  });
+  return (
+    <>
+      <Piece f={f} s={s} k={0} place={[0, H / 2, -0.65]} from={[0, -3, -2]}>
+        <mesh material={toon('#16121f')}><boxGeometry args={[W + 0.14, H + 0.14, 0.08]} /></mesh>
+        <mesh position={[0, 0, 0.045]}><planeGeometry args={[W, H]} /><meshBasicMaterial color={crashed ? '#120a1c' : '#2a3a7a'} toneMapped={false} /></mesh>
+      </Piece>
+      <Piece f={f} s={s} k={1} place={[0, H / 2, 0.3]} from={[0, 3, 0]}><Print tex={ui} w={W} h={H} text glow /></Piece>
+      {Array.from({length: 6}, (_, i) => {
+        const t = ((f - s.at) / FPS * 0.6 + i / 6) % 1;
+        return <mesh key={i} position={[W * 0.42 + 0.05 * Math.sin(f / 7 + i), 0.4 + t * H * 0.8, 0.32]} scale={0.6 + 0.4 * Math.sin(Math.PI * t)}>
+          <circleGeometry args={[0.06, 12]} /><meshBasicMaterial color="#ff5c9a" transparent opacity={(crashed ? 0 : 1) * Math.sin(Math.PI * t)} toneMapped={false} /></mesh>;
+      })}
+    </>
+  );
+};
+
+/** "Breaking hearts and breaking news": a news wall behind her - a red BREAKING bar and a running ticker above her head. */
+const News: React.FC<{f: number; s: Spec}> = ({f, s}) => {
+  const W = 3.4, accent = s.color ?? '#ff2d55';
+  const bar = card(`news_bar${s.title}`, W, 0.42, (ctx, w, h) => {
+    ctx.fillStyle = accent; ctx.fillRect(0, 0, w * 0.34, h); ctx.fillStyle = '#ffffff'; ctx.fillRect(w * 0.34, 0, w * 0.66, h);
+    drawText(ctx, 'BREAKING', w * 0.17, h / 2, h * 0.5, '#ffffff', {maxW: w * 0.3});
+    drawText(ctx, s.title ?? 'RAYMI SPOTTED - HEARTS BROKEN', w * 0.67, h / 2, h * 0.42, '#16121f', {maxW: w * 0.62});
+  });
+  const tick = s.text ?? 'WATCH ME  -  100% CHANCE OF SLAY  -  ON YOUR RADAR  -  ';
+  const ticker = card(`news_tick${tick}`, W * 2, 0.22, (ctx, w, h) => {
+    ctx.fillStyle = '#16121f'; ctx.fillRect(0, 0, w, h);
+    drawText(ctx, tick + tick, w / 2, h / 2, h * 0.6, '#ffffff', {maxW: w * 0.98});
+  });
+  ticker.wrapS = THREE.RepeatWrapping; ticker.repeat.set(0.5, 1); ticker.offset.x = ((f - s.at) / FPS) * 0.05;
+  return (
+    <>
+      <Piece f={f} s={s} k={0} place={[0, 2.05, -0.55]} from={[-4, 0, 0]}><Print tex={bar} w={W} h={0.42} text /></Piece>
+      <Piece f={f} s={s} k={2} place={[0, 1.78, -0.55]} from={[4, 0, 0]}><Print tex={ticker} w={W} h={0.22} text /></Piece>
+    </>
+  );
+};
+
+const KINDS: Record<string, React.FC<{f: number; s: Spec}>> = {cover: Cover, frame: Frame, forecast: Forecast, radar: Radar,
+  mosaic: Mosaic, pins: Pins, post: Post, news: News};
 
 /** Every staging of the shot, each turned to face the lens around its mark (her place). */
 export const Stagings: React.FC<{opts: Record<string, unknown>; f: number; camPos?: V3}> = ({opts, f, camPos = [0, 1.4, 4]}) => {
