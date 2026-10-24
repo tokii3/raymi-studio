@@ -117,6 +117,7 @@ jobs:
               if [ "$PROBE" != "0" ]; then   # the scene probe over the whole film (toki 2026-10-24: fault classes, not spots)
                 (cd studio && node probe.mjs "$J" --every "$PROBE" --out "../jobs/$J/out/probe_$FMT.json") < /dev/null
                 { echo "#### probe $J $FMT"; echo '```'; python -m raymi probe "$J" "$FMT" < /dev/null || true; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+                cp "jobs/$J/out/probe_$FMT.json" "jobs/$J/boards/probe_$FMT.json" 2>/dev/null || true   # kept on main: a refused still must not lose a 50-min measurement (stills run 40132877144)
               fi
               # frame fit (raymi/frame.py, Watch Me stills 1): close shots onto her MEASURED head, then the lyric fitter
               # and the guards again on the moved lenses - the stills below show the corrected film, shots.json is kept
@@ -126,7 +127,7 @@ jobs:
                 (cd studio && node guard.mjs "$J" --fill-all) < /dev/null >> "$GITHUB_STEP_SUMMARY" || true
                 python -m raymi timeline "$J" "$FMT" < /dev/null
                 { echo "#### guards $J $FMT"; (cd studio && node guard.mjs "$J") < /dev/null || true; } >> "$GITHUB_STEP_SUMMARY"
-                FITTED="$FITTED jobs/$J/shots.json"
+                FITTED="$FITTED jobs/$J/shots.json"; echo "jobs/$J/shots.json" >> /tmp/stills/fitted   # published even if a still is refused
               fi
               [ -n "$FR" ] || continue
               (cd studio && node stills.mjs "$J" "$FR" --scale "$SC" --out "$OUT" ${NAMES:+--names "$NAMES"}) < /dev/null
@@ -139,7 +140,7 @@ jobs:
             if [ "$(get thumbs False)" = "True" ]; then python -m raymi thumbs "$OUT"; fi   # boards/thumbs_168.jpg: the feed view
             { echo "#### exposure $J"; python -m raymi exposure "$OUT" || true; } >> "$GITHUB_STEP_SUMMARY"   # burnt / washed / loud / flat (toki 2026-10-24)
             echo "$TO" > "/tmp/stills/$J.to"
-            [ -n "$FITTED" ] && echo "$FITTED" > /tmp/stills/fitted
+
           done
       - name: Publish
         if: always() && steps.which.outputs.jobs != ''   # stills already made are kept even when a later job fails
