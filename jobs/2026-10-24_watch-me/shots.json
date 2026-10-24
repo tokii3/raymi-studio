@@ -3607,7 +3607,7 @@
     "key": [
      "RADAR"
     ],
-    "material": "engraved"
+    "material": "light"
    },
    "lyrics_fit": {
     "mv": {
@@ -3681,7 +3681,7 @@
     "key": [
      "LIKE THAT"
     ],
-    "material": "engraved"
+    "material": "light"
    },
    "lyrics_fit": {
     "mv": {
@@ -3826,7 +3826,7 @@
     "key": [
      "ONE WAY"
     ],
-    "material": "engraved"
+    "material": "light"
    },
    "lyrics_fit": {
     "mv": {
@@ -3959,7 +3959,7 @@
     "key": [
      "MOVE"
     ],
-    "material": "engraved",
+    "material": "light",
     "key_scale": 3.2,
     "cross": "orbit at floor height shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
    },
@@ -3998,9 +3998,9 @@
     "worlds_in_frames": true,
     "salmon": {
      "pos": [
-      -2.7,
-      1.3,
-      -3.7
+      -2.45,
+      1.7,
+      -3.85
      ],
      "hold": "flashlight",
      "search": true
@@ -4071,7 +4071,7 @@
     "key": [
      "NEWS"
     ],
-    "material": "engraved",
+    "material": "light",
     "cross": "macro plaque -> fly-through shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
    },
    "lyrics_fit": {
@@ -4152,7 +4152,7 @@
     "key": [
      "HURRICANE"
     ],
-    "material": "engraved",
+    "material": "light",
     "rot": 90,
     "cross": "fly-through then whip shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
    },
@@ -4251,7 +4251,7 @@
     "key": [
      "RADAR"
     ],
-    "material": "engraved"
+    "material": "light"
    },
    "lyrics_fit": {
     "mv": {
@@ -4348,7 +4348,7 @@
     "key": [
      "POSE"
     ],
-    "material": "engraved",
+    "material": "light",
     "key_scale": 3.4,
     "cross": "wide -> push to the stacked cover shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)"
    },
@@ -4588,7 +4588,7 @@
     "key": [
      "HURRICANE"
     ],
-    "material": "engraved",
+    "material": "light",
     "rot": 90
    },
    "transition": {
@@ -4884,7 +4884,7 @@
     "key": [
      "SLAY"
     ],
-    "material": "engraved",
+    "material": "light",
     "key_scale": 3.4
    },
    "lyrics_fit": {

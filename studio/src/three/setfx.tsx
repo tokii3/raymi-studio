@@ -176,7 +176,7 @@ const LightWriting: React.FC<{d: number; her: P3; camPos: P3; text: string; fps:
   const yaw = Math.atan2(toCam.x, toCam.z), W = 1.3, H = W / 4;
   // beside and above her head, never across her face (look-critic stills 3: WATCH ME parked on her eyes)
   const side = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw));
-  const c = new THREE.Vector3(her[0], her[1] + 1.78, her[2]).addScaledVector(toCam, 0.3).addScaledVector(side, 0.35);
+  const c = new THREE.Vector3(her[0], her[1] + 1.5, her[2]).addScaledVector(toCam, 0.3).addScaledVector(side, 0.62);   // stills 4: above her head it left the MS frame
   tex.repeat.set(p, 1); tex.offset.set(0, 0);
   const right = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw));
   const mid = c.clone().addScaledVector(right, -W / 2 + (W * p) / 2);
