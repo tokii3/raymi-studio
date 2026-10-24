@@ -103,4 +103,7 @@ IS the turn of the film), the night city gives the strongest natural colour scri
 toki's Beach note), and the city's own type is the best lyric medium we have had. C is the strongest gag; A is the
 safest. The staging parts (fly-in assembly, the cover, the forecast, the radar, the mosaic) are the same in all three.
 
-approved: <toki writes here: date + idea + notes>
+approved: toki 2026-10-24 "mir gefallen alle, bitte alle verwenden dynamisch, das set neu auf bauen / altes set löst sich auf fliegt weg , verflüssigt sich etc für transitions, gerne auch nah an raymi zoomen portrait aufnahmen, tranitions mit movement timen kamer ganz mit raymi / objekt bedecken und dann hintergrund / scene ändern etc"
+-> ALL THREE places in one film around her one spot: the world rebuilds itself around her - the old set dissolves / flies
+away / liquefies, the next one assembles; close portrait shots; transitions timed with her movement; the lens fully
+covered by her (or an object) and the scene changed behind it.

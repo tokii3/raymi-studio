@@ -180,6 +180,7 @@
   },
   {
    "id": "02",
+   "low_ok": "KNOWN FAULT (guard under_skirt 2026-10-24): kept only so QC v2 can re-measure run 58 as toki saw it; parked film, never render it like this again",
    "at": 1,
    "set": "office",
    "why": "the stop = the dream breaking: the colour drains back into her, she topples",
@@ -8518,6 +8519,7 @@
   },
   {
    "id": "68",
+   "low_ok": "KNOWN FAULT (guard under_skirt 2026-10-24): kept only so QC v2 can re-measure run 58 as toki saw it; parked film, never render it like this again",
    "at": 119.38,
    "set": "office",
    "why": "the glass bursts: she slides out, grows back, all five dots flare on",
@@ -9475,6 +9477,7 @@
   },
   {
    "id": "76",
+   "low_ok": "KNOWN FAULT (guard under_skirt 2026-10-24): kept only so QC v2 can re-measure run 58 as toki saw it; parked film, never render it like this again",
    "at": 137.25,
    "set": "dream",
    "why": "release: she lets herself fall backwards into the warm water",
