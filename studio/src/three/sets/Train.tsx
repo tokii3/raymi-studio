@@ -56,7 +56,7 @@ export const Train: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   });
   return (
     <group>
-      <SetLight sky="#b8c2e0" ground="#1e2030" fill={0.45 * lit + 0.01} key="#ffe8c8" keyI={1.6 * lit + 0.01} keyPos={[0, 4, 2]} target={[0, 0.5, 0]} shadowSize={6}
+      <SetLight depth={typeof opts.depth === 'number' ? opts.depth : 0} sky="#b8c2e0" ground="#1e2030" fill={0.45 * lit + 0.01} key="#ffe8c8" keyI={1.6 * lit + 0.01} keyPos={[0, 4, 2]} target={[0, 0.5, 0]} shadowSize={6}
         fog={off > 0.5 ? '#04050a' : '#3a3e52'} fogNear={10} fogFar={26} bg={off > 0.5 ? '#020308' : '#1c2033'} />
       {/* the car body */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} material={toonSurface('#5e6274', 'rubber', [6, 36])} receiveShadow><planeGeometry args={[2.6, 16]} /></mesh>

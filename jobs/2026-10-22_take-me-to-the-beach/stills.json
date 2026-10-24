@@ -1,1 +1,48 @@
-{"_why": "the scene probe over the whole MV + Short (toki 2026-10-24: fault classes, not spots)", "probe": 10, "passes": [{"format": "mv", "frames": [], "names": []}, {"format": "short", "frames": [], "names": []}], "to": "boards"}
+{
+ "_why": "structural pass 2026-10-24: the probe again (support raycast, resting things, sharpened probe) + look stills of every set (depth light, texture v2, her chair)",
+ "probe": 10,
+ "passes": [
+  {
+   "format": "mv",
+   "frames": [
+    15,
+    197,
+    257,
+    574,
+    628,
+    927,
+    1667,
+    2124,
+    2429,
+    2941,
+    3351,
+    3681,
+    4251,
+    4908
+   ],
+   "names": [
+    "sp_01",
+    "sp_11",
+    "sp_13",
+    "sp_19b",
+    "sp_20",
+    "sp_24",
+    "sp_36",
+    "sp_44",
+    "sp_50",
+    "sp_57",
+    "sp_64",
+    "sp_70",
+    "sp_78",
+    "sp_84"
+   ]
+  },
+  {
+   "format": "short",
+   "frames": [],
+   "names": []
+  }
+ ],
+ "scale": 0.75,
+ "to": "boards"
+}

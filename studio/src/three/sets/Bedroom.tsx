@@ -42,7 +42,7 @@ export const Bedroom: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   });
   return (
     <group>
-      <SetLight sky="#c6cde6" ground="#2a2540" fill={0.6 * power + 0.12} key="#fff1dc" keyI={2.4 * power} keyPos={[2, 4.5, 3]}
+      <SetLight depth={typeof opts.depth === 'number' ? opts.depth : 0} sky="#c6cde6" ground="#2a2540" fill={0.6 * power + 0.12} key="#fff1dc" keyI={2.4 * power} keyPos={[2, 4.5, 3]}
         target={[0, 0.4, 0]} shadowSize={5} fog="#2a2c40" fogNear={8} fogFar={20} bg="#22243a" />
       {/* the dome: a curved wall with ribs */}
       <mesh position={[0, 0, -0.5]} material={toon('#5c6080', '#000', 1, {side: THREE.BackSide})}><sphereGeometry args={[4.2, 40, 24, 0, Math.PI * 2, 0, Math.PI / 2]} /></mesh>

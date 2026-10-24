@@ -22,6 +22,8 @@ import {EXPRESSION_ALIAS, POSES, exprOf, type VrmKey, type VrmPose} from './vrmP
 import {vrmMouthAt, type VrmMouthKey} from './vrmLipSync';
 import type {V3} from '../film/types';
 import {wornProps} from './wearables';
+import {useThree} from '@react-three/fiber';
+import {supportBelow} from './support';
 
 export const DEFAULT_HEIGHT = 1.55;       // ears to feet, like the sprite puppet (raymi/timeline.py DEFAULT_HEIGHT)
 const WINDOW = 90;                         // frames of history simulated before f (springs forget faster than that)
@@ -581,6 +583,29 @@ function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: s
 }
 
 /** World points of her body at the current pose (for guards: face / figure / hero boxes from bones, not sprites). */
+/** She stands / sits / lies on what is REALLY under her (toki 2026-10-24: "fällt aus dem Himmel, clippt überall rein";
+ *  the scene probe measured her feet up to 0.55 m above and 0.39 m inside the surface): the key's floor height was a
+ *  hand guess. A ray under her lowest foot finds the surface; she moves by the difference, so the foot keeps the height
+ *  above its support that the pose / clip gives it. A jump, a fall, a flight or a float keeps the key's height. */
+const AIRBORNE = /fall|fly|jump|float|glide|paddl|swim/;
+function groundOnSupport(rig: Rig, k: VrmKey, scene: THREE.Object3D) {
+  if (k.ground === false || AIRBORNE.test(k.motion ?? '') || AIRBORNE.test(k.pose) || k.act === 'hop' || k.act === 'float') return;
+  rig.root.updateMatrixWorld(true);
+  let low: THREE.Vector3 | null = null;
+  for (const b of FEET) {
+    const node = rig.vrm.humanoid.getRawBoneNode(b);
+    if (!node) continue;
+    const p = node.getWorldPosition(new THREE.Vector3());
+    if (!low || p.y < low.y) low = p;
+  }
+  if (!low) return;
+  const floor = rig.root.position.y;                       // the key's floor (her feet's pose height sits above it)
+  const sup = supportBelow(scene, low.x, low.z, low.y + 0.6, [rig.root], 2.5);
+  if (sup === null) return;
+  const d = sup - floor;
+  if (Math.abs(d) > 0.004 && Math.abs(d) < 0.7) { rig.root.position.y += d; rig.root.updateMatrixWorld(true); }
+}
+
 /** Her placement root and the world position of her bones (the scene probe - film/Probe.tsx). */
 export function vrmBones(url: string): {root: THREE.Object3D; bones: Record<string, THREE.Vector3>} | null {
   const rig = rigs.get(url);
@@ -609,9 +634,10 @@ export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
  *  outline: ink line width in model metres (0 = none, ~0.004 = a cel drawing). */
 export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: number; from?: number; camPos: V3;
   mouthKeys?: VrmMouthKey[]; lock?: number; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string;
-  step?: number; outline?: number; outlineColor?: string;
+  step?: number; outline?: number; outlineColor?: string; keyLight?: number;
   battery?: {n: number; prev: number; t: number; color?: string; boost?: number} | null}> = ({url, keys, mouthKeys = [], f: frame, fps, from = 0, camPos, lock = 0.6,
-  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030', battery = null}) => {
+  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030', battery = null, keyLight = 0}) => {
+  const scene = useThree((s) => s.scene);
   const f = step > 1 ? frame - ((((frame - from) % step) + step) % step) : frame;
   if (!keys.length || f < keys[0].f) return null;
   const rig = rigs.get(url);
@@ -619,6 +645,7 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
   styleMaterials(rig, materialStyle);
   ensureOutline(rig, outline, outlineColor);
   const posed = poseVrm(url, keys, f, fps, Math.max(from, keys[0].f), camPos, lock, mouthKeys);
+  groundOnSupport(posed, keys[keyAt(keys, f)], scene);
   syncOutline(posed);
   const p = posed.root.position;
   const w = (posed.root.scale.x * posed.natural) * 0.42;
@@ -637,6 +664,13 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
         <meshBasicMaterial map={blobTexture(shadow)} transparent depthWrite={false} opacity={0.95} toneMapped={false} />
       </mesh>
       <primitive object={posed.root} />
+      {/* her own key from the lens side, short reach (a depth set dims the room - she stays lit, the room falls off) */}
+      {chest && keyLight > 0 ? (() => {
+        const fwd = new THREE.Vector3(camPos[0] - p.x, 0, camPos[2] - p.z).normalize();
+        const side = new THREE.Vector3(fwd.z, 0, -fwd.x).multiplyScalar(0.55);
+        return <pointLight position={[chest.x + fwd.x * 1.1 + side.x, chest.y + 0.55, chest.z + fwd.z * 1.1 + side.z]} color="#f3f0ff"
+          intensity={3.2 * keyLight} distance={3.2} decay={1.7} />;
+      })() : null}
       {/* a cool rim light behind her, toward the lens: her silhouette separates from any background (look-critic) */}
       {chest ? (() => {
         const back = new THREE.Vector3(p.x - camPos[0], 0, p.z - camPos[2]).normalize().multiplyScalar(0.9);

@@ -353,6 +353,7 @@ export type VrmKey = {
   // the observer effect (toki 2026-10-24): she notices the one who watches - head + neck turn this share toward the
   // lens on top of any clip (eyes follow anyway); from behind only a glance over the shoulder now and then. 0 = off.
   aware?: number;
+  ground?: boolean;          // false = keep the key's height (she hangs from strings, sits in the air on purpose)
   move?: number;             // original puppet travel duration in frames
   arc?: number;              // original hop arc in metres
   ease?: Ease;

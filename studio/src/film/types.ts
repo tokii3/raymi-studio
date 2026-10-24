@@ -111,7 +111,8 @@ export type Shot = {
 
 export type FilmProps = {
   composition: 'MV' | 'MVShort';
-  probe?: boolean;          // the scene probe (film/Probe.tsx): log her / things faults per frame, cloud only
+  probe?: boolean;
+  mouthEnv?: number[] | null;   // her vocal stem's loudness per film frame, 0..1 (lip sync opening)          // the scene probe (film/Probe.tsx): log her / things faults per frame, cloud only
   width: number;
   height: number;
   fps: number;

@@ -10,7 +10,8 @@ import {vrmBones} from '../three/VrmPuppet';
 
 const BONES = ['head', 'chest', 'hips', 'leftHand', 'rightHand', 'leftLowerArm', 'rightLowerArm', 'leftUpperLeg', 'rightUpperLeg',
   'leftLowerLeg', 'rightLowerLeg', 'leftFoot', 'rightFoot'] as const;
-const SHELL = 6;          // m: a box this big in two axes is a room shell (floor, wall, sky) - a support, never a collider
+const SHELL = 2.5;        // m: a box this big in two axes is a room shell (floor, wall, dome, sky) - a support, never a
+                          // collider (run 1: the bedroom dome counted as furniture, 'inside' 1.5 m deep)
 const SKIN = 0.015;       // m: a bone this deep inside a box counts (thin contact is fine)
 
 function label(o: THREE.Object3D): string {

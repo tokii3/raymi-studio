@@ -67,7 +67,9 @@ export const Film: React.FC<FilmProps> = (props) => {
   const fNow = useCurrentFrame();
   const {width: W, height: H, fps} = useVideoConfig();
   const mouthWords = useMemo(() => props.sung ?? vrmFilmWords(props.shots, fps), [props.sung, props.shots, fps]);
-  const mouthKeys = useMemo(() => makeVrmMouthKeys(mouthWords, fps, 0, props.durationInFrames), [mouthWords, fps, props.durationInFrames]);
+  // the loudness of her vocal stem per film frame (raymi/timeline.py) opens the mouth wider where she sings loud
+  const mouthKeys = useMemo(() => makeVrmMouthKeys(mouthWords, fps, 0, props.durationInFrames, {env: props.mouthEnv ?? null}),
+    [mouthWords, fps, props.durationInFrames, props.mouthEnv]);
   const i = shotAt(props.shots, fNow);
   const shot = props.shots[i];
   // a freeze / polaroid holds the 3D world on one frame while the 2D layer above keeps time (PovFx.tsx)
@@ -220,7 +222,8 @@ export const Film: React.FC<FilmProps> = (props) => {
                 mouthKeys={shotMouth} lock={Number(shot.opts.lock ?? (shot.actor ? 0.1 : 0.38))} shadow={String(shot.opts.shadow ?? '#120b2b')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={0.12 * glowGain}
                 materialStyle={String(shot.opts.material ?? (shot.actor ? 'routine' : 'firestarter'))}
-                step={shot.step ?? 1} outline={shot.outline ?? 0} battery={battery} />
+                step={shot.step ?? 1} outline={shot.outline ?? 0} battery={battery}
+                keyLight={Number(shot.opts.her_key ?? shot.opts.depth ?? 0)} />
             ) : (
               <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={glowGain} />

@@ -76,7 +76,7 @@ export const Dream: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const pageD = typeof opts.page === 'number' ? f - opts.page : -1;
   return (
     <group>
-      <SetLight sky={top.getStyle()} ground={deep.getStyle()} fill={1.35} key={new THREE.Color('#fff4e0').lerp(new THREE.Color('#c9a6ff'), night).getStyle()}
+      <SetLight depth={typeof opts.depth === 'number' ? opts.depth : 0} sky={top.getStyle()} ground={deep.getStyle()} fill={1.35} key={new THREE.Color('#fff4e0').lerp(new THREE.Color('#c9a6ff'), night).getStyle()}
         keyI={1.6 - 0.6 * night} keyPos={[2, 12, 3]} target={[0, 0, 0]} shadowSize={6} fog={mid.getStyle()} fogNear={10} fogFar={60} bg={mid.getStyle()} />
       {/* the water all around: a gradient dome, bright from above */}
       <mesh scale={[120, 80, 120]} position={[0, -20, 0]}><sphereGeometry args={[1, 32, 20]} />

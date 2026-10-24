@@ -22,6 +22,7 @@ export type LipSyncOpts = {
 const VISEMES: Viseme[] = ['a', 'i', 'u', 'e', 'o', 'close'];
 // the most each shape may open (VRoid A at 1.0 is a shout); close is lips pressed and may go to 1
 export const DEFAULT_CAPS: Required<MouthValues> = {a: 0.6, i: 0.45, u: 0.48, e: 0.5, o: 0.55, close: 1};
+const REACH = 1.6;
 
 // ------------------------------------------------------------------ phonemes
 // ARPAbet-like symbols, only what changes the mouth
@@ -244,7 +245,9 @@ export function mouthFrames(words: TimedLyricWord[], fps: number, excerptStartSe
       const want = (target[f][n] ?? 0) * (n === 'close' ? 1 : open);
       const k = n === 'close' ? (want > cur[n] ? 0.8 : 0.6) : (want > cur[n] ? 0.6 : 0.42);
       cur[n] += (want - cur[n]) * k;
-      const v = Math.min(caps[n], cur[n] * caps[n]);
+      // toki 2026-10-24 ("keine Mundsynchro"): sung syllables are short - the smoothed value rarely reaches its target,
+      // the mouth stayed at 20-40 % and read as closed. REACH lifts it so a sung vowel meets its cap (never 100 %).
+      const v = Math.min(caps[n], cur[n] * caps[n] * (n === 'close' ? 1 : REACH));
       if (v > 0.012) o[n] = Math.round(v * 1000) / 1000;
     }
     // pressed lips leave no room for an open vowel

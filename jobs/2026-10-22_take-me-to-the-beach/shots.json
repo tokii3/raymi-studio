@@ -1812,7 +1812,8 @@
        0
       ],
       "scale": 2,
-      "open_at": 17.65
+      "open_at": 17.65,
+      "float": true
      },
      {
       "kind": "glove",
@@ -2083,7 +2084,8 @@
       "text": "SALESMAN|calling",
       "ring_at": [
        19.8
-      ]
+      ],
+      "float": true
      }
     ],
     "strings": [
@@ -9178,7 +9180,8 @@
       ],
       "scale": 1.6,
       "crack": 1,
-      "empty": true
+      "empty": true,
+      "float": true
      }
     ],
     "post": {
@@ -10294,5 +10297,6 @@
   }
  ],
  "observer": 1,
- "aware": 0.35
+ "aware": 0.35,
+ "depth": 0.8
 }

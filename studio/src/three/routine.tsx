@@ -8,8 +8,10 @@
 //   boss: {pos, rotY?, scale?, hands?: 'desk'|'reach'|'hold'|'up', puff_at?, reach_at?}
 //   crowd: [{pos, yaw?, seed?, scale?, hold?: 'coffee'|'phone'|'paper'|null, look_at?, tap?, dance?}]
 // Everything is matte toon (look.tsx), deterministic, and moves by the frame only.
-import React from 'react';
+import React, {useLayoutEffect, useRef} from 'react';
 import * as THREE from 'three';
+import {useThree} from '@react-three/fiber';
+import {supportBelow} from './support';
 import {RBox, drawText} from './parts';
 import {canvasTexture, rnd, toon} from './look';
 import {vrmAnatomy} from './VrmPuppet';
@@ -517,11 +519,36 @@ export const Things: React.FC<{list: unknown; f: number}> = ({list, f}) => {
       {(list as ThingSpec[]).map((t, i) => {
         if (typeof t.at === 'number' && f < t.at && t.kind !== 'page') return null;
         if (typeof t.out === 'number' && f >= t.out) return null;
-        // every thing is tagged for the scene probe (film/Probe.tsx: things inside things, things in the air)
-        return <group key={i} userData={{thing: t.kind, float: Boolean((t as {float?: boolean}).float) || t.kind === 'page'}}>{thing(t, i, f)}</group>;
+        return <Resting key={i} t={t} f={f}>{thing(t, i, f)}</Resting>;
       })}
     </group>
   );
+};
+
+// things that hang, are held or float by nature - never set onto a surface (a thing may also say "float": true)
+const HANGING = new Set(['postcard', 'glove', 'headphones', 'calendar', 'page', 'sticky']);
+
+/** A thing resting on what is really under it (toki 2026-10-24: the phone in the cushion, the onigiri in the desk):
+ *  after the frame's scene is built, one ray finds the surface below and the thing's lowest point is set onto it. The
+ *  group is also tagged for the scene probe (film/Probe.tsx). */
+const Resting: React.FC<{t: ThingSpec; f: number; children: React.ReactNode}> = ({t, f, children}) => {
+  const ref = useRef<THREE.Group>(null);
+  const scene = useThree((s) => s.scene);
+  const float = Boolean((t as {float?: boolean}).float) || HANGING.has(t.kind);
+  useLayoutEffect(() => {
+    const g = ref.current;
+    if (!g || float) return;
+    g.position.y = 0;
+    scene.updateMatrixWorld(true);
+    const box = new THREE.Box3().setFromObject(g);
+    if (box.isEmpty()) return;
+    const c = box.getCenter(new THREE.Vector3());
+    const sup = supportBelow(scene, c.x, c.z, box.max.y + 0.02, [g], 2.5);
+    if (sup === null) return;
+    const d = sup - box.min.y;
+    if (Math.abs(d) < 0.6) { g.position.y = d; g.updateMatrixWorld(true); }
+  });
+  return <group ref={ref} userData={{thing: t.kind, float}}>{children}</group>;
 };
 
 /** One thing by its kind (Things wraps it in a group tagged for the scene probe). */

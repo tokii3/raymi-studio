@@ -9,7 +9,7 @@ def row(f, shot, hips, foot, support, inside=(), things=()):
 def test_classes():
     rep = {"every": 6, "frames": 5, "rows": [
         row(0, "a", [0, 0.9, 0], 0.05, 0.0, inside=[{"bone": "leftHand", "in": "desk", "depth": 0.04}]),
-        row(6, "a", [0, 0.9, 0.6], 0.3, 0.0),                                   # hips jump 0.6 m + floating 0.3 m
+        row(6, "a", [0, 0.9, 0.6], 0.38, 0.0),                                  # hips jump 0.6 m + floating 0.3 m (+ ankle)
         row(12, "b", [0, 0.9, 0], -0.1, 0.0, things=[{"thing": "phone", "with": "cushion", "share": 0.4, "gap": None}]),
         row(18, "c", [0, 1.5, 0], 0.6, 0.0),                                    # c is a jump: airborne, not floating
         row(24, "b", [0, 0.9, 0], 0.0, 0.0, things=[{"thing": "can", "with": "air", "share": 0, "gap": 0.2}]),

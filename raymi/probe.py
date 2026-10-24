@@ -16,8 +16,10 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-FLOAT = 0.05      # m: her lowest foot this far above the support = floating
-SINK = 0.05       # m: this far below = sunk in
+ANKLE = 0.08      # m: the probe measures the ankle bone - standing, it sits this high above the floor (run 1: every
+                  # standing shot read 'floating 0.077')
+FLOAT = 0.07      # m above the ankle's own height = floating
+SINK = 0.03       # m: the ankle this far below the support = the foot is inside it
 POP = 0.25        # m per probed step (default every 6 frames = 0.2 s) of hips travel the keys did not ask for
 
 
@@ -42,12 +44,12 @@ def classify(report: dict, airborne: set[str] | None = None, moving: set[str] | 
             for x in her.get("inside", []):
                 add("limb_in", shot, x["depth"], f"{x['bone']} in {x['in']}")
             if her.get("foot") is not None and her.get("support") is not None and shot not in airborne:
-                gap = her["foot"] - her["support"]
+                gap = her["foot"] - her["support"] - ANKLE
                 if gap > FLOAT:
                     add("float", shot, round(gap, 3), "above the support")
-                elif gap < -SINK:
-                    add("sink", shot, round(-gap, 3), "below the support")
-            if prev and prev.get("shot") == shot and prev.get("her") and her.get("hips") and prev["her"].get("hips") and shot not in moving:
+                elif gap + ANKLE < -SINK:
+                    add("sink", shot, round(-(gap + ANKLE), 3), "below the support")
+            if prev and prev.get("shot") == shot and prev.get("her") and her.get("hips") and prev["her"].get("hips") and shot not in moving and shot not in airborne:
                 d = sum((a - b) ** 2 for a, b in zip(her["hips"], prev["her"]["hips"])) ** 0.5
                 if d > POP:
                     add("pop", shot, round(d, 3), "hips jump")

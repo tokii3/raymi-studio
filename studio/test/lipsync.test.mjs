@@ -68,3 +68,13 @@ test('v1 keys are still available for the side by side comparison', () => {
   const k = L.makeVrmMouthKeys(words, 30, 0, 120, {version: 'v1'});
   assert.ok(k.some((x) => (x.values.a ?? 0) === 1 || (x.values.e ?? 0) > 0.5));
 });
+
+test('a sung line opens her mouth visibly: open vowels reach most of their cap (toki 2026-10-24 "keine Mundsynchro")', () => {
+  // "me to the beach" as sung in Beach (fast syllables, ~0.3 s each)
+  const words = [{w: 'me', t0: 0.0, t1: 0.3}, {w: 'to', t0: 0.3, t1: 0.55}, {w: 'the', t0: 0.55, t1: 0.75}, {w: 'beach', t0: 0.75, t1: 1.3}];
+  const keys = L.makeVrmMouthKeys(words, 30, 0, 45);
+  const peak = (v) => Math.max(...keys.map((k) => k.values[v] ?? 0));
+  const open = Math.max(peak('a'), peak('i'), peak('u'), peak('e'), peak('o'));
+  assert.ok(open >= 0.4, `the widest vowel only reaches ${open.toFixed(2)}`);
+  for (const [v, cap] of Object.entries(L.DEFAULT_CAPS)) assert.ok(peak(v) <= cap + 1e-9, `${v} over its cap`);
+});

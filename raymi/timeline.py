@@ -517,6 +517,25 @@ def thing_solids(things: list[dict], marks: dict) -> list[dict]:
     return out
 
 
+def vocal_envelope(path: Path, start: float, frames: int, fps: int = FPS) -> list[float]:
+    """Loudness of the vocal stem per film frame, 0..1 (-42 dB .. the 95th percentile) - studio/clip.mjs's measure."""
+    import subprocess
+
+    import numpy as np
+
+    rate = 8000
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{start:.3f}", "-t", f"{frames / fps + 0.5:.3f}", "-i", str(path),
+                          "-ac", "1", "-ar", str(rate), "-f", "f32le", "-"], capture_output=True, check=True).stdout
+    pcm = np.frombuffer(raw, dtype=np.float32)
+    per = rate / fps
+    db = []
+    for f in range(frames):
+        x = pcm[int(f * per):int((f + 1) * per)]
+        db.append(10 * np.log10(float(np.mean(x * x)) + 1e-12) if x.size else -120.0)
+    top = sorted(db)[int(len(db) * 0.95)] if db else -10.0
+    return [round(max(0.0, min(1.0, (d + 42) / max(6.0, top + 42))), 2) for d in db]
+
+
 def clip_names() -> set[str]:
     """Mixamo clip ids the studio can load (studio/catalog/clips.json; the files live in the private assets repo)."""
     p = Path(__file__).resolve().parents[1] / "studio" / "catalog" / "clips.json"
@@ -843,6 +862,13 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         if "grade" in opts and opts["grade"] not in GRADES:
             errors.append(f"{tag}: grade {opts['grade']!r} is not in the grade library {sorted(GRADES)}")
         short_opts = opts.pop("short", None)
+        if "depth" not in opts and spec.get("depth") is not None:
+            opts["depth"] = float(spec["depth"])           # the film's light depth (look.tsx SetLight): a shot may set its own
+        # her chair (office set): rolled back when she is at her place in this shot and never seated in it
+        at_place = [k for k in s.get("actor") or [] if k.get("pos") == "chair"]
+        if st == "office" and "chair_out" not in opts and at_place and not any(
+                str(k.get("pose", "")).startswith(("sit", "slump")) for k in at_place):
+            opts["chair_out"] = True
         if fmt == "short" and isinstance(short_opts, dict):
             opts.update(short_opts)                        # the narrow frame's own set choices (e.g. a sign left out)
         for k in TIME_OPTS & opts.keys():
@@ -952,6 +978,10 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         listed = list(spec.get("motions") or [])
         have = {Path(m).stem for m in listed}
         props["motions"] = listed + [f"motions/{c}.fbx" for c in sorted(used_clips - have)]
+        # her vocal stem's loudness per film frame opens the mouth (toki 2026-10-24: "keine Mundsynchro")
+        vocals = job / "vocals.ogg"
+        if vocals.exists():
+            props["mouthEnv"] = vocal_envelope(vocals, t_from, total)
         # every sung word for her lip sync (film seconds), not only the words a shot writes on screen
         props["sung"] = [{"w": w["w"], "roma": w.get("roma", ""), "t0": round(w["t0"] - t_from, 3), "t1": round(w["t1"] - t_from, 3)}
                          for ln in lyrics for w in ln.get("words", [])
