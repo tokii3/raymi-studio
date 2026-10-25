@@ -34,5 +34,14 @@
   "frames": 7,
   "worst": 0.438,
   "what": "rightFoot slides"
+ },
+ {
+  "cls": "climb",
+  "shot": "24",
+  "F": 1562,
+  "xy": null,
+  "frames": 4,
+  "worst": 0.245,
+  "what": "the support under her foot rises with her"
  }
 ]
