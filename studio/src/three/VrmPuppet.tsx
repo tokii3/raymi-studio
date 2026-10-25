@@ -552,7 +552,9 @@ function applyState(rig: Rig, s: State, fps: number) {
   // faceLens: measure the clip's hip turn on the unplaced rig and take it back out of her facing
   let hipTurn = 0;
   if (s.clipCur.faceLens && s.motion) {
-    const q = vrm.humanoid.getNormalizedBoneNode('hips')?.getWorldQuaternion(new THREE.Quaternion());
+    // the hips' LOCAL rotation = the turn against her rest pose (normalized bones rest at identity). Round 3 measured
+    // it in world space: a VRM0 model stands rotated 180 deg in its scene, so every face_lens shot showed her back
+    const q = vrm.humanoid.getNormalizedBoneNode('hips')?.quaternion;
     if (q) { const fw = new THREE.Vector3(0, 0, 1).applyQuaternion(q); hipTurn = Math.atan2(fw.x, fw.z); }
   }
   root.position.set(...s.pos);

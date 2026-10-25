@@ -177,8 +177,9 @@
      "x": 0.5,
      "y": 0.42,
      "r1": 0.8,
-     "band": 0.05,
-     "color": "#e9e2ff"
+     "band": 0.022,
+     "color": "#d9ccff",
+     "n": 2
     }
    ]
   },
@@ -198,8 +199,8 @@
       -0.2,
       -1.9
      ],
-     "yaw": 16,
-     "len": 80
+     "yaw": 48,
+     "len": 70
     },
     "glow": "#e6dcff",
     "glow_gain": 0.4,
@@ -210,7 +211,7 @@
     "her_rim_i": 2.5,
     "fog_c": "#2a3470",
     "post": {
-     "glow": 1.2,
+     "glow": 0.8,
      "vignette": 0.4,
      "dof_auto": 1
     }

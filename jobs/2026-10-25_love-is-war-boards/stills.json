@@ -25,6 +25,6 @@
  "scale": 1,
  "to": "boards",
  "dest": "jobs/2026-10-25_love-is-war/boards",
- "round": 3,
- "_why": "round 3: close mid-hit frames by the camera-director / fx-designer; material + light pass by the look-designer"
+ "round": "3b",
+ "_why": "round 3b: face_lens measured the hips in world space (VRM0 stands rotated 180) - every frame showed her back; A3 lens out of the beam cone; thinner ping rings"
 }
