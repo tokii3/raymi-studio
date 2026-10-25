@@ -25,6 +25,6 @@
  "scale": 1,
  "to": "boards",
  "dest": "jobs/2026-10-25_love-is-war/boards",
- "round": "3b",
- "_why": "round 3b: face_lens measured the hips in world space (VRM0 stands rotated 180) - every frame showed her back; A3 lens out of the beam cone; thinner ping rings"
+ "round": "3c",
+ "_why": "round 3c: A2 lens back (she was out of frame), B3/C3 poses without face_lens (backs), A3 closer + key"
 }
