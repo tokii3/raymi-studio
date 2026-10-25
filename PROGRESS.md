@@ -1,5 +1,18 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-25 - Watch Me MV takes 1-4, raymi7, one camera / one choreo, the bounce found
+- raymi7 (private assets): per-part materials (the lock only on skin, fabric shaded, the face shaded at all), texfix
+  (clean blends, off-black hair roots), vrmFix (sleeve caps ride the upper arm and stand up like the 2D fin, hair roots
+  by height in the shader, hair colliders on her torso). Model sheet job 2026-10-25_raymi-model-sheet.
+- Studio rules from toki's MV notes: bridge_cuts (a cut in a world = a fast move + blur), chain_actors (each shot blends
+  out of the last pose), holdTime (held frames = key poses), director (never a still lens; poses orbited), swing_words
+  (the lens darts on "move" / "K/DA" / "ay"), fill-frame (she fills the frame), film_look (DoF on her, glow, vignette),
+  lyrics_off, kick 0.
+- The bounce: she stood on her own contact shadow (3.5 cm up), climbed every frame, fell back at pose changes - fixed,
+  probe class `climb`. Probe stretch: stills.json probe_range.
+- MV runs 60 / 62 sent to toki (previews); look-critic FAIL x2 (reviews/stills_look-critic_1/2.md). NEXT: run of take
+  4, then the Short, thumbnails, upload.md, QC v2 once.
+
 ## 2026-10-24 (later) - Watch Me stills round 2: board 1's fault classes fixed in shared parts
 - Close shots onto her MEASURED head: raymi/frame.py (`raymi frame`, probe -> shots.json frame_fit, face centred and
   10 % high); stills.yml runs probe -> frame -> lyric fitter -> guards before the stills when stills.json has

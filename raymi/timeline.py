@@ -174,8 +174,60 @@ def bridge_cuts(shots: list[dict], n: int) -> None:
             moved.append(nk)
             last = nk["f"]
         moved[0]["ease"] = "inOut"
+        moved[0].pop("path", None)
+        # a spline segment after the rush must not swing through the far bridge key (Catmull-Rom overshoot dipped the
+        # lens into the hydrant, Watch Me 34): the first framing is held one frame so it is its own spline neighbour
+        if len(moved) > 1 and moved[1]["f"] > moved[0]["f"] + 1:
+            moved.insert(1, {**moved[0], "f": moved[0]["f"] + 1})
         b["camera"] = [bridge] + moved
         b["bridge"] = n
+
+
+def direct_camera(ckeys: list[dict], s: dict, f0: int, f1: int, idx: int) -> list[dict]:
+    """The camera director (toki 2026-10-25): "kamera soll nie still ... wenn dann langsam und ruhig bewegen oder sanften
+    zoom ... nie wirklich still"; "raymi muss noch mehr in scene gesetzt werden, vor allem bei ihren stillen posen, die
+    kamerawinkel sind zu normal ... mehr ähnliche winkel / kamerafahrten wie bei 0:30 - 0:34" (the 360 orbit round her).
+    A shot whose lens stands still becomes an arc round what it looks at: a slow drift with a gentle push in; a held pose
+    gets a real orbit with a crane and a roll (alternating sides shot by shot). Moving cameras stay as written."""
+    if not ckeys:
+        return ckeys
+    import math as _m
+    p0, k0 = ckeys[0]["pos"], ckeys[0]
+    still = all(_m.dist(k["pos"], p0) < 0.15 and abs(k["fov"] - k0["fov"]) < 3 for k in ckeys)
+    if not still:
+        return ckeys
+    acts = s.get("actor") or []
+    held = bool(acts) and all((a.get("speed") == 0) or "pose" in str(a.get("clip", "")) for a in acts)
+    look = k0["look"]
+    r = max(0.4, _m.dist(p0, look))
+    ang = _m.atan2(p0[0] - look[0], p0[2] - look[2])
+    side = 1 if idx % 2 == 0 else -1
+    sweep = _m.radians(38 if held else 12) * side
+    dy = (0.32 if held else 0.08) * (1 if idx % 4 < 2 else -1)
+    roll = (6.0 if held else 1.5) * side
+    def at(t):
+        a = ang + sweep * t
+        return [round(look[0] + r * (1 - 0.08 * t) * _m.sin(a), 4), round(p0[1] + dy * t, 4), round(look[2] + r * (1 - 0.08 * t) * _m.cos(a), 4)]
+    base = {k: v for k, v in k0.items() if k not in ("f", "pos", "fov", "roll", "ease", "path", "shake")}
+    mid = (f0 + f1) // 2
+    return [{**base, "f": f0, "pos": at(0), "fov": k0["fov"], "roll": k0.get("roll", 0), "ease": "inOut", "dir": 1},
+            {**base, "f": mid, "pos": at(0.5), "fov": round(k0["fov"] * 0.965, 2), "roll": round(roll / 2, 2), "ease": "inOut", "path": "spline", "dir": 1},
+            {**base, "f": max(mid + 1, f1 - 1), "pos": at(1), "fov": round(k0["fov"] * 0.93, 2), "roll": roll, "ease": "inOut", "path": "spline", "dir": 1}]
+
+
+def director_clear(shots: list[dict]) -> None:
+    """A director arc that would pass through a prop or a wall becomes a straight gentle push toward what it looks at
+    (the lens never stands still, never flies through the softbox)."""
+    for s in shots:
+        ks = s.get("camera") or []
+        if not ks or not ks[0].get("dir"):
+            continue
+        hit = any(_path_hits(a["pos"], b["pos"], s.get("solids") or [], s.get("noLens") or []) for a, b in zip(ks, ks[1:]))
+        if not hit:
+            continue
+        k0, look = ks[0], ks[0]["look"]
+        end = [round(lk + (p - lk) * 0.9, 4) for p, lk in zip(k0["pos"], look)]
+        s["camera"] = [ks[0], {**ks[-1], "pos": end, "roll": 0, "path": None}]
 
 
 def _path_hits(p0, p1, solids: list[dict], no_lens: list[dict], steps: int = 40) -> bool:
@@ -887,6 +939,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             for ck in ckeys:
                 ck["pos"] = [round(p + o, 4) for p, o in zip(ck["pos"], ff)]
                 ck["look"] = [round(p + o, 4) for p, o in zip(ck["look"], ff)]
+        if spec.get("director"):                          # the camera director (direct_camera): never still, poses staged
+            ckeys = direct_camera(ckeys, s, fr(a), fr(b), i)
         # frame_dolly (guard --fill-frame, toki 2026-10-25 "raymi ... sollte größer im bild sein ... oft wirkt alles leer
         # und raymi weit weg"): the lens moves this share of the way it was from what it looks at - she fills the frame
         fd = s.get("frame_dolly")
@@ -923,6 +977,19 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         fit = (s.get("lyrics_fit") or {}).get(fmt)      # guard.mjs --fill: the block placed in the frame's empty space
         if lyr and isinstance(fit, dict):
             lyr = {**lyr, **fit}
+        # toki 2026-10-25 "ich möchte die lyrics on screen komplett streichen": job option lyrics_off
+        if spec.get("lyrics_off") and not s.get("text"):
+            lyr = None
+        # camera swings on sung words (toki 2026-10-25: "kamera mehr schnelle dynamische bewegungen on beat zb im refrain bei
+        # move move oder kda ay so hin her"): job option swing_words -> the lens swings left / right on each of them
+        swing = []
+        sw_words = {x.lower() for x in spec.get("swing_words") or []}
+        if sw_words:
+            for ln in lyrics:
+                for w in ln["words"]:
+                    tok = re.sub(r"[^\w/]", "", w["w"].lower())
+                    if tok in sw_words and fr(a) <= w["cut"] < fr(b) - 4:
+                        swing.append([w["cut"], 1 if len(swing) % 2 == 0 else -1])
         L, words = None, []
         if lyr:
             if lyr.get("kind") not in LYRIC_KINDS:
@@ -1078,8 +1145,12 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                 if x.get("kind") == "stamp" and x.get("text"):
                     screen_texts.append(str(x["text"]))
                     heavy = True
+        if spec.get("film_look") and "post" not in opts:   # toki 2026-10-25 "sehr flach und cartoon / plastik": DoF on her, glow, vignette
+            opts["post"] = {"dof_auto": 1, "glow": 1, "vignette": 0.42}
+        if swing:
+            extra["swing"] = swing
         shots.append({**extra, "id": s.get("id", f"s{i + 1}"), "from": max(0, fr(a)), "to": min(total, fr(b)), "set": st, "hero": hero,
-                      "opts": opts, "camera": ckeys, "kick": float(s.get("kick", 1.0)), "puppets": pkeys,
+                      "opts": opts, "camera": ckeys, "kick": float(s.get("kick", spec.get("kick", 1.0))), "puppets": pkeys,
                       "lyrics": L, "words": words,
                       "transition": {"kind": tr.get("kind", "cut"), "frames": int(tr.get("frames", 0)),
                                      **({"obj": tr["obj"]} if "obj" in tr else {}), **({"dir": tr["dir"]} if "dir" in tr else {})},
@@ -1093,6 +1164,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                       "solids": [x for x in [{k: v for k, v in so.items() if k not in ("opt", "unless")} for so in sets[st].get("solids", [])
                                  if (not so.get("opt") or opts.get(so["opt"])) and opts.get(so.get("unless", ""), True) is not False]
                                  + thing_solids(opts.get("things") or [], marks) if x["name"] not in (s.get("lens_near") or {})]})
+    director_clear(shots)
     bridge_cuts(shots, int(spec.get("bridge", 0) or 0))
     chain_actors(shots, int(spec.get("chain", 0) or 0))
     if shots and shots[0]["from"] != 0:

@@ -9,6 +9,16 @@ import {SUB, blockLayout, blockRotation, lensPlace, subOf} from './lyricLayout';
 
 export function makeCamera(shot: Shot, f: number, aspect: number, hits: number[], fps: number): THREE.PerspectiveCamera {
   const c = cameraAt(shot.camera, f, hits, shot.kick, fps);
+  // a swing on a sung word (timeline swing_words): the lens darts sideways and back in 12 frames, the look follows half
+  for (const [f0, dir] of shot.swing ?? []) {
+    const d = f - f0;
+    if (d < 0 || d >= 12) continue;
+    const vx = c.look[0] - c.pos[0], vz = c.look[2] - c.pos[2], h = Math.hypot(vx, vz) || 1;
+    const amp = 0.26 * dir * Math.sin((Math.PI * d) / 12);
+    c.pos = [c.pos[0] + (vz / h) * amp, c.pos[1], c.pos[2] - (vx / h) * amp];
+    c.look = [c.look[0] + (vz / h) * amp * 0.5, c.look[1], c.look[2] - (vx / h) * amp * 0.5];
+    c.roll += 4 * dir * Math.sin((Math.PI * d) / 12);
+  }
   const cam = new THREE.PerspectiveCamera(fovFor(c.fov, aspect), aspect, 0.05, 200);
   cam.position.set(...c.pos);
   cam.up.set(0, 1, 0);

@@ -60,14 +60,14 @@ if (aid) {
   } else if (flag('--fill-frame') > 0) {
     const file = path.join(jobDir, 'shots.json');
     const spec = JSON.parse(fs.readFileSync(file, 'utf8'));
-    const WIDE = /wide|WS|LS|top|bird|tableau|macro|POV|plaque|sign|billboard|road|crane|overload/i;
+    const WIDE = /wide|\bWS\b|\bLS\b|top|bird|tableau|macro|POV|plaque|sign|billboard|road|crane|overload/i;
     const moved = [];
     props.shots.forEach((s, i) => {
       const row = spec.shots.find((r) => r.id === s.id);
       if (!row || WIDE.test(String(row.size ?? '')) || row.frame_dolly) return;
       const size = String(row.size ?? '');
-      const maxH = /(E?CU|MCU|MS)/.test(size) ? 1.05 : /FS/.test(size) ? 2.0 : 1.5;
-      const k = /E?CU/.test(size) ? null : fillFrame(props, i, maxH);
+      const maxH = /\b(E?CU|MCU|MS)\b/.test(size) ? 0.95 : /\bFS\b/.test(size) ? 1.8 : 1.25;   // toki 2026-10-25 (twice): still too much empty space
+      const k = /\bE?CU\b/.test(size) ? null : fillFrame(props, i, maxH);
       if (k === null) return;
       row.frame_dolly = k;
       moved.push(`${s.id} x${k}`);

@@ -88,6 +88,7 @@ export type Hero = {name: string; kind: 'worn' | 'face' | 'word' | 'prop'; word?
   uv?: [number, number]};   // uv: a prop she HOLDS - its box centre is that point of her sprite (the flame in her palm)
 
 export type Shot = {
+  swing?: [number, number][];   // [frame, +1 | -1]: the lens swings sideways on a sung word (timeline swing_words)
   bridge?: number;         // frames at its start where the lens rushes in from the previous shot's framing (timeline.py bridge_cuts)
   id: string;
   from: number;

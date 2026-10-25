@@ -6,11 +6,12 @@
 //   chroma - a hair of chromatic aberration at the frame edge (a lens, not a render)
 // A shot sets them in opts.post ({ao, bloom, dof, chroma}); defaults give every 3D shot ao + bloom.
 import React from 'react';
-import {Bloom, ChromaticAberration, DepthOfField, EffectComposer, N8AO} from '@react-three/postprocessing';
+import {Bloom, ChromaticAberration, DepthOfField, EffectComposer, N8AO, Vignette} from '@react-three/postprocessing';
 import {BlendFunction} from 'postprocessing';
 import * as THREE from 'three';
 
-export type PostSpec = {ao?: number; bloom?: number; dof?: number | null; dofRange?: number; chroma?: number; off?: boolean};
+export type PostSpec = {ao?: number; bloom?: number; dof?: number | null; dofRange?: number; chroma?: number; off?: boolean;
+  dof_auto?: number; glow?: number; vignette?: number};   // film look (toki 2026-10-25 "flach, cartoon, plastik")
 
 export const PostFX: React.FC<{spec?: PostSpec}> = ({spec = {}}) => {
   if (spec.off) return null;
@@ -18,6 +19,10 @@ export const PostFX: React.FC<{spec?: PostSpec}> = ({spec = {}}) => {
   const effects: React.ReactElement[] = [];
   if (ao > 0) effects.push(<N8AO key="ao" aoRadius={0.55} distanceFalloff={0.7} intensity={2.4 * ao} quality="low" halfRes color={new THREE.Color('#0d0820')} />);
   if (typeof spec.dof === 'number') effects.push(<DepthOfField key="dof" worldFocusDistance={spec.dof} worldFocusRange={spec.dofRange ?? 0.6} bokehScale={3} />);
+  // film look: a soft wide glow on the lights (an Orton pass, the anime-film halation) and a vignette - the clean 3D edge
+  // goes soft, the picture stops reading as plastic
+  if ((spec.glow ?? 0) > 0) effects.push(<Bloom key="glow" intensity={0.32 * (spec.glow ?? 0)} luminanceThreshold={0.55} luminanceSmoothing={0.35} mipmapBlur radius={0.9} />);
+  if ((spec.vignette ?? 0) > 0) effects.push(<Vignette key="vig" offset={0.32} darkness={spec.vignette ?? 0} />);
   if (bloom > 0) effects.push(<Bloom key="bloom" intensity={bloom} luminanceThreshold={0.86} luminanceSmoothing={0.12} mipmapBlur radius={0.65} />);
   if (chroma > 0) effects.push(<ChromaticAberration key="ca" offset={new THREE.Vector2(chroma, chroma)} radialModulation modulationOffset={0.35} blendFunction={BlendFunction.NORMAL} />);
   // an 8-bit frame buffer (2026-10-24, Beach shot 31 black): in the default half-float buffer one invalid pixel (NaN /

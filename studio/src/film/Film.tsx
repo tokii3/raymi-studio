@@ -260,7 +260,7 @@ export const Film: React.FC<FilmProps> = (props) => {
             ) : null}
             {shot.lyrics ? <group userData={{noSupport: true, qc: 'text'}}><Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} lens={cam} /></group> : null}
             {/* after effects (toki 2026-10-23): AO + bloom on every 3D-Raymi film shot, DoF where a shot asks for it */}
-            {props.vrm && !mask ? <PostFX spec={(shot.opts.post ?? {}) as PostSpec} /> : null}
+            {props.vrm && !mask ? <PostFX spec={postFor(shot.opts.post as PostSpec | undefined, herKey, camPos)} /> : null}
             {props.probe ? <Probe f={f} F={fNow} vrm={props.vrm ? staticFile(props.vrm) : null} shot={shot.id} /> : null}
             {mask ? <QcMask her={props.vrm ? vrmBones(staticFile(props.vrm))?.root ?? null : null} mode={mask} /> : null}
           </ThreeCanvas>
@@ -305,6 +305,16 @@ const BatterySign: React.FC<{n: number; prev: number; t: number; x: number; y: n
     </svg>
   );
 };
+
+/** The shot's post spec; dof_auto focuses the depth of field on HER (chest height) at this frame - she sharp, the room soft
+ *  (film look, toki 2026-10-25 "sehr flach und cartoon"). */
+function postFor(spec: PostSpec | undefined, her: {pos: number[]; height?: number} | null, camPos: [number, number, number]): PostSpec {
+  const s = spec ?? {};
+  if (!s.dof_auto || !her || typeof s.dof === 'number') return s;
+  const y = her.pos[1] + (her.height ?? 1.55) * 0.7;
+  const d = Math.hypot(camPos[0] - her.pos[0], camPos[1] - y, camPos[2] - her.pos[2]);
+  return {...s, dof: Number(d.toFixed(2)), dofRange: Math.max(0.5, d * 0.35)};
+}
 
 // The colour grade: the library + per-act choice live in grade.ts (the studio's look step).
 export function gradeOf(shot: Shot): Tone {
