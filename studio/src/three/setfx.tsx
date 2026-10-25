@@ -16,6 +16,12 @@
 //   tail_twitch: t            the barb twitches up into the lower corner for half a second
 //   haze: 0..1                deep-sea murk (K/DA FIRESTARTER study, in her world): soft water haze in front of and behind
 //                             her + marine snow drifting down - depth without walls (haze_c: the water's colour)
+//   sonar: t | [t, ...]       a ray senses with electricity: an ultraviolet ping rings out from her over the floor and the
+//                             room (on "radar")
+//   sense: 0..1               her electro-sense: thin flickering field lines between her and the Salmon guard
+//   caustics: 0..1            under-sea light patterns drifting over the floor round her (the street / the museum lie under
+//                             the sea)
+//   paparazzi: t | [t, ...]   a salvo of camera flashes from the dark round her (fame moments only)
 //   wet: 0..1                 the floor is a wet mirror (a set passes its own default; 0 = dry)
 //   fold: t                   the centerfold: a magazine page behind her folds open and down onto the floor over 0.8 s
 //                             (`fold_title`, "WATCH ME") - the cover becomes the sidewalk (Watch Me 25)
@@ -23,7 +29,7 @@ import React from 'react';
 import * as THREE from 'three';
 import {Reflector} from 'three/examples/jsm/objects/Reflector.js';
 import {blobTexture, canvasTexture, rnd, runTo, toon} from './look';
-import {drawText} from './parts';
+import {Caustics, drawText} from './parts';
 import {ease} from '../film/motion';
 
 type P3 = [number, number, number];
@@ -314,6 +320,61 @@ const Haze: React.FC<{v: number; her: P3; camPos: P3; f: number; c: string}> = (
   );
 };
 
+// ---------------------------------------------------------------- the four "her world" effects (toki 2026-10-25)
+const Sonar: React.FC<{d: number; her: P3}> = ({d, her}) => {
+  if (d < 0 || d > 42) return null;
+  return (
+    <group position={her}>
+      {[0, 8].map((k) => {
+        const t = Math.max(0, d - k) / 34;
+        if (t <= 0 || t >= 1) return null;
+        return <mesh key={k} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.015, 0]} scale={0.3 + 4.5 * ease('out', t)} renderOrder={4}>
+          <ringGeometry args={[0.96, 1, 64]} /><meshBasicMaterial color="#b28cff" transparent opacity={0.8 * (1 - t)} blending={THREE.AdditiveBlending} depthWrite={false} toneMapped={false} /></mesh>;
+      })}
+      <mesh position={[0, 1.1, 0]} scale={0.3 + 3.2 * ease('out', d / 42)} renderOrder={4}>
+        <sphereGeometry args={[1, 32, 20]} /><meshBasicMaterial color="#8f6bff" transparent opacity={0.14 * (1 - d / 42)} side={THREE.BackSide} blending={THREE.AdditiveBlending} depthWrite={false} toneMapped={false} />
+      </mesh>
+    </group>
+  );
+};
+
+const Sense: React.FC<{v: number; her: P3; to: P3 | null; f: number}> = ({v, her, to, f}) => {
+  if (!to || f % 6 > 3) return null;                       // it flickers: on for 4 frames of 6
+  const a = new THREE.Vector3(her[0], her[1] + 1.1, her[2]), b = new THREE.Vector3(...to);
+  return (<>
+    {[0, 1, 2].map((k) => {
+      const pts: THREE.Vector3[] = [];
+      for (let i = 0; i <= 10; i++) {
+        const p = a.clone().lerp(b, i / 10);
+        const j = i === 0 || i === 10 ? 0 : 0.07;
+        p.add(new THREE.Vector3((rnd(f * 3 + i * 7 + k) - 0.5) * j, (rnd(f * 5 + i * 11 + k * 3) - 0.5) * j, (rnd(f * 7 + i * 13 + k * 5) - 0.5) * j));
+        pts.push(p);
+      }
+      const geo = new THREE.BufferGeometry().setFromPoints(pts);
+      const mat = new THREE.LineBasicMaterial({color: k ? '#9ff6ff' : '#c9a8ff', transparent: true, opacity: 0.6 * v, blending: THREE.AdditiveBlending, depthWrite: false, toneMapped: false});
+      return <primitive key={k} object={new THREE.Line(geo, mat)} />;
+    })}
+  </>);
+};
+
+const Paparazzi: React.FC<{d: number; her: P3; camPos: P3}> = ({d, her, camPos}) => {
+  if (d < 0 || d > 22) return null;
+  const pops = [0, 4, 9, 15];
+  const k = pops.reduce((m, p) => (d >= p && d - p < 3 ? Math.max(m, 1 - (d - p) / 3) : m), 0);
+  const toCam = new THREE.Vector3(camPos[0] - her[0], 0, camPos[2] - her[2]).normalize();
+  const side = new THREE.Vector3(toCam.z, 0, -toCam.x);
+  return (<>
+    {k > 0 ? <pointLight position={[camPos[0] + side.x * 0.8, camPos[1] + 0.3, camPos[2] + side.z * 0.8]} color="#ffffff" intensity={9 * k} distance={7} decay={1.2} /> : null}
+    {pops.map((p, i) => {
+      const e = d >= p && d - p < 3 ? 1 - (d - p) / 3 : 0;
+      if (e <= 0) return null;
+      const pos = new THREE.Vector3(...her).addScaledVector(toCam, 1.2).addScaledVector(side, (i % 2 ? 1 : -1) * (1.4 + rnd(i) * 1.2)).add(new THREE.Vector3(0, 0.9 + rnd(i + 4) * 0.9, 0));
+      return <mesh key={i} position={pos} renderOrder={10}><planeGeometry args={[0.5, 0.5]} />
+        <meshBasicMaterial map={blobTexture('#ffffff')} transparent opacity={e} blending={THREE.AdditiveBlending} depthWrite={false} toneMapped={false} /></mesh>;
+    })}
+  </>);
+};
+
 /** Everything of this file a shot asks for. `her` = her spot; `frozenF` = the frame the set's time stopped at (freeze). */
 export const SetFx: React.FC<{opts: Record<string, unknown>; f: number; fps: number; her: P3; camPos: P3; plain?: boolean}> = ({opts, f, fps, her, camPos, plain}) => {
   const rain = Math.max(0, Math.min(1, runTo(0, opts.rain, 0.4, f)));
@@ -326,6 +387,10 @@ export const SetFx: React.FC<{opts: Record<string, unknown>; f: number; fps: num
   return (
     <group userData={{noSupport: true}}>
       {!plain && num(opts.wet) > 0 ? <WetFloor size={[16, 16]} pos={[her[0], (opts.wet_y as number | undefined) ?? 0.004, her[2]]} amount={num(opts.wet)} tint={String(opts.wet_tint ?? '#9aa8c8')} /> : null}
+      <Sonar d={since(opts.sonar, f)} her={her} />
+      {num(opts.sense) > 0 ? <Sense v={num(opts.sense)} her={her} to={(opts.salmon as {pos?: P3} | undefined)?.pos ?? null} f={f} /> : null}
+      {num(opts.caustics) > 0 ? <Caustics size={[7, 7]} pos={[her[0], (her[1] > 0.3 ? 0 : her[1]) + 0.012, her[2]]} f={f} opacity={0.35 * num(opts.caustics)} /> : null}
+      <Paparazzi d={since(opts.paparazzi, f)} her={her} camPos={camPos} />
       {num(opts.haze) > 0 ? <Haze v={num(opts.haze)} her={her} camPos={camPos} f={f} c={String(opts.haze_c ?? '#5b5aa8')} /> : null}
       {rain > 0.01 ? <Rain v={rain} her={her} f={f} wind={wind} dir={dir} /> : null}
       {wind > 0.01 ? <Wind v={wind} her={her} f={f} dir={dir} /> : null}

@@ -93,6 +93,9 @@ export const Film: React.FC<FilmProps> = (props) => {
     : shot.opts.chest_dots ? {n: 5, prev: 5, t: 1, boost: dotBoost} : null;
   const aspect = W / H;
   const cam = makeCamera(shot, f, aspect, props.hits, fps);
+  // fin wave (timeline effects: a real turn of hers): 10 frames of watery distortion, strongest at the start
+  const finD = since(shot.opts.finwave, f);
+  const fin = finD >= 0 && finD < 10 ? Math.sin((Math.PI * (finD + 1)) / 11) : 0;
   const camPos: [number, number, number] = [cam.position.x, cam.position.y, cam.position.z];
   // motion blur (toki 2026-10-23 "depth und motion blur"): where does the world point at the frame centre go between
   // the previous frame and this one? Its screen travel (px) becomes a directional blur on the 3D layer.
@@ -144,6 +147,7 @@ export const Film: React.FC<FilmProps> = (props) => {
   if (o.glow_pulse === 'beats') glowGain *= 1 + 0.9 * flare(props.beats, f, 6);
   if (typeof o.glow_out === 'number' && f >= o.glow_out) glowGain *= Math.max(0, 1 - (f - o.glow_out) / 4);
   glowGain *= 1 + 2.5 * dotBoost;
+  glowGain *= Number(o.glow_gain ?? 1);                              // a soft dot pulse in the chorus (timeline effects)
   // a blackout (sets Shoot / Corner / Exhibit "dark" / "dark_at"): her own key goes with the set's light and her dots
   // become the light of the picture - the lamp in the dark (Watch Me, boards run 1: she stayed lit as by day)
   const darkNow = Math.max(0, Math.min(1, runTo(Number(o.dark ?? 0), o.dark_at, Number(o.dark_s ?? 0.25), f)));
@@ -221,12 +225,19 @@ export const Film: React.FC<FilmProps> = (props) => {
   return (
     <AbsoluteFill style={{backgroundColor: '#0b0818', overflow: 'hidden'}}>
       <Fx2DDefs fx={fx} f={f} center={herScreen} aspect={aspect} />
+      {fin > 0 ? (
+        // the fin wave (a turn whips the water behind a fin): a short watery distortion of the picture
+        <svg width={0} height={0} style={{position: 'absolute'}}><defs>
+          <filter id="raymi-finwave"><feTurbulence type="fractalNoise" baseFrequency="0.008 0.022" numOctaves={2} seed={f % 97} />
+            <feDisplacementMap in="SourceGraphic" scale={(fin * 34).toFixed(1)} xChannelSelector="R" yChannelSelector="G" /></filter>
+        </defs></svg>
+      ) : null}
       {blur ? (
         <svg width={0} height={0} style={{position: 'absolute'}}><defs>
           <filter id="raymi-mblur" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation={`${blur.sx.toFixed(2)} ${blur.sy.toFixed(2)}`} /></filter>
         </defs></svg>
       ) : null}
-      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: mask ? 'none' : [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter, fxFilter(fx, f), povFilter(fx, f), blur ? 'url(#raymi-mblur)' : ''].filter(Boolean).join(' ')}}>
+      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: mask ? 'none' : [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter, fxFilter(fx, f), povFilter(fx, f), blur ? 'url(#raymi-mblur)' : '', fin > 0 ? 'url(#raymi-finwave)' : ''].filter(Boolean).join(' ')}}>
         {ready ? (
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>

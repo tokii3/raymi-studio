@@ -117,7 +117,8 @@ TIME_OPTS = {"lights_off", "window_break", "unfold", "shake", "cracks", "burst",
              # Watch Me sets (three/sets/Shoot, Corner, Exhibit): studio flashes, the bulb, the lamp, the crossed sign
              "flash", "bulb_flicker", "lamp_flick", "crossed",
              # three/setfx.tsx (any set): rain / wind as [[t, v]], floor events, light writing, letters, her tail at the lens
-             "rain", "wind", "splash", "tail_slap", "lightwriting", "letters_off", "tail_lens", "barb_lens", "tail_twitch", "fold"}
+             "rain", "wind", "splash", "tail_slap", "lightwriting", "letters_off", "tail_lens", "barb_lens", "tail_twitch", "fold",
+             "sonar", "paparazzi", "finwave"}
 # options holding specs (a dict or a list of dicts) whose own fields are times / positions (three/fire.tsx,
 # three/creatures.tsx): "at" / "out" / "toss" / "*_at" = song seconds -> frames, "grow" / "fade" / "ember" = seconds ->
 # frame counts, "pos" / "from" / "to" = a mark or [x, y, z]
@@ -216,6 +217,46 @@ def direct_camera(ckeys: list[dict], s: dict, f0: int, f1: int, idx: int) -> lis
     return [{**base, "f": f0, "pos": at(0), "fov": k0["fov"], "roll": k0.get("roll", 0), "ease": "inOut", "dir": 1},
             {**base, "f": mid, "pos": at(0.5), "fov": round(k0["fov"] * 0.965, 2), "roll": round(roll / 2, 2), "ease": "inOut", "path": "spline", "dir": 1},
             {**base, "f": max(mid + 1, f1 - 1), "pos": at(1), "fov": round(k0["fov"] * 0.93, 2), "roll": roll, "ease": "inOut", "path": "spline", "dir": 1}]
+
+
+def effect_rules(s: dict, opts: dict, st: str, a: float, b: float, lyrics: list, swing: list) -> dict:
+    """Where each of her-world effects belongs (toki 2026-10-25: "alle nutzen wenn sie passend genutzt werden können";
+    "nicht gleich alles voller leuchtspur"). A shot's own opts always win (setdefault). Returns the shot (fx added)."""
+    acts = s.get("actor") or []
+    words = [w for ln in lyrics for w in ln["words"]]
+    # sonar: a ray's electro-sense pings out on "radar"
+    radar = [round(w["t0"], 3) for w in words if "radar" in w["w"].lower() and a <= w["t0"] < b]
+    if radar:
+        opts.setdefault("sonar", radar)
+    sal = opts.get("salmon") if isinstance(opts.get("salmon"), dict) else None
+    # electro-sense: she feels the guard near her (the museum gag)
+    if st == "exhibit" and sal and sal.get("hold") == "flashlight" and not sal.get("frozen") and not sal.get("freeze_at"):
+        opts.setdefault("sense", 0.8)
+    # caustics: the street and the museum lie under the sea (the studio is the surface, none there)
+    if st in ("corner", "exhibit") and not opts.get("dark") and not opts.get("dark_at"):   # never in the blackout
+        opts.setdefault("caustics", 0.35 if st == "corner" else 0.25)
+    # dot pulse: only in the chorus (the shots with a beat snap)
+    if swing and "glow" not in opts:
+        opts.update({"glow": "#9b6bff", "glow_pulse": "beats", "glow_gain": 0.3})
+    stage = opts.get("stage") or []
+    cover = any(isinstance(x, dict) and x.get("kind") == "cover" for x in (stage if isinstance(stage, list) else [stage]))
+    keys_at = [float(k.get("at", 0)) for k in acts if isinstance(k.get("at", 0), (int, float))]
+    # fame moments: paparazzi salvos + a halftone freeze on each cover pose
+    if cover:
+        opts.setdefault("paparazzi", [round(a + x + 0.05, 3) for x in keys_at])
+        fx = list(s.get("fx") or [])
+        for x in keys_at:
+            fx.append({"kind": "freeze", "at": round(x + 0.1, 3), "to": round(x + 0.42, 3), "desat": 0})
+            fx.append({"kind": "halftone", "at": round(x + 0.1, 3), "to": round(x + 0.42, 3), "opacity": 0.45})
+        s = {**s, "fx": fx}
+    if sal and sal.get("flash_at"):
+        opts.setdefault("paparazzi", sal["flash_at"])
+    # fin wave: only on a real turn of hers
+    turns = [round(a + float(k.get("at", 0)) + 0.15, 3) for k in acts if re.search(r"spin|turn", str(k.get("clip", ""))) and isinstance(k.get("at", 0), (int, float))]
+    if turns:
+        opts.setdefault("finwave", turns)
+    return s
+
 
 
 def director_clear(shots: list[dict]) -> None:
@@ -1100,6 +1141,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             opts["chair_out"] = True
         if fmt == "short" and isinstance(short_opts, dict):
             opts.update(short_opts)                        # the narrow frame's own set choices (e.g. a sign left out)
+        if spec.get("effects"):                            # her-world effects, each only where it means something
+            s = effect_rules(s, opts, st, a, b, lyrics, swing)
         for k in TIME_OPTS & opts.keys():
             opts[k] = time_opt(opts[k], fr)
         for k in ("doors", "bed_drag", "dusk_to"):         # only the TIME of these is song seconds, the rest are values

@@ -3509,7 +3509,11 @@
     -0.033,
     -0.143,
     0.006
-   ]
+   ],
+   "transition": {
+    "kind": "ink",
+    "frames": 14
+   }
   },
   {
    "id": "48",
@@ -5207,5 +5211,6 @@
  ],
  "kick": 0,
  "film_look": true,
- "director": true
+ "director": true,
+ "effects": true
 }
