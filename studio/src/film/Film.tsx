@@ -102,9 +102,13 @@ export const Film: React.FC<FilmProps> = (props) => {
     const p = new THREE.Vector3(0, 0, -4).applyQuaternion(cam.quaternion).add(cam.position);
     const a = p.clone().project(prev), b = p.clone().project(cam);
     const dx = Math.abs(b.x - a.x) * W / 2, dy = Math.abs(b.y - a.y) * H / 2;
-    if (!(dx < W / 3 && dy < H / 3)) return null;                     // a lens JUMP inside a shot (a hold key) is a cut, not a move
-    const k = Number(shot.opts.motion_blur ?? 0.3);                  // share of the travel smeared (look-critic stills 3: 0.45 / 28 px smeared her face and the lyric)
-    const sx = Math.min(16, dx * k), sy = Math.min(16, dy * k);
+    // a camera bridge (timeline.py bridge_cuts: the cut became a fast move, toki 2026-10-25 "... + etwas mehr motion
+    // blur") is a travel, not a jump, and smears harder
+    const bridging = (shot.bridge ?? 0) > 0 && f - shot.from <= (shot.bridge ?? 0);
+    if (!bridging && !(dx < W / 3 && dy < H / 3)) return null;      // a lens JUMP inside a shot (a hold key) is a cut, not a move
+    const k = bridging ? 0.7 : Number(shot.opts.motion_blur ?? 0.3);  // share of the travel smeared (look-critic stills 3: 0.45 / 28 px smeared her face and the lyric)
+    const cap = bridging ? 40 : 16;
+    const sx = Math.min(cap, dx * k), sy = Math.min(cap, dy * k);
     return sx < 1.2 && sy < 1.2 ? null : {sx: sx / 2, sy: sy / 2};
   })();
   // her place on screen (chest height of the current key): the centre of a colour spread

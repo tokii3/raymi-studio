@@ -216,7 +216,8 @@
      "pos": "paper",
      "rotY": "lens"
     }
-   ]
+   ],
+   "frame_dolly": 0.94
   },
   {
    "id": "04",
@@ -518,16 +519,17 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.01,
-      1.31,
-      -0.1
+      -0.69,
+      1.41,
+      1.27
      ],
-     "size": 0.25,
-     "width": 1.34,
-     "tilt": 0.1,
+     "size": 0.025,
+     "width": 0.75,
+     "tilt": 0,
      "roll": 0,
-     "rot": 22.6,
-     "key_scale": 1.8
+     "rot": 102.5,
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
    }
   },
@@ -727,15 +729,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.46,
-      1.37,
-      0.18
+      0.53,
+      1.22,
+      0.23
      ],
-     "size": 0.067,
-     "width": 0.36,
+     "size": 0.04,
+     "width": 0.34,
      "tilt": -1.4,
      "roll": 0,
-     "rot": 1,
+     "rot": -2.1,
      "key_scale": 1.8
     }
    },
@@ -811,18 +813,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.74,
-      0.89,
-      0.33
+      0.49,
+      1.1,
+      0.42
      ],
-     "size": 0.127,
-     "width": 1.09,
-     "tilt": 5.1,
+     "size": 0.081,
+     "width": 0.7,
+     "tilt": 5,
      "roll": 0,
-     "rot": -10.4,
-     "key_scale": 1.8
+     "rot": -10.5,
+     "key_scale": 1.3
     }
-   }
+   },
+   "frame_dolly": 0.7
   },
   {
    "id": "13",
@@ -885,15 +888,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.13,
-      0.03,
-      0.73
+      1.48,
+      0.5,
+      -0.25
      ],
-     "size": 0.218,
-     "width": 3.97,
-     "tilt": -90,
+     "size": 0.16,
+     "width": 2.55,
+     "tilt": -81.7,
      "roll": 0,
-     "rot": 0,
+     "rot": -58,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
@@ -943,18 +946,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.79,
-      0.98,
-      -0.12
+      -0.22,
+      0.89,
+      0.59
      ],
-     "size": 0.096,
-     "width": 0.82,
+     "size": 0.082,
+     "width": 0.71,
      "tilt": -0.7,
      "roll": 0,
-     "rot": 13,
+     "rot": 42.1,
      "key_scale": 1.8
     }
-   }
+   },
+   "frame_dolly": 0.92
   },
   {
    "id": "15",
@@ -1207,16 +1211,16 @@
       2.35,
       -0.8
      ],
-     "size": 0.0232,
-     "width": 0.424,
+     "size": 0.0192,
+     "width": 0.408,
      "tilt": 0,
      "roll": 0,
      "rot": 0,
      "key_scale": 1.8,
      "lens": [
       0.5,
-      0.72,
-      0.5271757847220846
+      0.8,
+      0.507095738100718
      ]
     }
    }
@@ -1256,18 +1260,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.08,
-      1.73,
-      0.3
+      -0.28,
+      1.63,
+      0.43
      ],
-     "size": 0.145,
-     "width": 2.58,
+     "size": 0.105,
+     "width": 1.86,
      "tilt": -0.2,
      "roll": 0,
-     "rot": -21.7,
+     "rot": -18,
      "key_scale": 1.8
     }
-   }
+   },
+   "frame_dolly": 0.81
   },
   {
    "id": "20",
@@ -1398,13 +1403,17 @@
       1.11,
       -0.32
      ],
-     "size": 0.036,
-     "width": 0.48,
-     "tilt": -0.3,
+     "size": 0.0115,
+     "width": 0.257,
+     "tilt": 0,
      "roll": 0,
-     "rot": 6.5,
+     "rot": 0,
      "key_scale": 1,
-     "small": "fitter: the free space beside her is small in this frame"
+     "lens": [
+      0.5,
+      0.72,
+      0.3933567733341209
+     ]
     }
    }
   },
@@ -1469,18 +1478,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.97,
-      1.45,
-      -0.19
+      0.41,
+      1.42,
+      -0.57
      ],
-     "size": 0.151,
-     "width": 1.12,
+     "size": 0.094,
+     "width": 0.9,
      "tilt": 0.3,
      "roll": 0,
-     "rot": 36.5,
-     "key_scale": 1.8
+     "rot": 10.7,
+     "key_scale": 1
     }
-   }
+   },
+   "frame_dolly": 0.83
   },
   {
    "id": "23",
@@ -1552,15 +1562,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.52,
-      0.03,
-      0.56
+      0.13,
+      0.42,
+      -0.7
      ],
-     "size": 0.18,
-     "width": 3.28,
-     "tilt": -90,
+     "size": 0.095,
+     "width": 3.98,
+     "tilt": -85.2,
      "roll": 0,
-     "rot": 0,
+     "rot": -7.6,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
@@ -1658,14 +1668,14 @@
       0.5
      ],
      "size": 0.0281,
-     "width": 1.026,
+     "width": 0.832,
      "tilt": 0,
      "roll": 0,
      "rot": 0,
      "key_scale": 1.3,
      "lens": [
       0.5,
-      0.3,
+      0.8,
       1.2
      ],
      "small": "fitter: a long line in a tight frame (>= 60 px cap)"
@@ -1689,7 +1699,8 @@
      ],
      "small": "fitter: a long line in a tight frame (>= 60 px cap)"
     }
-   }
+   },
+   "frame_dolly": 0.94
   },
   {
    "id": "25",
@@ -2282,15 +2293,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.86,
-      1.36,
-      -0.27
+      -0.73,
+      1.33,
+      -0.21
      ],
-     "size": 0.052,
-     "width": 0.94,
-     "tilt": -5.7,
+     "size": 0.053,
+     "width": 0.64,
+     "tilt": -2.2,
      "roll": 0,
-     "rot": 101.4,
+     "rot": 37.1,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
@@ -2425,15 +2436,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.08,
-      0.03,
-      1.03
+      1.14,
+      1,
+      0.91
      ],
-     "size": 0.245,
-     "width": 3.26,
-     "tilt": -90,
+     "size": 0.105,
+     "width": 2.43,
+     "tilt": -15.6,
      "roll": 0,
-     "rot": 0,
+     "rot": -27.5,
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
@@ -2961,13 +2972,17 @@
       3.01,
       -2.48
      ],
-     "size": 0.251,
-     "width": 4.56,
-     "tilt": 12.7,
+     "size": 0.0742,
+     "width": 1.149,
+     "tilt": 0,
      "roll": 0,
-     "rot": -6.3,
+     "rot": 0,
      "key_scale": 1,
-     "small": "fitter: the free space beside her is small in this frame"
+     "lens": [
+      0.5,
+      0.5,
+      1.2
+     ]
     }
    }
   },
@@ -3197,22 +3212,28 @@
      "SLAY"
     ],
     "material": "light",
-    "key_scale": 3.4
+    "key_scale": 3.4,
+    "cross": "a rolling pull-out over the corner: the line rides the lens, may cross her body, never her face"
    },
+   "frame_dolly": 0.63,
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.52,
-      1.75,
-      -0.69
+      1.2,
+      2.1,
+      -0.6
      ],
-     "size": 0.066,
-     "width": 2.01,
-     "tilt": -5.3,
+     "size": 0.0417,
+     "width": 1.058,
+     "tilt": 0,
      "roll": 0,
-     "rot": -3.1,
-     "key_scale": 1,
-     "small": "fitter: the free space beside her is small in this frame"
+     "rot": 0,
+     "key_scale": 1.8,
+     "lens": [
+      0.5,
+      0.3,
+      1.1702481782864296
+     ]
     }
    }
   },
@@ -3463,17 +3484,16 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -0.41,
-      1.13,
-      -0.34
+      -0.03,
+      1.19,
+      -0.2
      ],
-     "size": 0.034,
-     "width": 1.04,
+     "size": 0.065,
+     "width": 1.77,
      "tilt": -0.2,
      "roll": 0,
-     "rot": 26,
-     "key_scale": 1,
-     "small": "fitter: the free space beside her is small in this frame"
+     "rot": 9.1,
+     "key_scale": 1
     }
    },
    "frame_fit": [
@@ -3612,18 +3632,20 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      -1.55,
-      1.72,
-      -0.17
+      -1.24,
+      1.71,
+      -0.22
      ],
-     "size": 0.157,
-     "width": 1.5,
-     "tilt": -4,
+     "size": 0.106,
+     "width": 1.14,
+     "tilt": -4.2,
      "roll": 0,
      "rot": 52.6,
-     "key_scale": 1
+     "key_scale": 1,
+     "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "frame_dolly": 0.72
   },
   {
    "id": "50",
@@ -3686,18 +3708,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.26,
-      1.9,
-      0.82
+      0.24,
+      1.7,
+      0.85
      ],
-     "size": 0.144,
-     "width": 1.96,
+     "size": 0.055,
+     "width": 1.03,
      "tilt": 16.3,
      "roll": 0,
      "rot": 11.9,
      "key_scale": 1.8
     }
-   }
+   },
+   "frame_dolly": 0.67
   },
   {
    "id": "51",
@@ -3889,15 +3912,15 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0.3,
-      2.13,
-      0.67
+      0.23,
+      1.96,
+      0.7
      ],
-     "size": 0.083,
+     "size": 0.05,
      "width": 1.04,
      "tilt": 0.6,
      "roll": 0,
-     "rot": -158.5,
+     "rot": -162,
      "key_scale": 1.8
     }
    },
@@ -3975,13 +3998,17 @@
       1.2,
       0.53
      ],
-     "size": 0.097,
-     "width": 1.54,
-     "tilt": -1.4,
+     "size": 0.0293,
+     "width": 0.536,
+     "tilt": 0,
      "roll": 0,
-     "rot": 150.7,
+     "rot": 0,
      "key_scale": 1,
-     "small": "fitter: the free space beside her is small in this frame"
+     "lens": [
+      0.5,
+      0.64,
+      0.6660331759272332
+     ]
     }
    }
   },
@@ -4364,7 +4391,7 @@
       -0.6
      ],
      "size": 0.0297,
-     "width": 1.087,
+     "width": 0.881,
      "tilt": 0,
      "roll": 0,
      "rot": 0,
@@ -4768,9 +4795,9 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      -0.33,
-      0.55,
-      0.66
+      -1.14,
+      1.05,
+      0.64
      ],
      "hold": "flashlight",
      "freeze_at": 172.74
@@ -4810,18 +4837,19 @@
    "lyrics_fit": {
     "mv": {
      "anchor": [
-      0,
-      1.68,
-      1.26
+      0.02,
+      1.54,
+      1.04
      ],
-     "size": 0.181,
-     "width": 2.27,
-     "tilt": -4.2,
+     "size": 0.111,
+     "width": 1.39,
+     "tilt": -4.1,
      "roll": 0,
-     "rot": 52.4,
+     "rot": 52.5,
      "key_scale": 1.8
     }
-   }
+   },
+   "frame_dolly": 0.66
   },
   {
    "id": "65",
@@ -5037,14 +5065,20 @@
       2.14,
       0.71
      ],
-     "size": 0.097,
-     "width": 2.03,
-     "tilt": -0.1,
+     "size": 0.0377,
+     "width": 0.496,
+     "tilt": 0,
      "roll": 0,
-     "rot": 16.3,
-     "key_scale": 1.8
+     "rot": 0,
+     "key_scale": 1.8,
+     "lens": [
+      0.5,
+      0.72,
+      1.034814579915649
+     ]
     }
-   }
+   },
+   "frame_dolly": 0.94
   },
   {
    "id": "68",
@@ -5150,5 +5184,7 @@
     0
    ]
   }
- ]
+ ],
+ "bridge": 8,
+ "chain": 10
 }

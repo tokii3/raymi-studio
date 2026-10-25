@@ -119,7 +119,8 @@ export const Shoot: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
           <planeGeometry args={[0.025, 2.6]} /></mesh>
       ))}
       {opts.bulb ? (
-        <group position={[-0.5, 4.6, 0.3]} rotation={[0.25 * swing, 0, swing]}>
+        // a hanging lamp: never a surface she stands on or is pushed out of (its glow plane pushed her - she popped, toki 2026-10-25)
+        <group position={[-0.5, 4.6, 0.3]} rotation={[0.25 * swing, 0, swing]} userData={{noSupport: true}}>
           {/* the bulb hangs at 2.05 m, beside her head - in the close frames too (stills 1: at 2.8 m it was never seen) */}
           <mesh position={[0, -1.22, 0]} material={toon('#141418')}><cylinderGeometry args={[0.006, 0.006, 2.44, 6]} /></mesh>
           <mesh position={[0, -2.46, 0]} material={toon('#2a2a30')}><cylinderGeometry args={[0.03, 0.035, 0.07, 10]} /></mesh>

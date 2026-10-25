@@ -142,6 +142,83 @@ def time_opt(v, fr):
     return v
 
 
+BRIDGE_FREE = {"cut"}      # only a plain cut is bridged; a cover / whip / spin / ink ... already carries the change
+
+
+def bridge_cuts(shots: list[dict], n: int) -> None:
+    """One camera through the film (toki 2026-10-24 brief "die kamera ist eine einzelne fahrt"; 2026-10-25: "auch bei cuts
+    oder transitions dann einfach die kamera schnell bewegen + etwas mehr motion blur"): a plain cut between two shots
+    in the same set becomes a fast move - shot B starts where shot A's lens ended and rushes to its own first framing
+    within n frames (Film smears it with a stronger motion blur, shot["bridge"]). Job option "bridge": n (0 = off)."""
+    if n <= 0:
+        return
+    for a, b in zip(shots, shots[1:]):
+        if a.get("set") != b.get("set") or (a.get("transition") or {}).get("kind", "cut") not in BRIDGE_FREE:
+            continue
+        if (b.get("opts") or {}).get("world") or not a.get("camera") or not b.get("camera"):
+            continue                                        # a world rebuilding around her is its own transition
+        if b["to"] - b["from"] < 2 * n:
+            continue
+        end = a["camera"][-1]
+        keys = b["camera"]
+        start = keys[0]
+        if _path_hits(end["pos"], start["pos"], b.get("solids") or [], b.get("noLens") or []):
+            continue                                        # the rush would fly through a prop or a wall: keep the cut
+        bridge = {**start, "f": b["from"], "pos": list(end["pos"]), "look": list(end["look"]), "fov": end["fov"],
+                  "roll": end.get("roll", 0), "bridge": 1}
+        bridge.pop("shake", None)
+        moved, last = [], b["from"]
+        for k in keys:
+            nk = dict(k)
+            nk["f"] = max(nk["f"], b["from"] + n, last + 1)
+            moved.append(nk)
+            last = nk["f"]
+        moved[0]["ease"] = "inOut"
+        b["camera"] = [bridge] + moved
+        b["bridge"] = n
+
+
+def _path_hits(p0, p1, solids: list[dict], no_lens: list[dict], steps: int = 40) -> bool:
+    """Does the straight lens path p0 -> p1 pass through a solid (centre / size) or a no-lens box (min / max)?"""
+    for i in range(steps + 1):
+        q = [a + (b - a) * i / steps for a, b in zip(p0, p1)]
+        for s in solids:
+            c, z = s.get("center"), s.get("size")
+            if c and z and all(abs(q[k] - c[k]) < z[k] / 2 + 0.18 for k in range(3)):   # the eased path and the lens breathing stray a little
+                return True
+        for bx in no_lens:
+            if all(bx["min"][k] < q[k] < bx["max"][k] for k in range(3)):
+                return True
+    return False
+
+
+def chain_actors(shots: list[dict], n: int) -> None:
+    """Her whole film is ONE movement (toki 2026-10-25: "raymis gesamt choreo soll auch 1 flüssige bewegung sein ... von
+    der end bewegung zur pose übergehen flüssig nicht als harter cut"; a snap into the next shot's pose read as her
+    "falling onto her spot"): shot B gets a key just before its start holding the pose shot A ended in (A's clip frozen
+    at its last time), so B's first key blends out of it over n frames. Job option "chain": n (0 = off)."""
+    if n <= 0:
+        return
+    for a, b in zip(shots, shots[1:]):
+        ak, bk = a.get("actor") or [], b.get("actor") or []
+        if not ak or not bk or b["to"] - b["from"] < n + 2:
+            continue
+        last = ak[-1]
+        m = last.get("motion")
+        start = last
+        for k in reversed(ak):                               # where A's clip started (as VrmPuppet clipStart)
+            if k.get("motion") != m or k.get("restart"):
+                break
+            start = k
+        t_end = float(start.get("clipFrom", 0) or 0) + (a["to"] - 1 - start["f"]) / FPS * float(start.get("speed", 1) if start.get("speed") is not None else 1)
+        if last.get("speed") == 0:
+            t_end = float(last.get("clipFrom", 0) or 0)
+        held = {**last, "f": b["from"] - 1, "pos": list(bk[0]["pos"]), "rotY": bk[0].get("rotY", "lens"),
+                "clipFrom": round(t_end, 3), "speed": 0, "restart": True, "exact": True, "move": 0, "act": "idle"}
+        first = {**bk[0], "blend": max(int(bk[0].get("blend", 8) or 8), n), "restart": True}
+        b["actor"] = [held, first] + bk[1:]
+
+
 def stage_texts(opts: dict) -> list[dict]:
     """The printed type of a staging cover (three/staging.tsx Cover: masthead + line plates) as readable texts, so the
     text-on-text guard keeps a lyric off them (Watch Me stills 1: the line sat on THE MASTERPIECE / ON YOUR RADAR).
@@ -810,6 +887,12 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             for ck in ckeys:
                 ck["pos"] = [round(p + o, 4) for p, o in zip(ck["pos"], ff)]
                 ck["look"] = [round(p + o, 4) for p, o in zip(ck["look"], ff)]
+        # frame_dolly (guard --fill-frame, toki 2026-10-25 "raymi ... sollte größer im bild sein ... oft wirkt alles leer
+        # und raymi weit weg"): the lens moves this share of the way it was from what it looks at - she fills the frame
+        fd = s.get("frame_dolly")
+        if isinstance(fd, (int, float)) and 0.3 <= fd < 1:
+            for ck in ckeys:
+                ck["pos"] = [round(lk + (p - lk) * fd, 4) for p, lk in zip(ck["pos"], ck["look"])]
         # the observer (toki 2026-10-24): a person watching her, not a tripod - the film's default, a shot may set 0
         obs = s.get("observer", spec.get("observer"))
         if obs is not None:
@@ -1010,6 +1093,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                       "solids": [x for x in [{k: v for k, v in so.items() if k not in ("opt", "unless")} for so in sets[st].get("solids", [])
                                  if (not so.get("opt") or opts.get(so["opt"])) and opts.get(so.get("unless", ""), True) is not False]
                                  + thing_solids(opts.get("things") or [], marks) if x["name"] not in (s.get("lens_near") or {})]})
+    bridge_cuts(shots, int(spec.get("bridge", 0) or 0))
+    chain_actors(shots, int(spec.get("chain", 0) or 0))
     if shots and shots[0]["from"] != 0:
         errors.append(f"the first shot must start at the window start ({t_from:.2f} s)")
     overlay = None

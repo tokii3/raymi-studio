@@ -80,7 +80,7 @@ export function cameraAt(keys: CamKey[], f: number, hits: number[] = [], kick = 
     // a person watching: breath lifts the lens (~4 s), the body sways, the head drifts a fraction of a degree and
     // after the cut the gaze settles onto her (an eye finding its subject) - pure sines, the same in every worker
     const l = Math.max(0, f - keys[0].f);
-    const settle = Math.exp(-l / 7);
+    const settle = keys[0].bridge ? 0 : Math.exp(-l / 7);   // a bridged cut has no gaze to settle (it read as her dropping into place)
     pos = [pos[0] + wobble(s * 0.33, 21) * 0.014 * o, pos[1] + Math.sin(s * Math.PI * 0.5) * 0.007 * o, pos[2] + wobble(s * 0.27, 22) * 0.01 * o];
     const dx = look[0] - pos[0], dy = look[1] - pos[1], dz = look[2] - pos[2];
     const dist = Math.hypot(dx, dy, dz);

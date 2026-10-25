@@ -419,7 +419,8 @@ export const SalmonActor: React.FC<{s: SalmonSpec; f: number; fps: number; camPo
 
 /** Everything of this file a set draws from its shot options. */
 export const DeepLife: React.FC<{opts: Record<string, unknown>; f: number; fps: number; camPos?: P3}> = ({opts, f, fps, camPos}) => (
-  <group>
+  // creatures and their props never carry her or push her (a swimming Salmon under her foot made her pop, 2026-10-25)
+  <group userData={{noSupport: true}}>
     <FishList list={opts.fish} f={f} fps={fps} />
     {opts.school ? <School s={opts.school as SchoolSpec} f={f} fps={fps} /> : null}
     {opts.sauna ? <Sauna {...(opts.sauna as {pos: P3; n?: number; r?: number; glow?: string})} f={f} /> : null}

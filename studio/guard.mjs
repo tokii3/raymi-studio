@@ -7,6 +7,8 @@
 // --hero-boxes <f,f,...|every:N> prints the main element's screen box per frame (JSON, for raymi/hero.py);
 // --fill-all: every shot whose lyrics fail a lyric guard gets fillLyrics, written into shots.json lyrics_fit.<format>
 //   (compile again afterwards: raymi timeline <job> <format>) - no shot needs a hand patch (toki 2026-10-20);
+// --fill-frame: every shot that is not meant wide (its shots.json size) gets frame_dolly so she fills >= 60 % of the
+//   frame height, her head kept in (toki 2026-10-25: "raymi weit weg");
 // --place-creatures: every shot whose Salmon is out of the picture gets a spot beside her (check.ts placeCreature),
 //   written into shots.json salmon.pos (compile again afterwards);
 // --fit-lyrics [shot#...] proposes the nearest lyric anchor (+ size) inside the frame and off her face (JSON per shot).
@@ -19,7 +21,7 @@ import {guardCutEdges, here, loadJob} from './lib.mjs';
 
 const {props, jobDir} = loadJob(process.argv[2]);
 const flag = (n) => process.argv.indexOf(n);
-const aid = ['--place-creatures', '--report', '--place', '--summary', '--fit', '--fit-lyrics', '--fill', '--fill-all', '--fit-lens', '--hero-boxes'].some((n) => flag(n) > 0);
+const aid = ['--fill-frame', '--place-creatures', '--report', '--place', '--summary', '--fit', '--fit-lyrics', '--fill', '--fill-all', '--fit-lens', '--hero-boxes'].some((n) => flag(n) > 0);
 if (!aid || process.argv.includes('--report')) {
   try {
     await guardCutEdges(props, null);
@@ -31,7 +33,7 @@ if (!aid || process.argv.includes('--report')) {
 if (aid) {
   const out = path.join(os.tmpdir(), `raymi-report-${process.pid}.mjs`);
   await build({entryPoints: [path.join(here, 'src/film/check.ts')], bundle: true, format: 'esm', platform: 'node', outfile: out, logLevel: 'error'});
-  const {framingReport, placeAt, shotSummary, fitShot, fitLyrics, fillLyrics, lyricsOutOfFrame, fitLens, heroBoxes, heroFaults, creatureFaults, placeCreature} = await import(pathToFileURL(out).href);
+  const {framingReport, placeAt, shotSummary, fitShot, fitLyrics, fillLyrics, lyricsOutOfFrame, fitLens, heroBoxes, heroFaults, creatureFaults, placeCreature, fillFrame} = await import(pathToFileURL(out).href);
   const pi = flag('--place');
   if (pi > 0) {
     const [s, f, x, y, d] = process.argv.slice(pi + 1, pi + 6).map(Number);
@@ -55,6 +57,23 @@ if (aid) {
     const out = {};
     for (const i of want) { const c = fitLens(props, i); out[i] = c ? c.map(({f, pos, look, fov, roll, ease}) => ({f, pos, look, fov, roll, ease})) : null; }
     console.log(JSON.stringify(out));
+  } else if (flag('--fill-frame') > 0) {
+    const file = path.join(jobDir, 'shots.json');
+    const spec = JSON.parse(fs.readFileSync(file, 'utf8'));
+    const WIDE = /wide|WS|LS|top|bird|tableau|macro|POV|plaque|sign|billboard|road|crane|overload/i;
+    const moved = [];
+    props.shots.forEach((s, i) => {
+      const row = spec.shots.find((r) => r.id === s.id);
+      if (!row || WIDE.test(String(row.size ?? '')) || row.frame_dolly) return;
+      const size = String(row.size ?? '');
+      const maxH = /(E?CU|MCU|MS)/.test(size) ? 1.05 : /FS/.test(size) ? 2.0 : 1.5;
+      const k = /E?CU/.test(size) ? null : fillFrame(props, i, maxH);
+      if (k === null) return;
+      row.frame_dolly = k;
+      moved.push(`${s.id} x${k}`);
+    });
+    fs.writeFileSync(file, JSON.stringify(spec, null, 1) + '\n');
+    console.log(`fill-frame: ${moved.length} shots closer (${moved.join(', ')})`);
   } else if (flag('--place-creatures') > 0) {
     const file = path.join(jobDir, 'shots.json');
     const spec = JSON.parse(fs.readFileSync(file, 'utf8'));

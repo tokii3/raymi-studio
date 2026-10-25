@@ -350,6 +350,7 @@ export type VrmKey = {
   speed?: number;            // playback speed (1 = as captured)
   once?: boolean;            // play once and hold the last frame (one-shot actions); default loops
   restart?: boolean;         // start the same clip again at this key
+  exact?: boolean;           // a held frame taken exactly (the end of the previous shot - timeline.py chain_actors), not a key-pose search
   // the observer effect (toki 2026-10-24): she notices the one who watches - head + neck turn this share toward the
   // lens on top of any clip (eyes follow anyway); from behind only a glance over the shoulder now and then. 0 = off.
   aware?: number;

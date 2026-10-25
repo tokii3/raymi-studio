@@ -15,6 +15,7 @@ export type CamKey = {f: number; pos: V3; look: V3; fov: number; roll?: number; 
   // the observer (toki 2026-10-24: "die Kamera imitiert den Viewer"): a person watching her - breathes, sways, the gaze
   // drifts a little and finds her again after a cut. 0 = off (a dead-still beat on purpose), 1 = a calm watcher.
   observer?: number;
+  bridge?: number;         // the inserted first key of a bridged cut (timeline.py bridge_cuts): no gaze settle
 };
 
 export type Act = 'idle' | 'pop' | 'hop' | 'bounce' | 'shake' | 'tilt' | 'lean' | 'shrink' | 'turn' | 'stomp' | 'float' | 'flatten';
@@ -87,6 +88,7 @@ export type Hero = {name: string; kind: 'worn' | 'face' | 'word' | 'prop'; word?
   uv?: [number, number]};   // uv: a prop she HOLDS - its box centre is that point of her sprite (the flame in her palm)
 
 export type Shot = {
+  bridge?: number;         // frames at its start where the lens rushes in from the previous shot's framing (timeline.py bridge_cuts)
   id: string;
   from: number;
   to: number;

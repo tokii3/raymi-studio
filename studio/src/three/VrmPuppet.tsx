@@ -29,7 +29,9 @@ import {solidBoxes, supportBelow} from './support';
 export const DEFAULT_HEIGHT = 1.55;       // ears to feet, like the sprite puppet (raymi/timeline.py DEFAULT_HEIGHT)
 const WINDOW = 90;                         // frames of history simulated before f (springs forget faster than that)
 const SETTLE = 30;                         // frames the start state is held so the springs hang at rest
-const HAIR_DRAG = 0.6, HAIR_STIFF = 1.1;   // the least damping / spring of every hair joint (VRoid exports ~0.4 / ~1)
+// toki 2026-10-24 "haare fliegen komisch" -> damped; 2026-10-25 "wenn sie still steht sind ihre haare steif, dabei müssten
+// die nach unten fallen": less damping and stiffness again, and real gravity so the strands hang and swing
+const HAIR_DRAG = 0.45, HAIR_STIFF = 0.75, HAIR_GRAVITY = 0.45;
 
 type Rig = {
   vrm: VRM;
@@ -87,6 +89,7 @@ async function loadRig(url: string, data?: ArrayBuffer): Promise<Rig> {
   for (const j of vrm.springBoneManager?.joints ?? []) {
     j.settings.dragForce = Math.max(j.settings.dragForce, HAIR_DRAG);
     j.settings.stiffness = Math.max(j.settings.stiffness, HAIR_STIFF);
+    if (/Hair/.test(j.bone.name)) { j.settings.gravityPower = Math.max(j.settings.gravityPower, HAIR_GRAVITY); j.settings.gravityDir.set(0, -1, 0); }
   }
   hairColliders(vrm);                      // vrmFix: her torso / shoulders as hair colliders (probe: hair_in in 34 shots)
   vrm.springBoneManager?.setInitState();
@@ -339,6 +342,34 @@ function clipStart(keys: VrmKey[], i: number): number {
   return j;
 }
 
+/** The frame of a clip to HOLD for a pose: near `want` (within 0.9 s), where the body moves least (a key pose, not a
+ *  passing frame) and the hips are high (standing, not caught mid-crouch). Cached per clip and time. */
+const holds = new Map<string, number>();
+export function holdTime(clip: THREE.AnimationClip, want: number): number {
+  const key = `${clip.uuid}:${want.toFixed(3)}`;
+  const hit = holds.get(key);
+  if (hit !== undefined) return hit;
+  const quats = clip.tracks.filter((tr) => tr.name.endsWith('.quaternion')).map((tr) => tr.createInterpolant());
+  const hipsPos = clip.tracks.find((tr) => tr.name.endsWith('.position') && /hips/i.test(tr.name))?.createInterpolant();
+  const sample = (tt: number) => quats.map((ip) => Array.from(ip.evaluate(tt) as Float32Array));
+  const hipsY = (tt: number) => (hipsPos ? (hipsPos.evaluate(tt) as Float32Array)[1] : 0);
+  let maxY = -Infinity;
+  for (let tt = 0; tt <= clip.duration; tt += 0.1) maxY = Math.max(maxY, hipsY(tt));
+  const span = Math.max(1e-3, maxY - Math.min(...Array.from({length: Math.ceil(clip.duration / 0.1) + 1}, (_, i) => hipsY(Math.min(clip.duration, i * 0.1)))));
+  let best = Math.max(0, Math.min(clip.duration - 1e-3, want)), score = Infinity;
+  const dt = 1 / 15;
+  for (let tt = Math.max(dt, want - 0.9); tt <= Math.min(clip.duration - dt, want + 0.9); tt += dt) {
+    const a = sample(tt - dt), b = sample(tt + dt);
+    let motion = 0;
+    for (let i = 0; i < a.length; i++) motion += 1 - Math.abs(a[i][0] * b[i][0] + a[i][1] * b[i][1] + a[i][2] * b[i][2] + a[i][3] * b[i][3]);
+    const low = (maxY - hipsY(tt)) / span;                 // 0 = as high as the clip's hips get, 1 = its lowest crouch
+    const s = motion * 40 + low * 1.2 + Math.abs(tt - want) * 0.25;
+    if (s < score) { score = s; best = tt; }
+  }
+  holds.set(key, best);
+  return best;
+}
+
 /** Seconds into the clip at frame f, from the key that started it (looping, or held on the last frame for a one-shot). */
 export function clipSeconds(s: VrmKey, f: number, fps: number, duration: number): number {
   const t = (s.clipFrom ?? 0) + ((f - s.f) / fps) * (s.speed ?? 1);
@@ -501,7 +532,12 @@ function applyState(rig: Rig, s: State, fps: number) {
       const weight = id === b ? wB : id === a ? wA : 0;
       action.enabled = true;
       action.setEffectiveWeight(weight);
-      if (weight > 0) action.time = clipSeconds(id === b ? s.clipCur : s.clipPrev, s.f, fps, clip.duration);
+      if (weight > 0) {
+        const ck = id === b ? s.clipCur : s.clipPrev;
+        // a held frame (speed 0) is a KEY POSE: the calmest upright frame near the asked time (toki 2026-10-25: "raymi
+        // springt die ganze zeit rum" - clip_from 0.6 landed mid-crouch / mid-jump in some dance clips)
+        action.time = (ck.speed ?? 1) === 0 && !ck.exact ? holdTime(clip, ck.clipFrom ?? 0) : clipSeconds(ck, s.f, fps, clip.duration);
+      }
     }
     forceApply(rig.mixer);
     rig.mixer.update(0);

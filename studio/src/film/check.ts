@@ -208,6 +208,7 @@ const L0 = (s: Shot) => s.lyrics!;
  *  then (FIRESTARTER s71: a 38 degree snap in 8 frames under "relax" - no place in the world stays in both views). */
 const WHIP_DEG = 3;
 function whipping(s: Shot, f: number, aspect: number, props: FilmProps): boolean {
+  if ((s.bridge ?? 0) > 0 && f >= s.from && f <= s.from + (s.bridge ?? 0)) return true;   // a bridged cut: the lens rushes in, smeared
   if (f <= s.from || f >= s.to - 1) return false;
   const dir = (k: number) => new THREE.Vector3(0, 0, -1).applyQuaternion(makeCamera(s, k, aspect, props.hits, props.fps).quaternion);
   return (dir(f - 1).angleTo(dir(f + 1)) * 180) / Math.PI / 2 > WHIP_DEG;
@@ -1065,5 +1066,44 @@ export function placeCreature(props: FilmProps, index: number): V3 | null {
     }).length >= 4;                                             // a moving lens may lose him for a moment (guard: >= 50 %)
     if (okAll) return [Number(pt.x.toFixed(2)), Number(pt.y.toFixed(2)), Number(pt.z.toFixed(2))];
   }
+  return null;
+}
+
+
+// ---------------------------------------------------------------- she fills the frame (toki 2026-10-25)
+/** "raymi bzw der teil der von ihr gezeigt wird sollte größer im bild sein, zumindest wo nicht explizit ein wide angle
+ *  gewollt ist - oft wirkt alles leer und raymi weit weg": how tall the visible part of her is on screen (share of the
+ *  frame height, the smallest over the shot's start / middle / end). */
+export function herFill(s: Shot, aspect: number, fps: number): number {
+  let low = Infinity;
+  for (const f of [s.from, Math.round((s.from + s.to) / 2), s.to - 1]) {
+    const cells = actorCells(s, f, makeCamera(s, f, aspect, [], fps));
+    if (!cells.length) return 0;
+    const y0 = Math.max(0, Math.min(...cells.map((c) => c[1]))), y1 = Math.min(1, Math.max(...cells.map((c) => c[3])));
+    low = Math.min(low, Math.max(0, y1 - y0));
+  }
+  return low;
+}
+
+/** The dolly factor (lens toward its look point) so the frame at her is at most `maxH` metres tall (her visible part
+ *  big, not a small figure in a wide room), her head kept inside the frame; null = already that close or no factor fits. */
+export function fillFrame(props: FilmProps, index: number, maxH = 1.5): number | null {
+  const s = props.shots[index], aspect = props.width / props.height;
+  if (!s.actor?.length) return null;
+  const fm = Math.round((s.from + s.to) / 2);
+  const cam = makeCamera(s, fm, aspect, [], props.fps) as THREE.PerspectiveCamera;
+  const k0 = s.actor[0];
+  const her = new THREE.Vector3(k0.pos[0], k0.pos[1] + (k0.height ?? 1.55) * 0.75, k0.pos[2]);
+  const hNow = 2 * her.distanceTo(cam.position) * Math.tan((cam.fov * Math.PI) / 360);
+  if (hNow <= maxH * 1.05) return null;
+  const headIn = (k: number) => {
+    const camera = s.camera.map((c) => ({...c, pos: c.pos.map((p, i) => c.look[i] + (p - c.look[i]) * k) as V3}));
+    const s2 = {...s, camera};
+    return [s2.from, fm, s2.to - 1].every((f) => {
+      const h = actorCells(s2, f, makeCamera(s2, f, aspect, [], props.fps), true)[0];
+      return h && h[1] > 0.04 && h[3] < 0.96 && h[0] > 0.03 && h[2] < 0.97;
+    });
+  };
+  for (let k = Math.max(0.5, Math.min(0.95, maxH / hNow)); k <= 0.95; k += 0.05) if (headIn(k)) return Number(k.toFixed(2));
   return null;
 }
