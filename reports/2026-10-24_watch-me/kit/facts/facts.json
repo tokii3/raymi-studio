@@ -154,9 +154,9 @@
  },
  "picture_change_on_hits": {
   "hits": 102,
-  "changed": 48,
-  "share": 0.47,
-  "threshold": 8.7
+  "changed": 41,
+  "share": 0.4,
+  "threshold": 10.7
  },
  "still_spans_s": [],
  "audio": {

@@ -243,7 +243,7 @@
   {
    "actor": [
     {
-     "f": 78,
+     "f": 77,
      "pose": "stand",
      "pos": [
       0,
@@ -257,11 +257,39 @@
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
+     "motion": "female-standing-pose-1",
+     "motionMix": 1,
+     "expr": {
+      "joy": 0.6,
+      "blink_l": 1
+     },
+     "aware": 0.35,
+     "clipFrom": 0.5,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
+     "f": 78,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
      "motion": "female-dance-pose-2",
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.7,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -284,6 +312,24 @@
    "camera": [
     {
      "f": 78,
+     "pos": [
+      0.295,
+      1.301,
+      0.527
+     ],
+     "look": [
+      0.175,
+      1.301,
+      -0.037
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 86,
      "pos": [
       -1.9,
       0.75,
@@ -378,10 +424,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 118,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-dance-pose-2",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.7,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 119,
      "pose": "stand",
@@ -392,7 +462,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -401,7 +471,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.7,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -425,9 +496,27 @@
     {
      "f": 119,
      "pos": [
+      -1.9,
+      0.75,
+      2.4
+     ],
+     "look": [
+      0.0,
       1.2,
-      2.6,
-      1.6
+      0.0
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 127,
+     "pos": [
+      1.128,
+      2.516,
+      1.504
      ],
      "look": [
       0.0,
@@ -518,10 +607,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 172,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": 200.0,
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-dance-pose-3",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.7,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 173,
      "pose": "stand",
@@ -532,7 +645,7 @@
      ],
      "rotY": 200.0,
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -541,7 +654,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.7,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -564,6 +678,24 @@
    "camera": [
     {
      "f": 173,
+     "pos": [
+      1.128,
+      2.516,
+      1.504
+     ],
+     "look": [
+      0.0,
+      1.2,
+      0.0
+     ],
+     "fov": 36.0,
+     "roll": -14.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 181,
      "pos": [
       1.451,
       1.58,
@@ -658,10 +790,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 194,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-standing-pose-2",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.7,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 195,
      "pose": "stand",
@@ -672,7 +828,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -681,7 +837,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -704,6 +861,24 @@
    "camera": [
     {
      "f": 195,
+     "pos": [
+      1.451,
+      1.58,
+      -0.307
+     ],
+     "look": [
+      0.001,
+      1.48,
+      0.043
+     ],
+     "fov": 32.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 203,
      "pos": [
       0.0,
       1.35,
@@ -836,10 +1011,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 224,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "pointing-forward",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 225,
      "pose": "stand",
@@ -850,7 +1049,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -860,7 +1059,8 @@
      "expr": {
       "joy": 0.8
      },
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -891,22 +1091,23 @@
     {
      "f": 225,
      "pos": [
-      -0.32,
+      0.0,
       1.35,
-      2.278
+      2.3
      ],
      "look": [
       0.0,
-      1.35,
+      1.3,
       0.0
      ],
-     "fov": 38.0,
+     "fov": 34.0,
      "roll": 0.0,
      "ease": "inOut",
-     "observer": 1.0
+     "observer": 1.0,
+     "bridge": 1
     },
     {
-     "f": 225,
+     "f": 233,
      "pos": [
       -0.32,
       1.35,
@@ -923,7 +1124,24 @@
      "observer": 1.0
     },
     {
-     "f": 231,
+     "f": 234,
+     "pos": [
+      -0.32,
+      1.35,
+      2.278
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 38.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 235,
      "pos": [
       -0.139,
       1.35,
@@ -1074,10 +1292,37 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 245,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "blow-a-kiss",
+     "motionMix": 1,
+     "expr": {
+      "joy": 0.8
+     },
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 0.667,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 246,
      "pose": "stand",
@@ -1088,7 +1333,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -1098,7 +1343,8 @@
      "expr": {
       "joy": 0.4
      },
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -1122,6 +1368,24 @@
    "camera": [
     {
      "f": 246,
+     "pos": [
+      -0.129,
+      1.35,
+      0.921
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 38.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 254,
      "pos": [
       0.107,
       1.401,
@@ -1319,10 +1583,37 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 317,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "gestures-pack-basic-look-away-gesture",
+     "motionMix": 1,
+     "expr": {
+      "joy": 0.4
+     },
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 2.367,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 318,
      "pose": "stand",
@@ -1333,7 +1624,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -1342,7 +1633,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.5,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -1375,6 +1667,24 @@
    "camera": [
     {
      "f": 318,
+     "pos": [
+      0.107,
+      1.401,
+      1.095
+     ],
+     "look": [
+      -1.882,
+      1.401,
+      1.304
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 326,
      "pos": [
       -0.5,
       1.35,
@@ -1413,13 +1723,13 @@
    "lyrics": {
     "kind": "card",
     "anchor": [
-     -1.01,
-     1.31,
-     -0.1
+     -0.69,
+     1.41,
+     1.27
     ],
-    "rotY": 22.6,
-    "size": 0.25,
-    "width": 1.34,
+    "rotY": 102.5,
+    "size": 0.025,
+    "width": 0.75,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -1429,11 +1739,11 @@
     "lens": null,
     "material": "print",
     "style": "v2",
-    "tilt": 0.1,
+    "tilt": 0.0,
     "roll": 0.0,
-    "keyScale": 1.8,
+    "keyScale": 1.0,
     "auto": true,
-    "small": null,
+    "small": "fitter: the free space beside her is small in this frame",
     "subs": {},
     "reveal": null,
     "dim": null,
@@ -1551,10 +1861,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 361,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-standing-pose",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.5,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 362,
      "pose": "stand",
@@ -1565,14 +1899,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "look-over-shoulder",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -1593,6 +1928,24 @@
    "camera": [
     {
      "f": 362,
+     "pos": [
+      0.5,
+      1.35,
+      3.2
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 370,
      "pos": [
       0.509,
       1.416,
@@ -1806,10 +2159,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 438,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "look-over-shoulder",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 2.533,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 439,
      "pose": "stand",
@@ -1820,7 +2197,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -1829,7 +2206,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.5,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -1875,6 +2253,24 @@
     {
      "f": 439,
      "pos": [
+      -1.481,
+      1.366,
+      0.276
+     ],
+     "look": [
+      -0.004,
+      1.316,
+      0.016
+     ],
+     "fov": 34.0,
+     "roll": 8.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 447,
+     "pos": [
       -0.021,
       1.031,
       3.68
@@ -1890,7 +2286,7 @@
      "observer": 1.0
     },
     {
-     "f": 444,
+     "f": 448,
      "pos": [
       -0.021,
       1.031,
@@ -2107,10 +2503,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 496,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-dynamic-pose",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.5,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 497,
      "pose": "stand",
@@ -2121,7 +2541,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -2131,7 +2551,8 @@
      "aware": 0.35,
      "look": "lens",
      "clipFrom": 0.5,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -2154,6 +2575,24 @@
     {
      "f": 497,
      "pos": [
+      -0.021,
+      1.031,
+      1.488
+     ],
+     "look": [
+      -0.021,
+      1.031,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 505,
+     "pos": [
       0.476,
       1.388,
       1.467
@@ -2174,13 +2613,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.46,
-     1.37,
-     0.18
+     0.53,
+     1.22,
+     0.23
     ],
-    "rotY": 1.0,
-    "size": 0.067,
-    "width": 0.36,
+    "rotY": -2.1,
+    "size": 0.04,
+    "width": 0.34,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -2321,10 +2760,35 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 546,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-standing-pose-1",
+     "motionMix": 1,
+     "aware": 0.35,
+     "look": "lens",
+     "clipFrom": 0.5,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 547,
      "pose": "stand",
@@ -2335,14 +2799,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "catwalk-walk-forward",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -2364,9 +2829,27 @@
     {
      "f": 547,
      "pos": [
-      0.2,
-      0.8,
-      2.8
+      0.476,
+      1.388,
+      1.467
+     ],
+     "look": [
+      0.176,
+      1.338,
+      -0.033
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 555,
+     "pos": [
+      0.14,
+      0.89,
+      1.96
      ],
      "look": [
       0.0,
@@ -2381,9 +2864,9 @@
     {
      "f": 617,
      "pos": [
-      0.2,
-      0.8,
-      3.2
+      0.14,
+      0.89,
+      2.24
      ],
      "look": [
       0.0,
@@ -2401,13 +2884,13 @@
    "lyrics": {
     "kind": "card",
     "anchor": [
-     0.74,
-     0.89,
-     0.33
+     0.49,
+     1.1,
+     0.42
     ],
-    "rotY": -10.4,
-    "size": 0.127,
-    "width": 1.09,
+    "rotY": -10.5,
+    "size": 0.081,
+    "width": 0.7,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -2417,9 +2900,9 @@
     "lens": null,
     "material": "print",
     "style": "v2",
-    "tilt": 5.1,
+    "tilt": 5.0,
     "roll": 0.0,
-    "keyScale": 1.8,
+    "keyScale": 1.3,
     "auto": true,
     "small": null,
     "subs": {},
@@ -2575,10 +3058,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 616,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "catwalk-walk-forward",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 2.3,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 617,
      "pose": "stand",
@@ -2589,14 +3096,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "catwalk-walk",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -2630,6 +3138,24 @@
     {
      "f": 617,
      "pos": [
+      0.14,
+      0.89,
+      2.24
+     ],
+     "look": [
+      0.0,
+      1.1,
+      0.0
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 625,
+     "pos": [
       0.1,
       4.2,
       0.6
@@ -2650,13 +3176,13 @@
    "lyrics": {
     "kind": "card",
     "anchor": [
-     -0.13,
-     0.03,
-     0.73
+     1.48,
+     0.5,
+     -0.25
     ],
-    "rotY": 0.0,
-    "size": 0.218,
-    "width": 3.97,
+    "rotY": -58.0,
+    "size": 0.16,
+    "width": 2.55,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -2666,7 +3192,7 @@
     "lens": null,
     "material": "print",
     "style": "v2",
-    "tilt": -90.0,
+    "tilt": -81.7,
     "roll": 0.0,
     "keyScale": 1.0,
     "auto": true,
@@ -2806,10 +3332,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 677,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "catwalk-walk",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 2.0,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 678,
      "pose": "stand",
@@ -2820,14 +3370,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "catwalk-walk-stop-twist-r",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -2860,9 +3411,27 @@
     {
      "f": 678,
      "pos": [
-      -1.8,
-      1.2,
-      2.145
+      0.1,
+      4.2,
+      0.6
+     ],
+     "look": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "fov": 46.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 686,
+     "pos": [
+      -1.656,
+      1.192,
+      1.9734
      ],
      "look": [
       0.0,
@@ -2877,9 +3446,9 @@
     {
      "f": 710,
      "pos": [
-      -0.232,
-      1.25,
-      2.65
+      -0.2134,
+      1.238,
+      2.438
      ],
      "look": [
       0.0,
@@ -2895,9 +3464,9 @@
     {
      "f": 743,
      "pos": [
-      1.4,
-      1.15,
-      2.425
+      1.288,
+      1.146,
+      2.231
      ],
      "look": [
       0.0,
@@ -2916,13 +3485,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.79,
-     0.98,
-     -0.12
+     -0.22,
+     0.89,
+     0.59
     ],
-    "rotY": 13.0,
-    "size": 0.096,
-    "width": 0.82,
+    "rotY": 42.1,
+    "size": 0.082,
+    "width": 0.71,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -3090,10 +3659,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 742,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "catwalk-walk-stop-twist-r",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 2.133,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 743,
      "pose": "stand",
@@ -3104,14 +3697,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "texting-while-standing",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -3132,6 +3726,24 @@
    "camera": [
     {
      "f": 743,
+     "pos": [
+      1.288,
+      1.146,
+      2.231
+     ],
+     "look": [
+      0.0,
+      1.1,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 6.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 751,
      "pos": [
       -1.305,
       1.35,
@@ -3398,10 +4010,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 852,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "texting-while-standing",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.633,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 853,
      "pose": "stand",
@@ -3412,7 +4048,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -3422,7 +4058,8 @@
      "expr": {
       "joy": 0.5
      },
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -3450,6 +4087,24 @@
    "camera": [
     {
      "f": 853,
+     "pos": [
+      -0.217,
+      1.35,
+      1.885
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 36.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 861,
      "pos": [
       -0.005,
       1.423,
@@ -3679,10 +4334,37 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 931,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "pointing-forward",
+     "motionMix": 1,
+     "expr": {
+      "joy": 0.5
+     },
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 2.6,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 932,
      "pose": "stand",
@@ -3693,14 +4375,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "pointing-gesture",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -3720,6 +4403,24 @@
    "camera": [
     {
      "f": 932,
+     "pos": [
+      -0.005,
+      1.423,
+      0.558
+     ],
+     "look": [
+      -0.005,
+      1.423,
+      0.0
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 940,
      "pos": [
       -0.084,
       1.11,
@@ -3926,10 +4627,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 962,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "pointing-gesture",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 1.0,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 963,
      "pose": "stand",
@@ -3940,14 +4665,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "hip-hop-dancing-3",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -3968,6 +4694,24 @@
    "camera": [
     {
      "f": 963,
+     "pos": [
+      -0.084,
+      1.11,
+      0.326
+     ],
+     "look": [
+      -0.084,
+      1.11,
+      0.0
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 971,
      "pos": [
       0.0,
       1.45,
@@ -4030,8 +4774,8 @@
      -0.8
     ],
     "rotY": 0.0,
-    "size": 0.0232,
-    "width": 0.424,
+    "size": 0.0192,
+    "width": 0.408,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -4040,8 +4784,8 @@
     "cross": "MS orbit 360 shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
     "lens": [
      0.5,
-     0.72,
-     0.5271757847220846
+     0.8,
+     0.507095738100718
     ],
     "material": "print",
     "style": "v2",
@@ -4195,10 +4939,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 1081,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "hip-hop-dancing-3",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.933,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 1082,
      "pose": "stand",
@@ -4209,14 +4977,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "arms-hip-hop-dance",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -4238,9 +5007,9 @@
     {
      "f": 1082,
      "pos": [
-      -2.376,
+      -1.9246,
       1.35,
-      1.998
+      1.6184
      ],
      "look": [
       0.0,
@@ -4255,9 +5024,9 @@
     {
      "f": 1122,
      "pos": [
-      -1.066,
+      -0.8635,
       1.35,
-      2.916
+      2.362
      ],
      "look": [
       0.0,
@@ -4275,13 +5044,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.08,
-     1.73,
-     0.3
+     -0.28,
+     1.63,
+     0.43
     ],
-    "rotY": -21.7,
-    "size": 0.145,
-    "width": 2.58,
+    "rotY": -18.0,
+    "size": 0.105,
+    "width": 1.86,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -4418,6 +5187,29 @@
   {
    "actor": [
     {
+     "f": 1121,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "arms-hip-hop-dance",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 1.3,
+     "speed": 0,
+     "exact": true
+    },
+    {
      "f": 1122,
      "pose": "stand",
      "pos": [
@@ -4427,14 +5219,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "hip-hop-dancing-5",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -4454,6 +5247,24 @@
    "camera": [
     {
      "f": 1122,
+     "pos": [
+      -0.8635,
+      1.35,
+      2.362
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 1130,
      "pos": [
       0.35,
       0.45,
@@ -4604,10 +5415,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 1155,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "hip-hop-dancing-5",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 1.1,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 1156,
      "pose": "stand",
@@ -4618,7 +5453,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -4627,7 +5462,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -4660,6 +5496,24 @@
    "camera": [
     {
      "f": 1156,
+     "pos": [
+      0.35,
+      0.45,
+      -0.75
+     ],
+     "look": [
+      0.05,
+      0.4,
+      -0.35
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 1164,
      "pos": [
       -0.528,
       1.43,
@@ -4702,23 +5556,27 @@
      1.11,
      -0.32
     ],
-    "rotY": 6.5,
-    "size": 0.036,
-    "width": 0.48,
+    "rotY": 0.0,
+    "size": 0.0115,
+    "width": 0.257,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
     "lit": false,
     "over": false,
     "cross": "MCU shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": null,
+    "lens": [
+     0.5,
+     0.72,
+     0.3933567733341209
+    ],
     "material": "print",
     "style": "v2",
-    "tilt": -0.3,
+    "tilt": 0.0,
     "roll": 0.0,
     "keyScale": 1.0,
     "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
+    "small": null,
     "subs": {},
     "reveal": null,
     "dim": null,
@@ -4890,10 +5748,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 1239,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-dance-pose-1",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 1240,
      "pose": "stand",
@@ -4904,14 +5786,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "shoved-reaction-with-spin",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -4946,9 +5829,27 @@
     {
      "f": 1240,
      "pos": [
-      1.026,
+      -0.105,
       1.35,
-      2.819
+      1.195
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 10.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 1248,
+     "pos": [
+      0.8516,
+      1.35,
+      2.3398
      ],
      "look": [
       0.0,
@@ -4964,9 +5865,9 @@
     {
      "f": 1351,
      "pos": [
-      1.171,
-      1.32,
-      2.631
+      0.9719,
+      1.3251,
+      2.1837
      ],
      "look": [
       0.0,
@@ -4985,13 +5886,13 @@
    "lyrics": {
     "kind": "card",
     "anchor": [
-     -0.97,
-     1.45,
-     -0.19
+     0.41,
+     1.42,
+     -0.57
     ],
-    "rotY": 36.5,
-    "size": 0.151,
-    "width": 1.12,
+    "rotY": 10.7,
+    "size": 0.094,
+    "width": 0.9,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -5003,7 +5904,7 @@
     "style": "v2",
     "tilt": 0.3,
     "roll": 0.0,
-    "keyScale": 1.8,
+    "keyScale": 1.0,
     "auto": true,
     "small": null,
     "subs": {},
@@ -5141,10 +6042,34 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 1350,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "shoved-reaction-with-spin",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.667,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 1351,
      "pose": "stand",
@@ -5155,7 +6080,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -5165,7 +6090,8 @@
      "aware": 0.35,
      "look": "lens",
      "clipFrom": 0.5,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -5186,6 +6112,24 @@
    "camera": [
     {
      "f": 1351,
+     "pos": [
+      0.9719,
+      1.3251,
+      2.1837
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 1359,
      "pos": [
       0.0,
       4.6,
@@ -5224,13 +6168,13 @@
    "lyrics": {
     "kind": "card",
     "anchor": [
-     -0.52,
-     0.03,
-     0.56
+     0.13,
+     0.42,
+     -0.7
     ],
-    "rotY": 0.0,
-    "size": 0.18,
-    "width": 3.28,
+    "rotY": -7.6,
+    "size": 0.095,
+    "width": 3.98,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -5240,7 +6184,7 @@
     "lens": null,
     "material": "print",
     "style": "v2",
-    "tilt": -90.0,
+    "tilt": -85.2,
     "roll": 0.0,
     "keyScale": 1.0,
     "auto": true,
@@ -5416,10 +6360,35 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 1481,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-dance-pose-3",
+     "motionMix": 1,
+     "aware": 0.35,
+     "look": "lens",
+     "clipFrom": 0.5,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 1482,
      "pose": "stand",
@@ -5430,7 +6399,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -5439,7 +6408,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     },
     {
      "f": 1527,
@@ -5541,8 +6511,26 @@
      "f": 1482,
      "pos": [
       0.0,
+      3.6,
+      0.3
+     ],
+     "look": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "fov": 44.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 1490,
+     "pos": [
+      0.0,
       1.35,
-      5.98
+      5.6212
      ],
      "look": [
       0.0,
@@ -5555,11 +6543,11 @@
      "observer": 1.0
     },
     {
-     "f": 1482,
+     "f": 1491,
      "pos": [
       0.0,
       1.35,
-      5.98
+      5.6212
      ],
      "look": [
       0.0,
@@ -5572,11 +6560,11 @@
      "observer": 1.0
     },
     {
-     "f": 1488,
+     "f": 1492,
      "pos": [
       0.0,
       1.35,
-      2.6
+      2.444
      ],
      "look": [
       0.0,
@@ -5594,7 +6582,7 @@
      "pos": [
       0.0,
       1.35,
-      2.418
+      2.2729
      ],
      "look": [
       0.0,
@@ -5618,7 +6606,7 @@
     ],
     "rotY": 0.0,
     "size": 0.0281,
-    "width": 1.026,
+    "width": 0.832,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -5627,7 +6615,7 @@
     "cross": "push to cover shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
     "lens": [
      0.5,
-     0.3,
+     0.8,
      1.2
     ],
     "material": "print",
@@ -5915,12 +6903,13 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
     {
-     "f": 1621,
+     "f": 1620,
      "pose": "stand",
      "pos": [
       0,
@@ -5934,10 +6923,34 @@
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
+     "motion": "female-dance-pose-1",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
+     "f": 1621,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
      "motion": "female-standing-pose-2",
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -6288,6 +7301,28 @@
   {
    "actor": [
     {
+     "f": 1731,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-standing-pose-2",
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
      "f": 1732,
      "pose": "stand",
      "pos": [
@@ -6297,7 +7332,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -6307,7 +7342,8 @@
      "expr": {
       "joy": 0.6
      },
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -6583,6 +7619,32 @@
   {
    "actor": [
     {
+     "f": 1859,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "pointing",
+     "motionMix": 1,
+     "expr": {
+      "joy": 0.6
+     },
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 4.233,
+     "speed": 0,
+     "exact": true
+    },
+    {
      "f": 1860,
      "pose": "stand",
      "pos": [
@@ -6592,14 +7654,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "look-around-2",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -6624,6 +7687,24 @@
    "camera": [
     {
      "f": 1860,
+     "pos": [
+      1.367,
+      2.45,
+      3.07
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 1868,
      "pos": [
       -0.6,
       3.6,
@@ -6880,10 +7961,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 1973,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "look-around-2",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.767,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 1974,
      "pose": "stand",
@@ -6894,14 +7999,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "texting-while-standing",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -6933,6 +8039,24 @@
    "camera": [
     {
      "f": 1974,
+     "pos": [
+      0.2,
+      1.5,
+      1.3
+     ],
+     "look": [
+      0.0,
+      1.4,
+      0.0
+     ],
+     "fov": 32.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 1982,
      "pos": [
       -0.472,
       1.43,
@@ -7189,10 +8313,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 2032,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "texting-while-standing",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 1.933,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 2033,
      "pose": "stand",
@@ -7203,14 +8351,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "gestures-pack-basic-being-cocky",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -7230,6 +8379,24 @@
    "camera": [
     {
      "f": 2033,
+     "pos": [
+      0.0,
+      1.35,
+      1.6
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": -8.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 2041,
      "pos": [
       1.507,
       1.302,
@@ -7442,10 +8609,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 2091,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "gestures-pack-basic-being-cocky",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 1.933,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 2092,
      "pose": "stand",
@@ -7456,14 +8647,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "hip-hop-dancing-6",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -7703,6 +8895,29 @@
   {
    "actor": [
     {
+     "f": 2138,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "hip-hop-dancing-6",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 1.533,
+     "speed": 0,
+     "exact": true
+    },
+    {
      "f": 2139,
      "pose": "stand",
      "pos": [
@@ -7712,7 +8927,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -7721,7 +8936,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -7746,6 +8962,24 @@
    "camera": [
     {
      "f": 2139,
+     "pos": [
+      0.8,
+      0.9,
+      1.6
+     ],
+     "look": [
+      0.0,
+      0.9,
+      0.0
+     ],
+     "fov": 36.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 2147,
      "pos": [
       0.738,
       1.601,
@@ -7803,13 +9037,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.86,
-     1.36,
-     -0.27
+     -0.73,
+     1.33,
+     -0.21
     ],
-    "rotY": 101.4,
-    "size": 0.052,
-    "width": 0.94,
+    "rotY": 37.1,
+    "size": 0.053,
+    "width": 0.64,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -7819,7 +9053,7 @@
     "lens": null,
     "material": "light",
     "style": "v2",
-    "tilt": -5.7,
+    "tilt": -2.2,
     "roll": 0.0,
     "keyScale": 1.0,
     "auto": true,
@@ -7994,10 +9228,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 2209,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-dance-pose-2",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 2210,
      "pose": "stand",
@@ -8008,14 +9266,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "gestures-pack-basic-angry-gesture",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -8036,6 +9295,24 @@
    "camera": [
     {
      "f": 2210,
+     "pos": [
+      0.501,
+      1.551,
+      1.424
+     ],
+     "look": [
+      -0.012,
+      1.501,
+      0.014
+     ],
+     "fov": 34.0,
+     "roll": 6.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 2218,
      "pos": [
       -0.923,
       0.3,
@@ -8329,10 +9606,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 2324,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "gestures-pack-basic-angry-gesture",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.8,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 2325,
      "pose": "stand",
@@ -8343,14 +9644,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "catwalk-walking",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -8382,6 +9684,24 @@
     {
      "f": 2325,
      "pos": [
+      -0.41,
+      2.45,
+      3.899
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 2333,
+     "pos": [
       0.2,
       5.0,
       1.4
@@ -8402,13 +9722,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -1.08,
-     0.03,
-     1.03
+     1.14,
+     1.0,
+     0.91
     ],
-    "rotY": 0.0,
-    "size": 0.245,
-    "width": 3.26,
+    "rotY": -27.5,
+    "size": 0.105,
+    "width": 2.43,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -8418,7 +9738,7 @@
     "lens": null,
     "material": "light",
     "style": "v2",
-    "tilt": -90.0,
+    "tilt": -15.6,
     "roll": 0.0,
     "keyScale": 1.0,
     "auto": true,
@@ -8584,10 +9904,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 2401,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "catwalk-walking",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 2.533,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 2402,
      "pose": "stand",
@@ -8598,14 +9942,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "kneeling-pointing-1",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -8628,6 +9973,24 @@
    "camera": [
     {
      "f": 2402,
+     "pos": [
+      0.2,
+      5.0,
+      1.4
+     ],
+     "look": [
+      0.0,
+      0.0,
+      0.2
+     ],
+     "fov": 46.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 2410,
      "pos": [
       1.5,
       0.9,
@@ -8876,10 +10239,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 2499,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "kneeling-pointing-1",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.233,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 2500,
      "pose": "stand",
@@ -8890,14 +10277,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "snake-hip-hop-dance",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -8922,6 +10310,25 @@
    "camera": [
     {
      "f": 2500,
+     "pos": [
+      1.5,
+      0.9,
+      1.4
+     ],
+     "look": [
+      0.0,
+      1.3,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "frameH": 1.2,
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 2508,
      "pos": [
       -1.564,
       1.227,
@@ -9127,10 +10534,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 2585,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "snake-hip-hop-dance",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 2.833,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 2586,
      "pose": "stand",
@@ -9141,14 +10572,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "hip-hop-dancing-7",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -9426,6 +10858,29 @@
   {
    "actor": [
     {
+     "f": 2626,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "hip-hop-dancing-7",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 1.333,
+     "speed": 0,
+     "exact": true
+    },
+    {
      "f": 2627,
      "pose": "stand",
      "pos": [
@@ -9435,7 +10890,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -9444,7 +10899,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     },
     {
      "f": 2639,
@@ -9512,6 +10968,24 @@
    "camera": [
     {
      "f": 2627,
+     "pos": [
+      -1.414,
+      1.4,
+      1.685
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 14.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 2635,
      "pos": [
       -2.145,
       1.35,
@@ -9795,12 +11269,13 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
     {
-     "f": 2788,
+     "f": 2787,
      "pose": "stand",
      "pos": [
       0,
@@ -9814,9 +11289,33 @@
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
+     "motion": "female-dynamic-pose",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
+     "f": 2788,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
      "motion": "hip-hop-dancing-8",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -9855,6 +11354,24 @@
    "camera": [
     {
      "f": 2788,
+     "pos": [
+      -1.145,
+      1.35,
+      1.816
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 36.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 2796,
      "pos": [
       0.821,
       1.35,
@@ -10096,10 +11613,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 2889,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "hip-hop-dancing-8",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.367,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 2890,
      "pose": "stand",
@@ -10110,14 +11651,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "step-hip-hop-dance",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -10155,6 +11697,24 @@
    "camera": [
     {
      "f": 2890,
+     "pos": [
+      0.821,
+      1.35,
+      2.255
+     ],
+     "look": [
+      -1.149,
+      1.35,
+      2.602
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 2898,
      "pos": [
       0.1,
       4.4,
@@ -10412,10 +11972,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 2992,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "step-hip-hop-dance",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.4,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 2993,
      "pose": "stand",
@@ -10426,7 +12010,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -10435,7 +12019,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     },
     {
      "f": 3047,
@@ -10521,6 +12106,24 @@
     {
      "f": 2993,
      "pos": [
+      0.1,
+      4.4,
+      0.8
+     ],
+     "look": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "fov": 48.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 3001,
+     "pos": [
       0.0,
       1.0,
       4.6
@@ -10562,23 +12165,27 @@
      3.01,
      -2.48
     ],
-    "rotY": -6.3,
-    "size": 0.251,
-    "width": 4.56,
+    "rotY": 0.0,
+    "size": 0.0742,
+    "width": 1.149,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
     "lit": false,
     "over": false,
     "cross": "the crane rises past her to the billboard - the long line may cross her, never her face",
-    "lens": null,
+    "lens": [
+     0.5,
+     0.5,
+     1.2
+    ],
     "material": "light",
     "style": "v2",
-    "tilt": 12.7,
+    "tilt": 0.0,
     "roll": 0.0,
     "keyScale": 1.0,
     "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
+    "small": null,
     "subs": {},
     "reveal": null,
     "dim": null,
@@ -10830,12 +12437,13 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
     {
-     "f": 3162,
+     "f": 3161,
      "pose": "stand",
      "pos": [
       0,
@@ -10849,9 +12457,33 @@
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
+     "motion": "female-dance-pose-2",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
+     "f": 3162,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
      "motion": "catwalk-sequence-05",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -10872,6 +12504,24 @@
    "camera": [
     {
      "f": 3162,
+     "pos": [
+      0.35,
+      2.4,
+      5.4
+     ],
+     "look": [
+      0.4,
+      4.3,
+      -3.1
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 3170,
      "pos": [
       0.0,
       1.35,
@@ -11163,10 +12813,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 3270,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "catwalk-sequence-05",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.6,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 3271,
      "pose": "stand",
@@ -11177,14 +12851,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "hip-hop-dancing-9",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -11219,6 +12894,24 @@
    "camera": [
     {
      "f": 3271,
+     "pos": [
+      0.0,
+      1.35,
+      1.86
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 3279,
      "pos": [
       2.2,
       0.9,
@@ -11443,10 +13136,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 3396,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "hip-hop-dancing-9",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 4.167,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 3397,
      "pose": "stand",
@@ -11457,7 +13174,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -11466,7 +13183,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.5,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -11490,9 +13208,27 @@
     {
      "f": 3397,
      "pos": [
-      0.4,
-      1.5,
-      1.6
+      2.2,
+      1.1,
+      1.4
+     ],
+     "look": [
+      0.0,
+      1.3,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 3405,
+     "pos": [
+      0.252,
+      1.4445,
+      1.008
      ],
      "look": [
       0.0,
@@ -11507,9 +13243,9 @@
     {
      "f": 3528,
      "pos": [
-      -0.6,
-      3.8,
-      5.2
+      -0.267,
+      2.838,
+      2.832
      ],
      "look": [
       0.3,
@@ -11527,27 +13263,31 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.52,
-     1.75,
-     -0.69
+     1.2,
+     2.1,
+     -0.6
     ],
-    "rotY": -3.1,
-    "size": 0.066,
-    "width": 2.01,
+    "rotY": 0.0,
+    "size": 0.0417,
+    "width": 1.058,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
     "lit": false,
     "over": false,
-    "cross": null,
-    "lens": null,
+    "cross": "a rolling pull-out over the corner: the line rides the lens, may cross her body, never her face",
+    "lens": [
+     0.5,
+     0.3,
+     1.1702481782864296
+    ],
     "material": "light",
     "style": "v2",
-    "tilt": -5.3,
+    "tilt": 0.0,
     "roll": 0.0,
-    "keyScale": 1.0,
+    "keyScale": 1.8,
     "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
+    "small": null,
     "subs": {},
     "reveal": null,
     "dim": null,
@@ -11745,10 +13485,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 3527,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-dynamic-pose",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.5,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 3528,
      "pose": "stand",
@@ -11759,7 +13523,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -11768,7 +13532,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.5,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -11962,6 +13727,29 @@
   {
    "actor": [
     {
+     "f": 3561,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-standing-pose",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.5,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
      "f": 3562,
      "pose": "stand",
      "pos": [
@@ -11971,14 +13759,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "pointing-gesture-1",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -12000,6 +13789,24 @@
    "camera": [
     {
      "f": 3562,
+     "pos": [
+      -2.4,
+      1.6,
+      4.8
+     ],
+     "look": [
+      0.0,
+      1.2,
+      -0.4
+     ],
+     "fov": 42.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 3570,
      "pos": [
       0.0,
       1.43,
@@ -12184,10 +13991,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 3620,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "pointing-gesture-1",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 1.933,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 3621,
      "pose": "stand",
@@ -12198,7 +14029,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -12210,7 +14041,8 @@
      },
      "aware": 0.35,
      "clipFrom": 0.5,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -12231,6 +14063,24 @@
    "camera": [
     {
      "f": 3621,
+     "pos": [
+      0.278,
+      1.35,
+      1.576
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 3629,
      "pos": [
       0.327,
       1.339,
@@ -12398,10 +14248,37 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 3715,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-standing-pose-1",
+     "motionMix": 1,
+     "expr": {
+      "blink": 0.6
+     },
+     "aware": 0.35,
+     "clipFrom": 0.5,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 3716,
      "pose": "stand",
@@ -12412,14 +14289,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "pointing-gesture",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -12440,6 +14318,24 @@
    "camera": [
     {
      "f": 3716,
+     "pos": [
+      0.327,
+      1.339,
+      0.872
+     ],
+     "look": [
+      0.177,
+      1.319,
+      -0.028
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 3724,
      "pos": [
       0.287,
       1.207,
@@ -12513,13 +14409,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -0.41,
-     1.13,
-     -0.34
+     -0.03,
+     1.19,
+     -0.2
     ],
-    "rotY": 26.0,
-    "size": 0.034,
-    "width": 1.04,
+    "rotY": 9.1,
+    "size": 0.065,
+    "width": 1.77,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -12533,7 +14429,7 @@
     "roll": 0.0,
     "keyScale": 1.0,
     "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
+    "small": null,
     "subs": {},
     "reveal": null,
     "dim": null,
@@ -12659,10 +14555,34 @@
       0.4
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 3830,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "pointing-gesture",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.8,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 3831,
      "pose": "stand",
@@ -12673,7 +14593,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -12682,7 +14602,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.5,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -12872,6 +14793,29 @@
   {
    "actor": [
     {
+     "f": 3877,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-standing-pose-2",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.5,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
      "f": 3878,
      "pose": "stand",
      "pos": [
@@ -12881,7 +14825,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -12890,7 +14834,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.5,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -12919,9 +14864,27 @@
     {
      "f": 3878,
      "pos": [
-      1.8,
-      1.9,
-      2.4
+      -0.8,
+      2.4,
+      3.0
+     ],
+     "look": [
+      0.0,
+      1.5,
+      0.0
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 3886,
+     "pos": [
+      1.296,
+      1.844,
+      1.728
      ],
      "look": [
       0.0,
@@ -12939,13 +14902,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     -1.55,
-     1.72,
-     -0.17
+     -1.24,
+     1.71,
+     -0.22
     ],
     "rotY": 52.6,
-    "size": 0.157,
-    "width": 1.5,
+    "size": 0.106,
+    "width": 1.14,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -12955,11 +14918,11 @@
     "lens": null,
     "material": "light",
     "style": "v2",
-    "tilt": -4.0,
+    "tilt": -4.2,
     "roll": 0.0,
     "keyScale": 1.0,
     "auto": true,
-    "small": null,
+    "small": "fitter: the free space beside her is small in this frame",
     "subs": {},
     "reveal": null,
     "dim": null,
@@ -13161,10 +15124,34 @@
       0.1
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 4000,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-standing-pose-1",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.5,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 4001,
      "pose": "stand",
@@ -13175,7 +15162,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -13184,7 +15171,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.5,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     },
     {
      "f": 4031,
@@ -13235,9 +15223,27 @@
     {
      "f": 4001,
      "pos": [
-      0.7,
-      0.9,
-      2.9
+      1.296,
+      1.844,
+      1.728
+     ],
+     "look": [
+      0.0,
+      1.7,
+      0.0
+     ],
+     "fov": 38.0,
+     "roll": 10.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 4009,
+     "pos": [
+      0.469,
+      1.1805,
+      1.943
      ],
      "look": [
       0.0,
@@ -13255,13 +15261,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.26,
-     1.9,
-     0.82
+     0.24,
+     1.7,
+     0.85
     ],
     "rotY": 11.9,
-    "size": 0.144,
-    "width": 1.96,
+    "size": 0.055,
+    "width": 1.03,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -13468,12 +15474,13 @@
       0.1
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
     {
-     "f": 4061,
+     "f": 4060,
      "pose": "stand",
      "pos": [
       2.6,
@@ -13487,11 +15494,35 @@
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
+     "motion": "female-dance-pose-1",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
+     "f": 4061,
+     "pose": "stand",
+     "pos": [
+      2.6,
+      0.0,
+      2.3
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
      "motion": "female-dance-pose-3",
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -13519,6 +15550,24 @@
    "camera": [
     {
      "f": 4061,
+     "pos": [
+      0.469,
+      1.1805,
+      1.943
+     ],
+     "look": [
+      0.0,
+      1.75,
+      0.0
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 4069,
      "pos": [
       2.1,
       1.8,
@@ -13744,10 +15793,34 @@
       0.1
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 4115,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-dance-pose-3",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 4116,
      "pose": "stand",
@@ -13758,14 +15831,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "taunt",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -13786,6 +15860,24 @@
    "camera": [
     {
      "f": 4116,
+     "pos": [
+      2.1,
+      1.8,
+      0.4
+     ],
+     "look": [
+      0.0,
+      1.75,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 4124,
      "pos": [
       1.6,
       0.95,
@@ -14019,10 +16111,34 @@
       0.1
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 4222,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "taunt",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.533,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 4223,
      "pose": "stand",
@@ -14033,14 +16149,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "catwalk-idle-to-walk-forward-highknees",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -14059,6 +16176,24 @@
    "camera": [
     {
      "f": 4223,
+     "pos": [
+      1.6,
+      1.4,
+      1.9
+     ],
+     "look": [
+      0.0,
+      1.7,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 4231,
      "pos": [
       -0.383,
       1.968,
@@ -14132,12 +16267,12 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.3,
-     2.13,
-     0.67
+     0.23,
+     1.96,
+     0.7
     ],
-    "rotY": -158.5,
-    "size": 0.083,
+    "rotY": -162.0,
+    "size": 0.05,
     "width": 1.04,
     "color": "#ffffff",
     "accent": "#ffcf6b",
@@ -14300,10 +16435,34 @@
       0.1
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 4297,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "catwalk-idle-to-walk-forward-highknees",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 2.467,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 4298,
      "pose": "stand",
@@ -14314,14 +16473,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "hip-hop-dancing-4",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -14350,6 +16510,24 @@
    "camera": [
     {
      "f": 4298,
+     "pos": [
+      -0.149,
+      1.968,
+      -0.441
+     ],
+     "look": [
+      0.01,
+      1.968,
+      -0.004
+     ],
+     "fov": 32.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 4306,
      "pos": [
       0.821,
       1.52,
@@ -14411,23 +16589,27 @@
      1.2,
      0.53
     ],
-    "rotY": 150.7,
-    "size": 0.097,
-    "width": 1.54,
+    "rotY": 0.0,
+    "size": 0.0293,
+    "width": 0.536,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
     "lit": false,
     "over": false,
     "cross": "orbit at floor height shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": null,
+    "lens": [
+     0.5,
+     0.64,
+     0.6660331759272332
+    ],
     "material": "light",
     "style": "v2",
-    "tilt": -1.4,
+    "tilt": 0.0,
     "roll": 0.0,
     "keyScale": 1.0,
     "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
+    "small": null,
     "subs": {},
     "reveal": null,
     "dim": null,
@@ -14675,10 +16857,34 @@
       0.1
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 4453,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "hip-hop-dancing-4",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 5.167,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 4454,
      "pose": "stand",
@@ -14689,14 +16895,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "pointing-1",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -15048,6 +17255,29 @@
   {
    "actor": [
     {
+     "f": 4567,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "pointing-1",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.767,
+     "speed": 0,
+     "exact": true
+    },
+    {
      "f": 4568,
      "pose": "stand",
      "pos": [
@@ -15057,14 +17287,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "hip-hop-dancing-2",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -15100,6 +17331,24 @@
    "camera": [
     {
      "f": 4568,
+     "pos": [
+      1.3,
+      1.45,
+      2.7
+     ],
+     "look": [
+      0.0,
+      1.3,
+      0.0
+     ],
+     "fov": 36.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 4576,
      "pos": [
       1.0,
       1.77,
@@ -15354,10 +17603,34 @@
       0.1
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 4673,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "hip-hop-dancing-2",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 3.5,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 4674,
      "pose": "stand",
@@ -15368,7 +17641,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -15377,7 +17650,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -15408,6 +17682,24 @@
    "camera": [
     {
      "f": 4674,
+     "pos": [
+      1.0,
+      1.77,
+      1.732
+     ],
+     "look": [
+      2.286,
+      1.77,
+      0.2
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 4682,
      "pos": [
       2.0,
       1.2,
@@ -15677,10 +17969,34 @@
       0.1
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 4805,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-dance-pose-2",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
     {
      "f": 4806,
      "pose": "stand",
@@ -15691,7 +18007,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -15700,7 +18016,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     },
     {
      "f": 4854,
@@ -15802,6 +18119,24 @@
     {
      "f": 4806,
      "pos": [
+      1.5,
+      1.35,
+      1.6
+     ],
+     "look": [
+      0.0,
+      1.6,
+      0.0
+     ],
+     "fov": 32.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 4814,
+     "pos": [
       0.0,
       1.77,
       5.98
@@ -15817,7 +18152,7 @@
      "observer": 1.0
     },
     {
-     "f": 4812,
+     "f": 4815,
      "pos": [
       0.0,
       1.77,
@@ -15880,7 +18215,7 @@
     ],
     "rotY": 0.0,
     "size": 0.0297,
-    "width": 1.087,
+    "width": 0.881,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -16252,12 +18587,13 @@
       0.1
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
     {
-     "f": 4954,
+     "f": 4953,
      "pose": "stand",
      "pos": [
       0,
@@ -16271,11 +18607,35 @@
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
+     "motion": "female-dynamic-pose",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
+     "f": 4954,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
      "motion": "female-standing-pose-1",
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -16513,6 +18873,29 @@
   {
    "actor": [
     {
+     "f": 4995,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-standing-pose-1",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
      "f": 4996,
      "pose": "stand",
      "pos": [
@@ -16522,7 +18905,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -16531,7 +18914,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -16799,6 +19183,29 @@
   {
    "actor": [
     {
+     "f": 5026,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-dance-pose-2",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
      "f": 5027,
      "pose": "stand",
      "pos": [
@@ -16808,7 +19215,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -16817,7 +19224,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     },
     {
      "f": 5054,
@@ -17051,7 +19459,7 @@
   {
    "actor": [
     {
-     "f": 5078,
+     "f": 5077,
      "pose": "stand",
      "pos": [
       0,
@@ -17065,11 +19473,35 @@
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
+     "motion": "pointing-gesture",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.767,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
+     "f": 5078,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
      "motion": "female-dynamic-pose",
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -17259,6 +19691,29 @@
   {
    "actor": [
     {
+     "f": 5109,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-dynamic-pose",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
      "f": 5110,
      "pose": "stand",
      "pos": [
@@ -17268,7 +19723,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -17277,7 +19732,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -17543,6 +19999,29 @@
   {
    "actor": [
     {
+     "f": 5156,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-standing-pose-2",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
      "f": 5157,
      "pose": "stand",
      "pos": [
@@ -17552,14 +20031,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "spin-in-place",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -17575,9 +20055,9 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      -0.33,
-      0.55,
-      0.66
+      -1.14,
+      1.05,
+      0.64
      ],
      "hold": "flashlight",
      "freeze_at": 5182
@@ -17588,9 +20068,9 @@
     {
      "f": 5157,
      "pos": [
-      1.6,
-      1.5,
-      2.5
+      0.9982,
+      1.432,
+      1.7962
      ],
      "look": [
       -0.17,
@@ -17608,13 +20088,13 @@
    "lyrics": {
     "kind": "sign",
     "anchor": [
-     0.0,
-     1.68,
-     1.26
+     0.02,
+     1.54,
+     1.04
     ],
-    "rotY": 52.4,
-    "size": 0.181,
-    "width": 2.27,
+    "rotY": 52.5,
+    "size": 0.111,
+    "width": 1.39,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
@@ -17624,7 +20104,7 @@
     "lens": null,
     "material": null,
     "style": "v2",
-    "tilt": -4.2,
+    "tilt": -4.1,
     "roll": 0.0,
     "keyScale": 1.8,
     "auto": true,
@@ -17764,6 +20244,29 @@
   {
    "actor": [
     {
+     "f": 5195,
+     "pose": "stand",
+     "pos": [
+      0.9,
+      0.0,
+      0.4
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "spin-in-place",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 1.267,
+     "speed": 0,
+     "exact": true
+    },
+    {
      "f": 5196,
      "pose": "stand",
      "pos": [
@@ -17773,7 +20276,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -17782,7 +20285,8 @@
      "motionMix": 1,
      "aware": 0.35,
      "clipFrom": 0.6,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     }
    ],
    "mouth": {
@@ -18022,6 +20526,29 @@
   {
    "actor": [
     {
+     "f": 5249,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "female-standing-pose-2",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 0.6,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
      "f": 5250,
      "pose": "stand",
      "pos": [
@@ -18031,14 +20558,15 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
      "motion": "female-locomotion-idle",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     },
     {
      "f": 5271,
@@ -18334,7 +20862,7 @@
   {
    "actor": [
     {
-     "f": 5316,
+     "f": 5315,
      "pose": "stand",
      "pos": [
       0,
@@ -18348,9 +20876,33 @@
      "move": 0,
      "arc": 0.0,
      "ease": "inOut",
+     "motion": "spin-in-place",
+     "motionMix": 1,
+     "aware": 0.35,
+     "clipFrom": 1.467,
+     "speed": 0,
+     "restart": true,
+     "exact": true
+    },
+    {
+     "f": 5316,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
      "motion": "catwalk-walk-stop",
      "motionMix": 1,
-     "aware": 0.35
+     "aware": 0.35,
+     "restart": true
     }
    ],
    "mouth": {
@@ -18395,9 +20947,28 @@
     {
      "f": 5316,
      "pos": [
-      1.084,
+      -1.268,
+      2.32,
+      -2.719
+     ],
+     "look": [
+      0.0,
       1.77,
-      6.145
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "frameH": 1.6,
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 5324,
+     "pos": [
+      1.019,
+      1.77,
+      5.7763
      ],
      "look": [
       0.0,
@@ -18413,9 +20984,9 @@
     {
      "f": 5385,
      "pos": [
-      0.451,
+      0.4239,
       1.77,
-      2.561
+      2.4073
      ],
      "look": [
       0.0,
@@ -18438,19 +21009,23 @@
      2.14,
      0.71
     ],
-    "rotY": 16.3,
-    "size": 0.097,
-    "width": 2.03,
+    "rotY": 0.0,
+    "size": 0.0377,
+    "width": 0.496,
     "color": "#ffffff",
     "accent": "#ffcf6b",
     "outline": "#1a0b33",
     "lit": false,
     "over": false,
     "cross": "MS, frame in the foreground shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": null,
+    "lens": [
+     0.5,
+     0.72,
+     1.034814579915649
+    ],
     "material": "light",
     "style": "v2",
-    "tilt": -0.1,
+    "tilt": 0.0,
     "roll": 0.0,
     "keyScale": 1.8,
     "auto": true,
@@ -18593,10 +21168,34 @@
       0.1
      ]
     }
-   ]
+   ],
+   "bridge": 8
   },
   {
    "actor": [
+    {
+     "f": 5384,
+     "pose": "stand",
+     "pos": [
+      0,
+      0.42,
+      0
+     ],
+     "rotY": "lens",
+     "height": 1.55,
+     "blend": 10,
+     "act": "idle",
+     "move": 0,
+     "arc": 0.0,
+     "ease": "inOut",
+     "motion": "catwalk-walk-stop",
+     "motionMix": 1,
+     "aware": 0.35,
+     "restart": true,
+     "clipFrom": 2.267,
+     "speed": 0,
+     "exact": true
+    },
     {
      "f": 5385,
      "pose": "stand",
@@ -18607,7 +21206,7 @@
      ],
      "rotY": "lens",
      "height": 1.55,
-     "blend": 8,
+     "blend": 10,
      "act": "idle",
      "move": 0,
      "arc": 0.0,
@@ -18619,7 +21218,8 @@
      },
      "aware": 0.35,
      "clipFrom": 0.5,
-     "speed": 0.0
+     "speed": 0.0,
+     "restart": true
     },
     {
      "f": 5427,
@@ -18698,6 +21298,24 @@
     {
      "f": 5385,
      "pos": [
+      0.4239,
+      1.77,
+      2.4073
+     ],
+     "look": [
+      0.0,
+      1.77,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "f": 5393,
+     "pos": [
       0.071,
       1.658,
       1.61
@@ -18713,7 +21331,7 @@
      "observer": 1.0
     },
     {
-     "f": 5391,
+     "f": 5394,
      "pos": [
       0.071,
       1.658,
@@ -18933,7 +21551,8 @@
       0.1
      ]
     }
-   ]
+   ],
+   "bridge": 8
   }
  ],
  "hits": [
