@@ -1,4 +1,6 @@
 {
  "kind": "mv",
- "created": "2026-10-24"
+ "created": "2026-10-24",
+ "status": "stopped",
+ "stopped": "2026-10-25: toki stopped the video after camera board 2 - see knowledge/HANDOFF_2026-10-25_watchme_stopped.md"
 }

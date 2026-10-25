@@ -1,5 +1,12 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-25 (night) - Watch Me STOPPED by toki; post-mortem
+- toki after camera board 2: "du ignorierst alle anweisungen, referenzen und hinweise" - video stopped (toki.md,
+  job.json status "stopped"). Post-mortem + questions: knowledge/HANDOFF_2026-10-25_watchme_stopped.md; CASEBOOK entry.
+- Kept on main: bounce / climb fix (shadow noSupport, probe class climb), raymi7 materials / texfix / vrmFix, setfx
+  effects, film look, guards, 40-part render, camera_moves parts.
+- NEXT chat (toki): analysis why the builder works against her instructions - no production before that.
+
 ## 2026-10-25 (evening) - Watch Me: the camera written by hand (6_CAMERA.md), key-moment board
 - Root cause of a month of camera faults (HANDOFF_2026-10-25_watchme_camera.md): rules instead of designed moments.
   Now jobs/2026-10-24_watch-me/6_CAMERA.md designs all 68 rows by hand: the move, what SHE does to the lens (clip), why

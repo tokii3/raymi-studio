@@ -91,6 +91,12 @@ Verdicts are toki's words (old engine VIDEO_LEARNINGS / PROGRESS / catalog). Exe
 - **Live My Life (2026-10-12..15):** music and lyrics did not match, half the text missing, gulls' feet in her belly,
   grey and washed out, the song's turns got no cut, "no sense"; toon plates next to painted Raymi. Cancelled.
 - **Queencard (2026-10-17):** "grell / uebersaturiert" - loud colour everywhere instead of calm masses + accents.
+- **Watch Me (K/DA, 3D, 2026-10-24..25):** stopped by toki: "du ignorierst alle anweisungen, referenzen und
+  hinweise". Brief = one place, one camera ride, she flirts with / presents herself to the lens; reference K/DA
+  FIRESTARTER 1:43-1:55. Got: generic rule cameras (director, v3 orbit, move functions), she never addresses the lens
+  (no clip for it), boards and guards green while the video was "total langweilig". Root: her picture turned into
+  rules, the reference summarised but never matched frame by frame, the missing core (lens play) worked around
+  instead of named. Post-mortem: knowledge/HANDOFF_2026-10-25_watchme_stopped.md.
 - **Electric Angel + 3 Shorts (2026-10-06):** "statisch, undynamisch, nur eine Abfolge von Raymi-Animationen, nichts
   wird gewagt" - a day spent on error gates instead of the idea.
 
