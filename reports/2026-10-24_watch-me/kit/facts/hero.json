@@ -1,6 +1,6 @@
 {
  "checked": 83,
- "unreadable": 7,
+ "unreadable": 11,
  "rows": [
   {
    "shot": "01",
@@ -46,7 +46,7 @@
    ],
    "px": 114,
    "sep": 0.131,
-   "detail": 0.524,
+   "detail": 0.523,
    "readable": true,
    "why": ""
   },
@@ -94,7 +94,7 @@
    ],
    "px": 116,
    "sep": 0.124,
-   "detail": 0.536,
+   "detail": 0.537,
    "readable": true,
    "why": ""
   },
@@ -110,7 +110,7 @@
    ],
    "px": 219,
    "sep": 0.0,
-   "detail": 0.565,
+   "detail": 0.567,
    "readable": true,
    "why": ""
   },
@@ -126,7 +126,7 @@
    ],
    "px": 219,
    "sep": 0.0,
-   "detail": 0.564,
+   "detail": 0.567,
    "readable": true,
    "why": ""
   },
@@ -142,7 +142,7 @@
    ],
    "px": 219,
    "sep": 0.0,
-   "detail": 0.554,
+   "detail": 0.556,
    "readable": true,
    "why": ""
   },
@@ -158,7 +158,7 @@
    ],
    "px": 219,
    "sep": 0.0,
-   "detail": 0.551,
+   "detail": 0.554,
    "readable": true,
    "why": ""
   },
@@ -302,7 +302,7 @@
    ],
    "px": 219,
    "sep": 0.055,
-   "detail": 0.397,
+   "detail": 0.398,
    "readable": true,
    "why": ""
   },
@@ -317,7 +317,7 @@
     0.529193039570196
    ],
    "px": 29,
-   "sep": 0.117,
+   "sep": 0.118,
    "detail": 0.755,
    "readable": true,
    "why": ""
@@ -349,8 +349,8 @@
     0.5267255897260031
    ],
    "px": 31,
-   "sep": 0.034,
-   "detail": 0.774,
+   "sep": 0.033,
+   "detail": 0.776,
    "readable": true,
    "why": ""
   },
@@ -382,7 +382,7 @@
    ],
    "px": 31,
    "sep": 0.268,
-   "detail": 0.758,
+   "detail": 0.756,
    "readable": true,
    "why": ""
   },
@@ -397,7 +397,7 @@
     1.339342602929062
    ],
    "px": 219,
-   "sep": 0.06,
+   "sep": 0.059,
    "detail": 0.418,
    "readable": true,
    "why": ""
@@ -413,8 +413,8 @@
     0.5283221917481413
    ],
    "px": 31,
-   "sep": 0.106,
-   "detail": 0.317,
+   "sep": 0.107,
+   "detail": 0.318,
    "readable": true,
    "why": ""
   },
@@ -445,8 +445,8 @@
     0.5326858714319754
    ],
    "px": 31,
-   "sep": 0.09,
-   "detail": 0.684,
+   "sep": 0.089,
+   "detail": 0.681,
    "readable": true,
    "why": ""
   },
@@ -477,8 +477,8 @@
     0.5390496430189315
    ],
    "px": 32,
-   "sep": 0.003,
-   "detail": 0.743,
+   "sep": 0.002,
+   "detail": 0.739,
    "readable": true,
    "why": ""
   },
@@ -509,8 +509,8 @@
     0.5439060433268779
    ],
    "px": 32,
-   "sep": 0.012,
-   "detail": 0.036,
+   "sep": 0.011,
+   "detail": 0.035,
    "readable": false,
    "why": "melts into what is behind it (low value contrast)"
   },
@@ -589,8 +589,8 @@
     0.5410391868091375
    ],
    "px": 55,
-   "sep": 0.038,
-   "detail": 0.315,
+   "sep": 0.04,
+   "detail": 0.287,
    "readable": true,
    "why": ""
   },
@@ -605,8 +605,8 @@
     0.5478131621905991
    ],
    "px": 54,
-   "sep": 0.039,
-   "detail": 0.31,
+   "sep": 0.04,
+   "detail": 0.286,
    "readable": true,
    "why": ""
   },
@@ -621,8 +621,8 @@
     0.5515440884691084
    ],
    "px": 55,
-   "sep": 0.039,
-   "detail": 0.342,
+   "sep": 0.04,
+   "detail": 0.325,
    "readable": true,
    "why": ""
   },
@@ -637,8 +637,8 @@
     0.5522757840881524
    ],
    "px": 55,
-   "sep": 0.039,
-   "detail": 0.326,
+   "sep": 0.04,
+   "detail": 0.291,
    "readable": true,
    "why": ""
   },
@@ -654,7 +654,7 @@
    ],
    "px": 57,
    "sep": 0.04,
-   "detail": 0.324,
+   "detail": 0.287,
    "readable": true,
    "why": ""
   },
@@ -669,8 +669,8 @@
     0.5516225337491746
    ],
    "px": 59,
-   "sep": 0.02,
-   "detail": 0.354,
+   "sep": 0.022,
+   "detail": 0.337,
    "readable": true,
    "why": ""
   },
@@ -685,10 +685,10 @@
     0.552642561571008
    ],
    "px": 61,
-   "sep": 0.039,
-   "detail": 0.331,
-   "readable": true,
-   "why": ""
+   "sep": 0.041,
+   "detail": 0.276,
+   "readable": false,
+   "why": "melts into what is behind it (low value contrast)"
   },
   {
    "shot": "40",
@@ -701,10 +701,10 @@
     0.5549750268532225
    ],
    "px": 62,
-   "sep": 0.041,
-   "detail": 0.294,
-   "readable": true,
-   "why": ""
+   "sep": 0.042,
+   "detail": 0.265,
+   "readable": false,
+   "why": "melts into what is behind it (low value contrast)"
   },
   {
    "shot": "40",
@@ -718,7 +718,7 @@
    ],
    "px": 64,
    "sep": 0.041,
-   "detail": 0.326,
+   "detail": 0.282,
    "readable": true,
    "why": ""
   },
@@ -733,10 +733,10 @@
     0.5603987052099395
    ],
    "px": 64,
-   "sep": 0.042,
-   "detail": 0.309,
-   "readable": true,
-   "why": ""
+   "sep": 0.043,
+   "detail": 0.28,
+   "readable": false,
+   "why": "melts into what is behind it (low value contrast)"
   },
   {
    "shot": "40",
@@ -749,10 +749,10 @@
     0.5587011412259529
    ],
    "px": 63,
-   "sep": 0.042,
-   "detail": 0.308,
-   "readable": true,
-   "why": ""
+   "sep": 0.044,
+   "detail": 0.279,
+   "readable": false,
+   "why": "melts into what is behind it (low value contrast)"
   },
   {
    "shot": "58",
@@ -765,7 +765,7 @@
     1.2122132082549095
    ],
    "px": 219,
-   "sep": 0.204,
+   "sep": 0.198,
    "detail": 0.474,
    "readable": true,
    "why": ""
@@ -781,8 +781,8 @@
     0.5245386276744167
    ],
    "px": 26,
-   "sep": 0.071,
-   "detail": 0.332,
+   "sep": 0.07,
+   "detail": 0.335,
    "readable": true,
    "why": ""
   },
@@ -797,7 +797,7 @@
     1.2558433600812526
    ],
    "px": 219,
-   "sep": 0.19,
+   "sep": 0.183,
    "detail": 0.512,
    "readable": true,
    "why": ""
@@ -813,7 +813,7 @@
     0.5270012752406628
    ],
    "px": 28,
-   "sep": 0.019,
+   "sep": 0.02,
    "detail": 0.476,
    "readable": true,
    "why": ""
@@ -829,8 +829,8 @@
     1.2775428799275108
    ],
    "px": 219,
-   "sep": 0.197,
-   "detail": 0.473,
+   "sep": 0.192,
+   "detail": 0.474,
    "readable": true,
    "why": ""
   },
@@ -861,7 +861,7 @@
     1.289814130942355
    ],
    "px": 219,
-   "sep": 0.2,
+   "sep": 0.196,
    "detail": 0.491,
    "readable": true,
    "why": ""
@@ -877,8 +877,8 @@
     0.5333216591296723
    ],
    "px": 29,
-   "sep": 0.068,
-   "detail": 0.858,
+   "sep": 0.067,
+   "detail": 0.86,
    "readable": true,
    "why": ""
   },
@@ -893,8 +893,8 @@
     1.2982958550038926
    ],
    "px": 219,
-   "sep": 0.209,
-   "detail": 0.482,
+   "sep": 0.203,
+   "detail": 0.483,
    "readable": true,
    "why": ""
   },
@@ -909,8 +909,8 @@
     0.5335315012475009
    ],
    "px": 29,
-   "sep": 0.015,
-   "detail": 0.868,
+   "sep": 0.011,
+   "detail": 0.867,
    "readable": true,
    "why": ""
   },
@@ -925,7 +925,7 @@
     1.307444853982834
    ],
    "px": 219,
-   "sep": 0.212,
+   "sep": 0.205,
    "detail": 0.513,
    "readable": true,
    "why": ""
@@ -941,8 +941,8 @@
     0.5345984837589446
    ],
    "px": 30,
-   "sep": 0.161,
-   "detail": 0.875,
+   "sep": 0.16,
+   "detail": 0.877,
    "readable": true,
    "why": ""
   },
@@ -957,7 +957,7 @@
     1.3116277311210398
    ],
    "px": 219,
-   "sep": 0.218,
+   "sep": 0.212,
    "detail": 0.498,
    "readable": true,
    "why": ""
@@ -974,7 +974,7 @@
    ],
    "px": 30,
    "sep": 0.015,
-   "detail": 0.776,
+   "detail": 0.774,
    "readable": true,
    "why": ""
   },
@@ -989,7 +989,7 @@
     1.3343506972123245
    ],
    "px": 219,
-   "sep": 0.187,
+   "sep": 0.182,
    "detail": 0.497,
    "readable": true,
    "why": ""
@@ -1021,7 +1021,7 @@
     1.3233599464736616
    ],
    "px": 219,
-   "sep": 0.192,
+   "sep": 0.186,
    "detail": 0.496,
    "readable": true,
    "why": ""
@@ -1053,7 +1053,7 @@
     1.3256900962583429
    ],
    "px": 219,
-   "sep": 0.199,
+   "sep": 0.194,
    "detail": 0.492,
    "readable": true,
    "why": ""
@@ -1118,7 +1118,7 @@
    ],
    "px": 156,
    "sep": 0.011,
-   "detail": 0.387,
+   "detail": 0.388,
    "readable": true,
    "why": ""
   },
@@ -1134,7 +1134,7 @@
    ],
    "px": 153,
    "sep": 0.01,
-   "detail": 0.396,
+   "detail": 0.398,
    "readable": true,
    "why": ""
   },
@@ -1150,7 +1150,7 @@
    ],
    "px": 57,
    "sep": 0.051,
-   "detail": 0.307,
+   "detail": 0.306,
    "readable": true,
    "why": ""
   },
@@ -1197,8 +1197,8 @@
     2.0867697815485213
    ],
    "px": 219,
-   "sep": 0.032,
-   "detail": 0.742,
+   "sep": 0.031,
+   "detail": 0.741,
    "readable": true,
    "why": ""
   },
@@ -1331,5 +1331,5 @@
    "why": ""
   }
  ],
- "verdict": "UNREADABLE in 7 of 83 sampled frames"
+ "verdict": "UNREADABLE in 11 of 83 sampled frames"
 }
