@@ -1,5 +1,14 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-25 (late, 6) - Love is War boards round 3 (makers + look pass): still FAIL, parked to toki as a capability question
+- toki: ideas good, "effekte und assets, beleuchtung materialien ... hochwertiger ... immernoch plastik look"; all
+  ideas where possible -> X5 asked (one world: storm sea + cables below + ink as her weapon language).
+- Makers drafted 6_CAMERA / 10_FX / 9_LOOK_boards3.md. New shared parts: SetLight `neutral`, her rim per shot,
+  toonPaint + inkHull, Fx2D slash / melody (song_map notes) / ring, face_lens (fixed: local hip space), calm grades.
+- Rounds 3-3d: she now faces the lens close; slash + melody line read. Critics still BLOCK / FAIL (reviews/*_2.md):
+  plastic primitives, no set light on her, skin tint, no shout (my bug: mouth "silent" on every shot). Gate FAIL.
+  BACKLOG entry with the options (Blender sets, CC0 textures, graphic 2D world). NEXT: toki picks the direction.
+
 ## 2026-10-25 (late, 5) - Love is War IDEAS: matrix + 3 worlds, new parts, idea boards FAIL (held back)
 - 2_IDEAS.md: matrix 16 rows x T01-T17, A Lighthouse That Never Looks / B Ink War / C Signal War (pick: A).
 - New studio parts: lighthouse + beam + lightning (nightsea), paper set with ink, sea-floor cables with pulses (deep);

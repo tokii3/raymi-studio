@@ -133,3 +133,11 @@
 - Mixamo `roar` turns her body away from the lens at 1.9 s (boards A2 / B2 round 2: we see her back) - the clip's own
   hip yaw adds to rotY 'lens'. Attack clips need their yaw measured (hips forward vector at the key time) and
   compensated, else every "attack at the viewer" faces away. Seen on the boards, not fixed yet.
+- Board look at the professional bar (Love is War idea boards, 2026-10-25, 3 rounds / 6 renders, look-critic FAIL +
+  brief-keeper BLOCK each time, reviews/ideas_*_1/2.md): tried painted toon materials + ink contour on code primitives,
+  neutral sky + rim per shot, calm grades, 2D hit layers. What WORKED: the 2D layers (brush slash, melody line), value
+  contrast of the paper world, close low frames (A1, B1, C2). What stays below the bar: every 3D prop built from code
+  primitives (cylinders, tubes, boxes) reads as plastic; she does not pick up set light; skin tint; blown white eyes.
+  Root guess: a capability limit of hand-coded primitive sets, not a parameter. Options to toki: Blender-modelled +
+  textured sets (cloud Blender, free), CC0 textures / HDRIs (Poly Haven, free, no account), or a graphic 2D world
+  around the 3D Raymi. Also found: every board shot had `mouth: "silent"` - her war cry could never open the mouth.
