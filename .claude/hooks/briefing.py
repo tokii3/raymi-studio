@@ -29,6 +29,14 @@ lines = ["RAYMI STUDIO BRIEFING (auto). FIRST load skill raymi-reading-toki (her
 git("fetch", "--quiet", "origin", "main", timeout=20)
 branch = git("rev-parse", "--abbrev-ref", "HEAD") or "?"
 behind = git("rev-list", "--count", "HEAD..origin/main")
+ahead = git("rev-list", "--count", "origin/main..HEAD")
+if behind and behind != "0" and ahead == "0":
+    # nothing of ours to lose: catch up by itself (2026-10-25: a stale main checkout started sessions with the OLD
+    # skills and hooks, so the whole rebuild did not reach them)
+    if git("merge", "--ff-only", "-q", "origin/main", timeout=30) is not None and \
+            git("rev-list", "--count", "HEAD..origin/main") == "0":
+        lines.append(f"Branch '{branch}' was {behind} commits behind origin/main - fast-forwarded automatically.")
+        behind = "0"
 if behind and behind != "0":
     lines.append(f"WARNING: branch '{branch}' is {behind} commits BEHIND origin/main - run `git merge origin/main` "
                  "(or `git pull` on main) BEFORE reading or changing anything; you would work on an old state.")
