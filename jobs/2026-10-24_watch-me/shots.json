@@ -87,13 +87,21 @@
    "camera": [
     {
      "move": {
-      "kind": "crash",
-      "around": "her",
-      "deg": 12,
-      "dist": 0.62,
-      "h": 1.42,
+      "kind": "pull",
+      "around": [
+       0.175,
+       0,
+       -0.037
+      ],
+      "h": 1.3,
+      "deg": 8,
+      "dist": 0.58,
       "fov": 30,
-      "hit": 0.1
+      "hold": 0.5,
+      "pull": 2.6,
+      "sweep": 22,
+      "rise": 0.12,
+      "drop_look": 0.2
      }
     }
    ],
@@ -131,7 +139,8 @@
     0.175,
     -0.119,
     -0.037
-   ]
+   ],
+   "camera_hand": "6_CAMERA.md K1: extreme close on her eyes, pulls out as the flash dies"
   },
   {
    "id": "02",
@@ -282,18 +291,15 @@
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      0,
-      1.35,
-      2.3
-     ],
-     "look": [
-      0,
-      1.3,
-      0
-     ],
-     "fov": 34
+     "move": {
+      "kind": "into",
+      "around": "her",
+      "h": 1.32,
+      "deg": -6,
+      "dist": 0.6,
+      "fov": 58,
+      "hit": 0.4
+     }
     }
    ],
    "actor": [
@@ -322,7 +328,8 @@
      "key_scale": 1.8
     }
    },
-   "frame_dolly": 0.72
+   "frame_dolly": 0.72,
+   "camera_hand": "6_CAMERA.md K2: her finger gun comes into the lens"
   },
   {
    "id": "06",
@@ -550,12 +557,15 @@
    "camera": [
     {
      "move": {
-      "kind": "orbit_roll",
+      "kind": "ots",
       "around": "her",
-      "deg": 160,
-      "dist": 1.5,
-      "sweep": 120,
-      "roll": 8
+      "h": 1.38,
+      "deg": 0,
+      "back": 150,
+      "dist": 0.95,
+      "look": 1.0,
+      "slide": 60,
+      "fov": 36
      }
     }
    ],
@@ -564,8 +574,8 @@
      "at": 0,
      "clip": "look-over-shoulder",
      "motionMix": 1,
-     "pos": "paper",
-     "rotY": "lens"
+     "rotY": 0,
+     "pos": "paper"
     }
    ],
    "lyrics": {
@@ -600,7 +610,8 @@
     -0.004,
     -0.034,
     0.016
-   ]
+   ],
+   "camera_hand": "6_CAMERA.md K3: back it up = her back; she looks over her shoulder on \"hot\""
   },
   {
    "id": "10",
@@ -763,32 +774,17 @@
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      0.2,
-      0.8,
-      2.8
-     ],
-     "look": [
-      0,
-      1.1,
-      0
-     ],
-     "fov": 40
-    },
-    {
-     "at": "end",
-     "pos": [
-      0.2,
-      0.8,
-      3.2
-     ],
-     "look": [
-      0,
-      1.1,
-      0
-     ],
-     "fov": 40
+     "move": {
+      "kind": "walk_in",
+      "around": "her",
+      "h": 1.38,
+      "deg": 4,
+      "dist": 0.5,
+      "far": 3.4,
+      "lens": 0.95,
+      "fov": 44,
+      "fov_end": 38
+     }
     }
    ],
    "actor": [
@@ -827,7 +823,8 @@
      "key_scale": 1.3
     }
    },
-   "frame_dolly": 0.71
+   "frame_dolly": 0.71,
+   "camera_hand": "6_CAMERA.md K4: when I walk in - into us"
   },
   {
    "id": "13",
@@ -1109,12 +1106,17 @@
    "camera": [
     {
      "move": {
-      "kind": "crash",
-      "around": "her",
+      "kind": "into",
+      "around": [
+       -0.084,
+       0,
+       0
+      ],
+      "h": 1.2,
       "deg": 0,
-      "dist": 0.35,
-      "fov": 30,
-      "hit": 0.5
+      "dist": 0.45,
+      "fov": 60,
+      "hit": 0.45
      }
     }
    ],
@@ -1153,7 +1155,8 @@
     -0.084,
     -0.24,
     0
-   ]
+   ],
+   "camera_hand": "6_CAMERA.md K5: her palm comes into the lens and covers it"
   },
   {
    "id": "18",
@@ -1170,12 +1173,15 @@
    "camera": [
     {
      "move": {
-      "kind": "orbit_roll",
+      "kind": "whip360",
       "around": "her",
+      "h": 1.2,
       "deg": 0,
-      "dist": 2,
-      "sweep": 360,
-      "roll": 6
+      "dist": 1.75,
+      "hit": 0.92,
+      "whip": 1.0,
+      "roll": 14,
+      "fov": 40
      }
     }
    ],
@@ -1184,8 +1190,9 @@
      "at": 0,
      "clip": "hip-hop-dancing-3",
      "motionMix": 1,
-     "pos": "paper",
-     "rotY": "lens"
+     "rotY": 0,
+     "look": "lens",
+     "pos": "paper"
     }
    ],
    "lyrics": {
@@ -1226,7 +1233,8 @@
       0.507095738100718
      ]
     }
-   }
+   },
+   "camera_hand": "6_CAMERA.md K6: \"move\" - the world spins round her, her eyes stay on us"
   },
   {
    "id": "19",
@@ -1449,11 +1457,53 @@
    "camera": [
     {
      "move": {
-      "kind": "handheld",
+      "kind": "burst",
       "around": "her",
-      "deg": 20,
-      "dist": 3,
-      "shake": 0.6
+      "h": 1.3,
+      "fov": 46,
+      "shots": [
+       {
+        "at": 0,
+        "deg": 20,
+        "dist": 2.6,
+        "lens": 0.85,
+        "fov": 50,
+        "ly": -0.25
+       },
+       {
+        "at": 1.76,
+        "deg": -50,
+        "dist": 1.6,
+        "lens": 2.3,
+        "fov": 42,
+        "roll": -6
+       },
+       {
+        "at": 2.27,
+        "deg": 70,
+        "dist": 2.8,
+        "lens": 0.35,
+        "fov": 52,
+        "ly": -0.3,
+        "roll": 8
+       },
+       {
+        "at": 2.97,
+        "deg": -15,
+        "dist": 1.9,
+        "lens": 1.1,
+        "fov": 46,
+        "roll": -14
+       },
+       {
+        "at": 3.33,
+        "deg": 35,
+        "dist": 0.9,
+        "lens": 1.4,
+        "fov": 34,
+        "roll": 10
+       }
+      ]
      }
     }
    ],
@@ -1462,8 +1512,38 @@
      "at": 0,
      "clip": "shoved-reaction-with-spin",
      "motionMix": 1,
-     "pos": "paper",
-     "rotY": "lens"
+     "rotY": 0,
+     "pos": "paper"
+    },
+    {
+     "at": 2.27,
+     "clip": "mma-kick",
+     "clip_from": 0.55,
+     "speed": 0,
+     "motionMix": 1,
+     "rotY": 20,
+     "look": "lens",
+     "pos": "paper"
+    },
+    {
+     "at": 2.97,
+     "clip": "arms-hip-hop-dance",
+     "clip_from": 1.0,
+     "speed": 0,
+     "motionMix": 1,
+     "rotY": -10,
+     "look": "lens",
+     "pos": "paper"
+    },
+    {
+     "at": 3.33,
+     "clip": "female-dynamic-pose",
+     "clip_from": 0.6,
+     "speed": 0,
+     "motionMix": 1,
+     "rotY": 20,
+     "look": "lens",
+     "pos": "paper"
     }
    ],
    "lyrics": {
@@ -1494,7 +1574,8 @@
      "key_scale": 1
     }
    },
-   "frame_dolly": 0.83
+   "frame_dolly": 0.83,
+   "camera_hand": "6_CAMERA.md K7: a new angle on every hook word (forecast, K/DA, ayy, the run)"
   },
   {
    "id": "23",
@@ -1510,32 +1591,20 @@
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      0,
-      4.6,
-      0.4
-     ],
-     "look": [
-      0,
-      0,
-      0
-     ],
-     "fov": 44
-    },
-    {
-     "at": "end",
-     "pos": [
-      0,
-      3.6,
-      0.3
-     ],
-     "look": [
-      0,
-      0,
-      0
-     ],
-     "fov": 44
+     "move": {
+      "kind": "drop_worm",
+      "around": "her",
+      "h": 1.3,
+      "deg": 10,
+      "hit": 3.19,
+      "top": 3.9,
+      "worm": 2.9,
+      "lens": 0.32,
+      "fov": 48,
+      "fov_top": 44,
+      "spin": 35,
+      "ly": -0.1
+     }
     }
    ],
    "actor": [
@@ -1546,8 +1615,18 @@
      "speed": 0,
      "motionMix": 1,
      "look": "lens",
-     "pos": "paper",
-     "rotY": "lens"
+     "rotY": 0,
+     "pos": "paper"
+    },
+    {
+     "at": 3.19,
+     "clip": "female-dynamic-pose",
+     "clip_from": 0.6,
+     "speed": 0,
+     "motionMix": 1,
+     "look": "lens",
+     "rotY": 10,
+     "pos": "paper"
     }
    ],
    "lyrics": {
@@ -1578,7 +1657,8 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "camera_hand": "6_CAMERA.md K8: radar = seen from above; the hit throws us to the floor"
   },
   {
    "id": "24",
@@ -1609,12 +1689,52 @@
    "camera": [
     {
      "move": {
-      "kind": "crash",
+      "kind": "hero",
       "around": "her",
-      "deg": 0,
-      "dist": 2.6,
-      "fov": 36,
-      "hit": 0
+      "h": 1.35,
+      "deg": -15,
+      "dist": 1.5,
+      "lens": 0.8,
+      "push": 1.6,
+      "sweep": 25,
+      "fov": 55,
+      "ly": -0.25,
+      "at": 0,
+      "dur": 3.1
+     }
+    },
+    {
+     "move": {
+      "kind": "burst",
+      "around": "her",
+      "h": 1.35,
+      "at": 3.1,
+      "shots": [
+       {
+        "at": 0.09,
+        "deg": 40,
+        "dist": 1.4,
+        "lens": 1.9,
+        "fov": 40,
+        "roll": 8
+       },
+       {
+        "at": 0.6,
+        "deg": -35,
+        "dist": 1.0,
+        "lens": 1.45,
+        "fov": 36,
+        "roll": -12
+       },
+       {
+        "at": 1.11,
+        "deg": 10,
+        "dist": 2.4,
+        "lens": 0.75,
+        "fov": 50,
+        "ly": -0.3
+       }
+      ]
      }
     }
    ],
@@ -1625,26 +1745,39 @@
      "clip_from": 0.6,
      "speed": 0,
      "motionMix": 1,
-     "pos": "paper",
-     "rotY": "lens"
+     "rotY": -10,
+     "look": "lens",
+     "pos": "paper"
     },
     {
-     "at": 1.5,
+     "at": 3.19,
      "clip": "female-dance-pose-2",
      "clip_from": 0.6,
      "speed": 0,
      "motionMix": 1,
-     "pos": "paper",
-     "rotY": "lens"
+     "rotY": 25,
+     "look": "lens",
+     "pos": "paper"
     },
     {
-     "at": 3,
+     "at": 3.7,
      "clip": "female-dance-pose-1",
      "clip_from": 0.6,
      "speed": 0,
      "motionMix": 1,
-     "pos": "paper",
-     "rotY": "lens"
+     "rotY": -25,
+     "look": "lens",
+     "pos": "paper"
+    },
+    {
+     "at": 4.21,
+     "clip": "female-dynamic-pose",
+     "clip_from": 0.6,
+     "speed": 0,
+     "motionMix": 1,
+     "rotY": 5,
+     "look": "lens",
+     "pos": "paper"
     }
    ],
    "lyrics": {
@@ -1704,7 +1837,8 @@
      "small": "fitter: a long line in a tight frame (>= 60 px cap)"
     }
    },
-   "frame_dolly": 0.94
+   "frame_dolly": 0.94,
+   "camera_hand": "6_CAMERA.md K9: the cover from below, then the shutter bursts on the three hits"
   },
   {
    "id": "25",
@@ -1932,33 +2066,17 @@
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      -0.6,
-      3.6,
-      0.9
-     ],
-     "look": [
-      0,
-      1.4,
-      0
-     ],
-     "fov": 40
-    },
-    {
-     "at": "end",
-     "pos": [
-      0.2,
-      1.5,
-      1.3
-     ],
-     "look": [
-      0,
-      1.4,
-      0
-     ],
-     "fov": 32,
-     "ease": "out"
+     "move": {
+      "kind": "dutch",
+      "around": "her",
+      "h": 1.38,
+      "deg": 15,
+      "dist": 0.85,
+      "roll": 18,
+      "hit": 3.16,
+      "flip": 28,
+      "fov": 34
+     }
     }
    ],
    "actor": [
@@ -1966,8 +2084,9 @@
      "at": 0,
      "clip": "look-around-2",
      "motionMix": 1,
-     "pos": "lamp_circle",
-     "rotY": "lens"
+     "rotY": 10,
+     "look": "lens",
+     "pos": "lamp_circle"
     }
    ],
    "lyrics": {
@@ -2018,7 +2137,8 @@
      ],
      "small": "fitter: a long line in a tight frame (>= 60 px cap)"
     }
-   }
+   },
+   "camera_hand": "6_CAMERA.md K10: slay, tilted; the drop on her nose flips the tilt"
   },
   {
    "id": "28",
@@ -2333,10 +2453,18 @@
    "camera": [
     {
      "move": {
-      "kind": "crane_up",
+      "kind": "drop_worm",
       "around": "her",
+      "h": 1.3,
       "deg": -20,
-      "dist": 2.8
+      "hit": 3.58,
+      "top": 4.0,
+      "worm": 3.0,
+      "lens": 0.35,
+      "fov": 50,
+      "fov_top": 46,
+      "spin": 30,
+      "ly": -0.1
      }
     }
    ],
@@ -2345,8 +2473,19 @@
      "at": 0,
      "clip": "gestures-pack-basic-angry-gesture",
      "motionMix": 1,
-     "pos": "lamp_circle",
-     "rotY": "lens"
+     "rotY": 0,
+     "look": "lens",
+     "pos": "lamp_circle"
+    },
+    {
+     "at": 3.58,
+     "clip": "female-dynamic-pose",
+     "clip_from": 0.6,
+     "speed": 0,
+     "motionMix": 1,
+     "rotY": -15,
+     "look": "lens",
+     "pos": "lamp_circle"
     }
    ],
    "lyrics": {
@@ -2377,7 +2516,8 @@
      "key_scale": 1,
      "small": "fitter: the free space beside her is small in this frame"
     }
-   }
+   },
+   "camera_hand": "6_CAMERA.md K11: the tantrum from above, the anthem from below"
   },
   {
    "id": "33",
@@ -2744,11 +2884,52 @@
    "camera": [
     {
      "move": {
-      "kind": "whip_out",
+      "kind": "burst",
       "around": "her",
-      "deg": 20,
-      "dist": 2.4,
-      "turn": 80
+      "h": 1.3,
+      "fov": 44,
+      "shots": [
+       {
+        "at": 0,
+        "deg": 25,
+        "dist": 2.4,
+        "lens": 1.0,
+        "fov": 44
+       },
+       {
+        "at": 0.91,
+        "deg": -40,
+        "dist": 1.5,
+        "lens": 1.9,
+        "fov": 40,
+        "roll": -10
+       },
+       {
+        "at": 1.93,
+        "deg": 60,
+        "dist": 2.8,
+        "lens": 0.35,
+        "fov": 52,
+        "ly": -0.3,
+        "roll": 6
+       },
+       {
+        "at": 2.61,
+        "deg": -10,
+        "dist": 1.8,
+        "lens": 1.2,
+        "fov": 44,
+        "roll": 14
+       },
+       {
+        "at": 3.0,
+        "deg": 30,
+        "dist": 0.9,
+        "lens": 1.42,
+        "fov": 34,
+        "roll": -8
+       }
+      ]
      }
     }
    ],
@@ -2757,8 +2938,39 @@
      "at": 0,
      "clip": "hip-hop-dancing-8",
      "motionMix": 1,
-     "pos": "lamp_circle",
-     "rotY": "lens"
+     "rotY": 0,
+     "look": "lens",
+     "pos": "lamp_circle"
+    },
+    {
+     "at": 1.93,
+     "clip": "mma-kick",
+     "clip_from": 0.55,
+     "speed": 0,
+     "motionMix": 1,
+     "rotY": 15,
+     "look": "lens",
+     "pos": "lamp_circle"
+    },
+    {
+     "at": 2.61,
+     "clip": "arms-hip-hop-dance",
+     "clip_from": 1.0,
+     "speed": 0,
+     "motionMix": 1,
+     "rotY": -5,
+     "look": "lens",
+     "pos": "lamp_circle"
+    },
+    {
+     "at": 3.0,
+     "clip": "female-dynamic-pose",
+     "clip_from": 0.6,
+     "speed": 0,
+     "motionMix": 1,
+     "rotY": 15,
+     "look": "lens",
+     "pos": "lamp_circle"
     }
    ],
    "lyrics": {
@@ -2794,7 +3006,8 @@
      ]
     }
    },
-   "frame_dolly": 0.92
+   "frame_dolly": 0.92,
+   "camera_hand": "6_CAMERA.md K12: the FIRESTARTER kick burst on K/DA and ayy"
   },
   {
    "id": "39",
@@ -3386,19 +3599,20 @@
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      0.15,
-      1.42,
-      0.9
-     ],
-     "look": [
-      0,
-      1.4,
-      0
-     ],
-     "fov": 30,
-     "observer": 0
+     "move": {
+      "kind": "slow_push",
+      "around": [
+       0.177,
+       0,
+       -0.028
+      ],
+      "h": 1.32,
+      "deg": 8,
+      "dist": 0.5,
+      "push": 1.5,
+      "fov": 28,
+      "sweep": 8
+     }
     }
    ],
    "actor": [
@@ -3445,7 +3659,8 @@
     0.177,
     -0.081,
     -0.028
-   ]
+   ],
+   "camera_hand": "6_CAMERA.md K13: the held note: a slow push into the sleepy blink"
   },
   {
    "id": "47",
@@ -3895,12 +4110,15 @@
    "camera": [
     {
      "move": {
-      "kind": "crash",
+      "kind": "walk_in",
       "around": "her",
-      "deg": -160,
-      "dist": 0.5,
-      "fov": 32,
-      "hit": 0.6
+      "h": 1.38,
+      "deg": -6,
+      "dist": 0.55,
+      "far": 3.4,
+      "lens": 0.95,
+      "fov": 44,
+      "fov_end": 40
      }
     }
    ],
@@ -3942,7 +4160,8 @@
     0.01,
     0.198,
     -0.004
-   ]
+   ],
+   "camera_hand": "6_CAMERA.md K14: her real step - toward us"
   },
   {
    "id": "54",
@@ -4820,27 +5039,33 @@
    },
    "camera": [
     {
-     "at": 0,
-     "pos": [
-      1.6,
-      1.5,
-      2.5
-     ],
-     "look": [
-      -0.17,
-      1.3,
-      0.43
-     ],
-     "fov": 42
+     "move": {
+      "kind": "ots",
+      "around": "her",
+      "h": 1.3,
+      "deg": -66,
+      "back": 150,
+      "dist": 1.05,
+      "look": 0.45,
+      "slide": 50,
+      "fov": 40
+     }
     }
    ],
    "actor": [
     {
      "at": 0,
+     "clip": "look-over-shoulder",
+     "motionMix": 1,
+     "rotY": -66,
+     "pos": "plinth"
+    },
+    {
+     "at": 0.55,
      "clip": "spin-in-place",
      "motionMix": 1,
-     "pos": "plinth",
-     "rotY": "lens"
+     "rotY": -66,
+     "pos": "plinth"
     }
    ],
    "low_ok": "the lens looks at the barb and the guard at hip height, sideways, not up",
@@ -4864,7 +5089,8 @@
      "key_scale": 1.8
     }
    },
-   "frame_dolly": 0.7
+   "frame_dolly": 0.7,
+   "camera_hand": "6_CAMERA.md K15: the sting from her side: a look back at him, then the spin"
   },
   {
    "id": "65",
@@ -5129,12 +5355,17 @@
    "camera": [
     {
      "move": {
-      "kind": "crash",
-      "around": "her",
+      "kind": "into",
+      "around": [
+       0.071,
+       0.42,
+       0
+      ],
+      "h": 1.24,
       "deg": 0,
-      "dist": 0.7,
-      "fov": 30,
-      "hit": 0.2
+      "dist": 0.5,
+      "fov": 50,
+      "hit": 1.6
      }
     }
    ],
@@ -5197,7 +5428,8 @@
     0.071,
     -0.112,
     0
-   ]
+   ],
+   "camera_hand": "6_CAMERA.md K16: she switches US off - her hand into the lens"
   }
  ],
  "bridge": 16,
@@ -5213,5 +5445,6 @@
  "film_look": true,
  "director": true,
  "effects": true,
- "camera_v3": true
+ "camera_v3": true,
+ "_camera": "6_CAMERA.md (2026-10-25): the camera written by hand bar by bar in the FIRESTARTER vocabulary; shots with camera_hand keep their lens (no v3 / director / swings / frame_fit). Key moments K1-K16 done, the rest follows after toki's board verdict."
 }

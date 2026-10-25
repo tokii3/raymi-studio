@@ -699,6 +699,7 @@ def _camera_list(s: dict, length: float, fmt: str, marks: dict, errors: list[str
         if P is None:
             continue
         P = [P[0], P[1] + float(m.get("h", 1.35)), P[2]]
+        m = {**m, "_h": float(m.get("h", 1.35))}            # the hand-written moves place the lens from her feet
         last = (s.get("actor") or [{}])[-1].get("pos")      # where she ends (a follow move travels with her)
         E = _v3(last, marks, errors, ktag) if last is not None else None
         E = [E[0], E[1] + float(m.get("h", 1.35)), E[2]] if E else None
@@ -1121,21 +1122,22 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         # oder nur am rand"): the lens is computed from HER - where she stands, how tall she is - in the grammar of the
         # K/DA FIRESTARTER study, replacing the script's world-coordinate keys (special shots keep theirs)
         v3 = None
-        if spec.get("camera_v3") and not (s.get("opts") or {}).get("her_off") and not V3_SPECIAL.search(str(s.get("size", ""))):
+        hand = bool(s.get("camera_hand"))                 # 6_CAMERA.md: a lens written by hand for this bar - no rule touches it
+        if spec.get("camera_v3") and not hand and not (s.get("opts") or {}).get("her_off") and not V3_SPECIAL.search(str(s.get("size", ""))):
             v3 = camera_v3(s, marks, errors, tag, fr(a), fr(b), i, st, sets[st])
         if v3:
             ckeys = v3
         # frame_fit (raymi/frame.py): the whole lens shifted onto her MEASURED head (probe) - close shots only
-        ff = None if v3 else s.get("frame_fit")
+        ff = None if v3 or hand else s.get("frame_fit")
         if isinstance(ff, list) and len(ff) == 3:
             for ck in ckeys:
                 ck["pos"] = [round(p + o, 4) for p, o in zip(ck["pos"], ff)]
                 ck["look"] = [round(p + o, 4) for p, o in zip(ck["look"], ff)]
-        if spec.get("director") and not v3:               # the camera director (direct_camera): never still, poses staged
+        if spec.get("director") and not v3 and not hand:               # the camera director (direct_camera): never still, poses staged
             ckeys = direct_camera(ckeys, s, fr(a), fr(b), i)
         # frame_dolly (guard --fill-frame, toki 2026-10-25 "raymi ... sollte größer im bild sein ... oft wirkt alles leer
         # und raymi weit weg"): the lens moves this share of the way it was from what it looks at - she fills the frame
-        fd = None if v3 else s.get("frame_dolly")
+        fd = None if v3 or hand else s.get("frame_dolly")
         if isinstance(fd, (int, float)) and 0.3 <= fd < 1:
             for ck in ckeys:
                 ck["pos"] = [round(lk + (p - lk) * fd, 4) for p, lk in zip(ck["pos"], ck["look"])]
@@ -1352,7 +1354,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             # really dances (a moving dance / spin clip), the murk soft, her UV + lamp light always
             moving = [a for a in (s.get("actor") or []) if a.get("speed", 1) != 0 and re.search(r"dance|hip-hop|spin|kick|twist", str(a.get("clip", "")))]
             opts.setdefault("trails", 1 if moving else 0); opts.setdefault("haze", 0.6); opts.setdefault("her_light", 1)
-        if swing:
+        if swing and not hand:                            # a hand-written burst IS the swing of this shot
             extra["swing"] = swing
         shots.append({**extra, "id": s.get("id", f"s{i + 1}"), "from": max(0, fr(a)), "to": min(total, fr(b)), "set": st, "hero": hero,
                       "opts": opts, "camera": ckeys, "kick": float(s.get("kick", spec.get("kick", 1.0))), "puppets": pkeys,
