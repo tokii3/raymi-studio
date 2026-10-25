@@ -118,7 +118,9 @@ TIME_OPTS = {"lights_off", "window_break", "unfold", "shake", "cracks", "burst",
              "flash", "bulb_flicker", "lamp_flick", "crossed",
              # three/setfx.tsx (any set): rain / wind as [[t, v]], floor events, light writing, letters, her tail at the lens
              "rain", "wind", "splash", "tail_slap", "lightwriting", "letters_off", "tail_lens", "barb_lens", "tail_twitch", "fold",
-             "sonar", "paparazzi", "finwave"}
+             "sonar", "paparazzi", "finwave",
+             # Love is War (2026-10-25): lightning (three/lighthouse.tsx), ink slashes (sets/Paper), cable pulses (three/cables.tsx)
+             "lightning", "ink_slash", "cable_pulse", "ink_at", "black_at"}
 # options holding specs (a dict or a list of dicts) whose own fields are times / positions (three/fire.tsx,
 # three/creatures.tsx): "at" / "out" / "toss" / "*_at" = song seconds -> frames, "grow" / "fade" / "ember" = seconds ->
 # frame counts, "pos" / "from" / "to" = a mark or [x, y, z]

@@ -1,0 +1,527 @@
+{
+ "_why": "Love is War idea boards (2_IDEAS.md): 3 worlds x 3 key frames in the REAL film path - A nightsea + the new lighthouse / lightning, B the new paper set (ink), C deep + the new sea cables. Cloud stills only. No lyrics (toki 2026-10-25).",
+ "audio": {
+  "file": "../2026-10-25_love-is-war/song.webm",
+  "from": 0.0,
+  "to": 14.0
+ },
+ "song_map": "../2026-10-25_love-is-war/song_map.json",
+ "vrm": "vrm/raymi7.vrm",
+ "grain": 0.04,
+ "observer": 1,
+ "aware": 0.3,
+ "depth": 0.8,
+ "shots": [
+  {
+   "id": "A1",
+   "at": 0.0,
+   "set": "nightsea",
+   "why": "the first hit: lightning, she rises out of the black sea in the flash, the lighthouse far behind",
+   "opts": {
+    "grade": "closing",
+    "rain_at": 0.0,
+    "cloud": 1,
+    "lightning": [
+     0.4
+    ],
+    "lightning_pos": [
+     [
+      7,
+      -42
+     ]
+    ],
+    "lighthouse": {
+     "pos": [
+      -16,
+      -50
+     ],
+     "height": 10,
+     "spin": 0,
+     "yaw": 120
+    },
+    "pool": 0.5,
+    "glow": "#c07bff",
+    "glow_gain": 0.8,
+    "lock": 0.45
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.5,
+      0.22,
+      2.7
+     ],
+     "look": [
+      0,
+      1.0,
+      -1.5
+     ],
+     "fov": 46
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "rotY": "lens",
+     "clip": "long-yell-while-standing-leaning-back",
+     "clip_from": 1.0,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": "pool",
+     "expr": {
+      "angry": 0.6
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "A2",
+   "at": 1.5,
+   "set": "nightsea",
+   "why": "the war cry INTO the lens: her ping rings out over the water, the beam passes behind her",
+   "opts": {
+    "grade": "closing",
+    "rain_at": 1.5,
+    "cloud": 1,
+    "lighthouse": {
+     "pos": [
+      -16,
+      -50
+     ],
+     "height": 10,
+     "spin": 0,
+     "yaw": 75
+    },
+    "pool": 0.7,
+    "pulse_at": [
+     1.6,
+     1.95
+    ],
+    "glow": "#c07bff",
+    "glow_gain": 1,
+    "lock": 0.45
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.1,
+      0.95,
+      1.35
+     ],
+     "look": [
+      0,
+      0.55,
+      0
+     ],
+     "fov": 36
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "rotY": "lens",
+     "clip": "long-yell-leaning-forward",
+     "clip_from": 1.0,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": "pool",
+     "expr": {
+      "angry": 0.8
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "speed",
+     "at": 0,
+     "to": "end",
+     "mode": "radial",
+     "opacity": 0.35
+    }
+   ]
+  },
+  {
+   "id": "A3",
+   "at": 3.0,
+   "set": "nightsea",
+   "why": "the storm stops dead: a huge moon, the lighthouse below it, she reaches out - it is too beautiful",
+   "opts": {
+    "grade": "own",
+    "cloud": 0,
+    "stars": 1,
+    "lighthouse": {
+     "pos": [
+      -22,
+      -62
+     ],
+     "height": 10,
+     "spin": 0,
+     "yaw": 160
+    },
+    "pool": 0.4,
+    "glow": "#c07bff",
+    "glow_gain": 0.6,
+    "lock": 0.45
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      1.1,
+      0.55,
+      2.4
+     ],
+     "look": [
+      -2.4,
+      2.6,
+      -8
+     ],
+     "fov": 44
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "rotY": 200,
+     "clip": "reaching-out",
+     "clip_from": 1.2,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": "pool"
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "B1",
+   "at": 4.5,
+   "set": "paper",
+   "why": "the first hit: a brush slash rips across the white, she kicks through it, the red heart out of reach",
+   "opts": {
+    "grade": "clean",
+    "ink": 0.7,
+    "ink_slash": [
+     [
+      4.6,
+      -14,
+      0.4,
+      -2.6
+     ]
+    ],
+    "heart": [
+     2.4,
+     2.3,
+     -4.2
+    ],
+    "lock": 0.45
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      1.25,
+      5.2
+     ],
+     "look": [
+      0,
+      1.25,
+      -1
+     ],
+     "fov": 40
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "rotY": "lens",
+     "clip": "spinning-back-kick-advancing",
+     "clip_from": 0.75,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": "center"
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "B2",
+   "at": 6.0,
+   "set": "paper",
+   "why": "the declaration: ink explodes from her, the frame turns two-tone, she points the war at the lens",
+   "opts": {
+    "grade": "clean",
+    "ink": 1,
+    "ink_slash": [
+     [
+      6.0,
+      20,
+      -0.5,
+      -2.2
+     ],
+     [
+      6.05,
+      -35,
+      0.8,
+      -3.0
+     ],
+     [
+      6.1,
+      70,
+      0,
+      -3.6
+     ]
+    ],
+    "lock": 0.45
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.35,
+      0.78,
+      2.2
+     ],
+     "look": [
+      0,
+      1.35,
+      0
+     ],
+     "fov": 42
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "rotY": "lens",
+     "clip": "angry-point",
+     "clip_from": 0.6,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": "center",
+     "expr": {
+      "angry": 0.8
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "duo",
+     "at": 0,
+     "to": "end",
+     "dark": "#0b0910",
+     "light": "#f1ebe0"
+    }
+   ]
+  },
+  {
+   "id": "B3",
+   "at": 7.5,
+   "set": "paper",
+   "why": "the page is black: only her light is left, her dots become the stars, the red heart in her hands",
+   "opts": {
+    "grade": "own",
+    "black": 1,
+    "heart": [
+     0.15,
+     1.15,
+     0.45
+    ],
+    "glow": "#c07bff",
+    "glow_gain": 1,
+    "lock": 0.45
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.9,
+      0.35,
+      2.6
+     ],
+     "look": [
+      0,
+      1.6,
+      -1
+     ],
+     "fov": 46
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "rotY": "lens",
+     "clip": "on-knees-arms-raised",
+     "clip_from": 1.0,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": "center"
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "C1",
+   "at": 9.0,
+   "set": "deep",
+   "why": "she feels the signal: a pulse races along the sea-floor cable toward her hand",
+   "opts": {
+    "grade": "own",
+    "cables": 5,
+    "cable_pulse": [
+     7.6,
+     8.1,
+     8.7
+    ],
+    "snow": 1,
+    "glow": "#5ef2ff",
+    "glow_gain": 0.6,
+    "lock": 0.45
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -1.6,
+      0.35,
+      2.2
+     ],
+     "look": [
+      0.6,
+      0.6,
+      -2.5
+     ],
+     "fov": 46
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "rotY": "lens",
+     "clip": "kneeling-down",
+     "clip_from": 1.9,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": "center"
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  },
+  {
+   "id": "C2",
+   "at": 10.5,
+   "set": "deep",
+   "why": "the current runs through her: she joins the cable and lights up, two-tone electric",
+   "opts": {
+    "grade": "own",
+    "cables": 5,
+    "cable_glow": 1,
+    "cable_pulse": "beats",
+    "glow": "#5ef2ff",
+    "glow_gain": 1,
+    "lock": 0.45
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.35,
+      1.2,
+      1.5
+     ],
+     "look": [
+      0.3,
+      1.1,
+      -0.6
+     ],
+     "fov": 34
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "rotY": "lens",
+     "clip": "great-sword-power-up",
+     "clip_from": 1.6,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": "center",
+     "expr": {
+      "angry": 0.5
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "duo",
+     "at": 0,
+     "to": "end",
+     "dark": "#06081a",
+     "light": "#9ff6ff"
+    }
+   ]
+  },
+  {
+   "id": "C3",
+   "at": 12.0,
+   "set": "deep",
+   "why": "the whole network lit: the sea floor from far above, her light at the centre of the map",
+   "opts": {
+    "grade": "own",
+    "cables": 9,
+    "cable_glow": 1,
+    "cable_pulse": [
+     10.8,
+     11.2,
+     11.6
+    ],
+    "glow": "#c07bff",
+    "glow_gain": 1,
+    "lock": 0.45
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      24,
+      6
+     ],
+     "look": [
+      0.3,
+      0,
+      -14
+     ],
+     "fov": 50
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "rotY": "lens",
+     "clip": "arms-spread-looking-upwards",
+     "clip_from": 1.0,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": "center"
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035
+  }
+ ]
+}

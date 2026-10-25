@@ -16,6 +16,7 @@
 //   fireworks [t, ...] + fw_from [[x, z], ...]   shells rise from under the water and burst in the sky (+ reflections)
 //   column 0..1 | column_at; column_bend ...      the heat column under her (sets/Deep HeatColumn)
 //   stars 0..1, moon false
+//   lighthouse {pos, height, yaw, spin, beam, len} + lightning [t, ...] / lightning_pos (three/lighthouse.tsx, Love is War)
 //   fires / sparks / fish / school / salmon / props as in sets/Deep
 import React from 'react';
 import * as THREE from 'three';
@@ -24,6 +25,7 @@ import {Fires, Sparks, add, glowTex} from '../fire';
 import {DeepLife} from '../creatures';
 import {HeatColumn, prog} from './Deep';
 import {flare, frames} from '../events';
+import {Lighthouse, Lightning, type LighthouseOpts} from '../lighthouse';
 import type {SetProps} from './index';
 
 type P3 = [number, number, number];
@@ -318,6 +320,9 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       <Fires list={o.fires} f={f} />
       <Sparks list={o.sparks} f={f} />
       <DeepLife opts={o} f={f} fps={fps} camPos={camPos} />
+      {/* Love is War (2026-10-25): the lighthouse whose beam never stops on her, and the storm's lightning */}
+      {o.lighthouse ? <Lighthouse o={o.lighthouse as LighthouseOpts} f={f} fps={fps} camPos={(camPos ?? [0, 1.5, 6]) as P3} /> : null}
+      <Lightning at={o.lightning} pos={o.lightning_pos as [number, number][] | undefined} f={f} />
     </group>
   );
 };

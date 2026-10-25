@@ -12,6 +12,7 @@ import {Exhibit} from './Exhibit';
 import {Globe} from './Globe';
 import {NightSea} from './NightSea';
 import {Office} from './Office';
+import {Paper} from './Paper';
 import {Shoot} from './Shoot';
 import {Train} from './Train';
 import {Weather} from './Weather';
@@ -31,6 +32,7 @@ export const SETS: Record<string, React.FC<SetProps>> = {
   globe: Globe,
   nightsea: NightSea,
   office: Office,
+  paper: Paper,
   shoot: Shoot,
   train: Train,
   weather: Weather,

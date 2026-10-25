@@ -35,6 +35,7 @@ import {Fires, Flame, Sparks, add, glowTex} from '../fire';
 import {DeepLife} from '../creatures';
 import {Things} from '../routine';
 import {flare, frames} from '../events';
+import {SeaCables} from '../cables';
 import type {SetProps} from './index';
 
 type P3 = [number, number, number];
@@ -527,6 +528,8 @@ export const Deep: React.FC<SetProps> = ({f, fps, opts, beats, camPos}) => {
       <Sparks list={o.sparks} f={f} />
       <DeepLife opts={o} f={f} fps={fps} camPos={camPos} />
       <Things list={o.things} f={f} />
+      {/* Love is War (2026-10-25): undersea data cables, pulses of light on the beat (three/cables.tsx) */}
+      <SeaCables opts={o} f={f} fps={fps} beats={beats} />
     </group>
   );
 };

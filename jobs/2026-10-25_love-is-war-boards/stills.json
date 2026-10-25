@@ -1,0 +1,30 @@
+{
+ "format": "mv",
+ "frames": [
+  13,
+  69,
+  112,
+  153,
+  198,
+  248,
+  292,
+  338,
+  382
+ ],
+ "names": [
+  "A1",
+  "A2",
+  "A3",
+  "B1",
+  "B2",
+  "B3",
+  "C1",
+  "C2",
+  "C3"
+ ],
+ "scale": 1,
+ "to": "boards",
+ "dest": "jobs/2026-10-25_love-is-war/boards",
+ "_why": "Love is War idea boards round 1",
+ "round": 1
+}
