@@ -28,7 +28,10 @@ export type BoardTile = {
 };
 
 export type VrmBoardProps = {composition: 'VrmBoard'; width: number; height: number; fps: number; durationInFrames: number;
-  vrm: string; sprites: string[]; tiles: BoardTile[]; grain?: number};
+  vrm: string; sprites: string[]; tiles: BoardTile[]; grain?: number;
+  // Mixamo clips the tiles play ("motions/<id>.fbx"; a key's `motion` + `clipFrom` picks the moment) - a clip sheet
+  // shows each clip on her real rig before a script relies on it (Love is War 2026-10-25: the board loaded none)
+  motions?: string[]};
 
 const Lens: React.FC<{pos: V3; look: V3; fov: number}> = ({pos, look, fov}) => {
   const {camera} = useThree();
@@ -46,7 +49,7 @@ const Lens: React.FC<{pos: V3; look: V3; fov: number}> = ({pos, look, fov}) => {
 export const VrmBoard: React.FC<VrmBoardProps> = (props) => {
   const f = useCurrentFrame();
   const {width: W, height: H, fps} = useVideoConfig();
-  const vrmReady = useVrmReady([staticFile(props.vrm)]);
+  const vrmReady = useVrmReady([staticFile(props.vrm)], (props.motions ?? []).map((m) => staticFile(m)));
   const texReady = useTexturesReady(props.sprites.map((s) => staticFile(s)));
   const tile = props.tiles[Math.min(f, props.tiles.length - 1)];
   const Set = SETS[tile.set];
