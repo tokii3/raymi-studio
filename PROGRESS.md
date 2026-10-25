@@ -1,5 +1,12 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-25 (late, 7) - Love is War: ideas approved, treatment v3 PASS, script v1 BLOCK (merge fault)
+- toki: one merged world, graphic 2D design ("eher richtung 2"), v3 allowed -> treatment v3 PASS (both critics).
+- Built: TwoTone (background-only two-tone, tested), more clips (wipe, climbs, vault, pull, swim, stumble, hang,
+  wall jump), clip sheets 2-3 seen; makers drafted camera (104 rows) / choreo / edit (91 cuts, audio corrections).
+- Script v1 was a mechanical by-time merge -> script-critic BLOCK; lesson in writers_room/templates/4_SCRIPT.md
+  (one shot list on the edit's cuts, authored by hand). NEXT: script v2 by hand -> shots.json -> storyboard -> toki.
+
 ## 2026-10-25 (late, 6) - Love is War boards round 3 (makers + look pass): still FAIL, parked to toki as a capability question
 - toki: ideas good, "effekte und assets, beleuchtung materialien ... hochwertiger ... immernoch plastik look"; all
   ideas where possible -> X5 asked (one world: storm sea + cables below + ink as her weapon language).

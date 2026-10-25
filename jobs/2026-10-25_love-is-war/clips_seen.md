@@ -60,3 +60,14 @@ angry-point / pointing at 10 moments each before the script, or key poses in vrm
 ## Two-tone test (TwoTone.tsx, boards/tests/) - seen
 The set goes paper-white / ink-black for the hit frames, she keeps her own values: works (cry + beam crossing). Flat
 3D planes of the old night sea read as big white slabs - the painted 2D layers of the build will carry it better.
+
+## Clip sheet round 3 (2026-10-25) - seen
+- reaching-out (8 moments): the arm rises only from 2.8 s and reaches to the side-front, never into the lens; angry-point
+  and pointing-forward-1: nothing readable at any of the 8 moments -> M1 (a hand INTO the lens) stays MISSING: a key
+  pose in vrmPoses.ts (both hands thrown at the camera, held on twos) is the build item.
+- stumble-backwards: 1.0 s thrown back, legs up; 1.9 s on the floor (white blob again) - the wave hit (94.04)
+- knocked-out-falling-back: 1.9 s falling back on a diagonal - the strongest "thrown back" shape
+- hanging-by-hands-against-wall: arms up, knees bent - hanging / slip-and-catch against a wall (150.58)
+- jump-from-wall: 1.0-1.9 s crouched, arms spread wide - the wall leap take-off (124.6)
+- grab-and-slam: 1.0 s both arms forward - a grab, not a ground punch
+- look-over-shoulder: a side turn - the outro look back (181.02)

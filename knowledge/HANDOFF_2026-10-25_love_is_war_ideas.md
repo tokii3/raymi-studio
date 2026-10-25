@@ -37,3 +37,19 @@ NEXT: translate the two drafts into jobs/2026-10-25_love-is-war-boards/shots.jso
 at y -0.85, so subtract ~0.85 from the camera-director's standing heights; A3 she stands on the lighthouse gallery;
 B2 adds a second still at 63.5 s for the melody line), push stills (round 3), look, refs pair, brief-keeper +
 look-critic, gate, then toki.
+
+## State at the end of the session (2026-10-25 late)
+- toki: ideas approved (A + C + B merged into ONE world), "eher richtung 2" = graphic 2D world around the 3D Raymi,
+  treatment v3 allowed after 2 BLOCKs -> v3 PASS (script-critic + brief-keeper, reviews/treatment_*_3.md / treatment_3.md).
+- Built: TwoTone.tsx (background-only two-tone, tested on boards/tests - works), Fx2D slash / melody / ring, SetLight
+  neutral, her rim, toonPaint + inkHull, face_lens (local hip space), war_night / war_ink grades, lighthouse / cables /
+  paper parts. 14 + 36 + 9 + 5 Mixamo clips; clip sheets 1-3 seen (clips_seen.md).
+- Maker drafts: 6_CAMERA_draft (104 rows), 7_CHOREO_draft, 8_EDIT_draft (91 cuts, corrections to the treatment from
+  the audio: hidden stop 121.94-122.62, B5 at 79.467, no voice after 169.7).
+- 4_SCRIPT v1 = a mechanical merge -> script-critic BLOCK (reviews/script_1.md, FIX 1-8), brief-keeper PASS with 3
+  conditions (reviews/script_brief-keeper_1.md). NEXT: author 4_SCRIPT v2 BY HAND as one shot list on the edit's cuts
+  (fix 1-8 + the 3 conditions), then shots.json, storyboard (>= 8 key moments, reference | previz) -> toki.
+- Open questions to toki: text on the Short (hook "the lighthouse never looks at me." + CTA "would you look back?").
+- Tool notes: agents' `python` on PATH is 3.7 - use C:/Users/Anne-/AppData/Local/Programs/Python/Python312/python.exe;
+  song_map.stops missed the stop 121.94-122.62 (fix stops() in raymi/song.py); the white blob under low poses is
+  still an open fault class; M1 (hand into the lens) needs a key pose in vrmPoses.ts.
