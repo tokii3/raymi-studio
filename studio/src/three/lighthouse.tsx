@@ -105,9 +105,9 @@ export const Lightning: React.FC<{at: unknown; pos?: [number, number][]; f: numb
       const [bx, bz] = pos?.[k % pos.length] ?? [(rnd(k * 3) - 0.5) * 50, -40 - rnd(k * 5) * 30];
       const pts: THREE.Vector3[] = [];
       let px = bx, pz = bz;
-      for (let i = 0; i <= 14; i++) {
-        pts.push(new THREE.Vector3(px, 42 * (1 - i / 14), pz));
-        px += (rnd(k * 31 + i) - 0.5) * 4.5; pz += (rnd(k * 17 + i) - 0.5) * 2;
+      for (let i = 0; i <= 26; i++) {
+        pts.push(new THREE.Vector3(px, 42 * (1 - i / 26), pz));
+        px += (rnd(k * 31 + i) - 0.5) * 3.2; pz += (rnd(k * 17 + i) - 0.5) * 1.4;
       }
       return (
         <group key={k}>
@@ -115,14 +115,14 @@ export const Lightning: React.FC<{at: unknown; pos?: [number, number][]; f: numb
             const a = pts[i], m = a.clone().add(p).multiplyScalar(0.5), L = a.distanceTo(p);
             const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), p.clone().sub(a).normalize());
             return <group key={i}>
-              <mesh position={m} quaternion={q} scale={[0.22, L, 0.22]} renderOrder={12}><boxGeometry args={[1, 1, 1]} />
+              <mesh position={m} quaternion={q} scale={[0.07, L, 0.07]} renderOrder={12}><boxGeometry args={[1, 1, 1]} />
                 <meshBasicMaterial color="#f4ecff" {...add} opacity={e} fog={false} /></mesh>
-              <mesh position={m} quaternion={q} scale={[1.6, L, 1.6]} renderOrder={12}><boxGeometry args={[1, 1, 1]} />
-                <meshBasicMaterial color="#9a6bff" {...add} opacity={0.25 * e} fog={false} /></mesh>
+              <mesh position={m} quaternion={q} scale={[0.7, L, 0.7]} renderOrder={12}><boxGeometry args={[1, 1, 1]} />
+                <meshBasicMaterial color="#9a6bff" {...add} opacity={0.18 * e} fog={false} /></mesh>
             </group>;
           })}
           <mesh scale={150} renderOrder={-6}><sphereGeometry args={[1, 24, 16]} />
-            <meshBasicMaterial color="#b9b4ff" {...add} side={THREE.BackSide} opacity={0.32 * e} fog={false} /></mesh>
+            <meshBasicMaterial color="#b9b4ff" {...add} side={THREE.BackSide} opacity={0.16 * e} fog={false} /></mesh>
           <hemisphereLight args={['#d9d4ff', '#1a1640', 3.2 * e]} />
         </group>
       );

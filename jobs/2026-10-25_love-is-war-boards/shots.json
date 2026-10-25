@@ -16,11 +16,11 @@
    "id": "A1",
    "at": 0.0,
    "set": "nightsea",
-   "why": "the first hit: lightning, she rises out of the black sea in the flash, the lighthouse far behind",
+   "why": "the first hit: lightning, she surges up out of the black sea in the flash, the lighthouse far behind",
    "opts": {
     "grade": "closing",
     "rain_at": 0.0,
-    "cloud": 1,
+    "cloud": 0,
     "lightning": [
      0.4
     ],
@@ -42,35 +42,36 @@
     "pool": 0.5,
     "glow": "#c07bff",
     "glow_gain": 0.8,
-    "lock": 0.45
+    "lock": 0.75,
+    "stars": 0.3
    },
    "camera": [
     {
      "at": 0,
      "pos": [
+      0.6,
       0.5,
-      0.22,
-      2.7
+      3.0
      ],
      "look": [
       0,
-      1.0,
-      -1.5
+      0.9,
+      -2
      ],
-     "fov": 46
+     "fov": 44
     }
    ],
    "actor": [
     {
      "at": 0,
      "rotY": "lens",
-     "clip": "long-yell-while-standing-leaning-back",
+     "clip": "roar",
      "clip_from": 1.0,
      "speed": 0,
      "motionMix": 1,
      "pos": "pool",
      "expr": {
-      "angry": 0.6
+      "angry": 1
      }
     }
    ],
@@ -102,35 +103,36 @@
     ],
     "glow": "#c07bff",
     "glow_gain": 1,
-    "lock": 0.45
+    "lock": 0.75
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      0.1,
-      0.95,
-      1.35
+      0.15,
+      0.42,
+      1.75
      ],
      "look": [
       0,
-      0.55,
+      0.35,
       0
      ],
-     "fov": 36
+     "fov": 38
     }
    ],
    "actor": [
     {
      "at": 0,
      "rotY": "lens",
-     "clip": "long-yell-leaning-forward",
-     "clip_from": 1.0,
+     "clip": "roar",
+     "clip_from": 1.9,
      "speed": 0,
      "motionMix": 1,
      "pos": "pool",
      "expr": {
-      "angry": 0.8
+      "angry": 1,
+      "aa": 0.7
      }
     }
    ],
@@ -167,7 +169,7 @@
     "pool": 0.4,
     "glow": "#c07bff",
     "glow_gain": 0.6,
-    "lock": 0.45
+    "lock": 0.75
    },
    "camera": [
     {
@@ -220,19 +222,20 @@
      2.3,
      -4.2
     ],
-    "lock": 0.45
+    "lock": 0.75,
+    "heart_scale": 0.6
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      0.6,
-      1.25,
-      5.2
+      0.9,
+      1.05,
+      3.8
      ],
      "look": [
       0,
-      1.25,
+      1.15,
       -1
      ],
      "fov": 40
@@ -243,10 +246,13 @@
      "at": 0,
      "rotY": "lens",
      "clip": "spinning-back-kick-advancing",
-     "clip_from": 0.75,
+     "clip_from": 1.9,
      "speed": 0,
      "motionMix": 1,
-     "pos": "center"
+     "pos": "center",
+     "expr": {
+      "angry": 1
+     }
     }
    ],
    "mouth": "silent",
@@ -280,7 +286,7 @@
       -3.6
      ]
     ],
-    "lock": 0.45
+    "lock": 0.75
    },
    "camera": [
     {
@@ -302,13 +308,14 @@
     {
      "at": 0,
      "rotY": "lens",
-     "clip": "angry-point",
-     "clip_from": 0.6,
+     "clip": "roar",
+     "clip_from": 1.9,
      "speed": 0,
      "motionMix": 1,
      "pos": "center",
      "expr": {
-      "angry": 0.8
+      "angry": 1,
+      "aa": 0.7
      }
     }
    ],
@@ -333,25 +340,26 @@
     "grade": "own",
     "black": 1,
     "heart": [
-     0.15,
-     1.15,
-     0.45
+     0.0,
+     0.92,
+     0.42
     ],
     "glow": "#c07bff",
     "glow_gain": 1,
-    "lock": 0.45
+    "lock": 0.75,
+    "heart_scale": 0.32
    },
    "camera": [
     {
      "at": 0,
      "pos": [
-      0.9,
-      0.35,
-      2.6
+      0.7,
+      0.75,
+      2.4
      ],
      "look": [
       0,
-      1.6,
+      1.4,
       -1
      ],
      "fov": 46
@@ -361,8 +369,8 @@
     {
      "at": 0,
      "rotY": "lens",
-     "clip": "on-knees-arms-raised",
-     "clip_from": 1.0,
+     "clip": "falling-to-knees-in-prayer",
+     "clip_from": 1.9,
      "speed": 0,
      "motionMix": 1,
      "pos": "center"
@@ -387,7 +395,7 @@
     "snow": 1,
     "glow": "#5ef2ff",
     "glow_gain": 0.6,
-    "lock": 0.45
+    "lock": 0.75
    },
    "camera": [
     {
@@ -431,7 +439,7 @@
     "cable_pulse": "beats",
     "glow": "#5ef2ff",
     "glow_gain": 1,
-    "lock": 0.45
+    "lock": 0.75
    },
    "camera": [
     {
@@ -453,13 +461,13 @@
     {
      "at": 0,
      "rotY": "lens",
-     "clip": "great-sword-power-up",
-     "clip_from": 1.6,
+     "clip": "casting-spell",
+     "clip_from": 1.0,
      "speed": 0,
      "motionMix": 1,
      "pos": "center",
      "expr": {
-      "angry": 0.5
+      "angry": 1
      }
     }
    ],
@@ -491,20 +499,20 @@
     ],
     "glow": "#c07bff",
     "glow_gain": 1,
-    "lock": 0.45
+    "lock": 0.75
    },
    "camera": [
     {
      "at": 0,
      "pos": [
       0.3,
-      24,
+      9,
       6
      ],
      "look": [
       0.3,
       0,
-      -14
+      -12
      ],
      "fov": 50
     }

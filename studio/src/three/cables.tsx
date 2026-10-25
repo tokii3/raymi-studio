@@ -50,8 +50,8 @@ export const SeaCables: React.FC<{opts: Record<string, unknown>; f: number; fps:
               if (d < 0 || u > 1) return null;
               const p = c.getPointAt(Math.min(1, u));
               return <group key={`p${k}`} position={p}>
-                <mesh scale={[0.2, 0.2, 0.2]}><sphereGeometry args={[1, 10, 8]} /><meshBasicMaterial color="#e9fdff" toneMapped={false} /></mesh>
-                <mesh scale={2.6} renderOrder={9}><planeGeometry args={[1, 1]} /><meshBasicMaterial map={glowTex(CYAN)} {...add} opacity={0.9} /></mesh>
+                <mesh scale={[0.12, 0.12, 0.12]}><sphereGeometry args={[1, 10, 8]} /><meshBasicMaterial color="#e9fdff" toneMapped={false} /></mesh>
+                <mesh scale={1.5} renderOrder={9}><planeGeometry args={[1, 1]} /><meshBasicMaterial map={glowTex(CYAN)} {...add} opacity={0.9} /></mesh>
                 {i === 0 ? <pointLight color={CYAN} intensity={6} distance={7} decay={1.6} /> : null}
               </group>;
             })}

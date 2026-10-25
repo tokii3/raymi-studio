@@ -9,7 +9,7 @@
 //                                  standing at (x, z) (default behind her); a bare t list works too
 //   wash 0..1                      the rain's grey wash over the whole paper (Weltschmerz)
 //   black 0..1 | black_at          the page turns black (1 = night); stars appear in it
-//   heart [x, y, z]                the red paper heart floating there
+//   heart [x, y, z] + heart_scale  the red paper heart floating there (default 0.9)
 import React from 'react';
 import * as THREE from 'three';
 import {SetLight, canvasTexture, rnd, toon} from '../look';
@@ -55,12 +55,12 @@ function slashTex(): THREE.CanvasTexture {
   return canvasTexture('ink_slash', 1024, 256, (ctx, w, h) => {
     ctx.clearRect(0, 0, w, h);
     for (let s = 0; s < 70; s++) {                       // bristles: each a line whose thickness follows the stroke's press
-      const off = (rnd(s * 3) - 0.5) * h * 0.62, alpha = 0.55 + rnd(s * 5) * 0.45;
+      const off = (rnd(s * 3) - 0.5) * h * 0.5, alpha = 0.55 + rnd(s * 5) * 0.45;
       ctx.strokeStyle = `rgba(6,5,10,${alpha})`;
       for (let x = 0; x < w; x += 6) {
         const u = x / w, press = Math.sin(Math.PI * Math.min(1, u * 1.15)) * (u > 0.8 ? (1 - u) * 5 : 1);
         if (u > 0.7 && rnd(s * 31 + x) < (u - 0.7) * 2.4) continue;   // the dry tail breaks up
-        ctx.lineWidth = 1 + press * 5;
+        ctx.lineWidth = 2 + press * 22;
         ctx.beginPath(); ctx.moveTo(x, h / 2 + off * press); ctx.lineTo(x + 7, h / 2 + off * press); ctx.stroke();
       }
     }
@@ -122,7 +122,7 @@ export const Paper: React.FC<SetProps> = ({f, fps, opts}) => {
       })}
       {/* the red paper heart she fights for */}
       {Array.isArray(o.heart) ? (
-        <mesh position={o.heart as P3} rotation={[0.1, Math.sin(f / 40) * 0.6, 0.05 * Math.sin(f / 23)]} scale={0.9} castShadow material={toon('#c81f37')}>
+        <mesh position={o.heart as P3} rotation={[0.1, Math.sin(f / 40) * 0.6, 0.05 * Math.sin(f / 23)]} scale={Number(o.heart_scale ?? 0.9)} castShadow material={toon('#b51a30')}>
           <extrudeGeometry args={[heartShape(), {depth: 0.04, bevelEnabled: false}]} />
         </mesh>
       ) : null}
@@ -131,7 +131,7 @@ export const Paper: React.FC<SetProps> = ({f, fps, opts}) => {
         const a = rnd(i * 3) * Math.PI * 2, e = 0.02 + Math.pow(rnd(i * 5), 0.8) * 1.3;
         const p = new THREE.Vector3(Math.cos(e) * Math.cos(a), Math.sin(e), Math.cos(e) * Math.sin(a)).multiplyScalar(120);
         const tw = 0.6 + 0.4 * Math.sin(f / (5 + rnd(i) * 7) + i);
-        return <mesh key={`s${i}`} position={p} scale={0.25 + rnd(i * 7) * 0.45} renderOrder={-8}>
+        return <mesh key={`s${i}`} position={p} scale={1.2 + rnd(i * 7) * 1.6} renderOrder={-8}>
           <planeGeometry args={[1, 1]} />
           <meshBasicMaterial map={glowTex(i % 4 ? '#c58cff' : '#ffffff')} {...add} opacity={tw * (black - 0.3) / 0.7} fog={false} />
         </mesh>;
