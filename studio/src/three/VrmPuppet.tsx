@@ -665,6 +665,50 @@ function batteryDots(rig: Rig, b: {n: number; prev: number; t: number; color?: s
   });
 }
 
+const TRAIL_BONES: VRMHumanBoneName[] = ['leftHand', 'rightHand', 'leftFoot', 'rightFoot'];
+const TRAIL_N = 12;
+/** Her hands / feet over the last TRAIL_N frames, in her root's space (oldest first). */
+function trailPoints(rig: Rig, keys: VrmKey[], f: number, fps: number, camPos: V3): THREE.Vector3[][] {
+  const out: THREE.Vector3[][] = TRAIL_BONES.map(() => []);
+  for (let k = TRAIL_N; k >= 0; k--) {
+    const g = Math.max(keys[0].f, f - k);
+    applyState(rig, stateAt(keys, g, camPos), fps);
+    rig.root.updateMatrixWorld(true);
+    TRAIL_BONES.forEach((b, i) => {
+      const n = rig.vrm.humanoid.getRawBoneNode(b);
+      if (n) out[i].push(rig.root.worldToLocal(n.getWorldPosition(new THREE.Vector3())));
+    });
+  }
+  return out;
+}
+
+/** Glowing plankton ribbons along those paths: ultraviolet fading to nothing at the old end, a few cyan sparks; only
+ *  where the limb really travelled (a still hand leaves no trail). */
+const Trails: React.FC<{pts: THREE.Vector3[][]; root: THREE.Object3D; amount: number}> = ({pts, root, amount}) => {
+  root.updateMatrixWorld(true);
+  return (<>
+    {pts.map((line, i) => {
+      if (line.length < 3) return null;
+      const w = line.map((v) => v.clone().applyMatrix4(root.matrixWorld));
+      let len = 0;
+      for (let k = 1; k < w.length; k++) len += w[k].distanceTo(w[k - 1]);
+      if (len < 0.18) return null;
+      const curve = new THREE.CatmullRomCurve3(w);
+      const geo = new THREE.TubeGeometry(curve, 36, 0.012, 6, false);
+      const op = Math.min(1, (len - 0.18) / 0.4) * amount;
+      return (
+        <group key={i}>
+          <mesh geometry={geo} renderOrder={8}><meshBasicMaterial color="#9b6bff" transparent opacity={0.55 * op} blending={THREE.AdditiveBlending} depthWrite={false} toneMapped={false} /></mesh>
+          {w.slice(0, -1).map((v, k) => (k % 3 === 1 ? (
+            <mesh key={k} position={v} renderOrder={9}><sphereGeometry args={[0.008 + 0.006 * (k / w.length), 6, 4]} />
+              <meshBasicMaterial color="#9ff6ff" transparent opacity={0.7 * op * (k / w.length)} blending={THREE.AdditiveBlending} depthWrite={false} toneMapped={false} /></mesh>
+          ) : null))}
+        </group>
+      );
+    })}
+  </>);
+};
+
 /** World points of her body at the current pose (for guards: face / figure / hero boxes from bones, not sprites). */
 /** She stands / sits / lies on what is REALLY under her (toki 2026-10-24: "fällt aus dem Himmel, clippt überall rein";
  *  the scene probe measured her feet up to 0.55 m above and 0.39 m inside the surface): the key's floor height was a
@@ -756,9 +800,9 @@ export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
  *  outline: ink line width in model metres (0 = none, ~0.004 = a cel drawing). */
 export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: number; from?: number; camPos: V3;
   mouthKeys?: VrmMouthKey[]; lock?: number; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string;
-  step?: number; outline?: number; outlineColor?: string; keyLight?: number;
+  step?: number; outline?: number; outlineColor?: string; keyLight?: number; trails?: number; lampLight?: number;
   battery?: {n: number; prev: number; t: number; color?: string; boost?: number} | null}> = ({url, keys, mouthKeys = [], f: frame, fps, from = 0, camPos, lock = 0.6,
-  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030', battery = null, keyLight = 0}) => {
+  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030', battery = null, keyLight = 0, trails = 0, lampLight = 0}) => {
   const scene = useThree((s) => s.scene);
   const f = step > 1 ? frame - ((((frame - from) % step) + step) % step) : frame;
   if (!keys.length || f < keys[0].f) return null;
@@ -766,6 +810,9 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
   if (!rig) { cancelRender(new Error(`VRM not preloaded: ${url}`)); throw new Error('unreachable'); }
   styleMaterials(rig, materialStyle);
   ensureOutline(rig, outline, outlineColor);
+  // bioluminescent trails (K/DA FIRESTARTER study -> her world): where her hands / feet were over the last frames, in
+  // her own space - posed BEFORE the current frame, which poseVrm then sets up from scratch
+  const trail = trails > 0 ? trailPoints(rig, keys, f, fps, camPos) : null;
   const posed = poseVrm(url, keys, f, fps, Math.max(from, keys[0].f), camPos, lock, mouthKeys);
   groundOnSupport(posed, keys[keyAt(keys, f)], scene);
   clearSolids(posed, keys[keyAt(keys, f)], scene);
@@ -781,6 +828,17 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
   return (
     <group>
       <group userData={{noSupport: true}}>{dots}{worn}</group>
+      {trail ? <group userData={{noSupport: true}}><Trails pts={trail} root={posed.root} amount={trails} /></group> : null}
+      {/* her own ultraviolet from below (she IS the light, 灯闇) and the warm lamp as the one complementary rim from behind
+          (K/DA FIRESTARTER study: never a flat front fill) */}
+      {chest && lampLight > 0 ? (() => {
+        const fwd = new THREE.Vector3(camPos[0] - p.x, 0, camPos[2] - p.z).normalize();
+        const side = new THREE.Vector3(fwd.z, 0, -fwd.x);
+        return (<>
+          <pointLight position={[chest.x + fwd.x * 0.45, chest.y - 0.55, chest.z + fwd.z * 0.45]} color="#8f6bff" intensity={2.4 * lampLight} distance={2.4} decay={1.6} />
+          <pointLight position={[chest.x - fwd.x * 0.8 + side.x * 0.9, chest.y + 0.7, chest.z - fwd.z * 0.8 + side.z * 0.9]} color="#ffb36b" intensity={3.0 * lampLight} distance={2.8} decay={1.5} />
+        </>);
+      })() : null}
       {/* her contact shadow is NEVER ground: the support ray found it 3.5 cm above her floor, set her on it, the shadow
           rose with her - she climbed 3.5 cm a frame and fell back at every pose change (probe 2026-10-25; toki: "raymi
           bounced die ganze zeit ... als würde sie jedes mal von oben auf ihre position fallen") */}

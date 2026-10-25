@@ -199,11 +199,14 @@ def direct_camera(ckeys: list[dict], s: dict, f0: int, f1: int, idx: int) -> lis
     acts = s.get("actor") or []
     held = bool(acts) and all((a.get("speed") == 0) or "pose" in str(a.get("clip", "")) for a in acts)
     look = k0["look"]
+    if held:                                              # K/DA FIRESTARTER study: a held pose is a low-angle hero shot
+        floor = 0.42 if look[1] > 1.6 else 0.0               # (lens below her chest, looking up) that cranes up slowly - plinth or floor
+        p0 = [p0[0], max(look[1] - 0.6, floor + 0.74), p0[2]]  # never under her skirt (timeline under_skirt: >= 0.70 m)
     r = max(0.4, _m.dist(p0, look))
     ang = _m.atan2(p0[0] - look[0], p0[2] - look[2])
     side = 1 if idx % 2 == 0 else -1
     sweep = _m.radians(38 if held else 12) * side
-    dy = (0.32 if held else 0.08) * (1 if idx % 4 < 2 else -1)
+    dy = 0.38 if held else 0.08 * (1 if idx % 4 < 2 else -1)
     roll = (6.0 if held else 1.5) * side
     def at(t):
         a = ang + sweep * t
@@ -228,6 +231,30 @@ def director_clear(shots: list[dict]) -> None:
         k0, look = ks[0], ks[0]["look"]
         end = [round(lk + (p - lk) * 0.9, 4) for p, lk in zip(k0["pos"], look)]
         s["camera"] = [ks[0], {**ks[-1], "pos": end, "roll": 0, "path": None}]
+
+
+def swing_clear(shots: list[dict]) -> None:
+    """A beat snap (Film makeCamera: the lens turns 0.45 rad round what it looks at and stays) that would put the lens in
+    a prop or a wall is dropped (Watch Me 22: into the softbox)."""
+    import math as _m
+    for s in shots:
+        sw, ks = s.get("swing") or [], s.get("camera") or []
+        if not sw or not ks:
+            continue
+        keep, ang, lift = [], 0.0, 0.0
+        for f0, d in sw:
+            k = min(ks, key=lambda c: abs(c["f"] - f0))
+            a2, l2 = ang + d * 0.45, lift + (0.22 if len(keep) % 2 == 0 else -0.22)
+            vx, vz = k["pos"][0] - k["look"][0], k["pos"][2] - k["look"][2]
+            cs, sn = _m.cos(a2), _m.sin(a2)
+            q = [k["look"][0] + vx * cs + vz * sn, k["pos"][1] + l2, k["look"][2] - vx * sn + vz * cs]
+            if _path_hits(k["pos"], q, s.get("solids") or [], s.get("noLens") or [], steps=12):
+                continue
+            keep.append([f0, d]); ang, lift = a2, l2
+        if keep:
+            s["swing"] = keep
+        else:
+            s.pop("swing", None)
 
 
 def _path_hits(p0, p1, solids: list[dict], no_lens: list[dict], steps: int = 40) -> bool:
@@ -1147,6 +1174,11 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                     heavy = True
         if spec.get("film_look") and "post" not in opts:   # toki 2026-10-25 "sehr flach und cartoon / plastik": DoF on her, glow, vignette
             opts["post"] = {"dof_auto": 1, "glow": 1, "vignette": 0.42}
+        if spec.get("film_look"):                          # K/DA FIRESTARTER study in her world: plankton trails, deep-sea murk, her UV + the lamp
+            # toki 2026-10-25 "effekte passend benutzt ... nicht gleich alles voller leuchtspur": trails only where she
+            # really dances (a moving dance / spin clip), the murk soft, her UV + lamp light always
+            moving = [a for a in (s.get("actor") or []) if a.get("speed", 1) != 0 and re.search(r"dance|hip-hop|spin|kick|twist", str(a.get("clip", "")))]
+            opts.setdefault("trails", 1 if moving else 0); opts.setdefault("haze", 0.6); opts.setdefault("her_light", 1)
         if swing:
             extra["swing"] = swing
         shots.append({**extra, "id": s.get("id", f"s{i + 1}"), "from": max(0, fr(a)), "to": min(total, fr(b)), "set": st, "hero": hero,
@@ -1165,6 +1197,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                                  if (not so.get("opt") or opts.get(so["opt"])) and opts.get(so.get("unless", ""), True) is not False]
                                  + thing_solids(opts.get("things") or [], marks) if x["name"] not in (s.get("lens_near") or {})]})
     director_clear(shots)
+    swing_clear(shots)
     bridge_cuts(shots, int(spec.get("bridge", 0) or 0))
     chain_actors(shots, int(spec.get("chain", 0) or 0))
     if shots and shots[0]["from"] != 0:

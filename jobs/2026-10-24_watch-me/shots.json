@@ -1286,7 +1286,8 @@
    "opts": {
     "grade": "wm_paper",
     "lock": 0.45,
-    "bulb": true
+    "bulb": true,
+    "her_off": "a detail of HER: the tail barb in macro (the sting plant)"
    },
    "camera": [
     {
@@ -2167,7 +2168,8 @@
    "opts": {
     "grade": "wm_night",
     "lock": 0.45,
-    "fountain": 69.79
+    "fountain": 69.79,
+    "her_off": "macro: the puddle rising (her sea in the street)"
    },
    "camera": [
     {
@@ -2889,7 +2891,8 @@
       83.38,
       0.8
      ]
-    ]
+    ],
+    "her_off": "the billboard carries the beat: her poses on it"
    },
    "camera": [
     {
@@ -3733,7 +3736,7 @@
    "at": "line:43",
    "set": "exhibit",
    "why": "the gag turns: she is no statue any more",
-   "size": "side profile",
+   "size": "wide: empty plinth, guard, her",
    "opts": {
     "grade": "wm_gold",
     "lock": 0.45,
@@ -3751,16 +3754,16 @@
     {
      "at": 0,
      "pos": [
-      2.1,
-      1.8,
-      0.4
+      -1.68,
+      1.5,
+      4.52
      ],
      "look": [
-      0,
-      1.75,
-      0
+      1.3,
+      0.9,
+      1.15
      ],
-     "fov": 34
+     "fov": 44
     }
    ],
    "actor": [
@@ -3882,7 +3885,8 @@
    "size": "tail fills the lens",
    "opts": {
     "grade": "wm_gold",
-    "lock": 0.45
+    "lock": 0.45,
+    "her_off": "cover-cut: her tail fills the lens"
    },
    "camera": [
     {
@@ -4037,7 +4041,8 @@
      ],
      "hold": "flashlight",
      "search": true
-    }
+    },
+    "her_off": "macro: the plaque swap, then the painting"
    },
    "camera": [
     {

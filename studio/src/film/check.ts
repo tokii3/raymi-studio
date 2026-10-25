@@ -9,15 +9,21 @@ import {SUB, blockLayout, blockRotation, lensPlace, subOf} from './lyricLayout';
 
 export function makeCamera(shot: Shot, f: number, aspect: number, hits: number[], fps: number): THREE.PerspectiveCamera {
   const c = cameraAt(shot.camera, f, hits, shot.kick, fps);
-  // a swing on a sung word (timeline swing_words): the lens darts sideways and back in 12 frames, the look follows half
-  for (const [f0, dir] of shot.swing ?? []) {
+  // a snap on a sung word (timeline swing_words; K/DA FIRESTARTER study: "a new angle on each hit"): the lens whips
+  // round her to a NEW angle in 6 frames and stays there - the burst of the reference as camera moves, not cuts
+  let snap = 0, lift = 0;
+  (shot.swing ?? []).forEach(([f0, dir], i) => {
     const d = f - f0;
-    if (d < 0 || d >= 12) continue;
-    const vx = c.look[0] - c.pos[0], vz = c.look[2] - c.pos[2], h = Math.hypot(vx, vz) || 1;
-    const amp = 0.26 * dir * Math.sin((Math.PI * d) / 12);
-    c.pos = [c.pos[0] + (vz / h) * amp, c.pos[1], c.pos[2] - (vx / h) * amp];
-    c.look = [c.look[0] + (vz / h) * amp * 0.5, c.look[1], c.look[2] - (vx / h) * amp * 0.5];
-    c.roll += 4 * dir * Math.sin((Math.PI * d) / 12);
+    if (d < 0) return;
+    const e = d >= 6 ? 1 : 0.5 - 0.5 * Math.cos((Math.PI * d) / 6);
+    snap += dir * 0.45 * e;
+    lift += (i % 2 ? -0.22 : 0.22) * e;
+  });
+  if (snap || lift) {
+    const vx = c.pos[0] - c.look[0], vz = c.pos[2] - c.look[2];
+    const cs = Math.cos(snap), sn = Math.sin(snap);
+    c.pos = [c.look[0] + vx * cs + vz * sn, c.pos[1] + lift, c.look[2] - vx * sn + vz * cs];
+    c.roll += snap * 8;
   }
   const cam = new THREE.PerspectiveCamera(fovFor(c.fov, aspect), aspect, 0.05, 200);
   cam.position.set(...c.pos);
@@ -1038,13 +1044,20 @@ export function creatureFaults(props: FilmProps): {shot: string; frame: number; 
   for (const s of props.shots) {
     const sal = salmonOf(s);
     if (!sal?.pos || sal.off) continue;
-    let ok = 0, n = 0, bad = s.from;
+    let ok = 0, n = 0, bad = s.from, front = 0, frontAt = s.from;
+    const herP = new THREE.Vector3(...((s.actor?.[0]?.pos as V3 | undefined) ?? [0, 0, 0]));
     for (let f = s.from; f < s.to; f += 4) {
-      const n3 = new THREE.Vector3(...sal.pos).project(makeCamera(s, f, aspect, [], props.fps));
+      const cam = makeCamera(s, f, aspect, [], props.fps);
+      const n3 = new THREE.Vector3(...sal.pos).project(cam);
       n++;
       if (n3.z < 1 && Math.abs(n3.x) < 0.85 && Math.abs(n3.y) < 0.85) ok++; else bad = f;
+      // in FRONT of her (nearer the lens and over her figure): the big guard hid her (Watch Me 2:16, MV run 63)
+      const sx = (n3.x + 1) / 2, sy = (1 - n3.y) / 2, r = (sal.scale ?? (sal.hold === 'flashlight' ? 1.8 : 1)) * 0.2 / Math.max(0.3, cam.position.distanceTo(new THREE.Vector3(...sal.pos)));
+      const nearer = cam.position.distanceTo(new THREE.Vector3(...sal.pos)) < cam.position.distanceTo(herP) - 0.2;
+      if (nearer && n3.z < 1 && actorCells(s, f, cam).some((b) => sx + r > b[0] && sx - r < b[2] && sy + r > b[1] && sy - r < b[3])) { front++; frontAt = f; }
     }
     if (n && ok / n < 0.5) out.push({shot: s.id, frame: bad, why: `Salmon on screen in ${Math.round((100 * ok) / n)} % of the shot`});
+    else if (n && front / n > 0.25) out.push({shot: s.id, frame: frontAt, why: `Salmon stands in front of her in ${Math.round((100 * front) / n)} % of the shot`});
   }
   return out;
 }
@@ -1072,7 +1085,7 @@ export function placeCreature(props: FilmProps, index: number): V3 | null {
       const n = pt.clone().project(cam);
       if (!(n.z < 1 && Math.abs(n.x) < 0.8 && Math.abs(n.y) < 0.8)) return false;
       const sx = (n.x + 1) / 2, sy = (1 - n.y) / 2;
-      return actorCells(s, f, cam).every((b) => sx < b[0] - 0.04 || sx > b[2] + 0.04 || sy < b[1] - 0.04 || sy > b[3] + 0.04);
+      return actorCells(s, f, cam).every((b) => sx < b[0] - 0.08 || sx > b[2] + 0.08 || sy < b[1] - 0.08 || sy > b[3] + 0.08);
     }).length >= 4;                                             // a moving lens may lose him for a moment (guard: >= 50 %)
     if (okAll) return [Number(pt.x.toFixed(2)), Number(pt.y.toFixed(2)), Number(pt.z.toFixed(2))];
   }
@@ -1116,4 +1129,27 @@ export function fillFrame(props: FilmProps, index: number, maxH = 1.5): number |
   };
   for (let k = Math.max(0.5, Math.min(0.95, maxH / hNow)); k <= 0.95; k += 0.05) if (headIn(k)) return Number(k.toFixed(2));
   return null;
+}
+
+
+/** She is the film (toki 2026-10-25: "es dreht sich alles um sie"): her chest inside the frame for at least half of
+ *  every shot she plays in - Watch Me 51 framed the empty plinth while she stood behind the lens (MV run 63, 2:16).
+ *  opts.her_off = "<why>" for a shot meant without her. */
+export function herOffFaults(props: FilmProps): {shot: string; frame: number; why: string}[] {
+  const out: {shot: string; frame: number; why: string}[] = [];
+  const aspect = props.width / props.height;
+  for (const s of props.shots) {
+    if (!s.actor?.length || s.opts.her_off) continue;
+    let ok = 0, n = 0, bad = s.from;
+    for (let f = s.from; f < s.to; f += 4) {
+      const k = s.actor.reduce((p, q) => (q.f <= f ? q : p), s.actor[0]);
+      const cam = makeCamera(s, f, aspect, [], props.fps);
+      // her head OR her chest in the frame (a face close-up leaves the chest out on purpose)
+      const inF = (h: number) => { const c = new THREE.Vector3(k.pos[0], k.pos[1] + (k.height ?? 1.55) * h, k.pos[2]).project(cam); return c.z < 1 && Math.abs(c.x) < 0.95 && Math.abs(c.y) < 0.95; };
+      n++;
+      if (inF(0.92) || inF(0.7)) ok++; else bad = f;
+    }
+    if (n && ok / n < 0.5) out.push({shot: s.id, frame: bad, why: `she is in the picture ${Math.round((100 * ok) / n)} % of the shot`});
+  }
+  return out;
 }

@@ -14,6 +14,8 @@
 //   tail_lens: t              her tail (thin, the barb at its end) sweeps right through the lens - a cover moment
 //   barb_lens: t              the barb crosses one corner of the lens (a plant, not a cover)
 //   tail_twitch: t            the barb twitches up into the lower corner for half a second
+//   haze: 0..1                deep-sea murk (K/DA FIRESTARTER study, in her world): soft water haze in front of and behind
+//                             her + marine snow drifting down - depth without walls (haze_c: the water's colour)
 //   wet: 0..1                 the floor is a wet mirror (a set passes its own default; 0 = dry)
 //   fold: t                   the centerfold: a magazine page behind her folds open and down onto the floor over 0.8 s
 //                             (`fold_title`, "WATCH ME") - the cover becomes the sidewalk (Watch Me 25)
@@ -281,6 +283,37 @@ const Centerfold: React.FC<{d: number; her: P3; camPos: P3; title: string; fps: 
   );
 };
 
+// ---------------------------------------------------------------- deep-sea murk and marine snow
+const Haze: React.FC<{v: number; her: P3; camPos: P3; f: number; c: string}> = ({v, her, camPos, f, c}) => {
+  const toCam = new THREE.Vector3(camPos[0] - her[0], 0, camPos[2] - her[2]);
+  const dist = toCam.length() || 1;
+  toCam.normalize();
+  const side = new THREE.Vector3(toCam.z, 0, -toCam.x);
+  const yaw = Math.atan2(toCam.x, toCam.z);
+  // layers: two in front of her (between her and the lens, off to the sides), three behind her
+  const layers: [number, number, number, number][] = [[0.45, -0.9, 1.1, 2.2], [0.6, 1.0, 0.7, 1.8], [-0.8, -1.2, 1.4, 3.4], [-1.6, 1.4, 0.9, 4.2], [-2.6, 0, 1.8, 6]];
+  return (
+    <group>
+      {layers.map(([d, s, y, size], i) => {
+        const along = d > 0 ? d * dist : d;                 // in front: a share of the way to the lens; behind: metres
+        const drift = 0.25 * Math.sin(f / (90 + i * 23) + i);
+        const pos = new THREE.Vector3(her[0], her[1] + y, her[2]).addScaledVector(toCam, along).addScaledVector(side, s + drift);
+        return <mesh key={i} position={pos} rotation={[0, yaw, 0]} renderOrder={d > 0 ? 9 : 1}>
+          <planeGeometry args={[size * 1.6, size]} />
+          <meshBasicMaterial map={blobTexture(c)} transparent opacity={(d > 0 ? 0.1 : 0.16) * v} depthWrite={false} toneMapped={false} />
+        </mesh>;
+      })}
+      {Array.from({length: Math.round(90 * v)}, (_, i) => {
+        const t = ((f / 600) * (0.6 + rnd(i * 1.3)) + rnd(i * 2.9)) % 1;   // slow fall, each its own pace
+        return <mesh key={`sn${i}`} position={[her[0] + (rnd(i * 3.7) - 0.5) * 4 + 0.08 * Math.sin(f / 40 + i), her[1] + 3 - t * 3.2, her[2] + (rnd(i * 5.1) - 0.5) * 4]} renderOrder={6}>
+          <sphereGeometry args={[0.006 + rnd(i) * 0.008, 5, 4]} />
+          <meshBasicMaterial color="#d6e6ff" transparent opacity={0.55 * Math.sin(Math.PI * t)} depthWrite={false} toneMapped={false} />
+        </mesh>;
+      })}
+    </group>
+  );
+};
+
 /** Everything of this file a shot asks for. `her` = her spot; `frozenF` = the frame the set's time stopped at (freeze). */
 export const SetFx: React.FC<{opts: Record<string, unknown>; f: number; fps: number; her: P3; camPos: P3; plain?: boolean}> = ({opts, f, fps, her, camPos, plain}) => {
   const rain = Math.max(0, Math.min(1, runTo(0, opts.rain, 0.4, f)));
@@ -293,6 +326,7 @@ export const SetFx: React.FC<{opts: Record<string, unknown>; f: number; fps: num
   return (
     <group userData={{noSupport: true}}>
       {!plain && num(opts.wet) > 0 ? <WetFloor size={[16, 16]} pos={[her[0], (opts.wet_y as number | undefined) ?? 0.004, her[2]]} amount={num(opts.wet)} tint={String(opts.wet_tint ?? '#9aa8c8')} /> : null}
+      {num(opts.haze) > 0 ? <Haze v={num(opts.haze)} her={her} camPos={camPos} f={f} c={String(opts.haze_c ?? '#5b5aa8')} /> : null}
       {rain > 0.01 ? <Rain v={rain} her={her} f={f} wind={wind} dir={dir} /> : null}
       {wind > 0.01 ? <Wind v={wind} her={her} f={f} dir={dir} /> : null}
       <Splash d={since(opts.splash, f)} her={her} />

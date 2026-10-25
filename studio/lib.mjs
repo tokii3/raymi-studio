@@ -64,7 +64,7 @@ export async function guardCutEdges(props, range) {
   const out = path.join(os.tmpdir(), `raymi-check-${process.pid}.mjs`);
   await build({entryPoints: [path.join(here, 'src/film/check.ts')], bundle: true, format: 'esm', platform: 'node',
     outfile: out, logLevel: 'error'});
-  const {checkFilm, lyricsOutOfFrame, faceCrops, setTextCuts, lensInside, overlayOnFace, solidFaults, heroFaults, creatureFaults} = await import(pathToFileURL(out).href);
+  const {checkFilm, lyricsOutOfFrame, faceCrops, setTextCuts, lensInside, overlayOnFace, solidFaults, heroFaults, creatureFaults, herOffFaults} = await import(pathToFileURL(out).href);
   // VRM renders have a real volumetric silhouette; sprite alpha-edge/face-box checks do not apply to that actor.
   // Keep every scene, lyric, lens, and hero guard active for the same film data.
   const faults = props.vrm ? [] : checkFilm(props, range);
@@ -98,11 +98,15 @@ export async function guardCutEdges(props, range) {
   if (hero.length) {         // the main element unreadable at phone size (toki 2026-10-19: the crown) - or a written why_small
     throw new Error(`REFUSED: the main element is not readable at phone size: ${hero.map((x) => `${x.shot} f${x.frame} ${x.why}`).join('; ')} - frame it bigger, or write why_small in the shot's hero`);
   }
+  const off = herOffFaults(props);
+  if (off.length) {
+    throw new Error(`REFUSED: Raymi is out of the picture: ${off.map((x) => `${x.shot} f${x.frame} ${x.why}`).join('; ')} - frame her, or opts.her_off with a reason`);
+  }
   const cre = creatureFaults(props);
   if (cre.length) {
     throw new Error(`REFUSED: a scripted creature is out of the picture: ${cre.map((x) => `${x.shot} f${x.frame} ${x.why}`).join('; ')} - node guard.mjs <job> --place-creatures, or salmon.off with a reason`);
   }
-  console.log('guards: Salmon in the picture, main element readable, cut edges ok, face never sliced, lyrics inside the frame and off her face ok, set texts whole, lens in a real place, no prop in the lens or before her face');
+  console.log('guards: Raymi in every shot, Salmon in the picture, main element readable, cut edges ok, face never sliced, lyrics inside the frame and off her face ok, set texts whole, lens in a real place, no prop in the lens or before her face');
 }
 
 export async function bundleStudio(pub) {
