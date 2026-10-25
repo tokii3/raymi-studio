@@ -12,6 +12,12 @@ Measured 2026-10-25 (yt-dlp): UOATu-g-Us0 = "ryo(supercell) - Love is War (Mwk R
 2016-05-03, ~396k views. Description: "Dance Remix", free download (toneden) + instrumental offered by Mwk; credits
 Music & Lyrics ryo (supercell), Remix Mwk, Guitar JUDAs; original nicovideo sm2397344 (Hatsune Miku, 2007/08).
 
+## Standing decision (toki 2026-10-25)
+- "ich möchte aber auch keine lyrics on screen mehr. nur für lip cync ." -> NO lyrics on screen in this video (no
+  lyric objects, no subtitles, no romaji / English). The words are measured only so her mouth sings by sound.
+  Scope beyond this video (all future videos?) -> asked, see toki.md. The meaning of the song must now be carried
+  by picture, acting and effects alone (stronger need for C1-C5).
+
 ## Core (her phrases)
 - "immersive ... effekte die einen reinziehen" - the viewer is pulled INTO it, not watching from the sofa
 - "aggressiv, raw ... intense ... einen umhauen" - force, attack, roughness; moments that hit like a blow
