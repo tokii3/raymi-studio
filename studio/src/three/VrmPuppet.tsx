@@ -780,9 +780,11 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
   const worn = wornProps(posed.vrm, curKey.props, facing, (curKey.height ?? DEFAULT_HEIGHT) / DEFAULT_HEIGHT);
   return (
     <group>
-      {dots}
-      {worn}
-      <mesh position={[p.x, p.y + 0.035, p.z]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2}>
+      <group userData={{noSupport: true}}>{dots}{worn}</group>
+      {/* her contact shadow is NEVER ground: the support ray found it 3.5 cm above her floor, set her on it, the shadow
+          rose with her - she climbed 3.5 cm a frame and fell back at every pose change (probe 2026-10-25; toki: "raymi
+          bounced die ganze zeit ... als würde sie jedes mal von oben auf ihre position fallen") */}
+      <mesh position={[p.x, p.y + 0.035, p.z]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={2} userData={{noSupport: true}}>
         <planeGeometry args={[w * 1.6, w * 0.9]} />
         <meshBasicMaterial map={blobTexture(shadow)} transparent depthWrite={false} opacity={0.95} toneMapped={false} />
       </mesh>

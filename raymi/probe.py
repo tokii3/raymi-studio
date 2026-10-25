@@ -42,7 +42,7 @@ SLIDE = 0.012     # m per frame a planted foot may drift (planted = within PLANT
 PLANT = 0.035
 MOTION = ("hips", "head", "leftHand", "rightHand", "leftFoot", "rightFoot")
 CLASSES = ("limb_in", "self_in", "hair_in", "leg_cross", "text_in", "lens_in", "near_cut", "head_cut", "float", "sink",
-           "drop", "pop", "jerk", "slide", "thing_in", "thing_air")
+           "drop", "pop", "jerk", "slide", "thing_in", "thing_air", "climb")
 
 
 def classify(report: dict, airborne: set[str] | None = None, moving: set[str] | None = None,
@@ -96,6 +96,7 @@ def classify(report: dict, airborne: set[str] | None = None, moving: set[str] | 
             add(x["cls"], shot, x["depth"], x["what"], r, x.get("at"))
         prev = r
     motion(report, add, airborne, moving, seated)
+    climb(report, add)
     return {c: {s: {**v, "detail": dict(v["detail"])} for s, v in shots.items()} for c, shots in out.items()}
 
 
@@ -112,6 +113,22 @@ def _shot_runs(rows: list[dict]) -> list[list[dict]]:
     if cur:
         runs.append(cur)
     return runs
+
+
+def climb(report: dict, add) -> None:
+    """climb (2026-10-25, Watch Me run 62): the support under her standing foot RISES frame after frame while she stays on
+    her spot - she stands on something that moves with her (her own contact shadow was it: she climbed 3.5 cm a frame
+    and fell back at every pose change; toki: "als würde sie jedes mal von oben auf ihre position fallen")."""
+    for run in _shot_runs(report["rows"]):
+        up = 0
+        for a, b in zip(run, run[1:]):
+            sa, sb = a["her"].get("support"), b["her"].get("support")
+            if sa is None or sb is None:
+                up = 0
+                continue
+            up = up + 1 if sb - sa > 0.015 else 0
+            if up >= 3:
+                add("climb", a.get("shot"), round(sb, 3), "the support under her foot rises with her", b)
 
 
 def motion(report: dict, add, airborne: set[str], moving: set[str], seated: set[str]) -> None:
