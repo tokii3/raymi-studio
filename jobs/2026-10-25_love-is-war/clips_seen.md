@@ -46,3 +46,17 @@ angry-point / pointing at 10 moments each before the script, or key poses in vrm
   BACKWARDS: rotY 'away' turns them to the lens; face_lens does not apply to them
 - roar 1.9 s bends her so low that a lens at her eye height sees only the top of her head - use 1.0 s or a higher lens
 - face_lens works for the real clips (yelling, hook-punch, casting-spell, swing-backflip) after the local-space fix
+
+## Clip sheet round 2 (2026-10-25, the 9 treatment v3 clips, face_lens) - seen
+- wiping-sweat: 1.0 s the hand at her forehead - the back-of-hand rain wipe (116.8)
+- climbing-up-wall, climbing-to-top, pulling-up-to-a-ledge: reaching up with one / both arms, a knee raised - the rock
+  and tower climb (88.6-94, 120.4-133.9); they lift off her contact shadow (a wall is needed behind her)
+- climbing-ladder: crouched, floating above her shadow - only against a ladder / wall
+- jumping-over-obstacle-one-hand: 0.35-1.0 s a low diagonal vault lean - the rail vault (130.2)
+- pull-heavy-object: arms forward, leaning back - the lamp pull (146-177)
+- treading-water: arms out, upright - the surface (31.7-62)
+- swimming-underwater: horizontal on the floor - only lifted into the water (ground false)
+
+## Two-tone test (TwoTone.tsx, boards/tests/) - seen
+The set goes paper-white / ink-black for the hit frames, she keeps her own values: works (cry + beam crossing). Flat
+3D planes of the old night sea read as big white slabs - the painted 2D layers of the build will carry it better.
