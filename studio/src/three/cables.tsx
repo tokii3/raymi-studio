@@ -1,7 +1,7 @@
 // Undersea data cables on the sea floor with light pulses running through them (Love is War idea C, 2026-10-25;
 // reusable in any floor set). Real cables are armoured black lines across the abyss - here a pulse of light runs
 // along them on a beat: the signal she can feel with her electro-sense (canvas T02). Built, never generated.
-// opts.cables = n (number of cables, 0 = none) | opts.cable_seed; opts.cable_pulse = [frame, ...] (song seconds in
+// opts.cable_r = tube radius (m, default 0.11); opts.cables = n (number of cables, 0 = none) | opts.cable_seed; opts.cable_pulse = [frame, ...] (song seconds in
 // shots.json) or 'beats'; opts.cable_speed (m/s, default 40); opts.cable_glow 0..1 (the whole line lit, a held moment)
 import React from 'react';
 import * as THREE from 'three';
@@ -37,12 +37,12 @@ export const SeaCables: React.FC<{opts: Record<string, unknown>; f: number; fps:
         const L = c.getLength();
         return (
           <group key={i}>
-            <mesh material={skin} castShadow receiveShadow><tubeGeometry args={[c, 160, 0.11, 10, false]} /></mesh>
+            <mesh material={skin} castShadow receiveShadow><tubeGeometry args={[c, 160, Number(opts.cable_r ?? 0.11), 10, false]} /></mesh>
             {/* armour joints every few metres: the cable reads as a real thing, not a line */}
             {Array.from({length: Math.floor(L / 3)}, (_, k) => {
               const u = (k + 0.5) / Math.floor(L / 3), p = c.getPointAt(u), tg = c.getTangentAt(u);
               const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), tg);
-              return <mesh key={k} position={p} quaternion={q} material={toon('#262836')}><cylinderGeometry args={[0.16, 0.16, 0.22, 12]} /></mesh>;
+              return <mesh key={k} position={p} quaternion={q} material={glow > 0.3 ? skin : toon('#262836')}><cylinderGeometry args={[0.16, 0.16, 0.22, 12]} /></mesh>;
             })}
             {pulses.map((t, k) => {
               const d = (f - t) / fps;                      // seconds since the pulse left the far end

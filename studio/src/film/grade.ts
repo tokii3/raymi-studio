@@ -48,6 +48,14 @@ export const TONES: Record<string, Tone & {lyric: LyricTone}> = {
     lyric: {color: '#f2f6ff', accent: '#ff3d7f', sub: '#cfd8f4', shadow: 'rgba(10,6,36,0.86)'}},
   wm_gold: {filter: 'contrast(1.14) saturate(1.1) brightness(0.95)', top: '#ffd08a', bottom: '#2a0a1e', split: 0.34, vignette: 0.64,
     lyric: {color: '#fff6e6', accent: '#ff3d7f', sub: '#f2dcc0', shadow: 'rgba(36,8,20,0.86)'}},
+  // Love is War (2026-10-25): the boards' night grades (own / closing, saturate 1.15-1.28) turned her pale lavender skin
+  // saturated blue-violet (look-critic ideas 1: "she looks like a recolour", rule 9). These keep saturation at 1.0 and
+  // let the LIGHTS carry the colour (her glow, the beam, the bolt), the skin stays as modelled.
+  war_night: {filter: 'contrast(1.18) saturate(1.0) brightness(0.96)', top: '#c4ccff', bottom: '#0d0a22', split: 0.26, vignette: 0.6,
+    lyric: {color: '#f3f1ff', accent: '#ffd9a0', sub: '#d9dcf0', shadow: 'rgba(8,6,28,0.86)'}},
+  // the ink world: near-monochrome paper and ink, one red, her violet - contrast high, colour low
+  war_ink: {filter: 'contrast(1.25) saturate(0.85) brightness(0.98)', top: '#fff4ea', bottom: '#0a0810', split: 0.2, vignette: 0.5,
+    lyric: {color: '#0a0810', accent: '#c81f37', sub: '#3a3640', shadow: 'rgba(240,232,220,0.8)'}},
   // VRM Firestarter look test: retain the deep-violet setting while keeping highlights on pale MToon materials.
   vrm_fire: {filter: 'contrast(1.08) saturate(1.08) brightness(0.92)', top: '#d39a82', bottom: '#180d31', split: 0.36, vignette: 0.62,
     lyric: {color: '#f3ecff', accent: '#ffc46b', sub: '#d8d2e8', shadow: 'rgba(12,5,30,0.84)'}},

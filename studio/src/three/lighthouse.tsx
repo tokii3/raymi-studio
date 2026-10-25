@@ -114,12 +114,22 @@ export const Lightning: React.FC<{at: unknown; pos?: [number, number][]; f: numb
           {pts.slice(1).map((p, i) => {
             const a = pts[i], m = a.clone().add(p).multiplyScalar(0.5), L = a.distanceTo(p);
             const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), p.clone().sub(a).normalize());
+            const thick = 0.45 * (1 - i / pts.length) + 0.12;
             return <group key={i}>
-              <mesh position={m} quaternion={q} scale={[0.07, L, 0.07]} renderOrder={12}><boxGeometry args={[1, 1, 1]} />
-                <meshBasicMaterial color="#f4ecff" {...add} opacity={e} fog={false} /></mesh>
-              <mesh position={m} quaternion={q} scale={[0.7, L, 0.7]} renderOrder={12}><boxGeometry args={[1, 1, 1]} />
-                <meshBasicMaterial color="#9a6bff" {...add} opacity={0.18 * e} fog={false} /></mesh>
+              <mesh position={m} quaternion={q} scale={[thick, L, thick]} renderOrder={12}><boxGeometry args={[1, 1, 1]} />
+                <meshBasicMaterial color="#ffffff" {...add} opacity={e} fog={false} /></mesh>
+              <mesh position={m} quaternion={q} scale={[thick * 5, L, thick * 5]} renderOrder={12}><boxGeometry args={[1, 1, 1]} />
+                <meshBasicMaterial color="#9a6bff" {...add} opacity={0.4 * e} fog={false} /></mesh>
             </group>;
+          })}
+          {/* the fork: a second, thinner branch leaving the trunk a third of the way down */}
+          {pts.slice(9, 18).map((p, i) => {
+            const a = i ? pts[9 + i - 1].clone().add(new THREE.Vector3((i - 1) * 1.4, 0, 0)) : pts[8];
+            const b = p.clone().add(new THREE.Vector3(i * 1.4, 0, 0));
+            const mm = a.clone().add(b).multiplyScalar(0.5), LL = a.distanceTo(b);
+            const qq = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), b.clone().sub(a).normalize());
+            return <mesh key={`fk${i}`} position={mm} quaternion={qq} scale={[0.1, LL, 0.1]} renderOrder={12}><boxGeometry args={[1, 1, 1]} />
+              <meshBasicMaterial color="#f4ecff" {...add} opacity={0.8 * e} fog={false} /></mesh>;
           })}
           <mesh scale={150} renderOrder={-6}><sphereGeometry args={[1, 24, 16]} />
             <meshBasicMaterial color="#b9b4ff" {...add} side={THREE.BackSide} opacity={0.16 * e} fog={false} /></mesh>

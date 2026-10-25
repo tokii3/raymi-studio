@@ -549,8 +549,14 @@ function applyState(rig: Rig, s: State, fps: number) {
   root.position.set(0, 0, 0); root.rotation.set(0, 0, 0); root.scale.setScalar(1); ground.position.set(0, 0, 0);
   root.updateMatrixWorld(true);
   ground.position.y = rig.restLow - lowestFoot(vrm) - rig.floor;
+  // faceLens: measure the clip's hip turn on the unplaced rig and take it back out of her facing
+  let hipTurn = 0;
+  if (s.clipCur.faceLens && s.motion) {
+    const q = vrm.humanoid.getNormalizedBoneNode('hips')?.getWorldQuaternion(new THREE.Quaternion());
+    if (q) { const fw = new THREE.Vector3(0, 0, 1).applyQuaternion(q); hipTurn = Math.atan2(fw.x, fw.z); }
+  }
   root.position.set(...s.pos);
-  root.rotation.set(0, s.yaw + (s.act === 'turn' ? Math.PI * ease('out', s.local / 8) : 0), s.rollZ, 'YXZ');
+  root.rotation.set(0, s.yaw - hipTurn + (s.act === 'turn' ? Math.PI * ease('out', s.local / 8) : 0), s.rollZ, 'YXZ');
   const size = (s.height / rig.natural) * s.squash;
   const wide = 1 + 0.3 * s.flat;
   root.scale.set(size * wide, size * (s.act === 'hop' && s.local < 10 ? 1.06 : 1) * (1 - 0.86 * s.flat), size * wide);

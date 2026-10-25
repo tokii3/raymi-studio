@@ -87,7 +87,7 @@ LYRIC_KINDS = {"sign", "float", "stamp", "glass", "card", "ticker", "firework"}
 LYRIC_MATERIALS = {None, "fog", "engraved", "screen", "print", "felt", "light"}
 TRANSITIONS = {"cut", "bubbles", "ink", "whip", "flash", "pass", "rewind", "spin", "zoom",
                "cover"}   # cover: her palm / hair / tail or a frame bar fills the lens, the cut hides inside (Watch Me)
-GRADES = {"day", "closing", "night", "own", "warm", "clean", "ember", "vrm_fire", "pov", "pov_warm", "wm_paper", "wm_night", "wm_gold"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
+GRADES = {"day", "closing", "night", "own", "warm", "clean", "ember", "vrm_fire", "pov", "pov_warm", "wm_paper", "wm_night", "wm_gold", "war_night", "war_ink"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
 LYRIC_STYLES = {"v1", "v2"}
 # a main element: worn on her head (crown, hat), her face, a lyric word, a prop box in the set (check.ts heroBox)
 HERO_KINDS = {"worn", "face", "word", "prop"}
@@ -883,7 +883,7 @@ def clip_names() -> set[str]:
     return set(json.loads(p.read_text(encoding="utf-8"))["clips"]) if p.exists() else set()
 
 
-FX_KINDS = {"duo", "speed", "impact", "halftone", "spread",
+FX_KINDS = {"duo", "speed", "impact", "halftone", "spread", "slash", "melody", "ring",
             # the POV layer (studio/src/film/PovFx.tsx): on the lens / the glass in front of it
             "cover", "pov_hand", "ripple", "algae", "freeze", "polaroid", "stamp"}
 FX_TIMES = {"taps", "big", "write0", "write1"}   # fx fields in song seconds -> film frames
@@ -943,6 +943,8 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
         for opt in ("motion", "motionMix", "expr", "once", "restart", "aware"):
             if opt in r:
                 key[opt] = r[opt]
+        if r.get("face_lens"):                             # the clip's own hip turn is taken out: her chest faces the lens
+            key["faceLens"] = True
         if "look" in r:                                    # "lens" | null | a mark / [x, y, z] she looks at
             key["look"] = r["look"] if r["look"] in ("lens", None) else _v3(r["look"], marks, errors, ktag)
         for j, w in enumerate(r.get("props", [])):         # things on her bones (studio/src/three/wearables.tsx)
@@ -964,7 +966,20 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
     return out
 
 
-def compile_fx(s: dict, a: float, b: float, fr, errors: list[str], tag: str) -> list[dict]:
+def melody_notes_fx(smap: dict, t0: float, t1: float, voice: str = "vocal") -> list[list[float]]:
+    """The measured notes of the sung (or lead) line between song seconds t0..t1 as [seconds after t0, midi] - the
+    `melody` 2D layer draws them (Love is War 2026-10-25, toki: "on beat / melodie effekte"). Octave slips (a note an
+    octave away from both neighbours) are folded back, see 1_DOSSIER: pyin slips ~10 notes per song."""
+    ns = [n for n in ((smap.get("melody") or {}).get(voice) or {}).get("notes", []) if t0 <= n["t0"] < t1]
+    ms = [n["midi"] for n in ns]
+    for i in range(1, len(ms) - 1):
+        for d in (12, -12):
+            if abs(ms[i] - d - ms[i - 1]) < 4 and abs(ms[i] - d - ms[i + 1]) < 4:
+                ms[i] -= d
+    return [[round(n["t0"] - t0, 3), round(m, 1)] for n, m in zip(ns, ms)]
+
+
+def compile_fx(s: dict, a: float, b: float, fr, errors: list[str], tag: str, smap: dict | None = None) -> list[dict]:
     out = []
     for k, x in enumerate(s.get("fx", [])):
         if x.get("kind") not in FX_KINDS:
@@ -974,6 +989,13 @@ def compile_fx(s: dict, a: float, b: float, fr, errors: list[str], tag: str) -> 
         for kk in FX_TIMES & set(item):                    # taps / write times: song seconds like the shot times
             v = item[kk]
             item[kk] = [fr(float(t)) for t in v] if isinstance(v, list) else fr(float(v))
+        if x["kind"] == "melody":                          # notes from the song map: `src` [t0, t1] song seconds (default the shot)
+            src = x.get("src") or [a, b]
+            notes = melody_notes_fx(smap or {}, float(src[0]), float(src[1]), x.get("voice", "vocal"))
+            if not notes:
+                errors.append(f"{tag} fx {k + 1}: no measured {x.get('voice', 'vocal')} notes in {src} (song_map melody)")
+            item = {kk: v for kk, v in item.items() if kk not in ("src", "voice")}
+            item["notes"] = [[round(dt * FPS, 1), m] for dt, m in notes]   # frames after the layer starts, midi
         out.append({**item, "from": fr(_key_time(x.get("at", 0), a, b)), "to": fr(_key_time(x.get("to", "end"), a, b)) + 1})
     return out
 
@@ -1350,7 +1372,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
             if opt in s:
                 extra[opt] = s[opt]
         if s.get("fx"):
-            extra["fx"] = compile_fx(s, a, b, fr, errors, tag)
+            extra["fx"] = compile_fx(s, a, b, fr, errors, tag, smap)
             for x in extra["fx"]:                          # a stamp word is screen text in her heavy weight
                 if x.get("kind") == "stamp" and x.get("text"):
                     screen_texts.append(str(x["text"]))

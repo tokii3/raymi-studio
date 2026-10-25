@@ -27,3 +27,13 @@ lyrics on screen), 1_DOSSIER.md, 2_IDEAS.md, clips_seen.md, reviews/ideas_brief-
 Ask toki first (sent this turn): round 3 now (camera-director + fx-designer design the 3 hardest frames per idea,
 fix classes 2-5 in the parts), or pick a direction from the text + reference pairs. Nothing visual goes to her
 without `raymi gate` PASS (deliveries/... GATE_FAIL.json now).
+
+## Round 3 (toki 2026-10-25 "mach runde 3 der boards: nahe, harte bilder mitten im treffer, mit kamera- und effekt-agenten, die fehlerklassen in den bauteilen fixen") - STOPPED at the usage limit
+Done: makers wrote jobs/2026-10-25_love-is-war/6_CAMERA_boards3.md + 10_FX_boards3.md (9 close mid-hit frames).
+Parts fixed / built (untested in the cloud, typecheck only there): grades war_night / war_ink (skin as modelled),
+actor `face_lens` (clip hip yaw cancelled - roar), Fx2D `slash` (2D brush hit), `melody` (timeline fills notes from
+song_map.melody via fx `src` [t0, t1]; octave slips folded), `ring` (ping at the lens), fat forked bolt, cable_r.
+NEXT: translate the two drafts into jobs/2026-10-25_love-is-war-boards/shots.json (nightsea frames: she is chest-deep
+at y -0.85, so subtract ~0.85 from the camera-director's standing heights; A3 she stands on the lighthouse gallery;
+B2 adds a second still at 63.5 s for the melody line), push stills (round 3), look, refs pair, brief-keeper +
+look-critic, gate, then toki.

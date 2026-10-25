@@ -19,6 +19,15 @@ export type Fx =
   | {kind: 'speed'; from: number; to: number; mode?: 'radial' | 'flow'; angle?: number; color?: string; density?: number; opacity?: number}
   | {kind: 'impact'; from: number; to: number}
   | {kind: 'halftone'; from: number; to: number; color?: string; size?: number; opacity?: number}
+  // a brush slash ripping the frame on a hit (Love is War 2026-10-25: a slash planted in the 3D set read as a small
+  // leaf twice - a slash is a graphic hit on the picture, refs hsr-hope-feathers@108, ado-usseewa@98)
+  | {kind: 'slash'; from: number; to: number; angle?: number; y?: number; width?: number; color?: string; draw?: number; seed?: number}
+  // the sung melody drawn as it is sung (timeline.py fills `notes` = [frames after `from`, midi] from song_map.melody):
+  // a thick stroke that climbs and falls with the pitch, a blob head popping on every note (toki: "melodie effekte")
+  | {kind: 'melody'; from: number; to: number; notes: [number, number][]; x0?: number; step?: number; base?: number;
+      per?: number; width?: number; color?: string; head?: string}
+  // a ring bursting at the lens (her ping / shout, T03): grows from 0 to r1 (share of the frame height) over the layer
+  | {kind: 'ring'; from: number; to: number; x?: number; y?: number; r1?: number; band?: number; color?: string; n?: number}
   | PovFx;   // the POV layer (PovFx.tsx): cover, pov_hand, ripple, algae, freeze, polaroid, stamp
 
 type Duo = Extract<Fx, {kind: 'duo' | 'spread'}>;
@@ -103,6 +112,9 @@ export const Fx2D: React.FC<{fx?: Fx[]; f: number; center?: [number, number]; as
             </React.Fragment>
           );
         }
+        if (x.kind === 'slash') return <Slash key={i} x={x} f={f} />;
+        if (x.kind === 'melody') return <MelodyLine key={i} x={x} f={f} />;
+        if (x.kind === 'ring') return <Ring key={i} x={x} f={f} />;
         if (x.kind === 'halftone') {
           const s = x.size ?? 9;
           return (
@@ -145,6 +157,80 @@ const Speed: React.FC<{x: Extract<Fx, {kind: 'speed'}>; f: number}> = ({x, f}) =
           return <rect key={i} x={xx} y={y} width={len} height={0.18 + rnd(i * 4.4) * 0.5} fill={color} />;
         })}
       </g>
+    </svg>
+  );
+};
+
+/** One brush slash across the whole frame: drawn in `draw` frames (default 3) from one side, a thick belly that tapers to
+ *  a thin tail, ragged edges, a spray of drops thrown off the stroke. Held after it lands (ink stays). */
+const Slash: React.FC<{x: Extract<Fx, {kind: 'slash'}>; f: number}> = ({x, f}) => {
+  const g = Math.min(1, (f - x.from + 1) / Math.max(1, x.draw ?? 3));
+  const W = 160, H = 90, s = x.seed ?? 1;
+  const w = (x.width ?? 0.2) * H;                         // the belly's thickness (share of the frame height)
+  const top: string[] = [], bot: string[] = [];
+  const n = 48;
+  for (let i = 0; i <= n; i++) {
+    const u = i / n;
+    if (u > g) break;
+    const xx = -10 + u * (W + 20);
+    const press = Math.sin(Math.PI * Math.min(1, u * 1.08)) ** 0.7 * (u > 0.82 ? Math.max(0.08, (1 - u) / 0.18) : 1);
+    const rag = (rnd(s * 31 + i) - 0.5) * w * 0.18;
+    top.push(`${xx.toFixed(2)},${(-w * press / 2 + rag).toFixed(2)}`);
+    bot.unshift(`${xx.toFixed(2)},${(w * press / 2 + (rnd(s * 17 + i) - 0.5) * w * 0.18).toFixed(2)}`);
+  }
+  const color = x.color ?? '#09070d';
+  const cy = (x.y ?? 0.5) * H;
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%'}}>
+      <g transform={`translate(${W / 2} ${cy}) rotate(${x.angle ?? -14}) translate(${-W / 2} 0)`}>
+        {top.length > 1 ? <polygon points={[...top, ...bot].join(' ')} fill={color} /> : null}
+        {/* the spray thrown off the stroke */}
+        {Array.from({length: 26}, (_, k) => {
+          const u = rnd(s * 11 + k);
+          if (u > g) return null;
+          const xx = -10 + u * (W + 20), side = rnd(s * 13 + k) > 0.5 ? 1 : -1;
+          const yy = side * (w * 0.55 + rnd(s * 19 + k) * w * 1.2);
+          return <circle key={`d${k}`} cx={xx} cy={yy} r={0.25 + rnd(s * 23 + k) * 1.2} fill={color} />;
+        })}
+      </g>
+    </svg>
+  );
+};
+
+/** The melody line: one point per sung note (x steps across, y = pitch), drawn up to the current frame. */
+const MelodyLine: React.FC<{x: Extract<Fx, {kind: 'melody'}>; f: number}> = ({x, f}) => {
+  const W = 160, H = 90, d = f - x.from;
+  const pts = x.notes.filter(([df]) => df <= d).map(([, m], k) => [
+    ((x.x0 ?? 0.08) + k * (x.step ?? 0.12)) * W,
+    ((x.base ?? 0.88) - (m - 59) * (x.per ?? 0.026)) * H] as [number, number]);
+  if (!pts.length) return null;
+  const color = x.color ?? '#0b0a10', w = (x.width ?? 0.05) * H;
+  const path = pts.map(([px, py], k) => (k ? 'L' : 'M') + px.toFixed(2) + ' ' + py.toFixed(2)).join(' ');
+  const last = x.notes.filter(([df]) => df <= d).slice(-1)[0];
+  const pop = last ? Math.min(1, (d - last[0] + 1) / 3) : 1;          // the newest head pops in 3 frames
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%'}}>
+      <path d={path} stroke={color} strokeWidth={w} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      {pts.map(([px, py], k) => (
+        <circle key={k} cx={px} cy={py} r={w * (k === pts.length - 1 ? 0.95 * pop : 0.8)} fill={x.head ?? '#c81f37'} />
+      ))}
+    </svg>
+  );
+};
+
+/** A ring (or a few) bursting outward at a point of the frame: thick, bright, thinning as it grows. */
+const Ring: React.FC<{x: Extract<Fx, {kind: 'ring'}>; f: number}> = ({x, f}) => {
+  const W = 160, H = 90, span = Math.max(1, x.to - x.from), u = Math.min(1, (f - x.from) / span);
+  const n = x.n ?? 3, color = x.color ?? '#efe0ff';
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: 'screen'}}>
+      {Array.from({length: n}, (_, k) => {
+        const v = u - k * 0.18;
+        if (v <= 0) return null;
+        const r = (x.r1 ?? 0.7) * H * Math.pow(v, 0.6);
+        return <circle key={k} cx={(x.x ?? 0.5) * W} cy={(x.y ?? 0.5) * H} r={r} fill="none" stroke={color}
+          strokeWidth={(x.band ?? 0.06) * H * (1 - 0.7 * v)} opacity={1 - 0.6 * v} />;
+      })}
     </svg>
   );
 };
