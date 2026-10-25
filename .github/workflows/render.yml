@@ -200,7 +200,8 @@ jobs:
           FLAG=""; [ "${{ needs.prepare.outputs.quality }}" = "draft" ] && FLAG="--draft"
           mkdir -p parts
           START=$(date +%s)
-          (cd studio && node render.mjs "${{ matrix.job }}" $FLAG --frames ${{ matrix.frames }} --muted --out ../parts/part_${{ matrix.part }}.mp4)
+          # 3 browser tabs on the 4-core runner (Remotion's default is 2; 4 starved a tab in the QC probe) - max power, toki 2026-10-25
+          (cd studio && RAYMI_CONCURRENCY=3 node render.mjs "${{ matrix.job }}" $FLAG --frames ${{ matrix.frames }} --muted --out ../parts/part_${{ matrix.part }}.mp4)
           echo "${{ matrix.job }} part ${{ matrix.part }} (${{ matrix.frames }}): $(( $(date +%s) - START )) s" >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:

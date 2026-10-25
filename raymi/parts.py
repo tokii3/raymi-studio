@@ -11,8 +11,11 @@ import re
 import subprocess
 from pathlib import Path
 
-PART_FRAMES = {"draft": 240, "final": 150}   # frames per worker; final frames cost ~4x a half-size draft frame
-MAX_PARTS = 20                                 # GitHub's concurrent job limit for a free private repo
+PART_FRAMES = {"draft": 240, "final": 140}   # frames per worker; final frames cost ~4x a half-size draft frame
+# toki 2026-10-25 "beim rendern generell immer mit maximaler power ... damit es schnellst möglich geht": GitHub runs 20
+# jobs at a time on the free plan (max-parallel 20); up to 40 smaller parts are queued behind them, so a worker that
+# finishes an easy stretch early takes the next part - the slowest worker no longer sets the time (run 63: 14-28 min)
+MAX_PARTS = 40
 
 
 def split(total: int, size: int, max_parts: int = MAX_PARTS) -> list[tuple[int, int]]:
