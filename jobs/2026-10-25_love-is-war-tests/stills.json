@@ -1,0 +1,19 @@
+{
+ "format": "mv",
+ "frames": [
+  14,
+  6,
+  61,
+  54
+ ],
+ "names": [
+  "two_tone_cry_on",
+  "two_tone_cry_off",
+  "two_tone_beam_on",
+  "two_tone_beam_off"
+ ],
+ "scale": 1,
+ "to": "boards",
+ "dest": "jobs/2026-10-25_love-is-war/boards/tests",
+ "_why": "two-tone test round 1"
+}

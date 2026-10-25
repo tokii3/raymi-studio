@@ -24,6 +24,7 @@ import {makeVrmMouthKeys} from '../three/vrmLipSync';
 import {Probe} from './Probe';
 import {QcMask} from './QcMask';
 import {WorldMotion, worldSpec} from '../three/world';
+import {TwoTone, twoToneOn} from './TwoTone';
 import {SET_WET, SetFx} from '../three/setfx';
 import {vrmFilmKeys, vrmFilmWords} from '../three/vrmFilm';
 import {OVERLAY, makeCamera, puppetMatrix, visibleCutEdges} from './check';
@@ -245,7 +246,10 @@ export const Film: React.FC<FilmProps> = (props) => {
             {/* the world around her may leave / arrive piece by piece (three/world.tsx, Watch Me) */}
             {Set ? <WorldMotion spec={worldSpec(shot.opts.world, fps)} f={f} centre={(actorKeys[0]?.pos as [number, number, number] | undefined) ?? [0, 0, 0]}>
               {/* freeze: the set's own time stops at the shot's first frame (she still moves) */}
+              <TwoTone on={twoToneOn(shot.opts.two_tone, f, Number(shot.opts.two_tone_n ?? 2))}
+                light={shot.opts.two_tone_light ? String(shot.opts.two_tone_light) : undefined} dark={shot.opts.two_tone_dark ? String(shot.opts.two_tone_dark) : undefined}>
               <Set f={shot.opts.freeze ? shot.from : f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} />
+              </TwoTone>
               <SetFx opts={{wet: SET_WET[shot.set] ?? 0, ...shot.opts}} f={f} fps={fps} camPos={camPos} plain={Boolean(mask)}
                 her={(actorKeys[0]?.pos as [number, number, number] | undefined) ?? [0, 0, 0]} />
             </WorldMotion> : null}

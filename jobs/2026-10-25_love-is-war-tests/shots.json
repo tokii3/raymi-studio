@@ -1,0 +1,195 @@
+{
+ "_why": "Love is War treatment v3 tests before the script: background-only two-tone (TwoTone.tsx) on the war cry and on a beam crossing",
+ "audio": {
+  "file": "../2026-10-25_love-is-war/song.webm",
+  "from": 0.0,
+  "to": 3.5
+ },
+ "song_map": "../2026-10-25_love-is-war/song_map.json",
+ "vrm": "vrm/raymi7.vrm",
+ "grain": 0.04,
+ "observer": 1,
+ "aware": 0.3,
+ "depth": 0.8,
+ "shots": [
+  {
+   "id": "T1",
+   "at": 0.0,
+   "set": "nightsea",
+   "why": "treatment v3 test: the 62.6 war cry with the lamp flash - the world two-tone, she keeps her values (script-critic FIX 6)",
+   "opts": {
+    "grade": "war_night",
+    "rain_at": 1.5,
+    "stars": 0.2,
+    "lighthouse": {
+     "height": 10,
+     "spin": 0,
+     "pos": [
+      -16,
+      -50
+     ],
+     "yaw": 60
+    },
+    "pool": 0.5,
+    "pulse_at": [
+     1.7
+    ],
+    "glow": "#e6dcff",
+    "glow_gain": 0.6,
+    "lock": 0.75,
+    "neutral_sky": 0.85,
+    "her_key": 1.0,
+    "her_rim": "#c58cff",
+    "her_rim_i": 1.8,
+    "fog_c": "#2a3470",
+    "post": {
+     "glow": 1,
+     "vignette": 0.4,
+     "dof_auto": 1
+    },
+    "two_tone": [
+     0.45
+    ],
+    "two_tone_n": 6
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.05,
+      0.62,
+      1.0
+     ],
+     "look": [
+      0,
+      0.55,
+      0
+     ],
+     "fov": 46,
+     "roll": 6
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "rotY": "lens",
+     "clip": "roar",
+     "clip_from": 1.0,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.75
+     }
+    }
+   ],
+   "mouth": {
+    "gain": 1.0
+   },
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "ring",
+     "at": 0.35,
+     "to": 1.2,
+     "x": 0.5,
+     "y": 0.42,
+     "r1": 0.8,
+     "band": 0.022,
+     "color": "#d9ccff",
+     "n": 2
+    }
+   ]
+  },
+  {
+   "id": "T2",
+   "at": 1.5,
+   "set": "nightsea",
+   "why": "treatment v3 test: the beam crossing at 36.0 - lamp flash two-tone",
+   "opts": {
+    "grade": "war_night",
+    "rain_at": 0.0,
+    "stars": 0.2,
+    "lightning": [],
+    "lightning_pos": [
+     [
+      3.5,
+      -26
+     ]
+    ],
+    "lighthouse": {
+     "height": 10,
+     "spin": 0,
+     "pos": [
+      -16,
+      -50
+     ],
+     "yaw": 100
+    },
+    "pool": 0.35,
+    "glow": "#e6dcff",
+    "glow_gain": 0.5,
+    "lock": 0.75,
+    "neutral_sky": 0.85,
+    "her_key": 0.9,
+    "her_rim": "#ffffff",
+    "her_rim_i": 2.2,
+    "fog_c": "#2a3470",
+    "post": {
+     "glow": 1,
+     "vignette": 0.4,
+     "dof_auto": 1
+    },
+    "two_tone": [
+     2.0
+    ],
+    "two_tone_n": 6
+   },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.15,
+      0.3,
+      1.55
+     ],
+     "look": [
+      0,
+      0.5,
+      0
+     ],
+     "fov": 42,
+     "roll": -9
+    }
+   ],
+   "actor": [
+    {
+     "at": 0,
+     "rotY": "lens",
+     "clip": "yelling",
+     "clip_from": 1.0,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     }
+    }
+   ],
+   "mouth": "silent",
+   "outline": 0.0035,
+   "fx": [
+    {
+     "kind": "speed",
+     "at": 0.5,
+     "to": "end",
+     "mode": "radial",
+     "opacity": 0.4
+    }
+   ]
+  }
+ ]
+}
