@@ -87,7 +87,12 @@
      0
     ],
     "gel": "#ffd2e6",
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -160,7 +165,7 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
    "lyrics": null,
    "words": [],
@@ -307,46 +312,109 @@
     "flash": [
      78
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
+     "look": [
+      0.175,
+      1.301,
+      -0.037
+     ],
      "f": 78,
      "pos": [
       0.295,
       1.301,
       0.527
      ],
-     "look": [
-      0.175,
-      1.301,
-      -0.037
-     ],
      "fov": 30.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 86,
-     "pos": [
-      -1.9,
-      0.75,
-      2.4
-     ],
      "look": [
       0.0,
       1.2,
       0.0
      ],
+     "f": 94,
+     "pos": [
+      -1.9204,
+      0.75,
+      2.4258
+     ],
      "fov": 40.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.2,
+      0.0
+     ],
+     "f": 95,
+     "pos": [
+      -1.9204,
+      0.75,
+      2.4258
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.2,
+      0.0
+     ],
+     "f": 98,
+     "pos": [
+      -2.5013,
+      0.91,
+      1.6017
+     ],
+     "fov": 38.6,
+     "roll": -3.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.2,
+      0.0
+     ],
+     "f": 118,
+     "pos": [
+      -2.7662,
+      1.07,
+      0.6709
+     ],
+     "fov": 37.2,
+     "roll": -6.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
    "lyrics": null,
    "words": [],
@@ -425,7 +493,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -490,46 +558,53 @@
     "flash": [
      119
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
+     "look": [
+      0.0,
+      1.2,
+      0.0
+     ],
      "f": 119,
      "pos": [
-      -1.9,
-      0.75,
-      2.4
-     ],
-     "look": [
-      0.0,
-      1.2,
-      0.0
-     ],
-     "fov": 40.0,
-     "roll": 0.0,
-     "ease": "inOut",
-     "observer": 1.0,
-     "bridge": 1
-    },
-    {
-     "f": 127,
-     "pos": [
-      1.128,
-      2.516,
-      1.504
-     ],
-     "look": [
-      0.0,
-      1.2,
-      0.0
+      1.3183,
+      2.46,
+      1.7577
      ],
      "fov": 36.0,
      "roll": -14.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.2,
+      0.0
+     ],
+     "f": 172,
+     "pos": [
+      1.1865,
+      2.334,
+      1.5819
+     ],
+     "fov": 33.48,
+     "roll": 0,
+     "ease": "inOut",
+     "path": null,
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
    "lyrics": null,
    "words": [],
@@ -607,8 +682,7 @@
       0.5
      ]
     }
-   ],
-   "bridge": 8
+   ]
   },
   {
    "actor": [
@@ -673,46 +747,72 @@
     "flash": [
      173
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
-     "f": 173,
-     "pos": [
-      1.128,
-      2.516,
-      1.504
-     ],
-     "look": [
-      0.0,
-      1.2,
-      0.0
-     ],
-     "fov": 36.0,
-     "roll": -14.0,
-     "ease": "inOut",
-     "observer": 1.0,
-     "bridge": 1
-    },
-    {
-     "f": 181,
-     "pos": [
-      1.451,
-      1.58,
-      -0.307
-     ],
      "look": [
       0.001,
       1.48,
       0.043
      ],
+     "f": 173,
+     "pos": [
+      1.4543,
+      1.58,
+      -0.3078
+     ],
      "fov": 32.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.001,
+      1.48,
+      0.043
+     ],
+     "f": 184,
+     "pos": [
+      1.4298,
+      1.42,
+      0.1788
+     ],
+     "fov": 30.88,
+     "roll": -3.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.001,
+      1.48,
+      0.043
+     ],
+     "f": 194,
+     "pos": [
+      1.2533,
+      1.26,
+      0.6118
+     ],
+     "fov": 29.76,
+     "roll": -6.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
    "lyrics": null,
    "words": [],
@@ -790,8 +890,7 @@
       0.5
      ]
     }
-   ],
-   "bridge": 8
+   ]
   },
   {
    "actor": [
@@ -856,87 +955,75 @@
     "flash": [
      195
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
-     "f": 195,
-     "pos": [
-      1.451,
-      1.58,
-      -0.307
-     ],
-     "look": [
-      0.001,
-      1.48,
-      0.043
-     ],
-     "fov": 32.0,
-     "roll": 0.0,
-     "ease": "inOut",
-     "observer": 1.0,
-     "bridge": 1
-    },
-    {
-     "f": 203,
-     "pos": [
-      0.0,
-      1.35,
-      2.3
-     ],
      "look": [
       0.0,
       1.3,
       0.0
      ],
+     "f": 195,
+     "pos": [
+      0.0,
+      1.336,
+      1.6564
+     ],
      "fov": 34.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.3,
+      0.0
+     ],
+     "f": 210,
+     "pos": [
+      0.5177,
+      1.4512,
+      1.5035
+     ],
+     "fov": 32.81,
+     "roll": 3.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.3,
+      0.0
+     ],
+     "f": 224,
+     "pos": [
+      0.9382,
+      1.5664,
+      1.2008
+     ],
+     "fov": 31.62,
+     "roll": 6.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.49,
-     1.51,
-     0.23
-    ],
-    "rotY": 13.4,
-    "size": 0.152,
-    "width": 1.92,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": null,
-    "style": "v2",
-    "tilt": -1.3,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Ah-ah",
-     "from": 216,
-     "to": 241,
-     "key": false,
-     "line": 0,
-     "idx": 0,
-     "em": 2.976
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -1011,8 +1098,7 @@
       0.5
      ]
     }
-   ],
-   "bridge": 8
+   ]
   },
   {
    "actor": [
@@ -1085,29 +1171,33 @@
      "hold": "camera"
     },
     "bulb_flicker": 225,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 225,
      "pos": [
-      0.0,
+      -0.32,
       1.35,
-      2.3
+      2.278
      ],
      "look": [
       0.0,
-      1.3,
+      1.35,
       0.0
      ],
-     "fov": 34.0,
+     "fov": 38.0,
      "roll": 0.0,
      "ease": "inOut",
-     "observer": 1.0,
-     "bridge": 1
+     "observer": 1.0
     },
     {
-     "f": 233,
+     "f": 225,
      "pos": [
       -0.32,
       1.35,
@@ -1124,24 +1214,7 @@
      "observer": 1.0
     },
     {
-     "f": 234,
-     "pos": [
-      -0.32,
-      1.35,
-      2.278
-     ],
-     "look": [
-      0.0,
-      1.35,
-      0.0
-     ],
-     "fov": 38.0,
-     "roll": 0.0,
-     "ease": "inOut",
-     "observer": 1.0
-    },
-    {
-     "f": 235,
+     "f": 231,
      "pos": [
       -0.139,
       1.35,
@@ -1176,48 +1249,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.51,
-     1.38,
-     -0.2
-    ],
-    "rotY": -29.2,
-    "size": 0.051,
-    "width": 1.25,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": null,
-    "style": "v2",
-    "tilt": -0.1,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Mwah",
-     "from": 240,
-     "to": 248,
-     "key": false,
-     "line": 1,
-     "idx": 0,
-     "em": 2.74
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -1292,8 +1327,7 @@
       0.5
      ]
     }
-   ],
-   "bridge": 8
+   ]
   },
   {
    "actor": [
@@ -1363,152 +1397,112 @@
      8.57,
      10.05
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
      "f": 246,
      "pos": [
       -0.129,
       1.35,
       0.921
      ],
-     "look": [
-      0.0,
-      1.35,
-      0.0
-     ],
      "fov": 38.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 254,
-     "pos": [
-      0.107,
-      1.401,
-      1.095
-     ],
      "look": [
       -0.008,
       1.401,
       0.001
      ],
-     "fov": 34.0,
-     "roll": 0.0,
-     "ease": "inOut",
-     "observer": 1.0
-    },
-    {
-     "f": 311,
+     "f": 262,
      "pos": [
       0.107,
       1.401,
       1.095
      ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
      "look": [
       -0.008,
       1.401,
       0.001
      ],
-     "fov": 34.0,
-     "roll": 0.0,
-     "ease": "inOut",
-     "observer": 1.0
-    },
-    {
-     "f": 318,
+     "f": 263,
      "pos": [
       0.107,
       1.401,
       1.095
      ],
-     "look": [
-      -1.882,
-      1.401,
-      1.304
-     ],
      "fov": 34.0,
      "roll": 0.0,
-     "ease": "in",
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      -0.008,
+      1.401,
+      0.001
+     ],
+     "f": 282,
+     "pos": [
+      0.2116,
+      1.361,
+      1.0339
+     ],
+     "fov": 32.81,
+     "roll": 0.75,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      -0.008,
+      1.401,
+      0.001
+     ],
+     "f": 317,
+     "pos": [
+      0.3047,
+      1.321,
+      0.9635
+     ],
+     "fov": 31.62,
+     "roll": 1.5,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -1.15,
-     1.55,
-     -0.3
-    ],
-    "rotY": 0.0,
-    "size": 0.0429,
-    "width": 0.909,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "MCU shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.8,
-     1.1304857837334574
-    ],
-    "material": "print",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.3,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Camera",
-     "from": 246,
-     "to": 257,
-     "key": true,
-     "line": 2,
-     "idx": 0,
-     "em": 3.721
-    },
-    {
-     "w": "on,",
-     "from": 256,
-     "to": 276,
-     "key": false,
-     "line": 2,
-     "idx": 1,
-     "em": 1.502
-    },
-    {
-     "w": "camera",
-     "from": 274,
-     "to": 302,
-     "key": true,
-     "line": 2,
-     "idx": 2,
-     "em": 3.687
-    },
-    {
-     "w": "off",
-     "from": 300,
-     "to": 320,
-     "key": false,
-     "line": 2,
-     "idx": 3,
-     "em": 1.698
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -1584,7 +1578,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -1662,33 +1656,55 @@
       "seed": 3
      }
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 318,
      "pos": [
-      0.107,
-      1.401,
-      1.095
+      0.3047,
+      1.321,
+      0.9635
      ],
      "look": [
-      -1.882,
+      -0.008,
       1.401,
-      1.304
+      0.001
      ],
-     "fov": 34.0,
-     "roll": 0.0,
+     "fov": 31.62,
+     "roll": 1.5,
      "ease": "inOut",
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 326,
+     "f": 334,
      "pos": [
-      -0.5,
+      -0.32,
       1.35,
-      3.2
+      2.048
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 335,
+     "pos": [
+      -0.32,
+      1.35,
+      2.048
      ],
      "look": [
       0.0,
@@ -1703,9 +1719,9 @@
     {
      "f": 362,
      "pos": [
-      0.5,
+      0.32,
       1.35,
-      3.2
+      2.048
      ],
      "look": [
       0.0,
@@ -1718,75 +1734,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "card",
-    "anchor": [
-     -0.69,
-     1.41,
-     1.27
-    ],
-    "rotY": 102.5,
-    "size": 0.025,
-    "width": 0.75,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "print",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "See",
-     "from": 318,
-     "to": 341,
-     "key": false,
-     "line": 3,
-     "idx": 0,
-     "em": 1.932
-    },
-    {
-     "w": "the",
-     "from": 339,
-     "to": 344,
-     "key": false,
-     "line": 3,
-     "idx": 1,
-     "em": 1.73
-    },
-    {
-     "w": "same",
-     "from": 343,
-     "to": 352,
-     "key": false,
-     "line": 3,
-     "idx": 2,
-     "em": 2.621
-    },
-    {
-     "w": "mosaic",
-     "from": 350,
-     "to": 364,
-     "key": true,
-     "line": 3,
-     "idx": 3,
-     "em": 3.49
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -1862,7 +1813,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -1923,15 +1874,20 @@
     "lock": 0.45,
     "bulb": true,
     "embers": 12.13,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 362,
      "pos": [
-      0.5,
+      0.32,
       1.35,
-      3.2
+      2.048
      ],
      "look": [
       0.0,
@@ -1945,7 +1901,24 @@
      "bridge": 1
     },
     {
-     "f": 370,
+     "f": 378,
+     "pos": [
+      0.509,
+      1.416,
+      -1.394
+     ],
+     "look": [
+      -0.004,
+      1.316,
+      0.016
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 379,
      "pos": [
       0.509,
       1.416,
@@ -1998,93 +1971,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "card",
-    "anchor": [
-     -0.23,
-     1.49,
-     0.38
-    ],
-    "rotY": -95.5,
-    "size": 0.029,
-    "width": 0.39,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "print",
-    "style": "v2",
-    "tilt": -1.7,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Back",
-     "from": 362,
-     "to": 380,
-     "key": false,
-     "line": 4,
-     "idx": 0,
-     "em": 2.474
-    },
-    {
-     "w": "it",
-     "from": 378,
-     "to": 386,
-     "key": false,
-     "line": 4,
-     "idx": 1,
-     "em": 0.997
-    },
-    {
-     "w": "up,",
-     "from": 385,
-     "to": 397,
-     "key": false,
-     "line": 4,
-     "idx": 2,
-     "em": 1.526
-    },
-    {
-     "w": "flame",
-     "from": 395,
-     "to": 425,
-     "key": false,
-     "line": 4,
-     "idx": 3,
-     "em": 3.134
-    },
-    {
-     "w": "so",
-     "from": 424,
-     "to": 433,
-     "key": false,
-     "line": 4,
-     "idx": 4,
-     "em": 1.137
-    },
-    {
-     "w": "hot",
-     "from": 431,
-     "to": 440,
-     "key": true,
-     "line": 4,
-     "idx": 5,
-     "em": 1.679
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -2160,7 +2050,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -2247,7 +2137,12 @@
       "text": "LOUVRE"
      }
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -2269,7 +2164,7 @@
      "bridge": 1
     },
     {
-     "f": 447,
+     "f": 455,
      "pos": [
       -0.021,
       1.031,
@@ -2286,7 +2181,7 @@
      "observer": 1.0
     },
     {
-     "f": 448,
+     "f": 456,
      "pos": [
       -0.021,
       1.031,
@@ -2303,7 +2198,7 @@
      "observer": 1.0
     },
     {
-     "f": 450,
+     "f": 457,
      "pos": [
       -0.021,
       1.031,
@@ -2338,97 +2233,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.0,
-     0.45,
-     0.45
-    ],
-    "rotY": 0.0,
-    "size": 0.0314,
-    "width": 0.574,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "MS through frame shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.72,
-     0.7133414622697224
-    ],
-    "material": "print",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "But",
-     "from": 439,
-     "to": 464,
-     "key": false,
-     "line": 5,
-     "idx": 0,
-     "em": 1.943
-    },
-    {
-     "w": "the",
-     "from": 462,
-     "to": 467,
-     "key": false,
-     "line": 5,
-     "idx": 1,
-     "em": 1.73
-    },
-    {
-     "w": "Louvre",
-     "from": 466,
-     "to": 475,
-     "key": true,
-     "line": 5,
-     "idx": 2,
-     "em": 3.5
-    },
-    {
-     "w": "gon'",
-     "from": 473,
-     "to": 486,
-     "key": false,
-     "line": 5,
-     "idx": 3,
-     "em": 2.174
-    },
-    {
-     "w": "hang",
-     "from": 484,
-     "to": 492,
-     "key": false,
-     "line": 5,
-     "idx": 4,
-     "em": 2.316
-    },
-    {
-     "w": "it",
-     "from": 490,
-     "to": 498,
-     "key": false,
-     "line": 5,
-     "idx": 5,
-     "em": 0.997
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -2504,7 +2312,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -2569,123 +2377,112 @@
     "bulb": true,
     "freeze": true,
     "bulb_swing": "frozen",
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
+     "look": [
+      -0.021,
+      1.031,
+      0.0
+     ],
      "f": 497,
      "pos": [
       -0.021,
       1.031,
       1.488
      ],
-     "look": [
-      -0.021,
-      1.031,
-      0.0
-     ],
      "fov": 34.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 505,
-     "pos": [
-      0.476,
-      1.388,
-      1.467
-     ],
      "look": [
       0.176,
       1.338,
       -0.033
      ],
+     "f": 513,
+     "pos": [
+      0.4762,
+      1.388,
+      1.4678
+     ],
      "fov": 30.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.176,
+      1.338,
+      -0.033
+     ],
+     "f": 514,
+     "pos": [
+      0.4762,
+      1.388,
+      1.4678
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.176,
+      1.338,
+      -0.033
+     ],
+     "f": 522,
+     "pos": [
+      0.9175,
+      1.228,
+      1.2355
+     ],
+     "fov": 28.95,
+     "roll": 3.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.176,
+      1.338,
+      -0.033
+     ],
+     "f": 546,
+     "pos": [
+      1.2437,
+      1.068,
+      0.885
+     ],
+     "fov": 27.9,
+     "roll": 6.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.53,
-     1.22,
-     0.23
-    ],
-    "rotY": -2.1,
-    "size": 0.04,
-    "width": 0.34,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": null,
-    "style": "v2",
-    "tilt": -1.4,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Hold",
-     "from": 497,
-     "to": 511,
-     "key": false,
-     "line": 6,
-     "idx": 0,
-     "em": 2.32
-    },
-    {
-     "w": "your",
-     "from": 509,
-     "to": 525,
-     "key": false,
-     "line": 6,
-     "idx": 1,
-     "em": 2.235
-    },
-    {
-     "w": "breath",
-     "from": 524,
-     "to": 544,
-     "key": false,
-     "line": 6,
-     "idx": 2,
-     "em": 3.466
-    },
-    {
-     "w": "(",
-     "from": 543,
-     "to": 546,
-     "key": false,
-     "line": 6,
-     "idx": 3,
-     "em": 0.464
-    },
-    {
-     "w": "Huh)",
-     "from": 545,
-     "to": 548,
-     "key": false,
-     "line": 6,
-     "idx": 4,
-     "em": 2.256
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -2761,7 +2558,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -2823,33 +2620,55 @@
     "lock": 0.45,
     "bulb": true,
     "treadmill": 0.9,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 547,
      "pos": [
-      0.476,
-      1.388,
-      1.467
+      1.2437,
+      1.068,
+      0.885
      ],
      "look": [
       0.176,
       1.338,
       -0.033
      ],
-     "fov": 30.0,
-     "roll": 0.0,
+     "fov": 27.9,
+     "roll": 6.0,
      "ease": "inOut",
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 555,
+     "f": 563,
      "pos": [
-      0.14,
-      0.89,
-      1.96
+      0.142,
+      0.887,
+      1.988
+     ],
+     "look": [
+      0.0,
+      1.1,
+      0.0
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 564,
+     "pos": [
+      0.142,
+      0.887,
+      1.988
      ],
      "look": [
       0.0,
@@ -2864,9 +2683,9 @@
     {
      "f": 617,
      "pos": [
-      0.14,
-      0.89,
-      2.24
+      0.142,
+      0.887,
+      2.272
      ],
      "look": [
       0.0,
@@ -2879,111 +2698,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "card",
-    "anchor": [
-     0.49,
-     1.1,
-     0.42
-    ],
-    "rotY": -10.5,
-    "size": 0.081,
-    "width": 0.7,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "print",
-    "style": "v2",
-    "tilt": 5.0,
-    "roll": 0.0,
-    "keyScale": 1.3,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Hear",
-     "from": 547,
-     "to": 557,
-     "key": false,
-     "line": 7,
-     "idx": 0,
-     "em": 2.364
-    },
-    {
-     "w": "a",
-     "from": 555,
-     "to": 561,
-     "key": false,
-     "line": 7,
-     "idx": 1,
-     "em": 0.677
-    },
-    {
-     "w": "pin",
-     "from": 560,
-     "to": 565,
-     "key": true,
-     "line": 7,
-     "idx": 2,
-     "em": 1.495
-    },
-    {
-     "w": "drop",
-     "from": 563,
-     "to": 571,
-     "key": false,
-     "line": 7,
-     "idx": 3,
-     "em": 2.124
-    },
-    {
-     "w": "when",
-     "from": 570,
-     "to": 580,
-     "key": false,
-     "line": 7,
-     "idx": 4,
-     "em": 2.454
-    },
-    {
-     "w": "I",
-     "from": 579,
-     "to": 587,
-     "key": false,
-     "line": 7,
-     "idx": 5,
-     "em": 0.351
-    },
-    {
-     "w": "walk",
-     "from": 586,
-     "to": 604,
-     "key": false,
-     "line": 7,
-     "idx": 6,
-     "em": 2.519
-    },
-    {
-     "w": "in",
-     "from": 602,
-     "to": 619,
-     "key": false,
-     "line": 7,
-     "idx": 7,
-     "em": 0.977
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -3059,7 +2777,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -3132,132 +2850,112 @@
       ]
      }
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
-     "f": 617,
-     "pos": [
-      0.14,
-      0.89,
-      2.24
-     ],
      "look": [
       0.0,
       1.1,
       0.0
      ],
+     "f": 617,
+     "pos": [
+      0.142,
+      0.887,
+      2.272
+     ],
      "fov": 40.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 625,
-     "pos": [
-      0.1,
-      4.2,
-      0.6
-     ],
      "look": [
       0.0,
       0.0,
       0.0
      ],
+     "f": 633,
+     "pos": [
+      0.6977,
+      4.2,
+      4.1861
+     ],
      "fov": 46.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "f": 634,
+     "pos": [
+      0.6977,
+      4.2,
+      4.1861
+     ],
+     "fov": 46.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "f": 647,
+     "pos": [
+      1.0862,
+      4.24,
+      3.9266
+     ],
+     "fov": 44.39,
+     "roll": 0.75,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "f": 677,
+     "pos": [
+      1.4285,
+      4.28,
+      3.6336
+     ],
+     "fov": 42.78,
+     "roll": 1.5,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "card",
-    "anchor": [
-     1.48,
-     0.5,
-     -0.25
-    ],
-    "rotY": -58.0,
-    "size": 0.16,
-    "width": 2.55,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "print",
-    "style": "v2",
-    "tilt": -81.7,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Pins",
-     "from": 617,
-     "to": 630,
-     "key": true,
-     "line": 8,
-     "idx": 0,
-     "em": 2.214
-    },
-    {
-     "w": "are",
-     "from": 629,
-     "to": 634,
-     "key": false,
-     "line": 8,
-     "idx": 1,
-     "em": 1.728
-    },
-    {
-     "w": "dropping,",
-     "from": 632,
-     "to": 650,
-     "key": false,
-     "line": 8,
-     "idx": 2,
-     "em": 4.518
-    },
-    {
-     "w": "pins",
-     "from": 648,
-     "to": 656,
-     "key": true,
-     "line": 8,
-     "idx": 3,
-     "em": 2.078
-    },
-    {
-     "w": "are",
-     "from": 655,
-     "to": 664,
-     "key": false,
-     "line": 8,
-     "idx": 4,
-     "em": 1.728
-    },
-    {
-     "w": "dropping",
-     "from": 663,
-     "to": 680,
-     "key": false,
-     "line": 8,
-     "idx": 5,
-     "em": 4.153
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -3333,7 +3031,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -3405,29 +3103,51 @@
       ]
      }
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 678,
      "pos": [
-      0.1,
-      4.2,
-      0.6
+      1.4285,
+      4.28,
+      3.6336
      ],
      "look": [
       0.0,
       0.0,
       0.0
      ],
-     "fov": 46.0,
-     "roll": 0.0,
+     "fov": 42.78,
+     "roll": 1.5,
      "ease": "inOut",
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 686,
+     "f": 694,
+     "pos": [
+      -1.656,
+      1.192,
+      1.9734
+     ],
+     "look": [
+      0.0,
+      1.1,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 695,
      "pos": [
       -1.656,
       1.192,
@@ -3480,111 +3200,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.22,
-     0.89,
-     0.59
-    ],
-    "rotY": 42.1,
-    "size": 0.082,
-    "width": 0.71,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": null,
-    "style": "v2",
-    "tilt": -0.7,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "When",
-     "from": 678,
-     "to": 688,
-     "key": false,
-     "line": 9,
-     "idx": 0,
-     "em": 2.386
-    },
-    {
-     "w": "I",
-     "from": 687,
-     "to": 695,
-     "key": false,
-     "line": 9,
-     "idx": 1,
-     "em": 0.351
-    },
-    {
-     "w": "walk",
-     "from": 694,
-     "to": 701,
-     "key": false,
-     "line": 9,
-     "idx": 2,
-     "em": 2.519
-    },
-    {
-     "w": "in,",
-     "from": 700,
-     "to": 718,
-     "key": false,
-     "line": 9,
-     "idx": 3,
-     "em": 1.342
-    },
-    {
-     "w": "when",
-     "from": 717,
-     "to": 724,
-     "key": false,
-     "line": 9,
-     "idx": 4,
-     "em": 2.454
-    },
-    {
-     "w": "I",
-     "from": 723,
-     "to": 727,
-     "key": false,
-     "line": 9,
-     "idx": 5,
-     "em": 0.351
-    },
-    {
-     "w": "walk",
-     "from": 725,
-     "to": 732,
-     "key": false,
-     "line": 9,
-     "idx": 6,
-     "em": 2.519
-    },
-    {
-     "w": "in",
-     "from": 731,
-     "to": 745,
-     "key": false,
-     "line": 9,
-     "idx": 7,
-     "em": 0.977
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -3660,7 +3279,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -3721,7 +3340,12 @@
     "lock": 0.45,
     "bulb": true,
     "polaroid": 24.83,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -3743,11 +3367,28 @@
      "bridge": 1
     },
     {
-     "f": 751,
+     "f": 759,
      "pos": [
-      -1.305,
+      -1.0571,
       1.35,
-      1.377
+      1.1154
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 36.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 760,
+     "pos": [
+      -1.0571,
+      1.35,
+      1.1154
      ],
      "look": [
       0.0,
@@ -3762,9 +3403,9 @@
     {
      "f": 853,
      "pos": [
-      -0.217,
+      -0.1758,
       1.35,
-      1.885
+      1.5269
      ],
      "look": [
       0.0,
@@ -3777,165 +3418,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "card",
-    "anchor": [
-     0.5,
-     1.32,
-     0.21
-    ],
-    "rotY": -23.5,
-    "size": 0.096,
-    "width": 0.6,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "print",
-    "style": "v2",
-    "tilt": -0.8,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "I",
-     "from": 743,
-     "to": 760,
-     "key": false,
-     "line": 10,
-     "idx": 0,
-     "em": 0.351
-    },
-    {
-     "w": "got",
-     "from": 759,
-     "to": 763,
-     "key": false,
-     "line": 10,
-     "idx": 1,
-     "em": 1.691
-    },
-    {
-     "w": "it",
-     "from": 762,
-     "to": 770,
-     "key": false,
-     "line": 10,
-     "idx": 2,
-     "em": 0.997
-    },
-    {
-     "w": "like",
-     "from": 768,
-     "to": 782,
-     "key": false,
-     "line": 10,
-     "idx": 3,
-     "em": 2.097
-    },
-    {
-     "w": "that",
-     "from": 781,
-     "to": 789,
-     "key": false,
-     "line": 10,
-     "idx": 4,
-     "em": 2.405
-    },
-    {
-     "w": "(",
-     "from": 788,
-     "to": 791,
-     "key": false,
-     "line": 10,
-     "idx": 5,
-     "em": 0.464
-    },
-    {
-     "w": "Ah)",
-     "from": 790,
-     "to": 794,
-     "key": false,
-     "line": 10,
-     "idx": 6,
-     "em": 1.721
-    },
-    {
-     "w": "If",
-     "from": 793,
-     "to": 821,
-     "key": false,
-     "line": 11,
-     "idx": 0,
-     "em": 0.923
-    },
-    {
-     "w": "you",
-     "from": 820,
-     "to": 824,
-     "key": false,
-     "line": 11,
-     "idx": 1,
-     "em": 1.789
-    },
-    {
-     "w": "wanna",
-     "from": 823,
-     "to": 830,
-     "key": false,
-     "line": 11,
-     "idx": 2,
-     "em": 3.264
-    },
-    {
-     "w": "like",
-     "from": 828,
-     "to": 840,
-     "key": false,
-     "line": 11,
-     "idx": 3,
-     "em": 2.097
-    },
-    {
-     "w": "that",
-     "from": 839,
-     "to": 848,
-     "key": false,
-     "line": 11,
-     "idx": 4,
-     "em": 2.405
-    },
-    {
-     "w": "(",
-     "from": 847,
-     "to": 850,
-     "key": false,
-     "line": 11,
-     "idx": 5,
-     "em": 0.464
-    },
-    {
-     "w": "Ah)",
-     "from": 849,
-     "to": 854,
-     "key": false,
-     "line": 11,
-     "idx": 6,
-     "em": 1.721
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -4011,7 +3497,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -4082,15 +3568,20 @@
     "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 853,
      "pos": [
-      -0.217,
+      -0.1758,
       1.35,
-      1.885
+      1.5269
      ],
      "look": [
       0.0,
@@ -4104,7 +3595,24 @@
      "bridge": 1
     },
     {
-     "f": 861,
+     "f": 869,
+     "pos": [
+      -0.005,
+      1.423,
+      1.38
+     ],
+     "look": [
+      -0.005,
+      1.423,
+      0.0
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 870,
      "pos": [
       -0.005,
       1.423,
@@ -4173,93 +3681,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.09,
-     1.65,
-     -0.64
-    ],
-    "rotY": -4.8,
-    "size": 0.028,
-    "width": 0.97,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "MS -> ECU shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.8,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "There's",
-     "from": 853,
-     "to": 884,
-     "key": false,
-     "line": 12,
-     "idx": 0,
-     "em": 3.986
-    },
-    {
-     "w": "only",
-     "from": 883,
-     "to": 895,
-     "key": false,
-     "line": 12,
-     "idx": 1,
-     "em": 2.253
-    },
-    {
-     "w": "one",
-     "from": 893,
-     "to": 905,
-     "key": false,
-     "line": 12,
-     "idx": 2,
-     "em": 1.742
-    },
-    {
-     "w": "way",
-     "from": 904,
-     "to": 911,
-     "key": false,
-     "line": 12,
-     "idx": 3,
-     "em": 2.013
-    },
-    {
-     "w": "to",
-     "from": 910,
-     "to": 919,
-     "key": false,
-     "line": 12,
-     "idx": 4,
-     "em": 1.157
-    },
-    {
-     "w": "know",
-     "from": 917,
-     "to": 934,
-     "key": false,
-     "line": 12,
-     "idx": 5,
-     "em": 2.455
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -4335,7 +3760,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -4398,29 +3823,16 @@
     "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 932,
-     "pos": [
-      -0.005,
-      1.423,
-      0.558
-     ],
-     "look": [
-      -0.005,
-      1.423,
-      0.0
-     ],
-     "fov": 30.0,
-     "roll": 0.0,
-     "ease": "inOut",
-     "observer": 1.0,
-     "bridge": 1
-    },
-    {
-     "f": 940,
      "pos": [
       -0.084,
       1.11,
@@ -4489,70 +3901,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "card",
-    "anchor": [
-     0.1,
-     1.45,
-     0.45
-    ],
-    "rotY": 0.0,
-    "size": 0.012,
-    "width": 0.3,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": true,
-    "cross": null,
-    "lens": [
-     0.5,
-     0.6,
-     0.22
-    ],
-    "material": "print",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 2.8,
-    "auto": true,
-    "small": "printed small and pink on her palm, the whole line",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "(",
-     "from": 932,
-     "to": 936,
-     "key": false,
-     "line": 13,
-     "idx": 0,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 934,
-     "to": 958,
-     "key": false,
-     "line": 13,
-     "idx": 1,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 957,
-     "to": 964,
-     "key": false,
-     "line": 13,
-     "idx": 2,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -4627,8 +3979,7 @@
       0.5
      ]
     }
-   ],
-   "bridge": 8
+   ]
   },
   {
    "actor": [
@@ -4679,6 +4030,12 @@
    "mouth": {
     "gain": 1.0
    },
+   "swing": [
+    [
+     991,
+     1
+    ]
+   ],
    "id": "18",
    "from": 963,
    "to": 1082,
@@ -4689,7 +4046,12 @@
     "lock": 0.45,
     "bulb": true,
     "orbit_gear": true,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -4711,7 +4073,24 @@
      "bridge": 1
     },
     {
-     "f": 971,
+     "f": 979,
+     "pos": [
+      0.0,
+      1.45,
+      2.0
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 980,
      "pos": [
       0.0,
       1.45,
@@ -4764,106 +4143,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.0,
-     2.35,
-     -0.8
-    ],
-    "rotY": 0.0,
-    "size": 0.0192,
-    "width": 0.408,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "MS orbit 360 shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.8,
-     0.507095738100718
-    ],
-    "material": "print",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Watch",
-     "from": 963,
-     "to": 984,
-     "key": false,
-     "line": 14,
-     "idx": 0,
-     "em": 3.004
-    },
-    {
-     "w": "me",
-     "from": 982,
-     "to": 992,
-     "key": false,
-     "line": 14,
-     "idx": 1,
-     "em": 1.361
-    },
-    {
-     "w": "move,",
-     "from": 991,
-     "to": 1034,
-     "key": false,
-     "line": 14,
-     "idx": 2,
-     "em": 2.912
-    },
-    {
-     "w": "runnin'",
-     "from": 1033,
-     "to": 1048,
-     "key": false,
-     "line": 14,
-     "idx": 3,
-     "em": 3.735
-    },
-    {
-     "w": "circles",
-     "from": 1046,
-     "to": 1064,
-     "key": false,
-     "line": 14,
-     "idx": 4,
-     "em": 3.604
-    },
-    {
-     "w": "'round",
-     "from": 1062,
-     "to": 1073,
-     "key": false,
-     "line": 14,
-     "idx": 5,
-     "em": 3.335
-    },
-    {
-     "w": "these",
-     "from": 1072,
-     "to": 1083,
-     "key": false,
-     "line": 14,
-     "idx": 6,
-     "em": 2.918
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cover",
     "frames": 10,
@@ -4940,7 +4223,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -5001,7 +4284,12 @@
     "lock": 0.45,
     "bulb": true,
     "orbit_gear": true,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -5039,75 +4327,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.28,
-     1.63,
-     0.43
-    ],
-    "rotY": -18.0,
-    "size": 0.105,
-    "width": 1.86,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": null,
-    "style": "v2",
-    "tilt": -0.2,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "dudes",
-     "from": 1082,
-     "to": 1100,
-     "key": false,
-     "line": 14,
-     "idx": 7,
-     "em": 3.043
-    },
-    {
-     "w": "(",
-     "from": 1099,
-     "to": 1104,
-     "key": false,
-     "line": 14,
-     "idx": 8,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 1103,
-     "to": 1119,
-     "key": false,
-     "line": 14,
-     "idx": 9,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 1117,
-     "to": 1124,
-     "key": false,
-     "line": 14,
-     "idx": 10,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -5242,105 +4465,94 @@
     "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
      "f": 1122,
      "pos": [
       -0.8635,
       1.35,
       2.362
      ],
-     "look": [
-      0.0,
-      1.35,
-      0.0
-     ],
      "fov": 34.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 1130,
-     "pos": [
-      0.35,
-      0.45,
-      -0.75
-     ],
      "look": [
       0.05,
       0.4,
       -0.35
      ],
+     "f": 1138,
+     "pos": [
+      0.3515,
+      0.45,
+      -0.752
+     ],
      "fov": 30.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.05,
+      0.4,
+      -0.35
+     ],
+     "f": 1139,
+     "pos": [
+      0.3782,
+      0.41,
+      -0.7035
+     ],
+     "fov": 28.95,
+     "roll": -0.75,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.05,
+      0.4,
+      -0.35
+     ],
+     "f": 1155,
+     "pos": [
+      0.3982,
+      0.37,
+      -0.6541
+     ],
+     "fov": 27.9,
+     "roll": -1.5,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.57,
-     0.23,
-     0.1
-    ],
-    "rotY": 132.7,
-    "size": 0.079,
-    "width": 0.76,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "print",
-    "style": "v2",
-    "tilt": -6.3,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "In",
-     "from": 1122,
-     "to": 1132,
-     "key": false,
-     "line": 15,
-     "idx": 0,
-     "em": 0.934
-    },
-    {
-     "w": "my",
-     "from": 1131,
-     "to": 1141,
-     "key": false,
-     "line": 15,
-     "idx": 1,
-     "em": 1.348
-    },
-    {
-     "w": "Loubs,",
-     "from": 1139,
-     "to": 1157,
-     "key": false,
-     "line": 15,
-     "idx": 2,
-     "em": 3.378
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -5416,7 +4628,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -5491,29 +4703,51 @@
       "title": "HEARTS BROKEN"
      }
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 1156,
      "pos": [
-      0.35,
-      0.45,
-      -0.75
+      0.3982,
+      0.37,
+      -0.6541
      ],
      "look": [
       0.05,
       0.4,
       -0.35
      ],
-     "fov": 30.0,
-     "roll": 0.0,
+     "fov": 27.9,
+     "roll": -1.5,
      "ease": "inOut",
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 1164,
+     "f": 1172,
+     "pos": [
+      -0.528,
+      1.43,
+      1.97
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 1173,
      "pos": [
       -0.528,
       1.43,
@@ -5547,133 +4781,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.28,
-     1.11,
-     -0.32
-    ],
-    "rotY": 0.0,
-    "size": 0.0115,
-    "width": 0.257,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "MCU shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.72,
-     0.3933567733341209
-    ],
-    "material": "print",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "breakin'",
-     "from": 1156,
-     "to": 1177,
-     "key": false,
-     "line": 15,
-     "idx": 3,
-     "em": 4.395
-    },
-    {
-     "w": "hearts",
-     "from": 1175,
-     "to": 1183,
-     "key": false,
-     "line": 15,
-     "idx": 4,
-     "em": 3.436
-    },
-    {
-     "w": "and",
-     "from": 1181,
-     "to": 1188,
-     "key": false,
-     "line": 15,
-     "idx": 5,
-     "em": 1.866
-    },
-    {
-     "w": "breakin'",
-     "from": 1186,
-     "to": 1210,
-     "key": false,
-     "line": 15,
-     "idx": 6,
-     "em": 4.395
-    },
-    {
-     "w": "news",
-     "from": 1208,
-     "to": 1214,
-     "key": false,
-     "line": 15,
-     "idx": 7,
-     "em": 2.515
-    },
-    {
-     "w": "(",
-     "from": 1213,
-     "to": 1217,
-     "key": false,
-     "line": 15,
-     "idx": 8,
-     "em": 0.464
-    },
-    {
-     "w": "Breakin',",
-     "from": 1216,
-     "to": 1223,
-     "key": false,
-     "line": 15,
-     "idx": 9,
-     "em": 4.844
-    },
-    {
-     "w": "breakin',",
-     "from": 1221,
-     "to": 1229,
-     "key": false,
-     "line": 15,
-     "idx": 10,
-     "em": 4.76
-    },
-    {
-     "w": "watch",
-     "from": 1227,
-     "to": 1238,
-     "key": false,
-     "line": 15,
-     "idx": 11,
-     "em": 3.072
-    },
-    {
-     "w": "me)",
-     "from": 1237,
-     "to": 1242,
-     "key": false,
-     "line": 15,
-     "idx": 12,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -5749,7 +4860,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -5800,6 +4911,16 @@
    "mouth": {
     "gain": 1.0
    },
+   "swing": [
+    [
+     1308,
+     1
+    ],
+    [
+     1329,
+     -1
+    ]
+   ],
    "id": "22",
    "from": 1240,
    "to": 1351,
@@ -5823,7 +4944,12 @@
      ],
      "spray_at": 1242
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -5845,7 +4971,25 @@
      "bridge": 1
     },
     {
-     "f": 1248,
+     "f": 1256,
+     "pos": [
+      0.8516,
+      1.35,
+      2.3398
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "shake": 0.6,
+     "observer": 1.0
+    },
+    {
+     "f": 1257,
      "pos": [
       0.8516,
       1.35,
@@ -5881,93 +5025,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "card",
-    "anchor": [
-     0.41,
-     1.42,
-     -0.57
-    ],
-    "rotY": 10.7,
-    "size": 0.094,
-    "width": 0.9,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "print",
-    "style": "v2",
-    "tilt": 0.3,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Hurricane",
-     "from": 1240,
-     "to": 1279,
-     "key": true,
-     "line": 16,
-     "idx": 0,
-     "em": 4.956
-    },
-    {
-     "w": "when",
-     "from": 1277,
-     "to": 1287,
-     "key": false,
-     "line": 16,
-     "idx": 1,
-     "em": 2.454
-    },
-    {
-     "w": "the",
-     "from": 1285,
-     "to": 1294,
-     "key": false,
-     "line": 16,
-     "idx": 2,
-     "em": 1.73
-    },
-    {
-     "w": "forecast",
-     "from": 1293,
-     "to": 1310,
-     "key": false,
-     "line": 16,
-     "idx": 3,
-     "em": 4.566
-    },
-    {
-     "w": "K/DA,",
-     "from": 1308,
-     "to": 1331,
-     "key": false,
-     "line": 16,
-     "idx": 4,
-     "em": 3.252
-    },
-    {
-     "w": "ayy",
-     "from": 1329,
-     "to": 1352,
-     "key": false,
-     "line": 16,
-     "idx": 5,
-     "em": 1.861
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -6043,7 +5104,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -6107,7 +5168,12 @@
     "lock": 0.45,
     "bulb": true,
     "track_lights": true,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -6129,7 +5195,24 @@
      "bridge": 1
     },
     {
-     "f": 1359,
+     "f": 1367,
+     "pos": [
+      0.0,
+      4.6,
+      0.4
+     ],
+     "look": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "fov": 44.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 1368,
      "pos": [
       0.0,
       4.6,
@@ -6163,129 +5246,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "card",
-    "anchor": [
-     0.13,
-     0.42,
-     -0.7
-    ],
-    "rotY": -7.6,
-    "size": 0.095,
-    "width": 3.98,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "print",
-    "style": "v2",
-    "tilt": -85.2,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "On",
-     "from": 1351,
-     "to": 1378,
-     "key": false,
-     "line": 17,
-     "idx": 0,
-     "em": 1.312
-    },
-    {
-     "w": "your",
-     "from": 1376,
-     "to": 1387,
-     "key": false,
-     "line": 17,
-     "idx": 1,
-     "em": 2.235
-    },
-    {
-     "w": "radar,",
-     "from": 1385,
-     "to": 1403,
-     "key": true,
-     "line": 17,
-     "idx": 2,
-     "em": 3.217
-    },
-    {
-     "w": "you",
-     "from": 1401,
-     "to": 1410,
-     "key": false,
-     "line": 17,
-     "idx": 3,
-     "em": 1.789
-    },
-    {
-     "w": "can't",
-     "from": 1409,
-     "to": 1422,
-     "key": false,
-     "line": 17,
-     "idx": 4,
-     "em": 2.892
-    },
-    {
-     "w": "look",
-     "from": 1421,
-     "to": 1433,
-     "key": false,
-     "line": 17,
-     "idx": 5,
-     "em": 2.206
-    },
-    {
-     "w": "away",
-     "from": 1432,
-     "to": 1448,
-     "key": false,
-     "line": 17,
-     "idx": 6,
-     "em": 2.69
-    },
-    {
-     "w": "(",
-     "from": 1447,
-     "to": 1456,
-     "key": false,
-     "line": 17,
-     "idx": 7,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 1454,
-     "to": 1473,
-     "key": false,
-     "line": 17,
-     "idx": 8,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 1472,
-     "to": 1484,
-     "key": false,
-     "line": 17,
-     "idx": 9,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -6361,7 +5325,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -6504,7 +5468,12 @@
       ]
      }
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -6526,7 +5495,7 @@
      "bridge": 1
     },
     {
-     "f": 1490,
+     "f": 1498,
      "pos": [
       0.0,
       1.35,
@@ -6543,7 +5512,7 @@
      "observer": 1.0
     },
     {
-     "f": 1491,
+     "f": 1499,
      "pos": [
       0.0,
       1.35,
@@ -6560,7 +5529,7 @@
      "observer": 1.0
     },
     {
-     "f": 1492,
+     "f": 1500,
      "pos": [
       0.0,
       1.35,
@@ -6595,169 +5564,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.0,
-     0.3,
-     0.5
-    ],
-    "rotY": 0.0,
-    "size": 0.0281,
-    "width": 0.832,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "push to cover shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.8,
-     1.2
-    ],
-    "material": "print",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.3,
-    "auto": true,
-    "small": "fitter: a long line in a tight frame (>= 60 px cap)",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Watch",
-     "from": 1482,
-     "to": 1502,
-     "key": false,
-     "line": 18,
-     "idx": 0,
-     "em": 3.004
-    },
-    {
-     "w": "me",
-     "from": 1501,
-     "to": 1510,
-     "key": false,
-     "line": 18,
-     "idx": 1,
-     "em": 1.361
-    },
-    {
-     "w": "pose,",
-     "from": 1509,
-     "to": 1528,
-     "key": true,
-     "line": 18,
-     "idx": 2,
-     "em": 2.625
-    },
-    {
-     "w": "always",
-     "from": 1526,
-     "to": 1541,
-     "key": false,
-     "line": 18,
-     "idx": 3,
-     "em": 3.797
-    },
-    {
-     "w": "keep",
-     "from": 1539,
-     "to": 1556,
-     "key": false,
-     "line": 18,
-     "idx": 4,
-     "em": 2.302
-    },
-    {
-     "w": "'em",
-     "from": 1555,
-     "to": 1564,
-     "key": false,
-     "line": 18,
-     "idx": 5,
-     "em": 1.864
-    },
-    {
-     "w": "on",
-     "from": 1562,
-     "to": 1567,
-     "key": false,
-     "line": 18,
-     "idx": 6,
-     "em": 1.137
-    },
-    {
-     "w": "they",
-     "from": 1565,
-     "to": 1571,
-     "key": false,
-     "line": 18,
-     "idx": 7,
-     "em": 2.322
-    },
-    {
-     "w": "toes",
-     "from": 1570,
-     "to": 1585,
-     "key": false,
-     "line": 18,
-     "idx": 8,
-     "em": 2.345
-    },
-    {
-     "w": "(",
-     "from": 1584,
-     "to": 1587,
-     "key": false,
-     "line": 18,
-     "idx": 9,
-     "em": 0.464
-    },
-    {
-     "w": "Oh,",
-     "from": 1586,
-     "to": 1590,
-     "key": false,
-     "line": 18,
-     "idx": 10,
-     "em": 1.616
-    },
-    {
-     "w": "bae,",
-     "from": 1589,
-     "to": 1603,
-     "key": false,
-     "line": 18,
-     "idx": 11,
-     "em": 2.26
-    },
-    {
-     "w": "watch",
-     "from": 1601,
-     "to": 1616,
-     "key": false,
-     "line": 18,
-     "idx": 12,
-     "em": 3.072
-    },
-    {
-     "w": "me)",
-     "from": 1615,
-     "to": 1623,
-     "key": false,
-     "line": 18,
-     "idx": 13,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -6904,7 +5714,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -6990,7 +5800,12 @@
      "out_s": 1.4
     },
     "fold": 1638,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -7028,129 +5843,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "card",
-    "anchor": [
-     0.05,
-     0.93,
-     1.07
-    ],
-    "rotY": -2.5,
-    "size": 0.071,
-    "width": 1.64,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "print",
-    "style": "v2",
-    "tilt": -54.3,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Centerfolds",
-     "from": 1621,
-     "to": 1651,
-     "key": false,
-     "line": 19,
-     "idx": 0,
-     "em": 6.241
-    },
-    {
-     "w": "turn",
-     "from": 1650,
-     "to": 1657,
-     "key": false,
-     "line": 19,
-     "idx": 1,
-     "em": 2.275
-    },
-    {
-     "w": "the",
-     "from": 1656,
-     "to": 1664,
-     "key": false,
-     "line": 19,
-     "idx": 2,
-     "em": 1.73
-    },
-    {
-     "w": "sidewalk",
-     "from": 1662,
-     "to": 1678,
-     "key": false,
-     "line": 19,
-     "idx": 3,
-     "em": 4.707
-    },
-    {
-     "w": "to",
-     "from": 1677,
-     "to": 1688,
-     "key": false,
-     "line": 19,
-     "idx": 4,
-     "em": 1.157
-    },
-    {
-     "w": "a",
-     "from": 1686,
-     "to": 1694,
-     "key": false,
-     "line": 19,
-     "idx": 5,
-     "em": 0.677
-    },
-    {
-     "w": "show",
-     "from": 1692,
-     "to": 1706,
-     "key": false,
-     "line": 19,
-     "idx": 6,
-     "em": 2.403
-    },
-    {
-     "w": "(",
-     "from": 1704,
-     "to": 1709,
-     "key": false,
-     "line": 19,
-     "idx": 7,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 1707,
-     "to": 1730,
-     "key": false,
-     "line": 19,
-     "idx": 8,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 1729,
-     "to": 1734,
-     "key": false,
-     "line": 19,
-     "idx": 9,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -7349,6 +6045,16 @@
    "mouth": {
     "gain": 1.0
    },
+   "swing": [
+    [
+     1824,
+     1
+    ],
+    [
+     1840,
+     -1
+    ]
+   ],
    "id": "26",
    "from": 1732,
    "to": 1860,
@@ -7370,7 +6076,12 @@
      ],
      "at": 1809
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -7427,93 +6138,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.18,
-     1.16,
-     -2.77
-    ],
-    "rotY": 11.4,
-    "size": 0.224,
-    "width": 1.92,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -17.8,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Hurricane",
-     "from": 1732,
-     "to": 1773,
-     "key": true,
-     "line": 20,
-     "idx": 0,
-     "em": 4.956
-    },
-    {
-     "w": "when",
-     "from": 1771,
-     "to": 1781,
-     "key": false,
-     "line": 20,
-     "idx": 1,
-     "em": 2.454
-    },
-    {
-     "w": "the",
-     "from": 1780,
-     "to": 1787,
-     "key": false,
-     "line": 20,
-     "idx": 2,
-     "em": 1.73
-    },
-    {
-     "w": "forecast",
-     "from": 1785,
-     "to": 1826,
-     "key": false,
-     "line": 20,
-     "idx": 3,
-     "em": 4.566
-    },
-    {
-     "w": "K/DA,",
-     "from": 1824,
-     "to": 1842,
-     "key": false,
-     "line": 20,
-     "idx": 4,
-     "em": 3.252
-    },
-    {
-     "w": "ayy",
-     "from": 1840,
-     "to": 1861,
-     "key": false,
-     "line": 20,
-     "idx": 5,
-     "em": 1.861
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -7682,7 +6310,12 @@
       6
      ]
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -7704,7 +6337,24 @@
      "bridge": 1
     },
     {
-     "f": 1868,
+     "f": 1876,
+     "pos": [
+      -0.6,
+      3.6,
+      0.9
+     ],
+     "look": [
+      0.0,
+      1.4,
+      0.0
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 1877,
      "pos": [
       -0.6,
       3.6,
@@ -7738,129 +6388,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.04,
-     1.64,
-     0.19
-    ],
-    "rotY": 7.5,
-    "size": 0.023,
-    "width": 0.73,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "crane down to MCU in the narrow Short frame: she fills it - the line may cross her, never her face",
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -5.9,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "There's",
-     "from": 1860,
-     "to": 1880,
-     "key": false,
-     "line": 21,
-     "idx": 0,
-     "em": 3.986
-    },
-    {
-     "w": "a",
-     "from": 1879,
-     "to": 1886,
-     "key": false,
-     "line": 21,
-     "idx": 1,
-     "em": 0.677
-    },
-    {
-     "w": "hundred",
-     "from": 1884,
-     "to": 1892,
-     "key": false,
-     "line": 21,
-     "idx": 2,
-     "em": 4.011
-    },
-    {
-     "w": "percent",
-     "from": 1891,
-     "to": 1910,
-     "key": false,
-     "line": 21,
-     "idx": 3,
-     "em": 3.886
-    },
-    {
-     "w": "chance",
-     "from": 1909,
-     "to": 1932,
-     "key": false,
-     "line": 21,
-     "idx": 4,
-     "em": 3.439
-    },
-    {
-     "w": "of",
-     "from": 1930,
-     "to": 1940,
-     "key": false,
-     "line": 21,
-     "idx": 5,
-     "em": 1.126
-    },
-    {
-     "w": "slay",
-     "from": 1939,
-     "to": 1949,
-     "key": true,
-     "line": 21,
-     "idx": 6,
-     "em": 2.376
-    },
-    {
-     "w": "(",
-     "from": 1948,
-     "to": 1954,
-     "key": false,
-     "line": 21,
-     "idx": 7,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 1952,
-     "to": 1969,
-     "key": false,
-     "line": 21,
-     "idx": 8,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 1967,
-     "to": 1975,
-     "key": false,
-     "line": 21,
-     "idx": 9,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -7962,7 +6493,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -8034,7 +6565,12 @@
       "crash_at": 2018
      }
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -8056,11 +6592,28 @@
      "bridge": 1
     },
     {
-     "f": 1982,
+     "f": 1990,
      "pos": [
-      -0.472,
-      1.43,
-      2.679
+      -0.2832,
+      1.398,
+      1.6074
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 1991,
+     "pos": [
+      -0.2832,
+      1.398,
+      1.6074
      ],
      "look": [
       0.0,
@@ -8077,7 +6630,7 @@
      "pos": [
       0.0,
       1.35,
-      1.6
+      0.96
      ],
      "look": [
       0.0,
@@ -8090,129 +6643,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.69,
-     1.39,
-     -0.78
-    ],
-    "rotY": -15.7,
-    "size": 0.09,
-    "width": 0.77,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -0.2,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "I",
-     "from": 1974,
-     "to": 1977,
-     "key": false,
-     "line": 22,
-     "idx": 0,
-     "em": 0.351
-    },
-    {
-     "w": "post",
-     "from": 1976,
-     "to": 1983,
-     "key": false,
-     "line": 22,
-     "idx": 1,
-     "em": 2.258
-    },
-    {
-     "w": "a",
-     "from": 1982,
-     "to": 1990,
-     "key": false,
-     "line": 22,
-     "idx": 2,
-     "em": 0.677
-    },
-    {
-     "w": "pic",
-     "from": 1988,
-     "to": 1994,
-     "key": false,
-     "line": 22,
-     "idx": 3,
-     "em": 1.438
-    },
-    {
-     "w": "and",
-     "from": 1993,
-     "to": 2000,
-     "key": false,
-     "line": 22,
-     "idx": 4,
-     "em": 1.866
-    },
-    {
-     "w": "the",
-     "from": 1998,
-     "to": 2009,
-     "key": false,
-     "line": 22,
-     "idx": 5,
-     "em": 1.73
-    },
-    {
-     "w": "app",
-     "from": 2008,
-     "to": 2018,
-     "key": false,
-     "line": 22,
-     "idx": 6,
-     "em": 1.713
-    },
-    {
-     "w": "crash",
-     "from": 2016,
-     "to": 2026,
-     "key": true,
-     "line": 22,
-     "idx": 7,
-     "em": 2.754
-    },
-    {
-     "w": "(",
-     "from": 2025,
-     "to": 2028,
-     "key": false,
-     "line": 22,
-     "idx": 8,
-     "em": 0.464
-    },
-    {
-     "w": "Yeah)",
-     "from": 2027,
-     "to": 2034,
-     "key": false,
-     "line": 22,
-     "idx": 9,
-     "em": 2.865
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -8314,7 +6748,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -8374,141 +6808,112 @@
     "grade": "wm_night",
     "lock": 0.45,
     "covers": 69.3,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
-     "f": 2033,
-     "pos": [
-      0.0,
-      1.35,
-      1.6
-     ],
      "look": [
       0.0,
       1.35,
       0.0
      ],
+     "f": 2033,
+     "pos": [
+      0.0,
+      1.35,
+      0.96
+     ],
      "fov": 34.0,
      "roll": -8.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 2041,
-     "pos": [
-      1.507,
-      1.302,
-      0.187
-     ],
      "look": [
       0.007,
       1.252,
       -0.013
      ],
+     "f": 2049,
+     "pos": [
+      1.5078,
+      1.302,
+      0.1871
+     ],
      "fov": 30.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.007,
+      1.252,
+      -0.013
+     ],
+     "f": 2050,
+     "pos": [
+      1.5078,
+      1.302,
+      0.1871
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.007,
+      1.252,
+      -0.013
+     ],
+     "f": 2062,
+     "pos": [
+      1.46,
+      1.342,
+      0.0274
+     ],
+     "fov": 28.95,
+     "roll": 0.75,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.007,
+      1.252,
+      -0.013
+     ],
+     "f": 2091,
+     "pos": [
+      1.3959,
+      1.382,
+      -0.12
+     ],
+     "fov": 27.9,
+     "roll": 1.5,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.73,
-     1.34,
-     -0.12
-    ],
-    "rotY": 68.5,
-    "size": 0.021,
-    "width": 0.23,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -1.8,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Rockin'",
-     "from": 2033,
-     "to": 2045,
-     "key": false,
-     "line": 23,
-     "idx": 0,
-     "em": 3.783
-    },
-    {
-     "w": "Chanel",
-     "from": 2044,
-     "to": 2052,
-     "key": false,
-     "line": 23,
-     "idx": 1,
-     "em": 3.471
-    },
-    {
-     "w": "with",
-     "from": 2050,
-     "to": 2066,
-     "key": false,
-     "line": 23,
-     "idx": 2,
-     "em": 2.263
-    },
-    {
-     "w": "a",
-     "from": 2064,
-     "to": 2072,
-     "key": false,
-     "line": 23,
-     "idx": 3,
-     "em": 0.677
-    },
-    {
-     "w": "snap-back",
-     "from": 2071,
-     "to": 2088,
-     "key": true,
-     "line": 23,
-     "idx": 4,
-     "em": 5.262
-    },
-    {
-     "w": "(",
-     "from": 2087,
-     "to": 2090,
-     "key": false,
-     "line": 23,
-     "idx": 5,
-     "em": 0.464
-    },
-    {
-     "w": "Yeah)",
-     "from": 2089,
-     "to": 2094,
-     "key": false,
-     "line": 23,
-     "idx": 6,
-     "em": 2.865
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -8610,7 +7015,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -8670,7 +7075,12 @@
     "grade": "wm_night",
     "lock": 0.45,
     "fountain": 69.79,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -8708,88 +7118,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     1.2,
-     0.6,
-     0.6
-    ],
-    "rotY": 0.0,
-    "size": 0.049,
-    "width": 0.7,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "macro puddle rising shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.62,
-     0.7576706193828681
-    ],
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Water",
-     "from": 2092,
-     "to": 2107,
-     "key": false,
-     "line": 24,
-     "idx": 0,
-     "em": 3.007
-    },
-    {
-     "w": "my",
-     "from": 2105,
-     "to": 2112,
-     "key": false,
-     "line": 24,
-     "idx": 1,
-     "em": 1.348
-    },
-    {
-     "w": "money,",
-     "from": 2111,
-     "to": 2118,
-     "key": false,
-     "line": 24,
-     "idx": 2,
-     "em": 3.455
-    },
-    {
-     "w": "it",
-     "from": 2117,
-     "to": 2122,
-     "key": false,
-     "line": 24,
-     "idx": 3,
-     "em": 0.997
-    },
-    {
-     "w": "grow",
-     "from": 2121,
-     "to": 2141,
-     "key": true,
-     "line": 24,
-     "idx": 4,
-     "em": 2.278
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -8957,7 +7289,12 @@
       30
      ]
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -8979,7 +7316,24 @@
      "bridge": 1
     },
     {
-     "f": 2147,
+     "f": 2155,
+     "pos": [
+      0.738,
+      1.601,
+      -1.285
+     ],
+     "look": [
+      -0.012,
+      1.501,
+      0.014
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 2156,
      "pos": [
       0.738,
       1.601,
@@ -9032,102 +7386,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.73,
-     1.33,
-     -0.21
-    ],
-    "rotY": 37.1,
-    "size": 0.053,
-    "width": 0.64,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -2.2,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Still",
-     "from": 2139,
-     "to": 2159,
-     "key": false,
-     "line": 25,
-     "idx": 0,
-     "em": 2.767
-    },
-    {
-     "w": "on",
-     "from": 2157,
-     "to": 2168,
-     "key": false,
-     "line": 25,
-     "idx": 1,
-     "em": 1.137
-    },
-    {
-     "w": "my",
-     "from": 2166,
-     "to": 2173,
-     "key": false,
-     "line": 25,
-     "idx": 2,
-     "em": 1.348
-    },
-    {
-     "w": "wrist,",
-     "from": 2171,
-     "to": 2185,
-     "key": false,
-     "line": 25,
-     "idx": 3,
-     "em": 3.135
-    },
-    {
-     "w": "bring",
-     "from": 2183,
-     "to": 2204,
-     "key": false,
-     "line": 25,
-     "idx": 4,
-     "em": 2.57
-    },
-    {
-     "w": "your",
-     "from": 2202,
-     "to": 2210,
-     "key": false,
-     "line": 25,
-     "idx": 5,
-     "em": 2.235
-    },
-    {
-     "w": "coat",
-     "from": 2209,
-     "to": 2218,
-     "key": true,
-     "line": 25,
-     "idx": 6,
-     "em": 2.36
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -9229,7 +7491,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -9290,7 +7552,12 @@
     "lock": 0.45,
     "billboard": "WATCH ME",
     "splash": 2218,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -9312,7 +7579,24 @@
      "bridge": 1
     },
     {
-     "f": 2218,
+     "f": 2226,
+     "pos": [
+      -0.923,
+      0.3,
+      2.537
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 2227,
      "pos": [
       -0.923,
       0.3,
@@ -9365,147 +7649,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.51,
-     1.99,
-     -2.75
-    ],
-    "rotY": -7.9,
-    "size": 0.145,
-    "width": 6.09,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -15.6,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Baddie",
-     "from": 2217,
-     "to": 2230,
-     "key": false,
-     "line": 26,
-     "idx": 0,
-     "em": 3.585
-    },
-    {
-     "w": "so",
-     "from": 2229,
-     "to": 2235,
-     "key": false,
-     "line": 26,
-     "idx": 1,
-     "em": 1.137
-    },
-    {
-     "w": "bad,",
-     "from": 2234,
-     "to": 2244,
-     "key": false,
-     "line": 26,
-     "idx": 2,
-     "em": 2.261
-    },
-    {
-     "w": "throw",
-     "from": 2242,
-     "to": 2247,
-     "key": false,
-     "line": 26,
-     "idx": 3,
-     "em": 2.869
-    },
-    {
-     "w": "a",
-     "from": 2246,
-     "to": 2252,
-     "key": false,
-     "line": 26,
-     "idx": 4,
-     "em": 0.677
-    },
-    {
-     "w": "tantrum",
-     "from": 2251,
-     "to": 2274,
-     "key": false,
-     "line": 26,
-     "idx": 5,
-     "em": 4.311
-    },
-    {
-     "w": "Baddie",
-     "from": 2272,
-     "to": 2294,
-     "key": false,
-     "line": 27,
-     "idx": 0,
-     "em": 3.585
-    },
-    {
-     "w": "so",
-     "from": 2292,
-     "to": 2298,
-     "key": false,
-     "line": 27,
-     "idx": 1,
-     "em": 1.137
-    },
-    {
-     "w": "bad,",
-     "from": 2297,
-     "to": 2303,
-     "key": false,
-     "line": 27,
-     "idx": 2,
-     "em": 2.261
-    },
-    {
-     "w": "need",
-     "from": 2302,
-     "to": 2309,
-     "key": false,
-     "line": 27,
-     "idx": 3,
-     "em": 2.399
-    },
-    {
-     "w": "an",
-     "from": 2307,
-     "to": 2318,
-     "key": false,
-     "line": 27,
-     "idx": 4,
-     "em": 1.26
-    },
-    {
-     "w": "anthem",
-     "from": 2316,
-     "to": 2326,
-     "key": true,
-     "line": 27,
-     "idx": 5,
-     "em": 3.746
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -9607,7 +7754,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -9678,132 +7825,112 @@
       2362
      ]
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
      "f": 2325,
      "pos": [
       -0.41,
       2.45,
       3.899
      ],
-     "look": [
-      0.0,
-      1.35,
-      0.0
-     ],
      "fov": 34.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 2333,
-     "pos": [
-      0.2,
-      5.0,
-      1.4
-     ],
      "look": [
       0.0,
       0.0,
       0.2
      ],
+     "f": 2341,
+     "pos": [
+      0.846,
+      5.0,
+      5.2759
+     ],
      "fov": 46.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      0.0,
+      0.2
+     ],
+     "f": 2342,
+     "pos": [
+      0.846,
+      5.0,
+      5.2759
+     ],
+     "fov": 46.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      0.0,
+      0.2
+     ],
+     "f": 2363,
+     "pos": [
+      1.317,
+      5.04,
+      4.9612
+     ],
+     "fov": 44.39,
+     "roll": 0.75,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      0.0,
+      0.2
+     ],
+     "f": 2401,
+     "pos": [
+      1.7322,
+      5.08,
+      4.6059
+     ],
+     "fov": 42.78,
+     "roll": 1.5,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     1.14,
-     1.0,
-     0.91
-    ],
-    "rotY": -27.5,
-    "size": 0.105,
-    "width": 2.43,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -15.6,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Pins",
-     "from": 2325,
-     "to": 2343,
-     "key": true,
-     "line": 28,
-     "idx": 0,
-     "em": 2.214
-    },
-    {
-     "w": "are",
-     "from": 2341,
-     "to": 2357,
-     "key": false,
-     "line": 28,
-     "idx": 1,
-     "em": 1.728
-    },
-    {
-     "w": "dropping,",
-     "from": 2356,
-     "to": 2372,
-     "key": false,
-     "line": 28,
-     "idx": 2,
-     "em": 4.518
-    },
-    {
-     "w": "pins",
-     "from": 2370,
-     "to": 2379,
-     "key": true,
-     "line": 28,
-     "idx": 3,
-     "em": 2.078
-    },
-    {
-     "w": "are",
-     "from": 2378,
-     "to": 2387,
-     "key": false,
-     "line": 28,
-     "idx": 4,
-     "em": 1.728
-    },
-    {
-     "w": "dropping",
-     "from": 2386,
-     "to": 2403,
-     "key": false,
-     "line": 28,
-     "idx": 5,
-     "em": 4.153
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -9905,7 +8032,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -9968,177 +8095,112 @@
      2453
     ],
     "her_camera": "hand_r",
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
-     "f": 2402,
-     "pos": [
-      0.2,
-      5.0,
-      1.4
-     ],
      "look": [
       0.0,
       0.0,
       0.2
      ],
-     "fov": 46.0,
-     "roll": 0.0,
+     "f": 2402,
+     "pos": [
+      1.7322,
+      5.08,
+      4.6059
+     ],
+     "fov": 42.78,
+     "roll": 1.5,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 2410,
-     "pos": [
-      1.5,
-      0.9,
-      1.4
-     ],
      "look": [
       0.0,
       1.3,
       0.0
      ],
+     "f": 2418,
+     "pos": [
+      1.5282,
+      0.9,
+      1.4264
+     ],
      "fov": 34.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.3,
+      0.0
+     ],
+     "f": 2419,
+     "pos": [
+      1.5282,
+      0.9,
+      1.4264
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.3,
+      0.0
+     ],
+     "f": 2451,
+     "pos": [
+      1.3159,
+      0.94,
+      1.5152
+     ],
+     "fov": 32.81,
+     "roll": -0.75,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.3,
+      0.0
+     ],
+     "f": 2499,
+     "pos": [
+      1.1024,
+      0.98,
+      1.5759
+     ],
+     "fov": 31.62,
+     "roll": -1.5,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.23,
-     1.58,
-     0.15
-    ],
-    "rotY": 45.5,
-    "size": 0.064,
-    "width": 1.32,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": null,
-    "style": "v2",
-    "tilt": 11.6,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "When",
-     "from": 2402,
-     "to": 2411,
-     "key": false,
-     "line": 29,
-     "idx": 0,
-     "em": 2.386
-    },
-    {
-     "w": "I",
-     "from": 2410,
-     "to": 2424,
-     "key": false,
-     "line": 29,
-     "idx": 1,
-     "em": 0.351
-    },
-    {
-     "w": "walk",
-     "from": 2423,
-     "to": 2428,
-     "key": false,
-     "line": 29,
-     "idx": 2,
-     "em": 2.519
-    },
-    {
-     "w": "in,",
-     "from": 2426,
-     "to": 2442,
-     "key": false,
-     "line": 29,
-     "idx": 3,
-     "em": 1.342
-    },
-    {
-     "w": "when",
-     "from": 2440,
-     "to": 2449,
-     "key": false,
-     "line": 29,
-     "idx": 4,
-     "em": 2.454
-    },
-    {
-     "w": "I",
-     "from": 2447,
-     "to": 2453,
-     "key": false,
-     "line": 29,
-     "idx": 5,
-     "em": 0.351
-    },
-    {
-     "w": "walk",
-     "from": 2451,
-     "to": 2458,
-     "key": false,
-     "line": 29,
-     "idx": 6,
-     "em": 2.519
-    },
-    {
-     "w": "in",
-     "from": 2457,
-     "to": 2464,
-     "key": false,
-     "line": 29,
-     "idx": 7,
-     "em": 0.977
-    },
-    {
-     "w": "(",
-     "from": 2462,
-     "to": 2471,
-     "key": false,
-     "line": 29,
-     "idx": 8,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 2470,
-     "to": 2494,
-     "key": false,
-     "line": 29,
-     "idx": 9,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 2493,
-     "to": 2501,
-     "key": false,
-     "line": 29,
-     "idx": 10,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -10240,7 +8302,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -10291,6 +8353,12 @@
    "mouth": {
     "gain": 1.0
    },
+   "swing": [
+    [
+     2529,
+     1
+    ]
+   ],
    "id": "35",
    "from": 2500,
    "to": 2586,
@@ -10305,30 +8373,53 @@
       18
      ]
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 2500,
      "pos": [
-      1.5,
-      0.9,
-      1.4
+      1.1024,
+      0.98,
+      1.5759
      ],
      "look": [
       0.0,
       1.3,
       0.0
      ],
-     "fov": 34.0,
-     "roll": 0.0,
+     "fov": 31.62,
+     "roll": -1.5,
      "ease": "inOut",
      "frameH": 1.2,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 2508,
+     "f": 2516,
+     "pos": [
+      -1.564,
+      1.227,
+      2.7
+     ],
+     "look": [
+      -0.004,
+      1.227,
+      -0.002
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "frameH": 1.2,
+     "observer": 1.0
+    },
+    {
+     "f": 2517,
      "pos": [
       -1.564,
       1.227,
@@ -10364,75 +8455,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.35,
-     1.45,
-     -0.48
-    ],
-    "rotY": -11.2,
-    "size": 0.079,
-    "width": 0.75,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -0.1,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Watch",
-     "from": 2500,
-     "to": 2522,
-     "key": false,
-     "line": 30,
-     "idx": 0,
-     "em": 3.004
-    },
-    {
-     "w": "me",
-     "from": 2521,
-     "to": 2530,
-     "key": false,
-     "line": 30,
-     "idx": 1,
-     "em": 1.361
-    },
-    {
-     "w": "move,",
-     "from": 2529,
-     "to": 2564,
-     "key": false,
-     "line": 30,
-     "idx": 2,
-     "em": 2.912
-    },
-    {
-     "w": "runnin'",
-     "from": 2562,
-     "to": 2588,
-     "key": false,
-     "line": 30,
-     "idx": 3,
-     "em": 3.735
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cover",
     "frames": 8,
@@ -10535,7 +8561,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -10600,7 +8626,12 @@
       18
      ]
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -10657,102 +8688,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.52,
-     1.42,
-     -0.15
-    ],
-    "rotY": -25.8,
-    "size": 0.053,
-    "width": 0.64,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": null,
-    "style": "v2",
-    "tilt": -1.4,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "circles",
-     "from": 2586,
-     "to": 2602,
-     "key": false,
-     "line": 30,
-     "idx": 4,
-     "em": 3.604
-    },
-    {
-     "w": "'round",
-     "from": 2600,
-     "to": 2612,
-     "key": false,
-     "line": 30,
-     "idx": 5,
-     "em": 3.335
-    },
-    {
-     "w": "these",
-     "from": 2611,
-     "to": 2620,
-     "key": false,
-     "line": 30,
-     "idx": 6,
-     "em": 2.918
-    },
-    {
-     "w": "dudes",
-     "from": 2619,
-     "to": 2623,
-     "key": false,
-     "line": 30,
-     "idx": 7,
-     "em": 3.043
-    },
-    {
-     "w": "(",
-     "from": 2621,
-     "to": 2624,
-     "key": false,
-     "line": 30,
-     "idx": 8,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 2623,
-     "to": 2626,
-     "key": false,
-     "line": 30,
-     "idx": 9,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 2625,
-     "to": 2629,
-     "key": false,
-     "line": 30,
-     "idx": 10,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -10963,7 +8902,12 @@
       18
      ]
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -10985,7 +8929,24 @@
      "bridge": 1
     },
     {
-     "f": 2635,
+     "f": 2643,
+     "pos": [
+      -2.145,
+      1.35,
+      0.084
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 36.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 2644,
      "pos": [
       -2.145,
       1.35,
@@ -11019,156 +8980,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "ticker",
-    "anchor": [
-     1.9,
-     1.15,
-     -2.95
-    ],
-    "rotY": 0.0,
-    "size": 0.3,
-    "width": 4.0,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "screen",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 2.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "In",
-     "from": 2627,
-     "to": 2667,
-     "key": false,
-     "line": 31,
-     "idx": 0,
-     "em": 0.934
-    },
-    {
-     "w": "my",
-     "from": 2666,
-     "to": 2679,
-     "key": false,
-     "line": 31,
-     "idx": 1,
-     "em": 1.348
-    },
-    {
-     "w": "Loubs,",
-     "from": 2678,
-     "to": 2697,
-     "key": false,
-     "line": 31,
-     "idx": 2,
-     "em": 3.378
-    },
-    {
-     "w": "breakin'",
-     "from": 2696,
-     "to": 2716,
-     "key": false,
-     "line": 31,
-     "idx": 3,
-     "em": 4.395
-    },
-    {
-     "w": "hearts",
-     "from": 2715,
-     "to": 2720,
-     "key": false,
-     "line": 31,
-     "idx": 4,
-     "em": 3.436
-    },
-    {
-     "w": "and",
-     "from": 2719,
-     "to": 2726,
-     "key": false,
-     "line": 31,
-     "idx": 5,
-     "em": 1.866
-    },
-    {
-     "w": "breakin'",
-     "from": 2725,
-     "to": 2741,
-     "key": false,
-     "line": 31,
-     "idx": 6,
-     "em": 4.395
-    },
-    {
-     "w": "news",
-     "from": 2739,
-     "to": 2749,
-     "key": true,
-     "line": 31,
-     "idx": 7,
-     "em": 2.515
-    },
-    {
-     "w": "(",
-     "from": 2747,
-     "to": 2751,
-     "key": false,
-     "line": 31,
-     "idx": 8,
-     "em": 0.464
-    },
-    {
-     "w": "Breakin',",
-     "from": 2749,
-     "to": 2765,
-     "key": false,
-     "line": 31,
-     "idx": 9,
-     "em": 4.844
-    },
-    {
-     "w": "breakin',",
-     "from": 2763,
-     "to": 2777,
-     "key": false,
-     "line": 31,
-     "idx": 10,
-     "em": 4.76
-    },
-    {
-     "w": "watch",
-     "from": 2775,
-     "to": 2780,
-     "key": false,
-     "line": 31,
-     "idx": 11,
-     "em": 3.072
-    },
-    {
-     "w": "me)",
-     "from": 2779,
-     "to": 2790,
-     "key": false,
-     "line": 31,
-     "idx": 12,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -11270,7 +9085,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -11321,6 +9136,16 @@
    "mouth": {
     "gain": 1.0
    },
+   "swing": [
+    [
+     2846,
+     1
+    ],
+    [
+     2867,
+     -1
+    ]
+   ],
    "id": "38",
    "from": 2788,
    "to": 2890,
@@ -11349,170 +9174,112 @@
      ],
      "jump_at": 2820
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
      "f": 2788,
      "pos": [
       -1.145,
       1.35,
       1.816
      ],
-     "look": [
-      0.0,
-      1.35,
-      0.0
-     ],
      "fov": 36.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 2796,
-     "pos": [
-      0.821,
-      1.35,
-      2.255
-     ],
      "look": [
       0.0,
       1.35,
       0.0
      ],
+     "f": 2804,
+     "pos": [
+      0.7553,
+      1.35,
+      2.0746
+     ],
      "fov": 34.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0
     },
     {
-     "f": 2883,
-     "pos": [
-      0.821,
-      1.35,
-      2.255
-     ],
      "look": [
       0.0,
       1.35,
       0.0
      ],
+     "f": 2805,
+     "pos": [
+      0.7553,
+      1.35,
+      2.0746
+     ],
      "fov": 34.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0
     },
     {
-     "f": 2890,
-     "pos": [
-      0.821,
-      1.35,
-      2.255
-     ],
      "look": [
-      -1.149,
+      0.0,
       1.35,
-      2.602
+      0.0
      ],
-     "fov": 34.0,
-     "roll": 0.0,
-     "ease": "in",
+     "f": 2839,
+     "pos": [
+      0.513,
+      1.3868,
+      2.0565
+     ],
+     "fov": 32.81,
+     "roll": -0.75,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "f": 2889,
+     "pos": [
+      0.2829,
+      1.4236,
+      2.0114
+     ],
+     "fov": 31.62,
+     "roll": -1.5,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -1.4,
-     2.6,
-     -2.9
-    ],
-    "rotY": 0.0,
-    "size": 0.045,
-    "width": 1.04,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "whip with the gust shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.78,
-     1.2
-    ],
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.3,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Hurricane",
-     "from": 2788,
-     "to": 2815,
-     "key": true,
-     "line": 32,
-     "idx": 0,
-     "em": 4.956
-    },
-    {
-     "w": "when",
-     "from": 2813,
-     "to": 2827,
-     "key": false,
-     "line": 32,
-     "idx": 1,
-     "em": 2.454
-    },
-    {
-     "w": "the",
-     "from": 2826,
-     "to": 2833,
-     "key": false,
-     "line": 32,
-     "idx": 2,
-     "em": 1.73
-    },
-    {
-     "w": "forecast",
-     "from": 2832,
-     "to": 2848,
-     "key": false,
-     "line": 32,
-     "idx": 3,
-     "em": 4.566
-    },
-    {
-     "w": "K/DA,",
-     "from": 2846,
-     "to": 2868,
-     "key": false,
-     "line": 32,
-     "idx": 4,
-     "em": 3.252
-    },
-    {
-     "w": "ayy",
-     "from": 2867,
-     "to": 2891,
-     "key": false,
-     "line": 32,
-     "idx": 5,
-     "em": 1.861
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -11614,7 +9381,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -11692,186 +9459,112 @@
       ]
      }
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
      "f": 2890,
      "pos": [
-      0.821,
-      1.35,
-      2.255
+      0.2829,
+      1.4236,
+      2.0114
      ],
-     "look": [
-      -1.149,
-      1.35,
-      2.602
-     ],
-     "fov": 34.0,
-     "roll": 0.0,
+     "fov": 31.62,
+     "roll": -1.5,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 2898,
-     "pos": [
-      0.1,
-      4.4,
-      0.8
-     ],
      "look": [
       0.0,
       0.0,
       0.0
      ],
+     "f": 2906,
+     "pos": [
+      0.5548,
+      4.4,
+      4.4387
+     ],
      "fov": 48.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "f": 2907,
+     "pos": [
+      0.5548,
+      4.4,
+      4.4387
+     ],
+     "fov": 48.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "f": 2941,
+     "pos": [
+      0.9751,
+      4.36,
+      4.1821
+     ],
+     "fov": 46.32,
+     "roll": 0.75,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "f": 2992,
+     "pos": [
+      1.3483,
+      4.32,
+      3.8882
+     ],
+     "fov": 44.64,
+     "roll": 1.5,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.98,
-     2.15,
-     0.38
-    ],
-    "rotY": -64.6,
-    "size": 0.088,
-    "width": 1.07,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -79.7,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "On",
-     "from": 2890,
-     "to": 2911,
-     "key": false,
-     "line": 33,
-     "idx": 0,
-     "em": 1.312
-    },
-    {
-     "w": "your",
-     "from": 2910,
-     "to": 2926,
-     "key": false,
-     "line": 33,
-     "idx": 1,
-     "em": 2.235
-    },
-    {
-     "w": "radar,",
-     "from": 2925,
-     "to": 2941,
-     "key": true,
-     "line": 33,
-     "idx": 2,
-     "em": 3.217
-    },
-    {
-     "w": "you",
-     "from": 2940,
-     "to": 2948,
-     "key": false,
-     "line": 33,
-     "idx": 3,
-     "em": 1.789
-    },
-    {
-     "w": "can't",
-     "from": 2947,
-     "to": 2963,
-     "key": false,
-     "line": 33,
-     "idx": 4,
-     "em": 2.892
-    },
-    {
-     "w": "look",
-     "from": 2962,
-     "to": 2972,
-     "key": false,
-     "line": 33,
-     "idx": 5,
-     "em": 2.206
-    },
-    {
-     "w": "away",
-     "from": 2970,
-     "to": 2981,
-     "key": false,
-     "line": 33,
-     "idx": 6,
-     "em": 2.69
-    },
-    {
-     "w": "(",
-     "from": 2980,
-     "to": 2983,
-     "key": false,
-     "line": 33,
-     "idx": 7,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 2982,
-     "to": 2985,
-     "key": false,
-     "line": 33,
-     "idx": 8,
-     "em": 3.004
-    },
-    {
-     "w": "me,",
-     "from": 2984,
-     "to": 2987,
-     "key": false,
-     "line": 33,
-     "idx": 9,
-     "em": 1.726
-    },
-    {
-     "w": "watch",
-     "from": 2986,
-     "to": 2989,
-     "key": false,
-     "line": 33,
-     "idx": 10,
-     "em": 3.072
-    },
-    {
-     "w": "me)",
-     "from": 2988,
-     "to": 2994,
-     "key": false,
-     "line": 33,
-     "idx": 11,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -11973,7 +9666,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -12100,29 +9793,51 @@
       24
      ]
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 2993,
      "pos": [
-      0.1,
-      4.4,
-      0.8
+      1.3483,
+      4.32,
+      3.8882
      ],
      "look": [
       0.0,
       0.0,
       0.0
      ],
-     "fov": 48.0,
-     "roll": 0.0,
+     "fov": 44.64,
+     "roll": 1.5,
      "ease": "inOut",
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 3001,
+     "f": 3009,
+     "pos": [
+      0.0,
+      1.0,
+      4.6
+     ],
+     "look": [
+      0.4,
+      4.3,
+      -3.1
+     ],
+     "fov": 44.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 3010,
      "pos": [
       0.0,
       1.0,
@@ -12156,187 +9871,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     1.23,
-     3.01,
-     -2.48
-    ],
-    "rotY": 0.0,
-    "size": 0.0742,
-    "width": 1.149,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "the crane rises past her to the billboard - the long line may cross her, never her face",
-    "lens": [
-     0.5,
-     0.5,
-     1.2
-    ],
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Watch",
-     "from": 2993,
-     "to": 3022,
-     "key": false,
-     "line": 34,
-     "idx": 0,
-     "em": 3.004
-    },
-    {
-     "w": "me",
-     "from": 3020,
-     "to": 3046,
-     "key": false,
-     "line": 34,
-     "idx": 1,
-     "em": 1.361
-    },
-    {
-     "w": "pose,",
-     "from": 3045,
-     "to": 3067,
-     "key": true,
-     "line": 34,
-     "idx": 2,
-     "em": 2.625
-    },
-    {
-     "w": "always",
-     "from": 3065,
-     "to": 3080,
-     "key": false,
-     "line": 34,
-     "idx": 3,
-     "em": 3.797
-    },
-    {
-     "w": "keep",
-     "from": 3078,
-     "to": 3094,
-     "key": false,
-     "line": 34,
-     "idx": 4,
-     "em": 2.302
-    },
-    {
-     "w": "'em",
-     "from": 3093,
-     "to": 3101,
-     "key": false,
-     "line": 34,
-     "idx": 5,
-     "em": 1.864
-    },
-    {
-     "w": "on",
-     "from": 3100,
-     "to": 3105,
-     "key": false,
-     "line": 34,
-     "idx": 6,
-     "em": 1.137
-    },
-    {
-     "w": "they",
-     "from": 3104,
-     "to": 3109,
-     "key": false,
-     "line": 34,
-     "idx": 7,
-     "em": 2.322
-    },
-    {
-     "w": "toes",
-     "from": 3107,
-     "to": 3117,
-     "key": false,
-     "line": 34,
-     "idx": 8,
-     "em": 2.345
-    },
-    {
-     "w": "(",
-     "from": 3115,
-     "to": 3119,
-     "key": false,
-     "line": 34,
-     "idx": 9,
-     "em": 0.464
-    },
-    {
-     "w": "Keep",
-     "from": 3117,
-     "to": 3129,
-     "key": false,
-     "line": 34,
-     "idx": 10,
-     "em": 2.49
-    },
-    {
-     "w": "'em",
-     "from": 3128,
-     "to": 3131,
-     "key": false,
-     "line": 34,
-     "idx": 11,
-     "em": 1.864
-    },
-    {
-     "w": "on",
-     "from": 3130,
-     "to": 3135,
-     "key": false,
-     "line": 34,
-     "idx": 12,
-     "em": 1.137
-    },
-    {
-     "w": "they,",
-     "from": 3133,
-     "to": 3146,
-     "key": false,
-     "line": 34,
-     "idx": 13,
-     "em": 2.687
-    },
-    {
-     "w": "watch",
-     "from": 3144,
-     "to": 3155,
-     "key": false,
-     "line": 34,
-     "idx": 14,
-     "em": 3.072
-    },
-    {
-     "w": "me)",
-     "from": 3154,
-     "to": 3164,
-     "key": false,
-     "line": 34,
-     "idx": 15,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -12438,7 +9976,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -12499,7 +10037,12 @@
     "lock": 0.45,
     "road_paint": 105.46,
     "treadmill": 0.6,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -12521,7 +10064,7 @@
      "bridge": 1
     },
     {
-     "f": 3170,
+     "f": 3178,
      "pos": [
       0.0,
       1.35,
@@ -12538,7 +10081,7 @@
      "observer": 1.0
     },
     {
-     "f": 3171,
+     "f": 3179,
      "pos": [
       0.0,
       1.35,
@@ -12555,7 +10098,7 @@
      "observer": 1.0
     },
     {
-     "f": 3177,
+     "f": 3180,
      "pos": [
       0.0,
       1.35,
@@ -12590,129 +10133,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.37,
-     1.44,
-     0.56
-    ],
-    "rotY": 15.7,
-    "size": 0.053,
-    "width": 0.5,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -0.6,
-    "roll": 0.0,
-    "keyScale": 1.3,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Centerfolds",
-     "from": 3162,
-     "to": 3188,
-     "key": false,
-     "line": 35,
-     "idx": 0,
-     "em": 6.241
-    },
-    {
-     "w": "turn",
-     "from": 3186,
-     "to": 3196,
-     "key": false,
-     "line": 35,
-     "idx": 1,
-     "em": 2.275
-    },
-    {
-     "w": "the",
-     "from": 3194,
-     "to": 3202,
-     "key": false,
-     "line": 35,
-     "idx": 2,
-     "em": 1.73
-    },
-    {
-     "w": "sidewalk",
-     "from": 3200,
-     "to": 3217,
-     "key": false,
-     "line": 35,
-     "idx": 3,
-     "em": 4.707
-    },
-    {
-     "w": "to",
-     "from": 3215,
-     "to": 3226,
-     "key": false,
-     "line": 35,
-     "idx": 4,
-     "em": 1.157
-    },
-    {
-     "w": "a",
-     "from": 3225,
-     "to": 3233,
-     "key": false,
-     "line": 35,
-     "idx": 5,
-     "em": 0.677
-    },
-    {
-     "w": "show",
-     "from": 3232,
-     "to": 3246,
-     "key": true,
-     "line": 35,
-     "idx": 6,
-     "em": 2.403
-    },
-    {
-     "w": "(",
-     "from": 3245,
-     "to": 3248,
-     "key": false,
-     "line": 35,
-     "idx": 7,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 3247,
-     "to": 3264,
-     "key": false,
-     "line": 35,
-     "idx": 8,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 3262,
-     "to": 3273,
-     "key": false,
-     "line": 35,
-     "idx": 9,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -12814,7 +10238,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -12865,6 +10289,16 @@
    "mouth": {
     "gain": 1.0
    },
+   "swing": [
+    [
+     3339,
+     1
+    ],
+    [
+     3371,
+     -1
+    ]
+   ],
    "id": "42",
    "from": 3271,
    "to": 3397,
@@ -12889,7 +10323,12 @@
       18
      ]
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -12911,7 +10350,24 @@
      "bridge": 1
     },
     {
-     "f": 3279,
+     "f": 3287,
+     "pos": [
+      2.2,
+      0.9,
+      1.4
+     ],
+     "look": [
+      2.5,
+      0.6,
+      -1.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 3288,
      "pos": [
       2.2,
       0.9,
@@ -12945,97 +10401,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.0,
-     1.0,
-     0.3
-    ],
-    "rotY": 0.0,
-    "size": 0.062,
-    "width": 1.04,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "his MS, focus pull shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.7,
-     1.2
-    ],
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Hurricane",
-     "from": 3271,
-     "to": 3308,
-     "key": false,
-     "line": 36,
-     "idx": 0,
-     "em": 4.956
-    },
-    {
-     "w": "when",
-     "from": 3307,
-     "to": 3320,
-     "key": false,
-     "line": 36,
-     "idx": 1,
-     "em": 2.454
-    },
-    {
-     "w": "the",
-     "from": 3318,
-     "to": 3326,
-     "key": false,
-     "line": 36,
-     "idx": 2,
-     "em": 1.73
-    },
-    {
-     "w": "forecast",
-     "from": 3324,
-     "to": 3340,
-     "key": false,
-     "line": 36,
-     "idx": 3,
-     "em": 4.566
-    },
-    {
-     "w": "K/DA,",
-     "from": 3339,
-     "to": 3373,
-     "key": false,
-     "line": 36,
-     "idx": 4,
-     "em": 3.252
-    },
-    {
-     "w": "ayy",
-     "from": 3371,
-     "to": 3399,
-     "key": false,
-     "line": 36,
-     "idx": 5,
-     "em": 1.861
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -13137,7 +10506,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -13202,7 +10571,12 @@
     "covers": 113.29,
     "billboard": "WATCH ME",
     "tv": "RAYMI RAYMI RAYMI",
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -13224,11 +10598,28 @@
      "bridge": 1
     },
     {
-     "f": 3405,
+     "f": 3413,
      "pos": [
-      0.252,
-      1.4445,
-      1.008
+      0.292,
+      1.4595,
+      1.168
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 3414,
+     "pos": [
+      0.292,
+      1.4595,
+      1.168
      ],
      "look": [
       0.0,
@@ -13243,9 +10634,9 @@
     {
      "f": 3528,
      "pos": [
-      -0.267,
-      2.838,
-      2.832
+      -0.357,
+      3.098,
+      3.472
      ],
      "look": [
       0.3,
@@ -13258,133 +10649,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     1.2,
-     2.1,
-     -0.6
-    ],
-    "rotY": 0.0,
-    "size": 0.0417,
-    "width": 1.058,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "a rolling pull-out over the corner: the line rides the lens, may cross her body, never her face",
-    "lens": [
-     0.5,
-     0.3,
-     1.1702481782864296
-    ],
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "There's",
-     "from": 3397,
-     "to": 3419,
-     "key": false,
-     "line": 37,
-     "idx": 0,
-     "em": 3.986
-    },
-    {
-     "w": "a",
-     "from": 3418,
-     "to": 3423,
-     "key": false,
-     "line": 37,
-     "idx": 1,
-     "em": 0.677
-    },
-    {
-     "w": "hundred",
-     "from": 3422,
-     "to": 3434,
-     "key": false,
-     "line": 37,
-     "idx": 2,
-     "em": 4.011
-    },
-    {
-     "w": "percent",
-     "from": 3432,
-     "to": 3448,
-     "key": false,
-     "line": 37,
-     "idx": 3,
-     "em": 3.886
-    },
-    {
-     "w": "chance",
-     "from": 3447,
-     "to": 3465,
-     "key": false,
-     "line": 37,
-     "idx": 4,
-     "em": 3.439
-    },
-    {
-     "w": "of",
-     "from": 3464,
-     "to": 3475,
-     "key": false,
-     "line": 37,
-     "idx": 5,
-     "em": 1.126
-    },
-    {
-     "w": "slay",
-     "from": 3473,
-     "to": 3477,
-     "key": true,
-     "line": 37,
-     "idx": 6,
-     "em": 2.376
-    },
-    {
-     "w": "(",
-     "from": 3475,
-     "to": 3479,
-     "key": false,
-     "line": 37,
-     "idx": 7,
-     "em": 0.464
-    },
-    {
-     "w": "Slay,",
-     "from": 3478,
-     "to": 3509,
-     "key": true,
-     "line": 37,
-     "idx": 8,
-     "em": 2.88
-    },
-    {
-     "w": "watch",
-     "from": 3508,
-     "to": 3543,
-     "key": false,
-     "line": 37,
-     "idx": 9,
-     "em": 3.072
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -13486,7 +10754,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -13559,69 +10827,75 @@
      "out_at": 3530,
      "out_s": 1
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
-     "f": 3528,
-     "pos": [
-      -2.4,
-      1.6,
-      4.8
-     ],
      "look": [
       0.0,
       1.2,
       -0.4
      ],
+     "f": 3528,
+     "pos": [
+      -2.4058,
+      1.6,
+      4.8127
+     ],
      "fov": 42.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.2,
+      -0.4
+     ],
+     "f": 3545,
+     "pos": [
+      -3.813,
+      1.44,
+      3.5796
+     ],
+     "fov": 40.53,
+     "roll": -3.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.2,
+      -0.4
+     ],
+     "f": 3561,
+     "pos": [
+      -4.6967,
+      1.28,
+      2.0163
+     ],
+     "fov": 39.06,
+     "roll": -6.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     1.45,
-     2.08,
-     0.82
-    ],
-    "rotY": -43.9,
-    "size": 0.476,
-    "width": 6.0,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": null,
-    "style": "v2",
-    "tilt": -4.2,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "me)",
-     "from": 3548,
-     "to": 3564,
-     "key": false,
-     "line": 37,
-     "idx": 10,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -13784,33 +11058,55 @@
     "dark": 1,
     "glow": "#bfe6ff",
     "lightwriting": 3564,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 3562,
      "pos": [
-      -2.4,
-      1.6,
-      4.8
+      -4.6967,
+      1.28,
+      2.0163
      ],
      "look": [
       0.0,
       1.2,
       -0.4
      ],
-     "fov": 42.0,
-     "roll": 0.0,
+     "fov": 39.06,
+     "roll": -6.0,
      "ease": "inOut",
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 3570,
+     "f": 3578,
      "pos": [
       0.0,
-      1.43,
-      2.72
+      1.426,
+      2.584
+     ],
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 3579,
+     "pos": [
+      0.0,
+      1.426,
+      2.584
      ],
      "look": [
       0.0,
@@ -13825,9 +11121,9 @@
     {
      "f": 3621,
      "pos": [
-      0.278,
+      0.2641,
       1.35,
-      1.576
+      1.4972
      ],
      "look": [
       0.0,
@@ -13840,57 +11136,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "float",
-    "anchor": [
-     0.39,
-     1.33,
-     0.42
-    ],
-    "rotY": -8.0,
-    "size": 0.072,
-    "width": 0.53,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -1.0,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Watch",
-     "from": 3562,
-     "to": 3588,
-     "key": false,
-     "line": 38,
-     "idx": 0,
-     "em": 3.004
-    },
-    {
-     "w": "me",
-     "from": 3587,
-     "to": 3621,
-     "key": false,
-     "line": 38,
-     "idx": 1,
-     "em": 1.361
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -13992,7 +11241,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -14048,6 +11297,12 @@
    "mouth": {
     "gain": 1.0
    },
+   "swing": [
+    [
+     3694,
+     1
+    ]
+   ],
    "id": "46",
    "from": 3621,
    "to": 3716,
@@ -14058,96 +11313,112 @@
     "lock": 0.45,
     "dark": 1,
     "glow": "#bfe6ff",
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
-     "f": 3621,
-     "pos": [
-      0.278,
-      1.35,
-      1.576
-     ],
      "look": [
       0.0,
       1.35,
       0.0
      ],
+     "f": 3621,
+     "pos": [
+      0.2641,
+      1.35,
+      1.4972
+     ],
      "fov": 34.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 3629,
-     "pos": [
-      0.327,
-      1.339,
-      0.872
-     ],
      "look": [
       0.177,
       1.319,
       -0.028
      ],
+     "f": 3637,
+     "pos": [
+      0.327,
+      1.339,
+      0.8722
+     ],
      "fov": 30.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.177,
+      1.319,
+      -0.028
+     ],
+     "f": 3638,
+     "pos": [
+      0.327,
+      1.339,
+      0.8722
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.177,
+      1.319,
+      -0.028
+     ],
+     "f": 3668,
+     "pos": [
+      0.0318,
+      1.499,
+      0.836
+     ],
+     "fov": 28.95,
+     "roll": -3.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.177,
+      1.319,
+      -0.028
+     ],
+     "f": 3715,
+     "pos": [
+      -0.2241,
+      1.659,
+      0.7096
+     ],
+     "fov": 27.9,
+     "roll": -6.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.26,
-     1.26,
-     0.07
-    ],
-    "rotY": -7.0,
-    "size": 0.015,
-    "width": 0.65,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "CU still shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -0.5,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "It's",
-     "from": 3672,
-     "to": 3695,
-     "key": false,
-     "line": 39,
-     "idx": 0,
-     "em": 2.04
-    },
-    {
-     "w": "K/DA",
-     "from": 3694,
-     "to": 3717,
-     "key": false,
-     "line": 39,
-     "idx": 1,
-     "em": 2.887
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -14249,7 +11520,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -14313,29 +11584,51 @@
     "lock": 0.45,
     "dark": 1,
     "glow": "#bfe6ff",
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 3716,
      "pos": [
-      0.327,
-      1.339,
-      0.872
+      -0.2241,
+      1.659,
+      0.7096
      ],
      "look": [
       0.177,
       1.319,
       -0.028
      ],
-     "fov": 30.0,
-     "roll": 0.0,
+     "fov": 27.9,
+     "roll": -6.0,
      "ease": "inOut",
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 3724,
+     "f": 3732,
+     "pos": [
+      0.287,
+      1.207,
+      1.818
+     ],
+     "look": [
+      -0.033,
+      1.207,
+      0.006
+     ],
+     "fov": 32.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 3733,
      "pos": [
       0.287,
       1.207,
@@ -14404,57 +11697,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.03,
-     1.19,
-     -0.2
-    ],
-    "rotY": 9.1,
-    "size": 0.065,
-    "width": 1.77,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "push to her hand shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -0.2,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Watch",
-     "from": 3716,
-     "to": 3753,
-     "key": false,
-     "line": 40,
-     "idx": 0,
-     "em": 3.004
-    },
-    {
-     "w": "me",
-     "from": 3751,
-     "to": 3792,
-     "key": false,
-     "line": 40,
-     "idx": 1,
-     "em": 1.361
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -14556,7 +11802,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -14633,7 +11879,12 @@
      ]
     ],
     "dark_s": 0.05,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -14671,7 +11922,7 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
    "lyrics": null,
    "words": [],
@@ -14858,159 +12109,112 @@
      "hold": "flashlight",
      "yaw": -2.4
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
+     "look": [
+      0.0,
+      1.5,
+      0.0
+     ],
      "f": 3878,
      "pos": [
       -0.8,
       2.4,
       3.0
      ],
-     "look": [
-      0.0,
-      1.5,
-      0.0
-     ],
      "fov": 40.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 3886,
-     "pos": [
-      1.296,
-      1.844,
-      1.728
-     ],
      "look": [
       0.0,
       1.7,
       0.0
      ],
+     "f": 3894,
+     "pos": [
+      1.3891,
+      1.854,
+      1.8521
+     ],
      "fov": 38.0,
      "roll": 10.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.7,
+      0.0
+     ],
+     "f": 3895,
+     "pos": [
+      1.3891,
+      1.854,
+      1.8521
+     ],
+     "fov": 38.0,
+     "roll": 10.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.7,
+      0.0
+     ],
+     "f": 3939,
+     "pos": [
+      1.8398,
+      1.9772,
+      1.247
+     ],
+     "fov": 36.67,
+     "roll": 3.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.7,
+      0.0
+     ],
+     "f": 4000,
+     "pos": [
+      2.0561,
+      2.1004,
+      0.5559
+     ],
+     "fov": 35.34,
+     "roll": 6.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -1.24,
-     1.71,
-     -0.22
-    ],
-    "rotY": 52.6,
-    "size": 0.106,
-    "width": 1.14,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -4.2,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "On",
-     "from": 3878,
-     "to": 3902,
-     "key": false,
-     "line": 41,
-     "idx": 0,
-     "em": 1.312
-    },
-    {
-     "w": "your",
-     "from": 3901,
-     "to": 3911,
-     "key": false,
-     "line": 41,
-     "idx": 1,
-     "em": 2.235
-    },
-    {
-     "w": "radar,",
-     "from": 3909,
-     "to": 3926,
-     "key": true,
-     "line": 41,
-     "idx": 2,
-     "em": 3.217
-    },
-    {
-     "w": "you",
-     "from": 3924,
-     "to": 3933,
-     "key": false,
-     "line": 41,
-     "idx": 3,
-     "em": 1.789
-    },
-    {
-     "w": "can't",
-     "from": 3931,
-     "to": 3950,
-     "key": false,
-     "line": 41,
-     "idx": 4,
-     "em": 2.892
-    },
-    {
-     "w": "look",
-     "from": 3948,
-     "to": 3956,
-     "key": false,
-     "line": 41,
-     "idx": 5,
-     "em": 2.206
-    },
-    {
-     "w": "away",
-     "from": 3955,
-     "to": 3980,
-     "key": false,
-     "line": 41,
-     "idx": 6,
-     "em": 2.69
-    },
-    {
-     "w": "(",
-     "from": 3978,
-     "to": 3984,
-     "key": false,
-     "line": 41,
-     "idx": 7,
-     "em": 0.464
-    },
-    {
-     "w": "way)",
-     "from": 3983,
-     "to": 4002,
-     "key": false,
-     "line": 41,
-     "idx": 8,
-     "em": 2.468
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -15125,7 +12329,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -15209,158 +12413,120 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      -1.06,
-      1.48,
-      0.27
+      -0.79,
+      1.64,
+      -0.2
      ],
      "hold": "flashlight",
      "yaw": 0.8
     },
     "plaque": "RAYMI, 2026 - deep sea",
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
-     "f": 4001,
-     "pos": [
-      1.296,
-      1.844,
-      1.728
-     ],
      "look": [
       0.0,
       1.7,
       0.0
      ],
-     "fov": 38.0,
-     "roll": 10.0,
+     "f": 4001,
+     "pos": [
+      2.0561,
+      2.1004,
+      0.5559
+     ],
+     "fov": 35.34,
+     "roll": 6.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 4009,
-     "pos": [
-      0.469,
-      1.1805,
-      1.943
-     ],
      "look": [
       0.0,
       1.75,
       0.0
      ],
+     "f": 4017,
+     "pos": [
+      0.5168,
+      1.1465,
+      2.1409
+     ],
      "fov": 40.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.75,
+      0.0
+     ],
+     "f": 4018,
+     "pos": [
+      0.5168,
+      1.1465,
+      2.1409
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.75,
+      0.0
+     ],
+     "f": 4031,
+     "pos": [
+      -0.2001,
+      1.2601,
+      2.1049
+     ],
+     "fov": 38.6,
+     "roll": -3.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.75,
+      0.0
+     ],
+     "f": 4060,
+     "pos": [
+      -0.838,
+      1.3737,
+      1.8448
+     ],
+     "fov": 37.2,
+     "roll": -6.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.24,
-     1.7,
-     0.85
-    ],
-    "rotY": 11.9,
-    "size": 0.055,
-    "width": 1.03,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": 16.3,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "I",
-     "from": 4001,
-     "to": 4007,
-     "key": false,
-     "line": 42,
-     "idx": 0,
-     "em": 0.351
-    },
-    {
-     "w": "got",
-     "from": 4005,
-     "to": 4022,
-     "key": false,
-     "line": 42,
-     "idx": 1,
-     "em": 1.691
-    },
-    {
-     "w": "it",
-     "from": 4020,
-     "to": 4032,
-     "key": false,
-     "line": 42,
-     "idx": 2,
-     "em": 0.997
-    },
-    {
-     "w": "like",
-     "from": 4030,
-     "to": 4044,
-     "key": false,
-     "line": 42,
-     "idx": 3,
-     "em": 2.097
-    },
-    {
-     "w": "that",
-     "from": 4043,
-     "to": 4046,
-     "key": false,
-     "line": 42,
-     "idx": 4,
-     "em": 2.405
-    },
-    {
-     "w": "(",
-     "from": 4045,
-     "to": 4051,
-     "key": false,
-     "line": 42,
-     "idx": 5,
-     "em": 0.464
-    },
-    {
-     "w": "Oh",
-     "from": 4049,
-     "to": 4056,
-     "key": false,
-     "line": 42,
-     "idx": 6,
-     "em": 1.251
-    },
-    {
-     "w": "yeah)",
-     "from": 4055,
-     "to": 4062,
-     "key": false,
-     "line": 42,
-     "idx": 7,
-     "em": 2.851
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -15475,7 +12641,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -15545,141 +12711,112 @@
      "hold": "flashlight",
      "yaw": -2.4
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
-     "f": 4061,
-     "pos": [
-      0.469,
-      1.1805,
-      1.943
-     ],
      "look": [
       0.0,
       1.75,
       0.0
      ],
-     "fov": 40.0,
-     "roll": 0.0,
+     "f": 4061,
+     "pos": [
+      -0.838,
+      1.3737,
+      1.8448
+     ],
+     "fov": 37.2,
+     "roll": -6.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 4069,
-     "pos": [
-      2.1,
-      1.8,
-      0.4
-     ],
      "look": [
       0.0,
       1.75,
       0.0
      ],
+     "f": 4077,
+     "pos": [
+      2.1006,
+      1.8,
+      0.4001
+     ],
      "fov": 34.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.75,
+      0.0
+     ],
+     "f": 4078,
+     "pos": [
+      2.1006,
+      1.8,
+      0.4001
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.75,
+      0.0
+     ],
+     "f": 4088,
+     "pos": [
+      2.0317,
+      1.64,
+      -0.2933
+     ],
+     "fov": 32.81,
+     "roll": 3.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.75,
+      0.0
+     ],
+     "f": 4115,
+     "pos": [
+      1.7495,
+      1.48,
+      -0.8997
+     ],
+     "fov": 31.62,
+     "roll": 6.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.24,
-     1.8,
-     -0.11
-    ],
-    "rotY": 74.7,
-    "size": 0.141,
-    "width": 1.36,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": null,
-    "style": "v2",
-    "tilt": -1.5,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "If",
-     "from": 4061,
-     "to": 4079,
-     "key": false,
-     "line": 43,
-     "idx": 0,
-     "em": 0.923
-    },
-    {
-     "w": "you",
-     "from": 4077,
-     "to": 4082,
-     "key": false,
-     "line": 43,
-     "idx": 1,
-     "em": 1.789
-    },
-    {
-     "w": "wanna",
-     "from": 4081,
-     "to": 4091,
-     "key": false,
-     "line": 43,
-     "idx": 2,
-     "em": 3.264
-    },
-    {
-     "w": "like",
-     "from": 4090,
-     "to": 4099,
-     "key": false,
-     "line": 43,
-     "idx": 3,
-     "em": 2.097
-    },
-    {
-     "w": "that",
-     "from": 4098,
-     "to": 4112,
-     "key": false,
-     "line": 43,
-     "idx": 4,
-     "em": 2.405
-    },
-    {
-     "w": "(",
-     "from": 4110,
-     "to": 4114,
-     "key": false,
-     "line": 43,
-     "idx": 5,
-     "em": 0.464
-    },
-    {
-     "w": "Oh)",
-     "from": 4112,
-     "to": 4117,
-     "key": false,
-     "line": 43,
-     "idx": 6,
-     "em": 1.706
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -15794,7 +12931,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -15855,29 +12992,51 @@
     "lock": 0.45,
     "crossed": 4117,
     "barb_lens": 4128,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 4116,
      "pos": [
-      2.1,
-      1.8,
-      0.4
+      1.7495,
+      1.48,
+      -0.8997
      ],
      "look": [
       0.0,
       1.75,
       0.0
      ],
-     "fov": 34.0,
-     "roll": 0.0,
+     "fov": 31.62,
+     "roll": 6.0,
      "ease": "inOut",
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 4124,
+     "f": 4132,
+     "pos": [
+      1.6,
+      0.95,
+      1.7
+     ],
+     "look": [
+      1.45,
+      0.85,
+      1.2
+     ],
+     "fov": 30.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 4133,
      "pos": [
       1.6,
       0.95,
@@ -15911,93 +13070,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -9.61,
-     0.11,
-     -20.25
-    ],
-    "rotY": 26.9,
-    "size": 0.517,
-    "width": 7.65,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": 6.0,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "There's",
-     "from": 4116,
-     "to": 4149,
-     "key": false,
-     "line": 44,
-     "idx": 0,
-     "em": 3.986
-    },
-    {
-     "w": "only",
-     "from": 4148,
-     "to": 4157,
-     "key": false,
-     "line": 44,
-     "idx": 1,
-     "em": 2.253
-    },
-    {
-     "w": "one",
-     "from": 4155,
-     "to": 4167,
-     "key": false,
-     "line": 44,
-     "idx": 2,
-     "em": 1.742
-    },
-    {
-     "w": "way",
-     "from": 4166,
-     "to": 4173,
-     "key": false,
-     "line": 44,
-     "idx": 3,
-     "em": 2.013
-    },
-    {
-     "w": "to",
-     "from": 4171,
-     "to": 4180,
-     "key": false,
-     "line": 44,
-     "idx": 4,
-     "em": 1.157
-    },
-    {
-     "w": "know",
-     "from": 4179,
-     "to": 4224,
-     "key": false,
-     "line": 44,
-     "idx": 5,
-     "em": 2.455
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -16112,7 +13188,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -16171,7 +13247,12 @@
    "opts": {
     "grade": "wm_gold",
     "lock": 0.45,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -16193,7 +13274,24 @@
      "bridge": 1
     },
     {
-     "f": 4231,
+     "f": 4239,
+     "pos": [
+      -0.383,
+      1.968,
+      -1.085
+     ],
+     "look": [
+      0.01,
+      1.968,
+      -0.004
+     ],
+     "fov": 32.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 4240,
      "pos": [
       -0.383,
       1.968,
@@ -16262,66 +13360,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.23,
-     1.96,
-     0.7
-    ],
-    "rotY": -162.0,
-    "size": 0.05,
-    "width": 1.04,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "tail fills the lens shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.6,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "(",
-     "from": 4223,
-     "to": 4229,
-     "key": false,
-     "line": 45,
-     "idx": 0,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 4227,
-     "to": 4274,
-     "key": false,
-     "line": 45,
-     "idx": 1,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 4277,
-     "to": 4300,
-     "key": false,
-     "line": 45,
-     "idx": 2,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -16436,7 +13478,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -16487,6 +13529,12 @@
    "mouth": {
     "gain": 1.0
    },
+   "swing": [
+    [
+     4340,
+     1
+    ]
+   ],
    "id": "54",
    "from": 4298,
    "to": 4454,
@@ -16505,7 +13553,12 @@
      "yaw": -2.6,
      "beam_on_her": true
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -16527,7 +13580,24 @@
      "bridge": 1
     },
     {
-     "f": 4306,
+     "f": 4314,
+     "pos": [
+      0.821,
+      1.52,
+      2.255
+     ],
+     "look": [
+      0.0,
+      1.42,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 4315,
      "pos": [
       0.821,
       1.52,
@@ -16580,169 +13650,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.74,
-     1.2,
-     0.53
-    ],
-    "rotY": 0.0,
-    "size": 0.0293,
-    "width": 0.536,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "orbit at floor height shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.64,
-     0.6660331759272332
-    ],
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Watch",
-     "from": 4298,
-     "to": 4320,
-     "key": false,
-     "line": 46,
-     "idx": 0,
-     "em": 3.004
-    },
-    {
-     "w": "me",
-     "from": 4319,
-     "to": 4342,
-     "key": false,
-     "line": 46,
-     "idx": 1,
-     "em": 1.361
-    },
-    {
-     "w": "move",
-     "from": 4340,
-     "to": 4344,
-     "key": true,
-     "line": 46,
-     "idx": 2,
-     "em": 2.547
-    },
-    {
-     "w": "(",
-     "from": 4343,
-     "to": 4346,
-     "key": false,
-     "line": 46,
-     "idx": 3,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 4345,
-     "to": 4348,
-     "key": false,
-     "line": 46,
-     "idx": 4,
-     "em": 3.004
-    },
-    {
-     "w": "me),",
-     "from": 4347,
-     "to": 4354,
-     "key": false,
-     "line": 46,
-     "idx": 5,
-     "em": 2.181
-    },
-    {
-     "w": "runnin'",
-     "from": 4353,
-     "to": 4374,
-     "key": false,
-     "line": 46,
-     "idx": 6,
-     "em": 3.735
-    },
-    {
-     "w": "circles",
-     "from": 4373,
-     "to": 4386,
-     "key": false,
-     "line": 46,
-     "idx": 7,
-     "em": 3.604
-    },
-    {
-     "w": "'round",
-     "from": 4385,
-     "to": 4394,
-     "key": false,
-     "line": 46,
-     "idx": 8,
-     "em": 3.335
-    },
-    {
-     "w": "these",
-     "from": 4392,
-     "to": 4406,
-     "key": false,
-     "line": 46,
-     "idx": 9,
-     "em": 2.918
-    },
-    {
-     "w": "dudes",
-     "from": 4404,
-     "to": 4423,
-     "key": false,
-     "line": 46,
-     "idx": 10,
-     "em": 3.043
-    },
-    {
-     "w": "(",
-     "from": 4421,
-     "to": 4427,
-     "key": false,
-     "line": 46,
-     "idx": 11,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 4426,
-     "to": 4448,
-     "key": false,
-     "line": 46,
-     "idx": 12,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 4446,
-     "to": 4455,
-     "key": false,
-     "line": 46,
-     "idx": 13,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cover",
     "frames": 8,
@@ -16858,7 +13769,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -16928,7 +13839,12 @@
      "hold": "flashlight",
      "search": true
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -16983,160 +13899,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -3.2,
-     1.35,
-     -4.3
-    ],
-    "rotY": 0.0,
-    "size": 0.0231,
-    "width": 0.398,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "macro plaque -> fly-through shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.64,
-     0.573472340286876
-    ],
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.3,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "In",
-     "from": 4454,
-     "to": 4464,
-     "key": false,
-     "line": 47,
-     "idx": 0,
-     "em": 0.934
-    },
-    {
-     "w": "my",
-     "from": 4463,
-     "to": 4468,
-     "key": false,
-     "line": 47,
-     "idx": 1,
-     "em": 1.348
-    },
-    {
-     "w": "Loubs,",
-     "from": 4466,
-     "to": 4484,
-     "key": false,
-     "line": 47,
-     "idx": 2,
-     "em": 3.378
-    },
-    {
-     "w": "breakin'",
-     "from": 4483,
-     "to": 4494,
-     "key": false,
-     "line": 47,
-     "idx": 3,
-     "em": 4.395
-    },
-    {
-     "w": "hearts",
-     "from": 4493,
-     "to": 4503,
-     "key": false,
-     "line": 47,
-     "idx": 4,
-     "em": 3.436
-    },
-    {
-     "w": "and",
-     "from": 4502,
-     "to": 4511,
-     "key": false,
-     "line": 47,
-     "idx": 5,
-     "em": 1.866
-    },
-    {
-     "w": "breakin'",
-     "from": 4510,
-     "to": 4519,
-     "key": false,
-     "line": 47,
-     "idx": 6,
-     "em": 4.395
-    },
-    {
-     "w": "news",
-     "from": 4517,
-     "to": 4525,
-     "key": true,
-     "line": 47,
-     "idx": 7,
-     "em": 2.515
-    },
-    {
-     "w": "(",
-     "from": 4523,
-     "to": 4527,
-     "key": false,
-     "line": 47,
-     "idx": 8,
-     "em": 0.464
-    },
-    {
-     "w": "Breakin',",
-     "from": 4525,
-     "to": 4540,
-     "key": false,
-     "line": 47,
-     "idx": 9,
-     "em": 4.844
-    },
-    {
-     "w": "breakin',",
-     "from": 4539,
-     "to": 4552,
-     "key": false,
-     "line": 47,
-     "idx": 10,
-     "em": 4.76
-    },
-    {
-     "w": "watch",
-     "from": 4550,
-     "to": 4565,
-     "key": false,
-     "line": 47,
-     "idx": 11,
-     "em": 3.072
-    },
-    {
-     "w": "me)",
-     "from": 4563,
-     "to": 4569,
-     "key": false,
-     "line": 47,
-     "idx": 12,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -17301,6 +14067,16 @@
    "mouth": {
     "gain": 1.0
    },
+   "swing": [
+    [
+     4631,
+     1
+    ],
+    [
+     4652,
+     -1
+    ]
+   ],
    "id": "56",
    "from": 4568,
    "to": 4674,
@@ -17326,170 +14102,112 @@
      "hold": "flashlight",
      "hat_off_at": 4593
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
+     "look": [
+      0.0,
+      1.3,
+      0.0
+     ],
      "f": 4568,
      "pos": [
       1.3,
       1.45,
       2.7
      ],
-     "look": [
-      0.0,
-      1.3,
-      0.0
-     ],
      "fov": 36.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 4576,
-     "pos": [
-      1.0,
-      1.77,
-      1.732
-     ],
      "look": [
       0.0,
       1.77,
       0.0
      ],
-     "fov": 34.0,
-     "roll": 0.0,
-     "ease": "inOut",
-     "observer": 1.0
-    },
-    {
-     "f": 4667,
+     "f": 4584,
      "pos": [
       1.0,
       1.77,
       1.732
      ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
      "look": [
       0.0,
       1.77,
       0.0
      ],
-     "fov": 34.0,
-     "roll": 0.0,
-     "ease": "inOut",
-     "observer": 1.0
-    },
-    {
-     "f": 4674,
+     "f": 4585,
      "pos": [
       1.0,
       1.77,
       1.732
      ],
-     "look": [
-      2.286,
-      1.77,
-      0.2
-     ],
      "fov": 34.0,
      "roll": 0.0,
-     "ease": "in",
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.77,
+      0.0
+     ],
+     "f": 4621,
+     "pos": [
+      0.7809,
+      1.73,
+      1.754
+     ],
+     "fov": 32.81,
+     "roll": -0.75,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.77,
+      0.0
+     ],
+     "f": 4673,
+     "pos": [
+      0.5686,
+      1.69,
+      1.7499
+     ],
+     "fov": 31.62,
+     "roll": -1.5,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -5.3,
-     2.8,
-     0.2
-    ],
-    "rotY": 0.0,
-    "size": 0.045,
-    "width": 1.04,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "fly-through then whip shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.78,
-     1.2
-    ],
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.3,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Hurricane,",
-     "from": 4568,
-     "to": 4600,
-     "key": true,
-     "line": 48,
-     "idx": 0,
-     "em": 5.321
-    },
-    {
-     "w": "when",
-     "from": 4598,
-     "to": 4611,
-     "key": false,
-     "line": 48,
-     "idx": 1,
-     "em": 2.454
-    },
-    {
-     "w": "the",
-     "from": 4610,
-     "to": 4618,
-     "key": false,
-     "line": 48,
-     "idx": 2,
-     "em": 1.73
-    },
-    {
-     "w": "forecast",
-     "from": 4617,
-     "to": 4633,
-     "key": false,
-     "line": 48,
-     "idx": 3,
-     "em": 4.566
-    },
-    {
-     "w": "K/DA,",
-     "from": 4631,
-     "to": 4653,
-     "key": false,
-     "line": 48,
-     "idx": 4,
-     "em": 3.252
-    },
-    {
-     "w": "ayy",
-     "from": 4652,
-     "to": 4676,
-     "key": false,
-     "line": 48,
-     "idx": 5,
-     "em": 1.861
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -17604,7 +14322,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -17677,29 +14395,51 @@
      "beam_on_her": true,
      "reach_at": 4728
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
      "f": 4674,
      "pos": [
-      1.0,
-      1.77,
-      1.732
+      0.5686,
+      1.69,
+      1.7499
      ],
      "look": [
-      2.286,
+      0.0,
       1.77,
-      0.2
+      0.0
      ],
-     "fov": 34.0,
-     "roll": 0.0,
+     "fov": 31.62,
+     "roll": -1.5,
      "ease": "inOut",
      "observer": 1.0,
      "bridge": 1
     },
     {
-     "f": 4682,
+     "f": 4690,
+     "pos": [
+      2.0,
+      1.2,
+      2.2
+     ],
+     "look": [
+      0.0,
+      1.6,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "observer": 1.0
+    },
+    {
+     "f": 4691,
      "pos": [
       2.0,
       1.2,
@@ -17733,129 +14473,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -1.36,
-     2.16,
-     -0.33
-    ],
-    "rotY": 55.9,
-    "size": 0.087,
-    "width": 1.05,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": 6.5,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "On",
-     "from": 4674,
-     "to": 4697,
-     "key": false,
-     "line": 49,
-     "idx": 0,
-     "em": 1.312
-    },
-    {
-     "w": "your",
-     "from": 4696,
-     "to": 4710,
-     "key": false,
-     "line": 49,
-     "idx": 1,
-     "em": 2.235
-    },
-    {
-     "w": "radar,",
-     "from": 4708,
-     "to": 4726,
-     "key": true,
-     "line": 49,
-     "idx": 2,
-     "em": 3.217
-    },
-    {
-     "w": "you",
-     "from": 4724,
-     "to": 4733,
-     "key": false,
-     "line": 49,
-     "idx": 3,
-     "em": 1.789
-    },
-    {
-     "w": "can't",
-     "from": 4731,
-     "to": 4746,
-     "key": false,
-     "line": 49,
-     "idx": 4,
-     "em": 2.892
-    },
-    {
-     "w": "look",
-     "from": 4744,
-     "to": 4761,
-     "key": false,
-     "line": 49,
-     "idx": 5,
-     "em": 2.206
-    },
-    {
-     "w": "away",
-     "from": 4760,
-     "to": 4780,
-     "key": false,
-     "line": 49,
-     "idx": 6,
-     "em": 2.69
-    },
-    {
-     "w": "(",
-     "from": 4778,
-     "to": 4782,
-     "key": false,
-     "line": 49,
-     "idx": 7,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 4780,
-     "to": 4796,
-     "key": false,
-     "line": 49,
-     "idx": 8,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 4795,
-     "to": 4808,
-     "key": false,
-     "line": 49,
-     "idx": 9,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -17970,7 +14591,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -18113,7 +14734,12 @@
       ]
      }
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -18135,7 +14761,7 @@
      "bridge": 1
     },
     {
-     "f": 4814,
+     "f": 4822,
      "pos": [
       0.0,
       1.77,
@@ -18152,7 +14778,7 @@
      "observer": 1.0
     },
     {
-     "f": 4815,
+     "f": 4823,
      "pos": [
       0.0,
       1.77,
@@ -18169,7 +14795,7 @@
      "observer": 1.0
     },
     {
-     "f": 4818,
+     "f": 4824,
      "pos": [
       0.0,
       1.77,
@@ -18204,205 +14830,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.0,
-     3.1,
-     -0.6
-    ],
-    "rotY": 0.0,
-    "size": 0.0297,
-    "width": 0.881,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "wide -> push to the stacked cover shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.8,
-     1.2
-    ],
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.3,
-    "auto": true,
-    "small": "fitter: a long line in a tight frame (>= 60 px cap)",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Watch",
-     "from": 4806,
-     "to": 4830,
-     "key": false,
-     "line": 50,
-     "idx": 0,
-     "em": 3.004
-    },
-    {
-     "w": "me",
-     "from": 4828,
-     "to": 4833,
-     "key": false,
-     "line": 50,
-     "idx": 1,
-     "em": 1.361
-    },
-    {
-     "w": "pose",
-     "from": 4832,
-     "to": 4846,
-     "key": true,
-     "line": 50,
-     "idx": 2,
-     "em": 2.26
-    },
-    {
-     "w": "(",
-     "from": 4845,
-     "to": 4851,
-     "key": false,
-     "line": 50,
-     "idx": 3,
-     "em": 0.464
-    },
-    {
-     "w": "Oh),",
-     "from": 4850,
-     "to": 4858,
-     "key": false,
-     "line": 50,
-     "idx": 4,
-     "em": 2.071
-    },
-    {
-     "w": "always",
-     "from": 4856,
-     "to": 4864,
-     "key": false,
-     "line": 50,
-     "idx": 5,
-     "em": 3.797
-    },
-    {
-     "w": "keep",
-     "from": 4863,
-     "to": 4871,
-     "key": false,
-     "line": 50,
-     "idx": 6,
-     "em": 2.302
-    },
-    {
-     "w": "'em",
-     "from": 4870,
-     "to": 4873,
-     "key": false,
-     "line": 50,
-     "idx": 7,
-     "em": 1.864
-    },
-    {
-     "w": "on",
-     "from": 4872,
-     "to": 4875,
-     "key": false,
-     "line": 50,
-     "idx": 8,
-     "em": 1.137
-    },
-    {
-     "w": "they",
-     "from": 4874,
-     "to": 4877,
-     "key": false,
-     "line": 50,
-     "idx": 9,
-     "em": 2.322
-    },
-    {
-     "w": "toes",
-     "from": 4876,
-     "to": 4879,
-     "key": false,
-     "line": 50,
-     "idx": 10,
-     "em": 2.345
-    },
-    {
-     "w": "(",
-     "from": 4878,
-     "to": 4881,
-     "key": false,
-     "line": 50,
-     "idx": 11,
-     "em": 0.464
-    },
-    {
-     "w": "Keep",
-     "from": 4880,
-     "to": 4883,
-     "key": false,
-     "line": 50,
-     "idx": 12,
-     "em": 2.49
-    },
-    {
-     "w": "'em",
-     "from": 4882,
-     "to": 4886,
-     "key": false,
-     "line": 50,
-     "idx": 13,
-     "em": 1.864
-    },
-    {
-     "w": "on",
-     "from": 4884,
-     "to": 4890,
-     "key": false,
-     "line": 50,
-     "idx": 14,
-     "em": 1.137
-    },
-    {
-     "w": "they,",
-     "from": 4889,
-     "to": 4914,
-     "key": false,
-     "line": 50,
-     "idx": 15,
-     "em": 2.687
-    },
-    {
-     "w": "watch",
-     "from": 4913,
-     "to": 4939,
-     "key": false,
-     "line": 50,
-     "idx": 16,
-     "em": 3.072
-    },
-    {
-     "w": "me)",
-     "from": 4938,
-     "to": 4956,
-     "key": false,
-     "line": 50,
-     "idx": 17,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -18588,7 +15019,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -18652,7 +15083,12 @@
     "bulb": true,
     "hers": false,
     "tail_slap": 4965,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -18725,75 +15161,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.58,
-     1.14,
-     -0.58
-    ],
-    "rotY": 28.7,
-    "size": 0.077,
-    "width": 0.57,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "crash shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": null,
-    "material": "print",
-    "style": "v2",
-    "tilt": 0.4,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Centerfolds",
-     "from": 4954,
-     "to": 4977,
-     "key": true,
-     "line": 51,
-     "idx": 0,
-     "em": 6.241
-    },
-    {
-     "w": "turn",
-     "from": 4976,
-     "to": 4981,
-     "key": false,
-     "line": 51,
-     "idx": 1,
-     "em": 2.275
-    },
-    {
-     "w": "the",
-     "from": 4979,
-     "to": 4988,
-     "key": false,
-     "line": 51,
-     "idx": 2,
-     "em": 1.73
-    },
-    {
-     "w": "sidewalk",
-     "from": 4987,
-     "to": 5001,
-     "key": false,
-     "line": 51,
-     "idx": 3,
-     "em": 4.707
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -18931,152 +15302,75 @@
     "lock": 0.45,
     "hers": false,
     "splash": 5001,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
+     "look": [
+      0.0,
+      1.35,
+      0.0
+     ],
      "f": 4996,
      "pos": [
       -0.9,
       1.35,
       1.559
      ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
      "look": [
       0.0,
       1.35,
       0.0
      ],
-     "fov": 34.0,
-     "roll": 0.0,
+     "f": 5011,
+     "pos": [
+      -1.3042,
+      1.19,
+      1.1338
+     ],
+     "fov": 32.81,
+     "roll": -3.0,
      "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     },
     {
-     "f": 5020,
-     "pos": [
-      -0.9,
-      1.35,
-      1.559
-     ],
      "look": [
       0.0,
       1.35,
       0.0
      ],
-     "fov": 34.0,
-     "roll": 0.0,
-     "ease": "inOut",
-     "observer": 1.0
-    },
-    {
-     "f": 5027,
+     "f": 5026,
      "pos": [
-      -0.9,
-      1.35,
-      1.559
+      -1.5355,
+      1.03,
+      0.6205
      ],
-     "look": [
-      -2.432,
-      1.35,
-      0.273
-     ],
-     "fov": 34.0,
-     "roll": 0.0,
-     "ease": "in",
+     "fov": 31.62,
+     "roll": -6.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.0,
-     0.02,
-     2.4
-    ],
-    "rotY": 0.0,
-    "size": 0.045,
-    "width": 1.04,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "whip shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.78,
-     1.2
-    ],
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "to",
-     "from": 5000,
-     "to": 5009,
-     "key": false,
-     "line": 51,
-     "idx": 4,
-     "em": 1.157
-    },
-    {
-     "w": "a",
-     "from": 5007,
-     "to": 5017,
-     "key": false,
-     "line": 51,
-     "idx": 5,
-     "em": 0.677
-    },
-    {
-     "w": "show",
-     "from": 5016,
-     "to": 5023,
-     "key": true,
-     "line": 51,
-     "idx": 6,
-     "em": 2.403
-    },
-    {
-     "w": "(",
-     "from": 5021,
-     "to": 5025,
-     "key": false,
-     "line": 51,
-     "idx": 7,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 5023,
-     "to": 5027,
-     "key": false,
-     "line": 51,
-     "idx": 8,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 5025,
-     "to": 5029,
-     "key": false,
-     "line": 51,
-     "idx": 9,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cover",
     "frames": 8,
@@ -19260,7 +15554,12 @@
     "lock": 0.45,
     "hers": true,
     "letters_off": 5029,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -19298,48 +15597,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     1.35,
-     -0.43,
-     -1.45
-    ],
-    "rotY": -29.2,
-    "size": 0.222,
-    "width": 6.7,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -81.5,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": "fitter: the free space beside her is small in this frame",
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Hurricane,",
-     "from": 5027,
-     "to": 5074,
-     "key": true,
-     "line": 52,
-     "idx": 0,
-     "em": 5.321
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cover",
     "frames": 8,
@@ -19520,7 +15781,12 @@
     "flash": [
      5088
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -19560,57 +15826,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "card",
-    "anchor": [
-     -0.42,
-     1.42,
-     -1.07
-    ],
-    "rotY": -1.7,
-    "size": 0.165,
-    "width": 1.04,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "print",
-    "style": "v2",
-    "tilt": -0.2,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "when",
-     "from": 5090,
-     "to": 5104,
-     "key": false,
-     "line": 52,
-     "idx": 1,
-     "em": 2.454
-    },
-    {
-     "w": "the",
-     "from": 5102,
-     "to": 5111,
-     "key": false,
-     "line": 52,
-     "idx": 2,
-     "em": 1.73
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cover",
     "frames": 10,
@@ -19739,6 +15958,24 @@
    "mouth": {
     "gain": 1.0
    },
+   "swing": [
+    [
+     5123,
+     1
+    ],
+    [
+     5133,
+     -1
+    ],
+    [
+     5142,
+     1
+    ],
+    [
+     5151,
+     -1
+    ]
+   ],
    "id": "63",
    "from": 5110,
    "to": 5157,
@@ -19749,7 +15986,12 @@
     "lock": 0.45,
     "hers": false,
     "lamp_flick": 5127,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -19806,93 +16048,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.17,
-     1.15,
-     0.31
-    ],
-    "rotY": -80.0,
-    "size": 0.052,
-    "width": 0.74,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "a 1.6 s dutch orbit round her: the line rides the lens, may cross her body, never her face",
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -1.3,
-    "roll": 0.0,
-    "keyScale": 1.0,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "forecast",
-     "from": 5110,
-     "to": 5125,
-     "key": false,
-     "line": 52,
-     "idx": 3,
-     "em": 4.566
-    },
-    {
-     "w": "K/DA,",
-     "from": 5123,
-     "to": 5134,
-     "key": false,
-     "line": 52,
-     "idx": 4,
-     "em": 3.252
-    },
-    {
-     "w": "ayy",
-     "from": 5133,
-     "to": 5141,
-     "key": false,
-     "line": 52,
-     "idx": 5,
-     "em": 1.861
-    },
-    {
-     "w": "(",
-     "from": 5140,
-     "to": 5143,
-     "key": false,
-     "line": 52,
-     "idx": 6,
-     "em": 0.464
-    },
-    {
-     "w": "Ayy,",
-     "from": 5142,
-     "to": 5152,
-     "key": false,
-     "line": 52,
-     "idx": 7,
-     "em": 2.293
-    },
-    {
-     "w": "ayy)",
-     "from": 5151,
-     "to": 5158,
-     "key": false,
-     "line": 52,
-     "idx": 8,
-     "em": 2.316
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cover",
     "frames": 8,
@@ -20062,69 +16221,75 @@
      "hold": "flashlight",
      "freeze_at": 5182
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
-     "f": 5157,
-     "pos": [
-      0.9982,
-      1.432,
-      1.7962
-     ],
      "look": [
       -0.17,
       1.3,
       0.43
      ],
+     "f": 5157,
+     "pos": [
+      1.0724,
+      1.44,
+      1.8829
+     ],
      "fov": 42.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      -0.17,
+      1.3,
+      0.43
+     ],
+     "f": 5176,
+     "pos": [
+      0.8703,
+      1.412,
+      1.9418
+     ],
+     "fov": 40.53,
+     "roll": -0.75,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      -0.17,
+      1.3,
+      0.43
+     ],
+     "f": 5195,
+     "pos": [
+      0.6701,
+      1.384,
+      1.9751
+     ],
+     "fov": 39.06,
+     "roll": -1.5,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.02,
-     1.54,
-     1.04
-    ],
-    "rotY": 52.5,
-    "size": 0.111,
-    "width": 1.39,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": null,
-    "style": "v2",
-    "tilt": -4.1,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "There's",
-     "from": 5157,
-     "to": 5203,
-     "key": false,
-     "line": 53,
-     "idx": 0,
-     "em": 3.986
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cover",
     "frames": 8,
@@ -20309,105 +16474,75 @@
      "hold": "flashlight",
      "frozen": true
     },
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
-     "f": 5196,
-     "pos": [
-      -1.4,
-      1.9,
-      3.6
-     ],
      "look": [
       0.0,
       1.2,
       0.0
      ],
+     "f": 5196,
+     "pos": [
+      -1.4228,
+      1.9,
+      3.6586
+     ],
      "fov": 40.0,
      "roll": 0.0,
      "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.2,
+      0.0
+     ],
+     "f": 5223,
+     "pos": [
+      -0.148,
+      2.06,
+      3.7656
+     ],
+     "fov": 38.6,
+     "roll": 3.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.2,
+      0.0
+     ],
+     "f": 5249,
+     "pos": [
+      1.0408,
+      2.22,
+      3.4583
+     ],
+     "fov": 37.2,
+     "roll": 6.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.09,
-     1.44,
-     -4.12
-    ],
-    "rotY": -9.7,
-    "size": 0.473,
-    "width": 4.45,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": "light",
-    "style": "v2",
-    "tilt": -9.9,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "a",
-     "from": 5202,
-     "to": 5206,
-     "key": false,
-     "line": 53,
-     "idx": 1,
-     "em": 0.677
-    },
-    {
-     "w": "hundred",
-     "from": 5204,
-     "to": 5215,
-     "key": false,
-     "line": 53,
-     "idx": 2,
-     "em": 4.011
-    },
-    {
-     "w": "percent",
-     "from": 5214,
-     "to": 5234,
-     "key": false,
-     "line": 53,
-     "idx": 3,
-     "em": 3.886
-    },
-    {
-     "w": "chance",
-     "from": 5232,
-     "to": 5250,
-     "key": false,
-     "line": 53,
-     "idx": 4,
-     "em": 3.439
-    },
-    {
-     "w": "of",
-     "from": 5248,
-     "to": 5264,
-     "key": false,
-     "line": 53,
-     "idx": 5,
-     "em": 1.126
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -20618,7 +16753,12 @@
      }
     ],
     "tail_lens": 5280,
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -20675,75 +16815,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.02,
-     2.17,
-     0.26
-    ],
-    "rotY": -156.7,
-    "size": 0.167,
-    "width": 2.97,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": null,
-    "lens": null,
-    "material": null,
-    "style": "v2",
-    "tilt": -10.6,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "slay",
-     "from": 5262,
-     "to": 5282,
-     "key": false,
-     "line": 53,
-     "idx": 6,
-     "em": 2.376
-    },
-    {
-     "w": "(",
-     "from": 5280,
-     "to": 5285,
-     "key": false,
-     "line": 53,
-     "idx": 7,
-     "em": 0.464
-    },
-    {
-     "w": "Watch",
-     "from": 5283,
-     "to": 5308,
-     "key": false,
-     "line": 53,
-     "idx": 8,
-     "em": 3.004
-    },
-    {
-     "w": "me)",
-     "from": 5307,
-     "to": 5318,
-     "key": false,
-     "line": 53,
-     "idx": 9,
-     "em": 1.816
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -20941,7 +17016,12 @@
       "text": "RAYMI"
      }
     ],
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -20964,7 +17044,25 @@
      "bridge": 1
     },
     {
-     "f": 5324,
+     "f": 5332,
+     "pos": [
+      1.019,
+      1.77,
+      5.7763
+     ],
+     "look": [
+      0.0,
+      1.77,
+      0.0
+     ],
+     "fov": 34.0,
+     "roll": 0.0,
+     "ease": "inOut",
+     "frameH": 1.6,
+     "observer": 1.0
+    },
+    {
+     "f": 5333,
      "pos": [
       1.019,
       1.77,
@@ -21000,61 +17098,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     -0.24,
-     2.14,
-     0.71
-    ],
-    "rotY": 0.0,
-    "size": 0.0377,
-    "width": 0.496,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "MS, frame in the foreground shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.72,
-     1.034814579915649
-    ],
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Let's",
-     "from": 5316,
-     "to": 5348,
-     "key": false,
-     "line": 54,
-     "idx": 0,
-     "em": 2.914
-    },
-    {
-     "w": "go",
-     "from": 5347,
-     "to": 5386,
-     "key": false,
-     "line": 54,
-     "idx": 1,
-     "em": 1.088
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -21169,7 +17216,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   },
   {
    "actor": [
@@ -21292,7 +17339,12 @@
     ],
     "dark_s": 0.1,
     "glow": "#bfe6ff",
-    "depth": 0.8
+    "depth": 0.8,
+    "post": {
+     "dof_auto": 1,
+     "glow": 1,
+     "vignette": 0.42
+    }
    },
    "camera": [
     {
@@ -21314,7 +17366,7 @@
      "bridge": 1
     },
     {
-     "f": 5393,
+     "f": 5401,
      "pos": [
       0.071,
       1.658,
@@ -21331,7 +17383,7 @@
      "observer": 1.0
     },
     {
-     "f": 5394,
+     "f": 5402,
      "pos": [
       0.071,
       1.658,
@@ -21348,7 +17400,7 @@
      "observer": 1.0
     },
     {
-     "f": 5397,
+     "f": 5403,
      "pos": [
       0.071,
       1.658,
@@ -21383,61 +17435,10 @@
      "observer": 1.0
     }
    ],
-   "kick": 1.0,
+   "kick": 0.0,
    "puppets": [],
-   "lyrics": {
-    "kind": "sign",
-    "anchor": [
-     0.0,
-     1.42,
-     0.3
-    ],
-    "rotY": 0.0,
-    "size": 0.016,
-    "width": 0.23,
-    "color": "#ffffff",
-    "accent": "#ffcf6b",
-    "outline": "#1a0b33",
-    "lit": false,
-    "over": false,
-    "cross": "push to ECU shot: she fills the frame - the line may lie over her body, never on her face (toki 2026-10-19)",
-    "lens": [
-     0.5,
-     0.8,
-     0.3
-    ],
-    "material": "light",
-    "style": "v2",
-    "tilt": 0.0,
-    "roll": 0.0,
-    "keyScale": 1.8,
-    "auto": true,
-    "small": null,
-    "subs": {},
-    "reveal": null,
-    "dim": null,
-    "mirror": null
-   },
-   "words": [
-    {
-     "w": "Watch",
-     "from": 5385,
-     "to": 5412,
-     "key": false,
-     "line": 55,
-     "idx": 0,
-     "em": 3.004
-    },
-    {
-     "w": "me",
-     "from": 5410,
-     "to": 5433,
-     "key": false,
-     "line": 55,
-     "idx": 1,
-     "em": 1.361
-    }
-   ],
+   "lyrics": null,
+   "words": [],
    "transition": {
     "kind": "cut",
     "frames": 0
@@ -21552,7 +17553,7 @@
      ]
     }
    ],
-   "bridge": 8
+   "bridge": 16
   }
  ],
  "hits": [
@@ -22016,7 +18017,7 @@
  "grain": 0.04,
  "title": "Watch Me - Raymi (one spot, three worlds)",
  "overlay": null,
- "heavy": true,
+ "heavy": false,
  "vrm": "vrm/raymi7.vrm",
  "motions": [
   "motions/arms-hip-hop-dance.fbx",

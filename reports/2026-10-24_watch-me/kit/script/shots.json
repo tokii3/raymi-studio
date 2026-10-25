@@ -47,7 +47,7 @@
   "to_s": 7.5,
   "set": "shoot",
   "why": "chop 4",
-  "words": "Ah-ah",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -57,7 +57,7 @@
   "to_s": 8.2,
   "set": "shoot",
   "why": "the kiss on the stop - the studio revealed; the bulb flickers: the lamp's first form (it dies at 117.6, she clicks it off at the end)",
-  "words": "Mwah",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -67,7 +67,7 @@
   "to_s": 10.6,
   "set": "shoot",
   "why": "her character beyond confident (canon/01)",
-  "words": "Camera on, camera off",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -77,7 +77,7 @@
   "to_s": 12.07,
   "set": "shoot",
   "why": "everybody sees the same mosaic",
-  "words": "See the same mosaic",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -87,7 +87,7 @@
   "to_s": 14.63,
   "set": "shoot",
   "why": "flame so hot - the picture burns",
-  "words": "Back it up, flame so hot",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -97,7 +97,7 @@
   "to_s": 16.57,
   "set": "shoot",
   "why": "the Louvre gon' hang it - act 3 planted",
-  "words": "But the Louvre gon' hang it",
+  "words": "",
   "transition_out": "cut",
   "hero": [
    "frame"
@@ -109,7 +109,7 @@
   "to_s": 18.23,
   "set": "shoot",
   "why": "hold your breath: one dead-still beat before the walk - even the bulb hangs frozen mid-swing",
-  "words": "Hold your breath ( Huh)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -119,7 +119,7 @@
   "to_s": 20.57,
   "set": "shoot",
   "why": "a pin drop when she walks in",
-  "words": "Hear a pin drop when I walk in",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -129,7 +129,7 @@
   "to_s": 22.6,
   "set": "shoot",
   "why": "pins dropping on every word",
-  "words": "Pins are dropping, pins are dropping",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -139,7 +139,7 @@
   "to_s": 24.77,
   "set": "shoot",
   "why": "the arrival lands",
-  "words": "When I walk in, when I walk in",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -149,7 +149,7 @@
   "to_s": 28.43,
   "set": "shoot",
   "why": "she likes what she sees",
-  "words": "I got it like that ( Ah) If you wanna like that ( Ah)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -159,7 +159,7 @@
   "to_s": 31.07,
   "set": "shoot",
   "why": "only one way to know - come closer",
-  "words": "There's only one way to know",
+  "words": "",
   "transition_out": "cut",
   "hero": [
    "face"
@@ -171,7 +171,7 @@
   "to_s": 32.1,
   "set": "shoot",
   "why": "COVER-CUT 1 (toki): the hand hides the change",
-  "words": "( Watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -181,7 +181,7 @@
   "to_s": 36.07,
   "set": "shoot",
   "why": "runnin' circles round these dudes",
-  "words": "Watch me move, runnin' circles 'round these",
+  "words": "",
   "transition_out": "cover",
   "hero": []
  },
@@ -191,7 +191,7 @@
   "to_s": 37.4,
   "set": "shoot",
   "why": "the circle closes",
-  "words": "dudes ( Watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -201,7 +201,7 @@
   "to_s": 38.53,
   "set": "shoot",
   "why": "a detail of HER, not a brand shoe; the plant for the sting",
-  "words": "In my Loubs,",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -211,7 +211,7 @@
   "to_s": 41.33,
   "set": "shoot",
   "why": "breakin' hearts and breakin' news",
-  "words": "breakin' hearts and breakin' news ( Breakin', breakin', watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -221,7 +221,7 @@
   "to_s": 45.03,
   "set": "shoot",
   "why": "her forecasts are wrong (canon) - hurricane",
-  "words": "Hurricane when the forecast K/DA, ayy",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -231,7 +231,7 @@
   "to_s": 49.4,
   "set": "shoot",
   "why": "on your radar - the lights cannot look away",
-  "words": "On your radar, you can't look away ( Watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -241,7 +241,7 @@
   "to_s": 54.03,
   "set": "shoot",
   "why": "watch me pose - she becomes the magazine",
-  "words": "Watch me pose, always keep 'em on they toes ( Oh, bae, watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": [
    "frame",
@@ -254,7 +254,7 @@
   "to_s": 57.73,
   "set": "shoot",
   "why": "centerfolds turn the sidewalk to a show (rays are flat)",
-  "words": "Centerfolds turn the sidewalk to a show ( Watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -264,7 +264,7 @@
   "to_s": 62.0,
   "set": "corner",
   "why": "the second world builds itself",
-  "words": "Hurricane when the forecast K/DA, ayy",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -274,7 +274,7 @@
   "to_s": 65.8,
   "set": "corner",
   "why": "100 % chance of slay - and the drop",
-  "words": "There's a hundred percent chance of slay ( Watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -284,7 +284,7 @@
   "to_s": 67.77,
   "set": "corner",
   "why": "I post a pic and the app crash",
-  "words": "I post a pic and the app crash ( Yeah)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -294,7 +294,7 @@
   "to_s": 69.73,
   "set": "corner",
   "why": "the flex - fashion",
-  "words": "Rockin' Chanel with a snap-back ( Yeah)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -304,7 +304,7 @@
   "to_s": 71.3,
   "set": "corner",
   "why": "water my money, it grow (her sea in the street)",
-  "words": "Water my money, it grow",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -314,7 +314,7 @@
   "to_s": 73.67,
   "set": "corner",
   "why": "bring your coat",
-  "words": "Still on my wrist, bring your coat",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -324,7 +324,7 @@
   "to_s": 77.5,
   "set": "corner",
   "why": "baddie so bad - tantrum / anthem",
-  "words": "Baddie so bad, throw a tantrum Baddie so bad, need an anthem",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -334,7 +334,7 @@
   "to_s": 80.07,
   "set": "corner",
   "why": "pins dropping when she walks in",
-  "words": "Pins are dropping, pins are dropping",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -344,7 +344,7 @@
   "to_s": 83.33,
   "set": "corner",
   "why": "competitive about nothing - she out-shoots the paparazzo",
-  "words": "When I walk in, when I walk in ( Watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -354,7 +354,7 @@
   "to_s": 86.2,
   "set": "corner",
   "why": "chorus 2 - wilder",
-  "words": "Watch me move, runnin'",
+  "words": "",
   "transition_out": "cover",
   "hero": []
  },
@@ -364,7 +364,7 @@
   "to_s": 87.57,
   "set": "corner",
   "why": "runnin' circles",
-  "words": "circles 'round these dudes ( Watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -374,7 +374,7 @@
   "to_s": 92.93,
   "set": "corner",
   "why": "breakin' news",
-  "words": "In my Loubs, breakin' hearts and breakin' news ( Breakin', breakin', watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -384,7 +384,7 @@
   "to_s": 96.33,
   "set": "corner",
   "why": "the hurricane she (wrongly) called arrives anyway",
-  "words": "Hurricane when the forecast K/DA, ayy",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -394,7 +394,7 @@
   "to_s": 99.77,
   "set": "corner",
   "why": "on your radar",
-  "words": "On your radar, you can't look away ( Watch me, watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -404,7 +404,7 @@
   "to_s": 105.4,
   "set": "corner",
   "why": "watch me pose - bigger than act 1",
-  "words": "Watch me pose, always keep 'em on they toes ( Keep 'em on they, watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": [
    "billboard"
@@ -416,7 +416,7 @@
   "to_s": 109.03,
   "set": "corner",
   "why": "the sidewalk is a show",
-  "words": "Centerfolds turn the sidewalk to a show ( Watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -426,7 +426,7 @@
   "to_s": 113.23,
   "set": "corner",
   "why": "the Salmon arc, act 2",
-  "words": "Hurricane when the forecast K/DA, ayy",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -436,7 +436,7 @@
   "to_s": 117.6,
   "set": "corner",
   "why": "too much - the city cannot hold her",
-  "words": "There's a hundred percent chance of slay ( Slay, watch",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -446,7 +446,7 @@
   "to_s": 118.73,
   "set": "corner",
   "why": "the world goes dark",
-  "words": "me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -456,7 +456,7 @@
   "to_s": 120.7,
   "set": "corner",
   "why": "灯闇 - she is the only light",
-  "words": "Watch me",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -466,7 +466,7 @@
   "to_s": 123.87,
   "set": "corner",
   "why": "unbothered by the dark (canon: sleepy)",
-  "words": "It's K/DA",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -476,7 +476,7 @@
   "to_s": 127.7,
   "set": "corner",
   "why": "the turn's last beat - the lamp is about to come back",
-  "words": "Watch me",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -496,7 +496,7 @@
   "to_s": 133.37,
   "set": "exhibit",
   "why": "on your radar",
-  "words": "On your radar, you can't look away ( way)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -506,7 +506,7 @@
   "to_s": 135.37,
   "set": "exhibit",
   "why": "I got it like that",
-  "words": "I got it like that ( Oh yeah)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -516,7 +516,7 @@
   "to_s": 137.2,
   "set": "exhibit",
   "why": "the gag turns: she is no statue any more",
-  "words": "If you wanna like that ( Oh)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -526,7 +526,7 @@
   "to_s": 140.77,
   "set": "exhibit",
   "why": "only one way to know",
-  "words": "There's only one way to know",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -536,7 +536,7 @@
   "to_s": 143.27,
   "set": "exhibit",
   "why": "COVER-CUT 3 - the tail (only a ray has one)",
-  "words": "( Watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -546,7 +546,7 @@
   "to_s": 148.47,
   "set": "exhibit",
   "why": "watch me move - his beam becomes her spotlight",
-  "words": "Watch me move ( Watch me), runnin' circles 'round these dudes ( Watch me)",
+  "words": "",
   "transition_out": "cover",
   "hero": []
  },
@@ -556,7 +556,7 @@
   "to_s": 152.27,
   "set": "exhibit",
   "why": "breakin' news - act 1 returns as a picture",
-  "words": "In my Loubs, breakin' hearts and breakin' news ( Breakin', breakin', watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -566,7 +566,7 @@
   "to_s": 155.8,
   "set": "exhibit",
   "why": "hurricane - act 2 returns",
-  "words": "Hurricane, when the forecast K/DA, ayy",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -576,7 +576,7 @@
   "to_s": 160.2,
   "set": "exhibit",
   "why": "on your radar - he can't look away either; his hand comes near her and the barb twitches (sting plant 3)",
-  "words": "On your radar, you can't look away ( Watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -586,7 +586,7 @@
   "to_s": 165.13,
   "set": "exhibit",
   "why": "watch me pose - the biggest cover",
-  "words": "Watch me pose ( Oh), always keep 'em on they toes ( Keep 'em on they, watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": [
    "frame",
@@ -599,7 +599,7 @@
   "to_s": 166.53,
   "set": "shoot",
   "why": "world 1 returns: she slaps the paper with her tail - the studio is hers to hit",
-  "words": "Centerfolds turn the sidewalk",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -609,7 +609,7 @@
   "to_s": 167.57,
   "set": "corner",
   "why": "world 2 returns: her heel in the puddle - the rain she forecast wrong is her stage now",
-  "words": "to a show ( Watch me)",
+  "words": "",
   "transition_out": "cover",
   "hero": []
  },
@@ -619,7 +619,7 @@
   "to_s": 169.27,
   "set": "exhibit",
   "why": "world 3 returns: the gold letters blow off again and she catches one - the hurricane obeys her",
-  "words": "Hurricane,",
+  "words": "",
   "transition_out": "cover",
   "hero": []
  },
@@ -629,7 +629,7 @@
   "to_s": 170.33,
   "set": "shoot",
   "why": "back in the studio: a flash goes off in her face and she does not blink - the paparazzi lost",
-  "words": "when the",
+  "words": "",
   "transition_out": "cover",
   "hero": []
  },
@@ -639,7 +639,7 @@
   "to_s": 171.9,
   "set": "corner",
   "why": "the corner: she flicks the lamp like a switch - the rehearsal of the last click",
-  "words": "forecast K/DA, ayy ( Ayy, ayy)",
+  "words": "",
   "transition_out": "cover",
   "hero": []
  },
@@ -649,7 +649,7 @@
   "to_s": 173.2,
   "set": "exhibit",
   "why": "the plant of row 20 pays off - only a ray has a sting",
-  "words": "There's",
+  "words": "",
   "transition_out": "cover",
   "hero": []
  },
@@ -659,7 +659,7 @@
   "to_s": 175.0,
   "set": "exhibit",
   "why": "the Salmon arc pays off: he is the exhibit now",
-  "words": "a hundred percent chance of",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -669,7 +669,7 @@
   "to_s": 177.2,
   "set": "exhibit",
   "why": "everything but her goes - her tail sweeps the lens while the walls fall",
-  "words": "slay ( Watch me)",
+  "words": "",
   "transition_out": "cut",
   "hero": []
  },
@@ -679,7 +679,7 @@
   "to_s": 179.5,
   "set": "exhibit",
   "why": "let's go - the room breathes around her as she steps into the frame",
-  "words": "Let's go",
+  "words": "",
   "transition_out": "cut",
   "hero": [
    "frame"
@@ -691,7 +691,7 @@
   "to_s": 182.5,
   "set": "exhibit",
   "why": "she switches us off - the opposite of the opening flash",
-  "words": "Watch me",
+  "words": "",
   "transition_out": "cut",
   "hero": [
    "face",
