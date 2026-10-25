@@ -184,6 +184,77 @@ def bridge_cuts(shots: list[dict], n: int) -> None:
         b["bridge"] = n
 
 
+V3_SPECIAL = re.compile(r"tableau|frame in the foreground|macro|POV|tail|palm|billboard|through|puddle|plaque|sign|cover|fold|vertigo|worm|crane to", re.I)
+V3_ANGLES = [40, -48, 30, -36, 56, -26, 46, -58]          # degrees round her from her front: always a 3/4, never dead on
+
+
+def v3_kind(s: dict) -> str:
+    size = str(s.get("size", ""))
+    acts = s.get("actor") or []
+    if re.search(r"top-down|bird", size, re.I):
+        return "top"
+    if re.search(r"\bE?CU\b|portrait|profile", size):
+        return "close"
+    if acts and all(a.get("speed") == 0 for a in acts):
+        return "hero"
+    return "dance"
+
+
+def camera_v3(s: dict, marks: dict, errors: list[str], tag: str, f0: int, f1: int, idx: int, st: str, setinfo: dict) -> list[dict] | None:
+    """The shot grammar of the K/DA FIRESTARTER study (knowledge/studies/kda_firestarter_1m43.md), aimed at HER:
+      hero  (a held pose)  low angle, close, wide lens, a slow push and a small arc, a dutch lean - she poses to us
+      dance (she moves)    her whole figure filling the frame, the lens orbiting 70 degrees round her
+      close (CU / ECU)     her face, eyes in the upper third, a slow push and arc
+    Every shot from a 3/4 angle (V3_ANGLES, alternating sides), never eye-level dead on; an angle whose path would cross
+    a prop or a wall is skipped for the next one."""
+    import math as _m
+    acts = s.get("actor") or []
+    if not acts:
+        return None
+    P = _v3(acts[0].get("pos", [0, 0, 0]), marks, errors, f"{tag} v3")
+    if P is None:
+        return None
+    h = float(acts[0].get("height", DEFAULT_HEIGHT))
+    kind = v3_kind(s)
+    side = 1 if idx % 2 == 0 else -1
+    if kind == "hero":
+        dist, ly, ay, fov, sweep, push, roll, rise = 1.3, 0.8, 1.22, 50, 16, 0.84, 6, 0.12
+    elif kind == "close":
+        dist, ly, ay, fov, sweep, push, roll, rise = 0.78, 1.38, 1.36, 34, 12, 0.9, 3, 0.02
+    else:
+        dist, ly, ay, fov, sweep, push, roll, rise = 2.2, 1.02, 0.9, 40, 70, 0.95, 2, 0.25
+    ly, ay = ly * h / DEFAULT_HEIGHT, ay * h / DEFAULT_HEIGHT
+    look = [P[0], P[1] + ay, P[2]]
+    if kind == "top":                                       # straight above her, close, turning: she fills the frame
+        k = {"look": [P[0], P[1] + 0.85 * h / DEFAULT_HEIGHT, P[2]], "observer": 0.4}
+        hgt = P[1] + h + 1.15
+        mid = (f0 + f1) // 2
+        return [{**k, "f": f0, "pos": [P[0] + 0.05, round(hgt + 0.25, 4), P[2] + 0.12], "fov": 46, "roll": 0.0, "ease": "inOut", "v3": kind},
+                {**k, "f": mid, "pos": [P[0] + 0.05, round(hgt + 0.1, 4), P[2] + 0.12], "fov": 45, "roll": 20.0 * side, "ease": "inOut", "path": "spline", "v3": kind},
+                {**k, "f": max(mid + 1, f1 - 1), "pos": [P[0] + 0.05, round(hgt, 4), P[2] + 0.12], "fov": 44, "roll": 40.0 * side, "ease": "inOut", "path": "spline", "v3": kind}]
+    solids = [{k: v for k, v in so.items()} for so in setinfo.get("solids", [])]
+    no_lens = setinfo.get("no_lens", [])
+    mid = (f0 + f1) // 2
+    for j in range(len(V3_ANGLES)):
+        base = _m.radians(V3_ANGLES[(idx + j) % len(V3_ANGLES)])
+        def at(t, base=base):
+            a = base + _m.radians(sweep) * side * t
+            d = dist * (1 - (1 - push) * t)
+            return [round(P[0] + d * _m.sin(a), 4), round(P[1] + ly + rise * t, 4), round(P[2] + d * _m.cos(a), 4)]
+        pts = [at(x / 6) for x in range(7)]
+        if any(_path_hits(p0, p1, solids, no_lens, steps=6) for p0, p1 in zip(pts, pts[1:])):
+            continue
+        face = [P[0], P[1] + 1.4 * h / DEFAULT_HEIGHT, P[2]]
+        blockers = [so for so in solids if so.get("name") not in ("plinth",)]
+        if any(_sight_hits(q, face, blockers) for q in pts):
+            continue
+        k = {"look": [round(v, 4) for v in look], "observer": 0.6}
+        return [{**k, "f": f0, "pos": at(0), "fov": fov, "roll": 0.0, "ease": "inOut", "v3": kind},
+                {**k, "f": mid, "pos": at(0.5), "fov": round(fov * 0.98, 2), "roll": round(roll * side / 2, 2), "ease": "inOut", "path": "spline", "v3": kind},
+                {**k, "f": max(mid + 1, f1 - 1), "pos": at(1), "fov": round(fov * 0.96, 2), "roll": round(roll * side, 2), "ease": "inOut", "path": "spline", "v3": kind}]
+    return None
+
+
 def direct_camera(ckeys: list[dict], s: dict, f0: int, f1: int, idx: int) -> list[dict]:
     """The camera director (toki 2026-10-25): "kamera soll nie still ... wenn dann langsam und ruhig bewegen oder sanften
     zoom ... nie wirklich still"; "raymi muss noch mehr in scene gesetzt werden, vor allem bei ihren stillen posen, die
@@ -274,28 +345,70 @@ def director_clear(shots: list[dict]) -> None:
         s["camera"] = [ks[0], {**ks[-1], "pos": end, "roll": 0, "path": None}]
 
 
+def _cam_lin(keys: list[dict], f: float) -> tuple[list[float], list[float]]:
+    """Lens position and look at frame f, linear between keys (enough to test a path against props)."""
+    if f <= keys[0]["f"]:
+        return keys[0]["pos"], keys[0]["look"]
+    for k0, k1 in zip(keys, keys[1:]):
+        if k0["f"] <= f <= k1["f"]:
+            u = (f - k0["f"]) / max(1, k1["f"] - k0["f"])
+            return ([x + (y - x) * u for x, y in zip(k0["pos"], k1["pos"])], [x + (y - x) * u for x, y in zip(k0["look"], k1["look"])])
+    return keys[-1]["pos"], keys[-1]["look"]
+
+
 def swing_clear(shots: list[dict]) -> None:
-    """A beat snap (Film makeCamera: the lens turns 0.45 rad round what it looks at and stays) that would put the lens in
-    a prop or a wall is dropped (Watch Me 22: into the softbox)."""
+    """A beat snap (Film makeCamera: the lens turns 0.45 rad round what it looks at and STAYS turned for the rest of the
+    shot) that would put the lens in a prop or a wall at any later frame is dropped (Watch Me 18 / 22: the softbox)."""
     import math as _m
     for s in shots:
         sw, ks = s.get("swing") or [], s.get("camera") or []
         if not sw or not ks:
             continue
-        keep, ang, lift = [], 0.0, 0.0
-        for f0, d in sw:
-            k = min(ks, key=lambda c: abs(c["f"] - f0))
-            a2, l2 = ang + d * 0.45, lift + (0.22 if len(keep) % 2 == 0 else -0.22)
-            vx, vz = k["pos"][0] - k["look"][0], k["pos"][2] - k["look"][2]
-            cs, sn = _m.cos(a2), _m.sin(a2)
-            q = [k["look"][0] + vx * cs + vz * sn, k["pos"][1] + l2, k["look"][2] - vx * sn + vz * cs]
-            if _path_hits(k["pos"], q, s.get("solids") or [], s.get("noLens") or [], steps=12):
-                continue
-            keep.append([f0, d]); ang, lift = a2, l2
+        solids, no_lens = s.get("solids") or [], s.get("noLens") or []
+        keep = []
+
+        def clear(events):
+            for f in range(int(events[0][0]), int(s["to"]), 3):
+                ang = lift = 0.0
+                for i, (f0, d) in enumerate(events):
+                    dd = f - f0
+                    if dd < 0:
+                        continue
+                    e = 1.0 if dd >= 6 else 0.5 - 0.5 * _m.cos(_m.pi * dd / 6)
+                    ang += d * 0.45 * e
+                    lift += (-0.22 if i % 2 else 0.22) * e
+                pos, look = _cam_lin(ks, f)
+                vx, vz = pos[0] - look[0], pos[2] - look[2]
+                c_, s_ = _m.cos(ang), _m.sin(ang)
+                q = [look[0] + vx * c_ + vz * s_, pos[1] + lift, look[2] - vx * s_ + vz * c_]
+                if _path_hits(q, q, solids, no_lens, steps=1):
+                    return False
+            return True
+        for ev in sw:
+            if clear(keep + [ev]):
+                keep.append(ev)
         if keep:
             s["swing"] = keep
         else:
             s.pop("swing", None)
+
+
+def _sight_hits(eye, target, solids: list[dict], steps: int = 20) -> bool:
+    """Is a solid between the lens and her face (the last 25 cm at her are not checked: her own spot)?"""
+    import math as _m
+    d = _m.dist(eye, target)
+    if d < 0.3:
+        return False
+    for i in range(1, steps):
+        tt = i / steps
+        if d * (1 - tt) < 0.25:
+            break
+        q = [a + (b - a) * tt for a, b in zip(eye, target)]
+        for s in solids:
+            c, z = s.get("center"), s.get("size")
+            if c and z and all(abs(q[k] - c[k]) < z[k] / 2 for k in range(3)):
+                return True
+    return False
 
 
 def _path_hits(p0, p1, solids: list[dict], no_lens: list[dict], steps: int = 40) -> bool:
@@ -1001,17 +1114,25 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         if not ckeys:
             errors.append(f"{tag}: needs at least one camera key")
             continue
+        # camera v3 (toki 2026-10-25, after six takes: "die most generic winkel und kamerafahrten ... raymi nicht im bild
+        # oder nur am rand"): the lens is computed from HER - where she stands, how tall she is - in the grammar of the
+        # K/DA FIRESTARTER study, replacing the script's world-coordinate keys (special shots keep theirs)
+        v3 = None
+        if spec.get("camera_v3") and not (s.get("opts") or {}).get("her_off") and not V3_SPECIAL.search(str(s.get("size", ""))):
+            v3 = camera_v3(s, marks, errors, tag, fr(a), fr(b), i, st, sets[st])
+        if v3:
+            ckeys = v3
         # frame_fit (raymi/frame.py): the whole lens shifted onto her MEASURED head (probe) - close shots only
-        ff = s.get("frame_fit")
+        ff = None if v3 else s.get("frame_fit")
         if isinstance(ff, list) and len(ff) == 3:
             for ck in ckeys:
                 ck["pos"] = [round(p + o, 4) for p, o in zip(ck["pos"], ff)]
                 ck["look"] = [round(p + o, 4) for p, o in zip(ck["look"], ff)]
-        if spec.get("director"):                          # the camera director (direct_camera): never still, poses staged
+        if spec.get("director") and not v3:               # the camera director (direct_camera): never still, poses staged
             ckeys = direct_camera(ckeys, s, fr(a), fr(b), i)
         # frame_dolly (guard --fill-frame, toki 2026-10-25 "raymi ... sollte größer im bild sein ... oft wirkt alles leer
         # und raymi weit weg"): the lens moves this share of the way it was from what it looks at - she fills the frame
-        fd = s.get("frame_dolly")
+        fd = None if v3 else s.get("frame_dolly")
         if isinstance(fd, (int, float)) and 0.3 <= fd < 1:
             for ck in ckeys:
                 ck["pos"] = [round(lk + (p - lk) * fd, 4) for p, lk in zip(ck["pos"], ck["look"])]
@@ -1204,6 +1325,12 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         extra = {}
         if actor:
             extra["actor"] = actor
+            # camera v3: she does NOT turn to whatever lens there is (that made every angle a frontal one) - she faces her
+            # own front and the lens moves round her; only a held hero pose plays to the viewer
+            if v3 and v3[0].get("v3") != "hero":
+                for ak in actor:
+                    if ak.get("rotY") in ("lens", None):
+                        ak["rotY"] = 0.0
             m = s.get("mouth", {"gain": 1.0})
             extra["mouth"] = {"gain": 0.0} if m == "silent" else {"gain": float(m.get("gain", 1.0))}
         for opt in ("step", "outline"):

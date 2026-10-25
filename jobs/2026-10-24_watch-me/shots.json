@@ -2391,9 +2391,9 @@
     "treadmill": 1,
     "salmon": {
      "pos": [
-      1.6,
-      0.4,
-      1.4
+      -0.46,
+      0.66,
+      0.75
      ],
      "flash_at": [
       77.54,
@@ -3067,9 +3067,9 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      2.1,
-      0.8,
-      -0.1
+      -0.85,
+      0.68,
+      -0.31
      ],
      "cover_at": [
       109.09
@@ -3671,9 +3671,9 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      -0.79,
-      1.64,
-      -0.2
+      -0.18,
+      1.59,
+      -0.69
      ],
      "hold": "flashlight",
      "yaw": 0.8
@@ -3955,9 +3955,9 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      -0.25,
-      1.05,
-      0.76
+      -0.57,
+      1,
+      -0.75
      ],
      "hold": "flashlight",
      "yaw": -2.6,
@@ -4810,9 +4810,9 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      -1.14,
-      1.05,
-      0.64
+      0.95,
+      1.62,
+      0.05
      ],
      "hold": "flashlight",
      "freeze_at": 172.74
@@ -4877,9 +4877,9 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      0,
+      0.0,
       0.62,
-      0
+      0.0
      ],
      "hold": "flashlight",
      "frozen": true
@@ -5212,5 +5212,6 @@
  "kick": 0,
  "film_look": true,
  "director": true,
- "effects": true
+ "effects": true,
+ "camera_v3": true
 }
