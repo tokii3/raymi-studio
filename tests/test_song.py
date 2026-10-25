@@ -234,3 +234,29 @@ def test_melody_track_follows_a_sung_glide(tmp_path):
     assert abs(c[2] - 57) < 1.5 and abs(c[-3] - 69) < 1.5          # it climbs an octave
     assert mt["contour"][-3] is None                                 # silence at the end
     assert mt["phrases"] and mt["phrases"][0]["shape"] == "rise"
+
+
+def test_lead_track_follows_the_line_over_a_chord(tmp_path):
+    pytest.importorskip("librosa")
+    import shutil
+    import subprocess
+    if not shutil.which("ffmpeg"):
+        pytest.skip("ffmpeg")
+    sr = 22050
+    t = np.arange(int(sr * 4)) / sr
+
+    def tone(m, amp, tt):
+        f = 440 * 2 ** ((m - 69) / 12)
+        return sum(amp / h * np.sin(2 * np.pi * h * f * tt) for h in (1, 2, 3))
+
+    y = sum(tone(m, 0.12, t) for m in (48, 52, 55))          # a C chord pad under ...
+    line = [72, 74, 76, 79, 76, 74, 72, 67]                   # ... a lead, half a second per note
+    for k, m in enumerate(line):
+        a, b = int(k * 0.5 * sr), int((k + 1) * 0.5 * sr)
+        y[a:b] += tone(m, 0.3, t[a:b])
+    wav = tmp_path / "other.wav"
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ac", "1", "-ar", str(sr), "-i", "-", str(wav)],
+                   input=(0.5 * y).astype(np.float32).tobytes(), check=True)
+    lead = S.lead_track(wav)
+    assert [n["midi"] for n in lead["notes"]] == line          # not the chord's root (harmonic summation picked 48)
+    assert lead["phrases"][0]["shape"] == "arch"

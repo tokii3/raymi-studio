@@ -3,5 +3,6 @@
  "lyrics": "lyrics.txt",
  "language": "ja",
  "model": "large-v3",
- "_why": "Love is War (ryo / supercell, Mwk Remix, YouTube UOATu-g-Us0, 187.6 s). No lyrics.txt on purpose: toki 2026-10-25 'keine lyrics on screen mehr, nur fuer lip sync' - the words are needed only for mouth shapes, which go by SOUND (vrmLipSync v2), so whisper's heard words (lyrics_heard.txt) are enough. If they cover the vocal badly, toki pastes the original Miku lyrics and this runs again (delete whisper_words.json first). New in this run: song_map.melody (vocal + lead)."
+ "_why": "Love is War (ryo / supercell, Mwk Remix, YouTube UOATu-g-Us0, 187.6 s). No lyrics.txt on purpose: toki 2026-10-25 'keine lyrics on screen mehr, nur fuer lip sync' - the words are needed only for mouth shapes, which go by SOUND (vrmLipSync v2), so whisper's heard words (lyrics_heard.txt) are enough. If they cover the vocal badly, toki pastes the original Miku lyrics and this runs again (delete whisper_words.json first). New in this run: song_map.melody (vocal + lead).",
+ "_run2": "2026-10-25: run 1 measured the vocal melody (318 notes, 27 held) but the lead came back EMPTY (pyin is monophonic, the other stem has chords). lead_track = CQT top line with overtone pruning; whisper_words.json is kept (no new transcription), Demucs + song map run again."
 }

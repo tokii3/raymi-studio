@@ -812,6 +812,54 @@ def melody_track(wav: Path, fmin: float = 80.0, fmax: float = 1400.0, min_prob: 
             "notes": notes, "phrases": melody_shape(notes)}
 
 
+def top_line(cqt_db: np.ndarray, midi0: float, gate_db: float = 18.0, within_db: float = 15.0,
+             top: int | None = None) -> np.ndarray:
+    """The melody on top of chords (MIDI per frame, NaN = none) from a semitone CQT in dB: the candidates are the
+    spectral peaks within `within_db` of the frame's loudest; a candidate that sits an octave / twelfth / two octaves
+    above a LOUDER lower candidate is that note's overtone and dropped; the highest note left (below `top`) is the
+    lead - it sits on top of the pads. Voiced only when the frame's loudest stands gate_db above its median.
+    Harmonic summation was tried first and failed: the chord's root collects the overtones and wins (test 2026-10-25)."""
+    n_bins, n = cqt_db.shape
+    top = n_bins if top is None else top
+    out = np.full(n, np.nan)
+    for j in range(n):
+        col = cqt_db[:, j]
+        mx = col.max()
+        if mx - np.median(col) < gate_db:
+            continue
+        pk = [i for i in range(n_bins) if col[i] >= mx - within_db and col[i] >= col[max(0, i - 1)]
+              and col[i] >= col[min(n_bins - 1, i + 1)]]
+        kept: list[int] = []
+        for i in pk:
+            if not any(i - b in (12, 19, 24, 28, 31) and col[i] < col[b] - 1.0 for b in kept):
+                kept.append(i)
+        kept = [i for i in kept if i < top]
+        if kept:
+            out[j] = midi0 + kept[-1]
+    return out
+
+
+def lead_track(wav: Path, fmin_midi: int = 48, n_bins: int = 48) -> dict:
+    """The band's lead melody (Demucs `other` stem: synths, guitars, keys) as data like melody_track. pyin gives up on
+    a polyphonic stem (2026-10-25 Love is War: 0 % voiced), so this follows the top line of a semitone CQT instead.
+    An ESTIMATE - check by ear in the dossier."""
+    import librosa
+
+    sr = 22050
+    y = load_audio(wav, sr)
+    hop = 512                                            # cqt needs a multiple of 2^octaves; resampled to MELODY_FPS
+    C = np.abs(librosa.cqt(y, sr=sr, hop_length=hop, fmin=librosa.midi_to_hz(fmin_midi), n_bins=n_bins + 24,
+                           bins_per_octave=12))
+    m = top_line(librosa.amplitude_to_db(C, ref=np.max), float(fmin_midi), top=n_bins)
+    t_src = np.arange(len(m)) * hop / sr
+    t_dst = np.arange(0, t_src[-1], 1 / MELODY_FPS)
+    idx = np.clip(np.searchsorted(t_src, t_dst), 0, len(m) - 1)
+    midi = m[idx]
+    notes = melody_notes(midi)
+    return {"fps": MELODY_FPS, "contour": [None if np.isnan(v) else round(float(v), 1) for v in midi],
+            "notes": notes, "phrases": melody_shape(notes), "method": "cqt top line (estimate)"}
+
+
 def song_map(song: Path, vocals: Path, lines: list[dict], accomp: Path | None = None) -> dict:
     full = load_audio(song, SR)
     dur = len(full) / SR
@@ -838,7 +886,7 @@ def song_map(song: Path, vocals: Path, lines: list[dict], accomp: Path | None = 
     out["melody"] = {"vocal": melody_track(vocals)}
     other = vocals.with_name("other.wav")
     if other.is_file():
-        out["melody"]["lead"] = melody_track(other)
+        out["melody"]["lead"] = lead_track(other)
     return out
 
 
