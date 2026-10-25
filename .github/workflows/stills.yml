@@ -115,7 +115,8 @@ jobs:
               START=$(date +%s)
               PROBE=$(get probe 0)
               if [ "$PROBE" != "0" ]; then   # the scene probe over the whole film (toki 2026-10-24: fault classes, not spots)
-                (cd studio && node probe.mjs "$J" --every "$PROBE" --out "../jobs/$J/out/probe_$FMT.json") < /dev/null
+                PRANGE=$(get probe_range "")   # e.g. "1555-1580": measure one stretch only (a quick look at one fault)
+                (cd studio && node probe.mjs "$J" --every "$PROBE" ${PRANGE:+--range "$PRANGE"} --out "../jobs/$J/out/probe_$FMT.json") < /dev/null
                 { echo "#### probe $J $FMT"; echo '```'; python -m raymi probe "$J" "$FMT" < /dev/null || true; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
                 cp "jobs/$J/out/probe_$FMT.json" "jobs/$J/boards/probe_$FMT.json" 2>/dev/null || true   # kept on main: a refused still must not lose a 50-min measurement (stills run 40132877144)
               fi
