@@ -12,3 +12,4 @@ ideas: toki 2026-10-25 "mach runde 3 der boards: nahe, harte bilder mitten im tr
 ideas: toki 2026-10-25 "okay die ideen gefallen mir schon gut aber die effekte und assets, beleuchtung materialien wtc bitte hochwertiger und professioneller, immernoch plastik look, fühlt sich komisch belichtet an etc gerne weiter machen alle ideen verwenden wo wenn wie geht bis jetzt bin ich zufrieden mit der arbeit"
 ideas: toki 2026-10-25 "eher richtung 2 bei designs, zusammenführung der welten passt so, bitte jetzt richtung mv v1 ansteuern"
 treatment: toki 2026-10-25 "die idee bleibt, schließ die lücken in einem v3 und mach dann weiter richtung script"
+script: toki 2026-10-26 "ja, hook-text und kommentarfrage auf dem short sind ok, mach weiter mit script v2"
