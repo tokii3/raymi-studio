@@ -4,7 +4,8 @@ name: analyze
 # Start: push jobs/<job>/analyze.json  ({"song": "song.webm", "lyrics": "lyrics.txt", "language": "ja"})
 #        or Actions -> analyze -> Run workflow -> job.
 # Result (committed back to main): jobs/<job>/lyrics_timed.json (every official word timed from the vocal stem,
-# `cut` = one frame before the syllable), song_map.json (beats, sections, stops, hits, vocal spans + onsets),
+# `cut` = one frame before the syllable), song_map.json (beats, sections, stops, hits, vocal spans + onsets,
+# `melody`: vocal + lead pitch contour at 20 fps, notes with `held`, phrases rise / fall / arch),
 # vocals.ogg (small vocal stem) and whisper_words.json (raw recognition; `python -m raymi lyrics <job>` re-aligns
 # locally from it).
 

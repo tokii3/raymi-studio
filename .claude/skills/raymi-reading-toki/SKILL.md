@@ -65,3 +65,4 @@ The `brief-keeper` agent judges against THIS file + the real result - never agai
 | FIRESTARTER 1:43 -> 10 move codes "only these" | the energy, light and closeness of that clip as the feel of the WHOLE video |
 | "mehr Dynamik" -> more effects | more change in camera / pose / rhythm, bolder |
 | every note -> a new rule layer for all shots | designed moments; a rule gives every shot the same treatment = generic |
+| "the whole video was strobe" -> "No strobe" in PRINCIPLES | the fault was the dose (everywhere), not the device; a flash on a hit is wanted (2026-10-25) |

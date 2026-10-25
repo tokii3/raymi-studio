@@ -4,7 +4,8 @@
 1. `python -m raymi new <date>_<slug> --kind mv` - creates `jobs/<job>/` with the writers' room templates.
 2. **Dossier** (`1_DOSSIER.md`): research the song (meaning of every line, what exists, the gap, who loves it),
    download the official audio into the job, put the official lyrics into `lyrics.txt`, push `analyze.json` ->
-   the cloud measures everything (`analyze.yml`: Demucs vocal stem, every word timed, song map). Nothing guessed.
+   the cloud measures everything (`analyze.yml`: Demucs vocal stem, every word timed, song map incl. `melody` - the
+   sung line and the lead as pitch contour / notes / phrases, so effects can follow the tune). Nothing guessed.
 3. **Ideas** (`2_IDEAS.md` + `boards/`): three really different worlds with 3 key frames each, rendered from board
    jobs (`jobs/<date>_<song>-board-<x>/shots.json`) with the studio's built sets -> toki picks one and writes
    `approved: toki <date> <idea>`.

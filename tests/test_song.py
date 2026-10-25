@@ -1,5 +1,6 @@
 """Song tools: lyric words, matching by sound, onset snapping, one-frame-early cuts, stops and sections."""
 import numpy as np
+import pytest
 
 from raymi import song as S
 
@@ -194,3 +195,42 @@ def test_heard_lines_break_on_pauses():
     text = heard_lines(asr)
     assert text.startswith("# heard")
     assert [ln["text"] for ln in parse_lyrics(text)] == ["watch me", "now"]
+
+
+def test_melody_notes_split_on_jumps_and_silence():
+    nan = float("nan")
+    m = np.array([60.0] * 10 + [nan] * 4 + [64.0] * 3 + [67.0] * 12 + [67.2] * 2)
+    notes = S.melody_notes(m, fps=20)
+    assert [n["midi"] for n in notes] == [60.0, 64.0, 67.0]
+    assert notes[0]["held"] and not notes[1]["held"] and notes[2]["held"]
+    assert notes[1]["t0"] == 0.7
+
+
+def test_melody_shape_names_rise_fall_arch():
+    n = lambda t, m: {"t0": t, "t1": t + 0.2, "midi": m, "held": False}
+    rise = S.melody_shape([n(0, 60), n(0.25, 63), n(0.5, 67)])
+    arch = S.melody_shape([n(0, 60), n(0.25, 67), n(0.5, 61)])
+    two = S.melody_shape([n(0, 60), n(0.25, 59), n(2.0, 70)])
+    assert rise[0]["shape"] == "rise" and arch[0]["shape"] == "arch" and arch[0]["peak_t"] == 0.25
+    assert len(two) == 2 and two[0]["shape"] == "flat"
+
+
+def test_melody_track_follows_a_sung_glide(tmp_path):
+    pytest.importorskip("librosa")
+    import shutil
+    if not shutil.which("ffmpeg"):
+        pytest.skip("ffmpeg")
+    sr = 22050
+    t = np.arange(int(sr * 2.0)) / sr
+    f = 220.0 * 2 ** (t / 2.0)                      # A3 -> A4 over two seconds
+    y = 0.4 * np.sin(2 * np.pi * np.cumsum(f) / sr)
+    y = np.concatenate([y, np.zeros(sr // 2)])
+    wav = tmp_path / "v.wav"
+    import subprocess
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ac", "1", "-ar", str(sr), "-i", "-", str(wav)],
+                   input=y.astype(np.float32).tobytes(), check=True)
+    mt = S.melody_track(wav)
+    c = [v for v in mt["contour"] if v is not None]
+    assert abs(c[2] - 57) < 1.5 and abs(c[-3] - 69) < 1.5          # it climbs an octave
+    assert mt["contour"][-3] is None                                 # silence at the end
+    assert mt["phrases"] and mt["phrases"][0]["shape"] == "rise"

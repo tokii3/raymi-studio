@@ -471,7 +471,8 @@ def separate(song: Path, out_dir: Path) -> Path:
     acc = sum(y[i] for i, n in enumerate(model.sources) if n != "vocals").numpy()
     out_dir.mkdir(parents=True, exist_ok=True)
     wav = out_dir / "vocals.wav"
-    for sig, f in ((voc, wav), (acc, out_dir / "accomp.wav")):
+    oth = y[model.sources.index("other")].numpy()       # synths / guitars / keys: the lead melody (melody_track)
+    for sig, f in ((voc, wav), (acc, out_dir / "accomp.wav"), (oth, out_dir / "other.wav")):
         pcm = np.clip(sig.T, -1, 1).astype(np.float32).tobytes()
         subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ac", "2", "-ar", str(model.samplerate), "-i", "-",
                         str(f)], input=pcm, check=True)
@@ -718,6 +719,99 @@ def line_voices(vocals: Path, lines: list[dict]) -> list[dict]:
     return label_voices(stats)
 
 
+MELODY_FPS = 20              # contour rate stored in song_map (an effect samples it per frame, 30 fps -> lerp)
+
+
+def hz_to_midi(f: np.ndarray) -> np.ndarray:
+    return 69.0 + 12.0 * np.log2(np.asarray(f, float) / 440.0)
+
+
+def melody_notes(midi: np.ndarray, fps: float = MELODY_FPS, min_s: float = 0.12, held_s: float = 0.45,
+                 jump: float = 0.8) -> list[dict]:
+    """A pitch contour (MIDI per frame, NaN = silent) -> notes {t0, t1, midi, held}: a new note where the pitch moves
+    by more than `jump` semitones from the running note or the voice stops; notes shorter than min_s are dropped
+    (consonants, octave slips). `held` = a long note an effect can sustain on (toki 2026-10-25: effects on the melody)."""
+    notes, a, vals = [], None, []
+
+    def close(z: int) -> None:
+        if a is not None and (z - a) / fps >= min_s:
+            notes.append({"t0": round(a / fps, 2), "t1": round(z / fps, 2), "midi": round(float(np.median(vals)), 1),
+                          "held": (z - a) / fps >= held_s})
+
+    for k, m in enumerate(midi):
+        if np.isnan(m):
+            close(k)
+            a, vals = None, []
+        elif a is None:
+            a, vals = k, [m]
+        elif abs(m - np.median(vals)) > jump:
+            close(k)
+            a, vals = k, [m]
+        else:
+            vals.append(m)
+    close(len(midi))
+    return notes
+
+
+def melody_shape(notes: list[dict], gap_s: float = 0.35) -> list[dict]:
+    """Phrases of the melody (notes closer than gap_s) with their shape: lowest / highest note, where the peak is,
+    and the direction (rise / fall / arch / flat) - what a picture can follow over a whole line."""
+    out, cur = [], []
+    for n in notes + [None]:
+        if cur and (n is None or n["t0"] - cur[-1]["t1"] > gap_s):
+            ms = [x["midi"] for x in cur]
+            top = max(range(len(cur)), key=lambda i: ms[i])
+            d = ms[-1] - ms[0]
+            shape = "flat" if max(ms) - min(ms) < 2 else ("arch" if 0 < top < len(cur) - 1 and ms[top] - max(ms[0], ms[-1]) >= 2
+                                                          else "rise" if d > 0 else "fall")
+            out.append({"t0": cur[0]["t0"], "t1": cur[-1]["t1"], "low": min(ms), "high": max(ms),
+                        "peak_t": cur[top]["t0"], "shape": shape, "notes": len(cur)})
+            cur = []
+        if n is not None:
+            cur.append(n)
+    return out
+
+
+def octave_fix(y: np.ndarray, sr: int, f: np.ndarray, hop: int, n_fft: int = 4096, weak: float = 0.25) -> np.ndarray:
+    """pyin's sub-harmonic slip: a frame reported at f with (almost) no energy at f but a strong partial at 2f is the
+    octave above. Measured 2026-10-25: a clean 220 Hz glide read as 110 Hz for the WHOLE track once half a second of
+    silence followed it (librosa 1.0 pyin) - so every frame is checked against the spectrum, up to two octaves."""
+    S = np.abs(np.fft.rfft(np.lib.stride_tricks.sliding_window_view(np.pad(y, n_fft // 2), n_fft)[::hop][:len(f)]
+                           * np.hanning(n_fft), axis=1))
+    freqs = np.fft.rfftfreq(n_fft, 1 / sr)
+
+    def mag(k: int, hz: float) -> float:
+        i = int(np.searchsorted(freqs, hz))
+        return float(S[k, max(0, i - 2):i + 3].max()) if i < len(freqs) else 0.0
+
+    out = f.copy()
+    for k in range(min(len(f), len(S))):
+        for _ in range(2):
+            if np.isnan(out[k]) or mag(k, out[k]) >= weak * mag(k, 2 * out[k]):
+                break
+            out[k] *= 2
+    return out
+
+
+def melody_track(wav: Path, fmin: float = 80.0, fmax: float = 1400.0, min_prob: float = 0.5) -> dict:
+    """The melody of a stem as data (librosa pyin): contour (MIDI at MELODY_FPS, null = silent), notes, phrases.
+    pyin is monophonic - on the vocal stem it is the sung line; on the `other` stem (synths, guitars, keys) it follows
+    the loudest line and is an ESTIMATE (chords confuse it): check the lead by ear in the dossier."""
+    import librosa
+
+    sr = 22050
+    y = load_audio(wav, sr)
+    hop = int(sr / MELODY_FPS)
+    f, voiced, prob = librosa.pyin(y, fmin=fmin, fmax=fmax, sr=sr, frame_length=2048, hop_length=hop)
+    f = np.where(voiced & (prob >= min_prob) & ~np.isnan(f), f, np.nan)
+    f = octave_fix(y, sr, f, hop)
+    midi = hz_to_midi(np.where(np.isnan(f), 440.0, f))
+    midi[np.isnan(f)] = np.nan
+    notes = melody_notes(midi)
+    return {"fps": MELODY_FPS, "contour": [None if np.isnan(m) else round(float(m), 1) for m in midi],
+            "notes": notes, "phrases": melody_shape(notes)}
+
+
 def song_map(song: Path, vocals: Path, lines: list[dict], accomp: Path | None = None) -> dict:
     full = load_audio(song, SR)
     dur = len(full) / SR
@@ -739,6 +833,12 @@ def song_map(song: Path, vocals: Path, lines: list[dict], accomp: Path | None = 
     # 2026-10-22: median pitch per line. Beach showed it measures REGISTER, not the singer (Dan Reynolds and Ado both
     # sing the verse low and the bridge high) - "voice" is only a hint; who sings is checked by ear in the dossier
     out["voices"] = line_voices(vocals, lines)
+    # 2026-10-25 (Love is War, toki: "on beat / melodie effekte"): the melody as data - the sung line and the lead of
+    # the band (Demucs `other` stem) - so an effect can rise, fall and hold with the tune, not only hit on the beat
+    out["melody"] = {"vocal": melody_track(vocals)}
+    other = vocals.with_name("other.wav")
+    if other.is_file():
+        out["melody"]["lead"] = melody_track(other)
     return out
 
 
@@ -761,7 +861,7 @@ def analyze(job_dir: Path) -> dict:
     song = job_dir / cfg.get("song", "song.webm")
     stems = job_dir / "out" / "stems"
     wav = stems / "vocals.wav"
-    if not wav.is_file() or not (stems / "accomp.wav").is_file():
+    if not wav.is_file() or not (stems / "accomp.wav").is_file() or not (stems / "other.wav").is_file():
         separate(song, stems)
     ogg = job_dir / "vocals.ogg"            # small stem kept in the repo: local re-alignment + checks by ear
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(wav), "-ac", "1", "-c:a", "libopus", "-b:a", "48k",

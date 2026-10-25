@@ -53,14 +53,18 @@ effekte mag ich alle sehr" KING). Channel: an evergreen vocaloid song for the VT
 - X1 "aggressiv, raw, intense" vs "schön und aesthetisch" -> my guess: not a contradiction but the design axis -
   rawness in camera, cut, motion and effects; beauty in light, colour and composition; the film breathes between
   hits (beautiful holds) and hits (raw bursts) -> ASK (confirm)
+answered X1: toki 2026-10-25 "x1: ja genau so"
 - X2 "starke on beat effekte die einen umhauen" vs standing principle "No strobe" (PRINCIPLES 13) and photosensitive
   viewers -> my guess: flashes and impact frames as single designed hits (1-3 frames), never a sustained flicker
   > 3 per second over a large area -> ASK
+answered X2: toki 2026-10-25 "x2: ja, das kein trobe war wieder zu wörtlich damals genommen, da das ganze video strobe war"
 - X3 "aggressiv, raw" + a song about desperate love vs canon "tsundere tone always stays light/playful, never
   genuinely hurt or sad" (canon/01) -> my guess: Raymi fights, attacks, dares - fierce and confident, not crying or
   broken; the pain of the lyrics is in the world / the music, her answer is the war -> ASK
+answered X3: toki 2026-10-25 "x3: ja, eher weltschmerz artig" -> Raymi fierce, not crying; the pain reads as Weltschmerz (a sorrow about the world, carried by the world and the music), her answer is the fight
 - X4 her link is the Mwk REMIX (188 s) - the remix or the original? -> my guess: the remix (she chose it and it is
   the dance energy she wants) -> ASK, also because of rights (Feasibility F5)
+answered X4: toki 2026-10-25 "x4: remix"
 
 ## Visible proof (each must be TRUE in the finished video)
 - [ ] C1 "immersive / reinziehen" -> from 0-3 s already inside the action; the camera is IN her space (close, moving
@@ -85,6 +89,7 @@ effekte mag ich alle sehr" KING). Channel: an evergreen vocaloid song for the VT
 - min_face_h_median: 0.10
 
 ## Feasibility (each proof: clip / asset / tool that makes it real)
+missing ok: toki 2026-10-25 "analyse tool gerne hinzu fügen, dann weiter machen, wegen mixamo, kannst du das nicht selber via deinem browser wenn ich mich anmelde in mixamo dann kannst du dir alles ziehen was du jetzt oder in der zukunft brauchst" -> F4 melody track gets built now; F1 lens clips: toki logs in to Mixamo in the built-in browser, Claude downloads the clips
 - F1 C1 immersive camera: camera_moves.py (push, through, crash, whip, dutch, burst), motion shake, DoF, PostFX -
   exist; designed per moment by camera-director. Lens play (she reaches / strikes INTO the lens): no clip does it
   (Watch Me lesson, clips_wanted.md) -> MISSING. Options: (a) toki downloads 3-6 more Mixamo clips (free, her account:

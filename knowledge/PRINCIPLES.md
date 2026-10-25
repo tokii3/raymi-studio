@@ -60,7 +60,9 @@ stronger effect with a written reason; real faults (section C) never.
     -> picture -> asset / technique. Never pick an asset because it exists and invent the reason afterwards.
 13. **Power, contrast, rhythm.** Off-centre, diagonal, too big for the frame; dense next to empty; a pause before the
     drop; holds next to 3-6-frame accents. Most loud beats change the picture (by a cut OR an event inside the shot).
-    Cuts go through things and land one frame BEFORE the syllable. No strobe.
+    Cuts go through things and land one frame BEFORE the syllable. Flashes, impact frames and light hits are a
+    designed weapon on the hits (toki 2026-10-25: "das kein strobe war wieder zu wörtlich damals genommen, da das
+    ganze video strobe war") - the fault is a WHOLE film that flickers, never a strong flash on a hit.
 14. **One anchor returns and grows** (a set, an object). Repetition is a motif only with a change; a lazily reused
     effect is not.
 15. **Places have love and make sense.** Lived-in details with reasons, nothing floats or stands where it cannot
