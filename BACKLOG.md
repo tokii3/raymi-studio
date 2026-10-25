@@ -119,3 +119,9 @@
     ohne Details") is not built.
   - The scene probe is a process step (stills.json "probe"), not an automatic gate in render.yml yet.
   - Runs 58 / 59 unscreened (no critic, no toki verdict).
+- Lead melody of the band on a dense mix (song_map.melody.lead, 2026-10-25 Love is War): tried (1) librosa pyin on
+  the Demucs `other` stem -> 0 % voiced (monophonic tracker on chords); (2) CQT top line with overtone pruning
+  (`lead_track`) -> exact on a synthetic chord + lead, on the real remix 49 % voiced but jittery (75 notes, 42 of 52
+  phrases "flat", 95th percentile at the range ceiling = hi-hats / noise picked). The VOCAL melody is reliable
+  (318 notes, median A4). Next idea: Spotify basic-pitch (free, polyphonic note transcription) on the other stem,
+  keep the highest sustained note; or restrict the top line to harmonic peaks (spectral flatness gate).

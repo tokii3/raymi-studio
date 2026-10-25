@@ -1,5 +1,22 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-25 (late, 4) - Love is War (supercell, Mwk Remix): brief + dossier through the new flow
+- Job jobs/2026-10-25_love-is-war (MV + Short + thumbs + upload). 0_BRIEF: her core (immersive, aggressiv, raw, on
+  beat / melodie effekte, umhauen, intense + schön), X1-X4 answered by toki (raw in camera/cut/fx, beauty in light /
+  colour; flashes on hits are fine; Raymi fierce, "eher weltschmerz artig"; the remix). NEW standing ask: no lyrics on
+  screen, words only for lip sync (memory no-lyrics-on-screen; scope for all videos asked).
+- Lesson: "No strobe" in PRINCIPLES was her complaint about a WHOLE flickering video turned into a ban on the device
+  ("zu wörtlich") - PRINCIPLES 13 rewritten, reading-toki anti-pattern row, memory user-toki.
+- Melody as data (raymi/song.py, analyze.yml): song_map.melody.vocal (pyin + octave fix, measured 318 notes / 27 held
+  / 68 phrases on this song) and .lead (CQT top line; estimate, parked in BACKLOG after 2 tries). Demucs `other`
+  stem kept. 142 tests.
+- Mixamo through the built-in browser with toki's login: 36 new clips (lens attacks, yells, Weltschmerz kneels,
+  power-ups, flips, floating poses) -> raymi-private-assets + studio/catalog/clips.json (491). Not yet seen on raymi7.
+- Dossier done (rights: expect Content ID; gap: no directed MV of the remix exists). Gemini listening pass failed
+  (free quota 429) - run it next session.
+- NEXT: Gemini listen (prompt in the session, reviews/dossier_gemini_listen.md), clip sheet of the 36 clips on
+  raymi7, then IDEAS (idea matrix x toolkit, 3 worlds as image boards) -> STOPP for toki.
+
 ## 2026-10-25 (late, 3) - the five planning gaps closed (toki: "hätten von Anfang an auftauchen müssen")
 - Traced: the radar gags were in IDEAS / TREATMENT as single-line gags; her own effect language (sonar, sense,
   caustics, ink, dot pulse, fin wave) came only in take 6 (10-25 03:17) as a fix for "flach" and as global RULES.

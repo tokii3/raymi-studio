@@ -60,7 +60,7 @@ dance crowd (Crusher, Mwk). What fans expect to see: the megaphone, a black / re
 Miku's twin-tail silhouette (we do NOT copy Miku - Raymi is her own character). Comment quotes: not collected yet
 (vidIQ / comment pull is a later step; guess: nostalgia "2008 kids", "this remix slaps").
 
-## 5. Song map (MEASURED, song_map.json, analyze run 1; lead melody comes with run 2)
+## 5. Song map (MEASURED, song_map.json, analyze run 2)
 | time | section (map) | energy | what happens (measured; listening by Gemini pending - free quota hit 2026-10-25) |
 |---|---|---|---|
 | 0.0-1.6 | intro | silent | -85.8 dB |
@@ -77,6 +77,10 @@ Miku's twin-tail silhouette (we do NOT copy Miku - Raymi is her own character). 
 | 119.9-120.4 | STOP | breath | -13.9 dB |
 | 120.4-169.8 | high -> peak | final chorus x2 | hits 123.8, 131.1, 139.3 |
 | 169.8-187.6 | high | outro | instrumental (sung 0 %), hits 172.5, 174.4, 176.3, 177.2 |
+Lead melody (song_map.melody.lead, CQT top line, run 2): an ESTIMATE - 49 % voiced, jittery (75 notes, mostly short
+flat phrases, top picks hit the range ceiling = hi-hats). Use only its long notes (4 held: 116.75-117.4, 118.2-119.3,
+119.85-120.8 = the run into the second stop) until a better tracker exists (BACKLOG). Effects follow the VOCAL melody.
+Note: both stops (62.2, 119.9) are -14 / -15 dB, not silence - a synth keeps playing through them.
 Lyric line times: vocal stem (lyrics_timed.json: 283 words, 265 snapped to vocal onsets, 10 interpolated).
 Melody (new, song_map.melody.vocal): 318 notes, 27 held, 68 phrases (23 flat, 22 fall, 14 rise, 9 arch); range
 MIDI 43-90.6, but 1st-99th percentile 56.1-83.1, median 69 (A4) - plausible for Miku; one outlier note (26.85 s, MIDI 44)
