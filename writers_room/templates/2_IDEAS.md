@@ -28,7 +28,9 @@ professional reference (`python -m raymi refs find <terms>`). Bad ideas allowed 
 - **5 wows** (time + what, strongest last): TODO
 - **The Short** (window + its own twist): TODO
 - **Risk** (what could make it weak): TODO
-- **Key frames:** boards/A1.jpg, A2, A3
+- **Key frames:** boards/A1.jpg, A2, A3 - each names the brief C-line it proves and its reference (`slug@s`); at least
+  one is the HARDEST moment of the idea, shot close and mid-hit, her face readable (Love is War 2026-10-25: nine calm
+  wide establishing frames with Raymi small or from behind - brief-keeper BLOCK + look-critic FAIL, reviews/ideas_*_1.md)
 
 ## Idea B - <name>
 TODO (same fields)

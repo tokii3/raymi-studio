@@ -125,3 +125,11 @@
   phrases "flat", 95th percentile at the range ceiling = hi-hats / noise picked). The VOCAL melody is reliable
   (318 notes, median A4). Next idea: Spotify basic-pitch (free, polyphonic note transcription) on the other stem,
   keep the highest sustained note; or restrict the top line to harmonic peaks (spectral flatness gate).
+- Ink brush slash standing in the air (sets/Paper `ink_slash`, Love is War boards 2026-10-25): round 1 bristle lines
+  1-6 px -> a thin dark leaf; round 2 bristles 2-24 px -> still a small leaf at board distance. Suspect: the plane is
+  12 x 3 m but the stroke texture only fills its middle band and the alpha tail eats the rest, so it reads small and
+  thin. Next idea: draw the slash as a 2D layer (Fx2D, screen space, like the Transitions ink) instead of a plane in
+  the set - a slash is a graphic hit (ref hsr-hope-feathers@108, ado-usseewa@98), not an object.
+- Mixamo `roar` turns her body away from the lens at 1.9 s (boards A2 / B2 round 2: we see her back) - the clip's own
+  hip yaw adds to rotY 'lens'. Attack clips need their yaw measured (hips forward vector at the key time) and
+  compensated, else every "attack at the viewer" faces away. Seen on the boards, not fixed yet.

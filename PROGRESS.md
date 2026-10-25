@@ -1,5 +1,14 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-25 (late, 5) - Love is War IDEAS: matrix + 3 worlds, new parts, idea boards FAIL (held back)
+- 2_IDEAS.md: matrix 16 rows x T01-T17, A Lighthouse That Never Looks / B Ink War / C Signal War (pick: A).
+- New studio parts: lighthouse + beam + lightning (nightsea), paper set with ink, sea-floor cables with pulses (deep);
+  VrmBoard loads Mixamo clips (it could not before); clip sheet of the 36 new clips seen (clips_seen.md).
+- Boards round 1 + 2 (9 key frames, film path): brief-keeper BLOCK + look-critic FAIL (reviews/ideas_*_1.md) - calm
+  wide frames, Raymi small / from behind / blue, flat props. Gate FAIL, not sent. Lesson -> 2_IDEAS template key-frame
+  field (C-line + one hardest close mid-hit frame). BACKLOG: ink slash (2 tries), clip yaw of roar.
+- Handoff: knowledge/HANDOFF_2026-10-25_love_is_war_ideas.md. NEXT: toki decides round 3 or a pick from text + pairs.
+
 ## 2026-10-25 (late, 4) - Love is War (supercell, Mwk Remix): brief + dossier through the new flow
 - Job jobs/2026-10-25_love-is-war (MV + Short + thumbs + upload). 0_BRIEF: her core (immersive, aggressiv, raw, on
   beat / melodie effekte, umhauen, intense + schön), X1-X4 answered by toki (raw in camera/cut/fx, beauty in light /
