@@ -3,24 +3,24 @@
  "width": 960,
  "height": 1080,
  "fps": 30,
- "durationInFrames": 27,
+ "durationInFrames": 42,
  "vrm": "vrm/raymi7.vrm",
  "sprites": [],
  "grain": 0.0,
  "motions": [
-  "motions/climbing-ladder.fbx",
-  "motions/climbing-to-top.fbx",
-  "motions/climbing-up-wall.fbx",
-  "motions/jumping-over-obstacle-one-hand.fbx",
-  "motions/pull-heavy-object.fbx",
-  "motions/pulling-up-to-a-ledge.fbx",
-  "motions/swimming-underwater.fbx",
-  "motions/treading-water.fbx",
-  "motions/wiping-sweat.fbx"
+  "motions/angry-point.fbx",
+  "motions/grab-and-slam.fbx",
+  "motions/hanging-by-hands-against-wall.fbx",
+  "motions/jump-from-wall.fbx",
+  "motions/knocked-out-falling-back.fbx",
+  "motions/look-over-shoulder.fbx",
+  "motions/pointing-forward-1.fbx",
+  "motions/reaching-out.fbx",
+  "motions/stumble-backwards.fbx"
  ],
  "tiles": [
   {
-   "name": "climbing-ladder_0",
+   "name": "grab-and-slam_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -49,7 +49,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "climbing-ladder",
+     "motion": "grab-and-slam",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
@@ -62,7 +62,7 @@
    "glowGain": 0
   },
   {
-   "name": "climbing-ladder_1",
+   "name": "grab-and-slam_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -91,7 +91,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "climbing-ladder",
+     "motion": "grab-and-slam",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
@@ -104,7 +104,7 @@
    "glowGain": 0
   },
   {
-   "name": "climbing-ladder_2",
+   "name": "grab-and-slam_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -133,7 +133,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "climbing-ladder",
+     "motion": "grab-and-slam",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
@@ -146,7 +146,7 @@
    "glowGain": 0
   },
   {
-   "name": "climbing-to-top_0",
+   "name": "hanging-by-hands-against-wall_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -175,7 +175,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "climbing-to-top",
+     "motion": "hanging-by-hands-against-wall",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
@@ -188,7 +188,7 @@
    "glowGain": 0
   },
   {
-   "name": "climbing-to-top_1",
+   "name": "hanging-by-hands-against-wall_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -217,7 +217,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "climbing-to-top",
+     "motion": "hanging-by-hands-against-wall",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
@@ -230,7 +230,7 @@
    "glowGain": 0
   },
   {
-   "name": "climbing-to-top_2",
+   "name": "hanging-by-hands-against-wall_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -259,7 +259,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "climbing-to-top",
+     "motion": "hanging-by-hands-against-wall",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
@@ -272,7 +272,7 @@
    "glowGain": 0
   },
   {
-   "name": "climbing-up-wall_0",
+   "name": "jump-from-wall_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -301,7 +301,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "climbing-up-wall",
+     "motion": "jump-from-wall",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
@@ -314,7 +314,7 @@
    "glowGain": 0
   },
   {
-   "name": "climbing-up-wall_1",
+   "name": "jump-from-wall_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -343,7 +343,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "climbing-up-wall",
+     "motion": "jump-from-wall",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
@@ -356,7 +356,7 @@
    "glowGain": 0
   },
   {
-   "name": "climbing-up-wall_2",
+   "name": "jump-from-wall_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -385,7 +385,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "climbing-up-wall",
+     "motion": "jump-from-wall",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
@@ -398,7 +398,7 @@
    "glowGain": 0
   },
   {
-   "name": "jumping-over-obstacle-one-hand_0",
+   "name": "knocked-out-falling-back_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -427,7 +427,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "jumping-over-obstacle-one-hand",
+     "motion": "knocked-out-falling-back",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
@@ -440,7 +440,7 @@
    "glowGain": 0
   },
   {
-   "name": "jumping-over-obstacle-one-hand_1",
+   "name": "knocked-out-falling-back_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -469,7 +469,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "jumping-over-obstacle-one-hand",
+     "motion": "knocked-out-falling-back",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
@@ -482,7 +482,7 @@
    "glowGain": 0
   },
   {
-   "name": "jumping-over-obstacle-one-hand_2",
+   "name": "knocked-out-falling-back_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -511,7 +511,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "jumping-over-obstacle-one-hand",
+     "motion": "knocked-out-falling-back",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
@@ -524,7 +524,7 @@
    "glowGain": 0
   },
   {
-   "name": "pull-heavy-object_0",
+   "name": "stumble-backwards_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -553,7 +553,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "pull-heavy-object",
+     "motion": "stumble-backwards",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
@@ -566,7 +566,7 @@
    "glowGain": 0
   },
   {
-   "name": "pull-heavy-object_1",
+   "name": "stumble-backwards_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -595,7 +595,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "pull-heavy-object",
+     "motion": "stumble-backwards",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
@@ -608,7 +608,7 @@
    "glowGain": 0
   },
   {
-   "name": "pull-heavy-object_2",
+   "name": "stumble-backwards_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -637,7 +637,7 @@
       0
      ],
      "rotY": "lens",
-     "motion": "pull-heavy-object",
+     "motion": "stumble-backwards",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
@@ -650,7 +650,7 @@
    "glowGain": 0
   },
   {
-   "name": "pulling-up-to-a-ledge_0",
+   "name": "reaching-out_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -679,9 +679,9 @@
       0
      ],
      "rotY": "lens",
-     "motion": "pulling-up-to-a-ledge",
+     "motion": "reaching-out",
      "motionMix": 1,
-     "clipFrom": 0.35,
+     "clipFrom": 0.2,
      "once": true,
      "look": "lens",
      "faceLens": true
@@ -692,7 +692,7 @@
    "glowGain": 0
   },
   {
-   "name": "pulling-up-to-a-ledge_1",
+   "name": "reaching-out_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -721,9 +721,9 @@
       0
      ],
      "rotY": "lens",
-     "motion": "pulling-up-to-a-ledge",
+     "motion": "reaching-out",
      "motionMix": 1,
-     "clipFrom": 1.0,
+     "clipFrom": 0.6,
      "once": true,
      "look": "lens",
      "faceLens": true
@@ -734,7 +734,7 @@
    "glowGain": 0
   },
   {
-   "name": "pulling-up-to-a-ledge_2",
+   "name": "reaching-out_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -763,9 +763,9 @@
       0
      ],
      "rotY": "lens",
-     "motion": "pulling-up-to-a-ledge",
+     "motion": "reaching-out",
      "motionMix": 1,
-     "clipFrom": 1.9,
+     "clipFrom": 1.2,
      "once": true,
      "look": "lens",
      "faceLens": true
@@ -776,7 +776,7 @@
    "glowGain": 0
   },
   {
-   "name": "swimming-underwater_0",
+   "name": "reaching-out_3",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -805,9 +805,9 @@
       0
      ],
      "rotY": "lens",
-     "motion": "swimming-underwater",
+     "motion": "reaching-out",
      "motionMix": 1,
-     "clipFrom": 0.35,
+     "clipFrom": 1.6,
      "once": true,
      "look": "lens",
      "faceLens": true
@@ -818,7 +818,7 @@
    "glowGain": 0
   },
   {
-   "name": "swimming-underwater_1",
+   "name": "reaching-out_4",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -847,9 +847,9 @@
       0
      ],
      "rotY": "lens",
-     "motion": "swimming-underwater",
+     "motion": "reaching-out",
      "motionMix": 1,
-     "clipFrom": 1.0,
+     "clipFrom": 2.2,
      "once": true,
      "look": "lens",
      "faceLens": true
@@ -860,7 +860,7 @@
    "glowGain": 0
   },
   {
-   "name": "swimming-underwater_2",
+   "name": "reaching-out_5",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -889,9 +889,9 @@
       0
      ],
      "rotY": "lens",
-     "motion": "swimming-underwater",
+     "motion": "reaching-out",
      "motionMix": 1,
-     "clipFrom": 1.9,
+     "clipFrom": 2.8,
      "once": true,
      "look": "lens",
      "faceLens": true
@@ -902,7 +902,7 @@
    "glowGain": 0
   },
   {
-   "name": "treading-water_0",
+   "name": "reaching-out_6",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -931,9 +931,9 @@
       0
      ],
      "rotY": "lens",
-     "motion": "treading-water",
+     "motion": "reaching-out",
      "motionMix": 1,
-     "clipFrom": 0.35,
+     "clipFrom": 3.4,
      "once": true,
      "look": "lens",
      "faceLens": true
@@ -944,7 +944,7 @@
    "glowGain": 0
   },
   {
-   "name": "treading-water_1",
+   "name": "reaching-out_7",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -973,9 +973,9 @@
       0
      ],
      "rotY": "lens",
-     "motion": "treading-water",
+     "motion": "reaching-out",
      "motionMix": 1,
-     "clipFrom": 1.0,
+     "clipFrom": 4.0,
      "once": true,
      "look": "lens",
      "faceLens": true
@@ -986,7 +986,7 @@
    "glowGain": 0
   },
   {
-   "name": "treading-water_2",
+   "name": "angry-point_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -1015,9 +1015,9 @@
       0
      ],
      "rotY": "lens",
-     "motion": "treading-water",
+     "motion": "angry-point",
      "motionMix": 1,
-     "clipFrom": 1.9,
+     "clipFrom": 0.2,
      "once": true,
      "look": "lens",
      "faceLens": true
@@ -1028,7 +1028,7 @@
    "glowGain": 0
   },
   {
-   "name": "wiping-sweat_0",
+   "name": "angry-point_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -1057,9 +1057,9 @@
       0
      ],
      "rotY": "lens",
-     "motion": "wiping-sweat",
+     "motion": "angry-point",
      "motionMix": 1,
-     "clipFrom": 0.35,
+     "clipFrom": 0.6,
      "once": true,
      "look": "lens",
      "faceLens": true
@@ -1070,7 +1070,7 @@
    "glowGain": 0
   },
   {
-   "name": "wiping-sweat_1",
+   "name": "angry-point_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -1099,9 +1099,9 @@
       0
      ],
      "rotY": "lens",
-     "motion": "wiping-sweat",
+     "motion": "angry-point",
      "motionMix": 1,
-     "clipFrom": 1.0,
+     "clipFrom": 1.2,
      "once": true,
      "look": "lens",
      "faceLens": true
@@ -1112,7 +1112,7 @@
    "glowGain": 0
   },
   {
-   "name": "wiping-sweat_2",
+   "name": "angry-point_3",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -1141,9 +1141,639 @@
       0
      ],
      "rotY": "lens",
-     "motion": "wiping-sweat",
+     "motion": "angry-point",
      "motionMix": 1,
-     "clipFrom": 1.9,
+     "clipFrom": 1.6,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "angry-point_4",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "angry-point",
+     "motionMix": 1,
+     "clipFrom": 2.2,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "angry-point_5",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "angry-point",
+     "motionMix": 1,
+     "clipFrom": 2.8,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "angry-point_6",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "angry-point",
+     "motionMix": 1,
+     "clipFrom": 3.4,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "angry-point_7",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "angry-point",
+     "motionMix": 1,
+     "clipFrom": 4.0,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "pointing-forward-1_0",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "pointing-forward-1",
+     "motionMix": 1,
+     "clipFrom": 0.2,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "pointing-forward-1_1",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "pointing-forward-1",
+     "motionMix": 1,
+     "clipFrom": 0.6,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "pointing-forward-1_2",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "pointing-forward-1",
+     "motionMix": 1,
+     "clipFrom": 1.2,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "pointing-forward-1_3",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "pointing-forward-1",
+     "motionMix": 1,
+     "clipFrom": 1.6,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "pointing-forward-1_4",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "pointing-forward-1",
+     "motionMix": 1,
+     "clipFrom": 2.2,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "pointing-forward-1_5",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "pointing-forward-1",
+     "motionMix": 1,
+     "clipFrom": 2.8,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "pointing-forward-1_6",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "pointing-forward-1",
+     "motionMix": 1,
+     "clipFrom": 3.4,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "pointing-forward-1_7",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "pointing-forward-1",
+     "motionMix": 1,
+     "clipFrom": 4.0,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "look-over-shoulder_0",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "look-over-shoulder",
+     "motionMix": 1,
+     "clipFrom": 0.5,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "look-over-shoulder_1",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "look-over-shoulder",
+     "motionMix": 1,
+     "clipFrom": 1.2,
+     "once": true,
+     "look": "lens",
+     "faceLens": true
+    }
+   ],
+   "lock": 0.45,
+   "materialStyle": "routine",
+   "glowGain": 0
+  },
+  {
+   "name": "look-over-shoulder_2",
+   "set": "shoot",
+   "opts": {
+    "grade": "wm_paper",
+    "bulb": false
+   },
+   "cam": {
+    "pos": [
+     1.15,
+     0.95,
+     3.4
+    ],
+    "look": [
+     0,
+     0.82,
+     0
+    ],
+    "fov": 36
+   },
+   "keys": [
+    {
+     "f": 0,
+     "pose": "stand",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "rotY": "lens",
+     "motion": "look-over-shoulder",
+     "motionMix": 1,
+     "clipFrom": 2.0,
      "once": true,
      "look": "lens",
      "faceLens": true
@@ -1154,5 +1784,5 @@
    "glowGain": 0
   }
  ],
- "_why": "clip sheet round 2: the 9 clips for Love is War treatment v3 (wipe, climbs, vault, pull, swim) on raymi7 with face_lens"
+ "_why": "clip sheet round 3: 5 new clips (choreographer M2-M6) + reaching-out / angry-point / pointing-forward-1 at 8 moments (M1) + look-over-shoulder (M4)"
 }
