@@ -3,6 +3,20 @@
 Knowledge to open: `knowledge/CASEBOOK.md` (the top three), `knowledge/PRINCIPLES.md` A,
 `knowledge/exemplars/renai_ANALYSIS.md`, `knowledge/studies/mv_study_12_videos.md`.
 Three REALLY different worlds (not one idea in three colours). Each gets 3 key frames in `boards/` (images for toki).
+Also open `canon/02_raymi_toolkit.md` (her body / lore as picture language, T01..) and `0_BRIEF.md` (her core +
+classes). Fill the matrix BEFORE the ideas - the ideas are picked FROM it (toki 2026-10-25: the Watch Me radar / sonar
+/ caustics ideas came in take 6 instead of here).
+
+## Idea matrix (every line or section of the song x her toolkit x the song's medium)
+One row per sung line / section (from 1_DOSSIER.md, measured times). At least 3 picture ideas per row, from at
+least 2 different sources - the line's meaning, a toolkit entry (T-id), the song's own medium / genre convention, a
+professional reference (`python -m raymi refs find <terms>`). Bad ideas allowed here; choosing comes later.
+| time | line / section | what it means | ideas (source in brackets: T03, medium, ref kda-more@..) |
+|---|---|---|---|
+| TODO | | | |
+
+## Toolkit coverage (EVERY T-id of canon/02, one line each - used in which rows, or why not in this song)
+- TODO T01 ...
 
 ## Idea A - <name>
 - **The one sentence:** TODO (like "something lives in the dark inside your screen - and she brought a lamp")

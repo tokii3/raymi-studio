@@ -41,6 +41,14 @@ TODO
 |---|---|---|---|---|---|---|
 | TODO | | | | | | |
 
+## Effects as MOMENTS (toolkit entries + effects - each one designed for its moment, never a rule over the film)
+toki 2026-10-25: good ideas (radar, sonar, waves) were added late as global rules and looked bad. Each effect here
+gets its exact moment, its meaning, a professional reference and a test still (look-dev pair on the storyboard).
+The fx-designer agent drafts this table from the idea matrix; the timeline refuses global `effects` for new jobs.
+| time | line | effect / toolkit (T-id) | what it means here | how it looks (size, colour, speed, layer) | ref (slug@s) | test still |
+|---|---|---|---|---|---|---|
+| TODO | | | | | | |
+
 ## Places make sense + love and detail
 Each place: what is in it and why (lived-in objects), physical sense (what stands on what): TODO
 

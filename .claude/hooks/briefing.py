@@ -22,7 +22,8 @@ lines = ["RAYMI STUDIO BRIEFING (auto). FIRST load skill raymi-reading-toki (her
          "'etc' is open), then raymi-video-production (map + acceptance list). Area skills, load when you work on that "
          "area: raymi-idea-story, raymi-camera, raymi-posing-acting, raymi-editing, raymi-2d-techniques, "
          "raymi-light-color, raymi-composition, raymi-lyrics-type, raymi-screening, raymi-references, "
-         "raymi-shorts-thumbs-upload. Makers: camera-director, choreographer, editor, look-designer; toki's advocate: "
+         "raymi-shorts-thumbs-upload. Her toolkit: canon/02_raymi_toolkit.md. Makers: camera-director, choreographer, "
+         "editor, look-designer, fx-designer; toki's advocate: "
          "brief-keeper. The bar = professional references (knowledge/references), never our own videos. Nothing goes "
          "to toki without `python -m raymi gate`."]
 

@@ -12,11 +12,18 @@ hand-written treatment (CASEBOOK). Process weight never replaces the idea.
 ## 1. Order (writers_room/README.md has the files)
 0. `0_BRIEF.md` (skill raymi-reading-toki) - her words, core, classes, visible proof, feasibility.
 1. Dossier - the song's meaning line by line, its existing videos (the gap), the measured song map.
-2. Ideas - 3 really different worlds as IMAGE boards (references paired), toki picks.
-3. Treatment - script-critic PASS **and** brief-keeper PASS (her contract lines all present).
-4. Script + shots.json - every moment: music, her action, camera, light, transition, reference segment, WHY.
-   The maker agents (camera-director, choreographer, editor, look-designer) draft their layer from the contract +
-   references; I merge and keep the whole.
+2. Ideas - FIRST the idea matrix: every line / section x `canon/02_raymi_toolkit.md` (T01.., her body / lore as a
+   picture language) x the song's medium x professional references, >= 3 ideas per row; every T-id used or skipped
+   with a reason (`raymi next` checks it). THEN 3 really different worlds picked from the matrix, as IMAGE boards
+   (references paired), toki picks. (toki 2026-10-25: radar / sonar / caustics must appear here, not in take 6.)
+3. Treatment - incl. the "Effects as MOMENTS" table (fx-designer drafts it: each effect at its line, with meaning,
+   look, reference, test still - never a rule over the film); script-critic PASS **and** brief-keeper PASS.
+4. Script + shots.json - every moment: music, her action, camera, light, effect, transition, reference, WHY.
+   The maker agents (camera-director, choreographer, editor, look-designer, fx-designer) draft their layer from the
+   contract + references; I merge and keep the whole.
+5. Storyboard BEFORE the build - `storyboard.json` (>= 8 key moments: t, line, ref, camera, her, fx, still) ->
+   `python -m raymi storyboard <job>`: reference frame | our previz still or a PLAN card. brief-keeper PASS, then
+   toki's verdict (`storyboard: toki ...`). Only then the build.
 
 ## 2. Craft (principles in knowledge/PRINCIPLES.md A/B)
 - One world from the song + Raymi (her name 灯闇, body, lore), with a change and a payoff; another VTuber could not

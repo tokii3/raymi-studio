@@ -21,6 +21,10 @@ Beispiele geben." Abbreviation is trust that I fill the gaps with thinking, not 
    "vogueing / jojo posing" -> extreme silhouettes held as a shape: also K-pop killing parts, fashion editorial,
    anime transformation poses, Sailor Moon, idol finger hearts, fighting-game win poses.
    A reference clip -> its FEELING and principles for the whole video, plus where it is literal.
+3b. **Find the conflicts.** Where two of her messages pull apart ("nur an 1 Ort" vs "bitte alle Ideen verwenden"),
+   write it as `- X1 "<A>" vs "<B>" -> my guess: ... -> ASK` and ask her before planning further. Never resolve it
+   silently - in Watch Me the silent guess (three worlds) killed "one place, one ride". `raymi next` holds the job
+   until `answered X1: toki YYYY-MM-DD ...` is in the brief.
 4. **Make it visible.** For each core phrase: "in the finished video you can SEE this when ..." - a test a stranger
    could answer from the real frames / the real video (not from our plan). This is the brief contract.
 5. **Feasibility.** For each core phrase: which clip / asset / tool makes it real? If one is missing, SAY IT NOW

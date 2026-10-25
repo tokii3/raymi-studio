@@ -22,15 +22,20 @@ demand, so the start stays small):
 | her body, poses, acting, lens play | raymi-posing-acting | choreographer | motion-critic, brief-keeper |
 | cuts, rhythm, transitions | raymi-editing | editor | cut-critic |
 | light, colour, materials | raymi-light-color | look-designer | look-critic |
-| anime / 2D feel | raymi-2d-techniques | look-designer | look / motion |
+| anime / 2D feel, effects as moments | raymi-2d-techniques + canon/02_raymi_toolkit.md | fx-designer, look-designer | look / motion |
 | framing, depth, sets | raymi-composition | - | look-critic |
 | lyrics, type | raymi-lyrics-type | - | type-critic |
 | looking at stills / renders | raymi-screening | - | all + `raymi reality` |
 | references, the bar | raymi-references | - | - |
 | Shorts, thumbnails, upload | raymi-shorts-thumbs-upload | - | thumb-critic |
 
-- **Step 0 of every job = `0_BRIEF.md`** (her words verbatim, core, classes, visible proof, reality claims,
-  feasibility). A MISSING capability is told to toki at once; `raymi next` keeps the job there until she answers.
+- **Step 0 of every job = `0_BRIEF.md`** (her words verbatim, core, classes, CONFLICTS between her messages, visible
+  proof, reality claims, feasibility). A MISSING capability or an open conflict is told to toki at once; `raymi next`
+  keeps the job there until she answers.
+- **IDEAS start with the idea matrix** (every line x `canon/02_raymi_toolkit.md` x medium x references); every T-id
+  used or skipped with a reason. **Effects are moments** (treatment table, fx-designer), never global rules.
+- **Storyboard before the build** (`storyboard.json` -> `raymi storyboard`): reference | previz or PLAN card per key
+  moment, brief-keeper PASS, toki's verdict - the first pictures she sees no longer come out of the build.
 - **The bar = professional references** (`python -m raymi refs find ...`, `knowledge/references/`), never our own
   older videos. Key moments on boards are shown as pairs: reference left, ours right (`refs pair`).
 - **Gemini watches video** for free (`python -m raymi gemini <url|mp4> --prompt ...`): references, first watch of our

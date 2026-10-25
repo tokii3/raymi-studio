@@ -28,6 +28,10 @@ from the result.
 - vogueing / JoJo -> every extreme, held, asymmetric silhouette (idol killing parts, editorial, anime poses)
 - magazine cover -> any medium of self-presentation building around her (cover, billboard, poster, screen, photo shoot)
 
+## Conflicts (added 2026-10-25 after the stop - this is the one that was resolved silently)
+- X1 "nur an 1 ort ... die kamera ist eine einzelne fahrt" vs "mir gefallen alle, bitte alle verwenden" (the three
+  idea worlds) -> my guess then: three worlds around one spot; it should have been asked -> ASK
+
 ## Visible proof (each must be TRUE in the finished video)
 - [ ] C1 "eine einzelne fahrt" -> no visible hard cut; every change happens inside a camera move -> reality + brief-keeper
 - [ ] C2 "flirtet / präsentiert sich der kamera" -> in most moments she looks INTO the lens; several moments where her

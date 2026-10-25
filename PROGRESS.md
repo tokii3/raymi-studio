@@ -1,5 +1,20 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-25 (late, 3) - the five planning gaps closed (toki: "hätten von Anfang an auftauchen müssen")
+- Traced: the radar gags were in IDEAS / TREATMENT as single-line gags; her own effect language (sonar, sense,
+  caustics, ink, dot pulse, fin wave) came only in take 6 (10-25 03:17) as a fix for "flach" and as global RULES.
+- canon/02_raymi_toolkit.md: T01-T17 (glow, electro-sense, "sonar" as licence, barb, fins, sand, ray anatomy, water
+  light, Sumi ink, Sumi, salmon, rain predictions, tako ears, UV, attitude, hobbies, food) - meaning, picture versions,
+  what exists in the studio.
+- IDEAS: idea matrix (every line x toolkit x medium x refs, >= 8 rows) + toolkit coverage (every T-id or a reason) -
+  `raymi next` holds the step otherwise (brief-era jobs).
+- Effects as MOMENTS: treatment table, fx-designer agent, timeline refuses spec `effects` for jobs with 0_BRIEF.md.
+- 0_BRIEF: Conflicts section (X1 ... -> ASK, held until `answered X1: toki ...`); Watch Me's X1 recorded.
+- Storyboard step between script and build: storyboard.json -> `raymi storyboard` (reference | previz still or a
+  labelled PLAN card, toki's core on top, umlaut-safe font), brief-keeper PASS + toki's verdict.
+- Also: the main checkout was 2 commits behind and started sessions with the old skills - the briefing hook now
+  fast-forwards a checkout with nothing of its own. 138 tests.
+
 ## 2026-10-25 (late, 2) - references downloaded (toki OK), reality calibrated on professionals
 - 34 references local in 480p (video only, gitignored, ~850 MB incl. frames): a still every 0.5 s + minute sheets
   (`refs download`, `refs frames`); `refs pair slug@<s>` boards; pairs are never committed (foreign footage).

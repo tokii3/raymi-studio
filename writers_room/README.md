@@ -13,9 +13,10 @@ hand-written treatment; the worst ones had heavy process and a weak idea (`knowl
 |---|---|---|---|
 | 0 | `0_BRIEF.md` | Claude, from toki's words (skill raymi-reading-toki) - since 2026-10-25 | her words quoted + dated, core, classes, visible proof lines, reality claims; nothing MISSING unless toki answered (`missing ok: toki <date>`) |
 | 1 | `1_DOSSIER.md` | Claude researches (web, measured song analysis) | no TODO left; every lyric line has its meaning; the song map is MEASURED |
-| 2 | `2_IDEAS.md` + `boards/` | Claude writes 3 different ideas + 3 key frames each (images) | toki picks one: `approved: toki <date> <idea>` line |
+| 2 | `2_IDEAS.md` + `boards/` | Claude fills the idea matrix (every line x `canon/02_raymi_toolkit.md` x medium x references), then 3 different ideas from it + 3 key frames each (images) | matrix >= 8 rows + every T-id covered (brief-era jobs); toki picks one: `approved: toki <date> <idea>` line |
 | 3 | `3_TREATMENT.md` | Claude, at the depth of `knowledge/exemplars/lets-get-weird_TREATMENT.md` | script critic PASS + brief-keeper PASS (`reviews/treatment_brief-keeper_<n>.md`) |
 | 4 | `4_SCRIPT.md` | Claude merges the makers' drafts (camera-director, choreographer, editor, look-designer: `6_CAMERA_draft` .. `9_LOOK_draft`), a professional ref per key moment | script critic PASS + brief-keeper PASS; every needed part exists or is on the build list |
+| 4b | `storyboard.json` | every key moment (>= 8): reference frame next to a previz still or a PLAN card (`python -m raymi storyboard <job>`) - brief-era jobs | brief-keeper PASS in `reviews/storyboard_brief-keeper_<n>.md`, `storyboard: toki <date>` in `toki.md` |
 | 5 | build | reuse what toki liked first (`studio/catalog/status.json`); missing parts become reusable components | `shots.json` exists; each new part has a still in `studio/catalog/` |
 | 6 | stills | >= 12 cloud stills across the whole MV (no pilot since toki 2026-10-22), key moments as reference pairs (`refs pair`) | brief-keeper + look-critic in `reviews/stills_*`, `raymi gate <job> stills`, then `stills: toki <date>` in `toki.md` |
 | 7 | final | full MV + Short (cut from the MV), rendered in the cloud | `raymi reality` (brief claims), Gemini watch + critics in `reviews/final_*`, `raymi gate <job> final`, toki's verdict in `toki.md` |

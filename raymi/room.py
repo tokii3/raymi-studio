@@ -123,15 +123,48 @@ def brief_state(f: Path) -> tuple[bool, str]:
         return False, "0_BRIEF.md quotes no dated words of toki"
     if not re.search(r"^- \[[ x]\] C\d", t, re.M):
         return False, "0_BRIEF.md has no visible-proof lines (- [ ] C1 ...)"
+    open_x = [x for x in re.findall(r"^- (X\d+)\b.*->\s*ASK\s*$", t, re.M)
+              if not re.search(rf"^answered {x}:\s*toki\s+\d{{4}}-", t, re.M)]
+    if open_x:
+        return False, ("0_BRIEF.md has open conflicts " + ", ".join(open_x) + " between toki's messages - ask her "
+                       "(line `answered X1: toki YYYY-MM-DD ...`)")
     if re.search(r"\bMISSING\b", t) and not re.search(r"^missing ok:\s*toki\s+\d{4}-", t, re.M):
         return False, "0_BRIEF.md names something MISSING - tell toki now and solve it (or her line `missing ok: toki ...`)"
     return True, "done"
+
+
+TOOLKIT = REPO / "canon" / "02_raymi_toolkit.md"
+MATRIX_MIN = 8      # rows of the idea matrix: a song has at least this many lines / sections worth a picture
+
+
+def toolkit_ids() -> list[str]:
+    return sorted(set(re.findall(r"^\| (T\d\d) \|", TOOLKIT.read_text(encoding="utf-8"), re.M))) if TOOLKIT.is_file() else []
+
+
+def ideas_gaps(text: str) -> str:
+    """The IDEAS step's homework (toki 2026-10-25: ideas like radar / sonar must appear from the start): an idea matrix
+    of >= MATRIX_MIN song rows with real ideas, and every toolkit entry of canon/02 used or skipped with a reason."""
+    m = re.search(r"## Idea matrix.*?\n(.*?)(\n## |\Z)", text, re.S)
+    rows = [r for r in (m.group(1) if m else "").splitlines()
+            if r.startswith("|") and not re.match(r"^\|\s*(time|-)", r) and r.count("|") >= 5
+            and len(r.split("|")[4].strip()) > 10]
+    if len(rows) < MATRIX_MIN:
+        return f"idea matrix has {len(rows)} filled rows - want >= {MATRIX_MIN} (every line x toolkit x medium, 2_IDEAS.md)"
+    cov = re.search(r"## Toolkit coverage.*?\n(.*?)(\n## |\Z)", text, re.S)
+    missing = [t for t in toolkit_ids() if not re.search(rf"^- {t}\b.{{8,}}", cov.group(1) if cov else "", re.M)]
+    if missing:
+        return "toolkit coverage misses " + ", ".join(missing) + " (used where, or why not - canon/02_raymi_toolkit.md)"
+    return ""
 
 
 def step_state(d: Path, step: str, fname: str | None, how: str, kind: str = "mv") -> tuple[bool, str]:
     f = d / fname
     if how == "brief":
         return brief_state(f)
+    if how == "storyboard":
+        from .storyboard import state
+
+        return state(d, kind)
     if how == "built":
         return (True, "done") if f.is_file() else (False, "shots.json missing - the shooting script as data (raymi/timeline.py)")
     if how == "verdict":
@@ -174,6 +207,10 @@ def step_state(d: Path, step: str, fname: str | None, how: str, kind: str = "mv"
     todos = text.count("TODO")
     if todos:
         return False, f"{todos} TODO left in {fname}"
+    if how == "approved" and uses_brief(d):
+        bad = ideas_gaps(text)
+        if bad:
+            return False, bad
     if how == "approved" and not APPROVED.search(text):
         return False, "waiting for toki's choice (line `approved: toki YYYY-MM-DD <idea>`)"
     if how == "critic":
@@ -204,9 +241,21 @@ def uses_brief(d: Path) -> bool:
     return json.loads((d / "job.json").read_text(encoding="utf-8")).get("created", "") >= BRIEF_FROM
 
 
+STORYBOARD_STEP = ("storyboard", "storyboard.json", "storyboard")
+
+
 def steps(d: Path) -> list[tuple[str, str, str]]:
+    """Brief-era jobs: the brief first, and a storyboard of pictures (reference + previz / plan) between the script and
+    the build (toki 2026-10-25: she judges pictures, the first pictures must not come out of the build)."""
     kind = json.loads((d / "job.json").read_text(encoding="utf-8"))["kind"]
-    return ([BRIEF_STEP] if uses_brief(d) else []) + STEPS[kind]
+    if not uses_brief(d):
+        return STEPS[kind]
+    out = [BRIEF_STEP]
+    for st in STEPS[kind]:
+        if st[0] == "build":
+            out.append(STORYBOARD_STEP)
+        out.append(st)
+    return out
 
 
 def status(job: str) -> list[tuple[str, bool, str]]:

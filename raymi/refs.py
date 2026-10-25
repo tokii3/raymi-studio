@@ -218,9 +218,21 @@ def frames(arg: str | None) -> None:
                 x, y = (i % cols) * w, (i // cols) * (h + 14)
                 t = float(o.stem)
                 sheet.paste(Image.open(o).convert("RGB").resize((w, h)), (x, y + 14))
-                ImageDraw.Draw(sheet).text((x + 3, y + 1), f"{int(t // 60)}:{t % 60:05.2f}", fill=(220, 220, 220))
+                ImageDraw.Draw(sheet).text((x + 3, y + 1), f"{int(t // 60)}:{t % 60:05.2f}", fill=(220, 220, 220), font=label_font(12))
             sheet.save(d / f"sheet_{n // 120}.jpg", quality=85)
         print(v["slug"], len(stills), "frames", flush=True)
+
+
+def label_font(size: int = 15):
+    """A board label font that has umlauts / kana (PIL's default draws toki's ä as '?')."""
+    from PIL import ImageFont
+
+    for f in ("arial.ttf", "C:/Windows/Fonts/arial.ttf", "DejaVuSans.ttf"):
+        try:
+            return ImageFont.truetype(f, size)
+        except OSError:
+            continue
+    return ImageFont.load_default()
 
 
 def ref_frame(ref: str) -> Path:
@@ -251,8 +263,8 @@ def pair(ref: str, ours: Path, out: Path, note: str = "") -> Path:
     img = Image.new("RGB", (left.width + right.width + 12, h + 44), (12, 12, 16))
     img.paste(left, (0, 44))
     img.paste(right, (left.width + 12, 44))
-    ImageDraw.Draw(img).text((8, 6), f"REFERENCE {ref}  |  OURS {ours.name}", fill=(235, 235, 235))
-    ImageDraw.Draw(img).text((8, 24), note[:200], fill=(255, 210, 120))
+    ImageDraw.Draw(img).text((8, 6), f"REFERENCE {ref}  |  OURS {ours.name}", fill=(235, 235, 235), font=label_font())
+    ImageDraw.Draw(img).text((8, 24), note[:200], fill=(255, 210, 120), font=label_font())
     out.parent.mkdir(parents=True, exist_ok=True)
     img.save(out, quality=90)
     return out

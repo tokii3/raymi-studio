@@ -76,3 +76,24 @@ def test_send_hook_lets_only_gated_pictures_out(tmp_path):
     (bad / "GATE_FAIL.json").write_text("{}")
     assert _hook([str(bad / "board.jpg")], "here it is") == 2
     assert _hook([str(bad / "board.jpg")], "FAIL: look-critic blocked - you asked to see it") == 0
+
+
+def test_storyboard_needs_refs_sheets_keeper_and_toki(tmp_path):
+    from raymi import storyboard
+
+    d = tmp_path / "2026-10-26_s"
+    (d / "reviews").mkdir(parents=True)
+    m = {"t": 1.0, "line": "x", "ref": "kda-firestarter@107.0", "camera": "low push", "her": "hand to the lens"}
+    (d / "storyboard.json").write_text(json.dumps({"moments": [m] * 3}), encoding="utf-8")
+    assert "want >= 8" in storyboard.state(d, "mv")[1]
+    (d / "storyboard.json").write_text(json.dumps({"moments": [m] * 7 + [{**m, "ref": ""}]}), encoding="utf-8")
+    assert "without a reference" in storyboard.state(d, "mv")[1]
+    (d / "storyboard.json").write_text(json.dumps({"moments": [m] * 8}), encoding="utf-8")
+    assert "not built" in storyboard.state(d, "mv")[1]
+    (d / "boards" / "pairs").mkdir(parents=True)
+    (d / "boards" / "pairs" / "storyboard_01.jpg").write_bytes(b"x")
+    assert "brief-keeper" in storyboard.state(d, "mv")[1]
+    (d / "reviews" / "storyboard_brief-keeper_1.md").write_text("VERDICT: PASS - all core lines\n", encoding="utf-8")
+    assert "toki" in storyboard.state(d, "mv")[1]
+    (d / "toki.md").write_text("storyboard: toki 2026-10-26 passt, los\n", encoding="utf-8")
+    assert storyboard.state(d, "mv") == (True, "done")

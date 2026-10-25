@@ -34,7 +34,9 @@ Before planning a video also: `knowledge/CASEBOOK.md`, `canon/07_video_catalog.m
    Skill `raymi-reading-toki` first; every job starts with `0_BRIEF.md`; `brief-keeper` judges treatment, script,
    boards and renders against HER words (never against my plan); the bar is professional references
    (`knowledge/references/`), never our own videos; checks measure the real video (`raymi reality`); nothing reaches
-   her without `raymi gate` (the SendUserFile hook enforces it). A missing capability is said on day 1.
+   her without `raymi gate` (the SendUserFile hook enforces it). A missing capability or a conflict between her
+   messages is said on day 1. IDEAS start from the idea matrix x `canon/02_raymi_toolkit.md`; effects are designed
+   moments (fx-designer), never global rules; a storyboard (reference | previz) goes to her before the build.
 1. **The writers' room comes first.** No studio work for a video before its step allows it (`python -m raymi next`).
    A treatment / script is done only with a stored script-critic PASS; two BLOCKs on one step -> back to IDEAS.
 2. **A video is data, never code.** A job = its writers' room files + timeline data. New looks, sets, moves, effects
@@ -54,7 +56,7 @@ Before planning a video also: `knowledge/CASEBOOK.md`, `canon/07_video_catalog.m
 11. **Anti-loop.** A fix that fails twice is parked in `BACKLOG.md` with what was tried; production continues.
 12. **No secrets in the repo.** Keys only as GitHub secrets / local .env (gitignored). Never print them.
 13. **Budget.** One session = one stage (studio work OR one video's steps). Subagents: critics, render workers and
-    the maker agents (camera-director, choreographer, editor, look-designer; toki 2026-10-25) - a whole video ~20 % of
+    the maker agents (camera-director, choreographer, editor, look-designer, fx-designer; toki 2026-10-25) - a whole video ~20 % of
     her weekly limit over 1-2 days, sonnet, small briefs; bulk looking goes to Gemini (`raymi gemini`).
 
 ## 3. Map

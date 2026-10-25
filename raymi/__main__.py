@@ -34,6 +34,7 @@
   lyrics <job>          re-align lyrics_timed.json locally from the cached whisper_words.json + vocals.ogg
   gemini <url|file> --prompt ..  Gemini WATCHES a YouTube video / local mp4 (motion + sound), answer verbatim
   refs   list|analyze|frames|board  the professional reference library (knowledge/references/, raymi/refs.py)
+  storyboard <job>      storyboard.json -> reference frame | our previz still (or a PLAN card), before the build
   reality <job> <video>  what the finished video really does: cuts, camera motion, her face / size (raymi/reality.py)
 """
 from __future__ import annotations
@@ -55,6 +56,10 @@ def main(argv: list[str]) -> int:
         from . import gemini
 
         return gemini.main(argv[1:])
+    if cmd == "storyboard":  # storyboard <job>: reference frame next to our previz / PLAN card, before the build
+        from . import storyboard
+
+        return storyboard.main(argv[1:])
     if cmd == "reality":     # reality <job> <video>: what the finished video really does + the brief's claims
         from . import reality
 

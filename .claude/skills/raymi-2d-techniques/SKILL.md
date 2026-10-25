@@ -28,6 +28,12 @@ references `yoasobi-idol`, `ado-usseewa`, `ado-show`, `csm-op`, `edgerunners-thi
   grain texture over everything for one material.
 - **Camera in 2D**: multiplane parallax, push on stills with layers, snap zooms, shake, rotation on beats.
 
+## 1b. Effects are MOMENTS, never rules (toki 2026-10-25)
+Watch Me laid sonar / caustics / dot pulse / fin wave over the whole film by rule (timeline `effects`) - "gute Ideen,
+schlecht umgesetzt". Every effect is designed for its line in the treatment's "Effects as MOMENTS" table (fx-designer
+agent), comes from the idea matrix and `canon/02_raymi_toolkit.md`, has a professional reference and a test still on
+the storyboard. The timeline refuses the global `effects` switch for every job with a brief contract.
+
 ## 2. Making 3D read as 2D (Raymi VRM)
 Cel shading with a hard terminator and coloured shadows (never grey), no GI bounce, outlines, held poses, body on
 twos, perspective cheats per shot, matte surfaces (never glossy plastic), 2D FX layers on top, colour per section.

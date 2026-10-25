@@ -16,6 +16,12 @@ TODO what a viewer should feel / do, and why she wants it (her taste, a referenc
 ## Classes (example -> the whole set)
 - TODO each example she gave -> the class it stands for + at least 5 members she did not name
 
+## Conflicts (where her messages pull apart - ASK her, never resolve it silently)
+Watch Me 2026-10-24: "nur an 1 Ort" and later "mir gefallen alle (Ideen), bitte alle verwenden" - I silently built
+three worlds instead of asking. Each conflict: `- X1 "<words A>" vs "<words B>" -> my guess: ... -> ASK`; the step
+stays open until a line `answered X1: toki YYYY-MM-DD <her words>` is below it. None? Write `- none` and why.
+- TODO
+
 ## Visible proof (each must be TRUE in the finished video)
 - [ ] C1 "TODO her phrase" -> TODO what a stranger SEES in the frames / video -> checked by brief-keeper | reality
 

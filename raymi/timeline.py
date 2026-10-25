@@ -982,6 +982,12 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
     if fmt not in FORMATS:
         raise TimelineError(f"format must be one of {sorted(FORMATS)}")
     comp, W, H = FORMATS[fmt]
+    # toki 2026-10-25: the Watch Me effects (sonar, caustics, sense, dot pulse ...) were good ideas laid over the film
+    # as RULES and looked bad. From the brief contract on (0_BRIEF.md) every effect is a designed moment in a shot's
+    # opts with its reason (treatment table "Effects as MOMENTS"), never the global `effects` switch.
+    if spec.get("effects") and (job / "0_BRIEF.md").is_file():
+        errors.append("spec 'effects': global effect rules are off for jobs with a brief contract - place each effect in "
+                      "its shot (opts) from the treatment's 'Effects as MOMENTS' table, with `fx_why` in the shot")
     sets = load_sets()
     cat = P.load_catalog()
     audio = spec.get("audio")
