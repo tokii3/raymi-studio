@@ -1,4 +1,10 @@
-# TREATMENT v2 - Love is War / 恋は戦争 (ryo (supercell), Mwk Remix) - ideas A + C + B merged, approved 2026-10-25
+# TREATMENT v3 - Love is War / 恋は戦争 (ryo (supercell), Mwk Remix) - ideas A + C + B merged, approved 2026-10-25
+
+v3 (toki 2026-10-25 "die idee bleibt, schließ die lücken in einem v3") closes script-critic v2 FIX 1-6
+(reviews/treatment_2.md, PASS) and brief-keeper v2 (reviews/treatment_brief-keeper_2.md): a cold open, a camera per
+bar in chorus 1 / lamp room / rise / tail, attacks in verse 1, she SINGS (lip sync from the vocal stem whenever the
+voice is there), grit as the film look, one ending meaning, the storm's eye closes, counts fixed, the cable reaches
+the lamp, a clip per acting beat.
 
 v2 after script-critic BLOCK (reviews/treatment_1.md) + brief-keeper BLOCK (reviews/treatment_brief-keeper_1.md):
 the hook is in the first second (no sleeper), the lighthouse beam is in the first 3 s, every stretch changes every
@@ -18,7 +24,9 @@ brief's visible proof.
 One place: the open sea at night in a storm, a lighthouse on a black rock, and under the surface the sea floor where the
 lighthouse's own cable runs down into her deep. Rules:
 1. **The beam never stops on her.** It sweeps the sea on the bars; it passes over her every time - even when she has
-   her hands on the lamp, it swings past twice. It stops on the lens, on YOU, on the very last hit (177.2).
+   her hands on the lamp, it swings past twice. It stops on the lens, on YOU, on the very last hit (177.2) - because she
+   hangs her whole weight on the lamp and holds it there. The light cannot look by itself; she makes it look. (The beam
+   overshoots the lens by a hair and settles back - the machine's lag, her strength.)
 2. **Two sides, two hit languages.** HER blows are Sumi's ink (T09): every strike she lands is a black brush slash
    across the picture; her VOICE is the ping (T03, the song's megaphone reinvented as her electro-sense). HIS blows are
    the lamp's flash: every time the beam crosses the lens the frame flashes two-tone (background black / white, she
@@ -29,6 +37,11 @@ lighthouse's own cable runs down into her deep. Rules:
 4. **Where she is.** In the sea she swims (waterline at her chest). When she leaves it, the storm's rain is her water:
    a halo of drops wraps her and she glides in the air like a ray in water - so she can climb, leap and float above the
    surf and stand on the gallery floor (contact shadow) without breaking the world's sense.
+5. **She sings.** Whenever the voice is there and her face is in frame, her mouth follows the vocal stem (lip sync by
+   sound, the measured words - toki: "nur für lip sync"); the war cry and the effort scream override it with the
+   mouth wide open. A closed mouth only where she does not sing.
+6. **Grit is the film's surface** (one style decision, PRINCIPLES 10): paper grain on every painted layer, film grain
+   0.05, ink edges dry and broken, halftone in the shadows of the hit frames - raw, never clean vector.
 Fused with her ocean: the biggest lamp of the sea against the smallest (灯闇 = a lamp in the dark); the cable feeding
 the light runs through HER deep, and her electro-sense (T02, real ray biology) feels the light's own current in it.
 
@@ -48,13 +61,13 @@ the light runs through HER deep, and her electro-sense (T02, real ray biology) f
 ## Story (acts)
 | act | time | place | what she wants / does | what changes |
 |---|---|---|---|---|
-| 1 the call | 0.0-31.7 | under the surface, the cable | frame 0: the beam crosses the black surface above, her eye snaps open; she is already gliding up the cable toward that light; the first hit (9.36) blows the pulse through; she rides up, pings three times, breaks out | from her deep to the storm |
-| 2 the beam | 31.7-62.2 | the storm sea | the beam sweeps over her again and again; she pings - rings over the water - it passes; a wave lifts her; she sinks, gathers herself | longing -> resolve |
+| 1 the call | 0.0-31.7 | under the surface, the cable | a 0.8 s cold open (her war cry, the beam filling the frame), then the beam crosses the black surface above, her eye snaps open; she is already gliding up the cable toward that light; the first hit (9.36) blows the pulse through; she rides up, pings at 24.4 / 27.3 / 29.9, breaks out | from her deep to the storm |
+| 2 the beam | 31.7-62.2 | the storm sea | the beam sweeps over her again and again; she sings at it, pings, CLAWS at the light as it passes (ink slashes) - it passes anyway; a wave lifts her; she sinks, gathers herself | longing -> resolve |
 | 3 the declaration | 62.2-86.7 | the storm sea | STOP; war cry into the lens; ink detonates; her pitch climbs as a drawn line; the top note lifts her light to a pillar; the storm's eye: her pillar the only light | she declares war |
 | 4 the broken megaphone | 86.7-120.4 | the rock | her ping shatters on the rock; she climbs, a wave throws her back, she falls to her knees, hits the water; the sky clears - ONE mocking moon (her rain call wrong); "not crying": she wipes the rain and glares at us; STOP | the first war is lost |
 | 5 war | 120.4-169.8 | the tower, the lamp room, below | she lands on the rock and climbs the tower bar by bar; grabs the great lamp; the beam swings past the lens twice (a false win); below the surface every cable lights violet - her signal is everywhere | she has the light in her hands |
-| 6 the stop | 169.8-187.6 | the sea, now hers | three pulls = three flashes coming closer; on the LAST hit (177.2) the beam stops on the lens; inside the light the sky inks over, her dots become stars, she looks at us; black on the last note | the light finally looks |
-Payoff: frame 0 is the beam crossing her dark and passing; the last image is the beam stopped on you, held by her.
+| 6 the stop | 169.8-187.6 | the sea, now hers | four pulls = four flashes coming closer (169.78, 172.5, 174.4, 176.3); on the LAST hit (177.2) the beam stops on the lens; inside the light the sky inks over, her dots become stars, she looks at us; black on the last note | the light finally looks |
+Payoff: the first frame after the cold open (0.8) is the beam crossing her dark and passing; the last image is the beam stopped on you, held by her.
 
 ## Colour and light script
 | act | grade | value / hue | key light | why |
@@ -72,32 +85,40 @@ Her skin: pale lavender as modelled under every light - neutral fill (`neutral_s
 ## Song map -> picture (measured; a change every 4-6 s at most)
 | time | section | picture (what happens, camera, effect) |
 |---|---|---|
-| 0.0 | first frame | from below the black surface: the beam sweeps across it like a blade of light; her eye opens in the foreground at 40 % of the frame height, her dots flare (20 % glow) - the promise in frame 0 (C1) |
-| 0.6-1.6 | silence | pull back: she is already gliding up along the thick cable, a pulse of light racing ahead of her up the line |
-| 1.6-8.7 | intro vocal | the ride: camera tracks beside her (low, dutch 8 deg); every sung note lights one of her dots, height by pitch (melody, C4); 3.0 the beam crosses the surface above again - her goal |
-| 8.7-9.36 | fast run | anticipation: everything compresses 4 frames, the camera pulls back |
+| 0.0-0.8 | cold open | flash-forward: 6 frames of her war cry into the lens (62.6), 6 frames of the beam filling the frame (177.2), cut one frame before - then black (PRINCIPLES B6) |
+| 0.8 | first frame | from below the black surface: the beam sweeps across it like a blade of light; her eye opens in the foreground at 40 % of the frame height, her dots flare (20 % glow) - the promise (C1) |
+| 0.9-1.6 | silence | pull back: she is already gliding up along the thick cable, a pulse of light racing ahead of her up the line |
+| 1.6-8.7 | intro vocal | the ride, she SINGS (lip sync): 1.6 track beside her (low, dutch 8 deg); 3.0 the beam crosses the surface above - her goal; 5.0 close on her face singing up toward it; every sung note lights one dot, height by pitch (C4) |
+| 8.7-9.36 | fast run | the picture stutters on twos for the run, then compresses 4 frames, the camera pulls back (anticipation) |
 | 9.36 | first hit | the pulse blows up the cable white-hot, two-tone impact frame (background only), she lunges up - camera shake 5 frames (C5 wow 1) |
 | 9.85-12.75 | held notes | a violet light ribbon from her hand along the cable, as long as each held note |
 | 12.8-16.4 | drop 1 | POV along the cable ahead (things rush at the lens), cut on the drop's hits |
 | 16.4-23.9 | instrumental drop | the ride at full speed: a new angle each bar (1.86 s) - top-down over her, low front with the cable converging, through a burst of bubbles at the lens, side track with speed lines of varied weight; smears on her turns |
 | 23.9-31.7 | build (24.4, 27.3, 29.9) | three pings upward, each bigger (30 / 55 / 90 % of the frame); the surface and the beam above come closer; 31.7 she breaks through - crash up out of the water into the rain |
 | 31.7-35 | verse 1 a | the storm at the waterline (lens half under water); the lighthouse on its rock far off |
-| 35-40.2 | verse 1 b | sweep 1: the beam passes right over her, seen close from the water with a wave crest in the foreground; flash two-tone as it crosses the lens |
+| 35-40.2 | verse 1 b | sweep 1: the beam passes right over her, close from the water with a wave crest in the foreground; she sings at it - and CLAWS at the light as it passes (roar 1.0, an ink slash); lamp flash two-tone as it crosses the lens |
 | 40.2-42.3 | hit cluster 40.17-42.28 | a rain curtain crosses the lens; she pings - rings run over the water toward the rock |
-| 42.3-46.2 | verse 1 c | sweep 2 from the lighthouse side: she small in the path of the light, the beam passes, she does not move |
+| 42.3-46.2 | verse 1 c | sweep 2 from the lighthouse side, close on her (not small): she swims hard toward the rock singing, the beam crosses her face |
 | 46.2-48.1 | verse 1 d | sweep 3 from her eye: POV toward the lighthouse, the beam swings at us and away |
-| 48.1-51.8 | hit cluster 48.13-48.39 | a wave lifts her, low dutch, her hair whipped by the wind |
-| 51.8-52.1 | fast run | the beam flickers, push in |
+| 48.1-51.8 | hit cluster 48.13-48.39 | a wave lifts her, low dutch; she rides it and strikes at the beam on its crest (hook-punch, slash) |
+| 51.8-52.1 | fast run | rain streaks stutter on twos, the beam flickers, push in |
 | 52.6-56.8 | pre-chorus 1 (fast run 55.6) | she sinks below the surface; bubbles burst past the lens on the fast run |
 | 56.8-62.2 | pre-chorus 1 end | worm's eye up through the water at the beam sweeping above (T07); push into her eye on the last line |
 | 62.2-62.6 | STOP | freeze: one drop hangs in the air, her eyes open - nothing else moves |
 | 62.6 | chorus 1 downbeat | WAR CRY into the lens, mouth open, claws at us; the ping ring bursts at the glass; ink detonates out of her (two-tone background, chromatic split 3 frames, shake) (C2, C5 wow 2) |
 | 62.75-64.45 | the climbing notes | the ink line draws her measured pitch, red note heads popping on each note (C4) |
 | 63.8 | hit | barb flick at the lens (T04) |
-| 64.5-79.3 | chorus 1 | a slash per strong beat, angles alternating; she strikes toward the lens (roar 1.0 s lunge, hook-punch, the back kick) with dutch angles that flip side on each slash; the beam sweeps behind her on every 2nd bar |
+| 64.32 | chorus 1 bar 2 | worm's eye from the water on her roar lunge (roar 1.0), slash |
+| 66.2 | bar 3 | THROUGH the ink crown: the camera punches through the black splash to her face singing |
+| 68.08 | bar 4 | top-down on her hook-punch toward the lens, rain streaks radial, slash |
+| 69.96 | bar 5 | dutch flip (-15 to +15 deg) on the back kick (spinning-back-kick 1.9), slash |
+| 71.82 | bar 6 | macro on her claw coming at the lens (roar 1.9 with a lens at her chest height), barb flick |
+| 73.7 | bar 7 | wide from behind her: the beam sweeps over both of us, lamp flash two-tone |
+| 75.58 | bar 8 | close, low: she sings the line into the lens, hair whipped, slash |
+| 77.44-79.34 | bar 9 | silence by contrast: everything holds one bar, rain hangs, only her mouth moves - so the top note lands |
 | 79.35-80.5 | held B5 | the camera cranes straight up with the note; her light a pillar in the rain, held as long as the note (C4) - wow 3 |
-| 80.5-86.7 | storm eye (instrumental) | the rain stops; a clear blue-black sky; she floats on her back in the water, arms spread, her pillar fading - the one beautiful breath (C6) |
-| 86.7-88.6 | verse 2 hit 87.05 | her ping hits the rock and SHATTERS into two-tone shards flying at the lens (the megaphone breaks) - shake |
+| 80.5-86.7 | storm eye (instrumental) | the rain stops; a clear blue-black sky (no moon); she floats on her back in the water (floating-back-arched), her pillar fading - the one beautiful breath (C6); from 85 a wall of cloud rolls back over the sky - the eye closes |
+| 86.7-88.6 | verse 2 hit 87.05 | the cloud wall is back, the storm returns; her ping hits the rock and SHATTERS into two-tone shards flying at the lens (the megaphone breaks) - shake |
 | 88.6-91.7 | verse 2 | she grabs the rock (low angle, rain streaks) |
 | 91.7-94.0 | verse 2 | she climbs, camera above looking down at the surf |
 | 94.0-96.2 | hit cluster 94.04-94.78 | a wave smashes over her, she is thrown back (smear, held impact pose) |
@@ -110,18 +131,23 @@ Her skin: pale lavender as modelled under every light - neutral fill (`neutral_s
 | 119.9-120.4 | STOP | black; one heartbeat of her dots |
 | 120.4 | final chorus downbeat | she lands on the rock (superhero landing), the lamp flashes over the lens two-tone, shake |
 | 120.4-133.9 | final chorus A | the climb, one step per bar, each a new camera: 122.7 the ladder from below (worm's eye), 124.6 a leap across the tower face (side track, speed lines), 126.4 grabs the gallery rail (close on her hand), 128.3 the beam passes inches over her head (two-tone flash), 130.2 she vaults over the rail, 131.1 hit: lands on the gallery (top-down) - ink slash on each landing |
-| 133.9-146.3 | final chorus A end | the lamp room: she faces the great Fresnel lens (painted rings of glass), throws her weight into it on 139.25 |
+| 133.7 | lamp room bar 1 | she grabs the brass frame of the great Fresnel lens - macro on her hand, grain |
+| 135.56 | bar 2 | the lens rings turn past the camera (the glass between us and her), her face through the rings |
+| 137.46 | bar 3 | top-down on her heave; the cable she followed arrives through the floor into the lamp's base |
+| 139.32 | bar 4 | hit 139.25: she throws her weight, the beam sweeps round outside (wide from the sea) |
+| 141.2 | bar 5 | close on her face, effort, singing through her teeth |
+| 143.08-146.3 | bars 6-7 | the beam swings toward the lens from the tower's side, she hangs on the frame (low angle) |
 | 146.33 | hit | she has the lamp: the beam swings round - and passes the lens (false win 1) |
-| 146.3-155 | final chorus B | she pulls again, the frame shakes, the beam comes round - passes the lens again, closer (false win 2) |
-| 155-161.3 | final chorus B | she screams with the effort (mouth open), ink slashes on the beats |
+| 146.82-154.32 | final chorus B bars | 146.82 she pulls again (shake); 148.7 the beam comes round - passes the lens again, closer (false win 2), flash; 150.58 she slips, catches the frame (macro); 152.44 dutch on her climbing back onto the base |
+| 154.32-161.3 | final chorus B | 154.32 she screams with the effort (mouth open), slash; 156.2 the camera circles her and the lens (half orbit); 158.08 her dots flare violet; 159.94 the violet runs down her arms into the brass |
 | 161.33 | hit | the camera dives through the surface: every cable on the sea floor lights violet, the whole sea glows from below (T02, T14) |
-| 161.3-169.8 | final chorus end | back up the cable to her at the lamp - the violet light rises with the camera |
+| 161.82-169.32 | final chorus end | the violet pulse rises: 161.82 the sea floor network lit (from above); 163.7 the camera follows one pulse up the cable through the water; 165.58 up the tower inside the cable; 167.44 the pulse bursts into the lamp - the beam turns violet-gold |
 | 169.78-176.3 | outro hits 169.78, 172.5, 174.4, 176.3 | four pulls, four flashes, each beam pass closer to the lens - the build |
 | 177.2 | the last hit | the beam STOPS on the lens: white-gold fills the frame, her silhouette in it, chromatic split, shake, a held frame (C5 - wow 5, strongest, last) |
-| 177.2-187.6 | outro end | inside the light the sky inks over (3 s), her dots rise as stars, she looks at us from the lamp; black on the last note |
+| 177.28-187.6 | outro end | the beam overshoots by a hair and settles on the lens (her weight holds it); 179.14 pull-out through the lens glass, stars streak past the lens as the sky inks over; 181.02 a slow turn: she looks at us from the lamp, singing the last line; 182.9 her dots rise as stars into the ink; black on the last note |
 
 ## Wow budget (5, strongest last)
-1. 0.0 / 9.36 - the beam crosses her dark in frame 0, the pulse blows up the cable on the first hit.
+1. 0.8 / 9.36 - the beam crosses her dark at 0.8, the pulse blows up the cable on the first hit.
 2. 62.6 - the war cry into the lens after the stop: ring, ink detonation, the line that climbs with her voice.
 3. 79.35 - the crane on the top note: her light a pillar in the storm.
 4. 106.2 - the sky clears into the one moon over the lighthouse at her lowest moment.
@@ -160,12 +186,36 @@ Her skin: pale lavender as modelled under every light - neutral fill (`neutral_s
 | 94.04 | wave | held impact pose + smear | she is thrown back | body held 6 frames, smear on the throw | - | 94.1 s |
 | 106.2 | sky clears | the one moon | the world mocks her | clouds part in 30 frames, moon 45 % height | edgerunners-this-fffire@91.25 | 107 s |
 | 119.9 | stop | heartbeat of her dots (T01) | she is still alive | black, dots pulse once | - | 120.1 s |
-| 120.4-133.9 | climb | slash per landing + flash on beam passes + grain | each step is a blow | as above; film grain 0.06 on the whole act | hsr-hope-feathers@108.25 | 128.35 s |
+| 120.4-133.9 | climb | slash per landing + flash on beam passes | each step is a blow | as above; film grain 0.06 on the whole act | hsr-hope-feathers@108.25 | 128.35 s |
 | 146.33 / ~150 | false wins | beam passes the lens, flash | almost | beam crosses in 10 frames, two-tone 2 frames | - | 146.4 s |
 | 161.33 | dive | the cable network lights (T02, T14) | her signal reached everything | violet lines on the sea floor from above, pulses converging on the rock | hsr-hope-feathers@113.25 | 163 s |
 | 169.78-176.3 | outro hits | four flashes, each closer | the build | flash 2 frames, beam closer each time | - | 174.45 s |
 | 177.2 | last hit | beam stops on the lens + chroma + shake + hold | the light finally looks | white-gold fills 100 % for 3 frames, her silhouette, then held | hsr-hope-feathers@112.75 | 177.3 s |
 | 177.2-187.6 | outro end | ink night + stars (T09, T01) | her light owns the night | sky inks over in 3 s, 60-90 drawn stars lift from her dots | hsr-hope-feathers@112.75 | 185 s |
+
+## Lip sync, grit, fast runs (brief-keeper v2)
+- Lip sync: mouth by the vocal stem in every shot where she is in frame and the voice is there (1.6-8.7, 9.87-16.4,
+  31.7-62.2, 62.6-79.3, 86.7-119.9, 120.4-169.8, 177.2-187.6); mouth closed only in the instrumental drop, the storm
+  eye and the stops.
+- Grit: film grain 0.05 + paper grain on every painted layer, dry-broken ink edges, halftone in hit-frame shadows.
+- Fast runs (8.7, 32.7, 34.8, 40.2, 48.1, 51.8, 55.6, 87.1-110.0): the picture stutters on twos for the run's
+  length (rain streaks, the beam, her hair) - the hi-hat class made visible.
+- The lead synth line: not followed - the measured lead is an estimate (BACKLOG); the vocal carries the melody effects.
+
+## Acting beats -> clips (seen: clips_seen.md)
+| beat | clip / pose | state |
+|---|---|---|
+| war cry, lens claw | roar 1.0 (lunge) / 1.9 (claws, lens at chest height), face_lens | exists |
+| strikes | hook-punch 1.0, spinning-back-kick-advancing 1.9, casting-spell 1.0-1.9 | exists |
+| superhero landing | swing-backflip-to-superhero-pose 1.9 | exists |
+| float on her back | floating-back-arched (pose, rotY away) | exists |
+| fall to knees, agony | falling-to-knees-in-prayer 1.9, agony 1.9 | exists |
+| arms wide cry / effort | yelling 1.0-1.9 | exists |
+| back-of-hand rain wipe | wiping-sweat (downloaded 2026-10-25, not yet seen on her) | to verify on the clip sheet |
+| climbing the rock / ladder | climbing-up-wall, climbing-ladder, climbing-to-top, pulling-up-to-a-ledge (downloaded) | to verify on the clip sheet |
+| vault over the rail | jumping-over-obstacle-one-hand (downloaded) | to verify on the clip sheet |
+| grab + pull the lamp | pull-heavy-object (downloaded) | to verify on the clip sheet |
+| swimming at the surface | treading-water, swimming-underwater (downloaded) | to verify on the clip sheet |
 
 ## Places make sense + love and detail
 - **The deep** (act 1): dark sand ripples, the lighthouse cable half buried and crusted with barnacles, its armour
@@ -186,13 +236,13 @@ Her skin: pale lavender as modelled under every light - neutral fill (`neutral_s
 - Staging: one read per moment - her face, OR the beam, OR the ink.
 
 ## Before the script (build test, script-critic FIX 6)
-The background-only two-tone (lamp flash / impact) must exist and pass one test still at 62.75 s before the script
+The background-only two-tone (lamp flash / impact) and the clips marked MISSING must exist and pass one test still at 62.75 s before the script
 relies on it: the set's painted layers switch to black / paper white, her model keeps its values.
 
 ## The Short (window, frame 0, twist, CTA)
 62.2-80.5 (18.3 s): frame 0 = her eyes opening in the stop (face 45 % of the 9:16 frame), the war cry into the lens,
 ink + the climbing melody line, slashes on the chorus beats, ends on the pillar of the held top note. Hook text (<= 8
-words, upper middle, her font - not a lyric): "the lighthouse never looks at me." CTA >= 2.5 s before the end:
+words, upper middle, her font - not a lyric; ASKED toki whether any text may be on screen): "the lighthouse never looks at me." CTA >= 2.5 s before the end:
 "would you look back?"
 
 ## Ending check

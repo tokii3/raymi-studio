@@ -3,51 +3,24 @@
  "width": 960,
  "height": 1080,
  "fps": 30,
- "durationInFrames": 108,
+ "durationInFrames": 27,
  "vrm": "vrm/raymi7.vrm",
  "sprites": [],
  "grain": 0.0,
  "motions": [
-  "motions/reaching-out.fbx",
-  "motions/angry-point.fbx",
-  "motions/pushing-with-both-hands.fbx",
-  "motions/jab-punch.fbx",
-  "motions/cross-punch.fbx",
-  "motions/hook-punch.fbx",
-  "motions/punch-combo.fbx",
-  "motions/pointing-forward-1.fbx",
-  "motions/yelling-out.fbx",
-  "motions/long-yell-leaning-forward.fbx",
-  "motions/yelling-while-standing-leaning-forward.fbx",
-  "motions/long-yell-while-standing-leaning-back.fbx",
-  "motions/roar.fbx",
-  "motions/yelling.fbx",
-  "motions/male-cheering-head-banging.fbx",
-  "motions/rallying.fbx",
-  "motions/threatening.fbx",
-  "motions/taunting-throwing-arms-back.fbx",
-  "motions/boxing-taunt.fbx",
-  "motions/falling-to-knees-in-prayer.fbx",
-  "motions/on-knees-arms-raised.fbx",
-  "motions/arms-spread-looking-upwards.fbx",
-  "motions/agony.fbx",
-  "motions/kneeling-down.fbx",
-  "motions/standing-up-from-a-kneeling-position.fbx",
-  "motions/great-sword-power-up.fbx",
-  "motions/casting-spell.fbx",
-  "motions/fireball.fbx",
-  "motions/swing-backflip-to-superhero-pose.fbx",
-  "motions/spin-flip-kick.fbx",
-  "motions/backflip.fbx",
-  "motions/spinning-back-kick-advancing.fbx",
-  "motions/kip-up.fbx",
-  "motions/floating-back-arched.fbx",
-  "motions/floating-legs-bent-and-arms-spread.fbx",
-  "motions/floating-legs-raised-arms-extended-upwards.fbx"
+  "motions/climbing-ladder.fbx",
+  "motions/climbing-to-top.fbx",
+  "motions/climbing-up-wall.fbx",
+  "motions/jumping-over-obstacle-one-hand.fbx",
+  "motions/pull-heavy-object.fbx",
+  "motions/pulling-up-to-a-ledge.fbx",
+  "motions/swimming-underwater.fbx",
+  "motions/treading-water.fbx",
+  "motions/wiping-sweat.fbx"
  ],
  "tiles": [
   {
-   "name": "reaching-out_0",
+   "name": "climbing-ladder_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -76,11 +49,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "reaching-out",
+     "motion": "climbing-ladder",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -88,7 +62,7 @@
    "glowGain": 0
   },
   {
-   "name": "reaching-out_1",
+   "name": "climbing-ladder_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -117,11 +91,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "reaching-out",
+     "motion": "climbing-ladder",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -129,7 +104,7 @@
    "glowGain": 0
   },
   {
-   "name": "reaching-out_2",
+   "name": "climbing-ladder_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -158,11 +133,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "reaching-out",
+     "motion": "climbing-ladder",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -170,7 +146,7 @@
    "glowGain": 0
   },
   {
-   "name": "angry-point_0",
+   "name": "climbing-to-top_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -199,11 +175,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "angry-point",
+     "motion": "climbing-to-top",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -211,7 +188,7 @@
    "glowGain": 0
   },
   {
-   "name": "angry-point_1",
+   "name": "climbing-to-top_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -240,11 +217,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "angry-point",
+     "motion": "climbing-to-top",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -252,7 +230,7 @@
    "glowGain": 0
   },
   {
-   "name": "angry-point_2",
+   "name": "climbing-to-top_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -281,11 +259,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "angry-point",
+     "motion": "climbing-to-top",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -293,7 +272,7 @@
    "glowGain": 0
   },
   {
-   "name": "pushing-with-both-hands_0",
+   "name": "climbing-up-wall_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -322,11 +301,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "pushing-with-both-hands",
+     "motion": "climbing-up-wall",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -334,7 +314,7 @@
    "glowGain": 0
   },
   {
-   "name": "pushing-with-both-hands_1",
+   "name": "climbing-up-wall_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -363,11 +343,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "pushing-with-both-hands",
+     "motion": "climbing-up-wall",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -375,7 +356,7 @@
    "glowGain": 0
   },
   {
-   "name": "pushing-with-both-hands_2",
+   "name": "climbing-up-wall_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -404,11 +385,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "pushing-with-both-hands",
+     "motion": "climbing-up-wall",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -416,7 +398,7 @@
    "glowGain": 0
   },
   {
-   "name": "jab-punch_0",
+   "name": "jumping-over-obstacle-one-hand_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -445,11 +427,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "jab-punch",
+     "motion": "jumping-over-obstacle-one-hand",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -457,7 +440,7 @@
    "glowGain": 0
   },
   {
-   "name": "jab-punch_1",
+   "name": "jumping-over-obstacle-one-hand_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -486,11 +469,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "jab-punch",
+     "motion": "jumping-over-obstacle-one-hand",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -498,7 +482,7 @@
    "glowGain": 0
   },
   {
-   "name": "jab-punch_2",
+   "name": "jumping-over-obstacle-one-hand_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -527,11 +511,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "jab-punch",
+     "motion": "jumping-over-obstacle-one-hand",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -539,7 +524,7 @@
    "glowGain": 0
   },
   {
-   "name": "cross-punch_0",
+   "name": "pull-heavy-object_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -568,11 +553,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "cross-punch",
+     "motion": "pull-heavy-object",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -580,7 +566,7 @@
    "glowGain": 0
   },
   {
-   "name": "cross-punch_1",
+   "name": "pull-heavy-object_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -609,11 +595,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "cross-punch",
+     "motion": "pull-heavy-object",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -621,7 +608,7 @@
    "glowGain": 0
   },
   {
-   "name": "cross-punch_2",
+   "name": "pull-heavy-object_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -650,11 +637,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "cross-punch",
+     "motion": "pull-heavy-object",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -662,7 +650,7 @@
    "glowGain": 0
   },
   {
-   "name": "hook-punch_0",
+   "name": "pulling-up-to-a-ledge_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -691,11 +679,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "hook-punch",
+     "motion": "pulling-up-to-a-ledge",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -703,7 +692,7 @@
    "glowGain": 0
   },
   {
-   "name": "hook-punch_1",
+   "name": "pulling-up-to-a-ledge_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -732,11 +721,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "hook-punch",
+     "motion": "pulling-up-to-a-ledge",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -744,7 +734,7 @@
    "glowGain": 0
   },
   {
-   "name": "hook-punch_2",
+   "name": "pulling-up-to-a-ledge_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -773,11 +763,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "hook-punch",
+     "motion": "pulling-up-to-a-ledge",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -785,7 +776,7 @@
    "glowGain": 0
   },
   {
-   "name": "punch-combo_0",
+   "name": "swimming-underwater_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -814,11 +805,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "punch-combo",
+     "motion": "swimming-underwater",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -826,7 +818,7 @@
    "glowGain": 0
   },
   {
-   "name": "punch-combo_1",
+   "name": "swimming-underwater_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -855,11 +847,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "punch-combo",
+     "motion": "swimming-underwater",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -867,7 +860,7 @@
    "glowGain": 0
   },
   {
-   "name": "punch-combo_2",
+   "name": "swimming-underwater_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -896,11 +889,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "punch-combo",
+     "motion": "swimming-underwater",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -908,7 +902,7 @@
    "glowGain": 0
   },
   {
-   "name": "pointing-forward-1_0",
+   "name": "treading-water_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -937,11 +931,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "pointing-forward-1",
+     "motion": "treading-water",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -949,7 +944,7 @@
    "glowGain": 0
   },
   {
-   "name": "pointing-forward-1_1",
+   "name": "treading-water_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -978,11 +973,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "pointing-forward-1",
+     "motion": "treading-water",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -990,7 +986,7 @@
    "glowGain": 0
   },
   {
-   "name": "pointing-forward-1_2",
+   "name": "treading-water_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -1019,11 +1015,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "pointing-forward-1",
+     "motion": "treading-water",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -1031,7 +1028,7 @@
    "glowGain": 0
   },
   {
-   "name": "yelling-out_0",
+   "name": "wiping-sweat_0",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -1060,11 +1057,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "yelling-out",
+     "motion": "wiping-sweat",
      "motionMix": 1,
      "clipFrom": 0.35,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -1072,7 +1070,7 @@
    "glowGain": 0
   },
   {
-   "name": "yelling-out_1",
+   "name": "wiping-sweat_1",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -1101,11 +1099,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "yelling-out",
+     "motion": "wiping-sweat",
      "motionMix": 1,
      "clipFrom": 1.0,
      "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -1113,7 +1112,7 @@
    "glowGain": 0
   },
   {
-   "name": "yelling-out_2",
+   "name": "wiping-sweat_2",
    "set": "shoot",
    "opts": {
     "grade": "wm_paper",
@@ -1142,3332 +1141,12 @@
       0
      ],
      "rotY": "lens",
-     "motion": "yelling-out",
+     "motion": "wiping-sweat",
      "motionMix": 1,
      "clipFrom": 1.9,
      "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "long-yell-leaning-forward_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "long-yell-leaning-forward",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "long-yell-leaning-forward_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "long-yell-leaning-forward",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "long-yell-leaning-forward_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "long-yell-leaning-forward",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "yelling-while-standing-leaning-forward_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "yelling-while-standing-leaning-forward",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "yelling-while-standing-leaning-forward_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "yelling-while-standing-leaning-forward",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "yelling-while-standing-leaning-forward_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "yelling-while-standing-leaning-forward",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "long-yell-while-standing-leaning-back_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "long-yell-while-standing-leaning-back",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "long-yell-while-standing-leaning-back_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "long-yell-while-standing-leaning-back",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "long-yell-while-standing-leaning-back_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "long-yell-while-standing-leaning-back",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "roar_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "roar",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "roar_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "roar",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "roar_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "roar",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "yelling_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "yelling",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "yelling_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "yelling",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "yelling_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "yelling",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "male-cheering-head-banging_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "male-cheering-head-banging",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "male-cheering-head-banging_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "male-cheering-head-banging",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "male-cheering-head-banging_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "male-cheering-head-banging",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "rallying_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "rallying",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "rallying_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "rallying",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "rallying_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "rallying",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "threatening_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "threatening",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "threatening_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "threatening",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "threatening_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "threatening",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "taunting-throwing-arms-back_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "taunting-throwing-arms-back",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "taunting-throwing-arms-back_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "taunting-throwing-arms-back",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "taunting-throwing-arms-back_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "taunting-throwing-arms-back",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "boxing-taunt_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "boxing-taunt",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "boxing-taunt_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "boxing-taunt",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "boxing-taunt_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "boxing-taunt",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "falling-to-knees-in-prayer_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "falling-to-knees-in-prayer",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "falling-to-knees-in-prayer_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "falling-to-knees-in-prayer",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "falling-to-knees-in-prayer_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "falling-to-knees-in-prayer",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "on-knees-arms-raised_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "on-knees-arms-raised",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "on-knees-arms-raised_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "on-knees-arms-raised",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "on-knees-arms-raised_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "on-knees-arms-raised",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "arms-spread-looking-upwards_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "arms-spread-looking-upwards",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "arms-spread-looking-upwards_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "arms-spread-looking-upwards",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "arms-spread-looking-upwards_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "arms-spread-looking-upwards",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "agony_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "agony",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "agony_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "agony",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "agony_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "agony",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "kneeling-down_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "kneeling-down",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "kneeling-down_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "kneeling-down",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "kneeling-down_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "kneeling-down",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "standing-up-from-a-kneeling-position_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "standing-up-from-a-kneeling-position",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "standing-up-from-a-kneeling-position_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "standing-up-from-a-kneeling-position",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "standing-up-from-a-kneeling-position_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "standing-up-from-a-kneeling-position",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "great-sword-power-up_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "great-sword-power-up",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "great-sword-power-up_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "great-sword-power-up",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "great-sword-power-up_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "great-sword-power-up",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "casting-spell_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "casting-spell",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "casting-spell_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "casting-spell",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "casting-spell_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "casting-spell",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "fireball_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "fireball",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "fireball_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "fireball",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "fireball_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "fireball",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "swing-backflip-to-superhero-pose_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "swing-backflip-to-superhero-pose",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "swing-backflip-to-superhero-pose_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "swing-backflip-to-superhero-pose",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "swing-backflip-to-superhero-pose_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "swing-backflip-to-superhero-pose",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "spin-flip-kick_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "spin-flip-kick",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "spin-flip-kick_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "spin-flip-kick",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "spin-flip-kick_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "spin-flip-kick",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "backflip_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "backflip",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "backflip_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "backflip",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "backflip_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "backflip",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "spinning-back-kick-advancing_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "spinning-back-kick-advancing",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "spinning-back-kick-advancing_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "spinning-back-kick-advancing",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "spinning-back-kick-advancing_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "spinning-back-kick-advancing",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "kip-up_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "kip-up",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "kip-up_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "kip-up",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "kip-up_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "kip-up",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "floating-back-arched_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "floating-back-arched",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "floating-back-arched_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "floating-back-arched",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "floating-back-arched_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "floating-back-arched",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "floating-legs-bent-and-arms-spread_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "floating-legs-bent-and-arms-spread",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "floating-legs-bent-and-arms-spread_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "floating-legs-bent-and-arms-spread",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "floating-legs-bent-and-arms-spread_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "floating-legs-bent-and-arms-spread",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "floating-legs-raised-arms-extended-upwards_0",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "floating-legs-raised-arms-extended-upwards",
-     "motionMix": 1,
-     "clipFrom": 0.35,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "floating-legs-raised-arms-extended-upwards_1",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "floating-legs-raised-arms-extended-upwards",
-     "motionMix": 1,
-     "clipFrom": 1.0,
-     "once": true,
-     "look": "lens"
-    }
-   ],
-   "lock": 0.45,
-   "materialStyle": "routine",
-   "glowGain": 0
-  },
-  {
-   "name": "floating-legs-raised-arms-extended-upwards_2",
-   "set": "shoot",
-   "opts": {
-    "grade": "wm_paper",
-    "bulb": false
-   },
-   "cam": {
-    "pos": [
-     1.15,
-     0.95,
-     3.4
-    ],
-    "look": [
-     0,
-     0.82,
-     0
-    ],
-    "fov": 36
-   },
-   "keys": [
-    {
-     "f": 0,
-     "pose": "stand",
-     "pos": [
-      0,
-      0,
-      0
-     ],
-     "rotY": "lens",
-     "motion": "floating-legs-raised-arms-extended-upwards",
-     "motionMix": 1,
-     "clipFrom": 1.9,
-     "once": true,
-     "look": "lens"
+     "look": "lens",
+     "faceLens": true
     }
    ],
    "lock": 0.45,
@@ -4475,5 +1154,5 @@
    "glowGain": 0
   }
  ],
- "_why": "Love is War clip sheet: the 36 new Mixamo clips (2026-10-25) on raymi7 in the film path (VrmPuppet), 3 moments each (0.35 / 1.0 / 1.9 s into the clip, once = clamped at the end) - does each clip really play, read on her body, address the lens? Before any script uses them (0_BRIEF F1/F2)."
+ "_why": "clip sheet round 2: the 9 clips for Love is War treatment v3 (wipe, climbs, vault, pull, swim) on raymi7 with face_lens"
 }
