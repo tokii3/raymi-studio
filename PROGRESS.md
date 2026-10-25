@@ -1,5 +1,16 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-25 (evening) - Watch Me: the camera written by hand (6_CAMERA.md), key-moment board
+- Root cause of a month of camera faults (HANDOFF_2026-10-25_watchme_camera.md): rules instead of designed moments.
+  Now jobs/2026-10-24_watch-me/6_CAMERA.md designs all 68 rows by hand: the move, what SHE does to the lens (clip), why
+  for that bar; FIRESTARTER vocabulary only; no two neighbours alike; a burst / spin on every "move" / "K/DA ... ayy".
+- Studio parts (reusable): camera_moves.py pull / hero / into / walk_in / drop_worm / whip360 / dutch / ots / burst /
+  slow_push; shots.json `camera_hand: "<why>"` keeps a hand-written lens (no v3 / director / swings / frame_fit / dolly);
+  her body turns to a FIXED bearing in spins and bursts (rotY "lens" made every angle frontal) and her eyes follow
+  (look: lens).
+- Key moments K1-K16 in shots.json, guards green MV + Short, 124 py tests; stills board camera-hand-1 (32 frames).
+  NEXT: toki's picks / corrections -> the other 52 rows as data -> one MV render -> QC v2 once.
+
 ## 2026-10-25 - Watch Me MV takes 1-4, raymi7, one camera / one choreo, the bounce found
 - raymi7 (private assets): per-part materials (the lock only on skin, fabric shaded, the face shaded at all), texfix
   (clean blends, off-black hair roots), vrmFix (sleeve caps ride the upper arm and stand up like the 2D fin, hair roots

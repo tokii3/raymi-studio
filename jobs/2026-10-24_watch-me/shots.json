@@ -561,10 +561,10 @@
       "around": "her",
       "h": 1.38,
       "deg": 0,
-      "back": 150,
-      "dist": 0.95,
+      "back": -140,
+      "dist": 0.9,
       "look": 1.0,
-      "slide": 60,
+      "slide": 95,
       "fov": 36
      }
     }
@@ -1176,11 +1176,12 @@
       "kind": "whip360",
       "around": "her",
       "h": 1.2,
-      "deg": 0,
-      "dist": 1.75,
+      "deg": -30,
+      "dist": 1.45,
       "hit": 0.92,
       "whip": 1.0,
       "roll": 14,
+      "drift": -50,
       "fov": 40
      }
     }
@@ -1190,7 +1191,7 @@
      "at": 0,
      "clip": "hip-hop-dancing-3",
      "motionMix": 1,
-     "rotY": 0,
+     "rotY": -30,
      "look": "lens",
      "pos": "paper"
     }
@@ -1465,42 +1466,42 @@
        {
         "at": 0,
         "deg": 20,
-        "dist": 2.6,
+        "dist": 1.9,
         "lens": 0.85,
-        "fov": 50,
+        "fov": 44,
         "ly": -0.25
        },
        {
         "at": 1.76,
-        "deg": -50,
-        "dist": 1.6,
-        "lens": 2.3,
-        "fov": 42,
+        "deg": -45,
+        "dist": 1.5,
+        "lens": 2.2,
+        "fov": 40,
         "roll": -6
        },
        {
         "at": 2.27,
-        "deg": 70,
-        "dist": 2.8,
+        "deg": 50,
+        "dist": 2.85,
         "lens": 0.35,
-        "fov": 52,
+        "fov": 36,
         "ly": -0.3,
         "roll": 8
        },
        {
         "at": 2.97,
         "deg": -15,
-        "dist": 1.9,
+        "dist": 1.6,
         "lens": 1.1,
-        "fov": 46,
+        "fov": 42,
         "roll": -14
        },
        {
         "at": 3.33,
-        "deg": 35,
-        "dist": 0.9,
+        "deg": 30,
+        "dist": 1.3,
         "lens": 1.4,
-        "fov": 34,
+        "fov": 38,
         "roll": 10
        }
       ]
@@ -1521,7 +1522,7 @@
      "clip_from": 0.55,
      "speed": 0,
      "motionMix": 1,
-     "rotY": 20,
+     "rotY": 25,
      "look": "lens",
      "pos": "paper"
     },
@@ -1531,7 +1532,7 @@
      "clip_from": 1.0,
      "speed": 0,
      "motionMix": 1,
-     "rotY": -10,
+     "rotY": -25,
      "look": "lens",
      "pos": "paper"
     },
@@ -1541,7 +1542,7 @@
      "clip_from": 0.6,
      "speed": 0,
      "motionMix": 1,
-     "rotY": 20,
+     "rotY": 15,
      "look": "lens",
      "pos": "paper"
     }
@@ -1597,13 +1598,13 @@
       "h": 1.3,
       "deg": 10,
       "hit": 3.19,
-      "top": 3.9,
-      "worm": 2.9,
+      "top": 2.75,
+      "worm": 2.85,
       "lens": 0.32,
-      "fov": 48,
-      "fov_top": 44,
+      "fov": 32,
+      "fov_top": 40,
       "spin": 35,
-      "ly": -0.1
+      "ly": -0.15
      }
     }
    ],
@@ -1693,11 +1694,11 @@
       "around": "her",
       "h": 1.35,
       "deg": -15,
-      "dist": 1.5,
+      "dist": 1.0,
       "lens": 0.8,
-      "push": 1.6,
+      "push": 1.45,
       "sweep": 25,
-      "fov": 55,
+      "fov": 52,
       "ly": -0.25,
       "at": 0,
       "dur": 3.1
@@ -1729,9 +1730,9 @@
        {
         "at": 1.11,
         "deg": 10,
-        "dist": 2.4,
+        "dist": 2.6,
         "lens": 0.75,
-        "fov": 50,
+        "fov": 34,
         "ly": -0.3
        }
       ]
@@ -2082,10 +2083,25 @@
    "actor": [
     {
      "at": 0,
-     "clip": "look-around-2",
+     "clip": "female-standing-pose-1",
+     "clip_from": 0.5,
+     "speed": 0,
      "motionMix": 1,
      "rotY": 10,
      "look": "lens",
+     "pos": "lamp_circle"
+    },
+    {
+     "at": 3.16,
+     "clip": "female-dance-pose-3",
+     "clip_from": 0.5,
+     "speed": 0,
+     "motionMix": 1,
+     "rotY": -10,
+     "look": "lens",
+     "expr": {
+      "blink": 0.5
+     },
      "pos": "lamp_circle"
     }
    ],
@@ -2458,11 +2474,11 @@
       "h": 1.3,
       "deg": -20,
       "hit": 3.58,
-      "top": 4.0,
-      "worm": 3.0,
+      "top": 2.75,
+      "worm": 2.8,
       "lens": 0.35,
-      "fov": 50,
-      "fov_top": 46,
+      "fov": 34,
+      "fov_top": 40,
       "spin": 30,
       "ly": -0.1
      }
@@ -2483,7 +2499,7 @@
      "clip_from": 0.6,
      "speed": 0,
      "motionMix": 1,
-     "rotY": -15,
+     "rotY": -30,
      "look": "lens",
      "pos": "lamp_circle"
     }
@@ -2891,14 +2907,14 @@
       "shots": [
        {
         "at": 0,
-        "deg": 25,
-        "dist": 2.4,
+        "deg": -25,
+        "dist": 1.8,
         "lens": 1.0,
-        "fov": 44
+        "fov": 42
        },
        {
         "at": 0.91,
-        "deg": -40,
+        "deg": 35,
         "dist": 1.5,
         "lens": 1.9,
         "fov": 40,
@@ -2906,10 +2922,10 @@
        },
        {
         "at": 1.93,
-        "deg": 60,
-        "dist": 2.8,
+        "deg": -45,
+        "dist": 2.85,
         "lens": 0.35,
-        "fov": 52,
+        "fov": 36,
         "ly": -0.3,
         "roll": 6
        },
@@ -2938,7 +2954,7 @@
      "at": 0,
      "clip": "hip-hop-dancing-8",
      "motionMix": 1,
-     "rotY": 0,
+     "rotY": -20,
      "look": "lens",
      "pos": "lamp_circle"
     },
@@ -2948,7 +2964,7 @@
      "clip_from": 0.55,
      "speed": 0,
      "motionMix": 1,
-     "rotY": 15,
+     "rotY": -30,
      "look": "lens",
      "pos": "lamp_circle"
     },
@@ -5044,7 +5060,7 @@
       "around": "her",
       "h": 1.3,
       "deg": -66,
-      "back": 150,
+      "back": -150,
       "dist": 1.05,
       "look": 0.45,
       "slide": 50,
