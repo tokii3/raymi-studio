@@ -92,7 +92,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -317,7 +320,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -347,9 +353,9 @@
      ],
      "f": 94,
      "pos": [
-      -1.9204,
-      0.75,
-      2.4258
+      -1.9213,
+      0.74,
+      2.4269
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -365,9 +371,9 @@
      ],
      "f": 95,
      "pos": [
-      -1.9204,
-      0.75,
-      2.4258
+      -1.9213,
+      0.74,
+      2.4269
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -383,9 +389,9 @@
      ],
      "f": 98,
      "pos": [
-      -2.5013,
-      0.91,
-      1.6017
+      -2.5025,
+      0.93,
+      1.6024
      ],
      "fov": 38.6,
      "roll": -3.0,
@@ -402,9 +408,9 @@
      ],
      "f": 118,
      "pos": [
-      -2.7662,
-      1.07,
-      0.6709
+      -2.7676,
+      1.12,
+      0.6712
      ],
      "fov": 37.2,
      "roll": -6.0,
@@ -563,7 +569,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -574,9 +583,28 @@
      ],
      "f": 119,
      "pos": [
-      1.3183,
-      2.46,
-      1.7577
+      -2.7676,
+      1.12,
+      0.6712
+     ],
+     "fov": 37.2,
+     "roll": -6.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0,
+     "bridge": 1
+    },
+    {
+     "look": [
+      0.0,
+      1.2,
+      0.0
+     ],
+     "f": 135,
+     "pos": [
+      1.1082,
+      0.786,
+      1.4776
      ],
      "fov": 36.0,
      "roll": -14.0,
@@ -590,16 +618,53 @@
       1.2,
       0.0
      ],
+     "f": 136,
+     "pos": [
+      1.1082,
+      0.786,
+      1.4776
+     ],
+     "fov": 36.0,
+     "roll": -14.0,
+     "ease": "inOut",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.2,
+      0.0
+     ],
+     "f": 146,
+     "pos": [
+      1.4677,
+      0.957,
+      0.9949
+     ],
+     "fov": 34.74,
+     "roll": 3.0,
+     "ease": "inOut",
+     "path": "spline",
+     "dir": 1,
+     "observer": 1.0
+    },
+    {
+     "look": [
+      0.0,
+      1.2,
+      0.0
+     ],
      "f": 172,
      "pos": [
-      1.1865,
-      2.334,
-      1.5819
+      1.6403,
+      1.128,
+      0.4435
      ],
      "fov": 33.48,
-     "roll": 0,
+     "roll": 6.0,
      "ease": "inOut",
-     "path": null,
+     "path": "spline",
      "dir": 1,
      "observer": 1.0
     }
@@ -682,7 +747,8 @@
       0.5
      ]
     }
-   ]
+   ],
+   "bridge": 16
   },
   {
    "actor": [
@@ -752,7 +818,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -763,9 +832,9 @@
      ],
      "f": 173,
      "pos": [
-      1.4543,
-      1.58,
-      -0.3078
+      1.5639,
+      0.88,
+      -0.3343
      ],
      "fov": 32.0,
      "roll": 0.0,
@@ -781,9 +850,9 @@
      ],
      "f": 184,
      "pos": [
-      1.4298,
-      1.42,
-      0.1788
+      1.5376,
+      1.07,
+      0.189
      ],
      "fov": 30.88,
      "roll": -3.0,
@@ -800,9 +869,9 @@
      ],
      "f": 194,
      "pos": [
-      1.2533,
+      1.3477,
       1.26,
-      0.6118
+      0.6547
      ],
      "fov": 29.76,
      "roll": -6.0,
@@ -960,7 +1029,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -972,8 +1044,8 @@
      "f": 195,
      "pos": [
       0.0,
-      1.336,
-      1.6564
+      0.8968,
+      1.7044
      ],
      "fov": 34.0,
      "roll": 0.0,
@@ -989,9 +1061,9 @@
      ],
      "f": 210,
      "pos": [
-      0.5177,
-      1.4512,
-      1.5035
+      0.5327,
+      1.0336,
+      1.5471
      ],
      "fov": 32.81,
      "roll": 3.0,
@@ -1008,9 +1080,9 @@
      ],
      "f": 224,
      "pos": [
-      0.9382,
-      1.5664,
-      1.2008
+      0.9654,
+      1.1704,
+      1.2356
      ],
      "fov": 31.62,
      "roll": 6.0,
@@ -1176,7 +1248,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -1402,7 +1477,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -1661,7 +1739,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -1879,7 +1960,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -2142,7 +2226,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -2382,7 +2469,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -2412,9 +2502,9 @@
      ],
      "f": 513,
      "pos": [
-      0.4762,
-      1.388,
-      1.4678
+      0.4981,
+      0.74,
+      1.5775
      ],
      "fov": 30.0,
      "roll": 0.0,
@@ -2430,9 +2520,9 @@
      ],
      "f": 514,
      "pos": [
-      0.4762,
-      1.388,
-      1.4678
+      0.4981,
+      0.74,
+      1.5775
      ],
      "fov": 30.0,
      "roll": 0.0,
@@ -2448,9 +2538,9 @@
      ],
      "f": 522,
      "pos": [
-      0.9175,
-      1.228,
-      1.2355
+      0.9717,
+      0.93,
+      1.3282
      ],
      "fov": 28.95,
      "roll": 3.0,
@@ -2467,9 +2557,9 @@
      ],
      "f": 546,
      "pos": [
-      1.2437,
-      1.068,
-      0.885
+      1.3217,
+      1.12,
+      0.9522
      ],
      "fov": 27.9,
      "roll": 6.0,
@@ -2625,15 +2715,18 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
      "f": 547,
      "pos": [
-      1.2437,
-      1.068,
-      0.885
+      1.3217,
+      1.12,
+      0.9522
      ],
      "look": [
       0.176,
@@ -2855,7 +2948,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -3108,7 +3204,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -3345,7 +3444,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -3573,7 +3675,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -3828,7 +3933,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -4047,11 +4155,17 @@
     "bulb": true,
     "orbit_gear": true,
     "depth": 0.8,
+    "glow": "#9b6bff",
+    "glow_pulse": "beats",
+    "glow_gain": 0.3,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -4289,7 +4403,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -4465,12 +4582,16 @@
     "grade": "wm_paper",
     "lock": 0.45,
     "bulb": true,
+    "her_off": "a detail of HER: the tail barb in macro (the sting plant)",
     "depth": 0.8,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -4708,7 +4829,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -4913,10 +5037,6 @@
    },
    "swing": [
     [
-     1308,
-     1
-    ],
-    [
      1329,
      -1
     ]
@@ -4945,11 +5065,20 @@
      "spray_at": 1242
     },
     "depth": 0.8,
+    "glow": "#9b6bff",
+    "glow_pulse": "beats",
+    "glow_gain": 0.3,
+    "finwave": [
+     1244
+    ],
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -5169,11 +5298,17 @@
     "bulb": true,
     "track_lights": true,
     "depth": 0.8,
+    "sonar": [
+     1387
+    ],
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -5421,6 +5556,44 @@
    "mouth": {
     "gain": 1.0
    },
+   "fx": [
+    {
+     "kind": "freeze",
+     "desat": 0,
+     "from": 1485,
+     "to": 1496
+    },
+    {
+     "kind": "halftone",
+     "opacity": 0.45,
+     "from": 1485,
+     "to": 1496
+    },
+    {
+     "kind": "freeze",
+     "desat": 0,
+     "from": 1530,
+     "to": 1541
+    },
+    {
+     "kind": "halftone",
+     "opacity": 0.45,
+     "from": 1530,
+     "to": 1541
+    },
+    {
+     "kind": "freeze",
+     "desat": 0,
+     "from": 1575,
+     "to": 1586
+    },
+    {
+     "kind": "halftone",
+     "opacity": 0.45,
+     "from": 1575,
+     "to": 1586
+    }
+   ],
    "id": "24",
    "from": 1482,
    "to": 1621,
@@ -5469,11 +5642,19 @@
      }
     ],
     "depth": 0.8,
+    "paparazzi": [
+     1484,
+     1528,
+     1574
+    ],
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -5766,6 +5947,20 @@
    "mouth": {
     "gain": 1.0
    },
+   "fx": [
+    {
+     "kind": "freeze",
+     "desat": 0,
+     "from": 1624,
+     "to": 1635
+    },
+    {
+     "kind": "halftone",
+     "opacity": 0.45,
+     "from": 1624,
+     "to": 1635
+    }
+   ],
    "id": "25",
    "from": 1621,
    "to": 1732,
@@ -5801,11 +5996,17 @@
     },
     "fold": 1638,
     "depth": 0.8,
+    "paparazzi": [
+     1622
+    ],
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -6077,11 +6278,18 @@
      "at": 1809
     },
     "depth": 0.8,
+    "caustics": 0.35,
+    "glow": "#9b6bff",
+    "glow_pulse": "beats",
+    "glow_gain": 0.3,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -6311,11 +6519,15 @@
      ]
     ],
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -6566,11 +6778,15 @@
      }
     ],
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -6809,11 +7025,15 @@
     "lock": 0.45,
     "covers": 69.3,
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -7075,12 +7295,17 @@
     "grade": "wm_night",
     "lock": 0.45,
     "fountain": 69.79,
+    "her_off": "macro: the puddle rising (her sea in the street)",
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -7290,11 +7515,15 @@
      ]
     ],
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -7553,11 +7782,15 @@
     "billboard": "WATCH ME",
     "splash": 2218,
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -7826,11 +8059,19 @@
      ]
     },
     "depth": 0.8,
+    "caustics": 0.35,
+    "paparazzi": [
+     2326,
+     2362
+    ],
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -8096,11 +8337,15 @@
     ],
     "her_camera": "hand_r",
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -8374,11 +8619,18 @@
      ]
     ],
     "depth": 0.8,
+    "caustics": 0.35,
+    "glow": "#9b6bff",
+    "glow_pulse": "beats",
+    "glow_gain": 0.3,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -8627,11 +8879,15 @@
      ]
     ],
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -8903,11 +9159,15 @@
      ]
     ],
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -9175,11 +9435,18 @@
      "jump_at": 2820
     },
     "depth": 0.8,
+    "caustics": 0.35,
+    "glow": "#9b6bff",
+    "glow_pulse": "beats",
+    "glow_gain": 0.3,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -9460,11 +9727,18 @@
      }
     ],
     "depth": 0.8,
+    "sonar": [
+     2926
+    ],
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -9793,12 +10067,17 @@
       24
      ]
     ],
+    "her_off": "the billboard carries the beat: her poses on it",
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -10038,11 +10317,15 @@
     "road_paint": 105.46,
     "treadmill": 0.6,
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -10324,11 +10607,18 @@
      ]
     ],
     "depth": 0.8,
+    "caustics": 0.35,
+    "glow": "#9b6bff",
+    "glow_pulse": "beats",
+    "glow_gain": 0.3,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -10572,11 +10862,15 @@
     "billboard": "WATCH ME",
     "tv": "RAYMI RAYMI RAYMI",
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -10832,7 +11126,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -10843,9 +11140,9 @@
      ],
      "f": 3528,
      "pos": [
-      -2.4058,
-      1.6,
-      4.8127
+      -2.4077,
+      0.74,
+      4.8167
      ],
      "fov": 42.0,
      "roll": 0.0,
@@ -10861,9 +11158,9 @@
      ],
      "f": 3545,
      "pos": [
-      -3.813,
-      1.44,
-      3.5796
+      -3.816,
+      0.93,
+      3.5827
      ],
      "fov": 40.53,
      "roll": -3.0,
@@ -10880,9 +11177,9 @@
      ],
      "f": 3561,
      "pos": [
-      -4.6967,
-      1.28,
-      2.0163
+      -4.7003,
+      1.12,
+      2.0182
      ],
      "fov": 39.06,
      "roll": -6.0,
@@ -11063,15 +11360,18 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
      "f": 3562,
      "pos": [
-      -4.6967,
-      1.28,
-      2.0163
+      -4.7003,
+      1.12,
+      2.0182
      ],
      "look": [
       0.0,
@@ -11318,7 +11618,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -11348,9 +11651,9 @@
      ],
      "f": 3637,
      "pos": [
-      0.327,
-      1.339,
-      0.8722
+      0.3547,
+      0.74,
+      1.0379
      ],
      "fov": 30.0,
      "roll": 0.0,
@@ -11366,9 +11669,9 @@
      ],
      "f": 3638,
      "pos": [
-      0.327,
-      1.339,
-      0.8722
+      0.3547,
+      0.74,
+      1.0379
      ],
      "fov": 30.0,
      "roll": 0.0,
@@ -11384,9 +11687,9 @@
      ],
      "f": 3668,
      "pos": [
-      0.0318,
-      1.499,
-      0.836
+      0.0051,
+      0.93,
+      0.9951
      ],
      "fov": 28.95,
      "roll": -3.0,
@@ -11403,9 +11706,9 @@
      ],
      "f": 3715,
      "pos": [
-      -0.2241,
-      1.659,
-      0.7096
+      -0.298,
+      1.12,
+      0.8454
      ],
      "fov": 27.9,
      "roll": -6.0,
@@ -11589,15 +11892,18 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
      "f": 3716,
      "pos": [
-      -0.2241,
-      1.659,
-      0.7096
+      -0.298,
+      1.12,
+      0.8454
      ],
      "look": [
       0.177,
@@ -11702,8 +12008,8 @@
    "lyrics": null,
    "words": [],
    "transition": {
-    "kind": "cut",
-    "frames": 0
+    "kind": "ink",
+    "frames": 14
    },
    "events": [],
    "texts": [],
@@ -11884,7 +12190,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -12110,11 +12419,19 @@
      "yaw": -2.4
     },
     "depth": 0.8,
+    "sonar": [
+     3911
+    ],
+    "sense": 0.8,
+    "caustics": 0.25,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -12144,9 +12461,9 @@
      ],
      "f": 3894,
      "pos": [
-      1.3891,
-      1.854,
-      1.8521
+      1.4083,
+      1.2842,
+      1.8777
      ],
      "fov": 38.0,
      "roll": 10.0,
@@ -12162,9 +12479,9 @@
      ],
      "f": 3895,
      "pos": [
-      1.3891,
-      1.854,
-      1.8521
+      1.4083,
+      1.2842,
+      1.8777
      ],
      "fov": 38.0,
      "roll": 10.0,
@@ -12180,9 +12497,9 @@
      ],
      "f": 3939,
      "pos": [
-      1.8398,
-      1.9772,
-      1.247
+      1.8652,
+      1.4305,
+      1.2643
      ],
      "fov": 36.67,
      "roll": 3.0,
@@ -12199,9 +12516,9 @@
      ],
      "f": 4000,
      "pos": [
-      2.0561,
-      2.1004,
-      0.5559
+      2.0845,
+      1.5768,
+      0.5636
      ],
      "fov": 35.34,
      "roll": 6.0,
@@ -12422,11 +12739,16 @@
     },
     "plaque": "RAYMI, 2026 - deep sea",
     "depth": 0.8,
+    "sense": 0.8,
+    "caustics": 0.25,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -12437,9 +12759,9 @@
      ],
      "f": 4001,
      "pos": [
-      2.0561,
-      2.1004,
-      0.5559
+      2.0845,
+      1.5768,
+      0.5636
      ],
      "fov": 35.34,
      "roll": 6.0,
@@ -12456,9 +12778,9 @@
      ],
      "f": 4017,
      "pos": [
-      0.5168,
-      1.1465,
-      2.1409
+      0.5067,
+      1.3311,
+      2.0989
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -12474,9 +12796,9 @@
      ],
      "f": 4018,
      "pos": [
-      0.5168,
-      1.1465,
-      2.1409
+      0.5067,
+      1.3311,
+      2.0989
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -12492,9 +12814,9 @@
      ],
      "f": 4031,
      "pos": [
-      -0.2001,
-      1.2601,
-      2.1049
+      -0.1961,
+      1.466,
+      2.0635
      ],
      "fov": 38.6,
      "roll": -3.0,
@@ -12511,9 +12833,9 @@
      ],
      "f": 4060,
      "pos": [
-      -0.838,
-      1.3737,
-      1.8448
+      -0.8215,
+      1.6009,
+      1.8086
      ],
      "fov": 37.2,
      "roll": -6.0,
@@ -12712,11 +13034,16 @@
      "yaw": -2.4
     },
     "depth": 0.8,
+    "sense": 0.8,
+    "caustics": 0.25,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -12727,9 +13054,9 @@
      ],
      "f": 4061,
      "pos": [
-      -0.838,
-      1.3737,
-      1.8448
+      -0.8215,
+      1.6009,
+      1.8086
      ],
      "fov": 37.2,
      "roll": -6.0,
@@ -12740,17 +13067,17 @@
     },
     {
      "look": [
-      0.0,
-      1.75,
-      0.0
+      1.3,
+      0.9,
+      1.15
      ],
      "f": 4077,
      "pos": [
-      2.1006,
-      1.8,
-      0.4001
+      -1.6819,
+      0.74,
+      4.5221
      ],
-     "fov": 34.0,
+     "fov": 44.0,
      "roll": 0.0,
      "ease": "inOut",
      "dir": 1,
@@ -12758,17 +13085,17 @@
     },
     {
      "look": [
-      0.0,
-      1.75,
-      0.0
+      1.3,
+      0.9,
+      1.15
      ],
      "f": 4078,
      "pos": [
-      2.1006,
-      1.8,
-      0.4001
+      -1.6819,
+      0.74,
+      4.5221
      ],
-     "fov": 34.0,
+     "fov": 44.0,
      "roll": 0.0,
      "ease": "inOut",
      "dir": 1,
@@ -12776,17 +13103,17 @@
     },
     {
      "look": [
-      0.0,
-      1.75,
-      0.0
+      1.3,
+      0.9,
+      1.15
      ],
      "f": 4088,
      "pos": [
-      2.0317,
-      1.64,
-      -0.2933
+      -0.3527,
+      0.93,
+      5.1429
      ],
-     "fov": 32.81,
+     "fov": 42.46,
      "roll": 3.0,
      "ease": "inOut",
      "path": "spline",
@@ -12795,17 +13122,17 @@
     },
     {
      "look": [
-      0.0,
-      1.75,
-      0.0
+      1.3,
+      0.9,
+      1.15
      ],
      "f": 4115,
      "pos": [
-      1.7495,
-      1.48,
-      -0.8997
+      1.0482,
+      1.12,
+      5.2837
      ],
-     "fov": 31.62,
+     "fov": 40.92,
      "roll": 6.0,
      "ease": "inOut",
      "path": "spline",
@@ -12993,26 +13320,30 @@
     "crossed": 4117,
     "barb_lens": 4128,
     "depth": 0.8,
+    "caustics": 0.25,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
      "f": 4116,
      "pos": [
-      1.7495,
-      1.48,
-      -0.8997
+      1.0482,
+      1.12,
+      5.2837
      ],
      "look": [
-      0.0,
-      1.75,
-      0.0
+      1.3,
+      0.9,
+      1.15
      ],
-     "fov": 31.62,
+     "fov": 40.92,
      "roll": 6.0,
      "ease": "inOut",
      "observer": 1.0,
@@ -13247,12 +13578,17 @@
    "opts": {
     "grade": "wm_gold",
     "lock": 0.45,
+    "her_off": "cover-cut: her tail fills the lens",
     "depth": 0.8,
+    "caustics": 0.25,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -13554,11 +13890,19 @@
      "beam_on_her": true
     },
     "depth": 0.8,
+    "sense": 0.8,
+    "caustics": 0.25,
+    "glow": "#9b6bff",
+    "glow_pulse": "beats",
+    "glow_gain": 0.3,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -13839,12 +14183,18 @@
      "hold": "flashlight",
      "search": true
     },
+    "her_off": "macro: the plaque swap, then the painting",
     "depth": 0.8,
+    "sense": 0.8,
+    "caustics": 0.25,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -14103,11 +14453,19 @@
      "hat_off_at": 4593
     },
     "depth": 0.8,
+    "sense": 0.8,
+    "caustics": 0.25,
+    "glow": "#9b6bff",
+    "glow_pulse": "beats",
+    "glow_gain": 0.3,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -14396,11 +14754,19 @@
      "reach_at": 4728
     },
     "depth": 0.8,
+    "sonar": [
+     4710
+    ],
+    "sense": 0.8,
+    "caustics": 0.25,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -14686,6 +15052,44 @@
    "mouth": {
     "gain": 1.0
    },
+   "fx": [
+    {
+     "kind": "freeze",
+     "desat": 0,
+     "from": 4809,
+     "to": 4820
+    },
+    {
+     "kind": "halftone",
+     "opacity": 0.45,
+     "from": 4809,
+     "to": 4820
+    },
+    {
+     "kind": "freeze",
+     "desat": 0,
+     "from": 4857,
+     "to": 4868
+    },
+    {
+     "kind": "halftone",
+     "opacity": 0.45,
+     "from": 4857,
+     "to": 4868
+    },
+    {
+     "kind": "freeze",
+     "desat": 0,
+     "from": 4905,
+     "to": 4916
+    },
+    {
+     "kind": "halftone",
+     "opacity": 0.45,
+     "from": 4905,
+     "to": 4916
+    }
+   ],
    "id": "58",
    "from": 4806,
    "to": 4954,
@@ -14735,11 +15139,20 @@
      }
     ],
     "depth": 0.8,
+    "caustics": 0.25,
+    "paparazzi": [
+     4808,
+     4856,
+     4904
+    ],
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -15088,7 +15501,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -15303,11 +15719,15 @@
     "hers": false,
     "splash": 5001,
     "depth": 0.8,
+    "caustics": 0.35,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -15318,9 +15738,9 @@
      ],
      "f": 4996,
      "pos": [
-      -0.9,
-      1.35,
-      1.559
+      -0.9487,
+      0.75,
+      1.6433
      ],
      "fov": 34.0,
      "roll": 0.0,
@@ -15336,9 +15756,9 @@
      ],
      "f": 5011,
      "pos": [
-      -1.3042,
-      1.19,
-      1.1338
+      -1.3747,
+      0.94,
+      1.1951
      ],
      "fov": 32.81,
      "roll": -3.0,
@@ -15355,9 +15775,9 @@
      ],
      "f": 5026,
      "pos": [
-      -1.5355,
-      1.03,
-      0.6205
+      -1.6186,
+      1.13,
+      0.654
      ],
      "fov": 31.62,
      "roll": -6.0,
@@ -15555,11 +15975,15 @@
     "hers": true,
     "letters_off": 5029,
     "depth": 0.8,
+    "caustics": 0.25,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -15786,7 +16210,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -15987,11 +16414,18 @@
     "hers": false,
     "lamp_flick": 5127,
     "depth": 0.8,
+    "caustics": 0.35,
+    "glow": "#9b6bff",
+    "glow_pulse": "beats",
+    "glow_gain": 0.3,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -16222,11 +16656,18 @@
      "freeze_at": 5182
     },
     "depth": 0.8,
+    "caustics": 0.25,
+    "finwave": [
+     5162
+    ],
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -16475,11 +16916,15 @@
      "frozen": true
     },
     "depth": 0.8,
+    "caustics": 0.25,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -16490,9 +16935,9 @@
      ],
      "f": 5196,
      "pos": [
-      -1.4228,
-      1.9,
-      3.6586
+      -1.4099,
+      0.74,
+      3.6254
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -16508,9 +16953,9 @@
      ],
      "f": 5223,
      "pos": [
-      -0.148,
-      2.06,
-      3.7656
+      -0.1466,
+      0.93,
+      3.7315
      ],
      "fov": 38.6,
      "roll": 3.0,
@@ -16527,9 +16972,9 @@
      ],
      "f": 5249,
      "pos": [
-      1.0408,
-      2.22,
-      3.4583
+      1.0313,
+      1.12,
+      3.4269
      ],
      "fov": 37.2,
      "roll": 6.0,
@@ -16754,11 +17199,18 @@
     ],
     "tail_lens": 5280,
     "depth": 0.8,
+    "caustics": 0.25,
+    "finwave": [
+     5276
+    ],
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 1,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -17017,11 +17469,15 @@
      }
     ],
     "depth": 0.8,
+    "caustics": 0.25,
     "post": {
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {
@@ -17344,7 +17800,10 @@
      "dof_auto": 1,
      "glow": 1,
      "vignette": 0.42
-    }
+    },
+    "trails": 0,
+    "haze": 0.6,
+    "her_light": 1
    },
    "camera": [
     {

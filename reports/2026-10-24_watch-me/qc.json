@@ -11,29 +11,12 @@
   "true_peak_<=-1": true,
   "duration_matches_plan": true,
   "no_frozen_picture_>1.2s": true,
-  "no_black_picture_>0.25s": false
+  "no_black_picture_>0.25s": true
  },
  "full_res": true,
  "lufs": -14.07,
  "true_peak": -4.18,
  "frozen_spans": [],
- "black_spans": [
-  [
-   33.5333,
-   1.37
-  ],
-  [
-   118.333,
-   0.4
-  ],
-  [
-   127.9,
-   0.33
-  ],
-  [
-   136.133,
-   0.87
-  ]
- ],
- "pass": false
+ "black_spans": [],
+ "pass": true
 }
