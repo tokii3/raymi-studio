@@ -72,6 +72,12 @@ answered X3: toki 2026-10-25 "x3: ja, eher weltschmerz artig" -> Raymi fierce, n
   the dance energy she wants) -> ASK, also because of rights (Feasibility F5)
 answered X4: toki 2026-10-25 "x4: remix"
 
+- X5 toki 2026-10-25 "alle ideen verwenden wo wenn wie geht" (A Lighthouse, B Ink War, C Signal War) vs PRINCIPLES A1
+  "one world" and Beach's "zusammengeklatscht" (many places with separate looks) -> my guess: ONE place, the storm sea
+  of A; C lives UNDER its surface (the cables on the sea floor, her electro-sense = the signal to the lighthouse), B is
+  her weapon language (Sumi ink + 2D brush hits on the beats, the ink night with her stars at the end) - one colour and
+  material family, not three worlds cut together -> ASK
+
 ## Visible proof (each must be TRUE in the finished video)
 - [ ] C1 "immersive / reinziehen" -> from 0-3 s already inside the action; the camera is IN her space (close, moving
   through things, things and Raymi coming at the lens); no stretch where we watch from a fixed distance -> reality

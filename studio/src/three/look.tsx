@@ -41,8 +41,14 @@ export const SetLight: React.FC<{
   // depth (toki 2026-10-24: "Räume nicht belichtet, hinten genauso hell wie vorne"): 0 = the flat even light of before,
   // 1 = the even fill and key give way to her own key + the set's practical pools, the distance falls into dark fog
   depth?: number;
-}> = ({sky, ground, fill: fill0 = 1.1, key, keyI: keyI0 = 2.2, keyPos, target = [0, 0, 0], shadowSize = 8, fog: fog0, fogNear: near0 = 8, fogFar: far0 = 30, bg, depth = 0}) => {
+  // 0..1: the hemisphere fill turns from the set's sky / ground colour to a neutral lavender-grey - the set's colour
+  // then reaches her only through motivated lights and the rim, her skin stays as modelled (Love is War 2026-10-25)
+  neutral?: number;
+}> = ({sky: sky0, ground: ground0, neutral = 0, fill: fill0 = 1.1, key, keyI: keyI0 = 2.2, keyPos, target = [0, 0, 0], shadowSize = 8, fog: fog0, fogNear: near0 = 8, fogFar: far0 = 30, bg, depth = 0}) => {
   const d = Math.max(0, Math.min(1, depth));
+  const nn = Math.max(0, Math.min(1, neutral));
+  const sky = nn ? new THREE.Color(sky0).lerp(new THREE.Color('#cfcde2'), nn).getStyle() : sky0;
+  const ground = nn ? new THREE.Color(ground0).lerp(new THREE.Color('#3b3550'), nn).getStyle() : ground0;
   const fill = fill0 * (1 - 0.62 * d), keyI = keyI0 * (1 - 0.45 * d);
   const fog = fog0 && d > 0 ? new THREE.Color(fog0).lerp(new THREE.Color('#05060b'), 0.7 * d).getStyle() : fog0;
   const fogNear = near0 * (1 - 0.55 * d), fogFar = far0 * (1 - 0.4 * d);
@@ -254,4 +260,39 @@ export function runTo(base: number, spec: unknown, s: number, f: number): number
     if (f >= t) v = v + (to - v) * (k * k * (3 - 2 * k));
   }
   return v;
+}
+
+// ---------------------------------------------------------------- ink contour + a colour ramp (Love is War 2026-10-25)
+// toki: "immernoch plastik look". A prop in flat toon colour with the white 4th ramp step reads as plastic; a painted
+// prop has a contour and a shade that stays its colour. inkHull = the back faces of the same geometry, a bit bigger,
+// in ink (the anime contour); toonPaint = a 3-step ramp with no white band + a hue-shifted shade colour.
+const hullMats = new Map<string, THREE.MeshBasicMaterial>();
+export function inkHull(color = '#0b0a14'): THREE.MeshBasicMaterial {
+  let m = hullMats.get(color);
+  if (!m) { m = new THREE.MeshBasicMaterial({color, side: THREE.BackSide}); hullMats.set(color, m); }
+  return m;
+}
+let paintRamp: THREE.DataTexture | null = null;
+function paintGradient(): THREE.DataTexture {
+  if (paintRamp) return paintRamp;
+  const steps = [96, 168, 228];
+  const data = new Uint8Array(steps.length * 4);
+  steps.forEach((v, i) => data.set([v, v, v, 255], i * 4));
+  paintRamp = new THREE.DataTexture(data, steps.length, 1, THREE.RGBAFormat);
+  paintRamp.minFilter = paintRamp.magFilter = THREE.NearestFilter;
+  paintRamp.needsUpdate = true;
+  return paintRamp;
+}
+const paintMats = new Map<string, THREE.MeshToonMaterial>();
+/** A painted prop: 3 toon steps (no white band), a surface pattern, its shade pulled toward `shade` (coloured shadow). */
+export function toonPaint(color: string, kind: Surface = 'plaster', shade = '#3a3060', repeat: [number, number] = [2, 2], emissive = '#000000', ei = 1): THREE.MeshToonMaterial {
+  const k = `${color}|${kind}|${shade}|${repeat}|${emissive}|${ei}`;
+  let m = paintMats.get(k);
+  if (!m) {
+    const map = surfaceTexture(kind).clone();
+    map.repeat.set(repeat[0], repeat[1]); map.wrapS = map.wrapT = THREE.RepeatWrapping; map.needsUpdate = true;
+    m = new THREE.MeshToonMaterial({color, map, gradientMap: paintGradient(), emissive: new THREE.Color(shade).multiplyScalar(0.35).add(new THREE.Color(emissive).multiplyScalar(ei))});
+    paintMats.set(k, m);
+  }
+  return m;
 }

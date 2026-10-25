@@ -5,7 +5,7 @@
 // shots.json) or 'beats'; opts.cable_speed (m/s, default 40); opts.cable_glow 0..1 (the whole line lit, a held moment)
 import React from 'react';
 import * as THREE from 'three';
-import {rnd, toon} from './look';
+import {rnd, toon, toonPaint} from './look';
 import {add, glowTex} from './fire';
 import {frames} from './events';
 
@@ -29,7 +29,8 @@ export const SeaCables: React.FC<{opts: Record<string, unknown>; f: number; fps:
   const speed = Number(opts.cable_speed ?? 40);
   const glow = Number(opts.cable_glow ?? 0);
   const pulses = opts.cable_pulse === 'beats' ? beats : frames(opts.cable_pulse);
-  const skin = toon('#15161f', CYAN, 0.05 + 0.6 * glow);
+  // ridged rubber conduit with a coloured shade, the core glowing through it when lit (look-designer boards3)
+  const skin = toonPaint('#1a1c28', 'rubber', '#0b1424', [60, 1], CYAN, 0.04 + 0.6 * glow);
   return (
     <group userData={{noSupport: true}}>
       {Array.from({length: n}, (_, i) => {

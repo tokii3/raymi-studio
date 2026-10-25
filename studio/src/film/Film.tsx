@@ -256,7 +256,8 @@ export const Film: React.FC<FilmProps> = (props) => {
                 materialStyle={String(shot.opts.material ?? (shot.actor ? 'routine' : 'firestarter'))}
                 step={shot.step ?? 1} outline={shot.outline ?? 0} battery={battery}
                 keyLight={Number(shot.opts.her_key ?? shot.opts.depth ?? 0) * (1 - 0.85 * darkNow)}
-                trails={Number(shot.opts.trails ?? 0)} lampLight={Number(shot.opts.her_light ?? 0)} />
+                trails={Number(shot.opts.trails ?? 0)} lampLight={Number(shot.opts.her_light ?? 0)}
+                rimColor={shot.opts.her_rim ? String(shot.opts.her_rim) : undefined} rimGain={Number(shot.opts.her_rim_i ?? 1)} />
             ) : (
               <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={glowGain} />

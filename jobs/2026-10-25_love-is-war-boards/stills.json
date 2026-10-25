@@ -1,11 +1,11 @@
 {
  "format": "mv",
  "frames": [
-  13,
+  18,
   69,
   112,
-  153,
-  198,
+  148,
+  224,
   248,
   292,
   338,
@@ -25,6 +25,6 @@
  "scale": 1,
  "to": "boards",
  "dest": "jobs/2026-10-25_love-is-war/boards",
- "_why": "round 2 after my own look at round 1: skin lock 0.75 (was saturated blue), A1/A2 lens above the surface (legs showed = floating; A2 framed the top of her head), roar for the attacks, angry faces, bold ink slashes, heart off her face, stars visible, C3 aerial without the floor edge",
- "round": 2
+ "round": 3,
+ "_why": "round 3: close mid-hit frames by the camera-director / fx-designer; material + light pass by the look-designer"
 }

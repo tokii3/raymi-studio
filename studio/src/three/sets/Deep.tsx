@@ -392,7 +392,7 @@ export const Deep: React.FC<SetProps> = ({f, fps, opts, beats, camPos}) => {
   const cx = camPos ? camPos[0] : 0, cy = camPos ? camPos[1] : 3, cz = camPos ? camPos[2] : 0;
   return (
     <group>
-      <SetLight sky="#2c2470" ground="#0a0718" fill={0.42 + 0.3 * warm} key="#8f8cff" keyI={0.6 + 0.4 * warm} keyPos={[-2, 9, 4]}
+      <SetLight neutral={Number(o.neutral_sky ?? 0)} sky="#2c2470" ground="#0a0718" fill={0.42 + 0.3 * warm} key="#8f8cff" keyI={0.6 + 0.4 * warm} keyPos={[-2, 9, 4]}
         target={[0.5, 0, -2]} shadowSize={9} fog={fogC} fogNear={7} fogFar={fogFar} bg={fogC} />
       {warm > 0 ? <pointLight position={[ox, 1.2, oz - 1]} color={erupt > 0.3 ? HOT : '#ff8a5c'} intensity={12 * warm * cap} distance={10 + front} decay={1.4} /> : null}
       <Ground size={[40, 34]} c={BASALT} pos={[0, 0, -5]} dunes={0.12} seed={11} />

@@ -7,7 +7,7 @@
 //   into the sea + the whole sky flashing for ~6 frames
 import React from 'react';
 import * as THREE from 'three';
-import {canvasTexture, rnd, toon} from './look';
+import {canvasTexture, inkHull, rnd, toonPaint} from './look';
 import {add, glowTex} from './fire';
 import {frames} from './events';
 
@@ -57,7 +57,10 @@ export const Lighthouse: React.FC<{o: LighthouseOpts; f: number; fps: number; ca
   const toCam = new THREE.Vector3(...camPos).sub(lamp).setY(0).normalize();
   const face = Math.max(...[yaw, yaw + Math.PI].map((a) => new THREE.Vector3(Math.sin(a), 0, Math.cos(a)).dot(toCam)));
   const blaze = Math.pow(Math.max(0, face), 18);
-  const white = toon('#e6e3ee'), red = toon('#b3263a'), dark = toon('#1b1a2a'), rock = toon('#121327');
+  // painted, not plastic (toki 2026-10-25): plaster with a coloured shade and an ink contour; wet black rock
+  const white = toonPaint('#d9d6e4', 'plaster', '#4a3f7a', [3, 6]), red = toonPaint('#a8233a', 'plaster', '#4a1830', [3, 2]);
+  const dark = toonPaint('#1b1a2a', 'metal', '#120c26'), rock = toonPaint('#1d1e33', 'plaster', '#0d0a22', [1, 1]);
+  const ink = inkHull();
   return (
     <group>
       {/* the black rock it stands on, waves breaking white at its foot */}
@@ -75,6 +78,7 @@ export const Lighthouse: React.FC<{o: LighthouseOpts; f: number; fps: number; ca
       })}
       {/* the tower: white with two red bands, the gallery, the lantern room, the dome */}
       <mesh position={[x, H / 2 + 0.3, z]} material={white}><cylinderGeometry args={[0.85, 1.3, H, 24]} /></mesh>
+      <mesh position={[x, H / 2 + 0.3, z]} material={ink} scale={[1.035, 1.004, 1.035]}><cylinderGeometry args={[0.85, 1.3, H, 24]} /></mesh>
       {[0.3, 0.62].map((k) => (
         <mesh key={k} position={[x, 0.3 + H * k, z]} material={red}><cylinderGeometry args={[1.3 - 0.45 * k + 0.02, 1.3 - 0.45 * k + 0.06, H * 0.12, 24]} /></mesh>
       ))}
@@ -84,6 +88,7 @@ export const Lighthouse: React.FC<{o: LighthouseOpts; f: number; fps: number; ca
         </mesh>
       ))}
       <mesh position={[x, H + 0.32, z]} material={dark}><cylinderGeometry args={[1.35, 1.35, 0.16, 24]} /></mesh>
+      <mesh position={[x, H + 0.32, z]} material={ink} scale={[1.03, 1.3, 1.03]}><cylinderGeometry args={[1.35, 1.35, 0.16, 24]} /></mesh>
       <mesh position={[x, H + 0.95, z]}><cylinderGeometry args={[0.7, 0.7, 1.1, 20]} />
         <meshBasicMaterial color="#fff1cf" toneMapped={false} /></mesh>
       <mesh position={[x, H + 1.5, z]} material={red}><sphereGeometry args={[0.78, 20, 10, 0, Math.PI * 2, 0, Math.PI / 2]} /></mesh>

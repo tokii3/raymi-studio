@@ -31,6 +31,9 @@ professional reference (`python -m raymi refs find <terms>`). Bad ideas allowed 
 - **Key frames:** boards/A1.jpg, A2, A3 - each names the brief C-line it proves and its reference (`slug@s`); at least
   one is the HARDEST moment of the idea, shot close and mid-hit, her face readable (Love is War 2026-10-25: nine calm
   wide establishing frames with Raymi small or from behind - brief-keeper BLOCK + look-critic FAIL, reviews/ideas_*_1.md)
+  Before the board renders: the makers draft their layer for the key frames - camera-director (6_CAMERA), fx-designer
+  (10_FX) AND look-designer (9_LOOK: light, materials, haze, post). Love is War rounds 1-3 skipped the look-designer
+  and toki said "immernoch plastik look, fühlt sich komisch belichtet an" (the same class as Watch Me "flach und plastik").
 
 ## Idea B - <name>
 TODO (same fields)

@@ -807,8 +807,9 @@ export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
 export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: number; from?: number; camPos: V3;
   mouthKeys?: VrmMouthKey[]; lock?: number; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string;
   step?: number; outline?: number; outlineColor?: string; keyLight?: number; trails?: number; lampLight?: number;
+  rimColor?: string; rimGain?: number;   // the set's colour reaches her as a rim (Love is War look-designer boards3)
   battery?: {n: number; prev: number; t: number; color?: string; boost?: number} | null}> = ({url, keys, mouthKeys = [], f: frame, fps, from = 0, camPos, lock = 0.6,
-  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030', battery = null, keyLight = 0, trails = 0, lampLight = 0}) => {
+  shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030', battery = null, keyLight = 0, trails = 0, lampLight = 0, rimColor = '#b9c8ff', rimGain = 1}) => {
   const scene = useThree((s) => s.scene);
   const f = step > 1 ? frame - ((((frame - from) % step) + step) % step) : frame;
   if (!keys.length || f < keys[0].f) return null;
@@ -863,7 +864,7 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
       {/* a cool rim light behind her, toward the lens: her silhouette separates from any background (look-critic) */}
       {chest ? (() => {
         const back = new THREE.Vector3(p.x - camPos[0], 0, p.z - camPos[2]).normalize().multiplyScalar(0.9);
-        return <pointLight position={[chest.x + back.x, chest.y + 0.45, chest.z + back.z]} color="#b9c8ff" intensity={1.5} distance={2.2} decay={1.6} />;
+        return <pointLight position={[chest.x + back.x, chest.y + 0.45, chest.z + back.z]} color={rimColor} intensity={1.5 * rimGain} distance={2.2} decay={1.6} />;
       })() : null}
       {glow && chest && glowGain > 0.01 ? (    // 灯闇: she is the lamp in the dark (like Puppet3D)
         <pointLight position={[chest.x, chest.y, chest.z + 0.25]} color={glow} intensity={7 * pulse} distance={5} decay={1.4} />

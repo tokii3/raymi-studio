@@ -90,7 +90,7 @@ export const Paper: React.FC<SetProps> = ({f, fps, opts}) => {
   const slashes = Array.isArray(o.ink_slash) ? (o.ink_slash as unknown[]).map((x) => (Array.isArray(x) ? x as number[] : [x as number])) : [];
   return (
     <group>
-      <SetLight sky={black > 0.5 ? '#2a2350' : '#ffffff'} ground={hex} fill={1.15 - 0.7 * black} key="#fff4e4" keyI={1.5 - 1.1 * black}
+      <SetLight neutral={Number(o.neutral_sky ?? 0)} sky={black > 0.5 ? '#2a2350' : '#ffffff'} ground={hex} fill={1.15 - 0.7 * black} key="#fff4e4" keyI={1.5 - 1.1 * black}
         keyPos={[3, 9, 5]} shadowSize={10} fog={hex} fogNear={18} fogFar={110} />
       {/* the sheet: floor + a dome of the same paper, the fold line as horizon */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>

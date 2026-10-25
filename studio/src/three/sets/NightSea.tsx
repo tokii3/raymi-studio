@@ -155,8 +155,8 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   seaGlow.offset.set(f * 0.0004, f * 0.0002);
   return (
     <group>
-      <SetLight sky="#2a3a8a" ground="#05040e" fill={0.35 + 0.3 * glow} key="#b9c8ff" keyI={0.55} keyPos={[moonP.x * 0.1, 12, moonP.z * 0.1]}
-        target={[0, 0, 0]} shadowSize={8} fog={under ? '#070a24' : '#16205a'} fogNear={under ? 3 : 12} fogFar={under ? 26 : 130} />
+      <SetLight neutral={Number(o.neutral_sky ?? 0)} sky="#2a3a8a" ground="#05040e" fill={0.35 + 0.3 * glow} key="#b9c8ff" keyI={0.55} keyPos={[moonP.x * 0.1, 12, moonP.z * 0.1]}
+        target={[0, 0, 0]} shadowSize={8} fog={under ? '#070a24' : String(o.fog_c ?? '#16205a')} fogNear={under ? 3 : 12} fogFar={under ? 26 : 130} />
       {/* the sky: gradient dome, stars, the low moon (+ its halo and its path on the water), the cloud */}
       <mesh scale={SKY_R} renderOrder={-10}>
         <sphereGeometry args={[1, 32, 24]} />
