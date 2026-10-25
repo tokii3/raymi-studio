@@ -11,6 +11,18 @@
           }
         ]
       }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "SendUserFile",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "py -3.12 \"$CLAUDE_PROJECT_DIR/.claude/hooks/gate_send.py\"",
+            "timeout": 15
+          }
+        ]
+      }
     ]
   }
 }

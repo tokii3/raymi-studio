@@ -16,7 +16,11 @@ REPO = Path(__file__).resolve().parents[1]
 TEMPLATES = REPO / "writers_room" / "templates"
 KINDS = ("mv", "lore", "pov")
 
-# (step id, file, how it is proven done)
+# (step id, file, how it is proven done). Every kind starts with the brief contract (0_BRIEF.md, toki 2026-10-25:
+# her words verbatim, her examples opened into classes, what must be VISIBLE, what is missing) - jobs created
+# before 2026-10-25 skip it.
+BRIEF_STEP = ("brief", "0_BRIEF.md", "brief")
+BRIEF_FROM = "2026-10-25"
 STEPS = {
     "mv": [
         ("dossier", "1_DOSSIER.md", "filled"),
@@ -64,7 +68,7 @@ PICKED = re.compile(r"^picked:\s*toki\s+\d{4}-\d{2}-\d{2}\b", re.M)
 def toki_said(text: str, step: str) -> bool:
     """toki.md line `<step>: toki YYYY-MM-DD <her words>`."""
     return re.search(rf"^{step}:\s*toki\s+\d{{4}}-\d{{2}}-\d{{2}}\b", text, re.M) is not None
-VERDICT = re.compile(r"^VERDICT:\s*(PASS|BLOCK\b.*)$", re.M)
+VERDICT = re.compile(r"^VERDICT:\s*(PASS\b|BLOCK\b.*)", re.M)   # "PASS" alone or "PASS - reason" (brief-keeper)
 
 
 def job_dir(job: str) -> Path:
@@ -80,7 +84,7 @@ def new(job: str, kind: str) -> Path:
         raise FileExistsError(f"{d} already exists")
     (d / "reviews").mkdir(parents=True, exist_ok=True)
     (d / "boards").mkdir(exist_ok=True)
-    for _, fname, how in STEPS[kind]:
+    for _, fname, how in [BRIEF_STEP, *STEPS[kind]]:
         if fname and fname.endswith(".md") and (TEMPLATES / fname).is_file() and not (d / fname).exists():
             shutil.copyfile(TEMPLATES / fname, d / fname)
     if not (d / "toki.md").exists():
@@ -90,9 +94,12 @@ def new(job: str, kind: str) -> Path:
     return d
 
 
-def last_verdict(d: Path, step: str) -> str | None:
-    """Verdict of the newest stored script-critic answer for a step (reviews/<step>_<n>.md, n increasing)."""
-    files = sorted((d / "reviews").glob(f"{step}_*.md"), key=lambda p: int(re.sub(r"\D", "", p.stem) or 0))
+def last_verdict(d: Path, step: str, critic: str | None = None) -> str | None:
+    """Verdict of the newest stored answer for a step: the script-critic's (reviews/<step>_<n>.md, n increasing) or,
+    with critic="brief-keeper", toki's advocate's (reviews/<step>_brief-keeper_<n>.md)."""
+    pat = f"{step}_{critic}_*.md" if critic else f"{step}_*.md"
+    files = sorted((p for p in (d / "reviews").glob(pat) if critic or "brief-keeper" not in p.name),
+                   key=lambda p: int(re.sub(r"\D", "", p.stem) or 0))
     if not files:
         return None
     found = VERDICT.findall(files[-1].read_text(encoding="utf-8"))
@@ -104,8 +111,27 @@ def blocks(d: Path, step: str) -> int:
                if any(v.startswith("BLOCK") for v in VERDICT.findall(p.read_text(encoding="utf-8"))))
 
 
+def brief_state(f: Path) -> tuple[bool, str]:
+    """0_BRIEF.md is done when her words are quoted with a date, every core has a visible proof, and nothing is
+    MISSING in the feasibility unless toki accepted it (line `missing ok: toki YYYY-MM-DD ...`)."""
+    if not f.is_file():
+        return False, "0_BRIEF.md missing - skill raymi-reading-toki (her words, core, classes, visible proof)"
+    t = f.read_text(encoding="utf-8")
+    if "TODO" in t:
+        return False, f"{t.count('TODO')} TODO left in 0_BRIEF.md"
+    if not re.search(r"toki\s+\d{4}-\d{2}-\d{2}", t):
+        return False, "0_BRIEF.md quotes no dated words of toki"
+    if not re.search(r"^- \[[ x]\] C\d", t, re.M):
+        return False, "0_BRIEF.md has no visible-proof lines (- [ ] C1 ...)"
+    if re.search(r"\bMISSING\b", t) and not re.search(r"^missing ok:\s*toki\s+\d{4}-", t, re.M):
+        return False, "0_BRIEF.md names something MISSING - tell toki now and solve it (or her line `missing ok: toki ...`)"
+    return True, "done"
+
+
 def step_state(d: Path, step: str, fname: str | None, how: str, kind: str = "mv") -> tuple[bool, str]:
     f = d / fname
+    if how == "brief":
+        return brief_state(f)
     if how == "built":
         return (True, "done") if f.is_file() else (False, "shots.json missing - the shooting script as data (raymi/timeline.py)")
     if how == "verdict":
@@ -158,6 +184,11 @@ def step_state(d: Path, step: str, fname: str | None, how: str, kind: str = "mv"
             n = blocks(d, step)
             back = " - TWO blocks: back to IDEAS, not a third patch" if n >= 2 else ""
             return False, f"script-critic: {v}{back}"
+        if uses_brief(d):
+            k = last_verdict(d, step, "brief-keeper")
+            if k != "PASS":
+                return False, (f"brief-keeper has not passed {fname} against toki's words "
+                               f"(reviews/{step}_brief-keeper_<n>.md){': ' + k if k else ''}")
     return True, "done"
 
 
@@ -169,11 +200,20 @@ def knowledge(fname: str) -> list[str]:
     return re.findall(r"`([^`]+)`", head)
 
 
+def uses_brief(d: Path) -> bool:
+    return json.loads((d / "job.json").read_text(encoding="utf-8")).get("created", "") >= BRIEF_FROM
+
+
+def steps(d: Path) -> list[tuple[str, str, str]]:
+    kind = json.loads((d / "job.json").read_text(encoding="utf-8"))["kind"]
+    return ([BRIEF_STEP] if uses_brief(d) else []) + STEPS[kind]
+
+
 def status(job: str) -> list[tuple[str, bool, str]]:
     d = job_dir(job)
     kind = json.loads((d / "job.json").read_text(encoding="utf-8"))["kind"]
     out, blocked = [], False
-    for step, fname, how in STEPS[kind]:
+    for step, fname, how in steps(d):
         ok, why = step_state(d, step, fname, how, kind)
         if blocked:
             ok, why = False, "after an open step"
@@ -185,7 +225,7 @@ def status(job: str) -> list[tuple[str, bool, str]]:
 def next_step(job: str) -> str:
     d = job_dir(job)
     kind = json.loads((d / "job.json").read_text(encoding="utf-8"))["kind"]
-    files = {s: f for s, f, _ in STEPS[kind]}
+    files = {s: f for s, f, _ in steps(d)}
     lines = []
     for step, ok, why in status(job):
         lines.append(f"  [{'x' if ok else ' '}] {step:<10} {why}")

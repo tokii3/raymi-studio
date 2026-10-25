@@ -1,0 +1,2394 @@
+[
+ {
+  "ref": "kda-popstars#000",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 0.0,
+  "end": 0.7,
+  "what": "Metallic fist logo animates with purple lens flare on a dark background.",
+  "shot": "cu",
+  "angle": "eye",
+  "move": [
+   "pull_out"
+  ],
+  "lens_play": [
+   "none"
+  ],
+  "tempo": "fast",
+  "music": "intro ambient riser",
+  "emotion": "anticipation",
+  "transition_out": "flash",
+  "light": [
+   "dark_key",
+   "neon",
+   "purple"
+  ],
+  "craft": "Anamorphic horizontal flare reveals the stylized emblem before bursting into the scene."
+ },
+ {
+  "ref": "kda-popstars#001",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 0.7,
+  "end": 3.167,
+  "what": "Evelynn poses on the hood of a sports car flanked by vehicles with blazing headlights.",
+  "shot": "wide",
+  "angle": "low",
+  "move": [
+   "pull_out"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "slow",
+  "music": "intro synth swell",
+  "emotion": "power, glamour",
+  "transition_out": "hard_cut",
+  "light": [
+   "rim_only",
+   "silhouette",
+   "purple",
+   "white"
+  ],
+  "craft": "Blinding car headlights create severe rim lighting and silhouette the performer."
+ },
+ {
+  "ref": "kda-popstars#002",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 3.167,
+  "end": 4.467,
+  "what": "High heels and legs walk directly away along double yellow road markings.",
+  "shot": "insert",
+  "angle": "low",
+  "move": [
+   "track_with"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "medium",
+  "music": "intro bass hit",
+  "emotion": "menace, calm",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "two_colour",
+   "teal",
+   "yellow"
+  ],
+  "craft": "Symmetrical framing tracks footsteps pacing down wet road centerlines."
+ },
+ {
+  "ref": "kda-popstars#003",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 4.467,
+  "end": 6.967,
+  "what": "Subway carriage LED display glitches from Korean characters to the group name KDA.",
+  "shot": "cu",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "none"
+  ],
+  "tempo": "medium",
+  "music": "intro vocal tag announcement",
+  "emotion": "anticipation",
+  "transition_out": "hard_cut",
+  "light": [
+   "self_glow",
+   "dark_key",
+   "amber"
+  ],
+  "craft": "Glitch pixel animation transitions Korean text into the band name typography."
+ },
+ {
+  "ref": "kda-popstars#004",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 6.967,
+  "end": 8.7,
+  "what": "Empty subway car flickers dark as a silhouette stands in the far background.",
+  "shot": "extreme_wide",
+  "angle": "eye",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "fast",
+  "music": "intro build, vocal hook",
+  "emotion": "menace",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "silhouette",
+   "blue"
+  ],
+  "craft": "Abrupt light blackout reveals distant outline framed by train interior symmetry."
+ },
+ {
+  "ref": "kda-popstars#005",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 8.7,
+  "end": 10.033,
+  "what": "Laundromat dryer drum spins with a stylish stiletto heel hooked over the door.",
+  "shot": "cu",
+  "angle": "eye",
+  "move": [
+   "pull_out"
+  ],
+  "lens_play": [
+   "none"
+  ],
+  "tempo": "medium",
+  "music": "intro percussion build",
+  "emotion": "playful, stylish",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "warm yellow"
+  ],
+  "craft": "Contrast of a rotating industrial dryer door with an anchored designer high heel."
+ },
+ {
+  "ref": "kda-popstars#006",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 10.033,
+  "end": 11.7,
+  "what": "Four members dance in full silhouette against a glowing slatted light wall.",
+  "shot": "full",
+  "angle": "low",
+  "move": [
+   "pull_out"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "fast",
+  "music": "intro beat drop anticipation",
+  "emotion": "power, flirt",
+  "transition_out": "hard_cut",
+  "light": [
+   "silhouette",
+   "high_key",
+   "white",
+   "purple"
+  ],
+  "craft": "Strong backlighting renders distinct character profiles instantly readable in shadow."
+ },
+ {
+  "ref": "kda-popstars#007",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 11.7,
+  "end": 15.967,
+  "what": "Akali walks down a subway car showing her embroidered dragon jacket before turning slightly.",
+  "shot": "ms",
+  "angle": "eye",
+  "move": [
+   "track_with"
+  ],
+  "lens_play": [
+   "look_back_over_shoulder"
+  ],
+  "tempo": "medium",
+  "music": "verse rap flow begins over 808 beat",
+  "emotion": "power, swagger",
+  "transition_out": "flash",
+  "light": [
+   "high_key",
+   "two_colour",
+   "purple",
+   "white"
+  ],
+  "craft": "Smooth tracking shot focuses on embroidered jacket graphic timed to rap cadence."
+ },
+ {
+  "ref": "kda-popstars#008",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 15.967,
+  "end": 16.667,
+  "what": "Subway switches to UV blacklight as Akali glows in neon graffiti styling.",
+  "shot": "ms",
+  "angle": "back",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "fast",
+  "music": "verse rap punchline",
+  "emotion": "energy, menace",
+  "transition_out": "flash",
+  "light": [
+   "neon",
+   "self_glow",
+   "dark_key",
+   "magenta",
+   "cyan"
+  ],
+  "craft": "Sudden UV light flip activates neon reactive costume and hair textures."
+ },
+ {
+  "ref": "kda-popstars#009",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 16.667,
+  "end": 20.0,
+  "what": "Kai'Sa strides forward down a highway tunnel with glowing crystalline thrusters floating over her shoulders.",
+  "shot": "full",
+  "angle": "eye",
+  "move": [
+   "track_with"
+  ],
+  "lens_play": [
+   "walk_into_lens",
+   "gaze_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse Korean rap continues",
+  "emotion": "power, cool",
+  "transition_out": "continuous",
+  "light": [
+   "dark_key",
+   "neon",
+   "teal",
+   "gold"
+  ],
+  "craft": "Centred one-point perspective runway walk enhanced by floating glowing wing props.",
+  "edge": true
+ },
+ {
+  "ref": "kda-popstars#010",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 20.0,
+  "end": 20.75,
+  "what": "A winged character walks steadily forward through a symmetrical dark tunnel.",
+  "shot": "full",
+  "angle": "eye",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "walk_into_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse, driving electronic beat",
+  "emotion": "power",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "neon",
+   "blue",
+   "cyan"
+  ],
+  "craft": "Tunnel vanishing point symmetry frames the steady forward stride."
+ },
+ {
+  "ref": "kda-popstars#011",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 20.75,
+  "end": 23.0,
+  "what": "A masked woman in streetwear strutting inside a brightly lit subway train car.",
+  "shot": "ms",
+  "angle": "low",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "gaze_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse, rhythmic hip-hop beat",
+  "emotion": "cool",
+  "transition_out": "flash",
+  "light": [
+   "high_key",
+   "two_colour",
+   "purple",
+   "white"
+  ],
+  "craft": "Low-angle tracking combined with lens flare enhances urban attitude."
+ },
+ {
+  "ref": "kda-popstars#012",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 23.0,
+  "end": 28.0,
+  "what": "A glowing skull prop hangs inside a dark vehicle beside a shadowy passenger.",
+  "shot": "cu",
+  "angle": "eye",
+  "move": [
+   "pull_out"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "verse, deep bass pulse",
+  "emotion": "mystery",
+  "transition_out": "flash",
+  "light": [
+   "dark_key",
+   "rim_only",
+   "red",
+   "magenta"
+  ],
+  "craft": "Central glowing skull pendant anchors dark, moody framing."
+ },
+ {
+  "ref": "kda-popstars#013",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 28.0,
+  "end": 34.0,
+  "what": "Sports cars frame a shadowy silhouette with glowing eyes projecting on the wall.",
+  "shot": "wide",
+  "angle": "low",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "pre-chorus, building beat",
+  "emotion": "dominance",
+  "transition_out": "flash",
+  "light": [
+   "dark_key",
+   "neon",
+   "purple",
+   "magenta"
+  ],
+  "craft": "Massive backlit shadow projection exaggerates character scale and presence."
+ },
+ {
+  "ref": "kda-popstars#014",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 34.0,
+  "end": 37.0,
+  "what": "A blonde fox-eared character poses closely against a sunlit nature backdrop.",
+  "shot": "cu",
+  "angle": "eye",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "gaze_to_lens",
+   "pose_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "pre-chorus, vocal swell",
+  "emotion": "flirt",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "flat",
+   "gold",
+   "green"
+  ],
+  "craft": "Soft daylight brightness contrasts abruptly with preceding dark neon shots."
+ },
+ {
+  "ref": "kda-popstars#015",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 37.0,
+  "end": 39.75,
+  "what": "The character sits atop laundromat washers in front of a mountain landscape wall.",
+  "shot": "wide",
+  "angle": "eye",
+  "move": [
+   "pull_out"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "slow",
+  "music": "pre-chorus, rhythmic build",
+  "emotion": "playful",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "two_colour",
+   "cyan",
+   "gold"
+  ],
+  "craft": "Surreal mashup pairing mundane laundromat elements with scenic mural art."
+ },
+ {
+  "ref": "kda-popstars#016",
+  "slug": "kda-popstars",
+  "id": "UOxkGD8qRB4",
+  "medium": "3d_cel",
+  "start": 39.75,
+  "end": 40.0,
+  "what": "Detail shot of a laundry basket filled with clothes and a large purple crystal.",
+  "shot": "insert",
+  "angle": "high",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "fast",
+  "music": "pre-chorus, peak transition beat",
+  "emotion": "stylish",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "flat",
+   "pastel",
+   "pink"
+  ],
+  "craft": "Quick insert shot emphasizing stylized prop details."
+ },
+ {
+  "ref": "kda-more#000",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 0.0,
+  "end": 3.25,
+  "what": "Abstract purple and blue glitched cityscape warps dynamically.",
+  "shot": "wide",
+  "angle": "eye",
+  "move": [
+   "float"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "medium",
+  "music": "intro synth swells",
+  "emotion": "mystery",
+  "transition_out": "hard_cut",
+  "light": [
+   "neon",
+   "purple",
+   "blue"
+  ],
+  "craft": "Digital glitch distortion shifts color palette and creates mystery."
+ },
+ {
+  "ref": "kda-more#001",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 3.25,
+  "end": 6.667,
+  "what": "An upside-down neon cityscape displays the K/DA logo in glowing letters.",
+  "shot": "extreme_wide",
+  "angle": "overhead",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "medium",
+  "music": "intro synth beat drop",
+  "emotion": "grand",
+  "transition_out": "hard_cut",
+  "light": [
+   "neon",
+   "blue",
+   "magenta"
+  ],
+  "craft": "Inverted city perspective with bold glowing title graphic."
+ },
+ {
+  "ref": "kda-more#002",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 6.667,
+  "end": 9.167,
+  "what": "Futuristic motorcycle with cyan glowing wheels sits in a red illuminated hallway.",
+  "shot": "wide",
+  "angle": "low",
+  "move": [
+   "pull_out"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "intro beat building",
+  "emotion": "cool",
+  "transition_out": "hard_cut",
+  "light": [
+   "neon",
+   "red",
+   "cyan"
+  ],
+  "craft": "High-contrast red wall framing with glowing cyan wheels."
+ },
+ {
+  "ref": "kda-more#003",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 9.167,
+  "end": 10.0,
+  "what": "Figure standing near a white sculpted statue in purple lighting.",
+  "shot": "ms",
+  "angle": "eye",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "fast",
+  "music": "intro vocals start",
+  "emotion": "dark",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "purple"
+  ],
+  "craft": "Quick glimpse of spiked statues lit in dramatic purple."
+ },
+ {
+  "ref": "kda-more#004",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 10.0,
+  "end": 11.0,
+  "what": "Cyan grand piano floats above a nocturnal city landscape with white flowers.",
+  "shot": "wide",
+  "angle": "high",
+  "move": [
+   "float"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "fast",
+  "music": "intro vocal hook",
+  "emotion": "dreamy",
+  "transition_out": "hard_cut",
+  "light": [
+   "neon",
+   "cyan"
+  ],
+  "craft": "Surreal floating piano framed against vibrant urban backdrop."
+ },
+ {
+  "ref": "kda-more#005",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 11.0,
+  "end": 11.833,
+  "what": "Open journal with glowing blue illustrations lies next to headphones.",
+  "shot": "cu",
+  "angle": "high",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "fast",
+  "music": "intro vocal hook",
+  "emotion": "intimate",
+  "transition_out": "hard_cut",
+  "light": [
+   "self_glow",
+   "blue"
+  ],
+  "craft": "Warm desk lighting highlighting glowing journal art."
+ },
+ {
+  "ref": "kda-more#006",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 11.833,
+  "end": 13.167,
+  "what": "Four K/DA members sit posed together around a golden throne in a palace hall.",
+  "shot": "wide",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "fast",
+  "music": "intro vocal hook",
+  "emotion": "power",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "gold",
+   "white"
+  ],
+  "craft": "Symmetrical opulent golden throne setting establishing group prestige."
+ },
+ {
+  "ref": "kda-more#007",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 13.167,
+  "end": 13.5,
+  "what": "Evelynn and Akali lean together in a stylish pose.",
+  "shot": "mcu",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "pose_to_lens",
+   "gaze_to_lens"
+  ],
+  "tempo": "fast",
+  "music": "intro vocal hook",
+  "emotion": "flirt",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "magenta"
+  ],
+  "craft": "Tight duo pose emphasizing character dynamic."
+ },
+ {
+  "ref": "kda-more#008",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 13.5,
+  "end": 14.0,
+  "what": "Group shot of Kai'Sa, Evelynn, Akali, and Ahri posing aggressively.",
+  "shot": "ms",
+  "angle": "eye",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "pose_to_lens",
+   "gaze_to_lens"
+  ],
+  "tempo": "fast",
+  "music": "intro vocal hook transition",
+  "emotion": "playful",
+  "transition_out": "hard_cut",
+  "light": [
+   "neon",
+   "purple"
+  ],
+  "craft": "Rapid push-in on full group squad pose."
+ },
+ {
+  "ref": "kda-more#009",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 14.0,
+  "end": 15.0,
+  "what": "Feet wearing glowing neon sneakers walk across a dark reflective floor.",
+  "shot": "cu",
+  "angle": "low",
+  "move": [
+   "track_with"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse beat drop",
+  "emotion": "cool",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "cyan",
+   "red"
+  ],
+  "craft": "Low-angle tracking shot highlighting glowing footwear detail."
+ },
+ {
+  "ref": "kda-more#010",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 15.0,
+  "end": 15.25,
+  "what": "Akali sits on a motorcycle beneath red overhead light structures.",
+  "shot": "wide",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "fast",
+  "music": "verse rap beat",
+  "emotion": "menace",
+  "transition_out": "flash",
+  "light": [
+   "dark_key",
+   "red"
+  ],
+  "craft": "Centered silhouette composition under red lighting geometry."
+ },
+ {
+  "ref": "kda-more#011",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 15.25,
+  "end": 16.417,
+  "what": "Fast graphic title screen displaying text graphics in bold red and blue layout.",
+  "shot": "full",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "burst",
+  "music": "verse rap vocals",
+  "emotion": "playful",
+  "transition_out": "whip",
+  "light": [
+   "flat",
+   "red",
+   "blue"
+  ],
+  "craft": "Kinetic typography overlay matching rap beat cadence."
+ },
+ {
+  "ref": "kda-more#012",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 16.417,
+  "end": 19.167,
+  "what": "Akali dances and raps dynamically on her motorcycle in front of red neon graphic screens.",
+  "shot": "ms",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "gaze_to_lens",
+   "pose_to_lens"
+  ],
+  "tempo": "fast",
+  "music": "verse rap verse",
+  "emotion": "playful",
+  "transition_out": "hard_cut",
+  "light": [
+   "neon",
+   "red"
+  ],
+  "craft": "Dynamic character performance against animated background text."
+ },
+ {
+  "ref": "kda-more#013",
+  "slug": "kda-more",
+  "id": "3VTkBuxU4yk",
+  "medium": "3d_cel",
+  "start": 19.167,
+  "end": 20.0,
+  "what": "Akali pulls down her glowing futuristic helmet visor over her face.",
+  "shot": "cu",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "gaze_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse rap verse continuation",
+  "emotion": "power",
+  "transition_out": "continuous",
+  "light": [
+   "neon",
+   "magenta",
+   "blue"
+  ],
+  "craft": "Dramatic visor pull down closing the performance shot.",
+  "edge": true
+ },
+ {
+  "ref": "kda-villain#000",
+  "slug": "kda-villain",
+  "id": "xoWxv2yZXLQ",
+  "medium": "3d_painterly",
+  "start": 0.0,
+  "end": 1.9,
+  "what": "Rooftop silhouettes of a futuristic city illuminated by blue light and mist.",
+  "shot": "extreme_wide",
+  "angle": "low",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "intro ambient synth",
+  "emotion": "mystery",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "silhouette",
+   "blue"
+  ],
+  "craft": "Deep atmospheric silhouette layered against fog."
+ },
+ {
+  "ref": "kda-villain#001",
+  "slug": "kda-villain",
+  "id": "xoWxv2yZXLQ",
+  "medium": "3d_painterly",
+  "start": 1.9,
+  "end": 2.9,
+  "what": "Rooftop antennas silhouetted against glowing blue mist.",
+  "shot": "wide",
+  "angle": "low",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "intro ambient synth",
+  "emotion": "solitude",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "silhouette",
+   "blue"
+  ],
+  "craft": "Low-angle silhouette framing structure against blue haze."
+ },
+ {
+  "ref": "kda-villain#002",
+  "slug": "kda-villain",
+  "id": "xoWxv2yZXLQ",
+  "medium": "3d_painterly",
+  "start": 2.9,
+  "end": 3.7,
+  "what": "Fences and urban structures silhouetted against foggy blue sky.",
+  "shot": "wide",
+  "angle": "dutch",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "intro subtle bass",
+  "emotion": "urban gloom",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "silhouette",
+   "blue"
+  ],
+  "craft": "Dutch angle creates visual tension."
+ },
+ {
+  "ref": "kda-villain#003",
+  "slug": "kda-villain",
+  "id": "xoWxv2yZXLQ",
+  "medium": "3d_painterly",
+  "start": 3.7,
+  "end": 4.2,
+  "what": "Building roof and antennas silhouetted against bright blue light.",
+  "shot": "wide",
+  "angle": "low",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "intro synth build",
+  "emotion": "mystery",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "silhouette",
+   "blue"
+  ],
+  "craft": "High-contrast backdrop lighting framing dark structures."
+ },
+ {
+  "ref": "kda-villain#004",
+  "slug": "kda-villain",
+  "id": "xoWxv2yZXLQ",
+  "medium": "3d_painterly",
+  "start": 4.2,
+  "end": 5.7,
+  "what": "Construction crane and tower silhouetted in dark blue fog.",
+  "shot": "wide",
+  "angle": "low",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "intro rise",
+  "emotion": "desolation",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "silhouette",
+   "blue"
+  ],
+  "craft": "Complex structural silhouettes framed by soft blue glow."
+ },
+ {
+  "ref": "kda-villain#005",
+  "slug": "kda-villain",
+  "id": "xoWxv2yZXLQ",
+  "medium": "3d_painterly",
+  "start": 5.7,
+  "end": 6.9,
+  "what": "A narrow alleyway silhouetted between buildings leading to blue light.",
+  "shot": "wide",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "medium",
+  "music": "intro beat entrance",
+  "emotion": "anticipation",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "silhouette",
+   "blue"
+  ],
+  "craft": "Symmetrical leading lines toward central glow."
+ },
+ {
+  "ref": "kda-villain#006",
+  "slug": "kda-villain",
+  "id": "xoWxv2yZXLQ",
+  "medium": "3d_painterly",
+  "start": 6.9,
+  "end": 9.0,
+  "what": "Silhouetted figure standing on a roof with flowing scarf in blue light.",
+  "shot": "wide",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "verse beat drop",
+  "emotion": "power",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "silhouette",
+   "blue"
+  ],
+  "craft": "Flowing scarf movement frames heroic silhouette."
+ },
+ {
+  "ref": "kda-villain#007",
+  "slug": "kda-villain",
+  "id": "xoWxv2yZXLQ",
+  "medium": "3d_painterly",
+  "start": 9.0,
+  "end": 10.5,
+  "what": "Profile silhouette of a woman wearing glasses against blue backdrop.",
+  "shot": "cu",
+  "angle": "profile",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "verse vocals",
+  "emotion": "cool",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "silhouette",
+   "blue"
+  ],
+  "craft": "Crisp profile silhouette highlighting eye glasses edge."
+ },
+ {
+  "ref": "kda-villain#008",
+  "slug": "kda-villain",
+  "id": "xoWxv2yZXLQ",
+  "medium": "3d_painterly",
+  "start": 10.5,
+  "end": 14.4,
+  "what": "Woman's profile rim-lit in red inside a pitch-black space.",
+  "shot": "cu",
+  "angle": "profile",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "verse vocals",
+  "emotion": "intimate",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "rim_only",
+   "red"
+  ],
+  "craft": "Subtle red rim light revealing facial contour."
+ },
+ {
+  "ref": "kda-villain#009",
+  "slug": "kda-villain",
+  "id": "xoWxv2yZXLQ",
+  "medium": "3d_painterly",
+  "start": 14.4,
+  "end": 17.2,
+  "what": "Pink slatted window light casting shadows on concrete wall.",
+  "shot": "ms",
+  "angle": "eye",
+  "move": [
+   "pull_out"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse beat driving",
+  "emotion": "solitude",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "two_colour",
+   "pink"
+  ],
+  "craft": "Geometric slatted light pattern creating graphic contrast."
+ },
+ {
+  "ref": "kda-villain#010",
+  "slug": "kda-villain",
+  "id": "xoWxv2yZXLQ",
+  "medium": "3d_painterly",
+  "start": 17.2,
+  "end": 18.8,
+  "what": "Macro close up of dark rippling water reflecting pink neon light.",
+  "shot": "ecu",
+  "angle": "high",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "verse bass synth",
+  "emotion": "sensual",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "pink"
+  ],
+  "craft": "High-contrast specular reflections on water surface."
+ },
+ {
+  "ref": "kda-villain#011",
+  "slug": "kda-villain",
+  "id": "xoWxv2yZXLQ",
+  "medium": "3d_painterly",
+  "start": 18.8,
+  "end": 20.0,
+  "what": "Silhouette of a woman standing in a pool inside neon-lit corridor.",
+  "shot": "full",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "verse vocals continuation",
+  "emotion": "power",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "silhouette",
+   "neon",
+   "pink",
+   "white"
+  ],
+  "craft": "Symmetrical neon framing surrounding centered silhouette.",
+  "edge": true
+ },
+ {
+  "ref": "kda-drum-go-dum#000",
+  "slug": "kda-drum-go-dum",
+  "id": "E_PbH5y70Tc",
+  "medium": "3d_painterly",
+  "start": 0,
+  "end": 1,
+  "what": "Stack of vintage CRT televisions displaying K/DA Ahri animations.",
+  "shot": "ms",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "medium",
+  "music": "intro + synth beat",
+  "emotion": "retro, mysterious",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "blue"
+  ],
+  "craft": "Multi-monitor vintage CRT display array."
+ },
+ {
+  "ref": "kda-drum-go-dum#001",
+  "slug": "kda-drum-go-dum",
+  "id": "E_PbH5y70Tc",
+  "medium": "3d_painterly",
+  "start": 1,
+  "end": 3,
+  "what": "Close shot of CRT monitor showing a dancer's silhouette.",
+  "shot": "cu",
+  "angle": "dutch",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "medium",
+  "music": "intro + synth beat",
+  "emotion": "mysterious",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "blue",
+   "silhouette"
+  ],
+  "craft": "Dutch angle framing single CRT screen."
+ },
+ {
+  "ref": "kda-drum-go-dum#002",
+  "slug": "kda-drum-go-dum",
+  "id": "E_PbH5y70Tc",
+  "medium": "3d_painterly",
+  "start": 3,
+  "end": 4.75,
+  "what": "Glitching CRT monitors displaying static and lines.",
+  "shot": "cu",
+  "angle": "eye",
+  "move": [
+   "track_lateral"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "fast",
+  "music": "intro + static FX",
+  "emotion": "tense",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "white"
+  ],
+  "craft": "CRT scanlines and visual static distortion."
+ },
+ {
+  "ref": "kda-drum-go-dum#003",
+  "slug": "kda-drum-go-dum",
+  "id": "E_PbH5y70Tc",
+  "medium": "3d_painterly",
+  "start": 4.75,
+  "end": 7.5,
+  "what": "Macro pull-out from screen pixels to dancer silhouette in front of animated eyes.",
+  "shot": "ecu",
+  "angle": "eye",
+  "move": [
+   "pull_out"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "intro + bass synth",
+  "emotion": "cool, stylish",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "cyan"
+  ],
+  "craft": "Macro zoom out revealing dancer against digital screen."
+ },
+ {
+  "ref": "kda-drum-go-dum#004",
+  "slug": "kda-drum-go-dum",
+  "id": "E_PbH5y70Tc",
+  "medium": "3d_painterly",
+  "start": 7.5,
+  "end": 9.5,
+  "what": "Dancer in bucket hat posing before glitching projected character eyes.",
+  "shot": "ms",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "intro + synth pad",
+  "emotion": "confident",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "blue"
+  ],
+  "craft": "Glitch overlay combined with projected backdrop."
+ },
+ {
+  "ref": "kda-drum-go-dum#005",
+  "slug": "kda-drum-go-dum",
+  "id": "E_PbH5y70Tc",
+  "medium": "3d_painterly",
+  "start": 9.5,
+  "end": 10.5,
+  "what": "Close-up dancer silhouette against vibrant blue background.",
+  "shot": "mcu",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "gaze_to_lens"
+  ],
+  "tempo": "fast",
+  "music": "intro + beat drop",
+  "emotion": "bold",
+  "transition_out": "hard_cut",
+  "light": [
+   "two_colour",
+   "blue",
+   "black"
+  ],
+  "craft": "High contrast silhouette transition."
+ },
+ {
+  "ref": "kda-drum-go-dum#006",
+  "slug": "kda-drum-go-dum",
+  "id": "E_PbH5y70Tc",
+  "medium": "3d_painterly",
+  "start": 10.5,
+  "end": 11,
+  "what": "3D animated K/DA Ahri character posing dynamically.",
+  "shot": "mcu",
+  "angle": "low",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "fast",
+  "music": "verse + beat",
+  "emotion": "power",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "blue"
+  ],
+  "craft": "Fast CGI animation character insert."
+ },
+ {
+  "ref": "kda-drum-go-dum#007",
+  "slug": "kda-drum-go-dum",
+  "id": "E_PbH5y70Tc",
+  "medium": "3d_painterly",
+  "start": 11,
+  "end": 14,
+  "what": "Dancer performing hip-hop choreography in blue studio setting.",
+  "shot": "full",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "gaze_to_lens"
+  ],
+  "tempo": "fast",
+  "music": "verse + driving beat",
+  "emotion": "energetic",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "blue",
+   "white"
+  ],
+  "craft": "Clean full-shot dance choreography framing."
+ },
+ {
+  "ref": "kda-drum-go-dum#008",
+  "slug": "kda-drum-go-dum",
+  "id": "E_PbH5y70Tc",
+  "medium": "3d_painterly",
+  "start": 14,
+  "end": 16.75,
+  "what": "Medium shot of dancer smiling and grooving to the music.",
+  "shot": "ms",
+  "angle": "low",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "gaze_to_lens",
+   "pose_to_lens"
+  ],
+  "tempo": "fast",
+  "music": "verse + vocals",
+  "emotion": "playful",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "blue"
+  ],
+  "craft": "Low angle emphasizes expressive movement."
+ },
+ {
+  "ref": "kda-drum-go-dum#009",
+  "slug": "kda-drum-go-dum",
+  "id": "E_PbH5y70Tc",
+  "medium": "3d_painterly",
+  "start": 16.75,
+  "end": 18.5,
+  "what": "Dancer dancing behind kinetic text overlay 'COME AND WATCH ME MOVE'.",
+  "shot": "full",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "gaze_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse + rhythm beat",
+  "emotion": "hype",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "blue",
+   "purple"
+  ],
+  "craft": "Dynamic typography overlay synced with motion."
+ },
+ {
+  "ref": "kda-drum-go-dum#010",
+  "slug": "kda-drum-go-dum",
+  "id": "E_PbH5y70Tc",
+  "medium": "3d_painterly",
+  "start": 18.5,
+  "end": 20,
+  "what": "Close-up of dancer smirking and gesturing towards camera.",
+  "shot": "cu",
+  "angle": "low",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "gaze_to_lens",
+   "point_at_lens"
+  ],
+  "tempo": "fast",
+  "music": "verse + bass hit",
+  "emotion": "flirt",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "blue"
+  ],
+  "craft": "Push-in camera move accentuating lens gesture.",
+  "edge": true
+ },
+ {
+  "ref": "kda-firestarter#000",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 0,
+  "end": 1.0,
+  "what": "Black screen with an ESRB rating badge.",
+  "shot": "insert",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "none"
+  ],
+  "tempo": "slow",
+  "music": "intro / silence",
+  "emotion": "anticipation",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "black"
+  ],
+  "craft": "Minimalist opening card building suspense before visual reveal."
+ },
+ {
+  "ref": "kda-firestarter#001",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 1.0,
+  "end": 6.0,
+  "what": "A vast, dark cathedral hall filled with rows of candles leading to an altar with coffins.",
+  "shot": "extreme_wide",
+  "angle": "eye",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "intro / ominous ambient choral drone",
+  "emotion": "somber, eerie",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "silhouette",
+   "warm candle glow and deep black"
+  ],
+  "craft": "Symmetrical gothic architecture framing the candlelit altar in total gloom."
+ },
+ {
+  "ref": "kda-firestarter#002",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 6.0,
+  "end": 9.75,
+  "what": "A funeral floral wreath adorned with a ribbon reading 'K/DA' flanked by burning candles.",
+  "shot": "cu",
+  "angle": "eye",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "slow",
+  "music": "intro / eerie music box chime and female vocal hum",
+  "emotion": "mournful, mysterious",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "soft candle glow on muted greens and purple"
+  ],
+  "craft": "Shallow depth of field keeping the branded ribbon sharp amidst fading candle haze."
+ },
+ {
+  "ref": "kda-firestarter#003",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 9.75,
+  "end": 13.167,
+  "what": "Four ornate upright coffins lined up across a candle-covered altar platform.",
+  "shot": "wide",
+  "angle": "low",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "medium",
+  "music": "intro / swelling tension with abrupt beat impact",
+  "emotion": "menace, suspense",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "candlelit orange and deep crimson shadows"
+  ],
+  "craft": "Subtle digital zoom amplifying tension right before an abrupt acoustic burst."
+ },
+ {
+  "ref": "kda-firestarter#004",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 13.167,
+  "end": 16.458,
+  "what": "Sharp silver clawed fingers violently punch through the wooden face of a coffin.",
+  "shot": "ecu",
+  "angle": "low",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "hand_to_lens"
+  ],
+  "tempo": "fast",
+  "music": "intro / aggressive rap vocal entry and hard bass thud",
+  "emotion": "rage, violent shock",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "metallic sheen on dark wood"
+  ],
+  "craft": "High-velocity splintering animation synced to the sudden vocal kick."
+ },
+ {
+  "ref": "kda-firestarter#005",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 16.458,
+  "end": 20.0,
+  "what": "A clawed hand clutches the coffin rim while a glowing red demonic eye peers from the shadows.",
+  "shot": "ecu",
+  "angle": "dutch",
+  "move": [
+   "push_in",
+   "track_lateral"
+  ],
+  "lens_play": [
+   "gaze_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse / rhythmic Korean rap over trap beats",
+  "emotion": "menace, lethal confidence",
+  "transition_out": "continuous",
+  "light": [
+   "dark_key",
+   "self_glow",
+   "striking crimson eye light against black"
+  ],
+  "craft": "Slow rack focus from glistening metallic claws to piercing glowing eye.",
+  "edge": true
+ },
+ {
+  "ref": "kda-firestarter#006",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 20.0,
+  "end": 20.25,
+  "what": "Extreme close-up of a character's glowing red eye reflecting on a polished blade.",
+  "shot": "ecu",
+  "angle": "eye",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "gaze_to_lens"
+  ],
+  "tempo": "burst",
+  "music": "pre, driving vocal buildup",
+  "emotion": "menace",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "rim_only",
+   "red",
+   "black"
+  ],
+  "craft": "Tight macro framing on an eye through metal to build anticipation."
+ },
+ {
+  "ref": "kda-firestarter#007",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 20.25,
+  "end": 20.75,
+  "what": "Silver ornamental emblem on a gothic coffin rapidly zooms in.",
+  "shot": "insert",
+  "angle": "eye",
+  "move": [
+   "crash_zoom"
+  ],
+  "lens_play": [
+   "none"
+  ],
+  "tempo": "burst",
+  "music": "pre, riser build",
+  "emotion": "power",
+  "transition_out": "whip",
+  "light": [
+   "dark_key",
+   "metallic silver",
+   "crimson"
+  ],
+  "craft": "Crash zoom on metallic filigree transitioning into the reveal action."
+ },
+ {
+  "ref": "kda-firestarter#008",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 20.75,
+  "end": 22.0,
+  "what": "A sharp silver metallic edge slices through dark smoke.",
+  "shot": "cu",
+  "angle": "dutch",
+  "move": [
+   "whip"
+  ],
+  "lens_play": [
+   "none"
+  ],
+  "tempo": "fast",
+  "music": "pre, vocal riser",
+  "emotion": "menace",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "rim_only",
+   "silver"
+  ],
+  "craft": "Fast motion blur and blade glint cutting to hand placement."
+ },
+ {
+  "ref": "kda-firestarter#009",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 22.0,
+  "end": 23.0,
+  "what": "A manicured hand with red nails and rings grips the silver edge of a casket.",
+  "shot": "cu",
+  "angle": "low",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "none"
+  ],
+  "tempo": "medium",
+  "music": "pre, vocal climb",
+  "emotion": "flirt",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "rim_only",
+   "crimson"
+  ],
+  "craft": "Gleam glint on metallic rings timed to the vocal articulation."
+ },
+ {
+  "ref": "kda-firestarter#010",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 23.0,
+  "end": 24.0,
+  "what": "The coffin lid swings open into a burst of white vapor.",
+  "shot": "cu",
+  "angle": "high",
+  "move": [
+   "pull_out"
+  ],
+  "lens_play": [
+   "none"
+  ],
+  "tempo": "fast",
+  "music": "pre, peak build",
+  "emotion": "power",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "smoke",
+   "silver"
+  ],
+  "craft": "Pneumatic smoke release framing the interior perspective cut."
+ },
+ {
+  "ref": "kda-firestarter#011",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 24.0,
+  "end": 26.25,
+  "what": "Inside the velvet coffin looking out as a tall metallic platform boot steps in.",
+  "shot": "cu",
+  "angle": "low",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "none"
+  ],
+  "tempo": "medium",
+  "music": "pre, drop cue",
+  "emotion": "power",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "rim_only",
+   "purple",
+   "silver"
+  ],
+  "craft": "Interior coffin perspective with heavy tufted fabric compressing underfoot."
+ },
+ {
+  "ref": "kda-firestarter#012",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 26.25,
+  "end": 27.5,
+  "what": "Clawed silver blades slash across the screen with anime-style speedlines.",
+  "shot": "cu",
+  "angle": "eye",
+  "move": [
+   "whip"
+  ],
+  "lens_play": [
+   "point_at_lens"
+  ],
+  "tempo": "burst",
+  "music": "drop, beat impact",
+  "emotion": "menace",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "silver",
+   "red"
+  ],
+  "craft": "Slash effect directly toward camera acting as a transitional wipe."
+ },
+ {
+  "ref": "kda-firestarter#013",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 27.5,
+  "end": 28.5,
+  "what": "All four group members strike a synchronized hero pose under a spotlight.",
+  "shot": "full",
+  "angle": "low",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "chorus, full beat drop",
+  "emotion": "power",
+  "transition_out": "hard_cut",
+  "light": [
+   "two_colour",
+   "rim_only",
+   "white spotlight",
+   "crimson"
+  ],
+  "craft": "Symmetrical spotlight silhouette breaking open as the main chorus drops."
+ },
+ {
+  "ref": "kda-firestarter#014",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 28.5,
+  "end": 34.75,
+  "what": "The red-hat leader struts forward down church steps carrying glowing gas canisters with trailing ribbons.",
+  "shot": "full",
+  "angle": "low",
+  "move": [
+   "pull_out",
+   "track_with"
+  ],
+  "lens_play": [
+   "pose_to_lens",
+   "walk_into_lens"
+  ],
+  "tempo": "medium",
+  "music": "chorus, rhythmic electronic beat",
+  "emotion": "power",
+  "transition_out": "through_object",
+  "light": [
+   "two_colour",
+   "rim_only",
+   "crimson",
+   "cyan backlight"
+  ],
+  "craft": "Sweeping crimson streamers exaggerate the walking rhythm of the runway strut."
+ },
+ {
+  "ref": "kda-firestarter#015",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 34.75,
+  "end": 40.0,
+  "what": "The fox-eared member steps forward pouring ignited fluid that swirls into magic fire.",
+  "shot": "full",
+  "angle": "low",
+  "move": [
+   "pull_out",
+   "track_with"
+  ],
+  "lens_play": [
+   "pose_to_lens",
+   "gaze_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "chorus, heavy driving synth groove",
+  "emotion": "power",
+  "transition_out": "continuous",
+  "light": [
+   "two_colour",
+   "self_glow",
+   "cyan",
+   "fiery orange"
+  ],
+  "craft": "Contrasting cool stadium lighting against swirling golden flames trailing the gas can.",
+  "edge": true
+ },
+ {
+  "ref": "kda-firestarter#016",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 40.0,
+  "end": 41.0,
+  "what": "Dark fox-eared character holding a flaming gas can poses dynamically.",
+  "shot": "mcu",
+  "angle": "low",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse, driving beat",
+  "emotion": "power",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "two_colour",
+   "red",
+   "blue"
+  ],
+  "craft": "Flaming gas can creates dynamic rim lighting."
+ },
+ {
+  "ref": "kda-firestarter#017",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 41.0,
+  "end": 42.0,
+  "what": "Character ignites hands into fire, sending smoke and flames across screen.",
+  "shot": "mcu",
+  "angle": "low",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "none"
+  ],
+  "tempo": "fast",
+  "music": "verse, building beat",
+  "emotion": "menace",
+  "transition_out": "hard_cut",
+  "light": [
+   "self_glow",
+   "red",
+   "orange"
+  ],
+  "craft": "Fire burst creates a natural visual wiped transition."
+ },
+ {
+  "ref": "kda-firestarter#018",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 42.0,
+  "end": 44.0,
+  "what": "Short-haired performer in visor dances between statue silhouettes.",
+  "shot": "ms",
+  "angle": "low",
+  "move": [
+   "track_lateral"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse, rhythmic beat",
+  "emotion": "playful",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "neon",
+   "purple",
+   "blue"
+  ],
+  "craft": "Foreground statue silhouettes add depth during lateral tracking."
+ },
+ {
+  "ref": "kda-firestarter#019",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 44.0,
+  "end": 47.0,
+  "what": "Performer in pink visor performs choreography surrounded by sculptures.",
+  "shot": "full",
+  "angle": "low",
+  "move": [
+   "pull_out"
+  ],
+  "lens_play": [
+   "pose_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse, steady groove",
+  "emotion": "playful",
+  "transition_out": "hard_cut",
+  "light": [
+   "two_colour",
+   "purple",
+   "blue"
+  ],
+  "craft": "Symmetrical composition framed by dark silhouettes."
+ },
+ {
+  "ref": "kda-firestarter#020",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 47.0,
+  "end": 50.0,
+  "what": "Close-up of performer leaning into camera and singing intensely.",
+  "shot": "cu",
+  "angle": "low",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "gaze_to_lens",
+   "lean_in"
+  ],
+  "tempo": "fast",
+  "music": "verse, vocal climax",
+  "emotion": "attitude",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "neon",
+   "purple"
+  ],
+  "craft": "Tight lens distance amplifies performer's facial expressions."
+ },
+ {
+  "ref": "kda-firestarter#021",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 50.0,
+  "end": 54.5,
+  "what": "White-haired character in high heels struts across a smoky stage.",
+  "shot": "full",
+  "angle": "low",
+  "move": [
+   "track_with"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "medium",
+  "music": "pre-chorus, rhythmic bass",
+  "emotion": "glamour",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "rim_only",
+   "purple",
+   "pink"
+  ],
+  "craft": "Choreographed runway walk aligned with heavy bass rhythm."
+ },
+ {
+  "ref": "kda-firestarter#022",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 54.5,
+  "end": 57.0,
+  "what": "Character turns toward camera and points authoritatively.",
+  "shot": "mcu",
+  "angle": "low",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "point_at_lens",
+   "gaze_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "pre-chorus, rising synth",
+  "emotion": "power",
+  "transition_out": "hard_cut",
+  "light": [
+   "two_colour",
+   "pink",
+   "purple"
+  ],
+  "craft": "Direct hand gesture toward lens emphasizes music swell."
+ },
+ {
+  "ref": "kda-firestarter#023",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 57.0,
+  "end": 60.0,
+  "what": "Flaming lipstick tube applies glowing purple lipstick onto lips.",
+  "shot": "ecu",
+  "angle": "profile",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "none"
+  ],
+  "tempo": "slow",
+  "music": "pre-chorus, suspenseful hold",
+  "emotion": "flirt",
+  "transition_out": "hard_cut",
+  "light": [
+   "self_glow",
+   "dark_key",
+   "purple",
+   "orange"
+  ],
+  "craft": "Flaming applicator generates vibrant localized glow on lips."
+ },
+ {
+  "ref": "kda-firestarter#024",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 60.0,
+  "end": 61.0,
+  "what": "Extreme close-up of a woman's red lips blowing fire off a bullet.",
+  "shot": "ecu",
+  "angle": "profile",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse synth beat and vocals",
+  "emotion": "sensual menace",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "self_glow",
+   "red",
+   "orange"
+  ],
+  "craft": "Extreme close-up framing highlighting lip movement and flame detail."
+ },
+ {
+  "ref": "kda-firestarter#025",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 61.0,
+  "end": 62.25,
+  "what": "A bullet ignites on the ground in a bright flame explosion.",
+  "shot": "insert",
+  "angle": "low",
+  "move": [
+   "static"
+  ],
+  "lens_play": [
+   "ignores_lens"
+  ],
+  "tempo": "burst",
+  "music": "verse beat building with explosive sound effect",
+  "emotion": "power",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "self_glow",
+   "orange",
+   "yellow"
+  ],
+  "craft": "High-contrast flame explosion effect anchoring the rhythm transition."
+ },
+ {
+  "ref": "kda-firestarter#026",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 62.25,
+  "end": 64.75,
+  "what": "Red-haired female character turns from profile to front while singing.",
+  "shot": "mcu",
+  "angle": "eye",
+  "move": [
+   "orbit"
+  ],
+  "lens_play": [
+   "gaze_to_lens",
+   "pose_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse steady beat with confident female vocals",
+  "emotion": "flirt power",
+  "transition_out": "match_cut",
+  "light": [
+   "dark_key",
+   "rim_only",
+   "red",
+   "orange"
+  ],
+  "craft": "Smooth character turn aligning with vocal phrasing."
+ },
+ {
+  "ref": "kda-firestarter#027",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 64.75,
+  "end": 67.25,
+  "what": "Fox-eared character emerges through swirling flames.",
+  "shot": "ms",
+  "angle": "eye",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "gaze_to_lens",
+   "walk_into_lens"
+  ],
+  "tempo": "medium",
+  "music": "verse beat building intensity",
+  "emotion": "menace power",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "self_glow",
+   "red",
+   "black"
+  ],
+  "craft": "Fire wipe transition revealing character transformation."
+ },
+ {
+  "ref": "kda-firestarter#028",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 67.25,
+  "end": 71.0,
+  "what": "Fox character performs magic gestures as flame rings swirl around her.",
+  "shot": "full",
+  "angle": "low",
+  "move": [
+   "pull_out"
+  ],
+  "lens_play": [
+   "gaze_to_lens",
+   "pose_to_lens"
+  ],
+  "tempo": "medium",
+  "music": "pre-chorus swell with vocal rise",
+  "emotion": "majestic power",
+  "transition_out": "flash",
+  "light": [
+   "dark_key",
+   "self_glow",
+   "pink",
+   "purple",
+   "yellow"
+  ],
+  "craft": "Swirling particle effects building up to full spell activation."
+ },
+ {
+  "ref": "kda-firestarter#029",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 71.0,
+  "end": 73.25,
+  "what": "Energy bursts into glowing pink fiery fox tails behind the singer.",
+  "shot": "full",
+  "angle": "eye",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "gaze_to_lens"
+  ],
+  "tempo": "fast",
+  "music": "chorus drop impact",
+  "emotion": "awe power",
+  "transition_out": "hard_cut",
+  "light": [
+   "high_key",
+   "self_glow",
+   "pink",
+   "orange",
+   "white"
+  ],
+  "craft": "Symmetrical aura burst framed to emphasize climax of transition."
+ },
+ {
+  "ref": "kda-firestarter#030",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 73.25,
+  "end": 75.0,
+  "what": "Four female band members walk forward together through fire.",
+  "shot": "full",
+  "angle": "eye",
+  "move": [
+   "track_with"
+  ],
+  "lens_play": [
+   "gaze_to_lens",
+   "walk_into_lens"
+  ],
+  "tempo": "fast",
+  "music": "chorus heavy beat and full vocals",
+  "emotion": "power unity",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "self_glow",
+   "orange",
+   "gold"
+  ],
+  "craft": "Group slow-motion walk through stylized fire overlay."
+ },
+ {
+  "ref": "kda-firestarter#031",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 75.0,
+  "end": 78.0,
+  "what": "Montage of individual members striking dance poses amidst fire sparks.",
+  "shot": "ms",
+  "angle": "eye",
+  "move": [
+   "whip"
+  ],
+  "lens_play": [
+   "gaze_to_lens",
+   "pose_to_lens"
+  ],
+  "tempo": "burst",
+  "music": "chorus driving beat",
+  "emotion": "energy hype",
+  "transition_out": "hard_cut",
+  "light": [
+   "dark_key",
+   "self_glow",
+   "red",
+   "orange"
+  ],
+  "craft": "Fast rhythmic cuts matching kick drum pattern."
+ },
+ {
+  "ref": "kda-firestarter#032",
+  "slug": "kda-firestarter",
+  "id": "Mmw-PpWhKFg",
+  "medium": "3d_cel",
+  "start": 78.0,
+  "end": 80.0,
+  "what": "Fox character performs choreography in foreground with partner behind.",
+  "shot": "ms",
+  "angle": "low",
+  "move": [
+   "push_in"
+  ],
+  "lens_play": [
+   "gaze_to_lens",
+   "pose_to_lens"
+  ],
+  "tempo": "fast",
+  "music": "chorus peak beat",
+  "emotion": "flirt power",
+  "transition_out": "continuous",
+  "light": [
+   "dark_key",
+   "self_glow",
+   "red",
+   "orange"
+  ],
+  "craft": "Layered depth staging with synchronized dance motion.",
+  "edge": true
+ }
+]

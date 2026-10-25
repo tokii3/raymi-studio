@@ -6,11 +6,69 @@ import pytest
 from raymi import room
 
 
+def _legacy(d):
+    """Jobs created before the brief contract (2026-10-25) start at the dossier - the step logic below is tested there."""
+    meta = json.loads((d / "job.json").read_text())
+    meta["created"] = "2026-10-01"
+    (d / "job.json").write_text(json.dumps(meta))
+
+
 @pytest.fixture
 def job(tmp_path):
     d = tmp_path / "2026-01-01_x"
     room.new(str(d), "mv")
+    _legacy(d)
     return d
+
+
+BRIEF = """# 0_BRIEF
+## Her words
+- toki 2026-10-26: "die kamera ist eine einzelne fahrt, sie flirtet mit der kamera"
+## Core
+- eine einzelne fahrt
+## Visible proof
+- [ ] C1 "eine einzelne fahrt" -> no hard cut -> reality
+## Reality claims
+- max_hard_cuts: 0
+"""
+
+
+@pytest.fixture
+def new_job(tmp_path):
+    d = tmp_path / "2026-10-26_y"
+    room.new(str(d), "mv")
+    return d
+
+
+def test_a_new_job_starts_with_tokis_brief_contract(new_job):
+    assert (new_job / "0_BRIEF.md").is_file()
+    assert "NEXT: brief" in room.next_step(str(new_job))
+    (new_job / "0_BRIEF.md").write_text(BRIEF, encoding="utf-8")
+    assert states(new_job)["brief"]
+
+
+def test_a_missing_capability_stops_the_brief_until_toki_knows(new_job):
+    (new_job / "0_BRIEF.md").write_text(BRIEF + "## Feasibility\n- C2 hand into the lens: MISSING clip\n",
+                                        encoding="utf-8")
+    assert not states(new_job)["brief"]
+    (new_job / "0_BRIEF.md").write_text(BRIEF + "## Feasibility\n- C2: MISSING clip\n"
+                                        "missing ok: toki 2026-10-26 nimm eine pose\n", encoding="utf-8")
+    assert states(new_job)["brief"]
+
+
+def test_treatment_needs_the_brief_keeper_too(new_job):
+    (new_job / "0_BRIEF.md").write_text(BRIEF, encoding="utf-8")
+    for f, t in (("1_DOSSIER.md", "x"), ("2_IDEAS.md", "approved: toki 2026-10-26 A"), ("3_TREATMENT.md", "full")):
+        (new_job / f).write_text(t, encoding="utf-8")
+    (new_job / "reviews" / "treatment_1.md").write_text("VERDICT: PASS\n", encoding="utf-8")
+    why = dict((s, w) for s, _, w in room.status(str(new_job)))["treatment"]
+    assert "brief-keeper" in why                     # the script-critic alone never judged her words
+    (new_job / "reviews" / "treatment_brief-keeper_1.md").write_text("VERDICT: BLOCK - the ride is gone\n",
+                                                                     encoding="utf-8")
+    assert not states(new_job)["treatment"]
+    (new_job / "reviews" / "treatment_brief-keeper_2.md").write_text("VERDICT: PASS - all core lines\n",
+                                                                     encoding="utf-8")
+    assert states(new_job)["treatment"]
 
 
 def states(d):

@@ -1,5 +1,25 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-25 (late) - the analysis + the system rebuild toki approved (no video work)
+- Analysis: knowledge/ANALYSE_2026-10-25_warum_es_scheitert.md (12 findings: the 50 old-engine memories were never
+  loaded in studio sessions; "eine einzelne Fahrt" vanished from treatment + script; no critic ever read her words or
+  her reference; critic BLOCKs overruled; examples turned into closed lists; checks read the plan, not the video).
+- Memory merged (user-toki, learning-is-a-mechanism, craft-taste, work-habits, channel-strategy, analysis, budget).
+- 12 area skills (.claude/skills/raymi-*: reading-toki FIRST, idea-story, camera, posing-acting, editing,
+  2d-techniques, light-color, composition, lyrics-type, screening, references, shorts-thumbs-upload).
+- Agents: makers camera-director, choreographer, editor, look-designer; brief-keeper (toki's words + refs vs result).
+  All critics: goal = her words (0_BRIEF.md), bar = professional references, never our own videos.
+- Writers' room step 0 = 0_BRIEF.md (her words, classes, visible proof, reality claims, feasibility; MISSING blocks
+  until toki answers); treatment / script need brief-keeper PASS too.
+- raymi gemini (Gemini WATCHES video, free), raymi refs (31 pro videos, ids verified; analysis in 20 s chunks,
+  resumable - free tier 20 requests / day / model, so the library fills over ~4 days), raymi reality (cuts, camera
+  motion at the frame edges, her face to the lens, size - measured on the real video; instrument checked on run 67
+  frames, two of my own measuring errors found and fixed that way), raymi gate + SendUserFile hook.
+- Calibration: Watch Me run 67 -> reality FAIL (32 hard cuts vs "eine Fahrt", face to the lens 35 %); camera board 2
+  -> brief-keeper BLOCK (reviews/boards_brief-keeper_1.md) - both say what toki said. 133 tests (incl. gate, brief, hook).
+- NEXT: finish the reference analysis (`python -m raymi refs analyze all`, daily until complete), `refs frames` once
+  toki OKs the 480p download of the 31 references (local only), then the next video through the new flow.
+
 ## 2026-10-25 (night) - Watch Me STOPPED by toki; post-mortem
 - toki after camera board 2: "du ignorierst alle anweisungen, referenzen und hinweise" - video stopped (toki.md,
   job.json status "stopped"). Post-mortem + questions: knowledge/HANDOFF_2026-10-25_watchme_stopped.md; CASEBOOK entry.

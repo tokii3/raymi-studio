@@ -9,6 +9,39 @@ Why this skill exists (toki 2026-10-24): she kept repeating the same feedback an
 zero. The knowledge exists - in the raymi-studio repo - but sessions did not load the newest state, and chat sessions
 had none of it. This skill is the map + the acceptance list + the expert notes. The repo stays the source of truth.
 
+## Since 2026-10-25: the skill library, the makers, the gate (knowledge/ANALYSE_2026-10-25_warum_es_scheitert.md)
+
+**Load `raymi-reading-toki` FIRST, every time she writes.** Then the area skill for what you work on (loaded on
+demand, so the start stays small):
+
+| area | skill | maker agent | critic(s) |
+|---|---|---|---|
+| reading her brief / feedback | raymi-reading-toki | - | brief-keeper |
+| idea, world, story, treatment | raymi-idea-story | - | script-critic + brief-keeper |
+| camera | raymi-camera | camera-director | brief-keeper, look / motion |
+| her body, poses, acting, lens play | raymi-posing-acting | choreographer | motion-critic, brief-keeper |
+| cuts, rhythm, transitions | raymi-editing | editor | cut-critic |
+| light, colour, materials | raymi-light-color | look-designer | look-critic |
+| anime / 2D feel | raymi-2d-techniques | look-designer | look / motion |
+| framing, depth, sets | raymi-composition | - | look-critic |
+| lyrics, type | raymi-lyrics-type | - | type-critic |
+| looking at stills / renders | raymi-screening | - | all + `raymi reality` |
+| references, the bar | raymi-references | - | - |
+| Shorts, thumbnails, upload | raymi-shorts-thumbs-upload | - | thumb-critic |
+
+- **Step 0 of every job = `0_BRIEF.md`** (her words verbatim, core, classes, visible proof, reality claims,
+  feasibility). A MISSING capability is told to toki at once; `raymi next` keeps the job there until she answers.
+- **The bar = professional references** (`python -m raymi refs find ...`, `knowledge/references/`), never our own
+  older videos. Key moments on boards are shown as pairs: reference left, ours right (`refs pair`).
+- **Gemini watches video** for free (`python -m raymi gemini <url|mp4> --prompt ...`): references, first watch of our
+  renders. Free tier = 20 requests / day / model.
+- **Checks on the real video**: `python -m raymi reality <job> <video>` (cuts, camera motion, her face to the lens,
+  size) against the brief's reality claims.
+- **The gate**: `python -m raymi gate <job> <stage> <files>`; the SendUserFile hook refuses pictures / videos without
+  GATE_PASS.json (or GATE_FAIL.json + "FAIL" in the caption when she asked to see a failed one).
+- **Budget** (toki 2026-10-25): a whole video ~20 % of her weekly limit over 1-2 days; makers and critics on sonnet
+  with small briefs; bulk looking goes to Gemini.
+
 ## 0. Start protocol (do this BEFORE planning or answering anything about a video)
 
 1. **Load the live state, never from memory alone.** The repo `tokii3/raymi-studio` is public:
@@ -38,7 +71,8 @@ had none of it. This skill is the map + the acceptance list + the expert notes. 
 | Fixed | Voice edge-tts `en-US-AnaNeural` +17 % / -7 Hz. Font Raymi-Regular / Raymi-Heavy (missing glyphs are BUILT in her style, never a fallback font). Skin pale grey-blue under any light. English content |
 | Read order (Claude Code) | `CLAUDE.md` -> `PRODUCTION.md` -> `knowledge/PRINCIPLES.md` -> `canon/01_character.md`; before planning a video also `knowledge/CASEBOOK.md`, `canon/07_video_catalog.md`, newest `canon/10_kanal_puls*` |
 
-**Song package flow (writers' room, one file per step in the job):** `1_DOSSIER.md` (meaning of every line, the gap
+**Song package flow (writers' room, one file per step in the job):** `0_BRIEF.md` (her words -> core, classes,
+visible proof, reality claims, feasibility) -> `1_DOSSIER.md` (meaning of every line, the gap
 in existing videos, measured song map via analyze.yml) -> `2_IDEAS.md` (3 really different worlds as IMAGE boards,
 toki picks) -> `3_TREATMENT.md` (script-critic PASS) -> `4_SCRIPT.md` + `shots.json` (script-critic PASS; times
 computed from the maps, never hand-typed) -> build (reusable components first, `studio/catalog/status.json` = what

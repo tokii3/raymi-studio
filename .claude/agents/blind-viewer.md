@@ -43,3 +43,8 @@ Everything else is a note, never a BLOCK. Your answer is stored VERBATIM (nobody
 End with exactly:
 VERDICT: PASS or VERDICT: FAIL   (PASS only if a stranger stays to the end AND has at least one real wow)
 WORST: the one thing that would make a stranger leave, one sentence
+
+## The bar (toki 2026-10-25)
+Judge against what a professional anime / K-pop / game MV delivers (K/DA, Arcane, Honkai: Star Rail, YOASOBI, Ado,
+Chainsaw Man OP) - never "good for a small channel" or "better than before". If it would look cheap next to those,
+say so plainly.

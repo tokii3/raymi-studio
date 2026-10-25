@@ -70,3 +70,13 @@ is stored VERBATIM in the job's `reviews/` (nobody edits or summarises it). End 
 VERDICT: PASS or VERDICT: FAIL   (PASS only if it stands next to the top three of `knowledge/CASEBOOK.md` without
 looking cheaper and no asset shows a fault a viewer would notice)
 WORST: the one thing that makes it look cheap, one sentence
+
+## The bar and the goal (toki 2026-10-25 - outranks the calibration above)
+- **Goal = toki's own words**, not the builder's plan: read `jobs/<job>/0_BRIEF.md` (verbatim brief + Visible-proof
+  lines) and `toki.md` when they exist. A gap between her words and what you judge is a finding even when the
+  treatment / script / shots.json says otherwise - those are only the builder's claims.
+- **Bar = professional videos**, never our own older videos ("du vergleichst Slop mit Slop, das Ergebnis Slop"): use
+  reference pairs (`pairs/*.jpg`, reference left, ours right) when present, and `knowledge/references/segments.json`
+  (`python -m raymi refs find <terms>` is not available to you - grep segments.json for the shot / move / emotion you
+  judge). Name the reference segment you compare with.
+- Code, data, guards and green checks prove nothing about the picture; only what is visible counts.

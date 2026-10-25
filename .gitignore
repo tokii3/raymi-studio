@@ -14,3 +14,7 @@ __pycache__/
 
 .venv/
 deliveries/
+
+# reference footage is not ours: local only, never committed
+knowledge/references/.cache/
+knowledge/references/frames/

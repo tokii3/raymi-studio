@@ -32,6 +32,9 @@
   thumbs <boards dir>   thumbnail candidates at feed size (168 px, dark + light) -> thumbs_168.jpg (raymi/thumbs.py)
   analyze <job>         song tools (cloud, heavy): vocal stem, word-timed lyrics, song map (raymi/song.py)
   lyrics <job>          re-align lyrics_timed.json locally from the cached whisper_words.json + vocals.ogg
+  gemini <url|file> --prompt ..  Gemini WATCHES a YouTube video / local mp4 (motion + sound), answer verbatim
+  refs   list|analyze|frames|board  the professional reference library (knowledge/references/, raymi/refs.py)
+  reality <job> <video>  what the finished video really does: cuts, camera motion, her face / size (raymi/reality.py)
 """
 from __future__ import annotations
 
@@ -48,7 +51,23 @@ def main(argv: list[str]) -> int:
         print(__doc__)
         return 2
     cmd, job = argv[0], argv[1]
-    if cmd == "parts":       # parts <job> draft|final -> JSON matrix for the parallel render
+    if cmd == "gemini":      # gemini <youtube url | file> [--start --end --fps] --prompt ...: Gemini watches a video
+        from . import gemini
+
+        return gemini.main(argv[1:])
+    if cmd == "reality":     # reality <job> <video>: what the finished video really does + the brief's claims
+        from . import reality
+
+        return reality.main(argv[1:])
+    if cmd == "gate":        # gate <job> <stage> [files..]: nothing reaches toki past a BLOCK / FAIL / reality fault
+        from . import gate
+
+        return gate.main(argv[1:])
+    if cmd == "refs":        # refs list|analyze|frames|board ...: the professional reference library
+        from . import refs
+
+        return refs.main(argv[1:])
+    if cmd == "parts":      # parts <job> draft|final -> JSON matrix for the parallel render
         from . import parts
 
         print(json.dumps(parts.matrix(P.job_dir(job) / "out" / "props.json", argv[2] if len(argv) > 2 else "draft")))

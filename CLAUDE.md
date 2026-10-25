@@ -10,7 +10,8 @@ Let's Get Weird) came from ONE strong idea and a deep hand-written treatment; th
 weak idea (`knowledge/CASEBOOK.md`, `knowledge/LESSONS.md`). So the effort goes into the WRITERS' ROOM, the studio
 turns the script into pictures with reusable components, and screening judges the real video, not proxies.
 
-Read at session start: the SessionStart briefing (sync with origin/main first if it warns) -> this file -> the newest
+Read at session start: the SessionStart briefing (sync with origin/main first if it warns) -> skill
+`raymi-reading-toki` -> this file -> the newest
 `knowledge/HANDOFF_*.md` -> the top of `PROGRESS.md` -> `PRODUCTION.md` -> `knowledge/PRINCIPLES.md` -> `canon/01_character.md`.
 toki's standing verdicts (the acceptance list) + start protocol: skill `raymi-video-production` (.claude/skills).
 Before planning a video also: `knowledge/CASEBOOK.md`, `canon/07_video_catalog.md` (no repeats), the newest
@@ -29,6 +30,11 @@ Before planning a video also: `knowledge/CASEBOOK.md`, `canon/07_video_catalog.m
 - Not sure -> "weiss ich nicht sicher" + best guess, labelled.
 
 ## 2. Hard rules (each one exists because the old engine broke it)
+0. **Her words are the goal, her examples are classes** (2026-10-25, `knowledge/ANALYSE_2026-10-25_warum_es_scheitert.md`).
+   Skill `raymi-reading-toki` first; every job starts with `0_BRIEF.md`; `brief-keeper` judges treatment, script,
+   boards and renders against HER words (never against my plan); the bar is professional references
+   (`knowledge/references/`), never our own videos; checks measure the real video (`raymi reality`); nothing reaches
+   her without `raymi gate` (the SendUserFile hook enforces it). A missing capability is said on day 1.
 1. **The writers' room comes first.** No studio work for a video before its step allows it (`python -m raymi next`).
    A treatment / script is done only with a stored script-critic PASS; two BLOCKs on one step -> back to IDEAS.
 2. **A video is data, never code.** A job = its writers' room files + timeline data. New looks, sets, moves, effects
@@ -47,8 +53,9 @@ Before planning a video also: `knowledge/CASEBOOK.md`, `canon/07_video_catalog.m
 10. **Measure the song, never guess** (sections, lyric times from the vocal stem, cut one frame before the syllable).
 11. **Anti-loop.** A fix that fails twice is parked in `BACKLOG.md` with what was tried; production continues.
 12. **No secrets in the repo.** Keys only as GitHub secrets / local .env (gitignored). Never print them.
-13. **Budget.** One session = one stage (studio work OR one video's steps). Subagents: critics and render workers
-    are allowed (toki 2026-10-18); nothing else without her yes.
+13. **Budget.** One session = one stage (studio work OR one video's steps). Subagents: critics, render workers and
+    the maker agents (camera-director, choreographer, editor, look-designer; toki 2026-10-25) - a whole video ~20 % of
+    her weekly limit over 1-2 days, sonnet, small briefs; bulk looking goes to Gemini (`raymi gemini`).
 
 ## 3. Map
 - `knowledge/` - PRINCIPLES, CASEBOOK, LESSONS, exemplars, studies, craft modules 00-12 (README says which is used where).

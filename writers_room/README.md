@@ -11,13 +11,14 @@ hand-written treatment; the worst ones had heavy process and a weak idea (`knowl
 
 | # | file | who writes / decides | done when |
 |---|---|---|---|
+| 0 | `0_BRIEF.md` | Claude, from toki's words (skill raymi-reading-toki) - since 2026-10-25 | her words quoted + dated, core, classes, visible proof lines, reality claims; nothing MISSING unless toki answered (`missing ok: toki <date>`) |
 | 1 | `1_DOSSIER.md` | Claude researches (web, measured song analysis) | no TODO left; every lyric line has its meaning; the song map is MEASURED |
 | 2 | `2_IDEAS.md` + `boards/` | Claude writes 3 different ideas + 3 key frames each (images) | toki picks one: `approved: toki <date> <idea>` line |
-| 3 | `3_TREATMENT.md` | Claude, at the depth of `knowledge/exemplars/lets-get-weird_TREATMENT.md` | script critic PASS stored in `reviews/` |
-| 4 | `4_SCRIPT.md` | Claude: the shooting script, shot by shot | script critic PASS stored in `reviews/`; every needed part exists or is on the build list |
+| 3 | `3_TREATMENT.md` | Claude, at the depth of `knowledge/exemplars/lets-get-weird_TREATMENT.md` | script critic PASS + brief-keeper PASS (`reviews/treatment_brief-keeper_<n>.md`) |
+| 4 | `4_SCRIPT.md` | Claude merges the makers' drafts (camera-director, choreographer, editor, look-designer: `6_CAMERA_draft` .. `9_LOOK_draft`), a professional ref per key moment | script critic PASS + brief-keeper PASS; every needed part exists or is on the build list |
 | 5 | build | reuse what toki liked first (`studio/catalog/status.json`); missing parts become reusable components | `shots.json` exists; each new part has a still in `studio/catalog/` |
-| 6 | stills | >= 12 cloud stills across the whole MV (no pilot since toki 2026-10-22) | `boards/still_*.jpg`, `stills: toki <date>` in `toki.md` |
-| 7 | final | full MV + Short (cut from the MV), rendered in the cloud | screening stored in `reviews/final_*`, toki's verdict in `toki.md` |
+| 6 | stills | >= 12 cloud stills across the whole MV (no pilot since toki 2026-10-22), key moments as reference pairs (`refs pair`) | brief-keeper + look-critic in `reviews/stills_*`, `raymi gate <job> stills`, then `stills: toki <date>` in `toki.md` |
+| 7 | final | full MV + Short (cut from the MV), rendered in the cloud | `raymi reality` (brief claims), Gemini watch + critics in `reviews/final_*`, `raymi gate <job> final`, toki's verdict in `toki.md` |
 | 8 | `5_THUMBS.md` | 5 MV + 5 Short candidates, cloud stills from the sets | `boards/thumb_mv_*` + `thumb_short_*`, thumb-critic in `reviews/thumbs_*`, `picked: toki <date>` |
 | 9 | `upload.md` | upload texts (canon/12, channel_rules.py) | toki uploaded: `toki.md` line `uploaded: toki <date>` |
 
