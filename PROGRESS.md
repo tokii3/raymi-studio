@@ -8,8 +8,9 @@
   slow_push; shots.json `camera_hand: "<why>"` keeps a hand-written lens (no v3 / director / swings / frame_fit / dolly);
   her body turns to a FIXED bearing in spins and bursts (rotY "lens" made every angle frontal) and her eyes follow
   (look: lens).
-- Key moments K1-K16 in shots.json, guards green MV + Short, 124 py tests; stills board camera-hand-1 (32 frames).
-  NEXT: toki's picks / corrections -> the other 52 rows as data -> one MV render -> QC v2 once.
+- Key moments K1-K16 in shots.json, guards green MV + Short, 124 py tests; stills board camera-hand-2 (32 frames, boards/camera_board_1-2.jpg; round 1 fixed: she faced away, too small).
+  Still weak on the board: no hand INTO the lens (no reach clip - asked toki), worm shots from behind, K7b/c hair too
+  close. NEXT: toki's picks / corrections -> the other 52 rows as data -> one MV render -> QC v2 once.
 
 ## 2026-10-25 - Watch Me MV takes 1-4, raymi7, one camera / one choreo, the bounce found
 - raymi7 (private assets): per-part materials (the lock only on skin, fabric shaded, the face shaded at all), texfix
