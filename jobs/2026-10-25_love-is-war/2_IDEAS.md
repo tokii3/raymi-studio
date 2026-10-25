@@ -147,4 +147,4 @@ stranger reads muted (a light that never stops on her), it pays off with the mos
 lands on the viewer), and it gives "aggressiv, raw" (storm, lightning, charging waves) and "schön" (storm eye, moon,
 purple sea) one world. From B I would take the melody stroke idea as her light ribbon on the held notes.
 
-approved: <toki writes here: date + idea + notes>
+approved: toki 2026-10-25 "okay die ideen gefallen mir schon gut ... gerne weiter machen alle ideen verwenden wo wenn wie geht" + "eher richtung 2 bei designs, zusammenführung der welten passt so, bitte jetzt richtung mv v1 ansteuern" -> A + C + B merged into one world, graphic 2D design direction

@@ -77,6 +77,7 @@ answered X4: toki 2026-10-25 "x4: remix"
   of A; C lives UNDER its surface (the cables on the sea floor, her electro-sense = the signal to the lighthouse), B is
   her weapon language (Sumi ink + 2D brush hits on the beats, the ink night with her stars at the end) - one colour and
   material family, not three worlds cut together -> ASK
+answered X5: toki 2026-10-25 "eher richtung 2 bei designs, zusammenführung der welten passt so, bitte jetzt richtung mv v1 ansteuern" -> ONE world (storm sea + lighthouse; the cables on the sea floor below; ink = her weapon language), designed as a GRAPHIC 2D world (painted layers, two-tone hits, ink) around the 3D Raymi - no plastic 3D props
 
 ## Visible proof (each must be TRUE in the finished video)
 - [ ] C1 "immersive / reinziehen" -> from 0-3 s already inside the action; the camera is IN her space (close, moving
