@@ -40,3 +40,9 @@ Looked at by me on 6 contact sheets (scratch, not committed). Verdicts per clip,
 roar (lunge + claws), the kicks and hook-punch give strikes toward the lens when she faces it; a hand reaching INTO
 the lens is still not proven (reaching-out showed no reach at the sampled moments) -> second sample of reaching-out /
 angry-point / pointing at 10 moments each before the script, or key poses in vrmPoses.ts.
+
+## Seen on the boards (rounds 3-3d, 2026-10-25)
+- the single-frame Mixamo poses (floating-legs-raised-arms-extended-upwards and its family) are authored facing
+  BACKWARDS: rotY 'away' turns them to the lens; face_lens does not apply to them
+- roar 1.9 s bends her so low that a lens at her eye height sees only the top of her head - use 1.0 s or a higher lens
+- face_lens works for the real clips (yelling, hook-punch, casting-spell, swing-backflip) after the local-space fix

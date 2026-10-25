@@ -139,12 +139,12 @@
      "at": 0,
      "pos": [
       0.05,
-      0.6,
-      1.2
+      0.62,
+      1.0
      ],
      "look": [
       0,
-      0.5,
+      0.55,
       0
      ],
      "fov": 46,
@@ -155,8 +155,8 @@
     {
      "at": 0,
      "rotY": "lens",
-     "clip": "roar",
-     "clip_from": 1.9,
+     "clip": "yelling",
+     "clip_from": 1.6,
      "speed": 0,
      "motionMix": 1,
      "pos": "pool",
@@ -242,9 +242,9 @@
      "speed": 0,
      "motionMix": 1,
      "pos": [
-      0.3,
+      0.8,
       9.38,
-      -0.75
+      -0.95
      ],
      "face_lens": true,
      "expr": {
@@ -447,7 +447,7 @@
    "actor": [
     {
      "at": 0,
-     "rotY": "lens",
+     "rotY": "away",
      "clip": "floating-legs-raised-arms-extended-upwards",
      "clip_from": 1.0,
      "speed": 0,
@@ -632,22 +632,22 @@
      "at": 0,
      "pos": [
       0,
-      2.6,
-      3.2
+      2.1,
+      2.6
      ],
      "look": [
       0,
-      1.1,
+      1.0,
       0
      ],
-     "fov": 44,
+     "fov": 46,
      "roll": -4
     }
    ],
    "actor": [
     {
      "at": 0,
-     "rotY": "lens",
+     "rotY": "away",
      "clip": "floating-legs-raised-arms-extended-upwards",
      "clip_from": 1.0,
      "speed": 0,
