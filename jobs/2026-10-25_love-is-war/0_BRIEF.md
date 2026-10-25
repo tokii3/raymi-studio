@@ -28,7 +28,7 @@ Music & Lyrics ryo (supercell), Remix Mwk, Guitar JUDAs; original nicovideo sm23
 A viewer should feel hit and swept along from the first second (no slow intro - PRINCIPLES 6, Know My Name 69 % at
 3 s), get goosebumps on the drops, and still want to pause on frames because they are beautiful. Why she wants it
 (my reading, labelled guess): Love is War is a vocaloid classic about a love so desperate it becomes a declaration of
-war (the original's image: Miku shouting into a megaphone on a ruin); the Mwk remix turns it into a hard dance track -
+war (the original PV, illustrations by Shiro Miwa: Miku shouting her feelings through a megaphone - verified 2026-10-25, moegirl wiki; "on a ruin" was my unverified memory, removed); the Mwk remix turns it into a hard dance track -
 the video has to carry that force. Her own past verdicts point the same way: "statisch, undynamisch ... nichts wird
 gewagt" (Electric Angel), "total langweilig" (Watch Me run 67) vs the parts she loved ("animationen, transitions und
 effekte mag ich alle sehr" KING). Channel: an evergreen vocaloid song for the VTuber audience (CLAUDE.md 4).
