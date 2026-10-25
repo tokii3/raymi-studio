@@ -1,5 +1,15 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-25 (late, 2) - references downloaded (toki OK), reality calibrated on professionals
+- 34 references local in 480p (video only, gitignored, ~850 MB incl. frames): a still every 0.5 s + minute sheets
+  (`refs download`, `refs frames`); `refs pair slug@<s>` boards; pairs are never committed (foreign footage).
+- Calibration (knowledge/references/reality_calibration.json): three REAL oners (Feist 1234, OK Go Rube Goldberg,
+  Billie Eilish party's over) = 0 visible cuts; multi-camera edits 33-108; Watch Me run 67 = 29 (cover / flash changes
+  now counted as hidden, as toki allows them). My catalog had called STUDIO CHOOM a oner without checking - it has 99
+  cuts (seen by eye); corrected, the oners replace it. face_to_lens works on Raymi only, not on pro faces.
+- An adaptive cut detector was tried and dropped (fired on fast moves, missed whip-hidden changes; checked by eye).
+- Watch Me FIRESTARTER pair board sent to toki through the gate, labelled FAIL.
+
 ## 2026-10-25 (late) - the analysis + the system rebuild toki approved (no video work)
 - Analysis: knowledge/ANALYSE_2026-10-25_warum_es_scheitert.md (12 findings: the 50 old-engine memories were never
   loaded in studio sessions; "eine einzelne Fahrt" vanished from treatment + script; no critic ever read her words or

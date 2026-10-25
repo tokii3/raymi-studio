@@ -18,3 +18,4 @@ deliveries/
 # reference footage is not ours: local only, never committed
 knowledge/references/.cache/
 knowledge/references/frames/
+jobs/*/boards/pairs/

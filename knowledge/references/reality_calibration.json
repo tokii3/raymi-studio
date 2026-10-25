@@ -1,0 +1,17 @@
+{
+ "_what": "raymi reality on professional references (2026-10-25). hard_cuts = VISIBLE hard cuts (hidden cover / flash changes not counted). face_to_lens uses an anime face detector: valid for Raymi (VRM, checked by eye), NOT for live action or K/DA-style 3D faces (7-17 % on pros) - never compare that number with a reference.",
+ "oners_visible_cuts": {
+  "feist-1234": 0,
+  "okgo-this-too-shall-pass": 0,
+  "billie-party-over": 0
+ },
+ "multicam_visible_cuts": {
+  "choom-aespa-next-level": 99,
+  "jennie-solo": 108,
+  "genshin-furina": 69,
+  "kda-firestarter": 33
+ },
+ "ours": {
+  "watch-me run 67": 29
+ }
+}

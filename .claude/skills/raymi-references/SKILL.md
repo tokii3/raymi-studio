@@ -11,11 +11,13 @@ verschiedene Szenen, Kameras, Emotionen, schnell, langsam."
 
 ## The library (raymi/refs.py, knowledge/references/)
 - `catalog.json` - 31 professional videos (K/DA, True Damage, HEARTSTEEL, Arcane, HSR, ZZZ, Genshin, a SANZIGEN VTuber
-  MV, YOASOBI, Ado, Chainsaw Man, Kanaria, Yorushika, ZUTOMAYO, Edgerunners, K-pop MVs, a STUDIO CHOOM oner).
+  MV, YOASOBI, Ado, Chainsaw Man, Kanaria, Yorushika, ZUTOMAYO, Edgerunners, K-pop MVs) + 3 REAL oners verified by measurement (feist-1234, okgo-this-too-shall-pass, billie-party-over: 0 visible cuts). 34 videos.
 - `analysis/<slug>.md` - Gemini WATCHED each video in 20 s chunks at 4 fps with sound, verbatim JSON per segment:
   shot, angle, move, lens_play, tempo, music, emotion, transition_out, light, craft.
 - `segments.json` - all segments; `python -m raymi refs find <term> <term>` (all terms must match).
-- `frames/` - 3 stills per segment, LOCAL only (`refs frames <slug>`; not our footage, never committed / published).
+- `frames/<slug>/` - a still every 0.5 s (`<t>.jpg`) + `sheet_<minute>.jpg` to browse, LOCAL only (`refs download`,
+  `refs frames`; not our footage, never committed / published). `reality_calibration.json` - the measured bar.
+- A reference moment is `slug@<seconds>` (e.g. `kda-firestarter@106.9`) or a Gemini segment `slug#021`.
 
 ## Use
 - **Makers**: for every key moment pick 1-3 segments (`refs find hand_to_lens low`, `refs find flirt cu`,

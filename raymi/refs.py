@@ -5,7 +5,7 @@ schnell, langsam").
 knowledge/references/catalog.json   the videos (YouTube ids verified)
 knowledge/references/analysis/      Gemini's answer per video, verbatim (it WATCHES the video)
 knowledge/references/segments.json  every segment of every video with tags -> `refs find`
-knowledge/references/frames/        3 stills per segment, LOCAL only (gitignored: not our footage, never published)
+knowledge/references/frames/        a still every 0.5 s + sheet_<minute>.jpg, LOCAL only (gitignored: not our footage, never published)
 
 Makers (camera / choreo / edit / look agents) pick the segments that match a moment; critics put our frame next to
 the reference frame (`refs pair`) and judge the gap. Our own videos are never the bar.
@@ -169,29 +169,73 @@ def _video(v: dict) -> Path:
     """480p copy for frame grabs - local cache only, never committed or published."""
     CACHE.mkdir(parents=True, exist_ok=True)
     p = CACHE / f"{v['slug']}.mp4"
-    if not p.exists():
-        subprocess.run([sys.executable, "-m", "yt_dlp", "-q", "-f", "bv*[height<=480][ext=mp4]/b[height<=480]",
-                        "-o", str(p), f"https://www.youtube.com/watch?v={v['id']}"], check=True)
+    if not p.exists():   # video only (frames + cut measurement need no sound; Gemini hears the YouTube original)
+        subprocess.run([sys.executable, "-m", "yt_dlp", "-q", "--no-warnings", "-f",
+                        "bv*[height<=480][ext=mp4]/b[height<=480]/bv*[height<=480]", "-o", str(p),
+                        f"https://www.youtube.com/watch?v={v['id']}"], check=True)
     return p
 
 
-def frames(arg: str | None) -> None:
-    """3 stills per segment (start + 25 %, middle, end - 25 %) -> frames/<slug>/<nnn>_<k>.jpg."""
-    segs = json.loads((REFS / "segments.json").read_text(encoding="utf-8"))
+def download(arg: str | None) -> None:
     for v in _pick(arg):
-        mine = [s for s in segs if s["slug"] == v["slug"]]
-        if not mine:
+        try:
+            print(v["slug"], _video(v).stat().st_size // 1_000_000, "MB", flush=True)
+        except subprocess.CalledProcessError as e:
+            print(v["slug"], "FAILED", e, flush=True)
+
+
+STEP = 0.5   # s between reference frames: a fixed grid, because cut detection on pro footage misses the changes
+             # hidden in whips / flares (FIRESTARTER 1:51-1:55, checked by eye 2026-10-25)
+
+
+def frames(arg: str | None) -> None:
+    """A still every 0.5 s -> frames/<slug>/<t>.jpg (t = seconds) + sheet_<n>.jpg (one per minute, labelled) - LOCAL
+    only (gitignored: not our footage)."""
+    from PIL import Image, ImageDraw
+
+    for v in _pick(arg):
+        try:
+            src = _video(v)
+        except subprocess.CalledProcessError as e:
+            print(v["slug"], "no video:", e)
             continue
-        src, d = _video(v), FRAMES / v["slug"]
+        d = FRAMES / v["slug"]
         d.mkdir(parents=True, exist_ok=True)
-        for s in mine:
-            a, b = float(s["start"]), float(s["end"])
-            for k, t in enumerate((a + (b - a) * 0.25, (a + b) / 2, b - (b - a) * 0.25)):
-                o = d / f"{s['ref'].split('#')[1]}_{k}.jpg"
-                if not o.exists():
-                    subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{t:.2f}", "-i", str(src), "-frames:v", "1",
-                                    "-q:v", "3", str(o)], check=False)
-        print(v["slug"], len(mine), "segments")
+        if not any(d.glob("*.*.jpg")):
+            subprocess.run(["ffmpeg", "-v", "error", "-i", str(src), "-vf", f"fps={1 / STEP:g}", "-q:v", "3",
+                            str(d / "f_%05d.jpg")], check=True)
+            for f in sorted(d.glob("f_*.jpg")):   # frame n of an fps filter sits at (n - 1) * STEP (+ STEP / 2)
+                t = (int(f.stem[2:]) - 1) * STEP + STEP / 2
+                f.rename(d / f"{t:07.2f}.jpg")
+        stills = sorted(d.glob("*.*.jpg"), key=lambda p: float(p.stem))
+        w, cols = 200, 10
+        im0 = Image.open(stills[0])
+        h = int(w * im0.height / im0.width)
+        for n in range(0, len(stills), 120):            # one sheet per minute (every 2nd still = 1 s)
+            part = stills[n:n + 120:2]
+            sheet = Image.new("RGB", (w * cols, (h + 14) * ((len(part) + cols - 1) // cols)), (10, 10, 12))
+            for i, o in enumerate(part):
+                x, y = (i % cols) * w, (i // cols) * (h + 14)
+                t = float(o.stem)
+                sheet.paste(Image.open(o).convert("RGB").resize((w, h)), (x, y + 14))
+                ImageDraw.Draw(sheet).text((x + 3, y + 1), f"{int(t // 60)}:{t % 60:05.2f}", fill=(220, 220, 220))
+            sheet.save(d / f"sheet_{n // 120}.jpg", quality=85)
+        print(v["slug"], len(stills), "frames", flush=True)
+
+
+def ref_frame(ref: str) -> Path:
+    """`slug@103.5` (a time) or `slug#021` (a Gemini segment) -> the nearest stored frame of that reference."""
+    if "#" in ref:
+        slug, n = ref.split("#")
+        seg = next(s for s in json.loads((REFS / "segments.json").read_text(encoding="utf-8"))
+                   if s["ref"] == f"{slug}#{n}")
+        t = (float(seg["start"]) + float(seg["end"])) / 2
+    else:
+        slug, t = ref.split("@")[0], float(ref.split("@")[1])
+    stills = sorted((FRAMES / slug).glob("*.*.jpg"))
+    if not stills:
+        raise SystemExit(f"no frames for {slug} - run python -m raymi refs frames {slug}")
+    return min(stills, key=lambda p: abs(float(p.stem) - t))
 
 
 def pair(ref: str, ours: Path, out: Path, note: str = "") -> Path:
@@ -199,8 +243,7 @@ def pair(ref: str, ours: Path, out: Path, note: str = "") -> Path:
     and every look / reference critic uses this."""
     from PIL import Image, ImageDraw
 
-    slug, n = ref.split("#")
-    left = Image.open(FRAMES / slug / f"{n}_1.jpg").convert("RGB")
+    left = Image.open(ref_frame(ref)).convert("RGB")
     right = Image.open(ours).convert("RGB")
     h = 540
     left = left.resize((int(left.width * h / left.height), h))
@@ -208,7 +251,8 @@ def pair(ref: str, ours: Path, out: Path, note: str = "") -> Path:
     img = Image.new("RGB", (left.width + right.width + 12, h + 44), (12, 12, 16))
     img.paste(left, (0, 44))
     img.paste(right, (left.width + 12, 44))
-    ImageDraw.Draw(img).text((8, 6), f"REFERENCE {ref}  |  OURS {ours.name}   {note}"[:180], fill=(235, 235, 235))
+    ImageDraw.Draw(img).text((8, 6), f"REFERENCE {ref}  |  OURS {ours.name}", fill=(235, 235, 235))
+    ImageDraw.Draw(img).text((8, 24), note[:200], fill=(255, 210, 120))
     out.parent.mkdir(parents=True, exist_ok=True)
     img.save(out, quality=90)
     return out
@@ -231,6 +275,8 @@ def main(argv: list[str]) -> int:
             build_segments()
         else:
             analyze(target, "--force" in rest)
+    elif cmd == "download":
+        download(rest[0] if rest else None)
     elif cmd == "segments":
         build_segments()
     elif cmd == "frames":

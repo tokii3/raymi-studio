@@ -51,4 +51,4 @@ allows cuts hidden in a fast move; a whip-hidden cut can still score as a scene 
   have stopped the plan on day 1 (HANDOFF_2026-10-25_watchme_stopped point 3).
 
 ## References
-- kda-firestarter 103-115 s (catalog), choom-aespa-next-level (a whole-song oner), jennie-solo (lens self-presentation)
+- kda-firestarter 103-115 s (catalog), feist-1234 + okgo-this-too-shall-pass (real oners, 0 visible cuts measured), jennie-solo (lens self-presentation)

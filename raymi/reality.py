@@ -2,13 +2,15 @@
 ein Skript schreibst in dem steht eine einzige Kamerafahrt, dann müssen die Checks das erkennen, falls es nicht so ist
 - ist aber nie passiert").
 
-- cuts:   hard cuts from ffmpeg's scene score (a real cut, not a planned one)
+- cuts:   VISIBLE hard cuts from ffmpeg's scene score (a real cut, not a planned one; hidden ones not counted)
 - motion: CAMERA motion per shot (corners tracked at the frame edges, where the set is) (a "never still" brief vs static shots)
 - face:   Raymi's face TURNED TO THE LENS (frontal) found by an anime face detector (lbpcascade_animeface, MIT, nagadomi): visible?, how big,
-          where - per shot
+          where - per shot. Valid for Raymi (checked by eye on run 67); NOT for live-action or K/DA-style 3D faces
+          (7-17 % on professional references) - never compare that number with a reference.
 Then the brief contract's reality claims (`jobs/<job>/0_BRIEF.md`, section "## Reality claims", lines `- key: value`)
-are checked against the measurement; exit 1 on a contradiction. Works on the pros too (calibration: a reference
-oner must give 0 cuts, a FIRESTARTER burst must give its 7 cuts).
+are checked against the measurement; exit 1 on a contradiction. Calibrated 2026-10-25
+(knowledge/references/reality_calibration.json): three real oners give 0 visible cuts, multi-camera edits 33-108,
+Watch Me run 67 29.
 """
 from __future__ import annotations
 
@@ -22,14 +24,35 @@ import cv2
 import numpy as np
 
 CASCADE = Path(__file__).parent / "data" / "lbpcascade_animeface.xml"
-SCENE = 0.32          # ffmpeg scene score for a hard cut
+SCENE = 0.32          # ffmpeg scene score for a VISIBLE hard cut (see cuts())
+FLAT = 14.0           # grey std of a frame below this = a cover / black / flash (see hidden())
 STILL = 0.12          # % of the width per 1/6 s: below it a shot reads as a standing camera (calibrated on frames)
 
 
 def cuts(video: Path, thr: float = SCENE) -> list[float]:
+    """VISIBLE hard cuts (a clean jump between two sharp frames), from ffmpeg's scene score. toki 2026-10-25: a change
+    hidden in a fast camera move / blur / flare is fine ("dann einfach die Kamera schnell bewegen") - and this score
+    does NOT count those: on FIRESTARTER 1:51-1:55 (~10 changes, nearly all hidden in whips and a flare, checked by
+    eye) it finds none. An adaptive frame-difference detector was tried and dropped: it fired on fast moves inside a
+    shot and still missed the hidden changes. The shot structure of a REFERENCE comes from Gemini (refs analyze)."""
     r = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(video), "-vf", f"select='gt(scene,{thr})',showinfo",
                         "-an", "-f", "null", "-"], capture_output=True, text=True, encoding="utf-8", errors="replace")
     return [round(float(t), 2) for t in re.findall(r"pts_time:([\d.]+)", r.stderr)]
+
+
+def hidden(video: Path, t: float) -> bool:
+    """A change hidden by a cover / black / flash: the frame just before or just after is nearly one flat colour.
+    Checked by eye on run 67 (2026-10-25): the stripe cover at 167.7 s, the yellow cover at 172.0 s and the flash at
+    2.6 s were counted as hard cuts before."""
+    cap = cv2.VideoCapture(str(video))
+    flat = False
+    for dt in (-0.07, 0.05):
+        cap.set(cv2.CAP_PROP_POS_MSEC, max(0.0, t + dt) * 1000)
+        ok, f = cap.read()
+        if ok and float(cv2.cvtColor(cv2.resize(f, (160, 90)), cv2.COLOR_BGR2GRAY).std()) < FLAT:
+            flat = True
+    cap.release()
+    return flat
 
 
 def _frames(video: Path, fps: float, width: int = 480):
@@ -72,7 +95,8 @@ def _shift(a: np.ndarray, b: np.ndarray) -> float:
 
 
 def measure(video: Path) -> dict:
-    cut_t = cuts(video)
+    changes = cuts(video)
+    cut_t = [t for t in changes if not hidden(video, t)]
     det = cv2.CascadeClassifier(str(CASCADE))
     rows, prev = [], None
     for t, f in _frames(video, 6):
@@ -87,7 +111,7 @@ def measure(video: Path) -> dict:
                     "cy": round((y + h / 2) / g.shape[0], 3)}
         rows.append({"t": round(t, 2), "flow": round(flow, 3), "face": face})
     dur = rows[-1]["t"] if rows else 0.0
-    edges = [0.0, *cut_t, dur + 0.01]
+    edges = [0.0, *changes, dur + 0.01]
     shots = []
     for a, b in zip(edges, edges[1:]):
         rs = [r for r in rows if a <= r["t"] < b]
@@ -103,6 +127,7 @@ def measure(video: Path) -> dict:
                       "face_cy": round(float(np.median([f["cy"] for f in fr])), 3) if fr else None})
     static = [s for s in shots if s["motion"] is not None and s["motion"] < STILL]
     return {"video": str(video), "duration": dur, "hard_cuts": len(cut_t), "cut_times": cut_t,
+            "hidden_changes": sorted(set(changes) - set(cut_t)),
             "cuts_per_min": round(len(cut_t) / max(dur / 60, 1e-6), 1),
             "static_shots": len(static), "static_seconds": round(sum(s["end"] - s["start"] for s in static), 1),
             "face_to_lens": round(float(np.mean([r["face"] is not None for r in rows])), 2) if rows else 0.0,

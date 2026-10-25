@@ -34,7 +34,8 @@ leer", Watch Me: "die kamera ist eine einzelne fahrt". Root cause of a month of 
   = presence; crash zoom = comic / shock hit. A move starts and ends on musical events.
 - **The oner (one continuous ride)**: variety comes from distance changes (wide -> ECU -> wide), height changes, speed
   changes on the music, the performer moving TO and AWAY from the lens, foreground objects wiping across, light
-  changes, whips that hide set changes. Reference: STUDIO CHOOM one-takes (`choom-aespa-next-level`).
+  changes, whips that hide set changes. References (measured: 0 visible cuts): `feist-1234` (a ride round a performer
+  singing to the lens), `okgo-this-too-shall-pass` (travel through events), `billie-party-over` (one close shot).
 - **Lens play (the performer addresses the viewer)**: gaze to lens on the line, hand to the lens (fills it, can cover
   = transition), leaning in, a wink, a kiss, pointing, walking into the lens, a look back over the shoulder, ignoring
   the lens on purpose then catching it. This needs CLIPS / poses that do it - check feasibility first.

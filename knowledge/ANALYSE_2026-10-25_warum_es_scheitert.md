@@ -79,7 +79,7 @@ Prinzip: nichts davon ist "ich passe besser auf". Jeder Punkt ist ein Mechanismu
 | 2 Skills | 12 Bereichs-Skills `.claude/skills/raymi-*`, raymi-reading-toki zuerst (Briefing-Hook) |
 | 3 Macher | camera-director, choreographer, editor, look-designer (sonnet, kleiner Kontext) |
 | 4 Brief-Wächter | `brief-keeper` + Schritt 0 `0_BRIEF.md` im Schreibraum; Treatment / Script brauchen seinen PASS |
-| 5 Referenz neben Ergebnis | `raymi refs pair`; Bibliothek 31 Profi-Videos, Gemini-Analyse läuft (Gratis-Limit, ~4 Tage) |
+| 5 Referenz neben Ergebnis | `raymi refs pair`; Bibliothek 34 Profi-Videos (3 echte Oner, gemessen), Gemini-Analyse läuft (Gratis-Limit, ~4 Tage) |
 | 6 Checks am echten Video | `raymi reality` (Schnitte, Kamerabewegung, Gesicht zur Linse, Grösse) gegen die Claims im Brief |
 | 7 Sperre | `raymi gate` + SendUserFile-Hook: kein Bild / Video ohne GATE_PASS (oder FAIL offen beschriftet) |
 | 8 Machbarkeit | `MISSING` im Brief hält den Job an, bis toki antwortet |
