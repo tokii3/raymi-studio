@@ -184,8 +184,10 @@ def bridge_cuts(shots: list[dict], n: int) -> None:
         b["bridge"] = n
 
 
-V3_SPECIAL = re.compile(r"tableau|frame in the foreground|macro|POV|tail|palm|billboard|through|puddle|plaque|sign|cover|fold|vertigo|worm|crane to", re.I)
-V3_ANGLES = [40, -48, 30, -36, 56, -26, 46, -58]          # degrees round her from her front: always a 3/4, never dead on
+V3_SPECIAL = re.compile(r"sting|tableau|frame in the foreground|macro|POV|tail|palm|billboard|through|puddle|plaque|sign|cover|fold|vertigo|worm|crane to", re.I)
+# start angles round her (degrees from her front, magnitude; the side alternates shot by shot). v3 board 1: a start at
+# 40-58 plus a 70 degree sweep AWAY from the front ended behind her (only hair) - every move now ends nearer her front
+V3_ANGLES = [42, 34, 48, 38, 30, 46, 36, 52]
 
 
 def v3_kind(s: dict) -> str:
@@ -217,12 +219,13 @@ def camera_v3(s: dict, marks: dict, errors: list[str], tag: str, f0: int, f1: in
     h = float(acts[0].get("height", DEFAULT_HEIGHT))
     kind = v3_kind(s)
     side = 1 if idx % 2 == 0 else -1
+    # end = the angle the move ends at (same side when > 0): dance crosses her front to the other side
     if kind == "hero":
-        dist, ly, ay, fov, sweep, push, roll, rise = 1.3, 0.8, 1.22, 50, 16, 0.84, 6, 0.12
+        dist, ly, ay, fov, end, push, roll, rise, scale = 1.3, 0.8, 1.22, 50, 14, 0.84, 6, 0.12, 0.8
     elif kind == "close":
-        dist, ly, ay, fov, sweep, push, roll, rise = 0.78, 1.38, 1.36, 34, 12, 0.9, 3, 0.02
+        dist, ly, ay, fov, end, push, roll, rise, scale = 0.78, 1.38, 1.36, 34, 6, 0.9, 3, 0.02, 0.5
     else:
-        dist, ly, ay, fov, sweep, push, roll, rise = 2.2, 1.02, 0.9, 40, 70, 0.95, 2, 0.25
+        dist, ly, ay, fov, end, push, roll, rise, scale = 2.2, 1.02, 0.9, 40, -24, 0.95, 2, 0.25, 1.0
     ly, ay = ly * h / DEFAULT_HEIGHT, ay * h / DEFAULT_HEIGHT
     look = [P[0], P[1] + ay, P[2]]
     if kind == "top":                                       # straight above her, close, turning: she fills the frame
@@ -236,9 +239,9 @@ def camera_v3(s: dict, marks: dict, errors: list[str], tag: str, f0: int, f1: in
     no_lens = setinfo.get("no_lens", [])
     mid = (f0 + f1) // 2
     for j in range(len(V3_ANGLES)):
-        base = _m.radians(V3_ANGLES[(idx + j) % len(V3_ANGLES)])
-        def at(t, base=base):
-            a = base + _m.radians(sweep) * side * t
+        start = V3_ANGLES[(idx + j) % len(V3_ANGLES)] * scale
+        def at(t, start=start):
+            a = _m.radians(side * (start + (end - start) * t))
             d = dist * (1 - (1 - push) * t)
             return [round(P[0] + d * _m.sin(a), 4), round(P[1] + ly + rise * t, 4), round(P[2] + d * _m.cos(a), 4)]
         pts = [at(x / 6) for x in range(7)]

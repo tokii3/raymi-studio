@@ -4810,9 +4810,9 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      0.95,
-      1.62,
-      0.05
+      -1.16,
+      1.07,
+      0.51
      ],
      "hold": "flashlight",
      "freeze_at": 172.74
@@ -4877,9 +4877,9 @@
     "lock": 0.45,
     "salmon": {
      "pos": [
-      0.0,
+      0,
       0.62,
-      0.0
+      0
      ],
      "hold": "flashlight",
      "frozen": true

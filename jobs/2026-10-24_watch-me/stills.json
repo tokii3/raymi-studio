@@ -48,7 +48,7 @@
  ],
  "scale": 1,
  "to": "boards",
- "_why": "camera v3 (toki 2026-10-25: generic angles, Raymi at the edge / bottom): every shot's lens computed from her in the FIRESTARTER grammar, she faces her own front (no auto-turn), sight lines and snap arcs checked - same 21 frames as boards 1-4",
- "round": "v3",
+ "_why": "camera v3 board 2: every orbit now crosses her front (board 1 ended behind her: only hair), close shots near frontal (+-22), sting / tableau keep their cameras",
+ "round": "v3b",
  "frame_fit": false
 }
