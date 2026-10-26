@@ -6,7 +6,9 @@ card that says exactly what the shot will be (labelled PLAN, never passed off as
 jobs/<job>/storyboard.json:
   {"moments": [{"t": 33.07, "line": "Watch me move", "ref": "kda-firestarter@112.0",
                 "camera": "360 whip round her, 1.7 m, roll 14", "her": "dances, eyes on us the whole turn",
-                "fx": "T01 dots flare on 'move'", "still": "boards/k06a_360_in.jpg"}, ...]}
+                "fx": "T01 dots flare on 'move'", "still": "boards/k06a_360_in.jpg",
+                "refs": ["slug@s", ...],          # optional: a strip of several frames (a burst of cuts is not one frame)
+                "rule": "the principle the pro frame follows + why (knowledge/references/LEARNED.md)"}, ...]}
 -> boards/pairs/storyboard_<n>.jpg (4 moments per sheet; gitignored: reference frames are foreign footage)
 """
 from __future__ import annotations
@@ -29,7 +31,7 @@ def _card(m: dict) -> "Image.Image":
     d.rectangle([0, 0, W - 1, H - 1], outline=(255, 190, 90), width=3)
     d.text((14, 10), "PLAN - no previz still yet", fill=(255, 190, 90), font=refs.label_font(16))
     y = 40
-    for key in ("camera", "her", "fx", "light"):
+    for key in ("camera", "her", "fx", "light", "rule"):
         if m.get(key):
             for i, ln in enumerate(textwrap.wrap(f"{key.upper()}: {m[key]}", 70)):
                 d.text((14, y), ln, fill=(230, 230, 236), font=refs.label_font(16))
@@ -49,6 +51,22 @@ def _fit(p: Path) -> "Image.Image":
     return out
 
 
+def _strip(refs_: list[str]) -> "Image.Image":
+    """Several reference frames in one panel (2 x n grid): a burst of cuts or a before / after."""
+    from PIL import Image
+
+    cols = 2 if len(refs_) <= 4 else 3
+    rows = (len(refs_) + cols - 1) // cols
+    cw, ch = W // cols, H // rows
+    out = Image.new("RGB", (W, H), (10, 10, 12))
+    for i, r in enumerate(refs_):
+        im = Image.open(refs.ref_frame(r)).convert("RGB")
+        s = min(cw / im.width, ch / im.height)
+        im = im.resize((max(1, int(im.width * s) - 2), max(1, int(im.height * s) - 2)))
+        out.paste(im, ((i % cols) * cw + 1, (i // cols) * ch + 1))
+    return out
+
+
 def build(job_dir: Path, core: str = "") -> list[Path]:
     from PIL import Image, ImageDraw
 
@@ -63,14 +81,16 @@ def build(job_dir: Path, core: str = "") -> list[Path]:
     sheets = []
     for n in range(0, len(moments), 4):
         part = moments[n:n + 4]
-        sheet = Image.new("RGB", (2 * W + 12, 30 + len(part) * (H + 34)), (14, 14, 18))
+        sheet = Image.new("RGB", (2 * W + 12, 30 + len(part) * (H + 52)), (14, 14, 18))
         d = ImageDraw.Draw(sheet)
         d.text((10, 8), f"toki's core: {core}", fill=(255, 210, 120), font=refs.label_font())
         for i, m in enumerate(part):
-            y = 30 + i * (H + 34)
+            y = 30 + i * (H + 52)
             d.text((10, y + 4), f"{m['t']:.2f} s  \"{m.get('line', '')}\"   reference {m['ref']}  |  "
                                f"{'ours: ' + Path(m['still']).name if m.get('still') else 'PLAN'}", fill=(235, 235, 235), font=refs.label_font())
-            sheet.paste(_fit(refs.ref_frame(m["ref"])), (0, y + 24))
+            sheet.paste(_strip(m["refs"]) if m.get("refs") else _fit(refs.ref_frame(m["ref"])), (0, y + 24))
+            if m.get("rule") and m.get("still"):          # without a still the PLAN card already shows the rule
+                d.text((10, y + 26 + H), ("RULE: " + m["rule"])[:190], fill=(150, 220, 255), font=refs.label_font())
             still = job_dir / m["still"] if m.get("still") else None
             sheet.paste(_fit(still) if still and still.is_file() else _card(m), (W + 12, y + 24))
         p = out_dir / f"storyboard_{n // 4 + 1:02d}.jpg"

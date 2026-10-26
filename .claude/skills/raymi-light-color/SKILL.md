@@ -21,6 +21,10 @@ in dunklen Szenen" (10-25), "flach und plastik" (10-25). Sources: knowledge/craf
 - **Value before hue**: the picture must read in greyscale - subject vs background separated by value.
 - **Big masses calm, accents loud**: one dominant hue family + one complementary accent (FIRESTARTER: violet void,
   warm fire on her face); saturation peaks only on what matters (her eyes, the main element).
+- **Measured bar** (knowledge/references/LEARNED.md, 5,999 pro shots): low key 49 %, high key only 12 % (dark is the
+  ground, light is the event); palettes analogous 57 %, triad 22 %, complementary 14 % (the complementary accent is
+  rare, so it hits). A two-tone impact frame is only one when >= 79 % of pixels sit in the two extremes and the black
+  is ink (p05 ~0.01) - navy "black" reads soft. Check a still: `refs measure <still> --card <class>`.
 - **Coloured shadows**: shadows shift hue (cool / violet), never just darker grey.
 - **Depth through light**: foreground darker or silhouetted, subject lit, background falls off (darker or hazier);
   haze / smoke layers in the set colour give depth without walls.
@@ -35,4 +39,4 @@ in dunklen Szenen" (10-25), "flach und plastik" (10-25). Sources: knowledge/craf
 - One light logic per world? Does set light touch her?
 - Any burnt / washed / muddy areas (exposure tool) and any grey shading?
 - Does the whole film look like ONE artwork (one hand), or several?
-- Next to its reference: same light idea and contrast?
+- Next to its reference: same light idea and contrast? Measured against its principle card (`refs measure --card`)?

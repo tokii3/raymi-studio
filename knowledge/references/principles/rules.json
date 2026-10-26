@@ -1,0 +1,580 @@
+{
+ "effects": {
+  "hit": {
+   "shots": 20,
+   "range": {
+    "dur": {
+     "p10": 0.17,
+     "p50": 0.17,
+     "p90": 0.72
+    },
+    "motion": {
+     "p10": 0.002,
+     "p50": 0.082,
+     "p90": 0.133
+    },
+    "subj_size": {
+     "p10": 0.018,
+     "p50": 0.026,
+     "p90": 0.067
+    },
+    "subj_thirds": {
+     "p10": 0.079,
+     "p50": 0.171,
+     "p90": 0.384
+    },
+    "neg_space": {
+     "p10": 0.164,
+     "p50": 0.695,
+     "p90": 0.904
+    },
+    "contrast": {
+     "p10": 0.302,
+     "p50": 0.535,
+     "p90": 0.844
+    },
+    "light_share": {
+     "p10": 0.001,
+     "p50": 0.042,
+     "p90": 0.293
+    },
+    "dark_share": {
+     "p10": 0.003,
+     "p50": 0.179,
+     "p90": 0.717
+    },
+    "two_tone": {
+     "p10": 0.158,
+     "p50": 0.357,
+     "p90": 0.726
+    },
+    "sat_mean": {
+     "p10": 0.168,
+     "p50": 0.308,
+     "p90": 0.602
+    },
+    "detail": {
+     "p10": 0.017,
+     "p50": 0.044,
+     "p90": 0.19
+    }
+   },
+   "neg_side": {
+    "left": 3,
+    "right": 2,
+    "top": 0,
+    "bottom": 4,
+    "even": 11
+   },
+   "key": {
+    "low": 9,
+    "mid": 8,
+    "high": 3
+   },
+   "examples": [
+    "jjk-op1@47.05: Close-up profile of Yuji's cheek splitting open with Sukuna's teeth and eye; harsh teal-cyan lighting. | why: Visceral body horror reveal timed exactly to an assertive vocal kick. | music: Punchy vocal accent on chorus line",
+    "jjk-op1@52.39: Low-angle action shot of Nobara thrusting hammer forward, nails glowing with cyan cursed aura. | why: Presents Nobara at her fiercest combat angle, breaking towards camera. | music: Drum kick and guitar accent",
+    "jjk-op1@52.55: Dynamic action freeze of Maki sweeping her long naginata spear across a penthouse window. | why: Displays martial grace and wide weapon reach across horizontal lines. | music: Driving chorus beat",
+    "jjk-op1@54.55: Explosive gold concentric circles radiating behind muscular Todo spreading his hands. | why: Establishes Todo's overwhelming physical charisma and psychic eccentricity. | music: Chorus vocal reaches euphoric climb",
+    "jjk-op1@36.7: POV through glasses revealing a grotesque green curse creature looming in the park. | why: Abrupt visual punch revealing hidden supernatural danger right before the chorus riser. | music: Tension riser builds in percussion",
+    "jjk-op1@64.06: Low-angle close-up of Sukuna leaning on his hand with a sinister predatory smirk. | why: Establishes absolute evil towering over Yuji's psyche. | music: Guitar bend accents facial reveal",
+    "jjk-op1@48.72: Rapid-cut impact frame of Nanami striking the target with golden energy blades. | why: Delivers instantaneous combat impact in 0.17 seconds. | music: Snare and cymbal crash",
+    "jjk-op1@41.88: Whip cut returning inside the train carriage with high kinetic speed (0.128). | why: Bridges the explosive chorus entry directly back to Yuji's passenger car. | music: High-energy rhythm driving forward"
+   ]
+  },
+  "pull_in": {
+   "shots": 12,
+   "range": {
+    "dur": {
+     "p10": 0.203,
+     "p50": 0.83,
+     "p90": 1.483
+    },
+    "motion": {
+     "p10": 0.003,
+     "p50": 0.059,
+     "p90": 0.131
+    },
+    "subj_size": {
+     "p10": 0.018,
+     "p50": 0.049,
+     "p90": 0.08
+    },
+    "subj_thirds": {
+     "p10": 0.068,
+     "p50": 0.128,
+     "p90": 0.371
+    },
+    "neg_space": {
+     "p10": 0.21,
+     "p50": 0.472,
+     "p90": 0.718
+    },
+    "contrast": {
+     "p10": 0.339,
+     "p50": 0.663,
+     "p90": 0.865
+    },
+    "light_share": {
+     "p10": 0.001,
+     "p50": 0.043,
+     "p90": 0.293
+    },
+    "dark_share": {
+     "p10": 0.16,
+     "p50": 0.408,
+     "p90": 0.772
+    },
+    "two_tone": {
+     "p10": 0.261,
+     "p50": 0.515,
+     "p90": 0.799
+    },
+    "sat_mean": {
+     "p10": 0.17,
+     "p50": 0.319,
+     "p90": 0.61
+    },
+    "detail": {
+     "p10": 0.037,
+     "p50": 0.103,
+     "p90": 0.169
+    }
+   },
+   "neg_side": {
+    "left": 1,
+    "right": 3,
+    "top": 1,
+    "bottom": 2,
+    "even": 5
+   },
+   "key": {
+    "low": 9,
+    "mid": 2,
+    "high": 1
+   },
+   "examples": [
+    "jjk-op1@54.39: Medium interior shot of Miwa turning her head sharply with sword drawn, elderly principal seated behind. | why: Introduces Kyoto school rivals in dignified traditional decor. | music: Guitar melody riff",
+    "jjk-op1@51.38: Medium close-up of Mahito gleefully licking dripping blood from his fingers; centered at (0.55, 0.32). | why: Communicates sadism and macabre playfulness in a held 0.83s shot. | music: Vocal line leaps into higher register",
+    "jjk-op1@0.0: Center-weighted crimson glyph glowing against absolute darkness; 92% negative space held for 0.83s. | why: Establishes a stark occult tone from pure pitch black before introducing characters, synchronizing with the quiet intro guitar lick. | music: Soft ambient guitar intro with subtle percussive tapping",
+    "jjk-op1@42.38: Rear medium shot of Yuji looking out the train window into sunlit skyscrapers, held for 2.0s. | why: Subverts explosive battle expectation with quiet introspection right on the vocal melody peak. | music: Chorus vocal soars over heavy driving guitar line",
+    "jjk-op1@4.84: Low-angle insert on water rippling over shoes; negative space shifts to 48% on the right. | why: Draws focus to the surreal surrealist water pooling inside the train before zooming out. | music: Vocal cadence reaches end of first phrase",
+    "jjk-op1@46.21: Sudden top-down POV looking into emerald green flooded water at shoes; motion near zero. | why: Re-grounds the uncanny water motif inside the carriage. | music: Rhythm guitar accents driving chorus",
+    "jjk-op1@22.19: Close-up profile of Megumi cast in deep shadow with harsh rim light from the top right. | why: Introduces key companion with serious, brooding interiority. | music: Syncopated drum pattern beneath vocal verse",
+    "jjk-op1@57.39: Medium low shot of Geto standing beside sliding shoji screen in traditional monk robes. | why: Positions mastermind in quiet conspiratorial darkness. | music: Quiet drum breakdown"
+   ]
+  },
+  "breathe": {
+   "shots": 41,
+   "range": {
+    "dur": {
+     "p10": 0.17,
+     "p50": 0.33,
+     "p90": 2.17
+    },
+    "motion": {
+     "p10": 0.005,
+     "p50": 0.023,
+     "p90": 0.132
+    },
+    "subj_size": {
+     "p10": 0.014,
+     "p50": 0.03,
+     "p90": 0.065
+    },
+    "subj_thirds": {
+     "p10": 0.097,
+     "p50": 0.166,
+     "p90": 0.386
+    },
+    "neg_space": {
+     "p10": 0.181,
+     "p50": 0.417,
+     "p90": 0.889
+    },
+    "contrast": {
+     "p10": 0.231,
+     "p50": 0.554,
+     "p90": 0.862
+    },
+    "light_share": {
+     "p10": 0.001,
+     "p50": 0.024,
+     "p90": 0.348
+    },
+    "dark_share": {
+     "p10": 0.0,
+     "p50": 0.354,
+     "p90": 0.771
+    },
+    "two_tone": {
+     "p10": 0.074,
+     "p50": 0.445,
+     "p90": 0.818
+    },
+    "sat_mean": {
+     "p10": 0.141,
+     "p50": 0.408,
+     "p90": 0.692
+    },
+    "detail": {
+     "p10": 0.022,
+     "p50": 0.11,
+     "p90": 0.167
+    }
+   },
+   "neg_side": {
+    "left": 6,
+    "right": 3,
+    "top": 10,
+    "bottom": 8,
+    "even": 14
+   },
+   "key": {
+    "low": 21,
+    "mid": 15,
+    "high": 5
+   },
+   "examples": [
+    "jjk-op1@1.5: Medium full shot of slumped protagonist centered at (0.47, 0.33); muted teal and washed-out daylight fills 31% negative space. | why: Establishes isolation and exhaustion, matching the solitary opening vocal entrance. | music: Lead vocal enters accompanied by sparse rhythm guitar",
+    "jjk-op1@23.69: Wide architectural exterior of Nobara on a sunlit balcony overlooking Tokyo; bright high-key sky filling 39% top frame. | why: Sharp tonal contrast from Megumi's dark tunnel, highlighting her brisk, confident presence. | music: Vocal lifts slightly into melodic verse continuation",
+    "jjk-op1@2.67: Hold on seated protagonist, camera gently drifting with water-covered floor reflections; low motion (0.005). | why: Gives weight to the lonely atmosphere, letting the melancholic vocal line settle. | music: Solo vocal melody over soft bass and drums",
+    "jjk-op1@90.09: Bright orange end-card bumper with white brand eye emblem centered and graphic call-to-action boxes. | why: Channel / distributor end card for streaming audience. | music: Promotional jingle / chime",
+    "jjk-op1@56.22: Extreme wide shot of Gojo and Yuji sitting on concrete riverbank steps at sunset; water glimmering. | why: Sudden emotional breath, contrasting chaotic battles with quiet mentorship and peace. | music: Chorus begins winding down into melodic bridge",
+    "jjk-op1@58.73: Warm bright hospital room shot of Yuji's grandfather sitting in bed looking sternly forward. | why: Flash of grandfather's memory that triggered Yuji's entire hero journey. | music: Vocals drop out; outro guitar solo enters",
+    "jjk-op1@49.22: Medium tracking shot of Gojo floating effortlessly over golden high-rise windows, smiling. | why: Juxtaposes violent combat with Gojo's playful, god-like ease. | music: Vocal melodic turnaround",
+    "jjk-op1@67.07: Yuji blinking as Sukuna's red eye marks vanish, returning to normal exhausted human eyes. | why: Resolves the possession back to everyday grim reality. | music: Final chord rings out"
+   ]
+  },
+  "tension": {
+   "shots": 20,
+   "range": {
+    "dur": {
+     "p10": 0.17,
+     "p50": 0.33,
+     "p90": 1.447
+    },
+    "motion": {
+     "p10": 0.001,
+     "p50": 0.029,
+     "p90": 0.118
+    },
+    "subj_size": {
+     "p10": 0.016,
+     "p50": 0.019,
+     "p90": 0.05
+    },
+    "subj_thirds": {
+     "p10": 0.045,
+     "p50": 0.338,
+     "p90": 0.387
+    },
+    "neg_space": {
+     "p10": 0.222,
+     "p50": 0.597,
+     "p90": 0.86
+    },
+    "contrast": {
+     "p10": 0.127,
+     "p50": 0.499,
+     "p90": 0.716
+    },
+    "light_share": {
+     "p10": 0.001,
+     "p50": 0.004,
+     "p90": 0.077
+    },
+    "dark_share": {
+     "p10": 0.056,
+     "p50": 0.478,
+     "p90": 0.89
+    },
+    "two_tone": {
+     "p10": 0.133,
+     "p50": 0.482,
+     "p90": 0.892
+    },
+    "sat_mean": {
+     "p10": 0.299,
+     "p50": 0.441,
+     "p90": 0.646
+    },
+    "detail": {
+     "p10": 0.025,
+     "p50": 0.064,
+     "p90": 0.17
+    }
+   },
+   "neg_side": {
+    "left": 1,
+    "right": 2,
+    "top": 0,
+    "bottom": 5,
+    "even": 12
+   },
+   "key": {
+    "low": 14,
+    "mid": 6,
+    "high": 0
+   },
+   "examples": [
+    "jjk-op1@18.52: Extreme wide shot of character walking inside a dimly lit underpass; 59% bottom negative space, low motion. | why: Contrasts the vast aerial view with subterranean loneliness as the verse deepens. | music: Rhythmic verse beat settles into steady mid-tempo groove",
+    "jjk-op1@28.7: High-angle descending shot looking down an escalator at Inumaki; desaturated institutional lighting. | why: Adds vertical variety to character vignettes and reinforces underground solitude. | music: Verse rhythm maintains steady forward momentum",
+    "jjk-op1@63.23: Sudden brutal cut to Sukuna's throne of skulls inside cursed domain; red and cyan contrast. | why: Shatters the cherry blossom fantasy with hellish demonic reality. | music: Drum rhythm powers forward",
+    "jjk-op1@66.4: Cut back to seated Yuji on the train, camera centered, eyes glowing red from Sukuna marks. | why: Confirms the internal parasitic curse residing within him. | music: Final guitar phrasing",
+    "jjk-op1@1.17: Brief flash frame introducing desaturated city skyline behind the carriage window. | why: Stepping the visual exposure up gradually to avoid jarring light jump. | music: Guitar arpeggio rises gently",
+    "jjk-op1@52.72: Close-up of Inumaki pulling down collar to reveal cursed speech seals, eyes wide. | why: Highlights character's lethal vocal weapon right before detonation. | music: Vocal cadence reaches peak tension",
+    "jjk-op1@44.38: Dark silhouette shot of Yuji's back reflected against night-black window glass. | why: Instantly flips the environment from golden daylight to dark interior mirror. | music: Chorus vocal continues strong",
+    "jjk-op1@49.72: Gojo raising hands to channel cursed technique, neon flare flaring across lens. | why: Builds supernatural energy within a half-second window. | music: Guitar arpeggio accents vocal hook"
+   ]
+  },
+  "beauty": {
+   "shots": 6,
+   "range": {
+    "dur": {
+     "p10": 0.5,
+     "p50": 1.67,
+     "p90": 2.085
+    },
+    "motion": {
+     "p10": 0.005,
+     "p50": 0.023,
+     "p90": 0.093
+    },
+    "subj_size": {
+     "p10": 0.015,
+     "p50": 0.032,
+     "p90": 0.043
+    },
+    "subj_thirds": {
+     "p10": 0.101,
+     "p50": 0.169,
+     "p90": 0.34
+    },
+    "neg_space": {
+     "p10": 0.052,
+     "p50": 0.295,
+     "p90": 0.51
+    },
+    "contrast": {
+     "p10": 0.451,
+     "p50": 0.682,
+     "p90": 0.838
+    },
+    "light_share": {
+     "p10": 0.002,
+     "p50": 0.137,
+     "p90": 0.307
+    },
+    "dark_share": {
+     "p10": 0.028,
+     "p50": 0.184,
+     "p90": 0.311
+    },
+    "two_tone": {
+     "p10": 0.186,
+     "p50": 0.328,
+     "p90": 0.455
+    },
+    "sat_mean": {
+     "p10": 0.256,
+     "p50": 0.285,
+     "p90": 0.468
+    },
+    "detail": {
+     "p10": 0.08,
+     "p50": 0.134,
+     "p90": 0.365
+    }
+   },
+   "neg_side": {
+    "left": 1,
+    "right": 0,
+    "top": 0,
+    "bottom": 1,
+    "even": 4
+   },
+   "key": {
+    "low": 2,
+    "mid": 3,
+    "high": 1
+   },
+   "examples": [
+    "jjk-op1@56.72: Wide idyllic watercolor landscape of cherry blossoms drifting past a rural railway station with young Junpei and curse. | why: Heartbreaking nostalgic dreamscape; soft pastel tones provide fragile warmth. | music: Melodic vocal tail over gentle guitar",
+    "jjk-op1@33.37: Overhead interior tracking shot of Nanami seated in a warm modernist lounge reading a book; centered at (0.43, 0.33). | why: Positions Nanami in calm corporate orderliness using warm amber interior tones. | music: Pre-chorus begins to stir underneath the vocals",
+    "jjk-op1@59.06: Wide panoramic shot of Yuji, Junpei, and Megumi sitting under blooming cherry blossom trees on a picnic. | why: The famous tragic 'false memory' painting; luminous pastel greens and pinks evoke painful tenderness. | music: Soaring, emotional lead guitar riff",
+    "jjk-op1@35.2: Medium exterior shot of Maki standing in a lush sun-dappled park framed by strong vertical tree trunks. | why: Provides vibrant organic green harmony, contrasting the prior urban interiors. | music: Pre-chorus vocal builds upward",
+    "jjk-op1@50.55: Wide shot of giant red curse creature (Dagon) wriggling in lush underwater coral. | why: Shifts palette entirely to luminous aquamarine and oceanic corals, expanding enemy world. | music: Secondary chorus vocal phrase begins",
+    "jjk-op1@61.23: Slow gentle pan over Junpei and Yuji laughing together under the tree shade. | why: Lingers on unachieved happiness, maximizing dramatic irony. | music: Lead guitar solo sings over driving drums"
+   ]
+  },
+  "scale": {
+   "shots": 2,
+   "range": {
+    "dur": {
+     "p10": 2.448,
+     "p50": 6.92,
+     "p90": 11.392
+    },
+    "motion": {
+     "p10": 0.014,
+     "p50": 0.057,
+     "p90": 0.1
+    },
+    "subj_size": {
+     "p10": 0.025,
+     "p50": 0.054,
+     "p90": 0.085
+    },
+    "subj_thirds": {
+     "p10": 0.146,
+     "p50": 0.159,
+     "p90": 0.172
+    },
+    "neg_space": {
+     "p10": 0.056,
+     "p50": 0.226,
+     "p90": 0.396
+    },
+    "contrast": {
+     "p10": 0.71,
+     "p50": 0.716,
+     "p90": 0.723
+    },
+    "light_share": {
+     "p10": 0.039,
+     "p50": 0.051,
+     "p90": 0.063
+    },
+    "dark_share": {
+     "p10": 0.264,
+     "p50": 0.29,
+     "p90": 0.316
+    },
+    "two_tone": {
+     "p10": 0.327,
+     "p50": 0.341,
+     "p90": 0.355
+    },
+    "sat_mean": {
+     "p10": 0.388,
+     "p50": 0.39,
+     "p90": 0.392
+    },
+    "detail": {
+     "p10": 0.165,
+     "p50": 0.335,
+     "p90": 0.505
+    }
+   },
+   "neg_side": {
+    "left": 0,
+    "right": 0,
+    "top": 0,
+    "bottom": 1,
+    "even": 1
+   },
+   "key": {
+    "low": 1,
+    "mid": 1,
+    "high": 0
+   },
+   "examples": [
+    "jjk-op1@6.01: Epic aerial top-down cartography shot of glowing night metropolis; held for 12.51s with title typography overlay. | why: Provides monumental geographical scale and allows the main title card to bleed red energy across the city grid. | music: Second vocal phrase swells with fuller backing drums and rhythm guitar",
+    "jjk-op1@38.87: Low silhouette shot of Gojo standing atop a massive steel tower against a hazy twilight sky. | why: Establishes supreme elevation and dominance over the cityscape. | music: Pre-chorus drum roll accelerates"
+   ]
+  },
+  "speed": {
+   "shots": 6,
+   "range": {
+    "dur": {
+     "p10": 0.17,
+     "p50": 0.335,
+     "p90": 0.67
+    },
+    "motion": {
+     "p10": 0.059,
+     "p50": 0.08,
+     "p90": 0.127
+    },
+    "subj_size": {
+     "p10": 0.027,
+     "p50": 0.045,
+     "p90": 0.064
+    },
+    "subj_thirds": {
+     "p10": 0.088,
+     "p50": 0.157,
+     "p90": 0.246
+    },
+    "neg_space": {
+     "p10": 0.243,
+     "p50": 0.545,
+     "p90": 0.746
+    },
+    "contrast": {
+     "p10": 0.397,
+     "p50": 0.574,
+     "p90": 0.802
+    },
+    "light_share": {
+     "p10": 0.01,
+     "p50": 0.037,
+     "p90": 0.235
+    },
+    "dark_share": {
+     "p10": 0.08,
+     "p50": 0.31,
+     "p90": 0.65
+    },
+    "two_tone": {
+     "p10": 0.14,
+     "p50": 0.486,
+     "p90": 0.697
+    },
+    "sat_mean": {
+     "p10": 0.325,
+     "p50": 0.415,
+     "p90": 0.473
+    },
+    "detail": {
+     "p10": 0.035,
+     "p50": 0.083,
+     "p90": 0.171
+    }
+   },
+   "neg_side": {
+    "left": 0,
+    "right": 1,
+    "top": 0,
+    "bottom": 2,
+    "even": 3
+   },
+   "key": {
+    "low": 2,
+    "mid": 4,
+    "high": 0
+   },
+   "examples": [
+    "jjk-op1@57.72: Medium action tracking shot of Yuji leaping forward in mid-air through exploding debris, arm extended. | why: Direct protagonist battle rush bursting through the screen. | music: Sudden rhythmic resurgence into outro lead",
+    "jjk-op1@48.21: High-angle rooftop night shot of Nanami diving down onto a massive curse in mid-air. | why: Launches the high-action montage sequence with kinetic vertical descent. | music: Chorus builds rhythmically",
+    "jjk-op1@53.72: Wide shot of Panda leaping across urban rooftops under cold night lighting. | why: Provides dynamic animalistic movement to bridge the combat ensemble. | music: Driving tom-tom drum accents",
+    "jjk-op1@41.54: Sub-frame kinetic blur carrying energy across the edit. | why: Connects the blinding flash to the physical impact of the next frame. | music: Chorus downbeat resonance",
+    "jjk-op1@41.71: Extreme fast cut shifting axis into the train carriage. | why: Propels viewer back into the emotional center of the story. | music: Driving chorus beat",
+    "jjk-op1@48.88: Insert of curse splitting under blade pressure. | why: Supplies tactile follow-through to the strike. | music: Driving rhythm continues"
+   ]
+  }
+ },
+ "rules_by_video": {
+  "jjk-op1": [
+   "Bookend sequences with matching thematic framing (e.g., solitary train car in 1.5, 42.38, and 66.4) to anchor the emotional journey of the protagonist.",
+   "Use extreme macro body-horror inserts held for fractions of a second (0.17s - 0.5s) to inject sudden narrative violence into serene or static shots (47.05, 47.88, 56.56).",
+   "Pair slow atmospheric establishment shots (>2s) during verses with rapid multi-angle montage cutting (0.17s) during chorus peaks (seen at 18.52 vs 48.72, 50.22, 52.39).",
+   "Leverage chromatic juxtaposition between scenes: transition directly from cool underground shadows to warm overexposed daylight to jolt audience awareness (22.19 to 23.69).",
+   "Anchor god-tier or mentor figures in high vertical positions with sweeping negative space to reinforce superior power dynamics (38.87, 49.22).",
+   "Synchronize sub-frame whiteout flash frames (0.17s) with maximum percussion downbeats to simulate sensory overpressure on musical drops (41.37, 58.56).",
+   "Use watercolor dreamscapes with expansive warm negative space for false or tragic memories to contrast stark dark reality (56.72, 59.06 vs 63.23).",
+   "Place close-up weapon preparation and technique seals immediately prior to wide impact strikes to build kinetic momentum (52.72, 55.72 to 57.72)."
+  ]
+ }
+}

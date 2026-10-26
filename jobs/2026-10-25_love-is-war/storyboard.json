@@ -1,14 +1,15 @@
 {
- "_why": "storyboard round 2 after brief-keeper BLOCK (reviews/storyboard_brief-keeper_1.md): one distinct reference per moment matched in closeness + light (no frame twice), + a C3 moment (chorus 1 bar cuts) and two more lens attacks (38.77, 154.3); previz stills come with the build",
+ "_why": "storyboard round 3 after brief-keeper BLOCK 2 (reviews/storyboard_brief-keeper_2.md): toki 2026-10-26 'aus den referenzen lernen ... alles hat grund und wirkung'. 5 new references (frieren, spiderverse, arcane, csm-ed1, jjk) + the library MEASURED (knowledge/references/LEARNED.md): every moment a matched frame or a strip + a RULE line (principle card or measured pro decision with its why); new moments: the hidden stop 121.94 and the stop -> drop move. Frames of each reference were looked at before use.",
  "moments": [
   {
    "t": 0.2,
    "line": "cold open / the last picture first (shot 0b) - she blinded by the light, a black shape",
-   "ref": "kda-popstars@1.25",
+   "ref": "kda-popstars@190.25",
    "camera": "on the beam axis at the lamp, h 13.7 d 6 fov 58",
    "her": "THE silhouette: hangs her whole weight on the brass of the lamp (pull-heavy-object 1.9)",
    "fx": "white-gold fills the frame, she a black shape - 6 frames",
-   "light": "the beam is the only light"
+   "light": "the beam is the only light",
+   "rule": "flood_silhouette: 38-66 % of the frame near white, the figure the only dark mass, small (5-12 %), even room - loneliness + awe, nowhere else to look (YOASOBI Idol 186, Frieren 69)"
   },
   {
    "t": 0.5,
@@ -17,7 +18,8 @@
    "camera": "from below her cheek, h 0.35 d 0.75 fov 50, pull-back arc",
    "her": "eye snaps open, glides up the lighthouse cable",
    "fx": "the beam sweeps the surface above like a blade (30 % width), a pulse sparks up the cable",
-   "light": "black-navy, her violet dots, the white beam far above"
+   "light": "black-navy, her violet dots, the white beam far above",
+   "rule": "pros open low key (49 % of pro shots are low key, 12 % high key): darkness is the ground, the first light is the event"
   },
   {
    "t": 9.358,
@@ -26,16 +28,22 @@
    "camera": "low converging-cable frame, h 0.4 d 1.2 fov 60, roll -8, crash in",
    "her": "LUNGES up the cable at the light (roar 1.0), mouth open",
    "fx": "cable white-hot, two-tone background 2 frames (she keeps her colours), shake 5",
-   "light": "the pulse is the key light"
+   "light": "the pulse is the key light",
+   "rule": "two_tone_hit: >= 79 % of pixels in the two extremes, black really black (p05 ~0.01), >= 37 % white, diagonal strokes; 1-4 frames on a strong hit only"
   },
   {
    "t": 38.767,
    "line": "verse 1: she CLAWS at the passing beam (shot 19)",
-   "ref": "kda-firestarter@14.25",
-   "camera": "close side, d 1.2, push with the vocal rise",
-   "her": "claws thrown at the light as it passes the lens (roar 1.0 held 5 frames), sings",
+   "ref": "spiderverse-across-t2@117.25",
+   "camera": "close, the lens on the beam path, d 0.9 (r3: was 1.2 - her claws must reach the glass), push with the vocal rise",
+   "her": "claws thrown at the light as it passes the lens: her hands hit the glass at the frame edges, face centred between them (roar 1.0 held 5 frames), sings",
    "fx": "ink slash 1 on the melody peak, the beam's edge flickers",
-   "light": "the beam crossing, two-tone flash on the lens crossing; film grain, broken ink edges"
+   "light": "the beam crossing, two-tone flash on the lens crossing; film grain, broken ink edges",
+   "refs": [
+    "spiderverse-across-t2@117.25",
+    "arcane-paint-town-blue@105.25"
+   ],
+   "rule": "lens_attack: hands flat on the lens at the frame edges, the face centred between them; drawn marks over the face (Arcane) - the fourth wall breaks, the viewer is inside and threatened"
   },
   {
    "t": 62.615,
@@ -44,25 +52,44 @@
    "camera": "ECU, h at her mouth d 0.62 fov 48, roll +6, 3-frame push",
    "her": "screams INTO the lens, claws at us (roar 1.0), mouth wide open",
    "fx": "ring bursts past the glass, ink detonation with a hole at her face, chroma 3, shake 5; the ink line climbs with her measured notes (red heads 62.75-64.45)",
-   "light": "two-tone paper / ink + her violet + one red"
+   "light": "two-tone paper / ink + her violet + one red",
+   "refs": [
+    "ado-usseewa@98.25",
+    "arcane-paint-town-blue@105.25"
+   ],
+   "rule": "ecu_scream: the open mouth fills 30-60 % of the frame, wide lens close, tilted, cut by the edges, one hue + black - the blow, no room to look away"
   },
   {
    "t": 64.3,
    "line": "chorus 1: a new picture on EVERY bar, a slash per bar (shots 29-35)",
-   "ref": "ado-usseewa@63.25",
+   "ref": "jjk-op1@47.25",
    "camera": "bar 2 worm's eye / bar 3 through the ink crown / bar 4 top-down / bar 5 dutch flip / bar 6 claw macro / bar 7 wide from behind / bar 8 close low - 8 cuts in 15 s on the measured bar lines",
    "her": "lunge, sing into the lens, hook-punch, back kick, claw, arms wide, sing - one action per bar",
    "fx": "ink slash per bar, barb flick, lamp flash on bar 7; then bar 9 HOLDS still against the loud track",
-   "light": "two-tone ink / paper, her violet, grain"
+   "light": "two-tone ink / paper, her violet, grain",
+   "refs": [
+    "jjk-op1@47.25",
+    "jjk-op1@47.75",
+    "jjk-op1@48.25",
+    "jjk-op1@48.75",
+    "ado-usseewa@63.25",
+    "edgerunners-this-fffire@74.25"
+   ],
+   "rule": "measured: pros change the picture every 0.33-0.67 s in aggressive choruses (JJK 47-49: 6 changes in 2 s), short shots simpler + emptier (54 % empty < 0.25 s); our plan: 1 per bar (1.9 s) + slashes / flashes inside - question to toki: denser?"
   },
   {
    "t": 79.467,
    "line": "the top note: crane + pillar (shot 36)",
-   "ref": "kda-firestarter@110.25",
+   "ref": "frieren-op@53.25",
    "camera": "crane straight up from 0.6 to 6 m in 1.2 s",
    "her": "arms raised, head back, mouth open on the held B5",
    "fx": "a violet-white pillar of her light, exactly as long as the note",
-   "light": "her pillar the only light in the storm"
+   "light": "her pillar the only light in the storm",
+   "refs": [
+    "frieren-op@53.25",
+    "edgerunners-this-fffire@32.25"
+   ],
+   "rule": "light_pillar: one vertical column of light, centred, 62-88 % dark, the figure < 9 % at its base - scale, an event from above; its length reads as time (as long as the note)"
   },
   {
    "t": 87.03,
@@ -71,7 +98,8 @@
    "camera": "close on her, the black cloud edge sweeps across the lens first",
    "her": "pings at the rock (casting-spell 1.0), mouth open",
    "fx": "the ping hits the rock and SHATTERS into 12 two-tone shards flying at the lens, stutter on twos, shake 4",
-   "light": "grey storm, the shards white"
+   "light": "grey storm, the shards white",
+   "rule": "two_tone_hit as shards: the frame breaks into white pieces with black between, the figure a cut-out; stutter on twos = the eye counts the hits"
   },
   {
    "t": 106.2,
@@ -80,25 +108,48 @@
    "camera": "wide from behind her, h 1.2 d 5",
    "her": "stands in the surf, looking up",
    "fx": "clouds part in 30 frames, the moon 45 % of the frame over the lighthouse",
-   "light": "moonlight rims her; the beauty that mocks her (her rain call wrong again)"
+   "light": "moonlight rims her; the beauty that mocks her (her rain call wrong again)",
+   "rule": "a calm moment in pros = a long hold: shots over 2 s move least (0.03 frame widths/s vs 0.105 under 0.25 s, 5,999 pro shots), a big calm mass (the moon) and a small figure - the only place the film breathes"
+  },
+  {
+   "t": 121.94,
+   "line": "the hidden stop: 0.68 s of silence before drop 2 (shot 53H)",
+   "ref": "ado-show@124.75",
+   "refs": [
+    "ado-show@124.75",
+    "ado-show@125.75",
+    "ado-show@126.25",
+    "ado-show@127.25"
+   ],
+   "camera": "4 cm/s drift, not locked, low under her at the apex",
+   "her": "FREEZE at the apex of the leap, the rain drops hang in the air",
+   "fx": "the lamp goes dark; only the drops catch a last glint; nothing moves but the drift",
+   "light": "near black, her dots the only light",
+   "rule": "stop -> drop as the pros do it (Ado SHOW 124-127, why pass): the silence held near black with ONE tiny light, then a 4-frame ECU flash on the hit, then HOLD the payoff - stutter in, hold the payoff"
   },
   {
    "t": 122.615,
    "line": "the landing on the drop (shot 54)",
-   "ref": "edgerunners-this-fffire@111.25",
+   "ref": "spiderverse-across-t2@4.25",
    "camera": "low on the ledge, d 2.8, roll -10",
    "her": "SUPERHERO LANDING on the rock (swing-backflip-to-superhero-pose 1.9), rain halo",
    "fx": "lamp flash two-tone, shake 5, a ring of rain, ink slash",
-   "light": "the lamp flash"
+   "light": "the lamp flash",
+   "refs": [
+    "spiderverse-across-t2@4.25",
+    "spiderverse-across-t2@12.75"
+   ],
+   "rule": "a landing = low camera, the figure crouched skidding TOWARD the lens with speed lines + sparks (Spider-Verse 4), a graphic impact star behind the hit (Spider-Verse 12); hold the pose 8 frames: the payoff after the stop is held, not cut"
   },
   {
    "t": 146.33,
    "line": "false win: the beam passes the lens (shot 66)",
-   "ref": "hsr-hope-feathers@117.25",
+   "ref": "bp-hylt@28.25",
    "camera": "on the lens-side beam axis, medium d 3",
    "her": "pulls the great lamp round (pull-heavy-object 1.0)",
    "fx": "the beam swings and PASSES the lens in 10 frames, flash, shake 4",
-   "light": "white-gold beam, violet lantern"
+   "light": "white-gold beam, violet lantern",
+   "rule": "beam_at_lens: the source swings into the lens, the centre flares to white with rays + dust, the figure lost in it - blinding = an invisible cut, the next shot can be anything"
   },
   {
    "t": 154.3,
@@ -107,25 +158,36 @@
    "camera": "close, low, d 0.8",
    "her": "screams, arms wide on the brass (yelling 1.9), mouth wide open",
    "fx": "ink slash, the lens rings flash past",
-   "light": "violet lantern, white-gold beam outside"
+   "light": "violet lantern, white-gold beam outside",
+   "refs": [
+    "edgerunners-this-fffire@85.25",
+    "ado-usseewa@51.25"
+   ],
+   "rule": "ecu_scream (second one): same rule, other side and colour than 62.6 so it does not repeat - the effort scream, eyes shut"
   },
   {
    "t": 177.238,
    "line": "THE LAST HIT: the beam stops on you (shot 83)",
-   "ref": "edgerunners-this-fffire@131.25",
+   "ref": "yoasobi-idol@186.25",
    "camera": "the cold-open camera: on the beam axis, h 13.7 d 6 fov 58",
    "her": "THE silhouette (same as 0.2 s): her whole weight on the lamp",
    "fx": "white-gold 100 % for 3 frames, chroma, shake 5, held; overshoot and settle",
-   "light": "the beam on the lens"
+   "light": "the beam on the lens",
+   "rule": "flood_silhouette from far: the figure 7-8 % of the frame, centred, a halo ring in the flood keeps it designed, not blown out; same class as 0.2 (the promise kept)"
   },
   {
    "t": 183.8,
    "line": "the ink night: her dots become stars (shot 86)",
-   "ref": "edgerunners-this-fffire@119.25",
+   "ref": "calli-gura-q@143.25",
    "camera": "close on her face, slow breathing push",
    "her": "looks at us from the lamp, mouth closed",
    "fx": "the sky inked over, 60-90 drawn stars burst from her dots on the biggest transient of the song",
-   "light": "ink black, violet stars, the gold beam"
+   "light": "ink black, violet stars, the gold beam",
+   "refs": [
+    "calli-gura-q@143.25",
+    "oshinoko-op@38.25"
+   ],
+   "rule": "star_sky: ink black + many small white points of varied size + 1-2 cross flares + a strong diagonal (the beam); her open eye catches the stars (Oshi no Ko 38) - quiet vastness after the noise"
   }
  ]
 }

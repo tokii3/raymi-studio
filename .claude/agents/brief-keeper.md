@@ -15,7 +15,10 @@ Read ONLY:
    (her verdicts, verbatim). Her words outrank everything else in the folder.
 2. The thing to judge (a treatment / script file, a stills / board folder, or a critic kit `view/` + `facts/`).
 3. Reference pairs if present (`pairs/*.jpg`: professional reference left, ours right) and
-   `knowledge/references/segments.json` for what the named references really do.
+   `knowledge/references/segments.json` for what the named references really do. A moment may carry a strip of
+   several reference frames (a burst of cuts) and a RULE line (a principle card from
+   `knowledge/references/principle_cards.json` / LEARNED.md): judge the moment against the rule's measured numbers
+   and its stated effect when the frame only shows the class (e.g. a pillar of light, not our exact pillar).
 Do NOT read 3_TREATMENT.md / 4_SCRIPT.md / shots.json as a statement of the goal - when you judge a board or render
 they are only the builder's claims. Code, data and checks prove nothing; only the text you judge or the pixels count.
 

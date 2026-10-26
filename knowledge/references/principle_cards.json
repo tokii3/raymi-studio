@@ -1,0 +1,701 @@
+{
+ "flood_silhouette": {
+  "refs": [
+   "yoasobi-idol@186.25",
+   "frieren-op@69.25",
+   "bp-hylt@139.25"
+  ],
+  "why": "A figure becomes a pure shape when the light behind it is total: >50 % of the frame near white, the figure the only dark mass, small (5-10 % of the frame) with even empty room around it. Effect: loneliness + awe; the eye has nowhere else to go. Halo / flare rings (Idol) or a hard cut-out edge (Frieren) keep it designed, not blown out.",
+  "skip": [],
+  "range": {
+   "lum_mean": [
+    0.596,
+    0.722
+   ],
+   "lum_p05": [
+    0.068,
+    0.192
+   ],
+   "lum_p50": [
+    0.565,
+    0.92
+   ],
+   "lum_p95": [
+    0.955,
+    1.0
+   ],
+   "contrast": [
+    0.783,
+    0.932
+   ],
+   "light_share": [
+    0.375,
+    0.659
+   ],
+   "dark_share": [
+    0.007,
+    0.265
+   ],
+   "two_tone": [
+    0.382,
+    0.83
+   ],
+   "sat_mean": [
+    0.161,
+    0.35
+   ],
+   "sat_accent": [
+    0.006,
+    0.263
+   ],
+   "main_share": [
+    0.218,
+    0.416
+   ],
+   "light_x": [
+    0.111,
+    0.673
+   ],
+   "light_y": [
+    0.316,
+    0.795
+   ],
+   "thirds": [
+    0.018,
+    0.263
+   ],
+   "detail": [
+    0.066,
+    0.098
+   ],
+   "subj_x": [
+    0.264,
+    0.496
+   ],
+   "subj_y": [
+    0.495,
+    0.664
+   ],
+   "subj_size": [
+    0.075,
+    0.117
+   ],
+   "subj_thirds": [
+    0.117,
+    0.175
+   ],
+   "neg_space": [
+    0.458,
+    0.604
+   ]
+  },
+  "harmony": [
+   "analogous",
+   "complementary"
+  ],
+  "key": [
+   "high",
+   "mid"
+  ]
+ },
+ "light_pillar": {
+  "refs": [
+   "frieren-op@53.25",
+   "edgerunners-this-fffire@32.25"
+  ],
+  "why": "A vertical column of light in a dark frame, centred, the figure tiny at its base (subject < 5 %), > 60 % of the frame empty dark. Effect: scale and an event from above; the column is the only bright thing, so its length reads as time (hold it as long as the note).",
+  "skip": [],
+  "range": {
+   "lum_mean": [
+    0.094,
+    0.34
+   ],
+   "lum_p05": [
+    0.022,
+    0.092
+   ],
+   "lum_p50": [
+    0.038,
+    0.108
+   ],
+   "lum_p95": [
+    0.436,
+    0.952
+   ],
+   "contrast": [
+    0.415,
+    0.86
+   ],
+   "light_share": [
+    0.021,
+    0.251
+   ],
+   "dark_share": [
+    0.617,
+    0.881
+   ],
+   "two_tone": [
+    0.868,
+    0.903
+   ],
+   "sat_mean": [
+    0.492,
+    0.638
+   ],
+   "sat_accent": [
+    0.142,
+    0.591
+   ],
+   "main_share": [
+    0.39,
+    0.399
+   ],
+   "light_x": [
+    0.488,
+    0.496
+   ],
+   "light_y": [
+    0.651,
+    0.739
+   ],
+   "thirds": [
+    0.155,
+    0.178
+   ],
+   "detail": [
+    0.018,
+    0.065
+   ],
+   "subj_x": [
+    0.292,
+    0.464
+   ],
+   "subj_y": [
+    0.752,
+    0.81
+   ],
+   "subj_size": [
+    0.035,
+    0.088
+   ],
+   "subj_thirds": [
+    0.094,
+    0.194
+   ],
+   "neg_space": [
+    0.66,
+    0.861
+   ]
+  },
+  "harmony": [
+   "complementary",
+   "triad"
+  ],
+  "key": [
+   "low",
+   "mid"
+  ]
+ },
+ "star_sky": {
+  "refs": [
+   "calli-gura-q@143.25"
+  ],
+  "why": "Ink-black ground with many small white points of varying size + 1-2 cross-flare stars; a strong diagonal object (sword) and a figure cut by the frame edge. Effect: quiet vastness after noise; the diagonal keeps it from being wallpaper.",
+  "skip": [
+   "subj_size",
+   "subj_thirds",
+   "neg_space"
+  ],
+  "range": {
+   "lum_mean": [
+    0.109,
+    0.109
+   ],
+   "lum_p05": [
+    0.0,
+    0.0
+   ],
+   "lum_p50": [
+    0.063,
+    0.063
+   ],
+   "lum_p95": [
+    0.392,
+    0.392
+   ],
+   "contrast": [
+    0.392,
+    0.392
+   ],
+   "light_share": [
+    0.027,
+    0.027
+   ],
+   "dark_share": [
+    0.737,
+    0.737
+   ],
+   "two_tone": [
+    0.764,
+    0.764
+   ],
+   "sat_mean": [
+    0.578,
+    0.578
+   ],
+   "sat_accent": [
+    0.501,
+    0.501
+   ],
+   "main_share": [
+    0.614,
+    0.614
+   ],
+   "light_x": [
+    0.668,
+    0.668
+   ],
+   "light_y": [
+    0.573,
+    0.573
+   ],
+   "thirds": [
+    0.094,
+    0.094
+   ],
+   "detail": [
+    0.102,
+    0.102
+   ],
+   "subj_x": [
+    0.734,
+    0.734
+   ],
+   "subj_y": [
+    0.467,
+    0.467
+   ],
+   "subj_size": [
+    0.04,
+    0.04
+   ],
+   "subj_thirds": [
+    0.15,
+    0.15
+   ],
+   "neg_space": [
+    0.236,
+    0.236
+   ]
+  },
+  "harmony": [
+   "complementary"
+  ],
+  "key": [
+   "low"
+  ]
+ },
+ "lens_attack": {
+  "refs": [
+   "spiderverse-across-t2@117.25",
+   "arcane-paint-town-blue@105.25"
+  ],
+  "why": "The performer touches / attacks the lens: hands spread flat on it at the frame edges (Spider-Verse) or a face so close the lens bends it, with drawn 2D marks over it (Arcane graffiti teeth). The face stays centred, the hands frame it. Effect: the fourth wall breaks; the viewer is inside the space and threatened.",
+  "skip": [
+   "subj_size",
+   "subj_thirds"
+  ],
+  "range": {
+   "lum_mean": [
+    0.119,
+    0.288
+   ],
+   "lum_p05": [
+    0.004,
+    0.093
+   ],
+   "lum_p50": [
+    0.068,
+    0.214
+   ],
+   "lum_p95": [
+    0.562,
+    0.707
+   ],
+   "contrast": [
+    0.558,
+    0.614
+   ],
+   "light_share": [
+    0.029,
+    0.031
+   ],
+   "dark_share": [
+    0.415,
+    0.847
+   ],
+   "two_tone": [
+    0.446,
+    0.876
+   ],
+   "sat_mean": [
+    0.279,
+    0.738
+   ],
+   "sat_accent": [
+    0.101,
+    0.827
+   ],
+   "main_share": [
+    0.461,
+    0.595
+   ],
+   "light_x": [
+    0.312,
+    0.554
+   ],
+   "light_y": [
+    0.262,
+    0.622
+   ],
+   "thirds": [
+    0.075,
+    0.121
+   ],
+   "detail": [
+    0.108,
+    0.135
+   ],
+   "subj_x": [
+    0.475,
+    0.549
+   ],
+   "subj_y": [
+    0.248,
+    0.616
+   ],
+   "subj_size": [
+    0.073,
+    0.096
+   ],
+   "subj_thirds": [
+    0.128,
+    0.165
+   ],
+   "neg_space": [
+    0.431,
+    0.493
+   ]
+  },
+  "harmony": [
+   "complementary",
+   "triad"
+  ],
+  "key": [
+   "low"
+  ]
+ },
+ "ecu_scream": {
+  "refs": [
+   "ado-usseewa@98.25",
+   "edgerunners-this-fffire@85.25",
+   "arcane-paint-town-blue@105.25"
+  ],
+  "why": "The open mouth fills 30-60 % of the frame, a wide lens close, tilted, cut by the edges; flat graphic colour (one hue + black) and shards / type around it. Effect: the blow; no room to look away.",
+  "skip": [
+   "subj_size",
+   "subj_thirds",
+   "neg_space",
+   "subj_x",
+   "subj_y"
+  ],
+  "range": {
+   "lum_mean": [
+    0.232,
+    0.499
+   ],
+   "lum_p05": [
+    0.001,
+    0.093
+   ],
+   "lum_p50": [
+    0.07,
+    0.46
+   ],
+   "lum_p95": [
+    0.707,
+    0.954
+   ],
+   "contrast": [
+    0.614,
+    0.918
+   ],
+   "light_share": [
+    0.031,
+    0.354
+   ],
+   "dark_share": [
+    0.217,
+    0.588
+   ],
+   "two_tone": [
+    0.446,
+    0.62
+   ],
+   "sat_mean": [
+    0.279,
+    0.801
+   ],
+   "sat_accent": [
+    0.101,
+    0.743
+   ],
+   "main_share": [
+    0.148,
+    0.461
+   ],
+   "light_x": [
+    0.312,
+    0.862
+   ],
+   "light_y": [
+    0.262,
+    0.522
+   ],
+   "thirds": [
+    0.075,
+    0.202
+   ],
+   "detail": [
+    0.135,
+    0.25
+   ],
+   "subj_x": [
+    0.475,
+    0.709
+   ],
+   "subj_y": [
+    0.211,
+    0.472
+   ],
+   "subj_size": [
+    0.001,
+    0.073
+   ],
+   "subj_thirds": [
+    0.145,
+    0.193
+   ],
+   "neg_space": [
+    0.097,
+    0.493
+   ]
+  },
+  "harmony": [
+   "analogous",
+   "complementary",
+   "triad"
+  ],
+  "key": [
+   "low",
+   "mid"
+  ]
+ },
+ "two_tone_hit": {
+  "refs": [
+   "edgerunners-this-fffire@74.25",
+   "calli-gura-q@141.25",
+   "spiderverse-across-t2@102.25"
+  ],
+  "why": "For 1-4 frames the picture becomes two values: paper white + ink black (> 85 % of pixels in the two extremes), the figure a white cut-out or gone, diagonal ink strokes / splatter. Effect: impact frame - the hit is felt before it is seen; works only as a short dose on the strongest hits.",
+  "skip": [
+   "subj_size",
+   "subj_thirds"
+  ],
+  "range": {
+   "lum_mean": [
+    0.414,
+    0.844
+   ],
+   "lum_p05": [
+    0.0,
+    0.01
+   ],
+   "lum_p50": [
+    0.059,
+    1.0
+   ],
+   "lum_p95": [
+    0.856,
+    1.0
+   ],
+   "contrast": [
+    0.846,
+    1.0
+   ],
+   "light_share": [
+    0.373,
+    0.825
+   ],
+   "dark_share": [
+    0.127,
+    0.544
+   ],
+   "two_tone": [
+    0.789,
+    0.952
+   ],
+   "sat_mean": [
+    0.038,
+    0.232
+   ],
+   "sat_accent": [
+    0.019,
+    0.131
+   ],
+   "main_share": [
+    0.485,
+    0.886
+   ],
+   "light_x": [
+    0.255,
+    0.446
+   ],
+   "light_y": [
+    0.278,
+    0.528
+   ],
+   "thirds": [
+    0.037,
+    0.179
+   ],
+   "detail": [
+    0.09,
+    0.138
+   ],
+   "subj_x": [
+    0.238,
+    0.666
+   ],
+   "subj_y": [
+    0.336,
+    0.548
+   ],
+   "subj_size": [
+    0.012,
+    0.094
+   ],
+   "subj_thirds": [
+    0.03,
+    0.167
+   ],
+   "neg_space": [
+    0.181,
+    0.611
+   ]
+  },
+  "harmony": [
+   "analogous",
+   "triad"
+  ],
+  "key": [
+   "high",
+   "mid"
+  ]
+ },
+ "beam_at_lens": {
+  "refs": [
+   "bp-hylt@28.25"
+  ],
+  "why": "A light source swings into the lens: the frame flares to near white at the centre with rays + dust; the figure is lost in it. Effect: blinding = a cut you do not see; the next shot can be anything.",
+  "skip": [],
+  "range": {
+   "lum_mean": [
+    0.294,
+    0.294
+   ],
+   "lum_p05": [
+    0.018,
+    0.018
+   ],
+   "lum_p50": [
+    0.254,
+    0.254
+   ],
+   "lum_p95": [
+    0.801,
+    0.801
+   ],
+   "contrast": [
+    0.784,
+    0.784
+   ],
+   "light_share": [
+    0.066,
+    0.066
+   ],
+   "dark_share": [
+    0.363,
+    0.363
+   ],
+   "two_tone": [
+    0.429,
+    0.429
+   ],
+   "sat_mean": [
+    0.545,
+    0.545
+   ],
+   "sat_accent": [
+    0.479,
+    0.479
+   ],
+   "main_share": [
+    0.572,
+    0.572
+   ],
+   "light_x": [
+    0.504,
+    0.504
+   ],
+   "light_y": [
+    0.388,
+    0.388
+   ],
+   "thirds": [
+    0.172,
+    0.172
+   ],
+   "detail": [
+    0.032,
+    0.032
+   ],
+   "subj_x": [
+    0.413,
+    0.413
+   ],
+   "subj_y": [
+    0.445,
+    0.445
+   ],
+   "subj_size": [
+    0.048,
+    0.048
+   ],
+   "subj_thirds": [
+    0.137,
+    0.137
+   ],
+   "neg_space": [
+    0.715,
+    0.715
+   ]
+  },
+  "harmony": [
+   "analogous"
+  ],
+  "key": [
+   "low"
+  ]
+ }
+}

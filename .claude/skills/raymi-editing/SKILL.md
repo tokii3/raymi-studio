@@ -3,6 +3,7 @@ name: raymi-editing
 description: Use for the edit of a Raymi video - cuts, rhythm, pacing, transitions, cutting to the music (beats, hits, sections, vocals), shot order, the Short cut from the MV, slow vs fast passages, or judging the edit of a render. Also what the editor agent loads.
 ---
 
+<!-- measured bar: knowledge/references/LEARNED.md "Speed" -->
 # Editing - the music decides, the feeling picks
 
 toki: "cuts wirken random" (10-22), "transitions etwas zu schnell", "Kamera soll eine Kameraführung sein auch bei
@@ -26,6 +27,9 @@ then there are no cuts at all - the "edit" happens inside the camera move.
   Dance-pop ~80 % of hits change the picture in the chorus, story songs ~45 %, calm passages 10-30 %.
 - **Contrast of rhythm**: holds next to 3-6-frame accents; a pause / black / freeze before the drop; the strongest
   burst near the end; the end never weaker than the start.
+- **Measured bar** (knowledge/references/LEARNED.md, 5,999 pro shots): a picture change every 0.67 s (median), 0.5 s in
+  2D anime / 3D cel, 0.33-0.67 s in aggressive anime / game MVs, p90 under 2-2.7 s. Short shots move more and are
+  simpler (more empty room). Compare a plan with `refs shots` numbers before the critics, never by feel.
 - **Bursts**: a new angle on every hit for 3-6 hits (FIRESTARTER 1:51, K-pop killing parts), then a held shot.
 - **Transitions through things**: cover (hand / hair / tail / object over the lens), whip, flash, match cut, push
   through a surface, a morph of the set. No menu of digital wipes.

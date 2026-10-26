@@ -271,7 +271,7 @@ def pair(ref: str, ours: Path, out: Path, note: str = "") -> Path:
 
 
 def main(argv: list[str]) -> int:
-    """refs list | analyze [slug|all] [--force] | segments | frames [slug|all] | find <term..> | pair <ref> <ours> <out>"""
+    """refs list | analyze [slug|all] [--force] | segments | frames [slug|all] | find <term..> | pair <ref> <ours> <out> | learn|card|measure (principles.py)"""
     cmd, rest = argv[0], argv[1:]
     if cmd == "list":
         for v in catalog():
@@ -300,6 +300,10 @@ def main(argv: list[str]) -> int:
                   f"| {s.get('craft','')[:90]}")
     elif cmd == "pair":
         print(pair(rest[0], Path(rest[1]), Path(rest[2]), " ".join(rest[3:])))
+    elif cmd in ("learn", "card", "measure", "shots", "why", "rules"):       # the rules behind the frames (raymi/principles.py)
+        from . import principles
+
+        principles.main([cmd, *rest])
     else:
         print(main.__doc__)
         return 2

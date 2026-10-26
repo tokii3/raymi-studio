@@ -28,3 +28,15 @@ verschiedene Szenen, Kameras, Emotionen, schnell, langsam."
 - **toki gives a new reference**: add it to catalog.json (verify the id with a YouTube search), `refs analyze <slug>`,
   then study the exact moment she named at frame level (`python -m raymi gemini <url> --start --end --fps 6`).
 - Gemini answers are a first pass; a key reference moment is confirmed by looking at its frames myself.
+
+## Learn the RULES, not only the frames (toki 2026-10-26: "alles hat grund und wirkung ... jede entscheidung von den
+profis abschauen wie und warum") - knowledge/references/LEARNED.md
+- `refs learn all` (frame rules: value, contrast, light / dark share, two-tone, palette + harmony, light position,
+  grit, placement, negative space), `refs shots all` (picture changes: length, motion speed, rules per shot),
+  `refs why <slug>` (Gemini on our measured shots: decision -> why -> effect -> music + director rules, verbatim),
+  `refs rules` (per effect class: the measured range of choices that produced it).
+- **No frame matches a moment?** Never stretch an unmatched frame (the Love is War storyboard was BLOCKed twice for
+  that). Search by numbers (light / dark share, two-tone, empty room) + look at the candidates, then a principle card:
+  `refs card <class> <slug@t>.. --why ".."`; judge our still with `refs measure <still> --card <class>`.
+- **A strip, not a frame**, for a burst of cuts: storyboard moment `"refs": [..]` (4-6 frames).
+- **Every decision a maker writes names its reason + effect** the way the pros' why answers do.
