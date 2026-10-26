@@ -56,6 +56,10 @@ export const TONES: Record<string, Tone & {lyric: LyricTone}> = {
   // the ink world: near-monochrome paper and ink, one red, her violet - contrast high, colour low
   war_ink: {filter: 'contrast(1.25) saturate(0.85) brightness(0.98)', top: '#fff4ea', bottom: '#0a0810', split: 0.2, vignette: 0.5,
     lyric: {color: '#0a0810', accent: '#c81f37', sub: '#3a3640', shadow: 'rgba(240,232,220,0.8)'}},
+  // the riser's end (Love is War 2026-10-26, script v3b): the grade climbs toward white over the measured riser - the
+  // pros' build into a drop (LEARNED.md); used only as grade_to over a riser, never as a section's grade
+  war_white: {filter: 'contrast(0.92) saturate(0.7) brightness(1.5)', top: '#ffffff', bottom: '#cfd2e8', split: 0.34, vignette: 0.12,
+    lyric: {color: '#0a0810', accent: '#c81f37', sub: '#3a3640', shadow: 'rgba(240,232,220,0.8)'}},
   // VRM Firestarter look test: retain the deep-violet setting while keeping highlights on pale MToon materials.
   vrm_fire: {filter: 'contrast(1.08) saturate(1.08) brightness(0.92)', top: '#d39a82', bottom: '#180d31', split: 0.36, vignette: 0.62,
     lyric: {color: '#f3ecff', accent: '#ffc46b', sub: '#d8d2e8', shadow: 'rgba(12,5,30,0.84)'}},

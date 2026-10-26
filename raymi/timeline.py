@@ -87,7 +87,7 @@ LYRIC_KINDS = {"sign", "float", "stamp", "glass", "card", "ticker", "firework"}
 LYRIC_MATERIALS = {None, "fog", "engraved", "screen", "print", "felt", "light"}
 TRANSITIONS = {"cut", "bubbles", "ink", "whip", "flash", "pass", "rewind", "spin", "zoom",
                "cover"}   # cover: her palm / hair / tail or a frame bar fills the lens, the cut hides inside (Watch Me)
-GRADES = {"day", "closing", "night", "own", "warm", "clean", "ember", "vrm_fire", "pov", "pov_warm", "wm_paper", "wm_night", "wm_gold", "war_night", "war_ink"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
+GRADES = {"day", "closing", "night", "own", "warm", "clean", "ember", "vrm_fire", "pov", "pov_warm", "wm_paper", "wm_night", "wm_gold", "war_night", "war_ink", "war_white"}   # studio/src/film/grade.ts TONES (a test keeps them equal)
 LYRIC_STYLES = {"v1", "v2"}
 # a main element: worn on her head (crown, hat), her face, a lyric word, a prop box in the set (check.ts heroBox)
 HERO_KINDS = {"worn", "face", "word", "prop"}
@@ -120,7 +120,9 @@ TIME_OPTS = {"lights_off", "window_break", "unfold", "shake", "cracks", "burst",
              "rain", "wind", "splash", "tail_slap", "lightwriting", "letters_off", "tail_lens", "barb_lens", "tail_twitch", "fold",
              "sonar", "paparazzi", "finwave",
              # Love is War (2026-10-25): lightning (three/lighthouse.tsx), ink slashes (sets/Paper), cable pulses (three/cables.tsx)
-             "lightning", "ink_slash", "cable_pulse", "ink_at", "black_at", "two_tone"}
+             "lightning", "ink_slash", "cable_pulse", "ink_at", "black_at", "two_tone",
+             # Love is War build (2026-10-26): the 1-beat colour flip on the measured minor-chord turns (Film.tsx)
+             "flip_at"}
 # options holding specs (a dict or a list of dicts) whose own fields are times / positions (three/fire.tsx,
 # three/creatures.tsx): "at" / "out" / "toss" / "*_at" = song seconds -> frames, "grow" / "fade" / "ember" = seconds ->
 # frame counts, "pos" / "from" / "to" = a mark or [x, y, z]
@@ -940,7 +942,7 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
             errors.append(f"{ktag}: icon must be one of {sorted(x for x in ICONS if x)}")
         elif r.get("icon"):
             key["icon"] = r["icon"]
-        for opt in ("motion", "motionMix", "expr", "once", "restart", "aware"):
+        for opt in ("motion", "motionMix", "expr", "once", "restart", "aware", "ground"):
             if opt in r:
                 key[opt] = r[opt]
         if r.get("face_lens"):                             # the clip's own hip turn is taken out: her chest faces the lens
@@ -1000,6 +1002,154 @@ def compile_fx(s: dict, a: float, b: float, fr, errors: list[str], tag: str, sma
     return out
 
 
+def aim_camera(a: dict, s: dict, marks: dict, errors: list[str], tag: str) -> tuple[list[float], list[float]] | None:
+    """A lens in the script's words (4_SCRIPT camera cells: "h 0.62 d 0.62 fov 48"): it looks at `at` (her first key's
+    place by default) raised by `y`, from `d` metres away, the lens at absolute height `h` (or `el` degrees above the
+    target), on the bearing `az` (degrees; 0 = in front of her along +z, 90 = from +x). `shift` slides the look point
+    sideways (m) so her face sits off centre."""
+    at = a.get("at", "her")
+    if at == "her":
+        at = ((s.get("actor") or [{}])[0]).get("pos", "center")
+    T = _v3(at, marks, errors, tag)
+    if T is None:
+        return None
+    ty = T[1] + float(a.get("y", 0.0))
+    d = float(a.get("d", 2.0))
+    h = float(a["h"]) if "h" in a else ty + d * math.sin(math.radians(float(a.get("el", 0.0))))
+    dh = math.sqrt(max(d * d - (h - ty) ** 2, 1e-4))
+    az = math.radians(float(a.get("az", 0.0)))
+    side = float(a.get("shift", 0.0))
+    look = [T[0] + side * math.cos(az), ty, T[2] - side * math.sin(az)]
+    pos = [T[0] + dh * math.sin(az), h, T[2] + dh * math.cos(az)]
+    return [round(v, 4) for v in pos], [round(v, 4) for v in look]
+
+
+SUB_KEEP = {"set", "opts", "actor", "mouth", "step", "outline", "fx", "kick", "observer", "aware", "low_ok", "lens_near",
+            "hero", "camera_hand", "why", "short_shot", "frame_fit", "row"}
+
+
+def _num_at(k: dict) -> float:
+    return 0.0 if k.get("at", 0) == "end" else float(k.get("at", 0))
+
+
+def _actor_from(actor: list[dict], off: float) -> list[dict]:
+    """A row's actor keys seen from `off` seconds into the row: the key playing then becomes the first key, its clip
+    advanced by the time that passed - her action runs ON across the multicam cuts (one action, several set-ups)."""
+    before = [k for k in actor if _num_at(k) <= off + 1e-6]
+    after = [k for k in actor if _num_at(k) > off + 1e-6]
+    out = []
+    if before:
+        k = dict(before[-1])
+        if ("clip" in k or "motion" in k) and float(k.get("speed", 1.0)) != 0:
+            k["clip_from"] = round(float(k.get("clip_from", 0.0)) + (off - _num_at(k)) * float(k.get("speed", 1.0)), 3)
+        k["at"] = 0
+        k["blend"] = 0                                     # a cut, not a pose change: no blend at the picture's start
+        out.append(k)
+    for k in after:
+        out.append({**k, "at": round(_num_at(k) - off, 3) if k.get("at") != "end" else "end"})
+    return out
+
+
+def _fixed_facing(row: dict) -> list[dict]:
+    """rotY "lens" turns her to EVERY lens; in a multicam row she keeps the facing the row's MAIN camera gave her."""
+    cam = (row.get("camera") or [{}])[0]
+    az = (cam.get("aim") or {}).get("az")
+    out = []
+    for k in row.get("actor") or []:
+        if k.get("rotY", "lens") == "lens" and az is not None:
+            k = {**k, "rotY": float(az)}
+        out.append(k)
+    return out
+
+
+def expand_rows(rows: list[dict], errors: list[str]) -> list[dict]:
+    """The script's multicam grammar (Love is War v3b, toki 2026-10-26 "drops dichter schneiden wie die profis"): a row
+    keeps ONE action of hers and is cut from several set-ups on the measured beat. A row (with "at" in song seconds) may
+    carry
+      "cams":    [{"at": <song s>, "camera": [...], "kind": "punch" | "reverse" | "insert" | ..., "opts": {..},
+                   "fx": [..], "her": false, "transition": {..}}, ...]   - a new picture at each `at`
+      "stutter": {"onsets": [<song s>, ...], "cams": [[keys A], [keys B]]}  - a cut on each measured onset, alternating
+                   two set-ups of the same light (X2: never more than 3 big brightness changes a second)
+      "riser":   {"aim": {..no d..}, "fov": 40, "steps": [[<song s>, d, roll, shift], ...], "white": [t0, t1]}
+                   - one push on ONE axis through the cuts while the grade climbs toward white (grade war_white)
+    Each picture becomes its own shot: her clip time runs on (_actor_from), the row's opts / fx / mouth stay, the row's
+    camera is the first picture. A picture with "her": false (a two-value insert) has no body."""
+    out = []
+    for i, row in enumerate(rows):
+        cams = [dict(c) for c in row.get("cams") or []]
+        st = row.get("stutter")
+        if st:
+            keys = st.get("cams") or []
+            if len(keys) < 2:
+                errors.append(f"row {i + 1}: stutter needs two camera set-ups (cams [A, B])")
+            else:
+                cams += [{"at": t, "camera": keys[(j + 1) % 2], "kind": "stutter"} for j, t in enumerate(st.get("onsets", []))]
+        rs = row.get("riser")
+        if rs:
+            white = rs.get("white")
+            for t, d, *rest in rs.get("steps", []):
+                c = {"at": t, "kind": "riser",
+                     "camera": [{"at": 0, "aim": {**rs["aim"], "d": d, "shift": rest[1] if len(rest) > 1 else 0},
+                                 "fov": rs.get("fov", 40), "roll": rest[0] if rest else 0}]}
+                if white:
+                    c["opts"] = {"grade_to": "war_white", "grade_at": white[0], "grade_s": round(white[1] - white[0], 3)}
+                cams.append(c)
+        if not cams:
+            out.append(row)
+            continue
+        if not isinstance(row.get("at"), (int, float)):
+            errors.append(f"row {i + 1}: a multicam row needs its start in song seconds")
+            out.append(row)
+            continue
+        a = float(row["at"])
+        cams.sort(key=lambda c: float(c["at"]))
+        base = {k: v for k, v in row.items() if k not in ("cams", "stutter", "riser")}
+        actor = _fixed_facing(row)
+        rid = row.get("id", f"s{i + 1}")
+        if float(cams[0]["at"]) > a + 1e-6:
+            out.append({**base, **({"actor": actor} if actor else {}), "id": rid})
+        for j, c in enumerate(cams):
+            t = float(c["at"])
+            if t < a - 1e-6:
+                errors.append(f"row {rid}: picture at {t} s is before the row ({a} s)")
+                continue
+            sub = {k: v for k, v in base.items() if k in SUB_KEEP}
+            sub["id"] = f"{rid}{chr(97 + j)}"
+            sub["at"] = round(t, 3)
+            sub["camera"] = c.get("camera") or base.get("camera")
+            if c.get("opts"):
+                sub["opts"] = {**(base.get("opts") or {}), **c["opts"]}
+            if "fx" in c:
+                sub["fx"] = c["fx"]
+            elif base.get("fx"):
+                # the row's 2D layers keep their place in the song: re-based to this picture's start
+                fx = []
+                for x in base["fx"]:
+                    to = x.get("to", "end")
+                    if to != "end" and float(to) <= t - a:
+                        continue
+                    y = {**x, "at": max(0.0, round(float(x.get("at", 0)) - (t - a), 3))}
+                    if to != "end":
+                        y["to"] = round(float(to) - (t - a), 3)
+                    fx.append(y)
+                sub["fx"] = fx
+            if c.get("her") is False:
+                sub.pop("actor", None)
+                sub.pop("mouth", None)
+                sub["opts"] = {**(sub.get("opts") or {}), "her_off": c.get("why", "a two-value insert without her body")}
+            elif actor:
+                sub["actor"] = _actor_from(actor, t - a)
+                if c.get("actor_set"):                     # one picture may change one thing of her key (expr, look)
+                    sub["actor"][0] = {**sub["actor"][0], **c["actor_set"]}
+            for k in ("transition", "camera_hand", "low_ok", "why", "lens_near"):
+                if k in c:
+                    sub[k] = c[k]
+            out.append(sub)
+        if "transition" in row and out and "transition" not in out[-1]:
+            out[-1]["transition"] = row["transition"]
+    return out
+
+
 def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None = None) -> tuple[dict, list[str], list[str]]:
     errors: list[str] = []
     warns: list[str] = []
@@ -1028,7 +1178,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         errors.append("audio window is empty (audio.to must be after audio.from)")
         total = 1
     fr = lambda t: round(t * FPS) - f0                      # noqa: E731  song seconds -> film frame
-    shots_in = spec.get("shots", [])
+    shots_in = expand_rows(spec.get("shots", []), errors)
     if not shots_in:
         errors.append("no shots")
     starts = [resolve_time(s.get("at", 0), lyrics, errors, f"shot {i + 1}") for i, s in enumerate(shots_in)]
@@ -1122,7 +1272,12 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                 ckeys.append({"f": kf, "pos": pos, "look": look, "fov": fov, "roll": float(c.get("roll", 0)),
                               "ease": c.get("ease", "inOut"), **_cam_v2(c, ktag, errors)})
                 continue
-            if "orbit" in c:                              # camera v2: a point on a circle around her / a mark
+            if "aim" in c:                                # the script's own words: lens height h, distance d, azimuth
+                aim = aim_camera(c["aim"], s, marks, errors, ktag)
+                if aim is None:
+                    continue
+                pos, look = aim
+            elif "orbit" in c:                            # camera v2: a point on a circle around her / a mark
                 o = c["orbit"]
                 centre = _v3(o.get("around"), marks, errors, ktag)
                 if centre is None:
@@ -1280,7 +1435,9 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                                           "romaEm": [P.text_em(t, heavy=True) for t in roma.split()],
                                           "enEm": [P.text_em(t, heavy=True) for t in tr["en"].split()]}
                     screen_texts += [roma, tr["en"]]
-        opts = dict(s.get("opts") or {})
+        # the film's look per set (spec "set_opts": {"nightsea": {...}}): the world's light, rain, lighthouse ... written
+        # once; a shot's own opts win (Love is War: ~200 pictures in one world)
+        opts = {**((spec.get("set_opts") or {}).get(st) or {}), **(s.get("opts") or {})}
         if "grade" not in opts and acts:                   # the look step: the act's grade (a shot may name its own)
             g = act_grade(acts, a)
             if g:

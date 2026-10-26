@@ -1,0 +1,8741 @@
+{
+ "_why": "Love is War MV - the shooting script v3c (4_SCRIPT.md) as data, authored row by row by hand (toki 2026-10-26 'storyboard runde 4 passt, letzter schlag A+ so, weiter zum build'). Multicam rows (cams / stutter / riser) are the 'Drops v3b' grids, rolls, risers and the final build: one action of hers, the camera changes on the beat (raymi/timeline.py expand_rows). No lyrics on screen (toki 2026-10-25), lip sync only.",
+ "audio": {
+  "file": "song.webm",
+  "from": 0.0,
+  "to": 187.57
+ },
+ "lyrics": "lyrics_timed.json",
+ "lyrics_off": true,
+ "all_lyrics": false,
+ "song_map": "song_map.json",
+ "vrm": "vrm/raymi7.vrm",
+ "grain": 0.05,
+ "observer": 1,
+ "aware": 0.25,
+ "depth": 0.8,
+ "kick": 0.4,
+ "window": {
+  "short": {
+   "from": 62.167,
+   "to": 80.467
+  }
+ },
+ "short": {
+  "hook": "the lighthouse never looks at me.",
+  "hook_at": 62.167,
+  "hook_to": 63.767,
+  "cta": "would you look back?",
+  "cta_from": 77.4
+ },
+ "set_opts": {
+  "nightsea": {
+   "grade": "war_night",
+   "stars": 0.2,
+   "rain_at": 31.904,
+   "rain_end_at": 80.467,
+   "lighthouse": {
+    "pos": [
+     -8.0,
+     -30.0
+    ],
+    "height": 12,
+    "len": 90,
+    "spin": 24.0,
+    "beam": 1.0,
+    "yaw": 0
+   },
+   "painted": 1,
+   "glow": "#e6dcff",
+   "glow_gain": 0.5,
+   "lock": 0.75,
+   "neutral_sky": 0.85,
+   "her_key": 0.9,
+   "her_rim": "#dfe6ff",
+   "her_rim_i": 1.8,
+   "fog_c": "#12183a",
+   "post": {
+    "glow": 0.6,
+    "vignette": 0.3,
+    "dof_auto": 1
+   }
+  },
+  "deep": {
+   "grade": "war_night",
+   "painted": 1,
+   "cables": 7,
+   "cable_r": 0.22,
+   "cable_glow": 0.35,
+   "snow": 1,
+   "ceiling_y": 14,
+   "glow": "#e6dcff",
+   "glow_gain": 0.6,
+   "lock": 0.75,
+   "neutral_sky": 0.9,
+   "her_key": 0.8,
+   "her_rim": "#7ff6ff",
+   "her_rim_i": 1.6,
+   "post": {
+    "glow": 0.8,
+    "vignette": 0.35,
+    "dof_auto": 1
+   }
+  }
+ },
+ "shots": [
+  {
+   "id": "0a",
+   "at": 0.0,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.62,
+      "az": 0.0,
+      "y": 1.4,
+      "h": 0.62
+     },
+     "fov": 48,
+     "roll": 6
+    },
+    {
+     "at": 0.1,
+     "aim": {
+      "d": 0.56,
+      "az": 0.0,
+      "y": 1.4,
+      "h": 0.62
+     },
+     "fov": 48,
+     "roll": 6
+    }
+   ],
+   "why": "cold open: the strongest blow in frame 1 - the war cry at the lens (PRINCIPLES B6, ref ado-usseewa@98.25)",
+   "actor": [
+    {
+     "at": 0.0,
+     "clip": "roar",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.8
+     }
+    },
+    {
+     "at": 0.2,
+     "clip": "roar",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.8
+     }
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": 200
+    },
+    "rain_at": 0.0,
+    "two_tone": [
+     0.0
+    ],
+    "two_tone_n": 2,
+    "two_tone_light": "#f0a03c",
+    "post": {
+     "glow": 1,
+     "vignette": 0.4,
+     "dof_auto": 1,
+     "chroma": 0.003
+    }
+   },
+   "fx": [
+    {
+     "kind": "crown",
+     "at": 0,
+     "to": "end",
+     "size": 0.55,
+     "hole": 0.36
+    }
+   ]
+  },
+  {
+   "id": "0b",
+   "at": 0.2,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -6.452,
+      13.7,
+      -24.204
+     ],
+     "look": [
+      -8.0,
+      13.299999999999999,
+      -30.0
+     ],
+     "fov": 58,
+     "roll": 0
+    }
+   ],
+   "why": "THE silhouette, promise of the last picture (as 83): a black shape on the white-gold (ref hsr-hope-feathers@112.75)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "mouth": "silent",
+   "low_ok": "lantern",
+   "opts": {
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 0,
+     "beam": 1.0,
+     "yaw": 14.95,
+     "lantern": "her"
+    },
+    "flood": [
+     0.2
+    ],
+    "flood_n": 6,
+    "flood_light": "#fff1d2",
+    "post": {
+     "chroma": 0.003,
+     "vignette": 0
+    }
+   }
+  },
+  {
+   "id": "0c",
+   "at": 0.4,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.0,
+      "az": 0.0,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "the hold that makes 0.467 land",
+   "opts": {
+    "her_off": "2 frames black"
+   },
+   "fx": [
+    {
+     "kind": "insert",
+     "at": 0,
+     "to": "end",
+     "motif": "black",
+     "tone": "ink"
+    }
+   ]
+  },
+  {
+   "id": "1",
+   "at": 0.467,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.75,
+      "az": -20,
+      "y": 0.05,
+      "h": 0.32,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 50,
+     "roll": 4
+    },
+    {
+     "at": 2.5,
+     "aim": {
+      "d": 1.45,
+      "az": 70,
+      "y": 0.05,
+      "h": 0.52,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 28,
+     "roll": 0,
+     "ease": "out"
+    }
+   ],
+   "why": "in the action from 0.5 s (C1): her eye opens, the beam sweeps the black surface, a pulse runs up her cable (ref edgerunners-this-fffire@91.25)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "swimming-underwater",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "rotY": 0.0,
+     "ground": false
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "ceiling_beam": [
+     0.8,
+     1.9
+    ],
+    "cable_pulse": [
+     1.2
+    ],
+    "eye_open": 0.5,
+    "glow_flare": [
+     0.5
+    ]
+   },
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   },
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+  },
+  {
+   "id": "2",
+   "at": 2.967,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 3.0,
+      "az": 25,
+      "y": 1.5,
+      "h": -1.58,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 50,
+     "roll": 0
+    },
+    {
+     "at": 2.5,
+     "aim": {
+      "d": 2.6,
+      "az": 30,
+      "y": 1.2,
+      "h": -1.38,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 50,
+     "roll": 0
+    }
+   ],
+   "why": "the goal above her: the beam crosses the surface",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "swimming-underwater",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "rotY": 0.0,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "ceiling_beam": [
+     3.0
+    ]
+   },
+   "fx": [
+    {
+     "kind": "dots",
+     "at": 1.0,
+     "to": 1.4,
+     "src": [
+      4.0,
+      4.4
+     ]
+    }
+   ],
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+  },
+  {
+   "id": "3",
+   "at": 5.5,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.9,
+      "az": -60,
+      "y": 0.05,
+      "h": 0.67,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 40,
+     "roll": 0
+    },
+    {
+     "at": 2.0,
+     "aim": {
+      "d": 0.7,
+      "az": -60,
+      "y": 0.05,
+      "h": 0.67,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "her voice wakes her light: one dot per sung note, height by pitch (C4)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "swimming-underwater",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "rotY": 0.0,
+     "ground": false
+    }
+   ],
+   "fx": [
+    {
+     "kind": "dots",
+     "at": 0,
+     "to": "end",
+     "src": [
+      5.55,
+      6.9
+     ]
+    }
+   ],
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+  },
+  {
+   "id": "4",
+   "at": 7.533,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 3.2,
+      "az": 150,
+      "y": 0.1,
+      "h": 1.02,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 45,
+     "roll": 0
+    },
+    {
+     "at": 1.47,
+     "aim": {
+      "d": 3.4,
+      "az": 150,
+      "y": 0.1,
+      "h": 1.12,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 45,
+     "roll": 0
+    }
+   ],
+   "why": "anticipation: the racing pulse ahead of her; the fast run as 16th cuts (roll 8.661, same light)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "swimming-underwater",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "rotY": 0.0,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "cable_pulse": [
+     7.6,
+     8.6
+    ]
+   },
+   "stutter": {
+    "onsets": [
+     8.661,
+     8.777,
+     8.893,
+     9.021
+    ],
+    "cams": [
+     [
+      {
+       "at": 0,
+       "aim": {
+        "d": 3.2,
+        "az": 150,
+        "y": 0.1,
+        "h": 1.02,
+        "at": [
+         0.0,
+         0.62,
+         0.72
+        ]
+       },
+       "fov": 45,
+       "roll": 0
+      }
+     ],
+     [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.6,
+        "az": 150,
+        "y": 0.1,
+        "h": 0.9199999999999999,
+        "at": [
+         0.0,
+         0.62,
+         0.72
+        ]
+       },
+       "fov": 45,
+       "roll": 0
+      }
+     ]
+    ]
+   },
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+  },
+  {
+   "id": "5",
+   "at": 9.333,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.2,
+      "az": 5,
+      "y": 0.05,
+      "h": 0.42,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 60,
+     "roll": -8
+    },
+    {
+     "at": 0.1,
+     "aim": {
+      "d": 1.0,
+      "az": 5,
+      "y": 0.05,
+      "h": 0.42,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 60,
+     "roll": -8,
+     "shake": 1
+    },
+    {
+     "at": 0.27,
+     "aim": {
+      "d": 1.0,
+      "az": 5,
+      "y": 0.05,
+      "h": 0.42,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 60,
+     "roll": -8,
+     "shake": 0
+    }
+   ],
+   "why": "WOW 1 (9.358): she LUNGES up the cable at the light, the pulse blows up white-hot, two-tone 2f, shake (ref edgerunners-this-fffire@74.25)",
+   "actor": [
+    {
+     "at": 0.025000000000000355,
+     "clip": "roar",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.8
+     },
+     "rotY": 0.0,
+     "ground": false
+    },
+    {
+     "at": 0.192,
+     "clip": "roar",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.8
+     },
+     "rotY": 0.0,
+     "ground": false
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "cable_pulse": [
+     9.3
+    ],
+    "cable_glow": 1,
+    "two_tone": [
+     9.358
+    ],
+    "two_tone_n": 2,
+    "two_tone_light": "#f0a03c"
+   },
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+  },
+  {
+   "id": "6",
+   "at": 9.833,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.6,
+      "az": 90,
+      "y": 0.0,
+      "h": 0.72,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 40,
+     "roll": 0
+    },
+    {
+     "at": 2.9,
+     "aim": {
+      "d": 1.6,
+      "az": 80,
+      "y": 0.0,
+      "h": 0.72,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "her voice as a line of light: the ribbon grows as long as each held note (C4)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "casting-spell",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "rotY": 0.0,
+     "ground": false
+    }
+   ],
+   "fx": [
+    {
+     "kind": "ribbon",
+     "at": 0.017,
+     "to": "end",
+     "notes": [
+      [
+       9.85,
+       11.2
+      ],
+      [
+       11.85,
+       12.55
+      ]
+     ],
+     "whip": 12.7
+    }
+   ],
+   "cams": [
+    {
+     "at": 10.733,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.5,
+        "az": 60,
+        "y": 0.0
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 11.133,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "ribbon",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: ribbon"
+    },
+    {
+     "at": 11.267,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.4,
+        "az": -10,
+        "y": 0.0,
+        "h": 0.32,
+        "at": [
+         0.0,
+         0.62,
+         0.72
+        ]
+       },
+       "fov": 45,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 11.6,
+     "kind": "main",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.6,
+        "az": 90,
+        "y": 0.0,
+        "h": 0.72,
+        "at": [
+         0.0,
+         0.62,
+         0.72
+        ]
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 12.5,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.4,
+        "az": -10,
+        "y": 0.0,
+        "h": 0.32,
+        "at": [
+         0.0,
+         0.62,
+         0.72
+        ]
+       },
+       "fov": 45,
+       "roll": 0
+      }
+     ]
+    }
+   ],
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+  },
+  {
+   "id": "7",
+   "at": 12.767,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      0.8,
+      2.0
+     ],
+     "look": [
+      0.0,
+      0.7,
+      -10.0
+     ],
+     "fov": 80,
+     "roll": 0
+    },
+    {
+     "at": 1.13,
+     "pos": [
+      0.0,
+      0.8,
+      -6.0
+     ],
+     "look": [
+      0.0,
+      0.7,
+      -18.0
+     ],
+     "fov": 80,
+     "roll": 15,
+     "ease": "linear"
+    }
+   ],
+   "why": "immersion (C1): we ride the cable, things rush at the lens",
+   "opts": {
+    "her_off": "POV along the cable",
+    "pov_rush": 1,
+    "cable_glow": 0.6
+   },
+   "mouth": "silent",
+   "fx": [
+    {
+     "kind": "speed",
+     "at": 0,
+     "to": "end",
+     "mode": "radial",
+     "opacity": 0.45,
+     "color": "#7ff6ff"
+    }
+   ]
+  },
+  {
+   "id": "8",
+   "at": 13.9,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.8,
+      "az": 0,
+      "y": 0.05,
+      "h": 0.67,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    },
+    {
+     "at": 1.88,
+     "aim": {
+      "d": 0.75,
+      "az": 0,
+      "y": 0.05,
+      "h": 0.67,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "her face carries the ride",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "swimming-underwater",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "rotY": 0.0,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "glow_pulse": "beats"
+   },
+   "cams": [
+    {
+     "at": 14.9,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.4,
+        "az": 0.0,
+        "y": 0.08
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 15.333,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "dots",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: dots"
+    },
+    {
+     "at": 15.467,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.2,
+        "az": 165,
+        "y": 0.05,
+        "h": 0.97,
+        "at": [
+         0.0,
+         0.62,
+         0.72
+        ]
+       },
+       "fov": 50,
+       "roll": 0
+      }
+     ]
+    }
+   ],
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+  },
+  {
+   "id": "9",
+   "at": 15.767,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.4,
+      "az": 20,
+      "y": 0.0,
+      "h": 1.52,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 45,
+     "roll": 0
+    },
+    {
+     "at": 1.8,
+     "aim": {
+      "d": 1.1,
+      "az": 20,
+      "y": 0.0,
+      "h": 1.22,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 45,
+     "roll": 0
+    }
+   ],
+   "why": "a cut through a thing: the bubble wall",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "swimming-underwater",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "rotY": 0.0,
+     "ground": false,
+     "rollZ": 30
+    }
+   ],
+   "transition": {
+    "kind": "bubbles",
+    "frames": 10
+   },
+   "opts": {
+    "ring_at": [
+     16.933
+    ]
+   },
+   "cams": [
+    {
+     "at": 16.733,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.5,
+        "az": 15,
+        "y": 0.05
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 17.167,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "bubbles",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: bubbles"
+    },
+    {
+     "at": 17.3,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.8,
+        "az": 10,
+        "y": 0.0,
+        "h": -0.68,
+        "at": [
+         0.0,
+         0.62,
+         0.72
+        ]
+       },
+       "fov": 50,
+       "roll": 0
+      }
+     ]
+    }
+   ],
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+  },
+  {
+   "id": "10",
+   "at": 17.633,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      2.7,
+      0.3
+     ],
+     "look": [
+      0.0,
+      0.5,
+      0.25
+     ],
+     "fov": 45,
+     "roll": 0
+    },
+    {
+     "at": 1.9,
+     "pos": [
+      0.0,
+      2.7,
+      0.3
+     ],
+     "look": [
+      0.0,
+      0.5,
+      0.25
+     ],
+     "fov": 45,
+     "roll": 12
+    }
+   ],
+   "why": "the ride at full speed, top-down, no voice",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "swimming-underwater",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "rotY": 0.0,
+     "ground": false
+    }
+   ],
+   "mouth": "silent",
+   "fx": [
+    {
+     "kind": "speed",
+     "at": 0,
+     "to": "end",
+     "mode": "radial",
+     "opacity": 0.35
+    }
+   ],
+   "cams": [
+    {
+     "at": 18.6,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.9,
+        "az": 0,
+        "y": 0.15
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 19.067,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "cable",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: cable"
+    },
+    {
+     "at": 19.2,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.6,
+        "az": 90,
+        "y": 0.0,
+        "h": 0.52,
+        "at": [
+         0.0,
+         0.62,
+         0.72
+        ]
+       },
+       "fov": 45,
+       "roll": 0
+      }
+     ]
+    }
+   ],
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+  },
+  {
+   "id": "11",
+   "at": 19.533,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.5,
+      "az": 0,
+      "y": 0.0,
+      "h": 0.42,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 55,
+     "roll": 0
+    },
+    {
+     "at": 1.8,
+     "aim": {
+      "d": 1.2,
+      "az": 0,
+      "y": 0.0,
+      "h": 0.42,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 55,
+     "roll": 0
+    }
+   ],
+   "why": "she comes at us along the converging cable",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "swimming-underwater",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "rotY": 0.0,
+     "ground": false
+    }
+   ],
+   "mouth": "silent",
+   "cams": [
+    {
+     "at": 20.467,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.5,
+        "az": 0,
+        "y": 0.05
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 20.933,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "speed",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: speed"
+    },
+    {
+     "at": 21.067,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.6,
+        "az": 170,
+        "y": 0.0,
+        "h": 1.62,
+        "at": [
+         0.0,
+         0.62,
+         0.72
+        ]
+       },
+       "fov": 50,
+       "roll": 0
+      }
+     ]
+    }
+   ],
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+  },
+  {
+   "id": "12",
+   "at": 21.367,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.8,
+      "az": 95,
+      "y": 0.0,
+      "h": 0.72,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 45,
+     "roll": 0
+    },
+    {
+     "at": 1.8,
+     "aim": {
+      "d": 1.8,
+      "az": 85,
+      "y": 0.0,
+      "h": 0.72,
+      "at": [
+       0.0,
+       0.62,
+       0.72
+      ]
+     },
+     "fov": 45,
+     "roll": 0
+    }
+   ],
+   "why": "variety per bar: a half roll from the side",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "swimming-underwater",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "rotY": 0.0,
+     "ground": false,
+     "rollZ": 40
+    }
+   ],
+   "mouth": "silent",
+   "fx": [
+    {
+     "kind": "speed",
+     "at": 0,
+     "to": "end",
+     "mode": "horizontal",
+     "opacity": 0.35
+    }
+   ],
+   "cams": [
+    {
+     "at": 22.333,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.5,
+        "az": 60,
+        "y": -0.1
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 22.767,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "smear",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: smear"
+    },
+    {
+     "at": 22.9,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.4,
+        "az": 0,
+        "y": 0.0,
+        "h": 0.62,
+        "at": [
+         0.0,
+         0.62,
+         0.72
+        ]
+       },
+       "fov": 45,
+       "roll": 0
+      }
+     ]
+    }
+   ],
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+  },
+  {
+   "id": "13",
+   "at": 23.2,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.4,
+      "az": 10,
+      "y": 1.4,
+      "h": 2.7,
+      "at": [
+       0.0,
+       0.5,
+       0.0
+      ]
+     },
+     "fov": 45,
+     "roll": 0
+    }
+   ],
+   "why": "the surface comes: double time into the next section",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "floating-legs-raised-arms-extended-upwards",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "rotY": "away",
+     "ground": false
+    }
+   ],
+   "opts": {
+    "ceiling_beam": [
+     23.9
+    ]
+   },
+   "cams": [
+    {
+     "at": 23.633,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.7,
+        "az": 180,
+        "y": 1.75,
+        "h": 2.4,
+        "at": [
+         0.0,
+         0.5,
+         0.0
+        ]
+       },
+       "fov": 45,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 23.867,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "pos": [
+        0.0,
+        3.6,
+        0.5
+       ],
+       "look": [
+        0.0,
+        1.4,
+        0.0
+       ],
+       "fov": 50,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 24.067,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "beam",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: beam"
+    }
+   ]
+  },
+  {
+   "id": "14",
+   "at": 24.4,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.6,
+      "az": 10,
+      "y": 1.4,
+      "h": 1.25,
+      "at": [
+       0.0,
+       0.5,
+       0.0
+      ]
+     },
+     "fov": 50,
+     "roll": 0
+    }
+   ],
+   "why": "PING 1 (24.427): she calls upward, ring 30 %",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "casting-spell",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "rotY": 0.0,
+     "ground": false
+    }
+   ],
+   "fx": [
+    {
+     "kind": "ring",
+     "at": 0.03,
+     "to": 1.4,
+     "x": 0.5,
+     "y": 0.4,
+     "r1": 0.3,
+     "band": 0.03,
+     "color": "#e6dcff",
+     "n": 1,
+     "brush": 1
+    }
+   ]
+  },
+  {
+   "id": "15",
+   "at": 27.233,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.1,
+      "az": 0,
+      "y": 1.4,
+      "h": 1.3,
+      "at": [
+       0.0,
+       0.5,
+       0.0
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "PING 2 (27.26) ring 55 %; the hi-hat roll 27.771-28.932 and 29.42-29.756 as cuts on every 16th (same light, X2)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "yelling",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "rotY": 0.0,
+     "ground": false
+    }
+   ],
+   "fx": [
+    {
+     "kind": "ring",
+     "at": 0.03,
+     "to": 2.6,
+     "x": 0.5,
+     "y": 0.42,
+     "r1": 0.55,
+     "band": 0.03,
+     "color": "#e6dcff",
+     "n": 1,
+     "brush": 1
+    }
+   ],
+   "stutter": {
+    "onsets": [
+     27.771,
+     27.876,
+     27.992,
+     28.131,
+     28.235,
+     28.34,
+     28.456,
+     28.584,
+     28.711,
+     28.816,
+     28.932,
+     29.42,
+     29.524,
+     29.629,
+     29.756
+    ],
+    "cams": [
+     [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.1,
+        "az": 0,
+        "y": 1.4,
+        "h": 1.3,
+        "at": [
+         0.0,
+         0.5,
+         0.0
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ],
+     [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.6,
+        "az": 0,
+        "y": 1.4,
+        "h": 1.25,
+        "at": [
+         0.0,
+         0.5,
+         0.0
+        ]
+       },
+       "fov": 60,
+       "roll": 0
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "16",
+   "at": 29.833,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.8,
+      "az": 0,
+      "y": 1.45,
+      "h": 1.7,
+      "at": [
+       0.0,
+       0.5,
+       0.0
+      ]
+     },
+     "fov": 48,
+     "roll": 0
+    }
+   ],
+   "why": "PING 3 (29.861) ring 90 %: the surface a ceiling of light",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "yelling",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.5,
+      0.0
+     ],
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.7
+     },
+     "rotY": 0.0,
+     "ground": false
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "ceiling_y": 3.5,
+    "ceiling_light": 1
+   },
+   "fx": [
+    {
+     "kind": "ring",
+     "at": 0.03,
+     "to": 2.0,
+     "x": 0.5,
+     "y": 0.4,
+     "r1": 0.9,
+     "band": 0.035,
+     "color": "#f3eeff",
+     "n": 1,
+     "brush": 1
+    }
+   ]
+  },
+  {
+   "id": "17",
+   "at": 31.867,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.0,
+      "az": 0,
+      "y": 1.4,
+      "h": 0.0
+     },
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 0.5,
+     "aim": {
+      "d": 1.0,
+      "az": 5,
+      "y": 1.4,
+      "h": 0.25
+     },
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 3.0,
+     "aim": {
+      "d": 1.1,
+      "az": -5,
+      "y": 1.4,
+      "h": 0.3
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "the storm (Weltschmerz): the camera crashes up through the surface into the rain",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "treading-water",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true
+    }
+   ],
+   "transition": {
+    "kind": "cover",
+    "frames": 6,
+    "obj": "water"
+   },
+   "opts": {
+    "rain_at": 31.904,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": 10
+    },
+    "rain_stutter": [
+     [
+      32.633,
+      33.2
+     ]
+    ],
+    "wave_shove": [
+     34.27,
+     34.5
+    ],
+    "spray_halo": [
+     31.904
+    ]
+   }
+  },
+  {
+   "id": "18",
+   "at": 34.933,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.2,
+      "az": -10,
+      "y": 1.4,
+      "h": 0.3
+     },
+     "fov": 40,
+     "roll": 0
+    },
+    {
+     "at": 2.6,
+     "aim": {
+      "d": 1.15,
+      "az": -12,
+      "y": 1.4,
+      "h": 0.35
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "his blow: the beam crosses the lens, lamp flash two-tone (ref edgerunners-this-fffire@91.25)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "treading-water",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true
+    }
+   ],
+   "transition": {
+    "kind": "flash",
+    "frames": 2
+   },
+   "opts": {
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": -825.95
+    },
+    "two_tone": [
+     34.967
+    ],
+    "two_tone_n": 2,
+    "two_tone_light": "#fff1d2"
+   }
+  },
+  {
+   "id": "19",
+   "at": 37.6,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.9,
+      "az": 40,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 40,
+     "roll": 0
+    },
+    {
+     "at": 2.5,
+     "aim": {
+      "d": 0.75,
+      "az": 40,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "her blow answers his: she CLAWS at the passing light, ink slash 1 at the melody peak (ref ado-usseewa@63.25)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "treading-water",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true
+    },
+    {
+     "at": 1.1700000000000017,
+     "clip": "roar",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     }
+    },
+    {
+     "at": 1.337,
+     "clip": "roar",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     }
+    }
+   ],
+   "opts": {
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": -913.2
+    }
+   },
+   "fx": [
+    {
+     "kind": "slash",
+     "at": 1.167,
+     "to": "end",
+     "angle": -24,
+     "y": 0.5,
+     "width": 0.12,
+     "seed": 1,
+     "brush": 1
+    }
+   ]
+  },
+  {
+   "id": "20",
+   "at": 40.133,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.5,
+      "az": -15,
+      "y": 1.4,
+      "h": 0.2
+     },
+     "fov": 45,
+     "roll": 0
+    }
+   ],
+   "why": "the call across the water: three rings run toward the rock (escalating burst)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "casting-spell",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true
+    }
+   ],
+   "transition": {
+    "kind": "cover",
+    "frames": 4,
+    "obj": "rain"
+   },
+   "fx": [
+    {
+     "kind": "ring",
+     "at": 0.22299999999999898,
+     "to": 1.1229999999999989,
+     "x": 0.35,
+     "y": 0.6,
+     "r1": 0.4,
+     "band": 0.025,
+     "color": "#e6dcff",
+     "n": 1,
+     "brush": 1
+    },
+    {
+     "kind": "ring",
+     "at": 0.9570000000000007,
+     "to": 1.8570000000000007,
+     "x": 0.26999999999999996,
+     "y": 0.6,
+     "r1": 0.55,
+     "band": 0.025,
+     "color": "#e6dcff",
+     "n": 1,
+     "brush": 1
+    },
+    {
+     "kind": "ring",
+     "at": 1.8369999999999962,
+     "to": 2.736999999999996,
+     "x": 0.18999999999999997,
+     "y": 0.6,
+     "r1": 0.7,
+     "band": 0.025,
+     "color": "#e6dcff",
+     "n": 1,
+     "brush": 1
+    }
+   ]
+  },
+  {
+   "id": "21",
+   "at": 42.267,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.6,
+      "az": -150,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 38,
+     "roll": 0
+    },
+    {
+     "at": 2.5,
+     "aim": {
+      "d": 1.6,
+      "az": -150,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 38,
+     "roll": 0
+    },
+    {
+     "at": 2.62,
+     "aim": {
+      "d": 1.4,
+      "az": 0,
+      "y": 1.4,
+      "h": 0.55
+     },
+     "fov": 40,
+     "roll": 0,
+     "ease": "snap"
+    }
+   ],
+   "why": "she goes to him: swims hard toward the rock; the beam crosses her face",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "treading-water",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "rotY": -165.0
+    },
+    {
+     "at": 2.6,
+     "clip": "treading-water",
+     "clip_from": 1.6,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true
+    }
+   ],
+   "opts": {
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": -1085.23
+    },
+    "two_tone": [
+     45.817
+    ],
+    "two_tone_n": 2,
+    "two_tone_light": "#fff1d2",
+    "drift": [
+     0.0,
+     0.0,
+     -0.6
+    ]
+   }
+  },
+  {
+   "id": "22",
+   "at": 46.167,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      0.55,
+      0.0
+     ],
+     "look": [
+      -8.0,
+      6.0,
+      -30.0
+     ],
+     "fov": 50,
+     "roll": 0
+    },
+    {
+     "at": 1.9,
+     "pos": [
+      0.0,
+      0.6,
+      0.0
+     ],
+     "look": [
+      -7.0,
+      6.5,
+      -30.0
+     ],
+     "fov": 50,
+     "roll": 3
+    }
+   ],
+   "why": "we are her (C1): the beam swings at us; her hand enters at 47.1",
+   "opts": {
+    "her_off": "POV from her eye",
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": -1114.75
+    },
+    "pov_hand": 47.1
+   },
+   "mouth": "silent",
+   "fx": [
+    {
+     "kind": "dots",
+     "at": 0.9,
+     "to": "end",
+     "src": [
+      47.0,
+      48.0
+     ]
+    },
+    {
+     "kind": "pov_hand",
+     "at": 0.93,
+     "to": "end"
+    }
+   ]
+  },
+  {
+   "id": "23",
+   "at": 48.1,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.6,
+      "az": 10,
+      "y": 1.4,
+      "h": 0.1
+     },
+     "fov": 44,
+     "roll": -12
+    },
+    {
+     "at": 3.9,
+     "aim": {
+      "d": 2.3,
+      "az": 10,
+      "y": 1.4,
+      "h": 0.2
+     },
+     "fov": 44,
+     "roll": -12
+    }
+   ],
+   "why": "three blows on the crest: ink slashes 2/3/4 on the lead stabs (ref hsr-hope-feathers@108.25)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "treading-water",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true
+    },
+    {
+     "at": 1.1700000000000017,
+     "clip": "hook-punch",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     }
+    },
+    {
+     "at": 1.303,
+     "clip": "hook-punch",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     }
+    }
+   ],
+   "opts": {
+    "wave_lift": 1,
+    "rain_stutter": [
+     [
+      51.633,
+      52.0
+     ]
+    ]
+   },
+   "fx": [
+    {
+     "kind": "slash",
+     "at": 1.1700000000000017,
+     "to": "end",
+     "angle": -20,
+     "y": 0.45,
+     "width": 0.11,
+     "seed": 2,
+     "brush": 1
+    },
+    {
+     "kind": "slash",
+     "at": 2.219999999999999,
+     "to": "end",
+     "angle": 28,
+     "y": 0.6,
+     "width": 0.11,
+     "seed": 3,
+     "brush": 1
+    },
+    {
+     "kind": "slash",
+     "at": 3.3200000000000003,
+     "to": "end",
+     "angle": -35,
+     "y": 0.35,
+     "width": 0.11,
+     "seed": 4,
+     "brush": 1
+    }
+   ]
+  },
+  {
+   "id": "24",
+   "at": 52.033,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.2,
+      "az": 0,
+      "y": 1.4,
+      "h": 0.4
+     },
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 0.8,
+     "aim": {
+      "d": 2.0,
+      "az": 0,
+      "y": 1.4,
+      "h": -1.0
+     },
+     "fov": 46,
+     "roll": 0,
+     "ease": "inOut"
+    },
+    {
+     "at": 3.5,
+     "aim": {
+      "d": 2.4,
+      "az": 10,
+      "y": 1.4,
+      "h": -1.4
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "she gathers herself: the camera goes down through the surface with her",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "swimming-underwater",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "ground": false
+    }
+   ],
+   "transition": {
+    "kind": "cover",
+    "frames": 6,
+    "obj": "water"
+   },
+   "opts": {
+    "bubble_pulse": [
+     52.57,
+     54.4
+    ]
+   },
+   "low_ok": "she dives head first, her skirt trails above her"
+  },
+  {
+   "id": "25",
+   "at": 55.567,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.0,
+      "az": 20,
+      "y": 1.4,
+      "h": -2.4,
+      "at": "under"
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "the fast run made visible: bubbles burst past the lens",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "swimming-underwater",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "under",
+     "face_lens": true,
+     "ground": false,
+     "rollZ": 90
+    }
+   ],
+   "transition": {
+    "kind": "bubbles",
+    "frames": 8
+   },
+   "fx": [
+    {
+     "kind": "insert",
+     "at": 0,
+     "to": 0.4,
+     "motif": "bubbles",
+     "tone": "clear"
+    }
+   ]
+  },
+  {
+   "id": "26",
+   "at": 56.8,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 5.0,
+      "az": 10,
+      "y": 0.8,
+      "h": -6.0,
+      "at": "under"
+     },
+     "fov": 50,
+     "roll": 0
+    },
+    {
+     "at": 1.57,
+     "aim": {
+      "d": 5.0,
+      "az": 10,
+      "y": 0.8,
+      "h": -6.0,
+      "at": "under"
+     },
+     "fov": 50,
+     "roll": 3
+    }
+   ],
+   "why": "his light above her world (T07); the riser into the stop starts on one axis: below her face, looking up",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "floating-legs-bent-and-arms-spread",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "under",
+     "rotY": "away",
+     "ground": false
+    }
+   ],
+   "opts": {
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 8,
+     "beam": 1.0,
+     "yaw": -452.03
+    },
+    "grade_to": "war_white",
+    "grade_at": 58.62,
+    "grade_s": 3.547
+   },
+   "cams": [
+    {
+     "at": 58.7,
+     "kind": "riser",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 3.0,
+        "az": 0,
+        "y": 1.4,
+        "el": -15,
+        "at": "under"
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "27",
+   "at": 59.0,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.2,
+      "az": 0,
+      "y": 1.4,
+      "el": -15,
+      "at": "under"
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "resolve; riser 1: one push on one axis to her eyes, the grade climbs toward white (ref arcane-enemy@125.75)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "treading-water",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "under",
+     "face_lens": true,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 8,
+     "beam": 1.0,
+     "yaw": -457.31
+    },
+    "grade_to": "war_white",
+    "grade_at": 58.62,
+    "grade_s": 3.547
+   },
+   "riser": {
+    "aim": {
+     "at": "under",
+     "y": 1.4,
+     "el": -15,
+     "az": 0
+    },
+    "fov": 40,
+    "white": [
+     58.62,
+     62.167
+    ],
+    "steps": [
+     [
+      59.629,
+      1.6
+     ],
+     [
+      60.093,
+      1.2
+     ],
+     [
+      60.558,
+      0.9,
+      3,
+      0.05
+     ],
+     [
+      61.045,
+      0.7,
+      -3,
+      -0.05
+     ],
+     [
+      61.278,
+      0.55,
+      3,
+      0.03
+     ],
+     [
+      61.51,
+      0.45,
+      -3,
+      -0.03
+     ],
+     [
+      61.742,
+      0.38
+     ],
+     [
+      61.974,
+      0.32
+     ]
+    ]
+   }
+  },
+  {
+   "id": "27H",
+   "at": 62.167,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.5,
+      "az": 0,
+      "y": 1.4,
+      "el": -10,
+      "at": "under"
+     },
+     "fov": 40,
+     "roll": 0,
+     "observer": 0
+    }
+   ],
+   "why": "a stop is a stop (C3): the only locked camera, one drop hangs, nothing moves",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "treading-water",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "under",
+     "face_lens": true,
+     "ground": false
+    }
+   ],
+   "mouth": "silent",
+   "observer": 0,
+   "opts": {
+    "freeze": true,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 0,
+     "beam": 0,
+     "yaw": 0
+    },
+    "drop_hang": 1
+   }
+  },
+  {
+   "id": "28",
+   "at": 62.567,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.7,
+      "az": 0.0,
+      "y": 1.4,
+      "h": 0.62
+     },
+     "fov": 48,
+     "roll": 6
+    },
+    {
+     "at": 0.1,
+     "aim": {
+      "d": 0.62,
+      "az": 0.0,
+      "y": 1.4,
+      "h": 0.62
+     },
+     "fov": 48,
+     "roll": 6,
+     "shake": 1
+    },
+    {
+     "at": 0.27,
+     "aim": {
+      "d": 0.62,
+      "az": 0.0,
+      "y": 1.4,
+      "h": 0.62
+     },
+     "fov": 48,
+     "roll": 6,
+     "shake": 0
+    },
+    {
+     "at": 1.73,
+     "aim": {
+      "d": 0.6,
+      "az": 0.0,
+      "y": 1.4,
+      "h": 0.62
+     },
+     "fov": 48,
+     "roll": 6
+    }
+   ],
+   "why": "WOW 2 (62.615): the declaration - the war cry INTO the lens, ink detonation with a hole at her face, the melody line from her mouth; the hit 63.808 as a gold-orange flash inside the held anchor (ref ado-usseewa@98.25)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "roar",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.8
+     }
+    },
+    {
+     "at": 0.04800000000000182,
+     "clip": "roar",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.8
+     }
+    },
+    {
+     "at": 0.248,
+     "clip": "roar",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.8
+     }
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": 200
+    },
+    "two_tone": [
+     62.615,
+     63.808
+    ],
+    "two_tone_n": 4,
+    "two_tone_light": "#f0a03c",
+    "post": {
+     "glow": 1,
+     "vignette": 0.4,
+     "dof_auto": 1,
+     "chroma": 0.003
+    },
+    "barb_lens": [
+     63.767
+    ]
+   },
+   "fx": [
+    {
+     "kind": "ring",
+     "at": 0.05,
+     "to": 0.32,
+     "x": 0.5,
+     "y": 0.42,
+     "r1": 1.3,
+     "band": 0.04,
+     "color": "#f3eeff",
+     "n": 1,
+     "brush": 1
+    },
+    {
+     "kind": "crown",
+     "at": 0.048,
+     "to": "end",
+     "size": 0.55,
+     "hole": 0.36
+    },
+    {
+     "kind": "melody",
+     "at": 0.15,
+     "to": "end",
+     "src": [
+      62.7,
+      64.5
+     ],
+     "x0": 0.06,
+     "step": 0.11
+    }
+   ]
+  },
+  {
+   "id": "29",
+   "at": 64.3,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.9,
+      "az": 15,
+      "y": 1.2,
+      "h": 0.0
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "the war has begun: a worm's eye on her lunge out of the water (ref kda-firestarter@103)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "roar",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      -0.2,
+      0.0
+     ],
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     },
+     "ground": false
+    }
+   ],
+   "fx": [
+    {
+     "kind": "halo",
+     "at": 0,
+     "to": "end"
+    },
+    {
+     "kind": "slash",
+     "at": 1.633,
+     "to": "end",
+     "angle": 22,
+     "y": 0.4,
+     "width": 0.12,
+     "seed": 5,
+     "brush": 1
+    }
+   ],
+   "cams": [
+    {
+     "at": 65.267,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.6,
+        "az": 15,
+        "y": 1.32
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 65.933,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "slash",
+       "tone": "paper"
+      }
+     ],
+     "why": "4-frame two-value insert: slash"
+    }
+   ]
+  },
+  {
+   "id": "30",
+   "at": 66.167,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.7,
+      "az": -10,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "through the ink crown to her face; COLOUR FLIP on the measured Bm turn 67.59 - gold-orange on ink, her picture (ref edgerunners-this-fffire@5.25)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "yelling",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true
+    }
+   ],
+   "transition": {
+    "kind": "ink",
+    "frames": 6
+   },
+   "opts": {
+    "flip_at": [
+     67.59
+    ]
+   },
+   "fx": [
+    {
+     "kind": "crown",
+     "at": 0,
+     "to": "end",
+     "size": 0.5,
+     "hole": 0.38
+    },
+    {
+     "kind": "dots",
+     "at": 0.96,
+     "to": 1.3,
+     "src": [
+      67.1,
+      67.4
+     ]
+    }
+   ],
+   "cams": [
+    {
+     "at": 67.133,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.35,
+        "az": -10,
+        "y": 1.4
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 67.6,
+     "kind": "flip",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.35,
+        "az": -10,
+        "y": 1.4
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 67.8,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "ink_drops",
+       "tone": "paper"
+      }
+     ],
+     "why": "4-frame two-value insert: ink_drops"
+    }
+   ]
+  },
+  {
+   "id": "31",
+   "at": 68.033,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      2.6,
+      0.4
+     ],
+     "look": [
+      0.0,
+      0.3,
+      0.0
+     ],
+     "fov": 50,
+     "roll": 0
+    },
+    {
+     "at": 1.4,
+     "pos": [
+      0.0,
+      2.5,
+      0.4
+     ],
+     "look": [
+      0.0,
+      0.3,
+      0.0
+     ],
+     "fov": 50,
+     "roll": 8
+    }
+   ],
+   "why": "HOLD 3 beats, no flash (the template breaks on purpose): the hook-punch at the lens from above",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "treading-water",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true
+    },
+    {
+     "at": 0.25,
+     "clip": "hook-punch",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     }
+    },
+    {
+     "at": 0.383,
+     "clip": "hook-punch",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     }
+    }
+   ],
+   "fx": [
+    {
+     "kind": "slash",
+     "at": 0.3,
+     "to": "end",
+     "angle": -40,
+     "y": 0.55,
+     "width": 0.1,
+     "seed": 6,
+     "brush": 1
+    },
+    {
+     "kind": "speed",
+     "at": 0,
+     "to": "end",
+     "mode": "radial",
+     "opacity": 0.3
+    }
+   ],
+   "cams": [
+    {
+     "at": 69.467,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.4,
+        "az": 0,
+        "y": 1.2
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "32",
+   "at": 69.933,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.6,
+      "az": 60,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 44,
+     "roll": -15
+    },
+    {
+     "at": 1.0,
+     "aim": {
+      "d": 2.6,
+      "az": 60,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 44,
+     "roll": 15,
+     "ease": "snap"
+    }
+   ],
+   "why": "the body's biggest shape: the back kick with a dutch flip",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "spinning-back-kick-advancing",
+     "clip_from": 1.9,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      -0.2,
+      0.0
+     ],
+     "face_lens": true,
+     "ground": false
+    },
+    {
+     "at": 0.133,
+     "clip": "spinning-back-kick-advancing",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      -0.2,
+      0.0
+     ],
+     "face_lens": true,
+     "ground": false
+    }
+   ],
+   "fx": [
+    {
+     "kind": "halo",
+     "at": 0,
+     "to": "end"
+    },
+    {
+     "kind": "slash",
+     "at": 0.1,
+     "to": "end",
+     "angle": 35,
+     "y": 0.5,
+     "width": 0.13,
+     "seed": 7,
+     "brush": 1
+    }
+   ],
+   "cams": [
+    {
+     "at": 70.9,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.6,
+        "az": 60,
+        "y": 0.3
+       },
+       "fov": 44,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 71.567,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "smear",
+       "tone": "paper"
+      }
+     ],
+     "why": "4-frame two-value insert: smear"
+    }
+   ]
+  },
+  {
+   "id": "33",
+   "at": 71.8,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.5,
+      "az": 0,
+      "y": 1.4,
+      "h": 0.65
+     },
+     "fov": 50,
+     "roll": 0
+    }
+   ],
+   "why": "the claw at the lens HELD 2 beats (stand-in for M1 until the key pose is built)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "roar",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     }
+    }
+   ],
+   "opts": {
+    "barb_lens": [
+     72.2
+    ]
+   },
+   "fx": [
+    {
+     "kind": "dots",
+     "at": 0.97,
+     "to": 1.3,
+     "src": [
+      72.7,
+      73.0
+     ]
+    }
+   ],
+   "cams": [
+    {
+     "at": 72.767,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.3,
+        "az": 0,
+        "y": 1.0
+       },
+       "fov": 50,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 73.433,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "claws",
+       "tone": "paper"
+      }
+     ],
+     "why": "4-frame two-value insert: claws"
+    }
+   ]
+  },
+  {
+   "id": "34",
+   "at": 73.667,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 3.5,
+      "az": 170,
+      "y": 1.4,
+      "h": 1.4
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "the war is two-sided: the beam sweeps over both of us; the flash after beat 2 (template break)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "yelling",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "rotY": -165.0
+    }
+   ],
+   "opts": {
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": -1775.96
+    }
+   },
+   "cams": [
+    {
+     "at": 74.367,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "wedge",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: wedge"
+    },
+    {
+     "at": 74.5,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.6,
+        "az": -165,
+        "y": 1.4
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 75.1,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 2.0,
+        "az": -150,
+        "y": 1.4,
+        "h": 1.1
+       },
+       "fov": 50,
+       "roll": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "35",
+   "at": 75.533,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.6,
+      "az": 170,
+      "y": 1.4,
+      "h": 1.0
+     },
+     "fov": 42,
+     "roll": 0
+    }
+   ],
+   "why": "closeness: double time into the bar-9 hold",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "casting-spell",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true
+    }
+   ],
+   "fx": [
+    {
+     "kind": "slash",
+     "at": 0.1,
+     "to": "end",
+     "angle": -18,
+     "y": 0.45,
+     "width": 0.11,
+     "seed": 8,
+     "brush": 1
+    }
+   ],
+   "cams": [
+    {
+     "at": 76.033,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.4,
+        "az": 0,
+        "y": 1.3
+       },
+       "fov": 42,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 76.5,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "pos": [
+        0.0,
+        2.0,
+        0.6
+       ],
+       "look": [
+        0.0,
+        0.6,
+        0.0
+       ],
+       "fov": 48,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 76.733,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "melody",
+       "tone": "paper"
+      }
+     ],
+     "why": "4-frame two-value insert: melody"
+    },
+    {
+     "at": 76.967,
+     "kind": "macro",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.5,
+        "az": 0,
+        "y": 1.25,
+        "h": 0.55
+       },
+       "fov": 48,
+       "roll": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "35H",
+   "at": 77.4,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.5,
+      "az": 0,
+      "y": 1.25,
+      "h": 0.55
+     },
+     "fov": 48,
+     "roll": 0
+    },
+    {
+     "at": 1.9,
+     "aim": {
+      "d": 0.48,
+      "az": 0,
+      "y": 1.25,
+      "h": 0.55
+     },
+     "fov": 48,
+     "roll": 0
+    }
+   ],
+   "why": "PICTURE HOLD one bar (bar 9 loud): only her mouth sings - the contrast that makes the top note land",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "casting-spell",
+     "clip_from": 1.47,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true
+    }
+   ],
+   "opts": {
+    "freeze": true
+   }
+  },
+  {
+   "id": "36",
+   "at": 79.3,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.0,
+      "az": 0,
+      "y": 1.6,
+      "h": 0.6
+     },
+     "fov": 40,
+     "roll": 0
+    },
+    {
+     "at": 1.17,
+     "aim": {
+      "d": 5.6,
+      "az": 0,
+      "y": 1.6,
+      "h": 6.0
+     },
+     "fov": 40,
+     "roll": 0,
+     "ease": "out"
+    }
+   ],
+   "why": "WOW 3 (79.467): the cry at its height - the crane straight up, a violet-white pillar as long as the held B5 (ref hsr-hope-feathers@112.75)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "floating-legs-raised-arms-extended-upwards",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      -0.2,
+      0.0
+     ],
+     "expr": {
+      "aa": 0.6
+     },
+     "rotY": "away",
+     "ground": false
+    }
+   ],
+   "mouth": "silent",
+   "fx": [
+    {
+     "kind": "pillar",
+     "at": 0.167,
+     "to": "end",
+     "src": [
+      79.467,
+      80.467
+     ]
+    }
+   ]
+  },
+  {
+   "id": "37",
+   "at": 80.467,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "orbit": {
+      "around": "pool",
+      "deg": 20,
+      "radius": 4.4,
+      "height": 1.0,
+      "look_y": 1.2
+     },
+     "fov": 34
+    },
+    {
+     "at": 1.87,
+     "orbit": {
+      "around": "pool",
+      "deg": 45,
+      "radius": 4.4,
+      "height": 1.0,
+      "look_y": 1.2
+     },
+     "fov": 34
+    }
+   ],
+   "why": "the one beautiful breath (C6): the storm eye, clear blue-black sky, embers lift from her dots on the hi-hat inside the shot",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "floating-back-arched",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      -0.4,
+      0.0
+     ],
+     "rotY": "away",
+     "ground": false
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "rain_end_at": 80.467,
+    "eye": 1,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": 120
+    },
+    "moon": false,
+    "stars": 1
+   },
+   "fx": [
+    {
+     "kind": "pillar",
+     "at": 0,
+     "to": 0.8,
+     "src": [
+      80.75,
+      81.25
+     ],
+     "fade": 1
+    },
+    {
+     "kind": "embers",
+     "at": 0,
+     "to": "end",
+     "taps": [
+      81.781,
+      81.9,
+      82.017,
+      82.133
+     ]
+    }
+   ]
+  },
+  {
+   "id": "38",
+   "at": 82.333,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.3,
+      3.0,
+      0.4
+     ],
+     "look": [
+      0.0,
+      -0.4,
+      0.0
+     ],
+     "fov": 44,
+     "roll": 0
+    },
+    {
+     "at": 2.6,
+     "pos": [
+      0.3,
+      3.0,
+      0.4
+     ],
+     "look": [
+      0.0,
+      -0.4,
+      0.0
+     ],
+     "fov": 44,
+     "roll": 20
+    }
+   ],
+   "why": "beauty, close enough to feel: the hi-hat lives inside the shot as embers + ripples (no cuts, script-critic FIX 2)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "floating-back-arched",
+     "clip_from": 1.0,
+     "speed": 0.3,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      -0.4,
+      0.0
+     ],
+     "rotY": "away",
+     "ground": false
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "rain_end_at": 80.467,
+    "eye": 1,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": 120
+    },
+    "moon": false,
+    "stars": 1,
+    "ripple_at": [
+     82.6
+    ]
+   },
+   "fx": [
+    {
+     "kind": "embers",
+     "at": 0,
+     "to": "end",
+     "taps": [
+      82.367,
+      82.6,
+      82.83,
+      83.06,
+      83.2,
+      83.313
+     ]
+    }
+   ]
+  },
+  {
+   "id": "39",
+   "at": 84.933,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.6,
+      "az": -20,
+      "y": 1.4,
+      "h": 0.1
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "the storm returns: a wall of cloud rolls back over the sky",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "treading-water",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "rotY": -120.0
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "cloud_wall": [
+     84.933,
+     86.267
+    ],
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": 40
+    }
+   }
+  },
+  {
+   "id": "40",
+   "at": 86.267,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.0,
+      "az": -30,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 44,
+     "roll": 0
+    },
+    {
+     "at": 0.78,
+     "aim": {
+      "d": 0.9,
+      "az": -30,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 44,
+     "roll": 0,
+     "shake": 1
+    },
+    {
+     "at": 0.92,
+     "aim": {
+      "d": 0.9,
+      "az": -30,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 44,
+     "roll": 0,
+     "shake": 0
+    }
+   ],
+   "why": "WOW 4 (87.03): the megaphone breaks - the ping hits the rock and shatters into 12 two-tone shards at the lens (ref edgerunners-this-fffire@75.25)",
+   "actor": [
+    {
+     "at": 0.04,
+     "clip": "casting-spell",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.6
+     }
+    },
+    {
+     "at": 0.173,
+     "clip": "casting-spell",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "pool",
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.6
+     }
+    }
+   ],
+   "mouth": "silent",
+   "transition": {
+    "kind": "cover",
+    "frames": 6,
+    "obj": "cloud"
+   },
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": 40
+    },
+    "two_tone": [
+     87.03
+    ],
+    "two_tone_n": 3,
+    "two_tone_light": "#f0a03c"
+   },
+   "fx": [
+    {
+     "kind": "shards",
+     "at": 0.763,
+     "to": "end",
+     "n": 12,
+     "stutter": 2
+    }
+   ]
+  },
+  {
+   "id": "41",
+   "at": 88.567,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.6,
+      "az": 20,
+      "y": 1.2,
+      "h": 0.9,
+      "at": [
+       -5.9,
+       0.0,
+       -26.2
+      ]
+     },
+     "fov": 48,
+     "roll": 0
+    }
+   ],
+   "why": "she attacks the rock (stutter run on the grip)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "climbing-up-wall",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -5.9,
+      0.0,
+      -26.2
+     ],
+     "rotY": -165.0,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "rain_streak": 1,
+    "rock_wall": 1
+   },
+   "fx": [
+    {
+     "kind": "slash",
+     "at": 0.8,
+     "to": 1.06,
+     "angle": -10,
+     "y": 0.4,
+     "width": 0.06,
+     "seed": 9,
+     "brush": 1
+    }
+   ],
+   "stutter": {
+    "onsets": [
+     89.17,
+     89.3,
+     89.47,
+     89.63
+    ],
+    "cams": [
+     [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.6,
+        "az": 20,
+        "y": 1.2,
+        "h": 0.9,
+        "at": [
+         -5.9,
+         0.0,
+         -26.2
+        ]
+       },
+       "fov": 48,
+       "roll": 0
+      }
+     ],
+     [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.8,
+        "az": 20,
+        "y": 1.4,
+        "h": 1.2,
+        "at": [
+         -5.9,
+         0.0,
+         -26.2
+        ]
+       },
+       "fov": 48,
+       "roll": 0
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "42",
+   "at": 91.708,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -5.6,
+      3.2,
+      -25.0
+     ],
+     "look": [
+      -5.9,
+      0.2,
+      -26.2
+     ],
+     "fov": 50,
+     "roll": 0
+    }
+   ],
+   "why": "the climb, seen from above past her at the white surf",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pulling-up-to-a-ledge",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -5.8,
+      0.6,
+      -26.4
+     ],
+     "rotY": -165.0,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "surf": 1
+   }
+  },
+  {
+   "id": "43",
+   "at": 93.767,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 3.5,
+      "az": 40,
+      "y": 1.0,
+      "h": 0.3,
+      "at": [
+       -5.7,
+       1.0,
+       -26.3
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "the sea throws her off: a wave rears behind her, smear + stutter",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "climbing-to-top",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -5.7,
+      1.0,
+      -26.3
+     ],
+     "rotY": -160.0,
+     "ground": false
+    },
+    {
+     "at": 0.7830000000000013,
+     "clip": "knocked-out-falling-back",
+     "clip_from": 1.9,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      -5.7,
+      1.0,
+      -26.3
+     ],
+     "face_lens": true,
+     "ground": false
+    },
+    {
+     "at": 0.9830000000000012,
+     "clip": "knocked-out-falling-back",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -4.8,
+      -0.85,
+      -24.0
+     ],
+     "face_lens": true,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "wave_smash": [
+     94.55
+    ],
+    "splash_lens": [
+     95.5
+    ]
+   },
+   "step": 2
+  },
+  {
+   "id": "44",
+   "at": 96.167,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.2,
+      "az": 10,
+      "y": 1.4,
+      "h": 0.4
+     },
+     "fov": 44,
+     "roll": 0
+    },
+    {
+     "at": 1.7,
+     "aim": {
+      "d": 2.0,
+      "az": 10,
+      "y": 1.4,
+      "h": 0.4
+     },
+     "fov": 44,
+     "roll": 0
+    },
+    {
+     "at": 2.15,
+     "aim": {
+      "d": 1.85,
+      "az": 10,
+      "y": 1.4,
+      "h": 0.4
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "Weltschmerz (X3): she falls to her knees in the surf",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "falling-to-knees-in-prayer",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "center",
+     "face_lens": true
+    },
+    {
+     "at": 1.2,
+     "clip": "agony",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "center",
+     "face_lens": true
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "shallows": 1
+   }
+  },
+  {
+   "id": "45",
+   "at": 98.667,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.2,
+      "az": -15,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "rage, not tears: the blow carried by the ink slash + the splash cover",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "grab-and-slam",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "center",
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.6
+     }
+    }
+   ],
+   "mouth": "silent",
+   "transition": {
+    "kind": "cover",
+    "frames": 6,
+    "obj": "water"
+   },
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "shallows": 1,
+    "splash_lens": [
+     98.708
+    ]
+   },
+   "fx": [
+    {
+     "kind": "slash",
+     "at": 0.04,
+     "to": "end",
+     "angle": 30,
+     "y": 0.6,
+     "width": 0.13,
+     "seed": 10,
+     "brush": 1
+    }
+   ]
+  },
+  {
+   "id": "46",
+   "at": 101.767,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.0,
+      "az": 10,
+      "y": 1.4,
+      "h": 0.55
+     },
+     "fov": 42,
+     "roll": 0
+    }
+   ],
+   "why": "she gets up",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "standing-up-from-a-kneeling-position",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "center",
+     "face_lens": true
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "shallows": 1,
+    "hair_whip": [
+     102.48
+    ]
+   }
+  },
+  {
+   "id": "47",
+   "at": 103.667,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.8,
+      "az": 40,
+      "y": 1.4,
+      "h": 0.55
+     },
+     "fov": 42,
+     "roll": 0
+    }
+   ],
+   "why": "the turn of her head to the sky opens the next shot",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "look-over-shoulder",
+     "clip_from": 1.2,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "center",
+     "rotY": 20.0
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "shallows": 1
+   }
+  },
+  {
+   "id": "48",
+   "at": 106.133,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 5.0,
+      "az": 175,
+      "y": 1.2,
+      "h": 1.2
+     },
+     "fov": 40,
+     "roll": 0
+    },
+    {
+     "at": 3.0,
+     "aim": {
+      "d": 5.0,
+      "az": 178,
+      "y": 1.4,
+      "h": 1.2
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "the beauty that mocks her (T12): the sky clears in 30 frames, THE moon at 45 % over the lighthouse (ref edgerunners-this-fffire@91.25)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "treading-water",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "center",
+     "rotY": -165.0
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 106.16,
+    "moon_big": 0.45,
+    "clear_at": [
+     106.16
+    ],
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": 60
+    },
+    "shallows": 1
+   }
+  },
+  {
+   "id": "49",
+   "at": 109.2,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.9,
+      "az": 0,
+      "y": 1.4,
+      "h": 0.3
+     },
+     "fov": 42,
+     "roll": 0
+    }
+   ],
+   "why": "her rain call was wrong again: she glares up",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "yelling",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "center",
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     }
+    }
+   ],
+   "opts": {
+    "rain_at": 109.227,
+    "rain_end_at": 999.0,
+    "shallows": 1,
+    "rain_stutter": [
+     [
+      110.0,
+      110.4
+     ]
+    ]
+   }
+  },
+  {
+   "id": "50",
+   "at": 110.433,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.0,
+      "az": -30,
+      "y": 1.4,
+      "h": 1.0
+     },
+     "fov": 42,
+     "roll": 0
+    }
+   ],
+   "why": "he passes again: lamp flash",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "look-over-shoulder",
+     "clip_from": 2.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "center",
+     "rotY": -120.0
+    }
+   ],
+   "transition": {
+    "kind": "flash",
+    "frames": 2
+   },
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "shallows": 1,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": -2636.35
+    },
+    "two_tone": [
+     110.45
+    ],
+    "two_tone_n": 2,
+    "two_tone_light": "#fff1d2"
+   }
+  },
+  {
+   "id": "51",
+   "at": 113.467,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.2,
+      "az": 5,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 40,
+     "roll": 0
+    },
+    {
+     "at": 3.33,
+     "aim": {
+      "d": 0.55,
+      "az": 5,
+      "y": 1.4,
+      "h": 0.58
+     },
+     "fov": 40,
+     "roll": 0,
+     "ease": "linear"
+    }
+   ],
+   "why": "the resolve forms: a continuous push-in on her eyes narrowing",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "treading-water",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "center",
+     "face_lens": true,
+     "expr": {
+      "angry": 0.6
+     }
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "shallows": 1,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": 30
+    }
+   }
+  },
+  {
+   "id": "52",
+   "at": 116.8,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.7,
+      "az": -5,
+      "y": 1.4,
+      "h": 0.58
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "'not crying' (T15): the back-of-hand wipe, then the GLARE INTO THE LENS locks; riser 2 as three cuts closer",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "treading-water",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "center",
+     "face_lens": true
+    },
+    {
+     "at": 1.867,
+     "clip": "wiping-sweat",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": "center",
+     "face_lens": true
+    },
+    {
+     "at": 2.6,
+     "clip": "wiping-sweat",
+     "clip_from": 1.6,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "center",
+     "face_lens": true,
+     "expr": {
+      "angry": 0.8
+     }
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "shallows": 1
+   },
+   "cams": [
+    {
+     "at": 118.7,
+     "kind": "riser",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.7,
+        "az": -5,
+        "y": 1.4,
+        "h": 0.58
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 119.165,
+     "kind": "riser",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.55,
+        "az": -5,
+        "y": 1.4,
+        "h": 0.58
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 119.4,
+     "kind": "riser",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.42,
+        "az": 0,
+        "y": 1.4,
+        "h": 0.57
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "52b",
+   "at": 119.867,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.0,
+      "az": 0.0,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "still alive: her dots do one heartbeat in the black",
+   "opts": {
+    "her_off": "black, the duck"
+   },
+   "mouth": "silent",
+   "fx": [
+    {
+     "kind": "insert",
+     "at": 0,
+     "to": "end",
+     "motif": "black",
+     "tone": "ink"
+    },
+    {
+     "kind": "dots",
+     "at": 0.233,
+     "to": 0.45,
+     "heartbeat": 1
+    }
+   ]
+  },
+  {
+   "id": "53",
+   "at": 120.367,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.0,
+      "az": 20,
+      "y": 1.2,
+      "h": 0.3
+     },
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 1.53,
+     "aim": {
+      "d": 2.0,
+      "az": 20,
+      "y": 1.2,
+      "h": 1.8
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "the second war begins: the slow-motion leap - no cuts, the riser goes on as LIGHT (rain halo 20 -> 90 % white)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "jump-from-wall",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": "center",
+     "face_lens": true,
+     "ground": false
+    },
+    {
+     "at": 0.1,
+     "clip": "jump-from-wall",
+     "clip_from": 1.0,
+     "speed": 0.6,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.3,
+      0.0
+     ],
+     "face_lens": true,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "halo_ramp": [
+     120.367,
+     121.9
+    ]
+   },
+   "fx": [
+    {
+     "kind": "halo",
+     "at": 0,
+     "to": "end",
+     "ramp": [
+      0.2,
+      0.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "53H",
+   "at": 121.9,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.0,
+      "az": 20,
+      "y": 1.2,
+      "h": 1.8
+     },
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 0.7,
+     "aim": {
+      "d": 2.0,
+      "az": 20,
+      "y": 1.2,
+      "h": 1.82
+     },
+     "fov": 46,
+     "roll": 0,
+     "ease": "linear"
+    }
+   ],
+   "why": "the hidden stop 121.94-122.62 (8_EDIT F1): freeze at the apex, drops hang, the lamp dark",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "jump-from-wall",
+     "clip_from": 1.0,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      0.0,
+      0.3,
+      0.0
+     ],
+     "face_lens": true,
+     "ground": false
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "freeze": true,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 0,
+     "yaw": 0
+    }
+   },
+   "fx": [
+    {
+     "kind": "halo",
+     "at": 0,
+     "to": "end",
+     "ramp": [
+      0.9,
+      0.9
+     ]
+    }
+   ]
+  },
+  {
+   "id": "54",
+   "at": 122.6,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.8,
+      "az": 15.0,
+      "y": 0.9,
+      "h": 2.3,
+      "at": [
+       -5.5,
+       2.0,
+       -27.0
+      ]
+     },
+     "fov": 46,
+     "roll": -10
+    },
+    {
+     "at": 0.015,
+     "aim": {
+      "d": 2.6,
+      "az": 15.0,
+      "y": 0.9,
+      "h": 2.3,
+      "at": [
+       -5.5,
+       2.0,
+       -27.0
+      ]
+     },
+     "fov": 46,
+     "roll": -10,
+     "shake": 1
+    },
+    {
+     "at": 0.18,
+     "aim": {
+      "d": 2.6,
+      "az": 15.0,
+      "y": 0.9,
+      "h": 2.3,
+      "at": [
+       -5.5,
+       2.0,
+       -27.0
+      ]
+     },
+     "fov": 46,
+     "roll": -10,
+     "shake": 0
+    }
+   ],
+   "why": "the war's second start (blow 5): SUPERHERO LANDING on the drop, lamp flash two-tone, shake; the hit 123.809 as a gold-orange flash (ref hsr-hope-feathers@108.25)",
+   "actor": [
+    {
+     "at": 0.015,
+     "clip": "swing-backflip-to-superhero-pose",
+     "clip_from": 1.9,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      -5.5,
+      2.0,
+      -27.0
+     ],
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     }
+    },
+    {
+     "at": 0.282,
+     "clip": "swing-backflip-to-superhero-pose",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -5.5,
+      2.0,
+      -27.0
+     ],
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     }
+    }
+   ],
+   "low_ok": "her crouch on the ledge, the lens 2.8 m away",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": -2913.43
+    },
+    "two_tone": [
+     122.615,
+     123.809
+    ],
+    "two_tone_n": 4,
+    "two_tone_light": "#f0a03c",
+    "rain_ring": [
+     122.615
+    ]
+   },
+   "fx": [
+    {
+     "kind": "halo",
+     "at": 0,
+     "to": "end"
+    },
+    {
+     "kind": "slash",
+     "at": 0.27,
+     "to": "end",
+     "angle": -30,
+     "y": 0.5,
+     "width": 0.12,
+     "seed": 11,
+     "brush": 1
+    }
+   ],
+   "cams": [
+    {
+     "at": 123.77,
+     "kind": "macro",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.4,
+        "az": 40,
+        "y": 0.0,
+        "h": 3.0,
+        "at": [
+         -5.95,
+         2.9,
+         -27.3
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ],
+     "why": "her hand finds the first rung: macro punch-in"
+    }
+   ]
+  },
+  {
+   "id": "55",
+   "at": 124.3,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 3.2,
+      "az": 75.0,
+      "y": 1.3,
+      "h": 4.75,
+      "at": [
+       -7.5,
+       4.0,
+       -28.16
+      ]
+     },
+     "fov": 50,
+     "roll": 0
+    }
+   ],
+   "why": "one step per bar: the ladder from below",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "climbing-ladder",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.5,
+      4.0,
+      -28.16
+     ],
+     "rotY": -165.0,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1
+   },
+   "fx": [
+    {
+     "kind": "slash",
+     "at": 0.2,
+     "to": "end",
+     "angle": 70,
+     "y": 0.5,
+     "width": 0.08,
+     "seed": 12,
+     "brush": 1
+    }
+   ],
+   "cams": [
+    {
+     "at": 125.233,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.4,
+        "az": 15.0,
+        "y": 1.6
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 125.933,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "rungs",
+       "tone": "paper"
+      }
+     ],
+     "why": "4-frame two-value insert: rungs"
+    }
+   ]
+  },
+  {
+   "id": "56",
+   "at": 126.167,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 3.0,
+      "az": 85.0,
+      "y": 1.0,
+      "h": 7.8,
+      "at": [
+       -6.9,
+       7.2,
+       -28.0
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 1.87,
+     "aim": {
+      "d": 3.0,
+      "az": 65.0,
+      "y": 1.4,
+      "h": 8.6,
+      "at": [
+       -6.9,
+       7.2,
+       -28.0
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "the climb as attack: she leaps across the tower face",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "jump-from-wall",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -6.9,
+      7.2,
+      -28.0
+     ],
+     "rotY": -105.0,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1
+   },
+   "fx": [
+    {
+     "kind": "halo",
+     "at": 0,
+     "to": "end"
+    },
+    {
+     "kind": "speed",
+     "at": 0,
+     "to": "end",
+     "mode": "horizontal",
+     "opacity": 0.35
+    }
+   ],
+   "cams": [
+    {
+     "at": 127.167,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.7,
+        "az": 75.0,
+        "y": 1.4
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 127.833,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "speed",
+       "tone": "paper"
+      }
+     ],
+     "why": "4-frame two-value insert: speed"
+    }
+   ]
+  },
+  {
+   "id": "57",
+   "at": 128.033,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.6,
+      "az": 15.0,
+      "y": 1.6,
+      "h": 13.0,
+      "at": [
+       -7.32,
+       11.6,
+       -27.48
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "contact with the place: her hand on the gallery rail, the beam inches over her head",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "hanging-by-hands-against-wall",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.32,
+      11.6,
+      -27.48
+     ],
+     "rotY": -165.0,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24.0,
+     "beam": 1.0,
+     "yaw": -3066.97,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "two_tone": [
+     128.3
+    ],
+    "two_tone_n": 2,
+    "two_tone_light": "#fff1d2"
+   },
+   "cams": [
+    {
+     "at": 129.0,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.3,
+        "az": 15.0,
+        "y": 1.75
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 129.667,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "wedge",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: wedge"
+    }
+   ]
+  },
+  {
+   "id": "58",
+   "at": 129.933,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.5,
+      "az": 25.0,
+      "y": 1.0,
+      "h": 13.180000000000001,
+      "at": [
+       -7.1,
+       12.38,
+       -27.25
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "over: she vaults the rail",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "jumping-over-obstacle-one-hand",
+     "clip_from": 0.35,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.32,
+      12.180000000000001,
+      -27.48
+     ],
+     "face_lens": true,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1
+   },
+   "fx": [
+    {
+     "kind": "halo",
+     "at": 0,
+     "to": "end"
+    }
+   ]
+  },
+  {
+   "id": "59",
+   "at": 131.067,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -7.1,
+      15.38,
+      -26.95
+     ],
+     "look": [
+      -7.1,
+      12.38,
+      -27.25
+     ],
+     "fov": 50,
+     "roll": 0
+    },
+    {
+     "at": 0.7,
+     "pos": [
+      -7.3999999999999995,
+      14.780000000000001,
+      -27.45
+     ],
+     "look": [
+      -8.0,
+      13.180000000000001,
+      -29.0
+     ],
+     "fov": 50,
+     "roll": 0
+    }
+   ],
+   "why": "she has arrived: the landing on the gallery ON the measured hit 131.077 (gold-orange two-tone)",
+   "actor": [
+    {
+     "at": 0.01,
+     "clip": "swing-backflip-to-superhero-pose",
+     "clip_from": 1.9,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      -7.1,
+      12.38,
+      -27.25
+     ],
+     "face_lens": true
+    },
+    {
+     "at": 0.143,
+     "clip": "swing-backflip-to-superhero-pose",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.1,
+      12.38,
+      -27.25
+     ],
+     "face_lens": true
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "two_tone": [
+     131.077
+    ],
+    "two_tone_n": 4,
+    "two_tone_light": "#f0a03c",
+    "ring_at": [
+     131.33
+    ]
+   },
+   "fx": [
+    {
+     "kind": "slash",
+     "at": 0.02,
+     "to": "end",
+     "angle": 12,
+     "y": 0.6,
+     "width": 0.11,
+     "seed": 13,
+     "brush": 1
+    }
+   ],
+   "cams": [
+    {
+     "at": 132.3,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.4,
+        "az": 15.0,
+        "y": 0.1
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 132.967,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "slash",
+       "tone": "paper"
+      }
+     ],
+     "why": "4-frame two-value insert: slash"
+    }
+   ]
+  },
+  {
+   "id": "60",
+   "at": 133.267,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.4,
+      "az": 75.0,
+      "y": 1.15,
+      "h": 14.1,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "the light in her hands: macro on the grip on the held note (hold = weight)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "grain_pulse": [
+     133.67
+    ]
+   },
+   "fx": [
+    {
+     "kind": "ring",
+     "at": 0.4,
+     "to": 1.0,
+     "x": 0.5,
+     "y": 0.5,
+     "r1": 0.5,
+     "band": 0.02,
+     "color": "#ffe9c4",
+     "n": 1,
+     "brush": 1
+    }
+   ]
+  },
+  {
+   "id": "61",
+   "at": 135.533,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.2,
+      "az": 30.0,
+      "y": 1.4,
+      "h": 14.3,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "the machine between us: the lens rings turn past the camera, her face through them",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "face_lens": true,
+     "rotY": -165.0
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "fresnel_front": 1
+   },
+   "transition": {
+    "kind": "cover",
+    "frames": 4,
+    "obj": "glass"
+   },
+   "cams": [
+    {
+     "at": 136.5,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.5,
+        "az": 15,
+        "y": 1.42
+       },
+       "fov": 44,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 137.167,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "rings",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: rings"
+    }
+   ]
+  },
+  {
+   "id": "62",
+   "at": 137.433,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -7.36,
+      15.5,
+      -28.34
+     ],
+     "look": [
+      -7.66,
+      12.9,
+      -29.139999999999997
+     ],
+     "fov": 50,
+     "roll": 0
+    }
+   ],
+   "why": "the chain from act 1 closes: the cable arrives through the floor into the lamp base",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "cable_glow": 0.4,
+    "lamp_cable": 1
+   },
+   "cams": [
+    {
+     "at": 138.4,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.4,
+        "az": 60,
+        "y": 1.1
+       },
+       "fov": 44,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 139.067,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "cable",
+       "tone": "ink",
+       "color": "#9b5cff"
+      }
+     ],
+     "why": "4-frame two-value insert: cable"
+    }
+   ]
+  },
+  {
+   "id": "63",
+   "at": 139.267,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.6,
+      "az": 15.0,
+      "y": 1.3,
+      "h": 14.1,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "what her pull does outside: the beam sweeps round the tower (hit 139.297 gold-orange)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "two_tone": [
+     139.297
+    ],
+    "two_tone_n": 4,
+    "two_tone_light": "#f0a03c"
+   },
+   "cams": [
+    {
+     "at": 140.233,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.6,
+        "az": -5.0,
+        "y": 1.3
+       },
+       "fov": 44,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 140.933,
+     "kind": "wide",
+     "camera": [
+      {
+       "at": 0,
+       "pos": [
+        4.5,
+        4.0,
+        -8.350000000000001
+       ],
+       "look": [
+        -8.0,
+        10.0,
+        -30.0
+       ],
+       "fov": 40,
+       "roll": 0
+      }
+     ],
+     "opts": {
+      "two_tone": [
+       140.933
+      ],
+      "two_tone_n": 4,
+      "two_tone_light": "#fff1d2"
+     },
+     "why": "THE WIDE as a 4-frame flash: the beam sweeping the sea from d 25 (scale for 4 frames only)"
+    }
+   ]
+  },
+  {
+   "id": "64",
+   "at": 141.167,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.6,
+      "az": 25.0,
+      "y": 1.4,
+      "h": 14.3,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "effort: she sings through her teeth; COLOUR FLIP on the measured Bm turn 142.62",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     },
+     "rotY": -165.0
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "flip_at": [
+     142.62
+    ]
+   },
+   "cams": [
+    {
+     "at": 142.133,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.3,
+        "az": 25.0,
+        "y": 1.3
+       },
+       "fov": 44,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 142.633,
+     "kind": "flip",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.3,
+        "az": 25.0,
+        "y": 1.3,
+        "h": 14.200000000000001,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 44,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 142.833,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "dots",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: dots"
+    }
+   ]
+  },
+  {
+   "id": "65",
+   "at": 143.033,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.8,
+      "az": 55.0,
+      "y": 1.3,
+      "h": 13.65,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 1.4,
+     "aim": {
+      "d": 1.8,
+      "az": 85.0,
+      "y": 1.3,
+      "h": 13.65,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "the weight begins: double time into the false win",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "hanging-by-hands-against-wall",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 10,
+     "beam": 1.0,
+     "yaw": -1448.3,
+     "lantern": "her"
+    },
+    "lantern_room": 1
+   },
+   "cams": [
+    {
+     "at": 144.0,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.5,
+        "az": 55.0,
+        "y": 0.1
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 144.467,
+     "kind": "angle",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.2,
+        "az": -160,
+        "y": 1.2,
+        "h": 15.3,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 48,
+       "roll": 180
+      }
+     ]
+    },
+    {
+     "at": 144.933,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "pos": [
+        -7.66,
+        15.9,
+        -28.439999999999998
+       ],
+       "look": [
+        -7.66,
+        13.5,
+        -28.74
+       ],
+       "fov": 50,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 145.433,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "wedge",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: wedge"
+    },
+    {
+     "at": 145.667,
+     "kind": "macro",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.3,
+        "az": 45.0,
+        "y": 0.1,
+        "h": 13.05,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 145.9,
+     "kind": "rail",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.0,
+        "az": -35.0,
+        "y": 1.0,
+        "h": 13.9,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 50,
+       "roll": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "66",
+   "at": 146.3,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -6.886,
+      13.7,
+      -25.842
+     ],
+     "look": [
+      -8.0,
+      13.1,
+      -30.0
+     ],
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 0.03,
+     "pos": [
+      -6.886,
+      13.7,
+      -25.842
+     ],
+     "look": [
+      -8.0,
+      13.1,
+      -30.0
+     ],
+     "fov": 46,
+     "roll": 0,
+     "shake": 1
+    },
+    {
+     "at": 0.17,
+     "pos": [
+      -6.886,
+      13.7,
+      -25.842
+     ],
+     "look": [
+      -8.0,
+      13.1,
+      -30.0
+     ],
+     "fov": 46,
+     "roll": 0,
+     "shake": 0
+    }
+   ],
+   "why": "FALSE WIN 1 (146.33): the beam swings round and PASSES the lens in 10 frames, flash, shake",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "expr": {
+      "aa": 0.5
+     },
+     "rotY": -165.0
+    },
+    {
+     "at": 0.49,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "transition": {
+    "kind": "flash",
+    "frames": 2
+   },
+   "mouth": "silent",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 40,
+     "beam": 1.0,
+     "yaw": -5825.04,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "two_tone": [
+     146.33
+    ],
+    "two_tone_n": 4,
+    "two_tone_light": "#f0a03c"
+   },
+   "cams": [
+    {
+     "at": 147.3,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.4,
+        "az": 35.0,
+        "y": 1.15
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 147.967,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "wedge",
+       "tone": "paper"
+      }
+     ],
+     "why": "4-frame two-value insert: wedge"
+    },
+    {
+     "at": 148.1,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 2.0,
+        "az": -150,
+        "y": 1.3,
+        "h": 14.3,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 50,
+       "roll": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "67",
+   "at": 148.667,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.2,
+      "az": 40.0,
+      "y": 1.3,
+      "h": 14.1,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "FALSE WIN 2: closer; COLOUR FLIP on the measured Bm turn 150.12",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 30,
+     "beam": 1.0,
+     "yaw": -4461.23,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "two_tone": [
+     149.6
+    ],
+    "two_tone_n": 2,
+    "two_tone_light": "#f0a03c",
+    "flip_at": [
+     150.12
+    ]
+   },
+   "cams": [
+    {
+     "at": 149.633,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.6,
+        "az": 40.0,
+        "y": 1.4
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 150.133,
+     "kind": "flip",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.6,
+        "az": 40.0,
+        "y": 1.4,
+        "h": 14.3,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "68",
+   "at": 150.367,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.4,
+      "az": 85.0,
+      "y": 1.2,
+      "h": 14.3,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "the machine fights back: her hand slips and catches the frame",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "hanging-by-hands-against-wall",
+     "clip_from": 0.35,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1
+   },
+   "cams": [
+    {
+     "at": 151.5,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.25,
+        "az": 85.0,
+        "y": 1.25
+       },
+       "fov": 44,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 152.167,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "smear",
+       "tone": "paper"
+      }
+     ],
+     "why": "4-frame two-value insert: smear"
+    }
+   ]
+  },
+  {
+   "id": "69",
+   "at": 152.4,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.0,
+      "az": 95.0,
+      "y": 0.5,
+      "h": 13.3,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 46,
+     "roll": 14
+    }
+   ],
+   "why": "she does not let go; COLOUR FLIP on the measured Bm turn 153.85 - the last orange of the film",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pulling-up-to-a-ledge",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.4,
+      -28.74
+     ],
+     "rotY": -165.0,
+     "ground": false
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "flip_at": [
+     153.85
+    ]
+   },
+   "cams": [
+    {
+     "at": 152.933,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.5,
+        "az": 95.0,
+        "y": 0.6
+       },
+       "fov": 46,
+       "roll": 14
+      }
+     ]
+    },
+    {
+     "at": 153.4,
+     "kind": "reverse",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.2,
+        "az": -170,
+        "y": 0.8,
+        "h": 13.1,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 50,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 153.633,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "rain",
+       "tone": "ink"
+      }
+     ],
+     "why": "4-frame two-value insert: rain"
+    },
+    {
+     "at": 153.867,
+     "kind": "flip",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.5,
+        "az": 95.0,
+        "y": 0.6,
+        "h": 13.3,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 14
+      }
+     ]
+    },
+    {
+     "at": 154.1,
+     "kind": "main",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.0,
+        "az": 95.0,
+        "y": 0.5,
+        "h": 13.3,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 14
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "70",
+   "at": 154.3,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.8,
+      "az": 20.0,
+      "y": 1.35,
+      "h": 13.8,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "rage as power: she SCREAMS with the effort, arms wide on the brass (ref ado-usseewa@71.25)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "yelling",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.9
+     }
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1
+   },
+   "fx": [
+    {
+     "kind": "slash",
+     "at": 0.05,
+     "to": "end",
+     "angle": -26,
+     "y": 0.55,
+     "width": 0.12,
+     "seed": 14,
+     "brush": 1
+    }
+   ],
+   "cams": [
+    {
+     "at": 155.267,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.35,
+        "az": 20.0,
+        "y": 1.3
+       },
+       "fov": 44,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 155.933,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "slash",
+       "tone": "paper"
+      }
+     ],
+     "why": "4-frame two-value insert: slash"
+    }
+   ]
+  },
+  {
+   "id": "71",
+   "at": 156.167,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "orbit": {
+      "around": [
+       -7.66,
+       12.9,
+       -28.74
+      ],
+      "deg": 40,
+      "radius": 1.4,
+      "height": 1.2,
+      "look_y": 1.2
+     },
+     "fov": 46
+    },
+    {
+     "at": 1.87,
+     "orbit": {
+      "around": [
+       -7.66,
+       12.9,
+       -28.74
+      ],
+      "deg": 200,
+      "radius": 1.4,
+      "height": 1.2,
+      "look_y": 1.2
+     },
+     "fov": 46
+    }
+   ],
+   "why": "the whole machine and her: a half orbit, HELD 3 beats, no flash",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "fresnel_front": 1
+   },
+   "cams": [
+    {
+     "at": 157.6,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.6,
+        "az": -120,
+        "y": 1.0
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "72",
+   "at": 158.033,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.9,
+      "az": 15.0,
+      "y": 1.15,
+      "h": 14.05,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "her light enters the fight: her dots flare violet",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "casting-spell",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "face_lens": true
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "glow_flare": [
+     158.1
+    ],
+    "lantern_violet": [
+     158.1
+    ]
+   },
+   "cams": [
+    {
+     "at": 159.0,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.2,
+        "az": 15.0,
+        "y": 1.1
+       },
+       "fov": 44,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 159.667,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "dots",
+       "tone": "ink",
+       "color": "#9b5cff"
+      }
+     ],
+     "why": "4-frame two-value insert: dots"
+    }
+   ]
+  },
+  {
+   "id": "73",
+   "at": 159.9,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.5,
+      "az": 95.0,
+      "y": 1.25,
+      "h": 14.1,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "she feeds the lamp (T02): the violet runs down her arms into the brass",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "lantern_violet": [
+     159.9
+    ],
+    "arm_current": [
+     159.9
+    ]
+   },
+   "cams": [
+    {
+     "at": 160.9,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.3,
+        "az": 115.0,
+        "y": 1.2
+       },
+       "fov": 44,
+       "roll": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "74",
+   "at": 161.3,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      22.0,
+      6.0
+     ],
+     "look": [
+      0.0,
+      0.0,
+      -20.0
+     ],
+     "fov": 60,
+     "roll": 0
+    },
+    {
+     "at": 0.52,
+     "pos": [
+      0.0,
+      6.0,
+      2.0
+     ],
+     "look": [
+      0.0,
+      0.0,
+      -30.0
+     ],
+     "fov": 60,
+     "roll": 0,
+     "ease": "in"
+    },
+    {
+     "at": 2.33,
+     "pos": [
+      0.0,
+      4.0,
+      0.0
+     ],
+     "look": [
+      0.0,
+      0.0,
+      -40.0
+     ],
+     "fov": 60,
+     "roll": 8
+    }
+   ],
+   "why": "her signal reached everything: THE DIVE, every cable lit violet (T14, ref hsr-hope-feathers@113.25)",
+   "mouth": "silent",
+   "opts": {
+    "her_off": "the map: her signal reaches everything",
+    "cables": 11,
+    "cable_glow": 1,
+    "cable_color": "#b98cff",
+    "sea_glow": 1,
+    "ceiling_y": 22,
+    "ceiling_light": 1
+   },
+   "transition": {
+    "kind": "cover",
+    "frames": 6,
+    "obj": "water"
+   }
+  },
+  {
+   "id": "75",
+   "at": 163.633,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.6,
+      0.6,
+      2.0
+     ],
+     "look": [
+      0.0,
+      0.2,
+      -6.0
+     ],
+     "fov": 50,
+     "roll": 0
+    },
+    {
+     "at": 1.9,
+     "pos": [
+      0.6,
+      3.0,
+      -6.0
+     ],
+     "look": [
+      0.0,
+      3.0,
+      -14.0
+     ],
+     "fov": 50,
+     "roll": 0
+    }
+   ],
+   "why": "back to her: the pulse climbs one step per held note",
+   "mouth": "silent",
+   "opts": {
+    "her_off": "follow one pulse",
+    "cables": 11,
+    "cable_glow": 0.6,
+    "cable_color": "#b98cff",
+    "cable_pulse": [
+     162.85,
+     163.4,
+     163.9,
+     164.6
+    ]
+   },
+   "transition": {
+    "kind": "cover",
+    "frames": 4,
+    "obj": "pulse"
+   }
+  },
+  {
+   "id": "76",
+   "at": 165.533,
+   "set": "deep",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0.0,
+      0.1,
+      1.0
+     ],
+     "look": [
+      0.0,
+      0.1,
+      -8.0
+     ],
+     "fov": 70,
+     "roll": 0
+    },
+    {
+     "at": 1.87,
+     "pos": [
+      0.0,
+      0.1,
+      -10.0
+     ],
+     "look": [
+      0.0,
+      0.1,
+      -20.0
+     ],
+     "fov": 70,
+     "roll": 30,
+     "ease": "linear"
+    }
+   ],
+   "why": "the current rises: inside the cable tube",
+   "mouth": "silent",
+   "opts": {
+    "her_off": "inside the cable tube",
+    "tube": 1,
+    "cable_color": "#b98cff"
+   },
+   "fx": [
+    {
+     "kind": "speed",
+     "at": 0,
+     "to": "end",
+     "mode": "radial",
+     "opacity": 0.5,
+     "color": "#c9a8ff"
+    }
+   ]
+  },
+  {
+   "id": "77",
+   "at": 167.4,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.5,
+      "az": 35.0,
+      "y": 1.2,
+      "h": 14.3,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    }
+   ],
+   "why": "the light is hers: the pulse bursts into the lamp, the beam turns violet-gold",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "transition": {
+    "kind": "cover",
+    "frames": 4,
+    "obj": "pulse"
+   },
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "lantern_violet": [
+     167.4
+    ],
+    "beam_color": [
+     [
+      167.4,
+      "#ffd9f0"
+     ]
+    ]
+   },
+   "cams": [
+    {
+     "at": 168.4,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.6,
+        "az": 25.0,
+        "y": 1.4
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 169.067,
+     "kind": "insert",
+     "her": false,
+     "fx": [
+      {
+       "kind": "insert",
+       "at": 0,
+       "to": "end",
+       "motif": "wedge",
+       "tone": "ink",
+       "color": "#e8c8ff"
+      }
+     ],
+     "why": "4-frame two-value insert: wedge"
+    }
+   ]
+  },
+  {
+   "id": "78",
+   "at": 169.3,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 6.0,
+      "az": 15.0,
+      "y": 1.0,
+      "h": 13.9,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "the build begins: THE silhouette at the lamp, double time",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1
+   },
+   "cams": [
+    {
+     "at": 169.3,
+     "kind": "angle",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.8,
+        "az": 175.0,
+        "y": 1.1,
+        "h": 14.0,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 169.567,
+     "kind": "punch",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.5,
+        "az": 175.0,
+        "y": 1.1
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "79",
+   "at": 169.767,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 5.0,
+      "az": 15.0,
+      "y": 1.0,
+      "h": 13.700000000000001,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "PULL 1: escalation; the beam passes 16 m off the lens",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.0,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 6,
+     "beam": 1.0,
+     "yaw": -996.5,
+     "lantern": "her"
+    },
+    "lantern_room": 1
+   },
+   "cams": [
+    {
+     "at": 170.736,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 4.2,
+        "az": 15.0,
+        "y": 1.2,
+        "h": 14.07,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 171.665,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 3.8,
+        "az": 15.0,
+        "y": 1.4,
+        "h": 14.030000000000001,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ],
+     "opts": {
+      "two_tone": [
+       171.665
+      ],
+      "two_tone_n": 4,
+      "two_tone_light": "#fff1d2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "80",
+   "at": 172.5,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 3.5,
+      "az": 15.0,
+      "y": 1.1,
+      "h": 13.1,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "PULL 2 on the hit 172.524: lower; the riser starts, the grade climbs toward white; the beam 8 m off",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 6,
+     "beam": 1.0,
+     "yaw": -1014.96,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "grade_to": "war_white",
+    "grade_at": 173.24,
+    "grade_s": 3.66
+   },
+   "cams": [
+    {
+     "at": 173.082,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 3.0,
+        "az": 15.0,
+        "y": 0.2,
+        "h": 13.200000000000001,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 173.546,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 2.7,
+        "az": 15.0,
+        "y": 1.4,
+        "h": 13.92,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 174.01,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 2.4,
+        "az": 15.0,
+        "y": 1.3,
+        "h": 13.89,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ],
+     "opts": {
+      "two_tone": [
+       174.01
+      ],
+      "two_tone_n": 4,
+      "two_tone_light": "#fff1d2",
+      "grade_to": "war_white",
+      "grade_at": 173.24,
+      "grade_s": 3.66
+     }
+    }
+   ]
+  },
+  {
+   "id": "81",
+   "at": 174.4,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.0,
+      "az": 15.0,
+      "y": 1.2,
+      "h": 13.8,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 44,
+     "roll": -8
+    }
+   ],
+   "why": "PULL 3 on the hit 174.428: her whole back, half beats; the beam's edge 3.5 m off, then 1 m",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "hanging-by-hands-against-wall",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0,
+     "ground": false
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 4,
+     "beam": 1.0,
+     "yaw": -671.98,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "grade_to": "war_white",
+    "grade_at": 173.24,
+    "grade_s": 3.66
+   },
+   "cams": [
+    {
+     "at": 174.707,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.8,
+        "az": 15.0,
+        "y": 1.6,
+        "h": 13.83,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 174.939,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.7,
+        "az": 25.0,
+        "y": 1.4,
+        "h": 13.82,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 175.172,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.6,
+        "az": 15.0,
+        "y": 1.4,
+        "h": 13.81,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ],
+     "opts": {
+      "two_tone": [
+       175.172
+      ],
+      "two_tone_n": 4,
+      "two_tone_light": "#fff1d2",
+      "grade_to": "war_white",
+      "grade_at": 173.24,
+      "grade_s": 3.66
+     }
+    },
+    {
+     "at": 175.404,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.5,
+        "az": 15.0,
+        "y": 1.4,
+        "h": 13.8,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 175.648,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.4,
+        "az": 5.0,
+        "y": 1.65,
+        "h": 13.790000000000001,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 175.891,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.3,
+        "az": 15.0,
+        "y": 1.4,
+        "h": 13.780000000000001,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 176.124,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.2,
+        "az": 15.0,
+        "y": 1.4,
+        "h": 13.77,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ],
+     "opts": {
+      "two_tone": [
+       176.124
+      ],
+      "two_tone_n": 4,
+      "two_tone_light": "#fff1d2",
+      "grade_to": "war_white",
+      "grade_at": 173.24,
+      "grade_s": 3.66
+     }
+    }
+   ]
+  },
+  {
+   "id": "82",
+   "at": 176.267,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.2,
+      "az": 15.0,
+      "y": 1.4,
+      "h": 14.200000000000001,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "why": "PULL 4 on the hit 176.286: on the beam axis, her eyes on us; then the dip and the lamp in her pupils",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "face_lens": true,
+     "expr": {
+      "angry": 0.8
+     },
+     "rotY": -165.0
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 2,
+     "beam": 1.0,
+     "yaw": -339.52,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "grade_to": "war_white",
+    "grade_at": 173.24,
+    "grade_s": 3.66
+   },
+   "cams": [
+    {
+     "at": 176.588,
+     "kind": "step",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.9,
+        "az": 15.0,
+        "y": 1.42,
+        "h": 13.74,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 46,
+       "roll": 0
+      }
+     ]
+    },
+    {
+     "at": 176.9,
+     "kind": "dip",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 1.0,
+        "az": 15.0,
+        "y": 1.3,
+        "h": 14.200000000000001,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 44,
+       "roll": 0
+      }
+     ],
+     "opts": {
+      "rain_at": 84.933,
+      "rain_end_at": 999.0,
+      "lighthouse": {
+       "pos": [
+        -8.0,
+        -30.0
+       ],
+       "height": 12,
+       "len": 90,
+       "spin": 24,
+       "beam": 1.0,
+       "yaw": 0,
+       "lantern": "her"
+      },
+      "lantern_room": 1,
+      "dip": 1,
+      "grade": "war_night"
+     },
+     "why": "THE DIP: near black, only her dots - the pros' pre-drop blackout (ref ado-show@173.3)"
+    },
+    {
+     "at": 177.167,
+     "kind": "pupils",
+     "camera": [
+      {
+       "at": 0,
+       "aim": {
+        "d": 0.3,
+        "az": 15.0,
+        "y": 1.42,
+        "h": 14.32,
+        "at": [
+         -7.66,
+         12.9,
+         -28.74
+        ]
+       },
+       "fov": 40,
+       "roll": 0
+      }
+     ],
+     "opts": {
+      "rain_at": 84.933,
+      "rain_end_at": 999.0,
+      "lighthouse": {
+       "pos": [
+        -8.0,
+        -30.0
+       ],
+       "height": 12,
+       "len": 90,
+       "spin": 24,
+       "beam": 1.0,
+       "yaw": 0,
+       "lantern": "her"
+      },
+      "lantern_room": 1,
+      "pupil_lamp": 1
+     },
+     "why": "2 frames: the lamp turning into her pupils (A+, toki 2026-10-26)"
+    }
+   ]
+  },
+  {
+   "id": "83",
+   "at": 177.2,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -6.452,
+      13.7,
+      -24.204
+     ],
+     "look": [
+      -8.0,
+      13.299999999999999,
+      -30.0
+     ],
+     "fov": 58,
+     "roll": 0
+    },
+    {
+     "at": 0.04,
+     "pos": [
+      -6.452,
+      13.7,
+      -24.204
+     ],
+     "look": [
+      -8.0,
+      13.299999999999999,
+      -30.0
+     ],
+     "fov": 58,
+     "roll": 0,
+     "shake": 1
+    },
+    {
+     "at": 0.21,
+     "pos": [
+      -6.452,
+      13.7,
+      -24.204
+     ],
+     "look": [
+      -8.0,
+      13.299999999999999,
+      -30.0
+     ],
+     "fov": 58,
+     "roll": 0,
+     "shake": 0
+    },
+    {
+     "at": 1.9,
+     "pos": [
+      -6.3746,
+      13.75,
+      -23.9142
+     ],
+     "look": [
+      -8.0,
+      13.299999999999999,
+      -30.0
+     ],
+     "fov": 58,
+     "roll": 0
+    }
+   ],
+   "why": "WOW 5, strongest, last (177.238): the beam STOPS on the lens - white-gold flood, her silhouette, shake; she makes the light look at you (ref hsr-hope-feathers@112.75)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "mouth": "silent",
+   "low_ok": "lantern",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 0,
+     "beam": 1.0,
+     "yaw": 14.95,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "flood": [
+     177.238
+    ],
+    "flood_n": 10,
+    "flood_light": "#fff1d2",
+    "beam_settle": [
+     177.48,
+     177.65
+    ],
+    "stars_at": [
+     178.17
+    ],
+    "post": {
+     "chroma": 0.003,
+     "vignette": 0
+    }
+   }
+  },
+  {
+   "id": "84",
+   "at": 179.1,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      -7.5872,
+      13.6,
+      -28.4544
+     ],
+     "look": [
+      -8.0,
+      13.5,
+      -30.0
+     ],
+     "fov": 50,
+     "roll": 0
+    },
+    {
+     "at": 1.9,
+     "pos": [
+      -6.839,
+      14.299999999999999,
+      -25.653
+     ],
+     "look": [
+      -8.0,
+      13.399999999999999,
+      -30.0
+     ],
+     "fov": 50,
+     "roll": 0,
+     "ease": "out"
+    }
+   ],
+   "why": "the ink night: a pull-out through the lens glass, the stars streak past",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "pull-heavy-object",
+     "clip_from": 1.9,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    },
+    {
+     "at": 0.6,
+     "clip": "look-over-shoulder",
+     "clip_from": 0.5,
+     "speed": 1.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0
+    }
+   ],
+   "mouth": "silent",
+   "transition": {
+    "kind": "cover",
+    "frames": 4,
+    "obj": "glass"
+   },
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 179.1,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 0,
+     "beam": 1.0,
+     "yaw": 14.95,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "ink_sky_at": [
+     179.1
+    ],
+    "stars": 1,
+    "star_streak": 1
+   }
+  },
+  {
+   "id": "85",
+   "at": 181.0,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 1.4,
+      "az": 55.0,
+      "y": 1.4,
+      "h": 14.3,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 40,
+     "roll": 0
+    },
+    {
+     "at": 1.8,
+     "aim": {
+      "d": 1.0,
+      "az": 25.0,
+      "y": 1.4,
+      "h": 14.3,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "she looks at YOU from the lamp",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "look-over-shoulder",
+     "clip_from": 1.2,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0,
+     "look": "lens"
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 179.1,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 0,
+     "beam": 1.0,
+     "yaw": 14.95,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "ink_sky_at": [
+     179.1
+    ],
+    "stars": 1,
+    "glow_flare": [
+     181.93
+    ]
+   }
+  },
+  {
+   "id": "86",
+   "at": 182.833,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 0.9,
+      "az": 25.0,
+      "y": 1.42,
+      "h": 14.32,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 40,
+     "roll": 0
+    },
+    {
+     "at": 3.6,
+     "aim": {
+      "d": 0.7,
+      "az": 25.0,
+      "y": 1.42,
+      "h": 14.32,
+      "at": [
+       -7.66,
+       12.9,
+       -28.74
+      ]
+     },
+     "fov": 40,
+     "roll": 0,
+     "ease": "inOut"
+    }
+   ],
+   "why": "her light owns the night (payoff of frame 0.5): 60-90 drawn stars burst from her dots (ref hsr-hope-feathers@112.75)",
+   "actor": [
+    {
+     "at": 0,
+     "clip": "look-over-shoulder",
+     "clip_from": 1.2,
+     "speed": 0.0,
+     "motionMix": 1,
+     "pos": [
+      -7.66,
+      12.9,
+      -28.74
+     ],
+     "rotY": -165.0,
+     "look": "lens"
+    }
+   ],
+   "mouth": "silent",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 179.1,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 0,
+     "beam": 1.0,
+     "yaw": 14.95,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "ink_sky_at": [
+     179.1
+    ],
+    "stars": 1
+   },
+   "fx": [
+    {
+     "kind": "starburst",
+     "at": 0.97,
+     "to": "end",
+     "n": 75
+    }
+   ]
+  },
+  {
+   "id": "87",
+   "at": 186.467,
+   "set": "nightsea",
+   "camera": [
+    {
+     "at": 0,
+     "aim": {
+      "d": 2.0,
+      "az": 0.0,
+      "y": 1.4,
+      "h": 0.6
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "why": "ends with the music: one dot pulse in the black (the heartbeat of 120.1)",
+   "mouth": "silent",
+   "opts": {
+    "her_off": "black"
+   },
+   "fx": [
+    {
+     "kind": "insert",
+     "at": 0,
+     "to": "end",
+     "motif": "black",
+     "tone": "ink"
+    },
+    {
+     "kind": "dots",
+     "at": 0.5,
+     "to": 0.75,
+     "heartbeat": 1
+    }
+   ]
+  }
+ ]
+}

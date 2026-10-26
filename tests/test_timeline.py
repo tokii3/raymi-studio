@@ -300,3 +300,34 @@ def test_low_lens_close_to_her_is_refused():
     far = [{"f": 0, "pos": [0.7, 0.9, 2.9], "look": [0, 1.75, 0]}]
     high = [{"f": 0, "pos": [0.4, 1.6, 1.2], "look": [0, 1.8, 0]}]
     assert T.under_skirt(near, her, "s") and not T.under_skirt(far, her, "s") and not T.under_skirt(high, her, "s")
+
+
+def test_multicam_row_keeps_her_action_running_across_the_cuts():
+    """Love is War v3b: one row = one action seen from several set-ups on the beat; her clip time runs on, she keeps
+    the facing of the row's main camera, an insert has no body, a stutter alternates two set-ups on the onsets."""
+    errors = []
+    row = {"id": "28", "at": 10.0, "set": "nightsea",
+           "camera": [{"at": 0, "aim": {"d": 1.0, "az": 30, "h": 0.5}, "fov": 40}],
+           "actor": [{"at": 0, "clip": "roar", "clip_from": 1.0, "pos": "pool", "rotY": "lens"}],
+           "cams": [{"at": 10.5, "camera": [{"at": 0, "aim": {"d": 0.4}}], "kind": "punch"},
+                    {"at": 11.0, "her": False, "kind": "insert", "fx": []}],
+           "stutter": {"onsets": [11.2, 11.3], "cams": [[{"at": 0, "aim": {"d": 1}}], [{"at": 0, "aim": {"d": 2}}]]}}
+    out = T.expand_rows([row], errors)
+    assert not errors
+    assert [s["at"] for s in out] == [10.0, 10.5, 11.0, 11.2, 11.3]
+    assert out[0]["actor"][0]["rotY"] == 30.0                       # the main camera's facing, not "lens"
+    assert out[1]["actor"][0]["clip_from"] == 1.5 and out[1]["actor"][0]["blend"] == 0
+    assert "actor" not in out[2] and out[2]["opts"]["her_off"]
+    assert out[3]["camera"][0]["aim"]["d"] == 2 and out[4]["camera"][0]["aim"]["d"] == 1
+
+
+def test_riser_steps_push_on_one_axis_and_climb_to_white():
+    errors = []
+    row = {"id": "27", "at": 59.0, "set": "nightsea", "camera": [{"at": 0, "aim": {"d": 2.2, "az": 0, "el": -30}}],
+           "riser": {"aim": {"az": 0, "el": -30}, "fov": 40, "steps": [[59.629, 1.6], [60.093, 1.2, 3, 0.05]],
+                     "white": [58.62, 62.167]}}
+    out = T.expand_rows([row], errors)
+    assert [s["camera"][0]["aim"]["d"] for s in out] == [2.2, 1.6, 1.2]
+    assert out[2]["camera"][0]["roll"] == 3 and out[2]["opts"]["grade_to"] == "war_white"
+    pos, look = T.aim_camera({"at": [0, 0, 0], "d": 2.0, "az": 90, "h": 0.0}, {}, {}, errors, "t")
+    assert abs(pos[0] - 2.0) < 1e-3 and abs(pos[2]) < 1e-3 and look == [0.0, 0.0, 0.0]

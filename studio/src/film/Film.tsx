@@ -80,8 +80,12 @@ export const Film: React.FC<FilmProps> = (props) => {
   // a freeze / polaroid holds the 3D world on one frame while the 2D layer above keeps time (PovFx.tsx)
   const f = sceneFrame(shot.fx, fNow);
   // a two-tone frame is TWO values: no grade, bloom or vignette may lift the ink (TwoTone.tsx)
-  const twoOn = twoToneOn(shot.opts.two_tone, f, Number(shot.opts.two_tone_n ?? 2));
+  // the colour flip (Love is War, script v3b): one beat of gold-orange on ink on a measured turn to the minor chord -
+  // the world flips, she keeps her values (opts.flip_at song seconds, flip_n frames, flip_light)
+  const flipOn = twoToneOn(shot.opts.flip_at, f, Number(shot.opts.flip_n ?? 14));
+  const twoOn = flipOn || twoToneOn(shot.opts.two_tone, f, Number(shot.opts.two_tone_n ?? 2));
   const ink = String(shot.opts.two_tone_dark ?? '#0b0910');
+  const paper = flipOn ? String(shot.opts.flip_light ?? '#f0a03c') : shot.opts.two_tone_light ? String(shot.opts.two_tone_light) : undefined;
   // a 3D shot names her rig keys itself (shots.json "actor"); the 2026-10-21 VRM edition translated sprite keys
   const actorKeys = useMemo(() => shot.actor?.length ? shot.actor : vrmFilmKeys(shot.puppets), [shot]);
   const gain = shot.mouth?.gain ?? 1;
@@ -250,7 +254,7 @@ export const Film: React.FC<FilmProps> = (props) => {
             {Set ? <WorldMotion spec={worldSpec(shot.opts.world, fps)} f={f} centre={(actorKeys[0]?.pos as [number, number, number] | undefined) ?? [0, 0, 0]}>
               {/* freeze: the set's own time stops at the shot's first frame (she still moves) */}
               <TwoTone on={twoOn} bg={shot.opts.two_tone_bg === 'ink' ? 'ink' : 'paper'}
-                light={shot.opts.two_tone_light ? String(shot.opts.two_tone_light) : undefined} dark={shot.opts.two_tone_dark ? String(shot.opts.two_tone_dark) : undefined}>
+                light={paper} dark={shot.opts.two_tone_dark ? String(shot.opts.two_tone_dark) : undefined}>
               <Set f={shot.opts.freeze ? shot.from : f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} />
               </TwoTone>
               <SetFx opts={{wet: SET_WET[shot.set] ?? 0, ...shot.opts}} f={f} fps={fps} camPos={camPos} plain={Boolean(mask)}
