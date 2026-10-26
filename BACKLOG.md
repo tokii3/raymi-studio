@@ -147,3 +147,9 @@
   on a rock); HSR frames carry a music-player overlay. Tried: 26 candidate frames looked at by eye, distinct refs per
   moment. Next: add references made for these classes (searched + verified ids, `refs download` + `refs frames`), or
   let the previz still stand alone where no professional frame matches - toki decides.
+- 2026-10-26 Storyboard Love is War round 3 (brief-keeper BLOCK 3, reviews/storyboard_brief-keeper_3.md): the
+  REFERENCE gap is closed (all 15 moments MATCH after the 5 new refs + principle cards). Left: two decisions that are
+  toki's, not mine - (1) cut density: the script cuts at a median 1.9 s, pros on aggressive songs 0.33-0.67 s
+  (LEARNED.md); denser means re-authoring the drops (chorus 1, drop 2, final drop) with riser / hi-hat / chord-change
+  / smear / colour-flip moments; (2) the last hit 177.24: the approved quiet silhouette vs "einen umhauen" (a blow).
+  Asked toki 2026-10-26; no round 4 before her answer.

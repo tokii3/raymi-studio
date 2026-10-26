@@ -1,5 +1,16 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-26 - Reference library learns the RULES (placement, empty room, speed, value, colour + why)
+- toki: "aus den referenzen lernen ... alles hat grund und wirkung" + "character placements, negative space,
+  schnelligkeit ... wie und warum". Built raymi/principles.py: `refs learn|shots|why|rules|card|measure`.
+- 5 new pro refs (JJK OP1, Arcane Paint the Town Blue, Spider-Verse trailer 2, CSM ED1, Frieren OP; YOASOBI Yoru
+  failed to download). 39 videos measured (7,600 frames, 5,999 shots); Gemini why pass running (decision -> why ->
+  effect per shot). knowledge/references/LEARNED.md: picture change every 0.67 s, figure centred 57 %, ~45 % empty,
+  low key 49 %, analogous 57 %; 7 principle cards from frames I looked at.
+- Found: our Love is War script cuts at a median of 1.9 s (pros on aggressive songs 0.33-0.67 s) -> question to toki;
+  our two-tone test frame measured soft (navy black, 28 % white) -> fix in the build.
+- Storyboard r3: matched frames / strips + RULE line per moment, + the hidden stop 121.94 -> brief-keeper.
+
 ## 2026-10-25 (late, 7) - Love is War: ideas approved, treatment v3 PASS, script v1 BLOCK (merge fault)
 - toki: one merged world, graphic 2D design ("eher richtung 2"), v3 allowed -> treatment v3 PASS (both critics).
 - Built: TwoTone (background-only two-tone, tested), more clips (wipe, climbs, vault, pull, swim, stumble, hang,
