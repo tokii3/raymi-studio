@@ -1,0 +1,104 @@
+{
+ "_why": "storyboard BEFORE the build (4_SCRIPT v2, script-critic + brief-keeper PASS): the 11 key moments incl. all 5 wows, reference | PLAN card - previz stills come with the painted 2D world (build list), never shown as finished",
+ "moments": [
+  {
+   "t": 0.2,
+   "line": "cold open / the last picture first (shot 0b)",
+   "ref": "hsr-hope-feathers@112.75",
+   "camera": "on the beam axis at the lamp, h 13.7 d 6 fov 58",
+   "her": "THE silhouette: hangs her whole weight on the brass of the lamp (pull-heavy-object 1.9)",
+   "fx": "white-gold fills the frame, she a black shape - 6 frames",
+   "light": "the beam is the only light"
+  },
+  {
+   "t": 0.5,
+   "line": "frame 0.5: her eye opens under the black surface (shot 1)",
+   "ref": "edgerunners-this-fffire@91.25",
+   "camera": "from below her cheek, h 0.35 d 0.75 fov 50, pull-back arc",
+   "her": "eye snaps open, glides up the lighthouse cable",
+   "fx": "the beam sweeps the surface above like a blade (30 % width), a pulse sparks up the cable",
+   "light": "black-navy, her violet dots, the white beam far above"
+  },
+  {
+   "t": 9.358,
+   "line": "hit 1: the pulse blows up the cable (shot 5)",
+   "ref": "edgerunners-this-fffire@74.25",
+   "camera": "low converging-cable frame, h 0.4 d 1.2 fov 60, roll -8, crash in",
+   "her": "LUNGES up the cable at the light (roar 1.0), mouth open",
+   "fx": "cable white-hot, two-tone background 2 frames (she keeps her colours), shake 5",
+   "light": "the pulse is the key light"
+  },
+  {
+   "t": 62.615,
+   "line": "the war cry after the stop (shot 28)",
+   "ref": "ado-usseewa@98.25",
+   "camera": "ECU, h at her mouth d 0.62 fov 48, roll +6, 3-frame push",
+   "her": "screams INTO the lens, claws at us (roar 1.0), mouth wide open",
+   "fx": "ring bursts past the glass, ink detonation with a hole at her face, chroma 3, shake 5; the ink line climbs with her measured notes (red heads 62.75-64.45)",
+   "light": "two-tone paper / ink + her violet + one red"
+  },
+  {
+   "t": 79.467,
+   "line": "the top note: crane + pillar (shot 36)",
+   "ref": "hsr-hope-feathers@112.75",
+   "camera": "crane straight up from 0.6 to 6 m in 1.2 s",
+   "her": "arms raised, head back, mouth open on the held B5",
+   "fx": "a violet-white pillar of her light, exactly as long as the note",
+   "light": "her pillar the only light in the storm"
+  },
+  {
+   "t": 87.03,
+   "line": "the megaphone breaks (shot 40)",
+   "ref": "edgerunners-this-fffire@75.25",
+   "camera": "close on her, the black cloud edge sweeps across the lens first",
+   "her": "pings at the rock (casting-spell 1.0), mouth open",
+   "fx": "the ping hits the rock and SHATTERS into 12 two-tone shards flying at the lens, stutter on twos, shake 4",
+   "light": "grey storm, the shards white"
+  },
+  {
+   "t": 106.2,
+   "line": "the sky clears: the one moon (shot 48)",
+   "ref": "edgerunners-this-fffire@91.25",
+   "camera": "wide from behind her, h 1.2 d 5",
+   "her": "stands in the surf, looking up",
+   "fx": "clouds part in 30 frames, the moon 45 % of the frame over the lighthouse",
+   "light": "moonlight rims her; the beauty that mocks her (her rain call wrong again)"
+  },
+  {
+   "t": 122.615,
+   "line": "the landing on the drop (shot 54)",
+   "ref": "hsr-hope-feathers@108.25",
+   "camera": "low on the ledge, d 2.8, roll -10",
+   "her": "SUPERHERO LANDING on the rock (swing-backflip-to-superhero-pose 1.9), rain halo",
+   "fx": "lamp flash two-tone, shake 5, a ring of rain, ink slash",
+   "light": "the lamp flash"
+  },
+  {
+   "t": 146.33,
+   "line": "false win: the beam passes the lens (shot 66)",
+   "ref": "csm-op@33.25",
+   "camera": "on the lens-side beam axis, medium d 3",
+   "her": "pulls the great lamp round (pull-heavy-object 1.0)",
+   "fx": "the beam swings and PASSES the lens in 10 frames, flash, shake 4",
+   "light": "white-gold beam, violet lantern"
+  },
+  {
+   "t": 177.238,
+   "line": "THE LAST HIT: the beam stops on you (shot 83)",
+   "ref": "hsr-hope-feathers@112.75",
+   "camera": "the cold-open camera: on the beam axis, h 13.7 d 6 fov 58",
+   "her": "THE silhouette (same as 0.2 s): her whole weight on the lamp",
+   "fx": "white-gold 100 % for 3 frames, chroma, shake 5, held; overshoot and settle",
+   "light": "the beam on the lens"
+  },
+  {
+   "t": 183.8,
+   "line": "the ink night: her dots become stars (shot 86)",
+   "ref": "hsr-hope-feathers@113.25",
+   "camera": "close on her face, slow breathing push",
+   "her": "looks at us from the lamp, mouth closed",
+   "fx": "the sky inked over, 60-90 drawn stars burst from her dots on the biggest transient of the song",
+   "light": "ink black, violet stars, the gold beam"
+  }
+ ]
+}
