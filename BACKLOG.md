@@ -153,3 +153,5 @@
   (LEARNED.md); denser means re-authoring the drops (chorus 1, drop 2, final drop) with riser / hi-hat / chord-change
   / smear / colour-flip moments; (2) the last hit 177.24: the approved quiet silhouette vs "einen umhauen" (a blow).
   Asked toki 2026-10-26; no round 4 before her answer.
+- 2026-10-26 `refs why` for 26 of 39 references hit the free Gemini quota (429 on every model). Re-run when it resets:
+  `python -m raymi refs why all` (skips the 13 done), then `python -m raymi refs rules` and refresh LEARNED.md.

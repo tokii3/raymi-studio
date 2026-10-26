@@ -1,5 +1,10 @@
-# SHOOTING SCRIPT v2 - Love is War / 恋は戦争 (ryo (supercell), Mwk Remix)
+# SHOOTING SCRIPT v3b - Love is War / 恋は戦争 (ryo (supercell), Mwk Remix)
 
+v3 (toki 2026-10-26 "ja, drops dichter schneiden wie die profis (ca. 0,5 s), riser / hi-hat / farbwechsel rein, dann
+storyboard runde 4"): the rows below stay (her actions, clips, main cameras); the DROPS get hold + flash on the beat
+(section "Drops v3b"), with hand-written tables for the hi-hat rolls, the three risers and the final build. v3b fixes
+script-critic 3 and brief-keeper 3 (reviews/script_3.md, script_brief-keeper_3.md). Everything outside the
+drops is v2.
 v2 written BY HAND as one shot list (toki 2026-10-26 "mach weiter mit script v2"): the row boundaries ARE the edit's
 cuts (8_EDIT_draft.md section 4, measured; cut frame = round(t*30)-1), every action cell belongs to its own row.
 Closes script-critic v1 FIX 1-8 (reviews/script_1.md) and brief-keeper v1 conditions 1-3 (reviews/script_brief-keeper_1.md).
@@ -126,8 +131,263 @@ carries a hook text + a comment question (toki 2026-10-26 "hook-text und komment
 | 86 | 182.833-186.467 | pulse 7 (182.88) | close on her face, slow breathing push | holds the look; closed | the dots rise as stars; 183.80 STAR BURST: 60-90 drawn stars in one pulse, the ink complete | cut | hsr-hope-feathers@112.75 | her light owns the night (payoff of frame 0.5) |
 | 87 | 186.467-187.570 | fade | black | - | one dot pulse at ~187.0 (the heartbeat of 120.1) | cut to black | - | ends with the music |
 
-Density: about 29 cuts / min (8_EDIT section 2); every bar in chorus 1 and the final chorus is a new picture; holds only at
-the stops (62.2, 121.9), the bar-9 picture hold, the black at 119.9 - each a decision.
+Density: v2 was about 29 cuts / min, one picture per bar in the drops (median row 1.9 s). v3b: in the drops hold + flash
+on the beat, 0.47-0.60 s per picture on average (measured per drop in "Drops v3b"), against the pros
+(knowledge/references/LEARNED.md: 0.67 s overall, 0.33-0.67 s in aggressive anime / game MVs, built as holds + flashes).
+Holds stay decisions: the stops (62.2, 121.9),
+the bar-9 hold, the black at 119.9, the rides (POV 7, crane 36, the dive 74-76), the grip on the held note (60).
+
+
+## Drops v3b: hold + flash on the beat (toki 2026-10-26; script-critic 3 / brief-keeper 3 BLOCK fixed)
+
+**What the pros do (knowledge/references/LEARNED.md, why pass over 13 videos) and what we copy:**
+- **Contrast, not a metronome.** 0.17 s flashes on fills, rolls and builds BEFORE a drop; in the drop held anchor
+  shots on the big action, with micro-flash inserts slammed in on the hits; a calm hold right after peak chaos. The
+  average lands near 0.5 s, the structure is hold + flash. v3 (one cut every beat, 0.46 s flat) hit the average and
+  missed the effect.
+- **Per bar of a drop row** (her action and clip run on, only the camera changes - multicam on ONE action):
+  ANCHOR = the row's main camera, held 2 beats -> SECOND set-up on beat 3 (punch-in in bar 1, reverse in bar 2) ->
+  a 4-frame FLASH insert on the measured hi-hat (the "and" of beat 4) -> THIRD set-up to the bar's end, or the flash
+  leads straight into the next row's downbeat. Never the same set-up twice in a row.
+- **Hi-hat**: measured phase profile of the band above 7 kHz in the drops: the hats sit on the off-beat 8th, 0.20 s
+  after each beat (chorus 1, drop 2, finale). Drop 1 has no hi-hat pattern (flat profile), so its flash sits on beat 4.
+- **Hits land ON a cut**: a measured hit within 0.12 s of a planned cut pulls the cut onto the hit (row 59 -> 131.077);
+  a hit inside a held shot slams in a 4-frame two-tone flash and returns.
+- **The drop heads are holds on purpose** (Ado SHOW: stutter in, hold the payoff): row 28 the war cry 62.567-64.300
+  and row 54 the landing 122.600-124.300 are ANCHORS, the hits 63.808 / 123.809 slam in as flashes.
+- **Double time** in the last bar before each section change (rows 13, 35, 65, 69, 78): a cut every beat plus half
+  beats in the last two beats, with new set-ups in the second cycle.
+- **The flash inserts** are two-value details (ink on paper / white on ink), >= 50 % empty, 4 frames (pro shots under
+  0.25 s are the simplest and emptiest). In the Short they are dropped or carry a crop of her face / hand (the 9:16
+  frame keeps her face >= 35 %).
+- **Stutter rule (X2)**: alternating stutter frames are the SAME light (main <-> punch-in of one set-up), so no more
+  than 3 hard brightness changes per second over a large area.
+- **No distance in the drops** (brief-keeper C1): every grid set-up is inside d 3; the one wide (row 63, d 25, the beam
+  over the sea) is a 4-frame flash.
+- **Colour flips: 4, only on the measured turn to the minor chord** (chroma-template chord track 2026-10-26, a first
+  estimate: the label can be off by one chord, the time is the beat it was measured on): 67.59, 142.62, 150.12,
+  153.85 - gold-orange on ink for one beat, always on a picture of HER (never on an ink-only frame). Dropped: 78.86
+  (a hold), 157.59 / 165.09 (violet scenes). No orange after 154, so the last hit stays pure white-gold.
+
+**Measured density (picture changes, incl. flashes):** drop 1 one every 0.47 s (median 0.33), chorus 1 0.57 s (median
+0.58), drop 2 0.61 s (median 0.55), finale 154.3-169.8 0.81 s (the dive 74-76 is one ride on purpose), the final
+build 169.8-177.2 0.37 s. Shortest picture 4 frames, longest anchor 2.3 s.
+
+### Hi-hat rolls (measured 16th onsets, high band) - a cut on each onset, 3-4 frames
+| roll | onsets (s) | cuts | pictures |
+|---|---|---|---|
+| 8.661-9.021 (row 4) | 8.661 8.777 8.893 9.021 | 4 | main <-> punch-in on the racing pulse (same light); 9.021 compresses into the 9.358 hit |
+| 27.771-28.932 (row 15) | 27.771 27.876 27.992 28.131 28.235 28.340 28.456 28.584 28.711 28.816 28.932 | 11 | her chest-open ping <-> the ring at 55 % (both lit by the ping, same brightness) |
+| 29.420-29.884 (row 15/16) | 29.420 29.524 29.629 29.756 29.884 | 5 | the ring <-> her mouth; the last cut lands 29.861 HIT |
+| 81.781-83.313 (rows 37-38, the storm eye) | 14 onsets | **0 - no cuts** | the one beautiful breath stays one slow orbit; the hi-hat lives INSIDE the shot: an ember lifts from her dots on every onset, a faint ripple ring per onset on the water (script-critic FIX 2) |
+
+### Riser 1: 58.620-62.167 into the stop (rows 26-27) - one push on one axis, the grade climbs toward white
+| t | row | picture (one axis: below her face, looking up at the beam) |
+|---|---|---|
+| 58.700 | 26 | her whole floating body, the beam sweeping the surface above, d 3.0 |
+| 59.000 | 27 | (row 27) her face and shoulders, d 2.2 |
+| 59.629 | 27 | d 1.6 |
+| 60.093 | 27 | d 1.2 (v2: 60.03 tighter) |
+| 60.558 | 27 | d 0.9 |
+| 61.045 | 27 | d 0.7 - last bar: half beats from here |
+| 61.278 | 27 | d 0.55 |
+| 61.510 | 27 | d 0.45 |
+| 61.742 | 27 | d 0.38 |
+| 61.974 | 27 | her eyes ECU, the beam in them, d 0.32 - the grade at its whitest |
+| 62.167 | 27H | FREEZE: the stop (v2) - the light drops away, one drop hangs |
+
+### Riser 2: 118.620-121.900 into the hidden stop (rows 52-53H) - cuts, then the cliff, then light
+| t | row | picture |
+|---|---|---|
+| 118.700 | 52 | "not crying": the back-of-hand wipe starts, close d 0.7 |
+| 119.165 | 52 | d 0.55, rain running over her eye |
+| 119.400 | 52 | the GLARE INTO THE LENS locks (half beat), d 0.42 - held to 119.867 |
+| 119.867 | 52b | BLACK: the duck - the first cliff; her dots one heartbeat at 120.1 |
+| 120.367 | 53 | the slow-motion leap - NO cuts: the riser goes on as LIGHT, the rain halo brightens from 20 % to 90 % white with the measured brightness (+854 Hz/s) |
+| 121.900 | 53H | FREEZE at the apex: the hidden stop (v2) |
+
+### The final build: 169.767-177.238 (rows 79-83) - one axis (the beam axis toward her), every cut closer
+Cuts thicken with the measured hi-hat density (1 -> 5 per beat, 170-177): row 79 every two beats, row 80 every beat,
+row 81 half beats, row 82 half beats + the dip. The big white flashes (the beam passing) come 4 times in 4.5 s
+(X2: under 3 per second); every other cut is a same-light step.
+| t | row | picture |
+|---|---|---|
+| 169.767 | 79 | PULL 1: her whole body hanging on the lamp, d 5.0, h 13 |
+| 170.736 | 79 | her hands on the brass, d 4.2 |
+| 171.665 | 79 | FLASH 4f: the beam passes 16 m off (white band), then her face, d 3.8 |
+| 172.524 | 80 | HIT: PULL 2, lower angle, d 3.5 (cut on the hit) |
+| 173.082 | 80 | her foot braced on the rail, d 3.0 |
+| 173.546 | 80 | her face, the beam light rising on it, d 2.7 - the riser (173.24) starts, the grade climbs toward white |
+| 174.010 | 80 | FLASH 4f: the beam passes 8 m off, then her shoulders, d 2.4 |
+| 174.428 | 81 | HIT: PULL 3, dutch -8, her whole back, d 2.0 |
+| 174.707 | 81 | her hands, d 1.8 |
+| 174.939 | 81 | her face, d 1.7 |
+| 175.172 | 81 | FLASH 4f: the beam's edge 3.5 m off |
+| 175.404 | 81 | her face in the white edge, d 1.5 |
+| 175.648 | 81 | her hands slipping on the brass, d 1.4 |
+| 175.891 | 81 | her eyes on us, d 1.3 |
+| 176.124 | 81 | FLASH 4f: the beam 1 m off |
+| 176.286 | 82 | HIT: PULL 4 on the beam axis, her face strained, eyes on us, d 1.2 |
+| 176.588 | 82 | her eyes, d 0.9 |
+| 176.900 | 82 | THE DIP: near black, only her dots - the pros' pre-drop blackout (Ado SHOW 173.3) |
+| 177.167 | 82 | 2 frames: the lamp turning into her pupils, ECU on the beam axis, d 0.3 |
+| 177.238 | 83 | THE LAST HIT: cut on the flash to THE silhouette (as 0b) on the beam axis h 13.7 d 6 - white-gold 100 % 3 frames, shake 5, chroma, held |
+
+**The last hit - recommendation A+ (script-critic FIX 6), toki decides on the storyboard:** the silhouette stays the
+last picture and the cold-open promise (A). The blow is built before it: the accelerating build, the dip to black,
+2 frames of the lamp in her pupils, then the white flood on the flash with shake. The camera gets from d 0.3 at her
+eye to the beam axis at d 6 by a hard cut on the flash (the white frame hides the jump). Variant B (eyes after the
+dip) is dropped: it repeated row 82 and put her face before the silhouette.
+
+### The drop grids (generated from the measured beats with the per-row set-ups above, then read by hand)
+
+### D1 drop 1 (9.833-24.400): 31 pictures, median 0.33 s (shortest 0.13, longest 1.13)
+
+| t | row | picture | what the camera shows |
+|---|---|---|---|
+| 9.833 | 6 | MAIN | the row's camera (v2) |
+| 10.733 | 6 | PUNCH | her reaching fingertips + the ribbon root, d 0.5 |
+| 11.133 | 6 | FLASH 4f | the violet ribbon alone on black (on beat 4) |
+| 11.267 | 6 | REVERSE | front-low, the ribbon coming at us, d 1.4 |
+| 11.600 | 6 | MAIN | the row's camera (v2) |
+| 12.500 | 6 | REVERSE | front-low, the ribbon coming at us, d 1.4 |
+| 12.767 | 7 | HOLD | POV ride along the cable - the rushing things are the changes |
+| 13.900 | 8 | MAIN | the row's camera (v2) |
+| 14.900 | 8 | PUNCH | her eyes, d 0.4 |
+| 15.333 | 8 | FLASH 4f | her dots pulsing on black (on beat 4) |
+| 15.467 | 8 | REVERSE | from behind her shoulder, the cable converging ahead, d 1.2 |
+| 15.767 | 9 | MAIN | the row's camera (v2) |
+| 16.733 | 9 | PUNCH | her face through the last bubbles, d 0.5 |
+| 17.167 | 9 | FLASH 4f | bubbles bursting white on ink (on beat 4) |
+| 17.300 | 9 | REVERSE | from below, her body against the surface light, d 1.8 |
+| 17.633 | 10 | MAIN | the row's camera (v2) |
+| 18.600 | 10 | PUNCH | her shoulder + cheek from above, d 0.9 |
+| 19.067 | 10 | FLASH 4f | the cable as one white diagonal on black (on beat 4) |
+| 19.200 | 10 | REVERSE | low side on the cable, d 1.6 |
+| 19.533 | 11 | MAIN | the row's camera (v2) |
+| 20.467 | 11 | PUNCH | her eyes coming at the lens, d 0.5 |
+| 20.933 | 11 | FLASH 4f | speed lines, white on ink (on beat 4) |
+| 21.067 | 11 | REVERSE | from behind and above, d 1.6 |
+| 21.367 | 12 | MAIN | the row's camera (v2) |
+| 22.333 | 12 | PUNCH | her hand cutting the water, d 0.5 |
+| 22.767 | 12 | FLASH 4f | the roll smear frame (2 values) (on beat 4) |
+| 22.900 | 12 | REVERSE | front, her roll toward us, d 1.4 |
+| 23.200 | 13 | MAIN | the row's camera (v2) - double time into the next section |
+| 23.633 | 13 | PUNCH x2 | her raised hands against the beam, d 0.7 |
+| 23.867 | 13 | REVERSE x2 | top-down, she rising from the dark, d 2.2 |
+| 24.067 | 13 | INSERT x2 | the beam above, a white bar on black |
+
+### C1 chorus 1 (62.567-77.400): 26 pictures, median 0.58 s (shortest 0.20, longest 1.23)
+
+| t | row | picture | what the camera shows |
+|---|---|---|---|
+| 62.567 | 28 | ANCHOR | WAR CRY held as the anchor 62.567-64.300; the measured hit 63.808 slams in a 4-frame two-tone flash |
+| 63.800 | 28 | HIT FLASH | 4-frame two-tone flash on the measured hit, back to the anchor |
+| 64.300 | 29 | MAIN | the row's camera (v2) |
+| 65.267 | 29 | PUNCH | her open mouth on the lunge, d 0.6 |
+| 65.933 | 29 | FLASH 4f | slash 5, a black stroke on paper (on the hi-hat, the and of 4) |
+| 66.167 | 30 | MAIN | the row's camera (v2) |
+| 67.133 | 30 | PUNCH | her eyes inside the ink crown, d 0.35 |
+| 67.800 | 30 | FLASH 4f | ink drops on paper (on the hi-hat, the and of 4) |
+| 68.033 | 31 | MAIN | the row's camera (v2) + COLOUR FLIP (measured Bm turn 67.59): this picture gold-orange on ink for 1 beat |
+| 69.000 | 31 | PUNCH | the fist at the lens, d 0.4 |
+| 69.667 | 31 | FLASH 4f | slash 6 on paper (on the hi-hat, the and of 4) |
+| 69.933 | 32 | MAIN | the row's camera (v2) |
+| 70.900 | 32 | PUNCH | her foot at the top of the kick, d 0.6 |
+| 71.567 | 32 | FLASH 4f | the kick smear (2 values) (on the hi-hat, the and of 4) |
+| 71.800 | 33 | ANCHOR | the claw at the lens HELD 2 beats (row 33 macro, d 0.5) |
+| 72.767 | 33 | PUNCH | the barb tip, d 0.3 |
+| 73.433 | 33 | FLASH 4f | five claw lines on paper (on the hi-hat, the and of 4) |
+| 73.667 | 34 | MAIN | the row's camera (v2) |
+| 74.633 | 34 | PUNCH | her face lit by the beam, d 0.6 |
+| 75.300 | 34 | FLASH 4f | the beam as a white wedge on ink (on the hi-hat, the and of 4) |
+| 75.533 | 35 | MAIN | the row's camera (v2) - double time into the next section |
+| 76.033 | 35 | PUNCH x2 | her mouth singing at us, d 0.4 |
+| 76.500 | 35 | REVERSE x2 | from above, her hair whipped up, d 1.2 |
+| 76.733 | 35 | INSERT x2 | the melody line alone, red on paper |
+| 76.967 | 35 | MACRO x2 | her hand thrown at us, d 0.5 |
+| 77.200 | 35 | ANGLE x2 | low behind her, the lighthouse over her shoulder, d 1.6 |
+
+### D2 drop 2 (122.600-154.300): 52 pictures, median 0.55 s (shortest 0.13, longest 2.27)
+
+| t | row | picture | what the camera shows |
+|---|---|---|---|
+| 122.600 | 54 | ANCHOR | LANDING held as the anchor 122.600-124.300 (8-frame pose hold inside); the measured hit 123.809 slams in a 4-frame two-tone flash + the 123.77 rung macro |
+| 123.800 | 54 | HIT FLASH | 4-frame two-tone flash on the measured hit, back to the anchor |
+| 124.300 | 55 | MAIN | the row's camera (v2) |
+| 125.233 | 55 | PUNCH | her hand on the rung, d 0.4 |
+| 125.933 | 55 | FLASH 4f | the rungs, black bars on paper (on the hi-hat, the and of 4) |
+| 126.167 | 56 | MAIN | the row's camera (v2) |
+| 127.167 | 56 | PUNCH | her face mid-leap, d 0.7 |
+| 127.833 | 56 | FLASH 4f | speed lines on the white tower (on the hi-hat, the and of 4) |
+| 128.033 | 57 | MAIN | the row's camera (v2) |
+| 129.000 | 57 | PUNCH | the knuckles on the rail, d 0.3 |
+| 129.667 | 57 | FLASH 4f | the beam passing, a white flash band (on the hi-hat, the and of 4) |
+| 129.933 | 58 | MAIN | the row's camera (v2) |
+| 131.067 | 59 | MAIN | the row's camera (v2) (cut moved onto the measured hit 131.077) |
+| 132.300 | 59 | PUNCH | her feet hitting the floor, d 0.4 |
+| 132.967 | 59 | FLASH 4f | the slash on the landing, ink on paper (on the hi-hat, the and of 4) |
+| 133.267 | 60 | HOLD | macro on the grip, held note 133.3 (hold = weight) |
+| 135.533 | 61 | MAIN | the row's camera (v2) |
+| 136.500 | 61 | PUNCH | her eye through one lens ring, d 0.5 |
+| 137.167 | 61 | FLASH 4f | the Fresnel rings, white arcs on ink (on the hi-hat, the and of 4) |
+| 137.433 | 62 | MAIN | the row's camera (v2) |
+| 138.400 | 62 | PUNCH | her re-gripping hands, d 0.4 |
+| 139.067 | 62 | FLASH 4f | the cable glow, a violet line on black (on the hi-hat, the and of 4) |
+| 139.267 | 63 | MAIN | the row's camera (v2) |
+| 140.233 | 63 | PUNCH | her shoulders heaving in the lantern window, d 1.6 |
+| 140.933 | 63 | FLASH 4f | THE WIDE as a 4-frame flash: the beam sweeping the sea from d 25 (scale for 4 frames only) (on the hi-hat, the and of 4) |
+| 141.167 | 64 | MAIN | the row's camera (v2) |
+| 142.133 | 64 | PUNCH | her teeth, d 0.3 |
+| 142.833 | 64 | FLASH 4f | her dots on black (on the hi-hat, the and of 4) |
+| 143.033 | 65 | MAIN | the row's camera (v2) - double time into the next section + COLOUR FLIP (measured Bm turn 142.62): this picture gold-orange on ink for 1 beat |
+| 143.533 | 65 | PUNCH x2 | her braced feet, d 0.5 |
+| 144.000 | 65 | REVERSE x2 | from above, her hanging over the drop, d 1.8 |
+| 144.467 | 65 | INSERT x2 | the beam's white edge creeping in |
+| 144.933 | 65 | MACRO x2 | rail-level macro on her braced boot, d 0.3 |
+| 145.433 | 65 | ANGLE x2 | from the lamp side, her face upside down, d 1.2 |
+| 145.667 | 65 | PUNCH x2 | her braced feet, d 0.5 |
+| 145.900 | 65 | INSERT x2 | the beam's white edge creeping in |
+| 146.133 | 65 | MAIN x2 | the row's camera (v2) |
+| 146.300 | 66 | MAIN | the row's camera (v2) |
+| 147.300 | 66 | PUNCH | her pulling hands, d 0.4 |
+| 147.967 | 66 | FLASH 4f | a white wedge at the frame edge (on the hi-hat, the and of 4) |
+| 148.100 | 66 | REVERSE | from behind, the beam coming round at the lens, d 2.0 |
+| 148.667 | 67 | MAIN | the row's camera (v2) |
+| 149.633 | 67 | PUNCH | her face leaning back, d 0.6 |
+| 150.367 | 68 | MAIN | the row's camera (v2) + COLOUR FLIP (measured Bm turn 150.12): this picture gold-orange on ink for 1 beat |
+| 151.500 | 68 | PUNCH | fingers slipping, d 0.25 |
+| 152.167 | 68 | FLASH 4f | the slip smear (2 values) (on the hi-hat, the and of 4) |
+| 152.400 | 69 | MAIN | the row's camera (v2) - double time into the next section |
+| 152.933 | 69 | PUNCH x2 | her elbow on the base, d 0.5 |
+| 153.400 | 69 | REVERSE x2 | from the base, she coming up into frame, d 1.2 |
+| 153.633 | 69 | INSERT x2 | rain on the lens, white points on ink |
+| 153.867 | 69 | MACRO x2 | her eyes over the edge of the base, d 0.4 + COLOUR FLIP (measured Bm turn 153.85): this picture gold-orange on ink for 1 beat |
+| 154.100 | 69 | ANGLE x2 | low side, her knee on the base, d 1.0 |
+
+### F final (154.300-169.767): 19 pictures, median 0.67 s (shortest 0.20, longest 2.33)
+
+| t | row | picture | what the camera shows |
+|---|---|---|---|
+| 154.300 | 70 | MAIN | the row's camera (v2) |
+| 155.267 | 70 | PUNCH | her open mouth, d 0.35 |
+| 155.933 | 70 | FLASH 4f | the slash, ink on paper (on the hi-hat, the and of 4) |
+| 156.167 | 71 | MAIN | the row's camera (v2) |
+| 157.133 | 71 | PUNCH | her arched back, d 0.6 |
+| 157.800 | 71 | FLASH 4f | the lens rings flashing past, white arcs (on the hi-hat, the and of 4) |
+| 158.033 | 72 | MAIN | the row's camera (v2) |
+| 159.000 | 72 | PUNCH | one dot flaring, d 0.2 |
+| 159.667 | 72 | FLASH 4f | violet glow on black (on the hi-hat, the and of 4) |
+| 159.900 | 73 | MAIN | the row's camera (v2) |
+| 160.900 | 73 | PUNCH | the current reaching her wrist, d 0.3 |
+| 161.300 | 74 | HOLD | THE DIVE: one ride |
+| 163.633 | 75 | HOLD | follows one pulse - a ride |
+| 165.533 | 76 | HOLD | inside the cable tube - a ride |
+| 167.400 | 77 | MAIN | the row's camera (v2) |
+| 168.400 | 77 | PUNCH | her face lit violet, d 0.6 |
+| 169.067 | 77 | FLASH 4f | the beam turning violet-gold, a wedge on ink (on the hi-hat, the and of 4) |
+| 169.300 | 78 | MAIN | the row's camera (v2) - double time into the next section |
+| 169.567 | 78 | PUNCH x2 | her hands on the lamp, d 0.5 |
 
 ## Wow budget (5 blows, strongest last) - brief-keeper condition 1
 1. 9.358 the pulse blows up the cable (shot 5). 2. 62.615 the war cry (28). 3. 79.467 the pillar on the top note (36).
@@ -135,11 +395,13 @@ the stops (62.2, 121.9), the bar-9 picture hold, the black at 119.9 - each a dec
 the landing on 122.615 (54) as the second war's start. The moon (48) is the beauty beat, not counted as a blow.
 
 ## Who is in frame (script-critic FIX 2) - rows WITHOUT her body: 7, 22 (her hand only), 74, 75, 76.
+v3b: every "FLASH 4f" / "INSERT" picture of the drop grids is without her body (a two-value detail, 4 frames),
+except where it names her (dots, hand, eyes); every other grid picture shows her.
 
 ## The Short (cut from the MV shots, 9:16 native)
 | # | from-to (song) | shots used | frame 0 / hook | CTA |
 |---|---|---|---|---|
-| S1 | 62.167-80.467 (18.3 s) | 27H (frozen eyes), 28 (war cry + melody line), 29-35 (the 7 bar cuts re-staged tall), 35H (bar-9 hold), 36 (crane + pillar) | 27H: her eyes opening, face 45 % of the 9:16 frame; hook text in her font, upper middle, out of the UI bands, held 0.0-1.6 s (until the barb): "the lighthouse never looks at me."; vertical set-ups for 29-35: a tall tower + diagonal beam for 34, the slashes as verticals, her face >= 35 % in 30 / 33 / 35 | from 77.40 (Short 15.23 s) to the end (3.07 s, >= 2.5 s before the end): "would you look back?" - the last frame whites out into frame 0 (loop) |
+| S1 | 62.167-80.467 (18.3 s) | 27H (frozen eyes), 28 (war cry + melody line), 29-35 (v3: the chorus-1 beat grid, a picture per beat, re-staged tall), 35H (bar-9 hold), 36 (crane + pillar) | 27H: her eyes opening, face 45 % of the 9:16 frame; hook text in her font, upper middle, out of the UI bands, held 0.0-1.6 s (until the barb): "the lighthouse never looks at me."; vertical set-ups for 29-35: a tall tower + diagonal beam for 34, the slashes as verticals, her face >= 35 % in 30 / 33 / 35 | from 77.40 (Short 15.23 s) to the end (3.07 s, >= 2.5 s before the end): "would you look back?" - the last frame whites out into frame 0 (loop) |
 
 ## Reuse first (studio/catalog/status.json)
 transitions (toki-liked: whip, ink, flash) as the cut covers; grade-per-act (toki-liked) as war_night / war_ink;
@@ -162,3 +424,8 @@ week, seen on boards / tests).
 | a key pose: both hands thrown INTO the lens (M1) | pose (vrmPoses.ts) | 28, 33 (now roar stand-in) | BUILD |
 | the white blob under low poses | fault class | 43, 44, 54, 59 | FIX in the shared part before the build |
 | song_map.stops misses 121.94-122.62 | tool fault | 53H | FIX raymi/song.py stops() |
+| multicam beat cuts: one row's action seen from 4 set-ups on the beat (shots.json sub-shots, clip_from continues) | timeline | drop grids | BUILD (timeline.py) |
+| stutter cuts on measured 16ths | timeline | rolls 8.66, 27.77, 29.42, 81.78 | BUILD (part of "stutter on twos") |
+| riser push: one camera axis through several cuts + grade ramp toward white | camera + grade | 58.62, 118.62, 173.24 | BUILD |
+| colour flip 1 beat (gold-orange on ink) as a grade op `flip_at` | grade | 7 Bm turns | BUILD (grade.ts + TIME_OPTS) |
+| graphic inserts (two-value details: ribbon, dots, cable, rain, rings, slashes) | 2D layer | every 4th beat in the drops | BUILD (TwoTone + Fx2D) |

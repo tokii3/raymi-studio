@@ -30,6 +30,9 @@ then there are no cuts at all - the "edit" happens inside the camera move.
 - **Measured bar** (knowledge/references/LEARNED.md, 5,999 pro shots): a picture change every 0.67 s (median), 0.5 s in
   2D anime / 3D cel, 0.33-0.67 s in aggressive anime / game MVs, p90 under 2-2.7 s. Short shots move more and are
   simpler (more empty room). Compare a plan with `refs shots` numbers before the critics, never by feel.
+- **Density is a structure, not a metronome** (why pass over 13 pro videos): 0.17 s flashes on fills, rolls and builds
+  BEFORE the drop; in the drop held anchor shots on the big action with micro-flash inserts on the hits; a held calm
+  shot right after peak chaos. A flat "one cut per beat" hits the average and misses the effect.
 - **Bursts**: a new angle on every hit for 3-6 hits (FIRESTARTER 1:51, K-pop killing parts), then a held shot.
 - **Transitions through things**: cover (hand / hair / tail / object over the lens), whip, flash, match cut, push
   through a surface, a morph of the set. No menu of digital wipes.

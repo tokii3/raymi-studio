@@ -1,571 +1,976 @@
 {
  "effects": {
   "hit": {
-   "shots": 20,
+   "shots": 202,
    "range": {
     "dur": {
      "p10": 0.17,
-     "p50": 0.17,
-     "p90": 0.72
+     "p50": 0.33,
+     "p90": 1.653
     },
     "motion": {
-     "p10": 0.002,
-     "p50": 0.082,
-     "p90": 0.133
+     "p10": 0.003,
+     "p50": 0.075,
+     "p90": 0.145
     },
     "subj_size": {
-     "p10": 0.018,
-     "p50": 0.026,
-     "p90": 0.067
+     "p10": 0.013,
+     "p50": 0.06,
+     "p90": 0.107
     },
     "subj_thirds": {
-     "p10": 0.079,
-     "p50": 0.171,
-     "p90": 0.384
+     "p10": 0.075,
+     "p50": 0.15,
+     "p90": 0.259
     },
     "neg_space": {
-     "p10": 0.164,
-     "p50": 0.695,
-     "p90": 0.904
+     "p10": 0.097,
+     "p50": 0.455,
+     "p90": 0.798
     },
     "contrast": {
-     "p10": 0.302,
-     "p50": 0.535,
-     "p90": 0.844
+     "p10": 0.164,
+     "p50": 0.62,
+     "p90": 0.858
     },
     "light_share": {
-     "p10": 0.001,
-     "p50": 0.042,
-     "p90": 0.293
+     "p10": 0.0,
+     "p50": 0.037,
+     "p90": 0.331
     },
     "dark_share": {
-     "p10": 0.003,
-     "p50": 0.179,
-     "p90": 0.717
+     "p10": 0.051,
+     "p50": 0.394,
+     "p90": 0.867
     },
     "two_tone": {
-     "p10": 0.158,
-     "p50": 0.357,
-     "p90": 0.726
+     "p10": 0.135,
+     "p50": 0.53,
+     "p90": 0.93
     },
     "sat_mean": {
-     "p10": 0.168,
-     "p50": 0.308,
-     "p90": 0.602
+     "p10": 0.244,
+     "p50": 0.48,
+     "p90": 0.836
     },
     "detail": {
      "p10": 0.017,
-     "p50": 0.044,
-     "p90": 0.19
+     "p50": 0.11,
+     "p90": 0.224
     }
    },
    "neg_side": {
-    "left": 3,
-    "right": 2,
-    "top": 0,
-    "bottom": 4,
-    "even": 11
+    "left": 27,
+    "right": 25,
+    "top": 20,
+    "bottom": 25,
+    "even": 105
    },
    "key": {
-    "low": 9,
-    "mid": 8,
-    "high": 3
+    "low": 117,
+    "mid": 67,
+    "high": 18
    },
    "examples": [
-    "jjk-op1@47.05: Close-up profile of Yuji's cheek splitting open with Sukuna's teeth and eye; harsh teal-cyan lighting. | why: Visceral body horror reveal timed exactly to an assertive vocal kick. | music: Punchy vocal accent on chorus line",
-    "jjk-op1@52.39: Low-angle action shot of Nobara thrusting hammer forward, nails glowing with cyan cursed aura. | why: Presents Nobara at her fiercest combat angle, breaking towards camera. | music: Drum kick and guitar accent",
-    "jjk-op1@52.55: Dynamic action freeze of Maki sweeping her long naginata spear across a penthouse window. | why: Displays martial grace and wide weapon reach across horizontal lines. | music: Driving chorus beat",
-    "jjk-op1@54.55: Explosive gold concentric circles radiating behind muscular Todo spreading his hands. | why: Establishes Todo's overwhelming physical charisma and psychic eccentricity. | music: Chorus vocal reaches euphoric climb",
-    "jjk-op1@36.7: POV through glasses revealing a grotesque green curse creature looming in the park. | why: Abrupt visual punch revealing hidden supernatural danger right before the chorus riser. | music: Tension riser builds in percussion",
-    "jjk-op1@64.06: Low-angle close-up of Sukuna leaning on his hand with a sinister predatory smirk. | why: Establishes absolute evil towering over Yuji's psyche. | music: Guitar bend accents facial reveal",
-    "jjk-op1@48.72: Rapid-cut impact frame of Nanami striking the target with golden energy blades. | why: Delivers instantaneous combat impact in 0.17 seconds. | music: Snare and cymbal crash",
-    "jjk-op1@41.88: Whip cut returning inside the train carriage with high kinetic speed (0.128). | why: Bridges the explosive chorus entry directly back to Yuji's passenger car. | music: High-energy rhythm driving forward"
+    "ado-show@0.0: Ultra-fast opening flash shot (0.17s); figure off-center at (0.38, 0.25) taking 6.8% area; 77% negative space on right; heavy video noise glitch effect; high-contrast scanline texture. | why: Establishes digital distortion aesthetic before kicking into sync with the music intro. | music: High-pitched digital noise sound effect opening.",
+    "aespa-next-level@4.84: Medium full group shot, pyramid choreography formation; cold cyan/white architectural rim lighting with reflective floor. | why: First idol presentation, grounding choreography on the main beat drop. | music: Heavy bass downbeat drop and initial vocal hook.",
+    "aespa-next-level@92.93: Abrupt tempo snap back to original hip-hop groove: Winter center in dark stage doing sharp neck rolls; held for 12.3s. | why: Shock transition snapping audience back from funk fantasy into hardcore swagger. | music: Sudden drop back to hard trap beat and heavy sub-bass.",
+    "ado-show@18.67: 0.17s flash cut; central subject mass (0.45, 0.49) taking 11.8% area; high light contrast, 68.1% empty background. | why: Strobe visual punch on synth accent. | music: High synth chime.",
+    "calli-gura-q@14.17: Hard reverse axis cut: Gura introduced screen-right (x=0.70), finger-gun gesture, left half heavy negative space. | why: Contrasts Mori's left-heavy placement by anchoring Gura on opposite screen quadrant. | music: Gura vocal verse handoff; playful snarling tone.",
+    "ado-show@1.0: Upper-right subject focus (0.61, 0.29); 22.9% empty frame; warm gold analogous palette; graphic kanji overlay. | why: Matches Japanese typography callout to beat accent. | music: Snare snap.",
+    "ado-show@15.17: 1.67s hold; centered gold 3D typography (0.44, 0.52) with 7% area share; dark background with art deco border. | why: Presents key title text clearly to music rhythm. | music: Major chord hit.",
+    "ado-show@9.83: Medium hold (1.33s); center-right subject (0.57, 0.24); gold graphic framing with large typography overlay. | why: Anchors lyric callout 'Ready for my show'. | music: Lead vocal hook accent."
    ]
   },
   "pull_in": {
-   "shots": 12,
+   "shots": 100,
    "range": {
     "dur": {
-     "p10": 0.203,
-     "p50": 0.83,
-     "p90": 1.483
+     "p10": 0.17,
+     "p50": 1.0,
+     "p90": 3.017
     },
     "motion": {
      "p10": 0.003,
+     "p50": 0.036,
+     "p90": 0.133
+    },
+    "subj_size": {
+     "p10": 0.017,
      "p50": 0.059,
-     "p90": 0.131
-    },
-    "subj_size": {
-     "p10": 0.018,
-     "p50": 0.049,
-     "p90": 0.08
+     "p90": 0.102
     },
     "subj_thirds": {
-     "p10": 0.068,
-     "p50": 0.128,
-     "p90": 0.371
+     "p10": 0.066,
+     "p50": 0.157,
+     "p90": 0.242
     },
     "neg_space": {
-     "p10": 0.21,
-     "p50": 0.472,
-     "p90": 0.718
+     "p10": 0.131,
+     "p50": 0.389,
+     "p90": 0.709
     },
     "contrast": {
-     "p10": 0.339,
-     "p50": 0.663,
-     "p90": 0.865
+     "p10": 0.248,
+     "p50": 0.577,
+     "p90": 0.814
     },
     "light_share": {
-     "p10": 0.001,
-     "p50": 0.043,
-     "p90": 0.293
-    },
-    "dark_share": {
-     "p10": 0.16,
-     "p50": 0.408,
-     "p90": 0.772
-    },
-    "two_tone": {
-     "p10": 0.261,
-     "p50": 0.515,
-     "p90": 0.799
-    },
-    "sat_mean": {
-     "p10": 0.17,
-     "p50": 0.319,
-     "p90": 0.61
-    },
-    "detail": {
-     "p10": 0.037,
-     "p50": 0.103,
-     "p90": 0.169
-    }
-   },
-   "neg_side": {
-    "left": 1,
-    "right": 3,
-    "top": 1,
-    "bottom": 2,
-    "even": 5
-   },
-   "key": {
-    "low": 9,
-    "mid": 2,
-    "high": 1
-   },
-   "examples": [
-    "jjk-op1@54.39: Medium interior shot of Miwa turning her head sharply with sword drawn, elderly principal seated behind. | why: Introduces Kyoto school rivals in dignified traditional decor. | music: Guitar melody riff",
-    "jjk-op1@51.38: Medium close-up of Mahito gleefully licking dripping blood from his fingers; centered at (0.55, 0.32). | why: Communicates sadism and macabre playfulness in a held 0.83s shot. | music: Vocal line leaps into higher register",
-    "jjk-op1@0.0: Center-weighted crimson glyph glowing against absolute darkness; 92% negative space held for 0.83s. | why: Establishes a stark occult tone from pure pitch black before introducing characters, synchronizing with the quiet intro guitar lick. | music: Soft ambient guitar intro with subtle percussive tapping",
-    "jjk-op1@42.38: Rear medium shot of Yuji looking out the train window into sunlit skyscrapers, held for 2.0s. | why: Subverts explosive battle expectation with quiet introspection right on the vocal melody peak. | music: Chorus vocal soars over heavy driving guitar line",
-    "jjk-op1@4.84: Low-angle insert on water rippling over shoes; negative space shifts to 48% on the right. | why: Draws focus to the surreal surrealist water pooling inside the train before zooming out. | music: Vocal cadence reaches end of first phrase",
-    "jjk-op1@46.21: Sudden top-down POV looking into emerald green flooded water at shoes; motion near zero. | why: Re-grounds the uncanny water motif inside the carriage. | music: Rhythm guitar accents driving chorus",
-    "jjk-op1@22.19: Close-up profile of Megumi cast in deep shadow with harsh rim light from the top right. | why: Introduces key companion with serious, brooding interiority. | music: Syncopated drum pattern beneath vocal verse",
-    "jjk-op1@57.39: Medium low shot of Geto standing beside sliding shoji screen in traditional monk robes. | why: Positions mastermind in quiet conspiratorial darkness. | music: Quiet drum breakdown"
-   ]
-  },
-  "breathe": {
-   "shots": 41,
-   "range": {
-    "dur": {
-     "p10": 0.17,
-     "p50": 0.33,
-     "p90": 2.17
-    },
-    "motion": {
-     "p10": 0.005,
-     "p50": 0.023,
-     "p90": 0.132
-    },
-    "subj_size": {
-     "p10": 0.014,
-     "p50": 0.03,
-     "p90": 0.065
-    },
-    "subj_thirds": {
-     "p10": 0.097,
-     "p50": 0.166,
-     "p90": 0.386
-    },
-    "neg_space": {
-     "p10": 0.181,
-     "p50": 0.417,
-     "p90": 0.889
-    },
-    "contrast": {
-     "p10": 0.231,
-     "p50": 0.554,
-     "p90": 0.862
-    },
-    "light_share": {
-     "p10": 0.001,
-     "p50": 0.024,
-     "p90": 0.348
-    },
-    "dark_share": {
      "p10": 0.0,
-     "p50": 0.354,
-     "p90": 0.771
+     "p50": 0.016,
+     "p90": 0.187
+    },
+    "dark_share": {
+     "p10": 0.043,
+     "p50": 0.378,
+     "p90": 0.804
     },
     "two_tone": {
-     "p10": 0.074,
-     "p50": 0.445,
-     "p90": 0.818
+     "p10": 0.148,
+     "p50": 0.482,
+     "p90": 0.848
     },
     "sat_mean": {
-     "p10": 0.141,
-     "p50": 0.408,
-     "p90": 0.692
+     "p10": 0.207,
+     "p50": 0.488,
+     "p90": 0.791
     },
     "detail": {
-     "p10": 0.022,
-     "p50": 0.11,
-     "p90": 0.167
+     "p10": 0.049,
+     "p50": 0.109,
+     "p90": 0.209
     }
    },
    "neg_side": {
-    "left": 6,
-    "right": 3,
-    "top": 10,
-    "bottom": 8,
-    "even": 14
+    "left": 22,
+    "right": 15,
+    "top": 14,
+    "bottom": 10,
+    "even": 39
    },
    "key": {
-    "low": 21,
-    "mid": 15,
+    "low": 63,
+    "mid": 32,
     "high": 5
    },
    "examples": [
+    "feist-1234@0.64: Master single-take continuous shot spanning 192.64s. Subject begins deep background (subj area ~0.049) in vibrant blue sequin jumpsuit before walking to medium center (x=0.54, y=0.55). Dynamic camera pan, tilt overhead, and dolly movement with rich color-blocked wardrobe ensemble. | why: Preserves unbroken performance real-time energy; matches the additive layer-by-layer musical arrangement from acoustic solo to full brass ensemble and choir. | music: Acoustic intro into vocal, building with handclaps, brass chorus, breakdown, lifted chorus, and gentle acoustic wind-down.",
+    "arcane-enemy@10.83: Medium full shot of young Powder in doorway, dead center (x 0.445, y 0.571), symmetrical rustic walls flanking, dim sepia and cool teal ambient key, holding for 2.5s. | why: First clear character introduction anchored to Dan Reynolds' opening vocal line. | music: first vocal line begins: 'Look out for yourself...'",
+    "ado-show@11.33: Extended close-up hold (2.17s); left-centered pirate girl character (0.26, 0.63); low background empty space (0.7%); bold kanji graphics overlay. | why: Maintains hero character reveal duration during vocal phrase. | music: Clear vocal verse line.",
+    "arcane-enemy@21.83: Medium close-up held for 3.33s, Powder rests chin on forearm next to the wind-up monkey, cool teal hair against warm amber pub light. | why: Allows her melancholy and isolation to register deeply as the verse builds narrative weight. | music: verse continuation: 'I wake up to the sounds...'",
+    "arcane-enemy@27.17: Medium shot of Dan Reynolds animated character sitting at the table, leaning forward into dim neon green light, held for 4.5s. | why: Unifies the singer's performance persona seamlessly with the narrative world of Zaun. | music: lead vocal delivery at peak verse intensity",
+    "arcane-enemy@126.83: Stylized close-up of J.I.D animated character performing, neon cyan projector light mapping across his face, held 2.5s. | why: Establishes J.I.D's unique guest visual universe within the Arcane aesthetic. | music: J.I.D rapid double-time rap cadence",
+    "genshin-furina@19.17: Close-up shot of newsboy raising newspaper high, subject right of center (x=0.59), complementary high contrast color. | why: Captures dramatic news delivery motion. | music: Brass swell on beat.",
+    "aespa-next-level@8.51: Return to medium full group choreography; low-angle camera push with center member leading syncopated shoulder pops. | why: Showcases key signature choreography phrase in full body context. | music: Rhythmic groove verse bassline."
+   ]
+  },
+  "breathe": {
+   "shots": 131,
+   "range": {
+    "dur": {
+     "p10": 0.17,
+     "p50": 1.17,
+     "p90": 4.35
+    },
+    "motion": {
+     "p10": 0.0,
+     "p50": 0.026,
+     "p90": 0.142
+    },
+    "subj_size": {
+     "p10": 0.014,
+     "p50": 0.054,
+     "p90": 0.097
+    },
+    "subj_thirds": {
+     "p10": 0.077,
+     "p50": 0.159,
+     "p90": 0.362
+    },
+    "neg_space": {
+     "p10": 0.118,
+     "p50": 0.389,
+     "p90": 0.792
+    },
+    "contrast": {
+     "p10": 0.105,
+     "p50": 0.547,
+     "p90": 0.837
+    },
+    "light_share": {
+     "p10": 0.0,
+     "p50": 0.015,
+     "p90": 0.298
+    },
+    "dark_share": {
+     "p10": 0.014,
+     "p50": 0.429,
+     "p90": 0.911
+    },
+    "two_tone": {
+     "p10": 0.124,
+     "p50": 0.515,
+     "p90": 0.964
+    },
+    "sat_mean": {
+     "p10": 0.101,
+     "p50": 0.436,
+     "p90": 0.759
+    },
+    "detail": {
+     "p10": 0.022,
+     "p50": 0.115,
+     "p90": 0.242
+    }
+   },
+   "neg_side": {
+    "left": 17,
+    "right": 15,
+    "top": 27,
+    "bottom": 17,
+    "even": 55
+   },
+   "key": {
+    "low": 76,
+    "mid": 43,
+    "high": 12
+   },
+   "examples": [
+    "feist-1234@193.28: Fade to black with minimal text in lower frame (subj y=0.926, area 0.06). Held for 7.68s in static monochromatic dark balance. | why: Provides a clean, traditional credit slate after the high-energy continuous movement finishes. | music: Trailing room tone fade to complete silence.",
     "jjk-op1@1.5: Medium full shot of slumped protagonist centered at (0.47, 0.33); muted teal and washed-out daylight fills 31% negative space. | why: Establishes isolation and exhaustion, matching the solitary opening vocal entrance. | music: Lead vocal enters accompanied by sparse rhythm guitar",
+    "arcane-enemy@15.67: Medium group shot seated around circular table, warm lantern center-light with dark silhouettes wrapping, 2.33s duration. | why: Contextualizes the patron crowd and band-member cameos in a cohesive social cluster. | music: rhythmic acoustic guitar loop and vocal cadence",
+    "genshin-furina@4.0: Wide architectural tracking shot following aquabus waterway, subject centered low (y=0.52, subj area ~0.05), held 5.67s. | why: Showcases grand Fontaine backdrop and establishes serene setting. | music: Lyrical, flowing string melody with steady tempo.",
+    "arcane-enemy@39.0: Wide tracking shot down sunlit alleyway, kids walking forward away from camera, high warm contrast framing, held 3.17s. | why: Opens up visual space completely to match the soaring chorus drop. | music: chorus explosion: 'OH, THE MISERY!'",
     "jjk-op1@23.69: Wide architectural exterior of Nobara on a sunlit balcony overlooking Tokyo; bright high-key sky filling 39% top frame. | why: Sharp tonal contrast from Megumi's dark tunnel, highlighting her brisk, confident presence. | music: Vocal lifts slightly into melodic verse continuation",
-    "jjk-op1@2.67: Hold on seated protagonist, camera gently drifting with water-covered floor reflections; low motion (0.005). | why: Gives weight to the lonely atmosphere, letting the melancholic vocal line settle. | music: Solo vocal melody over soft bass and drums",
-    "jjk-op1@90.09: Bright orange end-card bumper with white brand eye emblem centered and graphic call-to-action boxes. | why: Channel / distributor end card for streaming audience. | music: Promotional jingle / chime",
-    "jjk-op1@56.22: Extreme wide shot of Gojo and Yuji sitting on concrete riverbank steps at sunset; water glimmering. | why: Sudden emotional breath, contrasting chaotic battles with quiet mentorship and peace. | music: Chorus begins winding down into melodic bridge",
-    "jjk-op1@58.73: Warm bright hospital room shot of Yuji's grandfather sitting in bed looking sternly forward. | why: Flash of grandfather's memory that triggered Yuji's entire hero journey. | music: Vocals drop out; outro guitar solo enters",
-    "jjk-op1@49.22: Medium tracking shot of Gojo floating effortlessly over golden high-rise windows, smiling. | why: Juxtaposes violent combat with Gojo's playful, god-like ease. | music: Vocal melodic turnaround",
-    "jjk-op1@67.07: Yuji blinking as Sukuna's red eye marks vanish, returning to normal exhausted human eyes. | why: Resolves the possession back to everyday grim reality. | music: Final chord rings out"
+    "arcane-enemy@57.83: High-angle close-up of Powder lying flat on grass/foliage, golden bokeh filtering through leaves above, held for 2.0s. | why: Sudden stillness and dreamy warmth contrasting with the harsh urban city. | music: vocal break, stripped acoustic pulse",
+    "aespa-next-level@51.72: Main chorus hook full stage setup; wide to medium push, held for 9.8s showcasing iconic 'Next Level' arm gesture. | why: Gives maximum uninterrupted visual clarity to the viral key dance movement. | music: Chorus drop downbeat and vocal signature hook."
    ]
   },
   "tension": {
-   "shots": 20,
+   "shots": 132,
    "range": {
     "dur": {
      "p10": 0.17,
-     "p50": 0.33,
-     "p90": 1.447
+     "p50": 0.83,
+     "p90": 3.339
     },
     "motion": {
-     "p10": 0.001,
-     "p50": 0.029,
-     "p90": 0.118
+     "p10": 0.0,
+     "p50": 0.024,
+     "p90": 0.141
     },
     "subj_size": {
      "p10": 0.016,
-     "p50": 0.019,
-     "p90": 0.05
+     "p50": 0.049,
+     "p90": 0.101
     },
     "subj_thirds": {
-     "p10": 0.045,
-     "p50": 0.338,
-     "p90": 0.387
+     "p10": 0.062,
+     "p50": 0.156,
+     "p90": 0.359
     },
     "neg_space": {
-     "p10": 0.222,
-     "p50": 0.597,
-     "p90": 0.86
+     "p10": 0.16,
+     "p50": 0.472,
+     "p90": 0.908
     },
     "contrast": {
-     "p10": 0.127,
-     "p50": 0.499,
-     "p90": 0.716
+     "p10": 0.117,
+     "p50": 0.563,
+     "p90": 0.86
     },
     "light_share": {
-     "p10": 0.001,
-     "p50": 0.004,
-     "p90": 0.077
+     "p10": 0.0,
+     "p50": 0.012,
+     "p90": 0.246
     },
     "dark_share": {
-     "p10": 0.056,
-     "p50": 0.478,
-     "p90": 0.89
+     "p10": 0.084,
+     "p50": 0.508,
+     "p90": 0.968
     },
     "two_tone": {
-     "p10": 0.133,
-     "p50": 0.482,
-     "p90": 0.892
+     "p10": 0.221,
+     "p50": 0.585,
+     "p90": 0.979
     },
     "sat_mean": {
-     "p10": 0.299,
-     "p50": 0.441,
-     "p90": 0.646
+     "p10": 0.125,
+     "p50": 0.457,
+     "p90": 0.825
     },
     "detail": {
-     "p10": 0.025,
-     "p50": 0.064,
-     "p90": 0.17
+     "p10": 0.016,
+     "p50": 0.101,
+     "p90": 0.221
     }
    },
    "neg_side": {
-    "left": 1,
-    "right": 2,
-    "top": 0,
-    "bottom": 5,
-    "even": 12
+    "left": 15,
+    "right": 17,
+    "top": 17,
+    "bottom": 18,
+    "even": 65
    },
    "key": {
-    "low": 14,
-    "mid": 6,
-    "high": 0
+    "low": 83,
+    "mid": 44,
+    "high": 5
    },
    "examples": [
-    "jjk-op1@18.52: Extreme wide shot of character walking inside a dimly lit underpass; 59% bottom negative space, low motion. | why: Contrasts the vast aerial view with subterranean loneliness as the verse deepens. | music: Rhythmic verse beat settles into steady mid-tempo groove",
-    "jjk-op1@28.7: High-angle descending shot looking down an escalator at Inumaki; desaturated institutional lighting. | why: Adds vertical variety to character vignettes and reinforces underground solitude. | music: Verse rhythm maintains steady forward momentum",
-    "jjk-op1@63.23: Sudden brutal cut to Sukuna's throne of skulls inside cursed domain; red and cyan contrast. | why: Shatters the cherry blossom fantasy with hellish demonic reality. | music: Drum rhythm powers forward",
-    "jjk-op1@66.4: Cut back to seated Yuji on the train, camera centered, eyes glowing red from Sukuna marks. | why: Confirms the internal parasitic curse residing within him. | music: Final guitar phrasing",
-    "jjk-op1@1.17: Brief flash frame introducing desaturated city skyline behind the carriage window. | why: Stepping the visual exposure up gradually to avoid jarring light jump. | music: Guitar arpeggio rises gently",
-    "jjk-op1@52.72: Close-up of Inumaki pulling down collar to reveal cursed speech seals, eyes wide. | why: Highlights character's lethal vocal weapon right before detonation. | music: Vocal cadence reaches peak tension",
-    "jjk-op1@44.38: Dark silhouette shot of Yuji's back reflected against night-black window glass. | why: Instantly flips the environment from golden daylight to dark interior mirror. | music: Chorus vocal continues strong",
-    "jjk-op1@49.72: Gojo raising hands to channel cursed technique, neon flare flaring across lens. | why: Builds supernatural energy within a half-second window. | music: Guitar arpeggio accents vocal hook"
+    "billie-party-over@2.0: Ultra-long single continuous take (189.36s); slow zoom pull-back from macro object glass to medium sitting shot; subject placed off-center at x=0.323; high-key white studio lighting with extreme black-and-white graphic contrast. | why: Eliminating cuts forces the viewer into an inescapable, real-time emotional journey where every practical effect occurs live without safety edits. | music: Track develops from a sparse bassline and direct vocal into a dense, emotionally overwhelming choral and sub-bass climax before resolving.",
+    "arcane-enemy@13.33: Over-the-shoulder medium shot past Powder's blue hair onto the bustling neon pool table in the background, subject pushed to right edge (x 0.671). | why: Establishes her alienation and isolation from the adults and older crew in the Last Drop. | music: vocal melody continues over steady kick-snare",
+    "calli-gura-q@0.0: Extreme low-angle framing centered on walking heels; massive negative space above (0.87 top) on black void; held long (6.5s) to establish cadence. | why: Establishes rhythmic pacing and mystery before character reveal, synced to the opening bass groove. | music: Sparse intro bassline and metronomic clicking hi-hat.",
+    "arcane-enemy@162.83: Intense medium shot of Powder in stark white void, face shifting through rapid emotional contortions from sorrow to bitter fury, held 4.0s. | why: The emotional metamorphosis sequence anchored across the massive final build-up. | music: massive drum roll and vocal riser: 'everybody wants to be...'",
+    "arcane-enemy@25.33: Extreme close-up macro tracking of the wind-up monkey clapping cymbals, eye glowing red, shallow depth of field (neg 0.229). | why: Foreshadows danger and instability associated with her inventions. | music: rhythmic toy cymbals clashing over drum track",
+    "calli-gura-q@64.83: Extreme low-key profile tracking: Mori walking in deep red shadow (5.17s), cigarette glow, halftoned comic background. | why: Moody film-noir aesthetic shift for Calli's sultry, lower-register rap verse. | music: Verse 2 rap vocal: sensual, rhythmic, half-whispered cadence.",
+    "ado-show@124.33: 1.67s hold; dark screen transition (0.43, 0.51) with 11.4% mass; small central glowing English graphic 'No escape'. | why: Creates dramatic silence/darkness pause before grand final chorus build. | music: Music cuts out to quiet ambient whisper.",
+    "calli-gura-q@89.17: Comic-panel comic strip split (2.5s): Mori in three angled color-coded frames (red, grey, green) glaring forward. | why: Re-establishes battle readiness across multi-angle paneling on the second pre-chorus build. | music: Pre-chorus rebuild with heavy marching bass kick."
    ]
   },
   "beauty": {
-   "shots": 6,
+   "shots": 72,
    "range": {
     "dur": {
      "p10": 0.5,
-     "p50": 1.67,
-     "p90": 2.085
+     "p50": 1.585,
+     "p90": 3.67
     },
     "motion": {
      "p10": 0.005,
-     "p50": 0.023,
-     "p90": 0.093
+     "p50": 0.068,
+     "p90": 0.124
     },
     "subj_size": {
-     "p10": 0.015,
-     "p50": 0.032,
-     "p90": 0.043
+     "p10": 0.019,
+     "p50": 0.064,
+     "p90": 0.105
     },
     "subj_thirds": {
-     "p10": 0.101,
-     "p50": 0.169,
-     "p90": 0.34
+     "p10": 0.057,
+     "p50": 0.147,
+     "p90": 0.209
     },
     "neg_space": {
-     "p10": 0.052,
-     "p50": 0.295,
-     "p90": 0.51
+     "p10": 0.107,
+     "p50": 0.361,
+     "p90": 0.628
     },
     "contrast": {
-     "p10": 0.451,
-     "p50": 0.682,
-     "p90": 0.838
+     "p10": 0.338,
+     "p50": 0.591,
+     "p90": 0.888
     },
     "light_share": {
-     "p10": 0.002,
-     "p50": 0.137,
-     "p90": 0.307
+     "p10": 0.0,
+     "p50": 0.024,
+     "p90": 0.234
     },
     "dark_share": {
-     "p10": 0.028,
-     "p50": 0.184,
-     "p90": 0.311
+     "p10": 0.029,
+     "p50": 0.38,
+     "p90": 0.722
     },
     "two_tone": {
-     "p10": 0.186,
-     "p50": 0.328,
-     "p90": 0.455
+     "p10": 0.191,
+     "p50": 0.493,
+     "p90": 0.782
     },
     "sat_mean": {
-     "p10": 0.256,
-     "p50": 0.285,
-     "p90": 0.468
+     "p10": 0.269,
+     "p50": 0.446,
+     "p90": 0.742
     },
     "detail": {
-     "p10": 0.08,
-     "p50": 0.134,
-     "p90": 0.365
+     "p10": 0.054,
+     "p50": 0.126,
+     "p90": 0.271
     }
    },
    "neg_side": {
-    "left": 1,
-    "right": 0,
-    "top": 0,
-    "bottom": 1,
-    "even": 4
+    "left": 13,
+    "right": 9,
+    "top": 15,
+    "bottom": 6,
+    "even": 29
    },
    "key": {
-    "low": 2,
-    "mid": 3,
-    "high": 1
+    "low": 39,
+    "mid": 28,
+    "high": 5
    },
    "examples": [
-    "jjk-op1@56.72: Wide idyllic watercolor landscape of cherry blossoms drifting past a rural railway station with young Junpei and curse. | why: Heartbreaking nostalgic dreamscape; soft pastel tones provide fragile warmth. | music: Melodic vocal tail over gentle guitar",
-    "jjk-op1@33.37: Overhead interior tracking shot of Nanami seated in a warm modernist lounge reading a book; centered at (0.43, 0.33). | why: Positions Nanami in calm corporate orderliness using warm amber interior tones. | music: Pre-chorus begins to stir underneath the vocals",
-    "jjk-op1@59.06: Wide panoramic shot of Yuji, Junpei, and Megumi sitting under blooming cherry blossom trees on a picnic. | why: The famous tragic 'false memory' painting; luminous pastel greens and pinks evoke painful tenderness. | music: Soaring, emotional lead guitar riff",
-    "jjk-op1@35.2: Medium exterior shot of Maki standing in a lush sun-dappled park framed by strong vertical tree trunks. | why: Provides vibrant organic green harmony, contrasting the prior urban interiors. | music: Pre-chorus vocal builds upward",
-    "jjk-op1@50.55: Wide shot of giant red curse creature (Dagon) wriggling in lush underwater coral. | why: Shifts palette entirely to luminous aquamarine and oceanic corals, expanding enemy world. | music: Secondary chorus vocal phrase begins",
-    "jjk-op1@61.23: Slow gentle pan over Junpei and Yuji laughing together under the tree shade. | why: Lingers on unachieved happiness, maximizing dramatic irony. | music: Lead guitar solo sings over driving drums"
+    "arcane-enemy@32.83: Close-up emotional embrace between Vi and weeping Powder, warm crimson firelight background, subject filling frame right (x 0.818, area 0.065), 3.0s duration. | why: Hits the deep tragic backstory instantly as the music swells into vocal vulnerability. | music: emotional vocal ascent in pre-chorus",
+    "arcane-enemy@191.67: Medium wide shot of the small wind-up monkey toy waddling alone down the long empty bar counter, clapping its cymbals mechanically, held 5.5s. | why: Poetic, haunting final image symbolizing Powder's abandoned innocence left behind in the dark. | music: diegetic mechanical toy clicking in complete silence",
+    "arcane-enemy@18.0: Close-up table-level shot of Powder setting down her wind-up monkey toy, eye-level low angle, subject weighted right, soft background bokeh. | why: Introduces her signature mechanical companion intimately on a held melodic phrase. | music: melodic sustained vocal line",
+    "arcane-enemy@176.17: Wide shot snaps back: identical composition, but now it is tiny young Powder standing alone amidst the pile of bodies, blue light beam. | why: Tragic gut-punch reveal demonstrating that beneath Jinx's destructive mayhem, she is still just a terrified, lonely child. | music: chorus emotional peak: 'spare the sympathy'",
+    "arcane-enemy@131.33: Symmetrical composition: J.I.D with hands in prayer pose, tiny young Powder silhouette framed between his palms in red laser grid. | why: Connects J.I.D visually and metaphorically to Powder's vulnerable soul. | music: rhyme scheme climax",
+    "calli-gura-q@99.83: Tracking profile shot (2.17s): Gura firing twin shark pistols while falling, Mori parrying every bullet with katana spins. | why: Centerpiece combat sequence sustained without cuts to showcase top-tier sakuga animation. | music: Full chorus melody and driving bassline.",
+    "genshin-furina@136.83: Wide shot on illuminated stage: Furina poses with her three hydro summons surrounding her in curtain call bow, held 8.0s. | why: Final iconic tableau pose establishing character and her companion trio. | music: Final piano chord holding long resonance.",
+    "ado-show@126.33: Extended hold (7.33s); hero sitting on central throne in blue/gold outfit holding blue roses (0.27, 0.74); gold border. | why: Establishes grand re-entrance on hero throne room setup for climax. | music: Full chorus blast with soaring vocals."
    ]
   },
   "scale": {
-   "shots": 2,
+   "shots": 99,
    "range": {
     "dur": {
-     "p10": 2.448,
-     "p50": 6.92,
-     "p90": 11.392
+     "p10": 0.33,
+     "p50": 1.33,
+     "p90": 5.334
     },
     "motion": {
-     "p10": 0.014,
-     "p50": 0.057,
-     "p90": 0.1
+     "p10": 0.005,
+     "p50": 0.05,
+     "p90": 0.146
     },
     "subj_size": {
-     "p10": 0.025,
-     "p50": 0.054,
-     "p90": 0.085
+     "p10": 0.024,
+     "p50": 0.058,
+     "p90": 0.097
     },
     "subj_thirds": {
-     "p10": 0.146,
-     "p50": 0.159,
-     "p90": 0.172
+     "p10": 0.071,
+     "p50": 0.15,
+     "p90": 0.219
     },
     "neg_space": {
-     "p10": 0.056,
-     "p50": 0.226,
-     "p90": 0.396
+     "p10": 0.131,
+     "p50": 0.375,
+     "p90": 0.576
     },
     "contrast": {
-     "p10": 0.71,
-     "p50": 0.716,
-     "p90": 0.723
+     "p10": 0.243,
+     "p50": 0.576,
+     "p90": 0.841
     },
     "light_share": {
-     "p10": 0.039,
-     "p50": 0.051,
-     "p90": 0.063
+     "p10": 0.0,
+     "p50": 0.014,
+     "p90": 0.278
     },
     "dark_share": {
-     "p10": 0.264,
-     "p50": 0.29,
-     "p90": 0.316
+     "p10": 0.034,
+     "p50": 0.433,
+     "p90": 0.849
     },
     "two_tone": {
-     "p10": 0.327,
-     "p50": 0.341,
-     "p90": 0.355
+     "p10": 0.202,
+     "p50": 0.556,
+     "p90": 0.879
     },
     "sat_mean": {
-     "p10": 0.388,
-     "p50": 0.39,
-     "p90": 0.392
+     "p10": 0.306,
+     "p50": 0.509,
+     "p90": 0.856
     },
     "detail": {
-     "p10": 0.165,
-     "p50": 0.335,
-     "p90": 0.505
+     "p10": 0.06,
+     "p50": 0.13,
+     "p90": 0.244
     }
    },
    "neg_side": {
-    "left": 0,
-    "right": 0,
-    "top": 0,
-    "bottom": 1,
-    "even": 1
+    "left": 29,
+    "right": 8,
+    "top": 19,
+    "bottom": 10,
+    "even": 33
    },
    "key": {
-    "low": 1,
-    "mid": 1,
-    "high": 0
+    "low": 61,
+    "mid": 33,
+    "high": 5
    },
    "examples": [
-    "jjk-op1@6.01: Epic aerial top-down cartography shot of glowing night metropolis; held for 12.51s with title typography overlay. | why: Provides monumental geographical scale and allows the main title card to bleed red energy across the city grid. | music: Second vocal phrase swells with fuller backing drums and rhythm guitar",
-    "jjk-op1@38.87: Low silhouette shot of Gojo standing atop a massive steel tower against a hazy twilight sky. | why: Establishes supreme elevation and dominance over the cityscape. | music: Pre-chorus drum roll accelerates"
+    "feist-1234@0.64: Master single-take continuous shot spanning 192.64s. Subject begins deep background (subj area ~0.049) in vibrant blue sequin jumpsuit before walking to medium center (x=0.54, y=0.55). Dynamic camera pan, tilt overhead, and dolly movement with rich color-blocked wardrobe ensemble. | why: Preserves unbroken performance real-time energy; matches the additive layer-by-layer musical arrangement from acoustic solo to full brass ensemble and choir. | music: Acoustic intro into vocal, building with handclaps, brass chorus, breakdown, lifted chorus, and gentle acoustic wind-down.",
+    "aespa-next-level@0.0: Extreme wide CGI establishing shot, low-angle looking up into futuristic megastructures against blue sky; camera rotates slowly along z-axis. Held for almost 4 seconds with high negative space overhead. | why: Establishes grand sci-fi world scale before plunging into claustrophobic urban/cyber interiors. | music: Ethereal ambient synth swell opening the track.",
+    "arcane-enemy@2.33: Wide environmental establishing shot, low-key teal and sickly warm street lamps, figures diminutive (area 0.076) walking left-to-right across deep negative space. | why: Establishes the gritty, industrial atmosphere of the Undercity over a generous 5.67s hold while introductory typography overlays. | music: plucked acoustic intro theme begins",
+    "ado-show@140.67: Marathon climax shot hold (14.5s); wide throne room overview with masked audience worshipping in foreground bottom (0.44, 0.41); three throne leaders above. | why: Ultimate climactic shot displaying entire character universe celebrating together. | music: Peak energy chorus with driving percussion and full orchestra/synth mix.",
+    "arcane-enemy@174.5: Wide overhead arena shot: Adult Jinx standing in spotlight with arms outspread, swirling hextech energy, surrounded by heaps of defeated enforcers. | why: Triumphant, manic villain climax displaying absolute destructive mastery. | music: soaring chorus hook",
+    "arcane-enemy@64.0: Wide shot of underground fight gym, Vi shadowboxing in center surrounded by cheering spectators, deep green and teal walls, held 4.17s. | why: Demonstrates Vi's physical power, protective nature, and street credibility. | music: vocal verse delivery over tight bass groove",
+    "ado-show@134.67: Long shot hold (6.0s); three characters sitting on individual thrones side by side (0.59, 0.51); large golden kanji text over top. | why: Presents all three main leads together on thrones for epic climax showcase. | music: Full chorus melody with multi-character vocal harmony.",
+    "aespa-next-level@184.68: Extreme wide shot: massive bioluminescent purple willow tree atop overgrown cyberpunk rooftop; all four idols standing underneath. | why: Mythic fantasy image establishing aespa's overarching 'KWANGYA' universe. | music: Mystical synth chime outro."
    ]
   },
   "speed": {
-   "shots": 6,
+   "shots": 143,
    "range": {
     "dur": {
      "p10": 0.17,
-     "p50": 0.335,
-     "p90": 0.67
+     "p50": 0.5,
+     "p90": 1.798
     },
     "motion": {
-     "p10": 0.059,
-     "p50": 0.08,
-     "p90": 0.127
+     "p10": 0.008,
+     "p50": 0.079,
+     "p90": 0.147
     },
     "subj_size": {
-     "p10": 0.027,
-     "p50": 0.045,
-     "p90": 0.064
+     "p10": 0.019,
+     "p50": 0.057,
+     "p90": 0.103
     },
     "subj_thirds": {
-     "p10": 0.088,
-     "p50": 0.157,
-     "p90": 0.246
+     "p10": 0.073,
+     "p50": 0.152,
+     "p90": 0.21
     },
     "neg_space": {
-     "p10": 0.243,
-     "p50": 0.545,
-     "p90": 0.746
+     "p10": 0.118,
+     "p50": 0.424,
+     "p90": 0.756
     },
     "contrast": {
-     "p10": 0.397,
-     "p50": 0.574,
-     "p90": 0.802
+     "p10": 0.278,
+     "p50": 0.642,
+     "p90": 0.927
     },
     "light_share": {
-     "p10": 0.01,
-     "p50": 0.037,
-     "p90": 0.235
+     "p10": 0.0,
+     "p50": 0.038,
+     "p90": 0.379
     },
     "dark_share": {
-     "p10": 0.08,
-     "p50": 0.31,
-     "p90": 0.65
+     "p10": 0.056,
+     "p50": 0.421,
+     "p90": 0.823
     },
     "two_tone": {
-     "p10": 0.14,
-     "p50": 0.486,
-     "p90": 0.697
+     "p10": 0.195,
+     "p50": 0.579,
+     "p90": 0.855
     },
     "sat_mean": {
-     "p10": 0.325,
-     "p50": 0.415,
-     "p90": 0.473
+     "p10": 0.231,
+     "p50": 0.502,
+     "p90": 0.786
     },
     "detail": {
-     "p10": 0.035,
-     "p50": 0.083,
-     "p90": 0.171
+     "p10": 0.026,
+     "p50": 0.114,
+     "p90": 0.246
     }
    },
    "neg_side": {
-    "left": 0,
-    "right": 1,
-    "top": 0,
-    "bottom": 2,
-    "even": 3
+    "left": 26,
+    "right": 19,
+    "top": 22,
+    "bottom": 14,
+    "even": 62
    },
    "key": {
-    "low": 2,
-    "mid": 4,
-    "high": 0
+    "low": 80,
+    "mid": 52,
+    "high": 11
    },
    "examples": [
-    "jjk-op1@57.72: Medium action tracking shot of Yuji leaping forward in mid-air through exploding debris, arm extended. | why: Direct protagonist battle rush bursting through the screen. | music: Sudden rhythmic resurgence into outro lead",
-    "jjk-op1@48.21: High-angle rooftop night shot of Nanami diving down onto a massive curse in mid-air. | why: Launches the high-action montage sequence with kinetic vertical descent. | music: Chorus builds rhythmically",
-    "jjk-op1@53.72: Wide shot of Panda leaping across urban rooftops under cold night lighting. | why: Provides dynamic animalistic movement to bridge the combat ensemble. | music: Driving tom-tom drum accents",
-    "jjk-op1@41.54: Sub-frame kinetic blur carrying energy across the edit. | why: Connects the blinding flash to the physical impact of the next frame. | music: Chorus downbeat resonance",
-    "jjk-op1@41.71: Extreme fast cut shifting axis into the train carriage. | why: Propels viewer back into the emotional center of the story. | music: Driving chorus beat",
-    "jjk-op1@48.88: Insert of curse splitting under blade pressure. | why: Supplies tactile follow-through to the strike. | music: Driving rhythm continues"
+    "ado-show@36.5: Ultra-long tracking shot hold (12.17s); parade of background mummy/creature characters moving left to right; hero character center at desk (0.55, 0.32); warm gold tone. | why: Creates continuous side-scrolling parade motion matching full vocal section length. | music: Driving rhythmic chorus section with steady beat.",
+    "ado-show@97.0: Marathon hold (9.17s); energetic punk character section; center composition (0.55, 0.47); dark background with neon yellow/purple spiral glitch graphics. | why: Highlights rock/punk guest character visuals during aggressive vocal verse. | music: Aggressive vocal section with heavy electronic bass.",
+    "arcane-enemy@50.67: Low-angle wide shot of young Powder and young Ekko jumping playfully on a bouncy awning, low-key silhouettes in warehouse interior, held 4.0s. | why: Showcases playful kinetic energy and bond between Powder and Ekko. | music: chorus vocal tail phrase",
+    "calli-gura-q@30.0: Chorus explosion: Mori in dynamic low-angle thrusting blade, skull army swinging bats, deep crimson lighting (2.33s). | why: Releases built-up energy on the first chorus hook bar. | music: Chorus hook drop: full heavy drums, bass, and distorted guitar.",
+    "ado-show@155.67: 5.17s hold; massive crowd dance choreography shot; center mass (0.54, 0.70); warm yellow disco ball light overhead. | why: Displays large ensemble line-dance choreography. | music: Outro dance beat with vocal unison chants.",
+    "calli-gura-q@32.33: Counter chorus wide: Gura centered on black void pedestal (x=0.49), shrimp army surging below, blue rim light. | why: Alternates chorus lead melody to Gura with corresponding color shift from red to blue. | music: Second half of chorus hook vocal line.",
+    "ado-show@5.33: Longer hold (2.67s); low-center character focus (0.31, 0.46); medium shot distance; subtle character motion. | why: Allows character performance and kanji callouts to be readable. | music: Vocal verse section.",
+    "calli-gura-q@110.67: Uncolored genga pencil animation (2.67s): Mori unleashing wild, complex sword strokes directly into camera. | why: Celebrates raw animator craftsmanship at peak musical intensity, letting line art convey pure force. | music: Blistering rock guitar solo."
    ]
   }
  },
  "rules_by_video": {
+  "ado-show": [
+   "Rule 1 (Strobe Editing): On high-energy drum rolls and build-ups, use string sequences of 0.17-second flash cuts with alternating subject positions and high contrast color shifts to create intense visual rhythm (Evidence: 0.0s, 50.67s, 126.0s). Effect: Builds kinetic visual tension and matches rapid percussive music beats.",
+   "Rule 2 (Marathon Centerpiece Holds): Anchor major chorus drops and steady groove sections with continuous, sustained shots lasting 9 to 14 seconds featuring strong centered compositions (Evidence: 36.5s, 51.83s, 140.67s). Effect: Provides visual stability and lets intricate character animation and world-building breathe.",
+   "Rule 3 (Negative Space Framing): Frame single key figures with over 50% empty dark background on top or side to command focus and accommodate heavy kinetic typography (Evidence: 0.0s, 22.5s, 126.0s). Effect: Ensures clear readability of Japanese kanji and English lyrics without cluttering characters.",
+   "Rule 4 (Graphic Text Integration): Overlay bold, stylized 3D typography aligned directly with the rhythm of vocal phrases, matching shot cuts to lyric stabs (Evidence: 1.0s, 15.17s, 95.33s). Effect: Turns vocal lyrics into tangible, high-impact graphic design elements.",
+   "Rule 5 (Asymmetric Horizontal Offset): Position main character focal points slightly off-center (X coordinates 0.25–0.35 or 0.60–0.75) during dialogue or solo vocals to create dynamic diagonal energy (Evidence: 11.33s, 22.5s, 109.83s). Effect: Creates sophisticated art-deco compositional tension rather than dull flat centering.",
+   "Rule 6 (Texture Distortion Accents): Inject digital glitch, rainbow moiré, and CRT scanline overlays on 0.5s to 1.5s transitional cuts right before major section transitions (Evidence: 8.0s, 13.5s, 21.5s). Effect: Infuses modern digital cyber-grit into classic art-deco vector illustration styles.",
+   "Rule 7 (Color Palettes per World): Shift the primary visual palette distinctively between scene locations—gold/black for thrones, warm red for underworld Styx, and neon purple/cyan for punk breakdowns (Evidence: 19.5s, 97.0s, 107.83s). Effect: Clearly signals distinct thematic sections and character domains in the music's structure.",
+   "Rule 8 (Pre-Drop Silence Blackouts): Cut to near-total dark negative space with minimal centered micro-text for 1.5 seconds immediately preceding a major chorus beat drop (Evidence: 124.33s, 173.33s). Effect: Maximizes visual and emotional impact when the full color and choreography resume."
+  ],
+  "ado-usseewa": [
+   "Anchor explosive vocal drop points with extreme close-ups of bared teeth and mouths (51.0, 70.5, 119.85) to channel vocal aggression directly into screen impact.",
+   "Counterbalance rapid sub-second flash edits with extended static hero shots exceeding 9 seconds (6.15, 142.5, 189.3) to establish unforgettable iconic anchor frames.",
+   "Use monochromatic red scanline/CRT surveillance framing (38.25, 42.6) during corporate conformity lyrics to visualize institutional observation.",
+   "Confine the subject within dense crisscrossing red line/laser grids (62.85, 129.45, 131.55) to visually represent societal rules restricting youth.",
+   "Insert 0.15-second white flash/strobe frames immediately preceding hard musical drops (95.85, 118.8, 119.55) to reset viewer retinas for maximum impact.",
+   "Frame verses in cold monochromatic blues (16.65, 85.35) and flip to aggressive warm reds and neons during choruses (57.15, 165.0) to match musical dynamic shifts.",
+   "Integrate kinetic oversized kanji typography directly flanking or crossing the protagonist's face (51.0, 123.0, 164.85) on key lyrical phrases.",
+   "Employ low Dutch angles looking upward at the protagonist (54.15, 95.1, 136.65) to establish defiance and psychological dominance over authority."
+  ],
+  "aespa-next-level": [
+   {
+    "rule": "Hold key group choreography shots for extended durations (4 to 12 seconds) during main chorus drops to preserve dance integrity, while using rapid sub-second cuts exclusively during builds and transitional verses.",
+    "evidence": [
+     "51.72",
+     "92.93",
+     "130.63"
+    ],
+    "effect": "Anchors viewer attention on complex body geometry without montage fatigue, then contrasts with intense kinetic bursts."
+   },
+   {
+    "rule": "Anchor radical musical genre and tempo switches with completely divergent visual environments and wardrobe color palettes (e.g. cyber neon to pastel illustrated desert).",
+    "evidence": [
+     "67.4",
+     "89.26",
+     "92.93"
+    ],
+    "effect": "Visually validates dramatic musical genre transformations, preventing audio disorientation."
+   },
+   {
+    "rule": "Pair vocal climaxes and sustained high notes with extreme scale shots (vast landscapes, lava cliffs, massive celestial trees) rather than conventional tight beauty frames.",
+    "evidence": [
+     "91.59",
+     "145.98",
+     "184.68"
+    ],
+    "effect": "Amplifies perceived acoustic volume through vast visual scale."
+   },
+   {
+    "rule": "Direct solo rap bars straight down the lens with heavy center-weighted framing and saturated rim lighting (magenta/cyan) to maximize performer charisma.",
+    "evidence": [
+     "15.52",
+     "23.86",
+     "37.37"
+    ],
+    "effect": "Creates intense personal viewer engagement and swagger."
+   },
+   {
+    "rule": "Intercut 3D avatar CGI counterparts at exact choreographic match-cuts to reinforce hybrid virtual-real narrative lore seamlessly into standard K-pop dance structures.",
+    "evidence": [
+     "116.95",
+     "123.62",
+     "193.53"
+    ],
+    "effect": "Builds seamless sci-fi worldbuilding without interrupting dance flow."
+   },
+   {
+    "rule": "Employ continuous rotating Dutch-angle and overhead spinning cameras inside confined circular sets (cockpit pods) to induce dynamic motion during stationary lip-syncing.",
+    "evidence": [
+     "14.51",
+     "164.5",
+     "206.71"
+    ],
+    "effect": "Adds disorienting mechanical momentum to seated vocal performances."
+   },
+   {
+    "rule": "Use high-contrast silhouette and monochrome background sets (pure white rotunda or black laser grids) for sharp graphic physical accents and hand choreography.",
+    "evidence": [
+     "4.84",
+     "63.23",
+     "178.85"
+    ],
+    "effect": "Highlights crisp geometric limb alignment and finger positioning against clean negative space."
+   },
+   {
+    "rule": "Cut to micro-duration flash frames (sub-0.3s) on snare rolls, beat drops, and breath intakes immediately preceding major chorus releases.",
+    "evidence": [
+     "127.46",
+     "127.79",
+     "127.96"
+    ],
+    "effect": "Builds explosive tension and visceral physical punch on the subsequent downbeat."
+   }
+  ],
+  "arcane-enemy": [
+   "Anchor emotional vulnerability in center-frame symmetry (neg ~0.50-0.70) while pushing social estrangement to extreme horizontal edges (neg >0.75), as evidenced in 10.83, 13.33, and 178.67, yielding instant psychological clarity.",
+   "Use 0.17s micro-flash inserts ('frame-slams') on percussive hits and vocal syllables to fracture realism and inject raw kinetic energy, seen in 20.83, 126.5, and 141.33, producing an immediate visceral hit.",
+   "Pair soaring chorus downbeats with expansive tracking shots through architectural depth (dur >3.0s, high depth-of-field), demonstrated at 39.0, 99.67, and 174.5, buying massive spatial scale and kinetic release.",
+   "Shift color temperature aggressively between warm amber-red (past trauma/domestic intimacy) and cold cyan-magenta (present reality/madness), evident at 32.83, 64.0, and 126.83, to separate emotional timelines instantly.",
+   "Employ split-second step-zooms into character eyes immediately preceding psychological or musical transitions, as executed at 126.17, 157.5, and 178.33, pulling the audience directly into internal panic.",
+   "Reserve prolonged stillness (holds >4.0s) for symbolic inanimate objects or paralyzed emotional states to let thematic gravity settle, proven in 2.33, 162.83, and 191.67, delivering contemplative beauty and dread.",
+   "Match rapid rap cadence with multi-media visual shifts (2D cutouts, VHS scanlines, and graphic silhouettes) rather than standard live-action cuts, seen in 135.67, 136.33, and 147.0, accelerating perceptual speed.",
+   "Bookend high-energy narrative and performance spectacles with quiet, diegetic mechanical soundscapes and vacuum lighting, demonstrated at 0.17, 182.33, and 205.67, granting the viewer necessary room to breathe."
+  ],
+  "arcane-paint-town-blue": [
+   "Cut precisely on 0.17s micro-burst flash frames to puncture transitions before musical beat drops (evidence: 1.5, 43.21, 84.58).",
+   "Anchor thematic rebellion through high-contrast complementary color clashes (cyan/blue vs warning red/rust) (evidence: 7.84, 56.06, 85.59).",
+   "Keep the lead artist tightly centered (subj_x between 0.45 and 0.55) during rapid dance cuts to prevent ocular disorientation (evidence: 16.68, 33.37, 68.23).",
+   "Layer hand-drawn 2D animated scribbles on live-action footage during vocal exclamation peaks to invoke IP lore (evidence: 25.36, 46.71, 80.25).",
+   "Use low-angle upward tilts against towering industrial architecture to emphasize institutional oppression (evidence: 11.34, 31.87, 81.41).",
+   "Stall visual momentum with held static compositions right before launching explosive kinetic sequences (evidence: 13.35, 79.75, 102.6).",
+   "Employ disorienting spinning camera motion (human gyroscope) during psychological and harmonic bridges (evidence: 71.4, 73.91, 87.42).",
+   "Direct subject gaze straight down the lens barrel on confrontational vocal punchlines (evidence: 23.02, 42.71, 90.26)."
+  ],
+  "billie-party-over": [
+   "Unbroken Long Take for Absolute Intimacy: Holding a single continuous shot (shot 2.0) forces complete performer vulnerability and prevents editing from interrupting emotional momentum.",
+   "Extreme Graphic Value Contrast: Placing dense black elements (black hair, liquid tears, dark clothing accents) against a pure white environment (shot 2.0) maximizes graphic clarity and visceral shock value.",
+   "Slow Continuous Camera Creep: Using barely perceptible motorized zoom/push movements (shot 2.0) sustains subconscious forward tension across multi-minute durations.",
+   "Asymmetrical Subject Off-Centering: Framing the primary subject off to the left third (shot 2.0) creates visual imbalance against the central pedestal, building quiet psychological unease.",
+   "Dark Bookending: Enclosing an ultra-bright high-key visual setup between pure black frames (shots 0.0 and 191.36) establishes the video as a contained, dreamlike event.",
+   "High Negative Space Ratio: Maintaining over 70% empty frame area (shots 2.0) eliminates background clutter and forces 100% focus on micro-expressions.",
+   "Macro-to-Wide Scale Shift within One Take: Starting tight on an isolated object and opening up to full body context (shot 2.0) anchors the narrative visually without relying on traditional cutaways.",
+   "In-Camera Practical Transformation: Executing physical visual transformations in real time within a single frame (shot 2.0) guarantees viewer engagement and believable performer reactions."
+  ],
+  "bp-hylt": [
+   "Rule 1: Cut strictly on downbeats, snare snaps, or vocal accents during chorus sections to maximize rhythmic impact (e.g., 39.37, 40.37, 102.27).",
+   "Rule 2: Alternate extreme close-ups featuring distinct styling with grand wide shots to maintain visual contrast and scale (e.g., 1.17 vs 7.34, 135.97 vs 137.47).",
+   "Rule 3: Match color worlds to section transitions - shift from warm gold/purple to cold ice blue, to pink/red fire, to arctic white (e.g., 9.01, 13.01, 92.43, 102.27).",
+   "Rule 4: Frame vocal leads at screen center during solo lines for direct connection with the viewer (e.g., 7.34, 43.71, 64.73).",
+   "Rule 5: Use foreground elements like lattice, curtains, and gloved hands to create depth and frame faces tightly (e.g., 37.04, 67.57, 88.42).",
+   "Rule 6: Accelerate cut frequency drastically during pre-chorus builds and dance breaks to heighten adrenaline (e.g., 28.03-38.87, 140.97-142.48).",
+   "Rule 7: Mirror key choreography hit directions with whip pans and fast zoom cuts (e.g., 40.87, 47.38, 143.31).",
+   "Rule 8: Reserve maximal troupe dance ensembles and giant set pieces (like Trojan horses) for the final outro to ensure a massive visual climax (e.g., 142.48, 150.32, 157.99)."
+  ],
+  "calli-gura-q": [
+   {
+    "rule": "Anchor rival dual protagonists to opposite screen quadrants (left vs right) to build spatial antagonism across shots before unifying them center-frame.",
+    "evidence": [
+     "8.0",
+     "14.17",
+     "132.33"
+    ],
+    "effect": "Establishes natural visual tension and makes their eventual unison feel earned and balanced."
+   },
+   {
+    "rule": "Insert 0.17s micro-cuts and strobe flashes on 16th-note drum fills and snare rolls right before major beat drops.",
+    "evidence": [
+     "6.5",
+     "29.67",
+     "97.0"
+    ],
+    "effect": "Primes the eye and spikes neurological anticipation immediately before massive visual/audio payoffs."
+   },
+   {
+    "rule": "Maintain strict character-specific color palettes (crimson/magenta for Mori, cyan/navy for Gura) throughout lighting, backgrounds, and typography.",
+    "evidence": [
+     "64.83",
+     "70.83",
+     "132.33"
+    ],
+    "effect": "Ensures instant character recognition even during lightning-fast rapid-fire montage cutting."
+   },
+   {
+    "rule": "Hold choreographically complex combat shots for 2+ seconds without cuts to prioritize kinetic clarity and fluid sakuga motion.",
+    "evidence": [
+     "40.5",
+     "99.83",
+     "110.67"
+    ],
+    "effect": "Prevents combat confusion and showcases top-tier animation draftsmanship."
+   },
+   {
+    "rule": "Punctuate intense high-octane battle sequences with deadpan comedic slapstick cutaways to reset visual fatigue.",
+    "evidence": [
+     "54.17",
+     "86.17",
+     "106.0"
+    ],
+    "effect": "Prevents sensory overload and endears the characters through comedic tonal versatility."
+   },
+   {
+    "rule": "Deconstruct production polish down to raw pencil/genga sketch animation during peak instrumental solos.",
+    "evidence": [
+     "110.17",
+     "110.67",
+     "113.33"
+    ],
+    "effect": "Elevates the emotional and technical stakes by exposing raw hand-drawn dynamism."
+   },
+   {
+    "rule": "Utilize stark, 90%+ negative space blackouts on vocal dropouts and lyrical punches to force absolute focus on lyrical delivery.",
+    "evidence": [
+     "51.17",
+     "86.17",
+     "141.67"
+    ],
+    "effect": "Acts as a profound palate cleanser and heightens narrative drama."
+   },
+   {
+    "rule": "Reserve symmetrical, perfectly centered compositions strictly for title cards, unison battle cries, and final freeze-frames.",
+    "evidence": [
+     "7.5",
+     "27.17",
+     "132.33"
+    ],
+    "effect": "Bestows monumental authority and indelible branding to the most important narrative milestones."
+   }
+  ],
+  "csm-ed1": [
+   {
+    "rule": "1. Micro-flicker rapid montage (0.17s shots) on drum fills to maximize impact energy.",
+    "evidence": [
+     "4.0",
+     "17.68",
+     "34.7"
+    ],
+    "effect": "Visceral shock that triggers immediate audience adrenaline spike."
+   },
+   {
+    "rule": "2. High negative space (>80%) in wide landscape/field shots to emphasize isolation.",
+    "evidence": [
+     "10.68",
+     "11.85",
+     "60.39"
+    ],
+    "effect": "Creates dramatic contrast between peaceful expanse and claustrophobic violence."
+   },
+   {
+    "rule": "3. High-contrast monochromatic value shifts immediately preceding bright action peaks.",
+    "evidence": [
+     "8.51",
+     "14.51",
+     "28.03"
+    ],
+    "effect": "Resets viewer visual adaptation for maximum visual surprise upon cut."
+   },
+   {
+    "rule": "4. Anchor chorus drops with prolonged heroic action key shots held over 1.0s.",
+    "evidence": [
+     "33.2",
+     "35.2",
+     "41.37"
+    ],
+    "effect": "Allows audience to digest complex action hero choreography without visual fatigue."
+   },
+   {
+    "rule": "5. Offset character placement (x=0.2 to 0.3 or 0.7 to 0.8) during reflective vocal passages.",
+    "evidence": [
+     "11.18",
+     "13.85",
+     "56.39"
+    ],
+    "effect": "Imparts cinematic narrative depth and feeling of emotional journey."
+   },
+   {
+    "rule": "6. Macro close-up graphic inserts synced directly to snare hits or guitar bends.",
+    "evidence": [
+     "1.0",
+     "12.85",
+     "40.87"
+    ],
+    "effect": "Tightens synergy between sound design and tactile visual elements."
+   },
+   {
+    "rule": "7. Color temperature flip (desaturated gloomy darks vs bright warm pastels) to distinguish past memories from current battle reality.",
+    "evidence": [
+     "18.18",
+     "28.36",
+     "54.72"
+    ],
+    "effect": "Instant clarity of emotional state and narrative timeline."
+   },
+   {
+    "rule": "8. Extended static shot holds (>2.0s) immediately following peak chaotic action sequences.",
+    "evidence": [
+     "18.69",
+     "51.89",
+     "80.75"
+    ],
+    "effect": "Provides essential emotional breathing room and dramatic impact settling time."
+   }
+  ],
+  "edgerunners-this-fffire": [
+   "1. Micro-Flash Cutting on Beat Stutters: Deploy 0.17s ultra-short cuts during rapid synth/drum stutter sequences to create stroboscopic energy (e.g. 6.17, 6.34, 7.01).",
+   "2. Emotional Vocal Hold: Rest on extreme close-up facial shots for >1.5s during major soaring vocal hooks to solidify character intimacy (e.g. 10.68, 12.35, 141.31).",
+   "3. Oversized Graphic Typography Overlay: Frame large stylized graphic text across the center frame during low-angle moving tracking shots to make key lyrics visual anchors (e.g. 15.68, 19.02, 28.7).",
+   "4. Kinetic Main Beat Drops: Synchronize heavy downward physical actions (like superhero ground slams or weapon strikes) precisely on major sub-bass beat drops (e.g. 24.02, 71.4, 132.63).",
+   "5. High-Contrast Dual Color Palettes: Alternate starkly between warm golden yellows and cold cyber-cyans across adjacent cuts to re-energize visual contrast (e.g. 5.0, 10.68, 27.53).",
+   "6. Sandevistan Glitch Trailing: Apply ghosting multi-frame trails to characters during hyper-speed movements to visually communicate time dilation (e.g. 7.34, 78.24, 78.41).",
+   "7. Extreme Close-Up Eye Reflexes: Zoom into eyes reflecting blood droplets, shattered glass, or HUD grids to anchor psychological tension within human emotion (e.g. 27.03, 44.04, 83.92).",
+   "8. Cosmic Scale Contrast: Place minute character masses (subj <0.05) against massive illuminated backdrop elements (full moon, launching rocket, neon city grid) to contrast human vulnerability with overwhelming scale (e.g. 24.69, 68.74, 145.65)."
+  ],
+  "feist-1234": [
+   "Unbroken long-take illusion: Avoid cut editing (0.64s) to build organic performance trust and relentless visual momentum.",
+   "Central subject framing anchor: Keep the lead singer centered (subj x=0.54) across complex camera moves so the audience never loses track of the protagonist.",
+   "Depth-to-foreground reveals: Begin hero performer far in background at 0.64s and walk forward to establish spatial scale before crowd entry.",
+   "Wardrobe contrast separation: Clothe the hero in shiny blue sequins while dancers wear solid primary colors (0.64s) to visually separate hero from ensemble.",
+   "Bird's-eye overhead transformations: Tilt camera straight overhead (1.15s) to convert linear group dance into kaleidoscopic geometric patterns.",
+   "Climactic human elevation: Physically lift the lead singer on the chorus peak (1.45s) to sync visual elevation with vocal pitch high points.",
+   "Centripetal crowd funneling: Swirl secondary dancers inward around the singer (2.25s) to pull viewer focus back into a singular focal node.",
+   "360-degree orbital camera rotation: Circle around the central figure during musical refrains (2.05s) to simulate infinite energy.",
+   "Minimalist black bookends: Frame complex performance scenes with total dark black slates (0.0s, 193.28s) for clean visual punctuation."
+  ],
+  "genshin-furina": [
+   {
+    "rule": "Center key subjects during theatrical stage performances to command attention under spotlights.",
+    "evidence": [
+     "24.33",
+     "32.17",
+     "136.83"
+    ],
+    "effect": "Creates strong theatrical focus and iconic star imagery."
+   },
+   {
+    "rule": "Use rapid 0.17s flash cuts to synchronize visual motion with snare stabs or drum hits.",
+    "evidence": [
+     "48.67",
+     "70.0",
+     "120.67"
+    ],
+    "effect": "Builds high kinetic energy and sharp musical impact."
+   },
+   {
+    "rule": "Shift color grading to black-and-white during silent cinematic parodies to alter story genre instantly.",
+    "evidence": [
+     "53.5",
+     "56.67",
+     "58.67"
+    ],
+    "effect": "Signals comedic narrative shift and vintage film parody."
+   },
+   {
+    "rule": "Employ wide low-angle tracking shots for environmental establishing sequences.",
+    "evidence": [
+     "4.0",
+     "9.67",
+     "127.33"
+    ],
+    "effect": "Establishes architectural grand scale and immersive world setting."
+   },
+   {
+    "rule": "Incorporate film-strip overlays and letterboxing during multi-character ensemble montages.",
+    "evidence": [
+     "115.83",
+     "116.33",
+     "118.83"
+    ],
+    "effect": "Evokes behind-the-scenes movie-making charm and rapid character showcases."
+   },
+   {
+    "rule": "Utilize dark background negative space with centralized bright spotlights during solo dance numbers.",
+    "evidence": [
+     "24.33",
+     "28.83",
+     "136.83"
+    ],
+    "effect": "Isolates the figure to highlight dramatic elegance and vulnerability."
+   },
+   {
+    "rule": "Match long held camera shots (2.5s+) with lyrical, soaring musical melodies.",
+    "evidence": [
+     "4.0",
+     "38.0",
+     "136.83"
+    ],
+    "effect": "Allows viewers to absorb grand visual compositions without jarring interruptions."
+   },
+   {
+    "rule": "Employ graphic text overlay title cards for character dynamic entrances and companion introductions.",
+    "evidence": [
+     "50.33",
+     "84.17",
+     "90.33"
+    ],
+    "effect": "Snaps performance into stylized character showcase aesthetics."
+   },
+   {
+    "rule": "Transition from action sequences into wide top-down camera views during high-power elemental bursts.",
+    "evidence": [
+     "120.83",
+     "122.0",
+     "131.5"
+    ],
+    "effect": "Communicates spatial geometry and grand scale of gameplay mechanics."
+   },
+   {
+    "rule": "Conclude grand musical movements with backlit silhouettes before logo end-cards.",
+    "evidence": [
+     "103.67",
+     "105.83",
+     "144.83"
+    ],
+    "effect": "Leaves a lasting, poetic artistic silhouette in the viewer's memory."
+   }
+  ],
   "jjk-op1": [
    "Bookend sequences with matching thematic framing (e.g., solitary train car in 1.5, 42.38, and 66.4) to anchor the emotional journey of the protagonist.",
    "Use extreme macro body-horror inserts held for fractions of a second (0.17s - 0.5s) to inject sudden narrative violence into serene or static shots (47.05, 47.88, 56.56).",
