@@ -1,5 +1,5 @@
 {
- "_why": "storyboard round 3 after brief-keeper BLOCK 2 (reviews/storyboard_brief-keeper_2.md): toki 2026-10-26 'aus den referenzen lernen ... alles hat grund und wirkung'. 5 new references (frieren, spiderverse, arcane, csm-ed1, jjk) + the library MEASURED (knowledge/references/LEARNED.md): every moment a matched frame or a strip + a RULE line (principle card or measured pro decision with its why); new moments: the hidden stop 121.94 and the stop -> drop move. Frames of each reference were looked at before use.",
+ "_why": "storyboard round 4 (toki 2026-10-26: 'drops dichter schneiden wie die profis (ca. 0,5 s), riser / hi-hat / farbwechsel rein'): script v3b (hold + flash on the beat, measured hi-hat phase, riser / roll / final-build tables) pictured as moments; references looked at by eye; round 3 references kept where they matched.",
  "moments": [
   {
    "t": 0.2,
@@ -27,9 +27,27 @@
    "ref": "edgerunners-this-fffire@74.25",
    "camera": "low converging-cable frame, h 0.4 d 1.2 fov 60, roll -8, crash in",
    "her": "LUNGES up the cable at the light (roar 1.0), mouth open",
-   "fx": "cable white-hot, two-tone background 2 frames (she keeps her colours), shake 5",
+   "fx": "cable white-hot, two-tone 2 frames, shake 5; then drop 1 as hold + flash: an anchor held 2 beats, a 4-frame flash insert per bar (a simple shape in black), a picture every 0.47 s on average",
    "light": "the pulse is the key light",
-   "rule": "two_tone_hit: >= 79 % of pixels in the two extremes, black really black (p05 ~0.01), >= 37 % white, diagonal strokes; 1-4 frames on a strong hit only"
+   "rule": "two_tone_hit on the hit; drop flashes: pro shots under 0.25 s are the simplest and emptiest (Edgerunners 6.25: one small light, 96 % empty) - a 4-frame picture must read at once",
+   "refs": [
+    "edgerunners-this-fffire@74.25",
+    "edgerunners-this-fffire@6.25"
+   ]
+  },
+  {
+   "t": 27.771,
+   "line": "hi-hat roll: the picture stutters on every measured 16th (row 15)",
+   "ref": "edgerunners-this-fffire@6.25",
+   "refs": [
+    "edgerunners-this-fffire@6.25",
+    "edgerunners-this-fffire@6.75"
+   ],
+   "camera": "11 cuts on the measured onsets 27.771-28.932 (3-4 frames each): her chest-open ping <-> the ping ring, d 1.1",
+   "her": "PINGS: yelling 1.0, chest open, arms wide; sings",
+   "fx": "the stutter frames are the SAME light (X2: no strobe), the last one lands on the downbeat",
+   "light": "the ping ring lights both pictures",
+   "rule": "pros cut 0.17 s micro-flashes on drum / hi-hat rolls before a release (Edgerunners 6-7, Calli 6.5, CSM ED1, aespa) - the eye counts the hits it hears"
   },
   {
    "t": 38.767,
@@ -44,6 +62,22 @@
     "arcane-paint-town-blue@105.25"
    ],
    "rule": "lens_attack: hands flat on the lens at the frame edges, the face centred between them; drawn marks over the face (Arcane) - the fourth wall breaks, the viewer is inside and threatened"
+  },
+  {
+   "t": 58.62,
+   "line": "riser 1 into the stop: one push through the cuts to her eyes (rows 26-27)",
+   "ref": "arcane-enemy@125.75",
+   "refs": [
+    "arcane-enemy@125.75",
+    "arcane-enemy@126.25",
+    "arcane-enemy@178.25",
+    "ado-show@124.75"
+   ],
+   "camera": "ONE axis below her face looking up at the beam: d 3.0 -> 2.2 -> 1.6 -> 1.2 -> 0.9 -> 0.7, then half beats 0.55 -> 0.45 -> 0.38 -> 0.32 (her eyes ECU) on the measured beats 58.70-61.97",
+   "her": "floats looking up, then treading water, eyes up, hair floating; sings",
+   "fx": "the grade climbs toward white with the measured brightness (+404 Hz/s), then the stop 62.167: the light falls away, one drop hangs",
+   "light": "the beam on her face from above, whiter with every cut",
+   "rule": "pros step-zoom into the eyes right before a transition (Arcane Enemy 126 / 157 / 178, why pass) and hold near black in the silence (Ado SHOW 124): the build is felt as an approach, the stop lands as the cliff"
   },
   {
    "t": 62.615,
@@ -63,7 +97,7 @@
    "t": 64.3,
    "line": "chorus 1: a new picture on EVERY bar, a slash per bar (shots 29-35)",
    "ref": "jjk-op1@47.25",
-   "camera": "bar 2 worm's eye / bar 3 through the ink crown / bar 4 top-down / bar 5 dutch flip / bar 6 claw macro / bar 7 wide from behind / bar 8 close low - 8 cuts in 15 s on the measured bar lines",
+   "camera": "per bar: the row camera held 2 beats -> punch-in on beat 3 -> a 4-frame flash insert on the hi-hat (the and of 4) -> reverse; the template breaks: row 31 holds 3 beats, row 33 holds the claw 2 beats, row 34 flashes after beat 2, row 35 double time into the hold",
    "her": "lunge, sing into the lens, hook-punch, back kick, claw, arms wide, sing - one action per bar",
    "fx": "ink slash per bar, barb flick, lamp flash on bar 7; then bar 9 HOLDS still against the loud track",
    "light": "two-tone ink / paper, her violet, grain",
@@ -71,11 +105,26 @@
     "jjk-op1@47.25",
     "jjk-op1@47.75",
     "jjk-op1@48.25",
-    "jjk-op1@48.75",
+    "edgerunners-this-fffire@6.25",
     "ado-usseewa@63.25",
     "edgerunners-this-fffire@74.25"
    ],
-   "rule": "measured: pros change the picture every 0.33-0.67 s in aggressive choruses (JJK 47-49: 6 changes in 2 s), short shots simpler + emptier (54 % empty < 0.25 s); our plan: 1 per bar (1.9 s) + slashes / flashes inside - question to toki: denser?"
+   "rule": "hold + flash, not a metronome (why pass, 13 pro videos): anchors on the action, micro-flashes on the hats (measured: 0.20 s after each beat) - chorus 1 a picture every 0.57 s, JJK 47-49 shows the burst"
+  },
+  {
+   "t": 67.59,
+   "line": "colour flip on the turn to the minor chord (Bm, measured)",
+   "ref": "edgerunners-this-fffire@5.25",
+   "refs": [
+    "edgerunners-this-fffire@5.25",
+    "edgerunners-this-fffire@10.75",
+    "ado-usseewa@57.25"
+   ],
+   "camera": "a cut ON 67.600 to her eyes inside the ink crown, d 0.35 (row 30 punch-in) - then row 31 holds the hook-punch 3 beats",
+   "her": "eyes wide inside the black splash, singing at us",
+   "fx": "for one beat the picture turns gold-orange on ink, then back to violet two-tone",
+   "light": "the only warm moment of chorus 1",
+   "rule": "pros flip colour worlds on musical turns (Ado Usseewa blue -> red, Edgerunners warm / cold on adjacent cuts); the complementary accent is 14 % of pro shots, so it hits - 4 times on the measured minor turn (weltschmerz) + every hit flash before 154 in gold-orange two-tone; never after 154"
   },
   {
    "t": 79.467,
@@ -113,7 +162,7 @@
   },
   {
    "t": 121.94,
-   "line": "the hidden stop: 0.68 s of silence before drop 2 (shot 53H)",
+   "line": "riser 2 -> the cliff -> the hidden stop (rows 52-53H)",
    "ref": "ado-show@124.75",
    "refs": [
     "ado-show@124.75",
@@ -121,11 +170,11 @@
     "ado-show@126.25",
     "ado-show@127.25"
    ],
-   "camera": "4 cm/s drift, not locked, low under her at the apex",
+   "camera": "118.70 / 119.17 / 119.40 three cuts closer on her \"not crying\" glare (d 0.7 -> 0.55 -> 0.42), the glare held; 119.867 black; 120.37 the slow-motion leap (no cuts); 121.90 freeze at the apex",
    "her": "FREEZE at the apex of the leap, the rain drops hang in the air",
-   "fx": "the lamp goes dark; only the drops catch a last glint; nothing moves but the drift",
+   "fx": "the riser goes on as LIGHT after the black: the rain halo brightens 20 % -> 90 % with the measured brightness (+854 Hz/s); then the lamp dark, drops hang",
    "light": "near black, her dots the only light",
-   "rule": "stop -> drop as the pros do it (Ado SHOW 124-127, why pass): the silence held near black with ONE tiny light, then a 4-frame ECU flash on the hit, then HOLD the payoff - stutter in, hold the payoff"
+   "rule": "stop -> drop as the pros do it (Ado SHOW 124-127): build, near-black with one small light, then a flash on the hit and HOLD the payoff - the cuts end before the slow motion, the light carries the rest"
   },
   {
    "t": 122.615,
@@ -139,7 +188,7 @@
     "spiderverse-across-t2@4.25",
     "spiderverse-across-t2@12.75"
    ],
-   "rule": "a landing = low camera, the figure crouched skidding TOWARD the lens with speed lines + sparks (Spider-Verse 4), a graphic impact star behind the hit (Spider-Verse 12); hold the pose 8 frames: the payoff after the stop is held, not cut"
+   "rule": "the landing is the ANCHOR (held 1.7 s, the payoff after the stop), the measured hit 123.809 slams in a 4-frame two-tone flash; then drop 2 as hold + flash, a picture every 0.61 s"
   },
   {
    "t": 146.33,
@@ -166,14 +215,33 @@
    "rule": "ecu_scream (second one): same rule, other side and colour than 62.6 so it does not repeat - the effort scream, eyes shut"
   },
   {
+   "t": 169.767,
+   "line": "the final build: four pulls, every cut closer on the beam axis (rows 79-82)",
+   "ref": "arcane-enemy@178.25",
+   "refs": [
+    "arcane-enemy@178.25",
+    "bp-hylt@28.25"
+   ],
+   "camera": "one axis: d 5.0 -> 4.2 -> 3.8 -> 3.5 -> 3.0 -> 2.7 -> 2.4 -> 2.0 -> 1.8 -> 1.7 -> 1.5 -> 1.4 -> 1.3 -> 1.2 -> 0.9; cuts thicken with the measured hi-hat density: every 2 beats, every beat, half beats",
+   "her": "pulls the lamp with everything: four pulls, foot braced, whole back, face strained, eyes on us",
+   "fx": "the beam passes closer each time: 16 m, 8 m, 3.5 m, 1 m - 4 white flashes in 4.5 s (X2), the grade climbs toward white from 173.24",
+   "light": "white-gold beam, violet lantern",
+   "rule": "pros accelerate the cut rate into the climax (bp-hylt pre-chorus, why pass) and keep the hits on the cuts (172.524 / 174.428 / 176.286 measured)"
+  },
+  {
    "t": 177.238,
-   "line": "THE LAST HIT: the beam stops on you (shot 83)",
+   "line": "THE LAST HIT (A+): the dip to black, the lamp in her pupils, then the silhouette in the flood (rows 82-83)",
    "ref": "yoasobi-idol@186.25",
    "camera": "the cold-open camera: on the beam axis, h 13.7 d 6 fov 58",
    "her": "THE silhouette (same as 0.2 s): her whole weight on the lamp",
-   "fx": "white-gold 100 % for 3 frames, chroma, shake 5, held; overshoot and settle",
+   "fx": "176.90 the dip: near black, only her dots; 177.167 two frames: the lamp turning into her pupils (ECU); 177.238 hard cut on the flash to the silhouette: white-gold 100 % 3 frames, chroma, shake 5, held",
    "light": "the beam on the lens",
-   "rule": "flood_silhouette from far: the figure 7-8 % of the frame, centred, a halo ring in the flood keeps it designed, not blown out; same class as 0.2 (the promise kept)"
+   "rule": "pre-drop blackout (Ado SHOW 173) + the eye ECU reflecting the light (Edgerunners 27, eye reflections) + flood_silhouette held: the blow is the dark -> eye -> white sequence, the silhouette is the payoff held - recommendation A+, toki decides",
+   "refs": [
+    "ado-show@124.75",
+    "edgerunners-this-fffire@27.25",
+    "yoasobi-idol@186.25"
+   ]
   },
   {
    "t": 183.8,
