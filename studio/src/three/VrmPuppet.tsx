@@ -152,6 +152,23 @@ function syncOutline(rig: Rig) {
   }
 }
 
+/** Her BODY rests on the floor too, not only her feet (the white blob, clips_seen 2026-10-25: kneeling, lying, the
+ *  superhero crouch - grounded by the feet alone, her hips, back and head sank under the floor, only boots and a lit
+ *  patch stayed). Each bone keeps its own flesh radius (model units) above the model's floor; the lift that does it. */
+const BODY_R: [VRMHumanBoneName, number][] = [['hips', 0.12], ['spine', 0.11], ['chest', 0.11], ['upperChest', 0.1],
+  ['neck', 0.06], ['head', 0.11], ['leftUpperLeg', 0.08], ['rightUpperLeg', 0.08], ['leftLowerLeg', 0.05],
+  ['rightLowerLeg', 0.05], ['leftUpperArm', 0.05], ['rightUpperArm', 0.05], ['leftLowerArm', 0.04], ['rightLowerArm', 0.04],
+  ['leftHand', 0.03], ['rightHand', 0.03], ['leftShoulder', 0.06], ['rightShoulder', 0.06]];
+function bodyClear(vrm: VRM, floor: number): number {
+  const v = new THREE.Vector3();
+  let lift = -Infinity;
+  for (const [b, r] of BODY_R) {
+    const n = vrm.humanoid.getRawBoneNode(b);
+    if (n) lift = Math.max(lift, r - (n.getWorldPosition(v).y - floor));
+  }
+  return lift - floor;
+}
+
 function lowestFoot(vrm: VRM): number {
   const v = new THREE.Vector3();
   let low = Infinity;
@@ -548,7 +565,7 @@ function applyState(rig: Rig, s: State, fps: number) {
   // feet on the floor: measure the posed rig unplaced, then place it
   root.position.set(0, 0, 0); root.rotation.set(0, 0, 0); root.scale.setScalar(1); ground.position.set(0, 0, 0);
   root.updateMatrixWorld(true);
-  ground.position.y = rig.restLow - lowestFoot(vrm) - rig.floor;
+  ground.position.y = Math.max(rig.restLow - lowestFoot(vrm) - rig.floor, AIRBORNE.test(s.motion ?? '') ? -Infinity : bodyClear(vrm, rig.floor));
   // faceLens: measure the clip's hip turn on the unplaced rig and take it back out of her facing
   let hipTurn = 0;
   if (s.clipCur.faceLens && s.motion) {
@@ -844,7 +861,7 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
         const fwd = new THREE.Vector3(camPos[0] - p.x, 0, camPos[2] - p.z).normalize();
         const side = new THREE.Vector3(fwd.z, 0, -fwd.x);
         return (<>
-          <pointLight position={[chest.x + fwd.x * 0.45, chest.y - 0.55, chest.z + fwd.z * 0.45]} color="#8f6bff" intensity={2.4 * lampLight} distance={2.4} decay={1.6} />
+          <pointLight position={[chest.x + fwd.x * 0.45, Math.max(chest.y - 0.55, p.y + 0.35), chest.z + fwd.z * 0.45]} color="#8f6bff" intensity={2.4 * lampLight} distance={2.4} decay={1.6} />
           <pointLight position={[chest.x - fwd.x * 0.8 + side.x * 0.9, chest.y + 0.7, chest.z - fwd.z * 0.8 + side.z * 0.9]} color="#ffb36b" intensity={3.0 * lampLight} distance={2.8} decay={1.5} />
         </>);
       })() : null}
@@ -869,7 +886,9 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
         return <pointLight position={[chest.x + back.x, chest.y + 0.45, chest.z + back.z]} color={rimColor} intensity={1.5 * rimGain} distance={2.2} decay={1.6} />;
       })() : null}
       {glow && chest && glowGain > 0.01 ? (    // 灯闇: she is the lamp in the dark (like Puppet3D)
-        <pointLight position={[chest.x, chest.y, chest.z + 0.25]} color={glow} intensity={7 * pulse} distance={5} decay={1.4} />
+        // never closer than 0.6 m above her floor: lying / kneeling, the light at her chest burnt a white hot spot
+        // into the floor under her (the white blob, clips_seen 2026-10-25)
+        <pointLight position={[chest.x, Math.max(chest.y, p.y + 0.6), chest.z + 0.25]} color={glow} intensity={7 * pulse} distance={5} decay={1.4} />
       ) : null}
     </group>
   );

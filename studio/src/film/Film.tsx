@@ -79,6 +79,9 @@ export const Film: React.FC<FilmProps> = (props) => {
   const shot = props.shots[i];
   // a freeze / polaroid holds the 3D world on one frame while the 2D layer above keeps time (PovFx.tsx)
   const f = sceneFrame(shot.fx, fNow);
+  // a two-tone frame is TWO values: no grade, bloom or vignette may lift the ink (TwoTone.tsx)
+  const twoOn = twoToneOn(shot.opts.two_tone, f, Number(shot.opts.two_tone_n ?? 2));
+  const ink = String(shot.opts.two_tone_dark ?? '#0b0910');
   // a 3D shot names her rig keys itself (shots.json "actor"); the 2026-10-21 VRM edition translated sprite keys
   const actorKeys = useMemo(() => shot.actor?.length ? shot.actor : vrmFilmKeys(shot.puppets), [shot]);
   const gain = shot.mouth?.gain ?? 1;
@@ -224,7 +227,7 @@ export const Film: React.FC<FilmProps> = (props) => {
     if (local < 45) icon = <ReactionIcon kind={herKey.icon} x={herHead[0] * W + W * 0.12} y={herHead[1] * H - H * 0.03} local={local} accent="#b56bff" />;
   }
   return (
-    <AbsoluteFill style={{backgroundColor: '#0b0818', overflow: 'hidden'}}>
+    <AbsoluteFill style={{backgroundColor: twoOn ? ink : '#0b0818', overflow: 'hidden'}}>
       <Fx2DDefs fx={fx} f={f} center={herScreen} aspect={aspect} />
       {fin > 0 ? (
         // the fin wave (a turn whips the water behind a fin): a short watery distortion of the picture
@@ -238,7 +241,7 @@ export const Film: React.FC<FilmProps> = (props) => {
           <filter id="raymi-mblur" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation={`${blur.sx.toFixed(2)} ${blur.sy.toFixed(2)}`} /></filter>
         </defs></svg>
       ) : null}
-      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: mask ? 'none' : [whipStyle(props.shots, f, W).filter, gradeAt(shot, f).filter, fxFilter(fx, f), povFilter(fx, f), blur ? 'url(#raymi-mblur)' : '', fin > 0 ? 'url(#raymi-finwave)' : ''].filter(Boolean).join(' ')}}>
+      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: mask ? 'none' : [whipStyle(props.shots, f, W).filter, twoOn ? '' : gradeAt(shot, f).filter, fxFilter(fx, f), povFilter(fx, f), blur ? 'url(#raymi-mblur)' : '', fin > 0 ? 'url(#raymi-finwave)' : ''].filter(Boolean).join(' ')}}>
         {ready ? (
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>
@@ -246,7 +249,7 @@ export const Film: React.FC<FilmProps> = (props) => {
             {/* the world around her may leave / arrive piece by piece (three/world.tsx, Watch Me) */}
             {Set ? <WorldMotion spec={worldSpec(shot.opts.world, fps)} f={f} centre={(actorKeys[0]?.pos as [number, number, number] | undefined) ?? [0, 0, 0]}>
               {/* freeze: the set's own time stops at the shot's first frame (she still moves) */}
-              <TwoTone on={twoToneOn(shot.opts.two_tone, f, Number(shot.opts.two_tone_n ?? 2))}
+              <TwoTone on={twoOn} bg={shot.opts.two_tone_bg === 'ink' ? 'ink' : 'paper'}
                 light={shot.opts.two_tone_light ? String(shot.opts.two_tone_light) : undefined} dark={shot.opts.two_tone_dark ? String(shot.opts.two_tone_dark) : undefined}>
               <Set f={shot.opts.freeze ? shot.from : f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} />
               </TwoTone>
@@ -277,7 +280,7 @@ export const Film: React.FC<FilmProps> = (props) => {
             ) : null}
             {shot.lyrics ? <group userData={{noSupport: true, qc: 'text'}}><Words3D L={shot.lyrics} words={shot.words} f={f} fps={fps} tone={gradeAt(shot, f).lyric} beats={props.beats} cam={camPos} lens={cam} /></group> : null}
             {/* after effects (toki 2026-10-23): AO + bloom on every 3D-Raymi film shot, DoF where a shot asks for it */}
-            {props.vrm && !mask ? <PostFX spec={postFor(shot.opts.post as PostSpec | undefined, herKey, camPos)} /> : null}
+            {props.vrm && !mask ? <PostFX spec={twoOn ? {...postFor(shot.opts.post as PostSpec | undefined, herKey, camPos), bloom: 0, glow: 0, vignette: 0} : postFor(shot.opts.post as PostSpec | undefined, herKey, camPos)} /> : null}
             {props.probe ? <Probe f={f} F={fNow} vrm={props.vrm ? staticFile(props.vrm) : null} shot={shot.id} /> : null}
             {mask ? <QcMask her={props.vrm ? vrmBones(staticFile(props.vrm))?.root ?? null : null} mode={mask} /> : null}
           </ThreeCanvas>
@@ -289,7 +292,7 @@ export const Film: React.FC<FilmProps> = (props) => {
       {battery && shot.opts.battery_sign ? <BatterySign {...battery} x={herHead[0] * W} y={herHead[1] * H} h={H} f={f} side={shot.opts.battery_sign === 'left' ? -1 : 1} /> : null}
       {icon}
       <Transitions shots={props.shots} f={fNow} />
-      <Grade grain={props.grain} tone={gradeAt(shot, f)} />
+      {twoOn ? <Grade grain={props.grain} tone={{...gradeAt(shot, f), split: 0, vignette: 0}} /> : <Grade grain={props.grain} tone={gradeAt(shot, f)} />}
       {props.overlay ? (
         <>
           <Stamp text={props.overlay.hook.text} from={props.overlay.hook.from} to={props.overlay.hook.to} top={H * OVERLAY.hookTop} accent="#b56bff" size={96} />

@@ -260,3 +260,12 @@ def test_lead_track_follows_the_line_over_a_chord(tmp_path):
     lead = S.lead_track(wav)
     assert [n["midi"] for n in lead["notes"]] == line          # not the chord's root (harmonic summation picked 48)
     assert lead["phrases"][0]["shape"] == "arch"
+
+
+def test_stops_finds_a_true_silence_between_loud_parts_but_not_a_fade():
+    """Love is War 121.94-122.62: -50 dB between a ducked passage and the drop was missed (no loud frame before its
+    second frame); the intro silence and the outro fade are never stops."""
+    db = np.r_[np.full(10, -60.0), np.full(60, -6.0), np.full(20, -10.0), [-18, -47, -50, -53, -27, -19, -25],
+               np.full(60, -5.0), np.linspace(-6, -90, 40)]
+    st = S.stops(db)
+    assert [(s["t0"], s["t1"]) for s in st] == [(9.0, 9.7)]

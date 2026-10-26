@@ -3,7 +3,10 @@
 // While on, every mesh of the SET (not her - she is rendered outside this group) is drawn flat paper-white or ink-black
 // by the value of its own material (light / additive = paper, dark = ink); off, the materials come back.
 // shots.json opts.two_tone = [t, ...] (song seconds -> frames, TIME_OPTS) + opts.two_tone_n (frames per hit, default 2)
-// + opts.two_tone_light / _dark (default paper #f1ebe0 / ink #0b0910).
+// + opts.two_tone_light / _dark (default paper #f1ebe0 / ink #0b0910) + opts.two_tone_bg ('paper' default | 'ink').
+// The sky / backdrop (BackSide domes) is the bg value: a night set otherwise went ~all ink - the measured test frame had
+// 28 % paper against the pros' 37-83 % (refs card two_tone_hit, 2026-10-26). Film.tsx turns the grade overlay, bloom
+// and vignette off in a two-tone frame: they lifted the ink to navy (p05 0.07 against the pros' 0.00-0.01).
 import React, {useLayoutEffect, useRef} from 'react';
 import * as THREE from 'three';
 import {frames} from '../three/events';
@@ -28,7 +31,7 @@ function value(m: THREE.Material): number {
   return 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b;
 }
 
-export const TwoTone: React.FC<{on: boolean; light?: string; dark?: string; children: React.ReactNode}> = ({on, light = '#f1ebe0', dark = '#0b0910', children}) => {
+export const TwoTone: React.FC<{on: boolean; light?: string; dark?: string; bg?: 'paper' | 'ink'; children: React.ReactNode}> = ({on, light = '#f1ebe0', dark = '#0b0910', bg = 'paper', children}) => {
   const ref = useRef<THREE.Group>(null);
   useLayoutEffect(() => {
     ref.current?.traverse((o) => {
@@ -40,7 +43,8 @@ export const TwoTone: React.FC<{on: boolean; light?: string; dark?: string; chil
         const first = Array.isArray(ud.twoTone.material) ? ud.twoTone.material[0] : ud.twoTone.material;
         const transparent = (first as THREE.Material).transparent && (first as THREE.Material).opacity < 0.15;
         mesh.visible = !transparent;
-        mesh.material = flatMat(value(first) > 0.3 ? light : dark);
+        const back = (first as THREE.Material).side === THREE.BackSide;   // the sky / backdrop dome
+        mesh.material = flatMat(back ? (bg === 'ink' ? dark : light) : value(first) > 0.3 ? light : dark);
       } else if (ud.twoTone) {
         mesh.material = ud.twoTone.material;
         mesh.visible = true;

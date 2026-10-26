@@ -372,21 +372,25 @@ def loudness_db(x: np.ndarray, sr: int, hop_s: float = 0.1) -> np.ndarray:
 
 def stops(db: np.ndarray, hop_s: float = 0.1, drop: float = 6.0, min_s: float = 0.4, ctx_s: float = 3.0) -> list[dict]:
     """Spans where the music drops >= drop dB under its surrounding level (the song's breaks / held stops)."""
+    # The SURROUNDINGS must be music (not the intro silence / the outro fade) - never the frame before: a true silence
+    # (-50 dB) has no loud frame before its second frame, so stops() saw 0.1 s and dropped Love is War's hidden stop
+    # 121.94-122.62 (8_EDIT_draft F1, 2026-10-26; tests/test_song_stops.py).
     c = int(ctx_s / hop_s)
-    loud = db > db.max() - 40
+    floor = db.max() - 40
     res, i, n = [], 0, len(db)
     low = np.zeros(n, bool)
     for k in range(n):
         ref = np.median(db[max(0, k - c): min(n, k + c + 1)])
-        low[k] = loud[max(0, k - 1)] and db[k] < ref - drop
+        low[k] = ref > floor and db[k] < ref - drop
     while i < n:
         if low[i]:
             j = i
             while j < n and low[j]:
                 j += 1
-            if (j - i) * hop_s >= min_s and i > 0 and j < n:     # not the intro silence / the outro fade
-                res.append({"t0": round(i * hop_s, 2), "t1": round(j * hop_s, 2),
-                            "depth_db": round(float(np.median(db[max(0, i - c):i]) - db[i:j].mean()), 1)})
+            depth = float(np.median(db[max(0, i - c):i]) - db[i:j].mean()) if i > 0 else 0.0
+            back = float(np.median(db[j:j + c]) - db[i:j].mean()) if j < n else 0.0   # the music comes BACK (no fade)
+            if (j - i) * hop_s >= min_s and i > 0 and j < n and depth >= drop and back >= drop:
+                res.append({"t0": round(i * hop_s, 2), "t1": round(j * hop_s, 2), "depth_db": round(depth, 1)})
             i = j
         else:
             i += 1
