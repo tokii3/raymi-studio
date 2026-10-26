@@ -1,5 +1,14 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-26 (later) - Love is War: denser drops (script v3c PASS x2), storyboard round 4 PASS -> toki
+- toki: "drops dichter schneiden wie die profis (ca. 0,5 s), riser / hi-hat / farbwechsel rein". Measured beat 0.464 s,
+  risers (58.6, 118.6, 173.2), hi-hat rolls + hat phase (off-beat, +0.20 s), Bm turns (chroma estimate).
+- Why pass (13/39 refs, rest = Gemini quota): pros cut drops as HOLD + FLASH, not a metronome -> v3 (flat beat grid)
+  BLOCKed by both critics; v3b/v3c: anchors + 4-frame flashes on the hats, hits on cuts, double time before section
+  changes, hand-written riser / roll / final-build tables, last hit A+ (dip, lamp in her pupils, silhouette).
+  Drops now 0.47 / 0.57 / 0.61 s per picture. Skills: editing ("density is a structure").
+- Storyboard round 4 (19 moments) brief-keeper PASS, gate PASS, sent to toki. NEXT: her verdict, then build.
+
 ## 2026-10-26 - Reference library learns the RULES (placement, empty room, speed, value, colour + why)
 - toki: "aus den referenzen lernen ... alles hat grund und wirkung" + "character placements, negative space,
   schnelligkeit ... wie und warum". Built raymi/principles.py: `refs learn|shots|why|rules|card|measure`.
