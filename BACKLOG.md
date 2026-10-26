@@ -141,3 +141,9 @@
   Root guess: a capability limit of hand-coded primitive sets, not a parameter. Options to toki: Blender-modelled +
   textured sets (cloud Blender, free), CC0 textures / HDRIs (Poly Haven, free, no account), or a graphic 2D world
   around the 3D Raymi. Also found: every board shot had `mouth: "silent"` - her war cry could never open the mouth.
+- Storyboard references for Love is War (2 rounds, brief-keeper BLOCK x2, reviews/storyboard_brief-keeper_1/2.md): the
+  34-video library has no matching frame for several key moments (a silhouette in a white-gold flood seen from above,
+  a light pillar on a held note, an ink-black sky with stars bursting, a lamp beam passing the lens at night, a landing
+  on a rock); HSR frames carry a music-player overlay. Tried: 26 candidate frames looked at by eye, distinct refs per
+  moment. Next: add references made for these classes (searched + verified ids, `refs download` + `refs frames`), or
+  let the previz still stand alone where no professional frame matches - toki decides.
