@@ -36,6 +36,18 @@
   "what": "below the support"
  },
  {
+  "cls": "hair_in",
+  "shot": "28",
+  "F": 1918,
+  "xy": [
+   0.501,
+   1.018
+  ],
+  "frames": 16,
+  "worst": 0.055,
+  "what": "hair in her torso"
+ },
+ {
   "cls": "sink",
   "shot": "32",
   "F": 2110,
@@ -46,18 +58,6 @@
   "frames": 15,
   "worst": 0.155,
   "what": "below the support"
- },
- {
-  "cls": "hair_in",
-  "shot": "28",
-  "F": 1920,
-  "xy": [
-   0.523,
-   1.11
-  ],
-  "frames": 14,
-  "worst": 0.053,
-  "what": "hair in her torso"
  },
  {
   "cls": "hair_in",
@@ -192,18 +192,6 @@
   "what": "hair in her torso"
  },
  {
-  "cls": "hair_in",
-  "shot": "35",
-  "F": 2280,
-  "xy": [
-   0.419,
-   0.992
-  ],
-  "frames": 8,
-  "worst": 0.067,
-  "what": "hair in her torso"
- },
- {
   "cls": "jerk",
   "shot": "32",
   "F": 2106,
@@ -254,13 +242,25 @@
  {
   "cls": "hair_in",
   "shot": "30a",
-  "F": 2014,
+  "F": 2016,
   "xy": [
-   0.529,
-   0.984
+   0.482,
+   1.27
   ],
   "frames": 7,
-  "worst": 0.071,
+  "worst": 0.07,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "35",
+  "F": 2266,
+  "xy": [
+   0.392,
+   0.995
+  ],
+  "frames": 7,
+  "worst": 0.069,
   "what": "hair in her torso"
  },
  {
@@ -268,11 +268,11 @@
   "shot": "35a",
   "F": 2294,
   "xy": [
-   0.338,
-   1.941
+   0.136,
+   2.542
   ],
   "frames": 7,
-  "worst": 0.062,
+  "worst": 0.064,
   "what": "hair in her torso"
  },
  {
@@ -316,24 +316,12 @@
   "shot": "35d",
   "F": 2314,
   "xy": [
-   0.504,
-   0.822
+   0.322,
+   1.353
   ],
   "frames": 5,
-  "worst": 0.052,
+  "worst": 0.054,
   "what": "hair in her torso"
- },
- {
-  "cls": "near_cut",
-  "shot": "30a",
-  "F": 2020,
-  "xy": [
-   0.802,
-   0.654
-  ],
-  "frames": 5,
-  "worst": 58,
-  "what": "the lens cuts into her"
  },
  {
   "cls": "hair_in",
@@ -436,11 +424,11 @@
   "shot": "30b",
   "F": 2032,
   "xy": [
-   0.544,
-   1.094
+   0.478,
+   1.237
   ],
   "frames": 3,
-  "worst": 0.066,
+  "worst": 0.057,
   "what": "hair in her torso"
  },
  {
@@ -448,11 +436,11 @@
   "shot": "35b",
   "F": 2296,
   "xy": [
-   0.538,
-   0.644
+   0.436,
+   0.668
   ],
   "frames": 3,
-  "worst": 0.036,
+  "worst": 0.047,
   "what": "hair in her torso"
  },
  {
@@ -514,30 +502,6 @@
   "frames": 2,
   "worst": 0.045,
   "what": "hair in her torso"
- },
- {
-  "cls": "near_cut",
-  "shot": "30b",
-  "F": 2030,
-  "xy": [
-   0.78,
-   0.537
-  ],
-  "frames": 2,
-  "worst": 29,
-  "what": "the lens cuts into her"
- },
- {
-  "cls": "head_cut",
-  "shot": "30a",
-  "F": 2018,
-  "xy": [
-   0.498,
-   0.629
-  ],
-  "frames": 2,
-  "worst": 0.037,
-  "what": "top of her head cut by the frame"
  },
  {
   "cls": "hair_in",
