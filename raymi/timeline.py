@@ -122,7 +122,10 @@ TIME_OPTS = {"lights_off", "window_break", "unfold", "shake", "cracks", "burst",
              # Love is War (2026-10-25): lightning (three/lighthouse.tsx), ink slashes (sets/Paper), cable pulses (three/cables.tsx)
              "lightning", "ink_slash", "cable_pulse", "ink_at", "black_at", "two_tone",
              # Love is War build (2026-10-26): the 1-beat colour flip on the measured minor-chord turns (Film.tsx)
-             "flip_at"}
+             "flip_at", "flood", "ceiling_beam", "cloud_wall", "clear_at", "lantern_violet", "eye_open", "ring_at",
+             "rain_stutter", "wave_shove", "spray_halo", "bubble_pulse", "ripple_at", "wave_smash", "splash_lens", "hair_whip",
+             "halo_ramp", "rain_ring", "grain_pulse", "arm_current", "beam_settle", "stars_at", "ink_sky_at", "pov_hand",
+             "beam_color"}
 # options holding specs (a dict or a list of dicts) whose own fields are times / positions (three/fire.tsx,
 # three/creatures.tsx): "at" / "out" / "toss" / "*_at" = song seconds -> frames, "grow" / "fade" / "ember" = seconds ->
 # frame counts, "pos" / "from" / "to" = a mark or [x, y, z]
@@ -886,9 +889,11 @@ def clip_names() -> set[str]:
 
 
 FX_KINDS = {"duo", "speed", "impact", "halftone", "spread", "slash", "melody", "ring",
+            # Love is War moments (studio/src/film/FxWar.tsx)
+            "crown", "dots", "ribbon", "pillar", "embers", "halo", "shards", "starburst", "insert",
             # the POV layer (studio/src/film/PovFx.tsx): on the lens / the glass in front of it
             "cover", "pov_hand", "ripple", "algae", "freeze", "polaroid", "stamp"}
-FX_TIMES = {"taps", "big", "write0", "write1"}   # fx fields in song seconds -> film frames
+FX_TIMES = {"taps", "big", "write0", "write1", "whip", "holds"}   # fx fields in song seconds -> film frames ([t0, t1] pairs too)
 
 
 LOW_LENS = 0.45      # x her height: a lens below this, looking UP at her ...
@@ -990,7 +995,14 @@ def compile_fx(s: dict, a: float, b: float, fr, errors: list[str], tag: str, sma
         item = {kk: v for kk, v in x.items() if kk not in ("at", "to")}
         for kk in FX_TIMES & set(item):                    # taps / write times: song seconds like the shot times
             v = item[kk]
-            item[kk] = [fr(float(t)) for t in v] if isinstance(v, list) else fr(float(v))
+            item[kk] = time_opt(v, fr) if isinstance(v, list) else fr(float(v))
+        if x["kind"] == "pillar" and x.get("src"):          # the held note it lasts: song seconds -> frames
+            item["src"] = [fr(float(t)) for t in x["src"]]
+        if x["kind"] == "dots" and x.get("src"):            # her glow points by pitch: the measured sung notes
+            notes = melody_notes_fx(smap or {}, float(x["src"][0]), float(x["src"][1]), x.get("voice", "vocal"))
+            item = {kk: v for kk, v in item.items() if kk not in ("src", "voice")}
+            off = float(x["src"][0]) - (a + float(x.get("at", 0)))   # notes are timed from the layer's start
+            item["notes"] = [[round((dt + off) * FPS, 1), m] for dt, m in notes]
         if x["kind"] == "melody":                          # notes from the song map: `src` [t0, t1] song seconds (default the shot)
             src = x.get("src") or [a, b]
             notes = melody_notes_fx(smap or {}, float(src[0]), float(src[1]), x.get("voice", "vocal"))
@@ -1062,7 +1074,21 @@ def _fixed_facing(row: dict) -> list[dict]:
     return out
 
 
-def expand_rows(rows: list[dict], errors: list[str]) -> list[dict]:
+def carry_keys(camera: list[dict]) -> list[dict]:
+    """Snap + tail (raymi-camera pro_rules, the vector law of raymi-editing pro_rules): a held set-up becomes a push that
+    jumps most of the way in its first 4 frames and keeps creeping in to the cut, so every picture arrives moving and
+    leaves moving the same way - the push carries the eye through the seam (`raymi seams`: carried, not static).
+    Only a single "aim" key is turned into a move; a written move stays as it is."""
+    if len(camera) != 1 or "aim" not in camera[0]:
+        return camera
+    k = camera[0]
+    d = float(k["aim"].get("d", 2.0))
+    def at(dd, t, ease):
+        return {**k, "at": t, "aim": {**k["aim"], "d": round(dd, 3)}, "ease": ease}
+    return [at(d * 1.18, 0, "linear"), at(d, 0.13, "snap"), at(d * 0.9, "end", "linear")]
+
+
+def expand_rows(rows: list[dict], errors: list[str], carry: bool = False) -> list[dict]:
     """The script's multicam grammar (Love is War v3b, toki 2026-10-26 "drops dichter schneiden wie die profis"): a row
     keeps ONE action of hers and is cut from several set-ups on the measured beat. A row (with "at" in song seconds) may
     carry
@@ -1095,6 +1121,8 @@ def expand_rows(rows: list[dict], errors: list[str]) -> list[dict]:
                     c["opts"] = {"grade_to": "war_white", "grade_at": white[0], "grade_s": round(white[1] - white[0], 3)}
                 cams.append(c)
         if not cams:
+            if row.get("carry", carry) and row.get("carry") is not False:
+                row = {**row, "camera": carry_keys(row.get("camera") or [])}
             out.append(row)
             continue
         if not isinstance(row.get("at"), (int, float)):
@@ -1104,6 +1132,10 @@ def expand_rows(rows: list[dict], errors: list[str]) -> list[dict]:
         a = float(row["at"])
         cams.sort(key=lambda c: float(c["at"]))
         base = {k: v for k, v in row.items() if k not in ("cams", "stutter", "riser")}
+        go = row.get("carry", True) is not False and (carry or row.get("carry"))   # multicam pictures carry by default
+        go = go if not st else False                       # a stutter alternates two HELD set-ups (same light, X2)
+        if go:
+            base["camera"] = carry_keys(base.get("camera") or [])
         actor = _fixed_facing(row)
         rid = row.get("id", f"s{i + 1}")
         if float(cams[0]["at"]) > a + 1e-6:
@@ -1117,6 +1149,8 @@ def expand_rows(rows: list[dict], errors: list[str]) -> list[dict]:
             sub["id"] = f"{rid}{chr(97 + j)}"
             sub["at"] = round(t, 3)
             sub["camera"] = c.get("camera") or base.get("camera")
+            if go and c.get("kind") not in ("stutter", "riser") and c.get("carry") is not False:
+                sub["camera"] = carry_keys(sub["camera"])
             if c.get("opts"):
                 sub["opts"] = {**(base.get("opts") or {}), **c["opts"]}
             if "fx" in c:
@@ -1178,7 +1212,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         errors.append("audio window is empty (audio.to must be after audio.from)")
         total = 1
     fr = lambda t: round(t * FPS) - f0                      # noqa: E731  song seconds -> film frame
-    shots_in = expand_rows(spec.get("shots", []), errors)
+    shots_in = expand_rows(spec.get("shots", []), errors, bool(spec.get("carry")))
     if not shots_in:
         errors.append("no shots")
     starts = [resolve_time(s.get("at", 0), lyrics, errors, f"shot {i + 1}") for i, s in enumerate(shots_in)]

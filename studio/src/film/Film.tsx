@@ -83,9 +83,12 @@ export const Film: React.FC<FilmProps> = (props) => {
   // the colour flip (Love is War, script v3b): one beat of gold-orange on ink on a measured turn to the minor chord -
   // the world flips, she keeps her values (opts.flip_at song seconds, flip_n frames, flip_light)
   const flipOn = twoToneOn(shot.opts.flip_at, f, Number(shot.opts.flip_n ?? 14));
-  const twoOn = flipOn || twoToneOn(shot.opts.two_tone, f, Number(shot.opts.two_tone_n ?? 2));
+  // the flood (the last hit A+ / the cold open): the world white-gold, SHE a black silhouette in it (opts.flood [t],
+  // flood_n frames, flood_light) - the one place her values give way, on purpose (4_SCRIPT rows 0b, 83)
+  const floodOn = twoToneOn(shot.opts.flood, f, Number(shot.opts.flood_n ?? 6));
+  const twoOn = flipOn || floodOn || twoToneOn(shot.opts.two_tone, f, Number(shot.opts.two_tone_n ?? 2));
   const ink = String(shot.opts.two_tone_dark ?? '#0b0910');
-  const paper = flipOn ? String(shot.opts.flip_light ?? '#f0a03c') : shot.opts.two_tone_light ? String(shot.opts.two_tone_light) : undefined;
+  const paper = floodOn ? String(shot.opts.flood_light ?? '#fff1d2') : flipOn ? String(shot.opts.flip_light ?? '#f0a03c') : shot.opts.two_tone_light ? String(shot.opts.two_tone_light) : undefined;
   // a 3D shot names her rig keys itself (shots.json "actor"); the 2026-10-21 VRM edition translated sprite keys
   const actorKeys = useMemo(() => shot.actor?.length ? shot.actor : vrmFilmKeys(shot.puppets), [shot]);
   const gain = shot.mouth?.gain ?? 1;
@@ -261,6 +264,7 @@ export const Film: React.FC<FilmProps> = (props) => {
                 her={(actorKeys[0]?.pos as [number, number, number] | undefined) ?? [0, 0, 0]} />
             </WorldMotion> : null}
             {props.vrm ? (
+              <TwoTone on={floodOn} light={ink} dark={ink}>
               <VrmPuppet url={staticFile(props.vrm)} keys={actorKeys} f={f} fps={fps} from={shot.from} camPos={camPos}
                 mouthKeys={shotMouth} lock={Number(shot.opts.lock ?? (shot.actor ? 0.1 : 0.38)) * (1 - darkNow) + 0.32 * darkNow} shadow={String(shot.opts.shadow ?? '#120b2b')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={0.12 * glowGain}
@@ -269,6 +273,7 @@ export const Film: React.FC<FilmProps> = (props) => {
                 keyLight={Number(shot.opts.her_key ?? shot.opts.depth ?? 0) * (1 - 0.85 * darkNow)}
                 trails={Number(shot.opts.trails ?? 0)} lampLight={Number(shot.opts.her_light ?? 0)}
                 rimColor={shot.opts.her_rim ? String(shot.opts.her_rim) : undefined} rimGain={Number(shot.opts.her_rim_i ?? 1)} />
+              </TwoTone>
             ) : (
               <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={glowGain} />
@@ -291,7 +296,7 @@ export const Film: React.FC<FilmProps> = (props) => {
         ) : null}
       </AbsoluteFill>
       {mask ? null : (<>
-      <Fx2D fx={fx} f={fNow} center={herScreen} aspect={aspect} />
+      <Fx2D fx={fx} f={fNow} center={herScreen} head={herHead} aspect={aspect} />
       <PovLayer fx={fx as never} f={fNow} W={W} H={H} />
       {battery && shot.opts.battery_sign ? <BatterySign {...battery} x={herHead[0] * W} y={herHead[1] * H} h={H} f={f} side={shot.opts.battery_sign === 'left' ? -1 : 1} /> : null}
       {icon}

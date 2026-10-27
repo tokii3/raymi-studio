@@ -331,3 +331,11 @@ def test_riser_steps_push_on_one_axis_and_climb_to_white():
     assert out[2]["camera"][0]["roll"] == 3 and out[2]["opts"]["grade_to"] == "war_white"
     pos, look = T.aim_camera({"at": [0, 0, 0], "d": 2.0, "az": 90, "h": 0.0}, {}, {}, errors, "t")
     assert abs(pos[0] - 2.0) < 1e-3 and abs(pos[2]) < 1e-3 and look == [0.0, 0.0, 0.0]
+
+
+def test_carry_turns_a_held_setup_into_snap_and_tail():
+    """raymi-camera pro_rules: a held set-up arrives moving and leaves moving the same way (raymi seams: carried)."""
+    keys = T.carry_keys([{"at": 0, "aim": {"d": 1.0, "az": 0}, "fov": 40}])
+    assert [k["aim"]["d"] for k in keys] == [1.18, 1.0, 0.9] and keys[1]["ease"] == "snap" and keys[2]["at"] == "end"
+    moved = [{"at": 0, "aim": {"d": 1}}, {"at": 1, "aim": {"d": 2}}]
+    assert T.carry_keys(moved) == moved

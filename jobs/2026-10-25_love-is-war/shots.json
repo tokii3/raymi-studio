@@ -15,6 +15,7 @@
  "aware": 0.25,
  "depth": 0.8,
  "kick": 0.4,
+ "carry": true,
  "window": {
   "short": {
    "from": 62.167,
@@ -268,7 +269,8 @@
      "motif": "black",
      "tone": "ink"
     }
-   ]
+   ],
+   "carry": false
   },
   {
    "id": "1",
@@ -771,7 +773,7 @@
      "kind": "ribbon",
      "at": 0.017,
      "to": "end",
-     "notes": [
+     "holds": [
       [
        9.85,
        11.2
@@ -2788,7 +2790,8 @@
      "yaw": 0
     },
     "drop_hang": 1
-   }
+   },
+   "carry": false
   },
   {
    "id": "28",
@@ -2954,7 +2957,7 @@
     {
      "at": 0,
      "aim": {
-      "d": 2.9,
+      "d": 3.2,
       "az": 15,
       "y": 1.2,
       "h": 0.0
@@ -3248,7 +3251,8 @@
       }
      ]
     }
-   ]
+   ],
+   "carry": false
   },
   {
    "id": "32",
@@ -3691,7 +3695,8 @@
    ],
    "opts": {
     "freeze": true
-   }
+   },
+   "carry": false
   },
   {
    "id": "36",
@@ -4881,7 +4886,8 @@
      "to": 0.45,
      "heartbeat": 1
     }
-   ]
+   ],
+   "carry": false
   },
   {
    "id": "53",
@@ -5031,7 +5037,8 @@
       0.9
      ]
     }
-   ]
+   ],
+   "carry": false
   },
   {
    "id": "54",
@@ -7100,7 +7107,8 @@
        "fov": 46,
        "roll": 0
       }
-     ]
+     ],
+     "carry": false
     }
    ]
   },
@@ -8735,7 +8743,8 @@
      "to": 0.75,
      "heartbeat": 1
     }
-   ]
+   ],
+   "carry": false
   }
  ]
 }

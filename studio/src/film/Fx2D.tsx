@@ -12,6 +12,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {rnd} from '../three/look';
 import type {PovFx} from './PovFx';
+import {FxWar, WAR_KINDS, type WarFx} from './FxWar';
 
 export type Fx =
   | {kind: 'duo' | 'spread'; from: number; to: number; dark: string; light: string; levels?: number; mix?: number;
@@ -28,6 +29,7 @@ export type Fx =
       per?: number; width?: number; color?: string; head?: string}
   // a ring bursting at the lens (her ping / shout, T03): grows from 0 to r1 (share of the frame height) over the layer
   | {kind: 'ring'; from: number; to: number; x?: number; y?: number; r1?: number; band?: number; color?: string; n?: number}
+  | WarFx    // Love is War moments (FxWar.tsx): crown, dots, ribbon, pillar, embers, halo, shards, starburst, insert
   | PovFx;   // the POV layer (PovFx.tsx): cover, pov_hand, ripple, algae, freeze, polaroid, stamp
 
 type Duo = Extract<Fx, {kind: 'duo' | 'spread'}>;
@@ -92,12 +94,13 @@ export function fxFilter(fx: Fx[] | undefined, f: number): string {
 }
 
 /** Overlays drawn on top of the picture: speed lines and halftone. */
-export const Fx2D: React.FC<{fx?: Fx[]; f: number; center?: [number, number]; aspect?: number}> = ({fx, f, center = [0.5, 0.5], aspect = 16 / 9}) => {
+export const Fx2D: React.FC<{fx?: Fx[]; f: number; center?: [number, number]; head?: [number, number]; aspect?: number}> = ({fx, f, center = [0.5, 0.5], head = [0.5, 0.3], aspect = 16 / 9}) => {
   const items = live(fx, f);
   if (!items.length) return null;
   return (
     <>
       {items.map((x, i) => {
+        if (WAR_KINDS.has(x.kind)) return <FxWar key={i} x={x as WarFx} f={f} center={center} head={head} />;
         if (x.kind === 'speed') return <Speed key={i} x={x} f={f} />;
         if (x.kind === 'spread') {
           // the grey world outside a circle around HER: desaturate + tint, with a soft hole that grows (CSS mask)
