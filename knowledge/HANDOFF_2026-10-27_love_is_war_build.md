@@ -53,3 +53,14 @@ look-critic stills 1: FAIL (reviews/stills_look-critic_1.md). Whole-film draft: 
 "falls viele stills einer scene gerendert werden müssen für qc > lieber als kurze video sequenz rendern oder falls
 nötig das ganze video ... aber keine render leistung / zeit verschwenden". -> one stills round for framing questions;
 once the framing holds, an interim VIDEO (render.yml) instead of many stills per burst scene, gated before she sees it.
+
+## State after the fix list (toki 2026-10-27 "erst die Fix-Liste ...") - stills 9 + draft 2
+- Done: rock mound no-lens (+ test), climb outside it; she pulls the lamp from its far side (lantern pictures show her
+  face); the white ramp no longer lights her; slash off the scream; deep row 6 on her chest; dots insert = her five
+  lights; lamp + Fresnel vanish in a flood; THE silhouette in front of the lamp again (rows 0b / 83).
+- look-critic stills 2: FAIL (reviews/stills_look-critic_2.md) -> gate FAIL -> parked (BACKLOG, anti-loop). Draft 2
+  = release render-2026-10-25_love-is-war-74: black spans down to 11.6 (0.9 s, deep row 6's 2nd main picture) and
+  93.8 (2.4 s, row 43 wave smash on the rock) besides the intended blacks.
+- NEXT session (studio parts first, then ONE stills round, then the critics): skin-protect cap for her under the lamp /
+  beam (VrmPuppet + PostFX), a closer + cleaner silhouette camera for 0b / 83, the deep's painted layers (m03 void),
+  brush edge + paper grain on FxWar shapes, contact shadows + water reflections, the lamp roof off red, rows 6 / 43.
