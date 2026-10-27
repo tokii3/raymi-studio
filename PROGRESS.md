@@ -1,5 +1,17 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-27 (evening) - Motion fix (toki x3: "bewegungen nicht flüssig ... statisch ... plastik ... kollisionen")
+- Measured first: her limbs nearly still 33 % of the draft, median 0.22 m/s; the chorus 42 % / 0.29 m/s.
+- Built (reusable): clip-energy.yml + raymi/clip_energy_blender.py (every Mixamo clip measured in Blender: speed, still
+  share, loop seam -> studio/catalog/clip_energy.json, 486 clips); timeline: held frames play on after 8 frames
+  (exact frame), loud-section energy lint, loop-seam lint, one-shot clips play once; `raymi motion` (her motion per
+  section from the probe of the REAL render, designed stops / calm rows left out) + the gate reads out/motion.json;
+  hair colliders down to the knees; a 45-degree key light; Love is War lock 0.75 -> 0.3 + ink outline; inserts
+  slam in from oversize.
+- Excerpt 58.6-80.5 (render run 77): chorus 5 % still, 0.78 m/s, reality ok (1 static = the designed stop), qc ok.
+  motion-critic + look-critic FAIL (reviews/excerpt_*): she is small / from behind / dark in many pictures, effects
+  read as stickers, the pillar column bands. Sent to toki FAIL-marked as she asked, with a before / after video.
+
 ## 2026-10-27 (later) - Love is War fix list (toki: "erst die Fix-Liste ... dann durch Kritiker und Gate")
 - Fixed in shared parts: the rock mound is a no-lens place (timeline rock_no_lens + test; the 6.5 s black climb is
   gone), she pulls the lamp from its far side so the lantern pictures show her face, the white ramp no longer

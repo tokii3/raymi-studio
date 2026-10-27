@@ -64,3 +64,11 @@ once the framing holds, an interim VIDEO (render.yml) instead of many stills per
 - NEXT session (studio parts first, then ONE stills round, then the critics): skin-protect cap for her under the lamp /
   beam (VrmPuppet + PostFX), a closer + cleaner silhouette camera for 0b / 83, the deep's painted layers (m03 void),
   brush edge + paper grain on FxWar shapes, contact shadows + water reflections, the lamp roof off red, rows 6 / 43.
+
+## Motion fix (toki 2026-10-27 "Ja, setz den Plan so um ...") - done, waiting for her verdict on the excerpt
+- Tools: studio/catalog/clip_energy.json (push studio/catalog/clip_energy.request to measure again), `raymi motion`,
+  timeline lints (energy in loud sections, loop seams), hold cap + exact holds, gate reads out/motion.json.
+- Excerpt 58.6-80.5 sent FAIL-marked (deliveries/2026-10-25_love-is-war/excerpt/, render run 77).
+- Critics' next fixes (reviews/excerpt_*): her face >= 0.10 of the frame in hero pictures (wide / back views in the
+  chorus grid), rim light so she separates from the navy, ink shapes with grain (not vector stickers), the pillar
+  column without bands / see-through hair, more lens attacks with impact frames in the drops.
