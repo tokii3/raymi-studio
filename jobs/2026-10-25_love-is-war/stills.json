@@ -1,5 +1,5 @@
 {
- "_why": "build round 2: stills 1 showed fault CLASSES (her real head lower than the assumed eye height -> crown of her head in close shots; she sinks into the lantern base; the above-water world through the sea). The scene probe measures her head / feet in every shot, raymi frame puts every close picture on the measured head, then the same 21 moments again.",
+ "_why": "build round 3: the probe of round 2 (rows recovered from its log after frame.py failed) measured her head 0.25-0.45 m below the assumed eye height -> 69 close pictures fitted by raymi frame + 8 by hand; gallery inside the rail, a real landing ledge, under water without the above-water world, lighter gold hit flashes, the ink night dark.",
  "format": "mv",
  "frames": [
   8,
@@ -18,7 +18,7 @@
   3225,
   3666,
   3681,
-  4392,
+  4395,
   4635,
   5208,
   5319,
@@ -48,7 +48,5 @@
   "m21_ink_night"
  ],
  "scale": 1,
- "round": "build2",
- "probe": 4,
- "frame_fit": true
+ "round": "build3"
 }

@@ -44,6 +44,10 @@
     "len": 90,
     "spin": 24.0,
     "beam": 1.0,
+    "ledge": [
+     -5.5,
+     -27.0
+    ],
     "yaw": 0
    },
    "painted": 1,
@@ -154,6 +158,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 200
     },
     "rain_at": 0.0,
@@ -161,7 +169,7 @@
      0.0
     ],
     "two_tone_n": 2,
-    "two_tone_light": "#f0a03c",
+    "two_tone_light": "#ffc35c",
     "post": {
      "glow": 1,
      "vignette": 0.4,
@@ -177,6 +185,11 @@
      "size": 0.55,
      "hole": 0.36
     }
+   ],
+   "frame_fit": [
+    -0.001,
+    -0.171,
+    0.02
    ]
   },
   {
@@ -228,6 +241,10 @@
      "len": 90,
      "spin": 0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 14.95,
      "lantern": "her"
     },
@@ -349,7 +366,12 @@
     "kind": "cut",
     "frames": 0
    },
-   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
+   "frame_fit": [
+    0.232,
+    -0.082,
+    -0.254
+   ]
   },
   {
    "id": "2",
@@ -492,7 +514,12 @@
      ]
     }
    ],
-   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
+   "frame_fit": [
+    -0.07,
+    -0.077,
+    -0.121
+   ]
   },
   {
    "id": "4",
@@ -711,7 +738,7 @@
      9.358
     ],
     "two_tone_n": 2,
-    "two_tone_light": "#f0a03c"
+    "two_tone_light": "#ffc35c"
    },
    "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
   },
@@ -1072,7 +1099,19 @@
      ]
     }
    ],
-   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
+   "frame_fit": [
+    0.245,
+    -0.074,
+    0.0
+   ],
+   "frame_fits": {
+    "8a": [
+     0.295,
+     -0.004,
+     0.0
+    ]
+   }
   },
   {
    "id": "9",
@@ -1200,7 +1239,14 @@
      ]
     }
    ],
-   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
+   "frame_fits": {
+    "9a": [
+     0.13,
+     -0.014,
+     -0.035
+    ]
+   }
   },
   {
    "id": "10",
@@ -1326,7 +1372,14 @@
      ]
     }
    ],
-   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
+   "frame_fits": {
+    "10a": [
+     0.295,
+     -0.109,
+     0.0
+    ]
+   }
   },
   {
    "id": "11",
@@ -1445,7 +1498,14 @@
      ]
     }
    ],
-   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
+   "frame_fits": {
+    "11a": [
+     0.192,
+     0.002,
+     0.0
+    ]
+   }
   },
   {
    "id": "12",
@@ -1577,7 +1637,14 @@
      ]
     }
    ],
-   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
+   "frame_fits": {
+    "12a": [
+     0.148,
+     0.009,
+     -0.256
+    ]
+   }
   },
   {
    "id": "13",
@@ -1750,7 +1817,7 @@
       "d": 1.1,
       "az": 0,
       "y": 1.4,
-      "h": 1.3,
+      "h": 1.36,
       "at": [
        0.0,
        0.5,
@@ -1819,7 +1886,7 @@
         "d": 1.1,
         "az": 0,
         "y": 1.4,
-        "h": 1.3,
+        "h": 1.36,
         "at": [
          0.0,
          0.5,
@@ -1837,7 +1904,7 @@
         "d": 1.6,
         "az": 0,
         "y": 1.4,
-        "h": 1.25,
+        "h": 1.31,
         "at": [
          0.0,
          0.5,
@@ -1849,7 +1916,12 @@
       }
      ]
     ]
-   }
+   },
+   "frame_fit": [
+    0.028,
+    -0.132,
+    -0.086
+   ]
   },
   {
    "id": "16",
@@ -1913,6 +1985,11 @@
      "n": 1,
      "brush": 1
     }
+   ],
+   "frame_fit": [
+    0.013,
+    -0.22,
+    -0.076
    ]
   },
   {
@@ -1982,6 +2059,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 10
     },
     "rain_stutter": [
@@ -1997,7 +2078,13 @@
     "spray_halo": [
      31.904
     ]
-   }
+   },
+   "frame_fit": [
+    0.026,
+    -0.341,
+    -0.099
+   ],
+   "low_ok": "the lens at the waterline: her skirt is under the opaque sea surface"
   },
   {
    "id": "18",
@@ -2053,6 +2140,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -825.95
     },
     "two_tone": [
@@ -2060,7 +2151,12 @@
     ],
     "two_tone_n": 2,
     "two_tone_light": "#fff1d2"
-   }
+   },
+   "frame_fit": [
+    0.04,
+    -0.362,
+    -0.063
+   ]
   },
   {
    "id": "19",
@@ -2136,6 +2232,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -913.2
     }
    },
@@ -2150,6 +2250,11 @@
      "seed": 1,
      "brush": 1
     }
+   ],
+   "frame_fit": [
+    0.029,
+    -0.36,
+    0.005
    ]
   },
   {
@@ -2296,6 +2401,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -1085.23
     },
     "two_tone": [
@@ -2358,6 +2467,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -1114.75
     },
     "pov_hand": 47.1
@@ -2596,6 +2709,11 @@
      "motif": "bubbles",
      "tone": "clear"
     }
+   ],
+   "frame_fit": [
+    0.182,
+    -0.406,
+    0.051
    ]
   },
   {
@@ -2651,6 +2769,10 @@
      "len": 90,
      "spin": 8,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -452.03
     },
     "grade_to": "war_white",
@@ -2719,6 +2841,10 @@
      "len": 90,
      "spin": 8,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -457.31
     },
     "grade_to": "war_white",
@@ -2779,6 +2905,38 @@
       0.32
      ]
     ]
+   },
+   "frame_fits": {
+    "27b": [
+     0.032,
+     -0.367,
+     -0.098
+    ],
+    "27c": [
+     -0.006,
+     -0.373,
+     -0.1
+    ],
+    "27d": [
+     0.06,
+     -0.308,
+     -0.087
+    ],
+    "27e": [
+     0.007,
+     -0.294,
+     -0.078
+    ],
+    "27g": [
+     0.021,
+     -0.264,
+     -0.071
+    ],
+    "27h": [
+     0.021,
+     -0.276,
+     -0.074
+    ]
    }
   },
   {
@@ -2826,11 +2984,20 @@
      "len": 90,
      "spin": 0,
      "beam": 0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0
     },
     "drop_hang": 1
    },
-   "carry": false
+   "carry": false,
+   "frame_fit": [
+    0.022,
+    -0.302,
+    -0.053
+   ]
   },
   {
    "id": "28",
@@ -2937,6 +3104,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 200
     },
     "two_tone": [
@@ -2944,7 +3115,7 @@
      63.808
     ],
     "two_tone_n": 4,
-    "two_tone_light": "#f0a03c",
+    "two_tone_light": "#ffc35c",
     "post": {
      "glow": 1,
      "vignette": 0.4,
@@ -2986,6 +3157,11 @@
      "x0": 0.06,
      "step": 0.11
     }
+   ],
+   "frame_fit": [
+    -0.006,
+    -0.448,
+    0.052
    ]
   },
   {
@@ -3074,7 +3250,14 @@
      ],
      "why": "4-frame two-value insert: slash"
     }
-   ]
+   ],
+   "frame_fits": {
+    "29a": [
+     0.007,
+     -0.359,
+     -0.002
+    ]
+   }
   },
   {
    "id": "30",
@@ -3180,7 +3363,24 @@
      ],
      "why": "4-frame two-value insert: ink_drops"
     }
-   ]
+   ],
+   "frame_fit": [
+    0.02,
+    -0.281,
+    0.025
+   ],
+   "frame_fits": {
+    "30a": [
+     0.006,
+     -0.222,
+     0.001
+    ],
+    "30b": [
+     0.023,
+     -0.232,
+     0.004
+    ]
+   }
   },
   {
    "id": "31",
@@ -3291,7 +3491,14 @@
      ]
     }
    ],
-   "carry": false
+   "carry": false,
+   "frame_fits": {
+    "31a": [
+     0.018,
+     -0.013,
+     0.0
+    ]
+   }
   },
   {
    "id": "32",
@@ -3470,7 +3677,10 @@
        "fov": 50,
        "roll": 0
       }
-     ]
+     ],
+     "opts": {
+      "detail": "the barb tip at the lens"
+     }
     },
     {
      "at": 73.433,
@@ -3487,7 +3697,19 @@
      ],
      "why": "4-frame two-value insert: claws"
     }
-   ]
+   ],
+   "frame_fit": [
+    0.015,
+    -0.209,
+    0.045
+   ],
+   "frame_fits": {
+    "33a": [
+     -0.008,
+     0.242,
+     0.0
+    ]
+   }
   },
   {
    "id": "34",
@@ -3528,6 +3750,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -1775.96
     }
    },
@@ -3580,7 +3806,14 @@
       }
      ]
     }
-   ]
+   ],
+   "frame_fits": {
+    "34b": [
+     -0.007,
+     -0.222,
+     0.002
+    ]
+   }
   },
   {
    "id": "35",
@@ -3638,7 +3871,10 @@
        "fov": 42,
        "roll": 0
       }
-     ]
+     ],
+     "opts": {
+      "detail": "her mouth singing at us (a mouth macro, d 0.4)"
+     }
     },
     {
      "at": 76.5,
@@ -3693,7 +3929,19 @@
       }
      ]
     }
-   ]
+   ],
+   "frame_fits": {
+    "35d": [
+     0.137,
+     -0.335,
+     0.109
+    ],
+    "35a": [
+     0.241,
+     -0.41,
+     0.0
+    ]
+   }
   },
   {
    "id": "35H",
@@ -3738,7 +3986,12 @@
    "opts": {
     "freeze": true
    },
-   "carry": false
+   "carry": false,
+   "frame_fit": [
+    -0.212,
+    -0.215,
+    0.069
+   ]
   },
   {
    "id": "36",
@@ -3751,7 +4004,7 @@
       "d": 1.0,
       "az": 0,
       "y": 1.6,
-      "h": 0.6
+      "h": 1.0
      },
      "fov": 40,
      "roll": 0
@@ -3800,6 +4053,11 @@
       80.467
      ]
     }
+   ],
+   "frame_fit": [
+    0.0,
+    -0.45,
+    0.0
    ]
   },
   {
@@ -3860,6 +4118,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 120
     },
     "moon": false,
@@ -3955,6 +4217,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 120
     },
     "moon": false,
@@ -4025,6 +4291,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 40
     }
    }
@@ -4117,13 +4387,17 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 40
     },
     "two_tone": [
      87.03
     ],
     "two_tone_n": 3,
-    "two_tone_light": "#f0a03c"
+    "two_tone_light": "#ffc35c"
    },
    "fx": [
     {
@@ -4133,6 +4407,11 @@
      "n": 12,
      "stutter": 2
     }
+   ],
+   "frame_fit": [
+    -0.192,
+    -0.416,
+    -0.084
    ]
   },
   {
@@ -4236,6 +4515,13 @@
        "roll": 0
       }
      ]
+    ]
+   },
+   "frame_fits": {
+    "41c": [
+     -0.102,
+     -0.243,
+     -0.029
     ]
    }
   },
@@ -4486,6 +4772,11 @@
      "seed": 10,
      "brush": 1
     }
+   ],
+   "frame_fit": [
+    -0.059,
+    -0.344,
+    0.002
    ]
   },
   {
@@ -4524,7 +4815,12 @@
     "hair_whip": [
      102.48
     ]
-   }
+   },
+   "frame_fit": [
+    -0.005,
+    -0.187,
+    0.001
+   ]
   },
   {
    "id": "47",
@@ -4559,7 +4855,12 @@
     "rain_at": 84.933,
     "rain_end_at": 999.0,
     "shallows": 1
-   }
+   },
+   "frame_fit": [
+    -0.023,
+    -0.225,
+    0.019
+   ]
   },
   {
    "id": "48",
@@ -4618,6 +4919,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 60
     },
     "shallows": 1
@@ -4665,7 +4970,12 @@
       110.4
      ]
     ]
-   }
+   },
+   "frame_fit": [
+    0.012,
+    -0.179,
+    -0.054
+   ]
   },
   {
    "id": "50",
@@ -4713,6 +5023,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -2636.35
     },
     "two_tone": [
@@ -4779,9 +5093,18 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 30
     }
-   }
+   },
+   "frame_fit": [
+    0.022,
+    -0.374,
+    0.015
+   ]
   },
   {
    "id": "52",
@@ -4890,7 +5213,24 @@
       }
      ]
     }
-   ]
+   ],
+   "frame_fit": [
+    0.026,
+    -0.387,
+    0.019
+   ],
+   "frame_fits": {
+    "52a": [
+     0.043,
+     -0.225,
+     0.013
+    ],
+    "52c": [
+     0.04,
+     -0.198,
+     0.009
+    ]
+   }
   },
   {
    "id": "52b",
@@ -4929,7 +5269,12 @@
      "heartbeat": 1
     }
    ],
-   "carry": false
+   "carry": false,
+   "frame_fit": [
+    0.065,
+    -0.221,
+    0.018
+   ]
   },
   {
    "id": "53",
@@ -5066,6 +5411,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0
     }
    },
@@ -5186,6 +5535,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -2913.43
     },
     "two_tone": [
@@ -5193,7 +5546,7 @@
      123.809
     ],
     "two_tone_n": 4,
-    "two_tone_light": "#f0a03c",
+    "two_tone_light": "#ffc35c",
     "rain_ring": [
      122.615
     ]
@@ -5295,6 +5648,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -5416,6 +5773,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -5467,7 +5828,14 @@
      ],
      "why": "4-frame two-value insert: speed"
     }
-   ]
+   ],
+   "frame_fits": {
+    "56a": [
+     0.026,
+     -0.545,
+     -0.096
+    ]
+   }
   },
   {
    "id": "57",
@@ -5520,6 +5888,10 @@
      "len": 90,
      "spin": 24.0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -3066.97,
      "lantern": "her"
     },
@@ -5528,7 +5900,8 @@
      128.3
     ],
     "two_tone_n": 2,
-    "two_tone_light": "#fff1d2"
+    "two_tone_light": "#fff1d2",
+    "detail": "her hand on the gallery rail (the beam inches over her head)"
    },
    "cams": [
     {
@@ -5580,9 +5953,9 @@
       "y": 1.0,
       "h": 13.180000000000001,
       "at": [
-       -7.1,
+       -7.46,
        12.38,
-       -27.25
+       -27.97
       ]
      },
      "fov": 46,
@@ -5618,6 +5991,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -5639,14 +6016,14 @@
     {
      "at": 0,
      "pos": [
-      -7.1,
+      -7.46,
       15.38,
-      -26.95
+      -27.669999999999998
      ],
      "look": [
-      -7.1,
+      -7.46,
       12.38,
-      -27.25
+      -27.97
      ],
      "fov": 50,
      "roll": 0
@@ -5654,14 +6031,14 @@
     {
      "at": 0.7,
      "pos": [
-      -7.3999999999999995,
+      -7.76,
       14.780000000000001,
-      -26.85
+      -27.57
      ],
      "look": [
-      -7.3,
+      -7.66,
       13.180000000000001,
-      -27.55
+      -28.27
      ],
      "fov": 50,
      "roll": 0
@@ -5676,9 +6053,9 @@
      "speed": 0.0,
      "motionMix": 1,
      "pos": [
-      -7.1,
+      -7.46,
       12.38,
-      -27.25
+      -27.97
      ],
      "face_lens": true
     },
@@ -5689,9 +6066,9 @@
      "speed": 1.0,
      "motionMix": 1,
      "pos": [
-      -7.1,
+      -7.46,
       12.38,
-      -27.25
+      -27.97
      ],
      "face_lens": true
     }
@@ -5708,6 +6085,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -5716,7 +6097,7 @@
      131.077
     ],
     "two_tone_n": 4,
-    "two_tone_light": "#f0a03c",
+    "two_tone_light": "#ffc35c",
     "ring_at": [
      131.33
     ]
@@ -5820,6 +6201,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -5841,6 +6226,11 @@
      "n": 1,
      "brush": 1
     }
+   ],
+   "frame_fit": [
+    0.034,
+    -0.057,
+    -0.1
    ]
   },
   {
@@ -5894,6 +6284,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -5937,7 +6331,19 @@
      ],
      "why": "4-frame two-value insert: rings"
     }
-   ]
+   ],
+   "frame_fit": [
+    0.092,
+    -0.373,
+    -0.053
+   ],
+   "frame_fits": {
+    "61a": [
+     0.044,
+     -0.366,
+     -0.012
+    ]
+   }
   },
   {
    "id": "62",
@@ -5988,6 +6394,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -6028,7 +6438,14 @@
      ],
      "why": "4-frame two-value insert: cable"
     }
-   ]
+   ],
+   "frame_fits": {
+    "62a": [
+     0.026,
+     -0.024,
+     -0.046
+    ]
+   }
   },
   {
    "id": "63",
@@ -6080,6 +6497,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -6088,7 +6509,7 @@
      139.297
     ],
     "two_tone_n": 4,
-    "two_tone_light": "#f0a03c"
+    "two_tone_light": "#ffc35c"
    },
    "cams": [
     {
@@ -6192,6 +6613,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -6257,7 +6682,24 @@
      ],
      "why": "4-frame two-value insert: dots"
     }
-   ]
+   ],
+   "frame_fit": [
+    0.033,
+    -0.353,
+    -0.015
+   ],
+   "frame_fits": {
+    "64a": [
+     0.033,
+     -0.23,
+     -0.015
+    ],
+    "64b": [
+     0.033,
+     -0.231,
+     -0.015
+    ]
+   }
   },
   {
    "id": "65",
@@ -6326,6 +6768,10 @@
      "len": 90,
      "spin": 10,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -1448.3,
      "lantern": "her"
     },
@@ -6456,7 +6902,14 @@
       }
      ]
     }
-   ]
+   ],
+   "frame_fits": {
+    "65f": [
+     0.013,
+     -0.288,
+     0.009
+    ]
+   }
   },
   {
    "id": "66",
@@ -6560,6 +7013,10 @@
      "len": 90,
      "spin": 40,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -5825.04,
      "lantern": "her"
     },
@@ -6568,7 +7025,7 @@
      146.33
     ],
     "two_tone_n": 4,
-    "two_tone_light": "#f0a03c"
+    "two_tone_light": "#ffc35c"
    },
    "cams": [
     {
@@ -6624,7 +7081,14 @@
       }
      ]
     }
-   ]
+   ],
+   "frame_fits": {
+    "66a": [
+     -0.019,
+     -0.087,
+     0.014
+    ]
+   }
   },
   {
    "id": "67",
@@ -6676,6 +7140,10 @@
      "len": 90,
      "spin": 30,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -4461.23,
      "lantern": "her"
     },
@@ -6684,7 +7152,7 @@
      149.6
     ],
     "two_tone_n": 2,
-    "two_tone_light": "#f0a03c",
+    "two_tone_light": "#ffc35c",
     "flip_at": [
      150.12
     ]
@@ -6728,7 +7196,19 @@
       }
      ]
     }
-   ]
+   ],
+   "frame_fits": {
+    "67a": [
+     -0.034,
+     -0.362,
+     0.029
+    ],
+    "67b": [
+     0.007,
+     -0.333,
+     -0.006
+    ]
+   }
   },
   {
    "id": "68",
@@ -6781,10 +7261,15 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
-    "lantern_room": 1
+    "lantern_room": 1,
+    "detail": "macro on her hand slipping and catching the frame"
    },
    "cams": [
     {
@@ -6821,6 +7306,11 @@
      ],
      "why": "4-frame two-value insert: smear"
     }
+   ],
+   "frame_fit": [
+    0.19,
+    -0.314,
+    0.044
    ]
   },
   {
@@ -6874,6 +7364,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -6983,7 +7477,20 @@
       }
      ]
     }
-   ]
+   ],
+   "frame_fit": [
+    -0.029,
+    -0.209,
+    -0.057
+   ],
+   "frame_fits": {
+    "69a": [
+     -0.006,
+     0.372,
+     -0.067
+    ]
+   },
+   "low_ok": "she hangs below the lamp base's edge, the lens at the base: the base hides her legs"
   },
   {
    "id": "70",
@@ -7040,6 +7547,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -7089,7 +7600,19 @@
      ],
      "why": "4-frame two-value insert: slash"
     }
-   ]
+   ],
+   "frame_fit": [
+    0.005,
+    -0.051,
+    -0.041
+   ],
+   "frame_fits": {
+    "70a": [
+     0.014,
+     -0.108,
+     -0.005
+    ]
+   }
   },
   {
    "id": "71",
@@ -7155,6 +7678,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -7179,7 +7706,19 @@
      ],
      "carry": false
     }
-   ]
+   ],
+   "frame_fit": [
+    -0.024,
+    -0.142,
+    -0.047
+   ],
+   "frame_fits": {
+    "71a": [
+     0.044,
+     0.08,
+     -0.077
+    ]
+   }
   },
   {
    "id": "72",
@@ -7231,6 +7770,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -7257,7 +7800,10 @@
        "fov": 44,
        "roll": 0
       }
-     ]
+     ],
+     "opts": {
+      "detail": "one dot of hers flaring"
+     }
     },
     {
      "at": 159.667,
@@ -7275,7 +7821,19 @@
      ],
      "why": "4-frame two-value insert: dots"
     }
-   ]
+   ],
+   "frame_fit": [
+    -0.179,
+    -0.349,
+    0.048
+   ],
+   "frame_fits": {
+    "72a": [
+     -0.269,
+     -0.228,
+     0.072
+    ]
+   }
   },
   {
    "id": "73",
@@ -7327,6 +7885,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -7355,7 +7917,19 @@
       }
      ]
     }
-   ]
+   ],
+   "frame_fit": [
+    -0.034,
+    -0.209,
+    -0.133
+   ],
+   "frame_fits": {
+    "73a": [
+     -0.075,
+     -0.128,
+     -0.162
+    ]
+   }
   },
   {
    "id": "74",
@@ -7592,6 +8166,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -7639,7 +8217,14 @@
      ],
      "why": "4-frame two-value insert: wedge"
     }
-   ]
+   ],
+   "frame_fits": {
+    "77a": [
+     -0.068,
+     -0.357,
+     0.032
+    ]
+   }
   },
   {
    "id": "78",
@@ -7691,6 +8276,10 @@
      "len": 90,
      "spin": 24,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 0,
      "lantern": "her"
     },
@@ -7735,7 +8324,19 @@
       }
      ]
     }
-   ]
+   ],
+   "frame_fits": {
+    "78a": [
+     -0.178,
+     -0.076,
+     -0.016
+    ],
+    "78b": [
+     -0.178,
+     -0.048,
+     -0.016
+    ]
+   }
   },
   {
    "id": "79",
@@ -7788,6 +8389,10 @@
      "len": 90,
      "spin": 6,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -996.5,
      "lantern": "her"
     },
@@ -7898,6 +8503,10 @@
      "len": 90,
      "spin": 6,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -1014.96,
      "lantern": "her"
     },
@@ -8037,6 +8646,10 @@
      "len": 90,
      "spin": 4,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -671.98,
      "lantern": "her"
     },
@@ -8277,6 +8890,10 @@
      "len": 90,
      "spin": 2,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": -339.52,
      "lantern": "her"
     },
@@ -8341,6 +8958,10 @@
        "len": 90,
        "spin": 24,
        "beam": 1.0,
+       "ledge": [
+        -5.5,
+        -27.0
+       ],
        "yaw": 0,
        "lantern": "her"
       },
@@ -8383,6 +9004,10 @@
        "len": 90,
        "spin": 24,
        "beam": 1.0,
+       "ledge": [
+        -5.5,
+        -27.0
+       ],
        "yaw": 0,
        "lantern": "her"
       },
@@ -8391,7 +9016,25 @@
      },
      "why": "2 frames: the lamp turning into her pupils (A+, toki 2026-10-26)"
     }
-   ]
+   ],
+   "frame_fits": {
+    "82b": [
+     0.086,
+     -0.257,
+     -0.023
+    ],
+    "82a": [
+     -0.008,
+     -0.31,
+     -0.259
+    ]
+   },
+   "frame_fit": [
+    -0.002,
+    -0.415,
+    -0.037
+   ],
+   "low_ok": "ECUs of her eyes 0.3-1.2 m away on the beam axis while she leans back on the lamp: the frame holds her face only"
   },
   {
    "id": "83",
@@ -8491,6 +9134,10 @@
      "len": 90,
      "spin": 0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 14.95,
      "lantern": "her"
     },
@@ -8597,6 +9244,10 @@
      "len": 90,
      "spin": 0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 14.95,
      "lantern": "her"
     },
@@ -8676,6 +9327,10 @@
      "len": 90,
      "spin": 0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 14.95,
      "lantern": "her"
     },
@@ -8687,7 +9342,12 @@
     "glow_flare": [
      181.93
     ]
-   }
+   },
+   "frame_fit": [
+    0.009,
+    -0.251,
+    -0.008
+   ]
   },
   {
    "id": "86",
@@ -8758,6 +9418,10 @@
      "len": 90,
      "spin": 0,
      "beam": 1.0,
+     "ledge": [
+      -5.5,
+      -27.0
+     ],
      "yaw": 14.95,
      "lantern": "her"
     },
@@ -8774,6 +9438,11 @@
      "to": "end",
      "n": 75
     }
+   ],
+   "frame_fit": [
+    -0.012,
+    -0.246,
+    0.006
    ]
   },
   {

@@ -93,9 +93,9 @@ def main(job_dir: Path, fmt: str = "mv") -> int:
             print(f"  {sid}: SKIP {r['skip']} {r['shift']}")
             continue
         if pic:                                            # a multicam picture of the row (raymi/timeline.py expand_rows)
-            fits = row.setdefault("frame_fits", {})
-            fits[sid] = [round(a + b, 3) for a, b in zip(fits.get(sid) or [0, 0, 0], r["shift"])]
-            print(f"  {sid}: shift {r['shift']} over {r['frames']} frames (frame {r['frame_h']} m tall) -> frame_fits {fits[sid]}")
+            pf = row.setdefault("frame_fits", {})
+            pf[sid] = [round(a + b, 3) for a, b in zip(pf.get(sid) or [0, 0, 0], r["shift"])]
+            print(f"  {sid}: shift {r['shift']} over {r['frames']} frames (frame {r['frame_h']} m tall) -> frame_fits {pf[sid]}")
             applied += 1
             continue
         old = row.get("frame_fit") or [0, 0, 0]

@@ -14,7 +14,7 @@ import {Ladder, LanternRoom, rockMat, towerMat} from './painted';
 
 type P3 = [number, number, number];
 export type LighthouseOpts = {pos?: [number, number]; height?: number; yaw?: number; spin?: number; beam?: number; len?: number;
-  lantern?: 'her'};   // lantern 'her': the lantern room at HER scale (three/painted.tsx LanternRoom), the lamp at height + 1.7
+  lantern?: 'her'; ledge?: [number, number]};   // ledge: a flat rock shelf (top y 2.0) she lands on (Love is War row 54)   // lantern 'her': the lantern room at HER scale (three/painted.tsx LanternRoom), the lamp at height + 1.7
 
 /** Along the cone's height: bright at the lamp (v = 1), gone at the far end. */
 function beamTex(painted = false): THREE.CanvasTexture {
@@ -107,6 +107,10 @@ export const Lighthouse: React.FC<{o: LighthouseOpts; f: number; fps: number; ca
       <mesh position={[x, H + 1.5, z]} material={red}><sphereGeometry args={[0.78, 20, 10, 0, Math.PI * 2, 0, Math.PI / 2]} /></mesh>
       </>}
       {painted ? <Ladder x={x} z={z} nx={n.x} nz={n.y} r={1.25} y0={1.6} y1={H + 0.3} /> : null}
+      {o.ledge ? <group>
+        <mesh position={[o.ledge[0], 1.8, o.ledge[1]]} material={rock}><cylinderGeometry args={[1.5, 1.8, 0.4, 9]} /></mesh>
+        <mesh position={[o.ledge[0], 0.2, o.ledge[1]]} material={rock} scale={[1.7, 1.6, 1.7]}><dodecahedronGeometry args={[1, 0]} /></mesh>
+      </group> : null}
       <mesh position={lamp} scale={3 + 22 * blaze} renderOrder={10}><planeGeometry args={[1, 1]} />
         <meshBasicMaterial map={glowTex('#fff3d6')} {...add} opacity={0.85 * v} fog={false} /></mesh>
       <pointLight position={lamp} color="#ffe7bd" intensity={14 * v} distance={30} decay={1.4} />
