@@ -187,8 +187,9 @@ const Slash: React.FC<{x: Extract<Fx, {kind: 'slash'}>; f: number; head?: [numbe
   let cy = (x.y ?? 0.5) * H;
   if (head) {
     const at = cy + Math.tan(((x.angle ?? -14) * Math.PI) / 180) * (head[0] - 0.5) * W;
-    const d = at - head[1] * H;
-    if (Math.abs(d) < 0.2 * H) cy += (d >= 0 ? 1 : -1) * (0.2 * H - Math.abs(d)) + (d >= 0 ? w * 0.6 : -w * 0.6);
+    // her face runs from a bit above the eyes down to the chin: the band head - 0.15 .. head + 0.32 of the frame
+    const top = (head[1] - 0.15) * H, bot = (head[1] + 0.32) * H;
+    if (at > top - w * 0.6 && at < bot + w * 0.6) cy += at - top < bot - at ? top - w * 0.6 - at : bot + w * 0.6 - at;
   }
   return (
     <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%'}}>
