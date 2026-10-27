@@ -84,6 +84,10 @@ def main(argv: list[str]) -> int:
     smap = json.loads((job_dir / spec.get("song_map", "song_map.json")).read_text(encoding="utf-8"))
     t_from = float(rep.get("t_from", 0.0))
     res = check(speeds(rep["rows"], int(rep.get("fps", 30))), smap.get("sections", []), t_from)
+    # the lens inside her (probe near_cut: her surface in front of the near plane) - toki 2026-10-27 "hohl von innen"
+    cuts = sorted({r["shot"] for r in rep["rows"] for f in r.get("faults", []) if f.get("cls") == "near_cut"})
+    if cuts:
+        res["faults"].append(f"the lens cuts into her in {len(cuts)} pictures: {cuts[:12]} - move the lens back")
     res["probe"] = str(probe)
     (job_dir / "out").mkdir(exist_ok=True)
     (job_dir / "out" / "motion.json").write_text(json.dumps(res, indent=1), encoding="utf-8")

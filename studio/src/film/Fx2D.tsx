@@ -12,7 +12,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {rnd} from '../three/look';
 import type {PovFx} from './PovFx';
-import {FxWar, WAR_KINDS, type WarFx} from './FxWar';
+import {FxWar, WAR_KINDS, inkDefs, type WarFx} from './FxWar';
 
 export type Fx =
   | {kind: 'duo' | 'spread'; from: number; to: number; dark: string; light: string; levels?: number; mix?: number;
@@ -193,7 +193,7 @@ const Slash: React.FC<{x: Extract<Fx, {kind: 'slash'}>; f: number; head?: [numbe
   }
   return (
     <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%'}}>
-      <g transform={`translate(${W / 2} ${cy}) rotate(${x.angle ?? -14}) translate(${-W / 2} 0)`}>
+      {inkDefs(`sl${s}`, s)}<g filter={`url(#sl${s})`}><g transform={`translate(${W / 2} ${cy}) rotate(${x.angle ?? -14}) translate(${-W / 2} 0)`}>
         {top.length > 1 ? <polygon points={[...top, ...bot].join(' ')} fill={color} /> : null}
         {/* the spray thrown off the stroke */}
         {Array.from({length: 26}, (_, k) => {
@@ -203,7 +203,7 @@ const Slash: React.FC<{x: Extract<Fx, {kind: 'slash'}>; f: number; head?: [numbe
           const yy = side * (w * 0.55 + rnd(s * 19 + k) * w * 1.2);
           return <circle key={`d${k}`} cx={xx} cy={yy} r={0.25 + rnd(s * 23 + k) * 1.2} fill={color} />;
         })}
-      </g>
+      </g></g>
     </svg>
   );
 };
@@ -221,10 +221,11 @@ const MelodyLine: React.FC<{x: Extract<Fx, {kind: 'melody'}>; f: number}> = ({x,
   const pop = last ? Math.min(1, (d - last[0] + 1) / 3) : 1;          // the newest head pops in 3 frames
   return (
     <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%'}}>
+      {inkDefs(`ml${x.from}`, 5)}<g filter={`url(#ml${x.from})`}>
       <path d={path} stroke={color} strokeWidth={w} fill="none" strokeLinecap="round" strokeLinejoin="round" />
       {pts.map(([px, py], k) => (
         <circle key={k} cx={px} cy={py} r={w * (k === pts.length - 1 ? 0.95 * pop : 0.8)} fill={x.head ?? '#c81f37'} />
-      ))}
+      ))}</g>
     </svg>
   );
 };

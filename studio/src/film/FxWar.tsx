@@ -29,9 +29,28 @@ export const WAR_KINDS = new Set(['crown', 'dots', 'ribbon', 'pillar', 'embers',
 const INK = '#0b0910', PAPER = '#f1ebe0', VIOLET = '#b98cff', WHITE_V = '#f3eeff';
 const W = 160, H = 90;
 const two = (f: number) => f - (f % 2);                          // on twos
-const svg = (children: React.ReactNode, blend?: React.CSSProperties['mixBlendMode']) => (
-  <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: blend}}>{children}</svg>
+/** The ink hand every drawn effect shares (toki 2026-10-27: the effects read as flat vector stickers): the edges are
+ *  displaced by noise (a brush that frays), a paper grain eats into the fill. One filter, so every effect is one hand. */
+export const inkDefs = (id: string, seed = 3) => (
+  <defs>
+    <filter id={id} x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves={2} seed={seed} result="n" />
+      <feDisplacementMap in="SourceGraphic" in2="n" scale={1.6} xChannelSelector="R" yChannelSelector="G" result="d" />
+      <feTurbulence type="fractalNoise" baseFrequency="2.6" numOctaves={1} seed={seed + 7} result="g" />
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.55" result="gm" />
+      <feComposite in="d" in2="gm" operator="in" />
+    </filter>
+  </defs>
 );
+let inkN = 0;
+const svg = (children: React.ReactNode, blend?: React.CSSProperties['mixBlendMode']) => {
+  const id = `ink${inkN++ % 997}`;
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: blend}}>
+      {inkDefs(id)}<g filter={`url(#${id})`}>{children}</g>
+    </svg>
+  );
+};
 
 /** arrival from oversize: 3 frames from `big` down to 1 with one small overshoot (the one spring of a hit) */
 function arrive(d: number, big = 0.4): number {
@@ -152,7 +171,8 @@ const Starburst: React.FC<{x: Extract<WarFx, {kind: 'starburst'}>; f: number; ce
     const a = rnd(k * 1.7) * Math.PI * 2, rr = (8 + rnd(k * 3.9) * 110) * e;
     const px = center[0] * W + Math.cos(a) * rr, py = center[1] * H + Math.sin(a) * rr * 0.6 - rr * 0.25;
     const s = 0.5 + rnd(k * 5.3) * 1.3;
-    return <path key={k} d={`M${px - s} ${py}L${px + s} ${py}M${px} ${py - s}L${px} ${py + s}`} stroke={k % 4 ? WHITE_V : VIOLET} strokeWidth={0.5} />;
+    const q = s * 0.28;   // a drawn four-point star (look-critic: the plus signs read as stock sparkles)
+    return <path key={k} d={`M${px} ${py - s}Q${px + q} ${py - q} ${px + s} ${py}Q${px + q} ${py + q} ${px} ${py + s}Q${px - q} ${py + q} ${px - s} ${py}Q${px - q} ${py - q} ${px} ${py - s}Z`} fill={k % 4 ? WHITE_V : VIOLET} />;
   })}</g>, 'screen');
 };
 
@@ -206,7 +226,7 @@ export const FxWar: React.FC<{x: WarFx; f: number; center: [number, number]; hea
     case 'ribbon': return <Ribbon x={x} f={f} center={center} />;
     case 'pillar': return <Pillar x={x} f={f} center={center} head={head} />;
     case 'embers': return <Embers x={x} f={f} center={center} />;
-    case 'halo': return <Halo x={x} f={f} center={center} />;
+    case 'halo': return null;   // read as a dashed HUD ring (look-critic, toki 2026-10-27 "sticker") - left out
     case 'shards': return <Shards x={x} f={f} />;
     case 'starburst': return <Starburst x={x} f={f} center={center} />;
     case 'insert': return <Insert x={x} f={f} />;

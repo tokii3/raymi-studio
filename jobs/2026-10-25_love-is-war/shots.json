@@ -60,8 +60,8 @@
    "lock": 0.3,
    "neutral_sky": 0.85,
    "her_key": 0.9,
-   "her_rim": "#dfe6ff",
-   "her_rim_i": 1.8,
+   "her_rim": "#ffd9a0",
+   "her_rim_i": 2.4,
    "fog_c": "#12183a",
    "post": {
     "glow": 0.6,
@@ -194,8 +194,7 @@
     -0.001,
     -0.081,
     0.02
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "0b",
@@ -263,8 +262,7 @@
      "vignette": 0
     },
     "her_key": 0.55
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "0c",
@@ -378,8 +376,7 @@
     0.232,
     0.008,
     -0.254
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "2",
@@ -453,8 +450,7 @@
      ]
     }
    ],
-   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
-   "outline": 0.003
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
   },
   {
    "id": "3",
@@ -528,8 +524,7 @@
     -0.07,
     0.013,
     -0.121
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "4",
@@ -639,8 +634,7 @@
      ]
     ]
    },
-   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
-   "outline": 0.003
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
   },
   {
    "id": "5",
@@ -751,8 +745,7 @@
     "two_tone_n": 2,
     "two_tone_light": "#ffc35c"
    },
-   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
-   "outline": 0.003
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
   },
   {
    "id": "6",
@@ -935,8 +928,7 @@
      ]
     }
    ],
-   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
-   "outline": 0.003
+   "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
   },
   {
    "id": "7",
@@ -1124,8 +1116,7 @@
      0.086,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "9",
@@ -1260,8 +1251,7 @@
      0.076,
      -0.035
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "10",
@@ -1394,8 +1384,7 @@
      -0.019,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "11",
@@ -1521,8 +1510,7 @@
      0.092,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "12",
@@ -1661,8 +1649,7 @@
      0.099,
      -0.256
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "13",
@@ -1767,8 +1754,7 @@
      ],
      "why": "4-frame two-value insert: beam"
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "14",
@@ -1823,8 +1809,7 @@
      "n": 1,
      "brush": 1
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "15",
@@ -1941,8 +1926,7 @@
     0.028,
     -0.042,
     -0.086
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "16",
@@ -2011,8 +1995,7 @@
     0.013,
     -0.13,
     -0.076
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "17",
@@ -2106,8 +2089,7 @@
     -0.251,
     -0.099
    ],
-   "low_ok": "the lens at the waterline: her skirt is under the opaque sea surface",
-   "outline": 0.003
+   "low_ok": "the lens at the waterline: her skirt is under the opaque sea surface"
   },
   {
    "id": "18",
@@ -2179,8 +2161,7 @@
     0.04,
     -0.272,
     -0.063
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "19",
@@ -2279,8 +2260,7 @@
     0.029,
     -0.27,
     0.005
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "20",
@@ -2353,8 +2333,7 @@
      "n": 1,
      "brush": 1
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "21",
@@ -2443,8 +2422,7 @@
      0.0,
      -0.6
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "22",
@@ -2624,8 +2602,7 @@
      "seed": 4,
      "brush": 1
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "24",
@@ -2691,8 +2668,7 @@
      54.4
     ]
    },
-   "low_ok": "she dives head first, her skirt trails above her",
-   "outline": 0.003
+   "low_ok": "she dives head first, her skirt trails above her"
   },
   {
    "id": "25",
@@ -2743,8 +2719,7 @@
     0.182,
     -0.316,
     0.051
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "26",
@@ -2829,8 +2804,7 @@
       }
      ]
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "27",
@@ -2925,13 +2899,13 @@
      ],
      [
       61.51,
-      0.45,
+      0.608,
       -3,
       -0.03
      ],
      [
       61.742,
-      0.38
+      0.608
      ],
      [
       61.974,
@@ -2975,8 +2949,7 @@
      -0.266,
      -0.074
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "27H",
@@ -3036,8 +3009,7 @@
     0.022,
     -0.212,
     -0.053
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "28",
@@ -3176,8 +3148,7 @@
     -0.015,
     -0.166,
     0.048
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "29",
@@ -3187,10 +3158,10 @@
     {
      "at": 0,
      "aim": {
-      "d": 3.2,
+      "d": 2.304,
       "az": 15,
       "y": 1.2,
-      "h": 0.0
+      "h": 0.55
      },
      "fov": 46,
      "roll": 0
@@ -3241,7 +3212,7 @@
       {
        "at": 0,
        "aim": {
-        "d": 0.6,
+        "d": 0.87,
         "az": 15,
         "y": 1.32
        },
@@ -3272,8 +3243,7 @@
      -0.307,
      -0.001
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "30",
@@ -3339,7 +3309,7 @@
       {
        "at": 0,
        "aim": {
-        "d": 0.35,
+        "d": 0.58,
         "az": -10,
         "y": 1.4
        },
@@ -3356,7 +3326,7 @@
       {
        "at": 0,
        "aim": {
-        "d": 0.35,
+        "d": 0.58,
         "az": -10,
         "y": 1.4
        },
@@ -3398,8 +3368,7 @@
      -0.306,
      -0.009
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "31",
@@ -3496,8 +3465,7 @@
      0.032,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "32",
@@ -3507,7 +3475,7 @@
     {
      "at": 0,
      "aim": {
-      "d": 2.6,
+      "d": 2.002,
       "az": 60,
       "y": 1.4,
       "h": 0.6
@@ -3518,7 +3486,7 @@
     {
      "at": 1.0,
      "aim": {
-      "d": 2.6,
+      "d": 2.002,
       "az": 60,
       "y": 1.4,
       "h": 0.6
@@ -3614,7 +3582,6 @@
      "why": "4-frame two-value insert: smear"
     }
    ],
-   "outline": 0.003,
    "frame_fits": {}
   },
   {
@@ -3675,7 +3642,7 @@
       {
        "at": 0,
        "aim": {
-        "d": 0.3,
+        "d": 0.58,
         "az": 0,
         "y": 1.0
        },
@@ -3714,8 +3681,7 @@
      0.327,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "34",
@@ -3725,7 +3691,7 @@
     {
      "at": 0,
      "aim": {
-      "d": 3.5,
+      "d": 2.45,
       "az": 15,
       "y": 1.4,
       "h": 1.4
@@ -3819,8 +3785,7 @@
      -0.065,
      0.007
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "35",
@@ -3948,8 +3913,7 @@
      -0.32,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "35H",
@@ -3999,8 +3963,7 @@
     -0.206,
     -0.101,
     0.061
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "36",
@@ -4067,8 +4030,7 @@
     0.0,
     -0.45,
     0.0
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "37",
@@ -4159,8 +4121,7 @@
       82.133
      ]
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "38",
@@ -4254,8 +4215,7 @@
       83.313
      ]
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "39",
@@ -4309,8 +4269,7 @@
      ],
      "yaw": 40
     }
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "40",
@@ -4425,8 +4384,7 @@
     -0.192,
     -0.326,
     -0.084
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "41",
@@ -4530,8 +4488,7 @@
       }
      ]
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "42",
@@ -4575,8 +4532,7 @@
     "rain_at": 84.933,
     "rain_end_at": 999.0,
     "surf": 1
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "43",
@@ -4655,8 +4611,7 @@
      95.5
     ]
    },
-   "step": 2,
-   "outline": 0.003
+   "step": 2
   },
   {
    "id": "44",
@@ -4722,8 +4677,7 @@
     "rain_at": 84.933,
     "rain_end_at": 999.0,
     "shallows": 1
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "45",
@@ -4788,8 +4742,7 @@
     -0.059,
     -0.254,
     0.002
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "46",
@@ -4832,8 +4785,7 @@
     -0.005,
     -0.097,
     0.001
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "47",
@@ -4873,8 +4825,7 @@
     -0.023,
     -0.135,
     0.019
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "48",
@@ -4942,8 +4893,7 @@
     "shallows": 1,
     "her_rim": "#ffd9a0",
     "her_rim_i": 2.6
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "49",
@@ -4992,8 +4942,7 @@
     0.012,
     -0.089,
     -0.054
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "50",
@@ -5052,8 +5001,7 @@
     ],
     "two_tone_n": 2,
     "two_tone_light": "#fff1d2"
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "51",
@@ -5123,8 +5071,7 @@
     0.022,
     -0.284,
     0.015
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "52",
@@ -5250,8 +5197,7 @@
      -0.108,
      0.009
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "52b",
@@ -5370,8 +5316,7 @@
       0.9
      ]
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "53H",
@@ -5451,8 +5396,7 @@
      ]
     }
    ],
-   "carry": false,
-   "outline": 0.003
+   "carry": false
   },
   {
    "id": "54",
@@ -5618,8 +5562,7 @@
       "detail": "her hand on the first rung"
      }
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "55",
@@ -5729,8 +5672,7 @@
      ],
      "why": "4-frame two-value insert: rungs"
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "56",
@@ -5862,8 +5804,7 @@
      -0.455,
      -0.096
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "57",
@@ -5967,8 +5908,7 @@
      ],
      "why": "4-frame two-value insert: wedge"
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "58",
@@ -6037,8 +5977,7 @@
      "at": 0,
      "to": "end"
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "59",
@@ -6182,8 +6121,7 @@
      ],
      "why": "4-frame two-value insert: slash"
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "60",
@@ -6266,8 +6204,7 @@
     0.0,
     0.033,
     0.0
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "61",
@@ -6380,8 +6317,7 @@
      -0.276,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "62",
@@ -6484,8 +6420,7 @@
      0.066,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "63",
@@ -6598,8 +6533,7 @@
      },
      "why": "THE WIDE as a 4-frame flash: the beam sweeping the sea from d 25 (scale for 4 frames only)"
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "64",
@@ -6742,8 +6676,7 @@
      -0.141,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "65",
@@ -6954,8 +6887,7 @@
      -0.198,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "66",
@@ -7137,8 +7069,7 @@
      0.003,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "67",
@@ -7259,8 +7190,7 @@
      -0.243,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "68",
@@ -7364,8 +7294,7 @@
     0.0,
     -0.224,
     0.0
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "69",
@@ -7545,8 +7474,7 @@
      0.0
     ]
    },
-   "low_ok": "she hangs below the lamp base's edge, the lens at the base: the base hides her legs",
-   "outline": 0.003
+   "low_ok": "she hangs below the lamp base's edge, the lens at the base: the base hides her legs"
   },
   {
    "id": "70",
@@ -7669,8 +7597,7 @@
      -0.018,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "71",
@@ -7772,8 +7699,7 @@
      0.17,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "72",
@@ -7889,8 +7815,7 @@
      -0.138,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "73",
@@ -7987,8 +7912,7 @@
      -0.038,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "74",
@@ -8284,8 +8208,7 @@
      -0.267,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "78",
@@ -8398,8 +8321,7 @@
      0.042,
      0.0
     ]
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "79",
@@ -8514,8 +8436,7 @@
       "two_tone_light": "#fff1d2"
      }
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "80",
@@ -8658,8 +8579,7 @@
       "grade_s": 3.66
      }
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "81",
@@ -8901,8 +8821,7 @@
       "grade_s": 3.66
      }
     }
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "82",
@@ -9104,8 +9023,7 @@
     -0.325,
     0.0
    ],
-   "low_ok": "ECUs of her eyes 0.3-1.2 m away on the beam axis while she leans back on the lamp: the frame holds her face only",
-   "outline": 0.003
+   "low_ok": "ECUs of her eyes 0.3-1.2 m away on the beam axis while she leans back on the lamp: the frame holds her face only"
   },
   {
    "id": "83",
@@ -9230,8 +9148,7 @@
      "vignette": 0
     },
     "her_key": 0.55
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "84",
@@ -9337,8 +9254,7 @@
      "dof_auto": 1
     },
     "her_key": 0.55
-   },
-   "outline": 0.003
+   }
   },
   {
    "id": "85",
@@ -9435,8 +9351,7 @@
     0.0,
     -0.161,
     0.0
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "86",
@@ -9539,8 +9454,7 @@
     0.0,
     -0.156,
     0.0
-   ],
-   "outline": 0.003
+   ]
   },
   {
    "id": "87",

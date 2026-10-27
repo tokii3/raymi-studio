@@ -252,6 +252,9 @@ function styleMaterials(rig: Rig, style: string) {
     if (base?.emissive && m.emissive) m.emissive.copy(base.emissive);
     if (base && m.emissiveMap !== undefined) m.emissiveMap = base.emissiveMap ?? null;
     if (!m.isMToonMaterial || !m.color) continue;
+    // toki 2026-10-27: "wenn raymi nah an / in die kamera kommt sieht man dass sie hohl von innen ist" - back faces culled;
+    // both sides drawn, the inside of a sleeve or her hair is a surface, never a hole
+    (m as THREE.Material).side = THREE.DoubleSide;
     if (style === 'routine') {
       // look-critic 2026-10-23 (twice): skin, face and the white skirt clipped to paper white under the set lights +
       // bloom. Lowering the lights did not hold (anti-loop) - so her own colours carry the headroom: skin pale grey-blue

@@ -1,5 +1,5 @@
 {
- "_why": "motion fix excerpt: the scene probe over 58.6-80.5 every 2 frames (her real motion -> raymi motion -> gate) + 10 stills of the excerpt for the look-critic",
+ "_why": "excerpt 4 (toki 2026-10-27: outlines off, never hollow, the vector graphics as ink or gone): probe over the excerpt + 10 stills",
  "format": "mv",
  "frames": [
   1820,
@@ -26,7 +26,7 @@
   "x10_crane"
  ],
  "scale": 1,
- "round": "motion2",
+ "round": "motion3",
  "probe": 2,
  "probe_range": "1758-2415"
 }
