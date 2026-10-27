@@ -1,5 +1,14 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-27 (later) - Love is War fix list (toki: "erst die Fix-Liste ... dann durch Kritiker und Gate")
+- Fixed in shared parts: the rock mound is a no-lens place (timeline rock_no_lens + test; the 6.5 s black climb is
+  gone), she pulls the lamp from its far side so the lantern pictures show her face, the white ramp no longer
+  lights her, slash off the scream, deep row 6 on her chest, the dots insert = her five lights, lamp + Fresnel vanish
+  in a flood. Stills rounds 8-9 (boards/build9): ink night, scream, final build, war cry, M1 read.
+- look-critic stills 2: FAIL again (lantern skin white-out, silhouette small behind rails, m03 void, vector-looking
+  overlays). Gate FAIL -> parked in BACKLOG (anti-loop) with what was tried. Draft 2 of the whole film rendered for
+  the record. Not sent to toki as a gated delivery.
+
 ## 2026-10-27 - Love is War BUILD (B0-B5): studio parts built, 7 stills rounds + a whole-film draft; look-critic FAIL
 - Built (reusable): stops() finds true silences; her body rests on the floor in low poses; TwoTone two values for
   real (paper sky, no grade / bloom in a flash, glass vanishes); timeline multicam rows (cams / stutter / riser), aim

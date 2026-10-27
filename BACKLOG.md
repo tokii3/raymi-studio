@@ -163,3 +163,12 @@
   star_streak, tube, cable_color; fx ring "brush". Transitions cover obj water / rain / cloud / glass / pulse use the
   generic cover. The shots.json source is hand-authored row by row (the generator in the session scratchpad only
   shortened the writing); edit shots.json directly from now on.
+- Love is War stills gate (2026-10-27, anti-loop: look-critic FAIL twice - reviews/stills_look-critic_1.md, _2.md).
+  Tried (9 stills rounds): probe + eye-aimed frame fits, held frames that hold, no white ramp on her key, slash / crown
+  off her face, pillar as a light volume, rock mound as no-lens, she pulls the lamp from its far side (face visible),
+  silhouette back in front of the lamp. Still blocking: (1) the lantern room blows her skin to white (MToon under the
+  lamp + beam + bloom) - needs a skin-protect cap in VrmPuppet / PostFX, not more light tweaks; (2) the flood
+  silhouette is small and crossed by rails (needs a closer silhouette camera or a cleaner lantern front);
+  (3) m03 deep hit reads as a void (the deep's painted layers are thin); (4) vector-looking ink / HUD rings / sparkles
+  (brush edge + paper grain on FxWar shapes), contact shadows + water reflections, the red lamp roof. Next session:
+  these as studio parts first, then one stills round, then the critics.
