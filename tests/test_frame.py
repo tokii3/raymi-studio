@@ -27,3 +27,20 @@ def test_wide_shot_is_left_alone():
 def test_huge_shift_is_reported_not_applied():
     r = frame.fits(_props(), _report([1.2, 1.45, 0.0]))["01"]
     assert "skip" in r
+
+
+def test_main_writes_a_multicam_pictures_fit_into_its_row(tmp_path):
+    """Love is War stills 2 (2026-10-27): main() crashed on its own name `fits` after a 52-min probe; a picture id
+    "28a" (timeline expand_rows) stores its fit in row 28's frame_fits, the row's own picture in frame_fit."""
+    import json
+    props = _props()
+    props["shots"].append({**props["shots"][0], "id": "01a"})
+    rep = _report([0.15, 1.30, 0.0])
+    rep["rows"] += [{**r, "shot": "01a"} for r in rep["rows"]]
+    (tmp_path / "out").mkdir()
+    (tmp_path / "out" / "props.json").write_text(json.dumps(props), encoding="utf-8")
+    (tmp_path / "out" / "probe_mv.json").write_text(json.dumps(rep), encoding="utf-8")
+    (tmp_path / "shots.json").write_text(json.dumps({"shots": [{"id": "01"}]}), encoding="utf-8")
+    frame.main(tmp_path)
+    row = json.loads((tmp_path / "shots.json").read_text(encoding="utf-8"))["shots"][0]
+    assert row["frame_fit"] and row["frame_fits"]["01a"] == row["frame_fit"]
