@@ -1139,13 +1139,22 @@ export function herOffFaults(props: FilmProps): {shot: string; frame: number; wh
   const out: {shot: string; frame: number; why: string}[] = [];
   const aspect = props.width / props.height;
   for (const s of props.shots) {
-    if (!s.actor?.length || s.opts.her_off) continue;
+    // opts.detail = "<why>": the picture IS a part of her (a macro on her hand, her feet) - head and chest out on purpose
+    if (!s.actor?.length || s.opts.her_off || s.opts.detail) continue;
     let ok = 0, n = 0, bad = s.from;
     for (let f = s.from; f < s.to; f += 4) {
       const k = s.actor.reduce((p, q) => (q.f <= f ? q : p), s.actor[0]);
       const cam = makeCamera(s, f, aspect, [], props.fps);
       // her head OR her chest in the frame (a face close-up leaves the chest out on purpose)
-      const inF = (h: number) => { const c = new THREE.Vector3(k.pos[0], k.pos[1] + (k.height ?? 1.55) * h, k.pos[2]).project(cam); return c.z < 1 && Math.abs(c.x) < 0.95 && Math.abs(c.y) < 0.95; };
+      // a prone clip (swimming, gliding, lying - Love is War 2026-10-27: the swim clip lies flat, head ~0.7 m AHEAD of her
+      // root along her facing, clips_seen) puts head and chest along the body, not above the feet
+      const H = k.height ?? 1.55;
+      const prone = /swim|glide|lying|laying|crawl/.test(String(k.motion ?? '')) || k.pose === 'glide';
+      const yaw = typeof k.rotY === 'number' ? (k.rotY * Math.PI) / 180 : Math.atan2(cam.position.x - k.pos[0], cam.position.z - k.pos[2]) + (k.rotY === 'away' ? Math.PI : 0);
+      const at = (h: number) => prone
+        ? new THREE.Vector3(k.pos[0] + Math.sin(yaw) * H * (h - 0.45), k.pos[1] + 0.1, k.pos[2] + Math.cos(yaw) * H * (h - 0.45))
+        : new THREE.Vector3(k.pos[0], k.pos[1] + H * h, k.pos[2]);
+      const inF = (h: number) => { const c = at(h).project(cam); return c.z < 1 && Math.abs(c.x) < 0.95 && Math.abs(c.y) < 0.95; };
       n++;
       if (inF(0.92) || inF(0.7)) ok++; else bad = f;
     }
