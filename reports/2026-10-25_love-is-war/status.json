@@ -1,7 +1,7 @@
 {
- "run": 70,
+ "run": 71,
  "quality": "draft",
- "state": "failed",
- "release": "render-2026-10-25_love-is-war-70",
- "commit": "8000d34a55bcb89c404c564423505763ceebfc93"
+ "state": "done",
+ "release": "render-2026-10-25_love-is-war-71",
+ "commit": "d5815fa415259ff6a3d6eb23fc5331ab1b95e487"
 }
