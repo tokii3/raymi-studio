@@ -329,7 +329,7 @@ function lampMat() {
 
 /** The lantern room at HER scale (11_WORLD_build section 2): gallery floor y H+0.38 r 2.6 + rail 1.1 m, glass r 1.6
  *  from H+0.9 to H+3.3, the brass frame ring at H+1.4 + mullions, the lamp at H+1.7, the Fresnel lens as painted rings. */
-export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; fps: number; camPos: P3; fresnelFront: boolean; violet: number; v?: number}> = ({x, z, H, f, fps, camPos, fresnelFront, violet, v = 1}) => {
+export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; fps: number; camPos: P3; fresnelFront: boolean; violet: number; v?: number; glass?: boolean}> = ({x, z, H, f, fps, camPos, fresnelFront, violet, v = 1, glass = true}) => {
   const t = f / fps;
   const g = H + 0.38, lampY = H + 1.7;
   const toCam = Math.atan2(camPos[0] - x, camPos[2] - z);
@@ -350,7 +350,7 @@ export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; 
         const a = (i / 8) * Math.PI * 2 + t * 0.1;
         return <mesh key={`m${i}`} position={[x + Math.sin(a) * 1.6, H + 2.1, z + Math.cos(a) * 1.6]} material={brassMat()}><boxGeometry args={[0.06, 2.4, 0.06]} /></mesh>;
       })}
-      <mesh position={[x, H + 2.1, z]} material={glassMat()}><cylinderGeometry args={[1.6, 1.6, 2.4, 48, 1, true]} /></mesh>
+      {glass ? <mesh position={[x, H + 2.1, z]} material={glassMat()}><cylinderGeometry args={[1.6, 1.6, 2.4, 48, 1, true]} /></mesh> : null}
       <mesh position={[x, H + 3.55, z]} material={cached('roof', () => { const m = new THREE.MeshBasicMaterial({color: PAL.stripe, toneMapped: false, fog: false}); m.userData.tone = 'ink'; return m; })}>
         <coneGeometry args={[1.9, 0.9, 32]} /></mesh>
       {/* the lamp, facing the lens (a painted disc), breathing 4 % */}

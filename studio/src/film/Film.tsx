@@ -129,7 +129,9 @@ export const Film: React.FC<FilmProps> = (props) => {
   const herKey = actorKeys.length ? actorKeys.reduce((p, k) => (k.f <= f ? k : p), actorKeys[0]) : null;
   const herNdc = herKey ? new THREE.Vector3(herKey.pos[0], herKey.pos[1] + (herKey.height ?? 1.55) * 0.62, herKey.pos[2]).project(cam) : null;
   const herScreen: [number, number] = herNdc ? [herNdc.x * 0.5 + 0.5, -herNdc.y * 0.5 + 0.5] : [0.5, 0.5];
-  const headNdc = herKey ? new THREE.Vector3(herKey.pos[0], herKey.pos[1] + (herKey.height ?? 1.55) * 0.9, herKey.pos[2]).project(cam) : null;
+  // her eyes at ~0.77 of her figure height: the probe measured raymi7's head bone 1.0-1.2 m above her feet in bent clips
+  // (Love is War 2026-10-27; 0.9 put the ink crown's hole above her face)
+  const headNdc = herKey ? new THREE.Vector3(herKey.pos[0], herKey.pos[1] + (herKey.height ?? 1.55) * 0.77, herKey.pos[2]).project(cam) : null;
   const herHead: [number, number] = headNdc ? [headNdc.x * 0.5 + 0.5, -headNdc.y * 0.5 + 0.5] : [0.5, 0.3];
   const faults = props.vrm ? [] : visibleCutEdges(shot, f, aspect, props.hits, fps);
   if (faults.length) cancelRender(new Error(`cut sprite edge on screen: ${JSON.stringify(faults)} - reframe the shot (hard rule 9)`));

@@ -14,7 +14,7 @@ import {Ladder, LanternRoom, rockMat, towerMat} from './painted';
 
 type P3 = [number, number, number];
 export type LighthouseOpts = {pos?: [number, number]; height?: number; yaw?: number; spin?: number; beam?: number; len?: number;
-  lantern?: 'her'; ledge?: [number, number]};   // ledge: a flat rock shelf (top y 2.0) she lands on (Love is War row 54)   // lantern 'her': the lantern room at HER scale (three/painted.tsx LanternRoom), the lamp at height + 1.7
+  lantern?: 'her'; ledge?: [number, number]; glass?: boolean};   // ledge: a flat rock shelf (top y 2.0) she lands on (Love is War row 54)   // lantern 'her': the lantern room at HER scale (three/painted.tsx LanternRoom), the lamp at height + 1.7
 
 /** Along the cone's height: bright at the lamp (v = 1), gone at the far end. */
 function beamTex(painted = false): THREE.CanvasTexture {
@@ -99,7 +99,7 @@ export const Lighthouse: React.FC<{o: LighthouseOpts; f: number; fps: number; ca
           <boxGeometry args={[1, 1, 1]} /><meshBasicMaterial color="#ffd89a" toneMapped={false} />
         </mesh>
       ))}
-      {herScale ? <LanternRoom x={x} z={z} H={H} f={f} fps={fps} camPos={camPos} fresnelFront={fresnelFront} violet={violet} v={v} /> : <>
+      {herScale ? <LanternRoom x={x} z={z} H={H} f={f} fps={fps} camPos={camPos} fresnelFront={fresnelFront} violet={violet} v={v} glass={o.glass !== false} /> : <>
       <mesh position={[x, H + 0.32, z]} material={dark}><cylinderGeometry args={[1.35, 1.35, 0.16, 24]} /></mesh>
       <mesh position={[x, H + 0.32, z]} material={ink} scale={[1.03, 1.3, 1.03]}><cylinderGeometry args={[1.35, 1.35, 0.16, 24]} /></mesh>
       <mesh position={[x, H + 0.95, z]}><cylinderGeometry args={[0.7, 0.7, 1.1, 20]} />
