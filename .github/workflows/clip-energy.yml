@@ -27,7 +27,7 @@ jobs:
       - name: Blender
         run: |
           sudo apt-get update -qq
-          timeout 600 sudo apt-get install -y -qq blender > /dev/null
+          timeout 600 sudo apt-get install -y -qq blender python3-numpy > /dev/null   # the FBX importer needs numpy
           blender --version | head -1
       - name: Measure
         run: blender -b --python raymi/clip_energy_blender.py -- .private-assets/motions studio/catalog/clip_energy.json 2>&1 | tail -40
