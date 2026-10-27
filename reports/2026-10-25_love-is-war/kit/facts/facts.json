@@ -100,12 +100,12 @@
   "hits": 3,
   "changed": 2,
   "share": 0.67,
-  "threshold": 8.3
+  "threshold": 9.7
  },
  "still_spans_s": [],
  "audio": {
-  "input_i": "-14.13",
-  "input_tp": "-3.52"
+  "input_i": "-14.06",
+  "input_tp": "-6.82"
  },
  "hint": "Measured hints only. They never prove an effect - the critic describes what is REALLY there."
 }
