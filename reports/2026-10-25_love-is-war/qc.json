@@ -1,8 +1,8 @@
 {
  "file": "final.mp4",
- "width": 960,
- "height": 540,
- "duration": 187.57,
+ "width": 1920,
+ "height": 1080,
+ "duration": 21.9,
  "fps": "30/1",
  "checks": {
   "landscape_16x9": true,
@@ -10,35 +10,13 @@
   "loudness_-14": true,
   "true_peak_<=-1": true,
   "duration_matches_plan": true,
-  "no_frozen_picture_>1.2s": false,
-  "no_black_picture_>0.25s": false
+  "no_frozen_picture_>1.2s": true,
+  "no_black_picture_>0.25s": true
  },
- "full_res": false,
- "lufs": -14.06,
- "true_peak": -5.5,
- "frozen_spans": [
-  [
-   56.933333,
-   1.733333
-  ]
- ],
- "black_spans": [
-  [
-   11.6,
-   0.9
-  ],
-  [
-   93.8,
-   2.37
-  ],
-  [
-   119.866667,
-   0.5
-  ],
-  [
-   186.466656,
-   1.07
-  ]
- ],
- "pass": false
+ "full_res": true,
+ "lufs": -14.13,
+ "true_peak": -3.52,
+ "frozen_spans": [],
+ "black_spans": [],
+ "pass": true
 }
