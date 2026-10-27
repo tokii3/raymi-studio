@@ -189,7 +189,9 @@ const Ring: React.FC<{R: number; y0: number; y1: number; m: THREE.Material; rot?
 /** The storm sea's painted layers (11_WORLD_build section 1). centre = her place (the rings wrap round her). */
 export const PaintedSea: React.FC<{o: Record<string, unknown>; f: number; fps: number; centre: P3; under: boolean}> = ({o, f, fps, centre, under}) => {
   const t = f / fps;
-  const eye = Boolean(o.eye);
+  // the ink night (4_SCRIPT 84-86): from ink_sky_at on the storm is gone - the sky is the clear dark of the storm eye
+  // (build stills 1: star_sky measured lum 0.61 against the pros' <= 0.11)
+  const eye = Boolean(o.eye) || frames(o.ink_sky_at).some((t) => f >= t);
   const [cx, , cz] = centre;
   const rollIn = typeof (o.cloud_wall as number[] | undefined)?.[0] === 'number' ? (o.cloud_wall as number[]) : null;
   const wallC = rollIn ? Math.max(0, Math.min(1, (f - rollIn[0]) / Math.max(1, (rollIn[1] - rollIn[0])))) : eye ? 0 : 1;

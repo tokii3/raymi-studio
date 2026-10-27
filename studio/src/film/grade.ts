@@ -50,8 +50,9 @@ export const TONES: Record<string, Tone & {lyric: LyricTone}> = {
     lyric: {color: '#fff6e6', accent: '#ff3d7f', sub: '#f2dcc0', shadow: 'rgba(36,8,20,0.86)'}},
   // Love is War (2026-10-25): the boards' night grades (own / closing, saturate 1.15-1.28) turned her pale lavender skin
   // saturated blue-violet (look-critic ideas 1: "she looks like a recolour", rule 9). These keep saturation at 1.0 and
-  // let the LIGHTS carry the colour (her glow, the beam, the bolt), the skin stays as modelled.
-  war_night: {filter: 'contrast(1.18) saturate(1.0) brightness(0.96)', top: '#c4ccff', bottom: '#0d0a22', split: 0.26, vignette: 0.6,
+  // let the LIGHTS carry the colour (her glow, the beam, the bolt), the skin stays as modelled. Build stills 1 (2026-10-27,
+  // refs measure): sat_mean 0.75 against the pros' <= 0.64 and her skin read blue-violet -> saturate 0.84.
+  war_night: {filter: 'contrast(1.18) saturate(0.84) brightness(0.96)', top: '#c4ccff', bottom: '#0d0a22', split: 0.26, vignette: 0.6,
     lyric: {color: '#f3f1ff', accent: '#ffd9a0', sub: '#d9dcf0', shadow: 'rgba(8,6,28,0.86)'}},
   // the ink world: near-monochrome paper and ink, one red, her violet - contrast high, colour low
   war_ink: {filter: 'contrast(1.25) saturate(0.85) brightness(0.98)', top: '#fff4ea', bottom: '#0a0810', split: 0.2, vignette: 0.5,
