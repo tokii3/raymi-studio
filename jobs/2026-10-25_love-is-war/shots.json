@@ -3083,7 +3083,7 @@
      "at": 0.248,
      "clip": "roar",
      "clip_from": 1.0,
-     "speed": 0.15,
+     "speed": 0.0,
      "motionMix": 1,
      "pos": "pool",
      "face_lens": true,

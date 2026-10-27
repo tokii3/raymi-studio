@@ -1,52 +1,16 @@
 {
- "_why": "build round 5 = the board for toki: stills 4 + the war cry face up, the landing clear of the rock, the ink night dark, the crown's hole on her face. With it the whole film renders as a draft (toki 2026-10-27: the bursts as video, not many stills).",
+ "_why": "build 5b: three board frames again - the war cry held as the anchor (face up at the gold hit), the war cry after the shake, the final build on her eyes (175.95)",
  "format": "mv",
  "frames": [
-  8,
-  21,
-  282,
-  840,
-  1166,
-  1839,
-  1881,
-  1916,
-  1935,
-  2030,
-  2160,
-  2394,
-  2614,
-  3225,
-  3666,
-  3686,
-  4395,
-  4635,
-  5208,
-  5319,
-  5535
+  1887,
+  1915,
+  5279
  ],
  "names": [
-  "m01_silhouette",
-  "m02_eye_opens",
-  "m03_hit1_cable",
-  "m04_roll_ping",
-  "m05_claw_beam",
-  "m06_riser1_eyes",
   "m07_war_cry",
   "m08_hit_flash_gold",
-  "m09_chorus_grid",
-  "m10_colour_flip",
-  "m11_lens_attack_M1",
-  "m12_pillar",
-  "m13_shards",
-  "m14_moon",
-  "m15_hidden_stop",
-  "m16_landing",
-  "m17_false_win",
-  "m18_scream",
-  "m19_final_build",
-  "m20_last_hit",
-  "m21_ink_night"
+  "m19_final_build"
  ],
  "scale": 1,
- "round": "build5"
+ "round": "build5b"
 }
