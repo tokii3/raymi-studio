@@ -1,16 +1,52 @@
 {
- "_why": "build 7b: the slash off her whole face (eyes to chin), the final build on her eyes (176.6)",
+ "_why": "build round 8 (toki 2026-10-27 'erst die Fix-Liste'): rock mound no lens + the climb outside it, she pulls the lamp from its far side facing the lens (her face in the lantern room), no white-out on her skin, slash off the scream, deep row 6 on her chest, the dots insert her five lights. With the whole film as a draft.",
  "format": "mv",
  "frames": [
+  8,
+  21,
+  282,
+  840,
   1166,
+  1839,
+  1887,
+  1915,
+  1935,
+  2030,
+  2160,
+  2394,
+  2614,
+  3225,
+  3666,
+  3686,
+  4395,
   4635,
-  5298
+  5298,
+  5319,
+  5535
  ],
  "names": [
+  "m01_silhouette",
+  "m02_eye_opens",
+  "m03_hit1_cable",
+  "m04_roll_ping",
   "m05_claw_beam",
+  "m06_riser1_eyes",
+  "m07_war_cry",
+  "m08_hit_flash_gold",
+  "m09_chorus_grid",
+  "m10_colour_flip",
+  "m11_lens_attack_M1",
+  "m12_pillar",
+  "m13_shards",
+  "m14_moon",
+  "m15_hidden_stop",
+  "m16_landing",
+  "m17_false_win",
   "m18_scream",
-  "m19_final_build"
+  "m19_final_build",
+  "m20_last_hit",
+  "m21_ink_night"
  ],
  "scale": 1,
- "round": "build7b"
+ "round": "build8"
 }

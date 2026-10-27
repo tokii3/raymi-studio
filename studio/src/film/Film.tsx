@@ -88,6 +88,10 @@ export const Film: React.FC<FilmProps> = (props) => {
   const floodOn = twoToneOn(shot.opts.flood, f, Number(shot.opts.flood_n ?? 6));
   const twoOn = flipOn || floodOn || twoToneOn(shot.opts.two_tone, f, Number(shot.opts.two_tone_n ?? 2));
   const ink = String(shot.opts.two_tone_dark ?? '#0b0910');
+  // the riser's climb to white (grade_to war_white) is for the WORLD: her key goes down with it so her skin keeps its
+  // pale grey-blue (look-critic stills 1 FIX 1: her face clipped to white in the riser and the final build)
+  const whiteNow = shot.opts.grade_to === 'war_white' && typeof shot.opts.grade_at === 'number'
+    ? Math.max(0, Math.min(1, (f - shot.opts.grade_at) / Math.max(1, Number(shot.opts.grade_s ?? 0.5) * 30))) : 0;
   const paper = floodOn ? String(shot.opts.flood_light ?? '#fff1d2') : flipOn ? String(shot.opts.flip_light ?? '#f0a03c') : shot.opts.two_tone_light ? String(shot.opts.two_tone_light) : undefined;
   // a 3D shot names her rig keys itself (shots.json "actor"); the 2026-10-21 VRM edition translated sprite keys
   const actorKeys = useMemo(() => shot.actor?.length ? shot.actor : vrmFilmKeys(shot.puppets), [shot]);
@@ -272,7 +276,7 @@ export const Film: React.FC<FilmProps> = (props) => {
                 glow={glowColor(shot.opts.glow, f)} glowGain={0.12 * glowGain}
                 materialStyle={String(shot.opts.material ?? (shot.actor ? 'routine' : 'firestarter'))}
                 step={shot.step ?? 1} outline={shot.outline ?? 0} battery={battery}
-                keyLight={Number(shot.opts.her_key ?? shot.opts.depth ?? 0) * (1 - 0.85 * darkNow)}
+                keyLight={Number(shot.opts.her_key ?? shot.opts.depth ?? 0) * (1 - 0.85 * darkNow) * (1 - 0.7 * whiteNow)}
                 trails={Number(shot.opts.trails ?? 0)} lampLight={Number(shot.opts.her_light ?? 0)}
                 rimColor={shot.opts.her_rim ? String(shot.opts.her_rim) : undefined} rimGain={Number(shot.opts.her_rim_i ?? 1)} />
               </TwoTone>

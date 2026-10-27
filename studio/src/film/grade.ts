@@ -59,7 +59,7 @@ export const TONES: Record<string, Tone & {lyric: LyricTone}> = {
     lyric: {color: '#0a0810', accent: '#c81f37', sub: '#3a3640', shadow: 'rgba(240,232,220,0.8)'}},
   // the riser's end (Love is War 2026-10-26, script v3b): the grade climbs toward white over the measured riser - the
   // pros' build into a drop (LEARNED.md); used only as grade_to over a riser, never as a section's grade
-  war_white: {filter: 'contrast(0.94) saturate(0.75) brightness(1.22)', top: '#ffffff', bottom: '#cfd2e8', split: 0.34, vignette: 0.12,
+  war_white: {filter: 'contrast(0.95) saturate(0.8) brightness(1.12)', top: '#ffffff', bottom: '#cfd2e8', split: 0.34, vignette: 0.12,
     lyric: {color: '#0a0810', accent: '#c81f37', sub: '#3a3640', shadow: 'rgba(240,232,220,0.8)'}},
   // VRM Firestarter look test: retain the deep-violet setting while keeping highlights on pale MToon materials.
   vrm_fire: {filter: 'contrast(1.08) saturate(1.08) brightness(0.92)', top: '#d39a82', bottom: '#180d31', split: 0.36, vignette: 0.62,

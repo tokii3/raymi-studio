@@ -167,7 +167,11 @@ const Insert: React.FC<{x: Extract<WarFx, {kind: 'insert'}>; f: number}> = ({x, 
   if (m === 'ribbon' || m === 'cable' || m === 'melody') {
     const pts = Array.from({length: 24}, (_, i) => `${i * 7},${45 - (m === 'cable' ? i * 2.2 - 20 : Math.sin(i * 0.5) * 12 + (m === 'melody' ? (i % 4) * 4 : 0))}`).join(' ');
     body = <polyline points={pts} fill="none" stroke={x.color ?? (m === 'melody' ? '#c81f37' : fg)} strokeWidth={m === 'cable' ? 5 : 3.2} strokeLinecap="round" />;
-  } else if (m === 'dots' || m === 'rain' || m === 'bubbles') {
+  } else if (m === 'dots') {
+    const k = 0.6 + 0.4 * Math.sin(Math.PI * Math.min(1, t / 4));   // her five chest lights, one pulse
+    body = [-2, -1, 0, 1, 2].map((i) => <g key={i}><circle cx={W / 2 + i * 9} cy={H / 2 + Math.abs(i) * 2.5} r={4.5 * k} fill={x.color ?? VIOLET} opacity={0.35} />
+      <circle cx={W / 2 + i * 9} cy={H / 2 + Math.abs(i) * 2.5} r={1.8 * k} fill={WHITE_V} /></g>);
+  } else if (m === 'rain' || m === 'bubbles') {
     body = Array.from({length: m === 'rain' ? 60 : 18}, (_, k) => {
       const px = rnd(k * 3.1) * W, py = rnd(k * 5.7) * H, r = m === 'bubbles' ? 2 + rnd(k) * 6 : m === 'rain' ? 0.6 : 1.4;
       return m === 'rain' ? <line key={k} x1={px} y1={py} x2={px - 1} y2={py + 6} stroke={fg} strokeWidth={0.6} />

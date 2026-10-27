@@ -1021,6 +1021,17 @@ def compile_fx(s: dict, a: float, b: float, fr, errors: list[str], tag: str, sma
     return out
 
 
+def rock_no_lens(opts: dict) -> list[dict]:
+    """The lighthouse's rock mound (three/lighthouse.tsx: 7 lumps round the tower) is no place for a lens - Love is War
+    draft 71 had 6.5 s of black with the lens inside it. The box holds every lump (painted: smaller lumps)."""
+    lh = opts.get("lighthouse")
+    if not isinstance(lh, dict):
+        return []
+    x, z = (lh.get("pos") or [-14, -46])[:2]
+    rx, rz, top = (5.4, 4.9, 3.0) if opts.get("painted") else (7.0, 6.5, 4.6)
+    return [{"name": "lighthouse rock", "min": [x - rx, -3.0, z - rz], "max": [x + rx, top, z + rz]}]
+
+
 def aim_camera(a: dict, s: dict, marks: dict, errors: list[str], tag: str) -> tuple[list[float], list[float]] | None:
     """A lens in the script's words (4_SCRIPT camera cells: "h 0.62 d 0.62 fov 48"): it looks at `at` (her first key's
     place by default) raised by `y`, from `d` metres away, the lens at absolute height `h` (or `el` degrees above the
@@ -1599,7 +1610,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                       "texts": [{k: v for k, v in tx.items() if k not in ("opt", "unless", "blank")} for tx in sets[st].get("texts", [])
                                 if (not tx.get("opt") or opts.get(tx["opt"])) and opts.get(tx.get("unless", ""), True) is not False
                                 and not (tx.get("blank") and opts.get(tx["blank"]) == "")] + stage_texts(opts),
-                      "noLens": sets[st].get("no_lens", []),
+                      "noLens": sets[st].get("no_lens", []) + rock_no_lens(opts),
                       # a macro / a close-up AT a prop may sit close to it: "lens_near": {"monitor": "<why>"} lifts that solid
                       "solids": [x for x in [{k: v for k, v in so.items() if k not in ("opt", "unless")} for so in sets[st].get("solids", [])
                                  if (not so.get("opt") or opts.get(so["opt"])) and opts.get(so.get("unless", ""), True) is not False]

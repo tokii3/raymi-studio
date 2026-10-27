@@ -78,7 +78,7 @@ export const Lighthouse: React.FC<{o: LighthouseOpts; f: number; fps: number; ca
       {/* the black rock it stands on, waves breaking white at its foot */}
       {Array.from({length: 7}, (_, i) => (
         <mesh key={`r${i}`} position={[x + (rnd(i * 3) - 0.5) * 6, -0.8 + rnd(i * 5) * 1.4, z + (rnd(i * 7) - 0.5) * 5]}
-          rotation={[rnd(i) * 3, rnd(i * 2) * 3, 0]} scale={1.6 + rnd(i * 9) * 2.4} material={rock}>
+          rotation={[rnd(i) * 3, rnd(i * 2) * 3, 0]} scale={painted ? 1.2 + rnd(i * 9) * 1.2 : 1.6 + rnd(i * 9) * 2.4} material={rock}>
           <dodecahedronGeometry args={[1, 0]} />
         </mesh>
       ))}

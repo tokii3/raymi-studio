@@ -351,3 +351,10 @@ def test_a_held_frame_restarts_its_clip():
                    {"at": 0.5, "clip": "roar", "clip_from": 1.0, "speed": 1, "pos": [0, 0, 0]}]}
     keys = T.compile_actor(s, "mv", 0.0, 2.0, lambda t: round(t * 30), {}, {"stand"}, errors, "t", None)
     assert [k.get("restart", False) for k in keys] == [False, True, True, False]
+
+
+def test_the_lighthouse_rock_is_no_place_for_a_lens():
+    """Love is War draft 71: 6.5 s black - the lens sat inside the rock lumps round the tower (the guard did not know)."""
+    box = T.rock_no_lens({"lighthouse": {"pos": [-8, -30]}, "painted": 1})[0]
+    assert box["min"][0] < -8 < box["max"][0] and box["min"][2] < -26.2 < box["max"][2] and box["max"][1] >= 3.0
+    assert T.rock_no_lens({}) == []
