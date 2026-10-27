@@ -36,6 +36,7 @@ import {DeepLife} from '../creatures';
 import {Things} from '../routine';
 import {flare, frames} from '../events';
 import {SeaCables} from '../cables';
+import {PaintedDeep} from '../painted';
 import type {SetProps} from './index';
 
 type P3 = [number, number, number];
@@ -530,6 +531,8 @@ export const Deep: React.FC<SetProps> = ({f, fps, opts, beats, camPos}) => {
       <Things list={o.things} f={f} />
       {/* Love is War (2026-10-25): undersea data cables, pulses of light on the beat (three/cables.tsx) */}
       <SeaCables opts={o} f={f} fps={fps} beats={beats} />
+      {/* the painted deep (three/painted.tsx, Love is War): the surface ceiling carrying the beam, marine snow */}
+      {o.painted ? <PaintedDeep o={o} f={f} fps={fps} camPos={(camPos ?? [0, 1.5, 6]) as [number, number, number]} /> : null}
     </group>
   );
 };

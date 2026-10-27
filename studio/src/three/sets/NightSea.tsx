@@ -17,6 +17,8 @@
 //   column 0..1 | column_at; column_bend ...      the heat column under her (sets/Deep HeatColumn)
 //   stars 0..1, moon false
 //   lighthouse {pos, height, yaw, spin, beam, len} + lightning [t, ...] / lightning_pos (three/lighthouse.tsx, Love is War)
+//   painted 1                          the painted storm world (three/painted.tsx): sky / cloud walls / wave rings / foam;
+//                                      eye, cloud_wall [t0, t1], moon_big 0.45 + clear_at [t], fresnel_front, lantern_violet
 //   fires / sparks / fish / school / salmon / props as in sets/Deep
 import React from 'react';
 import * as THREE from 'three';
@@ -26,6 +28,7 @@ import {DeepLife} from '../creatures';
 import {HeatColumn, prog} from './Deep';
 import {flare, frames} from '../events';
 import {Lighthouse, Lightning, type LighthouseOpts} from '../lighthouse';
+import {PAL, PaintedSea} from '../painted';
 import type {SetProps} from './index';
 
 type P3 = [number, number, number];
@@ -132,6 +135,13 @@ const Firework: React.FC<{from: [number, number]; at: number; f: number; seed: n
   );
 };
 
+/** the painted sea surface: flat deep indigo, unlit (three/painted.tsx), the ink value in a flash */
+let seaFlatM: THREE.MeshBasicMaterial | null = null;
+function seaFlat(): THREE.MeshBasicMaterial {
+  if (!seaFlatM) { seaFlatM = new THREE.MeshBasicMaterial({color: PAL.deep, toneMapped: false}); seaFlatM.userData.tone = 'ink'; }
+  return seaFlatM;
+}
+
 export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const o = opts;
   const C = new THREE.Vector3(...(camPos ?? [0, 1.5, 6]));
@@ -149,6 +159,8 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
   const pathDir = Number(o.path_dir ?? 0);
   const rainOn = typeof o.rain_at === 'number' && f >= o.rain_at && !(typeof o.rain_end_at === 'number' && f >= o.rain_end_at);
   const rainT = typeof o.rain_at === 'number' ? f - o.rain_at : -1;
+  const painted = Boolean(o.painted);
+  const herAt = ((o.pool_pos as P3) ?? [0, 0, 0]);
   const seaGlow = seaGlowTex();
   seaGlow.wrapS = seaGlow.wrapT = THREE.RepeatWrapping;
   seaGlow.repeat.set(10, 10);
@@ -158,11 +170,11 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       <SetLight neutral={Number(o.neutral_sky ?? 0)} sky="#2a3a8a" ground="#05040e" fill={0.35 + 0.3 * glow} key="#b9c8ff" keyI={0.55} keyPos={[moonP.x * 0.1, 12, moonP.z * 0.1]}
         target={[0, 0, 0]} shadowSize={8} fog={under ? '#070a24' : String(o.fog_c ?? '#16205a')} fogNear={under ? 3 : 12} fogFar={under ? 26 : 130} />
       {/* the sky: gradient dome, stars, the low moon (+ its halo and its path on the water), the cloud */}
-      <mesh scale={SKY_R} renderOrder={-10}>
+      {painted ? <PaintedSea o={o} f={f} fps={fps} centre={herAt} under={under} /> : <mesh scale={SKY_R} renderOrder={-10}>
         <sphereGeometry args={[1, 32, 24]} />
         <meshBasicMaterial map={skyTex()} side={THREE.BackSide} fog={false} depthWrite={false} toneMapped={false} />
-      </mesh>
-      {stars > 0 ? Array.from({length: 520}, (_, i) => {
+      </mesh>}
+      {stars > 0 && (!painted || o.eye) ? Array.from({length: 520}, (_, i) => {
         const a = rnd(i * 3 + 1) * Math.PI * 2, e = 0.03 + Math.pow(rnd(i * 5 + 2), 0.7) * 1.45;
         const p = new THREE.Vector3(Math.cos(e) * Math.cos(a), Math.sin(e), Math.cos(e) * Math.sin(a)).multiplyScalar(SKY_R * 0.9);
         const tw = 0.6 + 0.4 * Math.sin(f / (6 + rnd(i) * 9) + i);
@@ -171,14 +183,14 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
           <sphereGeometry args={[1, 5, 4]} /><meshBasicMaterial color={rnd(i * 11) > 0.85 ? '#ffe6c4' : '#dfe6ff'} transparent opacity={tw * stars} fog={false} toneMapped={false} />
         </mesh>;
       }) : null}
-      {o.moon !== false ? (
+      {o.moon !== false && !painted ? (
         <group position={moonP}>
           <mesh scale={6.5}><sphereGeometry args={[1, 32, 20]} /><meshBasicMaterial color="#fff6e2" fog={false} toneMapped={false} /></mesh>
           <mesh scale={30} renderOrder={-5}><sphereGeometry args={[0.5, 16, 12]} /><meshBasicMaterial map={glowTex('#9fb2ff')} {...add} opacity={0.5 * (1 - 0.6 * cloud)} fog={false} side={THREE.BackSide} /></mesh>
         </group>
       ) : null}
       {/* the cloud: dark lumps that drift in front of the moon */}
-      <group position={MOON_DIR.clone().multiplyScalar(SKY_R * 0.7).add(new THREE.Vector3(-28 + 26 * cloud, 2, 0))}>
+      {painted ? null : <group position={MOON_DIR.clone().multiplyScalar(SKY_R * 0.7).add(new THREE.Vector3(-28 + 26 * cloud, 2, 0))}>
         {Array.from({length: 9}, (_, i) => (
           <mesh key={i} position={[(i - 4) * 4.2 + rnd(i) * 2, Math.sin(i * 1.3) * 1.6, rnd(i + 3) * 3]} scale={[6 + rnd(i * 5) * 4, 3 + rnd(i * 7) * 2, 3]}>
             <sphereGeometry args={[1, 14, 10]} /><meshBasicMaterial color="#0d1230" fog={false} transparent opacity={0.96} />
@@ -189,11 +201,11 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
             <sphereGeometry args={[1, 10, 8]} /><meshBasicMaterial color="#7f8fd6" fog={false} transparent opacity={0.22 * cloud} />
           </mesh>
         ))}
-      </group>
+      </group>}
       {/* the sea surface: opaque from above (hides what is under the waterline), a silvery skin from below */}
       {!split ? (
         <group>
-          <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -60]} material={toon('#0a1030')} receiveShadow>
+          <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -60]} material={painted ? seaFlat() : toon('#0a1030')} receiveShadow>
             <planeGeometry args={[400, 400, 1, 1]} />
           </mesh>
           <mesh rotation={[Math.PI / 2, 0, 0]} position={[0, -0.005, -60]}>
@@ -209,7 +221,7 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
         </mesh>
       )}
       {/* moonlight on the water: a shimmering path toward the moon */}
-      {!under && !split ? Array.from({length: 70}, (_, i) => {
+      {!under && !split && !painted ? Array.from({length: 70}, (_, i) => {
         const t = rnd(i * 3), dist = 8 + t * 90;
         const p = new THREE.Vector3(MOON_DIR.x, 0, MOON_DIR.z).normalize().multiplyScalar(dist);
         const w = 0.6 + dist * 0.06;
@@ -321,7 +333,8 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       <Sparks list={o.sparks} f={f} />
       <DeepLife opts={o} f={f} fps={fps} camPos={camPos} />
       {/* Love is War (2026-10-25): the lighthouse whose beam never stops on her, and the storm's lightning */}
-      {o.lighthouse ? <Lighthouse o={o.lighthouse as LighthouseOpts} f={f} fps={fps} camPos={(camPos ?? [0, 1.5, 6]) as P3} /> : null}
+      {o.lighthouse ? <Lighthouse o={o.lighthouse as LighthouseOpts} f={f} fps={fps} camPos={(camPos ?? [0, 1.5, 6]) as P3} painted={painted}
+        fresnelFront={Boolean(o.fresnel_front)} violet={frames(o.lantern_violet).some((t) => f >= t) ? 1 : 0} /> : null}
       <Lightning at={o.lightning} pos={o.lightning_pos as [number, number][] | undefined} f={f} />
     </group>
   );

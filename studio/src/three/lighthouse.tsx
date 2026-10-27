@@ -10,13 +10,22 @@ import * as THREE from 'three';
 import {canvasTexture, inkHull, rnd, toonPaint} from './look';
 import {add, glowTex} from './fire';
 import {frames} from './events';
+import {Ladder, LanternRoom, rockMat, towerMat} from './painted';
 
 type P3 = [number, number, number];
-export type LighthouseOpts = {pos?: [number, number]; height?: number; yaw?: number; spin?: number; beam?: number; len?: number};
+export type LighthouseOpts = {pos?: [number, number]; height?: number; yaw?: number; spin?: number; beam?: number; len?: number;
+  lantern?: 'her'};   // lantern 'her': the lantern room at HER scale (three/painted.tsx LanternRoom), the lamp at height + 1.7
 
 /** Along the cone's height: bright at the lamp (v = 1), gone at the far end. */
-function beamTex(): THREE.CanvasTexture {
-  return canvasTexture('lh_beam', 8, 256, (ctx, w, h) => {
+function beamTex(painted = false): THREE.CanvasTexture {
+  // painted (11_WORLD_build): hard value steps along the beam, one step per ~12 m - no soft volumetric fade
+  return canvasTexture(painted ? 'lh_beam_p' : 'lh_beam', 8, 256, (ctx, w, h) => {
+    if (painted) {
+      [[0, 0.06], [0.25, 0.14], [0.45, 0.24], [0.62, 0.38], [0.78, 0.6], [0.9, 0.9]].forEach(([y0, a]) => {
+        ctx.fillStyle = `rgba(255,236,200,${a})`; ctx.fillRect(0, 0, w, h * (1 - y0));
+      });
+      return;
+    }
     const g = ctx.createLinearGradient(0, h, 0, 0);
     g.addColorStop(0, 'rgba(255,240,205,0)'); g.addColorStop(0.55, 'rgba(255,240,205,0.25)'); g.addColorStop(1, 'rgba(255,246,225,1)');
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
@@ -28,7 +37,7 @@ export function beamYaw(o: LighthouseOpts, f: number, fps: number): number {
   return THREE.MathUtils.degToRad((o.yaw ?? 0) + (o.spin ?? 24) * (f / fps));
 }
 
-const Beam: React.FC<{from: THREE.Vector3; yaw: number; len: number; v: number}> = ({from, yaw, len, v}) => {
+const Beam: React.FC<{from: THREE.Vector3; yaw: number; len: number; v: number; painted?: boolean}> = ({from, yaw, len, v, painted = false}) => {
   const dir = new THREE.Vector3(Math.sin(yaw), -0.035, Math.cos(yaw)).normalize();
   const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, -1, 0), dir);   // the cone's top (the lamp) at `from`
   const mid = from.clone().addScaledVector(dir, len / 2);
@@ -36,30 +45,33 @@ const Beam: React.FC<{from: THREE.Vector3; yaw: number; len: number; v: number}>
     <group>
       <mesh position={mid} quaternion={q} renderOrder={9}>
         <cylinderGeometry args={[0.32, len * 0.085, len, 40, 1, true]} />
-        <meshBasicMaterial map={beamTex()} {...add} opacity={0.42 * v} fog={false} />
+        <meshBasicMaterial map={beamTex(painted)} {...add} opacity={0.42 * v} fog={false} />
       </mesh>
       <mesh position={mid} quaternion={q} renderOrder={9}>
         <cylinderGeometry args={[0.12, len * 0.03, len, 24, 1, true]} />
-        <meshBasicMaterial map={beamTex()} {...add} opacity={0.5 * v} fog={false} />
+        <meshBasicMaterial map={beamTex(painted)} {...add} opacity={0.5 * v} fog={false} />
       </mesh>
     </group>
   );
 };
 
-export const Lighthouse: React.FC<{o: LighthouseOpts; f: number; fps: number; camPos: P3}> = ({o, f, fps, camPos}) => {
+export const Lighthouse: React.FC<{o: LighthouseOpts; f: number; fps: number; camPos: P3; painted?: boolean; fresnelFront?: boolean; violet?: number}> = ({o, f, fps, camPos, painted = false, fresnelFront = false, violet = 0}) => {
   const [x, z] = o.pos ?? [-14, -46];
   const H = o.height ?? 9;
   const v = o.beam ?? 1;
   const len = o.len ?? 70;
-  const lamp = new THREE.Vector3(x, H + 0.6, z);
+  const herScale = o.lantern === 'her';
+  const lamp = new THREE.Vector3(x, H + (herScale ? 1.7 : 0.6), z);
   const yaw = beamYaw(o, f, fps);
   // the lamp blazes when a beam points at the lens (the moment the light finally looks at you)
   const toCam = new THREE.Vector3(...camPos).sub(lamp).setY(0).normalize();
   const face = Math.max(...[yaw, yaw + Math.PI].map((a) => new THREE.Vector3(Math.sin(a), 0, Math.cos(a)).dot(toCam)));
   const blaze = Math.pow(Math.max(0, face), 18);
   // painted, not plastic (toki 2026-10-25): plaster with a coloured shade and an ink contour; wet black rock
-  const white = toonPaint('#d9d6e4', 'plaster', '#4a3f7a', [3, 6]), red = toonPaint('#a8233a', 'plaster', '#4a1830', [3, 2]);
-  const dark = toonPaint('#1b1a2a', 'metal', '#120c26'), rock = toonPaint('#1d1e33', 'plaster', '#0d0a22', [1, 1]);
+  const white = painted ? towerMat() : toonPaint('#d9d6e4', 'plaster', '#4a3f7a', [3, 6]), red = toonPaint('#a8233a', 'plaster', '#4a1830', [3, 2]);
+  const dark = toonPaint('#1b1a2a', 'metal', '#120c26'), rock = painted ? rockMat() : toonPaint('#1d1e33', 'plaster', '#0d0a22', [1, 1]);
+  // the sea-facing normal (toward the usual lens side): the ladder runs up the tower face there
+  const n = new THREE.Vector2(-x, -z).normalize();
   const ink = inkHull();
   return (
     <group>
@@ -79,7 +91,7 @@ export const Lighthouse: React.FC<{o: LighthouseOpts; f: number; fps: number; ca
       {/* the tower: white with two red bands, the gallery, the lantern room, the dome */}
       <mesh position={[x, H / 2 + 0.3, z]} material={white}><cylinderGeometry args={[0.85, 1.3, H, 24]} /></mesh>
       <mesh position={[x, H / 2 + 0.3, z]} material={ink} scale={[1.035, 1.004, 1.035]}><cylinderGeometry args={[0.85, 1.3, H, 24]} /></mesh>
-      {[0.3, 0.62].map((k) => (
+      {(painted ? [] : [0.3, 0.62]).map((k) => (
         <mesh key={k} position={[x, 0.3 + H * k, z]} material={red}><cylinderGeometry args={[1.3 - 0.45 * k + 0.02, 1.3 - 0.45 * k + 0.06, H * 0.12, 24]} /></mesh>
       ))}
       {[0.2, 0.45, 0.75].map((k, i) => (
@@ -87,15 +99,18 @@ export const Lighthouse: React.FC<{o: LighthouseOpts; f: number; fps: number; ca
           <boxGeometry args={[1, 1, 1]} /><meshBasicMaterial color="#ffd89a" toneMapped={false} />
         </mesh>
       ))}
+      {herScale ? <LanternRoom x={x} z={z} H={H} f={f} fps={fps} camPos={camPos} fresnelFront={fresnelFront} violet={violet} /> : <>
       <mesh position={[x, H + 0.32, z]} material={dark}><cylinderGeometry args={[1.35, 1.35, 0.16, 24]} /></mesh>
       <mesh position={[x, H + 0.32, z]} material={ink} scale={[1.03, 1.3, 1.03]}><cylinderGeometry args={[1.35, 1.35, 0.16, 24]} /></mesh>
       <mesh position={[x, H + 0.95, z]}><cylinderGeometry args={[0.7, 0.7, 1.1, 20]} />
         <meshBasicMaterial color="#fff1cf" toneMapped={false} /></mesh>
       <mesh position={[x, H + 1.5, z]} material={red}><sphereGeometry args={[0.78, 20, 10, 0, Math.PI * 2, 0, Math.PI / 2]} /></mesh>
+      </>}
+      {painted ? <Ladder x={x} z={z} nx={n.x} nz={n.y} r={1.25} y0={1.6} y1={H + 0.3} /> : null}
       <mesh position={lamp} scale={3 + 22 * blaze} renderOrder={10}><planeGeometry args={[1, 1]} />
         <meshBasicMaterial map={glowTex('#fff3d6')} {...add} opacity={0.85 * v} fog={false} /></mesh>
       <pointLight position={lamp} color="#ffe7bd" intensity={14 * v} distance={30} decay={1.4} />
-      {v > 0 ? <><Beam from={lamp} yaw={yaw} len={len} v={v} /><Beam from={lamp} yaw={yaw + Math.PI} len={len} v={v * 0.7} /></> : null}
+      {v > 0 ? <><Beam from={lamp} yaw={yaw} len={len} v={v} painted={painted} /><Beam from={lamp} yaw={yaw + Math.PI} len={len} v={v * 0.7} painted={painted} /></> : null}
     </group>
   );
 };

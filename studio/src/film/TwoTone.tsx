@@ -24,6 +24,9 @@ function flatMat(c: string): THREE.MeshBasicMaterial {
 }
 
 function value(m: THREE.Material): number {
+  const tone = (m.userData as {tone?: string}).tone;                 // a painted card names its value (three/painted.tsx)
+  if (tone === 'ink') return 0;
+  if (tone === 'paper') return 1;
   const x = m as THREE.Material & {color?: THREE.Color; emissive?: THREE.Color; blending?: THREE.Blending};
   if (x.blending === THREE.AdditiveBlending) return 1;           // light, glow, beams: they are the paper in a flash
   const c = (x.color ?? new THREE.Color('#000')).clone();
