@@ -1,14 +1,12 @@
 {
- "_why": "build 5c: the gold hit flash 63.808 before the scripted barb flick covers the lens",
+ "_why": "build 5d: the gold hit flash with the barb flick after it",
  "format": "mv",
  "frames": [
-  1913,
-  1914
+  1915
  ],
  "names": [
-  "m08_hit_flash_gold",
-  "m08b_hit_flash_gold"
+  "m08_hit_flash_gold"
  ],
  "scale": 1,
- "round": "build5c"
+ "round": "build5d"
 }
