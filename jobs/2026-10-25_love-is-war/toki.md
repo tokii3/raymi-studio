@@ -23,3 +23,7 @@ build: toki 2026-10-27 "bitte zeige mir alle bilder / videos etc von aktuellen d
 draft: toki 2026-10-27 "also das größte problem was ich erkenne ist, dass raymis bewegungen nicht flüssig sind, daruch wirkt raymi / das video wirkt statisch, es sieht abgehackt aus, aber die ideen sind schon gut, aber es sieht weiterhin immernoch sehr billig aus leider ich kann es schlecht beschreiben aber es sieht einfach immernoch aus wie plastik, es wirkt so als wären kollisionen nicht richtig bereichnet etc"
 draft: toki 2026-10-27 "Ja, setz den Plan so um: Bewegung nach gemessener Energie, Kollisionen, Material gegen Plastik, Motion-Check ins Gate, dann ein Video-Ausschnitt zum Beurteilen."
 excerpt: toki 2026-10-27 "ja besser, die offenenn sachen vom kritiker sind mir auch aufgefallen, außerdem ist mir aufgefallen dass raymi so komische outlines hat die bitte weg machen sieht komisch aus einfach schwarze outline hatte ich bei vrm auch eigentlich aus gestellt, wenn raymi nah an / in die kamera kommt sieht man dass sie hohl von innen ist, diese vektor grafiken entweder verbessern dass sie nicht wie flache komische sticker aussehen oder weg tun ich weiß ja nicht was der plan damit war"
+excerpt: toki 2026-10-27 "ja ganzer film, restlichen kritiker punkte fixen, und dann den ganzen film so rendern, außerdem after effects nicht vergessen, damit es aus einem guss, aussieht, effekte etc, außerdem raymi lipsync sieht noch unpassend aus, anonsten go"
+
+## 2026-10-27 (während Lipsync-Fix)
+"und außerdem auch ihr gesicht anpassen sie ist imemr sehr emotionslos"

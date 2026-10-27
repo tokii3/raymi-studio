@@ -30,14 +30,15 @@ const INK = '#0b0910', PAPER = '#f1ebe0', VIOLET = '#b98cff', WHITE_V = '#f3eeff
 const W = 160, H = 90;
 const two = (f: number) => f - (f % 2);                          // on twos
 /** The ink hand every drawn effect shares (toki 2026-10-27: the effects read as flat vector stickers): the edges are
- *  displaced by noise (a brush that frays), a paper grain eats into the fill. One filter, so every effect is one hand. */
+ *  displaced by noise (a brush that frays), a paper grain eats into the fill. One filter, so every effect is one hand.
+ *  Excerpt 8 look-critic FIX 4: the grain ate so much that the ink read as grey speckle - now it only nicks the fill. */
 export const inkDefs = (id: string, seed = 3) => (
   <defs>
     <filter id={id} x="-10%" y="-10%" width="120%" height="120%">
       <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves={2} seed={seed} result="n" />
       <feDisplacementMap in="SourceGraphic" in2="n" scale={1.6} xChannelSelector="R" yChannelSelector="G" result="d" />
       <feTurbulence type="fractalNoise" baseFrequency="2.6" numOctaves={1} seed={seed + 7} result="g" />
-      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.55" result="gm" />
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.4 1.6" result="gm" />
       <feComposite in="d" in2="gm" operator="in" />
     </filter>
   </defs>

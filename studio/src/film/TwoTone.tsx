@@ -34,7 +34,10 @@ function value(m: THREE.Material): number {
   return 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b;
 }
 
-export const TwoTone: React.FC<{on: boolean; light?: string; dark?: string; bg?: 'paper' | 'ink'; children: React.ReactNode}> = ({on, light = '#f1ebe0', dark = '#0b0910', bg = 'paper', children}) => {
+// `mid` (the colour flip, excerpt 8 look-critic FIX 2): THREE tones instead of two - a flat light / ink pair read as a
+// broken colour pass; with a mid tone the set stays readable (light things lit, mid things the warm shade, darks stay
+// navy) and the sky takes the mid tone.
+export const TwoTone: React.FC<{on: boolean; light?: string; dark?: string; mid?: string; bg?: 'paper' | 'ink'; children: React.ReactNode}> = ({on, light = '#f1ebe0', dark = '#0b0910', mid, bg = 'paper', children}) => {
   const ref = useRef<THREE.Group>(null);
   useLayoutEffect(() => {
     ref.current?.traverse((o) => {
@@ -48,7 +51,8 @@ export const TwoTone: React.FC<{on: boolean; light?: string; dark?: string; bg?:
         mesh.visible = !transparent;
         if ((first.userData as {tone?: string}).tone === 'clear') { mesh.visible = false; return; }   // glass: gone in a flash
         const back = (first as THREE.Material).side === THREE.BackSide;   // the sky / backdrop dome
-        mesh.material = flatMat(back ? (bg === 'ink' ? dark : light) : value(first) > 0.3 ? light : dark);
+        const v = value(first);
+        mesh.material = flatMat(back ? (mid ?? (bg === 'ink' ? dark : light)) : mid ? (v > 0.5 ? light : v > 0.12 ? mid : dark) : v > 0.3 ? light : dark);
       } else if (ud.twoTone) {
         mesh.material = ud.twoTone.material;
         mesh.visible = true;

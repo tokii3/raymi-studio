@@ -589,7 +589,12 @@ function setExpressions(rig: Rig, k: VrmKey, f: number, fps: number, mouthKeys: 
   const em = rig.vrm.expressionManager;
   if (!em) return;
   for (const e of em.expressions) em.setValue(e.expressionName, 0);
-  const want = exprOf(k);
+  const want = {...exprOf(k)};
+  // toki 2026-10-27 ("lipsync sieht noch unpassend aus"): a vowel in a key's expr ("aa": 0.8 = a yell) was a FIXED open
+  // mouth on top of her singing - a frozen grimace while the words ran. Where she sings, the yell now opens the sung
+  // vowels wider (the voice still shapes the mouth); only a silent shot keeps the designed open scream.
+  let yell = 0;
+  if (mouthKeys.length) for (const n of Object.keys(want)) if (MOUTH_VOWELS.has(n.toLowerCase())) { yell = Math.max(yell, want[n]); delete want[n]; }
   for (const [name, v] of Object.entries(want)) {
     const n = EXPRESSION_ALIAS[name.toLowerCase()] ?? name;
     if (!em.getExpression(n)) cancelRender(new Error(`VRM has no expression ${name} (${n})`));
@@ -599,14 +604,27 @@ function setExpressions(rig: Rig, k: VrmKey, f: number, fps: number, mouthKeys: 
   // geschlossen sein wenn sie nicht spricht" - so an emotion ALWAYS comes from her raw brow + eye shape keys, never
   // from the preset; only her voice (the vowels below) opens the mouth.
   const mouth = vrmMouthAt(mouthKeys, f);
+  if (yell) for (const n of ['a', 'i', 'u', 'e', 'o'] as const) if (mouth[n]) mouth[n] = Math.min(0.9, mouth[n]! * (1 + 0.7 * yell));
+  // how hard she sings right now (0..1), read from the open vowels: the face sings along, not only the mouth
+  const sing = Math.min(1, (['a', 'i', 'u', 'e', 'o'] as const).reduce((s, n) => s + (mouth[n] ?? 0), 0) / 0.55);
   // raw keys are never reset by the expression manager: every frame writes all of them (0 when unused)
-  const raw: Record<string, number> = Object.fromEntries(['Fcl_MTH_Close', ...Object.values(EMOTION_PARTS).flat()].map((k) => [k, 0]));
+  const raw: Record<string, number> = Object.fromEntries(['Fcl_MTH_Close', ...Object.values(EMOTION_PARTS).flat(),
+    ...Object.values(EMOTION_MOUTH), 'Fcl_BRW_Surprised'].map((k) => [k, 0]));
+  let angry = 0;
   for (const [name, v] of Object.entries(want)) {
     const part = EMOTION_PARTS[name.toLowerCase()];
     if (!part) continue;
     em.setValue(EXPRESSION_ALIAS[name.toLowerCase()] ?? name, 0);
     for (const k of part) raw[k] = Math.max(raw[k] ?? 0, v);
+    // toki 2026-10-27 ("sie ist immer sehr emotionslos"): brows and eyes alone left her face blank - the mouth corners
+    // carry the feeling too (closed-mouth shapes: a smirk, a frown), fading out while a vowel needs the mouth
+    const mc = EMOTION_MOUTH[name.toLowerCase()];
+    if (mc) raw[mc] = Math.max(raw[mc] ?? 0, 0.45 * v * (1 - sing));
+    if (name.toLowerCase() === 'angry') angry = Math.max(angry, v);
   }
+  // singers' brows work with the voice: a loud note lifts them (or knits them harder in anger)
+  if (angry > 0) raw.Fcl_BRW_Angry = Math.min(1, raw.Fcl_BRW_Angry + 0.25 * sing);
+  else raw.Fcl_BRW_Surprised = Math.min(1, raw.Fcl_BRW_Surprised + 0.32 * sing);
   for (const [name, v] of Object.entries(mouth)) {
     if (name === 'close') { raw.Fcl_MTH_Close = v ?? 0; continue; }
     const n = EXPRESSION_ALIAS[name] ?? name;
@@ -625,6 +643,12 @@ const EMOTION_PARTS: Record<string, string[]> = {
   relaxed: ['Fcl_BRW_Fun', 'Fcl_EYE_Fun'], angry: ['Fcl_BRW_Angry', 'Fcl_EYE_Angry'], sorrow: ['Fcl_BRW_Sorrow', 'Fcl_EYE_Sorrow'],
   sad: ['Fcl_BRW_Sorrow', 'Fcl_EYE_Sorrow'], surprised: ['Fcl_BRW_Surprised', 'Fcl_EYE_Surprised'],
 };
+// the closed-mouth corner shape of each emotion (VRoid face keys; a missing key is simply not written)
+const EMOTION_MOUTH: Record<string, string> = {
+  joy: 'Fcl_MTH_Fun', happy: 'Fcl_MTH_Fun', fun: 'Fcl_MTH_Fun', relaxed: 'Fcl_MTH_Fun',
+  angry: 'Fcl_MTH_Angry', sorrow: 'Fcl_MTH_Sorrow', sad: 'Fcl_MTH_Sorrow',
+};
+const MOUTH_VOWELS = new Set(['aa', 'ih', 'ou', 'ee', 'oh', 'a', 'i', 'u', 'e', 'o']);
 const pendingRaw = new WeakMap<Rig, Record<string, number>>();
 
 const camV = new THREE.Vector3();

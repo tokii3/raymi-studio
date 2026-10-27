@@ -1,32 +1,8 @@
 {
- "_why": "excerpt 4 (toki 2026-10-27: outlines off, never hollow, the vector graphics as ink or gone): probe over the excerpt + 10 stills",
+ "_why": "face + lip sync + one grade (toki 2026-10-27: 'lipsync sieht noch unpassend aus', 'sie ist immer sehr emotionslos', 'after effects ... aus einem guss') and the excerpt 8 critic fixes (flip, 35H torso, 29a top-down, crane end, riser start) - checked before the whole film renders",
  "format": "mv",
- "frames": [
-  1820,
-  1890,
-  1915,
-  1960,
-  2030,
-  2075,
-  2120,
-  2165,
-  2225,
-  2390
- ],
- "names": [
-  "x1_riser",
-  "x2_war_cry",
-  "x3_hit_gold",
-  "x4_lunge",
-  "x5_flip",
-  "x6_punch",
-  "x7_kick",
-  "x8_M1",
-  "x9_arms_wide",
-  "x10_crane"
- ],
+ "frames": [82, 505, 954, 1790, 1966, 2028, 2280, 2340, 2405, 2607, 3294, 4087],
+ "names": ["f1_calm_sorrow", "f2_verse_smirk", "f3_yell_sung", "f4_riser_start", "f5_29a_from_below", "f6_flip_three_tone", "f7_chorus_smirk", "f8_35H_face", "f9_crane_end", "f10_yell_2", "f11_angry_sing", "f12_smirk_2"],
  "scale": 1,
- "round": "motion4",
- "probe": 2,
- "probe_range": "1758-2415"
+ "round": "face1"
 }

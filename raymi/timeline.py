@@ -18,6 +18,8 @@ jobs/<job>/shots.json is the machine part of the shooting script (4_SCRIPT.md sa
                   "pos": "desk", "rotY": "lens" | 20, "height": 1.55, "blend": 0.3, "act": "idle", "move": 0.4, "arc": 0,
                   "look": "lens" | null}],
        "mouth": {"gain": 0.6} | "silent",          # lip sync v2 from the sung words (gain 1 = full), or a closed mouth
+       "face": {"angry": 0.7},                     # her feeling for keys without expr (else the job's "faces" by section:
+                                                   #  top-level "faces": {"peak": {"main": {...}, "lens": {...}}, "calm": ...})
        "step": 2, "outline": 0.0035,               # she moves on twos (anime) / her ink line
        "fx": [{"kind": "duo", "at": 0, "to": "end", "dark": "#2a2e3e", "light": "#d6dbe8"}],   # the 2D layer (Fx2D.tsx)
        "lyrics": {"kind": "sign", "anchor": "led" | [x, y, z], "rot": 0, "size": 0.3, "width": 4, "key": ["KING"],
@@ -1087,7 +1089,7 @@ def aim_camera(a: dict, s: dict, marks: dict, errors: list[str], tag: str) -> tu
     return [round(v, 4) for v in pos], [round(v, 4) for v in look]
 
 
-SUB_KEEP = {"set", "opts", "actor", "mouth", "step", "outline", "fx", "kick", "observer", "aware", "low_ok", "lens_near",
+SUB_KEEP = {"set", "opts", "actor", "mouth", "face", "step", "outline", "fx", "kick", "observer", "aware", "low_ok", "lens_near",
             "hero", "camera_hand", "why", "short_shot", "row"}   # frame_fit: per picture (frame_fits), never inherited
 
 
@@ -1599,6 +1601,21 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                          **({"size": spec_h["size"]} if "size" in spec_h else {}),
                          **({"center": _v3(spec_h["center"], marks, errors, tag)} if "center" in spec_h else {})})
         actor = compile_actor(s, fmt, a, b, fr, marks, poses, errors, tag, clips) if s.get("actor") else []
+        # her face (toki 2026-10-27: "sie ist immer sehr emotionslos" - 186 of 229 keys had none): a key without its own
+        # expr takes the row's "face", else the job's "faces" for the song section it sits in - "main" when she acts in
+        # the world, "lens" when she plays to the camera (aware / face_lens). Named feeling, never a blank face.
+        faces = spec.get("faces") or {}
+        if actor and (s.get("face") or faces):
+            mid = (a + b) / 2
+            sec = next((x.get("kind") for x in smap.get("sections", []) if x["t0"] <= mid < x["t1"]), None)
+            mood = faces.get(sec) or faces.get("default") or {}
+            for k in actor:
+                if "expr" in k:
+                    continue
+                lens = bool(k.get("faceLens") or (k.get("aware") or 0) >= 0.5)
+                e = s.get("face") or (mood.get("lens") if lens and mood.get("lens") else mood.get("main"))
+                if e:
+                    k["expr"] = dict(e)
         # her motion against the music: a slow clip in a loud section is flagged with stronger ones (measured energy)
         loud = [x for x in smap.get("sections", []) if x.get("kind") in ("peak", "loud") and x["t0"] < b and x["t1"] > a]
         if loud and actor and not (s.get("opts") or {}).get("freeze"):
@@ -1708,6 +1725,16 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         props["sung"] = [{"w": w["w"], "roma": w.get("roma", ""), "t0": round(w["t0"] - t_from, 3), "t1": round(w["t1"] - t_from, 3)}
                          for ln in lyrics for w in ln.get("words", [])
                          if w.get("t1", 0) > t_from and w.get("t0", 0) < t_to and not ln.get("backing")]
+        # a closed mouth while she sings (toki 2026-10-27 "lipsync sieht noch unpassend aus": 15 rows were "silent" over
+        # 14 % of her loud vocal frames) - a silent row may hold at most 0.25 s of sung words
+        for sh in shots:
+            if (sh.get("mouth") or {}).get("gain", 1) > 0 or not sh.get("actor"):
+                continue
+            a0, b0 = sh["from"] / FPS, sh["to"] / FPS
+            over = sum(max(0.0, min(b0, w["t1"]) - max(a0, w["t0"])) for w in props["sung"])
+            if over > 0.25:
+                warns.append(f"shot {sh.get('id')}: mouth 'silent' but she sings {over:.1f} s of words in it - drop 'silent' "
+                             f"(or say why in the row)")
     if spec.get("voice"):
         # a talking Short (kind pov, raymi/voice_lines.py): her spoken words drive the mouth, and the sound under the
         # picture is the mix of bed + takes + sfx (python -m raymi mix, cloud prepare) - it starts at the window start

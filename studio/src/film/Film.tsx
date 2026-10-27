@@ -254,7 +254,7 @@ export const Film: React.FC<FilmProps> = (props) => {
           <filter id="raymi-mblur" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation={`${blur.sx.toFixed(2)} ${blur.sy.toFixed(2)}`} /></filter>
         </defs></svg>
       ) : null}
-      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: mask ? 'none' : [whipStyle(props.shots, f, W).filter, twoOn ? '' : gradeAt(shot, f).filter, fxFilter(fx, f), povFilter(fx, f), blur ? 'url(#raymi-mblur)' : '', fin > 0 ? 'url(#raymi-finwave)' : ''].filter(Boolean).join(' ')}}>
+      <AbsoluteFill style={{...whipStyle(props.shots, f, W), filter: mask ? 'none' : [whipStyle(props.shots, f, W).filter, fxFilter(fx, f), povFilter(fx, f), blur ? 'url(#raymi-mblur)' : '', fin > 0 ? 'url(#raymi-finwave)' : ''].filter(Boolean).join(' ')}}>
         {ready ? (
           <ThreeCanvas width={W} height={H} shadows flat gl={{antialias: true, preserveDrawingBuffer: true}}
             camera={{fov: cam.fov, near: 0.05, far: 200, position: camPos}}>
@@ -263,7 +263,8 @@ export const Film: React.FC<FilmProps> = (props) => {
             {Set ? <WorldMotion spec={worldSpec(shot.opts.world, fps)} f={f} centre={(actorKeys[0]?.pos as [number, number, number] | undefined) ?? [0, 0, 0]}>
               {/* freeze: the set's own time stops at the shot's first frame (she still moves) */}
               <TwoTone on={twoOn} bg={shot.opts.two_tone_bg === 'ink' ? 'ink' : 'paper'}
-                light={paper} dark={shot.opts.two_tone_dark ? String(shot.opts.two_tone_dark) : undefined}>
+                light={paper} dark={flipOn && !floodOn ? String(shot.opts.flip_dark ?? '#17112e') : shot.opts.two_tone_dark ? String(shot.opts.two_tone_dark) : undefined}
+                mid={flipOn && !floodOn ? String(shot.opts.flip_mid ?? '#a24a2c') : undefined}>
               <Set f={shot.opts.freeze ? shot.from : f} fps={fps} opts={shot.opts} hits={props.hits} beats={props.beats} camPos={camPos} />
               </TwoTone>
               <SetFx opts={{wet: SET_WET[shot.set] ?? 0, ...shot.opts}} f={f} fps={fps} camPos={camPos} plain={Boolean(mask)}
@@ -278,7 +279,8 @@ export const Film: React.FC<FilmProps> = (props) => {
                 step={shot.step ?? 1} outline={shot.outline ?? 0} battery={battery}
                 keyLight={Number(shot.opts.her_key ?? shot.opts.depth ?? 0) * (1 - 0.85 * darkNow) * (1 - 0.7 * whiteNow)}
                 trails={Number(shot.opts.trails ?? 0)} lampLight={Number(shot.opts.her_light ?? 0)}
-                rimColor={shot.opts.her_rim ? String(shot.opts.her_rim) : undefined} rimGain={Number(shot.opts.her_rim_i ?? 1)} />
+                /* no warm rim in the colour flip: on the orange it read as a pink cut-out fringe (excerpt 8 look-critic FIX 2) */
+                rimColor={shot.opts.her_rim ? String(shot.opts.her_rim) : undefined} rimGain={flipOn ? 0 : Number(shot.opts.her_rim_i ?? 1)} />
               </TwoTone>
             ) : (
               <Puppet3D keys={shot.puppets} f={f} fps={fps} camPos={camPos} shadow={String(shot.opts.shadow ?? '#1d0b38')}
@@ -318,6 +320,10 @@ export const Film: React.FC<FilmProps> = (props) => {
       {battery && shot.opts.battery_sign ? <BatterySign {...battery} x={herHead[0] * W} y={herHead[1] * H} h={H} f={f} side={shot.opts.battery_sign === 'left' ? -1 : 1} /> : null}
       {icon}
       <Transitions shots={props.shots} f={fNow} />
+      {/* ONE grade over the finished picture - the world, her, the drawn effects and the wipes (toki 2026-10-27: "after
+          effects nicht vergessen, damit es aus einem guss aussieht"). Before, only the 3D layer was graded and the 2D
+          effects sat raw on top. A backdrop filter grades what lies below it and keeps the effects' blend modes. */}
+      {twoOn ? null : <AbsoluteFill style={{backdropFilter: gradeAt(shot, f).filter, WebkitBackdropFilter: gradeAt(shot, f).filter}} />}
       {twoOn ? <Grade grain={props.grain} tone={{...gradeAt(shot, f), split: 0, vignette: 0}} /> : <Grade grain={props.grain} tone={gradeAt(shot, f)} />}
       {props.overlay ? (
         <>

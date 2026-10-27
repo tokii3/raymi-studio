@@ -181,7 +181,9 @@ const Slash: React.FC<{x: Extract<Fx, {kind: 'slash'}>; f: number; head?: [numbe
     top.push(`${xx.toFixed(2)},${(-w * press / 2 + rag).toFixed(2)}`);
     bot.unshift(`${xx.toFixed(2)},${(w * press / 2 + (rnd(s * 17 + i) - 0.5) * w * 0.18).toFixed(2)}`);
   }
-  const color = x.color ?? '#09070d';
+  // the brand's war red, a solid accent (excerpt 8 look-critic FIX 4: the near-black stroke read grey and muddy over
+  // the navy set and her face)
+  const color = x.color ?? '#b3122f';
   // where the stroke crosses her head's column: closer than 0.2 of the frame -> it moves off her face (look-critic
   // stills 1: the slash parked across her mouth in m05 / m18)
   let cy = (x.y ?? 0.5) * H;
