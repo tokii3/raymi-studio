@@ -213,7 +213,7 @@
      "roll": 0
     }
    ],
-   "why": "THE silhouette, promise of the last picture (as 83): a black shape on the white-gold (ref hsr-hope-feathers@112.75)",
+   "why": "THE silhouette, promise of the last picture (as 83): a black shape on the white-gold (ref hsr-hope-feathers@112.75) | build: THE silhouette stands between the lamp and the lens (stills 4-7 showed it); the white flood hides the change of place from row 82",
    "actor": [
     {
      "at": 0,
@@ -222,11 +222,11 @@
      "speed": 0.0,
      "motionMix": 1,
      "pos": [
-      -7.437,
+      -7.66,
       12.9,
-      -31.185
+      -28.74
      ],
-     "rotY": -25.4
+     "rotY": -165.0
     }
    ],
    "mouth": "silent",
@@ -9124,7 +9124,7 @@
      "roll": 0
     }
    ],
-   "why": "WOW 5, strongest, last (177.238): the beam STOPS on the lens - white-gold flood, her silhouette, shake; she makes the light look at you (ref hsr-hope-feathers@112.75)",
+   "why": "WOW 5, strongest, last (177.238): the beam STOPS on the lens - white-gold flood, her silhouette, shake; she makes the light look at you (ref hsr-hope-feathers@112.75) | build: THE silhouette stands between the lamp and the lens (stills 4-7 showed it); the white flood hides the change of place from row 82",
    "actor": [
     {
      "at": 0,
@@ -9133,11 +9133,11 @@
      "speed": 0.0,
      "motionMix": 1,
      "pos": [
-      -7.437,
+      -7.66,
       12.9,
-      -31.185
+      -28.74
      ],
-     "rotY": -25.4
+     "rotY": -165.0
     }
    ],
    "mouth": "silent",

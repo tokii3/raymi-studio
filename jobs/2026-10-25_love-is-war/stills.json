@@ -3,50 +3,12 @@
  "format": "mv",
  "frames": [
   8,
-  21,
-  282,
-  840,
-  1166,
-  1839,
-  1887,
-  1915,
-  1935,
-  2030,
-  2160,
-  2394,
-  2614,
-  3225,
-  3666,
-  3686,
-  4413,
-  4635,
-  5298,
-  5319,
-  5535
+  5319
  ],
  "names": [
   "m01_silhouette",
-  "m02_eye_opens",
-  "m03_hit1_cable",
-  "m04_roll_ping",
-  "m05_claw_beam",
-  "m06_riser1_eyes",
-  "m07_war_cry",
-  "m08_hit_flash_gold",
-  "m09_chorus_grid",
-  "m10_colour_flip",
-  "m11_lens_attack_M1",
-  "m12_pillar",
-  "m13_shards",
-  "m14_moon",
-  "m15_hidden_stop",
-  "m16_landing",
-  "m17_false_win",
-  "m18_scream",
-  "m19_final_build",
-  "m20_last_hit",
-  "m21_ink_night"
+  "m20_last_hit"
  ],
  "scale": 1,
- "round": "build9"
+ "round": "build9b"
 }
