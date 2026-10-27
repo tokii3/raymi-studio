@@ -2763,10 +2763,10 @@
     {
      "at": 0,
      "aim": {
-      "d": 5.0,
+      "d": 3.3,
       "az": 10,
       "y": 0.8,
-      "h": -6.0,
+      "h": -3.6,
       "at": "under"
      },
      "fov": 50,
@@ -2775,10 +2775,10 @@
     {
      "at": 1.57,
      "aim": {
-      "d": 5.0,
+      "d": 3.3,
       "az": 10,
       "y": 0.8,
-      "h": -6.0,
+      "h": -3.6,
       "at": "under"
      },
      "fov": 50,
@@ -2791,7 +2791,7 @@
      "at": 0,
      "clip": "floating-legs-bent-and-arms-spread",
      "clip_from": 1.0,
-     "speed": 0.0,
+     "speed": 0.35,
      "motionMix": 1,
      "pos": "under",
      "rotY": "away",
@@ -2838,7 +2838,8 @@
       }
      ]
     }
-   ]
+   ],
+   "why_fix": "take 11 QC + excerpt critics: frozen 1.4 s, a tiny figure in empty blue - closer, and she drifts (speed 0.35)"
   },
   {
    "id": "27",
@@ -4570,10 +4571,10 @@
     {
      "at": 0,
      "aim": {
-      "d": 4.2,
+      "d": 3.4,
       "az": 40,
       "y": 0.6,
-      "h": 0.6,
+      "h": 2.8,
       "at": [
        -6.8,
        1.0,
@@ -4639,7 +4640,8 @@
      95.5
     ]
    },
-   "step": 2
+   "step": 2,
+   "why_fix": "take 11 QC: 2.4 s near-black - the lens sat behind the rocks and hid her; it looks down over them now"
   },
   {
    "id": "44",
