@@ -967,6 +967,13 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
             key["speed"] = float(r["speed"])
         if "rollZ" in r:
             key["rollZ"] = math.radians(float(r["rollZ"]))
+        # a key that changes the clip's speed or start (a HELD frame on a hit, then playing on) restarts the clip: the
+        # puppet times a clip from the key that started it, so a later speed 0 of the same clip was silently ignored
+        # (Love is War stills 5: every "held N frames" played on - the war cry bent away from the lens on its hit)
+        prev = out[-1] if out else None
+        if prev and prev.get("motion") == key.get("motion") and key.get("motion") and (
+                key.get("speed", 1.0) != prev.get("speed", 1.0) or "clipFrom" in key and key["clipFrom"] != prev.get("clipFrom")):
+            key["restart"] = True
         out.append(key)
     if out and out[0]["f"] > fr(a):
         out[0]["f"] = fr(a)                                # she is there from the first frame of the shot

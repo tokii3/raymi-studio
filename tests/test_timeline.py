@@ -339,3 +339,15 @@ def test_carry_turns_a_held_setup_into_snap_and_tail():
     assert [k["aim"]["d"] for k in keys] == [1.18, 1.0, 0.9] and keys[1]["ease"] == "snap" and keys[2]["at"] == "end"
     moved = [{"at": 0, "aim": {"d": 1}}, {"at": 1, "aim": {"d": 2}}]
     assert T.carry_keys(moved) == moved
+
+
+def test_a_held_frame_restarts_its_clip():
+    """Love is War stills 5: a later key with speed 0 of the SAME clip never held (the puppet times a clip from the key
+    that started it) - a speed / start change restarts the clip, so the hold holds and the play-on plays on."""
+    errors = []
+    s = {"actor": [{"at": 0, "clip": "roar", "clip_from": 1.0, "speed": 1, "pos": [0, 0, 0]},
+                   {"at": 0.1, "clip": "roar", "clip_from": 1.0, "speed": 0, "pos": [0, 0, 0]},
+                   {"at": 0.3, "clip": "roar", "clip_from": 1.0, "speed": 1, "pos": [0, 0, 0]},
+                   {"at": 0.5, "clip": "roar", "clip_from": 1.0, "speed": 1, "pos": [0, 0, 0]}]}
+    keys = T.compile_actor(s, "mv", 0.0, 2.0, lambda t: round(t * 30), {}, {"stand"}, errors, "t", None)
+    assert [k.get("restart", False) for k in keys] == [False, True, True, False]
