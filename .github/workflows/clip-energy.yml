@@ -6,6 +6,8 @@ name: clip-energy
 
 on:
   workflow_dispatch: {}
+  push:
+    paths: ["studio/catalog/clip_energy.request"]   # touch it on any branch to measure again
 
 permissions:
   contents: write
