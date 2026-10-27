@@ -70,12 +70,14 @@ Before planning a video also: `knowledge/CASEBOOK.md`, `canon/07_video_catalog.m
   `MVShort` (built 3D sets with a real camera, Raymi's sprites in the space, lyrics as objects, transitions through
   things) driven by one timeline (`raymi/timeline.py` <- `jobs/<job>/shots.json`). Catalog: `studio/catalog/`.
 - 3D film tools (2026-10-24): scene probe (`studio/probe.mjs`, `python -m raymi probe`), cuts on the music
-  (`python -m raymi cuts`), camera moves (`raymi/camera_moves.py`), bodies on real surfaces (`studio/src/three/support.ts`);
+  (`python -m raymi cuts`), the camera through each cut (`python -m raymi seams`), camera moves (`raymi/camera_moves.py`), bodies on real surfaces (`studio/src/three/support.ts`);
   read `knowledge/HANDOFF_2026-10-24_beach_3d_film.md` before a 3D video.
 - Song tools: `raymi/song.py` + `.github/workflows/analyze.yml` (vocal stem, word-timed lyrics, song map).
   Screening: `raymi/screen.py` (critic kit) + critic agents in `.claude/agents` (calibrated per package:
   `knowledge/calibration/`), main element: `raymi/hero.py` + check.ts heroFaults. Stills: `.github/workflows/stills.yml`.
   Asset library: `studio/catalog/status.json` (what toki liked / approved / named a fault in - reuse proven parts first).
+- Skill packs adopted 2026-10-27 (`knowledge/skillpacks/README.md`): area skills' `pro_rules.md`, looks measured on
+  references (`python -m raymi style`, `knowledge/styles/`).
 - `.github/workflows/render.yml` - parallel cloud render (see PRODUCTION.md "Render").
 - `assets/` - 172 checked Raymi sprites (`catalog.json`, MIGRATION.md), the brand font.
 

@@ -40,3 +40,6 @@ profis abschauen wie und warum") - knowledge/references/LEARNED.md
   `refs card <class> <slug@t>.. --why ".."`; judge our still with `refs measure <still> --card <class>`.
 - **A strip, not a frame**, for a burst of cuts: storyboard moment `"refs": [..]` (4-6 frames).
 - **Every decision a maker writes names its reason + effect** the way the pros' why answers do.
+## Trying a new style
+`style_from_refs.md` (this folder): measure a look on reference frames (`python -m raymi style measure`),
+match 2-4 of our stills (`style compare`), one check-in with toki, then keep it as `knowledge/styles/<name>.md`.

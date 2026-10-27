@@ -170,6 +170,11 @@ through - fix the check / the shared part, not the one instance.
   layout; say the song + "fan animation".
 - Upload texts in Raymi's voice (lowercase, kaomoji, no em dashes), titles search-first, credits complete.
 
+## 3b. Skill packs adopted (2026-10-27)
+knowledge/skillpacks/README.md: measured motion / edit / camera rules live in the area skills' `pro_rules.md`,
+`raymi-screening/slop_tells.md`, `raymi-references/style_from_refs.md`. Checks: `raymi seams <job>` (camera through
+every cut, also printed by `timeline`), `raymi style measure | compare` (a look in numbers, `knowledge/styles/`).
+
 ## 4. Expert craft notes (researched 2026-10-24, cross-checked where marked)
 
 **3D that reads as 2D anime** (Arc System Works, Guilty Gear Xrd, GDC 2015 - Motomura talk + "Animation of GG Xrd /

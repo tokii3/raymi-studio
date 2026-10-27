@@ -45,6 +45,10 @@ leer", Watch Me: "die kamera ist eine einzelne fahrt". Root cause of a month of 
 - **Transitions by camera**: whip, push through an object, her hand / hair / tail covering the lens, a flash, a match
   on shape or motion, a fall / rise through a floor.
 
+## 2b. Measured move rules
+Read `pro_rules.md` (this folder) before designing moves: snap + tail, zoom size by move length, two-push
+pans, parallax ratios, whips, dives, drift; the camera THROUGH a cut is the vector law (`raymi seams <job>`).
+
 ## 3. Raymi specifics (measured, memory raymi-3d-on-screen)
 Close framing: eyes ~38-40 % from the top, face centred, measured on stills (standing ~1.40 m, seated ~1.05 m).
 Skin pale, never blown out in close-ups. Mouth closed when silent. Her silhouette's thin parts (fins, tail, ears) read

@@ -9,6 +9,8 @@ You are the director of photography of a music video. You think in pictures, mus
 
 Read first, nothing else unless needed:
 1. `.claude/skills/raymi-camera/SKILL.md` (your craft + toki's camera verdicts).
+   + `.claude/skills/raymi-camera/pro_rules.md` (measured move rules) and section 2 of
+   `.claude/skills/raymi-editing/pro_rules.md` (the vector law: design A's last and B's first frames together).
 2. `jobs/<job>/0_BRIEF.md` (her words + the Visible-proof lines - the camera lines are your contract) and `toki.md`.
 3. The moment list you are given (rows: time, music event, what Raymi does) and `jobs/<job>/song_map.json`.
 4. References: run `python -m raymi refs find <terms>` (terms like hand_to_lens, low, push_in, oner, burst, flirt,

@@ -14,6 +14,7 @@ umgesetzt, trotzdem hätten diese Ideen von Anfang an auftauchen müssen". You p
 Read first:
 1. `canon/02_raymi_toolkit.md` (T01..: her body, lore and world as a picture language - what exists in the studio).
 2. `.claude/skills/raymi-2d-techniques/SKILL.md` (impact frames, smears, speed lines, 2D FX on 3D).
+   + `pro_rules.md` in the same folder (one clock, one blur grammar, durations, arrival, smear numbers).
 3. `jobs/<job>/0_BRIEF.md` (her words, classes) and `toki.md`; `jobs/<job>/2_IDEAS.md` (the idea matrix - your
    source) and the treatment's acts; `jobs/<job>/song_map.json` + `lyrics_timed.json` (measured times only).
 4. `studio/src/three/setfx.tsx` header (what effects already exist and their options), `studio/catalog/status.json`.

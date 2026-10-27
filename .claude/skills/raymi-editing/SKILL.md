@@ -18,6 +18,11 @@ then there are no cuts at all - the "edit" happens inside the camera move.
    verse medium, pre-chorus building, chorus / drop dense, bridge breathing, final chorus densest, outro release.
 4. References for each section type: `python -m raymi refs find chorus fast`, `burst`, `slow verse`, `oner`.
 5. Check with `python -m raymi cuts <job>` (plan) AND `python -m raymi reality <job> <video>` (the real video).
+6. Seams: `python -m raymi seams <job>` (every hard cut: does the camera carry through? `timeline` prints it).
+
+**Read `pro_rules.md` (this folder) before planning an edit**: beat grid on beat 1, phrases, the arc, the vector law
+at every seam, carriers + handoff rows, no crossfades, speed ramps, silence before the payoff (from the motion-design
+skill packs, knowledge/skillpacks/README.md).
 
 ## 2. Craft
 - **Murch's rule of six**: emotion > story > rhythm > eye trace > 2D plane > 3D space. A cut that feels right beats

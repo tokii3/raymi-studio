@@ -68,6 +68,10 @@ def main(argv: list[str]) -> int:
         from . import gate
 
         return gate.main(argv[1:])
+    if cmd == "style":       # style measure <imgs> | compare <ref imgs> -- <ours>: a look in numbers (knowledge/styles)
+        from . import style
+
+        return style.main(argv[1:])
     if cmd == "refs":        # refs list|analyze|frames|board ...: the professional reference library
         from . import refs
 
@@ -243,6 +247,10 @@ def main(argv: list[str]) -> int:
         from . import cuts as C
 
         return C.main(d, "--apply" in argv)
+    if cmd == "seams":       # seams <job>: does the camera carry the eye through each hard cut? (needs out/props.json)
+        from . import seams
+
+        return seams.main(d)
     if cmd == "timeline":    # timeline <job> [mv|short] -> out/props.json for the film compositions
         from . import timeline as T
 
@@ -257,6 +265,12 @@ def main(argv: list[str]) -> int:
             return 1
         (out / "props.json").write_text(json.dumps(props, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
         print(f"timeline ({fmt}): {len(props['shots'])} shots, {props['durationInFrames']} frames -> {out / 'props.json'}")
+        from . import seams
+
+        rep = seams.report(props, seams.hits_frames(d, props))
+        print(seams.summary(rep), "(details: python -m raymi seams", job + ")")
+        for r in rep["mirrored_off_hit"]:
+            print(f"WARN  seam before shot {r['shot']}: camera {r['exit']} -> {r['entry']} (mirrored, no hit licenses it)")
         return 0
     if cmd == "finish" and not (d / "plan.json").is_file():   # a film job: expected length from its props
         props = json.loads((out / "props.json").read_text(encoding="utf-8"))

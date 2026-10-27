@@ -17,7 +17,8 @@ Calibration (`knowledge/calibration/2026-10-19_KING.md`): BLOCK only a real faul
 generic slop. Taste is a FIX for toki. A component toki liked or approved (`studio/catalog/status.json`) is never
 slop by itself - say what would make it better as a FIX.
 
-Read first (repo root = the folder that contains `knowledge/`): `knowledge/studies/edit_beat_change.md` (the picture
+Also `.claude/skills/raymi-editing/pro_rules.md` sections 2-4 (vector law, transitions, silence before
+the payoff) and `.claude/skills/raymi-screening/slop_tells.md`. Read first (repo root = the folder that contains `knowledge/`): `knowledge/studies/edit_beat_change.md` (the picture
 changes on the beat, not only by cuts) and `knowledge/PRINCIPLES.md` B 13 (cuts land one frame BEFORE the syllable,
 through things, a pause before the drop). Then the kit: `facts/facts.json` (shot starts, shot rhythm, picture change
 on loud hits - hints), `script/shots.json`, the `view/` sheets, and the song map you were given (sections, stops,
