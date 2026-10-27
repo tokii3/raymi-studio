@@ -154,3 +154,14 @@ def test_edge_tts_call_matches_installed_version():
 def test_channel_rules_block_ai_vtuber_tag():
     issues = channel_rules.tag_issues(["ai vtuber", "stingray vtuber"], ["#rain", "#vtuber", "#envtuber"])
     assert any("ai vtuber" in i for i in issues)
+
+
+def test_motion_check_fails_a_still_raymi_in_a_loud_section():
+    """toki 2026-10-27 (third time "nicht flüssig ... statisch"): the gate measures her motion on the render."""
+    from raymi import motion_check as M
+    still = [{"f": f, "shot": "a", "her": {"bones": {"hips": [0, 1, 0], "head": [0, 1.5, 0], "leftHand": [0.3, 1, 0]}}} for f in range(0, 120, 4)]
+    res = M.check(M.speeds(still), [{"t0": 0, "t1": 4, "kind": "peak"}])
+    assert res["faults"] and res["still"] == 1.0
+    moving = [{"f": f, "shot": "a", "her": {"bones": {"hips": [0, 1, 0], "head": [0, 1.5, 0], "leftHand": [0.3 + 0.1 * (f // 4 % 2), 1, 0]}}} for f in range(0, 120, 4)]
+    assert not M.check(M.speeds(moving), [{"t0": 0, "t1": 4, "kind": "peak"}])["faults"][:1] == ["x"]
+    assert M.check(M.speeds(moving), [{"t0": 0, "t1": 4, "kind": "peak"}])["median"] > 0.6

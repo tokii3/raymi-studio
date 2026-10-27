@@ -53,6 +53,13 @@ def check(job_dir: Path, stage: str, files: list[Path]) -> list[str]:
             reasons.append("no out/reality.json - run python -m raymi reality <job> <video>")
         else:
             reasons += [f"reality: {x}" for x in json.loads(rf.read_text(encoding="utf-8")).get("faults", [])]
+        # her motion on the real render (toki 2026-10-27, third time "nicht flüssig ... statisch"): stills never showed it
+        mf = job_dir / "out" / "motion.json"
+        if (job_dir / "shots.json").is_file() and json.loads((job_dir / "shots.json").read_text(encoding="utf-8")).get("vrm"):
+            if not mf.is_file():
+                reasons.append("no out/motion.json - run the scene probe on the render, then python -m raymi motion <job>")
+            else:
+                reasons += [f"motion: {x}" for x in json.loads(mf.read_text(encoding="utf-8")).get("faults", [])]
     return reasons
 
 

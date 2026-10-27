@@ -111,12 +111,21 @@ export function fixModel(scene: THREE.Object3D): void {
 // Hair against her body (probe on Watch Me, 2026-10-25: hair_in in 34 shots - strands through her chest and shoulders).
 // VRoid gave the hair springs head colliders only. Her torso gets a capsule on the chest and the upper chest and a
 // sphere on each shoulder, and every hair joint collides with them: the hair falls round her, not through her.
+// Love is War probe (2026-10-27): still hair_in in 169 of 229 pictures - her long hair reaches the waist and the thighs,
+// so the whole body down to the knees collides now (hips, spine, upper legs, the arms), and the torso capsules are as
+// thick as her torso (the probe's torso radius), not under it.
 const BODY_COLLIDERS: {bone: string; r: number; from?: [number, number, number]; to?: [number, number, number]}[] = [
-  {bone: 'J_Bip_C_Chest', r: 0.105, from: [0, 0.0, -0.01], to: [0, 0.09, -0.01]},
-  {bone: 'J_Bip_C_UpperChest', r: 0.11, from: [0, -0.02, -0.015], to: [0, 0.1, -0.015]},
-  {bone: 'J_Bip_L_UpperArm', r: 0.06},
-  {bone: 'J_Bip_R_UpperArm', r: 0.06},
-  {bone: 'J_Bip_C_Neck', r: 0.055},
+  {bone: 'J_Bip_C_Hips', r: 0.13, from: [0, -0.04, -0.01], to: [0, 0.08, -0.01]},
+  {bone: 'J_Bip_C_Spine', r: 0.12, from: [0, 0.0, -0.01], to: [0, 0.1, -0.01]},
+  {bone: 'J_Bip_C_Chest', r: 0.125, from: [0, 0.0, -0.01], to: [0, 0.09, -0.01]},
+  {bone: 'J_Bip_C_UpperChest', r: 0.125, from: [0, -0.02, -0.015], to: [0, 0.1, -0.015]},
+  {bone: 'J_Bip_L_UpperArm', r: 0.065, from: [0, 0, 0], to: [0.2, 0, 0]},
+  {bone: 'J_Bip_R_UpperArm', r: 0.065, from: [0, 0, 0], to: [-0.2, 0, 0]},
+  {bone: 'J_Bip_L_LowerArm', r: 0.045, from: [0, 0, 0], to: [0.2, 0, 0]},
+  {bone: 'J_Bip_R_LowerArm', r: 0.045, from: [0, 0, 0], to: [-0.2, 0, 0]},
+  {bone: 'J_Bip_L_UpperLeg', r: 0.085, from: [0, 0, 0], to: [0, -0.35, 0]},
+  {bone: 'J_Bip_R_UpperLeg', r: 0.085, from: [0, 0, 0], to: [0, -0.35, 0]},
+  {bone: 'J_Bip_C_Neck', r: 0.06},
 ];
 
 export function hairColliders(vrm: VRM): number {

@@ -247,6 +247,10 @@ def main(argv: list[str]) -> int:
         from . import cuts as C
 
         return C.main(d, "--apply" in argv)
+    if cmd == "motion":      # motion <job> [probe]: her motion on the real render, per section (gate reads out/motion.json)
+        from . import motion_check
+
+        return motion_check.main(argv[1:])
     if cmd == "seams":       # seams <job>: does the camera carry the eye through each hard cut? (needs out/props.json)
         from . import seams
 

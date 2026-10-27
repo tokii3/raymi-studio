@@ -876,9 +876,11 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
       {/* her own key from the lens side, short reach (a depth set dims the room - she stays lit, the room falls off) */}
       {chest && keyLight > 0 ? (() => {
         const fwd = new THREE.Vector3(camPos[0] - p.x, 0, camPos[2] - p.z).normalize();
-        const side = new THREE.Vector3(fwd.z, 0, -fwd.x).multiplyScalar(0.55);
-        return <pointLight position={[chest.x + fwd.x * 1.1 + side.x, chest.y + 0.55, chest.z + fwd.z * 1.1 + side.z]} color="#f3f0ff"
-          intensity={2.3 * keyLight} distance={3.2} decay={1.7} />;   // look-critic stills 3: her own light drowned the set's - she looked pasted on
+        // a 45-degree key from above the lens side, not flat from the front (toki 2026-10-27 "plastik"; look-critic: her face
+        // lit flat and frontal, a different logic than the set) - the toon terminator shapes her face and body
+        const side = new THREE.Vector3(fwd.z, 0, -fwd.x).multiplyScalar(1.15);
+        return <pointLight position={[chest.x + fwd.x * 0.9 + side.x, chest.y + 0.9, chest.z + fwd.z * 0.9 + side.z]} color="#f3f0ff"
+          intensity={2.6 * keyLight} distance={3.4} decay={1.7} />;   // look-critic stills 3: her own light drowned the set's - she looked pasted on
       })() : null}
       {/* a cool rim light behind her, toward the lens: her silhouette separates from any background (look-critic) */}
       {chest ? (() => {
