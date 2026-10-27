@@ -20,6 +20,10 @@
   "short": {
    "from": 62.167,
    "to": 80.467
+  },
+  "pilot": {
+   "from": 58.6,
+   "to": 80.5
   }
  },
  "short": {
@@ -3080,39 +3084,13 @@
      "roll": 6
     }
    ],
-   "why": "WOW 2 (62.615): the declaration - the war cry INTO the lens, ink detonation with a hole at her face, the melody line from her mouth; the hit 63.808 as a gold-orange flash inside the held anchor (ref ado-usseewa@98.25) | build: the barb flick moved 63.767 -> 64.05 so the gold hit flash 63.808 shows her face (stills 5c: the flick turned her back to the lens on the hit)",
+   "why": "WOW 2 (62.615): the declaration - the war cry INTO the lens, ink detonation with a hole at her face, the melody line from her mouth; the hit 63.808 as a gold-orange flash inside the held anchor (ref ado-usseewa@98.25) | build: the barb flick moved 63.767 -> 64.05 so the gold hit flash 63.808 shows her face (stills 5c: the flick turned her back to the lens on the hit) | motion: the war cry PLAYS (standing-taunt-battlecry 1.49 m/s) instead of a 1.7 s frozen roar",
    "actor": [
     {
      "at": 0,
-     "clip": "roar",
-     "clip_from": 1.0,
+     "clip": "standing-taunt-battlecry",
+     "clip_from": 0.35,
      "speed": 1.0,
-     "motionMix": 1,
-     "pos": "pool",
-     "face_lens": true,
-     "expr": {
-      "angry": 1,
-      "aa": 0.8
-     }
-    },
-    {
-     "at": 0.04800000000000182,
-     "clip": "roar",
-     "clip_from": 1.0,
-     "speed": 0.0,
-     "motionMix": 1,
-     "pos": "pool",
-     "face_lens": true,
-     "expr": {
-      "angry": 1,
-      "aa": 0.8
-     }
-    },
-    {
-     "at": 0.248,
-     "clip": "roar",
-     "clip_from": 1.0,
-     "speed": 0.0,
      "motionMix": 1,
      "pos": "pool",
      "face_lens": true,
@@ -3211,12 +3189,12 @@
      "roll": 0
     }
    ],
-   "why": "the war has begun: a worm's eye on her lunge out of the water (ref kda-firestarter@103)",
+   "why": "the war has begun: a worm's eye on her lunge out of the water (ref kda-firestarter@103) | motion (toki 2026-10-27): roar -> 2h magic area attack (2.55)",
    "actor": [
     {
      "at": 0,
-     "clip": "roar",
-     "clip_from": 1.0,
+     "clip": "pro-magic-standing-2h-magic-area-attack-01",
+     "clip_from": 0.4,
      "speed": 1.0,
      "motionMix": 1,
      "pos": [
@@ -3307,12 +3285,12 @@
      "roll": 0
     }
    ],
-   "why": "through the ink crown to her face; COLOUR FLIP on the measured Bm turn 67.59 - gold-orange on ink, her picture (ref edgerunners-this-fffire@5.25)",
+   "why": "through the ink crown to her face; COLOUR FLIP on the measured Bm turn 67.59 - gold-orange on ink, her picture (ref edgerunners-this-fffire@5.25) | motion (toki 2026-10-27): yelling (0.60) -> yelling leaning forward (1.11)",
    "actor": [
     {
      "at": 0,
-     "clip": "yelling",
-     "clip_from": 1.0,
+     "clip": "yelling-while-standing-leaning-forward",
+     "clip_from": 0.4,
      "speed": 1.0,
      "motionMix": 1,
      "pos": "pool",
@@ -3452,33 +3430,12 @@
      "roll": 8
     }
    ],
-   "why": "HOLD 3 beats, no flash (the template breaks on purpose): the hook-punch at the lens from above",
+   "why": "HOLD 3 beats, no flash (the template breaks on purpose): the hook-punch at the lens from above | motion: a punch combo at the lens (1.39) instead of a held hook-punch",
    "actor": [
     {
      "at": 0,
-     "clip": "treading-water",
-     "clip_from": 1.0,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": "pool",
-     "face_lens": true
-    },
-    {
-     "at": 0.25,
-     "clip": "hook-punch",
-     "clip_from": 1.0,
-     "speed": 0.0,
-     "motionMix": 1,
-     "pos": "pool",
-     "face_lens": true,
-     "expr": {
-      "angry": 1
-     }
-    },
-    {
-     "at": 0.383,
-     "clip": "hook-punch",
-     "clip_from": 1.0,
+     "clip": "punch-combo",
+     "clip_from": 0.2,
      "speed": 1.0,
      "motionMix": 1,
      "pos": "pool",
@@ -3667,7 +3624,7 @@
      "roll": 0
     }
    ],
-   "why": "M1: both hands thrown INTO the lens as claws, HELD 2 beats (the key pose built 2026-10-26)",
+   "why": "M1: both hands thrown INTO the lens as claws, HELD 2 beats (the key pose built 2026-10-26) | motion: M1 sways with a boxing taunt (35 %) - never a frozen pose",
    "actor": [
     {
      "at": 0,
@@ -3678,7 +3635,9 @@
       "angry": 1,
       "aa": 0.5
      },
-     "blend": 0.1
+     "blend": 0.1,
+     "motion": "boxing-taunt",
+     "motionMix": 0.35
     }
    ],
    "mouth": "silent",
@@ -3765,12 +3724,12 @@
      "roll": 0
     }
    ],
-   "why": "the war is two-sided: the beam sweeps over both of us; the flash after beat 2 (template break)",
+   "why": "the war is two-sided: the beam sweeps over both of us; the flash after beat 2 (template break) | motion (toki 2026-10-27): yelling (0.60) -> standing-cheering arms wide (1.84)",
    "actor": [
     {
      "at": 0,
-     "clip": "yelling",
-     "clip_from": 1.9,
+     "clip": "standing-cheering",
+     "clip_from": 0.3,
      "speed": 1.0,
      "motionMix": 1,
      "pos": "pool",
@@ -4883,12 +4842,12 @@
      "roll": 0
     }
    ],
-   "why": "the turn of her head to the sky opens the next shot",
+   "why": "the turn of her head to the sky opens the next shot | motion (toki 2026-10-27): look-over-shoulder (0.29) -> long-yell leaning back (0.92)",
    "actor": [
     {
      "at": 0,
-     "clip": "look-over-shoulder",
-     "clip_from": 1.2,
+     "clip": "long-yell-while-standing-leaning-back",
+     "clip_from": 0.5,
      "speed": 1.0,
      "motionMix": 1,
      "pos": "center",
@@ -5043,12 +5002,12 @@
      "roll": 0
     }
    ],
-   "why": "he passes again: lamp flash",
+   "why": "he passes again: lamp flash | motion (toki 2026-10-27): look-over-shoulder (0.29) -> threatening (0.67)",
    "actor": [
     {
      "at": 0,
-     "clip": "look-over-shoulder",
-     "clip_from": 2.0,
+     "clip": "threatening",
+     "clip_from": 0.3,
      "speed": 1.0,
      "motionMix": 1,
      "pos": "center",
@@ -5918,12 +5877,12 @@
      "roll": 0
     }
    ],
-   "why": "contact with the place: her hand on the gallery rail, the beam inches over her head",
+   "why": "contact with the place: her hand on the gallery rail, the beam inches over her head | motion (toki 2026-10-27): hanging-by-hands (0.02 m/s) -> pulling-up-to-a-ledge (1.70)",
    "actor": [
     {
      "at": 0,
-     "clip": "hanging-by-hands-against-wall",
-     "clip_from": 1.0,
+     "clip": "pulling-up-to-a-ledge",
+     "clip_from": 0.3,
      "speed": 1.0,
      "motionMix": 1,
      "pos": [
@@ -6814,12 +6773,12 @@
      "roll": 0
     }
    ],
-   "why": "the weight begins: double time into the false win",
+   "why": "the weight begins: double time into the false win | motion (toki 2026-10-27): hanging-by-hands (0.02 m/s) -> pulling-up-to-a-ledge (1.70)",
    "actor": [
     {
      "at": 0,
-     "clip": "hanging-by-hands-against-wall",
-     "clip_from": 1.9,
+     "clip": "pulling-up-to-a-ledge",
+     "clip_from": 0.3,
      "speed": 1.0,
      "motionMix": 1,
      "pos": [
@@ -7315,12 +7274,12 @@
      "roll": 0
     }
    ],
-   "why": "the machine fights back: her hand slips and catches the frame",
+   "why": "the machine fights back: her hand slips and catches the frame | motion (toki 2026-10-27): hanging-by-hands (0.02 m/s) -> pulling-up-to-a-ledge (1.70)",
    "actor": [
     {
      "at": 0,
-     "clip": "hanging-by-hands-against-wall",
-     "clip_from": 0.35,
+     "clip": "pulling-up-to-a-ledge",
+     "clip_from": 0.3,
      "speed": 1.0,
      "motionMix": 1,
      "pos": [
@@ -8714,12 +8673,12 @@
      "roll": -8
     }
    ],
-   "why": "PULL 3 on the hit 174.428: her whole back, half beats; the beam's edge 3.5 m off, then 1 m",
+   "why": "PULL 3 on the hit 174.428: her whole back, half beats; the beam's edge 3.5 m off, then 1 m | motion (toki 2026-10-27): hanging-by-hands (0.02 m/s) -> pulling-up-to-a-ledge (1.70)",
    "actor": [
     {
      "at": 0,
-     "clip": "hanging-by-hands-against-wall",
-     "clip_from": 1.9,
+     "clip": "pulling-up-to-a-ledge",
+     "clip_from": 0.3,
      "speed": 1.0,
      "motionMix": 1,
      "pos": [

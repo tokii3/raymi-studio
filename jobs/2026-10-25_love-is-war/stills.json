@@ -1,14 +1,32 @@
 {
- "_why": "build round 8 (toki 2026-10-27 'erst die Fix-Liste'): rock mound no lens + the climb outside it, she pulls the lamp from its far side facing the lens (her face in the lantern room), no white-out on her skin, slash off the scream, deep row 6 on her chest, the dots insert her five lights. With the whole film as a draft.",
+ "_why": "motion fix excerpt: the scene probe over 58.6-80.5 every 2 frames (her real motion -> raymi motion -> gate) + 10 stills of the excerpt for the look-critic",
  "format": "mv",
  "frames": [
-  8,
-  5319
+  1820,
+  1890,
+  1915,
+  1960,
+  2030,
+  2075,
+  2120,
+  2165,
+  2225,
+  2390
  ],
  "names": [
-  "m01_silhouette",
-  "m20_last_hit"
+  "x1_riser",
+  "x2_war_cry",
+  "x3_hit_gold",
+  "x4_lunge",
+  "x5_flip",
+  "x6_punch",
+  "x7_kick",
+  "x8_M1",
+  "x9_arms_wide",
+  "x10_crane"
  ],
  "scale": 1,
- "round": "build9b"
+ "round": "motion1",
+ "probe": 2,
+ "probe_range": "1758-2415"
 }

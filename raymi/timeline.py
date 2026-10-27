@@ -896,6 +896,20 @@ FX_KINDS = {"duo", "speed", "impact", "halftone", "spread", "slash", "melody", "
 FX_TIMES = {"taps", "big", "write0", "write1", "whip", "holds"}   # fx fields in song seconds -> film frames ([t0, t1] pairs too)
 
 
+HOLD_MAX = 8         # frames a held clip frame lasts before it plays on (a hit, pro_rules: holds of 4-8 frames)
+LOUD_ENERGY = 0.6    # m/s: a clip slower than this (studio/catalog/clip_energy.json, measured) in a loud section is flagged
+_ENERGY: dict | None = None
+
+
+def clip_energy() -> dict:
+    """Every clip's measured motion (raymi/clip_energy_blender.py, cloud): {clip: {mean, p90, still, seam, dur ...}}."""
+    global _ENERGY
+    if _ENERGY is None:
+        f = REPO / "studio" / "catalog" / "clip_energy.json"
+        _ENERGY = {k: v for k, v in json.loads(f.read_text(encoding="utf-8")).get("clips", {}).items() if "mean" in v} if f.is_file() else {}
+    return _ENERGY
+
+
 LOW_LENS = 0.45      # x her height: a lens below this, looking UP at her ...
 LOW_NEAR = 2.6       # ... closer than this many m (horizontal) looks under her skirt
 
@@ -963,6 +977,14 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
             key["props"] = r["props"]
         if "clip_from" in r:
             key["clipFrom"] = float(r["clip_from"])
+        # a one-shot action (its last pose far from its first: a jump, a landing, getting up) plays ONCE and never loops
+        # back with a snap; its start stays inside the clip (Love is War: clip_from 1.9 on a 1.27 s jump looped at once)
+        m = clip_energy().get(str(key.get("motion")))
+        if m:
+            if "clipFrom" in key and key["clipFrom"] > m["dur"] - 0.05:
+                key["clipFrom"] = round(max(0.0, m["dur"] - 0.35), 3)
+            if m["seam"] > 0.3 and "once" not in r:
+                key["once"] = True
         if "speed" in r:
             key["speed"] = float(r["speed"])
         if "rollZ" in r:
@@ -975,6 +997,15 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
                 key.get("speed", 1.0) != prev.get("speed", 1.0) or "clipFrom" in key and key["clipFrom"] != prev.get("clipFrom")):
             key["restart"] = True
         out.append(key)
+    # a held frame is a HIT, not a state (toki 2026-10-27, third time "nicht flüssig ... statisch"): a speed-0 key of a
+    # clip plays on after HOLD_MAX frames unless the shot is a designed stop (opts.freeze) or the next key comes first
+    if not (s.get("opts") or {}).get("freeze"):
+        held = []
+        for i, k in enumerate(out):
+            nxt = out[i + 1]["f"] if i + 1 < len(out) else fr(b)
+            if k.get("motion") and k.get("speed", 1.0) == 0 and nxt - k["f"] > HOLD_MAX:
+                held.append({**k, "f": k["f"] + HOLD_MAX, "speed": 1.0, "restart": True, "blend": 4})
+        out = sorted(out + held, key=lambda k: k["f"])
     if out and out[0]["f"] > fr(a):
         out[0]["f"] = fr(a)                                # she is there from the first frame of the shot
     return out
@@ -1564,6 +1595,24 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                          **({"size": spec_h["size"]} if "size" in spec_h else {}),
                          **({"center": _v3(spec_h["center"], marks, errors, tag)} if "center" in spec_h else {})})
         actor = compile_actor(s, fmt, a, b, fr, marks, poses, errors, tag, clips) if s.get("actor") else []
+        # her motion against the music: a slow clip in a loud section is flagged with stronger ones (measured energy)
+        loud = [x for x in smap.get("sections", []) if x.get("kind") in ("peak", "loud") and x["t0"] < b and x["t1"] > a]
+        if loud and actor and not (s.get("opts") or {}).get("freeze"):
+            en = clip_energy()
+            for k in actor:
+                m = en.get(str(k.get("motion")))
+                if m and m["mean"] < LOUD_ENERGY and k.get("speed", 1.0) != 0:
+                    warns.append(f"{tag}: clip {k['motion']} moves {m['mean']:.2f} m/s in a loud section (< {LOUD_ENERGY}) - "
+                                 f"pick a stronger clip (studio/catalog/clip_energy.json) or say why in the row")
+        # a clip that loops inside its key with a far-away last pose snaps on screen (the loop seam, measured)
+        if actor:
+            en = clip_energy()
+            for i, k in enumerate(actor):
+                m = en.get(str(k.get("motion")))
+                run = ((actor[i + 1]["f"] if i + 1 < len(actor) else fr(b)) - k["f"]) / FPS * abs(k.get("speed", 1.0))
+                if m and not k.get("once") and m["seam"] > 0.3 and float(k.get("clipFrom", 0)) + run > m["dur"]:
+                    warns.append(f"{tag}: clip {k['motion']} loops after {m['dur'] - float(k.get('clipFrom', 0)):.1f} s with a "
+                                 f"{m['seam']:.2f} m seam jump - shorter key, \"once\": true or another clip")
         used_clips |= {k["motion"] for k in actor if k.get("motion")}
         if actor and not s.get("low_ok"):
             errors += under_skirt(ckeys, actor, tag)
