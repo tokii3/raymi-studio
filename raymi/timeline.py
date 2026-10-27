@@ -1182,7 +1182,9 @@ def expand_rows(rows: list[dict], errors: list[str], carry: bool = False) -> lis
             continue
         a = float(row["at"])
         cams.sort(key=lambda c: float(c["at"]))
-        base = {k: v for k, v in row.items() if k not in ("cams", "stutter", "riser")}
+        # the row's transition leads into the NEXT row: only its last picture carries it (excerpt 7: an ink wipe ran at
+        # the row's first multicam cut and covered two pictures with blots)
+        base = {k: v for k, v in row.items() if k not in ("cams", "stutter", "riser", "transition")}
         go = row.get("carry", True) is not False and (carry or row.get("carry"))   # multicam pictures carry by default
         go = go if not st else False                       # a stutter alternates two HELD set-ups (same light, X2)
         if go:

@@ -358,3 +358,11 @@ def test_the_lighthouse_rock_is_no_place_for_a_lens():
     box = T.rock_no_lens({"lighthouse": {"pos": [-8, -30]}, "painted": 1})[0]
     assert box["min"][0] < -8 < box["max"][0] and box["min"][2] < -26.2 < box["max"][2] and box["max"][1] >= 3.0
     assert T.rock_no_lens({}) == []
+
+
+def test_a_multicam_row_carries_its_transition_only_on_its_last_picture():
+    errors = []
+    row = {"id": "30", "at": 10.0, "set": "nightsea", "camera": [{"at": 0, "aim": {"d": 1}}], "transition": {"kind": "ink", "frames": 6},
+           "cams": [{"at": 10.5, "camera": [{"at": 0, "aim": {"d": 0.5}}]}]}
+    out = T.expand_rows([row], errors)
+    assert "transition" not in out[0] and out[-1]["transition"]["kind"] == "ink"

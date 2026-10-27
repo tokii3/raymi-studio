@@ -294,7 +294,11 @@
      "tone": "ink"
     }
    ],
-   "carry": false
+   "carry": false,
+   "transition": {
+    "kind": "cut",
+    "frames": 0
+   }
   },
   {
    "id": "1",
@@ -366,10 +370,6 @@
     "glow_flare": [
      0.5
     ]
-   },
-   "transition": {
-    "kind": "cut",
-    "frames": 0
    },
    "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
    "frame_fit": [
@@ -1116,6 +1116,10 @@
      0.086,
      0.0
     ]
+   },
+   "transition": {
+    "kind": "bubbles",
+    "frames": 10
    }
   },
   {
@@ -1175,10 +1179,6 @@
      "rollZ": 30
     }
    ],
-   "transition": {
-    "kind": "bubbles",
-    "frames": 10
-   },
    "opts": {
     "ring_at": [
      16.933
@@ -1995,7 +1995,12 @@
     0.013,
     -0.13,
     -0.076
-   ]
+   ],
+   "transition": {
+    "kind": "cover",
+    "frames": 6,
+    "obj": "water"
+   }
   },
   {
    "id": "17",
@@ -2048,11 +2053,6 @@
      "face_lens": true
     }
    ],
-   "transition": {
-    "kind": "cover",
-    "frames": 6,
-    "obj": "water"
-   },
    "opts": {
     "rain_at": 31.904,
     "lighthouse": {
@@ -2089,7 +2089,11 @@
     -0.251,
     -0.099
    ],
-   "low_ok": "the lens at the waterline: her skirt is under the opaque sea surface"
+   "low_ok": "the lens at the waterline: her skirt is under the opaque sea surface",
+   "transition": {
+    "kind": "flash",
+    "frames": 2
+   }
   },
   {
    "id": "18",
@@ -2131,10 +2135,6 @@
      "face_lens": true
     }
    ],
-   "transition": {
-    "kind": "flash",
-    "frames": 2
-   },
    "opts": {
     "lighthouse": {
      "pos": [
@@ -2260,7 +2260,12 @@
     0.029,
     -0.27,
     0.005
-   ]
+   ],
+   "transition": {
+    "kind": "cover",
+    "frames": 4,
+    "obj": "rain"
+   }
   },
   {
    "id": "20",
@@ -2291,11 +2296,6 @@
      "face_lens": true
     }
    ],
-   "transition": {
-    "kind": "cover",
-    "frames": 4,
-    "obj": "rain"
-   },
    "fx": [
     {
      "kind": "ring",
@@ -2602,7 +2602,12 @@
      "seed": 4,
      "brush": 1
     }
-   ]
+   ],
+   "transition": {
+    "kind": "cover",
+    "frames": 6,
+    "obj": "water"
+   }
   },
   {
    "id": "24",
@@ -2657,18 +2662,17 @@
      "ground": false
     }
    ],
-   "transition": {
-    "kind": "cover",
-    "frames": 6,
-    "obj": "water"
-   },
    "opts": {
     "bubble_pulse": [
      52.57,
      54.4
     ]
    },
-   "low_ok": "she dives head first, her skirt trails above her"
+   "low_ok": "she dives head first, her skirt trails above her",
+   "transition": {
+    "kind": "bubbles",
+    "frames": 8
+   }
   },
   {
    "id": "25",
@@ -2702,10 +2706,6 @@
      "rollZ": 90
     }
    ],
-   "transition": {
-    "kind": "bubbles",
-    "frames": 8
-   },
    "fx": [
     {
      "kind": "insert",
@@ -3243,6 +3243,10 @@
      -0.329,
      -0.001
     ]
+   },
+   "transition": {
+    "kind": "ink",
+    "frames": 6
    }
   },
   {
@@ -3274,10 +3278,6 @@
      "face_lens": true
     }
    ],
-   "transition": {
-    "kind": "ink",
-    "frames": 6
-   },
    "opts": {
     "flip_at": [
      67.59
@@ -4265,6 +4265,11 @@
      ],
      "yaw": 40
     }
+   },
+   "transition": {
+    "kind": "cover",
+    "frames": 6,
+    "obj": "cloud"
    }
   },
   {
@@ -4338,11 +4343,6 @@
     }
    ],
    "mouth": "silent",
-   "transition": {
-    "kind": "cover",
-    "frames": 6,
-    "obj": "cloud"
-   },
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -4673,6 +4673,11 @@
     "rain_at": 84.933,
     "rain_end_at": 999.0,
     "shallows": 1
+   },
+   "transition": {
+    "kind": "cover",
+    "frames": 6,
+    "obj": "water"
    }
   },
   {
@@ -4709,11 +4714,6 @@
     }
    ],
    "mouth": "silent",
-   "transition": {
-    "kind": "cover",
-    "frames": 6,
-    "obj": "water"
-   },
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -4938,7 +4938,11 @@
     0.012,
     -0.089,
     -0.054
-   ]
+   ],
+   "transition": {
+    "kind": "flash",
+    "frames": 2
+   }
   },
   {
    "id": "50",
@@ -4969,10 +4973,6 @@
      "rotY": -120.0
     }
    ],
-   "transition": {
-    "kind": "flash",
-    "frames": 2
-   },
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -6200,7 +6200,12 @@
     0.0,
     0.033,
     0.0
-   ]
+   ],
+   "transition": {
+    "kind": "cover",
+    "frames": 4,
+    "obj": "glass"
+   }
   },
   {
    "id": "61",
@@ -6263,11 +6268,6 @@
     "lantern_room": 1,
     "fresnel_front": 1,
     "her_key": 0.55
-   },
-   "transition": {
-    "kind": "cover",
-    "frames": 4,
-    "obj": "glass"
    },
    "cams": [
     {
@@ -6883,6 +6883,10 @@
      -0.198,
      0.0
     ]
+   },
+   "transition": {
+    "kind": "flash",
+    "frames": 2
    }
   },
   {
@@ -6970,10 +6974,6 @@
      "rotY": -25.4
     }
    ],
-   "transition": {
-    "kind": "flash",
-    "frames": 2
-   },
    "mouth": "silent",
    "opts": {
     "rain_at": 84.933,
@@ -7908,6 +7908,11 @@
      -0.038,
      0.0
     ]
+   },
+   "transition": {
+    "kind": "cover",
+    "frames": 6,
+    "obj": "water"
    }
   },
   {
@@ -7975,8 +7980,8 @@
    },
    "transition": {
     "kind": "cover",
-    "frames": 6,
-    "obj": "water"
+    "frames": 4,
+    "obj": "pulse"
    }
   },
   {
@@ -8028,11 +8033,6 @@
      163.9,
      164.6
     ]
-   },
-   "transition": {
-    "kind": "cover",
-    "frames": 4,
-    "obj": "pulse"
    }
   },
   {
@@ -8088,7 +8088,12 @@
      "opacity": 0.5,
      "color": "#c9a8ff"
     }
-   ]
+   ],
+   "transition": {
+    "kind": "cover",
+    "frames": 4,
+    "obj": "pulse"
+   }
   },
   {
    "id": "77",
@@ -8128,11 +8133,6 @@
      "rotY": -25.4
     }
    ],
-   "transition": {
-    "kind": "cover",
-    "frames": 4,
-    "obj": "pulse"
-   },
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -9144,6 +9144,11 @@
      "vignette": 0
     },
     "her_key": 0.55
+   },
+   "transition": {
+    "kind": "cover",
+    "frames": 4,
+    "obj": "glass"
    }
   },
   {
@@ -9213,11 +9218,6 @@
     }
    ],
    "mouth": "silent",
-   "transition": {
-    "kind": "cover",
-    "frames": 4,
-    "obj": "glass"
-   },
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 179.1,
