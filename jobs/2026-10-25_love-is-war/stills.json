@@ -26,7 +26,7 @@
   "x10_crane"
  ],
  "scale": 1,
- "round": "motion1",
+ "round": "motion2",
  "probe": 2,
  "probe_range": "1758-2415"
 }

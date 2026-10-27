@@ -987,6 +987,8 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
                 key["once"] = True
         if "speed" in r:
             key["speed"] = float(r["speed"])
+            if key["speed"] == 0 and key.get("motion"):
+                key["exact"] = True              # hold THIS frame, so the play-on continues from it without a snap
         if "rollZ" in r:
             key["rollZ"] = math.radians(float(r["rollZ"]))
         # a key that changes the clip's speed or start (a HELD frame on a hit, then playing on) restarts the clip: the

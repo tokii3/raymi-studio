@@ -75,6 +75,10 @@ def main(argv: list[str]) -> int:
     job_dir = P.job_dir(argv[0])
     probe = Path(argv[1]) if len(argv) > 1 else job_dir / "out" / "probe_mv.json"
     rep = json.loads(probe.read_text(encoding="utf-8"))
+    props_f = job_dir / "out" / "props.json"
+    if props_f.is_file():          # designed stops / picture holds (opts.freeze) are decisions, not a still Raymi
+        frozen = {s["id"] for s in json.loads(props_f.read_text(encoding="utf-8"))["shots"] if (s.get("opts") or {}).get("freeze")}
+        rep["rows"] = [r for r in rep["rows"] if r.get("shot") not in frozen]
     spec = json.loads((job_dir / "shots.json").read_text(encoding="utf-8"))
     smap = json.loads((job_dir / spec.get("song_map", "song_map.json")).read_text(encoding="utf-8"))
     t_from = float(rep.get("t_from", 0.0))
