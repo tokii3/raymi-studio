@@ -155,3 +155,11 @@
   Asked toki 2026-10-26; no round 4 before her answer.
 - 2026-10-26 `refs why` for 26 of 39 references hit the free Gemini quota (429 on every model). Re-run when it resets:
   `python -m raymi refs why all` (skips the 13 done), then `python -m raymi refs rules` and refresh LEARNED.md.
+- Love is War build (2026-10-27): shots.json already NAMES these set events, the studio does not draw them yet (they
+  are ignored silently - build each where its moment is screened, in the shared part): eye_open, ring_at, pov_rush,
+  rain_stutter, wave_shove, spray_halo, drift, wave_lift, bubble_pulse, drop_hang, ripple_at, rain_streak, rock_wall,
+  surf, wave_smash, splash_lens, shallows, hair_whip, rain_ring, grain_pulse, lamp_cable, arm_current, beam_color,
+  dip (the A+ pre-drop blackout 176.9), pupil_lamp (the lamp in her pupils 177.167), beam_settle, stars_at, ink_sky_at,
+  star_streak, tube, cable_color; fx ring "brush". Transitions cover obj water / rain / cloud / glass / pulse use the
+  generic cover. The shots.json source is hand-authored row by row (the generator in the session scratchpad only
+  shortened the writing); edit shots.json directly from now on.
