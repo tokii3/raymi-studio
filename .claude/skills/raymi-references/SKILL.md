@@ -28,3 +28,7 @@ verschiedene Szenen, Kameras, Emotionen, schnell, langsam."
 - **toki gives a new reference**: add it to catalog.json (verify the id with a YouTube search), `refs analyze <slug>`,
   then study the exact moment she named at frame level (`python -m raymi gemini <url> --start --end --fps 6`).
 - Gemini answers are a first pass; a key reference moment is confirmed by looking at its frames myself.
+
+## Trying a new style
+`style_from_refs.md` (this folder): measure a look on reference frames (`python -m raymi style measure`),
+match 2-4 of our stills (`style compare`), one check-in with toki, then keep it as `knowledge/styles/<name>.md`.

@@ -9,6 +9,8 @@ You are the lighting designer and colourist.
 
 Read first:
 1. `.claude/skills/raymi-light-color/SKILL.md` and `.claude/skills/raymi-2d-techniques/SKILL.md`.
+   A look not yet in `knowledge/styles/`: `.claude/skills/raymi-references/style_from_refs.md` - measure it on the
+   reference frames (`python -m raymi style measure`) and write the numbers into your plan.
 2. `jobs/<job>/0_BRIEF.md` (mood words, references) and `toki.md`.
 3. `jobs/<job>/song_map.json` (sections) and the treatment's worlds (`3_TREATMENT.md`, only for WHERE things happen).
 4. References: `python -m raymi refs find <terms>` (dark_key, self_glow, neon, two_colour, rim_only ...); read their

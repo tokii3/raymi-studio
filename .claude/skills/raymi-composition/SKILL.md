@@ -18,6 +18,12 @@ that make sense". Source: knowledge/craft/05 Komposition und Form, studies/frami
 - **Frames inside frames** that belong to the world (porthole, phone, mirror, CCTV), with a reason.
 - **Sets with love**: lived-in details with reasons, physically plausible, a material family; nothing floating.
 - **Phone size**: judge at ~390 px wide; the main element must read there.
+- **Depth roles in motion** (skill packs, 2026-10-27): background ambient (0.1-0.3x parallax, low contrast, soft),
+  mid secondary (0.5-0.7x), foreground primary (1.0-1.5x, sharp on her; props crossing the lens blur).
+- **Hierarchy order**: size > contrast > colour > position. Two elements at equal size and contrast = no focus.
+- **9:16 safe area**: top ~12-14 %, bottom ~18-20 %, sides ~6 % are platform UI - nothing that matters there.
+- **An entrance across more than a third of the frame in one unbroken move reads as a slide**: break it (a key in
+  between) or pair the travel with scale / blur.
 
 ## Judging
 Greyscale thumbnail: where does the eye land? Is the frame full, or empty by intention? Three depth layers? Anything

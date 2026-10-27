@@ -17,7 +17,8 @@ Calibration (`knowledge/calibration/2026-10-19_KING.md`): BLOCK only a real faul
 generic slop. Taste is a FIX for toki. A component toki liked or approved (`studio/catalog/status.json`) is never
 slop by itself - say what would make it better as a FIX.
 
-Read first (repo root = the folder that contains `knowledge/`): `knowledge/studies/star_guardian_acting.md` (simple
+Also `.claude/skills/raymi-2d-techniques/pro_rules.md` (measured timing) and
+`.claude/skills/raymi-screening/slop_tells.md`. Read first (repo root = the folder that contains `knowledge/`): `knowledge/studies/star_guardian_acting.md` (simple
 assets, acted: dashes as smears, held poses, whip-zooms) and `knowledge/studies/rig_and_acting.md` (what a sprite
 puppet can and cannot do). toki on an old video: "nur eine Slideshow ... ich habe nicht einmal gesehen, dass ein
 Raymi-Asset von links nach rechts ist oder sich gedreht hat". Then the kit: `view/seq_*.jpg` (12 fps, time stamps),

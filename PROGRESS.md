@@ -1,5 +1,18 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-27 - Motion-design skill packs surveyed and built in (toki: "eigne sie dir an ... dass sie wirklich genutzt werden")
+- The paid pack from her TikTok (Miftahul) is now a subscription site; its known rules are covered by free MIT /
+  Apache packs: cth9191/animate, iart-ai/motion-design-skills, motionmaxxing (4,300 measured pro moves), HyperFrames
+  motion-doctrine. Generative ones (Higgsfield, fal) rejected. Survey + verdicts: knowledge/skillpacks/README.md.
+- Distilled in our words into the loaded skills: raymi-editing/pro_rules.md (grid, arc, vector law, carriers,
+  transitions), raymi-camera/pro_rules.md (snap + tail, move size, two-push pans, whips), raymi-2d-techniques/
+  pro_rules.md (one clock / blur grammar, durations, arrival, smear), raymi-screening/slop_tells.md,
+  raymi-references/style_from_refs.md; composition + idea-story bullets; maker agents + cut / motion critics read them.
+- Mechanisms: `raymi seams <job>` (every hard cut: does the camera carry through - carried / mirrored / half /
+  static; summary + WARN in every `timeline`). Beach measured: 1 of 76 hard cuts carried, 49 static = her
+  "Kamera eher Standard". `raymi style measure | compare` + knowledge/styles/ (a look in numbers, for trying styles).
+- NEXT: use seams + style on Love is War's storyboard / build; first style card after toki approves a look.
+
 ## 2026-10-25 (late, 7) - Love is War: ideas approved, treatment v3 PASS, script v1 BLOCK (merge fault)
 - toki: one merged world, graphic 2D design ("eher richtung 2"), v3 allowed -> treatment v3 PASS (both critics).
 - Built: TwoTone (background-only two-tone, tested), more clips (wipe, climbs, vault, pull, swim, stumble, hang,

@@ -9,7 +9,8 @@ You are the choreographer and acting coach for Raymi (a stingray-girl VTuber: ta
 body; canon/01_character.md). She performs FOR someone.
 
 Read first:
-1. `.claude/skills/raymi-posing-acting/SKILL.md`.
+1. `.claude/skills/raymi-posing-acting/SKILL.md`. Timing of her moves: `.claude/skills/raymi-2d-techniques/pro_rules.md`
+   (anticipation on the key move only, land decelerates / leave accelerates, one visible spring per film).
 2. `jobs/<job>/0_BRIEF.md` (her attitude lines are your contract) and `toki.md`.
 3. `jobs/<job>/song_map.json` + the moment list you are given.
 4. What exists: `studio/catalog/clips.json` (clips), `studio/src/three/vrmPoses.ts` (pose library),

@@ -33,6 +33,10 @@ hand-written treatment (CASEBOOK). Process weight never replaces the idea.
 - Love = specific details with reasons (a sticker that says something, a prop she uses, a light that means something).
 - Write the PERFECT version first (wishlist), then find how to build it - never design from what is easy in code.
 - Watch at least 3 references of the song's genre for each section type before writing it (`refs find`).
+- (skill packs, 2026-10-27) **One constant the eye can hold** while everything else changes (her, her glow, one
+  object). **A colour means one thing** for the whole film - never spent on decoration. **Act ideas out literally**
+  (a picture, not a caption). **One device you can say in a sentence.** **The end is the start, changed.**
+  **Silence before the payoff**, and the busiest moment sits just before it, not on it.
 
 ## 3. Self-check before review
 - Read the treatment next to her words: is every core phrase there, in its full class, visibly?

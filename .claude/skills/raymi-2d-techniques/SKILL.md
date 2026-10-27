@@ -28,6 +28,11 @@ references `yoasobi-idol`, `ado-usseewa`, `ado-show`, `csm-op`, `edgerunners-thi
   grain texture over everything for one material.
 - **Camera in 2D**: multiplane parallax, push on stills with layers, snap zooms, shake, rotation on beats.
 
+## 1a. Timing numbers
+Read `pro_rules.md` (this folder) when timing FX, lyric objects, props or her moves: one clock, one blur
+grammar, measured durations (median 10 f), land decelerates / leave accelerates, arrival from oversize, stagger,
+smear numbers.
+
 ## 1b. Effects are MOMENTS, never rules (toki 2026-10-25)
 Watch Me laid sonar / caustics / dot pulse / fin wave over the whole film by rule (timeline `effects`) - "gute Ideen,
 schlecht umgesetzt". Every effect is designed for its line in the treatment's "Effects as MOMENTS" table (fx-designer

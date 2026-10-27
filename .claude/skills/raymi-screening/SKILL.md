@@ -35,6 +35,10 @@ still went to her.
   size, nothing empty. Would a professional MV ship this frame?
 - **The whole**: re-read the brief contract top to bottom - is the GOAL still on screen, or did the fixes eat it?
 
+## 2b. Slop tells
+`slop_tells.md` (this folder): the AI default next to what a professional does - check a sheet against it,
+describe every frame in one sentence BEFORE judging, name the weakest shot. Measured: `raymi seams`, `cuts`, `reality`.
+
 ## 3. Rules that are not negotiable
 - Never write or edit a critic answer; never answer a check myself ("yes, checked") - only measured values or
   independent critics count.
