@@ -1,5 +1,16 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-27 (night) - Love is War excerpt after toki's notes (outlines off, never hollow, ink not stickers)
+- toki: "ja besser" + outlines weg, "hohl von innen" up close, vector graphics better or gone (toki.md verbatim).
+- Built: no ink outline on her (memory); her materials double-sided + the lens backs off where the probe saw it cut
+  into her, near_cut is a motion-gate fault; every 2D effect in one ink hand (frayed edges + paper grain), the
+  HUD-like rain halo gone, drawn stars; multicam rows carry their transition only on the last picture (+ test) and
+  the script's "in" column moved one row up (17 transitions were one row late: the ink wipe blotted the chorus).
+- Excerpt render run 83: motion 5 % still / 0.78 m/s, no lens inside her, reality ok (face to lens 28 %).
+  motion-critic 2 + look-critic 2 FAIL (reviews/excerpt_*_2.md): the riser start and the crane end show her small,
+  the colour flip reads as a flat orange pass with a pink fringe, a slash + skirt plane across her torso at 78.6,
+  a top-down hair disc at 65.2. Sent FAIL-marked with a before / after.
+
 ## 2026-10-27 (evening) - Motion fix (toki x3: "bewegungen nicht flüssig ... statisch ... plastik ... kollisionen")
 - Measured first: her limbs nearly still 33 % of the draft, median 0.22 m/s; the chorus 42 % / 0.29 m/s.
 - Built (reusable): clip-energy.yml + raymi/clip_energy_blender.py (every Mixamo clip measured in Blender: speed, still
