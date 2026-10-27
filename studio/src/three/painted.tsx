@@ -290,7 +290,7 @@ export function fresnelMat() {
       }
     }
     ctx.strokeStyle = 'rgba(7,11,28,0.7)'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(c, c, w * 0.48, 0, Math.PI * 2); ctx.stroke();
-  }), 'paper', {transparent: true, depthWrite: false, side: THREE.DoubleSide}));
+  }), 'clear', {transparent: true, depthWrite: false, side: THREE.DoubleSide}));
 }
 function plankMat() {
   return cached('plank', () => mat(canvasTexture('p_plank', 512, 512, (ctx, w, h) => {
@@ -324,7 +324,7 @@ function lampMat() {
       ctx.lineTo(c + Math.cos(a - 0.05) * c, c + Math.sin(a - 0.05) * c); ctx.lineTo(c + Math.cos(a + 0.05) * c, c + Math.sin(a + 0.05) * c); ctx.fill();
     }
     [[0.42, PAL.lamp], [0.3, PAL.core], [0.16, '#ffffff']].forEach(([rr, col]) => { ctx.fillStyle = col as string; ctx.beginPath(); ctx.arc(c, c, c * (rr as number), 0, Math.PI * 2); ctx.fill(); });
-  }), 'paper', {transparent: true, depthWrite: false}));
+  }), 'clear', {transparent: true, depthWrite: false}));
 }
 
 /** The lantern room at HER scale (11_WORLD_build section 2): gallery floor y H+0.38 r 2.6 + rail 1.1 m, glass r 1.6
