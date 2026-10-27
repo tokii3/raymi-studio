@@ -159,7 +159,7 @@
   are ignored silently - build each where its moment is screened, in the shared part): eye_open, ring_at, pov_rush,
   rain_stutter, wave_shove, spray_halo, drift, wave_lift, bubble_pulse, drop_hang, ripple_at, rain_streak, rock_wall,
   surf, wave_smash, splash_lens, shallows, hair_whip, rain_ring, grain_pulse, lamp_cable, arm_current, beam_color,
-  dip (the A+ pre-drop blackout 176.9), pupil_lamp (the lamp in her pupils 177.167), beam_settle, stars_at, ink_sky_at,
+  beam_settle, stars_at, ink_sky_at,
   star_streak, tube, cable_color; fx ring "brush". Transitions cover obj water / rain / cloud / glass / pulse use the
   generic cover. The shots.json source is hand-authored row by row (the generator in the session scratchpad only
   shortened the writing); edit shots.json directly from now on.

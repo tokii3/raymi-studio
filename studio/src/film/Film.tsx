@@ -296,6 +296,17 @@ export const Film: React.FC<FilmProps> = (props) => {
         ) : null}
       </AbsoluteFill>
       {mask ? null : (<>
+      {/* the A+ last hit (toki 2026-10-26): the pre-drop dip - near black, only her dots; then 2 frames of the lamp in her
+          pupils (opts.dip / opts.pupil_lamp on those pictures, 4_SCRIPT final build 176.9 / 177.167) */}
+      {shot.opts.dip ? <AbsoluteFill style={{backgroundColor: '#05040a', opacity: 0.9}} /> : null}
+      {shot.opts.pupil_lamp ? (
+        <svg viewBox="0 0 160 90" preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: 'screen'}}>
+          {[-1, 1].map((k) => <g key={k} transform={`translate(${80 + k * 19} 47)`}>
+            <circle r={3.2} fill="#ffd9a0" opacity={0.55} /><circle r={1.5} fill="#fff0cd" />
+            {[0, 45, 90, 135].map((a) => <rect key={a} x={-0.25} y={-7} width={0.5} height={14} fill="#fff0cd" transform={`rotate(${a})`} />)}
+          </g>)}
+        </svg>
+      ) : null}
       <Fx2D fx={fx} f={fNow} center={herScreen} head={herHead} aspect={aspect} />
       <PovLayer fx={fx as never} f={fNow} W={W} H={H} />
       {battery && shot.opts.battery_sign ? <BatterySign {...battery} x={herHead[0] * W} y={herHead[1] * H} h={H} f={f} side={shot.opts.battery_sign === 'left' ? -1 : 1} /> : null}
