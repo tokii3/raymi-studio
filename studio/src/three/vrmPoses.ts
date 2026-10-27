@@ -247,6 +247,15 @@ export const POSES: Record<string, VrmPose> = {
     rightUpperArm: [0, 1.55, -0.25], rightLowerArm: [0, 0.05, 0], rightHand: [0, 0, -0.9],
     leftUpperArm: [0, -0.15, -1.15], leftLowerArm: [0, -0.4, 0],
   },
+  // M1 (Love is War 4_SCRIPT build list, 2026-10-26): both hands thrown INTO the lens as claws - arms forward at face
+  // height and a little apart, fingers half curled, the body lunging, chin down: her face centred between her hands at
+  // the frame edges (brief C2 'aggressiv': she attacks the viewer; ref ado-usseewa@98.25, kda-firestarter@103)
+  lens_attack: {
+    ...curl('left', 0.45), ...curl('right', 0.45), hips: [0.06, 0, 0], spine: [0.3, 0, 0], chest: [0.12, 0, 0], neck: [-0.06, 0, 0], head: [-0.2, 0, 0],
+    rightUpperArm: [0, 1.35, -0.32], rightLowerArm: [0, 0.25, 0], rightHand: [0, 0, -0.7],
+    leftUpperArm: [0, -1.35, 0.32], leftLowerArm: [0, -0.25, 0], leftHand: [0, 0, 0.7],
+    leftUpperLeg: [-0.45, 0, 0.06], leftLowerLeg: [0.35, 0, 0], rightUpperLeg: [0.22, 0, -0.04],
+  },
   // leaning toward the lens, chin up at it (the presenter whisper, the glare up close)
   lean_in: {
     ...relaxedHands, hips: [0.04, 0, 0], spine: [0.24, 0, 0], chest: [0.1, 0, 0], neck: [-0.08, 0, 0], head: [-0.16, 0, 0.04],

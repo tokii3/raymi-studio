@@ -3382,21 +3382,21 @@
      "roll": 0
     }
    ],
-   "why": "the claw at the lens HELD 2 beats (stand-in for M1 until the key pose is built)",
+   "why": "M1: both hands thrown INTO the lens as claws, HELD 2 beats (the key pose built 2026-10-26)",
    "actor": [
     {
      "at": 0,
-     "clip": "roar",
-     "clip_from": 1.0,
-     "speed": 1.0,
-     "motionMix": 1,
+     "pose": "lens_attack",
      "pos": "pool",
-     "face_lens": true,
+     "rotY": 0.0,
      "expr": {
-      "angry": 1
-     }
+      "angry": 1,
+      "aa": 0.5
+     },
+     "blend": 0.1
     }
    ],
+   "mouth": "silent",
    "opts": {
     "barb_lens": [
      72.2
