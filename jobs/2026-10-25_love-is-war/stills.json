@@ -1,16 +1,14 @@
 {
- "_why": "build 5b: three board frames again - the war cry held as the anchor (face up at the gold hit), the war cry after the shake, the final build on her eyes (175.95)",
+ "_why": "build 5c: the gold hit flash 63.808 before the scripted barb flick covers the lens",
  "format": "mv",
  "frames": [
-  1887,
-  1915,
-  5279
+  1913,
+  1914
  ],
  "names": [
-  "m07_war_cry",
   "m08_hit_flash_gold",
-  "m19_final_build"
+  "m08b_hit_flash_gold"
  ],
  "scale": 1,
- "round": "build5b"
+ "round": "build5c"
 }
