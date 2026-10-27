@@ -64,7 +64,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "id": "26",
    "from": 0,
    "to": 3,
@@ -96,8 +95,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -226,7 +225,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "id": "26a",
    "from": 3,
    "to": 12,
@@ -258,8 +256,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -347,7 +345,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "id": "27",
    "from": 12,
    "to": 31,
@@ -379,8 +376,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -502,7 +499,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "id": "27a",
    "from": 31,
    "to": 45,
@@ -534,8 +530,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -623,7 +619,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fitted": true,
    "id": "27b",
    "from": 45,
@@ -656,8 +651,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -745,7 +740,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fitted": true,
    "id": "27c",
    "from": 59,
@@ -778,8 +772,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -867,7 +861,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fitted": true,
    "id": "27d",
    "from": 73,
@@ -900,8 +893,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -989,7 +982,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fitted": true,
    "id": "27e",
    "from": 80,
@@ -1022,8 +1014,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -1111,7 +1103,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fitted": true,
    "id": "27f",
    "from": 87,
@@ -1144,8 +1135,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -1163,8 +1154,8 @@
      "f": 87,
      "pos": [
       0.045,
-      -2.4825,
-      0.3607
+      -2.5234,
+      0.5133
      ],
      "look": [
       0.015,
@@ -1233,7 +1224,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fitted": true,
    "id": "27g",
    "from": 94,
@@ -1266,8 +1256,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -1285,8 +1275,8 @@
      "f": 94,
      "pos": [
       0.03,
-      -2.4534,
-      0.2741
+      -2.5124,
+      0.4943
      ],
      "look": [
       0.03,
@@ -1355,7 +1345,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fitted": true,
    "id": "27h",
    "from": 101,
@@ -1388,8 +1377,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -1478,7 +1467,6 @@
    "mouth": {
     "gain": 0.0
    },
-   "outline": 0.003,
    "fitted": true,
    "id": "27H",
    "from": 107,
@@ -1511,8 +1499,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -1601,7 +1589,6 @@
    "mouth": {
     "gain": 0.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "ring",
@@ -1684,8 +1671,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 1,
@@ -1835,7 +1822,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "halo",
@@ -1884,8 +1870,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -1898,9 +1884,9 @@
     {
      "f": 171,
      "pos": [
-      0.9424,
-      0.0,
-      3.5171
+      0.694,
+      0.55,
+      2.5901
      ],
      "look": [
       0.0,
@@ -1915,9 +1901,9 @@
     {
      "f": 175,
      "pos": [
-      0.7867,
-      0.0,
-      2.9362
+      0.5848,
+      0.55,
+      2.1826
      ],
      "look": [
       0.0,
@@ -1932,9 +1918,9 @@
     {
      "f": 200,
      "pos": [
-      0.699,
-      0.0,
-      2.6088
+      0.524,
+      0.55,
+      1.9556
      ],
      "look": [
       0.0,
@@ -2006,7 +1992,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "halo",
@@ -2056,8 +2041,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -2070,9 +2055,9 @@
     {
      "f": 200,
      "pos": [
-      0.1862,
+      0.2688,
       0.813,
-      0.6829
+      0.991
      ],
      "look": [
       0.003,
@@ -2087,9 +2072,9 @@
     {
      "f": 204,
      "pos": [
-      0.1583,
+      0.2282,
       0.813,
-      0.5786
+      0.8394
      ],
      "look": [
       0.003,
@@ -2104,9 +2089,9 @@
     {
      "f": 220,
      "pos": [
-      0.1428,
+      0.2057,
       0.813,
-      0.5206
+      0.7553
      ],
      "look": [
       0.003,
@@ -2147,7 +2132,6 @@
    "solids": []
   },
   {
-   "outline": 0.003,
    "fx": [
     {
      "kind": "insert",
@@ -2188,8 +2172,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -2203,9 +2187,9 @@
     {
      "f": 220,
      "pos": [
-      0.9731,
-      0.0,
-      3.6316
+      0.7018,
+      0.55,
+      2.6192
      ],
      "look": [
       0.0,
@@ -2220,9 +2204,9 @@
     {
      "f": 224,
      "pos": [
-      0.8233,
-      0.0,
-      3.0724
+      0.5941,
+      0.55,
+      2.2171
      ],
      "look": [
       0.0,
@@ -2237,9 +2221,9 @@
     {
      "f": 227,
      "pos": [
-      0.7399,
-      0.0,
-      2.7612
+      0.5343,
+      0.55,
+      1.994
      ],
      "look": [
       0.0,
@@ -2307,7 +2291,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "crown",
@@ -2360,8 +2343,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -2481,7 +2464,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fitted": true,
    "id": "30a",
    "from": 256,
@@ -2514,8 +2496,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -2531,9 +2513,9 @@
     {
      "f": 256,
      "pos": [
-      -0.1267,
+      -0.1738,
       0.239,
-      0.3967
+      0.6636
      ],
      "look": [
       -0.055,
@@ -2548,9 +2530,9 @@
     {
      "f": 260,
      "pos": [
-      -0.1158,
+      -0.1557,
       0.239,
-      0.3347
+      0.5612
      ],
      "look": [
       -0.055,
@@ -2565,9 +2547,9 @@
     {
      "f": 270,
      "pos": [
-      -0.1097,
+      -0.1456,
       0.239,
-      0.3002
+      0.5041
      ],
      "look": [
       -0.055,
@@ -2635,7 +2617,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fitted": true,
    "id": "30b",
    "from": 270,
@@ -2668,8 +2649,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -2685,9 +2666,9 @@
     {
      "f": 270,
      "pos": [
-      -0.1207,
+      -0.1678,
       0.244,
-      0.3977
+      0.6646
      ],
      "look": [
       -0.049,
@@ -2702,9 +2683,9 @@
     {
      "f": 274,
      "pos": [
-      -0.1098,
+      -0.1497,
       0.244,
-      0.3357
+      0.5622
      ],
      "look": [
       -0.049,
@@ -2719,9 +2700,9 @@
     {
      "f": 276,
      "pos": [
-      -0.1037,
+      -0.1396,
       0.244,
-      0.3012
+      0.5051
      ],
      "look": [
       -0.049,
@@ -2762,7 +2743,6 @@
    "solids": []
   },
   {
-   "outline": 0.003,
    "fx": [
     {
      "kind": "insert",
@@ -2803,8 +2783,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -2928,7 +2908,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "slash",
@@ -2979,8 +2958,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -3083,7 +3062,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "slash",
@@ -3135,8 +3113,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -3247,7 +3225,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "halo",
@@ -3296,8 +3273,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -3310,9 +3287,9 @@
     {
      "f": 340,
      "pos": [
-      2.1909,
+      1.6541,
       0.6,
-      1.2649
+      0.955
      ],
      "look": [
       0.0,
@@ -3327,9 +3304,9 @@
     {
      "f": 370,
      "pos": [
-      2.1909,
+      1.6541,
       0.6,
-      1.2649
+      0.955
      ],
      "look": [
       0.0,
@@ -3399,7 +3376,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "halo",
@@ -3448,8 +3424,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -3540,7 +3516,6 @@
    "solids": []
   },
   {
-   "outline": 0.003,
    "fx": [
     {
      "kind": "insert",
@@ -3581,8 +3556,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -3596,9 +3571,9 @@
     {
      "f": 389,
      "pos": [
-      2.2512,
+      1.7332,
       0.6,
-      1.2998
+      1.0007
      ],
      "look": [
       0.0,
@@ -3613,9 +3588,9 @@
     {
      "f": 419,
      "pos": [
-      2.2512,
+      1.7332,
       0.6,
-      1.2998
+      1.0007
      ],
      "look": [
       0.0,
@@ -3684,7 +3659,6 @@
    "mouth": {
     "gain": 0.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "dots",
@@ -3730,8 +3704,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -3853,7 +3827,6 @@
    "mouth": {
     "gain": 0.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "dots",
@@ -3899,8 +3872,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -3919,7 +3892,7 @@
      "pos": [
       -0.025,
       0.477,
-      0.354
+      0.684
      ],
      "look": [
       -0.025,
@@ -3936,7 +3909,7 @@
      "pos": [
       -0.025,
       0.477,
-      0.3
+      0.58
      ],
      "look": [
       -0.025,
@@ -3953,7 +3926,7 @@
      "pos": [
       -0.025,
       0.477,
-      0.27
+      0.522
      ],
      "look": [
       -0.025,
@@ -3994,7 +3967,6 @@
    "solids": []
   },
   {
-   "outline": 0.003,
    "fx": [
     {
      "kind": "insert",
@@ -4035,8 +4007,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -4156,7 +4128,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "id": "34",
    "from": 452,
    "to": 473,
@@ -4188,8 +4159,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -4202,9 +4173,9 @@
     {
      "f": 452,
      "pos": [
-      1.046,
+      0.7152,
       1.4,
-      3.9039
+      2.6691
      ],
      "look": [
       0.0,
@@ -4219,9 +4190,9 @@
     {
      "f": 456,
      "pos": [
-      0.8787,
+      0.5947,
       1.4,
-      3.2795
+      2.2195
      ],
      "look": [
       0.0,
@@ -4236,9 +4207,9 @@
     {
      "f": 473,
      "pos": [
-      0.785,
+      0.5266,
       1.4,
-      2.9298
+      1.9653
      ],
      "look": [
       0.0,
@@ -4279,7 +4250,6 @@
    "solids": []
   },
   {
-   "outline": 0.003,
    "fx": [
     {
      "kind": "insert",
@@ -4320,8 +4290,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -4335,9 +4305,9 @@
     {
      "f": 473,
      "pos": [
-      1.046,
+      0.7152,
       1.4,
-      3.9039
+      2.6691
      ],
      "look": [
       0.0,
@@ -4352,9 +4322,9 @@
     {
      "f": 477,
      "pos": [
-      0.8787,
+      0.5947,
       1.4,
-      3.2795
+      2.2195
      ],
      "look": [
       0.0,
@@ -4369,9 +4339,9 @@
     {
      "f": 477,
      "pos": [
-      0.785,
+      0.5266,
       1.4,
-      2.9298
+      1.9653
      ],
      "look": [
       0.0,
@@ -4438,7 +4408,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fitted": true,
    "id": "34b",
    "from": 477,
@@ -4471,8 +4440,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -4588,7 +4557,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "id": "34c",
    "from": 495,
    "to": 508,
@@ -4620,8 +4588,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -4738,7 +4706,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "slash",
@@ -4782,8 +4749,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -4900,7 +4867,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "slash",
@@ -4945,8 +4911,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -5064,7 +5030,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "slash",
@@ -5108,8 +5073,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -5165,7 +5130,6 @@
    "solids": []
   },
   {
-   "outline": 0.003,
    "fx": [
     {
      "kind": "insert",
@@ -5206,8 +5170,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -5325,7 +5289,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "slash",
@@ -5370,8 +5333,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -5489,7 +5452,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "outline": 0.003,
    "fitted": true,
    "id": "35H",
    "from": 564,
@@ -5522,8 +5484,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -5628,7 +5590,6 @@
    "mouth": {
     "gain": 0.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "pillar",
@@ -5672,8 +5633,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
@@ -5774,7 +5735,6 @@
    "mouth": {
     "gain": 0.0
    },
-   "outline": 0.003,
    "fx": [
     {
      "kind": "pillar",
@@ -5829,8 +5789,8 @@
     "lock": 0.3,
     "neutral_sky": 0.85,
     "her_key": 0.9,
-    "her_rim": "#dfe6ff",
-    "her_rim_i": 1.8,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.4,
     "fog_c": "#12183a",
     "post": {
      "glow": 0.6,
