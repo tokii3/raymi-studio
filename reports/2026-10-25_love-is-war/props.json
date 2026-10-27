@@ -2241,8 +2241,8 @@
    "lyrics": null,
    "words": [],
    "transition": {
-    "kind": "cut",
-    "frames": 0
+    "kind": "ink",
+    "frames": 6
    },
    "events": [],
    "texts": [],
@@ -2413,8 +2413,8 @@
    "lyrics": null,
    "words": [],
    "transition": {
-    "kind": "ink",
-    "frames": 6
+    "kind": "cut",
+    "frames": 0
    },
    "events": [],
    "texts": [],
@@ -2852,8 +2852,8 @@
    "lyrics": null,
    "words": [],
    "transition": {
-    "kind": "ink",
-    "frames": 6
+    "kind": "cut",
+    "frames": 0
    },
    "events": [],
    "texts": [],
