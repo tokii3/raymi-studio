@@ -77,7 +77,8 @@ def main(argv: list[str]) -> int:
     rep = json.loads(probe.read_text(encoding="utf-8"))
     props_f = job_dir / "out" / "props.json"
     if props_f.is_file():          # designed stops / picture holds (opts.freeze) are decisions, not a still Raymi
-        frozen = {s["id"] for s in json.loads(props_f.read_text(encoding="utf-8"))["shots"] if (s.get("opts") or {}).get("freeze")}
+        # opts.calm = "<why>": a designed calm picture (e.g. an ECU push where her limbs are out of frame) - said, not hidden
+        frozen = {s["id"] for s in json.loads(props_f.read_text(encoding="utf-8"))["shots"] if (s.get("opts") or {}).get("freeze") or (s.get("opts") or {}).get("calm")}
         rep["rows"] = [r for r in rep["rows"] if r.get("shot") not in frozen]
     spec = json.loads((job_dir / "shots.json").read_text(encoding="utf-8"))
     smap = json.loads((job_dir / spec.get("song_map", "song_map.json")).read_text(encoding="utf-8"))

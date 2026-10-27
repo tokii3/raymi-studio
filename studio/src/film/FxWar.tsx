@@ -191,7 +191,12 @@ const Insert: React.FC<{x: Extract<WarFx, {kind: 'insert'}>; f: number}> = ({x, 
   } else if (m === 'rings') {
     body = Array.from({length: 7}, (_, k) => <circle key={k} cx={W / 2} cy={H / 2} r={6 + k * 7} fill="none" stroke={fg} strokeWidth={0.6 + (k % 3)} strokeDasharray={`${18 + k * 4} 6`} />);
   }
-  return <AbsoluteFill style={{backgroundColor: bg === 'none' ? undefined : bg}}>{svg(body)}</AbsoluteFill>;
+  // an insert SLAMS in (2d pro_rules: arrival from oversize, never a still card - reality measured the 4-frame inserts
+  // as static shots): 1.35x -> 1.0 with a small travel along the stroke, on every frame of its 4
+  const d = Math.max(0, f - x.from), k = Math.min(1, d / 4), sc = 1.35 - 0.35 * (1 - (1 - k) ** 3);
+  return <AbsoluteFill style={{backgroundColor: bg === 'none' ? undefined : bg, overflow: 'hidden'}}>
+    <AbsoluteFill style={{transform: `scale(${sc.toFixed(3)}) translate(${(-6 * k).toFixed(2)}%, ${(3 * k).toFixed(2)}%) rotate(${(-2 + 2 * k).toFixed(2)}deg)`}}>{svg(body)}</AbsoluteFill>
+  </AbsoluteFill>;
 };
 
 export const FxWar: React.FC<{x: WarFx; f: number; center: [number, number]; head: [number, number]}> = ({x, f, center, head}) => {
