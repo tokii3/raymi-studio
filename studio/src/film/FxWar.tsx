@@ -102,9 +102,16 @@ const Pillar: React.FC<{x: Extract<WarFx, {kind: 'pillar'}>; f: number; center: 
   const grow = Math.min(1, (f - a + 1) / 3), end = x.fade ? Math.max(0, 1 - Math.max(0, f - b) / 8) * 0.4 : f > b ? Math.max(0, 1 - (f - b) / 4) : 1;
   const cx = head[0] * W, w = 16 * grow, top = Math.max(0, head[1] - 0.06) * H;   // from just above her head up
   void center;
+  const h = (top + 10) * grow, id = `pil${x.from}`;
   return svg(<g opacity={end}>
-    <rect x={cx - w} y={-10} width={w * 2} height={(top + 10) * grow} fill={x.color ?? VIOLET} opacity={0.45} />
-    <rect x={cx - w * 0.45} y={-10} width={w * 0.9} height={(top + 10) * grow} fill={WHITE_V} />
+    <defs>
+      <linearGradient id={`${id}g`} x1="0" y1="1" x2="0" y2="0"><stop offset="0" stopColor={WHITE_V} stopOpacity={1} /><stop offset="0.55" stopColor={x.color ?? VIOLET} stopOpacity={0.55} /><stop offset="1" stopColor={x.color ?? VIOLET} stopOpacity={0} /></linearGradient>
+      <filter id={`${id}b`} x="-50%" y="-10%" width="200%" height="120%"><feGaussianBlur stdDeviation={w * 0.25} /></filter>
+    </defs>
+    <rect x={cx - w * 1.4} y={top + 10 - h - 10} width={w * 2.8} height={h} fill={`url(#${id}g)`} filter={`url(#${id}b)`} opacity={0.6} />
+    <rect x={cx - w * 0.4} y={top + 10 - h - 10} width={w * 0.8} height={h} fill={`url(#${id}g)`} filter={`url(#${id}b)`} />
+    <ellipse cx={cx} cy={top + 1} rx={w * 1.6} ry={w * 0.35} fill={WHITE_V} opacity={0.5} filter={`url(#${id}b)`} />
+    {Array.from({length: 18}, (_, k) => <circle key={k} cx={cx + (rnd(k * 3.3) - 0.5) * w * 2.2} cy={top - ((two(f) * (0.6 + rnd(k)) + rnd(k * 7) * 90) % Math.max(10, top))} r={0.3 + rnd(k * 5) * 0.5} fill={WHITE_V} opacity={0.8} />)}
   </g>, 'screen');
 };
 

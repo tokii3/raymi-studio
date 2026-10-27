@@ -169,7 +169,7 @@ function collarMat() {
       for (let i = 0; i < 9 + k * 3; i++) {
         const a0 = (i / (9 + k * 3)) * Math.PI * 2 + r(k * 31 + i) * 0.4, a1 = a0 + 0.25 + r(k * 7 + i) * 0.35;
         ctx.strokeStyle = k < 2 ? PAL.paper : PAL.mist; ctx.lineWidth = (5 - k) * (0.8 + r(i) * 0.6); ctx.lineCap = 'round';
-        ctx.globalAlpha = 1 - k * 0.2;
+        ctx.globalAlpha = 0.55 - k * 0.12;
         ctx.beginPath(); ctx.arc(c, c, R + (r(k + i * 3) - 0.5) * 6, a0, a1); ctx.stroke();
       }
     }
@@ -363,7 +363,7 @@ export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; 
         const p = new THREE.Vector3(...camPos).addScaledVector(dir, d);
         return <mesh position={p} rotation={[0, Math.atan2(-dir.x, -dir.z), t * 0.1]} material={fresnelMat()} renderOrder={11}><planeGeometry args={[1.1, 1.1]} /></mesh>;
       })() : null}
-      <pointLight position={[x, lampY, z]} color={violet > 0 ? '#c9a8ff' : '#ffe9bd'} intensity={3.5 * v} distance={6} decay={1.5} />
+      <pointLight position={[x, lampY, z]} color={violet > 0 ? '#c9a8ff' : '#ffe9bd'} intensity={2.0 * v} distance={6} decay={1.5} />
       {violet > 0 ? <mesh position={[x, lampY, z]} scale={3.2 * violet} renderOrder={8}><sphereGeometry args={[1, 16, 12]} />
         <meshBasicMaterial color={PAL.violet} {...add} opacity={0.18 * violet} /></mesh> : null}
     </group>

@@ -115,7 +115,7 @@ export const Fx2D: React.FC<{fx?: Fx[]; f: number; center?: [number, number]; he
             </React.Fragment>
           );
         }
-        if (x.kind === 'slash') return <Slash key={i} x={x} f={f} />;
+        if (x.kind === 'slash') return <Slash key={i} x={x} f={f} head={head} />;
         if (x.kind === 'melody') return <MelodyLine key={i} x={x} f={f} />;
         if (x.kind === 'ring') return <Ring key={i} x={x} f={f} />;
         if (x.kind === 'halftone') {
@@ -166,7 +166,7 @@ const Speed: React.FC<{x: Extract<Fx, {kind: 'speed'}>; f: number}> = ({x, f}) =
 
 /** One brush slash across the whole frame: drawn in `draw` frames (default 3) from one side, a thick belly that tapers to
  *  a thin tail, ragged edges, a spray of drops thrown off the stroke. Held after it lands (ink stays). */
-const Slash: React.FC<{x: Extract<Fx, {kind: 'slash'}>; f: number}> = ({x, f}) => {
+const Slash: React.FC<{x: Extract<Fx, {kind: 'slash'}>; f: number; head?: [number, number]}> = ({x, f, head}) => {
   const g = Math.min(1, (f - x.from + 1) / Math.max(1, x.draw ?? 3));
   const W = 160, H = 90, s = x.seed ?? 1;
   const w = (x.width ?? 0.2) * H;                         // the belly's thickness (share of the frame height)
@@ -182,7 +182,14 @@ const Slash: React.FC<{x: Extract<Fx, {kind: 'slash'}>; f: number}> = ({x, f}) =
     bot.unshift(`${xx.toFixed(2)},${(w * press / 2 + (rnd(s * 17 + i) - 0.5) * w * 0.18).toFixed(2)}`);
   }
   const color = x.color ?? '#09070d';
-  const cy = (x.y ?? 0.5) * H;
+  // where the stroke crosses her head's column: closer than 0.2 of the frame -> it moves off her face (look-critic
+  // stills 1: the slash parked across her mouth in m05 / m18)
+  let cy = (x.y ?? 0.5) * H;
+  if (head) {
+    const at = cy + Math.tan(((x.angle ?? -14) * Math.PI) / 180) * (head[0] - 0.5) * W;
+    const d = at - head[1] * H;
+    if (Math.abs(d) < 0.2 * H) cy += (d >= 0 ? 1 : -1) * (0.2 * H - Math.abs(d)) + (d >= 0 ? w * 0.6 : -w * 0.6);
+  }
   return (
     <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%'}}>
       <g transform={`translate(${W / 2} ${cy}) rotate(${x.angle ?? -14}) translate(${-W / 2} 0)`}>

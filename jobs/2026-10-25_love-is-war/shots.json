@@ -256,7 +256,8 @@
     "post": {
      "chroma": 0.003,
      "vignette": 0
-    }
+    },
+    "her_key": 0.55
    }
   },
   {
@@ -3330,7 +3331,8 @@
        "fov": 46,
        "roll": 0
       }
-     ]
+     ],
+     "fx": []
     },
     {
      "at": 67.6,
@@ -3346,7 +3348,8 @@
        "fov": 46,
        "roll": 0
       }
-     ]
+     ],
+     "fx": []
     },
     {
      "at": 67.8,
@@ -4925,7 +4928,9 @@
      ],
      "yaw": 60
     },
-    "shallows": 1
+    "shallows": 1,
+    "her_rim": "#ffd9a0",
+    "her_rim_i": 2.6
    }
   },
   {
@@ -5439,7 +5444,7 @@
     {
      "at": 0,
      "aim": {
-      "d": 2.8,
+      "d": 2.1,
       "az": 15.0,
       "y": 0.9,
       "h": 2.3,
@@ -5455,7 +5460,7 @@
     {
      "at": 0.015,
      "aim": {
-      "d": 2.6,
+      "d": 1.95,
       "az": 15.0,
       "y": 0.9,
       "h": 2.3,
@@ -5472,7 +5477,7 @@
     {
      "at": 0.18,
      "aim": {
-      "d": 2.6,
+      "d": 1.95,
       "az": 15.0,
       "y": 0.9,
       "h": 2.3,
@@ -5655,7 +5660,8 @@
      "yaw": 0,
      "lantern": "her"
     },
-    "lantern_room": 1
+    "lantern_room": 1,
+    "her_key": 0.55
    },
    "fx": [
     {
@@ -5780,7 +5786,8 @@
      "yaw": 0,
      "lantern": "her"
     },
-    "lantern_room": 1
+    "lantern_room": 1,
+    "her_key": 0.55
    },
    "fx": [
     {
@@ -5901,7 +5908,8 @@
     ],
     "two_tone_n": 2,
     "two_tone_light": "#fff1d2",
-    "detail": "her hand on the gallery rail (the beam inches over her head)"
+    "detail": "her hand on the gallery rail (the beam inches over her head)",
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -5998,7 +6006,8 @@
      "yaw": 0,
      "lantern": "her"
     },
-    "lantern_room": 1
+    "lantern_room": 1,
+    "her_key": 0.55
    },
    "fx": [
     {
@@ -6100,7 +6109,8 @@
     "two_tone_light": "#ffc35c",
     "ring_at": [
      131.33
-    ]
+    ],
+    "her_key": 0.55
    },
    "fx": [
     {
@@ -6211,7 +6221,8 @@
     "lantern_room": 1,
     "grain_pulse": [
      133.67
-    ]
+    ],
+    "her_key": 0.55
    },
    "fx": [
     {
@@ -6292,7 +6303,8 @@
      "lantern": "her"
     },
     "lantern_room": 1,
-    "fresnel_front": 1
+    "fresnel_front": 1,
+    "her_key": 0.55
    },
    "transition": {
     "kind": "cover",
@@ -6403,7 +6415,8 @@
     },
     "lantern_room": 1,
     "cable_glow": 0.4,
-    "lamp_cable": 1
+    "lamp_cable": 1,
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -6509,7 +6522,8 @@
      139.297
     ],
     "two_tone_n": 4,
-    "two_tone_light": "#ffc35c"
+    "two_tone_light": "#ffc35c",
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -6623,7 +6637,8 @@
     "lantern_room": 1,
     "flip_at": [
      142.62
-    ]
+    ],
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -6775,7 +6790,8 @@
      "yaw": -1448.3,
      "lantern": "her"
     },
-    "lantern_room": 1
+    "lantern_room": 1,
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -6919,9 +6935,9 @@
     {
      "at": 0,
      "pos": [
-      -6.886,
+      -7.144,
       13.7,
-      -25.842
+      -26.808
      ],
      "look": [
       -8.0,
@@ -6934,9 +6950,9 @@
     {
      "at": 0.03,
      "pos": [
-      -6.886,
+      -7.144,
       13.7,
-      -25.842
+      -26.808
      ],
      "look": [
       -8.0,
@@ -6950,9 +6966,9 @@
     {
      "at": 0.17,
      "pos": [
-      -6.886,
+      -7.144,
       13.7,
-      -25.842
+      -26.808
      ],
      "look": [
       -8.0,
@@ -7025,7 +7041,10 @@
      146.33
     ],
     "two_tone_n": 4,
-    "two_tone_light": "#ffc35c"
+    "two_tone_light": "#ffc35c",
+    "her_key": 0.55,
+    "her_rim": "#bfd0ff",
+    "her_rim_i": 2.4
    },
    "cams": [
     {
@@ -7155,7 +7174,8 @@
     "two_tone_light": "#ffc35c",
     "flip_at": [
      150.12
-    ]
+    ],
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -7269,7 +7289,8 @@
      "lantern": "her"
     },
     "lantern_room": 1,
-    "detail": "macro on her hand slipping and catching the frame"
+    "detail": "macro on her hand slipping and catching the frame",
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -7374,7 +7395,8 @@
     "lantern_room": 1,
     "flip_at": [
      153.85
-    ]
+    ],
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -7554,7 +7576,8 @@
      "yaw": 0,
      "lantern": "her"
     },
-    "lantern_room": 1
+    "lantern_room": 1,
+    "her_key": 0.55
    },
    "fx": [
     {
@@ -7686,7 +7709,8 @@
      "lantern": "her"
     },
     "lantern_room": 1,
-    "fresnel_front": 1
+    "fresnel_front": 1,
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -7783,7 +7807,8 @@
     ],
     "lantern_violet": [
      158.1
-    ]
+    ],
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -7898,7 +7923,8 @@
     ],
     "arm_current": [
      159.9
-    ]
+    ],
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -8182,7 +8208,8 @@
       167.4,
       "#ffd9f0"
      ]
-    ]
+    ],
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -8283,7 +8310,8 @@
      "yaw": 0,
      "lantern": "her"
     },
-    "lantern_room": 1
+    "lantern_room": 1,
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -8396,7 +8424,8 @@
      "yaw": -996.5,
      "lantern": "her"
     },
-    "lantern_room": 1
+    "lantern_room": 1,
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -8513,7 +8542,8 @@
     "lantern_room": 1,
     "grade_to": "war_white",
     "grade_at": 173.24,
-    "grade_s": 3.66
+    "grade_s": 3.66,
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -8656,7 +8686,8 @@
     "lantern_room": 1,
     "grade_to": "war_white",
     "grade_at": 173.24,
-    "grade_s": 3.66
+    "grade_s": 3.66,
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -8900,7 +8931,8 @@
     "lantern_room": 1,
     "grade_to": "war_white",
     "grade_at": 173.24,
-    "grade_s": 3.66
+    "grade_s": 3.66,
+    "her_key": 0.55
    },
    "cams": [
     {
@@ -9157,7 +9189,8 @@
     "post": {
      "chroma": 0.003,
      "vignette": 0
-    }
+    },
+    "her_key": 0.55
    }
   },
   {
@@ -9262,7 +9295,8 @@
      "glow": 0.3,
      "vignette": 0.5,
      "dof_auto": 1
-    }
+    },
+    "her_key": 0.55
    }
   },
   {
@@ -9353,7 +9387,8 @@
      "glow": 0.3,
      "vignette": 0.5,
      "dof_auto": 1
-    }
+    },
+    "her_key": 0.55
    },
    "frame_fit": [
     0.009,
@@ -9447,7 +9482,8 @@
      "glow": 0.3,
      "vignette": 0.5,
      "dof_auto": 1
-    }
+    },
+    "her_key": 0.55
    },
    "fx": [
     {
