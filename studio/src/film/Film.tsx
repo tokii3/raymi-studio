@@ -136,7 +136,9 @@ export const Film: React.FC<FilmProps> = (props) => {
   // her eyes at ~0.77 of her figure height: the probe measured raymi7's head bone 1.0-1.2 m above her feet in bent clips
   // (Love is War 2026-10-27; 0.9 put the ink crown's hole above her face)
   const headNdc = herKey ? new THREE.Vector3(herKey.pos[0], herKey.pos[1] + (herKey.height ?? 1.55) * 0.77, herKey.pos[2]).project(cam) : null;
-  const herHead: [number, number] = headNdc ? [headNdc.x * 0.5 + 0.5, -headNdc.y * 0.5 + 0.5] : [0.5, 0.3];
+  // a lens fitted on her MEASURED head (raymi/frame.py: look point + HIGH 0.10 of the frame) has her eyes at x 0.5, 0.40
+  // from the top - the guess from her key missed in bent clips and the war-red slash crossed her eyes (face1 f7, 76 s)
+  const herHead: [number, number] = shot.fitted ? [0.5, 0.4] : headNdc ? [headNdc.x * 0.5 + 0.5, -headNdc.y * 0.5 + 0.5] : [0.5, 0.3];
   const faults = props.vrm ? [] : visibleCutEdges(shot, f, aspect, props.hits, fps);
   if (faults.length) cancelRender(new Error(`cut sprite edge on screen: ${JSON.stringify(faults)} - reframe the shot (hard rule 9)`));
   const Set = SETS[shot.set];

@@ -1,8 +1,9 @@
 {
- "_why": "face + lip sync + one grade (toki 2026-10-27: 'lipsync sieht noch unpassend aus', 'sie ist immer sehr emotionslos', 'after effects ... aus einem guss') and the excerpt 8 critic fixes (flip, 35H torso, 29a top-down, crane end, riser start) - checked before the whole film renders",
+ "_why": "whole film take 11: scene probe over the whole film (motion / reality checks) + the four places face1 still showed wrong (riser start, 29a, slash over her eyes at 76 s, the pillar box at the crane end)",
  "format": "mv",
- "frames": [82, 505, 954, 1790, 1966, 2028, 2280, 2340, 2405, 2607, 3294, 4087],
- "names": ["f1_calm_sorrow", "f2_verse_smirk", "f3_yell_sung", "f4_riser_start", "f5_29a_from_below", "f6_flip_three_tone", "f7_chorus_smirk", "f8_35H_face", "f9_crane_end", "f10_yell_2", "f11_angry_sing", "f12_smirk_2"],
+ "frames": [1790, 1966, 2280, 2405],
+ "names": ["g1_riser_start", "g2_29a_up_into_face", "g3_slash_off_eyes", "g4_crane_end_pillar"],
  "scale": 1,
- "round": "face1"
+ "round": "face2",
+ "probe": 2
 }

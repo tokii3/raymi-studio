@@ -44,11 +44,11 @@ export const inkDefs = (id: string, seed = 3) => (
   </defs>
 );
 let inkN = 0;
-const svg = (children: React.ReactNode, blend?: React.CSSProperties['mixBlendMode']) => {
+const svg = (children: React.ReactNode, blend?: React.CSSProperties['mixBlendMode'], ink = true) => {
   const id = `ink${inkN++ % 997}`;
   return (
     <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: blend}}>
-      {inkDefs(id)}<g filter={`url(#${id})`}>{children}</g>
+      {ink ? <>{inkDefs(id)}<g filter={`url(#${id})`}>{children}</g></> : children}
     </svg>
   );
 };
@@ -132,7 +132,7 @@ const Pillar: React.FC<{x: Extract<WarFx, {kind: 'pillar'}>; f: number; center: 
     <rect x={cx - w * 0.4} y={top + 10 - h - 10} width={w * 0.8} height={h} fill={`url(#${id}g)`} filter={`url(#${id}b)`} />
     <ellipse cx={cx} cy={top + 1} rx={w * 1.6} ry={w * 0.35} fill={WHITE_V} opacity={0.5} filter={`url(#${id}b)`} />
     {Array.from({length: 18}, (_, k) => <circle key={k} cx={cx + (rnd(k * 3.3) - 0.5) * w * 2.2} cy={top - ((two(f) * (0.6 + rnd(k)) + rnd(k * 7) * 90) % Math.max(10, top))} r={0.3 + rnd(k * 5) * 0.5} fill={WHITE_V} opacity={0.8} />)}
-  </g>, 'screen');
+  </g>, 'screen', false);   // light, not ink: the brush filter cut it into a hard noisy box (face1 f9)
 };
 
 const Embers: React.FC<{x: Extract<WarFx, {kind: 'embers'}>; f: number; center: [number, number]}> = ({x, f, center}) => svg(<g>
