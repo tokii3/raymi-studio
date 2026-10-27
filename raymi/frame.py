@@ -84,11 +84,19 @@ def main(job_dir: Path, fmt: str = "mv") -> int:
     by_id = {r["id"]: r for r in spec["shots"]}
     applied = 0
     for sid, r in sorted(res.items()):
-        row = by_id.get(sid)
+        row, pic = by_id.get(sid), False
+        if row is None and sid[:-1] in by_id:
+            row, pic = by_id[sid[:-1]], True              # "28a": a multicam picture of row 28 (timeline expand_rows)
         if row is None:
             continue
         if "skip" in r:
             print(f"  {sid}: SKIP {r['skip']} {r['shift']}")
+            continue
+        if pic:                                            # a multicam picture of the row (raymi/timeline.py expand_rows)
+            fits = row.setdefault("frame_fits", {})
+            fits[sid] = [round(a + b, 3) for a, b in zip(fits.get(sid) or [0, 0, 0], r["shift"])]
+            print(f"  {sid}: shift {r['shift']} over {r['frames']} frames (frame {r['frame_h']} m tall) -> frame_fits {fits[sid]}")
+            applied += 1
             continue
         old = row.get("frame_fit") or [0, 0, 0]
         row["frame_fit"] = [round(a + b, 3) for a, b in zip(old, r["shift"])]   # the probe saw the lens WITH the old fit

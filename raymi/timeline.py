@@ -1037,7 +1037,7 @@ def aim_camera(a: dict, s: dict, marks: dict, errors: list[str], tag: str) -> tu
 
 
 SUB_KEEP = {"set", "opts", "actor", "mouth", "step", "outline", "fx", "kick", "observer", "aware", "low_ok", "lens_near",
-            "hero", "camera_hand", "why", "short_shot", "frame_fit", "row"}
+            "hero", "camera_hand", "why", "short_shot", "row"}   # frame_fit: per picture (frame_fits), never inherited
 
 
 def _num_at(k: dict) -> float:
@@ -1147,6 +1147,9 @@ def expand_rows(rows: list[dict], errors: list[str], carry: bool = False) -> lis
                 continue
             sub = {k: v for k, v in base.items() if k in SUB_KEEP}
             sub["id"] = f"{rid}{chr(97 + j)}"
+            fit = (row.get("frame_fits") or {}).get(sub["id"])   # raymi/frame.py: this picture's lens on her measured head
+            if fit:
+                sub["frame_fit"] = fit
             sub["at"] = round(t, 3)
             sub["camera"] = c.get("camera") or base.get("camera")
             if go and c.get("kind") not in ("stutter", "riser") and c.get("carry") is not False:

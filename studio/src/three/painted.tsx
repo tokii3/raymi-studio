@@ -164,11 +164,16 @@ function moonMat() {
 function collarMat() {
   return cached('collar', () => mat(canvasTexture('p_collar', 512, 512, (ctx, w, h) => {
     const c = w / 2;
-    for (let i = 0; i < 90; i++) {
-      const a = (i / 90) * Math.PI * 2 + r(i) * 0.05, R0 = w * (0.15 + r(i * 3) * 0.05), R1 = R0 + w * (0.05 + r(i * 5) * 0.12);
-      ctx.strokeStyle = i % 4 ? PAL.paper : PAL.mist; ctx.lineWidth = 3 + r(i * 7) * 5; ctx.lineCap = 'round';
-      ctx.beginPath(); ctx.moveTo(c + Math.cos(a) * R0, c + Math.sin(a) * R0); ctx.lineTo(c + Math.cos(a + 0.05) * R1, c + Math.sin(a + 0.05) * R1); ctx.stroke();
+    for (let k = 0; k < 4; k++) {                                              // 4 rings of broken foam arcs
+      const R = w * (0.17 + k * 0.075);
+      for (let i = 0; i < 9 + k * 3; i++) {
+        const a0 = (i / (9 + k * 3)) * Math.PI * 2 + r(k * 31 + i) * 0.4, a1 = a0 + 0.25 + r(k * 7 + i) * 0.35;
+        ctx.strokeStyle = k < 2 ? PAL.paper : PAL.mist; ctx.lineWidth = (5 - k) * (0.8 + r(i) * 0.6); ctx.lineCap = 'round';
+        ctx.globalAlpha = 1 - k * 0.2;
+        ctx.beginPath(); ctx.arc(c, c, R + (r(k + i * 3) - 0.5) * 6, a0, a1); ctx.stroke();
+      }
     }
+    ctx.globalAlpha = 1;
     ctx.strokeStyle = PAL.ink; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(c, c, w * 0.145, 0, Math.PI * 2); ctx.stroke();
     grain(ctx, w, h, 21);
   }), 'paper', {transparent: true, depthWrite: false, side: THREE.DoubleSide}));
@@ -195,15 +200,15 @@ export const PaintedSea: React.FC<{o: Record<string, unknown>; f: number; fps: n
   const tex = (m: THREE.MeshBasicMaterial, ox: number) => { if (m.map) { m.map.wrapS = THREE.RepeatWrapping; m.map.offset.x = ox; } return m; };
   return (
     <group>
-      <Ring R={150} y0={-2} y1={110} m={skyMat(eye)} order={-12} />
+      {under ? null : <><Ring R={150} y0={-2} y1={110} m={skyMat(eye)} order={-12} />
       <mesh position={[0, 110, 0]} rotation={[Math.PI / 2, 0, 0]} renderOrder={-12}><circleGeometry args={[150, 48]} />
-        <meshBasicMaterial color={eye ? '#05081a' : PAL.ink} fog={false} toneMapped={false} side={THREE.DoubleSide} /></mesh>
-      {!eye ? <>
+        <meshBasicMaterial color={eye ? '#05081a' : PAL.ink} fog={false} toneMapped={false} side={THREE.DoubleSide} /></mesh></>}
+      {!eye && !under ? <>
         <Ring R={110} y0={6} y1={34} m={tex(cloudMat('A', PAL.deep, PAL.mid, PAL.light, 31), t * 0.4 / 690)} order={-11} />
         <Ring R={60} y0={4 - 20 * parted} y1={20 - 20 * parted} m={tex(cloudMat('B', PAL.ink, PAL.deep, PAL.mid, 47), t * 1 / 377)} order={-10} />
       </> : null}
-      {wallC > 0 ? <Ring R={90 - 76 * (rollIn ? wallC : 0)} y0={3} y1={16 + 6 * wallC} m={tex(cloudMat('C', PAL.ink, PAL.deep, PAL.light, 59), t / 300)} order={-9} /> : null}
-      {moonBig > 0 ? (
+      {wallC > 0 && !under ? <Ring R={90 - 76 * (rollIn ? wallC : 0)} y0={3} y1={16 + 6 * wallC} m={tex(cloudMat('C', PAL.ink, PAL.deep, PAL.light, 59), t / 300)} order={-9} /> : null}
+      {moonBig > 0 && !under ? (
         <mesh position={[centre[0] - 22, 26, centre[2] - 140]} renderOrder={-11} material={moonMat()}>
           <planeGeometry args={[52 * moonBig / 0.45, 52 * moonBig / 0.45]} />
         </mesh>

@@ -302,7 +302,7 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
             const x = C.x + (rnd(i * 5 + cyc * 17) - 0.5) * 14, z = C.z - 1.5 - rnd(i * 7 + cyc * 29) * 14;
             const R = 0.05 + (d / T) * 0.8;
             return <mesh key={`rr${i}`} position={[x, 0.03, z]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={6}>
-              <ringGeometry args={[R * 0.78, R, 32]} /><meshBasicMaterial color={i % 3 ? '#d7a6ff' : '#ffd38a'} {...add} opacity={0.9 * (1 - d / T) * Math.min(1, rainT / 10) * (0.4 + 0.6 * Math.max(glow, pool))} />
+              <ringGeometry args={[R * 0.78, R, 32]} /><meshBasicMaterial color={painted ? PAL.mist : i % 3 ? '#d7a6ff' : '#ffd38a'} {...add} opacity={(painted ? 0.35 : 0.9) * (1 - d / T) * Math.min(1, rainT / 10) * (0.4 + 0.6 * Math.max(glow, pool))} />
             </mesh>;
           })}
         </group>
@@ -333,7 +333,7 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
       <Sparks list={o.sparks} f={f} />
       <DeepLife opts={o} f={f} fps={fps} camPos={camPos} />
       {/* Love is War (2026-10-25): the lighthouse whose beam never stops on her, and the storm's lightning */}
-      {o.lighthouse ? <Lighthouse o={o.lighthouse as LighthouseOpts} f={f} fps={fps} camPos={(camPos ?? [0, 1.5, 6]) as P3} painted={painted}
+      {o.lighthouse && !(under && !split) ? <Lighthouse o={o.lighthouse as LighthouseOpts} f={f} fps={fps} camPos={(camPos ?? [0, 1.5, 6]) as P3} painted={painted}
         fresnelFront={Boolean(o.fresnel_front)} violet={frames(o.lantern_violet).some((t) => f >= t) ? 1 : 0} /> : null}
       <Lightning at={o.lightning} pos={o.lightning_pos as [number, number][] | undefined} f={f} />
     </group>

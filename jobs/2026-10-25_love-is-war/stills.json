@@ -1,5 +1,5 @@
 {
- "_why": "Love is War build stills round 1 (B5): the 19 storyboard moments + the gold hit flash + M1, from the real film path. A few stills to answer one question - is every framing / the painted world / the effects right - before any video render (toki 2026-10-27: no render time wasted).",
+ "_why": "build round 2: stills 1 showed fault CLASSES (her real head lower than the assumed eye height -> crown of her head in close shots; she sinks into the lantern base; the above-water world through the sea). The scene probe measures her head / feet in every shot, raymi frame puts every close picture on the measured head, then the same 21 moments again.",
  "format": "mv",
  "frames": [
   8,
@@ -48,5 +48,7 @@
   "m21_ink_night"
  ],
  "scale": 1,
- "round": "build1"
+ "round": "build2",
+ "probe": 4,
+ "frame_fit": true
 }
