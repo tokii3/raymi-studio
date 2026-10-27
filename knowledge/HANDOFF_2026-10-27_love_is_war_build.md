@@ -29,9 +29,25 @@ ac33679). Job: jobs/2026-10-25_love-is-war. Previous plan: knowledge/HANDOFF_202
 
 ## Not built yet (data in shots.json, silently ignored) -> BACKLOG.md "Love is War build"
 
-## B5 stills round 1
-- stills.json round build1: 21 frames (the 19 storyboard moments + the gold hit flash + M1), run 40428821556.
-- RESULT / fixes: see PROGRESS.md top entry.
+## B5 stills - 7 rounds (boards/build1 .. build7, local only; stills on branch renders reports/2026-10-25_love-is-war/stills)
+Each round found fault CLASSES, fixed in the shared parts (see PROGRESS top entry). Probe of round 2 lives in
+boards/probe_mv.json (+ flags). Pairs + card measures: boards/pairs/build_*.jpg, boards/build6/_pairs_measure.txt.
+look-critic stills 1: FAIL (reviews/stills_look-critic_1.md). Whole-film draft: release render-2026-10-25_love-is-war-71.
+
+## NEXT (in this order, then stills of the touched moments + look-critic + brief-keeper + gate -> toki)
+1. Rock climb rows 41-43 (88.6-96.2 black in the draft): the lens sits inside the lighthouse rock mound. Structural:
+   register the rock lumps (lighthouse.tsx) as solids / no_lens so the guard refuses it; move ROCK_CLIMB onto the
+   ledge side (the landing ledge is now at [-6.07, 2.0, -22.75]).
+2. Deep row 6 (9.8-12.7): casting-spell is upright - aim at her chest (DEEP + 1.0), not low.
+3. Lantern room multicam pictures (146-177): she faces the lamp (pulling), the beam-axis cameras see her BACK. The
+   script wants her face (82: "her face strained, eyes on us"; final build "her face", "her eyes on us"): face_lens /
+   a look over the shoulder on those pictures, or cameras on the lamp side. Then the final build has a face.
+4. White-out in the lantern (beam + war_white + lamp): keep the riser ramp on the world, not on her skin (look-critic
+   FIX 1) - e.g. her_key down while grade_to war_white runs, or the ramp as a 2D overlay behind her.
+5. m18 scream: the slash still crosses her mouth (the head estimate misses that close-up) - move row 70's slash y.
+6. Inserts that read as noise (15.4 white dots on black), wave strips repeat (look-critic FIX 6), contact shadows
+   (FIX 7), the deep two-tone hit has no paper (card two_tone_hit: light share 0.02).
+7. The draft's black / frozen spans in qc.json beyond the intended blacks (119.87, 186.47).
 
 ## toki 2026-10-27 (render policy, verbatim in toki.md)
 "falls viele stills einer scene gerendert werden müssen für qc > lieber als kurze video sequenz rendern oder falls

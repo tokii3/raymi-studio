@@ -1,5 +1,21 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-27 - Love is War BUILD (B0-B5): studio parts built, 7 stills rounds + a whole-film draft; look-critic FAIL
+- Built (reusable): stops() finds true silences; her body rests on the floor in low poses; TwoTone two values for
+  real (paper sky, no grade / bloom in a flash, glass vanishes); timeline multicam rows (cams / stutter / riser), aim
+  cameras, snap + tail carry (seams 0 -> 77 carried), set_opts, flip_at / flood / dip / pupil_lamp; held frames
+  restart their clip (they never held before); frame fit per multicam picture, aimed at the EYES; the her-in-frame
+  guard knows prone clips, details and probe-fitted lenses. three/painted.tsx (the painted storm world, lantern room
+  at her scale, Fresnel rings, deep ceiling), film/FxWar.tsx (crown, dots, ribbon, pillar, embers, halo, shards,
+  starburst, inserts), pose lens_attack (M1). shots.json: 94 rows -> 229 pictures, authored row by row.
+- Probe (52 min, rows recovered from the log after frame.py crashed on a name clash - test added): her head is
+  0.25-0.45 m below the assumed eye height in this film's bent clips -> 77 close pictures fitted.
+- Stills 7: war cry / gold hit / M1 / riser eyes / moon / flood silhouette / landing read. look-critic stills 1
+  FAIL (reviews/stills_look-critic_1.md): skin white-outs, effects over her face, flat pillar, small hero in wides;
+  most fixed in round 7. Draft render run 71 (release render-2026-10-25_love-is-war-71): rock climb 88.6-96.2 black
+  (lens inside the rock mound - the guard does not know those lumps), deep row 6 framed too low, lantern multicam
+  pictures show her BACK and blow out (final build). NOT sent to toki (gate would FAIL). Next: knowledge/HANDOFF_2026-10-27_love_is_war_build.md.
+
 ## 2026-10-27 - Motion-design skill packs surveyed and built in (toki: "eigne sie dir an ... dass sie wirklich genutzt werden")
 - The paid pack from her TikTok (Miftahul) is now a subscription site; its known rules are covered by free MIT /
   Apache packs: cth9191/animate, iart-ai/motion-design-skills, motionmaxxing (4,300 measured pro moves), HyperFrames
