@@ -1,0 +1,1521 @@
+{
+ "_why": "Measure every Mixamo clip's MOTION ENERGY (runs inside Blender, cloud only: .github/workflows/clip-energy.yml).",
+ "fps_note": "speeds in m/s for her 1.55 m figure, limbs relative to the hips",
+ "clips": {
+  "acknowledging": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-cover-to-stand-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-crouched-sneaking-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-crouched-sneaking-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-falling-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-falling-to-roll": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-hard-landing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-idle-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-idle-4": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-idle-5": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-left-cover-sneak": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-left-turn": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-right-cover-sneak": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-right-turn": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-run-to-stop": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-running": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-adventure-stand-to-cover-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "action-idle-to-fight-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "agony": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "angry-point": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "angry": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "arm-stretching": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "arms-hip-hop-dance": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "arms-spread-looking-upwards": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "backflip": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "backward-walking-turn": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "baseball-walk-out": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "batter-on-deck": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "beckoning": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "blow-a-kiss": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "booty-hip-hop-dance-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "booty-hip-hop-dance": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "boxing-taunt": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "breakdance-1990": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "breakdance-uprock-var-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-armada-to-esquiva": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-armada": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-au-to-role": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-au": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-bencao": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-capoeira-3": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-capoeira": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-chapa-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-chapa-giratoria-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-chapa-giratoria": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-chapaeu-de-couro": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-esquiva-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-esquiva-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-esquiva-3": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-esquiva-4": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-esquiva-5": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-ginga-backward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-ginga-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-ginga-sideways-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-ginga-sideways-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-ginga-sideways-to-au": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-ginga-variation-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-ginga-variation-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-ginga-variation-3": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-macaco-side": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-martelo-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-martelo-3": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-martelo-do-chau-sem-mao": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-martelo-do-chau": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-meia-lua-de-compasso-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-meia-lua-de-compasso": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-meia-lua-de-frente": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-pontera": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-queshada-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-queshada-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-rasteira-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-rasteira-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira-troca-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "capoeira": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "casting-spell": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-idle-to-walk-forward-highknees": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-idle-twist-l": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-idle-twist-r": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-sequence-02": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-sequence-04-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-sequence-04": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-sequence-05": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-twist-l-to-walk-180": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-twist-r-to-walk-180": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-walk-forward-02": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-walk-forward-turn-90r": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-walk-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-walk-stop-twist-r": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-walk-stop": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-walk-turn-180-tight": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-walk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "catwalk-walking": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "climbing-ladder": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "climbing-to-top": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "climbing-up-wall": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "creature-npc-mutant-breathing-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "creature-npc-mutant-flexing-muscles": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "creature-npc-mutant-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "creature-npc-mutant-left-turn-45": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "creature-npc-mutant-right-turn-45": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "creature-npc-mutant-run": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "creature-npc-mutant-walking": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "cross-punch": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "crossleg-freeze": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "crouch-to-stand": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "crouch-turn-left-90": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "crouch-turn-to-stand": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "crying": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "dance": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "dancing-maraschino-step": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "dancing-twerk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "death-from-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "defeated": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "drinking-fountain": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "drinking": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "drunk-walk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "dying": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "excited": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "fall-flat": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "falling-to-knees-in-prayer": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "falling-to-roll": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "falling": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-box-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-box-turn-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-box-turn": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-box-walk-arc": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-cow-milking": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-dig-and-plant-seeds": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-holding-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-holding-turn-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-holding-turn-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-holding-walk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-kneeling-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-pick-fruit-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-pick-fruit-3": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-pick-fruit": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-plant-a-plant": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-pull-plant-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-pull-plant": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-watering": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-wheelbarrow-dump": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-wheelbarrow-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-wheelbarrow-walk-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-wheelbarrow-walk-turn-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-wheelbarrow-walk-turn": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "farming-wheelbarrow-walk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-basic-locomotion-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-basic-locomotion-jump": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-basic-locomotion-left-strafe-walk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-basic-locomotion-right-turn-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-basic-locomotion-right-turn": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-basic-locomotion-running": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-crouch-pose": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-dance-pose-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-dance-pose-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-dance-pose-3": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-dance-pose": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-dynamic-pose": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-laying-pose-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-laying-pose-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-laying-pose": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-locomotion-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-locomotion-jump": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-locomotion-left-strafe-walk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-locomotion-left-strafe": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-locomotion-left-turn": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-locomotion-right-strafe-walk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-locomotion-right-strafe": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-locomotion-right-turn": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-locomotion-running": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-locomotion-walking": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-sitting-pose": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-standing-pose-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-standing-pose-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "female-standing-pose": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "fireball": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "fist-pump": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "floating-back-arched": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "floating-legs-bent-and-arms-spread": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "floating-legs-raised-arms-extended-upwards": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "flying": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "gestures-pack-basic-acknowledging": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "gestures-pack-basic-angry-gesture": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "gestures-pack-basic-annoyed-head-shake": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "gestures-pack-basic-being-cocky": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "gestures-pack-basic-dismissing-gesture": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "gestures-pack-basic-happy-hand-gesture": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "gestures-pack-basic-hard-head-nod": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "gestures-pack-basic-head-nod-yes": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "gestures-pack-basic-lengthy-head-nod": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "gestures-pack-basic-look-away-gesture": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "gestures-pack-basic-sarcastic-head-nod": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "gestures-pack-basic-thoughtful-head-shake": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "getting-up-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "getting-up": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "goalkeeper-catch": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "goofy-running": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "grab-and-slam": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "great-sword-power-up": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hanging-by-hands-against-wall": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "happy": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hard-landing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "head-hit": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hip-hop-dancing-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hip-hop-dancing-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hip-hop-dancing-3": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hip-hop-dancing-4": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hip-hop-dancing-5": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hip-hop-dancing-6": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hip-hop-dancing-7": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hip-hop-dancing-8": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hip-hop-dancing-9": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hip-hop-dancing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hit-to-head": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hit-to-side-of-body": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hook-punch": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "hurricane-kick": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "injured-run-backwards": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "jab-cross": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "jab-punch": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "joyful-jump": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "jump-from-wall": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "jump-push-up": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "jump": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "jumping-down-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "jumping-down": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "jumping-out-of-a-plane": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "jumping-over-obstacle-one-hand": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "jumping": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "kip-up": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "kiss": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "kneeling-down": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "kneeling-pointing-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "kneeling-pointing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "knocked-out-falling-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "knocked-unconscious": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "laughing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "laying-breathless": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "laying-moaning": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "laying-seizure": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "laying-severe-cough": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "laying-shrugging": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "left-turn-w-briefcase": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "locking-hip-hop-dance": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "long-yell-leaning-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "long-yell-while-standing-leaning-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "longbow-standing-idle-01": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "longbow-standing-run-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "longbow-standing-run-forward-stop": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "longbow-standing-run-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "longbow-standing-run-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "longbow-standing-run-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "longbow-standing-turn-90-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "longbow-standing-turn-90-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "longbow-standing-walk-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "longbow-standing-walk-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "longbow-standing-walk-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "longbow-standing-walk-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "look-around-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "look-around-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "look-around-3": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "look-around-4": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "look-around": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "look-over-shoulder": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "looking-around-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "looking-around": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "lying-down": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "macarena-dance": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "magic-locomotion-standing-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "magic-locomotion-standing-jump-running-landing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "magic-locomotion-standing-jump-running": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "magic-locomotion-standing-jump": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "magic-locomotion-standing-run-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "magic-locomotion-standing-run-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "magic-locomotion-standing-sprint-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "magic-locomotion-standing-turn-left-90": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "magic-locomotion-standing-turn-right-90": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "magic-locomotion-standing-walk-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "magic-locomotion-standing-walk-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "male-cheering-head-banging": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "mma-kick": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "moonwalk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "neck-stretching": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "nervously-look-around-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "nervously-look-around": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "offensive-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "old-man-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "on-knees-arms-raised": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "opening-a-filing-cabinet": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pacing-and-talking-on-a-phone": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "paddling": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pain-gesture": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "petting-animal": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pointing-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pointing-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pointing-forward-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pointing-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pointing-gesture-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pointing-gesture": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pointing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "praying": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-crouch-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-crouch-to-standing-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-crouch-turn-left-90": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-crouch-turn-right-90": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-crouch-walk-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-crouch-walk-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-crouch-walk-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-crouch-walk-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-1h-cast-spell-01": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-1h-magic-attack-01": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-1h-magic-attack-02": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-1h-magic-attack-03": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-2h-cast-spell-01": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-2h-magic-area-attack-01": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-2h-magic-area-attack-02": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-2h-magic-attack-01": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-2h-magic-attack-02": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-2h-magic-attack-03": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-2h-magic-attack-04": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-2h-magic-attack-05": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-block-end": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-block-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-block-react-large": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-block-start": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-idle-02": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-idle-03": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-idle-04": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-idle-to-crouch": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-jump-running-landing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-jump-running": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-jump": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-land-to-standing-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-react-death-backward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-react-death-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-react-death-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-react-death-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-react-large-from-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-react-large-from-front": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-react-large-from-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-react-large-from-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-react-small-from-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-react-small-from-front": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-react-small-from-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-react-small-from-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-run-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-run-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-run-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-run-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-sprint-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-turn-left-90": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-turn-right-90": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-walk-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-walk-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-walk-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pro-magic-standing-walk-right": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pull-heavy-object": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pulling-lever": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pulling-up-to-a-ledge": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "punch-combo": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "pushing-with-both-hands": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "quick-formal-bow": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "quick-informal-bow": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "rallying": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "reaching-out": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "reaction": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "rejected": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "roar": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "rumba-dancing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "run-look-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "running-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "running-arc": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "running-up-stairs": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "running": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sad-idle-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sad-idle-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sad-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sad-walk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "shaking-hands-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "shopping-cart-dance": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "shoved-reaction-with-spin": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "shrugging": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "silly-dancing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sit-to-type": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-and-pointing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-angry-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-angry": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-clap": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-disapproval": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-drinking": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-gun-motion": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-laughing-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-laughing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-talking-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-talking": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-thumbs-up": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting-victory": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sitting": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "snake-hip-hop-dance": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "spin-flip-kick": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "spin-in-place": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "spinning-back-kick-advancing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standard-walk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-cheering": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-clap": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-cover-turn": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-death-forward-01": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-dodge-backward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-greeting": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-idle-to-fight-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-react-large-from-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-run-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-taunt-battlecry": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-torch-light-torch": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-up-from-a-kneeling-position": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-up": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-using-touchscreen-tablet": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "standing-w-briefcase-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "step-hip-hop-dance": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "stroke-shaking-head": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "stumble-backwards": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "swimming-underwater": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "swing-backflip-to-superhero-pose": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sheath-sword-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sheath-sword-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-180-turn-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-attack-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-attack-3": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-attack-4": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-attack": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-block-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-block": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-casting-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-casting": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-crouch-block-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-crouch-block-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-crouch-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-crouch": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-crouching": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-death-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-death": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-idle-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-idle-4": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-impact-3": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-impact": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-jump-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-jump": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-kick": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-power-up": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-run-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-run": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-slash-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-slash-4": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-slash-5": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-strafe-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-strafe-3": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-strafe": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-walk-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "sword-and-shield-sword-and-shield-walk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "talking-at-watercooler": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "talking-on-a-cell-phone": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "talking-on-phone": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "talking-phone-pacing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "talking": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "taunt-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "taunt": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "taunting-throwing-arms-back": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "texting-and-walking": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "texting-while-standing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "texting": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "threatening": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "thriller-part-3": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "throw": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "tonic-seizure": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "treading-water": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "tut-hip-hop-dance": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "twist-dance": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "type-to-sit": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "typing": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "unarmed-idle-01": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "unarmed-idle-looking-ver-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "using-a-fax-machine": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "waking": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "walk-strafe-left": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "walking-while-texting": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "wave-hip-hop-dance-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "wave-hip-hop-dance": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "waving-1": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "waving-2": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "waving-gesture": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "waving": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "wiping-sweat": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "yawn": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "yelling-out": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "yelling-while-standing-leaning-forward": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "yelling": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "zombie-idle": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  },
+  "zombie-walk": {
+   "error": "Error: Python: Traceback (most recent call last):\n  File \"/usr/share/blender/scripts/addons/io_scene_fbx/__init__.py\", line 201, in execute\n    from . import import_fbx\n  File \"/usr/share/blender/scri"
+  }
+ }
+}
