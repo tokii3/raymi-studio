@@ -99,7 +99,7 @@ export const Lighthouse: React.FC<{o: LighthouseOpts; f: number; fps: number; ca
           <boxGeometry args={[1, 1, 1]} /><meshBasicMaterial color="#ffd89a" toneMapped={false} />
         </mesh>
       ))}
-      {herScale ? <LanternRoom x={x} z={z} H={H} f={f} fps={fps} camPos={camPos} fresnelFront={fresnelFront} violet={violet} /> : <>
+      {herScale ? <LanternRoom x={x} z={z} H={H} f={f} fps={fps} camPos={camPos} fresnelFront={fresnelFront} violet={violet} v={v} /> : <>
       <mesh position={[x, H + 0.32, z]} material={dark}><cylinderGeometry args={[1.35, 1.35, 0.16, 24]} /></mesh>
       <mesh position={[x, H + 0.32, z]} material={ink} scale={[1.03, 1.3, 1.03]}><cylinderGeometry args={[1.35, 1.35, 0.16, 24]} /></mesh>
       <mesh position={[x, H + 0.95, z]}><cylinderGeometry args={[0.7, 0.7, 1.1, 20]} />

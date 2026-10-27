@@ -1,5 +1,5 @@
 {
- "_why": "build round 3: the probe of round 2 (rows recovered from its log after frame.py failed) measured her head 0.25-0.45 m below the assumed eye height -> 69 close pictures fitted by raymi frame + 8 by hand; gallery inside the rail, a real landing ledge, under water without the above-water world, lighter gold hit flashes, the ink night dark.",
+ "_why": "build round 4: stills 3 fixed the framing classes; this round: the flood silhouette visible (glass gone in a two-value frame), ECUs on her eyes (frame fit aims 9 cm above the skull-base head bone), the moon clear of the cloud walls, the pillar above her, the ink night dark.",
  "format": "mv",
  "frames": [
   8,
@@ -17,7 +17,7 @@
   2614,
   3225,
   3666,
-  3681,
+  3686,
   4395,
   4635,
   5208,
@@ -48,5 +48,5 @@
   "m21_ink_night"
  ],
  "scale": 1,
- "round": "build3"
+ "round": "build4"
 }

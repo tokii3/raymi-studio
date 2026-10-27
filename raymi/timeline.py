@@ -1571,6 +1571,8 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                 if x.get("kind") == "stamp" and x.get("text"):
                     screen_texts.append(str(x["text"]))
                     heavy = True
+        if isinstance(ff, list) and len(ff) == 3:
+            extra["fitted"] = True                         # the lens sits on her MEASURED head (probe): the guard trusts it
         if spec.get("film_look") and "post" not in opts:   # toki 2026-10-25 "sehr flach und cartoon / plastik": DoF on her, glow, vignette
             opts["post"] = {"dof_auto": 1, "glow": 1, "vignette": 0.42}
         if spec.get("film_look"):                          # K/DA FIRESTARTER study in her world: plankton trails, deep-sea murk, her UV + the lamp

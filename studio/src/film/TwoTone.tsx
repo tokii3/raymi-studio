@@ -46,6 +46,7 @@ export const TwoTone: React.FC<{on: boolean; light?: string; dark?: string; bg?:
         const first = Array.isArray(ud.twoTone.material) ? ud.twoTone.material[0] : ud.twoTone.material;
         const transparent = (first as THREE.Material).transparent && (first as THREE.Material).opacity < 0.15;
         mesh.visible = !transparent;
+        if ((first.userData as {tone?: string}).tone === 'clear') { mesh.visible = false; return; }   // glass: gone in a flash
         const back = (first as THREE.Material).side === THREE.BackSide;   // the sky / backdrop dome
         mesh.material = flatMat(back ? (bg === 'ink' ? dark : light) : value(first) > 0.3 ? light : dark);
       } else if (ud.twoTone) {

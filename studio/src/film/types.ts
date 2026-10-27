@@ -112,6 +112,7 @@ export type Shot = {
   step?: number;
   outline?: number;
   fx?: Fx[];
+  fitted?: boolean;        // the lens was put on her MEASURED head by the scene probe (raymi/frame.py frame_fit)
 };
 
 export type FilmProps = {

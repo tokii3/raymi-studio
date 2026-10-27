@@ -1140,7 +1140,9 @@ export function herOffFaults(props: FilmProps): {shot: string; frame: number; wh
   const aspect = props.width / props.height;
   for (const s of props.shots) {
     // opts.detail = "<why>": the picture IS a part of her (a macro on her hand, her feet) - head and chest out on purpose
-    if (!s.actor?.length || s.opts.her_off || s.opts.detail) continue;
+    // a lens fitted on her measured head (probe, raymi/frame.py) beats the assumed body here (Love is War stills 3: the
+    // guard's head at 92 % of 1.55 m was 0.3 m above her real one in bent clips - treading, pulling, lunging)
+    if (!s.actor?.length || s.opts.her_off || s.opts.detail || s.fitted) continue;
     let ok = 0, n = 0, bad = s.from;
     for (let f = s.from; f < s.to; f += 4) {
       const k = s.actor.reduce((p, q) => (q.f <= f ? q : p), s.actor[0]);

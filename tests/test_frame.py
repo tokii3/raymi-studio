@@ -16,7 +16,7 @@ def test_close_shot_moves_onto_the_head_and_a_little_high():
     r = frame.fits(_props(), _report([0.15, 1.30, 0.0]))["01"]
     fh = 2 * 0.6 * 0.2679                                   # frame height at 0.6 m, fov 30
     assert abs(r["shift"][0] - 0.15) < 1e-3                 # sideways onto the head
-    assert abs(r["shift"][1] - (1.30 - 1.45 - frame.HIGH * fh)) < 2e-3   # down, leaving the face 10 % high
+    assert abs(r["shift"][1] - (1.30 + frame.EYES - 1.45 - frame.HIGH * fh)) < 2e-3   # her eyes, the face 10 % high
     assert abs(r["shift"][2]) < 1e-3                        # never along the view: the distance stays
 
 

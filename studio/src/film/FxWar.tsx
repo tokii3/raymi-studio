@@ -96,14 +96,15 @@ const Ribbon: React.FC<{x: Extract<WarFx, {kind: 'ribbon'}>; f: number; center: 
   </g>, 'screen');
 };
 
-const Pillar: React.FC<{x: Extract<WarFx, {kind: 'pillar'}>; f: number; center: [number, number]}> = ({x, f, center}) => {
+const Pillar: React.FC<{x: Extract<WarFx, {kind: 'pillar'}>; f: number; center: [number, number]; head: [number, number]}> = ({x, f, center, head}) => {
   const [a, b] = x.src ?? [x.from, x.to];
   if (f < a) return null;
   const grow = Math.min(1, (f - a + 1) / 3), end = x.fade ? Math.max(0, 1 - Math.max(0, f - b) / 8) * 0.4 : f > b ? Math.max(0, 1 - (f - b) / 4) : 1;
-  const cx = center[0] * W, w = 16 * grow;
+  const cx = head[0] * W, w = 16 * grow, top = Math.max(0, head[1] - 0.06) * H;   // from just above her head up
+  void center;
   return svg(<g opacity={end}>
-    <rect x={cx - w} y={-10} width={w * 2} height={(center[1] * H + 10) * grow + 10} fill={x.color ?? VIOLET} opacity={0.45} />
-    <rect x={cx - w * 0.45} y={-10} width={w * 0.9} height={(center[1] * H + 10) * grow + 10} fill={WHITE_V} />
+    <rect x={cx - w} y={-10} width={w * 2} height={(top + 10) * grow} fill={x.color ?? VIOLET} opacity={0.45} />
+    <rect x={cx - w * 0.45} y={-10} width={w * 0.9} height={(top + 10) * grow} fill={WHITE_V} />
   </g>, 'screen');
 };
 
@@ -187,7 +188,7 @@ export const FxWar: React.FC<{x: WarFx; f: number; center: [number, number]; hea
     case 'crown': return <Crown x={x} f={f} head={head} />;
     case 'dots': return <Dots x={x} f={f} center={center} />;
     case 'ribbon': return <Ribbon x={x} f={f} center={center} />;
-    case 'pillar': return <Pillar x={x} f={f} center={center} />;
+    case 'pillar': return <Pillar x={x} f={f} center={center} head={head} />;
     case 'embers': return <Embers x={x} f={f} center={center} />;
     case 'halo': return <Halo x={x} f={f} center={center} />;
     case 'shards': return <Shards x={x} f={f} />;

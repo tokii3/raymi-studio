@@ -73,7 +73,7 @@ function strokeLine(ctx: CanvasRenderingContext2D, pts: [number, number][], colo
   ctx.strokeStyle = color; ctx.lineWidth = width; ctx.lineJoin = 'round'; ctx.stroke();
 }
 
-function mat(map: THREE.Texture, tone: 'ink' | 'paper', o: Partial<THREE.MeshBasicMaterialParameters> = {}): THREE.MeshBasicMaterial {
+function mat(map: THREE.Texture, tone: 'ink' | 'paper' | 'clear', o: Partial<THREE.MeshBasicMaterialParameters> = {}): THREE.MeshBasicMaterial {
   const m = new THREE.MeshBasicMaterial({map, toneMapped: false, fog: false, ...o});
   m.userData.tone = tone;
   return m;
@@ -206,10 +206,10 @@ export const PaintedSea: React.FC<{o: Record<string, unknown>; f: number; fps: n
       <mesh position={[0, 110, 0]} rotation={[Math.PI / 2, 0, 0]} renderOrder={-12}><circleGeometry args={[150, 48]} />
         <meshBasicMaterial color={eye ? '#05081a' : PAL.ink} fog={false} toneMapped={false} side={THREE.DoubleSide} /></mesh></>}
       {!eye && !under ? <>
-        <Ring R={110} y0={6} y1={34} m={tex(cloudMat('A', PAL.deep, PAL.mid, PAL.light, 31), t * 0.4 / 690)} order={-11} />
+        <Ring R={110} y0={6 - 30 * parted} y1={34 - 30 * parted} m={tex(cloudMat('A', PAL.deep, PAL.mid, PAL.light, 31), t * 0.4 / 690)} order={-11} />
         <Ring R={60} y0={4 - 20 * parted} y1={20 - 20 * parted} m={tex(cloudMat('B', PAL.ink, PAL.deep, PAL.mid, 47), t * 1 / 377)} order={-10} />
       </> : null}
-      {wallC > 0 && !under ? <Ring R={90 - 76 * (rollIn ? wallC : 0)} y0={3} y1={16 + 6 * wallC} m={tex(cloudMat('C', PAL.ink, PAL.deep, PAL.light, 59), t / 300)} order={-9} /> : null}
+      {wallC > 0 && !under && parted < 1 ? <Ring R={90 - 76 * (rollIn ? wallC : 0)} y0={3 - 20 * parted} y1={16 + 6 * wallC - 20 * parted} m={tex(cloudMat('C', PAL.ink, PAL.deep, PAL.light, 59), t / 300)} order={-9} /> : null}
       {moonBig > 0 && !under ? (
         <mesh position={[centre[0] - 22, 26, centre[2] - 140]} renderOrder={-11} material={moonMat()}>
           <planeGeometry args={[52 * moonBig / 0.45, 52 * moonBig / 0.45]} />
@@ -312,7 +312,7 @@ function glassMat() {
       const x = r(i * 5) * w; ctx.beginPath(); ctx.moveTo(x, h); ctx.lineTo(x + 50, 0); ctx.stroke();
     }
     for (let i = 0; i < 70; i++) { ctx.fillStyle = 'rgba(170,182,236,0.35)'; ctx.fillRect(r(i * 7) * w, r(i * 9) * h, 2, 10 + r(i) * 20); }   // rain drips
-  }), 'paper', {transparent: true, depthWrite: false, side: THREE.DoubleSide, opacity: 0.9}));
+  }), 'clear', {transparent: true, depthWrite: false, side: THREE.DoubleSide, opacity: 0.9}));
 }
 /** The lamp: a disc with three flat concentric rings and 8-12 hard radial spikes. */
 function lampMat() {
@@ -329,7 +329,7 @@ function lampMat() {
 
 /** The lantern room at HER scale (11_WORLD_build section 2): gallery floor y H+0.38 r 2.6 + rail 1.1 m, glass r 1.6
  *  from H+0.9 to H+3.3, the brass frame ring at H+1.4 + mullions, the lamp at H+1.7, the Fresnel lens as painted rings. */
-export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; fps: number; camPos: P3; fresnelFront: boolean; violet: number}> = ({x, z, H, f, fps, camPos, fresnelFront, violet}) => {
+export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; fps: number; camPos: P3; fresnelFront: boolean; violet: number; v?: number}> = ({x, z, H, f, fps, camPos, fresnelFront, violet, v = 1}) => {
   const t = f / fps;
   const g = H + 0.38, lampY = H + 1.7;
   const toCam = Math.atan2(camPos[0] - x, camPos[2] - z);
@@ -354,7 +354,7 @@ export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; 
       <mesh position={[x, H + 3.55, z]} material={cached('roof', () => { const m = new THREE.MeshBasicMaterial({color: PAL.stripe, toneMapped: false, fog: false}); m.userData.tone = 'ink'; return m; })}>
         <coneGeometry args={[1.9, 0.9, 32]} /></mesh>
       {/* the lamp, facing the lens (a painted disc), breathing 4 % */}
-      <mesh position={[x, lampY, z]} rotation={[0, toCam, 0]} scale={0.9 * (1 + 0.04 * Math.sin(t * 3))} material={lampMat()} renderOrder={9}><planeGeometry args={[1, 1]} /></mesh>
+      {v > 0.05 ? <mesh position={[x, lampY, z]} rotation={[0, toCam, 0]} scale={0.9 * v * (1 + 0.04 * Math.sin(t * 3))} material={lampMat()} renderOrder={9}><planeGeometry args={[1, 1]} /></mesh> : null}
       {/* the Fresnel lens round the lamp, its painted rings turning so the highlights slide */}
       <mesh position={[x, lampY, z]} rotation={[0, toCam + t * 0.1, 0]} material={fresnelMat()} renderOrder={10}><planeGeometry args={[1.5, 1.5]} /></mesh>
       {fresnelFront ? (() => {
@@ -363,7 +363,7 @@ export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; 
         const p = new THREE.Vector3(...camPos).addScaledVector(dir, d);
         return <mesh position={p} rotation={[0, Math.atan2(-dir.x, -dir.z), t * 0.1]} material={fresnelMat()} renderOrder={11}><planeGeometry args={[1.1, 1.1]} /></mesh>;
       })() : null}
-      <pointLight position={[x, lampY, z]} color={violet > 0 ? '#c9a8ff' : '#ffe9bd'} intensity={3.5} distance={6} decay={1.5} />
+      <pointLight position={[x, lampY, z]} color={violet > 0 ? '#c9a8ff' : '#ffe9bd'} intensity={3.5 * v} distance={6} decay={1.5} />
       {violet > 0 ? <mesh position={[x, lampY, z]} scale={3.2 * violet} renderOrder={8}><sphereGeometry args={[1, 16, 12]} />
         <meshBasicMaterial color={PAL.violet} {...add} opacity={0.18 * violet} /></mesh> : null}
     </group>

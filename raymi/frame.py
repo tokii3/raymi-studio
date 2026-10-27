@@ -20,6 +20,8 @@ from statistics import median
 
 CLOSE_H = 1.0        # m: a frame this tall (or less) at the look distance is a close shot - the face must sit right
 HIGH = 0.10          # x frame height: the head above the look point (eyes ~40 % from the top)
+EYES = 0.09          # m: her eyes above the VRM head bone (it sits at the base of the skull - Love is War stills 3:
+                     # the fitted ECUs framed her chin)
 MAX_SHIFT = 0.4      # m: a larger shift means the shot aims at the wrong thing - reported, not applied
 MIN_SHIFT = 0.015    # m: smaller = already right
 
@@ -59,7 +61,8 @@ def fits(props: dict, report: dict) -> dict[str, dict]:
                 continue
             fwd = [x / dist for x in v]
             want = [k["look"][0], k["look"][1] + HIGH * fh, k["look"][2]]
-            d = [h - w for h, w in zip(r["her"]["bones"]["head"], want)]
+            head = r["her"]["bones"]["head"]
+            d = [h - w for h, w in zip([head[0], head[1] + EYES, head[2]], want)]
             along = sum(a * b for a, b in zip(d, fwd))
             deltas.append([a - along * b for a, b in zip(d, fwd)])     # keep the scripted distance
             hs.append(fh)
