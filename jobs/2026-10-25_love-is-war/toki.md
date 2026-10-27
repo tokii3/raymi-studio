@@ -19,3 +19,4 @@ storyboard: toki 2026-10-26 "ja, drops dichter schneiden wie die profis (ca. 0,5
 storyboard: toki 2026-10-26 "storyboard runde 4 passt, letzter schlag A+ so, weiter zum build"
 build: toki 2026-10-27 "bitte weiter machen, falls viele stills einer scene gerendert werden müssen für qc > lieber als kurze video sequenz rendern oder falls nötig das ganze video, dann kann ich den zwischenstand besser beurteilen ohne doppeltes rendern, aber keine render leistung / zeit verschwenden wenn es sich nicht anbietet mach deine stills"
 build: toki 2026-10-27 "Erst die Fix-Liste aus dem Handoff abarbeiten (Fels-Kamera, Laternenraum mit Gesicht, kein Überstrahlen), dann Stills + Video durch Kritiker und Gate und mir schicken."
+build: toki 2026-10-27 "bitte zeige mir alle bilder / videos etc von aktuellen draft"
