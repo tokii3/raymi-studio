@@ -1,0 +1,722 @@
+[
+ {
+  "cls": "hair_in",
+  "shot": "23",
+  "F": 1456,
+  "xy": [
+   0.548,
+   0.798
+  ],
+  "frames": 28,
+  "worst": 0.038,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "sink",
+  "shot": "86",
+  "F": 5592,
+  "xy": [
+   0.386,
+   3.254
+  ],
+  "frames": 27,
+  "worst": 0.273,
+  "what": "below the support"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "21",
+  "F": 1372,
+  "xy": [
+   0.535,
+   1.129
+  ],
+  "frames": 26,
+  "worst": 0.038,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "24",
+  "F": 1628,
+  "xy": [
+   0.549,
+   0.51
+  ],
+  "frames": 26,
+  "worst": 0.052,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "51",
+  "F": 3500,
+  "xy": [
+   0.585,
+   1.79
+  ],
+  "frames": 25,
+  "worst": 0.033,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "limb_in",
+  "shot": "72",
+  "F": 4760,
+  "xy": [
+   0.291,
+   0.519
+  ],
+  "frames": 24,
+  "worst": 0.028,
+  "what": "face head in Box 0.06x2.40x0.06 @-7.8,14.1,-28.4"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "17",
+  "F": 968,
+  "xy": [
+   0.542,
+   1.391
+  ],
+  "frames": 22,
+  "worst": 0.038,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "float",
+  "shot": "14",
+  "F": 764,
+  "xy": [
+   0.777,
+   1.929
+  ],
+  "frames": 22,
+  "worst": 0.594,
+  "what": "above the support"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "14",
+  "F": 816,
+  "xy": [
+   0.364,
+   1.049
+  ],
+  "frames": 20,
+  "worst": 0.064,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "48",
+  "F": 3260,
+  "xy": [
+   0.492,
+   0.664
+  ],
+  "frames": 20,
+  "worst": 0.039,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "1",
+  "F": 80,
+  "xy": [
+   0.897,
+   0.535
+  ],
+  "frames": 19,
+  "worst": 0.071,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "2",
+  "F": 156,
+  "xy": [
+   0.579,
+   0.742
+  ],
+  "frames": 19,
+  "worst": 0.053,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "38",
+  "F": 2512,
+  "xy": [
+   0.495,
+   0.447
+  ],
+  "frames": 19,
+  "worst": 0.076,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "float",
+  "shot": "1",
+  "F": 84,
+  "xy": [
+   1.1,
+   0.664
+  ],
+  "frames": 19,
+  "worst": 0.599,
+  "what": "above the support"
+ },
+ {
+  "cls": "float",
+  "shot": "2",
+  "F": 156,
+  "xy": [
+   0.575,
+   0.8
+  ],
+  "frames": 19,
+  "worst": 0.599,
+  "what": "above the support"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "18",
+  "F": 1124,
+  "xy": [
+   0.548,
+   1.325
+  ],
+  "frames": 18,
+  "worst": 0.038,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "40",
+  "F": 2656,
+  "xy": [
+   0.367,
+   1.303
+  ],
+  "frames": 18,
+  "worst": 0.066,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "60",
+  "F": 4020,
+  "xy": [
+   0.541,
+   1.424
+  ],
+  "frames": 17,
+  "worst": 0.066,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "float",
+  "shot": "42",
+  "F": 2784,
+  "xy": [
+   0.508,
+   0.413
+  ],
+  "frames": 16,
+  "worst": 0.649,
+  "what": "above the support"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "3",
+  "F": 208,
+  "xy": [
+   0.267,
+   0.615
+  ],
+  "frames": 15,
+  "worst": 0.061,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "16",
+  "F": 940,
+  "xy": [
+   0.496,
+   1.397
+  ],
+  "frames": 15,
+  "worst": 0.069,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "26",
+  "F": 1752,
+  "xy": [
+   0.498,
+   0.489
+  ],
+  "frames": 15,
+  "worst": 0.045,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "52",
+  "F": 3516,
+  "xy": [
+   0.56,
+   1.679
+  ],
+  "frames": 15,
+  "worst": 0.039,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "83",
+  "F": 5348,
+  "xy": [
+   0.49,
+   0.423
+  ],
+  "frames": 15,
+  "worst": 0.06,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "float",
+  "shot": "3",
+  "F": 168,
+  "xy": [
+   -0.381,
+   0.609
+  ],
+  "frames": 15,
+  "worst": 0.589,
+  "what": "above the support"
+ },
+ {
+  "cls": "float",
+  "shot": "16",
+  "F": 916,
+  "xy": [
+   0.709,
+   4.54
+  ],
+  "frames": 15,
+  "worst": 0.544,
+  "what": "above the support"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "20",
+  "F": 1204,
+  "xy": [
+   0.407,
+   0.978
+  ],
+  "frames": 14,
+  "worst": 0.068,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "35H",
+  "F": 2376,
+  "xy": [
+   0.335,
+   1.234
+  ],
+  "frames": 14,
+  "worst": 0.065,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "37",
+  "F": 2436,
+  "xy": [
+   0.494,
+   0.432
+  ],
+  "frames": 14,
+  "worst": 0.076,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "sink",
+  "shot": "84",
+  "F": 5424,
+  "xy": [
+   0.494,
+   0.715
+  ],
+  "frames": 14,
+  "worst": 0.281,
+  "what": "below the support"
+ },
+ {
+  "cls": "sink",
+  "shot": "85",
+  "F": 5484,
+  "xy": [
+   0.436,
+   2.395
+  ],
+  "frames": 14,
+  "worst": 0.273,
+  "what": "below the support"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "42",
+  "F": 2784,
+  "xy": [
+   0.552,
+   0.125
+  ],
+  "frames": 13,
+  "worst": 0.061,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "sink",
+  "shot": "83",
+  "F": 5372,
+  "xy": [
+   0.502,
+   0.568
+  ],
+  "frames": 13,
+  "worst": 0.275,
+  "what": "below the support"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "19",
+  "F": 1140,
+  "xy": [
+   0.549,
+   1.409
+  ],
+  "frames": 12,
+  "worst": 0.039,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "slide",
+  "shot": "60",
+  "F": 4064,
+  "xy": [
+   0.695,
+   2.686
+  ],
+  "frames": 11,
+  "worst": 0.04,
+  "what": "rightFoot slides"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "39",
+  "F": 2584,
+  "xy": [
+   0.488,
+   0.783
+  ],
+  "frames": 10,
+  "worst": 0.039,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "41d",
+  "F": 2692,
+  "xy": [
+   0.488,
+   0.608
+  ],
+  "frames": 10,
+  "worst": 0.042,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "45",
+  "F": 3028,
+  "xy": [
+   0.519,
+   1.052
+  ],
+  "frames": 10,
+  "worst": 0.066,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "71",
+  "F": 4696,
+  "xy": [
+   0.493,
+   0.74
+  ],
+  "frames": 10,
+  "worst": 0.069,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "float",
+  "shot": "59",
+  "F": 3932,
+  "xy": [
+   0.515,
+   0.523
+  ],
+  "frames": 10,
+  "worst": 9.085,
+  "what": "above the support"
+ },
+ {
+  "cls": "float",
+  "shot": "54",
+  "F": 3712,
+  "xy": [
+   0.571,
+   0.889
+  ],
+  "frames": 9,
+  "worst": 1.998,
+  "what": "above the support"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "4",
+  "F": 240,
+  "xy": [
+   0.511,
+   0.623
+  ],
+  "frames": 8,
+  "worst": 0.064,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "44",
+  "F": 2944,
+  "xy": [
+   0.496,
+   0.856
+  ],
+  "frames": 8,
+  "worst": 0.058,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "67",
+  "F": 4484,
+  "xy": [
+   0.497,
+   0.766
+  ],
+  "frames": 8,
+  "worst": 0.069,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "float",
+  "shot": "4",
+  "F": 228,
+  "xy": [
+   0.764,
+   0.609
+  ],
+  "frames": 8,
+  "worst": 0.591,
+  "what": "above the support"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "6",
+  "F": 308,
+  "xy": [
+   0.584,
+   0.984
+  ],
+  "frames": 7,
+  "worst": 0.063,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "6d",
+  "F": 356,
+  "xy": [
+   0.592,
+   1.011
+  ],
+  "frames": 7,
+  "worst": 0.059,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "8",
+  "F": 440,
+  "xy": [
+   0.599,
+   0.63
+  ],
+  "frames": 7,
+  "worst": 0.049,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "10",
+  "F": 556,
+  "xy": [
+   0.546,
+   0.499
+  ],
+  "frames": 7,
+  "worst": 0.054,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "11",
+  "F": 600,
+  "xy": [
+   0.571,
+   0.589
+  ],
+  "frames": 7,
+  "worst": 0.053,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "28",
+  "F": 1916,
+  "xy": [
+   0.434,
+   1.681
+  ],
+  "frames": 7,
+  "worst": 0.067,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "30",
+  "F": 1988,
+  "xy": [
+   0.524,
+   1.271
+  ],
+  "frames": 7,
+  "worst": 0.043,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "32",
+  "F": 2124,
+  "xy": [
+   0.46,
+   0.772
+  ],
+  "frames": 7,
+  "worst": 0.034,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "33",
+  "F": 2180,
+  "xy": [
+   0.455,
+   1.323
+  ],
+  "frames": 7,
+  "worst": 0.027,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "43",
+  "F": 2836,
+  "xy": [
+   0.506,
+   0.439
+  ],
+  "frames": 7,
+  "worst": 0.064,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "57",
+  "F": 3864,
+  "xy": [
+   0.562,
+   13.127
+  ],
+  "frames": 7,
+  "worst": 0.01,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "58",
+  "F": 3904,
+  "xy": [
+   0.489,
+   0.956
+  ],
+  "frames": 7,
+  "worst": 0.072,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "61",
+  "F": 4068,
+  "xy": [
+   0.494,
+   1.127
+  ],
+  "frames": 7,
+  "worst": 0.064,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "62",
+  "F": 4144,
+  "xy": [
+   0.453,
+   0.538
+  ],
+  "frames": 7,
+  "worst": 0.067,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "63",
+  "F": 4180,
+  "xy": [
+   0.476,
+   0.901
+  ],
+  "frames": 7,
+  "worst": 0.064,
+  "what": "hair in her torso"
+ }
+]
