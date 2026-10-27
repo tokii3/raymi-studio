@@ -1,0 +1,36 @@
+name: clip-energy
+
+# Measures every Mixamo clip's motion energy in Blender (raymi/clip_energy_blender.py) and commits
+# studio/catalog/clip_energy.json back to the branch it ran on. toki 2026-10-27: "raymis bewegungen nicht flüssig ...
+# statisch" - clips are picked by measured energy, not by name. Start: Actions -> clip-energy -> Run workflow (any ref).
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  measure:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Private assets (licensed motions - never in this public repo)
+        uses: actions/checkout@v4
+        with:
+          repository: tokii3/raymi-private-assets
+          ssh-key: ${{ secrets.ASSETS_DEPLOY_KEY }}
+          path: .private-assets
+      - name: Blender
+        run: |
+          sudo apt-get update -qq
+          timeout 600 sudo apt-get install -y -qq blender > /dev/null
+          blender --version | head -1
+      - name: Measure
+        run: blender -b --python raymi/clip_energy_blender.py -- .private-assets/motions studio/catalog/clip_energy.json 2>&1 | tail -40
+      - name: Commit back
+        run: |
+          git config user.name raymi-clip-bot; git config user.email actions@users.noreply.github.com
+          git add studio/catalog/clip_energy.json
+          git diff --cached --quiet || { git commit -qm "clip energy measured [skip ci]"; for t in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done; }

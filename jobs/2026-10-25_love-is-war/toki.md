@@ -21,3 +21,4 @@ build: toki 2026-10-27 "bitte weiter machen, falls viele stills einer scene gere
 build: toki 2026-10-27 "Erst die Fix-Liste aus dem Handoff abarbeiten (Fels-Kamera, Laternenraum mit Gesicht, kein Überstrahlen), dann Stills + Video durch Kritiker und Gate und mir schicken."
 build: toki 2026-10-27 "bitte zeige mir alle bilder / videos etc von aktuellen draft"
 draft: toki 2026-10-27 "also das größte problem was ich erkenne ist, dass raymis bewegungen nicht flüssig sind, daruch wirkt raymi / das video wirkt statisch, es sieht abgehackt aus, aber die ideen sind schon gut, aber es sieht weiterhin immernoch sehr billig aus leider ich kann es schlecht beschreiben aber es sieht einfach immernoch aus wie plastik, es wirkt so als wären kollisionen nicht richtig bereichnet etc"
+draft: toki 2026-10-27 "Ja, setz den Plan so um: Bewegung nach gemessener Energie, Kollisionen, Material gegen Plastik, Motion-Check ins Gate, dann ein Video-Ausschnitt zum Beurteilen."
