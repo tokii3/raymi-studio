@@ -174,7 +174,7 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
         <sphereGeometry args={[1, 32, 24]} />
         <meshBasicMaterial map={skyTex()} side={THREE.BackSide} fog={false} depthWrite={false} toneMapped={false} />
       </mesh>}
-      {stars > 0 && (!painted || o.eye) ? Array.from({length: 520}, (_, i) => {
+      {stars > 0 && (!painted || o.eye || frames(o.ink_sky_at).some((t) => f >= t)) ? Array.from({length: 520}, (_, i) => {
         const a = rnd(i * 3 + 1) * Math.PI * 2, e = 0.03 + Math.pow(rnd(i * 5 + 2), 0.7) * 1.45;
         const p = new THREE.Vector3(Math.cos(e) * Math.cos(a), Math.sin(e), Math.cos(e) * Math.sin(a)).multiplyScalar(SKY_R * 0.9);
         const tw = 0.6 + 0.4 * Math.sin(f / (6 + rnd(i) * 9) + i);
