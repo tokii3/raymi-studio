@@ -2,13 +2,13 @@
  {
   "cls": "hair_in",
   "shot": "35H",
-  "F": 2378,
+  "F": 2330,
   "xy": [
-   0.55,
-   0.88
+   0.521,
+   0.999
   ],
   "frames": 29,
-  "worst": 0.058,
+  "worst": 0.066,
   "what": "hair in her torso"
  },
  {
@@ -26,34 +26,34 @@
  {
   "cls": "hair_in",
   "shot": "28",
-  "F": 1886,
+  "F": 1916,
   "xy": [
-   0.483,
-   0.804
+   0.512,
+   1.23
   ],
-  "frames": 18,
-  "worst": 0.07,
+  "frames": 19,
+  "worst": 0.051,
   "what": "hair in her torso"
  },
  {
-  "cls": "hair_in",
+  "cls": "sink",
   "shot": "36",
-  "F": 2412,
+  "F": 2398,
   "xy": [
-   0.497,
-   0.555
+   0.484,
+   0.619
   ],
   "frames": 17,
-  "worst": 0.026,
-  "what": "hair in her torso"
+  "worst": 0.154,
+  "what": "below the support"
  },
  {
   "cls": "hair_in",
   "shot": "33",
   "F": 2170,
   "xy": [
-   0.521,
-   0.974
+   0.541,
+   0.952
   ],
   "frames": 15,
   "worst": 0.025,
@@ -74,13 +74,25 @@
  {
   "cls": "hair_in",
   "shot": "30",
-  "F": 2012,
+  "F": 2002,
   "xy": [
-   0.437,
-   1.379
+   0.487,
+   0.748
   ],
   "frames": 14,
-  "worst": 0.071,
+  "worst": 0.073,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "36",
+  "F": 2400,
+  "xy": [
+   0.501,
+   0.531
+  ],
+  "frames": 14,
+  "worst": 0.074,
   "what": "hair in her torso"
  },
  {
@@ -98,13 +110,13 @@
  {
   "cls": "slide",
   "shot": "32",
-  "F": 2102,
+  "F": 2106,
   "xy": [
-   0.51,
-   1.165
+   0.489,
+   1.214
   ],
-  "frames": 12,
-  "worst": 0.206,
+  "frames": 11,
+  "worst": 0.056,
   "what": "leftFoot slides"
  },
  {
@@ -122,13 +134,13 @@
  {
   "cls": "hair_in",
   "shot": "32a",
-  "F": 2132,
+  "F": 2130,
   "xy": [
-   0.514,
-   -0.603
+   0.494,
+   0.631
   ],
   "frames": 10,
-  "worst": 0.046,
+  "worst": 0.043,
   "what": "hair in her torso"
  },
  {
@@ -136,20 +148,32 @@
   "shot": "33a",
   "F": 2184,
   "xy": [
-   0.591,
-   1.612
+   0.624,
+   1.591
   ],
   "frames": 10,
-  "worst": 0.022,
+  "worst": 0.023,
   "what": "hair in her torso"
+ },
+ {
+  "cls": "near_cut",
+  "shot": "33a",
+  "F": 2202,
+  "xy": [
+   0.884,
+   0.204
+  ],
+  "frames": 10,
+  "worst": 20,
+  "what": "the lens cuts into her"
  },
  {
   "cls": "sink",
   "shot": "29a",
   "F": 1974,
   "xy": [
-   0.71,
-   3.461
+   0.717,
+   3.348
   ],
   "frames": 10,
   "worst": 0.157,
@@ -160,36 +184,12 @@
   "shot": "32a",
   "F": 2146,
   "xy": [
-   1.252,
-   1.133
+   0.856,
+   2.349
   ],
   "frames": 10,
   "worst": 0.152,
   "what": "below the support"
- },
- {
-  "cls": "hair_in",
-  "shot": "32",
-  "F": 2104,
-  "xy": [
-   0.5,
-   0.703
-  ],
-  "frames": 9,
-  "worst": 0.073,
-  "what": "hair in her torso"
- },
- {
-  "cls": "jerk",
-  "shot": "32",
-  "F": 2102,
-  "xy": [
-   0.487,
-   0.708
-  ],
-  "frames": 9,
-  "worst": 0.514,
-  "what": "rightFoot jumps"
  },
  {
   "cls": "hair_in",
@@ -201,6 +201,18 @@
   ],
   "frames": 8,
   "worst": 0.076,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "32",
+  "F": 2122,
+  "xy": [
+   0.455,
+   0.834
+  ],
+  "frames": 8,
+  "worst": 0.054,
   "what": "hair in her torso"
  },
  {
@@ -226,6 +238,18 @@
   "frames": 8,
   "worst": 0.065,
   "what": "hair in her torso"
+ },
+ {
+  "cls": "jerk",
+  "shot": "32",
+  "F": 2106,
+  "xy": [
+   0.47,
+   0.768
+  ],
+  "frames": 8,
+  "worst": 0.15,
+  "what": "leftHand jumps"
  },
  {
   "cls": "hair_in",
@@ -268,11 +292,11 @@
   "shot": "30a",
   "F": 2020,
   "xy": [
-   0.342,
-   3.309
+   0.587,
+   2.102
   ],
   "frames": 7,
-  "worst": 0.072,
+  "worst": 0.071,
   "what": "hair in her torso"
  },
  {
@@ -288,36 +312,12 @@
   "what": "hair in her torso"
  },
  {
-  "cls": "near_cut",
-  "shot": "33a",
-  "F": 2202,
-  "xy": [
-   0.78,
-   0.264
-  ],
-  "frames": 7,
-  "worst": 31,
-  "what": "the lens cuts into her"
- },
- {
-  "cls": "jerk",
-  "shot": "28",
-  "F": 1882,
-  "xy": [
-   0.452,
-   1.12
-  ],
-  "frames": 7,
-  "worst": 0.195,
-  "what": "rightHand jumps"
- },
- {
   "cls": "slide",
   "shot": "29a",
   "F": 1976,
   "xy": [
-   0.189,
-   2.008
+   0.193,
+   1.946
   ],
   "frames": 7,
   "worst": 0.05,
@@ -328,11 +328,11 @@
   "shot": "27H",
   "F": 1876,
   "xy": [
-   0.546,
-   1.602
+   0.543,
+   1.642
   ],
   "frames": 6,
-  "worst": 0.051,
+  "worst": 0.053,
   "what": "hair in her torso"
  },
  {
@@ -352,8 +352,8 @@
   "shot": "27e",
   "F": 1838,
   "xy": [
-   0.414,
-   1.755
+   0.409,
+   1.505
   ],
   "frames": 4,
   "worst": 0.059,
@@ -364,20 +364,32 @@
   "shot": "27g",
   "F": 1852,
   "xy": [
-   0.47,
-   3.151
+   0.435,
+   2.544
   ],
   "frames": 4,
   "worst": 0.059,
   "what": "hair in her torso"
  },
  {
+  "cls": "near_cut",
+  "shot": "30a",
+  "F": 2020,
+  "xy": [
+   0.977,
+   0.973
+  ],
+  "frames": 4,
+  "worst": 12,
+  "what": "the lens cuts into her"
+ },
+ {
   "cls": "hair_in",
   "shot": "27d",
   "F": 1836,
   "xy": [
-   0.512,
-   1.273
+   0.504,
+   1.109
   ],
   "frames": 3,
   "worst": 0.057,
@@ -386,25 +398,25 @@
  {
   "cls": "hair_in",
   "shot": "27f",
-  "F": 1850,
+  "F": 1846,
   "xy": [
-   0.682,
-   2.972
+   0.516,
+   1.833
   ],
   "frames": 3,
-  "worst": 0.054,
+  "worst": 0.058,
   "what": "hair in her torso"
  },
  {
   "cls": "hair_in",
   "shot": "27h",
-  "F": 1862,
+  "F": 1860,
   "xy": [
-   0.482,
-   4.186
+   0.426,
+   3.581
   ],
   "frames": 3,
-  "worst": 0.057,
+  "worst": 0.058,
   "what": "hair in her torso"
  },
  {
@@ -412,8 +424,8 @@
   "shot": "29a",
   "F": 1976,
   "xy": [
-   0.553,
-   0.609
+   0.558,
+   0.518
   ],
   "frames": 3,
   "worst": 0.03,
@@ -424,33 +436,60 @@
   "shot": "30b",
   "F": 2032,
   "xy": [
-   0.302,
-   2.834
+   0.567,
+   1.836
   ],
   "frames": 3,
-  "worst": 0.073,
+  "worst": 0.074,
   "what": "hair in her torso"
  },
  {
   "cls": "near_cut",
-  "shot": "30a",
-  "F": 2014,
-  "xy": null,
+  "shot": "27f",
+  "F": 1846,
+  "xy": [
+   0.929,
+   0.096
+  ],
   "frames": 3,
-  "worst": 38,
+  "worst": 13,
   "what": "the lens cuts into her"
  },
  {
   "cls": "head_cut",
-  "shot": "29a",
-  "F": 1974,
+  "shot": "30",
+  "F": 2000,
   "xy": [
-   0.523,
-   0.039
+   0.483,
+   0.297
   ],
   "frames": 3,
-  "worst": 0.328,
+  "worst": 0.05,
   "what": "top of her head cut by the frame"
+ },
+ {
+  "cls": "jerk",
+  "shot": "36",
+  "F": 2398,
+  "xy": [
+   0.502,
+   0.554
+  ],
+  "frames": 3,
+  "worst": 0.149,
+  "what": "leftHand jumps"
+ },
+ {
+  "cls": "slide",
+  "shot": "36",
+  "F": 2396,
+  "xy": [
+   0.521,
+   0.719
+  ],
+  "frames": 3,
+  "worst": 0.016,
+  "what": "rightFoot slides"
  },
  {
   "cls": "hair_in",
@@ -478,27 +517,48 @@
  },
  {
   "cls": "near_cut",
+  "shot": "27g",
+  "F": 1858,
+  "xy": null,
+  "frames": 2,
+  "worst": 8,
+  "what": "the lens cuts into her"
+ },
+ {
+  "cls": "near_cut",
   "shot": "29a",
   "F": 1968,
   "xy": [
-   0.647,
-   0.314
+   0.846,
+   0.08
   ],
   "frames": 2,
-  "worst": 71,
+  "worst": 69,
   "what": "the lens cuts into her"
  },
  {
   "cls": "near_cut",
   "shot": "30b",
-  "F": 2032,
+  "F": 2030,
   "xy": [
-   0.556,
-   0.686
+   0.903,
+   0.872
   ],
   "frames": 2,
   "worst": 20,
   "what": "the lens cuts into her"
+ },
+ {
+  "cls": "head_cut",
+  "shot": "29a",
+  "F": 1972,
+  "xy": [
+   0.527,
+   0.02
+  ],
+  "frames": 2,
+  "worst": 0.378,
+  "what": "top of her head cut by the frame"
  },
  {
   "cls": "self_in",
@@ -525,6 +585,18 @@
   "what": "hair in her torso"
  },
  {
+  "cls": "head_cut",
+  "shot": "27g",
+  "F": 1858,
+  "xy": [
+   0.478,
+   0.906
+  ],
+  "frames": 1,
+  "worst": 0.274,
+  "what": "top of her head cut by the frame"
+ },
+ {
   "cls": "pop",
   "shot": "29",
   "F": 1954,
@@ -534,18 +606,6 @@
   ],
   "frames": 1,
   "worst": 0.092,
-  "what": "hips jump"
- },
- {
-  "cls": "pop",
-  "shot": "32",
-  "F": 2102,
-  "xy": [
-   0.487,
-   0.708
-  ],
-  "frames": 1,
-  "worst": 0.332,
   "what": "hips jump"
  }
 ]
