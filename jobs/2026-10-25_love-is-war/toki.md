@@ -33,3 +33,6 @@ excerpt: toki 2026-10-27 "ja ganzer film, restlichen kritiker punkte fixen, und 
 
 ## 2026-10-28 (Nachtrag)
 "ich sehe deine auswertung, ich meinte noch weiter vorne die gesamte leuchttum scene am ende, das ganz ende ist ok aber davor die letzten 30 sek oder so"
+
+## 2026-10-28 (zu Take 13)
+"kririker liste fixen, außerdem habe ich immernoch das gefühl dass raymi wie nagewurzelt wirkt, die schwimm clips sehen immernoch komisch aus, sie klettert am leuchttum in die falsche richtung etc, die on scrren grafiken wirken immernoch komisch teilweise nur rote punkte die mit linien verbunden sind deren deuting man nicht erkennt, schnitt mäßig und ideen mäßig ist es aber gut, aber diese grundlegenden engine fehler müssen behoben werden"
