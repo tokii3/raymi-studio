@@ -68,12 +68,7 @@
   "share": 1.0,
   "threshold": 6.0
  },
- "still_spans_s": [
-  [
-   48.33,
-   50.97
-  ]
- ],
+ "still_spans_s": [],
  "audio": {
   "input_i": "-14.13",
   "input_tp": "-4.06"
