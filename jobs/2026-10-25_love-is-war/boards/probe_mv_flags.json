@@ -1,35 +1,47 @@
 [
  {
-  "cls": "hair_in",
+  "cls": "slide",
   "shot": "24",
   "F": 1640,
   "xy": [
-   0.504,
-   0.563
+   0.569,
+   0.322
+  ],
+  "frames": 88,
+  "worst": 0.064,
+  "what": "rightFoot slides"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "24",
+  "F": 1638,
+  "xy": [
+   0.798,
+   0.278
   ],
   "frames": 53,
-  "worst": 0.069,
+  "worst": 0.073,
   "what": "hair in her torso"
  },
  {
-  "cls": "pop",
-  "shot": "24",
-  "F": 1588,
+  "cls": "hair_in",
+  "shot": "23",
+  "F": 1514,
   "xy": [
-   0.434,
-   0.602
+   0.693,
+   0.693
   ],
-  "frames": 52,
-  "worst": 0.14,
-  "what": "hips jump"
+  "frames": 48,
+  "worst": 0.073,
+  "what": "hair in her torso"
  },
  {
   "cls": "hair_in",
   "shot": "1",
-  "F": 58,
+  "F": 50,
   "xy": [
-   0.278,
-   0.631
+   0.697,
+   0.23
   ],
   "frames": 45,
   "worst": 0.08,
@@ -38,82 +50,58 @@
  {
   "cls": "float",
   "shot": "1",
-  "F": 22,
+  "F": 14,
   "xy": [
-   0.837,
-   0.625
+   1.093,
+   0.371
   ],
   "frames": 45,
-  "worst": 0.716,
+  "worst": 1.334,
   "what": "above the support"
- },
- {
-  "cls": "hair_in",
-  "shot": "23",
-  "F": 1518,
-  "xy": [
-   0.716,
-   0.698
-  ],
-  "frames": 44,
-  "worst": 0.065,
-  "what": "hair in her torso"
- },
- {
-  "cls": "pop",
-  "shot": "1",
-  "F": 28,
-  "xy": [
-   0.718,
-   0.629
-  ],
-  "frames": 44,
-  "worst": 0.14,
-  "what": "hips jump"
- },
- {
-  "cls": "hair_in",
-  "shot": "21",
-  "F": 1286,
-  "xy": [
-   0.551,
-   1.03
-  ],
-  "frames": 43,
-  "worst": 0.073,
-  "what": "hair in her torso"
  },
  {
   "cls": "float",
   "shot": "14",
   "F": 766,
   "xy": [
-   0.78,
-   1.919
+   0.777,
+   1.987
   ],
   "frames": 43,
-  "worst": 0.595,
+  "worst": 0.576,
   "what": "above the support"
  },
  {
   "cls": "hair_in",
-  "shot": "48",
-  "F": 3252,
+  "shot": "21",
+  "F": 1290,
   "xy": [
-   0.496,
-   0.629
+   0.552,
+   1.002
   ],
   "frames": 42,
-  "worst": 0.061,
+  "worst": 0.073,
   "what": "hair in her torso"
+ },
+ {
+  "cls": "sink",
+  "shot": "24",
+  "F": 1654,
+  "xy": [
+   0.651,
+   0.289
+  ],
+  "frames": 42,
+  "worst": 0.342,
+  "what": "below the support"
  },
  {
   "cls": "self_in",
   "shot": "50",
   "F": 3400,
   "xy": [
-   0.381,
-   0.833
+   0.627,
+   0.839
   ],
   "frames": 40,
   "worst": 0.027,
@@ -122,37 +110,25 @@
  {
   "cls": "hair_in",
   "shot": "18",
-  "F": 1056,
+  "F": 1052,
   "xy": [
-   0.332,
-   0.874
+   0.327,
+   0.838
   ],
   "frames": 40,
   "worst": 0.069,
   "what": "hair in her torso"
  },
  {
-  "cls": "jerk",
-  "shot": "71",
-  "F": 4714,
+  "cls": "hair_in",
+  "shot": "48",
+  "F": 3248,
   "xy": [
-   0.573,
-   3.786
+   0.495,
+   0.625
   ],
   "frames": 40,
-  "worst": 0.355,
-  "what": "hips jumps"
- },
- {
-  "cls": "hair_in",
-  "shot": "14",
-  "F": 816,
-  "xy": [
-   0.364,
-   1.049
-  ],
-  "frames": 39,
-  "worst": 0.064,
+  "worst": 0.061,
   "what": "hair in her torso"
  },
  {
@@ -160,8 +136,8 @@
   "shot": "38",
   "F": 2518,
   "xy": [
-   0.512,
-   0.491
+   0.515,
+   0.475
   ],
   "frames": 39,
   "worst": 0.087,
@@ -169,50 +145,62 @@
  },
  {
   "cls": "hair_in",
-  "shot": "2",
-  "F": 158,
+  "shot": "50",
+  "F": 3368,
   "xy": [
-   0.66,
-   0.74
+   0.62,
+   0.765
+  ],
+  "frames": 39,
+  "worst": 0.057,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "2",
+  "F": 146,
+  "xy": [
+   0.732,
+   0.421
   ],
   "frames": 38,
-  "worst": 0.053,
+  "worst": 0.075,
   "what": "hair in her torso"
  },
  {
   "cls": "float",
   "shot": "2",
-  "F": 104,
+  "F": 98,
   "xy": [
    0.574,
-   0.916
+   0.743
   ],
   "frames": 38,
-  "worst": 0.718,
+  "worst": 1.204,
   "what": "above the support"
  },
  {
-  "cls": "pop",
-  "shot": "2",
-  "F": 114,
+  "cls": "hair_in",
+  "shot": "14",
+  "F": 816,
   "xy": [
-   0.632,
-   0.895
+   0.357,
+   1.06
   ],
   "frames": 37,
-  "worst": 0.14,
-  "what": "hips jump"
+  "worst": 0.067,
+  "what": "hair in her torso"
  },
  {
   "cls": "hair_in",
   "shot": "17",
-  "F": 984,
+  "F": 988,
   "xy": [
-   0.679,
-   0.926
+   0.685,
+   0.933
   ],
   "frames": 36,
-  "worst": 0.074,
+  "worst": 0.071,
   "what": "hair in her torso"
  },
  {
@@ -229,50 +217,26 @@
  },
  {
   "cls": "hair_in",
-  "shot": "50",
-  "F": 3392,
-  "xy": [
-   0.368,
-   0.782
-  ],
-  "frames": 35,
-  "worst": 0.044,
-  "what": "hair in her torso"
- },
- {
-  "cls": "hair_in",
   "shot": "60",
   "F": 4052,
   "xy": [
-   0.436,
-   1.695
+   1.008,
+   1.463
   ],
   "frames": 34,
-  "worst": 0.069,
+  "worst": 0.068,
   "what": "hair in her torso"
- },
- {
-  "cls": "float",
-  "shot": "42",
-  "F": 2786,
-  "xy": [
-   0.452,
-   0.52
-  ],
-  "frames": 31,
-  "worst": 0.65,
-  "what": "above the support"
  },
  {
   "cls": "hair_in",
   "shot": "3",
-  "F": 208,
+  "F": 180,
   "xy": [
-   0.262,
-   0.633
+   0.42,
+   0.082
   ],
   "frames": 30,
-  "worst": 0.061,
+  "worst": 0.072,
   "what": "hair in her torso"
  },
  {
@@ -280,35 +244,35 @@
   "shot": "16",
   "F": 940,
   "xy": [
-   0.478,
-   1.113
+   0.483,
+   1.134
   ],
   "frames": 30,
-  "worst": 0.069,
+  "worst": 0.07,
   "what": "hair in her torso"
  },
  {
   "cls": "float",
   "shot": "3",
-  "F": 172,
+  "F": 166,
   "xy": [
-   -0.414,
-   0.645
+   -0.382,
+   0.036
   ],
   "frames": 30,
-  "worst": 0.732,
+  "worst": 1.181,
   "what": "above the support"
  },
  {
   "cls": "float",
   "shot": "16",
-  "F": 918,
+  "F": 920,
   "xy": [
-   0.709,
-   4.462
+   0.726,
+   4.758
   ],
   "frames": 30,
-  "worst": 0.544,
+  "worst": 0.537,
   "what": "above the support"
  },
  {
@@ -324,52 +288,16 @@
   "what": "hair in her torso"
  },
  {
-  "cls": "hair_in",
-  "shot": "51",
-  "F": 3428,
+  "cls": "jerk",
+  "shot": "56",
+  "F": 3794,
   "xy": [
-   0.525,
-   0.938
+   0.473,
+   0.437
   ],
   "frames": 29,
-  "worst": 0.029,
-  "what": "hair in her torso"
- },
- {
-  "cls": "hair_in",
-  "shot": "83",
-  "F": 5354,
-  "xy": [
-   0.496,
-   0.445
-  ],
-  "frames": 29,
-  "worst": 0.071,
-  "what": "hair in her torso"
- },
- {
-  "cls": "pop",
-  "shot": "3",
-  "F": 190,
-  "xy": [
-   0.151,
-   0.705
-  ],
-  "frames": 29,
-  "worst": 0.14,
-  "what": "hips jump"
- },
- {
-  "cls": "hair_in",
-  "shot": "19",
-  "F": 1196,
-  "xy": [
-   0.751,
-   0.949
-  ],
-  "frames": 28,
-  "worst": 0.066,
-  "what": "hair in her torso"
+  "worst": 0.177,
+  "what": "hips jumps"
  },
  {
   "cls": "hair_in",
@@ -377,11 +305,119 @@
   "F": 2444,
   "xy": [
    0.495,
-   0.436
+   0.361
   ],
   "frames": 28,
   "worst": 0.076,
   "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "51",
+  "F": 3428,
+  "xy": [
+   0.52,
+   0.942
+  ],
+  "frames": 27,
+  "worst": 0.027,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "83",
+  "F": 5350,
+  "xy": [
+   0.495,
+   0.422
+  ],
+  "frames": 27,
+  "worst": 0.069,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "28",
+  "F": 1896,
+  "xy": [
+   0.459,
+   0.865
+  ],
+  "frames": 26,
+  "worst": 0.071,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "42",
+  "F": 2756,
+  "xy": [
+   0.504,
+   0.049
+  ],
+  "frames": 25,
+  "worst": 0.072,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "19",
+  "F": 1194,
+  "xy": [
+   1.015,
+   1.176
+  ],
+  "frames": 24,
+  "worst": 0.066,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "47",
+  "F": 3166,
+  "xy": [
+   0.418,
+   1.511
+  ],
+  "frames": 24,
+  "worst": 0.065,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "sink",
+  "shot": "83",
+  "F": 5316,
+  "xy": [
+   0.481,
+   0.566
+  ],
+  "frames": 24,
+  "worst": 0.301,
+  "what": "below the support"
+ },
+ {
+  "cls": "jerk",
+  "shot": "71",
+  "F": 4690,
+  "xy": [
+   0.523,
+   0.909
+  ],
+  "frames": 24,
+  "worst": 0.296,
+  "what": "hips jumps"
+ },
+ {
+  "cls": "slide",
+  "shot": "29",
+  "F": 1952,
+  "xy": [
+   0.447,
+   1.062
+  ],
+  "frames": 24,
+  "worst": 0.079,
+  "what": "leftFoot slides"
  },
  {
   "cls": "hair_in",
@@ -391,8 +427,20 @@
    0.407,
    0.978
   ],
-  "frames": 27,
+  "frames": 23,
   "worst": 0.068,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "45",
+  "F": 3020,
+  "xy": [
+   0.361,
+   0.731
+  ],
+  "frames": 23,
+  "worst": 0.065,
   "what": "hair in her torso"
  },
  {
@@ -400,164 +448,188 @@
   "shot": "52",
   "F": 3516,
   "xy": [
-   0.668,
-   1.193
+   0.671,
+   1.195
   ],
-  "frames": 26,
-  "worst": 0.075,
+  "frames": 23,
+  "worst": 0.074,
   "what": "hair in her torso"
  },
  {
-  "cls": "hair_in",
-  "shot": "42",
-  "F": 2804,
-  "xy": [
-   0.501,
-   0.206
-  ],
-  "frames": 25,
-  "worst": 0.065,
-  "what": "hair in her torso"
- },
- {
-  "cls": "slide",
-  "shot": "29",
-  "F": 1952,
-  "xy": [
-   0.579,
-   1.254
-  ],
-  "frames": 25,
-  "worst": 0.063,
-  "what": "leftFoot slides"
- },
- {
-  "cls": "sink",
+  "cls": "limb_in",
   "shot": "83",
-  "F": 5358,
+  "F": 5362,
   "xy": [
-   0.495,
-   0.567
+   0.488,
+   0.469
   ],
-  "frames": 24,
-  "worst": 0.303,
-  "what": "below the support"
+  "frames": 21,
+  "worst": 0.028,
+  "what": "chest in Box 0.06x2.40x0.06 @-7.7,14.1,-28.4"
  },
  {
-  "cls": "hair_in",
-  "shot": "41d",
-  "F": 2706,
+  "cls": "float",
+  "shot": "42",
+  "F": 2810,
   "xy": [
-   0.5,
-   0.738
+   0.534,
+   -0.035
   ],
-  "frames": 22,
-  "worst": 0.062,
-  "what": "hair in her torso"
+  "frames": 21,
+  "worst": 2.494,
+  "what": "above the support"
  },
  {
   "cls": "hair_in",
   "shot": "71",
-  "F": 4696,
+  "F": 4686,
   "xy": [
    0.485,
-   0.872
+   1.344
   ],
-  "frames": 21,
+  "frames": 20,
   "worst": 0.067,
   "what": "hair in her torso"
  },
  {
-  "cls": "slide",
-  "shot": "83",
-  "F": 5362,
+  "cls": "hair_in",
+  "shot": "49",
+  "F": 3284,
   "xy": [
-   0.496,
-   0.563
+   0.541,
+   1.029
   ],
   "frames": 19,
-  "worst": 0.05,
-  "what": "rightFoot slides"
+  "worst": 0.036,
+  "what": "hair in her torso"
  },
  {
   "cls": "jerk",
-  "shot": "77",
-  "F": 5050,
+  "shot": "41d",
+  "F": 2710,
   "xy": [
-   0.373,
-   1.041
+   0.583,
+   -0.197
   ],
-  "frames": 18,
-  "worst": 0.297,
-  "what": "hips jumps"
+  "frames": 19,
+  "worst": 0.095,
+  "what": "rightFoot jumps"
  },
  {
-  "cls": "slide",
+  "cls": "limb_in",
   "shot": "60",
-  "F": 4062,
+  "F": 4060,
   "xy": [
-   0.133,
-   3.262
+   1.953,
+   2.398
+  ],
+  "frames": 18,
+  "worst": 0.027,
+  "what": "hair leftUpperLeg in Box 0.06x2.40x0.06 @-7.1,14.1,-31.3"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "41d",
+  "F": 2738,
+  "xy": [
+   0.532,
+   -0.353
   ],
   "frames": 18,
   "worst": 0.054,
-  "what": "rightFoot slides"
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "hair_in",
+  "shot": "54",
+  "F": 3696,
+  "xy": [
+   0.371,
+   0.766
+  ],
+  "frames": 18,
+  "worst": 0.065,
+  "what": "hair in her torso"
+ },
+ {
+  "cls": "jerk",
+  "shot": "42",
+  "F": 2810,
+  "xy": [
+   0.451,
+   -0.579
+  ],
+  "frames": 18,
+  "worst": 0.118,
+  "what": "leftFoot jumps"
+ },
+ {
+  "cls": "jerk",
+  "shot": "84",
+  "F": 5396,
+  "xy": [
+   0.63,
+   0.381
+  ],
+  "frames": 18,
+  "worst": 0.324,
+  "what": "hips jumps"
  },
  {
   "cls": "hair_in",
   "shot": "4",
-  "F": 240,
+  "F": 258,
   "xy": [
-   0.614,
-   0.622
+   0.536,
+   0.346
   ],
   "frames": 17,
-  "worst": 0.064,
+  "worst": 0.073,
   "what": "hair in her torso"
  },
  {
   "cls": "float",
   "shot": "4",
-  "F": 228,
+  "F": 226,
   "xy": [
-   0.878,
-   0.608
+   0.883,
+   0.357
   ],
   "frames": 17,
-  "worst": 0.739,
+  "worst": 1.173,
+  "what": "above the support"
+ },
+ {
+  "cls": "float",
+  "shot": "68",
+  "F": 4544,
+  "xy": [
+   0.493,
+   0.848
+  ],
+  "frames": 17,
+  "worst": 0.99,
   "what": "above the support"
  },
  {
   "cls": "sink",
   "shot": "36",
-  "F": 2398,
+  "F": 2390,
   "xy": [
-   0.461,
-   0.855
+   0.452,
+   0.955
   ],
   "frames": 17,
-  "worst": 0.154,
+  "worst": 0.175,
   "what": "below the support"
- },
- {
-  "cls": "pop",
-  "shot": "25",
-  "F": 1698,
-  "xy": [
-   0.546,
-   0.375
-  ],
-  "frames": 17,
-  "worst": 0.153,
-  "what": "hips jump"
  },
  {
   "cls": "hair_in",
   "shot": "26",
   "F": 1726,
   "xy": [
-   0.639,
-   0.479
+   0.637,
+   0.403
   ],
   "frames": 16,
   "worst": 0.029,
@@ -565,23 +637,11 @@
  },
  {
   "cls": "hair_in",
-  "shot": "28",
-  "F": 1918,
-  "xy": [
-   0.501,
-   0.914
-  ],
-  "frames": 16,
-  "worst": 0.054,
-  "what": "hair in her torso"
- },
- {
-  "cls": "hair_in",
   "shot": "44",
-  "F": 2954,
+  "F": 2958,
   "xy": [
-   0.648,
-   0.833
+   0.328,
+   0.837
   ],
   "frames": 16,
   "worst": 0.062,
@@ -589,95 +649,47 @@
  },
  {
   "cls": "hair_in",
-  "shot": "53",
-  "F": 3640,
+  "shot": "68",
+  "F": 4518,
   "xy": [
-   0.618,
-   0.708
+   0.642,
+   0.24
   ],
   "frames": 16,
-  "worst": 0.19,
+  "worst": 0.077,
   "what": "hair in her torso"
  },
  {
-  "cls": "pop",
-  "shot": "4",
-  "F": 256,
-  "xy": [
-   0.667,
-   0.585
-  ],
-  "frames": 16,
-  "worst": 0.139,
-  "what": "hips jump"
- },
- {
-  "cls": "slide",
+  "cls": "float",
   "shot": "41d",
-  "F": 2706,
+  "F": 2742,
   "xy": [
-   0.601,
-   1.328
+   0.604,
+   -0.119
   ],
   "frames": 16,
-  "worst": 0.053,
-  "what": "leftFoot slides"
- },
- {
-  "cls": "slide",
-  "shot": "68",
-  "F": 4522,
-  "xy": [
-   0.271,
-   1.581
-  ],
-  "frames": 16,
-  "worst": 0.101,
-  "what": "rightFoot slides"
+  "worst": 2.106,
+  "what": "above the support"
  },
  {
   "cls": "hair_in",
   "shot": "8",
-  "F": 442,
+  "F": 446,
   "xy": [
-   0.473,
-   0.648
+   0.594,
+   -0.081
   ],
   "frames": 15,
-  "worst": 0.045,
-  "what": "hair in her torso"
- },
- {
-  "cls": "hair_in",
-  "shot": "49",
-  "F": 3288,
-  "xy": [
-   0.549,
-   1.052
-  ],
-  "frames": 15,
-  "worst": 0.036,
-  "what": "hair in her torso"
- },
- {
-  "cls": "hair_in",
-  "shot": "58",
-  "F": 3904,
-  "xy": [
-   0.622,
-   1.118
-  ],
-  "frames": 15,
-  "worst": 0.072,
+  "worst": 0.071,
   "what": "hair in her torso"
  },
  {
   "cls": "hair_in",
   "shot": "61",
-  "F": 4078,
+  "F": 4084,
   "xy": [
-   0.447,
-   1.045
+   0.488,
+   1.039
   ],
   "frames": 15,
   "worst": 0.066,
@@ -686,37 +698,25 @@
  {
   "cls": "hair_in",
   "shot": "63",
-  "F": 4190,
+  "F": 4180,
   "xy": [
-   0.485,
-   0.83
+   0.501,
+   0.881
   ],
   "frames": 15,
-  "worst": 0.069,
+  "worst": 0.064,
   "what": "hair in her torso"
  },
  {
   "cls": "hair_in",
   "shot": "66",
-  "F": 4418,
+  "F": 4416,
   "xy": [
-   0.503,
-   0.568
+   0.53,
+   0.273
   ],
   "frames": 15,
-  "worst": 0.056,
-  "what": "hair in her torso"
- },
- {
-  "cls": "hair_in",
-  "shot": "67",
-  "F": 4472,
-  "xy": [
-   0.602,
-   0.722
-  ],
-  "frames": 15,
-  "worst": 0.067,
+  "worst": 0.063,
   "what": "hair in her torso"
  }
 ]

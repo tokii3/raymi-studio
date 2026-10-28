@@ -1,58 +1,62 @@
 qc2 picture 2026-10-25_love-is-war (mv): 2814 mask frames, every 2, scale 0.25
 
-## pierced: 10 shots, 65 frames
-     51:  22 frames, worst 0.03489  (room through her x13, set through her x9)  F3432
-     19:  10 frames, worst 0.00825  (room through her x10)  F1158
-     28:   7 frames, worst 0.00459  (room through her x5, set through her x2)  F1886
-    30a:   6 frames, worst 0.00595  (room through her x6)  F2020
-    30b:   6 frames, worst 0.00319  (room through her x6)  F2032
-     30:   5 frames, worst 0.00917  (room through her x5)  F2012
-    59a:   5 frames, worst 0.0065  (room through her x5)  F3976
-     58:   2 frames, worst 0.00184  (room through her x2)  F3910
-     31:   1 frames, worst 0.00049  (room through her x1)  F2068
-    35a:   1 frames, worst 0.00758  (room through her x1)  F2290
+## pierced: 11 shots, 59 frames
+     51:  16 frames, worst 0.0309  (room through her x9, set through her x7)  F3450
+     19:   8 frames, worst 0.00235  (room through her x8)  F1170
+     30:   7 frames, worst 0.02328  (room through her x7)  F2000
+    59a:   7 frames, worst 0.00471  (room through her x7)  F3976
+    30b:   6 frames, worst 0.00325  (room through her x6)  F2030
+    57a:   6 frames, worst 0.0287  (set through her x4, room through her x2)  F3886
+    30a:   5 frames, worst 0.00806  (room through her x5)  F2020
+     21:   1 frames, worst 0.00115  (room through her x1)  F1304
+     31:   1 frames, worst 0.0005  (room through her x1)  F2068
+    35a:   1 frames, worst 0.01003  (room through her x1)  F2290
+     45:   1 frames, worst 0.00052  (room through her x1)  F3012
 
 ## text_face: 0 shots, 0 frames
 
 ## text_hid: 0 shots, 0 frames
 
-## face_cut: 25 shots, 105 frames
+## face_cut: 27 shots, 130 frames
      20:  17 frames, worst 1  (face cut by the frame edge x17)  F1266
+     30:   9 frames, worst 1  (face cut by the frame edge x9)  F2012
     72a:   9 frames, worst 1  (face cut by the frame edge x9)  F4788
-     40:   8 frames, worst 1  (face cut by the frame edge x8)  F2648
+    27b:   7 frames, worst 1  (face cut by the frame edge x7)  F1816
+    27c:   7 frames, worst 1  (face cut by the frame edge x7)  F1830
     35a:   7 frames, worst 1  (face cut by the frame edge x7)  F2294
+     40:   7 frames, worst 1  (face cut by the frame edge x7)  F2648
+     60:   7 frames, worst 1  (face cut by the frame edge x7)  F4050
     27H:   6 frames, worst 1  (face cut by the frame edge x6)  F1876
+    30a:   6 frames, worst 1  (face cut by the frame edge x6)  F2026
+     33:   6 frames, worst 1  (face cut by the frame edge x6)  F2182
      72:   6 frames, worst 1  (face cut by the frame edge x6)  F4762
-     30:   5 frames, worst 1  (face cut by the frame edge x5)  F2004
-    30a:   5 frames, worst 1  (face cut by the frame edge x5)  F2026
+     19:   5 frames, worst 1  (face cut by the frame edge x5)  F1188
      51:   5 frames, worst 1  (face cut by the frame edge x5)  F3502
-    27c:   4 frames, worst 1  (face cut by the frame edge x4)  F1824
-    27e:   4 frames, worst 1  (face cut by the frame edge x4)  F1844
-    27g:   4 frames, worst 1  (face cut by the frame edge x4)  F1858
-     27:   3 frames, worst 1  (face cut by the frame edge x3)  F1776
-    27d:   3 frames, worst 1  (face cut by the frame edge x3)  F1836
+    12a:   4 frames, worst 1  (face cut by the frame edge x4)  F676
+     25:   4 frames, worst 1  (face cut by the frame edge x4)  F1674
     27f:   3 frames, worst 1  (face cut by the frame edge x3)  F1850
-    27h:   3 frames, worst 1  (face cut by the frame edge x3)  F1864
-    27a:   2 frames, worst 1  (face cut by the frame edge x2)  F1800
+      3:   2 frames, worst 1  (face cut by the frame edge x2)  F188
+     24:   2 frames, worst 1  (face cut by the frame edge x2)  F1652
+    27e:   2 frames, worst 1  (face cut by the frame edge x2)  F1844
     30b:   2 frames, worst 1  (face cut by the frame edge x2)  F2032
-     58:   2 frames, worst 1  (face cut by the frame edge x2)  F3906
-    69a:   2 frames, worst 1  (face cut by the frame edge x2)  F4592
-     19:   1 frames, worst 1  (face cut by the frame edge x1)  F1198
+     58:   2 frames, worst 1  (face cut by the frame edge x2)  F3908
+     6c:   1 frames, worst 1  (face cut by the frame edge x1)  F346
+    10a:   1 frames, worst 1  (face cut by the frame edge x1)  F558
     29a:   1 frames, worst 1  (face cut by the frame edge x1)  F1968
-     60:   1 frames, worst 1  (face cut by the frame edge x1)  F4016
-     71:   1 frames, worst 1  (face cut by the frame edge x1)  F4710
+     71:   1 frames, worst 1  (face cut by the frame edge x1)  F4712
     82a:   1 frames, worst 1  (face cut by the frame edge x1)  F5300
 
-## her_pop: 12 shots, 20 frames
-     57:   4 frames, worst 1.0  (her figure jumps / vanishes x4)  F3864
-    61a:   3 frames, worst 0.99  (her figure jumps / vanishes x3)  F4102
-     45:   2 frames, worst 0.93  (her figure jumps / vanishes x2)  F3044
-     58:   2 frames, worst 0.64  (her figure jumps / vanishes x2)  F3908
-    81e:   2 frames, worst 0.57  (her figure jumps / vanishes x2)  F5274
-     43:   1 frames, worst 1.0  (her figure jumps / vanishes x1)  F2844
-    65a:   1 frames, worst 0.58  (her figure jumps / vanishes x1)  F4322
-    65e:   1 frames, worst 0.86  (her figure jumps / vanishes x1)  F4372
-    65f:   1 frames, worst 0.45  (her figure jumps / vanishes x1)  F4386
-     68:   1 frames, worst 0.51  (her figure jumps / vanishes x1)  F4538
-     71:   1 frames, worst 0.5  (her figure jumps / vanishes x1)  F4714
+## her_pop: 13 shots, 27 frames
+    56a:   6 frames, worst 1.0  (her figure jumps / vanishes x6)  F3830
+     53:   3 frames, worst 1.0  (her figure jumps / vanishes x3)  F3614
+     60:   3 frames, worst 0.71  (her figure jumps / vanishes x3)  F4064
+    61a:   3 frames, worst 1.0  (her figure jumps / vanishes x3)  F4098
+      1:   2 frames, worst 0.78  (her figure jumps / vanishes x2)  F20
+     45:   2 frames, worst 0.78  (her figure jumps / vanishes x2)  F3046
+     58:   2 frames, worst 1.0  (her figure jumps / vanishes x2)  F3918
+     6a:   1 frames, worst 0.49  (her figure jumps / vanishes x1)  F324
+     19:   1 frames, worst 0.48  (her figure jumps / vanishes x1)  F1194
+     43:   1 frames, worst 0.57  (her figure jumps / vanishes x1)  F2842
+    65b:   1 frames, worst 0.73  (her figure jumps / vanishes x1)  F4336
+     71:   1 frames, worst 0.47  (her figure jumps / vanishes x1)  F4716
      84:   1 frames, worst 1.0  (her figure jumps / vanishes x1)  F5380
