@@ -184,10 +184,34 @@ function lowestFoot(vrm: VRM): number {
 export function inPlace(clip: THREE.AnimationClip): THREE.AnimationClip {
   for (const t of clip.tracks) {
     if (!t.name.endsWith('.position') || !/hips/i.test(t.name)) continue;
-    const v = t.values, x0 = v[0], z0 = v[2];
+    const v = t.values, x0 = v[0], y0 = v[1], z0 = v[2];
+    // the way is kept aside (rootAt) and given back on the puppet - toki 2026-10-28: "wie angewurzelt"
+    const xs: number[] = [], ys: number[] = [], zs: number[] = [];
+    for (let i = 0; i < v.length; i += 3) { xs.push(v[i] - x0); ys.push(v[i + 1] - y0); zs.push(v[i + 2] - z0); }
+    ROOTS.set(clip, {times: Array.from(t.times), xs, ys, zs});
     for (let i = 0; i < v.length; i += 3) { v[i] = x0; v[i + 2] = z0; }
   }
   return clip;
+}
+
+// Her way through the space (toki 2026-10-28 on take 13: "raymi wirkt wie angewurzelt ... die schwimm clips sehen
+// immernoch komisch aus, sie klettert am leuchtturm in die falsche richtung"). The clip's hips travel is given back
+// in the hips' OWN parent space - the space the retarget wrote it in, so a VRM0 model (turned 180 deg, its x / z
+// mirrored by the retarget) needs no sign rule. A loop goes ON from where it ended (x / z and the climb's height),
+// never back to its start. Key "root": false keeps a clip on its spot.
+const ROOTS = new WeakMap<THREE.AnimationClip, {times: number[]; xs: number[]; ys: number[]; zs: number[]}>();
+/** The clip's hips travel at UNWRAPPED clip time tt, relative to its first frame: [x, y, z] in the hips' parent space.
+ *  y counts only whole loops (the track keeps its own height inside a loop). */
+export function rootAt(clip: THREE.AnimationClip, tt: number): [number, number, number] {
+  const r = ROOTS.get(clip);
+  if (!r || r.times.length < 2) return [0, 0, 0];
+  const d = clip.duration || r.times[r.times.length - 1];
+  const loops = Math.floor(tt / d), u = tt - loops * d;
+  let j = 0;
+  while (j < r.times.length - 2 && r.times[j + 1] <= u) j++;
+  const a = r.times[j], b = r.times[j + 1], w = b > a ? Math.max(0, Math.min(1, (u - a) / (b - a))) : 0;
+  const n = r.xs.length - 1, at = (xs: number[]) => xs[j] + (xs[j + 1] - xs[j]) * w;
+  return [at(r.xs) + loops * r.xs[n], loops * r.ys[n], at(r.zs) + loops * r.zs[n]];
 }
 
 /** Load a model into the cache by hand (tests: the bytes of the file, no browser). */
@@ -563,13 +587,26 @@ function applyState(rig: Rig, s: State, fps: number) {
     forceApply(rig.mixer);
     rig.mixer.update(0);
     if (amount < 0.999) for (const [node, q, p] of saved) { node.quaternion.copy(q.slerp(node.quaternion, amount)); node.position.lerpVectors(p, node.position, amount); }
+    // the clip's way since this key (rootAt): she steps, lunges, swims and climbs THROUGH the space
+    const clipNow = b ? rig.motions.get(b) : undefined, ck = s.clipCur, sp = ck.speed ?? 1;
+    const hips = vrm.humanoid.getNormalizedBoneNode('hips');
+    if (clipNow && hips && s.cur.root !== false && sp !== 0) {
+      const cap = (x: number) => (ck.once ? Math.min(x, clipNow.duration - 1e-3) : x);
+      const t0 = cap((ck.clipFrom ?? 0) + ((s.keyF - ck.f) / fps) * sp), t1 = cap((ck.clipFrom ?? 0) + ((s.f - ck.f) / fps) * sp);
+      const a0 = rootAt(clipNow, t0), a1 = rootAt(clipNow, t1), k = s.mixCur;
+      hips.position.x += (a1[0] - a0[0]) * k; hips.position.y += (a1[1] - a0[1]) * k; hips.position.z += (a1[2] - a0[2]) * k;
+    }
   }
   if (s.aware > 0.001) noticeLens(rig, s, fps);
   vrm.humanoid.update();
   // feet on the floor: measure the posed rig unplaced, then place it
   root.position.set(0, 0, 0); root.rotation.set(0, 0, 0); root.scale.setScalar(1); ground.position.set(0, 0, 0);
   root.updateMatrixWorld(true);
-  ground.position.y = Math.max(rig.restLow - lowestFoot(vrm) - rig.floor, AIRBORNE.test(s.motion ?? '') ? -Infinity : bodyClear(vrm, rig.floor));
+  // in water, in the air and on a wall nothing stands on the floor: the rest pose's feet mark the key's height and the
+  // body moves freely from there (take 13: every swim pose was set down on its lowest foot - she crawled on the cable -
+  // and every metre a climb gained was pulled back to the floor, so she climbed on the spot or downwards)
+  const free = AIRBORNE.test(s.motion ?? '') || s.cur.ground === false;
+  ground.position.y = free ? -rig.floor : Math.max(rig.restLow - lowestFoot(vrm) - rig.floor, bodyClear(vrm, rig.floor));
   // faceLens: measure the clip's hip turn on the unplaced rig and take it back out of her facing
   let hipTurn = 0;
   if (s.clipCur.faceLens && s.motion) {
@@ -767,7 +804,8 @@ const Trails: React.FC<{pts: THREE.Vector3[][]; root: THREE.Object3D; amount: nu
  *  the scene probe measured her feet up to 0.55 m above and 0.39 m inside the surface): the key's floor height was a
  *  hand guess. A ray under her lowest foot finds the surface; she moves by the difference, so the foot keeps the height
  *  above its support that the pose / clip gives it. A jump, a fall, a flight or a float keeps the key's height. */
-const AIRBORNE = /fall|fly|jump|float|glide|paddl|swim/;
+// climbing is held up by the wall, not the floor: the way goes up (rootAt) instead of being pulled back to the ground
+const AIRBORNE = /fall|fly|jump|float|glide|paddl|swim|climb|ladder|ledge/;
 function groundOnSupport(rig: Rig, k: VrmKey, scene: THREE.Object3D) {
   if (k.ground === false || AIRBORNE.test(k.motion ?? '') || AIRBORNE.test(k.pose) || k.act === 'hop' || k.act === 'float') return;
   // seated, her chair carries her - her feet tuck under the seat and a ray from above them meets the SEAT (probe run 2)
@@ -836,6 +874,11 @@ export function vrmBones(url: string): {root: THREE.Object3D; bones: Record<stri
     if (n) bones[b] = n.getWorldPosition(new THREE.Vector3());
   }
   return {root: rig.root, bones};
+}
+
+/** A loaded clip's length in seconds (studio/root_travel.mjs measures one loop). */
+export function vrmClipDuration(url: string, id: string): number | null {
+  return rigs.get(url)?.motions.get(id)?.duration ?? null;
 }
 
 export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {

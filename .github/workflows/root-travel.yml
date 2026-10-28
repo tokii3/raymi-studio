@@ -1,0 +1,46 @@
+name: root-travel
+
+# Where every Mixamo clip carries HER on the real rig (studio/root_travel.mjs, the puppet's own rootAt) and commits
+# studio/catalog/root_travel.json back to the branch it ran on. toki 2026-10-28: "raymi wirkt wie angewurzelt ...
+# klettert in die falsche richtung" - the timeline plans her way and the lens rides on these numbers.
+# Start: touch studio/catalog/root_travel.request on any branch.
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths: ["studio/catalog/root_travel.request"]
+
+permissions:
+  contents: write
+
+jobs:
+  measure:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Node modules (cached)
+        id: nm
+        uses: actions/cache@v4
+        with:
+          path: studio/node_modules
+          key: nm-${{ runner.os }}-${{ hashFiles('studio/package-lock.json') }}-v1
+      - name: Install
+        if: steps.nm.outputs.cache-hit != 'true'
+        run: cd studio && npm ci --no-audit --no-fund
+      - name: Private assets (licensed motions + VRM models - never in this public repo)
+        uses: actions/checkout@v4
+        with:
+          repository: tokii3/raymi-private-assets
+          ssh-key: ${{ secrets.ASSETS_DEPLOY_KEY }}
+          path: .private-assets
+      - name: Measure
+        run: cd studio && node root_travel.mjs ../.private-assets/motions ../.private-assets/vrm/raymi7.vrm catalog/root_travel.json 2>&1 | tail -45
+      - name: Commit back
+        run: |
+          git config user.name raymi-clip-bot; git config user.email actions@users.noreply.github.com
+          git add studio/catalog/root_travel.json
+          git diff --cached --quiet || { git commit -qm "root travel measured [skip ci]"; for t in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done; }

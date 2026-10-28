@@ -371,6 +371,7 @@ export type VrmKey = {
   // The clip's own root travel is NOT used: three-vrm's Mixamo retarget mirrors x / z for a VRM0 model and the probe
   // measured 0.3 m/s backwards on a swim Blender measured 2 m/s forwards (take 12 QC v2, 2026-10-28)
   drift?: [number, number, number];
+  root?: boolean;            // false = the clip stays on its spot (its own hips travel is not given back; default on)
   move?: number;             // original puppet travel duration in frames
   arc?: number;              // original hop arc in metres
   ease?: Ease;
