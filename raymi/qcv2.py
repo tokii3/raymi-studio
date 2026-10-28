@@ -10,6 +10,8 @@ Level 2 PICTURE   the mask pass (studio/qcmask.mjs, film/QcMask.tsx): every 2nd 
                     text_hid   a lyric mostly hidden behind her or a prop
                     face_cut   her face cut by the frame edge
                     her_pop    her figure jumps / vanishes between two frames of one shot
+                    hair_wall  the frame is a wall of her hair: hair fills much of it and her face is not seen (the
+                               lens behind / inside her head - take 14, toki 2026-10-28 "unsauber ... low quality")
 Level 3 EYE       full-resolution stills of every flagged frame (both levels), cropped and enlarged around the fault,
                   + a dense sheet of the whole film (one frame a second) - looked at by me first, then a critic.
                   `frames()` says which stills to render, `crops()` builds boards/qc/.
@@ -37,6 +39,8 @@ PIERCE = 0.0004           # share of the frame a covered patch inside her outlin
 EDGE = 2                  # px her outline is eroded by before 'inside' (an object touching her outline is in front)
 TEXT_FACE = 0.10          # share of her face under a lyric
 TEXT_HID = 0.35           # share of a lyric hidden
+HAIR_WALL = 0.30          # share of the frame that is her hair ...
+HAIR_WALL_FACE = 0.01     # ... while her face is (nearly) not seen
 TEXT_MIN = 0.002          # a lyric this small (share of frame) is not judged for hiding
 FACE_MIN = 0.002          # her face this small is not judged for a cut
 POP = 0.45                # relative change of her visible area between two masks of one shot
@@ -71,7 +75,8 @@ def frame_metrics(all_: np.ndarray, her: np.ndarray, text: np.ndarray) -> dict:
     face_b = her == NAMES.index("face")
     text_a = all_ == NAMES.index("text")
     text_c = text == NAMES.index("text")
-    out: dict = {"her": round(float(in_her_b.mean()), 5), "seen": round(float(in_her_a.mean()), 5), "pierced": []}
+    out: dict = {"her": round(float(in_her_b.mean()), 5), "seen": round(float(in_her_a.mean()), 5), "pierced": [],
+                 "hair": round(float((all_ == NAMES.index("hair")).mean()), 4), "face": round(float((all_ == NAMES.index("face")).mean()), 4)}
     if in_her_b.any():
         k = np.ones((2 * EDGE + 1, 2 * EDGE + 1), np.uint8)
         # holes in her own outline (the gap under an arm) belong to her silhouette for 'inside': fill them first
@@ -182,11 +187,13 @@ def classify(rep: dict, closeups: set[str] | None = None) -> dict[str, dict[str,
             ch = abs(r["her"] - prev["her"]) / max(prev["her"], r["her"])
             if ch > POP:
                 add("her_pop", s, round(ch, 2), "her figure jumps / vanishes", F, r.get("face_xy"))
+        if r.get("hair", 0) > HAIR_WALL and r.get("face", 0) < HAIR_WALL_FACE:
+            add("hair_wall", s, r["hair"], "the frame is a wall of her hair, no face", F, None)
         prev = r
     return {c: {s: {**v, "detail": dict(v["detail"])} for s, v in shots.items()} for c, shots in out.items()}
 
 
-PICTURE = ("pierced", "text_face", "text_hid", "face_cut", "her_pop")
+PICTURE = ("pierced", "text_face", "text_hid", "face_cut", "her_pop", "hair_wall")
 
 
 def flags(cls: dict, top: int = 60) -> list[dict]:
