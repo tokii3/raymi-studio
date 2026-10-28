@@ -36,3 +36,6 @@ excerpt: toki 2026-10-27 "ja ganzer film, restlichen kritiker punkte fixen, und 
 
 ## 2026-10-28 (zu Take 13)
 "kririker liste fixen, außerdem habe ich immernoch das gefühl dass raymi wie nagewurzelt wirkt, die schwimm clips sehen immernoch komisch aus, sie klettert am leuchttum in die falsche richtung etc, die on scrren grafiken wirken immernoch komisch teilweise nur rote punkte die mit linien verbunden sind deren deuting man nicht erkennt, schnitt mäßig und ideen mäßig ist es aber gut, aber diese grundlegenden engine fehler müssen behoben werden"
+
+## 2026-10-28 (zu Take 14)
+"video enthält immernoch teilweise störende vektor grafiken wie striche, zacken um ihr gesicht usw diese sollten weg, außerdem wirken manche assets unsauber zb kabel unter see sieht sehr langweilig, leer und ohne tiefe aus, letzter abschnitt auf dem leuchtturm immernoch unsauber / animationen immernoch falsch, der leuchtturm / end teil wurde auch immer nur s 147-177 bearbeitet weil ich mal meine ca 30 sek aber der eigentlich gemeinte abschnitt wurde nie richtig ermittelt, es geht um die gesamte end leuchttum teil ab hochklettern, es wirkt sehr unsauber, haare bewegen sich manchmal noch komisch, alles wirkt choppy, low quality, laggy, rugged etc anstat flüssoger sauberer animationen und assets"
