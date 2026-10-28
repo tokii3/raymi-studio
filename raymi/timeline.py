@@ -896,6 +896,11 @@ FX_KINDS = {"duo", "speed", "impact", "halftone", "spread", "slash", "melody", "
             "crown", "dots", "ribbon", "pillar", "embers", "halo", "shards", "starburst", "insert",
             # the POV layer (studio/src/film/PovFx.tsx): on the lens / the glass in front of it
             "cover", "pov_hand", "ripple", "algae", "freeze", "polaroid", "stamp"}
+# Flat drawn graphics on top of the 3D picture: lines, slashes, rings, spikes, speed lines, dot graphs. toki twice:
+# 2026-10-27 "diese vektor grafiken ... wie flache komische sticker", 2026-10-28 "störende vektor grafiken wie striche,
+# zacken um ihr gesicht usw diese sollten weg". Force on a hit comes from light, camera, cut and her body instead.
+# A row may still use one with "vector_ok": "<why this drawn mark is the moment>" (and toki has seen it).
+VECTOR_FX = {"speed", "slash", "melody", "ring", "crown", "dots", "ribbon", "halo", "shards", "starburst"}
 FX_TIMES = {"taps", "big", "write0", "write1", "whip", "holds"}   # fx fields in song seconds -> film frames ([t0, t1] pairs too)
 
 
@@ -1071,6 +1076,13 @@ def compile_fx(s: dict, a: float, b: float, fr, errors: list[str], tag: str, sma
     for k, x in enumerate(s.get("fx", [])):
         if x.get("kind") not in FX_KINDS:
             errors.append(f"{tag} fx {k + 1}: kind must be one of {sorted(FX_KINDS)}")
+            continue
+        if x["kind"] in VECTOR_FX and not (s.get("vector_ok") or x.get("vector_ok")):
+            errors.append(f"{tag} fx {k + 1}: {x['kind']} is a flat drawn graphic over the picture (toki 2026-10-28 'vektor "
+                          f"grafiken ... sollten weg') - give the hit to light / camera / cut / her body, or say why with vector_ok")
+            continue
+        if x["kind"] == "insert" and x.get("motif") not in (None, "black"):
+            errors.append(f"{tag} fx {k + 1}: insert motif {x.get('motif')!r} is a drawn graphic (toki 2026-10-28) - only a black insert")
             continue
         item = {kk: v for kk, v in x.items() if kk not in ("at", "to")}
         for kk in FX_TIMES & set(item):                    # taps / write times: song seconds like the shot times

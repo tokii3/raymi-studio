@@ -249,17 +249,6 @@
      3.0
     ]
    },
-   "fx": [
-    {
-     "kind": "dots",
-     "at": 1.0,
-     "to": 1.4,
-     "src": [
-      4.0,
-      4.4
-     ]
-    }
-   ],
    "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)"
   },
   {
@@ -316,17 +305,6 @@
      "face_lens": true,
      "rotY": 0.0,
      "ground": false
-    }
-   ],
-   "fx": [
-    {
-     "kind": "dots",
-     "at": 0,
-     "to": "end",
-     "src": [
-      5.55,
-      6.9
-     ]
     }
    ],
    "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
@@ -611,24 +589,6 @@
      "ground": false
     }
    ],
-   "fx": [
-    {
-     "kind": "ribbon",
-     "at": 0.017,
-     "to": "end",
-     "holds": [
-      [
-       9.85,
-       11.2
-      ],
-      [
-       11.85,
-       12.55
-      ]
-     ],
-     "whip": 12.7
-    }
-   ],
    "cams": [
     {
      "at": 10.733,
@@ -654,21 +614,6 @@
      "opts": {
       "detail": "her reaching fingertips + the ribbon root"
      }
-    },
-    {
-     "at": 11.133,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "ribbon",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: ribbon"
     },
     {
      "at": 11.267,
@@ -782,17 +727,7 @@
     "pov_rush": 1,
     "cable_glow": 0.6
    },
-   "mouth": "silent",
-   "fx": [
-    {
-     "kind": "speed",
-     "at": 0,
-     "to": "end",
-     "mode": "radial",
-     "opacity": 0.45,
-     "color": "#7ff6ff"
-    }
-   ]
+   "mouth": "silent"
   },
   {
    "id": "8",
@@ -874,21 +809,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 15.333,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "dots",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: dots"
     },
     {
      "at": 15.467,
@@ -1016,21 +936,6 @@
      ]
     },
     {
-     "at": 17.167,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "bubbles",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: bubbles"
-    },
-    {
      "at": 17.3,
      "kind": "reverse",
      "camera": [
@@ -1117,15 +1022,6 @@
     }
    ],
    "mouth": "silent",
-   "fx": [
-    {
-     "kind": "speed",
-     "at": 0,
-     "to": "end",
-     "mode": "radial",
-     "opacity": 0.35
-    }
-   ],
    "cams": [
     {
      "at": 18.6,
@@ -1147,21 +1043,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 19.067,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "cable",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: cable"
     },
     {
      "at": 19.2,
@@ -1275,21 +1156,6 @@
      ]
     },
     {
-     "at": 20.933,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "speed",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: speed"
-    },
-    {
      "at": 21.067,
      "kind": "reverse",
      "camera": [
@@ -1379,15 +1245,6 @@
     }
    ],
    "mouth": "silent",
-   "fx": [
-    {
-     "kind": "speed",
-     "at": 0,
-     "to": "end",
-     "mode": "horizontal",
-     "opacity": 0.35
-    }
-   ],
    "cams": [
     {
      "at": 22.333,
@@ -1412,21 +1269,6 @@
      "opts": {
       "detail": "her hand cutting the water"
      }
-    },
-    {
-     "at": 22.767,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "smear",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: smear"
     },
     {
      "at": 22.9,
@@ -1547,21 +1389,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 24.067,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "beam",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: beam"
     }
    ]
   },
@@ -1604,20 +1431,6 @@
      "rotY": 0.0,
      "ground": false
     }
-   ],
-   "fx": [
-    {
-     "kind": "ring",
-     "at": 0.03,
-     "to": 1.4,
-     "x": 0.5,
-     "y": 0.4,
-     "r1": 0.3,
-     "band": 0.03,
-     "color": "#e6dcff",
-     "n": 1,
-     "brush": 1
-    }
    ]
   },
   {
@@ -1658,20 +1471,6 @@
      "face_lens": true,
      "rotY": 0.0,
      "ground": false
-    }
-   ],
-   "fx": [
-    {
-     "kind": "ring",
-     "at": 0.03,
-     "to": 2.6,
-     "x": 0.5,
-     "y": 0.42,
-     "r1": 0.55,
-     "band": 0.03,
-     "color": "#e6dcff",
-     "n": 1,
-     "brush": 1
     }
    ],
    "stutter": {
@@ -1785,20 +1584,6 @@
     "ceiling_y": 3.5,
     "ceiling_light": 1
    },
-   "fx": [
-    {
-     "kind": "ring",
-     "at": 0.03,
-     "to": 2.0,
-     "x": 0.5,
-     "y": 0.4,
-     "r1": 0.9,
-     "band": 0.035,
-     "color": "#f3eeff",
-     "n": 1,
-     "brush": 1
-    }
-   ],
    "frame_fit": [
     0.013,
     -0.13,
@@ -2052,18 +1837,6 @@
      "yaw": -913.2
     }
    },
-   "fx": [
-    {
-     "kind": "slash",
-     "at": 1.167,
-     "to": "end",
-     "angle": -24,
-     "y": 0.5,
-     "width": 0.12,
-     "seed": 1,
-     "brush": 1
-    }
-   ],
    "frame_fit": [
     0.029,
     -0.27,
@@ -2102,44 +1875,6 @@
      "motionMix": 1,
      "pos": "pool",
      "face_lens": true
-    }
-   ],
-   "fx": [
-    {
-     "kind": "ring",
-     "at": 0.22299999999999898,
-     "to": 1.1229999999999989,
-     "x": 0.35,
-     "y": 0.6,
-     "r1": 0.4,
-     "band": 0.025,
-     "color": "#e6dcff",
-     "n": 1,
-     "brush": 1
-    },
-    {
-     "kind": "ring",
-     "at": 0.9570000000000007,
-     "to": 1.8570000000000007,
-     "x": 0.26999999999999996,
-     "y": 0.6,
-     "r1": 0.55,
-     "band": 0.025,
-     "color": "#e6dcff",
-     "n": 1,
-     "brush": 1
-    },
-    {
-     "kind": "ring",
-     "at": 1.8369999999999962,
-     "to": 2.736999999999996,
-     "x": 0.18999999999999997,
-     "y": 0.6,
-     "r1": 0.7,
-     "band": 0.025,
-     "color": "#e6dcff",
-     "n": 1,
-     "brush": 1
     }
    ]
   },
@@ -2291,15 +2026,6 @@
    "mouth": "silent",
    "fx": [
     {
-     "kind": "dots",
-     "at": 0.9,
-     "to": "end",
-     "src": [
-      47.0,
-      48.0
-     ]
-    },
-    {
      "kind": "pov_hand",
      "at": 0.93,
      "to": "end"
@@ -2379,38 +2105,6 @@
      ]
     ]
    },
-   "fx": [
-    {
-     "kind": "slash",
-     "at": 1.1700000000000017,
-     "to": "end",
-     "angle": -20,
-     "y": 0.45,
-     "width": 0.11,
-     "seed": 2,
-     "brush": 1
-    },
-    {
-     "kind": "slash",
-     "at": 2.219999999999999,
-     "to": "end",
-     "angle": 28,
-     "y": 0.6,
-     "width": 0.11,
-     "seed": 3,
-     "brush": 1
-    },
-    {
-     "kind": "slash",
-     "at": 3.3200000000000003,
-     "to": "end",
-     "angle": -35,
-     "y": 0.35,
-     "width": 0.11,
-     "seed": 4,
-     "brush": 1
-    }
-   ],
    "transition": {
     "kind": "cover",
     "frames": 6,
@@ -2512,15 +2206,6 @@
      "face_lens": true,
      "ground": false,
      "rollZ": 90
-    }
-   ],
-   "fx": [
-    {
-     "kind": "insert",
-     "at": 0,
-     "to": 0.4,
-     "motif": "bubbles",
-     "tone": "clear"
     }
    ],
    "frame_fit": [
@@ -2920,38 +2605,6 @@
      64.05
     ]
    },
-   "fx": [
-    {
-     "kind": "ring",
-     "at": 0.05,
-     "to": 0.32,
-     "x": 0.5,
-     "y": 0.42,
-     "r1": 1.3,
-     "band": 0.04,
-     "color": "#f3eeff",
-     "n": 1,
-     "brush": 1
-    },
-    {
-     "kind": "crown",
-     "at": 0.048,
-     "to": "end",
-     "size": 0.55,
-     "hole": 0.36
-    },
-    {
-     "kind": "melody",
-     "at": 0.15,
-     "to": "end",
-     "src": [
-      62.7,
-      64.5
-     ],
-     "x0": 0.06,
-     "step": 0.11
-    }
-   ],
    "frame_fit": [
     0.011,
     -0.173,
@@ -2995,23 +2648,6 @@
      "ground": false
     }
    ],
-   "fx": [
-    {
-     "kind": "halo",
-     "at": 0,
-     "to": "end"
-    },
-    {
-     "kind": "slash",
-     "at": 1.633,
-     "to": "end",
-     "angle": 22,
-     "y": 0.4,
-     "width": 0.12,
-     "seed": 5,
-     "brush": 1
-    }
-   ],
    "cams": [
     {
      "at": 65.267,
@@ -3029,21 +2665,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 65.933,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "slash",
-       "tone": "paper"
-      }
-     ],
-     "why": "4-frame two-value insert: slash"
     }
    ],
    "frame_fits": {
@@ -3093,24 +2714,6 @@
      67.59
     ]
    },
-   "fx": [
-    {
-     "kind": "crown",
-     "at": 0,
-     "to": "end",
-     "size": 0.5,
-     "hole": 0.38
-    },
-    {
-     "kind": "dots",
-     "at": 0.96,
-     "to": 1.3,
-     "src": [
-      67.1,
-      67.4
-     ]
-    }
-   ],
    "cams": [
     {
      "at": 67.133,
@@ -3127,8 +2730,7 @@
        "fov": 46,
        "roll": 0
       }
-     ],
-     "fx": []
+     ]
     },
     {
      "at": 67.6,
@@ -3145,23 +2747,7 @@
        "fov": 46,
        "roll": 0
       }
-     ],
-     "fx": []
-    },
-    {
-     "at": 67.8,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "slash",
-       "tone": "paper"
-      }
-     ],
-     "why": "4-frame two-value insert: an ink slash (the ink-drops insert read as lilac discs - excerpt 6)"
+     ]
     }
    ]
   },
@@ -3214,25 +2800,6 @@
      "expr": {
       "angry": 1
      }
-    }
-   ],
-   "fx": [
-    {
-     "kind": "slash",
-     "at": 0.3,
-     "to": "end",
-     "angle": -40,
-     "y": 0.55,
-     "width": 0.1,
-     "seed": 6,
-     "brush": 1
-    },
-    {
-     "kind": "speed",
-     "at": 0,
-     "to": "end",
-     "mode": "radial",
-     "opacity": 0.3
     }
    ],
    "cams": [
@@ -3322,23 +2889,6 @@
      "ground": false
     }
    ],
-   "fx": [
-    {
-     "kind": "halo",
-     "at": 0,
-     "to": "end"
-    },
-    {
-     "kind": "slash",
-     "at": 0.1,
-     "to": "end",
-     "angle": 35,
-     "y": 0.5,
-     "width": 0.13,
-     "seed": 7,
-     "brush": 1
-    }
-   ],
    "cams": [
     {
      "at": 70.9,
@@ -3360,21 +2910,6 @@
       "detail": "her foot at the top of the kick"
      },
      "why": "her kick from the side at hip height (excerpt 1: the low punch looked under her skirt)"
-    },
-    {
-     "at": 71.567,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "smear",
-       "tone": "paper"
-      }
-     ],
-     "why": "4-frame two-value insert: smear"
     }
    ],
    "frame_fits": {
@@ -3423,17 +2958,6 @@
      72.2
     ]
    },
-   "fx": [
-    {
-     "kind": "dots",
-     "at": 0.97,
-     "to": 1.3,
-     "src": [
-      72.7,
-      73.0
-     ]
-    }
-   ],
    "cams": [
     {
      "at": 72.767,
@@ -3453,21 +2977,6 @@
      "opts": {
       "detail": "the barb tip at the lens"
      }
-    },
-    {
-     "at": 73.433,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "claws",
-       "tone": "paper"
-      }
-     ],
-     "why": "4-frame two-value insert: claws"
     }
    ],
    "frame_fit": [
@@ -3530,21 +3039,6 @@
     }
    },
    "cams": [
-    {
-     "at": 74.367,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "wedge",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: wedge"
-    },
     {
      "at": 74.5,
      "kind": "punch",
@@ -3616,18 +3110,6 @@
      "face_lens": true
     }
    ],
-   "fx": [
-    {
-     "kind": "slash",
-     "at": 0.1,
-     "to": "end",
-     "angle": -18,
-     "y": 0.45,
-     "width": 0.11,
-     "seed": 8,
-     "brush": 1
-    }
-   ],
    "cams": [
     {
      "at": 76.033,
@@ -3668,21 +3150,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 76.733,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "melody",
-       "tone": "paper"
-      }
-     ],
-     "why": "4-frame two-value insert: melody"
     },
     {
      "at": 76.967,
@@ -4174,15 +3641,6 @@
     "two_tone_n": 3,
     "two_tone_light": "#ffc35c"
    },
-   "fx": [
-    {
-     "kind": "shards",
-     "at": 0.763,
-     "to": "end",
-     "n": 12,
-     "stutter": 2
-    }
-   ],
    "frame_fit": [
     -0.192,
     -0.326,
@@ -4234,18 +3692,6 @@
     "rain_streak": 1,
     "rock_wall": 1
    },
-   "fx": [
-    {
-     "kind": "slash",
-     "at": 0.8,
-     "to": 1.06,
-     "angle": -10,
-     "y": 0.4,
-     "width": 0.06,
-     "seed": 9,
-     "brush": 1
-    }
-   ],
    "stutter": {
     "onsets": [
      89.17,
@@ -4415,7 +3861,6 @@
      95.5
     ]
    },
-   "step": 2,
    "why_fix": "take 11 QC: 2.4 s near-black - the lens sat behind the rocks; it looks down over them now, on the middle of her climb and her fall (take 12 guard: from the climb spot alone she was in the picture 44 %)"
   },
   {
@@ -4530,18 +3975,6 @@
      98.708
     ]
    },
-   "fx": [
-    {
-     "kind": "slash",
-     "at": 0.04,
-     "to": "end",
-     "angle": 30,
-     "y": 0.6,
-     "width": 0.13,
-     "seed": 10,
-     "brush": 1
-    }
-   ],
    "frame_fit": [
     -0.059,
     -0.254,
@@ -5031,12 +4464,6 @@
      "to": "end",
      "motif": "black",
      "tone": "ink"
-    },
-    {
-     "kind": "dots",
-     "at": 0.233,
-     "to": 0.45,
-     "heartbeat": 1
     }
    ],
    "carry": false,
@@ -5108,18 +4535,7 @@
      120.367,
      121.9
     ]
-   },
-   "fx": [
-    {
-     "kind": "halo",
-     "at": 0,
-     "to": "end",
-     "ramp": [
-      0.2,
-      0.9
-     ]
-    }
-   ]
+   }
   },
   {
    "id": "53H",
@@ -5187,17 +4603,6 @@
      "yaw": 0
     }
    },
-   "fx": [
-    {
-     "kind": "halo",
-     "at": 0,
-     "to": "end",
-     "ramp": [
-      0.9,
-      0.9
-     ]
-    }
-   ],
    "carry": false
   },
   {
@@ -5320,23 +4725,6 @@
      122.615
     ]
    },
-   "fx": [
-    {
-     "kind": "halo",
-     "at": 0,
-     "to": "end"
-    },
-    {
-     "kind": "slash",
-     "at": 0.27,
-     "to": "end",
-     "angle": -30,
-     "y": 0.5,
-     "width": 0.12,
-     "seed": 11,
-     "brush": 1
-    }
-   ],
    "cams": [
     {
      "at": 123.77,
@@ -5427,18 +4815,6 @@
     "lantern_room": 1,
     "her_key": 0.55
    },
-   "fx": [
-    {
-     "kind": "slash",
-     "at": 0.2,
-     "to": "end",
-     "angle": 70,
-     "y": 0.5,
-     "width": 0.08,
-     "seed": 12,
-     "brush": 1
-    }
-   ],
    "cams": [
     {
      "at": 125.233,
@@ -5458,21 +4834,6 @@
      "opts": {
       "detail": "her hand on the rung"
      }
-    },
-    {
-     "at": 125.933,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "rungs",
-       "tone": "paper"
-      }
-     ],
-     "why": "4-frame two-value insert: rungs"
     }
    ]
   },
@@ -5553,20 +4914,6 @@
     "lantern_room": 1,
     "her_key": 0.55
    },
-   "fx": [
-    {
-     "kind": "halo",
-     "at": 0,
-     "to": "end"
-    },
-    {
-     "kind": "speed",
-     "at": 0,
-     "to": "end",
-     "mode": "horizontal",
-     "opacity": 0.35
-    }
-   ],
    "cams": [
     {
      "at": 127.167,
@@ -5583,21 +4930,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 127.833,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "speed",
-       "tone": "paper"
-      }
-     ],
-     "why": "4-frame two-value insert: speed"
     }
    ],
    "frame_fits": {
@@ -5694,21 +5026,6 @@
      "opts": {
       "detail": "the knuckles on the rail"
      }
-    },
-    {
-     "at": 129.667,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "wedge",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: wedge"
     }
    ]
   },
@@ -5772,14 +5089,7 @@
     },
     "lantern_room": 1,
     "her_key": 0.55
-   },
-   "fx": [
-    {
-     "kind": "halo",
-     "at": 0,
-     "to": "end"
-    }
-   ]
+   }
   },
   {
    "id": "59",
@@ -5876,18 +5186,6 @@
     ],
     "her_key": 0.55
    },
-   "fx": [
-    {
-     "kind": "slash",
-     "at": 0.02,
-     "to": "end",
-     "angle": 12,
-     "y": 0.6,
-     "width": 0.11,
-     "seed": 13,
-     "brush": 1
-    }
-   ],
    "cams": [
     {
      "at": 132.3,
@@ -5907,21 +5205,6 @@
      "opts": {
       "detail": "her feet hitting the floor"
      }
-    },
-    {
-     "at": 132.967,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "slash",
-       "tone": "paper"
-      }
-     ],
-     "why": "4-frame two-value insert: slash"
     }
    ]
   },
@@ -5988,20 +5271,6 @@
     ],
     "her_key": 0.55
    },
-   "fx": [
-    {
-     "kind": "ring",
-     "at": 0.4,
-     "to": 1.0,
-     "x": 0.5,
-     "y": 0.5,
-     "r1": 0.5,
-     "band": 0.02,
-     "color": "#ffe9c4",
-     "n": 1,
-     "brush": 1
-    }
-   ],
    "frame_fit": [
     0.0,
     0.033,
@@ -6091,21 +5360,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 137.167,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "rings",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: rings"
     }
    ]
   },
@@ -6186,22 +5440,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 139.067,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "cable",
-       "tone": "ink",
-       "color": "#9b5cff"
-      }
-     ],
-     "why": "4-frame two-value insert: cable"
     }
    ]
   },
@@ -6426,21 +5664,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 142.833,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "dots",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: dots"
     }
    ]
   },
@@ -6583,21 +5806,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 145.433,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "wedge",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: wedge"
     },
     {
      "at": 145.667,
@@ -6787,21 +5995,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 147.967,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "wedge",
-       "tone": "paper"
-      }
-     ],
-     "why": "4-frame two-value insert: wedge"
     },
     {
      "at": 148.1,
@@ -7031,21 +6224,6 @@
      "opts": {
       "detail": "her fingers slipping"
      }
-    },
-    {
-     "at": 152.167,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "smear",
-       "tone": "paper"
-      }
-     ],
-     "why": "4-frame two-value insert: smear"
     }
    ],
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
@@ -7161,21 +6339,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 153.633,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "rain",
-       "tone": "ink"
-      }
-     ],
-     "why": "4-frame two-value insert: rain"
     },
     {
      "at": 153.867,
@@ -7295,18 +6458,6 @@
      "dof_auto": 1
     }
    },
-   "fx": [
-    {
-     "kind": "slash",
-     "at": 0.05,
-     "to": "end",
-     "angle": -10,
-     "y": 0.9,
-     "width": 0.12,
-     "seed": 14,
-     "brush": 1
-    }
-   ],
    "cams": [
     {
      "at": 155.267,
@@ -7323,21 +6474,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 155.933,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "slash",
-       "tone": "paper"
-      }
-     ],
-     "why": "4-frame two-value insert: slash"
     }
    ],
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
@@ -7535,22 +6671,6 @@
      "opts": {
       "detail": "one dot of hers flaring"
      }
-    },
-    {
-     "at": 159.667,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "dots",
-       "tone": "ink",
-       "color": "#9b5cff"
-      }
-     ],
-     "why": "4-frame two-value insert: dots"
     }
    ],
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
@@ -7817,16 +6937,6 @@
     "tube": 1,
     "cable_color": "#b98cff"
    },
-   "fx": [
-    {
-     "kind": "speed",
-     "at": 0,
-     "to": "end",
-     "mode": "radial",
-     "opacity": 0.5,
-     "color": "#c9a8ff"
-    }
-   ],
    "transition": {
     "kind": "cover",
     "frames": 4,
@@ -7923,22 +7033,6 @@
        "roll": 0
       }
      ]
-    },
-    {
-     "at": 169.067,
-     "kind": "insert",
-     "her": false,
-     "fx": [
-      {
-       "kind": "insert",
-       "at": 0,
-       "to": "end",
-       "motif": "wedge",
-       "tone": "ink",
-       "color": "#e8c8ff"
-      }
-     ],
-     "why": "4-frame two-value insert: wedge"
     }
    ],
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
@@ -9179,14 +8273,6 @@
     },
     "her_key": 0.55
    },
-   "fx": [
-    {
-     "kind": "starburst",
-     "at": 0.97,
-     "to": "end",
-     "n": 75
-    }
-   ],
    "frame_fit": [
     0.0,
     -0.156,
@@ -9222,12 +8308,6 @@
      "to": "end",
      "motif": "black",
      "tone": "ink"
-    },
-    {
-     "kind": "dots",
-     "at": 0.5,
-     "to": 0.75,
-     "heartbeat": 1
     }
    ],
    "carry": false

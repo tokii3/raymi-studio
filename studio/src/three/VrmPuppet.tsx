@@ -3,8 +3,11 @@
 // rotations (vrmPoses.ts), expressions by name, eyes on the lens, deterministic blinks.
 //
 // Determinism for parallel render workers: nothing is carried between frames. Every frame re-simulates her spring
-// bones (hair, rabbit ears, tail) from a fixed start: a settle at the state of max(from, f - WINDOW), then frame by
-// frame up to f. Same f -> same picture on every worker, in any order.
+// bones (hair, rabbit ears, tail) from ONE fixed start per shot: a settle at the shot's first frame, then frame by frame
+// up to f, each step with the camera of THAT frame. Same f -> same picture on every worker, in any order. (Until take 14
+// the start slid with f (f - 90) and every step used the camera of f: each frame began from another history, so a moving
+// camera shook her hair - toki 2026-10-28 "haare bewegen sich manchmal noch komisch ... choppy".) A memo of the spring
+// state per frame keeps it cheap: a tab renders its frames in order, so it steps on from the last one it simulated.
 //
 // Her skin stays pale grey-blue under any set light (hard rule 9): `lock` (0..1) moves that share of her colour
 // from the lit term into a self-lit term (emissive = her own texture), so a coloured set light can only tint the
@@ -27,7 +30,6 @@ import {useThree} from '@react-three/fiber';
 import {solidBoxes, supportBelow} from './support';
 
 export const DEFAULT_HEIGHT = 1.55;       // ears to feet, like the sprite puppet (raymi/timeline.py DEFAULT_HEIGHT)
-const WINDOW = 90;                         // frames of history simulated before f (springs forget faster than that)
 const SETTLE = 30;                         // frames the start state is held so the springs hang at rest
 // toki 2026-10-24 "haare fliegen komisch" -> damped; 2026-10-25 "wenn sie still steht sind ihre haare steif, dabei müssten
 // die nach unten fallen": less damping and stiffness again, and real gravity so the strands hang and swing
@@ -699,21 +701,44 @@ export function poseBody(url: string, keys: VrmKey[], f: number, fps: number, ca
   rig.root.updateMatrixWorld(true);
 }
 
+type SpringSnap = {cur: THREE.Vector3; prev: THREE.Vector3; q: THREE.Quaternion}[];
+const springMemo = new Map<Rig, {id: string; at: Map<number, SpringSnap>}>();
+type SpringJoint = {bone: THREE.Object3D; _currentTail: THREE.Vector3; _prevTail: THREE.Vector3};
+const springJoints = (rig: Rig) => [...(rig.vrm.springBoneManager?.joints ?? [])] as unknown as SpringJoint[];
+function snapSprings(rig: Rig): SpringSnap {
+  return springJoints(rig).map((j) => ({cur: j._currentTail.clone(), prev: j._prevTail.clone(), q: j.bone.quaternion.clone()}));
+}
+function restoreSprings(rig: Rig, s: SpringSnap): void {
+  springJoints(rig).forEach((j, i) => { j._currentTail.copy(s[i].cur); j._prevTail.copy(s[i].prev); j.bone.quaternion.copy(s[i].q); });
+}
+
+/** camAt(g): the lens at frame g (the body turns to it: rotY "lens"); without it every step uses camPos. */
 export function poseVrm(url: string, keys: VrmKey[], f: number, fps: number, from: number, camPos: V3, lock: number,
-  mouthKeys: VrmMouthKey[] = []): Rig {
+  mouthKeys: VrmMouthKey[] = [], camAt?: (g: number) => V3): Rig {
   const rig = rigs.get(url);
   if (!rig) { cancelRender(new Error(`VRM not preloaded: ${url}`)); throw new Error('unreachable'); }
   lockColours(rig, lock);
   const {vrm} = rig;
-  const start = Math.max(from, f - WINDOW);
+  const start = Math.min(from, f);
   const dt = 1 / fps;
-  const s0 = stateAt(keys, start, camPos);
-  applyState(rig, s0, fps);
-  vrm.springBoneManager?.reset();
-  for (let i = 0; i < SETTLE; i++) { vrm.springBoneManager?.update(dt); }
-  for (let g = start; g <= f; g++) {
-    applyState(rig, g === start ? s0 : stateAt(keys, g, camPos), fps);
+  const camOf = (g: number): V3 => (g === f || !camAt ? camPos : camAt(g));
+  const id = `${start}|${keys.length}|${keys[0].f}|${keys[keys.length - 1].f}|${fps}`;
+  let memo = springMemo.get(rig);
+  if (!memo || memo.id !== id) { memo = {id, at: new Map()}; springMemo.set(rig, memo); }
+  let g0 = -1;
+  for (const g of memo.at.keys()) if (g < f && g > g0) g0 = g;
+  if (g0 >= start) {
+    restoreSprings(rig, memo.at.get(g0)!);
+  } else {
+    applyState(rig, stateAt(keys, start, camOf(start)), fps);
+    vrm.springBoneManager?.reset();
+    for (let i = 0; i < SETTLE; i++) { vrm.springBoneManager?.update(dt); }
+    g0 = start - 1;
+  }
+  for (let g = g0 + 1; g <= f; g++) {
+    applyState(rig, stateAt(keys, g, camOf(g)), fps);
     vrm.springBoneManager?.update(dt);
+    memo.at.set(g, snapSprings(rig));
   }
   const k = keys[keyAt(keys, f)];
   setExpressions(rig, k, f, fps, mouthKeys);
@@ -903,10 +928,10 @@ export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
 /** step: 2 = she moves "on twos" (15 poses a second, the anime look) while the camera stays smooth at 30.
  *  outline: ink line width in model metres (0 = none, ~0.004 = a cel drawing). */
 export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: number; from?: number; camPos: V3;
-  mouthKeys?: VrmMouthKey[]; lock?: number; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string;
+  mouthKeys?: VrmMouthKey[]; lock?: number; camAt?: (g: number) => V3; shadow?: string; glow?: string; glowGain?: number; materialStyle?: string;
   step?: number; outline?: number; outlineColor?: string; keyLight?: number; trails?: number; lampLight?: number;
   rimColor?: string; rimGain?: number;   // the set's colour reaches her as a rim (Love is War look-designer boards3)
-  battery?: {n: number; prev: number; t: number; color?: string; boost?: number} | null}> = ({url, keys, mouthKeys = [], f: frame, fps, from = 0, camPos, lock = 0.6,
+  battery?: {n: number; prev: number; t: number; color?: string; boost?: number} | null}> = ({url, keys, mouthKeys = [], f: frame, fps, from = 0, camPos, camAt, lock = 0.6,
   shadow = '#1d0b38', glow, glowGain = 1, materialStyle = 'none', step = 1, outline = 0, outlineColor = '#1a1030', battery = null, keyLight = 0, trails = 0, lampLight = 0, rimColor = '#b9c8ff', rimGain = 1}) => {
   const scene = useThree((s) => s.scene);
   const f = step > 1 ? frame - ((((frame - from) % step) + step) % step) : frame;
@@ -918,7 +943,7 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
   // bioluminescent trails (K/DA FIRESTARTER study -> her world): where her hands / feet were over the last frames, in
   // her own space - posed BEFORE the current frame, which poseVrm then sets up from scratch
   const trail = trails > 0 ? trailPoints(rig, keys, f, fps, camPos) : null;
-  const posed = poseVrm(url, keys, f, fps, Math.max(from, keys[0].f), camPos, lock, mouthKeys);
+  const posed = poseVrm(url, keys, f, fps, Math.max(from, keys[0].f), camPos, lock, mouthKeys, camAt);
   groundOnSupport(posed, keys[keyAt(keys, f)], scene);
   clearSolids(posed, keys[keyAt(keys, f)], scene);
   syncOutline(posed);

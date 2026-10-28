@@ -275,6 +275,7 @@ export const Film: React.FC<FilmProps> = (props) => {
             {props.vrm ? (
               <TwoTone on={floodOn} light={ink} dark={ink}>
               <VrmPuppet url={staticFile(props.vrm)} keys={actorKeys} f={f} fps={fps} from={shot.from} camPos={camPos}
+                camAt={(g) => { const c = makeCamera(shot, g, aspect, props.hits, fps).position; return [c.x, c.y, c.z]; }}
                 mouthKeys={shotMouth} lock={Number(shot.opts.lock ?? (shot.actor ? 0.1 : 0.38)) * (1 - darkNow) + 0.32 * darkNow} shadow={String(shot.opts.shadow ?? '#120b2b')}
                 glow={glowColor(shot.opts.glow, f)} glowGain={0.12 * glowGain}
                 materialStyle={String(shot.opts.material ?? (shot.actor ? 'routine' : 'firestarter'))}
