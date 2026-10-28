@@ -46,7 +46,7 @@ for (const f of files) {
     // velocity is summed; implied = minus its mean (m/s, her frame), planted = share of frames with a planted foot.
     const step = 2, feet = [];
     for (let fr = 0; fr <= n; fr += step) {
-      V.poseVrm('r', keys, fr, 30, 0, cam, 0.6);
+      V.poseBody('r', keys, fr, 30, cam);
       const a = V.vrmAnatomy('r');
       feet.push({l: a.leftFoot.clone(), r: a.rightFoot.clone()});
     }

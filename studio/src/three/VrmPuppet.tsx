@@ -691,6 +691,14 @@ const pendingRaw = new WeakMap<Rig, Record<string, number>>();
 
 const camV = new THREE.Vector3();
 /** Run the deterministic simulation and leave the rig posed for frame f. */
+/** Her body at frame f without the hair / cloth simulation (measuring tools: studio/root_travel.mjs). */
+export function poseBody(url: string, keys: VrmKey[], f: number, fps: number, camPos: V3): void {
+  const rig = rigs.get(url);
+  if (!rig) throw new Error(`VRM not preloaded: ${url}`);
+  applyState(rig, stateAt(keys, f, camPos), fps);
+  rig.root.updateMatrixWorld(true);
+}
+
 export function poseVrm(url: string, keys: VrmKey[], f: number, fps: number, from: number, camPos: V3, lock: number,
   mouthKeys: VrmMouthKey[] = []): Rig {
   const rig = rigs.get(url);
