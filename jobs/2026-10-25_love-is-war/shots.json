@@ -4196,10 +4196,10 @@
     {
      "at": 0,
      "aim": {
-      "d": 1.6,
-      "az": 20,
-      "y": 1.2,
-      "h": 0.9,
+      "d": 2.0,
+      "az": -63,
+      "y": 1.0,
+      "h": 1.3,
       "at": [
        -6.9,
        0.0,
@@ -4290,7 +4290,8 @@
       }
      ]
     ]
-   }
+   },
+   "why_fix": "take 13 critics 'dark on dark rock': the lens stood INSIDE the rock (az 20 toward it) - now beside her on the open side, she faces the rock (face_walls)"
   },
   {
    "id": "42",
@@ -6746,7 +6747,7 @@
      "height": 12,
      "len": 90,
      "spin": 40,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -6762,7 +6763,12 @@
     "two_tone_light": "#ffc35c",
     "her_key": 0.55,
     "her_rim": "#bfd0ff",
-    "her_rim_i": 2.4
+    "her_rim_i": 2.4,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -6819,7 +6825,8 @@
      ]
     }
    ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "67",
@@ -6870,7 +6877,7 @@
      "height": 12,
      "len": 90,
      "spin": 30,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -6887,7 +6894,12 @@
     "flip_at": [
      150.12
     ],
-    "her_key": 0.55
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -6929,7 +6941,8 @@
      ]
     }
    ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "68",
@@ -6981,7 +6994,7 @@
      "height": 12,
      "len": 90,
      "spin": 24,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -6991,7 +7004,12 @@
     },
     "lantern_room": 1,
     "detail": "macro on her hand slipping and catching the frame",
-    "her_key": 0.55
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -7029,7 +7047,8 @@
      "why": "4-frame two-value insert: smear"
     }
    ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "69",
@@ -7081,7 +7100,7 @@
      "height": 12,
      "len": 90,
      "spin": 24,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -7093,7 +7112,12 @@
     "flip_at": [
      153.85
     ],
-    "her_key": 0.55
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -7198,7 +7222,8 @@
     }
    ],
    "low_ok": "she hangs below the lamp base's edge, the lens at the base: the base hides her legs",
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "70",
@@ -7253,7 +7278,7 @@
      "height": 12,
      "len": 90,
      "spin": 24,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -7262,7 +7287,12 @@
      "lantern": "her"
     },
     "lantern_room": 1,
-    "her_key": 0.55
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "fx": [
     {
@@ -7309,7 +7339,8 @@
      "why": "4-frame two-value insert: slash"
     }
    ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "71",
@@ -7374,7 +7405,7 @@
      "height": 12,
      "len": 90,
      "spin": 24,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -7384,7 +7415,12 @@
     },
     "lantern_room": 1,
     "fresnel_front": 1,
-    "her_key": 0.55
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -7405,7 +7441,8 @@
      "carry": false
     }
    ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "72",
@@ -7456,7 +7493,7 @@
      "height": 12,
      "len": 90,
      "spin": 24,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -7471,7 +7508,12 @@
     "lantern_violet": [
      158.1
     ],
-    "her_key": 0.55
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -7510,7 +7552,8 @@
      "why": "4-frame two-value insert: dots"
     }
    ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "73",
@@ -7561,7 +7604,7 @@
      "height": 12,
      "len": 90,
      "spin": 24,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -7576,7 +7619,12 @@
     "arm_current": [
      159.9
     ],
-    "her_key": 0.55
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -7601,7 +7649,8 @@
     "frames": 6,
     "obj": "water"
    },
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "74",
@@ -7832,7 +7881,7 @@
      "height": 12,
      "len": 90,
      "spin": 24,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -7850,7 +7899,12 @@
       "#ffd9f0"
      ]
     ],
-    "her_key": 0.55
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -7886,7 +7940,8 @@
      "why": "4-frame two-value insert: wedge"
     }
    ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "78",
@@ -7937,7 +7992,7 @@
      "height": 12,
      "len": 90,
      "spin": 24,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -7946,7 +8001,12 @@
      "lantern": "her"
     },
     "lantern_room": 1,
-    "her_key": 0.55
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -7988,7 +8048,8 @@
      ]
     }
    ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "79",
@@ -8040,7 +8101,7 @@
      "height": 12,
      "len": 90,
      "spin": 6,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -8049,7 +8110,12 @@
      "lantern": "her"
     },
     "lantern_room": 1,
-    "her_key": 0.55
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -8104,7 +8170,8 @@
      }
     }
    ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "80",
@@ -8156,7 +8223,7 @@
      "height": 12,
      "len": 90,
      "spin": 6,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -8166,9 +8233,14 @@
     },
     "lantern_room": 1,
     "grade_to": "war_white",
-    "grade_at": 173.24,
-    "grade_s": 3.66,
-    "her_key": 0.55
+    "grade_at": 175.5,
+    "grade_s": 1.6,
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -8248,7 +8320,8 @@
      }
     }
    ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "81",
@@ -8300,7 +8373,7 @@
      "height": 12,
      "len": 90,
      "spin": 4,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -8310,9 +8383,14 @@
     },
     "lantern_room": 1,
     "grade_to": "war_white",
-    "grade_at": 173.24,
-    "grade_s": 3.66,
-    "her_key": 0.55
+    "grade_at": 175.5,
+    "grade_s": 1.6,
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -8490,7 +8568,8 @@
      }
     }
    ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "82",
@@ -8545,7 +8624,7 @@
      "height": 12,
      "len": 90,
      "spin": 2,
-     "beam": 1.0,
+     "beam": 0.6,
      "ledge": [
       -6.07,
       -22.75
@@ -8555,9 +8634,14 @@
     },
     "lantern_room": 1,
     "grade_to": "war_white",
-    "grade_at": 173.24,
-    "grade_s": 3.66,
-    "her_key": 0.55
+    "grade_at": 175.5,
+    "grade_s": 1.6,
+    "her_key": 0.55,
+    "post": {
+     "glow": 0.15,
+     "vignette": 0.45,
+     "dof_auto": 1
+    }
    },
    "cams": [
     {
@@ -8675,7 +8759,8 @@
     }
    ],
    "low_ok": "ECUs of her eyes 0.3-1.2 m away on the beam axis while she leans back on the lamp: the frame holds her face only",
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m"
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
   },
   {
    "id": "83",

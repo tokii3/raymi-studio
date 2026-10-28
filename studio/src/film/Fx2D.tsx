@@ -195,7 +195,7 @@ const Slash: React.FC<{x: Extract<Fx, {kind: 'slash'}>; f: number; head?: [numbe
   }
   return (
     <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', inset: 0, width: '100%', height: '100%'}}>
-      {inkDefs(`sl${s}`, s)}<g filter={`url(#sl${s})`}><g transform={`translate(${W / 2} ${cy}) rotate(${x.angle ?? -14}) translate(${-W / 2} 0)`}>
+      {/* a clean brush stroke, no grain filter (take 13 look-critic + toki: the red slash read as pixel noise) */}<g><g transform={`translate(${W / 2} ${cy}) rotate(${x.angle ?? -14}) translate(${-W / 2} 0)`}>
         {top.length > 1 ? <polygon points={[...top, ...bot].join(' ')} fill={color} /> : null}
         {/* the spray thrown off the stroke */}
         {Array.from({length: 26}, (_, k) => {

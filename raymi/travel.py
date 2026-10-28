@@ -149,3 +149,33 @@ def compose_thirds(rows: list[dict]) -> list[dict]:
                        else c for c in r["camera"]]
         side = -side
     return out
+
+
+def face_walls(rows: list[dict], warns: list[str], set_opts: dict | None = None) -> list[dict]:
+    """A climb holds on to a real surface (toki 2026-10-28 on take 13: "sie klettert am leuchtturm in die falsche
+    richtung"; measured: at the rock ledge she climbed with her BACK to the rock). A climbing clip turns to the nearest
+    climbable thing the row's set names - the lighthouse tower and its rock ledge (opts.lighthouse pos / ledge) - and a
+    climb with no surface within 3 m is reported."""
+    out = []
+    for r in rows:
+        actor = r.get("actor") or []
+        lh = (r.get("opts") or {}).get("lighthouse") or ((set_opts or {}).get(r.get("set")) or {}).get("lighthouse") or {}
+        walls = [w for w in (lh.get("pos"), lh.get("ledge")) if isinstance(w, list) and len(w) == 2]
+        if not actor or not any(CLIMB.search(str(k.get("clip") or k.get("motion") or "")) for k in actor):
+            out.append(r)
+            continue
+        keys = []
+        for k in actor:
+            m = str(k.get("clip") or k.get("motion") or "")
+            p = k.get("pos")
+            # up the tower / onto its rocks only: in the lantern room (her feet at the tower top) a pull is acting, not a climb
+            if CLIMB.search(m) and not re.search(r"jump", m) and isinstance(p, list) and len(p) == 3 and p[1] < float(lh.get("height", 12)) - 0.2:
+                near = min(walls, key=lambda w: math.hypot(w[0] - p[0], w[1] - p[2]), default=None)
+                if near is None or math.hypot(near[0] - p[0], near[1] - p[2]) > 3.0:
+                    warns.append(f"row {r.get('id')}: {m} climbs with no wall within 3 m - put her at the tower / the ledge")
+                else:
+                    want = math.degrees(math.atan2(near[0] - p[0], near[1] - p[2]))
+                    k = {**k, "rotY": round(want, 1), "face_lens": False}
+            keys.append(k)
+        out.append({**r, "actor": keys})
+    return out

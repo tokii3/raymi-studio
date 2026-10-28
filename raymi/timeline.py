@@ -53,7 +53,7 @@ from pathlib import Path
 
 from . import camera_moves as CM
 from . import plan as P
-from .travel import compose_thirds, plan_travel
+from .travel import compose_thirds, face_walls, plan_travel
 
 REPO = Path(__file__).resolve().parents[1]
 SETS = REPO / "studio" / "src" / "three" / "sets" / "sets.json"
@@ -1031,6 +1031,35 @@ def melody_notes_fx(smap: dict, t0: float, t1: float, voice: str = "vocal") -> l
     return [[round(n["t0"] - t0, 3), round(m, 1)] for n, m in zip(ns, ms)]
 
 
+def melody_on_her(rows: list[dict], smap: dict) -> list[dict]:
+    """The melody is played on HER, not drawn as a graph (toki 2026-10-28 on take 13: "die on screen grafiken wirken
+    immernoch komisch teilweise nur rote punkte die mit linien verbunden sind deren deutung man nicht erkennt"): a
+    `melody` line or a `dots` pitch graph becomes her five chest lights flaring on every measured sung note
+    (opts.glow_flare + chest_dots); an insert with a dots / melody motif becomes a wedge. Rows keep their timing."""
+    out = []
+    for r in rows:
+        fx = r.get("fx") or []
+        keep, flares = [], []
+        for x in fx:
+            if x.get("kind") in ("melody", "dots") and not x.get("heartbeat"):
+                src = x.get("src")
+                if src and len(src) == 2:
+                    flares += [round(float(src[0]) + dt, 3) for dt, _ in melody_notes_fx(smap, float(src[0]), float(src[1]), x.get("voice", "vocal"))]
+                continue
+            if x.get("kind") == "insert" and x.get("motif") in ("dots", "melody"):
+                x = {**x, "motif": "wedge"}
+            keep.append(x)
+        if len(keep) != len(fx) or any(y is not z for y, z in zip(keep, fx)):
+            r = {**r, "fx": keep}
+            if flares:
+                o = dict(r.get("opts") or {})
+                o["glow_flare"] = sorted(set((o.get("glow_flare") or []) + flares))
+                o.setdefault("chest_dots", 1)
+                r["opts"] = o
+        out.append(r)
+    return out
+
+
 def compile_fx(s: dict, a: float, b: float, fr, errors: list[str], tag: str, smap: dict | None = None) -> list[dict]:
     out = []
     for k, x in enumerate(s.get("fx", [])):
@@ -1276,9 +1305,12 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         total = 1
     fr = lambda t: round(t * FPS) - f0                      # noqa: E731  song seconds -> film frame
     # her way through the space before the rows split into pictures (toki 2026-10-28 "schwimmt auf der stelle")
-    rows_in = spec.get("shots", []) if spec.get("travel") is False else plan_travel(spec.get("shots", []), clip_energy(), warns)
+    rows_in = face_walls(spec.get("shots", []), warns, spec.get("set_opts"))
+    rows_in = rows_in if spec.get("travel") is False else plan_travel(rows_in, clip_energy(), warns)
     if spec.get("thirds", True):
         rows_in = compose_thirds(rows_in)
+    if spec.get("melody_on_her", True):
+        rows_in = melody_on_her(rows_in, smap)
     shots_in = expand_rows(rows_in, errors, bool(spec.get("carry")))
     if not shots_in:
         errors.append("no shots")
