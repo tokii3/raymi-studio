@@ -347,7 +347,8 @@ export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; 
       <mesh position={[x, H + 0.64, z]} material={brassMat()}><cylinderGeometry args={[1.5, 1.6, 0.52, 40]} /></mesh>
       <mesh position={[x, H + 1.4, z]} rotation={[Math.PI / 2, 0, 0]} material={brassMat()}><torusGeometry args={[1.25, 0.05, 8, 64]} /></mesh>
       {Array.from({length: 8}, (_, i) => {
-        const a = (i / 8) * Math.PI * 2 + t * 0.1;
+        // still, not turning: turning mullions swept through her where she works at the lamp (QC v2 2026-10-28, rows 72 / 73 / 77)
+        const a = (i / 8) * Math.PI * 2 + 0.2;
         return <mesh key={`m${i}`} position={[x + Math.sin(a) * 1.6, H + 2.1, z + Math.cos(a) * 1.6]} material={brassMat()}><boxGeometry args={[0.06, 2.4, 0.06]} /></mesh>;
       })}
       {glass ? <mesh position={[x, H + 2.1, z]} material={glassMat()}><cylinderGeometry args={[1.6, 1.6, 2.4, 48, 1, true]} /></mesh> : null}

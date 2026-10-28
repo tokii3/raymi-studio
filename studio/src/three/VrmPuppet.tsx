@@ -181,32 +181,13 @@ function lowestFoot(vrm: VRM): number {
 
 /** Mixamo clips that walk / run / dance across the floor would carry her out of the shot and jump back at the loop:
  *  the hips keep their height (bounce, crouch) but not their travel - the shot's keys and camera decide where she goes. */
-const ROOTS = new WeakMap<THREE.AnimationClip, {times: number[]; xs: number[]; zs: number[]}>();
 export function inPlace(clip: THREE.AnimationClip): THREE.AnimationClip {
   for (const t of clip.tracks) {
     if (!t.name.endsWith('.position') || !/hips/i.test(t.name)) continue;
     const v = t.values, x0 = v[0], z0 = v[2];
-    // the travel is kept aside, not thrown away: a key with `travel` gets it back (rootTravel)
-    const xs: number[] = [], zs: number[] = [];
-    for (let i = 0; i < v.length; i += 3) { xs.push(v[i] - x0); zs.push(v[i + 2] - z0); }
-    ROOTS.set(clip, {times: Array.from(t.times), xs, zs});
     for (let i = 0; i < v.length; i += 3) { v[i] = x0; v[i + 2] = z0; }
   }
   return clip;
-}
-
-/** The clip's own root travel (clip space, rig units) at UNWRAPPED clip time tt: a loop adds its whole way again, so a
- *  swim goes on and on instead of jumping back (toki 2026-10-28: "schwimmt auf der stelle"). */
-export function rootTravel(clip: THREE.AnimationClip, tt: number): [number, number] {
-  const r = ROOTS.get(clip);
-  if (!r || r.times.length < 2) return [0, 0];
-  const d = clip.duration || r.times[r.times.length - 1];
-  const loops = Math.floor(tt / d), u = tt - loops * d;
-  let j = 0;
-  while (j < r.times.length - 2 && r.times[j + 1] <= u) j++;
-  const a = r.times[j], b = r.times[j + 1], w = b > a ? Math.max(0, Math.min(1, (u - a) / (b - a))) : 0;
-  const n = r.xs.length - 1;
-  return [r.xs[j] + (r.xs[j + 1] - r.xs[j]) * w + loops * r.xs[n], r.zs[j] + (r.zs[j + 1] - r.zs[j]) * w + loops * r.zs[n]];
 }
 
 /** Load a model into the cache by hand (tests: the bytes of the file, no browser). */
@@ -600,18 +581,6 @@ function applyState(rig: Rig, s: State, fps: number) {
   root.position.set(...s.pos);
   root.rotation.set(0, s.yaw - hipTurn + (s.act === 'turn' ? Math.PI * ease('out', s.local / 8) : 0), s.rollZ, 'YXZ');
   const size = (s.height / rig.natural) * s.squash;
-  // her own way through the space: the clip's root travel since this key, turned with her (the key's pos is where she is
-  // at the key; timeline.py places the next key / picture where the way has taken her)
-  const tc = s.cur.travel ?? 0, clipNow = s.motion ? rig.motions.get(s.motion) : undefined;
-  if (tc > 0 && clipNow && (s.clipCur.speed ?? 1) !== 0) {
-    const sp = s.clipCur.speed ?? 1, t0 = (s.clipCur.clipFrom ?? 0) + ((s.keyF - s.clipCur.f) / fps) * sp;
-    const t1 = (s.clipCur.clipFrom ?? 0) + ((s.f - s.clipCur.f) / fps) * sp;
-    const cap = (x: number) => (s.clipCur.once ? Math.min(x, clipNow.duration - 1e-3) : x);
-    const [ax, az] = rootTravel(clipNow, cap(t0)), [bx, bz] = rootTravel(clipNow, cap(t1));
-    const lx = (bx - ax) * size * tc, lz = (bz - az) * size * tc, ry = root.rotation.y;
-    root.position.x += lx * Math.cos(ry) + lz * Math.sin(ry);
-    root.position.z += -lx * Math.sin(ry) + lz * Math.cos(ry);
-  }
   const wide = 1 + 0.3 * s.flat;
   root.scale.set(size * wide, size * (s.act === 'hop' && s.local < 10 ? 1.06 : 1) * (1 - 0.86 * s.flat), size * wide);
   root.updateMatrixWorld(true);

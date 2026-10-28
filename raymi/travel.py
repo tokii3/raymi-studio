@@ -3,9 +3,10 @@ selbst, sie schwebt, schwimmt auf der stelle" - measured: 63 of 63 swim / tread 
 lens sat on her in 163 of 194 shots: "raymi wird immer in die mitte des bildes gezwungen").
 
 Runs over the script rows before the multicam expansion (timeline.compile_shots):
-- a clip that travels when captured (studio/catalog/clip_energy.json "travel", measured in Blender) gets its own root
-  travel back on the puppet (key "travel": 1, VrmPuppet.rootTravel) - the strokes and the way match;
-- a clip that does not travel but lives in water (treading, floating) drifts slowly (key "drift", m/s);
+- a clip that travels when captured (studio/catalog/clip_energy.json "travel", measured in Blender) moves her at that
+  measured speed (key "drift", m/s, linear - the clip's own root curve is not used: the VRM0 retarget mirrors it, take 12
+  QC v2 measured a swim going 0.3 m/s backwards);
+- a clip that does not travel but lives in water (treading, floating) drifts slowly (DRIFT);
 - she heads ACROSS the lens, not into it (rotY): 55 deg off the lens axis when the lens rides along, 80 deg when it lets
   her pass; the row alternates left / right so the film is not one direction;
 - her way is centred on the middle of the key's time (key "path", m): the place the script chose is where she is half way;
@@ -22,6 +23,8 @@ MIN_TRAVEL = 0.3     # m of root travel in one clip loop: below that a clip is i
 DRIFT = 0.15         # m/s: treading water / floating moves with the water, never pinned to a point
 WATER = re.compile(r"tread|float|swim", re.I)
 CLIMB = re.compile(r"climb|pull|ladder|ledge|wall", re.I)
+# a linear way only for clips that ARE a way (swim, walk, run): an attack or a turn that shifts its weight would slide
+LOCO = re.compile(r"swim|walk|run|jog|sprint|crawl|dash|skip", re.I)
 
 
 def _num(x, default=0.0):
@@ -70,7 +73,7 @@ def plan_travel(rows: list[dict], energy: dict, warns: list[str]) -> list[dict]:
             if not m or _num(k.get("speed"), 1.0) == 0 or _num(k.get("travel"), 1.0) == 0 or "drift" in k:
                 continue
             e = energy.get(m) or {}
-            loop = _num(e.get("travel")) if _num(e.get("travel")) >= MIN_TRAVEL else 0.0
+            loop = _num(e.get("travel")) if _num(e.get("travel")) >= MIN_TRAVEL and LOCO.search(m) else 0.0
             if CLIMB.search(m):
                 continue                                  # the way is up: the clip's own hips carry her (kept by inPlace)
             speed = loop / max(_num(e.get("dur"), 1.0), 1e-3) * _num(k.get("speed"), 1.0) if loop else 0.0
@@ -99,10 +102,7 @@ def plan_travel(rows: list[dict], energy: dict, warns: list[str]) -> list[dict]:
             k_to = next((_num(x.get("at")) for x in keys[j + 1:] if x.get("at") != "end"), dur)
             span = max(0.2, k_to - k_at)
             v = [round(speed * c, 4) for c in fwd]
-            if loop:
-                k["travel"] = 1
-            else:
-                k["drift"] = v
+            k["drift"] = v
             k["_v"] = v
             k["path"] = [round(-c * span / 2, 4) for c in v]
             # a later key of the same row standing on the same mark: she is where her way took her
@@ -122,8 +122,8 @@ def plan_travel(rows: list[dict], energy: dict, warns: list[str]) -> list[dict]:
     return out
 
 
-THIRD = 0.16         # x frame width: off the centre onto the third (her looking room on the other side)
-COMPOSE_H = (1.0, 9.0)   # m frame heights that compose on the thirds: closer ones keep the measured face position
+THIRD = 0.12         # x frame width: off the centre toward the third (QC v2: 0.16 on medium frames cut her face at the edge)
+COMPOSE_H = (1.5, 9.0)   # m frame heights that compose on the thirds: closer ones keep her face clear of the edges
 
 
 def compose_thirds(rows: list[dict]) -> list[dict]:
