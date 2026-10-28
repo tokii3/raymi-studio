@@ -1152,7 +1152,9 @@ export function herOffFaults(props: FilmProps): {shot: string; frame: number; wh
     if (!s.actor?.length || s.opts.her_off || s.opts.detail || s.fitted) continue;
     let ok = 0, n = 0, bad = s.from;
     for (let f = s.from; f < s.to; f += 4) {
-      const k = s.actor.reduce((p, q) => (q.f <= f ? q : p), s.actor[0]);
+      const k0 = s.actor.reduce((p, q) => (q.f <= f ? q : p), s.actor[0]);
+      // her way through the space (raymi/travel.py drift): where she IS at f, not where her key started
+      const k = k0.drift ? {...k0, pos: k0.pos.map((v, i) => v + k0.drift![i] * (f - k0.f) / props.fps) as V3} : k0;
       const cam = makeCamera(s, f, aspect, [], props.fps);
       // her head OR her chest in the frame (a face close-up leaves the chest out on purpose)
       // a prone clip (swimming, gliding, lying - Love is War 2026-10-27: the swim clip lies flat, head ~0.7 m AHEAD of her
