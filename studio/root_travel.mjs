@@ -40,13 +40,34 @@ for (const f of files) {
     const p0 = hips(0), pm = hips(Math.round(n / 2)), p1 = hips(n);
     const d = [p1.x - p0.x, p1.y - p0.y, p1.z - p0.z].map((x) => +x.toFixed(3));
     const half = Math.hypot(pm.x - p0.x, pm.z - p0.z), whole = Math.hypot(d[0], d[2]);
+    // the way her FEET imply (take 13 + this measurement: nearly every clip is exported in place, so the hips never
+    // travel): a foot that stands on the floor in an in-place clip slides backwards at exactly the speed she should go
+    // forwards. Over one loop, every frame a foot is planted (within 3 cm of the loop's lowest foot) its horizontal
+    // velocity is summed; implied = minus its mean (m/s, her frame), planted = share of frames with a planted foot.
+    const step = 2, feet = [];
+    for (let fr = 0; fr <= n; fr += step) {
+      V.poseVrm('r', keys, fr, 30, 0, cam, 0.6);
+      const a = V.vrmAnatomy('r');
+      feet.push({l: a.leftFoot.clone(), r: a.rightFoot.clone()});
+    }
+    const low = Math.min(...feet.map((q) => Math.min(q.l.y, q.r.y)));
+    let sx = 0, sz = 0, cnt = 0, planted = 0;
+    for (let i = 1; i < feet.length; i++) {
+      let any = false;
+      for (const side of ['l', 'r']) {
+        const a0 = feet[i - 1][side], a1 = feet[i][side];
+        if (a0.y - low < 0.03 && a1.y - low < 0.03) { sx += (a1.x - a0.x) / (step / 30); sz += (a1.z - a0.z) / (step / 30); cnt++; any = true; }
+      }
+      planted += any ? 1 : 0;
+    }
+    const implied = cnt ? [-sx / cnt, 0, -sz / cnt].map((x) => +x.toFixed(3)) : [0, 0, 0];
     out.clips[id] = {dur: +(n / 30).toFixed(2), loop: d, v: d.map((x) => +(x / (n / 30)).toFixed(3)),
-      even: whole > 0.05 ? +(half / whole).toFixed(2) : null};
+      even: whole > 0.05 ? +(half / whole).toFixed(2) : null, implied, planted: +(planted / Math.max(1, feet.length - 1)).toFixed(2)};
   } catch (e) {
     out.clips[id] = {error: String(e).slice(0, 120)};
   }
 }
 fs.writeFileSync(outFile, JSON.stringify(out, null, 1));
-const moving = Object.entries(out.clips).filter(([, c]) => c.loop && Math.hypot(c.loop[0], c.loop[2]) > 0.3);
-console.log(`root travel: ${files.length} clips, ${moving.length} move > 0.3 m per loop`);
+const moving = Object.entries(out.clips).filter(([, c]) => c.implied && Math.hypot(c.implied[0], c.implied[2]) > 0.15);
+console.log(`root travel: ${files.length} clips, ${moving.length} imply > 0.15 m/s from their planted feet`);
 for (const [id, c] of moving.slice(0, 40)) console.log(id, JSON.stringify(c));
