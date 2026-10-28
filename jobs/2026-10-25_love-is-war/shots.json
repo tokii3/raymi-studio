@@ -90,7 +90,8 @@
     "glow": 0.8,
     "vignette": 0.35,
     "dof_auto": 1
-   }
+   },
+   "seabed": 1
   }
  },
  "faces": {

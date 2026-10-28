@@ -9,15 +9,15 @@ import {rnd, toon, toonPaint} from './look';
 import {add, glowTex} from './fire';
 import {frames} from './events';
 
-const CYAN = '#5ef2ff';
+const CYAN0 = '#5ef2ff';
 
-function cablePath(i: number, seed: number): THREE.CatmullRomCurve3 {
+export function cablePath(i: number, seed: number): THREE.CatmullRomCurve3 {
   const pts: THREE.Vector3[] = [];
   const x0 = (rnd(seed + i * 7) - 0.5) * 30, x1 = (rnd(seed + i * 11) - 0.5) * 8 + (i - 1) * 1.6;
   for (let k = 0; k <= 8; k++) {
     const u = k / 8, z = -70 + u * 78;                     // from the far dark to just past the lens side
     const x = x0 + (x1 - x0) * u + Math.sin(u * 7 + i) * 1.2;
-    pts.push(new THREE.Vector3(x, 0.09 + 0.05 * Math.sin(k * 2.3 + i), z));
+    pts.push(new THREE.Vector3(x, 0.03 + 0.03 * Math.sin(k * 2.3 + i), z));   // half sunk in the sand (seabed.tsx berms)
   }
   return new THREE.CatmullRomCurve3(pts);
 }
@@ -29,8 +29,11 @@ export const SeaCables: React.FC<{opts: Record<string, unknown>; f: number; fps:
   const speed = Number(opts.cable_speed ?? 40);
   const glow = Number(opts.cable_glow ?? 0);
   const pulses = opts.cable_pulse === 'beats' ? beats : frames(opts.cable_pulse);
-  // ridged rubber conduit with a coloured shade, the core glowing through it when lit (look-designer boards3)
-  const skin = toonPaint('#1a1c28', 'rubber', '#0b1424', [60, 1], CYAN, 0.04 + 0.6 * glow);
+  const CYAN = String(opts.cable_color ?? CYAN0);
+  // ridged armour; lit, only a thin seam glows along its top - the whole tube lit read as a flat cyan plank
+  // (toki 2026-10-28 take 14 "kabel unter see ... langweilig, leer")
+  const skin = toonPaint('#1a1c28', 'rubber', '#0b1424', [60, 1], CYAN, 0.03 + 0.07 * glow);
+  const r = Number(opts.cable_r ?? 0.11);
   return (
     <group userData={{noSupport: true}}>
       {Array.from({length: n}, (_, i) => {
@@ -38,12 +41,14 @@ export const SeaCables: React.FC<{opts: Record<string, unknown>; f: number; fps:
         const L = c.getLength();
         return (
           <group key={i}>
-            <mesh material={skin} castShadow receiveShadow><tubeGeometry args={[c, 160, Number(opts.cable_r ?? 0.11), 10, false]} /></mesh>
+            <mesh material={skin} castShadow receiveShadow><tubeGeometry args={[c, 160, r, 10, false]} /></mesh>
+            {glow > 0 ? <mesh position={[0, r * 0.82, 0]}><tubeGeometry args={[c, 160, r * 0.16, 6, false]} />
+              <meshBasicMaterial color={CYAN} transparent opacity={0.35 + 0.6 * glow} toneMapped={false} /></mesh> : null}
             {/* armour joints every few metres: the cable reads as a real thing, not a line */}
             {Array.from({length: Math.floor(L / 3)}, (_, k) => {
               const u = (k + 0.5) / Math.floor(L / 3), p = c.getPointAt(u), tg = c.getTangentAt(u);
               const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), tg);
-              return <mesh key={k} position={p} quaternion={q} material={glow > 0.3 ? skin : toon('#262836')}><cylinderGeometry args={[0.16, 0.16, 0.22, 12]} /></mesh>;
+              return <mesh key={k} position={p} quaternion={q} material={glow > 0.3 ? skin : toon('#262836')}><cylinderGeometry args={[r * 1.45, r * 1.45, 0.22, 12]} /></mesh>;
             })}
             {pulses.map((t, k) => {
               const d = (f - t) / fps;                      // seconds since the pulse left the far end
