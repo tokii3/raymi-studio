@@ -18,409 +18,8 @@
      "pose": "stand",
      "pos": [
       0.0,
-      -0.85,
-      0.0
-     ],
-     "rotY": "lens",
-     "height": 1.55,
-     "blend": 8,
-     "act": "idle",
-     "move": 0,
-     "arc": 0.0,
-     "ease": "inOut",
-     "motion": "roar",
-     "motionMix": 1,
-     "expr": {
-      "angry": 1,
-      "aa": 0.8
-     },
-     "aware": 0.25,
-     "faceLens": true,
-     "clipFrom": 1.0,
-     "speed": 0.0,
-     "exact": true
-    },
-    {
-     "f": 6,
-     "pose": "stand",
-     "pos": [
-      0.0,
-      -0.85,
-      0.0
-     ],
-     "rotY": "lens",
-     "height": 1.55,
-     "blend": 8,
-     "act": "idle",
-     "move": 0,
-     "arc": 0.0,
-     "ease": "inOut",
-     "motion": "roar",
-     "motionMix": 1,
-     "expr": {
-      "angry": 1,
-      "aa": 0.8
-     },
-     "aware": 0.25,
-     "faceLens": true,
-     "clipFrom": 1.0,
-     "speed": 1.0,
-     "restart": true
-    }
-   ],
-   "mouth": {
-    "gain": 0.0
-   },
-   "fx": [
-    {
-     "kind": "crown",
-     "size": 0.55,
-     "hole": 0.36,
-     "from": 0,
-     "to": 7
-    }
-   ],
-   "fitted": true,
-   "id": "0a",
-   "from": 0,
-   "to": 6,
-   "set": "nightsea",
-   "hero": [],
-   "opts": {
-    "grade": "war_night",
-    "stars": 0.2,
-    "rain_at": 0,
-    "rain_end_at": 2414,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 24.0,
-     "beam": 1.0,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 200
-    },
-    "painted": 1,
-    "glow": "#e6dcff",
-    "glow_gain": 0.5,
-    "lock": 0.3,
-    "neutral_sky": 0.85,
-    "her_key": 0.9,
-    "her_rim": "#ffd9a0",
-    "her_rim_i": 2.4,
-    "fog_c": "#12183a",
-    "post": {
-     "glow": 1,
-     "vignette": 0.4,
-     "dof_auto": 1,
-     "chroma": 0.003
-    },
-    "two_tone": [
-     0
-    ],
-    "two_tone_n": 2,
-    "two_tone_light": "#ffc35c",
-    "depth": 0.8
-   },
-   "camera": [
-    {
-     "f": 0,
-     "pos": [
-      -0.001,
-      0.539,
-      0.636
-     ],
-     "look": [
-      -0.001,
-      0.469,
-      0.02
-     ],
-     "fov": 48.0,
-     "roll": 6.0,
-     "ease": "inOut",
-     "observer": 1.0
-    },
-    {
-     "f": 3,
-     "pos": [
-      -0.001,
-      0.539,
-      0.5756
-     ],
-     "look": [
-      -0.001,
-      0.469,
-      0.02
-     ],
-     "fov": 48.0,
-     "roll": 6.0,
-     "ease": "inOut",
-     "observer": 1.0
-    }
-   ],
-   "kick": 0.4,
-   "puppets": [],
-   "lyrics": null,
-   "words": [],
-   "transition": {
-    "kind": "cut",
-    "frames": 0
-   },
-   "events": [],
-   "texts": [],
-   "noLens": [
-    {
-     "name": "lighthouse rock",
-     "min": [
-      -13.4,
-      -3.0,
-      -34.9
-     ],
-     "max": [
-      -2.5999999999999996,
-      3.0,
-      -25.1
-     ]
-    }
-   ],
-   "solids": []
-  },
-  {
-   "actor": [
-    {
-     "f": 6,
-     "pose": "stand",
-     "pos": [
-      -7.66,
-      12.9,
-      -28.74
-     ],
-     "rotY": -165.0,
-     "height": 1.55,
-     "blend": 8,
-     "act": "idle",
-     "move": 0,
-     "arc": 0.0,
-     "ease": "inOut",
-     "motion": "pull-heavy-object",
-     "motionMix": 1,
-     "aware": 0.25,
-     "clipFrom": 0.75,
-     "speed": 0.0,
-     "exact": true,
-     "expr": {
-      "angry": 0.45
-     }
-    }
-   ],
-   "mouth": {
-    "gain": 0.0
-   },
-   "id": "0b",
-   "from": 6,
-   "to": 12,
-   "set": "nightsea",
-   "hero": [],
-   "opts": {
-    "grade": "war_night",
-    "stars": 0.2,
-    "rain_at": 957,
-    "rain_end_at": 2414,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 0,
-     "beam": 1.0,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 14.95,
-     "lantern": "her"
-    },
-    "painted": 1,
-    "glow": "#e6dcff",
-    "glow_gain": 0.5,
-    "lock": 0.3,
-    "neutral_sky": 0.85,
-    "her_key": 0.55,
-    "her_rim": "#ffd9a0",
-    "her_rim_i": 2.4,
-    "fog_c": "#12183a",
-    "post": {
-     "chroma": 0.003,
-     "vignette": 0
-    },
-    "flood": [
-     6
-    ],
-    "flood_n": 6,
-    "flood_light": "#fff1d2",
-    "depth": 0.8
-   },
-   "camera": [
-    {
-     "f": 6,
-     "pos": [
-      -6.452,
-      13.7,
-      -24.204
-     ],
-     "look": [
-      -8.0,
-      13.299999999999999,
-      -30.0
-     ],
-     "fov": 58.0,
-     "roll": 0.0,
-     "ease": "inOut",
-     "observer": 1.0
-    }
-   ],
-   "kick": 0.4,
-   "puppets": [],
-   "lyrics": null,
-   "words": [],
-   "transition": {
-    "kind": "cut",
-    "frames": 0
-   },
-   "events": [],
-   "texts": [],
-   "noLens": [
-    {
-     "name": "lighthouse rock",
-     "min": [
-      -13.4,
-      -3.0,
-      -34.9
-     ],
-     "max": [
-      -2.5999999999999996,
-      3.0,
-      -25.1
-     ]
-    }
-   ],
-   "solids": []
-  },
-  {
-   "fx": [
-    {
-     "kind": "insert",
-     "motif": "black",
-     "tone": "ink",
-     "from": 12,
-     "to": 15
-    }
-   ],
-   "id": "0c",
-   "from": 12,
-   "to": 14,
-   "set": "nightsea",
-   "hero": [],
-   "opts": {
-    "grade": "war_night",
-    "stars": 0.2,
-    "rain_at": 957,
-    "rain_end_at": 2414,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 24.0,
-     "beam": 1.0,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 0
-    },
-    "painted": 1,
-    "glow": "#e6dcff",
-    "glow_gain": 0.5,
-    "lock": 0.3,
-    "neutral_sky": 0.85,
-    "her_key": 0.9,
-    "her_rim": "#ffd9a0",
-    "her_rim_i": 2.4,
-    "fog_c": "#12183a",
-    "post": {
-     "glow": 0.6,
-     "vignette": 0.3,
-     "dof_auto": 1
-    },
-    "her_off": "2 frames black",
-    "depth": 0.8
-   },
-   "camera": [
-    {
-     "f": 12,
-     "pos": [
-      0.0,
-      0.6,
-      1.9994
-     ],
-     "look": [
-      0.0,
-      0.55,
-      0.0
-     ],
-     "fov": 40.0,
-     "roll": 0.0,
-     "ease": "inOut",
-     "observer": 1.0
-    }
-   ],
-   "kick": 0.4,
-   "puppets": [],
-   "lyrics": null,
-   "words": [],
-   "transition": {
-    "kind": "cut",
-    "frames": 0
-   },
-   "events": [],
-   "texts": [],
-   "noLens": [
-    {
-     "name": "lighthouse rock",
-     "min": [
-      -13.4,
-      -3.0,
-      -34.9
-     ],
-     "max": [
-      -2.5999999999999996,
-      3.0,
-      -25.1
-     ]
-    }
-   ],
-   "solids": []
-  },
-  {
-   "actor": [
-    {
-     "f": 14,
-     "pose": "stand",
-     "pos": [
-      0.0,
       0.5,
-      0.0
+      -2.9614
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -433,20 +32,24 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 1.0,
      "speed": 1.0,
      "expr": {
-      "sorrow": 0.4
+      "angry": 0.45
      }
     }
    ],
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "1",
-   "from": 14,
+   "from": 0,
    "to": 89,
    "set": "deep",
    "hero": [],
@@ -487,37 +90,54 @@
    },
    "camera": [
     {
-     "f": 14,
+     "f": 0,
      "pos": [
-      0.0051,
-      0.328,
-      1.0893
+      4.7169,
+      0.75,
+      0.72
      ],
      "look": [
-      0.232,
-      0.678,
-      0.466
+      0.0,
+      0.92,
+      0.099
      ],
-     "fov": 50.0,
-     "roll": 4.0,
-     "ease": "inOut",
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "linear",
+     "observer": 1.0
+    },
+    {
+     "f": 4,
+     "pos": [
+      3.9964,
+      0.75,
+      0.72
+     ],
+     "look": [
+      0.0,
+      0.92,
+      0.099
+     ],
+     "fov": 40.0,
+     "roll": 0.0,
+     "ease": "snap",
      "observer": 1.0
     },
     {
      "f": 89,
      "pos": [
-      1.5872,
-      0.528,
-      0.9593
+      3.596,
+      0.75,
+      0.72
      ],
      "look": [
-      0.232,
-      0.678,
-      0.466
+      0.0,
+      0.92,
+      0.099
      ],
-     "fov": 28.0,
+     "fov": 40.0,
      "roll": 0.0,
-     "ease": "out",
+     "ease": "linear",
      "observer": 1.0
     }
    ],
@@ -556,7 +176,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      -2.5282
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -569,6 +189,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 1.0,
      "speed": 1.0,
@@ -577,6 +202,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 127,
+    "lead": [
+     -0.3239,
+     0.0,
+     0.151
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -696,7 +334,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      -2.0291
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -709,6 +347,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 1.0,
      "speed": 1.0,
@@ -717,6 +360,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 196,
+    "lead": [
+     0.0857,
+     0.0,
+     0.1485
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -850,7 +506,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      -1.7966
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -863,6 +519,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 1.0,
      "speed": 1.0,
@@ -871,6 +532,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 253,
+    "lead": [
+     0.3469,
+     0.0,
+     0.2003
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -978,7 +652,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      0.4551
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -991,6 +665,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 2.128,
      "speed": 1.0,
@@ -999,6 +678,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 253,
+    "lead": [
+     0.3469,
+     0.0,
+     0.2003
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -1089,7 +781,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      0.6867
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -1102,6 +794,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 2.244,
      "speed": 1.0,
@@ -1110,6 +807,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 253,
+    "lead": [
+     0.3469,
+     0.0,
+     0.2003
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -1200,7 +910,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      0.9182
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -1213,6 +923,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 2.36,
      "speed": 1.0,
@@ -1221,6 +936,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 253,
+    "lead": [
+     0.3469,
+     0.0,
+     0.2003
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -1311,7 +1039,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      1.1737
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -1324,6 +1052,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 2.488,
      "speed": 1.0,
@@ -1332,6 +1065,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 253,
+    "lead": [
+     0.3469,
+     0.0,
+     0.2003
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -2585,7 +2331,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      -1.8635
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -2598,6 +2344,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 1.9,
      "speed": 1.0,
@@ -2606,6 +2357,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 445,
+    "lead": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -2711,7 +2475,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      0.1327
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -2724,6 +2488,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 2.9,
      "speed": 1.0,
@@ -2732,6 +2501,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 445,
+    "lead": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -2958,7 +2740,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      1.2645
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -2971,6 +2753,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 3.467,
      "speed": 1.0,
@@ -2979,6 +2766,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 445,
+    "lead": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -3070,8 +2870,8 @@
    "lyrics": null,
    "words": [],
    "transition": {
-    "kind": "bubbles",
-    "frames": 10
+    "kind": "cut",
+    "frames": 0
    },
    "events": [],
    "texts": [],
@@ -3100,7 +2900,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      -1.8625
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -3113,6 +2913,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 1.0,
      "speed": 1.0,
@@ -3122,6 +2927,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 501,
+    "lead": [
+     -0.1127,
+     0.0,
+     0.041
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -3228,7 +3046,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      0.0658
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -3241,6 +3059,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 1.966,
      "speed": 1.0,
@@ -3250,6 +3073,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 501,
+    "lead": [
+     -0.1127,
+     0.0,
+     0.041
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -3480,7 +3316,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      1.1977
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -3493,6 +3329,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 2.533,
      "speed": 1.0,
@@ -3502,6 +3343,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 501,
+    "lead": [
+     -0.1127,
+     0.0,
+     0.041
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -3625,7 +3479,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      -1.8964
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -3638,6 +3492,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 1.9,
      "speed": 1.0,
@@ -3646,6 +3505,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 557,
+    "lead": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 0.0
    },
@@ -3758,7 +3630,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      0.0339
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -3771,6 +3643,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 2.867,
      "speed": 1.0,
@@ -3779,6 +3656,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 557,
+    "lead": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 0.0
    },
@@ -4012,7 +3902,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      1.2316
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -4025,6 +3915,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 3.467,
      "speed": 1.0,
@@ -4033,6 +3928,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 557,
+    "lead": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 0.0
    },
@@ -4162,7 +4070,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      -1.8305
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -4175,6 +4083,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 1.0,
      "speed": 1.0,
@@ -4183,6 +4096,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 614,
+    "lead": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 0.0
    },
@@ -4286,7 +4212,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      0.034
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -4299,6 +4225,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 1.934,
      "speed": 1.0,
@@ -4307,6 +4238,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 614,
+    "lead": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 0.0
    },
@@ -4531,7 +4475,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      1.2317
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -4544,6 +4488,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 2.534,
      "speed": 1.0,
@@ -4552,6 +4501,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 614,
+    "lead": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 0.0
    },
@@ -4672,7 +4634,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      -1.8295
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -4685,6 +4647,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 1.9,
      "speed": 1.0,
@@ -4694,6 +4661,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 669,
+    "lead": [
+     0.0391,
+     0.0,
+     0.4472
+    ]
+   },
    "mouth": {
     "gain": 0.0
    },
@@ -4806,7 +4786,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      0.0988
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -4819,6 +4799,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 2.866,
      "speed": 1.0,
@@ -4828,6 +4813,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 669,
+    "lead": [
+     0.0391,
+     0.0,
+     0.4472
+    ]
+   },
    "mouth": {
     "gain": 0.0
    },
@@ -5062,7 +5060,7 @@
      "pos": [
       0.0,
       0.5,
-      0.0
+      1.2307
      ],
      "rotY": 0.0,
      "height": 1.55,
@@ -5075,6 +5073,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      0.0,
+      0.0,
+      1.9962
+     ],
      "faceLens": true,
      "clipFrom": 3.433,
      "speed": 1.0,
@@ -5084,6 +5087,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.0,
+     0.0,
+     1.9962
+    ],
+    "mid": 669,
+    "lead": [
+     0.0391,
+     0.0,
+     0.4472
+    ]
+   },
    "mouth": {
     "gain": 0.0
    },
@@ -8010,11 +8026,11 @@
      "f": 956,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.1884,
       -0.85,
-      0.0
+      -0.1318
      ],
-     "rotY": "lens",
+     "rotY": -55.0,
      "height": 1.55,
      "blend": 8,
      "act": "idle",
@@ -8024,6 +8040,11 @@
      "motion": "treading-water",
      "motionMix": 1,
      "aware": 0.25,
+     "drift": [
+      -0.1229,
+      0.0,
+      0.086
+     ],
      "faceLens": true,
      "clipFrom": 1.0,
      "speed": 1.0,
@@ -8032,6 +8053,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.1229,
+     0.0,
+     0.086
+    ],
+    "mid": 1002,
+    "lead": [
+     -0.2102,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -8148,8 +8182,8 @@
    "lyrics": null,
    "words": [],
    "transition": {
-    "kind": "flash",
-    "frames": 2
+    "kind": "cut",
+    "frames": 0
    },
    "events": [],
    "texts": [],
@@ -8176,11 +8210,11 @@
      "f": 1048,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.1415,
       -0.85,
-      0.0
+      -0.1415
      ],
-     "rotY": "lens",
+     "rotY": 45.0,
      "height": 1.55,
      "blend": 8,
      "act": "idle",
@@ -8190,6 +8224,11 @@
      "motion": "treading-water",
      "motionMix": 1,
      "aware": 0.25,
+     "drift": [
+      0.1061,
+      0.0,
+      0.1061
+     ],
      "faceLens": true,
      "clipFrom": 1.9,
      "speed": 1.0,
@@ -8198,6 +8237,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     0.1061,
+     0.0,
+     0.1061
+    ],
+    "mid": 1088,
+    "lead": [
+     0.213,
+     0.0,
+     0.0376
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -8317,11 +8369,11 @@
      "f": 1128,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.0227,
       -0.85,
-      0.0
+      -0.0848
      ],
-     "rotY": "lens",
+     "rotY": -15.0,
      "height": 1.55,
      "blend": 8,
      "act": "idle",
@@ -8331,6 +8383,11 @@
      "motion": "treading-water",
      "motionMix": 1,
      "aware": 0.25,
+     "drift": [
+      -0.0388,
+      0.0,
+      0.1449
+     ],
      "faceLens": true,
      "clipFrom": 1.0,
      "speed": 1.0,
@@ -8342,9 +8399,9 @@
      "f": 1163,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.0227,
       -0.85,
-      0.0
+      0.0848
      ],
      "rotY": "lens",
      "height": 1.55,
@@ -8368,9 +8425,9 @@
      "f": 1168,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.0227,
       -0.85,
-      0.0
+      0.0848
      ],
      "rotY": "lens",
      "height": 1.55,
@@ -8391,6 +8448,19 @@
      "restart": true
     }
    ],
+   "track": {
+    "v": [
+     -0.0388,
+     0.0,
+     0.1449
+    ],
+    "mid": 1146,
+    "lead": [
+     -0.1242,
+     0.0,
+     0.1043
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -8489,9 +8559,8 @@
    "lyrics": null,
    "words": [],
    "transition": {
-    "kind": "cover",
-    "frames": 4,
-    "obj": "rain"
+    "kind": "cut",
+    "frames": 0
    },
    "events": [],
    "texts": [],
@@ -8708,9 +8777,9 @@
      "f": 1268,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.0504,
       -0.85,
-      0.0
+      0.1884
      ],
      "rotY": -165.0,
      "height": 1.55,
@@ -8722,6 +8791,11 @@
      "motion": "treading-water",
      "motionMix": 1,
      "aware": 0.25,
+     "drift": [
+      -0.0388,
+      0.0,
+      -0.1449
+     ],
      "clipFrom": 1.0,
      "speed": 1.0,
      "expr": {
@@ -8732,11 +8806,11 @@
      "f": 1346,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.0971,
       -0.85,
-      0.0
+      0.0085
      ],
-     "rotY": "lens",
+     "rotY": -95.0,
      "height": 1.55,
      "blend": 8,
      "act": "idle",
@@ -8746,6 +8820,11 @@
      "motion": "treading-water",
      "motionMix": 1,
      "aware": 0.25,
+     "drift": [
+      -0.1494,
+      0.0,
+      -0.0131
+     ],
      "faceLens": true,
      "clipFrom": 1.6,
      "speed": 1.0,
@@ -8755,6 +8834,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.0388,
+     0.0,
+     -0.1449
+    ],
+    "mid": 1307,
+    "lead": [
+     0.0746,
+     0.0,
+     -0.0431
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -9024,11 +9116,11 @@
      "f": 1443,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.0621,
       -0.85,
-      0.0
+      -0.0621
      ],
-     "rotY": "lens",
+     "rotY": -45.0,
      "height": 1.55,
      "blend": 8,
      "act": "idle",
@@ -9038,6 +9130,11 @@
      "motion": "treading-water",
      "motionMix": 1,
      "aware": 0.25,
+     "drift": [
+      -0.1061,
+      0.0,
+      0.1061
+     ],
      "faceLens": true,
      "clipFrom": 1.0,
      "speed": 1.0,
@@ -9049,9 +9146,9 @@
      "f": 1478,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.0621,
       -0.85,
-      0.0
+      0.0621
      ],
      "rotY": "lens",
      "height": 1.55,
@@ -9075,9 +9172,9 @@
      "f": 1482,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.0621,
       -0.85,
-      0.0
+      0.0621
      ],
      "rotY": "lens",
      "height": 1.55,
@@ -9098,6 +9195,19 @@
      "restart": true
     }
    ],
+   "track": {
+    "v": [
+     -0.1061,
+     0.0,
+     0.1061
+    ],
+    "mid": 1461,
+    "lead": [
+     -0.5122,
+     0.0,
+     0.0903
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -9222,9 +9332,8 @@
    "lyrics": null,
    "words": [],
    "transition": {
-    "kind": "cover",
-    "frames": 6,
-    "obj": "water"
+    "kind": "cut",
+    "frames": 0
    },
    "events": [],
    "texts": [],
@@ -9251,11 +9360,11 @@
      "f": 1561,
      "pose": "stand",
      "pos": [
-      0.0,
+      -2.8894,
       -0.85,
-      0.0
+      -2.0232
      ],
-     "rotY": "lens",
+     "rotY": 55.0,
      "height": 1.55,
      "blend": 8,
      "act": "idle",
@@ -9266,6 +9375,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      1.6352,
+      0.0,
+      1.145
+     ],
      "faceLens": true,
      "clipFrom": 1.0,
      "speed": 1.0,
@@ -9274,6 +9388,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     1.6352,
+     0.0,
+     1.145
+    ],
+    "mid": 1614,
+    "lead": [
+     0.2942,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -9380,8 +9507,8 @@
    "lyrics": null,
    "words": [],
    "transition": {
-    "kind": "bubbles",
-    "frames": 8
+    "kind": "cut",
+    "frames": 0
    },
    "events": [],
    "texts": [],
@@ -9408,11 +9535,11 @@
      "f": 1667,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.7059,
       -3.5,
-      0.0
+      -1.0081
      ],
-     "rotY": "lens",
+     "rotY": -35.0,
      "height": 1.55,
      "blend": 8,
      "act": "idle",
@@ -9423,6 +9550,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      -1.145,
+      0.0,
+      1.6352
+     ],
      "faceLens": true,
      "clipFrom": 1.9,
      "speed": 1.0,
@@ -9432,6 +9564,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -1.145,
+     0.0,
+     1.6352
+    ],
+    "mid": 1685,
+    "lead": [
+     -0.237,
+     0.0,
+     0.0863
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -9572,11 +9717,11 @@
      "f": 1704,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.165,
       -3.5,
       0.0
      ],
-     "rotY": "away",
+     "rotY": 270.0,
      "height": 1.55,
      "blend": 8,
      "act": "idle",
@@ -9587,36 +9732,13 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
-     "clipFrom": 1.0,
-     "speed": 0.0,
-     "exact": true,
-     "expr": {
-      "angry": 0.75
-     }
-    },
-    {
-     "f": 1712,
-     "pose": "stand",
-     "pos": [
+     "drift": [
+      -0.15,
       0.0,
-      -3.5,
-      0.0
+      -0.0
      ],
-     "rotY": "away",
-     "height": 1.55,
-     "blend": 4,
-     "act": "idle",
-     "move": 0,
-     "arc": 0.0,
-     "ease": "inOut",
-     "motion": "floating-legs-bent-and-arms-spread",
-     "motionMix": 1,
-     "aware": 0.25,
-     "ground": false,
      "clipFrom": 1.0,
-     "speed": 1.0,
-     "exact": true,
-     "restart": true,
+     "speed": 0.35,
      "expr": {
       "angry": 0.75
      }
@@ -9674,14 +9796,14 @@
     {
      "f": 1704,
      "pos": [
-      0.6523,
-      -6.0,
-      3.6993
+      0.5513,
+      -3.6,
+      3.1267
      ],
      "look": [
-      0.0,
+      -0.647,
       -2.7,
-      0.0
+      0.1141
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -9691,14 +9813,14 @@
     {
      "f": 1751,
      "pos": [
-      0.6523,
-      -6.0,
-      3.6993
+      0.5513,
+      -3.6,
+      3.1267
      ],
      "look": [
-      0.0,
+      -0.647,
       -2.7,
-      0.0
+      0.1141
      ],
      "fov": 50.0,
      "roll": 3.0,
@@ -9739,11 +9861,11 @@
      "f": 1761,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.12,
       -3.5,
       0.0
      ],
-     "rotY": "away",
+     "rotY": 270.0,
      "height": 1.55,
      "blend": 0,
      "act": "idle",
@@ -9754,36 +9876,13 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
-     "clipFrom": 1.0,
-     "speed": 0.0,
-     "exact": true,
-     "expr": {
-      "angry": 0.75
-     }
-    },
-    {
-     "f": 1769,
-     "pose": "stand",
-     "pos": [
+     "drift": [
+      -0.15,
       0.0,
-      -3.5,
-      0.0
+      -0.0
      ],
-     "rotY": "away",
-     "height": 1.55,
-     "blend": 4,
-     "act": "idle",
-     "move": 0,
-     "arc": 0.0,
-     "ease": "inOut",
-     "motion": "floating-legs-bent-and-arms-spread",
-     "motionMix": 1,
-     "aware": 0.25,
-     "ground": false,
-     "clipFrom": 1.0,
-     "speed": 1.0,
-     "exact": true,
-     "restart": true,
+     "clipFrom": 1.665,
+     "speed": 0.35,
      "expr": {
       "angry": 0.75
      }
@@ -9889,11 +9988,11 @@
      "f": 1770,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.1946,
       -3.5,
-      0.0
+      -0.1362
      ],
-     "rotY": 0.0,
+     "rotY": -55.0,
      "height": 1.55,
      "blend": 8,
      "act": "idle",
@@ -9904,6 +10003,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      -0.1229,
+      0.0,
+      0.086
+     ],
      "faceLens": true,
      "clipFrom": 1.0,
      "speed": 1.0,
@@ -9912,6 +10016,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.1229,
+     0.0,
+     0.086
+    ],
+    "mid": 1818,
+    "lead": [
+     -0.1982,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -10046,11 +10163,11 @@
      "f": 1789,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.1173,
       -3.5,
-      0.0
+      -0.0821
      ],
-     "rotY": 0.0,
+     "rotY": -55.0,
      "height": 1.55,
      "blend": 0,
      "act": "idle",
@@ -10061,6 +10178,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      -0.1229,
+      0.0,
+      0.086
+     ],
      "faceLens": true,
      "clipFrom": 1.629,
      "speed": 1.0,
@@ -10069,6 +10191,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.1229,
+     0.0,
+     0.086
+    ],
+    "mid": 1818,
+    "lead": [
+     -0.1982,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -10169,11 +10304,11 @@
      "f": 1803,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.0603,
       -3.5,
-      0.0
+      -0.0422
      ],
-     "rotY": 0.0,
+     "rotY": -55.0,
      "height": 1.55,
      "blend": 0,
      "act": "idle",
@@ -10184,6 +10319,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      -0.1229,
+      0.0,
+      0.086
+     ],
      "faceLens": true,
      "clipFrom": 2.093,
      "speed": 1.0,
@@ -10192,6 +10332,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.1229,
+     0.0,
+     0.086
+    ],
+    "mid": 1818,
+    "lead": [
+     -0.1982,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -10293,11 +10446,11 @@
      "f": 1817,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.0031,
       -3.5,
-      0.0
+      -0.0022
      ],
-     "rotY": 0.0,
+     "rotY": -55.0,
      "height": 1.55,
      "blend": 0,
      "act": "idle",
@@ -10308,6 +10461,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      -0.1229,
+      0.0,
+      0.086
+     ],
      "faceLens": true,
      "clipFrom": 2.558,
      "speed": 1.0,
@@ -10316,6 +10474,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.1229,
+     0.0,
+     0.086
+    ],
+    "mid": 1818,
+    "lead": [
+     -0.1982,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -10417,11 +10588,11 @@
      "f": 1831,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.0567,
       -3.5,
-      0.0
+      0.0397
      ],
-     "rotY": 0.0,
+     "rotY": -55.0,
      "height": 1.55,
      "blend": 0,
      "act": "idle",
@@ -10432,6 +10603,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      -0.1229,
+      0.0,
+      0.086
+     ],
      "faceLens": true,
      "clipFrom": 2.65,
      "speed": 1.0,
@@ -10440,6 +10616,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.1229,
+     0.0,
+     0.086
+    ],
+    "mid": 1818,
+    "lead": [
+     -0.1982,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -10541,11 +10730,11 @@
      "f": 1838,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.0854,
       -3.5,
-      0.0
+      0.0597
      ],
-     "rotY": 0.0,
+     "rotY": -55.0,
      "height": 1.55,
      "blend": 0,
      "act": "idle",
@@ -10556,6 +10745,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      -0.1229,
+      0.0,
+      0.086
+     ],
      "faceLens": true,
      "clipFrom": 2.65,
      "speed": 1.0,
@@ -10564,6 +10758,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.1229,
+     0.0,
+     0.086
+    ],
+    "mid": 1818,
+    "lead": [
+     -0.1982,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -10665,11 +10872,11 @@
      "f": 1845,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.1139,
       -3.5,
-      0.0
+      0.0797
      ],
-     "rotY": 0.0,
+     "rotY": -55.0,
      "height": 1.55,
      "blend": 0,
      "act": "idle",
@@ -10680,6 +10887,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      -0.1229,
+      0.0,
+      0.086
+     ],
      "faceLens": true,
      "clipFrom": 2.65,
      "speed": 1.0,
@@ -10688,6 +10900,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.1229,
+     0.0,
+     0.086
+    ],
+    "mid": 1818,
+    "lead": [
+     -0.1982,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -10789,11 +11014,11 @@
      "f": 1852,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.1424,
       -3.5,
-      0.0
+      0.0996
      ],
-     "rotY": 0.0,
+     "rotY": -55.0,
      "height": 1.55,
      "blend": 0,
      "act": "idle",
@@ -10804,6 +11029,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      -0.1229,
+      0.0,
+      0.086
+     ],
      "faceLens": true,
      "clipFrom": 2.65,
      "speed": 1.0,
@@ -10812,6 +11042,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.1229,
+     0.0,
+     0.086
+    ],
+    "mid": 1818,
+    "lead": [
+     -0.1982,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -10913,11 +11156,11 @@
      "f": 1859,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.1709,
       -3.5,
-      0.0
+      0.1196
      ],
-     "rotY": 0.0,
+     "rotY": -55.0,
      "height": 1.55,
      "blend": 0,
      "act": "idle",
@@ -10928,6 +11171,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      -0.1229,
+      0.0,
+      0.086
+     ],
      "faceLens": true,
      "clipFrom": 2.65,
      "speed": 1.0,
@@ -10936,6 +11184,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.1229,
+     0.0,
+     0.086
+    ],
+    "mid": 1818,
+    "lead": [
+     -0.1982,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -15538,11 +15799,11 @@
      "f": 2470,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.1739,
       -0.4,
-      0.0
+      -0.0881
      ],
-     "rotY": "away",
+     "rotY": 296.9,
      "height": 1.55,
      "blend": 8,
      "act": "idle",
@@ -15553,6 +15814,11 @@
      "motionMix": 1,
      "aware": 0.25,
      "ground": false,
+     "drift": [
+      -0.1338,
+      0.0,
+      0.0678
+     ],
      "clipFrom": 1.0,
      "speed": 0.3,
      "expr": {
@@ -15693,9 +15959,9 @@
      "f": 2548,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.0866,
       -0.85,
-      0.0
+      0.05
      ],
      "rotY": -120.0,
      "height": 1.55,
@@ -15707,6 +15973,11 @@
      "motion": "treading-water",
      "motionMix": 1,
      "aware": 0.25,
+     "drift": [
+      -0.1299,
+      0.0,
+      -0.075
+     ],
      "clipFrom": 1.0,
      "speed": 1.0,
      "expr": {
@@ -15714,6 +15985,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.1299,
+     0.0,
+     -0.075
+    ],
+    "mid": 2568,
+    "lead": [
+     -0.5876,
+     0.0,
+     -0.2139
+    ]
+   },
    "mouth": {
     "gain": 0.0
    },
@@ -15820,9 +16104,8 @@
    "lyrics": null,
    "words": [],
    "transition": {
-    "kind": "cover",
-    "frames": 6,
-    "obj": "cloud"
+    "kind": "cut",
+    "frames": 0
    },
    "events": [],
    "texts": [],
@@ -16949,14 +17232,14 @@
     {
      "f": 2813,
      "pos": [
-      -3.6799,
-      0.6,
-      -20.9816
+      -2.5564,
+      2.6,
+      -20.4845
      ],
      "look": [
-      -6.8,
-      1.6,
-      -24.7
+      -5.0991,
+      0.6,
+      -24.9382
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -16966,14 +17249,14 @@
     {
      "f": 2817,
      "pos": [
-      -4.1779,
-      0.6,
-      -21.5751
+      -3.1373,
+      2.6,
+      -21.1767
      ],
      "look": [
-      -6.8,
-      1.6,
-      -24.7
+      -5.0991,
+      0.6,
+      -24.9382
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -16983,14 +17266,14 @@
     {
      "f": 2885,
      "pos": [
-      -4.4568,
-      0.6,
-      -21.9075
+      -3.47,
+      2.6,
+      -21.5732
      ],
      "look": [
-      -6.8,
-      1.6,
-      -24.7
+      -5.0991,
+      0.6,
+      -24.9382
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -17133,9 +17416,9 @@
       2.1615
      ],
      "look": [
-      0.0,
+      -0.3732,
       0.55,
-      0.0
+      0.0658
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -17150,9 +17433,9 @@
       1.9641
      ],
      "look": [
-      0.0,
+      -0.3732,
       0.55,
-      0.0
+      0.0658
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -17167,9 +17450,9 @@
       1.8159
      ],
      "look": [
-      0.0,
+      -0.3732,
       0.55,
-      0.0
+      0.0658
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -17693,9 +17976,9 @@
      "f": 3184,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.0595,
       -0.85,
-      0.0
+      0.2222
      ],
      "rotY": -165.0,
      "height": 1.55,
@@ -17707,6 +17990,11 @@
      "motion": "treading-water",
      "motionMix": 1,
      "aware": 0.25,
+     "drift": [
+      -0.0388,
+      0.0,
+      -0.1449
+     ],
      "clipFrom": 1.9,
      "speed": 1.0,
      "expr": {
@@ -17714,6 +18002,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.0388,
+     0.0,
+     -0.1449
+    ],
+    "mid": 3230,
+    "lead": [
+     -0.0,
+     0.0,
+     0.0
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -18100,9 +18401,9 @@
       2.0063
      ],
      "look": [
-      0.0,
+      0.2841,
       0.55,
-      0.0
+      0.164
      ],
      "fov": 42.0,
      "roll": 0.0,
@@ -18117,9 +18418,9 @@
       1.6876
      ],
      "look": [
-      0.0,
+      0.2841,
       0.55,
-      0.0
+      0.164
      ],
      "fov": 42.0,
      "roll": 0.0,
@@ -18134,9 +18435,9 @@
       1.5093
      ],
      "look": [
-      0.0,
+      0.2841,
       0.55,
-      0.0
+      0.164
      ],
      "fov": 42.0,
      "roll": 0.0,
@@ -18342,11 +18643,11 @@
      "f": 3504,
      "pose": "stand",
      "pos": [
-      0.0,
+      0.1213,
       -0.85,
-      0.0
+      -0.07
      ],
-     "rotY": -5.0,
+     "rotY": -60.0,
      "height": 1.55,
      "blend": 8,
      "act": "idle",
@@ -18356,6 +18657,11 @@
      "motion": "treading-water",
      "motionMix": 1,
      "aware": 0.25,
+     "drift": [
+      -0.1299,
+      0.0,
+      0.075
+     ],
      "faceLens": true,
      "clipFrom": 1.0,
      "speed": 1.0,
@@ -18367,9 +18673,9 @@
      "f": 3560,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.1213,
       -0.85,
-      0.0
+      0.07
      ],
      "rotY": -5.0,
      "height": 1.55,
@@ -18392,9 +18698,9 @@
      "f": 3582,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.1213,
       -0.85,
-      0.0
+      0.07
      ],
      "rotY": -5.0,
      "height": 1.55,
@@ -18416,6 +18722,19 @@
      "restart": true
     }
    ],
+   "track": {
+    "v": [
+     -0.1299,
+     0.0,
+     0.075
+    ],
+    "mid": 3532,
+    "lead": [
+     -0.1257,
+     0.0,
+     -0.011
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -18548,9 +18867,9 @@
      "f": 3561,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.1213,
       -0.85,
-      0.0
+      0.07
      ],
      "rotY": -5.0,
      "height": 1.55,
@@ -18573,9 +18892,9 @@
      "f": 3582,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.1213,
       -0.85,
-      0.0
+      0.07
      ],
      "rotY": -5.0,
      "height": 1.55,
@@ -18597,6 +18916,19 @@
      "restart": true
     }
    ],
+   "track": {
+    "v": [
+     -0.1299,
+     0.0,
+     0.075
+    ],
+    "mid": 3532,
+    "lead": [
+     -0.1257,
+     0.0,
+     -0.011
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -18695,9 +19027,9 @@
      "f": 3575,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.1213,
       -0.85,
-      0.0
+      0.07
      ],
      "rotY": -5.0,
      "height": 1.55,
@@ -18720,9 +19052,9 @@
      "f": 3582,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.1213,
       -0.85,
-      0.0
+      0.07
      ],
      "rotY": -5.0,
      "height": 1.55,
@@ -18744,6 +19076,19 @@
      "restart": true
     }
    ],
+   "track": {
+    "v": [
+     -0.1299,
+     0.0,
+     0.075
+    ],
+    "mid": 3532,
+    "lead": [
+     -0.1257,
+     0.0,
+     -0.011
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -18841,9 +19186,9 @@
      "f": 3582,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.1213,
       -0.85,
-      0.0
+      0.07
      ],
      "rotY": -5.0,
      "height": 1.55,
@@ -18867,9 +19212,9 @@
      "f": 3590,
      "pose": "stand",
      "pos": [
-      0.0,
+      -0.1213,
       -0.85,
-      0.0
+      0.07
      ],
      "rotY": -5.0,
      "height": 1.55,
@@ -18891,6 +19236,19 @@
      "restart": true
     }
    ],
+   "track": {
+    "v": [
+     -0.1299,
+     0.0,
+     0.075
+    ],
+    "mid": 3532,
+    "lead": [
+     -0.1257,
+     0.0,
+     -0.011
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -19215,9 +19573,9 @@
       1.8788
      ],
      "look": [
-      0.0,
+      -0.3402,
       0.35,
-      0.0
+      0.1238
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -19232,9 +19590,9 @@
       1.8504
      ],
      "look": [
-      0.0,
+      -0.3402,
       1.45,
-      0.0
+      0.1238
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -19365,9 +19723,9 @@
       1.8581
      ],
      "look": [
-      0.0,
+      0.3402,
       1.5,
-      0.0
+      -0.1238
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -19382,9 +19740,9 @@
       1.8552
      ],
      "look": [
-      0.0,
+      0.3402,
       1.5,
-      0.0
+      -0.1238
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -19555,9 +19913,9 @@
       -20.8061
      ],
      "look": [
-      -6.07,
+      -6.4371,
       2.9,
-      -22.75
+      -22.6516
      ],
      "fov": 46.0,
      "roll": -10.0,
@@ -19572,9 +19930,9 @@
       -20.9578
      ],
      "look": [
-      -6.07,
+      -6.4371,
       2.9,
-      -22.75
+      -22.6516
      ],
      "fov": 46.0,
      "roll": -10.0,
@@ -19590,9 +19948,9 @@
       -20.9578
      ],
      "look": [
-      -6.07,
+      -6.4371,
       2.9,
-      -22.75
+      -22.6516
      ],
      "fov": 46.0,
      "roll": -10.0,
@@ -19903,9 +20261,9 @@
       -27.1931
      ],
      "look": [
-      -7.5,
+      -7.3351,
       5.3,
-      -28.16
+      -28.7753
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -19920,9 +20278,9 @@
       -27.3441
      ],
      "look": [
-      -7.5,
+      -7.3351,
       5.3,
-      -28.16
+      -28.7753
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -19937,9 +20295,9 @@
       -27.4283
      ],
      "look": [
-      -7.5,
+      -7.3351,
       5.3,
-      -28.16
+      -28.7753
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -20204,9 +20562,9 @@
       -27.1931
      ],
      "look": [
-      -7.5,
+      -7.3351,
       5.3,
-      -28.16
+      -28.7753
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -20221,9 +20579,9 @@
       -27.3441
      ],
      "look": [
-      -7.5,
+      -7.3351,
       5.3,
-      -28.16
+      -28.7753
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -20238,9 +20596,9 @@
       -27.4283
      ],
      "look": [
-      -7.5,
+      -7.3351,
       5.3,
-      -28.16
+      -28.7753
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -21268,9 +21626,9 @@
       -25.3025
      ],
      "look": [
-      -7.46,
+      -7.8706,
       13.38,
-      -27.97
+      -27.7786
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -21285,9 +21643,9 @@
       -25.7115
      ],
      "look": [
-      -7.46,
+      -7.8706,
       13.38,
-      -27.97
+      -27.7786
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -21302,9 +21660,9 @@
       -25.9389
      ],
      "look": [
-      -7.46,
+      -7.8706,
       13.38,
-      -27.97
+      -27.7786
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -22004,9 +22362,9 @@
      "f": 4066,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -22029,7 +22387,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "61",
    "from": 4066,
    "to": 4095,
@@ -22078,14 +22435,14 @@
     {
      "f": 4066,
      "pos": [
-      -6.729,
-      14.017,
-      -29.9587
+      -6.811,
+      14.3,
+      -29.7857
      ],
      "look": [
-      -7.437,
-      14.017,
-      -31.185
+      -7.519,
+      14.3,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22095,14 +22452,14 @@
     {
      "f": 4070,
      "pos": [
-      -6.837,
-      14.017,
-      -30.1458
+      -6.919,
+      14.3,
+      -29.9728
      ],
      "look": [
-      -7.437,
-      14.017,
-      -31.185
+      -7.519,
+      14.3,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22112,14 +22469,14 @@
     {
      "f": 4095,
      "pos": [
-      -6.897,
-      14.017,
-      -30.2497
+      -6.979,
+      14.3,
+      -30.0767
      ],
      "look": [
-      -7.437,
-      14.017,
-      -31.185
+      -7.519,
+      14.3,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22160,9 +22517,9 @@
      "f": 4095,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -22185,7 +22542,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "61a",
    "from": 4095,
    "to": 4115,
@@ -22234,14 +22590,14 @@
     {
      "f": 4095,
      "pos": [
-      -7.2843,
-      14.044,
-      -30.6151
+      -7.3663,
+      14.32,
+      -30.4421
      ],
      "look": [
-      -7.437,
-      14.044,
-      -31.185
+      -7.519,
+      14.32,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22251,14 +22607,14 @@
     {
      "f": 4099,
      "pos": [
-      -7.3076,
-      14.044,
-      -30.702
+      -7.3896,
+      14.32,
+      -30.529
      ],
      "look": [
-      -7.437,
-      14.044,
-      -31.185
+      -7.519,
+      14.32,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22268,14 +22624,14 @@
     {
      "f": 4115,
      "pos": [
-      -7.3205,
-      14.044,
-      -30.7503
+      -7.4025,
+      14.32,
+      -30.5773
      ],
      "look": [
-      -7.437,
-      14.044,
-      -31.185
+      -7.519,
+      14.32,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22369,14 +22725,14 @@
     {
      "f": 4115,
      "pos": [
-      -6.729,
+      -6.811,
       14.3,
-      -29.9587
+      -29.7857
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.3,
-      -31.185
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22386,14 +22742,14 @@
     {
      "f": 4119,
      "pos": [
-      -6.837,
+      -6.919,
       14.3,
-      -30.1458
+      -29.9728
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.3,
-      -31.185
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22403,14 +22759,14 @@
     {
      "f": 4123,
      "pos": [
-      -6.897,
+      -6.979,
       14.3,
-      -30.2497
+      -30.0767
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.3,
-      -31.185
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22451,9 +22807,9 @@
      "f": 4123,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -22524,14 +22880,14 @@
     {
      "f": 4123,
      "pos": [
-      -7.137,
+      -7.219,
       15.5,
-      -30.785
+      -30.612
      ],
      "look": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.585
+      -31.412
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -22572,9 +22928,9 @@
      "f": 4152,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -22596,7 +22952,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "62a",
    "from": 4152,
    "to": 4172,
@@ -22646,14 +23001,14 @@
     {
      "f": 4152,
      "pos": [
-      -7.0282,
-      14.066,
-      -30.949
+      -7.1102,
+      14.0,
+      -30.776
      ],
      "look": [
-      -7.437,
-      14.066,
-      -31.185
+      -7.519,
+      14.0,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22663,14 +23018,14 @@
     {
      "f": 4156,
      "pos": [
-      -7.0906,
-      14.066,
-      -30.985
+      -7.1726,
+      14.0,
+      -30.812
      ],
      "look": [
-      -7.437,
-      14.066,
-      -31.185
+      -7.519,
+      14.0,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22680,14 +23035,14 @@
     {
      "f": 4172,
      "pos": [
-      -7.1252,
-      14.066,
-      -31.005
+      -7.2072,
+      14.0,
+      -30.832
      ],
      "look": [
-      -7.437,
-      14.066,
-      -31.185
+      -7.519,
+      14.0,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22783,14 +23138,14 @@
     {
      "f": 4172,
      "pos": [
-      -7.137,
+      -7.219,
       15.5,
-      -30.785
+      -30.612
      ],
      "look": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.585
+      -31.412
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -22831,9 +23186,9 @@
      "f": 4178,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -22907,14 +23262,14 @@
     {
      "f": 4178,
      "pos": [
-      -6.949,
+      -7.031,
       14.1,
-      -29.3639
+      -29.1909
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.2,
-      -31.185
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22924,14 +23279,14 @@
     {
      "f": 4182,
      "pos": [
-      -7.0237,
+      -7.1057,
       14.1,
-      -29.6425
+      -29.4695
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.2,
-      -31.185
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22941,14 +23296,14 @@
     {
      "f": 4207,
      "pos": [
-      -7.0652,
+      -7.1472,
       14.1,
-      -29.7974
+      -29.6244
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.2,
-      -31.185
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -22989,9 +23344,9 @@
      "f": 4207,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -23065,14 +23420,14 @@
     {
      "f": 4207,
      "pos": [
-      -7.6016,
+      -7.6836,
       14.2,
-      -29.3042
+      -29.1312
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.2,
-      -31.185
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23082,14 +23437,14 @@
     {
      "f": 4211,
      "pos": [
-      -7.5764,
+      -7.6584,
       14.2,
-      -29.5911
+      -29.4181
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.2,
-      -31.185
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23099,14 +23454,14 @@
     {
      "f": 4228,
      "pos": [
-      -7.5625,
+      -7.6445,
       14.2,
-      -29.7505
+      -29.5775
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.2,
-      -31.185
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23147,9 +23502,9 @@
      "f": 4228,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -23271,9 +23626,9 @@
      "f": 4235,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -23297,9 +23652,9 @@
      "f": 4243,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -23324,7 +23679,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "64",
    "from": 4235,
    "to": 4264,
@@ -23375,14 +23729,14 @@
     {
      "f": 4235,
      "pos": [
-      -7.1378,
-      14.037,
-      -30.5433
+      -7.2198,
+      14.3,
+      -30.3703
      ],
      "look": [
-      -7.437,
-      14.037,
-      -31.185
+      -7.519,
+      14.3,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23392,14 +23746,14 @@
     {
      "f": 4239,
      "pos": [
-      -7.1834,
-      14.037,
-      -30.6412
+      -7.2654,
+      14.3,
+      -30.4682
      ],
      "look": [
-      -7.437,
-      14.037,
-      -31.185
+      -7.519,
+      14.3,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23409,14 +23763,14 @@
     {
      "f": 4264,
      "pos": [
-      -7.2088,
-      14.037,
-      -30.6956
+      -7.2908,
+      14.3,
+      -30.5226
      ],
      "look": [
-      -7.437,
-      14.037,
-      -31.185
+      -7.519,
+      14.3,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23457,9 +23811,9 @@
      "f": 4264,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -23483,9 +23837,9 @@
      "f": 4272,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -23510,7 +23864,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "64a",
    "from": 4264,
    "to": 4279,
@@ -23562,14 +23915,14 @@
     {
      "f": 4264,
      "pos": [
-      -7.2874,
-      14.06,
-      -30.8642
+      -7.3694,
+      14.2,
+      -30.6912
      ],
      "look": [
-      -7.437,
-      14.06,
-      -31.185
+      -7.519,
+      14.2,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23579,14 +23932,14 @@
     {
      "f": 4268,
      "pos": [
-      -7.3102,
-      14.06,
-      -30.9131
+      -7.3922,
+      14.2,
+      -30.7401
      ],
      "look": [
-      -7.437,
-      14.06,
-      -31.185
+      -7.519,
+      14.2,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23596,14 +23949,14 @@
     {
      "f": 4279,
      "pos": [
-      -7.3229,
-      14.06,
-      -30.9403
+      -7.4049,
+      14.2,
+      -30.7673
      ],
      "look": [
-      -7.437,
-      14.06,
-      -31.185
+      -7.519,
+      14.2,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23644,9 +23997,9 @@
      "f": 4279,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -23670,7 +24023,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "64b",
    "from": 4279,
    "to": 4285,
@@ -23721,14 +24073,14 @@
     {
      "f": 4279,
      "pos": [
-      -7.2874,
-      14.059,
-      -30.8642
+      -7.3694,
+      14.2,
+      -30.6912
      ],
      "look": [
-      -7.437,
-      14.059,
-      -31.185
+      -7.519,
+      14.2,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23738,14 +24090,14 @@
     {
      "f": 4283,
      "pos": [
-      -7.3102,
-      14.059,
-      -30.9131
+      -7.3922,
+      14.2,
+      -30.7401
      ],
      "look": [
-      -7.437,
-      14.059,
-      -31.185
+      -7.519,
+      14.2,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23755,14 +24107,14 @@
     {
      "f": 4285,
      "pos": [
-      -7.3229,
-      14.059,
-      -30.9403
+      -7.4049,
+      14.2,
+      -30.7673
      ],
      "look": [
-      -7.437,
-      14.059,
-      -31.185
+      -7.519,
+      14.2,
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23858,14 +24210,14 @@
     {
      "f": 4285,
      "pos": [
-      -7.1378,
+      -7.2198,
       14.3,
-      -30.5433
+      -30.3703
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.3,
-      -31.185
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23875,14 +24227,14 @@
     {
      "f": 4289,
      "pos": [
-      -7.1834,
+      -7.2654,
       14.3,
-      -30.6412
+      -30.4682
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.3,
-      -31.185
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23892,14 +24244,14 @@
     {
      "f": 4291,
      "pos": [
-      -7.2088,
+      -7.2908,
       14.3,
-      -30.6956
+      -30.5226
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.3,
-      -31.185
+      -31.012
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -23940,9 +24292,9 @@
      "f": 4291,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -24013,14 +24365,14 @@
     {
      "f": 4291,
      "pos": [
-      -6.033,
+      -6.115,
       13.65,
-      -30.2019
+      -30.0289
      ],
      "look": [
-      -7.437,
+      -7.332,
       14.2,
-      -31.185
+      -31.279
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -24030,14 +24382,14 @@
     {
      "f": 4333,
      "pos": [
-      -5.7296,
+      -5.8116,
       13.65,
-      -31.0356
+      -30.8626
      ],
      "look": [
-      -7.437,
+      -7.4906,
       14.2,
-      -31.185
+      -31.3368
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -24078,9 +24430,9 @@
      "f": 4320,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -24152,14 +24504,14 @@
     {
      "f": 4320,
      "pos": [
-      -6.9537,
+      -7.0357,
       13.0,
-      -30.8466
+      -30.6736
      ],
      "look": [
-      -7.437,
+      -7.519,
       13.0,
-      -31.185
+      -31.012
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -24169,14 +24521,14 @@
     {
      "f": 4324,
      "pos": [
-      -7.0274,
+      -7.1094,
       13.0,
-      -30.8982
+      -30.7252
      ],
      "look": [
-      -7.437,
+      -7.519,
       13.0,
-      -31.185
+      -31.012
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -24186,14 +24538,14 @@
     {
      "f": 4334,
      "pos": [
-      -7.0684,
+      -7.1504,
       13.0,
-      -30.9269
+      -30.7539
      ],
      "look": [
-      -7.437,
+      -7.519,
       13.0,
-      -31.185
+      -31.012
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -24234,9 +24586,9 @@
      "f": 4334,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -24307,14 +24659,14 @@
     {
      "f": 4334,
      "pos": [
-      -7.6941,
+      -7.7761,
       15.3,
-      -31.8914
+      -31.7184
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.1,
-      -31.185
+      -31.012
      ],
      "fov": 48.0,
      "roll": 180.0,
@@ -24324,14 +24676,14 @@
     {
      "f": 4338,
      "pos": [
-      -7.4404,
+      -7.5224,
       15.3,
-      -31.1944
+      -31.0214
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.1,
-      -31.185
+      -31.012
      ],
      "fov": 48.0,
      "roll": 180.0,
@@ -24341,14 +24693,14 @@
     {
      "f": 4348,
      "pos": [
-      -7.4404,
+      -7.5224,
       15.3,
-      -31.1944
+      -31.0214
      ],
      "look": [
-      -7.437,
+      -7.519,
       14.1,
-      -31.185
+      -31.012
      ],
      "fov": 48.0,
      "roll": 180.0,
@@ -24389,9 +24741,9 @@
      "f": 4348,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -24462,14 +24814,14 @@
     {
      "f": 4348,
      "pos": [
-      -7.437,
+      -7.519,
       15.9,
-      -30.885
+      -30.712
      ],
      "look": [
-      -7.437,
+      -7.519,
       13.5,
-      -31.185
+      -31.012
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -24562,14 +24914,14 @@
     {
      "f": 4363,
      "pos": [
-      -6.033,
+      -6.115,
       13.65,
-      -30.2019
+      -30.0289
      ],
      "look": [
-      -7.437,
+      -7.332,
       14.2,
-      -31.185
+      -31.279
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -24579,14 +24931,14 @@
     {
      "f": 4405,
      "pos": [
-      -5.7296,
+      -5.8116,
       13.65,
-      -31.0356
+      -30.8626
      ],
      "look": [
-      -7.437,
+      -7.4906,
       14.2,
-      -31.185
+      -31.3368
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -24627,9 +24979,9 @@
      "f": 4370,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -24701,14 +25053,14 @@
     {
      "f": 4370,
      "pos": [
-      -7.1892,
+      -7.2712,
       13.05,
-      -30.9372
+      -30.7642
      ],
      "look": [
-      -7.437,
+      -7.519,
       13.0,
-      -31.185
+      -31.012
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -24718,14 +25070,14 @@
     {
      "f": 4374,
      "pos": [
-      -7.2278,
+      -7.3098,
       13.05,
-      -30.9758
+      -30.8028
      ],
      "look": [
-      -7.437,
+      -7.519,
       13.0,
-      -31.185
+      -31.012
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -24735,14 +25087,14 @@
     {
      "f": 4377,
      "pos": [
-      -7.2494,
+      -7.3314,
       13.05,
-      -30.9974
+      -30.8244
      ],
      "look": [
-      -7.437,
+      -7.519,
       13.0,
-      -31.185
+      -31.012
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -24783,9 +25135,9 @@
      "f": 4377,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.519,
       12.9,
-      -31.185
+      -31.012
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -24809,7 +25161,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "65f",
    "from": 4377,
    "to": 4389,
@@ -24857,14 +25208,14 @@
     {
      "f": 4377,
      "pos": [
-      -8.1138,
-      13.702,
-      -30.2184
+      -8.1958,
+      13.9,
+      -30.0454
      ],
      "look": [
-      -7.437,
-      13.702,
-      -31.185
+      -7.519,
+      13.9,
+      -31.012
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -24874,14 +25225,14 @@
     {
      "f": 4381,
      "pos": [
-      -8.0106,
-      13.702,
-      -30.3658
+      -8.0926,
+      13.9,
+      -30.1928
      ],
      "look": [
-      -7.437,
-      13.702,
-      -31.185
+      -7.519,
+      13.9,
+      -31.012
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -24891,14 +25242,14 @@
     {
      "f": 4389,
      "pos": [
-      -7.9532,
-      13.702,
-      -30.4478
+      -8.0352,
+      13.9,
+      -30.2748
      ],
      "look": [
-      -7.437,
-      13.702,
-      -31.185
+      -7.519,
+      13.9,
+      -31.012
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -24939,9 +25290,9 @@
      "f": 4389,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -24963,9 +25314,9 @@
      "f": 4404,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -25123,9 +25474,9 @@
      "f": 4419,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -25147,7 +25498,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "66a",
    "from": 4419,
    "to": 4439,
@@ -25200,14 +25550,14 @@
     {
      "f": 4419,
      "pos": [
-      -7.1663,
-      14.053,
-      -30.7984
+      -7.2004,
+      14.05,
+      -28.1941
      ],
      "look": [
-      -7.437,
-      14.053,
-      -31.185
+      -7.708,
+      14.05,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -25217,14 +25567,14 @@
     {
      "f": 4423,
      "pos": [
-      -7.2076,
-      14.053,
-      -30.8573
+      -7.2778,
+      14.05,
+      -28.3046
      ],
      "look": [
-      -7.437,
-      14.053,
-      -31.185
+      -7.708,
+      14.05,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -25234,14 +25584,14 @@
     {
      "f": 4439,
      "pos": [
-      -7.2305,
-      14.053,
-      -30.8901
+      -7.3208,
+      14.05,
+      -28.3661
      ],
      "look": [
-      -7.437,
-      14.053,
-      -31.185
+      -7.708,
+      14.05,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -25423,9 +25773,9 @@
      "f": 4443,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -25499,14 +25849,14 @@
     {
      "f": 4443,
      "pos": [
-      -8.6159,
+      -8.8869,
       14.3,
-      -33.227
+      -30.961
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.2,
-      -31.185
+      -28.919
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -25516,14 +25866,14 @@
     {
      "f": 4447,
      "pos": [
-      -8.4357,
+      -8.7067,
       14.3,
-      -32.9149
+      -30.6489
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.2,
-      -31.185
+      -28.919
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -25533,14 +25883,14 @@
     {
      "f": 4460,
      "pos": [
-      -8.3356,
+      -8.6066,
       14.3,
-      -32.7414
+      -30.4754
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.2,
-      -31.185
+      -28.919
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -25581,9 +25931,9 @@
      "f": 4460,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -25660,14 +26010,14 @@
     {
      "f": 4460,
      "pos": [
-      -5.7696,
+      -6.0406,
       14.1,
-      -29.1978
+      -26.9318
      ],
      "look": [
-      -7.437,
+      -8.0129,
       14.2,
-      -31.185
+      -28.6632
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -25677,14 +26027,14 @@
     {
      "f": 4464,
      "pos": [
-      -6.0243,
+      -6.2953,
       14.1,
-      -29.5014
+      -27.2354
      ],
      "look": [
-      -7.437,
+      -8.0129,
       14.2,
-      -31.185
+      -28.6632
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -25694,14 +26044,14 @@
     {
      "f": 4489,
      "pos": [
-      -6.1659,
+      -6.4369,
       14.1,
-      -29.6702
+      -27.4042
      ],
      "look": [
-      -7.437,
+      -8.0129,
       14.2,
-      -31.185
+      -28.6632
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -25742,9 +26092,9 @@
      "f": 4489,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -25766,7 +26116,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "67a",
    "from": 4489,
    "to": 4504,
@@ -25822,14 +26171,14 @@
     {
      "f": 4489,
      "pos": [
-      -6.9819,
-      14.028,
-      -30.6426
+      -7.1391,
+      14.3,
+      -28.2411
      ],
      "look": [
-      -7.437,
-      14.028,
-      -31.185
+      -7.708,
+      14.3,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -25839,14 +26188,14 @@
     {
      "f": 4493,
      "pos": [
-      -7.0513,
-      14.028,
-      -30.7254
+      -7.2259,
+      14.3,
+      -28.3445
      ],
      "look": [
-      -7.437,
-      14.028,
-      -31.185
+      -7.708,
+      14.3,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -25856,14 +26205,14 @@
     {
      "f": 4504,
      "pos": [
-      -7.0899,
-      14.028,
-      -30.7713
+      -7.2741,
+      14.3,
+      -28.4019
      ],
      "look": [
-      -7.437,
-      14.028,
-      -31.185
+      -7.708,
+      14.3,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -25904,9 +26253,9 @@
      "f": 4504,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -25928,7 +26277,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "67b",
    "from": 4504,
    "to": 4511,
@@ -25984,14 +26332,14 @@
     {
      "f": 4504,
      "pos": [
-      -6.9819,
-      14.057,
-      -30.6426
+      -7.1391,
+      14.3,
+      -28.2411
      ],
      "look": [
-      -7.437,
-      14.057,
-      -31.185
+      -7.708,
+      14.3,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -26001,14 +26349,14 @@
     {
      "f": 4508,
      "pos": [
-      -7.0513,
-      14.057,
-      -30.7254
+      -7.2259,
+      14.3,
+      -28.3445
      ],
      "look": [
-      -7.437,
-      14.057,
-      -31.185
+      -7.708,
+      14.3,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -26018,14 +26366,14 @@
     {
      "f": 4511,
      "pos": [
-      -7.0899,
-      14.057,
-      -30.7713
+      -7.2741,
+      14.3,
+      -28.4019
      ],
      "look": [
-      -7.437,
-      14.057,
-      -31.185
+      -7.708,
+      14.3,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -26066,9 +26414,9 @@
      "f": 4511,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -26092,7 +26440,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "68",
    "from": 4511,
    "to": 4545,
@@ -26141,14 +26488,14 @@
     {
      "f": 4511,
      "pos": [
-      -7.0111,
-      14.076,
-      -31.1477
+      -6.8492,
+      14.3,
+      -28.8439
      ],
      "look": [
-      -7.437,
-      13.876,
-      -31.185
+      -7.708,
+      14.1,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -26158,14 +26505,14 @@
     {
      "f": 4515,
      "pos": [
-      -7.0919,
-      14.076,
-      -31.1548
+      -6.9879,
+      14.3,
+      -28.856
      ],
      "look": [
-      -7.437,
-      13.876,
-      -31.185
+      -7.708,
+      14.1,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -26175,14 +26522,14 @@
     {
      "f": 4545,
      "pos": [
-      -7.1388,
-      14.076,
-      -31.1589
+      -7.0658,
+      14.3,
+      -28.8628
      ],
      "look": [
-      -7.437,
-      13.876,
-      -31.185
+      -7.708,
+      14.1,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -26223,9 +26570,9 @@
      "f": 4545,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -26297,14 +26644,14 @@
     {
      "f": 4545,
      "pos": [
-      -7.1431,
+      -6.8264,
       14.15,
-      -31.1593
+      -28.8419
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.15,
-      -31.185
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -26314,14 +26661,14 @@
     {
      "f": 4549,
      "pos": [
-      -7.188,
+      -6.9609,
       14.15,
-      -31.1632
+      -28.8536
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.15,
-      -31.185
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -26331,14 +26678,14 @@
     {
      "f": 4565,
      "pos": [
-      -7.2129,
+      -7.0356,
       14.15,
-      -31.1654
+      -28.8602
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.15,
-      -31.185
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -26432,14 +26779,14 @@
     {
      "f": 4565,
      "pos": [
-      -7.0111,
+      -6.8492,
       14.3,
-      -31.1477
+      -28.8439
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.1,
-      -31.185
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -26449,14 +26796,14 @@
     {
      "f": 4569,
      "pos": [
-      -7.0919,
+      -6.9879,
       14.3,
-      -31.1548
+      -28.856
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.1,
-      -31.185
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -26466,14 +26813,14 @@
     {
      "f": 4572,
      "pos": [
-      -7.1388,
+      -7.0658,
       14.3,
-      -31.1589
+      -28.8628
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.1,
-      -31.185
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -26514,9 +26861,9 @@
      "f": 4572,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.4,
-      -31.185
+      -28.919
      ],
      "rotY": -165.0,
      "height": 1.55,
@@ -26540,7 +26887,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "69",
    "from": 4572,
    "to": 4588,
@@ -26591,14 +26937,14 @@
     {
      "f": 4572,
      "pos": [
-      -6.2657,
-      13.181,
-      -31.2875
+      -6.5367,
+      13.3,
+      -29.0215
      ],
      "look": [
-      -7.437,
-      13.281,
-      -31.185
+      -7.708,
+      13.4,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -26608,14 +26954,14 @@
     {
      "f": 4576,
      "pos": [
-      -6.4458,
-      13.181,
-      -31.2717
+      -6.7168,
+      13.3,
+      -29.0057
      ],
      "look": [
-      -7.437,
-      13.281,
-      -31.185
+      -7.708,
+      13.4,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -26625,14 +26971,14 @@
     {
      "f": 4588,
      "pos": [
-      -6.546,
-      13.181,
-      -31.263
+      -6.817,
+      13.3,
+      -28.997
      ],
      "look": [
-      -7.437,
-      13.281,
-      -31.185
+      -7.708,
+      13.4,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -26673,9 +27019,9 @@
      "f": 4588,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.4,
-      -31.185
+      -28.919
      ],
      "rotY": -165.0,
      "height": 1.55,
@@ -26699,7 +27045,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "69a",
    "from": 4588,
    "to": 4602,
@@ -26751,14 +27096,14 @@
     {
      "f": 4588,
      "pos": [
-      -6.8492,
-      13.462,
-      -31.2364
+      -6.8264,
+      13.0,
+      -28.9961
      ],
      "look": [
-      -7.437,
-      13.462,
-      -31.185
+      -7.708,
+      13.0,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -26768,14 +27113,14 @@
     {
      "f": 4592,
      "pos": [
-      -6.9389,
-      13.462,
-      -31.2286
+      -6.9609,
+      13.0,
+      -28.9844
      ],
      "look": [
-      -7.437,
-      13.462,
-      -31.185
+      -7.708,
+      13.0,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -26785,14 +27130,14 @@
     {
      "f": 4602,
      "pos": [
-      -6.9887,
-      13.462,
-      -31.2242
+      -7.0356,
+      13.0,
+      -28.9778
      ],
      "look": [
-      -7.437,
-      13.462,
-      -31.185
+      -7.708,
+      13.0,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -26833,9 +27178,9 @@
      "f": 4602,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.4,
-      -31.185
+      -28.919
      ],
      "rotY": -165.0,
      "height": 1.55,
@@ -26909,14 +27254,14 @@
     {
      "f": 4602,
      "pos": [
-      -7.6597,
+      -7.9307,
       13.1,
-      -32.4481
+      -30.1821
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.7,
-      -31.185
+      -28.919
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -26926,14 +27271,14 @@
     {
      "f": 4606,
      "pos": [
-      -7.6175,
+      -7.8885,
       13.1,
-      -32.2084
+      -29.9424
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.7,
-      -31.185
+      -28.919
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -26943,14 +27288,14 @@
     {
      "f": 4609,
      "pos": [
-      -7.5929,
+      -7.8639,
       13.1,
-      -32.0694
+      -29.8034
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.7,
-      -31.185
+      -28.919
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -27046,14 +27391,14 @@
     {
      "f": 4609,
      "pos": [
-      -6.2657,
+      -6.5367,
       13.3,
-      -31.2875
+      -29.0215
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.4,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -27063,14 +27408,14 @@
     {
      "f": 4613,
      "pos": [
-      -6.4458,
+      -6.7168,
       13.3,
-      -31.2717
+      -29.0057
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.4,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -27080,14 +27425,14 @@
     {
      "f": 4616,
      "pos": [
-      -6.546,
+      -6.817,
       13.3,
-      -31.263
+      -28.997
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.4,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -27128,9 +27473,9 @@
      "f": 4616,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.4,
-      -31.185
+      -28.919
      ],
      "rotY": -165.0,
      "height": 1.55,
@@ -27204,14 +27549,14 @@
     {
      "f": 4616,
      "pos": [
-      -6.884,
+      -6.8492,
       13.3,
-      -31.2334
+      -28.9941
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.5,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -27221,14 +27566,14 @@
     {
      "f": 4620,
      "pos": [
-      -6.9805,
+      -6.9879,
       13.3,
-      -31.2249
+      -28.982
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.5,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -27238,14 +27583,14 @@
     {
      "f": 4623,
      "pos": [
-      -7.0354,
+      -7.0658,
       13.3,
-      -31.2201
+      -28.9752
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.5,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -27286,9 +27631,9 @@
      "f": 4623,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.4,
-      -31.185
+      -28.919
      ],
      "rotY": -165.0,
      "height": 1.55,
@@ -27362,14 +27707,14 @@
     {
      "f": 4623,
      "pos": [
-      -6.2657,
+      -6.5367,
       13.3,
-      -31.2875
+      -29.0215
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.4,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -27379,14 +27724,14 @@
     {
      "f": 4627,
      "pos": [
-      -6.4458,
+      -6.7168,
       13.3,
-      -31.2717
+      -29.0057
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.4,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -27396,14 +27741,14 @@
     {
      "f": 4629,
      "pos": [
-      -6.546,
+      -6.817,
       13.3,
-      -31.263
+      -28.997
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.4,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 14.0,
@@ -27444,9 +27789,9 @@
      "f": 4629,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": 20.0,
      "height": 1.55,
@@ -27482,7 +27827,6 @@
      "to": 4659
     }
    ],
-   "fitted": true,
    "id": "70",
    "from": 4629,
    "to": 4658,
@@ -27530,14 +27874,14 @@
     {
      "f": 4629,
      "pos": [
-      -7.1532,
-      13.839,
-      -30.4052
+      -7.4242,
+      13.8,
+      -28.1392
      ],
      "look": [
-      -7.437,
-      14.289,
-      -31.185
+      -7.708,
+      14.25,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -27547,14 +27891,14 @@
     {
      "f": 4633,
      "pos": [
-      -7.2108,
-      13.839,
-      -30.5635
+      -7.4818,
+      13.8,
+      -28.2975
      ],
      "look": [
-      -7.437,
-      14.289,
-      -31.185
+      -7.708,
+      14.25,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -27564,14 +27908,14 @@
     {
      "f": 4658,
      "pos": [
-      -7.2448,
-      13.839,
-      -30.6568
+      -7.5158,
+      13.8,
+      -28.3908
      ],
      "look": [
-      -7.437,
-      14.289,
-      -31.185
+      -7.708,
+      14.25,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -27612,9 +27956,9 @@
      "f": 4658,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": 20.0,
      "height": 1.55,
@@ -27650,7 +27994,6 @@
      "to": 4679
     }
    ],
-   "fitted": true,
    "id": "70a",
    "from": 4658,
    "to": 4678,
@@ -27698,14 +28041,14 @@
     {
      "f": 4658,
      "pos": [
-      -7.2957,
-      14.182,
-      -30.7969
+      -7.4053,
+      14.2,
+      -28.0874
      ],
      "look": [
-      -7.437,
-      14.182,
-      -31.185
+      -7.708,
+      14.2,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -27715,14 +28058,14 @@
     {
      "f": 4662,
      "pos": [
-      -7.3173,
-      14.182,
-      -30.8561
+      -7.4515,
+      14.2,
+      -28.2142
      ],
      "look": [
-      -7.437,
-      14.182,
-      -31.185
+      -7.708,
+      14.2,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -27732,14 +28075,14 @@
     {
      "f": 4678,
      "pos": [
-      -7.3293,
-      14.182,
-      -30.889
+      -7.4771,
+      14.2,
+      -28.2847
      ],
      "look": [
-      -7.437,
-      14.182,
-      -31.185
+      -7.708,
+      14.2,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -27832,14 +28175,14 @@
     {
      "f": 4678,
      "pos": [
-      -7.1532,
+      -7.4242,
       13.8,
-      -30.4052
+      -28.1392
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.25,
-      -31.185
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -27849,14 +28192,14 @@
     {
      "f": 4682,
      "pos": [
-      -7.2108,
+      -7.4818,
       13.8,
-      -30.5635
+      -28.2975
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.25,
-      -31.185
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -27866,14 +28209,14 @@
     {
      "f": 4685,
      "pos": [
-      -7.2448,
+      -7.5158,
       13.8,
-      -30.6568
+      -28.3908
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.25,
-      -31.185
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -27914,9 +28257,9 @@
      "f": 4685,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -27986,14 +28329,14 @@
     {
      "f": 4685,
      "pos": [
-      -6.537097346438846,
+      -6.808097346438846,
       14.1,
-      -30.112537779633428
+      -27.84653777963343
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.1,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -28003,14 +28346,14 @@
     {
      "f": 4741,
      "pos": [
-      -7.915828200655937,
+      -9.023569669100272,
       14.1,
-      -32.50056966910027
+      -29.397828200655937
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.1,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -28051,9 +28394,9 @@
      "f": 4728,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -28075,7 +28418,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "71a",
    "from": 4728,
    "to": 4741,
@@ -28124,14 +28466,14 @@
     {
      "f": 4728,
      "pos": [
-      -7.9566,
-      14.07,
-      -31.485
+      -8.3575,
+      13.9,
+      -29.294
      ],
      "look": [
-      -7.437,
-      14.07,
-      -31.185
+      -7.708,
+      13.9,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -28172,9 +28514,9 @@
      "f": 4741,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": 15.0,
      "height": 1.55,
@@ -28197,7 +28539,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "72",
    "from": 4741,
    "to": 4770,
@@ -28251,14 +28592,14 @@
     {
      "f": 4741,
      "pos": [
-      -7.1621,
-      13.791,
-      -30.1592
+      -7.4331,
+      14.05,
+      -27.8932
      ],
      "look": [
-      -7.437,
-      13.791,
-      -31.185
+      -7.708,
+      14.05,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28268,14 +28609,14 @@
     {
      "f": 4745,
      "pos": [
-      -7.2041,
-      13.791,
-      -30.3157
+      -7.4751,
+      14.05,
+      -28.0497
      ],
      "look": [
-      -7.437,
-      13.791,
-      -31.185
+      -7.708,
+      14.05,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28285,14 +28626,14 @@
     {
      "f": 4770,
      "pos": [
-      -7.2274,
-      13.791,
-      -30.4026
+      -7.4984,
+      14.05,
+      -28.1366
      ],
      "look": [
-      -7.437,
-      13.791,
-      -31.185
+      -7.708,
+      14.05,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28333,9 +28674,9 @@
      "f": 4770,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": 15.0,
      "height": 1.55,
@@ -28358,7 +28699,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "72a",
    "from": 4770,
    "to": 4790,
@@ -28413,14 +28753,14 @@
     {
      "f": 4770,
      "pos": [
-      -7.3759,
-      13.862,
-      -30.957
+      -7.4789,
+      14.0,
+      -28.0642
      ],
      "look": [
-      -7.437,
-      13.862,
-      -31.185
+      -7.708,
+      14.0,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28430,14 +28770,14 @@
     {
      "f": 4774,
      "pos": [
-      -7.3852,
-      13.862,
-      -30.9918
+      -7.5139,
+      14.0,
+      -28.1946
      ],
      "look": [
-      -7.437,
-      13.862,
-      -31.185
+      -7.708,
+      14.0,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28447,14 +28787,14 @@
     {
      "f": 4790,
      "pos": [
-      -7.3904,
-      13.862,
-      -31.0111
+      -7.5333,
+      14.0,
+      -28.267
      ],
      "look": [
-      -7.437,
-      13.862,
-      -31.185
+      -7.708,
+      14.0,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28554,14 +28894,14 @@
     {
      "f": 4790,
      "pos": [
-      -7.1621,
+      -7.4331,
       14.05,
-      -30.1592
+      -27.8932
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.05,
-      -31.185
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28571,14 +28911,14 @@
     {
      "f": 4794,
      "pos": [
-      -7.2041,
+      -7.4751,
       14.05,
-      -30.3157
+      -28.0497
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.05,
-      -31.185
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28588,14 +28928,14 @@
     {
      "f": 4797,
      "pos": [
-      -7.2274,
+      -7.4984,
       14.05,
-      -30.4026
+      -28.1366
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.05,
-      -31.185
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28636,9 +28976,9 @@
      "f": 4797,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -28661,9 +29001,9 @@
      "f": 4805,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -28687,7 +29027,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "73",
    "from": 4797,
    "to": 4827,
@@ -28741,14 +29080,14 @@
     {
      "f": 4797,
      "pos": [
-      -6.8514,
-      13.981,
-      -31.2362
+      -6.8278,
+      14.1,
+      -28.996
      ],
      "look": [
-      -7.437,
-      14.031,
-      -31.185
+      -7.708,
+      14.15,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28758,14 +29097,14 @@
     {
      "f": 4801,
      "pos": [
-      -6.9414,
-      13.981,
-      -31.2284
+      -6.9625,
+      14.1,
+      -28.9842
      ],
      "look": [
-      -7.437,
-      14.031,
-      -31.185
+      -7.708,
+      14.15,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28775,14 +29114,14 @@
     {
      "f": 4827,
      "pos": [
-      -6.9915,
-      13.981,
-      -31.224
+      -7.0374,
+      14.1,
+      -28.9777
      ],
      "look": [
-      -7.437,
-      14.031,
-      -31.185
+      -7.708,
+      14.15,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28823,9 +29162,9 @@
      "f": 4827,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -28848,9 +29187,9 @@
      "f": 4835,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -28874,7 +29213,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "73a",
    "from": 4827,
    "to": 4839,
@@ -28928,14 +29266,14 @@
     {
      "f": 4827,
      "pos": [
-      -7.1162,
-      14.062,
-      -31.3346
+      -6.9059,
+      14.1,
+      -29.293
      ],
      "look": [
-      -7.437,
-      14.062,
-      -31.185
+      -7.708,
+      14.1,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28945,14 +29283,14 @@
     {
      "f": 4831,
      "pos": [
-      -7.1651,
-      14.062,
-      -31.3118
+      -7.0283,
+      14.1,
+      -29.236
      ],
      "look": [
-      -7.437,
-      14.062,
-      -31.185
+      -7.708,
+      14.1,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -28962,14 +29300,14 @@
     {
      "f": 4839,
      "pos": [
-      -7.1923,
-      14.062,
-      -31.2991
+      -7.0962,
+      14.1,
+      -29.2043
      ],
      "look": [
-      -7.437,
-      14.062,
-      -31.185
+      -7.708,
+      14.1,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -29334,9 +29672,9 @@
      "f": 5022,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -29414,14 +29752,14 @@
     {
      "f": 5022,
      "pos": [
-      -5.7488,
+      -6.0198,
       14.3,
-      -28.7741
+      -26.5081
      ],
      "look": [
-      -7.437,
+      -7.3369,
       14.1,
-      -31.185
+      -29.1788
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -29431,14 +29769,14 @@
     {
      "f": 5026,
      "pos": [
-      -6.0077,
+      -6.2787,
       14.3,
-      -29.1437
+      -26.8777
      ],
      "look": [
-      -7.437,
+      -7.3369,
       14.1,
-      -31.185
+      -29.1788
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -29448,14 +29786,14 @@
     {
      "f": 5052,
      "pos": [
-      -6.1516,
+      -6.4226,
       14.3,
-      -29.3492
+      -27.0832
      ],
      "look": [
-      -7.437,
+      -7.3369,
       14.1,
-      -31.185
+      -29.1788
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -29496,9 +29834,9 @@
      "f": 5052,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -29520,7 +29858,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "77a",
    "from": 5052,
    "to": 5072,
@@ -29577,14 +29914,14 @@
     {
      "f": 5052,
      "pos": [
-      -7.1378,
-      14.033,
-      -30.5433
+      -7.334,
+      14.3,
+      -28.1169
      ],
      "look": [
-      -7.437,
-      14.033,
-      -31.185
+      -7.708,
+      14.3,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -29594,14 +29931,14 @@
     {
      "f": 5056,
      "pos": [
-      -7.1834,
-      14.033,
-      -30.6412
+      -7.391,
+      14.3,
+      -28.2393
      ],
      "look": [
-      -7.437,
-      14.033,
-      -31.185
+      -7.708,
+      14.3,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -29611,14 +29948,14 @@
     {
      "f": 5072,
      "pos": [
-      -7.2088,
-      14.033,
-      -30.6956
+      -7.4227,
+      14.3,
+      -28.3072
      ],
      "look": [
-      -7.437,
-      14.033,
-      -31.185
+      -7.708,
+      14.3,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -29721,14 +30058,14 @@
     {
      "f": 5072,
      "pos": [
-      -5.7488,
+      -6.0198,
       14.3,
-      -28.7741
+      -26.5081
      ],
      "look": [
-      -7.437,
+      -7.3369,
       14.1,
-      -31.185
+      -29.1788
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -29738,14 +30075,14 @@
     {
      "f": 5076,
      "pos": [
-      -6.0077,
+      -6.2787,
       14.3,
-      -29.1437
+      -26.8777
      ],
      "look": [
-      -7.437,
+      -7.3369,
       14.1,
-      -31.185
+      -29.1788
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -29755,14 +30092,14 @@
     {
      "f": 5079,
      "pos": [
-      -6.1516,
+      -6.4226,
       14.3,
-      -29.3492
+      -27.0832
      ],
      "look": [
-      -7.437,
+      -7.3369,
       14.1,
-      -31.185
+      -29.1788
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -29803,9 +30140,9 @@
      "f": 5079,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -29828,7 +30165,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "78a",
    "from": 5079,
    "to": 5087,
@@ -29876,14 +30212,14 @@
     {
      "f": 5079,
      "pos": [
-      -7.3547,
-      14.014,
-      -32.1254
+      -7.6257,
+      14.0,
+      -29.8594
      ],
      "look": [
-      -7.437,
-      14.014,
-      -31.185
+      -7.708,
+      14.0,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -29893,14 +30229,14 @@
     {
      "f": 5083,
      "pos": [
-      -7.3673,
-      14.014,
-      -31.982
+      -7.6383,
+      14.0,
+      -29.716
      ],
      "look": [
-      -7.437,
-      14.014,
-      -31.185
+      -7.708,
+      14.0,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -29910,14 +30246,14 @@
     {
      "f": 5087,
      "pos": [
-      -7.3742,
-      14.014,
-      -31.9023
+      -7.6452,
+      14.0,
+      -29.6363
      ],
      "look": [
-      -7.437,
-      14.014,
-      -31.185
+      -7.708,
+      14.0,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -29958,9 +30294,9 @@
      "f": 5087,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -29983,7 +30319,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "78b",
    "from": 5087,
    "to": 5093,
@@ -30031,14 +30366,14 @@
     {
      "f": 5087,
      "pos": [
-      -7.3856,
-      14.042,
-      -31.7728
+      -7.6309,
+      14.0,
+      -29.8006
      ],
      "look": [
-      -7.437,
-      14.042,
-      -31.185
+      -7.708,
+      14.0,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30048,14 +30383,14 @@
     {
      "f": 5091,
      "pos": [
-      -7.3934,
-      14.042,
-      -31.6831
+      -7.6426,
+      14.0,
+      -29.6661
      ],
      "look": [
-      -7.437,
-      14.042,
-      -31.185
+      -7.708,
+      14.0,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30065,14 +30400,14 @@
     {
      "f": 5093,
      "pos": [
-      -7.3978,
-      14.042,
-      -31.6333
+      -7.6492,
+      14.0,
+      -29.5914
      ],
      "look": [
-      -7.437,
-      14.042,
-      -31.185
+      -7.708,
+      14.0,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30113,9 +30448,9 @@
      "f": 5093,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -30184,14 +30519,14 @@
     {
      "f": 5093,
      "pos": [
-      -5.9108,
+      -6.1818,
       13.7,
-      -25.4893
+      -23.2233
      ],
      "look": [
-      -7.437,
+      -6.9584,
       13.9,
-      -31.185
+      -29.1198
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -30201,14 +30536,14 @@
     {
      "f": 5097,
      "pos": [
-      -6.1439,
+      -6.4149,
       13.7,
-      -26.3592
+      -24.0932
      ],
      "look": [
-      -7.437,
+      -6.9584,
       13.9,
-      -31.185
+      -29.1198
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -30218,14 +30553,14 @@
     {
      "f": 5122,
      "pos": [
-      -6.2735,
+      -6.5445,
       13.7,
-      -26.8426
+      -24.5766
      ],
      "look": [
-      -7.437,
+      -6.9584,
       13.9,
-      -31.185
+      -29.1198
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -30266,9 +30601,9 @@
      "f": 5122,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -30337,14 +30672,14 @@
     {
      "f": 5122,
      "pos": [
-      -6.1543,
+      -6.4253,
       14.07,
-      -26.398
+      -24.132
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.1,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30354,14 +30689,14 @@
     {
      "f": 5126,
      "pos": [
-      -6.35,
+      -6.621,
       14.07,
-      -27.1282
+      -24.8622
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.1,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30371,14 +30706,14 @@
     {
      "f": 5150,
      "pos": [
-      -6.4587,
+      -6.7297,
       14.07,
-      -27.5339
+      -25.2679
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.1,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30419,9 +30754,9 @@
      "f": 5150,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -30495,14 +30830,14 @@
     {
      "f": 5150,
      "pos": [
-      -6.2786,
+      -6.5496,
       14.03,
-      -26.8616
+      -24.5956
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30512,14 +30847,14 @@
     {
      "f": 5154,
      "pos": [
-      -6.456,
+      -6.727,
       14.03,
-      -27.5238
+      -25.2578
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30529,14 +30864,14 @@
     {
      "f": 5175,
      "pos": [
-      -6.5546,
+      -6.8256,
       14.03,
-      -27.8918
+      -25.6258
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30577,9 +30912,9 @@
      "f": 5175,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -30651,14 +30986,14 @@
     {
      "f": 5175,
      "pos": [
-      -6.3938,
+      -6.6648,
       13.1,
-      -27.2916
+      -25.0256
      ],
      "look": [
-      -7.437,
+      -8.2905,
       14.0,
-      -31.185
+      -28.7629
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -30668,14 +31003,14 @@
     {
      "f": 5179,
      "pos": [
-      -6.5616,
+      -6.8326,
       13.1,
-      -27.9179
+      -25.6519
      ],
      "look": [
-      -7.437,
+      -8.2905,
       14.0,
-      -31.185
+      -28.7629
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -30685,14 +31020,14 @@
     {
      "f": 5192,
      "pos": [
-      -6.6557,
+      -6.9267,
       13.1,
-      -28.2692
+      -26.0032
      ],
      "look": [
-      -7.437,
+      -8.2905,
       14.0,
-      -31.185
+      -28.7629
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -30733,9 +31068,9 @@
      "f": 5192,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -30807,14 +31142,14 @@
     {
      "f": 5192,
      "pos": [
-      -6.5211,
+      -6.7921,
       13.2,
-      -27.767
+      -25.501
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.1,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30824,14 +31159,14 @@
     {
      "f": 5196,
      "pos": [
-      -6.661,
+      -6.932,
       13.2,
-      -28.2888
+      -26.0228
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.1,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30841,14 +31176,14 @@
     {
      "f": 5206,
      "pos": [
-      -6.7387,
+      -7.0097,
       13.2,
-      -28.5788
+      -26.3128
      ],
      "look": [
-      -7.437,
+      -7.708,
       13.1,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30889,9 +31224,9 @@
      "f": 5206,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -30963,14 +31298,14 @@
     {
      "f": 5206,
      "pos": [
-      -6.6183,
+      -6.8893,
       13.92,
-      -28.1295
+      -25.8635
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30980,14 +31315,14 @@
     {
      "f": 5210,
      "pos": [
-      -6.7451,
+      -7.0161,
       13.92,
-      -28.603
+      -26.337
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -30997,14 +31332,14 @@
     {
      "f": 5220,
      "pos": [
-      -6.8158,
+      -7.0868,
       13.92,
-      -28.8667
+      -26.6007
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31045,9 +31380,9 @@
      "f": 5220,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -31124,14 +31459,14 @@
     {
      "f": 5220,
      "pos": [
-      -6.7084,
+      -6.9794,
       13.89,
-      -28.4659
+      -26.1999
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.2,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31141,14 +31476,14 @@
     {
      "f": 5224,
      "pos": [
-      -6.821,
+      -7.092,
       13.89,
-      -28.8862
+      -26.6202
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.2,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31158,14 +31493,14 @@
     {
      "f": 5232,
      "pos": [
-      -6.8837,
+      -7.1547,
       13.89,
-      -29.1202
+      -26.8542
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.2,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31206,9 +31541,9 @@
      "f": 5232,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -31282,14 +31617,14 @@
     {
      "f": 5232,
      "pos": [
-      -6.8311,
+      -7.1021,
       13.8,
-      -28.9239
+      -26.6579
      ],
      "look": [
-      -7.437,
+      -7.3748,
       14.1,
-      -31.185
+      -29.0083
      ],
      "fov": 44.0,
      "roll": -8.0,
@@ -31299,14 +31634,14 @@
     {
      "f": 5236,
      "pos": [
-      -6.9252,
+      -7.1962,
       13.8,
-      -29.275
+      -27.009
      ],
      "look": [
-      -7.437,
+      -7.3748,
       14.1,
-      -31.185
+      -29.0083
      ],
      "fov": 44.0,
      "roll": -8.0,
@@ -31316,14 +31651,14 @@
     {
      "f": 5241,
      "pos": [
-      -6.9776,
+      -7.2486,
       13.8,
-      -29.4707
+      -27.2047
      ],
      "look": [
-      -7.437,
+      -7.3748,
       14.1,
-      -31.185
+      -29.0083
      ],
      "fov": 44.0,
      "roll": -8.0,
@@ -31364,9 +31699,9 @@
      "f": 5241,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -31440,14 +31775,14 @@
     {
      "f": 5241,
      "pos": [
-      -6.9153,
+      -7.1863,
       13.83,
-      -29.2381
+      -26.9721
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.5,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31457,14 +31792,14 @@
     {
      "f": 5245,
      "pos": [
-      -7.0046,
+      -7.2756,
       13.83,
-      -29.5713
+      -27.3053
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.5,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31474,14 +31809,14 @@
     {
      "f": 5248,
      "pos": [
-      -7.0553,
+      -7.3263,
       13.83,
-      -29.7603
+      -27.4943
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.5,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31522,9 +31857,9 @@
      "f": 5248,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -31598,14 +31933,14 @@
     {
      "f": 5248,
      "pos": [
-      -6.6139,
+      -6.8849,
       13.82,
-      -29.4198
+      -27.1538
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31615,14 +31950,14 @@
     {
      "f": 5252,
      "pos": [
-      -6.7478,
+      -7.0188,
       13.82,
-      -29.707
+      -27.441
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31632,14 +31967,14 @@
     {
      "f": 5255,
      "pos": [
-      -6.823,
+      -7.094,
       13.82,
-      -29.8684
+      -27.6024
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31680,9 +32015,9 @@
      "f": 5255,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -31761,14 +32096,14 @@
     {
      "f": 5255,
      "pos": [
-      -6.9651,
+      -7.2361,
       13.81,
-      -29.4238
+      -27.1578
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31778,14 +32113,14 @@
     {
      "f": 5259,
      "pos": [
-      -7.0428,
+      -7.3138,
       13.81,
-      -29.7138
+      -27.4478
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31795,14 +32130,14 @@
     {
      "f": 5262,
      "pos": [
-      -7.0865,
+      -7.3575,
       13.81,
-      -29.8771
+      -27.6111
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31843,9 +32178,9 @@
      "f": 5262,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -31919,14 +32254,14 @@
     {
      "f": 5262,
      "pos": [
-      -6.9975,
+      -7.2685,
       13.8,
-      -29.5449
+      -27.2789
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31936,14 +32271,14 @@
     {
      "f": 5266,
      "pos": [
-      -7.071,
+      -7.342,
       13.8,
-      -29.819
+      -27.553
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -31953,14 +32288,14 @@
     {
      "f": 5269,
      "pos": [
-      -7.1124,
+      -7.3834,
       13.8,
-      -29.9737
+      -27.7077
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32001,9 +32336,9 @@
      "f": 5269,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -32077,14 +32412,14 @@
     {
      "f": 5269,
      "pos": [
-      -7.3092,
+      -7.5802,
       13.79,
-      -29.7238
+      -27.4578
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.55,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32094,14 +32429,14 @@
     {
      "f": 5273,
      "pos": [
-      -7.3345,
+      -7.6055,
       13.79,
-      -30.0137
+      -27.7477
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.55,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32111,14 +32446,14 @@
     {
      "f": 5277,
      "pos": [
-      -7.3494,
+      -7.6204,
       13.79,
-      -30.1838
+      -27.9178
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.55,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32159,9 +32494,9 @@
      "f": 5277,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -32235,14 +32570,14 @@
     {
      "f": 5277,
      "pos": [
-      -7.0635,
+      -7.3345,
       13.78,
-      -29.791
+      -27.525
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32252,14 +32587,14 @@
     {
      "f": 5281,
      "pos": [
-      -7.1286,
+      -7.3996,
       13.78,
-      -30.0341
+      -27.7681
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32269,14 +32604,14 @@
     {
      "f": 5284,
      "pos": [
-      -7.1657,
+      -7.4367,
       13.78,
-      -30.1726
+      -27.9066
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32317,9 +32652,9 @@
      "f": 5284,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -32398,14 +32733,14 @@
     {
      "f": 5284,
      "pos": [
-      -7.0972,
+      -7.3682,
       13.77,
-      -29.9167
+      -27.6507
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32415,14 +32750,14 @@
     {
      "f": 5288,
      "pos": [
-      -7.1584,
+      -7.4294,
       13.77,
-      -30.1451
+      -27.8791
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32432,14 +32767,14 @@
     {
      "f": 5288,
      "pos": [
-      -7.1934,
+      -7.4644,
       13.77,
-      -30.2761
+      -28.0101
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.3,
-      -31.185
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32480,9 +32815,9 @@
      "f": 5288,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -32505,7 +32840,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "82",
    "from": 5288,
    "to": 5298,
@@ -32556,14 +32890,14 @@
     {
      "f": 5288,
      "pos": [
-      -7.0714,
-      13.875,
-      -29.8207
+      -7.3424,
+      14.2,
+      -27.5547
      ],
      "look": [
-      -7.437,
-      13.975,
-      -31.185
+      -7.708,
+      14.3,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -32573,14 +32907,14 @@
     {
      "f": 5292,
      "pos": [
-      -7.1275,
-      13.875,
-      -30.0299
+      -7.3985,
+      14.2,
+      -27.7639
      ],
      "look": [
-      -7.437,
-      13.975,
-      -31.185
+      -7.708,
+      14.3,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -32590,14 +32924,14 @@
     {
      "f": 5298,
      "pos": [
-      -7.1587,
-      13.875,
-      -30.1463
+      -7.4297,
+      14.2,
+      -27.8803
      ],
      "look": [
-      -7.437,
-      13.975,
-      -31.185
+      -7.708,
+      14.3,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -32638,9 +32972,9 @@
      "f": 5298,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -32663,7 +32997,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "82a",
    "from": 5298,
    "to": 5307,
@@ -32714,14 +33047,14 @@
     {
      "f": 5298,
      "pos": [
-      -7.2067,
-      13.52,
-      -30.3257
+      -7.4777,
+      13.74,
+      -28.0597
      ],
      "look": [
-      -7.437,
-      14.1,
-      -31.185
+      -7.708,
+      14.32,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32731,14 +33064,14 @@
     {
      "f": 5302,
      "pos": [
-      -7.2589,
-      13.52,
-      -30.5203
+      -7.5299,
+      13.74,
+      -28.2543
      ],
      "look": [
-      -7.437,
-      14.1,
-      -31.185
+      -7.708,
+      14.32,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32748,14 +33081,14 @@
     {
      "f": 5307,
      "pos": [
-      -7.2907,
-      13.52,
-      -30.6388
+      -7.5617,
+      13.74,
+      -28.3728
      ],
      "look": [
-      -7.437,
-      14.1,
-      -31.185
+      -7.708,
+      14.32,
+      -28.919
      ],
      "fov": 46.0,
      "roll": 0.0,
@@ -32796,9 +33129,9 @@
      "f": 5307,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -32821,7 +33154,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "82b",
    "from": 5307,
    "to": 5315,
@@ -32873,14 +33205,14 @@
     {
      "f": 5307,
      "pos": [
-      -7.1316,
-      14.033,
-      -30.0452
+      -7.4026,
+      14.2,
+      -27.7792
      ],
      "look": [
-      -7.437,
-      14.033,
-      -31.185
+      -7.708,
+      14.2,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -32890,14 +33222,14 @@
     {
      "f": 5311,
      "pos": [
-      -7.1782,
-      14.033,
-      -30.2191
+      -7.4492,
+      14.2,
+      -27.9531
      ],
      "look": [
-      -7.437,
-      14.033,
-      -31.185
+      -7.708,
+      14.2,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -32907,14 +33239,14 @@
     {
      "f": 5315,
      "pos": [
-      -7.2041,
-      14.033,
-      -30.3157
+      -7.4751,
+      14.2,
+      -28.0497
      ],
      "look": [
-      -7.437,
-      14.033,
-      -31.185
+      -7.708,
+      14.2,
+      -28.919
      ],
      "fov": 44.0,
      "roll": 0.0,
@@ -32955,9 +33287,9 @@
      "f": 5315,
      "pose": "stand",
      "pos": [
-      -7.437,
+      -7.708,
       12.9,
-      -31.185
+      -28.919
      ],
      "rotY": -25.4,
      "height": 1.55,
@@ -33031,14 +33363,14 @@
     {
      "f": 5315,
      "pos": [
-      -7.3454,
+      -7.4789,
       14.32,
-      -30.8431
+      -28.0642
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.32,
-      -31.185
+      -28.919
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -33048,14 +33380,14 @@
     {
      "f": 5319,
      "pos": [
-      -7.3594,
+      -7.5139,
       14.32,
-      -30.8952
+      -28.1946
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.32,
-      -31.185
+      -28.919
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -33065,14 +33397,14 @@
     {
      "f": 5316,
      "pos": [
-      -7.3671,
+      -7.5333,
       14.32,
-      -30.9242
+      -28.267
      ],
      "look": [
-      -7.437,
+      -7.708,
       14.32,
-      -31.185
+      -28.919
      ],
      "fov": 40.0,
      "roll": 0.0,
