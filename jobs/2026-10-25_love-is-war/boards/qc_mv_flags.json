@@ -16,8 +16,8 @@
   "shot": "20",
   "F": 1266,
   "xy": [
-   0.548,
-   0.951
+   0.355,
+   0.955
   ],
   "frames": 17,
   "worst": 1,
@@ -46,18 +46,6 @@
   "frames": 9,
   "worst": 1,
   "what": "face cut by the frame edge"
- },
- {
-  "cls": "pierced",
-  "shot": "61a",
-  "F": 4112,
-  "xy": [
-   0.111,
-   0.905
-  ],
-  "frames": 8,
-  "worst": 0.00701,
-  "what": "room through her"
  },
  {
   "cls": "face_cut",
@@ -156,6 +144,18 @@
   "what": "room through her"
  },
  {
+  "cls": "pierced",
+  "shot": "59a",
+  "F": 3976,
+  "xy": [
+   0.869,
+   0.835
+  ],
+  "frames": 5,
+  "worst": 0.0065,
+  "what": "room through her"
+ },
+ {
   "cls": "face_cut",
   "shot": "30",
   "F": 2004,
@@ -238,18 +238,6 @@
  },
  {
   "cls": "face_cut",
-  "shot": "14",
-  "F": 816,
-  "xy": [
-   0.015,
-   0.837
-  ],
-  "frames": 3,
-  "worst": 1,
-  "what": "face cut by the frame edge"
- },
- {
-  "cls": "face_cut",
   "shot": "27",
   "F": 1776,
   "xy": [
@@ -297,63 +285,24 @@
   "what": "face cut by the frame edge"
  },
  {
-  "cls": "face_cut",
-  "shot": "66",
-  "F": 4406,
-  "xy": [
-   0.463,
-   0.07
-  ],
+  "cls": "her_pop",
+  "shot": "61a",
+  "F": 4102,
+  "xy": null,
   "frames": 3,
-  "worst": 1,
-  "what": "face cut by the frame edge"
+  "worst": 0.99,
+  "what": "her figure jumps / vanishes"
  },
  {
   "cls": "pierced",
-  "shot": "59a",
-  "F": 3978,
+  "shot": "58",
+  "F": 3910,
   "xy": [
-   0.049,
-   0.144
+   0.722,
+   0.754
   ],
   "frames": 2,
-  "worst": 0.0054,
-  "what": "room through her"
- },
- {
-  "cls": "pierced",
-  "shot": "64",
-  "F": 4258,
-  "xy": [
-   0.411,
-   0.908
-  ],
-  "frames": 2,
-  "worst": 0.00194,
-  "what": "room through her"
- },
- {
-  "cls": "pierced",
-  "shot": "70",
-  "F": 4642,
-  "xy": [
-   0.446,
-   0.116
-  ],
-  "frames": 2,
-  "worst": 0.00217,
-  "what": "room through her"
- },
- {
-  "cls": "pierced",
-  "shot": "72",
-  "F": 4758,
-  "xy": [
-   0.3,
-   0.961
-  ],
-  "frames": 2,
-  "worst": 0.0014,
+  "worst": 0.00184,
   "what": "room through her"
  },
  {
@@ -382,11 +331,11 @@
  },
  {
   "cls": "face_cut",
-  "shot": "45",
-  "F": 3028,
+  "shot": "58",
+  "F": 3906,
   "xy": [
-   0.943,
-   0.498
+   0.73,
+   0.972
   ],
   "frames": 2,
   "worst": 1,
@@ -406,26 +355,8 @@
  },
  {
   "cls": "her_pop",
-  "shot": "4",
-  "F": 248,
-  "xy": null,
-  "frames": 2,
-  "worst": 0.78,
-  "what": "her figure jumps / vanishes"
- },
- {
-  "cls": "her_pop",
-  "shot": "11c",
-  "F": 640,
-  "xy": null,
-  "frames": 2,
-  "worst": 0.92,
-  "what": "her figure jumps / vanishes"
- },
- {
-  "cls": "her_pop",
-  "shot": "12",
-  "F": 652,
+  "shot": "45",
+  "F": 3044,
   "xy": null,
   "frames": 2,
   "worst": 0.93,
@@ -433,14 +364,14 @@
  },
  {
   "cls": "her_pop",
-  "shot": "54",
-  "F": 3686,
+  "shot": "58",
+  "F": 3908,
   "xy": [
-   0.657,
-   0.521
+   0.744,
+   0.837
   ],
   "frames": 2,
-  "worst": 1.0,
+  "worst": 0.64,
   "what": "her figure jumps / vanishes"
  },
  {
@@ -474,30 +405,6 @@
   ],
   "frames": 1,
   "worst": 0.00758,
-  "what": "room through her"
- },
- {
-  "cls": "pierced",
-  "shot": "52",
-  "F": 3518,
-  "xy": [
-   0.258,
-   0.972
-  ],
-  "frames": 1,
-  "worst": 0.00117,
-  "what": "room through her"
- },
- {
-  "cls": "pierced",
-  "shot": "72a",
-  "F": 4776,
-  "xy": [
-   0.009,
-   0.968
-  ],
-  "frames": 1,
-  "worst": 0.0014,
   "what": "room through her"
  },
  {
@@ -562,44 +469,8 @@
  },
  {
   "cls": "her_pop",
-  "shot": "3",
-  "F": 182,
-  "xy": null,
-  "frames": 1,
-  "worst": 0.66,
-  "what": "her figure jumps / vanishes"
- },
- {
-  "cls": "her_pop",
-  "shot": "10",
-  "F": 544,
-  "xy": null,
-  "frames": 1,
-  "worst": 0.58,
-  "what": "her figure jumps / vanishes"
- },
- {
-  "cls": "her_pop",
   "shot": "43",
   "F": 2844,
-  "xy": null,
-  "frames": 1,
-  "worst": 1.0,
-  "what": "her figure jumps / vanishes"
- },
- {
-  "cls": "her_pop",
-  "shot": "58",
-  "F": 3912,
-  "xy": null,
-  "frames": 1,
-  "worst": 0.55,
-  "what": "her figure jumps / vanishes"
- },
- {
-  "cls": "her_pop",
-  "shot": "59",
-  "F": 3936,
   "xy": null,
   "frames": 1,
   "worst": 1.0,
@@ -621,6 +492,15 @@
   "xy": null,
   "frames": 1,
   "worst": 0.86,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "65f",
+  "F": 4386,
+  "xy": null,
+  "frames": 1,
+  "worst": 0.45,
   "what": "her figure jumps / vanishes"
  },
  {
