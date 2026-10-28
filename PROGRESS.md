@@ -1,5 +1,19 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-28 (later) - Love is War take 14: engine faults (toki: angewurzelt, swims odd, climbs wrong, dot graphs)
+- Measured on her real rig (root-travel.yml + studio/root_travel.mjs -> studio/catalog/root_travel.json): nearly every
+  Mixamo clip is exported in place (all 34 in this film: hips travel 0); 189 of 505 imply a way by their planted feet.
+  Blender's "travel" (2 m/s swim) was wrong - the swim slid past its strokes.
+- Engine: clips keep their hips travel in the hips' own space (rootAt; no VRM0 sign rule), loops go on; in water / air /
+  on a wall the body is not set down on its lowest foot (she crawled on the cable; climbs fell back); travel.py on the
+  measured way (root / planted feet / swim 0.7 m/s best guess / drift), pass rows start off the frame edge; climbs face
+  their real surface (face_walls + lint: at the rock she climbed with her back to it, the lens stood inside the rock);
+  melody on her chest lights (melody_on_her) instead of dot / line graphs; clean red slash; lamp room bloom 0.15.
+- Take 14 (render run 87): gate FAIL - brief-keeper BLOCK (C4 melody not visible in stills, lighthouse room still hard
+  to read, opening dark), look-critic FAIL (empty dark stage, set cheap: wave arcs, striped tower, flat beam), motion-
+  critic FAIL (opening / rings / rocks tiny, puppet holds between hits). Motion: lens in her in 6 pictures, 3 snaps.
+  Sent FAIL-marked. Next (proposed to toki): a choreography pass - real steps / advances between the actions.
+
 ## 2026-10-28 - Love is War whole film takes 11-13 (face, lip sync, one grade, her way through the space)
 - toki 10-27: lip sync "unpassend", face "emotionslos", after effects "aus einem guss", whole film. Built: faces by song
   section (shots.json "faces", row "face"), brows / mouth corners sing along, a yell widens the sung vowels instead of a

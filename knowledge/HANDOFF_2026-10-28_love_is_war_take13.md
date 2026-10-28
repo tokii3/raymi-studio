@@ -17,3 +17,10 @@ Open (critics + gate, not yet fixed):
 Learned (in code now): raymi/travel.py (drift, track, pass, thirds), faces by section, one backdrop-filter grade,
 mouth "silent" lint, still lamp-room mullions. The clip root travel of three-vrm's Mixamo retarget is mirrored for a
 VRM0 model - do not use it without a test on the real clip.
+
+## Update take 14 (later 2026-10-28)
+Done: engine root travel + free bodies, measured clip ways (studio/catalog/root_travel.json), face_walls, melody_on_her,
+clean slash, lamp-room light. Reviews: reviews/final_*_2.md (all FAIL). QC v2 run 40620651427, probe out/probe_mv_take14.json.
+Open: opening still dark / small (critics want her face large in 2 s - conflicts with toki's "leer am Anfang": ask her);
+choreography pass for "angewurzelt" (steps between in-place actions); lens in her at 35a / 56a / 57 / 60 / 62a / 71;
+set quality (sea, tower, beam) is a structural asset job; skin reads blue-violet in places.
