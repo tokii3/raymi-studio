@@ -1,16 +1,28 @@
 {
- "_why": "the seabed at the opening (toki 2026-10-28 'kabel unter see ... langweilig, leer, ohne tiefe')",
+ "_why": "take 16 check: seabed light, beam without slab, lamp without rings/spikes, closer lamp room, climb framing",
  "format": "mv",
  "frames": [
   45,
   240,
-  396
+  4857,
+  4950,
+  3795,
+  4080,
+  4266,
+  4650,
+  5130
  ],
  "names": [
   "s1_open",
   "s2_row4",
-  "s3_pov_cable"
+  "d1_dive",
+  "d2_pulse",
+  "c1_climb",
+  "l1_room",
+  "l2_close",
+  "l3_scream",
+  "l4_silhouette"
  ],
  "scale": 0.5,
- "round": "seabed1"
+ "round": "t16"
 }

@@ -14,7 +14,7 @@ import {add, glowTex} from './fire';
 import {cablePath} from './cables';
 
 type P3 = [number, number, number];
-const SAND = '#3b4566', SAND_DARK = '#252c47', ROCKC = '#2b2f48', KELP = '#24453f', KELP2 = '#3a3f62', BARN = '#4d5677';
+const SAND = '#56628f', SAND_DARK = '#323b62', ROCKC = '#2b2f48', KELP = '#24453f', KELP2 = '#3a3f62', BARN = '#4d5677';
 
 /** Rippled sand: soft light / dark bands plus silt specks, tiled. */
 function sandTexture(): THREE.CanvasTexture {
@@ -57,7 +57,7 @@ const floorGeo = (() => {
 /** Barnacles / growth on the cable armour: one instanced mesh per cable. */
 const Growth: React.FC<{curve: THREE.CatmullRomCurve3; r: number; seed: number}> = ({curve, r, seed}) => {
   const mesh = useMemo(() => {
-    const n = 220;
+    const n = 70;
     const m = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 7, 5), toon(BARN), n);
     const o = new THREE.Object3D();
     for (let i = 0; i < n; i++) {
@@ -65,7 +65,7 @@ const Growth: React.FC<{curve: THREE.CatmullRomCurve3; r: number; seed: number}>
       const side = new THREE.Vector3(tg.z, 0, -tg.x).normalize();
       const a = (rnd(seed + i * 5) - 0.5) * Math.PI * 1.2;          // the upper side of the cable (the lower one is in the sand)
       o.position.copy(p).addScaledVector(side, Math.sin(a) * r).add(new THREE.Vector3(0, Math.cos(a) * r, 0));
-      const s = r * (0.12 + rnd(seed + i * 7) * 0.22);
+      const s = r * (0.08 + rnd(seed + i * 7) * 0.14);
       o.scale.set(s, s * 0.6, s);
       o.updateMatrix();
       m.setMatrixAt(i, o.matrix);
@@ -82,13 +82,18 @@ export const Seabed: React.FC<{o: Record<string, unknown>; f: number; fps: numbe
   const n = Number(o.cables ?? 0), seed = Number(o.cable_seed ?? 3), r = Number(o.cable_r ?? 0.11);
   const curves = useMemo(() => Array.from({length: n}, (_, i) => cablePath(i, seed)), [n, seed]);
   if (amount <= 0) return null;
-  const sandMat = toon(SAND);
+  // the sand carries a little of its own colour: under the war_night grade a toon floor lit only from above went black
+  // (take 15 stills: the whole seabed read as a black void)
+  const sandMat = toon(SAND, '#26305a', 1);
   sandMat.map = sand;
   const t = f / fps;
   // the floor follows the lens in whole tiles, so it never ends in the frame and its texture never slides
   const fx = Math.round(camPos[0] / 6) * 6, fz = Math.round(camPos[2] / 6) * 6;
   return (
     <group userData={{noSupport: false}}>
+      {/* light from the surface: a cool sky above, the sand bouncing a little back */}
+      <hemisphereLight args={['#9db4f0', '#2a3360', 1.6 * amount]} />
+      <directionalLight position={[fx + 4, 30, fz - 6]} color='#b8c8ff' intensity={1.2 * amount} />
       <mesh geometry={floorGeo()} material={sandMat} position={[fx, 0, fz]} receiveShadow />
       {curves.map((c, i) => {
         const L = c.getLength(), items: React.ReactNode[] = [];
@@ -126,7 +131,7 @@ export const Seabed: React.FC<{o: Record<string, unknown>; f: number; fps: numbe
       {Array.from({length: 9}, (_, k) => {
         const x = fx + (rnd(k * 3 + 1) - 0.5) * 40, z = fz - 6 - rnd(k * 5 + 2) * 34;
         const sway = 0.06 * Math.sin(t * 0.4 + k * 1.7);
-        const op = (0.05 + 0.05 * rnd(k)) * amount * (0.8 + 0.2 * Math.sin(t * 0.7 + k));
+        const op = (0.12 + 0.08 * rnd(k)) * amount * (0.8 + 0.2 * Math.sin(t * 0.7 + k));
         return <mesh key={`sh${k}`} position={[x, 9, z]} rotation={[0, rnd(k * 9) * Math.PI, 0.18 + sway]} renderOrder={5}>
           <planeGeometry args={[1.6 + rnd(k * 7) * 2.4, 22]} />
           <meshBasicMaterial map={glowTex('#9fb8ff')} {...add} opacity={op} fog={false} />

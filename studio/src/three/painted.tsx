@@ -8,7 +8,7 @@
 import React from 'react';
 import * as THREE from 'three';
 import {canvasTexture, rnd} from './look';
-import {add} from './fire';
+import {add, glowTex} from './fire';
 import {frames} from './events';
 
 type P3 = [number, number, number];
@@ -360,19 +360,22 @@ export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; 
       {glass ? <mesh position={[x, H + 2.1, z]} material={glassMat()}><cylinderGeometry args={[1.6, 1.6, 2.4, 48, 1, true]} /></mesh> : null}
       <mesh position={[x, H + 3.55, z]} material={cached('roof', () => { const m = new THREE.MeshBasicMaterial({color: PAL.stripe, toneMapped: false, fog: false}); m.userData.tone = 'ink'; return m; })}>
         <coneGeometry args={[1.9, 0.9, 32]} /></mesh>
-      {/* the lamp, facing the lens (a painted disc), breathing 4 % */}
-      {v > 0.05 ? <mesh position={[x, lampY, z]} rotation={[0, toCam, 0]} scale={0.9 * v * (1 + 0.04 * Math.sin(t * 3))} material={lampMat()} renderOrder={9}><planeGeometry args={[1, 1]} /></mesh> : null}
-      {/* the Fresnel lens round the lamp, its painted rings turning so the highlights slide */}
-      <mesh position={[x, lampY, z]} rotation={[0, toCam + t * 0.1, 0]} material={fresnelMat()} renderOrder={10}><planeGeometry args={[1.5, 1.5]} /></mesh>
-      {fresnelFront ? (() => {
+      {/* the lamp: a glass body with a burning core and a soft glow, breathing 4 % - the painted disc with spikes and the
+          Fresnel ring card read as drawn lines round her (toki 2026-10-28 "vektor grafiken wie striche, zacken") */}
+      <mesh position={[x, lampY, z]} scale={[0.32, 0.42, 0.32]}><sphereGeometry args={[1, 24, 16]} />
+        <meshBasicMaterial color="#fff4da" transparent opacity={0.55} toneMapped={false} /></mesh>
+      <mesh position={[x, lampY, z]} scale={0.14}><sphereGeometry args={[1, 16, 12]} /><meshBasicMaterial color="#ffffff" toneMapped={false} /></mesh>
+      {v > 0.05 ? <mesh position={[x, lampY, z]} rotation={[0, toCam, 0]} scale={1.6 * v * (1 + 0.04 * Math.sin(t * 3))} renderOrder={9}><planeGeometry args={[1, 1]} />
+        <meshBasicMaterial map={glowTex('#ffe2b0')} {...add} opacity={0.7} fog={false} /></mesh> : null}
+      {fresnelFront && false ? (() => {
         const d = 0.55;                                                          // a card of rings just in front of the lens
         const dir = new THREE.Vector3(x - camPos[0], lampY - 0.4 - camPos[1], z - camPos[2]).normalize();
         const p = new THREE.Vector3(...camPos).addScaledVector(dir, d);
         return <mesh position={p} rotation={[0, Math.atan2(-dir.x, -dir.z), t * 0.1]} material={fresnelMat()} renderOrder={11}><planeGeometry args={[1.1, 1.1]} /></mesh>;
       })() : null}
       <pointLight position={[x, lampY, z]} color={violet > 0 ? '#c9a8ff' : '#ffe9bd'} intensity={2.0 * v} distance={6} decay={1.5} />
-      {violet > 0 ? <mesh position={[x, lampY, z]} scale={3.2 * violet} renderOrder={8}><sphereGeometry args={[1, 16, 12]} />
-        <meshBasicMaterial color={PAL.violet} {...add} opacity={0.18 * violet} /></mesh> : null}
+      {/* her violet in the lamp: light on the room, not a flat violet ball round the lantern (take 15) */}
+      {violet > 0 ? <pointLight position={[x, lampY, z]} color={PAL.violet} intensity={3 * violet} distance={5} decay={1.5} /> : null}
     </group>
   );
 };

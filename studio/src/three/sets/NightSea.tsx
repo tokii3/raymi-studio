@@ -300,9 +300,10 @@ export const NightSea: React.FC<SetProps> = ({f, fps, opts, camPos}) => {
           {Array.from({length: 90}, (_, i) => {
             const T = 26, ph = rnd(i * 13) * T, d = (f + ph) % T, cyc = Math.floor((f + ph) / T);
             const x = C.x + (rnd(i * 5 + cyc * 17) - 0.5) * 14, z = C.z - 1.5 - rnd(i * 7 + cyc * 29) * 14;
-            const R = 0.05 + (d / T) * 0.8;
+            // small and faint: 0.85 m drawn circles read as line art on the water (toki 2026-10-28 "striche", take 15 landing)
+            const R = 0.03 + (d / T) * 0.3;
             return <mesh key={`rr${i}`} position={[x, 0.03, z]} rotation={[-Math.PI / 2, 0, 0]} renderOrder={6}>
-              <ringGeometry args={[R * 0.78, R, 32]} /><meshBasicMaterial color={painted ? PAL.mist : i % 3 ? '#d7a6ff' : '#ffd38a'} {...add} opacity={(painted ? 0.35 : 0.9) * (1 - d / T) * Math.min(1, rainT / 10) * (0.4 + 0.6 * Math.max(glow, pool))} />
+              <ringGeometry args={[R * 0.78, R, 32]} /><meshBasicMaterial color={painted ? PAL.mist : i % 3 ? '#d7a6ff' : '#ffd38a'} {...add} opacity={(painted ? 0.16 : 0.45) * (1 - d / T) * Math.min(1, rainT / 10) * (0.4 + 0.6 * Math.max(glow, pool))} />
             </mesh>;
           })}
         </group>

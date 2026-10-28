@@ -386,7 +386,7 @@ export const Deep: React.FC<SetProps> = ({f, fps, opts, beats, camPos}) => {
   const inRed = Math.max(Number(o.red ?? 0), tintR > camD ? Math.min(1, (tintR - camD) / 3) : 0);   // red: the water stays red (acts 6-7)
   const bed = Number(o.seabed ?? 0);
   // dark violet, never dead black (pilot 1); with a seabed the water is a deep blue the distance fades into
-  const fogC = new THREE.Color('#0e0a26').lerp(new THREE.Color('#1a2c5c'), bed).lerp(new THREE.Color('#1c0410'), inRed).getStyle();
+  const fogC = new THREE.Color('#0e0a26').lerp(new THREE.Color('#2a4585'), bed).lerp(new THREE.Color('#1c0410'), inRed).getStyle();
   const fogFar = Number(o.fog_far ?? (bed > 0 ? 60 : 24));
   // the cliff and the column
   const cliffFront = prog(o, 'cliff_ignite', f, fps) * 30 + Number(o.cliff_base ?? 0)

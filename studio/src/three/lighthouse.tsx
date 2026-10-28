@@ -37,6 +37,29 @@ export function beamYaw(o: LighthouseOpts, f: number, fps: number): number {
   return THREE.MathUtils.degToRad((o.yaw ?? 0) + (o.spin ?? 24) * (f / fps));
 }
 
+// A beam of light, not a slab (toki 2026-10-28 on take 14/15: white planes filled the lamp-room pictures). The cone fades
+// toward its silhouette edges (view-angle falloff, like light in haze) and close to the lens (a lens inside the beam sees
+// glow, not a wall).
+const beamMats = new Map<string, THREE.ShaderMaterial>();
+function beamMat(tex: THREE.Texture, opacity: number): THREE.ShaderMaterial {
+  const key = `${tex.uuid}|${opacity.toFixed(3)}`;
+  let m = beamMats.get(key);
+  if (!m) {
+    m = new THREE.ShaderMaterial({
+      uniforms: {map: {value: tex}, opacity: {value: opacity}},
+      vertexShader: `varying vec2 vUv; varying vec3 vN; varying vec3 vV;
+        void main() { vUv = uv; vec4 mv = modelViewMatrix * vec4(position, 1.0); vV = mv.xyz; vN = normalMatrix * normal; gl_Position = projectionMatrix * mv; }`,
+      fragmentShader: `uniform sampler2D map; uniform float opacity; varying vec2 vUv; varying vec3 vN; varying vec3 vV;
+        void main() { vec4 t = texture2D(map, vUv); float edge = abs(dot(normalize(vN), normalize(-vV)));
+          float near = smoothstep(0.8, 6.0, length(vV));
+          gl_FragColor = vec4(t.rgb, t.a * opacity * pow(edge, 1.6) * near); }`,
+      transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, toneMapped: false,
+    });
+    beamMats.set(key, m);
+  }
+  return m;
+}
+
 const Beam: React.FC<{from: THREE.Vector3; yaw: number; len: number; v: number; painted?: boolean}> = ({from, yaw, len, v, painted = false}) => {
   const dir = new THREE.Vector3(Math.sin(yaw), -0.035, Math.cos(yaw)).normalize();
   const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, -1, 0), dir);   // the cone's top (the lamp) at `from`
@@ -45,11 +68,11 @@ const Beam: React.FC<{from: THREE.Vector3; yaw: number; len: number; v: number; 
     <group>
       <mesh position={mid} quaternion={q} renderOrder={9}>
         <cylinderGeometry args={[0.32, len * 0.085, len, 40, 1, true]} />
-        <meshBasicMaterial map={beamTex(painted)} {...add} opacity={0.42 * v} fog={false} />
+        <primitive object={beamMat(beamTex(false), 0.42 * v)} attach="material" />
       </mesh>
       <mesh position={mid} quaternion={q} renderOrder={9}>
         <cylinderGeometry args={[0.12, len * 0.03, len, 24, 1, true]} />
-        <meshBasicMaterial map={beamTex(painted)} {...add} opacity={0.5 * v} fog={false} />
+        <primitive object={beamMat(beamTex(false), 0.5 * v)} attach="material" />
       </mesh>
     </group>
   );
