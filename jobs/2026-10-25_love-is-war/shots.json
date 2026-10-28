@@ -4344,14 +4344,14 @@
     {
      "at": 0,
      "aim": {
-      "d": 3.4,
+      "d": 4.6,
       "az": 40,
-      "y": 0.6,
-      "h": 2.8,
+      "y": 0.4,
+      "h": 2.6,
       "at": [
-       -6.8,
-       1.0,
-       -24.7
+       -5.8,
+       0.2,
+       -24.35
       ]
      },
      "fov": 50,
@@ -4414,7 +4414,7 @@
     ]
    },
    "step": 2,
-   "why_fix": "take 11 QC: 2.4 s near-black - the lens sat behind the rocks and hid her; it looks down over them now"
+   "why_fix": "take 11 QC: 2.4 s near-black - the lens sat behind the rocks; it looks down over them now, on the middle of her climb and her fall (take 12 guard: from the climb spot alone she was in the picture 44 %)"
   },
   {
    "id": "44",
