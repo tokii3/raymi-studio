@@ -904,6 +904,12 @@ LOUD_ENERGY = 0.6    # m/s: a clip slower than this (studio/catalog/clip_energy.
 _ENERGY: dict | None = None
 
 
+def root_travel() -> dict:
+    """Where each clip carries her on her rig (studio/catalog/root_travel.json, measured by root-travel.yml)."""
+    f = Path(__file__).resolve().parent.parent / "studio" / "catalog" / "root_travel.json"
+    return json.loads(f.read_text(encoding="utf-8")).get("clips", {}) if f.is_file() else {}
+
+
 def clip_energy() -> dict:
     """Every clip's measured motion (raymi/clip_energy_blender.py, cloud): {clip: {mean, p90, still, seam, dur ...}}."""
     global _ENERGY
@@ -1306,7 +1312,7 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
     fr = lambda t: round(t * FPS) - f0                      # noqa: E731  song seconds -> film frame
     # her way through the space before the rows split into pictures (toki 2026-10-28 "schwimmt auf der stelle")
     rows_in = face_walls(spec.get("shots", []), warns, spec.get("set_opts"))
-    rows_in = rows_in if spec.get("travel") is False else plan_travel(rows_in, clip_energy(), warns)
+    rows_in = rows_in if spec.get("travel") is False else plan_travel(rows_in, root_travel(), warns)
     if spec.get("thirds", True):
         rows_in = compose_thirds(rows_in)
     if spec.get("melody_on_her", True):

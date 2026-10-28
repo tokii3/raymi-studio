@@ -139,10 +139,10 @@
     {
      "at": 0,
      "aim": {
-      "d": 4.0,
+      "d": 2.2,
       "az": 90,
-      "y": 0.3,
-      "h": 0.75,
+      "y": 0.25,
+      "h": 0.7,
       "at": [
        0.0,
        0.62,
@@ -185,7 +185,8 @@
     ]
    },
    "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
-   "pass": true
+   "pass": true,
+   "why_fix": "take 13 critics: in the pass she was a speck at the edge - the lens at 2.2 m, she swims in from just off the frame edge and owns it"
   },
   {
    "id": "2",

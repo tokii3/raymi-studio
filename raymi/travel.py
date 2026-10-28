@@ -3,10 +3,10 @@ selbst, sie schwebt, schwimmt auf der stelle" - measured: 63 of 63 swim / tread 
 lens sat on her in 163 of 194 shots: "raymi wird immer in die mitte des bildes gezwungen").
 
 Runs over the script rows before the multicam expansion (timeline.compile_shots):
-- a clip that travels when captured (studio/catalog/clip_energy.json "travel", measured in Blender) moves her at that
-  measured speed (key "drift", m/s, linear - the clip's own root curve is not used: the VRM0 retarget mirrors it, take 12
-  QC v2 measured a swim going 0.3 m/s backwards);
-- a clip that does not travel but lives in water (treading, floating) drifts slowly (DRIFT);
+- her way per clip is MEASURED on her rig (studio/catalog/root_travel.json, studio/root_travel.mjs): a clip whose hips
+  travel carries her itself (VrmPuppet rootAt); nearly all are exported in place, so the way her planted feet imply
+  moves her (key "drift", m/s) - a kick that advances advances, a step lands where the foot stays (toki 2026-10-28 on
+  take 13: "raymi wirkt wie angewurzelt"); a swim moves at SWIM_V, treading / floating drifts (DRIFT);
 - she heads ACROSS the lens, not into it (rotY): 55 deg off the lens axis when the lens rides along, 80 deg when it lets
   her pass; the row alternates left / right so the film is not one direction;
 - her way is centred on the middle of the key's time (key "path", m): the place the script chose is where she is half way;
@@ -21,6 +21,11 @@ TRACK_H = 2.6        # m: frames this tall or smaller at the look distance ride 
 LEAD = 0.17          # x frame width: she sits this far behind the centre, the room is ahead of her (rule of thirds)
 MIN_TRAVEL = 0.3     # m of root travel in one clip loop: below that a clip is in place by nature (a dance, a pose)
 DRIFT = 0.15         # m/s: treading water / floating moves with the water, never pinned to a point
+MIN_FEET = 0.15      # m/s her planted feet must imply before she is moved by them (a dance shuffles in place)
+# swimming has no foot on a floor to measure: one breaststroke cycle carries a swimmer about 1 m, the clip's ~1.4 s cycle
+# -> ~0.7 m/s (BEST GUESS, labelled; take 13 used Blender's 2 m/s and the body slid past its slow strokes)
+SWIM = re.compile(r"swim", re.I)
+SWIM_V = 0.7
 WATER = re.compile(r"tread|float|swim", re.I)
 CLIMB = re.compile(r"climb|pull|ladder|ledge|wall", re.I)
 # a linear way only for clips that ARE a way (swim, walk, run): an attack or a turn that shifts its weight would slide
@@ -72,39 +77,59 @@ def plan_travel(rows: list[dict], energy: dict, warns: list[str]) -> list[dict]:
             m = str(k.get("clip") or k.get("motion") or "")
             if not m or _num(k.get("speed"), 1.0) == 0 or _num(k.get("travel"), 1.0) == 0 or "drift" in k:
                 continue
-            e = energy.get(m) or {}
-            loop = _num(e.get("travel")) if _num(e.get("travel")) >= MIN_TRAVEL and LOCO.search(m) else 0.0
             if CLIMB.search(m):
-                continue                                  # the way is up: the clip's own hips carry her (kept by inPlace)
-            speed = loop / max(_num(e.get("dur"), 1.0), 1e-3) * _num(k.get("speed"), 1.0) if loop else 0.0
-            if not speed and WATER.search(m):
-                speed = DRIFT
-            if not speed:
+                continue                                  # the way is up: rootAt keeps the climb's height loop on loop
+            rt = energy.get(m) or {}
+            sp = _num(k.get("speed"), 1.0)
+            lv, imp = rt.get("v") or [0, 0, 0], rt.get("implied") or [0, 0, 0]
+            root = math.hypot(lv[0], lv[2]) * _num(rt.get("dur"), 1.0) >= MIN_TRAVEL
+            if root:                                      # the clip's own hips carry her (VrmPuppet rootAt)
+                local = [lv[0] * sp, lv[2] * sp]
+            elif math.hypot(imp[0], imp[2]) >= MIN_FEET and _num(rt.get("planted")) >= 0.3:
+                local = [imp[0] * sp, imp[2] * sp]        # the way her planted feet imply (measured on her rig)
+            elif SWIM.search(m):
+                local = [0.0, SWIM_V * sp]
+            elif WATER.search(m):
+                local = [0.0, DRIFT]
+            else:
                 continue
-            # heading: across the lens (her face still reads), alternating sides; a fixed facing in the script stays
+            loco = bool(LOCO.search(m) or WATER.search(m))
+            # heading: a way of its own (swim, walk) goes ACROSS the lens, alternating sides; an action (a kick that
+            # advances, a punch that steps in) keeps the facing the script gave it and moves the way her feet say
             rot = k.get("rotY", "lens")
             if isinstance(rot, (int, float)):
                 head = float(rot)
             elif az is None:
                 head = 90.0 * side
+            elif not loco:
+                head = az + (180.0 if rot == "away" else 0.0)
             else:
                 head = az + (180.0 if rot == "away" else 0.0) + side * (55.0 if track else 80.0)
-            if az is not None and not track:
+            if loco and az is not None and not track:
                 off = abs(((head - az) + 180.0) % 360.0 - 180.0)
                 if off < 45 or off > 135:
                     if row.get("pass"):                   # a pass crosses the frame: never at / away along the lens axis
                         head = az + side * 80.0
                     else:                                 # along the lens axis she would swim into it: the lens rides
                         track = True
-            k["rotY"] = round(head, 1)
-            fwd = [math.sin(math.radians(head)), 0.0, math.cos(math.radians(head))]
+            if loco:
+                k["rotY"] = round(head, 1)
+            h = math.radians(head)
+            fwd = [math.sin(h), 0.0, math.cos(h)]
+            right = [math.cos(h), 0.0, -math.sin(h)]
             k_at = 0.0 if k.get("at") == "end" else _num(k.get("at"))
             k_to = next((_num(x.get("at")) for x in keys[j + 1:] if x.get("at") != "end"), dur)
             span = max(0.2, k_to - k_at)
-            v = [round(speed * c, 4) for c in fwd]
-            k["drift"] = v
+            v = [round(right[c] * local[0] + fwd[c] * local[1], 4) for c in range(3)]
+            if not root:
+                k["drift"] = v                            # a linear way; a root clip is carried by its own hips
             k["_v"] = v
             k["path"] = [round(-c * span / 2, 4) for c in v]
+            if row.get("pass") and math.hypot(v[0], v[2]) > 0:
+                # a pass starts just outside the frame edge and swims in (toki 2026-10-28: "es ist normal dass die
+                # flaeche am anfang ... leer ist ... wenn sie erst rein ... schwimmt"): the frame is empty first
+                fw = fh * 16 / 9
+                k["path"] = [round(-c * (fw / 2 + 0.45), 4) for c in fwd]
             # a later key of the same row standing on the same mark: she is where her way took her
             for x in keys[j + 1:]:
                 if x.get("pos", "center") == k.get("pos", "center") and "path" not in x:
