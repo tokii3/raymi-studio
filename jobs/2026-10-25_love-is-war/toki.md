@@ -30,3 +30,6 @@ excerpt: toki 2026-10-27 "ja ganzer film, restlichen kritiker punkte fixen, und 
 
 ## 2026-10-28 (zu Take 11, ganzer Film)
 "manche scenen wie am anfang das schwimmen aber auch viele andere wirken komisch da raymi sich zwar bewegt also die animation aber nicht im raum selbst, sie schwebt, schwimmt auf der stelle etc und am ende die leuchtturm scene man erkennt garnicht was passiert , sie clippt in gegenstände, aber im großen und ganzen schon ganz gut , außerdem habe ich das gefühl raymi wird immer in die mitte des bildes gezwungen was nicht sein muss, sie muss nicht zwingend im jeden frame / scene zentriert sein, zb schwimmen es ist normal dass die fläche am anfang und am ende leer ist / wenig passiert wenn sie rst rein und dannn raus / vorbei schwimmt oder so und am anfang ist etwas stille bevor die musik einsetzt"
+
+## 2026-10-28 (Nachtrag)
+"ich sehe deine auswertung, ich meinte noch weiter vorne die gesamte leuchttum scene am ende, das ganz ende ist ok aber davor die letzten 30 sek oder so"

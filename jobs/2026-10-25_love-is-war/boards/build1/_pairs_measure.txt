@@ -1,0 +1,33 @@
+m01_silhouette: ref kda-popstars@190.25 -> no frames for kda-popstars - run python -m raymi refs frames kda-popstars
+   card flood_silhouette: OUTSIDE: lum_mean 0.824 > 0.722; light_share 0.853 > 0.659; two_tone 0.959 > 0.83; neg_space 0.66 > 0.604
+m02_eye_opens: ref kda-firestarter@20.25 -> no frames for kda-firestarter - run python -m raymi refs frames kda-firestarter
+m03_hit1_cable: ref edgerunners-this-fffire@74.25 -> no frames for edgerunners-this-fffire - run python -m raymi refs frames edgerunners-this-fffire
+   card two_tone_hit: OUTSIDE: lum_mean 0.168 < 0.414; lum_p95 0.666 < 0.856; contrast 0.628 < 0.846; light_share 0.002 < 0.373; dark_share 0.78 > 0.544; sat_accent 0.238 > 0.131; key low not in ['high', 'mid']
+m04_roll_ping: ref edgerunners-this-fffire@6.25 -> no frames for edgerunners-this-fffire - run python -m raymi refs frames edgerunners-this-fffire
+m05_claw_beam: ref spiderverse-across-t2@117.25 -> no frames for spiderverse-across-t2 - run python -m raymi refs frames spiderverse-across-t2
+   card lens_attack: OUTSIDE: lum_p95 0.397 < 0.562; contrast 0.394 < 0.558; neg_space 0.257 < 0.431
+m06_riser1_eyes: ref arcane-enemy@125.75 -> no frames for arcane-enemy - run python -m raymi refs frames arcane-enemy
+m07_war_cry: ref ado-usseewa@98.25 -> no frames for ado-usseewa - run python -m raymi refs frames ado-usseewa
+   card ecu_scream: OUTSIDE: main_share 0.611 > 0.461
+m08_hit_flash_gold: ref ado-usseewa@98.25 -> no frames for ado-usseewa - run python -m raymi refs frames ado-usseewa
+   card two_tone_hit: OUTSIDE: lum_mean 0.261 < 0.414; lum_p95 0.666 < 0.856; contrast 0.628 < 0.846; light_share 0.0 < 0.373; dark_share 0.612 > 0.544; two_tone 0.612 < 0.789; sat_mean 0.442 > 0.232; sat_accent 0.405 > 0.131; key low not in ['high', 'mid']
+m09_chorus_grid: ref jjk-op1@47.25 -> no frames for jjk-op1 - run python -m raymi refs frames jjk-op1
+m10_colour_flip: ref edgerunners-this-fffire@5.25 -> no frames for edgerunners-this-fffire - run python -m raymi refs frames edgerunners-this-fffire
+m11_lens_attack_M1: ref spiderverse-across-t2@117.25 -> no frames for spiderverse-across-t2 - run python -m raymi refs frames spiderverse-across-t2
+   card lens_attack: OUTSIDE: lum_p95 0.365 < 0.562; contrast 0.36 < 0.558; sat_mean 0.812 > 0.738; neg_space 0.319 < 0.431
+m12_pillar: ref frieren-op@53.25 -> no frames for frieren-op - run python -m raymi refs frames frieren-op
+   card light_pillar: OUTSIDE: contrast 0.924 > 0.86; sat_mean 0.755 > 0.638; sat_accent 0.74 > 0.591; main_share 0.672 > 0.399; detail 0.119 > 0.065; neg_space 0.424 < 0.66
+m13_shards: ref edgerunners-this-fffire@75.25 -> no frames for edgerunners-this-fffire - run python -m raymi refs frames edgerunners-this-fffire
+   card two_tone_hit: OUTSIDE: lum_mean 0.122 < 0.414; lum_p95 0.595 < 0.856; contrast 0.59 < 0.846; light_share 0.02 < 0.373; dark_share 0.76 > 0.544; sat_mean 0.782 > 0.232; sat_accent 0.766 > 0.131; detail 0.19 > 0.138; key low not in ['high', 'mid']
+m14_moon: ref edgerunners-this-fffire@91.25 -> no frames for edgerunners-this-fffire - run python -m raymi refs frames edgerunners-this-fffire
+m15_hidden_stop: ref ado-show@124.75 -> no frames for ado-show - run python -m raymi refs frames ado-show
+m16_landing: ref spiderverse-across-t2@4.25 -> no frames for spiderverse-across-t2 - run python -m raymi refs frames spiderverse-across-t2
+m17_false_win: ref bp-hylt@28.25 -> no frames for bp-hylt - run python -m raymi refs frames bp-hylt
+   card beam_at_lens: OUTSIDE: lum_mean 0.466 > 0.294; lum_p50 0.66 > 0.254; lum_p95 0.666 < 0.801; contrast 0.663 < 0.784; light_share 0.0 < 0.066; dark_share 0.276 < 0.363; two_tone 0.276 < 0.429; sat_mean 0.711 > 0.545; sat_accent 0.886 > 0.479; main_share 0.982 > 0.572; thirds 0.046 < 0.172; neg_space 0.646 < 0.715; key mid not in ['low']
+m18_scream: ref edgerunners-this-fffire@85.25 -> no frames for edgerunners-this-fffire - run python -m raymi refs frames edgerunners-this-fffire
+   card ecu_scream: inside the range
+m19_final_build: ref arcane-enemy@178.25 -> no frames for arcane-enemy - run python -m raymi refs frames arcane-enemy
+m20_last_hit: ref yoasobi-idol@186.25 -> no frames for yoasobi-idol - run python -m raymi refs frames yoasobi-idol
+   card flood_silhouette: OUTSIDE: lum_mean 0.822 > 0.722; light_share 0.852 > 0.659; two_tone 0.956 > 0.83
+m21_ink_night: ref calli-gura-q@143.25 -> no frames for calli-gura-q - run python -m raymi refs frames calli-gura-q
+   card star_sky: OUTSIDE: lum_mean 0.615 > 0.109; lum_p05 0.178 > 0.0; lum_p50 0.669 > 0.063; lum_p95 0.93 > 0.392; contrast 0.752 > 0.392; light_share 0.383 > 0.027; dark_share 0.03 < 0.737; two_tone 0.413 < 0.764; sat_mean 0.267 < 0.578; sat_accent 0.178 < 0.501; main_share 0.348 < 0.614; key high not in ['low']

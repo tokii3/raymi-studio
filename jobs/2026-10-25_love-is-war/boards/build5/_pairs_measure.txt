@@ -1,0 +1,33 @@
+m01_silhouette: ref kda-popstars@190.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m01_silhouette.jpg
+   card flood_silhouette: OUTSIDE: lum_mean 0.787 > 0.722; light_share 0.808 > 0.659; two_tone 0.953 > 0.83
+m02_eye_opens: ref kda-firestarter@20.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m02_eye_opens.jpg
+m03_hit1_cable: ref edgerunners-this-fffire@74.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m03_hit1_cable.jpg
+   card two_tone_hit: OUTSIDE: lum_mean 0.087 < 0.414; lum_p95 0.344 < 0.856; contrast 0.306 < 0.846; light_share 0.016 < 0.373; dark_share 0.909 > 0.544; key low not in ['high', 'mid']
+m04_roll_ping: ref edgerunners-this-fffire@6.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m04_roll_ping.jpg
+m05_claw_beam: ref spiderverse-across-t2@117.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m05_claw_beam.jpg
+   card lens_attack: OUTSIDE: contrast 0.715 > 0.614; thirds 0.184 > 0.121; detail 0.192 > 0.135; neg_space 0.139 < 0.431
+m06_riser1_eyes: ref arcane-enemy@125.75 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m06_riser1_eyes.jpg
+m07_war_cry: ref ado-usseewa@98.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m07_war_cry.jpg
+   card ecu_scream: OUTSIDE: two_tone 0.692 > 0.62; main_share 0.62 > 0.461
+m08_hit_flash_gold: ref ado-usseewa@98.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m08_hit_flash_gold.jpg
+   card two_tone_hit: OUTSIDE: lum_mean 0.234 < 0.414; lum_p95 0.789 < 0.856; contrast 0.751 < 0.846; light_share 0.167 < 0.373; dark_share 0.667 > 0.544; sat_mean 0.455 > 0.232; sat_accent 0.324 > 0.131; key low not in ['high', 'mid']
+m09_chorus_grid: ref jjk-op1@47.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m09_chorus_grid.jpg
+m10_colour_flip: ref edgerunners-this-fffire@5.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m10_colour_flip.jpg
+m11_lens_attack_M1: ref spiderverse-across-t2@117.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m11_lens_attack_M1.jpg
+   card lens_attack: OUTSIDE: lum_p95 0.769 > 0.707; contrast 0.764 > 0.614; thirds 0.174 > 0.121; detail 0.188 > 0.135; neg_space 0.181 < 0.431
+m12_pillar: ref frieren-op@53.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m12_pillar.jpg
+   card light_pillar: OUTSIDE: sat_mean 0.817 > 0.638; sat_accent 0.84 > 0.591; main_share 0.535 > 0.399; neg_space 0.514 < 0.66
+m13_shards: ref edgerunners-this-fffire@75.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m13_shards.jpg
+   card two_tone_hit: OUTSIDE: lum_mean 0.153 < 0.414; lum_p95 0.708 < 0.856; contrast 0.703 < 0.846; light_share 0.04 < 0.373; dark_share 0.693 > 0.544; two_tone 0.733 < 0.789; sat_mean 0.739 > 0.232; sat_accent 0.721 > 0.131; detail 0.225 > 0.138; neg_space 0.125 < 0.181; key low not in ['high', 'mid']
+m14_moon: ref edgerunners-this-fffire@91.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m14_moon.jpg
+m15_hidden_stop: ref ado-show@124.75 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m15_hidden_stop.jpg
+m16_landing: ref spiderverse-across-t2@4.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m16_landing.jpg
+m17_false_win: ref bp-hylt@28.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m17_false_win.jpg
+   card beam_at_lens: OUTSIDE: lum_mean 0.456 > 0.294; lum_p50 0.437 > 0.254; lum_p95 0.961 > 0.801; contrast 0.953 > 0.784; light_share 0.294 > 0.066; dark_share 0.31 < 0.363; two_tone 0.603 > 0.429; sat_mean 0.341 < 0.545; sat_accent 0.266 < 0.479; main_share 0.484 < 0.572; thirds 0.02 < 0.172; detail 0.119 > 0.032; neg_space 0.347 < 0.715; key mid not in ['low']
+m18_scream: ref edgerunners-this-fffire@85.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m18_scream.jpg
+   card ecu_scream: inside the range
+m19_final_build: ref arcane-enemy@178.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m19_final_build.jpg
+m20_last_hit: ref yoasobi-idol@186.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m20_last_hit.jpg
+   card flood_silhouette: OUTSIDE: lum_mean 0.783 > 0.722; light_share 0.802 > 0.659; two_tone 0.946 > 0.83; neg_space 0.66 > 0.604
+m21_ink_night: ref calli-gura-q@143.25 -> jobs\2026-10-25_love-is-war\boards\pairs\build_m21_ink_night.jpg
+   card star_sky: OUTSIDE: lum_mean 0.267 > 0.109; lum_p05 0.086 > 0.0; lum_p50 0.254 > 0.063; lum_p95 0.566 > 0.392; contrast 0.48 > 0.392; dark_share 0.151 < 0.737; two_tone 0.166 < 0.764; sat_mean 0.378 < 0.578; sat_accent 0.202 < 0.501; main_share 0.352 < 0.614; thirds 0.162 > 0.094
