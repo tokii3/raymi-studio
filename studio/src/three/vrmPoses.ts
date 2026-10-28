@@ -365,6 +365,9 @@ export type VrmKey = {
   // the observer effect (toki 2026-10-24): she notices the one who watches - head + neck turn this share toward the
   // lens on top of any clip (eyes follow anyway); from behind only a glance over the shoulder now and then. 0 = off.
   aware?: number;
+  // a rope / cable from between her hands to this world point (and a slack tail from her hands to the floor): what she
+  // pulls is SEEN (Love is War lamp room: she hauled at nothing - choreographer 2026-10-28, toki "man erkennt garnicht was passiert")
+  tether?: [number, number, number];
   ground?: boolean;          // false = keep the key's height (she hangs from strings, sits in the air on purpose)
   // her way through the space (toki 2026-10-28: "sie bewegt sich zwar ... aber nicht im raum selbst, sie schwebt, schwimmt
   // auf der stelle"): drift = her way in m/s [x, y, z] from this key on (raymi/travel.py; the lens rides the same way).

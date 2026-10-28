@@ -329,7 +329,8 @@ function lampMat() {
 
 /** The lantern room at HER scale (11_WORLD_build section 2): gallery floor y H+0.38 r 2.6 + rail 1.1 m, glass r 1.6
  *  from H+0.9 to H+3.3, the brass frame ring at H+1.4 + mullions, the lamp at H+1.7, the Fresnel lens as painted rings. */
-export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; fps: number; camPos: P3; fresnelFront: boolean; violet: number; v?: number; glass?: boolean}> = ({x, z, H, f, fps, camPos, fresnelFront, violet, v = 1, glass = true}) => {
+export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; fps: number; camPos: P3; fresnelFront: boolean; violet: number; v?: number; glass?: boolean;
+  mullionPhase?: number; ringGap?: [number, number]}> = ({x, z, H, f, fps, camPos, fresnelFront, violet, v = 1, glass = true, mullionPhase = 0.2, ringGap}) => {
   const t = f / fps;
   const g = H + 0.38, lampY = H + 1.7;
   const toCam = Math.atan2(camPos[0] - x, camPos[2] - z);
@@ -345,10 +346,15 @@ export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; 
       })}
       {/* the turning base she stands on, the brass ring of the frame and its mullions up to the roof */}
       <mesh position={[x, H + 0.64, z]} material={brassMat()}><cylinderGeometry args={[1.5, 1.6, 0.52, 40]} /></mesh>
-      <mesh position={[x, H + 1.4, z]} rotation={[Math.PI / 2, 0, 0]} material={brassMat()}><torusGeometry args={[1.25, 0.05, 8, 64]} /></mesh>
+      {/* ringGap [az, width] (deg): the frame ring open where she stands at the lamp - closed, it cut through her chest (choreographer 2026-10-28) */}
+      {(() => {
+        const gw = ringGap ? (ringGap[1] * Math.PI) / 180 : 0, ga = ringGap ? (ringGap[0] * Math.PI) / 180 : 0;
+        // torus arc runs from +x counter-clockwise (seen from above after the -90 deg x turn); the gap is centred on az (0 = +z)
+        return <mesh position={[x, H + 1.4, z]} rotation={[Math.PI / 2, 0, Math.PI / 2 - ga + gw / 2]} material={brassMat()}><torusGeometry args={[1.25, 0.05, 8, 64, Math.PI * 2 - gw]} /></mesh>;
+      })()}
       {Array.from({length: 8}, (_, i) => {
         // still, not turning: turning mullions swept through her where she works at the lamp (QC v2 2026-10-28, rows 72 / 73 / 77)
-        const a = (i / 8) * Math.PI * 2 + 0.2;
+        const a = (i / 8) * Math.PI * 2 + mullionPhase;
         return <mesh key={`m${i}`} position={[x + Math.sin(a) * 1.6, H + 2.1, z + Math.cos(a) * 1.6]} material={brassMat()}><boxGeometry args={[0.06, 2.4, 0.06]} /></mesh>;
       })}
       {glass ? <mesh position={[x, H + 2.1, z]} material={glassMat()}><cylinderGeometry args={[1.6, 1.6, 2.4, 48, 1, true]} /></mesh> : null}

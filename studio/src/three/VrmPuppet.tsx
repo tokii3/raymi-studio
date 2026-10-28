@@ -20,7 +20,7 @@ import {FBXLoader} from 'three/examples/jsm/loaders/FBXLoader.js';
 import {VRMLoaderPlugin, VRMUtils, type VRM, type VRMHumanBoneName} from '@pixiv/three-vrm';
 import {retargetAnimation} from 'vrm-mixamo-retarget';
 import {cancelRender, continueRender, delayRender} from 'remotion';
-import {blobTexture} from './look';
+import {blobTexture, toon} from './look';
 import {ease} from '../film/motion';
 import {EXPRESSION_ALIAS, POSES, exprOf, type VrmKey, type VrmPose} from './vrmPoses';
 import {vrmMouthAt, type VrmMouthKey} from './vrmLipSync';
@@ -925,6 +925,26 @@ export function vrmAnatomy(url: string): Record<string, THREE.Vector3> {
   return out;
 }
 
+/** The cable she hauls on: from the point between her hands taut to the target, and a slack tail from her hands down
+ *  to the floor behind her - armoured like the sea cables (three/cables.tsx), with their violet seam. */
+function tetherRope(rig: Rig, to: V3, facing: THREE.Vector3): React.ReactNode {
+  const l = rig.vrm.humanoid.getRawBoneNode('leftHand')?.getWorldPosition(new THREE.Vector3());
+  const r = rig.vrm.humanoid.getRawBoneNode('rightHand')?.getWorldPosition(new THREE.Vector3());
+  if (!l || !r) return null;
+  const m = l.clone().add(r).multiplyScalar(0.5);
+  const T = new THREE.Vector3(...to);
+  const taut = new THREE.CatmullRomCurve3([T, T.clone().lerp(m, 0.5).add(new THREE.Vector3(0, -0.03, 0)), m]);
+  const foot = rig.root.position.clone().addScaledVector(facing, 0.7).setY(rig.root.position.y + 0.02);
+  const sag = m.clone().lerp(foot, 0.5).add(new THREE.Vector3(0, -0.15, 0));
+  const slack = new THREE.CatmullRomCurve3([m, sag, foot, foot.clone().addScaledVector(facing, 0.6)]);
+  const skin = toon('#1a1c28'), seam = toon('#2a2140', '#b98cff', 0.9);
+  return (<>
+    <mesh material={skin} castShadow><tubeGeometry args={[taut, 24, 0.035, 8, false]} /></mesh>
+    <mesh material={skin} castShadow><tubeGeometry args={[slack, 32, 0.035, 8, false]} /></mesh>
+    <mesh material={seam} position={[0, 0.03, 0]}><tubeGeometry args={[taut, 24, 0.012, 5, false]} /></mesh>
+  </>);
+}
+
 /** step: 2 = she moves "on twos" (15 poses a second, the anime look) while the camera stays smooth at 30.
  *  outline: ink line width in model metres (0 = none, ~0.004 = a cel drawing). */
 export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: number; from?: number; camPos: V3;
@@ -955,9 +975,10 @@ export const VrmPuppet: React.FC<{url: string; keys: VrmKey[]; f: number; fps: n
   const curKey = keys[keyAt(keys, f)];
   const facing = new THREE.Vector3(Math.sin(posed.root.rotation.y), 0, Math.cos(posed.root.rotation.y));
   const worn = wornProps(posed.vrm, curKey.props, facing, (curKey.height ?? DEFAULT_HEIGHT) / DEFAULT_HEIGHT);
+  const tether = curKey.tether ? tetherRope(posed, curKey.tether, facing) : null;
   return (
     <group>
-      <group userData={{noSupport: true}}>{dots}{worn}</group>
+      <group userData={{noSupport: true}}>{dots}{worn}{tether}</group>
       {trail ? <group userData={{noSupport: true}}><Trails pts={trail} root={posed.root} amount={trails} /></group> : null}
       {/* her own ultraviolet from below (she IS the light, 灯闇) and the warm lamp as the one complementary rim from behind
           (K/DA FIRESTARTER study: never a flat front fill) */}

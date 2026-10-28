@@ -22,8 +22,8 @@
    "to": 80.467
   },
   "pilot": {
-   "from": 58.6,
-   "to": 80.5
+   "from": 120.367,
+   "to": 187.57
   }
  },
  "short": {
@@ -4610,94 +4610,7 @@
    "id": "54",
    "at": 122.6,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 2.1,
-      "az": 15.0,
-      "y": 0.9,
-      "h": 2.3,
-      "at": [
-       -6.07,
-       2.0,
-       -22.75
-      ]
-     },
-     "fov": 46,
-     "roll": -10
-    },
-    {
-     "at": 0.015,
-     "aim": {
-      "d": 1.95,
-      "az": 15.0,
-      "y": 0.9,
-      "h": 2.3,
-      "at": [
-       -6.07,
-       2.0,
-       -22.75
-      ]
-     },
-     "fov": 46,
-     "roll": -10,
-     "shake": 1
-    },
-    {
-     "at": 0.18,
-     "aim": {
-      "d": 1.95,
-      "az": 15.0,
-      "y": 0.9,
-      "h": 2.3,
-      "at": [
-       -6.07,
-       2.0,
-       -22.75
-      ]
-     },
-     "fov": 46,
-     "roll": -10,
-     "shake": 0
-    }
-   ],
-   "why": "the war's second start (blow 5): SUPERHERO LANDING on the drop, lamp flash two-tone, shake; the hit 123.809 as a gold-orange flash (ref hsr-hope-feathers@108.25)",
-   "actor": [
-    {
-     "at": 0.015,
-     "clip": "swing-backflip-to-superhero-pose",
-     "clip_from": 1.9,
-     "speed": 0.0,
-     "motionMix": 1,
-     "pos": [
-      -6.07,
-      2.0,
-      -22.75
-     ],
-     "face_lens": true,
-     "expr": {
-      "angry": 1
-     }
-    },
-    {
-     "at": 0.282,
-     "clip": "swing-backflip-to-superhero-pose",
-     "clip_from": 1.9,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -6.07,
-      2.0,
-      -22.75
-     ],
-     "face_lens": true,
-     "expr": {
-      "angry": 1
-     }
-    }
-   ],
-   "low_ok": "her crouch on the ledge, the lens 2.8 m away",
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 54 -> one picture. the war's second start (blow 5): SUPERHERO LANDING on the drop, lamp flash two-tone, shake; the hit 123.809 as a gold-orange flash (ref hsr-hope-feathers@108.25)",
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -4721,265 +4634,229 @@
      123.809
     ],
     "two_tone_n": 4,
-    "two_tone_light": "#ffc35c",
-    "rain_ring": [
-     122.615
-    ]
+    "two_tone_light": "#ffc35c"
    },
-   "cams": [
+   "camera": [
     {
-     "at": 123.77,
-     "kind": "macro",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "at": [
-         -7.62,
-         3.3,
-         -28.62
-        ],
-        "d": 0.45,
-        "az": 15.0,
-        "y": 0.0,
-        "h": 3.4
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ],
-     "why": "her hand finds the first rung: macro punch-in",
-     "opts": {
-      "detail": "her hand on the first rung"
-     }
+     "at": 0.0,
+     "aim": {
+      "d": 7.4,
+      "az": 15,
+      "y": 1.2,
+      "h": 1.5,
+      "at": [
+       -6.07,
+       2,
+       -22.75
+      ]
+     },
+     "fov": 46,
+     "roll": -10
+    },
+    {
+     "at": 0.015,
+     "aim": {
+      "d": 6.8,
+      "az": 15,
+      "y": 1.2,
+      "h": 1.5,
+      "at": [
+       -6.07,
+       2,
+       -22.75
+      ]
+     },
+     "fov": 46,
+     "roll": -10,
+     "shake": 1
+    },
+    {
+     "at": 0.18,
+     "aim": {
+      "d": 6.7,
+      "az": 15,
+      "y": 1.2,
+      "h": 1.5,
+      "at": [
+       -6.07,
+       2,
+       -22.75
+      ]
+     },
+     "fov": 46,
+     "roll": -10,
+     "shake": 0
+    },
+    {
+     "at": 1.72,
+     "aim": {
+      "d": 5.6,
+      "az": 25,
+      "y": 1.2,
+      "h": 1.9,
+      "at": [
+       -6.07,
+       2,
+       -22.75
+      ]
+     },
+     "fov": 46,
+     "roll": -4,
+     "ease": "in"
     }
-   ]
+   ],
+   "actor": [
+    {
+     "clip": "swing-backflip-to-superhero-pose",
+     "clip_from": 1.9,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": [
+      -6.07,
+      2,
+      -22.75
+     ],
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     },
+     "at": 0.015
+    },
+    {
+     "clip": "swing-backflip-to-superhero-pose",
+     "clip_from": 1.9,
+     "speed": 1,
+     "motionMix": 1,
+     "pos": [
+      -6.07,
+      2,
+      -22.75
+     ],
+     "face_lens": true,
+     "expr": {
+      "angry": 1
+     },
+     "at": 0.282
+    }
+   ],
+   "low_ok": "her crouch on the ledge, the lens 2.8 m away"
   },
   {
    "id": "55",
    "at": 124.3,
    "set": "nightsea",
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 55+56 -> one picture. one step per bar: the ladder from below",
+   "opts": {
+    "rain_at": 84.933,
+    "rain_end_at": 999.0,
+    "lighthouse": {
+     "pos": [
+      -8.0,
+      -30.0
+     ],
+     "height": 12,
+     "len": 90,
+     "spin": 24,
+     "beam": 1.0,
+     "ledge": [
+      -6.07,
+      -22.75
+     ],
+     "yaw": 0,
+     "lantern": "her"
+    },
+    "lantern_room": 1,
+    "her_key": 0.55
+   },
    "camera": [
     {
-     "at": 0,
+     "at": 0.0,
      "aim": {
-      "d": 3.2,
-      "az": 75.0,
-      "y": 1.3,
-      "h": 4.75,
+      "d": 9,
+      "az": 80,
+      "y": 0.8,
+      "h": 4.0,
       "at": [
-       -7.5,
-       4.0,
-       -28.16
+       -7.555,
+       4.5,
+       -28.339
+      ]
+     },
+     "fov": 52,
+     "roll": 0
+    },
+    {
+     "at": 1.85,
+     "aim": {
+      "d": 6.5,
+      "az": 88,
+      "y": 0.8,
+      "h": 6.8,
+      "at": [
+       -7.555,
+       6.5,
+       -28.339
       ]
      },
      "fov": 50,
      "roll": 0
+    },
+    {
+     "at": 3.73,
+     "aim": {
+      "d": 5.5,
+      "az": 95,
+      "y": 0.8,
+      "h": 9.3,
+      "at": [
+       -7.555,
+       8.55,
+       -28.339
+      ]
+     },
+     "fov": 46,
+     "roll": 0
     }
    ],
-   "why": "one step per bar: the ladder from below",
    "actor": [
     {
-     "at": 0,
      "clip": "climbing-ladder",
-     "clip_from": 1.0,
-     "speed": 1.0,
+     "clip_from": 0,
+     "speed": 1.4,
      "motionMix": 1,
      "pos": [
-      -7.5,
-      4.0,
-      -28.16
+      -7.555,
+      4.5,
+      -28.339
      ],
-     "rotY": -165.0,
-     "ground": false
-    }
-   ],
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 24,
-     "beam": 1.0,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 0,
-     "lantern": "her"
+     "rotY": -165,
+     "ground": false,
+     "travel": 0,
+     "at": 0.0
     },
-    "lantern_room": 1,
-    "her_key": 0.55
-   },
-   "cams": [
     {
-     "at": 125.233,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.4,
-        "az": 15.0,
-        "y": 1.6
-       },
-       "fov": 46,
-       "roll": 0
-      }
+     "clip": "climbing-ladder",
+     "speed": 1.4,
+     "motionMix": 1,
+     "pos": [
+      -7.555,
+      8.55,
+      -28.339
      ],
-     "opts": {
-      "detail": "her hand on the rung"
-     }
+     "rotY": -165,
+     "ground": false,
+     "move": 3.73,
+     "ease": "linear",
+     "travel": 0,
+     "at": 3.73
     }
    ]
-  },
-  {
-   "id": "56",
-   "at": 126.167,
-   "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 3.0,
-      "az": 85.0,
-      "y": 1.0,
-      "h": 7.8,
-      "at": [
-       -6.9,
-       7.2,
-       -28.0
-      ]
-     },
-     "fov": 46,
-     "roll": 0
-    },
-    {
-     "at": 1.87,
-     "aim": {
-      "d": 3.0,
-      "az": 65.0,
-      "y": 1.4,
-      "h": 8.6,
-      "at": [
-       -6.9,
-       7.2,
-       -28.0
-      ]
-     },
-     "fov": 46,
-     "roll": 0
-    }
-   ],
-   "why": "the climb as attack: she leaps across the tower face",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "jump-from-wall",
-     "clip_from": 1.9,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -6.9,
-      7.2,
-      -28.0
-     ],
-     "rotY": -105.0,
-     "ground": false
-    }
-   ],
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 24,
-     "beam": 1.0,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 0,
-     "lantern": "her"
-    },
-    "lantern_room": 1,
-    "her_key": 0.55
-   },
-   "cams": [
-    {
-     "at": 127.167,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.7,
-        "az": 75.0,
-        "y": 1.4
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    }
-   ],
-   "frame_fits": {
-    "56a": [
-     0.026,
-     -0.455,
-     -0.096
-    ]
-   }
   },
   {
    "id": "57",
    "at": 128.033,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 0.6,
-      "az": 15.0,
-      "y": 1.6,
-      "h": 13.0,
-      "at": [
-       -7.32,
-       11.6,
-       -27.48
-      ]
-     },
-     "fov": 46,
-     "roll": 0
-    }
-   ],
-   "why": "contact with the place: her hand on the gallery rail, the beam inches over her head | motion (toki 2026-10-27): hanging-by-hands (0.02 m/s) -> pulling-up-to-a-ledge (1.70)",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pulling-up-to-a-ledge",
-     "clip_from": 0.3,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.32,
-      11.6,
-      -27.48
-     ],
-     "rotY": -165.0,
-     "ground": false
-    }
-   ],
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 57+58 -> one picture. contact with the place: her hand on the gallery rail, the beam inches over her head | motion (toki 2026-10-27): hanging-by-hands (0.02 m/s) -> pulling-up-to-a-ledge (1.70)",
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -5005,158 +4882,113 @@
     ],
     "two_tone_n": 2,
     "two_tone_light": "#fff1d2",
-    "detail": "her hand on the gallery rail (the beam inches over her head)",
     "her_key": 0.55
    },
-   "cams": [
-    {
-     "at": 129.0,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.3,
-        "az": 15.0,
-        "y": 1.75
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ],
-     "opts": {
-      "detail": "the knuckles on the rail"
-     }
-    }
-   ]
-  },
-  {
-   "id": "58",
-   "at": 129.933,
-   "set": "nightsea",
    "camera": [
     {
-     "at": 0,
+     "at": 0.0,
      "aim": {
-      "d": 2.5,
-      "az": 25.0,
-      "y": 1.0,
-      "h": 13.180000000000001,
+      "d": 4.2,
+      "az": 70,
+      "y": 1,
+      "h": 10,
       "at": [
-       -7.46,
-       12.38,
-       -27.97
+       -7.32,
+       11.8,
+       -27.48
       ]
      },
-     "fov": 46,
+     "fov": 50,
      "roll": 0
+    },
+    {
+     "at": 1.9,
+     "aim": {
+      "d": 4,
+      "az": 55,
+      "y": 1.2,
+      "h": 12,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 48,
+     "roll": 0
+    },
+    {
+     "at": 3.03,
+     "aim": {
+      "d": 4.6,
+      "az": 40,
+      "y": 1.3,
+      "h": 13.4,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 48,
+     "roll": 0,
+     "ease": "in"
     }
    ],
-   "why": "over: she vaults the rail",
    "actor": [
     {
-     "at": 0,
-     "clip": "jumping-over-obstacle-one-hand",
-     "clip_from": 0.35,
-     "speed": 1.0,
+     "clip": "pulling-up-to-a-ledge",
+     "clip_from": 0.3,
+     "speed": 1.85,
      "motionMix": 1,
      "pos": [
-      -7.32,
-      12.180000000000001,
-      -27.48
+      -7.327,
+      11.6,
+      -27.488
      ],
-     "face_lens": true,
-     "ground": false
-    }
-   ],
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 24,
-     "beam": 1.0,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 0,
-     "lantern": "her"
+     "rotY": -165,
+     "ground": false,
+     "travel": 0,
+     "at": 0.0
     },
-    "lantern_room": 1,
-    "her_key": 0.55
-   }
+    {
+     "clip": "jumping-over-obstacle-one-hand",
+     "clip_from": 0.35,
+     "speed": 0.72,
+     "motionMix": 1,
+     "pos": [
+      -7.327,
+      13.3,
+      -27.488
+     ],
+     "rotY": -165,
+     "ground": false,
+     "travel": 0,
+     "at": 1.9
+    },
+    {
+     "clip": "jumping-over-obstacle-one-hand",
+     "speed": 0.72,
+     "motionMix": 1,
+     "pos": [
+      -7.482,
+      12.38,
+      -28.068
+     ],
+     "rotY": -165,
+     "ground": false,
+     "move": 1.1,
+     "ease": "linear",
+     "travel": 0,
+     "at": 3.0
+    }
+   ]
   },
   {
    "id": "59",
    "at": 131.067,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "pos": [
-      -7.46,
-      15.38,
-      -27.669999999999998
-     ],
-     "look": [
-      -7.46,
-      12.38,
-      -27.97
-     ],
-     "fov": 50,
-     "roll": 0
-    },
-    {
-     "at": 0.7,
-     "pos": [
-      -7.76,
-      14.780000000000001,
-      -27.57
-     ],
-     "look": [
-      -7.66,
-      13.180000000000001,
-      -28.27
-     ],
-     "fov": 50,
-     "roll": 0
-    }
-   ],
-   "why": "she has arrived: the landing on the gallery ON the measured hit 131.077 (gold-orange two-tone)",
-   "actor": [
-    {
-     "at": 0.01,
-     "clip": "swing-backflip-to-superhero-pose",
-     "clip_from": 1.9,
-     "speed": 0.0,
-     "motionMix": 1,
-     "pos": [
-      -7.46,
-      12.38,
-      -27.97
-     ],
-     "face_lens": true
-    },
-    {
-     "at": 0.143,
-     "clip": "swing-backflip-to-superhero-pose",
-     "clip_from": 1.9,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.46,
-      12.38,
-      -27.97
-     ],
-     "face_lens": true
-    }
-   ],
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 59 -> one picture. she has arrived: the landing on the gallery ON the measured hit 131.077 (gold-orange two-tone)",
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -5174,7 +5006,13 @@
       -22.75
      ],
      "yaw": 0,
-     "lantern": "her"
+     "lantern": "her",
+     "glass": false,
+     "mullion_phase": 0.654,
+     "ring_gap": [
+      15,
+      50
+     ]
     },
     "lantern_room": 1,
     "two_tone": [
@@ -5182,30 +5020,92 @@
     ],
     "two_tone_n": 4,
     "two_tone_light": "#ffc35c",
-    "ring_at": [
-     131.33
-    ],
     "her_key": 0.55
    },
-   "cams": [
+   "camera": [
     {
-     "at": 132.3,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.4,
-        "az": 15.0,
-        "y": 0.1
-       },
-       "fov": 46,
-       "roll": 0
-      }
+     "at": 0.0,
+     "aim": {
+      "d": 5.2,
+      "az": 135.0,
+      "y": 1.0,
+      "h": 12.9,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 0,
+     "shake": 1
+    },
+    {
+     "at": 0.17,
+     "aim": {
+      "d": 5.0,
+      "az": 133.0,
+      "y": 1.0,
+      "h": 12.9,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 0,
+     "shake": 0
+    },
+    {
+     "at": 2.2,
+     "aim": {
+      "d": 4.4,
+      "az": 125.0,
+      "y": 1.0,
+      "h": 13.0,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    }
+   ],
+   "actor": [
+    {
+     "clip": "jumping-over-obstacle-one-hand",
+     "clip_from": 1.1,
+     "speed": 0,
+     "motionMix": 1,
+     "pos": [
+      -7.482,
+      12.38,
+      -28.068
      ],
-     "opts": {
-      "detail": "her feet hitting the floor"
-     }
+     "rotY": -165,
+     "at": 0.0
+    },
+    {
+     "clip": "pull-heavy-object",
+     "speed": 1.185,
+     "motionMix": 1,
+     "pos": [
+      -7.482,
+      12.38,
+      -28.068
+     ],
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
+     ],
+     "clip_from": 0.0,
+     "blend": 0.45,
+     "at": 0.383
     }
    ]
   },
@@ -5213,40 +5113,7 @@
    "id": "60",
    "at": 133.267,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 0.4,
-      "az": 75.0,
-      "y": 1.15,
-      "h": 14.1,
-      "at": [
-       -7.437,
-       12.9,
-       -31.185
-      ]
-     },
-     "fov": 44,
-     "roll": 0
-    }
-   ],
-   "why": "the light in her hands: macro on the grip on the held note (hold = weight)",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pull-heavy-object",
-     "clip_from": 1.0,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.437,
-      12.9,
-      -31.185
-     ],
-     "rotY": -25.4
-    }
-   ],
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 60+61 -> one picture. the light in her hands: macro on the grip on the held note (hold = weight)",
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -5264,12 +5131,15 @@
       -22.75
      ],
      "yaw": 0,
-     "lantern": "her"
+     "lantern": "her",
+     "glass": false,
+     "mullion_phase": 0.654,
+     "ring_gap": [
+      15,
+      50
+     ]
     },
     "lantern_room": 1,
-    "grain_pulse": [
-     133.67
-    ],
     "her_key": 0.55
    },
    "frame_fit": [
@@ -5277,90 +5147,74 @@
     0.033,
     0.0
    ],
-   "transition": {
-    "kind": "cover",
-    "frames": 4,
-    "obj": "glass"
-   }
-  },
-  {
-   "id": "61",
-   "at": 135.533,
-   "set": "nightsea",
    "camera": [
     {
-     "at": 0,
+     "at": 0.0,
      "aim": {
-      "d": 1.2,
-      "az": 30.0,
-      "y": 1.4,
-      "h": 14.3,
+      "d": 7.0,
+      "az": 105.0,
+      "y": 1.1,
+      "h": 13.4,
       "at": [
-       -7.519,
-       12.9,
-       -31.012
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 2.0,
+     "aim": {
+      "d": 5.6,
+      "az": 105.0,
+      "y": 1.1,
+      "h": 13.6,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 4.17,
+     "aim": {
+      "d": 4.5,
+      "az": 110.0,
+      "y": 1.1,
+      "h": 13.7,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
       ]
      },
      "fov": 44,
      "roll": 0
     }
    ],
-   "why": "the machine between us: the lens rings turn past the camera, her face through them",
    "actor": [
     {
-     "at": 0,
      "clip": "pull-heavy-object",
-     "clip_from": 1.9,
-     "speed": 1.0,
+     "speed": 1.185,
      "motionMix": 1,
      "pos": [
-      -7.519,
-      12.9,
-      -31.012
+      -7.482,
+      12.38,
+      -28.068
      ],
-     "face_lens": true,
-     "rotY": -25.4
-    }
-   ],
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
      ],
-     "height": 12,
-     "len": 90,
-     "spin": 24,
-     "beam": 1.0,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 0,
-     "lantern": "her"
-    },
-    "lantern_room": 1,
-    "fresnel_front": 1,
-    "her_key": 0.55
-   },
-   "cams": [
-    {
-     "at": 136.5,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.5,
-        "az": 15,
-        "y": 1.42
-       },
-       "fov": 44,
-       "roll": 0
-      }
-     ]
+     "clip_from": 1.027,
+     "at": 0.0
     }
    ]
   },
@@ -5368,39 +5222,7 @@
    "id": "62",
    "at": 137.433,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "pos": [
-      -7.219,
-      15.5,
-      -30.612
-     ],
-     "look": [
-      -7.519,
-      12.9,
-      -31.412
-     ],
-     "fov": 50,
-     "roll": 0
-    }
-   ],
-   "why": "the chain from act 1 closes: the cable arrives through the floor into the lamp base",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pull-heavy-object",
-     "clip_from": 1.0,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.519,
-      12.9,
-      -31.012
-     ],
-     "rotY": -25.4
-    }
-   ],
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 62+63 -> one picture. the chain from act 1 closes: the cable arrives through the floor into the lamp base",
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -5418,142 +5240,91 @@
       -22.75
      ],
      "yaw": 0,
-     "lantern": "her"
+     "lantern": "her",
+     "glass": false,
+     "mullion_phase": 0.654,
+     "ring_gap": [
+      15,
+      50
+     ]
     },
     "lantern_room": 1,
     "cable_glow": 0.4,
-    "lamp_cable": 1,
-    "her_key": 0.55
+    "her_key": 0.55,
+    "two_tone": [
+     139.297
+    ],
+    "two_tone_n": 4,
+    "two_tone_light": "#ffc35c"
    },
-   "cams": [
-    {
-     "at": 138.4,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.4,
-        "az": 60,
-        "y": 1.1
-       },
-       "fov": 44,
-       "roll": 0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "63",
-   "at": 139.267,
-   "set": "nightsea",
    "camera": [
     {
-     "at": 0,
+     "at": 0.0,
      "aim": {
-      "d": 1.6,
-      "az": 15.0,
-      "y": 1.3,
-      "h": 14.1,
+      "d": 3.4,
+      "az": -110.0,
+      "y": 0.9,
+      "h": 13.3,
       "at": [
-       -7.519,
-       12.9,
-       -31.012
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 1.87,
+     "aim": {
+      "d": 3.4,
+      "az": -107.0,
+      "y": 1.1,
+      "h": 13.6,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    },
+    {
+     "at": 3.73,
+     "aim": {
+      "d": 3.6,
+      "az": -103.0,
+      "y": 1.1,
+      "h": 13.7,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
       ]
      },
      "fov": 44,
      "roll": 0
     }
    ],
-   "why": "what her pull does outside: the beam sweeps round the tower (hit 139.297 gold-orange)",
    "actor": [
     {
-     "at": 0,
      "clip": "pull-heavy-object",
-     "clip_from": 1.9,
-     "speed": 1.0,
+     "speed": 1.185,
      "motionMix": 1,
      "pos": [
-      -7.519,
-      12.9,
-      -31.012
+      -7.482,
+      12.38,
+      -28.068
      ],
-     "rotY": -25.4
-    }
-   ],
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
      ],
-     "height": 12,
-     "len": 90,
-     "spin": 24,
-     "beam": 1.0,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 0,
-     "lantern": "her"
-    },
-    "lantern_room": 1,
-    "two_tone": [
-     139.297
-    ],
-    "two_tone_n": 4,
-    "two_tone_light": "#ffc35c",
-    "her_key": 0.55
-   },
-   "cams": [
-    {
-     "at": 140.233,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.6,
-        "az": -5.0,
-        "y": 1.3
-       },
-       "fov": 44,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 140.933,
-     "kind": "wide",
-     "camera": [
-      {
-       "at": 0,
-       "pos": [
-        4.5,
-        4.0,
-        -8.350000000000001
-       ],
-       "look": [
-        -8.0,
-        10.0,
-        -30.0
-       ],
-       "fov": 40,
-       "roll": 0
-      }
-     ],
-     "opts": {
-      "two_tone": [
-       140.933
-      ],
-      "two_tone_n": 4,
-      "two_tone_light": "#fff1d2"
-     },
-     "why": "THE WIDE as a 4-frame flash: the beam sweeping the sea from d 25 (scale for 4 frames only)"
+     "clip_from": 0.464,
+     "at": 0.0
     }
    ]
   },
@@ -5561,44 +5332,7 @@
    "id": "64",
    "at": 141.167,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 0.6,
-      "az": 25.0,
-      "y": 1.4,
-      "h": 14.3,
-      "at": [
-       -7.519,
-       12.9,
-       -31.012
-      ]
-     },
-     "fov": 44,
-     "roll": 0
-    }
-   ],
-   "why": "effort: she sings through her teeth; COLOUR FLIP on the measured Bm turn 142.62",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pull-heavy-object",
-     "clip_from": 1.9,
-     "speed": 0.0,
-     "motionMix": 1,
-     "pos": [
-      -7.519,
-      12.9,
-      -31.012
-     ],
-     "face_lens": true,
-     "expr": {
-      "angry": 1
-     },
-     "rotY": -25.4
-    }
-   ],
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 64 -> one picture. effort: she sings through her teeth; COLOUR FLIP on the measured Bm turn 142.62",
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -5616,7 +5350,13 @@
       -22.75
      ],
      "yaw": 0,
-     "lantern": "her"
+     "lantern": "her",
+     "glass": false,
+     "mullion_phase": 0.654,
+     "ring_gap": [
+      15,
+      50
+     ]
     },
     "lantern_room": 1,
     "flip_at": [
@@ -5624,47 +5364,61 @@
     ],
     "her_key": 0.55
    },
-   "cams": [
+   "camera": [
     {
-     "at": 142.133,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.3,
-        "az": 25.0,
-        "y": 1.3
-       },
-       "fov": 44,
-       "roll": 0
-      }
-     ],
-     "opts": {
-      "detail": "her teeth"
-     }
+     "at": 0.0,
+     "aim": {
+      "d": 3.6,
+      "az": 140.0,
+      "y": 1.28,
+      "h": 14.25,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 24,
+     "roll": 0
     },
     {
-     "at": 142.633,
-     "kind": "flip",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.3,
-        "az": 25.0,
-        "y": 1.3,
-        "h": 14.200000000000001,
-        "at": [
-         -7.519,
-         12.9,
-         -31.012
-        ]
-       },
-       "fov": 44,
-       "roll": 0
-      }
-     ]
+     "at": 1.87,
+     "aim": {
+      "d": 3.2,
+      "az": 140.0,
+      "y": 1.28,
+      "h": 14.25,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 22,
+     "roll": 0
+    }
+   ],
+   "actor": [
+    {
+     "clip": "pull-heavy-object",
+     "speed": 1.185,
+     "motionMix": 1,
+     "pos": [
+      -7.482,
+      12.38,
+      -28.068
+     ],
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
+     ],
+     "clip_from": 0.489,
+     "expr": {
+      "angry": 1
+     },
+     "at": 0.0
     }
    ]
   },
@@ -5672,57 +5426,7 @@
    "id": "65",
    "at": 143.033,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 1.8,
-      "az": 55.0,
-      "y": 1.3,
-      "h": 13.65,
-      "at": [
-       -7.519,
-       12.9,
-       -31.012
-      ]
-     },
-     "fov": 46,
-     "roll": 0
-    },
-    {
-     "at": 1.4,
-     "aim": {
-      "d": 1.8,
-      "az": 85.0,
-      "y": 1.3,
-      "h": 13.65,
-      "at": [
-       -7.519,
-       12.9,
-       -31.012
-      ]
-     },
-     "fov": 46,
-     "roll": 0
-    }
-   ],
-   "why": "the weight begins: double time into the false win | motion (toki 2026-10-27): hanging-by-hands (0.02 m/s) -> pulling-up-to-a-ledge (1.70)",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pulling-up-to-a-ledge",
-     "clip_from": 0.3,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.519,
-      12.9,
-      -31.012
-     ],
-     "rotY": -25.4,
-     "ground": false
-    }
-   ],
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 65 -> one picture. the weight begins: double time into the false win | motion (toki 2026-10-27): hanging-by-hands (0.02 m/s) -> pulling-up-to-a-ledge (1.70)",
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -5740,120 +5444,88 @@
       -22.75
      ],
      "yaw": -1448.3,
-     "lantern": "her"
+     "lantern": "her",
+     "glass": false,
+     "mullion_phase": 0.654,
+     "ring_gap": [
+      15,
+      50
+     ]
     },
     "lantern_room": 1,
     "her_key": 0.55
    },
-   "cams": [
+   "camera": [
     {
-     "at": 144.0,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.5,
-        "az": 55.0,
-        "y": 0.1
-       },
-       "fov": 46,
-       "roll": 0
-      }
+     "at": 0.0,
+     "aim": {
+      "d": 3.8,
+      "az": 115.0,
+      "y": 1.1,
+      "h": 13.2,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 3.27,
+     "aim": {
+      "d": 3.0,
+      "az": 90.0,
+      "y": 1.1,
+      "h": 13.9,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 0,
+     "ease": "in"
+    }
+   ],
+   "actor": [
+    {
+     "clip": "pull-heavy-object",
+     "speed": 1.78,
+     "motionMix": 1,
+     "pos": [
+      -7.482,
+      12.38,
+      -28.068
      ],
-     "opts": {
-      "detail": "her braced feet"
-     }
-    },
-    {
-     "at": 144.467,
-     "kind": "angle",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.2,
-        "az": -160,
-        "y": 1.2,
-        "h": 15.3,
-        "at": [
-         -7.519,
-         12.9,
-         -31.012
-        ]
-       },
-       "fov": 48,
-       "roll": 180
-      }
-     ]
-    },
-    {
-     "at": 144.933,
-     "kind": "reverse",
-     "camera": [
-      {
-       "at": 0,
-       "pos": [
-        -7.519,
-        15.9,
-        -30.712
-       ],
-       "look": [
-        -7.519,
-        13.5,
-        -31.012
-       ],
-       "fov": 50,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 145.667,
-     "kind": "macro",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.3,
-        "az": 45.0,
-        "y": 0.1,
-        "h": 13.05,
-        "at": [
-         -7.519,
-         12.9,
-         -31.012
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
      ],
-     "opts": {
-      "detail": "rail-level macro on her braced boot"
-     }
+     "clip_from": 0.5,
+     "at": 0.0
     },
     {
-     "at": 145.9,
-     "kind": "rail",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.0,
-        "az": -35.0,
-        "y": 1.0,
-        "h": 13.9,
-        "at": [
-         -7.519,
-         12.9,
-         -31.012
-        ]
-       },
-       "fov": 50,
-       "roll": 0
-      }
-     ]
+     "clip": "pull-heavy-object",
+     "speed": 2.37,
+     "motionMix": 1,
+     "pos": [
+      -7.482,
+      12.38,
+      -28.068
+     ],
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
+     ],
+     "clip_from": 0.523,
+     "at": 1.867
     }
    ],
    "transition": {
@@ -5865,87 +5537,7 @@
    "id": "66",
    "at": 146.3,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "pos": [
-      -7.144,
-      13.7,
-      -26.808
-     ],
-     "look": [
-      -8.0,
-      13.1,
-      -30.0
-     ],
-     "fov": 46,
-     "roll": 0
-    },
-    {
-     "at": 0.03,
-     "pos": [
-      -7.144,
-      13.7,
-      -26.808
-     ],
-     "look": [
-      -8.0,
-      13.1,
-      -30.0
-     ],
-     "fov": 46,
-     "roll": 0,
-     "shake": 1
-    },
-    {
-     "at": 0.17,
-     "pos": [
-      -7.144,
-      13.7,
-      -26.808
-     ],
-     "look": [
-      -8.0,
-      13.1,
-      -30.0
-     ],
-     "fov": 46,
-     "roll": 0,
-     "shake": 0
-    }
-   ],
-   "why": "FALSE WIN 1 (146.33): the beam swings round and PASSES the lens in 10 frames, flash, shake",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pull-heavy-object",
-     "clip_from": 1.0,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.708,
-      12.9,
-      -28.919
-     ],
-     "expr": {
-      "aa": 0.5
-     },
-     "rotY": -25.4
-    },
-    {
-     "at": 0.49,
-     "clip": "pull-heavy-object",
-     "clip_from": 1.0,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.708,
-      12.9,
-      -28.919
-     ],
-     "rotY": -25.4
-    }
-   ],
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 66+67 -> one picture. FALSE WIN 1 (146.33): the beam swings round and PASSES the lens in 10 frames, flash, shake",
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -5963,11 +5555,18 @@
       -22.75
      ],
      "yaw": -5825.04,
-     "lantern": "her"
+     "lantern": "her",
+     "glass": false,
+     "mullion_phase": 0.654,
+     "ring_gap": [
+      15,
+      50
+     ]
     },
     "lantern_room": 1,
     "two_tone": [
-     146.33
+     146.33,
+     149.6
     ],
     "two_tone_n": 4,
     "two_tone_light": "#ffc35c",
@@ -5978,206 +5577,129 @@
      "glow": 0.15,
      "vignette": 0.45,
      "dof_auto": 1
-    }
-   },
-   "cams": [
-    {
-     "at": 147.3,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": 35.0,
-        "y": 1.15
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
     },
-    {
-     "at": 148.1,
-     "kind": "reverse",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 2.0,
-        "az": -150,
-        "y": 1.3,
-        "h": 14.3,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 50,
-       "roll": 0
-      }
-     ]
-    }
-   ],
+    "flip_at": [
+     150.12
+    ]
+   },
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
-  },
-  {
-   "id": "67",
-   "at": 148.667,
-   "set": "nightsea",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop",
    "camera": [
     {
-     "at": 0,
+     "at": 0.0,
      "aim": {
-      "d": 2.2,
-      "az": 40.0,
-      "y": 1.3,
-      "h": 14.1,
+      "d": 3.2,
+      "az": -95.0,
+      "y": 1.1,
+      "h": 13.7,
       "at": [
-       -7.708,
-       12.9,
-       -28.919
+       -7.482,
+       12.38,
+       -28.068
       ]
      },
      "fov": 46,
      "roll": 0
+    },
+    {
+     "at": 0.03,
+     "aim": {
+      "d": 3.2,
+      "az": -95.0,
+      "y": 1.1,
+      "h": 13.7,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 46,
+     "roll": 0,
+     "shake": 1
+    },
+    {
+     "at": 0.17,
+     "aim": {
+      "d": 3.3,
+      "az": -95.0,
+      "y": 1.1,
+      "h": 13.7,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 46,
+     "roll": 0,
+     "shake": 0
+    },
+    {
+     "at": 4.07,
+     "aim": {
+      "d": 4.4,
+      "az": -87.0,
+      "y": 1.1,
+      "h": 13.8,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 46,
+     "roll": 0,
+     "ease": "linear"
     }
    ],
-   "why": "FALSE WIN 2: closer; COLOUR FLIP on the measured Bm turn 150.12",
    "actor": [
     {
-     "at": 0,
      "clip": "pull-heavy-object",
-     "clip_from": 1.9,
      "speed": 1.0,
      "motionMix": 1,
      "pos": [
-      -7.708,
-      12.9,
-      -28.919
+      -7.482,
+      12.38,
+      -28.068
      ],
-     "rotY": -25.4
-    }
-   ],
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
+     ],
+     "clip_from": 0.541,
+     "expr": {
+      "aa": 0.5
+     },
+     "at": 0.0
+    },
+    {
+     "clip": "pull-heavy-object",
+     "speed": 1.5,
+     "motionMix": 1,
      "pos": [
-      -8.0,
-      -30.0
+      -7.482,
+      12.38,
+      -28.068
      ],
-     "height": 12,
-     "len": 90,
-     "spin": 30,
-     "beam": 0.6,
-     "ledge": [
-      -6.07,
-      -22.75
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
      ],
-     "yaw": -4461.23,
-     "lantern": "her"
-    },
-    "lantern_room": 1,
-    "two_tone": [
-     149.6
-    ],
-    "two_tone_n": 2,
-    "two_tone_light": "#ffc35c",
-    "flip_at": [
-     150.12
-    ],
-    "her_key": 0.55,
-    "post": {
-     "glow": 0.15,
-     "vignette": 0.45,
-     "dof_auto": 1
+     "clip_from": 0.708,
+     "at": 2.367
     }
-   },
-   "cams": [
-    {
-     "at": 149.633,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": 40.0,
-        "y": 1.4
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 150.133,
-     "kind": "flip",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": 40.0,
-        "y": 1.4,
-        "h": 14.3,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    }
-   ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
+   ]
   },
   {
    "id": "68",
    "at": 150.367,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 0.75,
-      "az": 85.0,
-      "y": 1.2,
-      "h": 14.3,
-      "at": [
-       -7.708,
-       12.9,
-       -28.919
-      ]
-     },
-     "fov": 44,
-     "roll": 0
-    }
-   ],
-   "why": "the machine fights back: her hand slips and catches the frame | motion (toki 2026-10-27): hanging-by-hands (0.02 m/s) -> pulling-up-to-a-ledge (1.70)",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pulling-up-to-a-ledge",
-     "clip_from": 0.3,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.708,
-      12.9,
-      -28.919
-     ],
-     "rotY": -25.4,
-     "ground": false
-    }
-   ],
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 68+69 -> one picture. the machine fights back: her hand slips and catches the frame | motion (toki 2026-10-27): hanging-by-hands (0.02 m/s) -> pulling-up-to-a-ledge (1.70)",
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -6195,243 +5717,118 @@
       -22.75
      ],
      "yaw": 0,
-     "lantern": "her"
+     "lantern": "her",
+     "glass": false,
+     "mullion_phase": 0.654,
+     "ring_gap": [
+      15,
+      50
+     ]
     },
     "lantern_room": 1,
-    "detail": "macro on her hand slipping and catching the frame",
     "her_key": 0.55,
     "post": {
      "glow": 0.15,
      "vignette": 0.45,
      "dof_auto": 1
-    }
+    },
+    "flip_at": [
+     153.85
+    ]
    },
-   "cams": [
-    {
-     "at": 151.5,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": 85.0,
-        "y": 1.25
-       },
-       "fov": 44,
-       "roll": 0
-      }
-     ],
-     "opts": {
-      "detail": "her fingers slipping"
-     }
-    }
-   ],
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
-  },
-  {
-   "id": "69",
-   "at": 152.4,
-   "set": "nightsea",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop",
    "camera": [
     {
-     "at": 0,
+     "at": 0.0,
      "aim": {
-      "d": 1.0,
-      "az": 95.0,
-      "y": 0.5,
-      "h": 13.3,
+      "d": 3.4,
+      "az": 105.0,
+      "y": 0.9,
+      "h": 12.8,
       "at": [
-       -7.708,
-       12.9,
-       -28.919
+       -7.482,
+       12.38,
+       -28.068
       ]
      },
      "fov": 46,
-     "roll": 14
+     "roll": 0
+    },
+    {
+     "at": 2.03,
+     "aim": {
+      "d": 3.0,
+      "az": 103.0,
+      "y": 0.8,
+      "h": 12.75,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 46,
+     "roll": 5
+    },
+    {
+     "at": 3.93,
+     "aim": {
+      "d": 2.8,
+      "az": 100.0,
+      "y": 0.7,
+      "h": 12.75,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 10
     }
    ],
-   "why": "she does not let go; COLOUR FLIP on the measured Bm turn 153.85 - the last orange of the film",
    "actor": [
     {
-     "at": 0,
-     "clip": "pulling-up-to-a-ledge",
-     "clip_from": 1.0,
+     "clip": "pro-magic-standing-block-react-large",
+     "clip_from": 0,
+     "speed": 1,
+     "motionMix": 1,
+     "pos": [
+      -7.482,
+      12.38,
+      -28.068
+     ],
+     "rotY": -165,
+     "at": 0.0
+    },
+    {
+     "clip": "pull-heavy-object",
      "speed": 1.0,
      "motionMix": 1,
      "pos": [
-      -7.708,
-      12.4,
-      -28.919
+      -7.482,
+      12.38,
+      -28.068
      ],
-     "rotY": -165.0,
-     "ground": false
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
+     ],
+     "clip_from": 0.0,
+     "blend": 0.45,
+     "at": 1.0
     }
    ],
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 24,
-     "beam": 0.6,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 0,
-     "lantern": "her"
-    },
-    "lantern_room": 1,
-    "flip_at": [
-     153.85
-    ],
-    "her_key": 0.55,
-    "post": {
-     "glow": 0.15,
-     "vignette": 0.45,
-     "dof_auto": 1
-    }
-   },
-   "cams": [
-    {
-     "at": 152.933,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": 95.0,
-        "y": 0.6
-       },
-       "fov": 46,
-       "roll": 14
-      }
-     ],
-     "opts": {
-      "detail": "her elbow on the base"
-     }
-    },
-    {
-     "at": 153.4,
-     "kind": "reverse",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.2,
-        "az": -170,
-        "y": 0.8,
-        "h": 13.1,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 50,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 153.867,
-     "kind": "flip",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": 95.0,
-        "y": 0.6,
-        "h": 13.3,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 14
-      }
-     ]
-    },
-    {
-     "at": 154.1,
-     "kind": "main",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.0,
-        "az": 95.0,
-        "y": 0.5,
-        "h": 13.3,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 14
-      }
-     ]
-    }
-   ],
-   "low_ok": "she hangs below the lamp base's edge, the lens at the base: the base hides her legs",
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
+   "low_ok": "she hangs below the lamp base's edge, the lens at the base: the base hides her legs"
   },
   {
    "id": "70",
    "at": 154.3,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 0.8,
-      "az": 20.0,
-      "y": 1.35,
-      "h": 13.8,
-      "at": [
-       -7.708,
-       12.9,
-       -28.919
-      ]
-     },
-     "fov": 44,
-     "roll": 0
-    }
-   ],
-   "why": "rage as power: she SCREAMS with the effort, arms wide on the brass (ref ado-usseewa@71.25)",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "yelling",
-     "clip_from": 1.9,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.708,
-      12.9,
-      -28.919
-     ],
-     "face_lens": true,
-     "expr": {
-      "angry": 1,
-      "aa": 0.9
-     }
-    }
-   ],
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 70 -> one picture. rage as power: she SCREAMS with the effort, arms wide on the brass (ref ado-usseewa@71.25)",
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -6449,7 +5846,13 @@
       -22.75
      ],
      "yaw": 0,
-     "lantern": "her"
+     "lantern": "her",
+     "glass": false,
+     "mullion_phase": 0.654,
+     "ring_gap": [
+      15,
+      50
+     ]
     },
     "lantern_room": 1,
     "her_key": 0.55,
@@ -6459,79 +5862,68 @@
      "dof_auto": 1
     }
    },
-   "cams": [
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop",
+   "camera": [
     {
-     "at": 155.267,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": 20.0,
-        "y": 1.3
-       },
-       "fov": 44,
-       "roll": 0
-      }
-     ]
+     "at": 0.0,
+     "aim": {
+      "d": 3.6,
+      "az": -120.0,
+      "y": 0.9,
+      "h": 13.4,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 46,
+     "roll": 0
+    },
+    {
+     "at": 1.87,
+     "aim": {
+      "d": 3.0,
+      "az": -125.0,
+      "y": 0.95,
+      "h": 13.5,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 0
     }
    ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
+   "actor": [
+    {
+     "clip": "yelling-while-standing-leaning-forward",
+     "clip_from": 0,
+     "speed": 1,
+     "motionMix": 1,
+     "pos": [
+      -7.482,
+      12.38,
+      -28.068
+     ],
+     "rotY": -165,
+     "face_lens": true,
+     "expr": {
+      "angry": 1,
+      "aa": 0.9
+     },
+     "at": 0.0
+    }
+   ]
   },
   {
    "id": "71",
    "at": 156.167,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "orbit": {
-      "around": [
-       -7.708,
-       12.9,
-       -28.919
-      ],
-      "deg": 40,
-      "radius": 1.4,
-      "height": 1.2,
-      "look_y": 1.2
-     },
-     "fov": 46
-    },
-    {
-     "at": 1.87,
-     "orbit": {
-      "around": [
-       -7.708,
-       12.9,
-       -28.919
-      ],
-      "deg": -110,
-      "radius": 1.4,
-      "height": 1.2,
-      "look_y": 1.2
-     },
-     "fov": 46
-    }
-   ],
-   "why": "the whole machine and her: a half orbit, HELD 3 beats, no flash",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pull-heavy-object",
-     "clip_from": 1.9,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.708,
-      12.9,
-      -28.919
-     ],
-     "rotY": -25.4
-    }
-   ],
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 71+72+73 -> one picture. the whole machine and her: a half orbit, HELD 3 beats, no flash",
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -6549,284 +5941,130 @@
       -22.75
      ],
      "yaw": 0,
-     "lantern": "her"
+     "lantern": "her",
+     "glass": false,
+     "mullion_phase": 0.654,
+     "ring_gap": [
+      15,
+      50
+     ]
     },
     "lantern_room": 1,
-    "fresnel_front": 1,
     "her_key": 0.55,
     "post": {
      "glow": 0.15,
      "vignette": 0.45,
      "dof_auto": 1
-    }
-   },
-   "cams": [
-    {
-     "at": 157.6,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": -120,
-        "y": 1.0
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ],
-     "carry": false
-    }
-   ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
-  },
-  {
-   "id": "72",
-   "at": 158.033,
-   "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 0.9,
-      "az": 15.0,
-      "y": 1.15,
-      "h": 14.05,
-      "at": [
-       -7.708,
-       12.9,
-       -28.919
-      ]
-     },
-     "fov": 44,
-     "roll": 0
-    }
-   ],
-   "why": "her light enters the fight: her dots flare violet",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "casting-spell",
-     "clip_from": 1.9,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.708,
-      12.9,
-      -28.919
-     ],
-     "face_lens": true
-    }
-   ],
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 24,
-     "beam": 0.6,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 0,
-     "lantern": "her"
     },
-    "lantern_room": 1,
     "glow_flare": [
      158.1
     ],
     "lantern_violet": [
-     158.1
-    ],
-    "her_key": 0.55,
-    "post": {
-     "glow": 0.15,
-     "vignette": 0.45,
-     "dof_auto": 1
-    }
-   },
-   "cams": [
-    {
-     "at": 159.0,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": 15.0,
-        "y": 1.1
-       },
-       "fov": 44,
-       "roll": 0
-      }
-     ],
-     "opts": {
-      "detail": "one dot of hers flaring"
-     }
-    }
-   ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
-  },
-  {
-   "id": "73",
-   "at": 159.9,
-   "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 0.75,
-      "az": 95.0,
-      "y": 1.25,
-      "h": 14.1,
-      "at": [
-       -7.708,
-       12.9,
-       -28.919
-      ]
-     },
-     "fov": 44,
-     "roll": 0
-    }
-   ],
-   "why": "she feeds the lamp (T02): the violet runs down her arms into the brass",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pull-heavy-object",
-     "clip_from": 1.9,
-     "speed": 0.0,
-     "motionMix": 1,
-     "pos": [
-      -7.708,
-      12.9,
-      -28.919
-     ],
-     "rotY": -25.4
-    }
-   ],
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 24,
-     "beam": 0.6,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 0,
-     "lantern": "her"
-    },
-    "lantern_room": 1,
-    "lantern_violet": [
+     158.1,
      159.9
     ],
     "arm_current": [
      159.9
-    ],
-    "her_key": 0.55,
-    "post": {
-     "glow": 0.15,
-     "vignette": 0.45,
-     "dof_auto": 1
-    }
+    ]
    },
-   "cams": [
+   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop",
+   "camera": [
     {
-     "at": 160.9,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": 115.0,
-        "y": 1.2
-       },
-       "fov": 44,
-       "roll": 0
-      }
-     ]
+     "at": 0.0,
+     "aim": {
+      "d": 3.8,
+      "az": 95.0,
+      "y": 1.1,
+      "h": 13.3,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    },
+    {
+     "at": 1.9,
+     "aim": {
+      "d": 3.5,
+      "az": 120.0,
+      "y": 1.1,
+      "h": 13.6,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    },
+    {
+     "at": 5.13,
+     "aim": {
+      "d": 3.2,
+      "az": 150.0,
+      "y": 1.2,
+      "h": 13.9,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 40,
+     "roll": 0
+    }
+   ],
+   "actor": [
+    {
+     "clip": "pull-heavy-object",
+     "speed": 1.5,
+     "motionMix": 1,
+     "pos": [
+      -7.482,
+      12.38,
+      -28.068
+     ],
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
+     ],
+     "clip_from": 0.0,
+     "at": 0.0
+    },
+    {
+     "clip": "casting-spell",
+     "clip_from": 1.9,
+     "speed": 1,
+     "motionMix": 1,
+     "pos": [
+      -7.482,
+      12.38,
+      -28.068
+     ],
+     "rotY": -165,
+     "face_lens": true,
+     "blend": 0.4,
+     "at": 1.866
     }
    ],
    "transition": {
     "kind": "cover",
     "frames": 6,
     "obj": "water"
-   },
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
+   }
   },
   {
    "id": "74",
    "at": 161.3,
    "set": "deep",
-   "camera": [
-    {
-     "at": 0,
-     "pos": [
-      0.0,
-      22.0,
-      6.0
-     ],
-     "look": [
-      0.0,
-      0.0,
-      -20.0
-     ],
-     "fov": 60,
-     "roll": 0
-    },
-    {
-     "at": 0.52,
-     "pos": [
-      0.0,
-      6.0,
-      2.0
-     ],
-     "look": [
-      0.0,
-      0.0,
-      -30.0
-     ],
-     "fov": 60,
-     "roll": 0,
-     "ease": "in"
-    },
-    {
-     "at": 2.33,
-     "pos": [
-      0.0,
-      4.0,
-      0.0
-     ],
-     "look": [
-      0.0,
-      0.0,
-      -40.0
-     ],
-     "fov": 60,
-     "roll": 8
-    }
-   ],
-   "why": "her signal reached everything: THE DIVE, every cable lit violet (T14, ref hsr-hope-feathers@113.25)",
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 74 -> one picture. her signal reached everything: THE DIVE, every cable lit violet (T14, ref hsr-hope-feathers@113.25)",
    "mouth": "silent",
    "opts": {
     "her_off": "the map: her signal reaches everything",
@@ -6835,8 +6073,60 @@
     "cable_color": "#b98cff",
     "sea_glow": 1,
     "ceiling_y": 22,
-    "ceiling_light": 1
+    "ceiling_light": 1,
+    "cable_speed": 9,
+    "cable_pulse": [
+     158.52
+    ]
    },
+   "camera": [
+    {
+     "at": 0,
+     "pos": [
+      0,
+      20,
+      -46
+     ],
+     "look": [
+      0,
+      0,
+      -26
+     ],
+     "fov": 60,
+     "roll": 0
+    },
+    {
+     "at": 0.52,
+     "pos": [
+      0.4,
+      7,
+      -36
+     ],
+     "look": [
+      0,
+      0,
+      -14
+     ],
+     "fov": 60,
+     "roll": 0,
+     "ease": "in"
+    },
+    {
+     "at": 2.33,
+     "pos": [
+      1.4,
+      0.55,
+      -27.2
+     ],
+     "look": [
+      0.3,
+      0.3,
+      -20
+     ],
+     "fov": 58,
+     "roll": 8
+    }
+   ],
    "transition": {
     "kind": "cover",
     "frames": 4,
@@ -6847,97 +6137,67 @@
    "id": "75",
    "at": 163.633,
    "set": "deep",
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 75+76 -> one picture. back to her: the pulse climbs one step per held note",
+   "mouth": "silent",
+   "opts": {
+    "her_off": "the pulse runs along the cable to the lamp",
+    "cables": 11,
+    "cable_glow": 0.6,
+    "cable_color": "#b98cff",
+    "cable_pulse": [
+     158.52
+    ],
+    "cable_speed": 9
+   },
    "camera": [
     {
      "at": 0,
      "pos": [
-      0.6,
-      0.6,
-      2.0
+      1.4,
+      0.5,
+      -27.2
      ],
      "look": [
-      0.0,
-      0.2,
-      -6.0
+      0.4,
+      0.3,
+      -24.0
      ],
-     "fov": 50,
+     "fov": 58,
      "roll": 0
     },
     {
      "at": 1.9,
      "pos": [
-      0.6,
-      3.0,
-      -6.0
+      0.7,
+      0.5,
+      -10.4
      ],
      "look": [
-      0.0,
-      3.0,
-      -14.0
+      -0.3,
+      0.3,
+      -6.9
      ],
-     "fov": 50,
-     "roll": 0
-    }
-   ],
-   "why": "back to her: the pulse climbs one step per held note",
-   "mouth": "silent",
-   "opts": {
-    "her_off": "follow one pulse",
-    "cables": 11,
-    "cable_glow": 0.6,
-    "cable_color": "#b98cff",
-    "cable_pulse": [
-     162.85,
-     163.4,
-     163.9,
-     164.6
-    ]
-   }
-  },
-  {
-   "id": "76",
-   "at": 165.533,
-   "set": "deep",
-   "camera": [
-    {
-     "at": 0,
-     "pos": [
-      0.0,
-      0.1,
-      1.0
-     ],
-     "look": [
-      0.0,
-      0.1,
-      -8.0
-     ],
-     "fov": 70,
-     "roll": 0
+     "fov": 58,
+     "roll": 0,
+     "ease": "linear"
     },
     {
-     "at": 1.87,
+     "at": 3.77,
      "pos": [
-      0.0,
-      0.1,
-      -10.0
+      1.2,
+      0.5,
+      5.0
      ],
      "look": [
-      0.0,
-      0.1,
-      -20.0
+      0.2,
+      0.3,
+      9.0
      ],
-     "fov": 70,
-     "roll": 30,
-     "ease": "linear"
+     "fov": 60,
+     "roll": 6,
+     "ease": "in"
     }
    ],
-   "why": "the current rises: inside the cable tube",
-   "mouth": "silent",
-   "opts": {
-    "her_off": "inside the cable tube",
-    "tube": 1,
-    "cable_color": "#b98cff"
-   },
    "transition": {
     "kind": "cover",
     "frames": 4,
@@ -6948,40 +6208,7 @@
    "id": "77",
    "at": 167.4,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 2.5,
-      "az": 35.0,
-      "y": 1.2,
-      "h": 14.3,
-      "at": [
-       -7.708,
-       12.9,
-       -28.919
-      ]
-     },
-     "fov": 46,
-     "roll": 0
-    }
-   ],
-   "why": "the light is hers: the pulse bursts into the lamp, the beam turns violet-gold",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pull-heavy-object",
-     "clip_from": 1.9,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.708,
-      12.9,
-      -28.919
-     ],
-     "rotY": -25.4
-    }
-   ],
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 77+78+79 -> one picture. the light is hers: the pulse bursts into the lamp, the beam turns violet-gold",
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
@@ -6999,7 +6226,13 @@
       -22.75
      ],
      "yaw": 0,
-     "lantern": "her"
+     "lantern": "her",
+     "glass": false,
+     "mullion_phase": 0.654,
+     "ring_gap": [
+      15,
+      50
+     ]
     },
     "lantern_room": 1,
     "lantern_violet": [
@@ -7018,295 +6251,104 @@
      "dof_auto": 1
     }
    },
-   "cams": [
-    {
-     "at": 168.4,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": 25.0,
-        "y": 1.4
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    }
-   ],
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
-  },
-  {
-   "id": "78",
-   "at": 169.3,
-   "set": "nightsea",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop",
    "camera": [
     {
-     "at": 0,
+     "at": 0.0,
+     "aim": {
+      "d": 3.4,
+      "az": 5.0,
+      "y": 1.1,
+      "h": 13.3,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    },
+    {
+     "at": 2.37,
      "aim": {
       "d": 6.0,
-      "az": 15.0,
+      "az": 20.0,
       "y": 1.0,
-      "h": 13.9,
+      "h": 13.7,
       "at": [
-       -7.708,
-       12.9,
-       -28.919
+       -7.482,
+       12.38,
+       -28.068
       ]
      },
      "fov": 40,
-     "roll": 0
-    }
-   ],
-   "why": "the build begins: THE silhouette at the lamp, double time",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pull-heavy-object",
-     "clip_from": 1.9,
-     "speed": 0.0,
-     "motionMix": 1,
-     "pos": [
-      -7.708,
-      12.9,
-      -28.919
-     ],
-     "rotY": -25.4
-    }
-   ],
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 24,
-     "beam": 0.6,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 0,
-     "lantern": "her"
-    },
-    "lantern_room": 1,
-    "her_key": 0.55,
-    "post": {
-     "glow": 0.15,
-     "vignette": 0.45,
-     "dof_auto": 1
-    }
-   },
-   "cams": [
-    {
-     "at": 169.3,
-     "kind": "angle",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.8,
-        "az": 175.0,
-        "y": 1.1,
-        "h": 14.0,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
+     "roll": 0,
+     "ease": "out"
     },
     {
-     "at": 169.567,
-     "kind": "punch",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": 175.0,
-        "y": 1.1
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    }
-   ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
-  },
-  {
-   "id": "79",
-   "at": 169.767,
-   "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
+     "at": 5.1,
      "aim": {
-      "d": 5.0,
+      "d": 4.4,
       "az": 15.0,
-      "y": 1.0,
-      "h": 13.700000000000001,
+      "y": 1.1,
+      "h": 13.4,
       "at": [
-       -7.708,
-       12.9,
-       -28.919
+       -7.482,
+       12.38,
+       -28.068
       ]
      },
-     "fov": 40,
-     "roll": 0
+     "fov": 42,
+     "roll": 0,
+     "ease": "in"
     }
    ],
-   "why": "PULL 1: escalation; the beam passes 16 m off the lens",
    "actor": [
     {
-     "at": 0,
      "clip": "pull-heavy-object",
-     "clip_from": 1.0,
-     "speed": 1.0,
+     "speed": 1.185,
      "motionMix": 1,
      "pos": [
-      -7.708,
-      12.9,
-      -28.919
+      -7.482,
+      12.38,
+      -28.068
      ],
-     "rotY": -25.4
-    }
-   ],
-   "mouth": "silent",
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
+     ],
+     "clip_from": 0.0,
+     "at": 0.0
+    },
+    {
+     "clip": "pull-heavy-object",
+     "speed": 1.78,
+     "motionMix": 1,
      "pos": [
-      -8.0,
-      -30.0
+      -7.482,
+      12.38,
+      -28.068
      ],
-     "height": 12,
-     "len": 90,
-     "spin": 6,
-     "beam": 0.6,
-     "ledge": [
-      -6.07,
-      -22.75
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
      ],
-     "yaw": -996.5,
-     "lantern": "her"
-    },
-    "lantern_room": 1,
-    "her_key": 0.55,
-    "post": {
-     "glow": 0.15,
-     "vignette": 0.45,
-     "dof_auto": 1
+     "clip_from": 0.052,
+     "at": 1.9
     }
-   },
-   "cams": [
-    {
-     "at": 170.736,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 4.2,
-        "az": 15.0,
-        "y": 1.2,
-        "h": 14.07,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 171.665,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 3.8,
-        "az": 15.0,
-        "y": 1.4,
-        "h": 14.030000000000001,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ],
-     "opts": {
-      "two_tone": [
-       171.665
-      ],
-      "two_tone_n": 4,
-      "two_tone_light": "#fff1d2"
-     }
-    }
-   ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
+   ]
   },
   {
    "id": "80",
    "at": 172.5,
    "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 3.5,
-      "az": 15.0,
-      "y": 1.1,
-      "h": 13.1,
-      "at": [
-       -7.708,
-       12.9,
-       -28.919
-      ]
-     },
-     "fov": 44,
-     "roll": 0
-    }
-   ],
-   "why": "PULL 2 on the hit 172.524: lower; the riser starts, the grade climbs toward white; the beam 8 m off",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pull-heavy-object",
-     "clip_from": 1.9,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.708,
-      12.9,
-      -28.919
-     ],
-     "rotY": -25.4
-    }
-   ],
+   "why": "restaged 2026-10-28 (toki take 14: 'die gesamte end leuchtturm teil ab hochklettern ... unsauber'): rows 80+81+82 -> one picture. PULL 2 on the hit 172.524: lower; the riser starts, the grade climbs toward white; the beam 8 m off",
    "mouth": "silent",
    "opts": {
     "rain_at": 84.933,
@@ -7325,7 +6367,13 @@
       -22.75
      ],
      "yaw": -1014.96,
-     "lantern": "her"
+     "lantern": "her",
+     "glass": false,
+     "mullion_phase": 0.654,
+     "ring_gap": [
+      15,
+      50
+     ]
     },
     "lantern_room": 1,
     "grade_to": "war_white",
@@ -7338,525 +6386,198 @@
      "dof_auto": 1
     }
    },
-   "cams": [
-    {
-     "at": 173.082,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 3.0,
-        "az": 15.0,
-        "y": 0.2,
-        "h": 13.200000000000001,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 173.546,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 2.7,
-        "az": 15.0,
-        "y": 1.4,
-        "h": 13.92,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 174.01,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 2.4,
-        "az": 15.0,
-        "y": 1.3,
-        "h": 13.89,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ],
-     "opts": {
-      "two_tone": [
-       174.01
-      ],
-      "two_tone_n": 4,
-      "two_tone_light": "#fff1d2",
-      "grade_to": "war_white",
-      "grade_at": 173.24,
-      "grade_s": 3.66
-     }
-    }
-   ],
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
-  },
-  {
-   "id": "81",
-   "at": 174.4,
-   "set": "nightsea",
+   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop",
    "camera": [
     {
-     "at": 0,
+     "at": 0.0,
      "aim": {
-      "d": 2.0,
+      "d": 4.2,
       "az": 15.0,
-      "y": 1.2,
-      "h": 13.8,
+      "y": 1.1,
+      "h": 13.2,
       "at": [
-       -7.708,
-       12.9,
-       -28.919
-      ]
-     },
-     "fov": 44,
-     "roll": -8
-    }
-   ],
-   "why": "PULL 3 on the hit 174.428: her whole back, half beats; the beam's edge 3.5 m off, then 1 m | motion (toki 2026-10-27): hanging-by-hands (0.02 m/s) -> pulling-up-to-a-ledge (1.70)",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pulling-up-to-a-ledge",
-     "clip_from": 0.3,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": [
-      -7.708,
-      12.9,
-      -28.919
-     ],
-     "rotY": -25.4,
-     "ground": false
-    }
-   ],
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 4,
-     "beam": 0.6,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": -671.98,
-     "lantern": "her"
-    },
-    "lantern_room": 1,
-    "grade_to": "war_white",
-    "grade_at": 175.5,
-    "grade_s": 1.6,
-    "her_key": 0.55,
-    "post": {
-     "glow": 0.15,
-     "vignette": 0.45,
-     "dof_auto": 1
-    }
-   },
-   "cams": [
-    {
-     "at": 174.707,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.8,
-        "az": 15.0,
-        "y": 1.6,
-        "h": 13.83,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 174.939,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.7,
-        "az": 25.0,
-        "y": 1.4,
-        "h": 13.82,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 175.172,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.6,
-        "az": 15.0,
-        "y": 1.4,
-        "h": 13.81,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ],
-     "opts": {
-      "two_tone": [
-       175.172
-      ],
-      "two_tone_n": 4,
-      "two_tone_light": "#fff1d2",
-      "grade_to": "war_white",
-      "grade_at": 173.24,
-      "grade_s": 3.66
-     }
-    },
-    {
-     "at": 175.404,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.5,
-        "az": 15.0,
-        "y": 1.4,
-        "h": 13.8,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 175.648,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.4,
-        "az": 5.0,
-        "y": 1.65,
-        "h": 13.790000000000001,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 175.891,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.3,
-        "az": 15.0,
-        "y": 1.4,
-        "h": 13.780000000000001,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 176.124,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.2,
-        "az": 15.0,
-        "y": 1.4,
-        "h": 13.77,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ],
-     "opts": {
-      "two_tone": [
-       176.124
-      ],
-      "two_tone_n": 4,
-      "two_tone_light": "#fff1d2",
-      "grade_to": "war_white",
-      "grade_at": 173.24,
-      "grade_s": 3.66
-     }
-    }
-   ],
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
-  },
-  {
-   "id": "82",
-   "at": 176.267,
-   "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 1.2,
-      "az": 15.0,
-      "y": 1.4,
-      "h": 14.200000000000001,
-      "at": [
-       -7.708,
-       12.9,
-       -28.919
+       -7.482,
+       12.38,
+       -28.068
       ]
      },
      "fov": 44,
      "roll": 0
+    },
+    {
+     "at": 0.03,
+     "aim": {
+      "d": 3.6,
+      "az": 15.0,
+      "y": 1.1,
+      "h": 13.2,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    },
+    {
+     "at": 0.5,
+     "aim": {
+      "d": 3.5,
+      "az": 11.0,
+      "y": 1.1,
+      "h": 13.2,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    },
+    {
+     "at": 1.9,
+     "aim": {
+      "d": 3.4,
+      "az": 105.0,
+      "y": 1.0,
+      "h": 13.0,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": -8
+    },
+    {
+     "at": 1.95,
+     "aim": {
+      "d": 3.2,
+      "az": 107.0,
+      "y": 1.0,
+      "h": 13.0,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": -8
+    },
+    {
+     "at": 3.72,
+     "aim": {
+      "d": 3.4,
+      "az": 135.0,
+      "y": 1.1,
+      "h": 13.4,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
+     "roll": 0
+    },
+    {
+     "at": 3.8,
+     "aim": {
+      "d": 3.7,
+      "az": 145.0,
+      "y": 1.3,
+      "h": 14.2,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 24,
+     "roll": 0
+    },
+    {
+     "at": 4.7,
+     "aim": {
+      "d": 3.5,
+      "az": 145.0,
+      "y": 1.3,
+      "h": 14.2,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 22,
+     "roll": 0
     }
    ],
-   "why": "PULL 4 on the hit 176.286: on the beam axis, her eyes on us; then the dip and the lamp in her pupils",
    "actor": [
     {
-     "at": 0,
      "clip": "pull-heavy-object",
-     "clip_from": 1.9,
-     "speed": 1.0,
+     "speed": 2.37,
      "motionMix": 1,
      "pos": [
-      -7.708,
-      12.9,
-      -28.919
+      -7.482,
+      12.38,
+      -28.068
+     ],
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
+     ],
+     "clip_from": 0.248,
+     "at": 0.0
+    },
+    {
+     "clip": "pull-heavy-object",
+     "speed": 2.37,
+     "motionMix": 1,
+     "pos": [
+      -7.482,
+      12.38,
+      -28.068
+     ],
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
+     ],
+     "act": "lean",
+     "at": 1.9
+    },
+    {
+     "clip": "pull-heavy-object",
+     "speed": 2.37,
+     "motionMix": 1,
+     "pos": [
+      -7.482,
+      12.38,
+      -28.068
+     ],
+     "rotY": -165,
+     "tether": [
+      -7.87,
+      13.3,
+      -29.52
      ],
      "face_lens": true,
      "expr": {
       "angry": 0.8
      },
-     "rotY": -25.4
+     "at": 3.767
     }
    ],
-   "opts": {
-    "rain_at": 84.933,
-    "rain_end_at": 999.0,
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 2,
-     "beam": 0.6,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": -339.52,
-     "lantern": "her"
-    },
-    "lantern_room": 1,
-    "grade_to": "war_white",
-    "grade_at": 175.5,
-    "grade_s": 1.6,
-    "her_key": 0.55,
-    "post": {
-     "glow": 0.15,
-     "vignette": 0.45,
-     "dof_auto": 1
-    }
-   },
-   "cams": [
-    {
-     "at": 176.588,
-     "kind": "step",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.9,
-        "az": 15.0,
-        "y": 1.42,
-        "h": 13.74,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 46,
-       "roll": 0
-      }
-     ]
-    },
-    {
-     "at": 176.9,
-     "kind": "dip",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.0,
-        "az": 15.0,
-        "y": 1.3,
-        "h": 14.200000000000001,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 44,
-       "roll": 0
-      }
-     ],
-     "opts": {
-      "rain_at": 84.933,
-      "rain_end_at": 999.0,
-      "lighthouse": {
-       "pos": [
-        -8.0,
-        -30.0
-       ],
-       "height": 12,
-       "len": 90,
-       "spin": 24,
-       "beam": 1.0,
-       "ledge": [
-        -6.07,
-        -22.75
-       ],
-       "yaw": 0,
-       "lantern": "her"
-      },
-      "lantern_room": 1,
-      "dip": 1,
-      "grade": "war_night"
-     },
-     "why": "THE DIP: near black, only her dots - the pros' pre-drop blackout (ref ado-show@173.3)"
-    },
-    {
-     "at": 177.167,
-     "kind": "pupils",
-     "camera": [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.75,
-        "az": 15.0,
-        "y": 1.42,
-        "h": 14.32,
-        "at": [
-         -7.708,
-         12.9,
-         -28.919
-        ]
-       },
-       "fov": 40,
-       "roll": 0
-      }
-     ],
-     "opts": {
-      "rain_at": 84.933,
-      "rain_end_at": 999.0,
-      "lighthouse": {
-       "pos": [
-        -8.0,
-        -30.0
-       ],
-       "height": 12,
-       "len": 90,
-       "spin": 24,
-       "beam": 1.0,
-       "ledge": [
-        -6.07,
-        -22.75
-       ],
-       "yaw": 0,
-       "lantern": "her"
-      },
-      "lantern_room": 1,
-      "pupil_lamp": 1
-     },
-     "why": "2 frames: the lamp turning into her pupils (A+, toki 2026-10-26)"
-    }
-   ],
-   "low_ok": "ECUs of her eyes 0.3-1.2 m away on the beam axis while she leans back on the lamp: the frame holds her face only",
-   "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
-   "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop"
+   "low_ok": "ECUs of her eyes 0.3-1.2 m away on the beam axis while she leans back on the lamp: the frame holds her face only"
   },
   {
    "id": "83",

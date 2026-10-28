@@ -1,21 +1,15 @@
 {
- "_why": "seabed round the cables (toki 2026-10-28 'kabel unter see ... langweilig, leer, ohne tiefe') - first look at the new floor, cable, shafts, depth",
+ "_why": "the seabed at the opening (toki 2026-10-28 'kabel unter see ... langweilig, leer, ohne tiefe')",
  "format": "mv",
  "frames": [
   45,
   240,
-  396,
-  4860,
-  4935,
-  4995
+  396
  ],
  "names": [
   "s1_open",
   "s2_row4",
-  "s3_pov_cable",
-  "s4_map",
-  "s5_pulse",
-  "s6_tube"
+  "s3_pov_cable"
  ],
  "scale": 0.5,
  "round": "seabed1"
