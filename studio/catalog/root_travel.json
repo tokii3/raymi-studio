@@ -1,0 +1,7075 @@
+{
+ "_why": "her way per clip on the real rig (studio/root_travel.mjs): x right, y up, z forward, she faces +z",
+ "clips": {
+  "acknowledging": {
+   "dur": 1.93,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "action-adventure-cover-to-stand-2": {
+   "dur": 1.13,
+   "loop": [
+    -0.017,
+    0.014,
+    -0.827
+   ],
+   "v": [
+    -0.015,
+    0.012,
+    -0.73
+   ],
+   "even": 0.29
+  },
+  "action-adventure-crouched-sneaking-left": {
+   "dur": 1.27,
+   "loop": [
+    -1.07,
+    0,
+    0
+   ],
+   "v": [
+    -0.845,
+    0,
+    0
+   ],
+   "even": 0.53
+  },
+  "action-adventure-crouched-sneaking-right": {
+   "dur": 1.07,
+   "loop": [
+    0.721,
+    -0.002,
+    0.001
+   ],
+   "v": [
+    0.676,
+    -0.002,
+    0.001
+   ],
+   "even": 0.47
+  },
+  "action-adventure-falling-idle": {
+   "dur": 0.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "action-adventure-falling-to-roll": {
+   "dur": 1.47,
+   "loop": [
+    -0.02,
+    -0.006,
+    1.186
+   ],
+   "v": [
+    -0.014,
+    -0.004,
+    0.809
+   ],
+   "even": 0.67
+  },
+  "action-adventure-hard-landing": {
+   "dur": 2,
+   "loop": [
+    -0.006,
+    0.01,
+    0.06
+   ],
+   "v": [
+    -0.003,
+    0.005,
+    0.03
+   ],
+   "even": 1.46
+  },
+  "action-adventure-idle-2": {
+   "dur": 9.9,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "action-adventure-idle-4": {
+   "dur": 2.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "action-adventure-idle-5": {
+   "dur": 2.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "action-adventure-idle": {
+   "dur": 3.87,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "action-adventure-left-cover-sneak": {
+   "dur": 1.13,
+   "loop": [
+    -0.22,
+    0,
+    0
+   ],
+   "v": [
+    -0.194,
+    0,
+    0
+   ],
+   "even": 0.55
+  },
+  "action-adventure-left-turn": {
+   "dur": 1.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "action-adventure-right-cover-sneak": {
+   "dur": 1.13,
+   "loop": [
+    0.184,
+    0,
+    0
+   ],
+   "v": [
+    0.162,
+    0,
+    0
+   ],
+   "even": 0.46
+  },
+  "action-adventure-right-turn": {
+   "dur": 1.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "action-adventure-run-to-stop": {
+   "dur": 0.87,
+   "loop": [
+    -0.001,
+    0.003,
+    0.1
+   ],
+   "v": [
+    -0.001,
+    0.003,
+    0.115
+   ],
+   "even": 0.97
+  },
+  "action-adventure-running": {
+   "dur": 0.7,
+   "loop": [
+    0,
+    0,
+    0.386
+   ],
+   "v": [
+    0,
+    0,
+    0.551
+   ],
+   "even": 0.53
+  },
+  "action-adventure-stand-to-cover-2": {
+   "dur": 1.27,
+   "loop": [
+    0,
+    -0.041,
+    0.13
+   ],
+   "v": [
+    0,
+    -0.032,
+    0.103
+   ],
+   "even": 0.73
+  },
+  "action-idle-to-fight-idle": {
+   "dur": 1,
+   "loop": [
+    0.003,
+    -0.002,
+    -0.009
+   ],
+   "v": [
+    0.003,
+    -0.002,
+    -0.009
+   ],
+   "even": null
+  },
+  "agony": {
+   "dur": 3.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "angry-point": {
+   "dur": 2.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "angry": {
+   "dur": 19.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "arm-stretching": {
+   "dur": 8.87,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "arms-hip-hop-dance": {
+   "dur": 21.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "arms-spread-looking-upwards": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "backflip": {
+   "dur": 2.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "backward-walking-turn": {
+   "dur": 1.97,
+   "loop": [
+    -0.014,
+    0,
+    -0.034
+   ],
+   "v": [
+    -0.007,
+    0,
+    -0.017
+   ],
+   "even": null
+  },
+  "baseball-walk-out": {
+   "dur": 4,
+   "loop": [
+    0.026,
+    0.002,
+    -0.011
+   ],
+   "v": [
+    0.006,
+    0.001,
+    -0.003
+   ],
+   "even": null
+  },
+  "batter-on-deck": {
+   "dur": 37.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "beckoning": {
+   "dur": 2.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "blow-a-kiss": {
+   "dur": 4.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "booty-hip-hop-dance-1": {
+   "dur": 4.9,
+   "loop": [
+    0,
+    0,
+    0.02
+   ],
+   "v": [
+    0,
+    0,
+    0.004
+   ],
+   "even": null
+  },
+  "booty-hip-hop-dance": {
+   "dur": 4.9,
+   "loop": [
+    0,
+    0,
+    0.019
+   ],
+   "v": [
+    0,
+    0,
+    0.004
+   ],
+   "even": null
+  },
+  "boxing-taunt": {
+   "dur": 1.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "breakdance-1990": {
+   "dur": 3.5,
+   "loop": [
+    0.017,
+    0.004,
+    0.004
+   ],
+   "v": [
+    0.005,
+    0.001,
+    0.001
+   ],
+   "even": null
+  },
+  "breakdance-uprock-var-2": {
+   "dur": 5.33,
+   "loop": [
+    0.009,
+    0,
+    0
+   ],
+   "v": [
+    0.002,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-armada-to-esquiva": {
+   "dur": 4.07,
+   "loop": [
+    0.009,
+    0,
+    0.009
+   ],
+   "v": [
+    0.002,
+    0,
+    0.002
+   ],
+   "even": null
+  },
+  "capoeira-armada": {
+   "dur": 1.63,
+   "loop": [
+    0.01,
+    0,
+    0.01
+   ],
+   "v": [
+    0.006,
+    0,
+    0.006
+   ],
+   "even": null
+  },
+  "capoeira-au-to-role": {
+   "dur": 4,
+   "loop": [
+    0.03,
+    0,
+    0.009
+   ],
+   "v": [
+    0.007,
+    0,
+    0.002
+   ],
+   "even": null
+  },
+  "capoeira-au": {
+   "dur": 2.9,
+   "loop": [
+    0.021,
+    0,
+    0
+   ],
+   "v": [
+    0.007,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-bencao": {
+   "dur": 1.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-capoeira-3": {
+   "dur": 4.8,
+   "loop": [
+    0.002,
+    0,
+    -0.001
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-capoeira": {
+   "dur": 3.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-chapa-2": {
+   "dur": 1.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-chapa-giratoria-2": {
+   "dur": 2.37,
+   "loop": [
+    0.001,
+    0,
+    0.001
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-chapa-giratoria": {
+   "dur": 3,
+   "loop": [
+    0.002,
+    0,
+    0.002
+   ],
+   "v": [
+    0.001,
+    0,
+    0.001
+   ],
+   "even": null
+  },
+  "capoeira-chapaeu-de-couro": {
+   "dur": 3.43,
+   "loop": [
+    0.002,
+    0,
+    0.001
+   ],
+   "v": [
+    0.001,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-esquiva-1": {
+   "dur": 4.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-esquiva-2": {
+   "dur": 2.23,
+   "loop": [
+    -0.001,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-esquiva-3": {
+   "dur": 2.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-esquiva-4": {
+   "dur": 2.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-esquiva-5": {
+   "dur": 2.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-ginga-backward": {
+   "dur": 1.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-ginga-forward": {
+   "dur": 1.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-ginga-sideways-1": {
+   "dur": 1.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-ginga-sideways-2": {
+   "dur": 2.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-ginga-sideways-to-au": {
+   "dur": 3.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-ginga-variation-1": {
+   "dur": 3.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-ginga-variation-2": {
+   "dur": 3.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-ginga-variation-3": {
+   "dur": 2.87,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-macaco-side": {
+   "dur": 3.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-martelo-2": {
+   "dur": 1.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-martelo-3": {
+   "dur": 1.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-martelo-do-chau-sem-mao": {
+   "dur": 3.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-martelo-do-chau": {
+   "dur": 3.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-meia-lua-de-compasso-back": {
+   "dur": 2.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-meia-lua-de-compasso": {
+   "dur": 1.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-meia-lua-de-frente": {
+   "dur": 2.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-pontera": {
+   "dur": 1.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-queshada-1": {
+   "dur": 2.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-queshada-2": {
+   "dur": 2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-rasteira-1": {
+   "dur": 1.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-rasteira-2": {
+   "dur": 2.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira-troca-1": {
+   "dur": 5.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "capoeira": {
+   "dur": 3.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "casting-spell": {
+   "dur": 7.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-idle-to-walk-forward-highknees": {
+   "dur": 1.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-idle-twist-l": {
+   "dur": 5.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-idle-twist-r": {
+   "dur": 5.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-sequence-02": {
+   "dur": 12.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-sequence-04-1": {
+   "dur": 12.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-sequence-04": {
+   "dur": 12.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-sequence-05": {
+   "dur": 10.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-twist-l-to-walk-180": {
+   "dur": 2.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-twist-r-to-walk-180": {
+   "dur": 1.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-walk-forward-02": {
+   "dur": 1.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-walk-forward-turn-90r": {
+   "dur": 2.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-walk-forward": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-walk-stop-twist-r": {
+   "dur": 2.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-walk-stop": {
+   "dur": 1.93,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-walk-turn-180-tight": {
+   "dur": 3.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-walk": {
+   "dur": 15.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "catwalk-walking": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "climbing-ladder": {
+   "dur": 0.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "climbing-to-top": {
+   "dur": 4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "climbing-up-wall": {
+   "dur": 2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "creature-npc-mutant-breathing-idle": {
+   "dur": 4.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "creature-npc-mutant-flexing-muscles": {
+   "dur": 4.4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "creature-npc-mutant-idle": {
+   "dur": 5.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "creature-npc-mutant-left-turn-45": {
+   "dur": 1.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "creature-npc-mutant-right-turn-45": {
+   "dur": 1.9,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "creature-npc-mutant-run": {
+   "dur": 0.87,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "creature-npc-mutant-walking": {
+   "dur": 1.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "cross-punch": {
+   "dur": 2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "crossleg-freeze": {
+   "dur": 2.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "crouch-to-stand": {
+   "dur": 2.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "crouch-turn-left-90": {
+   "dur": 1.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "crouch-turn-to-stand": {
+   "dur": 0.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "crying": {
+   "dur": 6.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "dance": {
+   "dur": 4.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "dancing-maraschino-step": {
+   "dur": 3.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "dancing-twerk": {
+   "dur": 15.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "death-from-right": {
+   "dur": 3.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "defeated": {
+   "dur": 6.73,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "drinking-fountain": {
+   "dur": 10.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "drinking": {
+   "dur": 8.87,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "drunk-walk": {
+   "dur": 3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "dying": {
+   "dur": 4.4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "excited": {
+   "dur": 6.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "fall-flat": {
+   "dur": 2.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "falling-to-knees-in-prayer": {
+   "dur": 6.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "falling-to-roll": {
+   "dur": 2.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "falling": {
+   "dur": 11.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-box-idle": {
+   "dur": 5.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-box-turn-2": {
+   "dur": 1.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-box-turn": {
+   "dur": 1.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-box-walk-arc": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-cow-milking": {
+   "dur": 4.5,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-dig-and-plant-seeds": {
+   "dur": 5.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-holding-idle": {
+   "dur": 5.73,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-holding-turn-left": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-holding-turn-right": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-holding-walk": {
+   "dur": 1.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-kneeling-idle": {
+   "dur": 4.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-pick-fruit-2": {
+   "dur": 6.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-pick-fruit-3": {
+   "dur": 7.1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-pick-fruit": {
+   "dur": 8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-plant-a-plant": {
+   "dur": 7.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-pull-plant-2": {
+   "dur": 4.73,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-pull-plant": {
+   "dur": 4.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-watering": {
+   "dur": 5.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-wheelbarrow-dump": {
+   "dur": 6.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-wheelbarrow-idle": {
+   "dur": 1.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-wheelbarrow-walk-2": {
+   "dur": 0.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-wheelbarrow-walk-turn-2": {
+   "dur": 1.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-wheelbarrow-walk-turn": {
+   "dur": 1.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "farming-wheelbarrow-walk": {
+   "dur": 0.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-basic-locomotion-idle": {
+   "dur": 8.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-basic-locomotion-jump": {
+   "dur": 1.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-basic-locomotion-left-strafe-walk": {
+   "dur": 0.9,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-basic-locomotion-right-turn-2": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-basic-locomotion-right-turn": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-basic-locomotion-running": {
+   "dur": 0.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-crouch-pose": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-dance-pose-1": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-dance-pose-2": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-dance-pose-3": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-dance-pose": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-dynamic-pose": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-laying-pose-1": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-laying-pose-2": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-laying-pose": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-locomotion-idle": {
+   "dur": 8.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-locomotion-jump": {
+   "dur": 1.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-locomotion-left-strafe-walk": {
+   "dur": 0.9,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-locomotion-left-strafe": {
+   "dur": 0.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-locomotion-left-turn": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-locomotion-right-strafe-walk": {
+   "dur": 0.93,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-locomotion-right-strafe": {
+   "dur": 0.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-locomotion-right-turn": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-locomotion-running": {
+   "dur": 0.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-locomotion-walking": {
+   "dur": 0.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-sitting-pose": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-standing-pose-1": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-standing-pose-2": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "female-standing-pose": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "fireball": {
+   "dur": 3.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "fist-pump": {
+   "dur": 2.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "floating-back-arched": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "floating-legs-bent-and-arms-spread": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "floating-legs-raised-arms-extended-upwards": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "flying": {
+   "dur": 2.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "gestures-pack-basic-acknowledging": {
+   "dur": 1.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "gestures-pack-basic-angry-gesture": {
+   "dur": 2.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "gestures-pack-basic-annoyed-head-shake": {
+   "dur": 2.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "gestures-pack-basic-being-cocky": {
+   "dur": 2.87,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "gestures-pack-basic-dismissing-gesture": {
+   "dur": 3.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "gestures-pack-basic-happy-hand-gesture": {
+   "dur": 2.73,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "gestures-pack-basic-hard-head-nod": {
+   "dur": 1.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "gestures-pack-basic-head-nod-yes": {
+   "dur": 2.4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "gestures-pack-basic-lengthy-head-nod": {
+   "dur": 1.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "gestures-pack-basic-look-away-gesture": {
+   "dur": 1.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "gestures-pack-basic-sarcastic-head-nod": {
+   "dur": 2.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "gestures-pack-basic-thoughtful-head-shake": {
+   "dur": 3.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "getting-up-1": {
+   "dur": 7.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "getting-up": {
+   "dur": 7.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "goalkeeper-catch": {
+   "dur": 2.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "goofy-running": {
+   "dur": 0.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "grab-and-slam": {
+   "dur": 4.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "great-sword-power-up": {
+   "dur": 3.5,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hanging-by-hands-against-wall": {
+   "dur": 2.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "happy": {
+   "dur": 10,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hard-landing": {
+   "dur": 2.5,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "head-hit": {
+   "dur": 1.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hip-hop-dancing-1": {
+   "dur": 6.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hip-hop-dancing-2": {
+   "dur": 15.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hip-hop-dancing-3": {
+   "dur": 18.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hip-hop-dancing-4": {
+   "dur": 15.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hip-hop-dancing-5": {
+   "dur": 4.1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hip-hop-dancing-6": {
+   "dur": 3.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hip-hop-dancing-7": {
+   "dur": 13.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hip-hop-dancing-8": {
+   "dur": 5.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hip-hop-dancing-9": {
+   "dur": 13.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hip-hop-dancing": {
+   "dur": 4.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hit-to-head": {
+   "dur": 2.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hit-to-side-of-body": {
+   "dur": 2.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hook-punch": {
+   "dur": 2.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "hurricane-kick": {
+   "dur": 1.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "idle": {
+   "dur": 16.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "injured-run-backwards": {
+   "dur": 0.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "jab-cross": {
+   "dur": 2.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "jab-punch": {
+   "dur": 1.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "joyful-jump": {
+   "dur": 1.87,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "jump-from-wall": {
+   "dur": 1.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "jump-push-up": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "jump": {
+   "dur": 2.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "jumping-down-1": {
+   "dur": 2.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "jumping-down": {
+   "dur": 2.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "jumping-out-of-a-plane": {
+   "dur": 2.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "jumping-over-obstacle-one-hand": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "jumping": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "kip-up": {
+   "dur": 2.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "kiss": {
+   "dur": 7.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "kneeling-down": {
+   "dur": 2.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "kneeling-pointing-1": {
+   "dur": 3.9,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "kneeling-pointing": {
+   "dur": 3.9,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "knocked-out-falling-back": {
+   "dur": 4.93,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "knocked-unconscious": {
+   "dur": 4.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "laughing": {
+   "dur": 9.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "laying-breathless": {
+   "dur": 0.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "laying-moaning": {
+   "dur": 2.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "laying-seizure": {
+   "dur": 5,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "laying-severe-cough": {
+   "dur": 1.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "laying-shrugging": {
+   "dur": 1.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "left-turn-w-briefcase": {
+   "dur": 2.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "locking-hip-hop-dance": {
+   "dur": 17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "long-yell-leaning-forward": {
+   "dur": 5.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "long-yell-while-standing-leaning-back": {
+   "dur": 5.5,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "longbow-standing-idle-01": {
+   "dur": 5.1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "longbow-standing-run-back": {
+   "dur": 0.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "longbow-standing-run-forward-stop": {
+   "dur": 0.87,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "longbow-standing-run-forward": {
+   "dur": 0.87,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "longbow-standing-run-left": {
+   "dur": 0.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "longbow-standing-run-right": {
+   "dur": 0.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "longbow-standing-turn-90-left": {
+   "dur": 1.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "longbow-standing-turn-90-right": {
+   "dur": 1.1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "longbow-standing-walk-back": {
+   "dur": 1.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "longbow-standing-walk-forward": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "longbow-standing-walk-left": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "longbow-standing-walk-right": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "look-around-1": {
+   "dur": 13.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "look-around-2": {
+   "dur": 6.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "look-around-3": {
+   "dur": 13.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "look-around-4": {
+   "dur": 4.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "look-around": {
+   "dur": 4.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "look-over-shoulder": {
+   "dur": 3.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "looking-around-1": {
+   "dur": 6.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "looking-around": {
+   "dur": 6.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "lying-down": {
+   "dur": 5.73,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "macarena-dance": {
+   "dur": 8.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "magic-locomotion-standing-idle": {
+   "dur": 1.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "magic-locomotion-standing-jump-running-landing": {
+   "dur": 1.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "magic-locomotion-standing-jump-running": {
+   "dur": 1.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "magic-locomotion-standing-jump": {
+   "dur": 2.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "magic-locomotion-standing-run-forward": {
+   "dur": 0.73,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "magic-locomotion-standing-run-right": {
+   "dur": 0.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "magic-locomotion-standing-sprint-forward": {
+   "dur": 0.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "magic-locomotion-standing-turn-left-90": {
+   "dur": 1.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "magic-locomotion-standing-turn-right-90": {
+   "dur": 1.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "magic-locomotion-standing-walk-back": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "magic-locomotion-standing-walk-forward": {
+   "dur": 1.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "male-cheering-head-banging": {
+   "dur": 1.9,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "mma-kick": {
+   "dur": 1.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "moonwalk": {
+   "dur": 1.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "neck-stretching": {
+   "dur": 3.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "nervously-look-around-1": {
+   "dur": 6.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "nervously-look-around": {
+   "dur": 6.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "offensive-idle": {
+   "dur": 10.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "old-man-idle": {
+   "dur": 12.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "on-knees-arms-raised": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "opening-a-filing-cabinet": {
+   "dur": 14.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pacing-and-talking-on-a-phone": {
+   "dur": 37.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "paddling": {
+   "dur": 7.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pain-gesture": {
+   "dur": 1.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "petting-animal": {
+   "dur": 14.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pointing-1": {
+   "dur": 3.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pointing-2": {
+   "dur": 2.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pointing-forward-1": {
+   "dur": 4.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pointing-forward": {
+   "dur": 4.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pointing-gesture-1": {
+   "dur": 1.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pointing-gesture": {
+   "dur": 1.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pointing": {
+   "dur": 3.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "praying": {
+   "dur": 6.87,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-crouch-idle": {
+   "dur": 1.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-crouch-to-standing-idle": {
+   "dur": 1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-crouch-turn-left-90": {
+   "dur": 1.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-crouch-turn-right-90": {
+   "dur": 1.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-crouch-walk-back": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-crouch-walk-forward": {
+   "dur": 1.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-crouch-walk-left": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-crouch-walk-right": {
+   "dur": 1.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-1h-cast-spell-01": {
+   "dur": 2.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-1h-magic-attack-01": {
+   "dur": 2.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-1h-magic-attack-02": {
+   "dur": 2.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-1h-magic-attack-03": {
+   "dur": 2.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-2h-cast-spell-01": {
+   "dur": 2.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-2h-magic-area-attack-01": {
+   "dur": 2.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-2h-magic-area-attack-02": {
+   "dur": 3.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-2h-magic-attack-01": {
+   "dur": 2.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-2h-magic-attack-02": {
+   "dur": 2.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-2h-magic-attack-03": {
+   "dur": 4.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-2h-magic-attack-04": {
+   "dur": 3.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-2h-magic-attack-05": {
+   "dur": 3.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-block-end": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-block-idle": {
+   "dur": 2.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-block-react-large": {
+   "dur": 1.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-block-start": {
+   "dur": 0.5,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-idle-02": {
+   "dur": 5.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-idle-03": {
+   "dur": 11.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-idle-04": {
+   "dur": 7.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-idle-to-crouch": {
+   "dur": 0.93,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-idle": {
+   "dur": 1.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-jump-running-landing": {
+   "dur": 1.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-jump-running": {
+   "dur": 1.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-jump": {
+   "dur": 2.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-land-to-standing-idle": {
+   "dur": 1.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-react-death-backward": {
+   "dur": 3.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-react-death-forward": {
+   "dur": 3.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-react-death-left": {
+   "dur": 3.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-react-death-right": {
+   "dur": 3.5,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-react-large-from-back": {
+   "dur": 1.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-react-large-from-front": {
+   "dur": 1.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-react-large-from-left": {
+   "dur": 1.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-react-large-from-right": {
+   "dur": 1.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-react-small-from-back": {
+   "dur": 1.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-react-small-from-front": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-react-small-from-left": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-react-small-from-right": {
+   "dur": 0.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-run-back": {
+   "dur": 0.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-run-forward": {
+   "dur": 0.73,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-run-left": {
+   "dur": 0.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-run-right": {
+   "dur": 0.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-sprint-forward": {
+   "dur": 0.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-turn-left-90": {
+   "dur": 1.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-turn-right-90": {
+   "dur": 1.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-walk-back": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-walk-forward": {
+   "dur": 1.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-walk-left": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pro-magic-standing-walk-right": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pull-heavy-object": {
+   "dur": 1.1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pulling-lever": {
+   "dur": 6.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pulling-up-to-a-ledge": {
+   "dur": 3.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "punch-combo": {
+   "dur": 2.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "pushing-with-both-hands": {
+   "dur": 0.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "quick-formal-bow": {
+   "dur": 2.73,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "quick-informal-bow": {
+   "dur": 2.73,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "rallying": {
+   "dur": 6.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "reaching-out": {
+   "dur": 4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "reaction": {
+   "dur": 1.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "rejected": {
+   "dur": 4.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "roar": {
+   "dur": 5.4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "rumba-dancing": {
+   "dur": 2.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "run-look-back": {
+   "dur": 2.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "running-1": {
+   "dur": 0.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "running-arc": {
+   "dur": 0.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "running-up-stairs": {
+   "dur": 0.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "running": {
+   "dur": 0.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sad-idle-1": {
+   "dur": 4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sad-idle-2": {
+   "dur": 2.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sad-idle": {
+   "dur": 2.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sad-walk": {
+   "dur": 1.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "shaking-hands-1": {
+   "dur": 4.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "shopping-cart-dance": {
+   "dur": 15.93,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "shoved-reaction-with-spin": {
+   "dur": 4.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "shrugging": {
+   "dur": 2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "silly-dancing": {
+   "dur": 3.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sit-to-type": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-1": {
+   "dur": 2.1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-2": {
+   "dur": 4.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-and-pointing": {
+   "dur": 3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-angry-1": {
+   "dur": 3.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-angry": {
+   "dur": 3.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-clap": {
+   "dur": 5.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-disapproval": {
+   "dur": 3.93,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-drinking": {
+   "dur": 15.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-gun-motion": {
+   "dur": 4.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-idle": {
+   "dur": 2.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-laughing-1": {
+   "dur": 8.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-laughing": {
+   "dur": 8.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-talking-1": {
+   "dur": 44.07,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-talking": {
+   "dur": 44.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-thumbs-up": {
+   "dur": 3.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting-victory": {
+   "dur": 5.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sitting": {
+   "dur": 5.93,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "snake-hip-hop-dance": {
+   "dur": 15.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "spin-flip-kick": {
+   "dur": 3.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "spin-in-place": {
+   "dur": 4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "spinning-back-kick-advancing": {
+   "dur": 3.4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standard-walk": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-cheering": {
+   "dur": 3.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-clap": {
+   "dur": 4.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-cover-turn": {
+   "dur": 1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-death-forward-01": {
+   "dur": 3.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-dodge-backward": {
+   "dur": 1.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-greeting": {
+   "dur": 5.1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-idle-to-fight-idle": {
+   "dur": 1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-react-large-from-left": {
+   "dur": 1.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-run-forward": {
+   "dur": 0.87,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-taunt-battlecry": {
+   "dur": 2.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-torch-light-torch": {
+   "dur": 4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-up-from-a-kneeling-position": {
+   "dur": 2.77,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-up": {
+   "dur": 11.4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-using-touchscreen-tablet": {
+   "dur": 33.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "standing-w-briefcase-idle": {
+   "dur": 14.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "step-hip-hop-dance": {
+   "dur": 7.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "stroke-shaking-head": {
+   "dur": 1.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "stumble-backwards": {
+   "dur": 3.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "swimming-underwater": {
+   "dur": 4.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "swing-backflip-to-superhero-pose": {
+   "dur": 1.87,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sheath-sword-1": {
+   "dur": 1.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sheath-sword-2": {
+   "dur": 0.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-180-turn-2": {
+   "dur": 0.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-attack-2": {
+   "dur": 1.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-attack-3": {
+   "dur": 1.73,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-attack-4": {
+   "dur": 1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-attack": {
+   "dur": 2.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-block-2": {
+   "dur": 0.5,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-block": {
+   "dur": 0.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-casting-2": {
+   "dur": 1.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-casting": {
+   "dur": 2.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-crouch-block-2": {
+   "dur": 0.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-crouch-block-idle": {
+   "dur": 0.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-crouch-idle": {
+   "dur": 2.4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-crouch": {
+   "dur": 0.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-crouching": {
+   "dur": 0.5,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-death-2": {
+   "dur": 3.9,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-death": {
+   "dur": 2.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-idle-2": {
+   "dur": 7.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-idle-4": {
+   "dur": 2.5,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-idle": {
+   "dur": 3.6,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-impact-3": {
+   "dur": 0.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-impact": {
+   "dur": 0.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-jump-2": {
+   "dur": 0.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-jump": {
+   "dur": 0.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-kick": {
+   "dur": 1.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-power-up": {
+   "dur": 2.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-run-2": {
+   "dur": 0.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-run": {
+   "dur": 0.7,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-slash-2": {
+   "dur": 3.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-slash-4": {
+   "dur": 2.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-slash-5": {
+   "dur": 1.37,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-strafe-2": {
+   "dur": 1.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-strafe-3": {
+   "dur": 0.67,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-strafe": {
+   "dur": 1.13,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-walk-2": {
+   "dur": 1.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "sword-and-shield-sword-and-shield-walk": {
+   "dur": 1.1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "talking-at-watercooler": {
+   "dur": 44.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "talking-on-a-cell-phone": {
+   "dur": 37.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "talking-on-phone": {
+   "dur": 38.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "talking-phone-pacing": {
+   "dur": 42.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "talking": {
+   "dur": 4.8,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "taunt-1": {
+   "dur": 2.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "taunt": {
+   "dur": 2.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "taunting-throwing-arms-back": {
+   "dur": 3.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "texting-and-walking": {
+   "dur": 3.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "texting-while-standing": {
+   "dur": 23.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "texting": {
+   "dur": 18.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "threatening": {
+   "dur": 4.4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "thriller-part-3": {
+   "dur": 25.57,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "throw": {
+   "dur": 2.2,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "tonic-seizure": {
+   "dur": 8.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "treading-water": {
+   "dur": 3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "tut-hip-hop-dance": {
+   "dur": 16.93,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "twist-dance": {
+   "dur": 9.43,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "type-to-sit": {
+   "dur": 0.93,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "typing": {
+   "dur": 16.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "unarmed-idle-01": {
+   "dur": 5.1,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "unarmed-idle-looking-ver-2": {
+   "dur": 7.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "using-a-fax-machine": {
+   "dur": 16.27,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "waking": {
+   "dur": 1.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "walk-strafe-left": {
+   "dur": 1.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "walking-while-texting": {
+   "dur": 4,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "wave-hip-hop-dance-1": {
+   "dur": 15.97,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "wave-hip-hop-dance": {
+   "dur": 1.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "waving-1": {
+   "dur": 3.17,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "waving-2": {
+   "dur": 4.73,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "waving-gesture": {
+   "dur": 1.47,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "waving": {
+   "dur": 0.53,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "wiping-sweat": {
+   "dur": 2.63,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "yawn": {
+   "dur": 8.33,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "yelling-out": {
+   "dur": 4.3,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "yelling-while-standing-leaning-forward": {
+   "dur": 4.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "yelling": {
+   "dur": 7.83,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "zombie-idle": {
+   "dur": 4.23,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  },
+  "zombie-walk": {
+   "dur": 4.03,
+   "loop": [
+    0,
+    0,
+    0
+   ],
+   "v": [
+    0,
+    0,
+    0
+   ],
+   "even": null
+  }
+ }
+}
