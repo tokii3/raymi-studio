@@ -4772,10 +4772,10 @@
     {
      "at": 0.0,
      "aim": {
-      "d": 7.5,
+      "d": 7.0,
       "az": 80,
-      "y": 1.4,
-      "h": 5.6,
+      "y": 1.0,
+      "h": 5.8,
       "at": [
        -7.555,
        4.5,
@@ -4790,11 +4790,11 @@
      "aim": {
       "d": 5.5,
       "az": 88,
-      "y": 1.4,
-      "h": 7.6,
+      "y": 1.0,
+      "h": 8.2,
       "at": [
        -7.555,
-       6.5,
+       7.0,
        -28.339
       ]
      },
@@ -4804,13 +4804,13 @@
     {
      "at": 3.73,
      "aim": {
-      "d": 4.6,
+      "d": 4.8,
       "az": 95,
-      "y": 1.4,
-      "h": 9.8,
+      "y": 1.0,
+      "h": 10.8,
       "at": [
        -7.555,
-       8.55,
+       9.6,
        -28.339
       ]
      },
@@ -4832,23 +4832,8 @@
      "rotY": -165,
      "ground": false,
      "travel": 0,
-     "at": 0.0
-    },
-    {
-     "clip": "climbing-ladder",
-     "speed": 1.4,
-     "motionMix": 1,
-     "pos": [
-      -7.555,
-      8.55,
-      -28.339
-     ],
-     "rotY": -165,
-     "ground": false,
-     "move": 3.73,
-     "ease": "linear",
-     "travel": 0,
-     "at": 3.73
+     "at": 0.0,
+     "why": "the ladder clip's own rise carries her - a pos move on top doubled it (take 16 stills: she left the frame at the top)"
     }
    ]
   },
