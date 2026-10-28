@@ -53,6 +53,7 @@ from pathlib import Path
 
 from . import camera_moves as CM
 from . import plan as P
+from .travel import compose_thirds, plan_travel
 
 REPO = Path(__file__).resolve().parents[1]
 SETS = REPO / "studio" / "src" / "three" / "sets" / "sets.json"
@@ -951,6 +952,8 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
         pos = _v3(r.get("pos", "center"), marks, errors, ktag)
         if pos is None:
             continue
+        if "path" in r:                                    # where her way through the space has taken her (travel.py)
+            pos = [round(a + b, 4) for a, b in zip(pos, r["path"])]
         if r.get("act", "idle") not in ACTS:
             errors.append(f"{ktag}: act must be one of {sorted(ACTS)}")
         rot = r.get("rotY", "lens")
@@ -963,7 +966,7 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
             errors.append(f"{ktag}: icon must be one of {sorted(x for x in ICONS if x)}")
         elif r.get("icon"):
             key["icon"] = r["icon"]
-        for opt in ("motion", "motionMix", "expr", "once", "restart", "aware", "ground"):
+        for opt in ("motion", "motionMix", "expr", "once", "restart", "aware", "ground", "travel", "drift"):
             if opt in r:
                 key[opt] = r[opt]
         if r.get("face_lens"):                             # the clip's own hip turn is taken out: her chest faces the lens
@@ -1089,7 +1092,7 @@ def aim_camera(a: dict, s: dict, marks: dict, errors: list[str], tag: str) -> tu
     return [round(v, 4) for v in pos], [round(v, 4) for v in look]
 
 
-SUB_KEEP = {"set", "opts", "actor", "mouth", "face", "step", "outline", "fx", "kick", "observer", "aware", "low_ok", "lens_near",
+SUB_KEEP = {"set", "opts", "actor", "mouth", "face", "track", "step", "outline", "fx", "kick", "observer", "aware", "low_ok", "lens_near",
             "hero", "camera_hand", "why", "short_shot", "row"}   # frame_fit: per picture (frame_fits), never inherited
 
 
@@ -1107,6 +1110,8 @@ def _actor_from(actor: list[dict], off: float) -> list[dict]:
         k = dict(before[-1])
         if ("clip" in k or "motion" in k) and float(k.get("speed", 1.0)) != 0:
             k["clip_from"] = round(float(k.get("clip_from", 0.0)) + (off - _num_at(k)) * float(k.get("speed", 1.0)), 3)
+        if "_v" in k:                                      # her way runs on too: she is where it has taken her (travel.py)
+            k["path"] = [round(p + v * (off - _num_at(k)), 4) for p, v in zip(k.get("path", [0, 0, 0]), k["_v"])]
         k["at"] = 0
         k["blend"] = 0                                     # a cut, not a pose change: no blend at the picture's start
         out.append(k)
@@ -1270,7 +1275,11 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
         errors.append("audio window is empty (audio.to must be after audio.from)")
         total = 1
     fr = lambda t: round(t * FPS) - f0                      # noqa: E731  song seconds -> film frame
-    shots_in = expand_rows(spec.get("shots", []), errors, bool(spec.get("carry")))
+    # her way through the space before the rows split into pictures (toki 2026-10-28 "schwimmt auf der stelle")
+    rows_in = spec.get("shots", []) if spec.get("travel") is False else plan_travel(spec.get("shots", []), clip_energy(), warns)
+    if spec.get("thirds", True):
+        rows_in = compose_thirds(rows_in)
+    shots_in = expand_rows(rows_in, errors, bool(spec.get("carry")))
     if not shots_in:
         errors.append("no shots")
     starts = [resolve_time(s.get("at", 0), lyrics, errors, f"shot {i + 1}") for i, s in enumerate(shots_in)]
@@ -1648,6 +1657,9 @@ def compile_shots(job: Path, spec: dict, fmt: str = "mv", cmap: set[int] | None 
                 for ak in actor:
                     if ak.get("rotY") in ("lens", None):
                         ak["rotY"] = 0.0
+            if s.get("track"):                             # the lens rides along her way (travel.py; check.ts makeCamera)
+                tr = s["track"]
+                extra["track"] = {"v": tr["v"], "mid": fr(tr["mid"]), "lead": tr["lead"]}
             m = s.get("mouth", {"gain": 1.0})
             extra["mouth"] = {"gain": 0.0} if m == "silent" else {"gain": float(m.get("gain", 1.0))}
         for opt in ("step", "outline"):

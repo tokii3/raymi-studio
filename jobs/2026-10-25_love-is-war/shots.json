@@ -132,251 +132,28 @@
  },
  "shots": [
   {
-   "id": "0a",
-   "at": 0.0,
-   "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 0.62,
-      "az": 0.0,
-      "y": 1.4,
-      "h": 0.62
-     },
-     "fov": 48,
-     "roll": 6
-    },
-    {
-     "at": 0.1,
-     "aim": {
-      "d": 0.56,
-      "az": 0.0,
-      "y": 1.4,
-      "h": 0.62
-     },
-     "fov": 48,
-     "roll": 6
-    }
-   ],
-   "why": "cold open: the strongest blow in frame 1 - the war cry at the lens (PRINCIPLES B6, ref ado-usseewa@98.25)",
-   "actor": [
-    {
-     "at": 0.0,
-     "clip": "roar",
-     "clip_from": 1.0,
-     "speed": 0.0,
-     "motionMix": 1,
-     "pos": "pool",
-     "face_lens": true,
-     "expr": {
-      "angry": 1,
-      "aa": 0.8
-     }
-    },
-    {
-     "at": 0.2,
-     "clip": "roar",
-     "clip_from": 1.0,
-     "speed": 1.0,
-     "motionMix": 1,
-     "pos": "pool",
-     "face_lens": true,
-     "expr": {
-      "angry": 1,
-      "aa": 0.8
-     }
-    }
-   ],
-   "mouth": "silent",
-   "opts": {
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 24.0,
-     "beam": 1.0,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 200
-    },
-    "rain_at": 0.0,
-    "two_tone": [
-     0.0
-    ],
-    "two_tone_n": 2,
-    "two_tone_light": "#ffc35c",
-    "post": {
-     "glow": 1,
-     "vignette": 0.4,
-     "dof_auto": 1,
-     "chroma": 0.003
-    }
-   },
-   "fx": [
-    {
-     "kind": "crown",
-     "at": 0,
-     "to": "end",
-     "size": 0.55,
-     "hole": 0.36
-    }
-   ],
-   "frame_fit": [
-    -0.001,
-    -0.081,
-    0.02
-   ]
-  },
-  {
-   "id": "0b",
-   "at": 0.2,
-   "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "pos": [
-      -6.452,
-      13.7,
-      -24.204
-     ],
-     "look": [
-      -8.0,
-      13.299999999999999,
-      -30.0
-     ],
-     "fov": 58,
-     "roll": 0
-    }
-   ],
-   "why": "THE silhouette, promise of the last picture (as 83): a black shape on the white-gold (ref hsr-hope-feathers@112.75) | build: THE silhouette stands between the lamp and the lens (stills 4-7 showed it); the white flood hides the change of place from row 82",
-   "actor": [
-    {
-     "at": 0,
-     "clip": "pull-heavy-object",
-     "clip_from": 1.9,
-     "speed": 0.0,
-     "motionMix": 1,
-     "pos": [
-      -7.66,
-      12.9,
-      -28.74
-     ],
-     "rotY": -165.0
-    }
-   ],
-   "mouth": "silent",
-   "low_ok": "lantern",
-   "opts": {
-    "lighthouse": {
-     "pos": [
-      -8.0,
-      -30.0
-     ],
-     "height": 12,
-     "len": 90,
-     "spin": 0,
-     "beam": 1.0,
-     "ledge": [
-      -6.07,
-      -22.75
-     ],
-     "yaw": 14.95,
-     "lantern": "her"
-    },
-    "flood": [
-     0.2
-    ],
-    "flood_n": 6,
-    "flood_light": "#fff1d2",
-    "post": {
-     "chroma": 0.003,
-     "vignette": 0
-    },
-    "her_key": 0.55
-   }
-  },
-  {
-   "id": "0c",
-   "at": 0.4,
-   "set": "nightsea",
-   "camera": [
-    {
-     "at": 0,
-     "aim": {
-      "d": 2.0,
-      "az": 0.0,
-      "y": 1.4,
-      "h": 0.6
-     },
-     "fov": 40,
-     "roll": 0
-    }
-   ],
-   "why": "the hold that makes 0.467 land",
-   "opts": {
-    "her_off": "2 frames black"
-   },
-   "fx": [
-    {
-     "kind": "insert",
-     "at": 0,
-     "to": "end",
-     "motif": "black",
-     "tone": "ink"
-    }
-   ],
-   "carry": false,
-   "transition": {
-    "kind": "cut",
-    "frames": 0
-   }
-  },
-  {
    "id": "1",
-   "at": 0.467,
+   "at": 0.0,
    "set": "deep",
    "camera": [
     {
      "at": 0,
      "aim": {
-      "d": 0.75,
-      "az": -20,
-      "y": 0.05,
-      "h": 0.32,
+      "d": 4.0,
+      "az": 90,
+      "y": 0.3,
+      "h": 0.75,
       "at": [
        0.0,
        0.62,
        0.72
       ]
      },
-     "fov": 50,
-     "roll": 4
-    },
-    {
-     "at": 2.5,
-     "aim": {
-      "d": 1.45,
-      "az": 70,
-      "y": 0.05,
-      "h": 0.52,
-      "at": [
-       0.0,
-       0.62,
-       0.72
-      ]
-     },
-     "fov": 28,
-     "roll": 0,
-     "ease": "out"
+     "fov": 40,
+     "roll": 0
     }
    ],
-   "why": "in the action from 0.5 s (C1): her eye opens, the beam sweeps the black surface, a pulse runs up her cable (ref edgerunners-this-fffire@91.25)",
+   "why": "toki 2026-10-28: 'am anfang ist etwas stille bevor die musik einsetzt' + 'es ist normal dass die flaeche am anfang und am ende leer ist ... wenn sie erst rein und dann raus / vorbei schwimmt' - the song is silent 0-2.1 s: the deep water empty, she swims in from the side, crosses, the music comes as she passes (replaces the cold open 0a-0c)",
    "actor": [
     {
      "at": 0,
@@ -408,11 +185,7 @@
     ]
    },
    "low_ok": "prone in the water toward the lens, her skirt trails behind her (4_SCRIPT: skirt ok)",
-   "frame_fit": [
-    0.232,
-    0.008,
-    -0.254
-   ]
+   "pass": true
   },
   {
    "id": "2",

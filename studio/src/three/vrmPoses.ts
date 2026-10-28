@@ -366,6 +366,11 @@ export type VrmKey = {
   // lens on top of any clip (eyes follow anyway); from behind only a glance over the shoulder now and then. 0 = off.
   aware?: number;
   ground?: boolean;          // false = keep the key's height (she hangs from strings, sits in the air on purpose)
+  // her way through the space (toki 2026-10-28: "sie bewegt sich zwar ... aber nicht im raum selbst, sie schwebt, schwimmt
+  // auf der stelle"): travel = how much of the clip's OWN root travel she keeps (1 = as captured: a swim carries her 2 m/s,
+  // feet and strokes match); drift = a slow linear way in m/s [x, y, z] for clips that do not travel (treading water)
+  travel?: number;
+  drift?: [number, number, number];
   move?: number;             // original puppet travel duration in frames
   arc?: number;              // original hop arc in metres
   ease?: Ease;

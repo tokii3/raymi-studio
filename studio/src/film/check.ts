@@ -25,6 +25,13 @@ export function makeCamera(shot: Shot, f: number, aspect: number, hits: number[]
     c.pos = [c.look[0] + vx * cs + vz * sn, c.pos[1] + lift, c.look[2] - vx * sn + vz * cs];
     c.roll += snap * 8;
   }
+  // the lens travels WITH her on her way through the space (timeline.py travel: close shots track, wide shots let her
+  // pass): the world streams past behind her, and she sits behind the centre with room ahead (lead)
+  if (shot.track) {
+    const {v, mid, lead} = shot.track, dt = (f - mid) / fps;
+    c.pos = [0, 1, 2].map((n) => c.pos[n] + v[n] * dt + lead[n]) as V3;
+    c.look = [0, 1, 2].map((n) => c.look[n] + v[n] * dt + lead[n]) as V3;
+  }
   const cam = new THREE.PerspectiveCamera(fovFor(c.fov, aspect), aspect, 0.05, 200);
   cam.position.set(...c.pos);
   cam.up.set(0, 1, 0);
