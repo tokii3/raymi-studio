@@ -1,5 +1,21 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-28 - Love is War whole film takes 11-13 (face, lip sync, one grade, her way through the space)
+- toki 10-27: lip sync "unpassend", face "emotionslos", after effects "aus einem guss", whole film. Built: faces by song
+  section (shots.json "faces", row "face"), brows / mouth corners sing along, a yell widens the sung vowels instead of a
+  frozen grimace, 15 "silent" rows she sang in unsilenced (+ lint); ONE grade as a backdrop filter over world + effects;
+  three-tone colour flip; effects find her eyes on fitted close shots.
+- toki 10-28 on take 11: "schwimmt auf der stelle", "immer in die mitte", lighthouse passage unreadable / clipping
+  (the 30 s before the very end). Measured 63/63 locomotion keys on the spot, lens on her in 163/194 shots. Built:
+  raymi/travel.py (drift at the measured clip speed; close frames ride along with lead room, wide frames let her pass;
+  compose_thirds), check.ts makeCamera track; the silent 0-2.1 s = empty deep water, she swims in (cold open out).
+  Clip root travel NOT usable: the VRM0 retarget mirrors it (QC v2 measured the swim going backwards). Lamp room: she
+  stood BEHIND the lamp since an earlier fix - back in front at r 1.12, mullions no longer turn (QC v2: 153 -> 17 frames).
+- Take 13 (render run 86): motion 11 % still, 0.60 m/s; gate FAIL: brief-keeper BLOCK, look-critic FAIL, motion-critic
+  (cut off before its verdict) - opening / climb she is small and dark, lamp room over-exposed, end weak, melody class
+  missing, red slash reads as pixel noise; motion faults 124-170 s 0.58 m/s, 4 pose snaps, lens in her at 35a.
+  Sent FAIL-marked (deliveries/2026-10-25_love-is-war/final). Handoff: knowledge/HANDOFF_2026-10-28_love_is_war_take13.md
+
 ## 2026-10-27 (night) - Love is War excerpt after toki's notes (outlines off, never hollow, ink not stickers)
 - toki: "ja besser" + outlines weg, "hohl von innen" up close, vector graphics better or gone (toki.md verbatim).
 - Built: no ink outline on her (memory); her materials double-sided + the lens backs off where the probe saw it cut
