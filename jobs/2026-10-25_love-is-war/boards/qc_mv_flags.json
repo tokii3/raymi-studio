@@ -1,0 +1,653 @@
+[
+ {
+  "cls": "pierced",
+  "shot": "51",
+  "F": 3432,
+  "xy": [
+   0.523,
+   0.921
+  ],
+  "frames": 22,
+  "worst": 0.03489,
+  "what": "room through her"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "20",
+  "F": 1266,
+  "xy": [
+   0.548,
+   0.951
+  ],
+  "frames": 17,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "pierced",
+  "shot": "19",
+  "F": 1158,
+  "xy": [
+   0.485,
+   0.909
+  ],
+  "frames": 10,
+  "worst": 0.00825,
+  "what": "room through her"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "72a",
+  "F": 4788,
+  "xy": [
+   0.141,
+   0.914
+  ],
+  "frames": 9,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "pierced",
+  "shot": "61a",
+  "F": 4112,
+  "xy": [
+   0.111,
+   0.905
+  ],
+  "frames": 8,
+  "worst": 0.00701,
+  "what": "room through her"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "40",
+  "F": 2648,
+  "xy": [
+   0.57,
+   0.914
+  ],
+  "frames": 8,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "pierced",
+  "shot": "28",
+  "F": 1886,
+  "xy": [
+   0.422,
+   0.97
+  ],
+  "frames": 7,
+  "worst": 0.00459,
+  "what": "room through her"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "35a",
+  "F": 2294,
+  "xy": [
+   0.806,
+   0.851
+  ],
+  "frames": 7,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "pierced",
+  "shot": "30a",
+  "F": 2020,
+  "xy": [
+   0.598,
+   0.9
+  ],
+  "frames": 6,
+  "worst": 0.00595,
+  "what": "room through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "30b",
+  "F": 2032,
+  "xy": [
+   0.555,
+   0.969
+  ],
+  "frames": 6,
+  "worst": 0.00319,
+  "what": "room through her"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "27H",
+  "F": 1876,
+  "xy": [
+   0.537,
+   0.518
+  ],
+  "frames": 6,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "72",
+  "F": 4762,
+  "xy": [
+   0.41,
+   0.947
+  ],
+  "frames": 6,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "pierced",
+  "shot": "30",
+  "F": 2012,
+  "xy": [
+   0.522,
+   0.896
+  ],
+  "frames": 5,
+  "worst": 0.00917,
+  "what": "room through her"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "30",
+  "F": 2004,
+  "xy": [
+   0.415,
+   0.209
+  ],
+  "frames": 5,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "30a",
+  "F": 2026,
+  "xy": [
+   0.188,
+   0.799
+  ],
+  "frames": 5,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "51",
+  "F": 3502,
+  "xy": [
+   0.522,
+   0.483
+  ],
+  "frames": 5,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "27c",
+  "F": 1824,
+  "xy": [
+   0.467,
+   0.731
+  ],
+  "frames": 4,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "27e",
+  "F": 1844,
+  "xy": [
+   0.391,
+   0.8
+  ],
+  "frames": 4,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "27g",
+  "F": 1858,
+  "xy": [
+   0.4,
+   0.806
+  ],
+  "frames": 4,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "57",
+  "F": 3864,
+  "xy": null,
+  "frames": 4,
+  "worst": 1.0,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "14",
+  "F": 816,
+  "xy": [
+   0.015,
+   0.837
+  ],
+  "frames": 3,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "27",
+  "F": 1776,
+  "xy": [
+   0.488,
+   0.959
+  ],
+  "frames": 3,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "27d",
+  "F": 1836,
+  "xy": [
+   0.303,
+   0.824
+  ],
+  "frames": 3,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "27f",
+  "F": 1850,
+  "xy": [
+   0.388,
+   0.854
+  ],
+  "frames": 3,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "27h",
+  "F": 1864,
+  "xy": [
+   0.247,
+   0.555
+  ],
+  "frames": 3,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "66",
+  "F": 4406,
+  "xy": [
+   0.463,
+   0.07
+  ],
+  "frames": 3,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "pierced",
+  "shot": "59a",
+  "F": 3978,
+  "xy": [
+   0.049,
+   0.144
+  ],
+  "frames": 2,
+  "worst": 0.0054,
+  "what": "room through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "64",
+  "F": 4258,
+  "xy": [
+   0.411,
+   0.908
+  ],
+  "frames": 2,
+  "worst": 0.00194,
+  "what": "room through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "70",
+  "F": 4642,
+  "xy": [
+   0.446,
+   0.116
+  ],
+  "frames": 2,
+  "worst": 0.00217,
+  "what": "room through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "72",
+  "F": 4758,
+  "xy": [
+   0.3,
+   0.961
+  ],
+  "frames": 2,
+  "worst": 0.0014,
+  "what": "room through her"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "27a",
+  "F": 1800,
+  "xy": [
+   0.484,
+   0.96
+  ],
+  "frames": 2,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "30b",
+  "F": 2032,
+  "xy": [
+   0.336,
+   0.349
+  ],
+  "frames": 2,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "45",
+  "F": 3028,
+  "xy": [
+   0.943,
+   0.498
+  ],
+  "frames": 2,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "69a",
+  "F": 4592,
+  "xy": [
+   0.631,
+   0.077
+  ],
+  "frames": 2,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "4",
+  "F": 248,
+  "xy": null,
+  "frames": 2,
+  "worst": 0.78,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "11c",
+  "F": 640,
+  "xy": null,
+  "frames": 2,
+  "worst": 0.92,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "12",
+  "F": 652,
+  "xy": null,
+  "frames": 2,
+  "worst": 0.93,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "54",
+  "F": 3686,
+  "xy": [
+   0.657,
+   0.521
+  ],
+  "frames": 2,
+  "worst": 1.0,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "81e",
+  "F": 5274,
+  "xy": null,
+  "frames": 2,
+  "worst": 0.57,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "pierced",
+  "shot": "31",
+  "F": 2068,
+  "xy": [
+   0.506,
+   0.572
+  ],
+  "frames": 1,
+  "worst": 0.00049,
+  "what": "room through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "35a",
+  "F": 2290,
+  "xy": [
+   0.494,
+   0.971
+  ],
+  "frames": 1,
+  "worst": 0.00758,
+  "what": "room through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "52",
+  "F": 3518,
+  "xy": [
+   0.258,
+   0.972
+  ],
+  "frames": 1,
+  "worst": 0.00117,
+  "what": "room through her"
+ },
+ {
+  "cls": "pierced",
+  "shot": "72a",
+  "F": 4776,
+  "xy": [
+   0.009,
+   0.968
+  ],
+  "frames": 1,
+  "worst": 0.0014,
+  "what": "room through her"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "19",
+  "F": 1198,
+  "xy": [
+   0.764,
+   0.833
+  ],
+  "frames": 1,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "29a",
+  "F": 1968,
+  "xy": [
+   0.505,
+   0.014
+  ],
+  "frames": 1,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "60",
+  "F": 4016,
+  "xy": [
+   0.024,
+   0.967
+  ],
+  "frames": 1,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "71",
+  "F": 4710,
+  "xy": [
+   0.323,
+   0.86
+  ],
+  "frames": 1,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "face_cut",
+  "shot": "82a",
+  "F": 5300,
+  "xy": [
+   0.217,
+   0.893
+  ],
+  "frames": 1,
+  "worst": 1,
+  "what": "face cut by the frame edge"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "3",
+  "F": 182,
+  "xy": null,
+  "frames": 1,
+  "worst": 0.66,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "10",
+  "F": 544,
+  "xy": null,
+  "frames": 1,
+  "worst": 0.58,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "43",
+  "F": 2844,
+  "xy": null,
+  "frames": 1,
+  "worst": 1.0,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "58",
+  "F": 3912,
+  "xy": null,
+  "frames": 1,
+  "worst": 0.55,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "59",
+  "F": 3936,
+  "xy": null,
+  "frames": 1,
+  "worst": 1.0,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "65a",
+  "F": 4322,
+  "xy": null,
+  "frames": 1,
+  "worst": 0.58,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "65e",
+  "F": 4372,
+  "xy": null,
+  "frames": 1,
+  "worst": 0.86,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "68",
+  "F": 4538,
+  "xy": null,
+  "frames": 1,
+  "worst": 0.51,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "71",
+  "F": 4714,
+  "xy": null,
+  "frames": 1,
+  "worst": 0.5,
+  "what": "her figure jumps / vanishes"
+ },
+ {
+  "cls": "her_pop",
+  "shot": "84",
+  "F": 5380,
+  "xy": null,
+  "frames": 1,
+  "worst": 1.0,
+  "what": "her figure jumps / vanishes"
+ }
+]
