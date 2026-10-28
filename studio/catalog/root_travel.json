@@ -13,7 +13,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "action-adventure-cover-to-stand-2": {
    "dur": 1.13,
@@ -27,7 +33,13 @@
     0.012,
     -0.73
    ],
-   "even": 0.29
+   "even": 0.29,
+   "implied": [
+    -0.009,
+    0,
+    0.068
+   ],
+   "planted": 0.82
   },
   "action-adventure-crouched-sneaking-left": {
    "dur": 1.27,
@@ -41,7 +53,13 @@
     0,
     0
    ],
-   "even": 0.53
+   "even": 0.53,
+   "implied": [
+    0.002,
+    0,
+    -0.051
+   ],
+   "planted": 0.84
   },
   "action-adventure-crouched-sneaking-right": {
    "dur": 1.07,
@@ -55,7 +73,13 @@
     -0.002,
     0.001
    ],
-   "even": 0.47
+   "even": 0.47,
+   "implied": [
+    -0.047,
+    0,
+    0.014
+   ],
+   "planted": 0.88
   },
   "action-adventure-falling-idle": {
    "dur": 0.7,
@@ -69,21 +93,33 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.002,
+    0,
+    0.002
+   ],
+   "planted": 1
   },
   "action-adventure-falling-to-roll": {
    "dur": 1.47,
    "loop": [
     -0.02,
     -0.006,
-    1.186
+    1.185
    ],
    "v": [
     -0.014,
     -0.004,
-    0.809
+    0.808
    ],
-   "even": 0.67
+   "even": 0.67,
+   "implied": [
+    0.147,
+    0,
+    0.621
+   ],
+   "planted": 0.09
   },
   "action-adventure-hard-landing": {
    "dur": 2,
@@ -97,7 +133,13 @@
     0.005,
     0.03
    ],
-   "even": 1.46
+   "even": 1.46,
+   "implied": [
+    -0.054,
+    0,
+    -0.013
+   ],
+   "planted": 0.17
   },
   "action-adventure-idle-2": {
    "dur": 9.9,
@@ -111,7 +153,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "action-adventure-idle-4": {
    "dur": 2.57,
@@ -125,7 +173,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "action-adventure-idle-5": {
    "dur": 2.27,
@@ -139,7 +193,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "action-adventure-idle": {
    "dur": 3.87,
@@ -153,21 +213,33 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.001,
+    0,
+    -0.002
+   ],
+   "planted": 1
   },
   "action-adventure-left-cover-sneak": {
    "dur": 1.13,
    "loop": [
-    -0.22,
+    -0.219,
     0,
     0
    ],
    "v": [
-    -0.194,
+    -0.193,
     0,
     0
    ],
-   "even": 0.55
+   "even": 0.55,
+   "implied": [
+    -0.792,
+    0,
+    -0.012
+   ],
+   "planted": 0.53
   },
   "action-adventure-left-turn": {
    "dur": 1.03,
@@ -181,7 +253,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.049,
+    0,
+    0.033
+   ],
+   "planted": 1
   },
   "action-adventure-right-cover-sneak": {
    "dur": 1.13,
@@ -195,7 +273,13 @@
     0,
     0
    ],
-   "even": 0.46
+   "even": 0.46,
+   "implied": [
+    0.814,
+    0,
+    0.001
+   ],
+   "planted": 0.47
   },
   "action-adventure-right-turn": {
    "dur": 1.03,
@@ -209,7 +293,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.097,
+    0,
+    0.066
+   ],
+   "planted": 1
   },
   "action-adventure-run-to-stop": {
    "dur": 0.87,
@@ -223,49 +313,73 @@
     0.003,
     0.115
    ],
-   "even": 0.97
+   "even": 0.97,
+   "implied": [
+    -0.079,
+    0,
+    -0.034
+   ],
+   "planted": 0.38
   },
   "action-adventure-running": {
    "dur": 0.7,
    "loop": [
     0,
     0,
-    0.386
+    0.387
    ],
    "v": [
     0,
     0,
-    0.551
+    0.553
    ],
-   "even": 0.53
+   "even": 0.53,
+   "implied": [
+    0.159,
+    0,
+    0.637
+   ],
+   "planted": 0.2
   },
   "action-adventure-stand-to-cover-2": {
    "dur": 1.27,
    "loop": [
     0,
-    -0.041,
-    0.13
+    -0.04,
+    0.128
    ],
    "v": [
     0,
     -0.032,
-    0.103
+    0.101
    ],
-   "even": 0.73
+   "even": 0.73,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "action-idle-to-fight-idle": {
    "dur": 1,
    "loop": [
     0.003,
     -0.002,
-    -0.009
+    -0.008
    ],
    "v": [
     0.003,
     -0.002,
-    -0.009
+    -0.008
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.332,
+    0,
+    0.152
+   ],
+   "planted": 0.13
   },
   "agony": {
    "dur": 3.7,
@@ -279,7 +393,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.002,
+    0,
+    -0.004
+   ],
+   "planted": 0.91
   },
   "angry-point": {
    "dur": 2.43,
@@ -293,7 +413,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "angry": {
    "dur": 19.17,
@@ -307,7 +433,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    -0.001
+   ],
+   "planted": 1
   },
   "arm-stretching": {
    "dur": 8.87,
@@ -321,7 +453,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "arms-hip-hop-dance": {
    "dur": 21.97,
@@ -335,7 +473,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.05,
+    0,
+    0.009
+   ],
+   "planted": 0.11
   },
   "arms-spread-looking-upwards": {
    "dur": 0.07,
@@ -349,7 +493,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "backflip": {
    "dur": 2.17,
@@ -363,7 +513,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.079,
+    0,
+    0.145
+   ],
+   "planted": 0.16
   },
   "backward-walking-turn": {
    "dur": 1.97,
@@ -377,21 +533,33 @@
     0,
     -0.017
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.321,
+    0,
+    -0.692
+   ],
+   "planted": 0.17
   },
   "baseball-walk-out": {
    "dur": 4,
    "loop": [
-    0.026,
+    0.025,
     0.002,
-    -0.011
+    -0.01
    ],
    "v": [
     0.006,
     0.001,
     -0.003
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.206,
+    0,
+    -0.05
+   ],
+   "planted": 0.67
   },
   "batter-on-deck": {
    "dur": 37.33,
@@ -405,7 +573,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    -0.003
+   ],
+   "planted": 0.78
   },
   "beckoning": {
    "dur": 2.6,
@@ -419,7 +593,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "blow-a-kiss": {
    "dur": 4.57,
@@ -433,7 +613,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "booty-hip-hop-dance-1": {
    "dur": 4.9,
@@ -447,7 +633,13 @@
     0,
     0.004
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.005,
+    0,
+    0.122
+   ],
+   "planted": 0.12
   },
   "booty-hip-hop-dance": {
    "dur": 4.9,
@@ -461,7 +653,13 @@
     0,
     0.004
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.005,
+    0,
+    0.122
+   ],
+   "planted": 0.12
   },
   "boxing-taunt": {
    "dur": 1.63,
@@ -475,21 +673,33 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.005,
+    0,
+    -0.066
+   ],
+   "planted": 0.54
   },
   "breakdance-1990": {
    "dur": 3.5,
    "loop": [
     0.017,
     0.004,
-    0.004
+    0.003
    ],
    "v": [
     0.005,
     0.001,
     0.001
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.77,
+    0,
+    0.234
+   ],
+   "planted": 0.15
   },
   "breakdance-uprock-var-2": {
    "dur": 5.33,
@@ -503,7 +713,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.139,
+    0,
+    0.175
+   ],
+   "planted": 0.03
   },
   "capoeira-armada-to-esquiva": {
    "dur": 4.07,
@@ -517,7 +733,13 @@
     0,
     0.002
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.776,
+    0,
+    -0.685
+   ],
+   "planted": 0.03
   },
   "capoeira-armada": {
    "dur": 1.63,
@@ -531,12 +753,18 @@
     0,
     0.006
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.472,
+    0,
+    0.67
+   ],
+   "planted": 0.21
   },
   "capoeira-au-to-role": {
    "dur": 4,
    "loop": [
-    0.03,
+    0.029,
     0,
     0.009
    ],
@@ -545,12 +773,18 @@
     0,
     0.002
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "capoeira-au": {
    "dur": 2.9,
    "loop": [
-    0.021,
+    0.02,
     0,
     0
    ],
@@ -559,7 +793,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.7,
+    0,
+    -0.81
+   ],
+   "planted": 0.07
   },
   "capoeira-bencao": {
    "dur": 1.37,
@@ -573,7 +813,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.006,
+    0,
+    -0.408
+   ],
+   "planted": 0.15
   },
   "capoeira-capoeira-3": {
    "dur": 4.8,
@@ -587,7 +833,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.172,
+    0,
+    -0.152
+   ],
+   "planted": 0.17
   },
   "capoeira-capoeira": {
    "dur": 3.43,
@@ -601,7 +853,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.11,
+    0,
+    -0.489
+   ],
+   "planted": 0.1
   },
   "capoeira-chapa-2": {
    "dur": 1.23,
@@ -615,7 +873,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.137,
+    0,
+    -0.152
+   ],
+   "planted": 0.28
   },
   "capoeira-chapa-giratoria-2": {
    "dur": 2.37,
@@ -629,7 +893,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.141,
+    0,
+    0.174
+   ],
+   "planted": 0.14
   },
   "capoeira-chapa-giratoria": {
    "dur": 3,
@@ -643,7 +913,13 @@
     0,
     0.001
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.143,
+    0,
+    0.649
+   ],
+   "planted": 0.11
   },
   "capoeira-chapaeu-de-couro": {
    "dur": 3.43,
@@ -657,7 +933,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.565,
+    0,
+    -0.712
+   ],
+   "planted": 0.06
   },
   "capoeira-esquiva-1": {
    "dur": 4.6,
@@ -671,7 +953,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.076,
+    0,
+    -0.342
+   ],
+   "planted": 0.06
   },
   "capoeira-esquiva-2": {
    "dur": 2.23,
@@ -685,7 +973,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.7,
+    0,
+    -0.019
+   ],
+   "planted": 0.27
   },
   "capoeira-esquiva-3": {
    "dur": 2.17,
@@ -699,7 +993,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.561,
+    0,
+    -0.383
+   ],
+   "planted": 0.09
   },
   "capoeira-esquiva-4": {
    "dur": 2.8,
@@ -713,7 +1013,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.575,
+    0,
+    -0.934
+   ],
+   "planted": 0.07
   },
   "capoeira-esquiva-5": {
    "dur": 2.17,
@@ -727,7 +1033,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.509,
+    0,
+    -0.557
+   ],
+   "planted": 0.09
   },
   "capoeira-ginga-backward": {
    "dur": 1.13,
@@ -741,7 +1053,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.249,
+    0,
+    -1.09
+   ],
+   "planted": 0.18
   },
   "capoeira-ginga-forward": {
    "dur": 1.23,
@@ -755,7 +1073,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.513,
+    0,
+    0.227
+   ],
+   "planted": 0.11
   },
   "capoeira-ginga-sideways-1": {
    "dur": 1.67,
@@ -769,7 +1093,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.411,
+    0,
+    0.566
+   ],
+   "planted": 0.16
   },
   "capoeira-ginga-sideways-2": {
    "dur": 2.23,
@@ -783,7 +1113,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.311,
+    0,
+    0.232
+   ],
+   "planted": 0.18
   },
   "capoeira-ginga-sideways-to-au": {
    "dur": 3.77,
@@ -797,7 +1133,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.157,
+    0,
+    0.712
+   ],
+   "planted": 0.07
   },
   "capoeira-ginga-variation-1": {
    "dur": 3.53,
@@ -811,7 +1153,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.118,
+    0,
+    -0.67
+   ],
+   "planted": 0.09
   },
   "capoeira-ginga-variation-2": {
    "dur": 3.8,
@@ -825,7 +1173,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.053,
+    0,
+    -0.667
+   ],
+   "planted": 0.12
   },
   "capoeira-ginga-variation-3": {
    "dur": 2.87,
@@ -839,7 +1193,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.33,
+    0,
+    -0.219
+   ],
+   "planted": 0.23
   },
   "capoeira-macaco-side": {
    "dur": 3.3,
@@ -853,7 +1213,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.494,
+    0,
+    -1.001
+   ],
+   "planted": 0.06
   },
   "capoeira-martelo-2": {
    "dur": 1.3,
@@ -867,7 +1233,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.21,
+    0,
+    0.21
+   ],
+   "planted": 0.26
   },
   "capoeira-martelo-3": {
    "dur": 1.97,
@@ -881,7 +1253,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.121,
+    0,
+    -0.02
+   ],
+   "planted": 0.38
   },
   "capoeira-martelo-do-chau-sem-mao": {
    "dur": 3.07,
@@ -895,7 +1273,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.67,
+    0,
+    0.22
+   ],
+   "planted": 0.09
   },
   "capoeira-martelo-do-chau": {
    "dur": 3.03,
@@ -909,7 +1293,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.452,
+    0,
+    0.287
+   ],
+   "planted": 0.11
   },
   "capoeira-meia-lua-de-compasso-back": {
    "dur": 2.2,
@@ -923,7 +1313,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    1.165,
+    0,
+    -1.756
+   ],
+   "planted": 0.03
   },
   "capoeira-meia-lua-de-compasso": {
    "dur": 1.7,
@@ -937,7 +1333,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.749,
+    0,
+    0.303
+   ],
+   "planted": 0.16
   },
   "capoeira-meia-lua-de-frente": {
    "dur": 2.47,
@@ -951,7 +1353,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.098,
+    0,
+    -0.22
+   ],
+   "planted": 0.16
   },
   "capoeira-pontera": {
    "dur": 1.3,
@@ -965,7 +1373,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.048,
+    0,
+    -0.048
+   ],
+   "planted": 0.53
   },
   "capoeira-queshada-1": {
    "dur": 2.57,
@@ -979,7 +1393,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.291,
+    0,
+    0.472
+   ],
+   "planted": 0.11
   },
   "capoeira-queshada-2": {
    "dur": 2,
@@ -993,7 +1413,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.288,
+    0,
+    -0.082
+   ],
+   "planted": 0.17
   },
   "capoeira-rasteira-1": {
    "dur": 1.8,
@@ -1007,7 +1433,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.408,
+    0,
+    -0.288
+   ],
+   "planted": 0.22
   },
   "capoeira-rasteira-2": {
    "dur": 2.47,
@@ -1021,7 +1453,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.586,
+    0,
+    -0.327
+   ],
+   "planted": 0.11
   },
   "capoeira-troca-1": {
    "dur": 5.17,
@@ -1035,7 +1473,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.772,
+    0,
+    0.676
+   ],
+   "planted": 0.16
   },
   "capoeira": {
    "dur": 3.43,
@@ -1049,7 +1493,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.111,
+    0,
+    -0.485
+   ],
+   "planted": 0.1
   },
   "casting-spell": {
    "dur": 7.7,
@@ -1063,7 +1513,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.233,
+    0,
+    -0.564
+   ],
+   "planted": 0.04
   },
   "catwalk-idle-to-walk-forward-highknees": {
    "dur": 1.13,
@@ -1077,7 +1533,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.212,
+    0,
+    0.185
+   ],
+   "planted": 0.59
   },
   "catwalk-idle-twist-l": {
    "dur": 5.17,
@@ -1091,7 +1553,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "catwalk-idle-twist-r": {
    "dur": 5.17,
@@ -1105,7 +1573,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "catwalk-sequence-02": {
    "dur": 12.17,
@@ -1119,7 +1593,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.086,
+    0,
+    0.116
+   ],
+   "planted": 0.32
   },
   "catwalk-sequence-04-1": {
    "dur": 12.13,
@@ -1133,7 +1613,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.027,
+    0,
+    0.075
+   ],
+   "planted": 0.54
   },
   "catwalk-sequence-04": {
    "dur": 12.13,
@@ -1147,7 +1633,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.027,
+    0,
+    0.075
+   ],
+   "planted": 0.54
   },
   "catwalk-sequence-05": {
    "dur": 10.17,
@@ -1161,7 +1653,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.004,
+    0,
+    0.142
+   ],
+   "planted": 0.32
   },
   "catwalk-twist-l-to-walk-180": {
    "dur": 2.03,
@@ -1175,7 +1673,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.044,
+    0,
+    -0.233
+   ],
+   "planted": 0.57
   },
   "catwalk-twist-r-to-walk-180": {
    "dur": 1.97,
@@ -1189,7 +1693,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.034,
+    0,
+    -0.053
+   ],
+   "planted": 0.62
   },
   "catwalk-walk-forward-02": {
    "dur": 1.13,
@@ -1203,7 +1713,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.01,
+    0,
+    1.116
+   ],
+   "planted": 0.59
   },
   "catwalk-walk-forward-turn-90r": {
    "dur": 2.47,
@@ -1217,7 +1733,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.202,
+    0,
+    0.302
+   ],
+   "planted": 0.81
   },
   "catwalk-walk-forward": {
    "dur": 1.2,
@@ -1231,7 +1753,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.022,
+    0,
+    0.399
+   ],
+   "planted": 0.89
   },
   "catwalk-walk-stop-twist-r": {
    "dur": 2.97,
@@ -1245,7 +1773,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.027,
+    0,
+    0.171
+   ],
+   "planted": 1
   },
   "catwalk-walk-stop": {
    "dur": 1.93,
@@ -1259,7 +1793,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.047,
+    0,
+    0.208
+   ],
+   "planted": 0.9
   },
   "catwalk-walk-turn-180-tight": {
    "dur": 3.63,
@@ -1273,7 +1813,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.084,
+    0,
+    -0.043
+   ],
+   "planted": 0.91
   },
   "catwalk-walk": {
    "dur": 15.13,
@@ -1287,7 +1833,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.057,
+    0,
+    -0.08
+   ],
+   "planted": 0.21
   },
   "catwalk-walking": {
    "dur": 1.17,
@@ -1301,7 +1853,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.011,
+    0,
+    0.879
+   ],
+   "planted": 0.47
   },
   "climbing-ladder": {
    "dur": 0.77,
@@ -1315,7 +1873,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.223,
+    0,
+    -0.157
+   ],
+   "planted": 0.18
   },
   "climbing-to-top": {
    "dur": 4,
@@ -1329,7 +1893,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.015,
+    0,
+    0.685
+   ],
+   "planted": 0.13
   },
   "climbing-up-wall": {
    "dur": 2,
@@ -1343,7 +1913,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.109,
+    0,
+    0.468
+   ],
+   "planted": 0.3
   },
   "creature-npc-mutant-breathing-idle": {
    "dur": 4.03,
@@ -1357,7 +1933,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "creature-npc-mutant-flexing-muscles": {
    "dur": 4.4,
@@ -1371,7 +1953,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.001,
+    0,
+    0.032
+   ],
+   "planted": 0.5
   },
   "creature-npc-mutant-idle": {
    "dur": 5.23,
@@ -1385,7 +1973,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "creature-npc-mutant-left-turn-45": {
    "dur": 1.33,
@@ -1399,7 +1993,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.165,
+    0,
+    -0.024
+   ],
+   "planted": 0.7
   },
   "creature-npc-mutant-right-turn-45": {
    "dur": 1.9,
@@ -1413,7 +2013,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.106,
+    0,
+    -0.184
+   ],
+   "planted": 0.46
   },
   "creature-npc-mutant-run": {
    "dur": 0.87,
@@ -1427,7 +2033,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "creature-npc-mutant-walking": {
    "dur": 1.43,
@@ -1441,7 +2053,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.046,
+    0,
+    0.965
+   ],
+   "planted": 0.19
   },
   "cross-punch": {
    "dur": 2,
@@ -1455,7 +2073,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.12,
+    0,
+    -0.006
+   ],
+   "planted": 0.23
   },
   "crossleg-freeze": {
    "dur": 2.03,
@@ -1469,7 +2093,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.227,
+    0,
+    0.102
+   ],
+   "planted": 0.2
   },
   "crouch-to-stand": {
    "dur": 2.57,
@@ -1483,7 +2113,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.082,
+    0,
+    -0.023
+   ],
+   "planted": 0.45
   },
   "crouch-turn-left-90": {
    "dur": 1.83,
@@ -1497,7 +2133,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.202,
+    0,
+    0.12
+   ],
+   "planted": 0.26
   },
   "crouch-turn-to-stand": {
    "dur": 0.83,
@@ -1511,7 +2153,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.516,
+    0,
+    0.056
+   ],
+   "planted": 0.17
   },
   "crying": {
    "dur": 6.27,
@@ -1525,7 +2173,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "dance": {
    "dur": 4.47,
@@ -1539,7 +2193,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.116,
+    0,
+    -0.094
+   ],
+   "planted": 0.24
   },
   "dancing-maraschino-step": {
    "dur": 3.23,
@@ -1553,7 +2213,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.017,
+    0,
+    0.209
+   ],
+   "planted": 0.1
   },
   "dancing-twerk": {
    "dur": 15.2,
@@ -1567,7 +2233,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.01,
+    0,
+    -0.097
+   ],
+   "planted": 0.08
   },
   "death-from-right": {
    "dur": 3.3,
@@ -1581,7 +2253,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.302,
+    0,
+    -0.081
+   ],
+   "planted": 0.1
   },
   "defeated": {
    "dur": 6.73,
@@ -1595,7 +2273,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0.003
+   ],
+   "planted": 0.95
   },
   "drinking-fountain": {
    "dur": 10.23,
@@ -1609,7 +2293,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.008,
+    0,
+    0.03
+   ],
+   "planted": 0.92
   },
   "drinking": {
    "dur": 8.87,
@@ -1623,7 +2313,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "drunk-walk": {
    "dur": 3,
@@ -1637,7 +2333,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.031,
+    0,
+    0.571
+   ],
+   "planted": 0.53
   },
   "dying": {
    "dur": 4.4,
@@ -1651,7 +2353,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.041,
+    0,
+    -0.201
+   ],
+   "planted": 0.2
   },
   "excited": {
    "dur": 6.57,
@@ -1665,7 +2373,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.011,
+    0,
+    0.003
+   ],
+   "planted": 0.59
   },
   "fall-flat": {
    "dur": 2.53,
@@ -1679,7 +2393,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "falling-to-knees-in-prayer": {
    "dur": 6.67,
@@ -1693,7 +2413,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.007,
+    0,
+    0.064
+   ],
+   "planted": 0.09
   },
   "falling-to-roll": {
    "dur": 2.13,
@@ -1707,7 +2433,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.097,
+    0,
+    -0.027
+   ],
+   "planted": 0.03
   },
   "falling": {
    "dur": 11.37,
@@ -1721,7 +2453,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.004,
+    0,
+    0.018
+   ],
+   "planted": 0.31
   },
   "farming-box-idle": {
    "dur": 5.97,
@@ -1735,7 +2473,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "farming-box-turn-2": {
    "dur": 1.13,
@@ -1749,7 +2493,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.078,
+    0,
+    0.037
+   ],
+   "planted": 1
   },
   "farming-box-turn": {
    "dur": 1.53,
@@ -1763,7 +2513,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.027,
+    0,
+    0.053
+   ],
+   "planted": 1
   },
   "farming-box-walk-arc": {
    "dur": 1.2,
@@ -1777,7 +2533,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.086,
+    0,
+    0.438
+   ],
+   "planted": 0.5
   },
   "farming-cow-milking": {
    "dur": 4.5,
@@ -1791,7 +2553,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "farming-dig-and-plant-seeds": {
    "dur": 5.43,
@@ -1805,7 +2573,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.001,
+    0,
+    -0.009
+   ],
+   "planted": 0.94
   },
   "farming-holding-idle": {
    "dur": 5.73,
@@ -1819,7 +2593,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "farming-holding-turn-left": {
    "dur": 1.2,
@@ -1833,7 +2613,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.029,
+    0,
+    0.071
+   ],
+   "planted": 1
   },
   "farming-holding-turn-right": {
    "dur": 1.2,
@@ -1847,7 +2633,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.046,
+    0,
+    0.026
+   ],
+   "planted": 1
   },
   "farming-holding-walk": {
    "dur": 1.37,
@@ -1861,7 +2653,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.013,
+    0,
+    0.917
+   ],
+   "planted": 0.45
   },
   "farming-kneeling-idle": {
    "dur": 4.27,
@@ -1875,7 +2673,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "farming-pick-fruit-2": {
    "dur": 6.2,
@@ -1889,7 +2693,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "farming-pick-fruit-3": {
    "dur": 7.1,
@@ -1903,7 +2713,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    -0.009
+   ],
+   "planted": 0.26
   },
   "farming-pick-fruit": {
    "dur": 8,
@@ -1917,7 +2733,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.01,
+    0,
+    -0.011
+   ],
+   "planted": 0.95
   },
   "farming-plant-a-plant": {
    "dur": 7.47,
@@ -1931,7 +2753,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.017,
+    0,
+    -0.001
+   ],
+   "planted": 0.24
   },
   "farming-pull-plant-2": {
    "dur": 4.73,
@@ -1945,7 +2773,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.01,
+    0,
+    0.004
+   ],
+   "planted": 0.61
   },
   "farming-pull-plant": {
    "dur": 4.67,
@@ -1959,7 +2793,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.037,
+    0,
+    -0.035
+   ],
+   "planted": 0.33
   },
   "farming-watering": {
    "dur": 5.6,
@@ -1973,7 +2813,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.008,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "farming-wheelbarrow-dump": {
    "dur": 6.23,
@@ -1987,7 +2833,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.027,
+    0,
+    0.003
+   ],
+   "planted": 0.31
   },
   "farming-wheelbarrow-idle": {
    "dur": 1.43,
@@ -2001,7 +2853,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "farming-wheelbarrow-walk-2": {
    "dur": 0.97,
@@ -2015,7 +2873,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.018,
+    0,
+    0.539
+   ],
+   "planted": 0.36
   },
   "farming-wheelbarrow-walk-turn-2": {
    "dur": 1.07,
@@ -2029,7 +2893,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.007,
+    0,
+    1.285
+   ],
+   "planted": 0.31
   },
   "farming-wheelbarrow-walk-turn": {
    "dur": 1.03,
@@ -2043,7 +2913,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.018,
+    0,
+    1.288
+   ],
+   "planted": 0.33
   },
   "farming-wheelbarrow-walk": {
    "dur": 0.97,
@@ -2057,7 +2933,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.004,
+    0,
+    0.544
+   ],
+   "planted": 0.36
   },
   "female-basic-locomotion-idle": {
    "dur": 8.33,
@@ -2071,7 +2953,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-basic-locomotion-jump": {
    "dur": 1.67,
@@ -2085,7 +2973,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.023,
+    0,
+    0.036
+   ],
+   "planted": 0.2
   },
   "female-basic-locomotion-left-strafe-walk": {
    "dur": 0.9,
@@ -2099,7 +2993,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    1.51,
+    0,
+    -0.032
+   ],
+   "planted": 0.38
   },
   "female-basic-locomotion-right-turn-2": {
    "dur": 1.17,
@@ -2113,7 +3013,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    0.004
+   ],
+   "planted": 1
   },
   "female-basic-locomotion-right-turn": {
    "dur": 1.17,
@@ -2127,7 +3033,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.057,
+    0,
+    -0.103
+   ],
+   "planted": 1
   },
   "female-basic-locomotion-running": {
    "dur": 0.7,
@@ -2141,7 +3053,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.173,
+    0,
+    1.269
+   ],
+   "planted": 0.5
   },
   "female-crouch-pose": {
    "dur": 0.07,
@@ -2155,7 +3073,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-dance-pose-1": {
    "dur": 0.07,
@@ -2169,7 +3093,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-dance-pose-2": {
    "dur": 0.07,
@@ -2183,7 +3113,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-dance-pose-3": {
    "dur": 0.07,
@@ -2197,7 +3133,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-dance-pose": {
    "dur": 0.07,
@@ -2211,7 +3153,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-dynamic-pose": {
    "dur": 0.07,
@@ -2225,7 +3173,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-laying-pose-1": {
    "dur": 0.07,
@@ -2239,7 +3193,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-laying-pose-2": {
    "dur": 0.07,
@@ -2253,7 +3213,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-laying-pose": {
    "dur": 0.07,
@@ -2267,7 +3233,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-locomotion-idle": {
    "dur": 8.33,
@@ -2281,7 +3253,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-locomotion-jump": {
    "dur": 1.67,
@@ -2295,7 +3273,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.023,
+    0,
+    0.036
+   ],
+   "planted": 0.2
   },
   "female-locomotion-left-strafe-walk": {
    "dur": 0.9,
@@ -2309,7 +3293,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    1.51,
+    0,
+    -0.032
+   ],
+   "planted": 0.38
   },
   "female-locomotion-left-strafe": {
    "dur": 0.67,
@@ -2323,7 +3313,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    2.23,
+    0,
+    0.101
+   ],
+   "planted": 0.5
   },
   "female-locomotion-left-turn": {
    "dur": 1.17,
@@ -2337,7 +3333,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.112,
+    0,
+    0.059
+   ],
+   "planted": 1
   },
   "female-locomotion-right-strafe-walk": {
    "dur": 0.93,
@@ -2351,7 +3353,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -1.5,
+    0,
+    -0.032
+   ],
+   "planted": 0.43
   },
   "female-locomotion-right-strafe": {
    "dur": 0.67,
@@ -2365,7 +3373,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -2.23,
+    0,
+    0.101
+   ],
+   "planted": 0.5
   },
   "female-locomotion-right-turn": {
    "dur": 1.17,
@@ -2379,7 +3393,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.057,
+    0,
+    -0.103
+   ],
+   "planted": 1
   },
   "female-locomotion-running": {
    "dur": 0.7,
@@ -2393,7 +3413,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.173,
+    0,
+    1.269
+   ],
+   "planted": 0.5
   },
   "female-locomotion-walking": {
    "dur": 0.97,
@@ -2407,7 +3433,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    1.343
+   ],
+   "planted": 0.57
   },
   "female-sitting-pose": {
    "dur": 0.07,
@@ -2421,7 +3453,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-standing-pose-1": {
    "dur": 0.07,
@@ -2435,7 +3473,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.002,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-standing-pose-2": {
    "dur": 0.07,
@@ -2449,7 +3493,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "female-standing-pose": {
    "dur": 0.07,
@@ -2463,7 +3513,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.002,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "fireball": {
    "dur": 3.37,
@@ -2477,7 +3533,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.016,
+    0,
+    0.006
+   ],
+   "planted": 0.34
   },
   "fist-pump": {
    "dur": 2.03,
@@ -2491,7 +3553,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "floating-back-arched": {
    "dur": 0.07,
@@ -2505,7 +3573,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "floating-legs-bent-and-arms-spread": {
    "dur": 0.07,
@@ -2519,7 +3593,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "floating-legs-raised-arms-extended-upwards": {
    "dur": 0.07,
@@ -2533,7 +3613,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "flying": {
    "dur": 2.63,
@@ -2547,7 +3633,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.004,
+    0,
+    0.002
+   ],
+   "planted": 0.59
   },
   "gestures-pack-basic-acknowledging": {
    "dur": 1.57,
@@ -2561,7 +3653,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    -0.002
+   ],
+   "planted": 1
   },
   "gestures-pack-basic-angry-gesture": {
    "dur": 2.17,
@@ -2575,7 +3673,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "gestures-pack-basic-annoyed-head-shake": {
    "dur": 2.43,
@@ -2589,7 +3693,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0.001
+   ],
+   "planted": 1
   },
   "gestures-pack-basic-being-cocky": {
    "dur": 2.87,
@@ -2603,7 +3713,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.008,
+    0,
+    0.011
+   ],
+   "planted": 0.67
   },
   "gestures-pack-basic-dismissing-gesture": {
    "dur": 3.27,
@@ -2617,7 +3733,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "gestures-pack-basic-happy-hand-gesture": {
    "dur": 2.73,
@@ -2631,7 +3753,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "gestures-pack-basic-hard-head-nod": {
    "dur": 1.63,
@@ -2645,7 +3773,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "gestures-pack-basic-head-nod-yes": {
    "dur": 2.4,
@@ -2659,7 +3793,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "gestures-pack-basic-lengthy-head-nod": {
    "dur": 1.7,
@@ -2673,7 +3813,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "gestures-pack-basic-look-away-gesture": {
    "dur": 1.8,
@@ -2687,7 +3833,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "gestures-pack-basic-sarcastic-head-nod": {
    "dur": 2.17,
@@ -2701,7 +3853,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    -0.001
+   ],
+   "planted": 1
   },
   "gestures-pack-basic-thoughtful-head-shake": {
    "dur": 3.07,
@@ -2715,7 +3873,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "getting-up-1": {
    "dur": 7.6,
@@ -2729,7 +3893,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.024,
+    0,
+    0.06
+   ],
+   "planted": 0.2
   },
   "getting-up": {
    "dur": 7.6,
@@ -2743,7 +3913,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.024,
+    0,
+    0.06
+   ],
+   "planted": 0.2
   },
   "goalkeeper-catch": {
    "dur": 2.7,
@@ -2757,7 +3933,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -1.312,
+    0,
+    -1.177
+   ],
+   "planted": 0.05
   },
   "goofy-running": {
    "dur": 0.63,
@@ -2771,7 +3953,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    1.02,
+    0,
+    -0.836
+   ],
+   "planted": 0.11
   },
   "grab-and-slam": {
    "dur": 4.27,
@@ -2785,7 +3973,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    -0.038
+   ],
+   "planted": 0.27
   },
   "great-sword-power-up": {
    "dur": 3.5,
@@ -2799,7 +3993,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.008,
+    0,
+    -0.006
+   ],
+   "planted": 0.69
   },
   "hanging-by-hands-against-wall": {
    "dur": 2.33,
@@ -2813,7 +4013,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "happy": {
    "dur": 10,
@@ -2827,7 +4033,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "hard-landing": {
    "dur": 2.5,
@@ -2841,7 +4053,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "head-hit": {
    "dur": 1.53,
@@ -2855,7 +4073,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.266,
+    0,
+    -0.101
+   ],
+   "planted": 0.22
   },
   "hip-hop-dancing-1": {
    "dur": 6.33,
@@ -2869,7 +4093,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.035,
+    0,
+    0.065
+   ],
+   "planted": 0.62
   },
   "hip-hop-dancing-2": {
    "dur": 15.33,
@@ -2883,7 +4113,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.007,
+    0,
+    0.003
+   ],
+   "planted": 0.54
   },
   "hip-hop-dancing-3": {
    "dur": 18.57,
@@ -2897,7 +4133,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.046,
+    0,
+    0.015
+   ],
+   "planted": 0.19
   },
   "hip-hop-dancing-4": {
    "dur": 15.77,
@@ -2911,7 +4153,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    -0.095
+   ],
+   "planted": 0.08
   },
   "hip-hop-dancing-5": {
    "dur": 4.1,
@@ -2925,7 +4173,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    -0.086
+   ],
+   "planted": 0.41
   },
   "hip-hop-dancing-6": {
    "dur": 3.37,
@@ -2939,7 +4193,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.006,
+    0,
+    0.186
+   ],
+   "planted": 0.24
   },
   "hip-hop-dancing-7": {
    "dur": 13.03,
@@ -2953,7 +4213,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "hip-hop-dancing-8": {
    "dur": 5.2,
@@ -2967,7 +4233,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.011,
+    0,
+    0.017
+   ],
+   "planted": 0.96
   },
   "hip-hop-dancing-9": {
    "dur": 13.03,
@@ -2981,7 +4253,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "hip-hop-dancing": {
    "dur": 4.47,
@@ -2995,7 +4273,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.116,
+    0,
+    -0.094
+   ],
+   "planted": 0.24
   },
   "hit-to-head": {
    "dur": 2.53,
@@ -3009,7 +4293,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.258,
+    0,
+    0.601
+   ],
+   "planted": 0.05
   },
   "hit-to-side-of-body": {
    "dur": 2.8,
@@ -3023,7 +4313,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "hook-punch": {
    "dur": 2.17,
@@ -3037,7 +4333,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.008,
+    0,
+    -0.099
+   ],
+   "planted": 0.75
   },
   "hurricane-kick": {
    "dur": 1.83,
@@ -3051,7 +4353,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.019,
+    0,
+    0.004
+   ],
+   "planted": 1
   },
   "idle": {
    "dur": 16.63,
@@ -3065,7 +4373,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "injured-run-backwards": {
    "dur": 0.6,
@@ -3079,7 +4393,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.13,
+    0,
+    -0.386
+   ],
+   "planted": 0.22
   },
   "jab-cross": {
    "dur": 2.13,
@@ -3093,7 +4413,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.047,
+    0,
+    -0.053
+   ],
+   "planted": 0.09
   },
   "jab-punch": {
    "dur": 1.03,
@@ -3107,7 +4433,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.003,
+    0,
+    -0.022
+   ],
+   "planted": 0.33
   },
   "joyful-jump": {
    "dur": 1.87,
@@ -3121,7 +4453,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.016,
+    0,
+    0.017
+   ],
+   "planted": 0.46
   },
   "jump-from-wall": {
    "dur": 1.27,
@@ -3135,7 +4473,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.721,
+    0,
+    1.779
+   ],
+   "planted": 0.05
   },
   "jump-push-up": {
    "dur": 1.17,
@@ -3149,7 +4493,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "jump": {
    "dur": 2.6,
@@ -3163,7 +4513,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.014,
+    0,
+    0.066
+   ],
+   "planted": 0.23
   },
   "jumping-down-1": {
    "dur": 2.83,
@@ -3177,7 +4533,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.036,
+    0,
+    0.19
+   ],
+   "planted": 0.26
   },
   "jumping-down": {
    "dur": 2.67,
@@ -3191,7 +4553,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.014,
+    0,
+    -0.666
+   ],
+   "planted": 0.1
   },
   "jumping-out-of-a-plane": {
    "dur": 2.07,
@@ -3205,7 +4573,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.221,
+    0,
+    -0.099
+   ],
+   "planted": 0.06
   },
   "jumping-over-obstacle-one-hand": {
    "dur": 1.17,
@@ -3219,7 +4593,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "jumping": {
    "dur": 1.17,
@@ -3233,7 +4613,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "kip-up": {
    "dur": 2.03,
@@ -3247,7 +4633,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.068,
+    0,
+    0.053
+   ],
+   "planted": 0.13
   },
   "kiss": {
    "dur": 7.07,
@@ -3261,7 +4653,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "kneeling-down": {
    "dur": 2.77,
@@ -3275,7 +4673,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.012,
+    0,
+    -0.03
+   ],
+   "planted": 0.29
   },
   "kneeling-pointing-1": {
    "dur": 3.9,
@@ -3289,7 +4693,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "kneeling-pointing": {
    "dur": 3.9,
@@ -3303,7 +4713,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "knocked-out-falling-back": {
    "dur": 4.93,
@@ -3317,7 +4733,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.461,
+    0,
+    -0.683
+   ],
+   "planted": 0.07
   },
   "knocked-unconscious": {
    "dur": 4.57,
@@ -3331,7 +4753,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.005,
+    0,
+    -0.004
+   ],
+   "planted": 1
   },
   "laughing": {
    "dur": 9.77,
@@ -3345,7 +4773,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.005,
+    0,
+    -0.006
+   ],
+   "planted": 0.88
   },
   "laying-breathless": {
    "dur": 0.83,
@@ -3359,7 +4793,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "laying-moaning": {
    "dur": 2.13,
@@ -3373,7 +4813,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.061,
+    0,
+    0.033
+   ],
+   "planted": 0.69
   },
   "laying-seizure": {
    "dur": 5,
@@ -3387,7 +4833,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.323,
+    0,
+    0.011
+   ],
+   "planted": 0.03
   },
   "laying-severe-cough": {
    "dur": 1.77,
@@ -3401,7 +4853,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    0.001
+   ],
+   "planted": 0.27
   },
   "laying-shrugging": {
    "dur": 1.67,
@@ -3415,7 +4873,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "left-turn-w-briefcase": {
    "dur": 2.2,
@@ -3429,7 +4893,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.575,
+    0,
+    0.72
+   ],
+   "planted": 0.12
   },
   "locking-hip-hop-dance": {
    "dur": 17,
@@ -3443,7 +4913,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.086,
+    0,
+    0
+   ],
+   "planted": 0.2
   },
   "long-yell-leaning-forward": {
    "dur": 5.97,
@@ -3457,7 +4933,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.006,
+    0,
+    -0.051
+   ],
+   "planted": 0.22
   },
   "long-yell-while-standing-leaning-back": {
    "dur": 5.5,
@@ -3471,7 +4953,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.007,
+    0,
+    -0.055
+   ],
+   "planted": 0.29
   },
   "longbow-standing-idle-01": {
    "dur": 5.1,
@@ -3485,7 +4973,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "longbow-standing-run-back": {
    "dur": 0.67,
@@ -3499,7 +4993,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.069,
+    0,
+    -2.1
+   ],
+   "planted": 0.2
   },
   "longbow-standing-run-forward-stop": {
    "dur": 0.87,
@@ -3513,7 +5013,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.014,
+    0,
+    -0.277
+   ],
+   "planted": 0.15
   },
   "longbow-standing-run-forward": {
    "dur": 0.87,
@@ -3527,7 +5033,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.054,
+    0,
+    2.807
+   ],
+   "planted": 0.31
   },
   "longbow-standing-run-left": {
    "dur": 0.67,
@@ -3541,7 +5053,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    1.213,
+    0,
+    0.06
+   ],
+   "planted": 0.6
   },
   "longbow-standing-run-right": {
    "dur": 0.77,
@@ -3555,7 +5073,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -2.829,
+    0,
+    0.076
+   ],
+   "planted": 0.18
   },
   "longbow-standing-turn-90-left": {
    "dur": 1.27,
@@ -3569,7 +5093,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.21,
+    0,
+    -0.056
+   ],
+   "planted": 0.79
   },
   "longbow-standing-turn-90-right": {
    "dur": 1.1,
@@ -3583,7 +5113,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.012,
+    0,
+    0.055
+   ],
+   "planted": 1
   },
   "longbow-standing-walk-back": {
    "dur": 1.47,
@@ -3597,7 +5133,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.019,
+    0,
+    -0.756
+   ],
+   "planted": 0.45
   },
   "longbow-standing-walk-forward": {
    "dur": 1.2,
@@ -3611,7 +5153,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.003,
+    0,
+    0.958
+   ],
+   "planted": 0.56
   },
   "longbow-standing-walk-left": {
    "dur": 1.2,
@@ -3625,7 +5173,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    1.211,
+    0,
+    -0.015
+   ],
+   "planted": 0.61
   },
   "longbow-standing-walk-right": {
    "dur": 1.2,
@@ -3639,7 +5193,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -1.369,
+    0,
+    0.021
+   ],
+   "planted": 0.44
   },
   "look-around-1": {
    "dur": 13.33,
@@ -3653,7 +5213,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0.001
+   ],
+   "planted": 0.96
   },
   "look-around-2": {
    "dur": 6.33,
@@ -3667,7 +5233,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "look-around-3": {
    "dur": 13.33,
@@ -3681,7 +5253,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0.001
+   ],
+   "planted": 0.96
   },
   "look-around-4": {
    "dur": 4.47,
@@ -3695,7 +5273,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.005,
+    0,
+    -0.004
+   ],
+   "planted": 1
   },
   "look-around": {
    "dur": 4.47,
@@ -3709,7 +5293,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.005,
+    0,
+    -0.004
+   ],
+   "planted": 1
   },
   "look-over-shoulder": {
    "dur": 3.77,
@@ -3723,7 +5313,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.037,
+    0,
+    0.014
+   ],
+   "planted": 0.23
   },
   "looking-around-1": {
    "dur": 6.33,
@@ -3737,7 +5333,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    -0.005
+   ],
+   "planted": 0.91
   },
   "looking-around": {
    "dur": 6.47,
@@ -3751,7 +5353,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    -0.079
+   ],
+   "planted": 0.78
   },
   "lying-down": {
    "dur": 5.73,
@@ -3765,7 +5373,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.009,
+    0,
+    -0.066
+   ],
+   "planted": 0.23
   },
   "macarena-dance": {
    "dur": 8.23,
@@ -3779,7 +5393,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.01,
+    0,
+    0.026
+   ],
+   "planted": 0.53
   },
   "magic-locomotion-standing-idle": {
    "dur": 1.8,
@@ -3793,7 +5413,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.023,
+    0,
+    0.006
+   ],
+   "planted": 0.59
   },
   "magic-locomotion-standing-jump-running-landing": {
    "dur": 1.37,
@@ -3807,7 +5433,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.435,
+    0,
+    3.709
+   ],
+   "planted": 0.05
   },
   "magic-locomotion-standing-jump-running": {
    "dur": 1.07,
@@ -3821,7 +5453,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "magic-locomotion-standing-jump": {
    "dur": 2.33,
@@ -3835,7 +5473,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.102,
+    0,
+    -0.18
+   ],
+   "planted": 0.06
   },
   "magic-locomotion-standing-run-forward": {
    "dur": 0.73,
@@ -3849,7 +5493,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.007,
+    0,
+    2.568
+   ],
+   "planted": 0.09
   },
   "magic-locomotion-standing-run-right": {
    "dur": 0.77,
@@ -3863,7 +5513,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -2.577,
+    0,
+    -0.241
+   ],
+   "planted": 0.18
   },
   "magic-locomotion-standing-sprint-forward": {
    "dur": 0.57,
@@ -3877,7 +5533,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.333,
+    0,
+    3.693
+   ],
+   "planted": 0.13
   },
   "magic-locomotion-standing-turn-left-90": {
    "dur": 1.6,
@@ -3891,7 +5553,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.025,
+    0,
+    0.136
+   ],
+   "planted": 0.5
   },
   "magic-locomotion-standing-turn-right-90": {
    "dur": 1.63,
@@ -3905,7 +5573,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.05,
+    0,
+    -0.022
+   ],
+   "planted": 0.92
   },
   "magic-locomotion-standing-walk-back": {
    "dur": 1.2,
@@ -3919,7 +5593,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.01,
+    0,
+    -0.972
+   ],
+   "planted": 0.33
   },
   "magic-locomotion-standing-walk-forward": {
    "dur": 1.13,
@@ -3933,7 +5613,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.051,
+    0,
+    1.343
+   ],
+   "planted": 0.71
   },
   "male-cheering-head-banging": {
    "dur": 1.9,
@@ -3947,7 +5633,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.003,
+    0,
+    -0.001
+   ],
+   "planted": 1
   },
   "mma-kick": {
    "dur": 1.6,
@@ -3961,7 +5653,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.071,
+    0,
+    0.145
+   ],
+   "planted": 0.21
   },
   "moonwalk": {
    "dur": 1.03,
@@ -3975,7 +5673,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.068,
+    0,
+    0.45
+   ],
+   "planted": 0.6
   },
   "neck-stretching": {
    "dur": 3.2,
@@ -3989,7 +5693,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "nervously-look-around-1": {
    "dur": 6.27,
@@ -4003,7 +5713,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    0.001
+   ],
+   "planted": 0.89
   },
   "nervously-look-around": {
    "dur": 6.27,
@@ -4017,7 +5733,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    0.001
+   ],
+   "planted": 0.89
   },
   "offensive-idle": {
    "dur": 10.57,
@@ -4031,7 +5753,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.004,
+    0,
+    0.005
+   ],
+   "planted": 1
   },
   "old-man-idle": {
    "dur": 12.17,
@@ -4045,7 +5773,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "on-knees-arms-raised": {
    "dur": 0.07,
@@ -4059,7 +5793,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "opening-a-filing-cabinet": {
    "dur": 14.17,
@@ -4073,7 +5813,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.006,
+    0,
+    0.031
+   ],
+   "planted": 0.37
   },
   "pacing-and-talking-on-a-phone": {
    "dur": 37.63,
@@ -4087,7 +5833,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.007,
+    0,
+    0.019
+   ],
+   "planted": 0.38
   },
   "paddling": {
    "dur": 7.23,
@@ -4101,7 +5853,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "pain-gesture": {
    "dur": 1.77,
@@ -4115,7 +5873,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.033,
+    0,
+    0.097
+   ],
+   "planted": 0.69
   },
   "petting-animal": {
    "dur": 14.17,
@@ -4129,7 +5893,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "pointing-1": {
    "dur": 3.6,
@@ -4143,7 +5913,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "pointing-2": {
    "dur": 2.77,
@@ -4157,7 +5933,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "pointing-forward-1": {
    "dur": 4.7,
@@ -4171,7 +5953,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "pointing-forward": {
    "dur": 4.7,
@@ -4185,7 +5973,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "pointing-gesture-1": {
    "dur": 1.83,
@@ -4199,7 +5993,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.011,
+    0,
+    -0.025
+   ],
+   "planted": 0.56
   },
   "pointing-gesture": {
    "dur": 1.97,
@@ -4213,7 +6013,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.034,
+    0,
+    -0.012
+   ],
+   "planted": 0.45
   },
   "pointing": {
    "dur": 3.43,
@@ -4227,7 +6033,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "praying": {
    "dur": 6.87,
@@ -4241,7 +6053,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.08,
+    0,
+    -0.014
+   ],
+   "planted": 0.13
   },
   "pro-magic-crouch-idle": {
    "dur": 1.37,
@@ -4255,7 +6073,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.007,
+    0,
+    0.004
+   ],
+   "planted": 0.7
   },
   "pro-magic-crouch-to-standing-idle": {
    "dur": 1,
@@ -4269,7 +6093,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.004,
+    0,
+    0.023
+   ],
+   "planted": 0.27
   },
   "pro-magic-crouch-turn-left-90": {
    "dur": 1.67,
@@ -4283,7 +6113,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.202,
+    0,
+    0.12
+   ],
+   "planted": 0.28
   },
   "pro-magic-crouch-turn-right-90": {
    "dur": 1.6,
@@ -4297,7 +6133,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.034,
+    0,
+    -0.263
+   ],
+   "planted": 0.33
   },
   "pro-magic-crouch-walk-back": {
    "dur": 1.2,
@@ -4311,7 +6153,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.142,
+    0,
+    -0.868
+   ],
+   "planted": 0.28
   },
   "pro-magic-crouch-walk-forward": {
    "dur": 1.13,
@@ -4325,7 +6173,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.085,
+    0,
+    1.336
+   ],
+   "planted": 0.18
   },
   "pro-magic-crouch-walk-left": {
    "dur": 1.17,
@@ -4339,7 +6193,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    1.251,
+    0,
+    0.027
+   ],
+   "planted": 0.53
   },
   "pro-magic-crouch-walk-right": {
    "dur": 1.27,
@@ -4353,7 +6213,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -1.026,
+    0,
+    -0.045
+   ],
+   "planted": 0.79
   },
   "pro-magic-standing-1h-cast-spell-01": {
    "dur": 2.27,
@@ -4367,7 +6233,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.102,
+    0,
+    -0.027
+   ],
+   "planted": 0.35
   },
   "pro-magic-standing-1h-magic-attack-01": {
    "dur": 2.3,
@@ -4381,7 +6253,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.011,
+    0,
+    -0.034
+   ],
+   "planted": 0.53
   },
   "pro-magic-standing-1h-magic-attack-02": {
    "dur": 2.2,
@@ -4395,7 +6273,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.009,
+    0,
+    -0.021
+   ],
+   "planted": 0.52
   },
   "pro-magic-standing-1h-magic-attack-03": {
    "dur": 2.3,
@@ -4409,7 +6293,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.071,
+    0,
+    -0.07
+   ],
+   "planted": 0.62
   },
   "pro-magic-standing-2h-cast-spell-01": {
    "dur": 2.17,
@@ -4423,7 +6313,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.012,
+    0,
+    -0.053
+   ],
+   "planted": 0.19
   },
   "pro-magic-standing-2h-magic-area-attack-01": {
    "dur": 2.97,
@@ -4437,7 +6333,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.044,
+    0,
+    0.034
+   ],
+   "planted": 0.18
   },
   "pro-magic-standing-2h-magic-area-attack-02": {
    "dur": 3.13,
@@ -4451,7 +6353,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.032,
+    0,
+    -0.02
+   ],
+   "planted": 0.32
   },
   "pro-magic-standing-2h-magic-attack-01": {
    "dur": 2.67,
@@ -4465,7 +6373,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.078,
+    0,
+    -0.146
+   ],
+   "planted": 0.23
   },
   "pro-magic-standing-2h-magic-attack-02": {
    "dur": 2.63,
@@ -4479,7 +6393,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.124,
+    0,
+    -0.104
+   ],
+   "planted": 0.31
   },
   "pro-magic-standing-2h-magic-attack-03": {
    "dur": 4.27,
@@ -4493,7 +6413,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.142,
+    0,
+    0.099
+   ],
+   "planted": 0.13
   },
   "pro-magic-standing-2h-magic-attack-04": {
    "dur": 3.33,
@@ -4507,7 +6433,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.207,
+    0,
+    0.297
+   ],
+   "planted": 0.1
   },
   "pro-magic-standing-2h-magic-attack-05": {
    "dur": 3.53,
@@ -4521,7 +6453,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.065,
+    0,
+    0.057
+   ],
+   "planted": 0.4
   },
   "pro-magic-standing-block-end": {
    "dur": 1.2,
@@ -4535,7 +6473,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.027,
+    0,
+    -0.043
+   ],
+   "planted": 0.67
   },
   "pro-magic-standing-block-idle": {
    "dur": 2.77,
@@ -4549,7 +6493,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    0.004
+   ],
+   "planted": 0.68
   },
   "pro-magic-standing-block-react-large": {
    "dur": 1.3,
@@ -4563,7 +6513,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    -0.004
+   ],
+   "planted": 1
   },
   "pro-magic-standing-block-start": {
    "dur": 0.5,
@@ -4577,7 +6533,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.124,
+    0,
+    0.114
+   ],
+   "planted": 0.71
   },
   "pro-magic-standing-idle-02": {
    "dur": 5.2,
@@ -4591,7 +6553,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.006,
+    0,
+    0.007
+   ],
+   "planted": 0.72
   },
   "pro-magic-standing-idle-03": {
    "dur": 11.17,
@@ -4605,7 +6573,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.002,
+    0,
+    -0.001
+   ],
+   "planted": 1
   },
   "pro-magic-standing-idle-04": {
    "dur": 7.43,
@@ -4619,7 +6593,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.01,
+    0,
+    0.096
+   ],
+   "planted": 0.28
   },
   "pro-magic-standing-idle-to-crouch": {
    "dur": 0.93,
@@ -4633,7 +6613,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.057,
+    0,
+    -0.082
+   ],
+   "planted": 0.29
   },
   "pro-magic-standing-idle": {
    "dur": 1.8,
@@ -4647,7 +6633,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.023,
+    0,
+    0.006
+   ],
+   "planted": 0.59
   },
   "pro-magic-standing-jump-running-landing": {
    "dur": 1.37,
@@ -4661,7 +6653,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.435,
+    0,
+    3.709
+   ],
+   "planted": 0.05
   },
   "pro-magic-standing-jump-running": {
    "dur": 1.07,
@@ -4675,7 +6673,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "pro-magic-standing-jump": {
    "dur": 2.33,
@@ -4689,7 +6693,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.102,
+    0,
+    -0.18
+   ],
+   "planted": 0.06
   },
   "pro-magic-standing-land-to-standing-idle": {
    "dur": 1.07,
@@ -4703,7 +6713,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "pro-magic-standing-react-death-backward": {
    "dur": 3.53,
@@ -4717,7 +6733,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.007,
+    0,
+    -0.012
+   ],
+   "planted": 0.34
   },
   "pro-magic-standing-react-death-forward": {
    "dur": 3.67,
@@ -4731,7 +6753,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.125,
+    0,
+    0.487
+   ],
+   "planted": 0.09
   },
   "pro-magic-standing-react-death-left": {
    "dur": 3.43,
@@ -4745,7 +6773,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.141,
+    0,
+    0.183
+   ],
+   "planted": 0.27
   },
   "pro-magic-standing-react-death-right": {
    "dur": 3.5,
@@ -4759,7 +6793,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.258,
+    0,
+    0.258
+   ],
+   "planted": 0.21
   },
   "pro-magic-standing-react-large-from-back": {
    "dur": 1.67,
@@ -4773,7 +6813,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.012,
+    0,
+    0.395
+   ],
+   "planted": 0.6
   },
   "pro-magic-standing-react-large-from-front": {
    "dur": 1.37,
@@ -4787,7 +6833,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.073,
+    0,
+    -0.384
+   ],
+   "planted": 0.5
   },
   "pro-magic-standing-react-large-from-left": {
    "dur": 1.33,
@@ -4801,7 +6853,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.509,
+    0,
+    0.026
+   ],
+   "planted": 0.3
   },
   "pro-magic-standing-react-large-from-right": {
    "dur": 1.63,
@@ -4815,7 +6873,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.398,
+    0,
+    0.044
+   ],
+   "planted": 0.83
   },
   "pro-magic-standing-react-small-from-back": {
    "dur": 1.27,
@@ -4829,7 +6893,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.003,
+    0,
+    -0.001
+   ],
+   "planted": 1
   },
   "pro-magic-standing-react-small-from-front": {
    "dur": 1.17,
@@ -4843,7 +6913,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.001,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "pro-magic-standing-react-small-from-left": {
    "dur": 1.2,
@@ -4857,7 +6933,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.003,
+    0,
+    -0.002
+   ],
+   "planted": 1
   },
   "pro-magic-standing-react-small-from-right": {
    "dur": 0.97,
@@ -4871,7 +6953,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    -0.001
+   ],
+   "planted": 1
   },
   "pro-magic-standing-run-back": {
    "dur": 0.63,
@@ -4885,7 +6973,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.093,
+    0,
+    -2.213
+   ],
+   "planted": 0.11
   },
   "pro-magic-standing-run-forward": {
    "dur": 0.73,
@@ -4899,7 +6993,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.007,
+    0,
+    2.568
+   ],
+   "planted": 0.09
   },
   "pro-magic-standing-run-left": {
    "dur": 0.77,
@@ -4913,7 +7013,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    2.086,
+    0,
+    -0.043
+   ],
+   "planted": 0.36
   },
   "pro-magic-standing-run-right": {
    "dur": 0.77,
@@ -4927,7 +7033,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -2.577,
+    0,
+    -0.241
+   ],
+   "planted": 0.18
   },
   "pro-magic-standing-sprint-forward": {
    "dur": 0.57,
@@ -4941,7 +7053,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.333,
+    0,
+    3.693
+   ],
+   "planted": 0.13
   },
   "pro-magic-standing-turn-left-90": {
    "dur": 1.6,
@@ -4955,7 +7073,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.025,
+    0,
+    0.136
+   ],
+   "planted": 0.5
   },
   "pro-magic-standing-turn-right-90": {
    "dur": 1.63,
@@ -4969,7 +7093,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.05,
+    0,
+    -0.022
+   ],
+   "planted": 0.92
   },
   "pro-magic-standing-walk-back": {
    "dur": 1.2,
@@ -4983,7 +7113,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.01,
+    0,
+    -0.972
+   ],
+   "planted": 0.33
   },
   "pro-magic-standing-walk-forward": {
    "dur": 1.13,
@@ -4997,7 +7133,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.051,
+    0,
+    1.343
+   ],
+   "planted": 0.71
   },
   "pro-magic-standing-walk-left": {
    "dur": 1.17,
@@ -5011,7 +7153,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    1.024,
+    0,
+    0.011
+   ],
+   "planted": 0.35
   },
   "pro-magic-standing-walk-right": {
    "dur": 1.2,
@@ -5025,7 +7173,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -1.041,
+    0,
+    0.004
+   ],
+   "planted": 0.39
   },
   "pull-heavy-object": {
    "dur": 1.1,
@@ -5039,7 +7193,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.104,
+    0,
+    -0.175
+   ],
+   "planted": 0.5
   },
   "pulling-lever": {
    "dur": 6.27,
@@ -5053,7 +7213,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "pulling-up-to-a-ledge": {
    "dur": 3.83,
@@ -5067,7 +7233,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.033,
+    0,
+    0.274
+   ],
+   "planted": 0.18
   },
   "punch-combo": {
    "dur": 2.2,
@@ -5081,7 +7253,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    -0.001
+   ],
+   "planted": 1
   },
   "pushing-with-both-hands": {
    "dur": 0.07,
@@ -5095,7 +7273,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "quick-formal-bow": {
    "dur": 2.73,
@@ -5109,7 +7293,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "quick-informal-bow": {
    "dur": 2.73,
@@ -5123,7 +7313,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "rallying": {
    "dur": 6.2,
@@ -5137,7 +7333,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.019,
+    0,
+    -0.104
+   ],
+   "planted": 0.69
   },
   "reaching-out": {
    "dur": 4,
@@ -5151,7 +7353,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "reaction": {
    "dur": 1.83,
@@ -5165,7 +7373,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.064,
+    0,
+    -0.004
+   ],
+   "planted": 0.74
   },
   "rejected": {
    "dur": 4.8,
@@ -5179,7 +7393,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.004,
+    0,
+    -0.005
+   ],
+   "planted": 0.61
   },
   "roar": {
    "dur": 5.4,
@@ -5193,7 +7413,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.059,
+    0,
+    -0.062
+   ],
+   "planted": 0.17
   },
   "rumba-dancing": {
    "dur": 2.37,
@@ -5207,7 +7433,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.009,
+    0,
+    -0.006
+   ],
+   "planted": 0.6
   },
   "run-look-back": {
    "dur": 2.23,
@@ -5221,7 +7453,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.04,
+    0,
+    1.177
+   ],
+   "planted": 0.12
   },
   "running-1": {
    "dur": 0.7,
@@ -5235,7 +7473,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.178,
+    0,
+    1.426
+   ],
+   "planted": 0.5
   },
   "running-arc": {
    "dur": 0.6,
@@ -5249,7 +7493,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -1.046,
+    0,
+    2.435
+   ],
+   "planted": 0.56
   },
   "running-up-stairs": {
    "dur": 0.6,
@@ -5263,7 +7513,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.112,
+    0,
+    0.584
+   ],
+   "planted": 0.11
   },
   "running": {
    "dur": 0.7,
@@ -5277,7 +7533,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.159,
+    0,
+    1.173
+   ],
+   "planted": 0.2
   },
   "sad-idle-1": {
    "dur": 4,
@@ -5291,7 +7553,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sad-idle-2": {
    "dur": 2.67,
@@ -5305,7 +7573,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sad-idle": {
    "dur": 2.8,
@@ -5319,7 +7593,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.009,
+    0,
+    0.005
+   ],
+   "planted": 1
   },
   "sad-walk": {
    "dur": 1.47,
@@ -5333,7 +7613,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    0.326
+   ],
+   "planted": 0.86
   },
   "shaking-hands-1": {
    "dur": 4.37,
@@ -5347,7 +7633,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.006,
+    0,
+    0.017
+   ],
+   "planted": 0.97
   },
   "shopping-cart-dance": {
    "dur": 15.93,
@@ -5361,7 +7653,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.253,
+    0,
+    0.062
+   ],
+   "planted": 0.08
   },
   "shoved-reaction-with-spin": {
    "dur": 4.53,
@@ -5375,7 +7673,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.058,
+    0,
+    0.183
+   ],
+   "planted": 0.72
   },
   "shrugging": {
    "dur": 2,
@@ -5389,7 +7693,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "silly-dancing": {
    "dur": 3.83,
@@ -5403,7 +7713,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.011,
+    0,
+    0.088
+   ],
+   "planted": 0.39
   },
   "sit-to-type": {
    "dur": 1.2,
@@ -5417,7 +7733,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sitting-1": {
    "dur": 2.1,
@@ -5431,7 +7753,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.049,
+    0,
+    0.451
+   ],
+   "planted": 0.23
   },
   "sitting-2": {
    "dur": 4.43,
@@ -5445,7 +7773,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.013,
+    0,
+    -0.08
+   ],
+   "planted": 0.45
   },
   "sitting-and-pointing": {
    "dur": 3,
@@ -5459,7 +7793,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.002,
+    0,
+    -0.007
+   ],
+   "planted": 0.58
   },
   "sitting-angry-1": {
    "dur": 3.33,
@@ -5473,7 +7813,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sitting-angry": {
    "dur": 3.33,
@@ -5487,7 +7833,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sitting-clap": {
    "dur": 5.67,
@@ -5501,7 +7853,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sitting-disapproval": {
    "dur": 3.93,
@@ -5515,7 +7873,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sitting-drinking": {
    "dur": 15.2,
@@ -5529,7 +7893,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.069,
+    0,
+    0.432
+   ],
+   "planted": 0.08
   },
   "sitting-gun-motion": {
    "dur": 4.8,
@@ -5543,7 +7913,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sitting-idle": {
    "dur": 2.97,
@@ -5557,7 +7933,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sitting-laughing-1": {
    "dur": 8.33,
@@ -5571,7 +7953,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    0.003
+   ],
+   "planted": 0.9
   },
   "sitting-laughing": {
    "dur": 8.33,
@@ -5585,7 +7973,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    0.003
+   ],
+   "planted": 0.9
   },
   "sitting-talking-1": {
    "dur": 44.07,
@@ -5599,7 +7993,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sitting-talking": {
    "dur": 44.97,
@@ -5613,7 +8013,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sitting-thumbs-up": {
    "dur": 3.83,
@@ -5627,7 +8033,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sitting-victory": {
    "dur": 5.6,
@@ -5641,7 +8053,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.003,
+    0,
+    0.001
+   ],
+   "planted": 0.98
   },
   "sitting": {
    "dur": 5.93,
@@ -5655,7 +8073,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    -0.001
+   ],
+   "planted": 1
   },
   "snake-hip-hop-dance": {
    "dur": 15.27,
@@ -5669,7 +8093,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.115,
+    0,
+    0.179
+   ],
+   "planted": 0.14
   },
   "spin-flip-kick": {
    "dur": 3.7,
@@ -5683,7 +8113,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.012,
+    0,
+    0.212
+   ],
+   "planted": 0.16
   },
   "spin-in-place": {
    "dur": 4,
@@ -5697,7 +8133,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.037,
+    0,
+    0.004
+   ],
+   "planted": 0.78
   },
   "spinning-back-kick-advancing": {
    "dur": 3.4,
@@ -5711,7 +8153,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.658,
+    0,
+    -0.366
+   ],
+   "planted": 0.02
   },
   "standard-walk": {
    "dur": 1.17,
@@ -5725,7 +8173,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.012,
+    0,
+    1.171
+   ],
+   "planted": 0.35
   },
   "standing-cheering": {
    "dur": 3.43,
@@ -5739,7 +8193,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.018,
+    0,
+    -0.013
+   ],
+   "planted": 0.45
   },
   "standing-clap": {
    "dur": 4.77,
@@ -5753,7 +8213,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.003,
+    0,
+    -0.001
+   ],
+   "planted": 0.52
   },
   "standing-cover-turn": {
    "dur": 1,
@@ -5767,7 +8233,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.013,
+    0,
+    -0.021
+   ],
+   "planted": 1
   },
   "standing-death-forward-01": {
    "dur": 3.17,
@@ -5781,7 +8253,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.062,
+    0,
+    0.183
+   ],
+   "planted": 0.13
   },
   "standing-dodge-backward": {
    "dur": 1.63,
@@ -5795,7 +8273,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.185,
+    0,
+    -0.373
+   ],
+   "planted": 0.13
   },
   "standing-greeting": {
    "dur": 5.1,
@@ -5809,7 +8293,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "standing-idle-to-fight-idle": {
    "dur": 1,
@@ -5823,7 +8313,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.116,
+    0,
+    0.025
+   ],
+   "planted": 0.4
   },
   "standing-react-large-from-left": {
    "dur": 1.03,
@@ -5837,7 +8333,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.068,
+    0,
+    0.013
+   ],
+   "planted": 0.8
   },
   "standing-run-forward": {
    "dur": 0.87,
@@ -5851,7 +8353,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.031,
+    0,
+    2.77
+   ],
+   "planted": 0.31
   },
   "standing-taunt-battlecry": {
    "dur": 2.83,
@@ -5865,7 +8373,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.021,
+    0,
+    -0.033
+   ],
+   "planted": 0.57
   },
   "standing-torch-light-torch": {
    "dur": 4,
@@ -5879,7 +8393,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "standing-up-from-a-kneeling-position": {
    "dur": 2.77,
@@ -5893,7 +8413,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.024,
+    0,
+    0.025
+   ],
+   "planted": 0.44
   },
   "standing-up": {
    "dur": 11.4,
@@ -5907,7 +8433,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.007,
+    0,
+    0.03
+   ],
+   "planted": 0.29
   },
   "standing-using-touchscreen-tablet": {
    "dur": 33.13,
@@ -5921,7 +8453,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "standing-w-briefcase-idle": {
    "dur": 14.33,
@@ -5935,7 +8473,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "step-hip-hop-dance": {
    "dur": 7.8,
@@ -5949,7 +8493,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.035,
+    0,
+    0.312
+   ],
+   "planted": 0.61
   },
   "stroke-shaking-head": {
    "dur": 1.67,
@@ -5963,7 +8513,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "stumble-backwards": {
    "dur": 3.33,
@@ -5977,7 +8533,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.058,
+    0,
+    -0.153
+   ],
+   "planted": 0.1
   },
   "swimming-underwater": {
    "dur": 4.53,
@@ -5991,7 +8553,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.083,
+    0,
+    0.075
+   ],
+   "planted": 0.07
   },
   "swing-backflip-to-superhero-pose": {
    "dur": 1.87,
@@ -6005,7 +8573,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "sword-and-shield-sheath-sword-1": {
    "dur": 1.27,
@@ -6019,7 +8593,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.017,
+    0,
+    0.052
+   ],
+   "planted": 0.37
   },
   "sword-and-shield-sheath-sword-2": {
    "dur": 0.8,
@@ -6033,7 +8613,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.03,
+    0,
+    0.08
+   ],
+   "planted": 1
   },
   "sword-and-shield-sword-and-shield-180-turn-2": {
    "dur": 0.83,
@@ -6047,7 +8633,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "sword-and-shield-sword-and-shield-attack-2": {
    "dur": 1.3,
@@ -6061,7 +8653,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.816,
+    0,
+    2.624
+   ],
+   "planted": 0.11
   },
   "sword-and-shield-sword-and-shield-attack-3": {
    "dur": 1.73,
@@ -6075,7 +8673,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.11,
+    0,
+    0.127
+   ],
+   "planted": 0.04
   },
   "sword-and-shield-sword-and-shield-attack-4": {
    "dur": 1,
@@ -6089,7 +8693,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.01,
+    0,
+    0.002
+   ],
+   "planted": 0.8
   },
   "sword-and-shield-sword-and-shield-attack": {
    "dur": 2.33,
@@ -6103,7 +8713,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "sword-and-shield-sword-and-shield-block-2": {
    "dur": 0.5,
@@ -6117,7 +8733,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.001,
+    0,
+    -0.063
+   ],
+   "planted": 0.29
   },
   "sword-and-shield-sword-and-shield-block": {
    "dur": 0.57,
@@ -6131,7 +8753,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.009,
+    0,
+    0.192
+   ],
+   "planted": 0.25
   },
   "sword-and-shield-sword-and-shield-casting-2": {
    "dur": 1.03,
@@ -6145,7 +8773,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0.006
+   ],
+   "planted": 1
   },
   "sword-and-shield-sword-and-shield-casting": {
    "dur": 2.97,
@@ -6159,7 +8793,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.029,
+    0,
+    0.015
+   ],
+   "planted": 0.45
   },
   "sword-and-shield-sword-and-shield-crouch-block-2": {
    "dur": 0.67,
@@ -6173,7 +8813,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.005,
+    0,
+    -0.017
+   ],
+   "planted": 1
   },
   "sword-and-shield-sword-and-shield-crouch-block-idle": {
    "dur": 0.27,
@@ -6187,7 +8833,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.002,
+    0,
+    0.003
+   ],
+   "planted": 1
   },
   "sword-and-shield-sword-and-shield-crouch-idle": {
    "dur": 2.4,
@@ -6201,7 +8853,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sword-and-shield-sword-and-shield-crouch": {
    "dur": 0.57,
@@ -6215,7 +8873,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.026,
+    0,
+    -0.693
+   ],
+   "planted": 0.13
   },
   "sword-and-shield-sword-and-shield-crouching": {
    "dur": 0.5,
@@ -6229,7 +8893,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.018,
+    0,
+    0.528
+   ],
+   "planted": 0.14
   },
   "sword-and-shield-sword-and-shield-death-2": {
    "dur": 3.9,
@@ -6243,7 +8913,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.001,
+    0,
+    0.155
+   ],
+   "planted": 0.16
   },
   "sword-and-shield-sword-and-shield-death": {
    "dur": 2.3,
@@ -6257,7 +8933,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.054,
+    0,
+    -0.179
+   ],
+   "planted": 0.29
   },
   "sword-and-shield-sword-and-shield-idle-2": {
    "dur": 7.43,
@@ -6271,7 +8953,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    -0.007
+   ],
+   "planted": 0.81
   },
   "sword-and-shield-sword-and-shield-idle-4": {
    "dur": 2.5,
@@ -6285,7 +8973,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sword-and-shield-sword-and-shield-idle": {
    "dur": 3.6,
@@ -6299,7 +8993,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "sword-and-shield-sword-and-shield-impact-3": {
    "dur": 0.7,
@@ -6313,7 +9013,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.105,
+    0,
+    0.034
+   ],
+   "planted": 0.8
   },
   "sword-and-shield-sword-and-shield-impact": {
    "dur": 0.7,
@@ -6327,7 +9033,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.028,
+    0,
+    -0.011
+   ],
+   "planted": 0.9
   },
   "sword-and-shield-sword-and-shield-jump-2": {
    "dur": 0.97,
@@ -6341,7 +9053,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.138,
+    0,
+    0.434
+   ],
+   "planted": 0.07
   },
   "sword-and-shield-sword-and-shield-jump": {
    "dur": 0.83,
@@ -6355,7 +9073,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 0
   },
   "sword-and-shield-sword-and-shield-kick": {
    "dur": 1.2,
@@ -6369,7 +9093,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.031,
+    0,
+    0.105
+   ],
+   "planted": 0.39
   },
   "sword-and-shield-sword-and-shield-power-up": {
    "dur": 2.37,
@@ -6383,7 +9113,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.018,
+    0,
+    0
+   ],
+   "planted": 0.6
   },
   "sword-and-shield-sword-and-shield-run-2": {
    "dur": 0.53,
@@ -6397,7 +9133,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.154,
+    0,
+    -3.686
+   ],
+   "planted": 0.25
   },
   "sword-and-shield-sword-and-shield-run": {
    "dur": 0.7,
@@ -6411,7 +9153,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.019,
+    0,
+    3.245
+   ],
+   "planted": 0.4
   },
   "sword-and-shield-sword-and-shield-slash-2": {
    "dur": 3.53,
@@ -6425,7 +9173,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.282,
+    0,
+    0.432
+   ],
+   "planted": 0.02
   },
   "sword-and-shield-sword-and-shield-slash-4": {
    "dur": 2.3,
@@ -6439,7 +9193,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.312,
+    0,
+    1.396
+   ],
+   "planted": 0.06
   },
   "sword-and-shield-sword-and-shield-slash-5": {
    "dur": 1.37,
@@ -6453,7 +9213,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.299,
+    0,
+    -0.197
+   ],
+   "planted": 0.05
   },
   "sword-and-shield-sword-and-shield-strafe-2": {
    "dur": 1.3,
@@ -6467,7 +9233,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.851,
+    0,
+    -0.013
+   ],
+   "planted": 0.47
   },
   "sword-and-shield-sword-and-shield-strafe-3": {
    "dur": 0.67,
@@ -6481,7 +9253,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    2.101,
+    0,
+    -0.17
+   ],
+   "planted": 0.4
   },
   "sword-and-shield-sword-and-shield-strafe": {
    "dur": 1.13,
@@ -6495,7 +9273,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.71,
+    0,
+    0.086
+   ],
+   "planted": 0.47
   },
   "sword-and-shield-sword-and-shield-walk-2": {
    "dur": 1.27,
@@ -6509,7 +9293,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.009,
+    0,
+    -0.911
+   ],
+   "planted": 0.63
   },
   "sword-and-shield-sword-and-shield-walk": {
    "dur": 1.1,
@@ -6523,7 +9313,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.005,
+    0,
+    0.791
+   ],
+   "planted": 0.5
   },
   "talking-at-watercooler": {
    "dur": 44.57,
@@ -6537,7 +9333,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    0.001
+   ],
+   "planted": 0.92
   },
   "talking-on-a-cell-phone": {
    "dur": 37.23,
@@ -6551,7 +9353,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    0.003
+   ],
+   "planted": 0.97
   },
   "talking-on-phone": {
    "dur": 38.83,
@@ -6565,7 +9373,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.001,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "talking-phone-pacing": {
    "dur": 42.23,
@@ -6579,7 +9393,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.001,
+    0,
+    0.036
+   ],
+   "planted": 0.76
   },
   "talking": {
    "dur": 4.8,
@@ -6593,7 +9413,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    -0.004
+   ],
+   "planted": 0.93
   },
   "taunt-1": {
    "dur": 2.83,
@@ -6607,7 +9433,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    0.004
+   ],
+   "planted": 0.95
   },
   "taunt": {
    "dur": 2.83,
@@ -6621,7 +9453,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    0.004
+   ],
+   "planted": 0.95
   },
   "taunting-throwing-arms-back": {
    "dur": 3.23,
@@ -6635,7 +9473,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    0.009
+   ],
+   "planted": 0.69
   },
   "texting-and-walking": {
    "dur": 3.3,
@@ -6649,7 +9493,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.003,
+    0,
+    0.896
+   ],
+   "planted": 0.84
   },
   "texting-while-standing": {
    "dur": 23.57,
@@ -6663,7 +9513,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "texting": {
    "dur": 18.53,
@@ -6677,7 +9533,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "threatening": {
    "dur": 4.4,
@@ -6691,7 +9553,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "thriller-part-3": {
    "dur": 25.57,
@@ -6705,7 +9573,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.131,
+    0,
+    -0.087
+   ],
+   "planted": 0.02
   },
   "throw": {
    "dur": 2.2,
@@ -6719,7 +9593,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.018,
+    0,
+    -0.03
+   ],
+   "planted": 0.94
   },
   "tonic-seizure": {
    "dur": 8.03,
@@ -6733,7 +9613,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.019,
+    0,
+    -0.003
+   ],
+   "planted": 0.43
   },
   "treading-water": {
    "dur": 3,
@@ -6747,7 +9633,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.504,
+    0,
+    0.274
+   ],
+   "planted": 0.18
   },
   "tut-hip-hop-dance": {
    "dur": 16.93,
@@ -6761,7 +9653,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.006,
+    0,
+    0.017
+   ],
+   "planted": 0.56
   },
   "twist-dance": {
    "dur": 9.43,
@@ -6775,7 +9673,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.339,
+    0,
+    1.009
+   ],
+   "planted": 0.01
   },
   "type-to-sit": {
    "dur": 0.93,
@@ -6789,7 +9693,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.001,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "typing": {
    "dur": 16.47,
@@ -6803,7 +9713,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "unarmed-idle-01": {
    "dur": 5.1,
@@ -6817,7 +9733,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "unarmed-idle-looking-ver-2": {
    "dur": 7.83,
@@ -6831,7 +9753,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "using-a-fax-machine": {
    "dur": 16.27,
@@ -6845,7 +9773,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.001,
+    0,
+    0.005
+   ],
+   "planted": 1
   },
   "waking": {
    "dur": 1.83,
@@ -6859,7 +9793,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "walk-strafe-left": {
    "dur": 1.47,
@@ -6873,7 +9813,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.458,
+    0,
+    -0.056
+   ],
+   "planted": 0.82
   },
   "walking-while-texting": {
    "dur": 4,
@@ -6887,7 +9833,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.005,
+    0,
+    0.683
+   ],
+   "planted": 0.9
   },
   "wave-hip-hop-dance-1": {
    "dur": 15.97,
@@ -6901,7 +9853,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.006,
+    0,
+    -0.01
+   ],
+   "planted": 0.56
   },
   "wave-hip-hop-dance": {
    "dur": 1.17,
@@ -6915,7 +9873,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.022,
+    0,
+    -0.002
+   ],
+   "planted": 0.82
   },
   "waving-1": {
    "dur": 3.17,
@@ -6929,7 +9893,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "waving-2": {
    "dur": 4.73,
@@ -6943,7 +9913,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "waving-gesture": {
    "dur": 1.47,
@@ -6957,7 +9933,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "waving": {
    "dur": 0.53,
@@ -6971,7 +9953,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "wiping-sweat": {
    "dur": 2.63,
@@ -6985,7 +9973,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "yawn": {
    "dur": 8.33,
@@ -6999,7 +9993,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "yelling-out": {
    "dur": 4.3,
@@ -7013,7 +10013,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.009,
+    0,
+    0.004
+   ],
+   "planted": 0.94
   },
   "yelling-while-standing-leaning-forward": {
    "dur": 4.03,
@@ -7027,7 +10033,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.04,
+    0,
+    -0.035
+   ],
+   "planted": 0.1
   },
   "yelling": {
    "dur": 7.83,
@@ -7041,7 +10053,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0.001,
+    0,
+    -0.001
+   ],
+   "planted": 0.52
   },
   "zombie-idle": {
    "dur": 4.23,
@@ -7055,7 +10073,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    0,
+    0,
+    0
+   ],
+   "planted": 1
   },
   "zombie-walk": {
    "dur": 4.03,
@@ -7069,7 +10093,13 @@
     0,
     0
    ],
-   "even": null
+   "even": null,
+   "implied": [
+    -0.009,
+    0,
+    -0.159
+   ],
+   "planted": 0.2
   }
  }
 }
