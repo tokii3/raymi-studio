@@ -1,5 +1,25 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-29 - Love is War takes 15-16: the lighthouse END from the climb (122.6 s), vector graphics out, seabed
+- toki on take 14 (toki.md verbatim): vector graphics (lines, spikes round her face) out; cable under the sea boring /
+  empty / no depth; the WHOLE lighthouse end from the climb unclean (only 147-177 had ever been worked on); hair odd;
+  everything choppy / low quality.
+- Engine: hair springs simulated from the shot start with the camera of every frame (memo per frame) - before, every
+  frame began from another history (sliding f-90 start, camera of f); no "on twos". QC v2 class hair_wall.
+- Vector graphics: 49 fx + 27 drawn insert pictures out; timeline check VECTOR_FX refuses them (vector_ok to argue);
+  in the sets: spiked lamp disc, Fresnel ring card, violet ball, big rain circles gone; the beam a soft cone (edge
+  falloff, fades near the lens) instead of a white slab.
+- Seabed (studio/src/three/seabed.tsx, opts.seabed): endless sand, berms, rocks + kelp along every cable, growth, far
+  ridges in blue fog, shafts, sky light; cables lit only as a seam.
+- End 122.6-177.2 restaged with camera-director + choreographer: 30 rows -> 16 pictures, whole actions (one climb, one
+  arrival, one pull fight that builds), she hauls the lamp cable facing the lamp (actor key "tether": the rope is seen),
+  lantern open where she works (ring_gap, mullion_phase, glass off). The ladder clip rises by itself (rootAt) - a pos
+  move on top doubled it.
+- Take 16 excerpt (render run 89, 120.4-187.6): gate FAIL - brief-keeper BLOCK, look-critic FAIL, motion-critic FAIL
+  (reviews/end16_*): she is still small / dark / behind rails in the lamp room, the lamp room reads as a gazebo
+  (primitive set), seabed still plain, one orange colour-flip frame reads as a glitch, no melody element. Sent to toki
+  FAIL-marked with a before / after (deliveries/2026-10-25_love-is-war/end16).
+
 ## 2026-10-28 (later) - Love is War take 14: engine faults (toki: angewurzelt, swims odd, climbs wrong, dot graphs)
 - Measured on her real rig (root-travel.yml + studio/root_travel.mjs -> studio/catalog/root_travel.json): nearly every
   Mixamo clip is exported in place (all 34 in this film: hips travel 0); 189 of 505 imply a way by their planted feet.
