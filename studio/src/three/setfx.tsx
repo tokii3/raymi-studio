@@ -394,7 +394,7 @@ export const SetFx: React.FC<{opts: Record<string, unknown>; f: number; fps: num
       {num(opts.haze) > 0 ? <Haze v={num(opts.haze)} her={her} camPos={camPos} f={f} c={String(opts.haze_c ?? '#5b5aa8')} /> : null}
       {rain > 0.01 ? <Rain v={rain} her={her} f={f} wind={wind} dir={dir} /> : null}
       {wind > 0.01 ? <Wind v={wind} her={her} f={f} dir={dir} /> : null}
-      <Splash d={since(opts.splash, f)} her={her} />
+      <Splash d={since(opts.splash, f)} her={(opts.splash_pos as P3 | undefined) ?? her} />
       <Slap d={since(opts.tail_slap, f)} her={her} />
       {num(opts.treadmill) > 0 ? <Treadmill speed={num(opts.treadmill)} her={her} f={f} fps={fps} camPos={camPos} /> : null}
       {opts.freeze ? <FrozenDust her={her} /> : null}

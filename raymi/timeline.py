@@ -977,7 +977,7 @@ def compile_actor(s: dict, fmt: str, a: float, b: float, fr, marks: dict, poses:
             errors.append(f"{ktag}: icon must be one of {sorted(x for x in ICONS if x)}")
         elif r.get("icon"):
             key["icon"] = r["icon"]
-        for opt in ("motion", "motionMix", "expr", "once", "restart", "aware", "ground", "drift", "tether"):
+        for opt in ("motion", "motionMix", "expr", "once", "restart", "aware", "ground", "drift", "tether", "root"):
             if opt in r:
                 key[opt] = r[opt]
         if r.get("face_lens"):                             # the clip's own hip turn is taken out: her chest faces the lens

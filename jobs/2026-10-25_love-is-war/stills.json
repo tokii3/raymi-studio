@@ -1,34 +1,24 @@
 {
- "_why": "take 22 check: riser, leap cut, water, ladder",
+ "_why": "take 22 check 2: glare before the cut, cut + spray, ladder",
  "format": "mv",
  "frames": [
-  1800,
-  1830,
-  1854,
   3618,
-  3634,
-  3648,
-  3666,
+  3633,
+  3636,
   3750,
   3771,
   3798,
-  3828,
-  3682
+  3828
  ],
  "names": [
-  "u00",
-  "u01",
-  "u02",
-  "u03",
-  "u04",
-  "u05",
-  "u06",
-  "u07",
-  "u08",
-  "u09",
-  "u10",
-  "u11"
+  "v0",
+  "v1",
+  "v2",
+  "v3",
+  "v4",
+  "v5",
+  "v6"
  ],
  "scale": 0.5,
- "round": "t22"
+ "round": "t22b"
 }
