@@ -1,26 +1,22 @@
 {
- "_why": "take 20 check before the whole render: riser, stop, floating, throw, cable",
+ "_why": "take 21 check: riser + rock",
  "format": "mv",
  "frames": [
-  1785,
-  1815,
-  1845,
-  1872,
-  2520,
-  2850,
-  240,
-  4977
+  1788,
+  1818,
+  1848,
+  2820,
+  2847,
+  2874
  ],
  "names": [
-  "r0",
-  "r1",
-  "r2",
-  "r3",
-  "r4",
-  "r5",
-  "r6",
-  "r7"
+  "s0",
+  "s1",
+  "s2",
+  "s3",
+  "s4",
+  "s5"
  ],
  "scale": 0.5,
- "round": "t20"
+ "round": "t21"
 }
