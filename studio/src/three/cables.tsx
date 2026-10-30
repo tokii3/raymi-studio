@@ -32,7 +32,7 @@ export const SeaCables: React.FC<{opts: Record<string, unknown>; f: number; fps:
   const CYAN = String(opts.cable_color ?? CYAN0);
   // ridged armour; lit, only a thin seam glows along its top - the whole tube lit read as a flat cyan plank
   // (toki 2026-10-28 take 14 "kabel unter see ... langweilig, leer")
-  const skin = toonPaint('#1a1c28', 'rubber', '#0b1424', [60, 1], CYAN, 0.03 + 0.07 * glow);
+  const skin = toonPaint('#1a1c28', 'rubber', '#0b1424', [60, 1]);   // no colour in the armour: lit it read as green or pink pipes (take 19)
   const r = Number(opts.cable_r ?? 0.11);
   return (
     <group userData={{noSupport: true}}>

@@ -1,34 +1,26 @@
 {
- "_why": "last pass check 2",
+ "_why": "take 20 check before the whole render: riser, stop, floating, throw, cable",
  "format": "mv",
  "frames": [
-  45,
-  240,
-  390,
-  525,
+  1785,
   1815,
-  2694,
-  3750,
-  3774,
-  3828,
-  4926,
-  4950,
-  4995
+  1845,
+  1872,
+  2520,
+  2850,
+  240,
+  4977
  ],
  "names": [
-  "q00",
-  "q01",
-  "q02",
-  "q03",
-  "q04",
-  "q05",
-  "q06",
-  "q07",
-  "q08",
-  "q09",
-  "q10",
-  "q11"
+  "r0",
+  "r1",
+  "r2",
+  "r3",
+  "r4",
+  "r5",
+  "r6",
+  "r7"
  ],
  "scale": 0.5,
- "round": "last2"
+ "round": "t20"
 }
