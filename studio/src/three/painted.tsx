@@ -224,10 +224,11 @@ export const PaintedSea: React.FC<{o: Record<string, unknown>; f: number; fps: n
           <Ring key={`wm${k}`} R={R} x={cx} z={cz} y0={-0.4 + bob(k + 3, a, 4)} y1={hh + bob(k + 3, a, 4)}
             m={tex(waveMat(`mid${k}`, PAL.light, PAL.mid, PAL.paper, 91 + k * 7, 14), (t * 0.9) / (2 * Math.PI * R))} order={-6} />
         ))}
-        {/* the foam collar round her chest: she is IN the water, never a cut-out on a sheet */}
-        <mesh position={[cx, 0.03, cz]} rotation={[-Math.PI / 2, 0, t * 0.15]} scale={2.4 + 0.08 * Math.sin(t * 2)} material={collarMat()} renderOrder={7}>
+        {/* the foam collar round her chest: she is IN the water, never a cut-out on a sheet - only while she IS in it (on the
+            ledge / the tower it lay on the sea alone as a dashed target at the origin, take 16: pool_pos = where she is) */}
+        {o.pool_pos !== undefined && Math.abs(centre[1]) < 0.6 ? <mesh position={[cx, 0.03, cz]} rotation={[-Math.PI / 2, 0, t * 0.15]} scale={2.4 + 0.08 * Math.sin(t * 2)} material={collarMat()} renderOrder={7}>
           <planeGeometry args={[1, 1]} />
-        </mesh>
+        </mesh> : null}
       </> : null}
     </group>
   );
@@ -275,6 +276,24 @@ export function brassMat() {
     }
     for (let i = 0; i < 6; i++) { ctx.fillStyle = PAL.brassShade; ctx.beginPath(); ctx.ellipse(20 + i * 42, h * 0.55, 4, 3, 0, 0, Math.PI * 2); ctx.fill(); }
     ctx.strokeStyle = PAL.ink; ctx.lineWidth = 4; ctx.strokeRect(0, 0, w, h);
+  }), 'ink'));
+}
+/** Dark painted iron: navy-black with a cooler lit band and a few rust dabs (the lantern frame, the base, the column). */
+function ironMat() {
+  return cached('iron', () => mat(canvasTexture('p_iron', 256, 256, (ctx, w, h) => {
+    ctx.fillStyle = '#1b1f38'; ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = '#2c3358'; ctx.fillRect(0, 0, w, h * 0.3);
+    for (let i = 0; i < 30; i++) { ctx.fillStyle = 'rgba(107,74,28,0.35)'; ctx.fillRect(r(i * 7) * w, r(i * 11) * h, 3, 2); }
+    grain(ctx, w, h, 61);
+  }), 'ink'));
+}
+/** The cap: dark weathered copper-violet, a lit band at the top. */
+function capMat() {
+  return cached('cap', () => mat(canvasTexture('p_cap', 256, 256, (ctx, w, h) => {
+    ctx.fillStyle = '#2a2340'; ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = '#463a63'; ctx.fillRect(0, 0, w, h * 0.25);
+    for (let i = 0; i < 24; i++) { ctx.fillStyle = 'rgba(70,120,110,0.25)'; ctx.fillRect(r(i * 5) * w, r(i * 9) * h, 6, 3); }
+    grain(ctx, w, h, 71);
   }), 'ink'));
 }
 /** The Fresnel lens as painted glass: 6-9 broken concentric prism rings, banded, no rainbow. */
@@ -345,7 +364,11 @@ export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; 
         return <mesh key={`b${i}`} position={[x + Math.sin(a) * 2.6, g + 0.55, z + Math.cos(a) * 2.6]} material={ink}><boxGeometry args={[0.035, 1.1, 0.035]} /></mesh>;
       })}
       {/* the turning base she stands on, the brass ring of the frame and its mullions up to the roof */}
-      <mesh position={[x, H + 0.64, z]} material={brassMat()}><cylinderGeometry args={[1.5, 1.6, 0.52, 40]} /></mesh>
+      {/* dark iron, a brass trim on its edge only - the amber disc filled the lamp-room pictures like a table (take 16 look-critic) */}
+      <mesh position={[x, H + 0.64, z]} material={ironMat()}><cylinderGeometry args={[1.5, 1.6, 0.52, 40]} /></mesh>
+      <mesh position={[x, H + 0.9, z]} rotation={[Math.PI / 2, 0, 0]} material={brassMat()}><torusGeometry args={[1.5, 0.025, 6, 64]} /></mesh>
+      {/* the lamp column up to the lens */}
+      <mesh position={[x, (H + 0.9 + lampY - 0.45) / 2, z]} material={ironMat()}><cylinderGeometry args={[0.16, 0.24, lampY - 0.45 - H - 0.9, 16]} /></mesh>
       {/* ringGap [az, width] (deg): the frame ring open where she stands at the lamp - closed, it cut through her chest (choreographer 2026-10-28) */}
       {(() => {
         const gw = ringGap ? (ringGap[1] * Math.PI) / 180 : 0, ga = ringGap ? (ringGap[0] * Math.PI) / 180 : 0;
@@ -355,15 +378,26 @@ export const LanternRoom: React.FC<{x: number; z: number; H: number; f: number; 
       {Array.from({length: 8}, (_, i) => {
         // still, not turning: turning mullions swept through her where she works at the lamp (QC v2 2026-10-28, rows 72 / 73 / 77)
         const a = (i / 8) * Math.PI * 2 + mullionPhase;
-        return <mesh key={`m${i}`} position={[x + Math.sin(a) * 1.6, H + 2.1, z + Math.cos(a) * 1.6]} material={brassMat()}><boxGeometry args={[0.06, 2.4, 0.06]} /></mesh>;
+        return <mesh key={`m${i}`} position={[x + Math.sin(a) * 1.6, H + 2.1, z + Math.cos(a) * 1.6]} material={ironMat()}><boxGeometry args={[0.045, 2.4, 0.045]} /></mesh>;
       })}
       {glass ? <mesh position={[x, H + 2.1, z]} material={glassMat()}><cylinderGeometry args={[1.6, 1.6, 2.4, 48, 1, true]} /></mesh> : null}
-      <mesh position={[x, H + 3.55, z]} material={cached('roof', () => { const m = new THREE.MeshBasicMaterial({color: PAL.stripe, toneMapped: false, fog: false}); m.userData.tone = 'ink'; return m; })}>
-        <coneGeometry args={[1.9, 0.9, 32]} /></mesh>
+      {/* the cap: a dark copper dome with a brass rim, a vent and a ball on top (it was a flat red cone - a gazebo roof) */}
+      <mesh position={[x, H + 3.3, z]} material={capMat()}><sphereGeometry args={[1.8, 40, 16, 0, Math.PI * 2, 0, Math.PI / 2]} /></mesh>
+      <mesh position={[x, H + 3.3, z]} rotation={[Math.PI / 2, 0, 0]} material={brassMat()}><torusGeometry args={[1.8, 0.05, 8, 72]} /></mesh>
+      <mesh position={[x, H + 5.15, z]} material={capMat()}><cylinderGeometry args={[0.18, 0.26, 0.3, 16]} /></mesh>
+      <mesh position={[x, H + 5.42, z]} material={brassMat()}><sphereGeometry args={[0.16, 16, 12]} /></mesh>
       {/* the lamp: a glass body with a burning core and a soft glow, breathing 4 % - the painted disc with spikes and the
           Fresnel ring card read as drawn lines round her (toki 2026-10-28 "vektor grafiken wie striche, zacken") */}
+      {/* the Fresnel lens as a real object: a drum of glass prism ribs round the flame, lit from inside */}
       <mesh position={[x, lampY, z]} scale={[0.32, 0.42, 0.32]}><sphereGeometry args={[1, 24, 16]} />
         <meshBasicMaterial color="#fff4da" transparent opacity={0.55} toneMapped={false} /></mesh>
+      {Array.from({length: 9}, (_, i) => {
+        const yy = (i - 4) * 0.11, rr = 0.62 - Math.abs(i - 4) * 0.035;
+        return <mesh key={`fr${i}`} position={[x, lampY + yy, z]} rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[rr, 0.035, 8, 48]} />
+          <meshBasicMaterial color={i % 2 ? '#ffe2ae' : '#f4f0ff'} transparent opacity={0.42} depthWrite={false} toneMapped={false} /></mesh>;
+      })}
+      <mesh position={[x, lampY - 0.55, z]} rotation={[Math.PI / 2, 0, 0]} material={brassMat()}><torusGeometry args={[0.6, 0.06, 8, 48]} /></mesh>
+      <mesh position={[x, lampY + 0.55, z]} rotation={[Math.PI / 2, 0, 0]} material={brassMat()}><torusGeometry args={[0.55, 0.05, 8, 48]} /></mesh>
       <mesh position={[x, lampY, z]} scale={0.14}><sphereGeometry args={[1, 16, 12]} /><meshBasicMaterial color="#ffffff" toneMapped={false} /></mesh>
       {v > 0.05 ? <mesh position={[x, lampY, z]} rotation={[0, toCam, 0]} scale={1.6 * v * (1 + 0.04 * Math.sin(t * 3))} renderOrder={9}><planeGeometry args={[1, 1]} />
         <meshBasicMaterial map={glowTex('#ffe2b0')} {...add} opacity={0.7} fog={false} /></mesh> : null}

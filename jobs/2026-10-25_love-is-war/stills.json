@@ -1,28 +1,34 @@
 {
- "_why": "take 16 check: seabed light, beam without slab, lamp without rings/spikes, closer lamp room, climb framing",
+ "_why": "take 17 check: new lantern (iron, glass lens drum, dark cap), her closer + lit by the lamp, no orange flip, no orphan foam ring",
  "format": "mv",
  "frames": [
-  45,
-  240,
-  4857,
+  3615,
+  3954,
+  4026,
+  4104,
+  4185,
+  4269,
+  4536,
+  4659,
+  4758,
   4950,
-  3795,
-  4080,
-  4266,
-  4650,
-  5130
+  5100,
+  5304
  ],
  "names": [
-  "s1_open",
-  "s2_row4",
-  "d1_dive",
-  "d2_pulse",
-  "c1_climb",
-  "l1_room",
-  "l2_close",
-  "l3_scream",
-  "l4_silhouette"
+  "e00_120",
+  "e01_132",
+  "e02_134",
+  "e03_137",
+  "e04_140",
+  "e05_142",
+  "e06_151",
+  "e07_155",
+  "e08_159",
+  "e09_165",
+  "e10_170",
+  "e11_177"
  ],
  "scale": 0.5,
- "round": "t16"
+ "round": "t17"
 }

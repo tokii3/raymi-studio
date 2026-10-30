@@ -39,3 +39,5 @@ excerpt: toki 2026-10-27 "ja ganzer film, restlichen kritiker punkte fixen, und 
 
 ## 2026-10-28 (zu Take 14)
 "video enthält immernoch teilweise störende vektor grafiken wie striche, zacken um ihr gesicht usw diese sollten weg, außerdem wirken manche assets unsauber zb kabel unter see sieht sehr langweilig, leer und ohne tiefe aus, letzter abschnitt auf dem leuchtturm immernoch unsauber / animationen immernoch falsch, der leuchtturm / end teil wurde auch immer nur s 147-177 bearbeitet weil ich mal meine ca 30 sek aber der eigentlich gemeinte abschnitt wurde nie richtig ermittelt, es geht um die gesamte end leuchttum teil ab hochklettern, es wirkt sehr unsauber, haare bewegen sich manchmal noch komisch, alles wirkt choppy, low quality, laggy, rugged etc anstat flüssoger sauberer animationen und assets"
+
+build: toki 2026-10-30 "Ja, weiter" (auf: Laternenraum neu bauen, Raymi im Ende größer und heller, dann wieder Ausschnitt)

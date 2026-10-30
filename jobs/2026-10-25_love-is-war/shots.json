@@ -5005,16 +5005,19 @@
     ],
     "two_tone_n": 4,
     "two_tone_light": "#ffc35c",
-    "her_key": 0.55
+    "her_key": 0.9,
+    "her_rim": "#ffcf8a",
+    "her_rim_i": 2.2,
+    "her_light": 0.8
    },
    "camera": [
     {
      "at": 0.0,
      "aim": {
-      "d": 3.8,
-      "az": 135.0,
-      "y": 1.0,
-      "h": 13.0,
+      "d": 2.4,
+      "az": 105.0,
+      "y": 0.9,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5028,10 +5031,10 @@
     {
      "at": 0.17,
      "aim": {
-      "d": 3.6,
-      "az": 133.0,
-      "y": 1.0,
-      "h": 13.0,
+      "d": 2.3,
+      "az": 105.0,
+      "y": 0.9,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5045,10 +5048,10 @@
     {
      "at": 2.2,
      "aim": {
-      "d": 3.0,
-      "az": 140.0,
-      "y": 1.0,
-      "h": 13.2,
+      "d": 2.1,
+      "az": 115.0,
+      "y": 0.95,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5126,7 +5129,10 @@
      ]
     },
     "lantern_room": 1,
-    "her_key": 0.55
+    "her_key": 0.9,
+    "her_rim": "#ffcf8a",
+    "her_rim_i": 2.2,
+    "her_light": 0.8
    },
    "frame_fit": [
     0.0,
@@ -5137,26 +5143,10 @@
     {
      "at": 0.0,
      "aim": {
-      "d": 5.0,
-      "az": 105.0,
+      "d": 3.2,
+      "az": 100.0,
       "y": 1.0,
-      "h": 13.4,
-      "at": [
-       -7.482,
-       12.38,
-       -28.068
-      ]
-     },
-     "fov": 46,
-     "roll": 0
-    },
-    {
-     "at": 2.0,
-     "aim": {
-      "d": 3.6,
-      "az": 115.0,
-      "y": 1.0,
-      "h": 13.5,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5167,12 +5157,28 @@
      "roll": 0
     },
     {
+     "at": 2.0,
+     "aim": {
+      "d": 2.4,
+      "az": 117.0,
+      "y": 1.0,
+      "h": 13.95,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 42,
+     "roll": 0
+    },
+    {
      "at": 4.17,
      "aim": {
-      "d": 2.8,
+      "d": 2.0,
       "az": 130.0,
       "y": 1.05,
-      "h": 13.6,
+      "h": 14.0,
       "at": [
        -7.482,
        12.38,
@@ -5237,21 +5243,24 @@
     },
     "lantern_room": 1,
     "cable_glow": 0.4,
-    "her_key": 0.55,
+    "her_key": 0.9,
     "two_tone": [
      139.297
     ],
     "two_tone_n": 4,
-    "two_tone_light": "#ffc35c"
+    "two_tone_light": "#ffc35c",
+    "her_rim": "#ffcf8a",
+    "her_rim_i": 2.2,
+    "her_light": 0.8
    },
    "camera": [
     {
      "at": 0.0,
      "aim": {
-      "d": 3.0,
-      "az": -120.0,
-      "y": 0.9,
-      "h": 13.3,
+      "d": 2.4,
+      "az": -75.0,
+      "y": 1.0,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5264,10 +5273,10 @@
     {
      "at": 1.87,
      "aim": {
-      "d": 2.7,
-      "az": -123.0,
-      "y": 1.0,
-      "h": 13.5,
+      "d": 2.2,
+      "az": -65.0,
+      "y": 1.05,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5280,10 +5289,10 @@
     {
      "at": 3.73,
      "aim": {
-      "d": 2.6,
-      "az": -127.0,
+      "d": 2.1,
+      "az": -60.0,
       "y": 1.05,
-      "h": 13.6,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5347,42 +5356,42 @@
      ]
     },
     "lantern_room": 1,
-    "flip_at": [
-     142.62
-    ],
-    "her_key": 0.55
+    "her_key": 0.9,
+    "her_rim": "#ffcf8a",
+    "her_rim_i": 2.2,
+    "her_light": 0.8
    },
    "camera": [
     {
      "at": 0.0,
      "aim": {
-      "d": 2.6,
-      "az": 160.0,
-      "y": 1.25,
-      "h": 13.95,
+      "d": 1.65,
+      "az": 135.0,
+      "y": 1.3,
+      "h": 14.0,
       "at": [
        -7.482,
        12.38,
        -28.068
       ]
      },
-     "fov": 28,
+     "fov": 32,
      "roll": 0
     },
     {
      "at": 1.87,
      "aim": {
-      "d": 2.3,
-      "az": 162.0,
-      "y": 1.25,
-      "h": 13.95,
+      "d": 1.5,
+      "az": 135.0,
+      "y": 1.3,
+      "h": 14.0,
       "at": [
        -7.482,
        12.38,
        -28.068
       ]
      },
-     "fov": 26,
+     "fov": 30,
      "roll": 0
     }
    ],
@@ -5442,16 +5451,19 @@
      ]
     },
     "lantern_room": 1,
-    "her_key": 0.55
+    "her_key": 0.9,
+    "her_rim": "#ffcf8a",
+    "her_rim_i": 2.2,
+    "her_light": 0.8
    },
    "camera": [
     {
      "at": 0.0,
      "aim": {
-      "d": 3.0,
+      "d": 2.2,
       "az": 125.0,
       "y": 1.0,
-      "h": 13.2,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5464,17 +5476,17 @@
     {
      "at": 3.27,
      "aim": {
-      "d": 2.6,
+      "d": 2.0,
       "az": 100.0,
-      "y": 1.0,
-      "h": 13.7,
+      "y": 1.05,
+      "h": 14.1,
       "at": [
        -7.482,
        12.38,
        -28.068
       ]
      },
-     "fov": 42,
+     "fov": 44,
      "roll": 0,
      "ease": "in"
     }
@@ -5561,17 +5573,15 @@
     ],
     "two_tone_n": 4,
     "two_tone_light": "#ffc35c",
-    "her_key": 0.55,
-    "her_rim": "#bfd0ff",
-    "her_rim_i": 2.4,
+    "her_key": 0.9,
+    "her_rim": "#ffcf8a",
+    "her_rim_i": 2.2,
     "post": {
      "glow": 0.15,
      "vignette": 0.45,
      "dof_auto": 1
     },
-    "flip_at": [
-     150.12
-    ]
+    "her_light": 0.8
    },
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
    "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop",
@@ -5579,10 +5589,10 @@
     {
      "at": 0.0,
      "aim": {
-      "d": 2.8,
-      "az": -110.0,
+      "d": 2.2,
+      "az": -70.0,
       "y": 1.0,
-      "h": 13.6,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5595,10 +5605,10 @@
     {
      "at": 0.03,
      "aim": {
-      "d": 2.8,
-      "az": -110.0,
+      "d": 2.2,
+      "az": -70.0,
       "y": 1.0,
-      "h": 13.6,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5612,10 +5622,10 @@
     {
      "at": 0.17,
      "aim": {
-      "d": 2.9,
-      "az": -110.0,
+      "d": 2.25,
+      "az": -70.0,
       "y": 1.0,
-      "h": 13.6,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5629,10 +5639,10 @@
     {
      "at": 4.07,
      "aim": {
-      "d": 3.6,
-      "az": -100.0,
+      "d": 2.8,
+      "az": -60.0,
       "y": 1.0,
-      "h": 13.7,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5719,15 +5729,15 @@
      ]
     },
     "lantern_room": 1,
-    "her_key": 0.55,
+    "her_key": 0.9,
     "post": {
      "glow": 0.15,
      "vignette": 0.45,
      "dof_auto": 1
     },
-    "flip_at": [
-     153.85
-    ]
+    "her_rim": "#ffcf8a",
+    "her_rim_i": 2.2,
+    "her_light": 0.8
    },
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
    "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop",
@@ -5735,10 +5745,10 @@
     {
      "at": 0.0,
      "aim": {
-      "d": 2.9,
-      "az": 115.0,
-      "y": 0.9,
-      "h": 12.9,
+      "d": 2.0,
+      "az": 130.0,
+      "y": 1.0,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5751,10 +5761,10 @@
     {
      "at": 2.03,
      "aim": {
-      "d": 2.6,
-      "az": 113.0,
-      "y": 0.8,
-      "h": 12.85,
+      "d": 1.85,
+      "az": 115.0,
+      "y": 0.95,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5762,23 +5772,23 @@
       ]
      },
      "fov": 44,
-     "roll": 5
+     "roll": 4
     },
     {
      "at": 3.93,
      "aim": {
-      "d": 2.4,
+      "d": 1.8,
       "az": 110.0,
-      "y": 0.75,
-      "h": 12.85,
+      "y": 0.95,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
        -28.068
       ]
      },
-     "fov": 42,
-     "roll": 10
+     "fov": 44,
+     "roll": 7
     }
    ],
    "actor": [
@@ -5849,12 +5859,15 @@
      ]
     },
     "lantern_room": 1,
-    "her_key": 0.55,
+    "her_key": 0.9,
     "post": {
      "glow": 0.15,
      "vignette": 0.45,
      "dof_auto": 1
-    }
+    },
+    "her_rim": "#ffcf8a",
+    "her_rim_i": 2.2,
+    "her_light": 0.8
    },
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
    "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop",
@@ -5862,10 +5875,10 @@
     {
      "at": 0.0,
      "aim": {
-      "d": 2.8,
-      "az": -130.0,
-      "y": 1.0,
-      "h": 13.5,
+      "d": 2.0,
+      "az": 140.0,
+      "y": 1.2,
+      "h": 14.0,
       "at": [
        -7.482,
        12.38,
@@ -5878,17 +5891,17 @@
     {
      "at": 1.87,
      "aim": {
-      "d": 2.4,
-      "az": -135.0,
-      "y": 1.05,
-      "h": 13.55,
+      "d": 1.7,
+      "az": 140.0,
+      "y": 1.25,
+      "h": 14.0,
       "at": [
        -7.482,
        12.38,
        -28.068
       ]
      },
-     "fov": 42,
+     "fov": 40,
      "roll": 0
     }
    ],
@@ -5944,7 +5957,7 @@
      ]
     },
     "lantern_room": 1,
-    "her_key": 0.55,
+    "her_key": 0.9,
     "post": {
      "glow": 0.15,
      "vignette": 0.45,
@@ -5959,7 +5972,10 @@
     ],
     "arm_current": [
      159.9
-    ]
+    ],
+    "her_rim": "#ffcf8a",
+    "her_rim_i": 2.2,
+    "her_light": 0.8
    },
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
    "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop",
@@ -5967,10 +5983,10 @@
     {
      "at": 0.0,
      "aim": {
-      "d": 3.0,
-      "az": 105.0,
+      "d": 2.2,
+      "az": 100.0,
       "y": 1.0,
-      "h": 13.3,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -5983,26 +5999,26 @@
     {
      "at": 1.9,
      "aim": {
-      "d": 2.8,
-      "az": 130.0,
+      "d": 2.0,
+      "az": 125.0,
       "y": 1.05,
-      "h": 13.5,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
        -28.068
       ]
      },
-     "fov": 42,
+     "fov": 44,
      "roll": 0
     },
     {
      "at": 5.13,
      "aim": {
-      "d": 2.6,
-      "az": 155.0,
+      "d": 1.8,
+      "az": 140.0,
       "y": 1.15,
-      "h": 13.75,
+      "h": 14.0,
       "at": [
        -7.482,
        12.38,
@@ -6239,12 +6255,15 @@
       "#ffd9f0"
      ]
     ],
-    "her_key": 0.55,
+    "her_key": 0.9,
     "post": {
      "glow": 0.15,
      "vignette": 0.45,
      "dof_auto": 1
-    }
+    },
+    "her_rim": "#ffcf8a",
+    "her_rim_i": 2.2,
+    "her_light": 0.8
    },
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
    "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop",
@@ -6252,10 +6271,10 @@
     {
      "at": 0.0,
      "aim": {
-      "d": 3.0,
-      "az": 5.0,
+      "d": 2.8,
+      "az": 15.0,
       "y": 1.0,
-      "h": 13.3,
+      "h": 14.1,
       "at": [
        -7.482,
        12.38,
@@ -6268,27 +6287,10 @@
     {
      "at": 2.37,
      "aim": {
-      "d": 4.6,
-      "az": 20.0,
-      "y": 1.0,
-      "h": 13.6,
-      "at": [
-       -7.482,
-       12.38,
-       -28.068
-      ]
-     },
-     "fov": 40,
-     "roll": 0,
-     "ease": "out"
-    },
-    {
-     "at": 5.1,
-     "aim": {
       "d": 3.6,
-      "az": 15.0,
+      "az": 7.0,
       "y": 1.0,
-      "h": 13.4,
+      "h": 14.15,
       "at": [
        -7.482,
        12.38,
@@ -6296,6 +6298,23 @@
       ]
      },
      "fov": 42,
+     "roll": 0,
+     "ease": "out"
+    },
+    {
+     "at": 5.1,
+     "aim": {
+      "d": 3.0,
+      "az": 15.0,
+      "y": 1.0,
+      "h": 14.1,
+      "at": [
+       -7.482,
+       12.38,
+       -28.068
+      ]
+     },
+     "fov": 44,
      "roll": 0,
      "ease": "in"
     }
@@ -6376,12 +6395,15 @@
     "grade_to": "war_white",
     "grade_at": 175.5,
     "grade_s": 1.6,
-    "her_key": 0.55,
+    "her_key": 0.9,
     "post": {
      "glow": 0.15,
      "vignette": 0.45,
      "dof_auto": 1
-    }
+    },
+    "her_rim": "#ffcf8a",
+    "her_rim_i": 2.2,
+    "her_light": 0.8
    },
    "why_fix_lamp": "toki 2026-10-28 'die gesamte leuchtturm scene ... die letzten 30 sek': she stood BEHIND the lamp - the glowing lamp between every lens and her, close lenses squeezed into her hair. She stands in front of it again (the silhouette's place), every lens moved with her, none closer than 0.75 m",
    "why_fix_light": "take 13 look-critic FIX 3 + brief-keeper (lamp room cream on cream, 'kein Ueberstrahlen'): bloom 0.6 -> 0.15, beam 0.6, the white ramp only in the last 1.6 s before the stop",
@@ -6389,10 +6411,10 @@
     {
      "at": 0.0,
      "aim": {
-      "d": 3.6,
+      "d": 3.2,
       "az": 15.0,
       "y": 1.0,
-      "h": 13.2,
+      "h": 14.1,
       "at": [
        -7.482,
        12.38,
@@ -6405,10 +6427,10 @@
     {
      "at": 0.03,
      "aim": {
-      "d": 3.1,
+      "d": 2.7,
       "az": 15.0,
       "y": 1.0,
-      "h": 13.2,
+      "h": 14.1,
       "at": [
        -7.482,
        12.38,
@@ -6421,10 +6443,10 @@
     {
      "at": 0.5,
      "aim": {
-      "d": 3.0,
+      "d": 2.6,
       "az": 11.0,
       "y": 1.0,
-      "h": 13.2,
+      "h": 14.1,
       "at": [
        -7.482,
        12.38,
@@ -6437,10 +6459,10 @@
     {
      "at": 1.9,
      "aim": {
-      "d": 2.8,
-      "az": 110.0,
+      "d": 2.2,
+      "az": 105.0,
       "y": 1.0,
-      "h": 13.0,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -6453,10 +6475,10 @@
     {
      "at": 1.95,
      "aim": {
-      "d": 2.7,
-      "az": 113.0,
+      "d": 2.1,
+      "az": 107.0,
       "y": 1.0,
-      "h": 13.0,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -6469,10 +6491,10 @@
     {
      "at": 3.72,
      "aim": {
-      "d": 2.8,
-      "az": 145.0,
+      "d": 2.0,
+      "az": 125.0,
       "y": 1.1,
-      "h": 13.4,
+      "h": 13.95,
       "at": [
        -7.482,
        12.38,
@@ -6485,33 +6507,33 @@
     {
      "at": 3.8,
      "aim": {
-      "d": 2.6,
-      "az": 160.0,
-      "y": 1.25,
-      "h": 13.95,
+      "d": 1.65,
+      "az": 135.0,
+      "y": 1.3,
+      "h": 14.0,
       "at": [
        -7.482,
        12.38,
        -28.068
       ]
      },
-     "fov": 28,
+     "fov": 32,
      "roll": 0
     },
     {
      "at": 4.7,
      "aim": {
-      "d": 2.4,
-      "az": 160.0,
-      "y": 1.25,
-      "h": 13.95,
+      "d": 1.5,
+      "az": 135.0,
+      "y": 1.3,
+      "h": 14.0,
       "at": [
        -7.482,
        12.38,
        -28.068
       ]
      },
-     "fov": 26,
+     "fov": 30,
      "roll": 0
     }
    ],
