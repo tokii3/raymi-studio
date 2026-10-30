@@ -47,3 +47,5 @@ build: toki 2026-10-30 "Ja, weiter" (auf: Laternenraum neu bauen, Raymi im Ende 
 
 ## 2026-10-30 (Nachtrag zu Take 18)
 "NEIN HÖR AUF IMMER NUR EINZELNE STELLEN AN ZU SCHAUEN DU SOLLST DIR DAS GESAMTE VIDEO IMMER ANSCHAUEN SO OFT HABE ICH DAS GESAGT ANSCHAUEN UND RELAISTISCH BEWERTEN NICHT NACH CODE DU SCHAUST IMMER NUR DREI BILDER AN FÜR DAS GANZE MV DU ARBEITEST NIE RICHTIG HÖR AUF IMMER ALLES EINFACH ZU AMCHEN WIE OFT NOCH WIE OFT NOCH WIE OFT DENN NOCH"
+
+build: toki 2026-10-30 "Letzter Durchgang" (ganzer Film: Schnitte und Ideen des Endes zurück, Loch 88-96 s, Sprung aus dem Wasser neu, Klettern prüfen, ganzen Film rendern und selbst komplett ansehen)
