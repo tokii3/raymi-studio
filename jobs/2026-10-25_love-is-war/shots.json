@@ -5365,8 +5365,8 @@
     {
      "at": 0.0,
      "aim": {
-      "d": 1.65,
-      "az": 135.0,
+      "d": 1.5,
+      "az": 170.0,
       "y": 1.18,
       "h": 13.62,
       "at": [
@@ -5382,7 +5382,7 @@
      "at": 1.87,
      "aim": {
       "d": 1.5,
-      "az": 135.0,
+      "az": 170.0,
       "y": 1.18,
       "h": 13.62,
       "at": [
@@ -5416,7 +5416,8 @@
       "angry": 1
      },
      "at": 0.0,
-     "face_lens": true
+     "face_lens": true,
+     "aware": 0.7
     }
    ]
   },
@@ -6507,8 +6508,8 @@
     {
      "at": 3.8,
      "aim": {
-      "d": 1.65,
-      "az": 135.0,
+      "d": 1.5,
+      "az": 170.0,
       "y": 1.18,
       "h": 13.62,
       "at": [
@@ -6524,7 +6525,7 @@
      "at": 4.7,
      "aim": {
       "d": 1.5,
-      "az": 135.0,
+      "az": 170.0,
       "y": 1.18,
       "h": 13.62,
       "at": [
@@ -6555,7 +6556,8 @@
      ],
      "clip_from": 0.248,
      "at": 0.0,
-     "face_lens": true
+     "face_lens": true,
+     "aware": 0.7
     },
     {
      "clip": "pull-heavy-object",
@@ -6574,7 +6576,8 @@
      ],
      "act": "lean",
      "at": 1.9,
-     "face_lens": true
+     "face_lens": true,
+     "aware": 0.7
     },
     {
      "clip": "pull-heavy-object",
@@ -6595,7 +6598,8 @@
      "expr": {
       "angry": 0.8
      },
-     "at": 3.767
+     "at": 3.767,
+     "aware": 0.7
     }
    ],
    "low_ok": "ECUs of her eyes 0.3-1.2 m away on the beam axis while she leans back on the lamp: the frame holds her face only"

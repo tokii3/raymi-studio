@@ -1,34 +1,18 @@
 {
- "_why": "take 17 check: new lantern (iron, glass lens drum, dark cap), her closer + lit by the lamp, no orange flip, no orphan foam ring",
+ "_why": "take 17 close-ups: face from the lamp side + head lifted",
  "format": "mv",
  "frames": [
-  3615,
-  3954,
-  4026,
-  4104,
-  4185,
-  4269,
-  4536,
-  4659,
-  4758,
-  4950,
-  5100,
-  5304
+  4248,
+  4278,
+  5295,
+  5310
  ],
  "names": [
-  "e00_120",
-  "e01_132",
-  "e02_134",
-  "e03_137",
-  "e04_140",
-  "e05_142",
-  "e06_151",
-  "e07_155",
-  "e08_159",
-  "e09_165",
-  "e10_170",
-  "e11_177"
+  "k1",
+  "k2",
+  "k3",
+  "k4"
  ],
  "scale": 0.5,
- "round": "t17"
+ "round": "t17b"
 }
