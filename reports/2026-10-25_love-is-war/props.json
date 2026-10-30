@@ -8746,12 +8746,12 @@
      "f": 1761,
      "pos": [
       0.0,
-      -1.9965,
+      -2.7465,
       2.8978
      ],
      "look": [
       0.0,
-      -1.22,
+      -1.97,
       0.0
      ],
      "fov": 40.0,
@@ -8880,7 +8880,7 @@
     "grade_at": 1759,
     "grade_s": 3.547,
     "calm": "riser 1: one push on one axis to her eyes (ECU, her limbs out of frame) - the build is the camera and the grade",
-    "her_off": "not off: the guard sees her key height, her real height is measured on the stills (the clip lifts her)",
+    "her_off": "not off: the guard sees her key height, her eyes are measured on the stills",
     "depth": 0.8
    },
    "camera": [
@@ -8888,12 +8888,12 @@
      "f": 1770,
      "pos": [
       0.0,
-      -1.3105,
+      -2.0605,
       1.2948
      ],
      "look": [
       0.0,
-      -1.22,
+      -1.97,
       0.0
      ],
      "fov": 40.0,
@@ -8905,12 +8905,12 @@
      "f": 1774,
      "pos": [
       0.0,
-      -1.2967,
+      -2.0467,
       1.0973
      ],
      "look": [
       0.0,
-      -1.22,
+      -1.97,
       0.0
      ],
      "fov": 40.0,
@@ -8922,12 +8922,12 @@
      "f": 1789,
      "pos": [
       0.0,
-      -1.2891,
+      -2.0391,
       0.9876
      ],
      "look": [
       0.0,
-      -1.22,
+      -1.97,
       0.0
      ],
      "fov": 40.0,
@@ -9056,7 +9056,7 @@
     "grade_at": 1759,
     "grade_s": 3.547,
     "calm": "riser 1: one push on one axis to her eyes (ECU, her limbs out of frame) - the build is the camera and the grade",
-    "her_off": "not off: the guard sees her key height, her real height is measured on the stills (the clip lifts her)",
+    "her_off": "not off: the guard sees her key height, her eyes are measured on the stills",
     "depth": 0.8
    },
    "camera": [
@@ -9064,12 +9064,12 @@
      "f": 1789,
      "pos": [
       0.0,
-      -2.1692,
+      -2.0392,
       0.9896
      ],
      "look": [
       0.0,
-      -2.1,
+      -1.97,
       0.0
      ],
      "fov": 40.0,
@@ -9155,7 +9155,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "27b",
    "from": 1803,
    "to": 1817,
@@ -9199,21 +9198,21 @@
     "grade_at": 1759,
     "grade_s": 3.547,
     "calm": "riser 1: one push on one axis to her eyes (ECU, her limbs out of frame) - the build is the camera and the grade",
-    "her_off": "not off: the guard sees her key height, her real height is measured on the stills (the clip lifts her)",
+    "her_off": "not off: the guard sees her key height, her eyes are measured on the stills",
     "depth": 0.8
    },
    "camera": [
     {
      "f": 1803,
      "pos": [
-      0.032,
-      -2.4289,
-      0.6442
+      0.0,
+      -2.0219,
+      0.7422
      ],
      "look": [
-      0.032,
-      -2.377,
-      -0.098
+      0.0,
+      -1.97,
+      0.0
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -9298,7 +9297,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "27c",
    "from": 1817,
    "to": 1831,
@@ -9342,21 +9340,21 @@
     "grade_at": 1759,
     "grade_s": 3.547,
     "calm": "riser 1: one push on one axis to her eyes (ECU, her limbs out of frame) - the build is the camera and the grade",
-    "her_off": "not off: the guard sees her key height, her real height is measured on the stills (the clip lifts her)",
+    "her_off": "not off: the guard sees her key height, her eyes are measured on the stills",
     "depth": 0.8
    },
    "camera": [
     {
      "f": 1817,
      "pos": [
-      -0.006,
-      -2.4219,
-      0.4566
+      0.0,
+      -2.0089,
+      0.5566
      ],
      "look": [
-      0.044,
-      -2.383,
-      -0.1
+      0.05,
+      -1.97,
+      0.0
      ],
      "fov": 40.0,
      "roll": 3.0,
@@ -9441,7 +9439,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "27d",
    "from": 1831,
    "to": 1838,
@@ -9485,21 +9482,21 @@
     "grade_at": 1759,
     "grade_s": 3.547,
     "calm": "riser 1: one push on one axis to her eyes (ECU, her limbs out of frame) - the build is the camera and the grade",
-    "her_off": "not off: the guard sees her key height, her real height is measured on the stills (the clip lifts her)",
+    "her_off": "not off: the guard sees her key height, her eyes are measured on the stills",
     "depth": 0.8
    },
    "camera": [
     {
      "f": 1831,
      "pos": [
-      0.061,
-      -2.4084,
-      0.3459
+      0.0,
+      -2.0014,
+      0.4489
      ],
      "look": [
-      0.011,
-      -2.377,
-      -0.103
+      -0.05,
+      -1.97,
+      0.0
      ],
      "fov": 40.0,
      "roll": -3.0,
@@ -9584,7 +9581,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "27e",
    "from": 1838,
    "to": 1845,
@@ -9628,21 +9624,21 @@
     "grade_at": 1759,
     "grade_s": 3.547,
     "calm": "riser 1: one push on one axis to her eyes (ECU, her limbs out of frame) - the build is the camera and the grade",
-    "her_off": "not off: the guard sees her key height, her real height is measured on the stills (the clip lifts her)",
+    "her_off": "not off: the guard sees her key height, her eyes are measured on the stills",
     "depth": 0.8
    },
    "camera": [
     {
      "f": 1838,
      "pos": [
-      0.014,
-      -2.3984,
-      0.3549
+      0.0,
+      -2.0014,
+      0.4489
      ],
      "look": [
-      0.044,
-      -2.367,
-      -0.094
+      0.03,
+      -1.97,
+      0.0
      ],
      "fov": 40.0,
      "roll": 3.0,
@@ -9727,7 +9723,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "27f",
    "from": 1845,
    "to": 1852,
@@ -9771,21 +9766,21 @@
     "grade_at": 1759,
     "grade_s": 3.547,
     "calm": "riser 1: one push on one axis to her eyes (ECU, her limbs out of frame) - the build is the camera and the grade",
-    "her_off": "not off: the guard sees her key height, her real height is measured on the stills (the clip lifts her)",
+    "her_off": "not off: the guard sees her key height, her eyes are measured on the stills",
     "depth": 0.8
    },
    "camera": [
     {
      "f": 1845,
      "pos": [
-      0.045,
-      -2.3974,
-      0.3749
+      0.0,
+      -2.0014,
+      0.4489
      ],
      "look": [
-      0.015,
-      -2.366,
-      -0.074
+      -0.03,
+      -1.97,
+      0.0
      ],
      "fov": 40.0,
      "roll": -3.0,
@@ -9870,7 +9865,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "27g",
    "from": 1852,
    "to": 1859,
@@ -9914,21 +9908,21 @@
     "grade_at": 1759,
     "grade_s": 3.547,
     "calm": "riser 1: one push on one axis to her eyes (ECU, her limbs out of frame) - the build is the camera and the grade",
-    "her_off": "not off: the guard sees her key height, her real height is measured on the stills (the clip lifts her)",
+    "her_off": "not off: the guard sees her key height, her eyes are measured on the stills",
     "depth": 0.8
    },
    "camera": [
     {
      "f": 1852,
      "pos": [
-      0.03,
-      -2.4014,
-      0.3519
+      0.0,
+      -2.0014,
+      0.4489
      ],
      "look": [
-      0.03,
-      -2.37,
-      -0.097
+      0.0,
+      -1.97,
+      0.0
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -10013,7 +10007,6 @@
    "mouth": {
     "gain": 1.0
    },
-   "fitted": true,
    "id": "27h",
    "from": 1859,
    "to": 1865,
@@ -10057,21 +10050,21 @@
     "grade_at": 1759,
     "grade_s": 3.547,
     "calm": "riser 1: one push on one axis to her eyes (ECU, her limbs out of frame) - the build is the camera and the grade",
-    "her_off": "not off: the guard sees her key height, her real height is measured on the stills (the clip lifts her)",
+    "her_off": "not off: the guard sees her key height, her eyes are measured on the stills",
     "depth": 0.8
    },
    "camera": [
     {
      "f": 1859,
      "pos": [
-      0.03,
-      -2.3743,
-      0.2272
+      0.0,
+      -1.9923,
+      0.3192
      ],
      "look": [
-      0.03,
-      -2.352,
-      -0.092
+      0.0,
+      -1.97,
+      0.0
      ],
      "fov": 40.0,
      "roll": 0.0,
@@ -10181,6 +10174,7 @@
     },
     "freeze": true,
     "drop_hang": 1,
+    "her_off": "not off: the guard sees her key height, her eyes are measured on the stills",
     "depth": 0.8
    },
    "camera": [
@@ -10188,12 +10182,12 @@
      "f": 1865,
      "pos": [
       0.022,
-      -1.5188,
+      -2.2688,
       0.4394
      ],
      "look": [
       0.022,
-      -1.432,
+      -2.182,
       -0.053
      ],
      "fov": 40.0,
@@ -13581,11 +13575,11 @@
      "f": 2470,
      "pose": "stand",
      "pos": [
-      0.1739,
+      0.1949,
       -0.4,
-      -0.0881
+      -0.0064
      ],
-     "rotY": 296.9,
+     "rotY": 271.9,
      "height": 1.55,
      "blend": 8,
      "act": "idle",
@@ -13597,9 +13591,9 @@
      "aware": 0.25,
      "ground": false,
      "drift": [
-      -0.1338,
+      -0.1499,
       0.0,
-      0.0678
+      0.0049
      ],
      "clipFrom": 1.0,
      "speed": 0.3,
@@ -13608,6 +13602,19 @@
      }
     }
    ],
+   "track": {
+    "v": [
+     -0.1499,
+     0.0,
+     0.0049
+    ],
+    "mid": 2509,
+    "lead": [
+     -0.3141,
+     0.0,
+     0.2356
+    ]
+   },
    "mouth": {
     "gain": 1.0
    },
@@ -13677,15 +13684,15 @@
      "f": 2470,
      "pos": [
       0.3,
-      3.0,
+      2.0,
       0.4
      ],
      "look": [
       0.0,
-      -0.4,
+      0.2,
       0.0
      ],
-     "fov": 44.0,
+     "fov": 46.0,
      "roll": 0.0,
      "ease": "inOut",
      "observer": 1.0
@@ -13693,16 +13700,16 @@
     {
      "f": 2548,
      "pos": [
-      0.3,
-      3.0,
-      0.4
+      0.25,
+      1.8,
+      0.35
      ],
      "look": [
       0.0,
-      -0.4,
+      0.2,
       0.0
      ],
-     "fov": 44.0,
+     "fov": 46.0,
      "roll": 20.0,
      "ease": "inOut",
      "observer": 1.0
@@ -14364,7 +14371,7 @@
      "pose": "stand",
      "pos": [
       -6.8,
-      4.2,
+      1.6,
       -24.7
      ],
      "rotY": 20.5,
@@ -14391,7 +14398,7 @@
      "pose": "stand",
      "pos": [
       -6.8,
-      4.2,
+      1.6,
       -24.7
      ],
      "rotY": "lens",
@@ -14419,7 +14426,7 @@
      "pose": "stand",
      "pos": [
       -4.8,
-      4.2,
+      1.6,
       -24.0
      ],
      "rotY": "lens",
@@ -14497,14 +14504,14 @@
     {
      "f": 2813,
      "pos": [
-      -2.2748,
-      5.0,
-      -19.8221
+      -3.0561,
+      3.0,
+      -20.7533
      ],
      "look": [
-      -5.4071,
-      4.4,
-      -25.1653
+      -5.5596,
+      2.2,
+      -25.0374
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -14514,14 +14521,14 @@
     {
      "f": 2817,
      "pos": [
-      -2.8798,
-      5.0,
-      -20.5432
+      -3.5497,
+      3.0,
+      -21.3415
      ],
      "look": [
-      -5.4071,
-      4.4,
-      -25.1653
+      -5.5596,
+      2.2,
+      -25.0374
      ],
      "fov": 50.0,
      "roll": 0.0,
@@ -14531,14 +14538,14 @@
     {
      "f": 2885,
      "pos": [
-      -3.2166,
-      5.0,
-      -20.9445
+      -3.8253,
+      3.0,
+      -21.6699
      ],
      "look": [
-      -5.4071,
-      4.4,
-      -25.1653
+      -5.5596,
+      2.2,
+      -25.0374
      ],
      "fov": 50.0,
      "roll": 0.0,

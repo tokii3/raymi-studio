@@ -390,16 +390,11 @@
  },
  "picture_change_on_hits": {
   "hits": 29,
-  "changed": 22,
-  "share": 0.76,
+  "changed": 21,
+  "share": 0.72,
   "threshold": 6.0
  },
- "still_spans_s": [
-  [
-   82.37,
-   84.93
-  ]
- ],
+ "still_spans_s": [],
  "audio": {
   "input_i": "-14.12",
   "input_tp": "-3.90"
