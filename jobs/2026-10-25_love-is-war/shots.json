@@ -2291,8 +2291,8 @@
        "aim": {
         "d": 3.0,
         "az": 0,
-        "y": 1.38,
-        "el": -15,
+        "y": 1.53,
+        "el": -10,
         "at": "under"
        },
        "fov": 40,
@@ -2313,8 +2313,8 @@
      "aim": {
       "d": 1.1,
       "az": 0,
-      "y": 1.38,
-      "el": -4,
+      "y": 1.53,
+      "el": -10,
       "at": "under"
      },
      "fov": 40,
@@ -2327,7 +2327,7 @@
      "at": 0,
      "clip": "treading-water",
      "clip_from": 1.0,
-     "speed": 1.0,
+     "speed": 0.0,
      "motionMix": 1,
      "pos": "under",
      "face_lens": true,
@@ -2354,13 +2354,14 @@
     "grade_at": 58.62,
     "grade_s": 3.547,
     "calm": "riser 1: one push on one axis to her eyes (ECU, her limbs out of frame) - the build is the camera and the grade",
-    "her_off": "not off: the guard sees her key height, her eyes are measured on the stills"
+    "her_off": "not off: the guard sees her key height, her eyes are measured on the stills",
+    "freeze": true
    },
    "riser": {
     "aim": {
      "at": "under",
-     "y": 1.38,
-     "el": -4,
+     "y": 1.53,
+     "el": -10,
      "az": 0
     },
     "fov": 40,
@@ -3736,13 +3737,13 @@
     {
      "at": 0,
      "aim": {
-      "d": 4.2,
+      "d": 3.8,
       "az": 40,
-      "y": 0.6,
-      "h": 3.2,
+      "y": 0.7,
+      "h": 2.2,
       "at": [
        -6.2,
-       2.0,
+       1.0,
        -24.5
       ]
      },
@@ -3760,7 +3761,7 @@
      "motionMix": 1,
      "pos": [
       -6.8,
-      2.0,
+      0.9,
       -24.7
      ],
      "rotY": -160.0,
@@ -3774,7 +3775,7 @@
      "motionMix": 1,
      "pos": [
       -6.8,
-      2.0,
+      0.9,
       -24.7
      ],
      "face_lens": true,
@@ -3788,7 +3789,7 @@
      "motionMix": 1,
      "pos": [
       -4.8,
-      1.6,
+      0.9,
       -24.0
      ],
      "face_lens": true,
