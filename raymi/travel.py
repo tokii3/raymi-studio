@@ -204,7 +204,9 @@ def face_walls(rows: list[dict], warns: list[str], set_opts: dict | None = None)
                     warns.append(f"row {r.get('id')}: {m} climbs with no wall within 3 m - put her at the tower / the ledge")
                 else:
                     want = math.degrees(math.atan2(near[0] - p[0], near[1] - p[2]))
-                    k = {**k, "rotY": round(want, 1), "face_lens": False}
+                    # face_lens: the clip's own hip turn taken out, so she really faces rotY. Climb clips carry their own yaw (climbing-ladder
+                    # ~180 deg): with it left in she hung on the sea side with her back to the tower, three takes after toki said so
+                    k = {**k, "rotY": round(want, 1), "face_lens": True}
             keys.append(k)
         out.append({**r, "actor": keys})
     return out

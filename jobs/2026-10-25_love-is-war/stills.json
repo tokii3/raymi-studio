@@ -1,18 +1,20 @@
 {
- "_why": "take 17 close-ups: face from the lamp side + head lifted",
+ "_why": "toki 2026-10-30: 'klettert immernoch mit dem ruecken zum leuchtturm' - does she face the wall now? rock + ladder, full size",
  "format": "mv",
  "frames": [
-  4248,
-  4278,
-  5295,
-  5310
+  2685,
+  2775,
+  3756,
+  3786,
+  3816
  ],
  "names": [
-  "k1",
-  "k2",
-  "k3",
-  "k4"
+  "w0",
+  "w1",
+  "w2",
+  "w3",
+  "w4"
  ],
- "scale": 0.5,
- "round": "t17b"
+ "scale": 1,
+ "round": "wall"
 }
