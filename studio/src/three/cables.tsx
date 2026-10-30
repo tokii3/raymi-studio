@@ -17,7 +17,7 @@ export function cablePath(i: number, seed: number): THREE.CatmullRomCurve3 {
   for (let k = 0; k <= 8; k++) {
     const u = k / 8, z = -70 + u * 78;                     // from the far dark to just past the lens side
     const x = x0 + (x1 - x0) * u + Math.sin(u * 7 + i) * 1.2;
-    pts.push(new THREE.Vector3(x, 0.03 + 0.03 * Math.sin(k * 2.3 + i), z));   // half sunk in the sand (seabed.tsx berms)
+    pts.push(new THREE.Vector3(x, 0.1 + 0.03 * Math.sin(k * 2.3 + i), z));   // half sunk in the sand (seabed.tsx berms)
   }
   return new THREE.CatmullRomCurve3(pts);
 }

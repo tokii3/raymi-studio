@@ -106,7 +106,7 @@ export const Seabed: React.FC<{o: Record<string, unknown>; f: number; fps: numbe
           const sgn = rnd(i * 13 + k) > 0.5 ? 1 : -1, off = r * 2.2 + 0.25 + rnd(i * 17 + k) * 1.6;
           const q: P3 = [p.x + side.x * off * sgn, 0, p.z + side.z * off * sgn];
           // the berm: sand pushed up along the cable, so it lies IN the floor, not on it
-          items.push(<mesh key={`b${k}`} position={[p.x, -0.02, p.z]} rotation={[0, Math.atan2(tg.x, tg.z), 0]} scale={[r * 3.4, r * 1.1, 1.5]}
+          items.push(<mesh key={`b${k}`} position={[p.x, -0.04, p.z]} rotation={[0, Math.atan2(tg.x, tg.z), 0]} scale={[r * 3.2, r * 0.35, 1.5]}
             material={toon(SAND_DARK)} receiveShadow><sphereGeometry args={[1, 10, 6, 0, Math.PI * 2, 0, Math.PI / 2]} /></mesh>);
           const roll = rnd(i * 7 + k * 3);
           if (roll < 0.45) {

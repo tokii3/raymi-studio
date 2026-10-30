@@ -938,7 +938,7 @@ def under_skirt(ckeys: list[dict], actor: list[dict], tag: str) -> list[str]:
         cam, look = ck["pos"], ck["look"]
         dist = math.hypot(cam[0] - p[0], cam[2] - p[2])
         if cam[1] - p[1] < LOW_LENS * h and dist < LOW_NEAR and look[1] > cam[1]:
-            out.append(f"{tag}: the lens at {cam[1] - p[1]:.2f} m, {dist:.1f} m from her, looks up her skirt - go wider "
+            out.append(f"{tag} f{ck['f']}: the lens at {cam[1] - p[1]:.2f} m, {dist:.1f} m from her, looks up her skirt - go wider "
                        f"(>= {LOW_NEAR} m) or higher (>= {LOW_LENS * h:.2f} m), or \"low_ok\": \"<why>\"")
     return out
 

@@ -200,7 +200,7 @@
       "d": 3.0,
       "az": 25,
       "y": 0.9,
-      "h": 0.15,
+      "h": 0.75,
       "at": [
        0.0,
        0.62,
@@ -216,7 +216,7 @@
       "d": 2.6,
       "az": 30,
       "y": 0.5,
-      "h": 0.15,
+      "h": 0.75,
       "at": [
        0.0,
        0.62,
@@ -946,7 +946,7 @@
         "d": 1.8,
         "az": 10,
         "y": 0.0,
-        "h": 0.12,
+        "h": 0.75,
         "at": [
          0.0,
          0.62,
@@ -1057,7 +1057,7 @@
         "d": 1.6,
         "az": 90,
         "y": 0.0,
-        "h": 0.52,
+        "h": 0.75,
         "at": [
          0.0,
          0.62,
@@ -1090,7 +1090,7 @@
       "d": 1.5,
       "az": 0,
       "y": 0.0,
-      "h": 0.42,
+      "h": 0.75,
       "at": [
        0.0,
        0.62,
@@ -1106,7 +1106,7 @@
       "d": 1.2,
       "az": 0,
       "y": 0.0,
-      "h": 0.42,
+      "h": 0.75,
       "at": [
        0.0,
        0.62,
@@ -2291,7 +2291,7 @@
        "aim": {
         "d": 3.0,
         "az": 0,
-        "y": 2.12,
+        "y": 2.28,
         "el": -15,
         "at": "under"
        },
@@ -2313,7 +2313,7 @@
      "aim": {
       "d": 1.1,
       "az": 0,
-      "y": 2.12,
+      "y": 2.28,
       "el": -4,
       "at": "under"
      },
@@ -2460,7 +2460,7 @@
      "aim": {
       "d": 0.5,
       "az": 0,
-      "y": 2.12,
+      "y": 2.28,
       "el": -10,
       "at": "under"
      },
@@ -3659,13 +3659,13 @@
     {
      "at": 0,
      "aim": {
-      "d": 3.2,
+      "d": 3.0,
       "az": -100,
-      "y": 1.2,
-      "h": 1.8,
+      "y": 1.9,
+      "h": 2.2,
       "at": [
        -6.9,
-       0,
+       0.3,
        -24.4
       ]
      },
@@ -3675,13 +3675,13 @@
     {
      "at": 3.14,
      "aim": {
-      "d": 3.4,
+      "d": 3.0,
       "az": -96,
-      "y": 1.2,
-      "h": 4.3,
+      "y": 1.9,
+      "h": 5.2,
       "at": [
        -6.9,
-       3.0,
+       3.3,
        -24.4
       ]
      },
@@ -3694,70 +3694,29 @@
    "actor": [
     {
      "at": 0,
-     "clip": "climbing-up-wall",
-     "clip_from": 1.0,
+     "clip": "climbing-ladder",
+     "clip_from": 0,
      "speed": 1.0,
      "motionMix": 1,
      "pos": [
       -6.9,
-      0.0,
+      0.3,
       -24.4
      ],
      "rotY": -165.0,
-     "ground": false
+     "ground": false,
+     "travel": 0,
+     "expr": {
+      "angry": 0.8
+     }
     }
    ],
    "opts": {
     "rain_at": 84.933,
     "rain_end_at": 999.0,
     "rain_streak": 1,
-    "rock_wall": 1
-   },
-   "stutter": {
-    "onsets": [
-     89.17,
-     89.3,
-     89.47,
-     89.63
-    ],
-    "cams": [
-     [
-      {
-       "at": 0,
-       "aim": {
-        "d": 1.6,
-        "az": 20,
-        "y": 1.2,
-        "h": 0.9,
-        "at": [
-         -6.9,
-         0.0,
-         -24.4
-        ]
-       },
-       "fov": 48,
-       "roll": 0
-      }
-     ],
-     [
-      {
-       "at": 0,
-       "aim": {
-        "d": 0.8,
-        "az": 20,
-        "y": 1.4,
-        "h": 1.2,
-        "at": [
-         -6.9,
-         0.0,
-         -24.4
-        ]
-       },
-       "fov": 48,
-       "roll": 0
-      }
-     ]
-    ]
+    "rock_wall": 1,
+    "her_off": "not off: the guard sees her key height, the clip lifts her (stills)"
    },
    "why_fix": "take 13 critics 'dark on dark rock': the lens stood INSIDE the rock (az 20 toward it) - now beside her on the open side, she faces the rock (face_walls)"
   },
@@ -7558,8 +7517,8 @@
    "actor": [
     {
      "at": 0,
-     "clip": "long-yell-while-standing-leaning-back",
-     "clip_from": 1.0,
+     "clip": "yelling-while-standing-leaning-forward",
+     "clip_from": 0.6,
      "speed": 1,
      "motionMix": 1,
      "pos": [
@@ -7570,7 +7529,7 @@
      "rotY": 170.0,
      "face_lens": true,
      "expr": {
-      "angry": 0.9
+      "angry": 1
      },
      "travel": 0
     }
