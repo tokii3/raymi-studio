@@ -1132,9 +1132,19 @@
  {
   "id": "53",
   "from_s": 120.37,
-  "to_s": 121.9,
+  "to_s": 121.1,
   "set": "nightsea",
   "why": "the second war begins: the slow-motion leap - no cuts, the riser goes on as LIGHT (rain halo 20 -> 90 % white)",
+  "words": "",
+  "transition_out": "cut",
+  "hero": []
+ },
+ {
+  "id": "53b",
+  "from_s": 121.1,
+  "to_s": 121.9,
+  "set": "nightsea",
+  "why": "the leap is not shown: the spray where she was",
   "words": "",
   "transition_out": "cut",
   "hero": []
