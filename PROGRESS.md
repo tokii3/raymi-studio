@@ -1,5 +1,18 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-30 - Love is War takes 17-18: lantern rebuilt, her readable in the lamp room
+- toki "Ja, weiter" (lantern new, her bigger + brighter in the end).
+- Lantern (painted.tsx LanternRoom): dark iron base / column / thin frame, a glass prism lens drum with brass rings round
+  the flame, a dark copper dome with vent + ball (the red cone + amber disc read as a gazebo). The foam collar only
+  where she is in the water (pool_pos) - it lay on the sea as an orphan dashed target.
+- travel.py compose_thirds: the shift per camera key (one shift from the wide first key pushed her out of the edge when
+  the lens pushed in). Lamp room lenses 1.6-2.4 m above the rail, close-ups at eye level from the lamp side, head lifted
+  to the lens (aware 0.7), warm lamp rim, no orange colour flip.
+- Take 18 excerpt (render run 91): she hauls the cable at medium size, face lit by the lamp in the close-ups, the lantern
+  reads. Gate FAIL (reviews/end18_*): critics still find her small / dark / behind rails in the climb + opening
+  pictures, the seabed without a readable cable, rain bars + flat sea strips + MMD hair + blown skin = mixed styles,
+  no lens attack / melody element. Sent FAIL-marked with a before / after.
+
 ## 2026-10-29 - Love is War takes 15-16: the lighthouse END from the climb (122.6 s), vector graphics out, seabed
 - toki on take 14 (toki.md verbatim): vector graphics (lines, spikes round her face) out; cable under the sea boring /
   empty / no depth; the WHOLE lighthouse end from the climb unclean (only 147-177 had ever been worked on); hair odd;

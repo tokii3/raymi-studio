@@ -22,3 +22,13 @@ Open (critics end16_* + my own look):
 5. Melody class (C4) still has no element in this passage (melody_on_her chest lights not in these rows).
 6. Climb: the ladder clip rises ~0.75 m a cycle (rootAt) - measure climbing-ladder in root_travel.json.
 7. The landing (122.6) still has concentric water rings around her (NightSea waterline / pulses) - remove.
+
+## Update 2026-10-30 (takes 17-18)
+Done: lantern rebuilt, close-ups with her face, thirds per key, no orange flip, no orphan foam collar.
+Take 18 (render run 91), reviews/end18_* all FAIL. What is left is mostly NOT this passage's staging but the film's look:
+1. The world's style: flat stacked sea strips, white rain bars, a photoreal beam fog, a toon girl - "four hands" (look).
+   A look pass over the whole film (look-designer + references): rain in the set's blue, the sea with volume/foam,
+   one beam language, skin capped at ~80 % (blown in close light), coloured shadows, contact shadows.
+2. The climb + first lamp pictures still show her small (d 5-7); the critics want her face >= 0.12 of the frame there too.
+3. Seabed: the pulse ride shows no readable cable - lens 0.6 m from cable 0 and the seam brighter.
+4. Lens attack / melody element in 122-177 (C2 / C4 of the brief) - the fx-designer should place 2-3 moments.
