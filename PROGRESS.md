@@ -1,5 +1,18 @@
 # PROGRESS - Raymi Studio (newest first, kept short - a new entry ALWAYS goes directly under this title)
 
+## 2026-10-30 (later) - Love is War takes 19-22: last pass over the whole film (toki "Letzter Durchgang")
+- toki on take 18 (toki.md verbatim): boring; she flies spread-legged out of the water; climbs with her back to the tower;
+  "immer nur einzelne Stellen" - watch the WHOLE video. Screening skill + memory watch-the-whole-film: whole film at 3 fps
+  read by me before any critic or delivery (done on takes 19, 21, 22).
+- Root causes found by eye: face_walls set face_lens false (the climb clip's own yaw turned her back to the wall); the climb
+  clip drifted off the ladder (key "root": false, rise by the key); my lamp-room restage had thrown away the cuts toki liked
+  (now a moving set of 10 pictures on the old cut points, two roar attacks); stale frame_fits on the riser.
+- Leap not shown any more: roar to the lens, cut + flash + spray, empty water, the silence, the landing. Rock: lens follows.
+  Cables dark with a seam, on flat sand, low ride with her face between.
+- Take 22 (run 95, whole film): gate FAIL, brief-keeper BLOCK, look + motion FAIL (reviews/film22_*). Open: dark frames, Raymi
+  small in the wide pictures, rain / dash sticks, flat sea, no melody element, the two swim insets on blank blue
+  at 82-85 s, the very end's back view (toki: "ganz ende ist ok"). Sent FAIL-marked: the decision to stop or go on is toki's.
+
 ## 2026-10-30 - Love is War takes 17-18: lantern rebuilt, her readable in the lamp room
 - toki "Ja, weiter" (lantern new, her bigger + brighter in the end).
 - Lantern (painted.tsx LanternRoom): dark iron base / column / thin frame, a glass prism lens drum with brass rings round

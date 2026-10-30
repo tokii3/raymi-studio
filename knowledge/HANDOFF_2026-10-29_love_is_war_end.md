@@ -32,3 +32,7 @@ Take 18 (render run 91), reviews/end18_* all FAIL. What is left is mostly NOT th
 2. The climb + first lamp pictures still show her small (d 5-7); the critics want her face >= 0.12 of the frame there too.
 3. Seabed: the pulse ride shows no readable cable - lens 0.6 m from cable 0 and the seam brighter.
 4. Lens attack / melody element in 122-177 (C2 / C4 of the brief) - the fx-designer should place 2-3 moments.
+
+## Update 2026-10-30 evening (take 22, whole film, release render-2026-10-25_love-is-war-95)
+Gate FAIL, reviews/film22_*. Sent to toki FAIL-marked. No further work without her word. What is left is the look of the
+whole film, not staging: rain and dash sticks (setfx / PaintedDeep), flat sea cards, dark frames, one light, melody element.
