@@ -44,3 +44,10 @@ describe every frame in one sentence BEFORE judging, name the weakest shot. Meas
   independent critics count.
 - Never call something done because tests / guards are green.
 - A check that passed a video toki rejected is broken: recalibrate it on that video + the professional references.
+
+## Hard rule: the whole film, by eye, first (toki 2026-10-30)
+Before any critic, number or delivery: read the WHOLE film myself at >= 3 frames a second (5x4 sheets, every sheet, also the
+parts I did not touch) and write per passage what she really does. Check each action against the world: which way she faces,
+what she touches, how she enters and leaves a place. Compare with what toki last praised. An excerpt is never a verdict
+on the film. Stills cannot judge smoothness: say so. Reason: she flew spread-legged out of the water and climbed with her back
+to the tower for several takes, on my own sheets, because I only looked for whether my fix worked.

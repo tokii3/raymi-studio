@@ -44,3 +44,6 @@ build: toki 2026-10-30 "Ja, weiter" (auf: Laternenraum neu bauen, Raymi im Ende 
 
 ## 2026-10-30 (zu Take 18)
 "ja also jetzt ist es halt total langweilig, es sieht total komisch aus wie raymi aus dem wasser springt sie fliegt einfach raus ich kann langsam nicht mehr wir müssen bald abbrechen wenn das so weiter geht, fast 20 runs und die kritik dreht sich mal wieder im kreis es wird wieder nur an zahlen gemessen anstatt das bild an zu schauen warum fällt icht auf dass raymi einfach breitbeinig aus dem wasser fliegt sie klrettert immernoch mit dem rücken zum leuchtturm das wurde schon 3 mal gesagt aber du machst es wieder absichtlich schlecht warum arbeitest du gegen mich"
+
+## 2026-10-30 (Nachtrag zu Take 18)
+"NEIN HÖR AUF IMMER NUR EINZELNE STELLEN AN ZU SCHAUEN DU SOLLST DIR DAS GESAMTE VIDEO IMMER ANSCHAUEN SO OFT HABE ICH DAS GESAGT ANSCHAUEN UND RELAISTISCH BEWERTEN NICHT NACH CODE DU SCHAUST IMMER NUR DREI BILDER AN FÜR DAS GANZE MV DU ARBEITEST NIE RICHTIG HÖR AUF IMMER ALLES EINFACH ZU AMCHEN WIE OFT NOCH WIE OFT NOCH WIE OFT DENN NOCH"
