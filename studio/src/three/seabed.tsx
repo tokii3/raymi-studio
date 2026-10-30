@@ -47,7 +47,8 @@ const floorGeo = (() => {
     for (let i = 0; i < p.count; i++) {
       const x = p.getX(i), z = p.getZ(i);
       // long dunes + small ripples; the floor falls away slowly into the distance (a slope reads as depth)
-      p.setY(i, 0.35 * Math.sin(x * 0.11 + 1.3) * Math.cos(z * 0.08) + 0.06 * Math.sin(x * 0.7 + z * 0.4) - 0.08 + Math.min(0, z + 20) * 0.03);
+      // flat near the cables: dunes of 0.35 m buried them (they lie at y 0.03; take 18 last-pass stills: no cable in the ride)
+      p.setY(i, 0.05 * Math.sin(x * 0.11 + 1.3) * Math.cos(z * 0.08) + 0.03 * Math.sin(x * 0.7 + z * 0.4) - 0.1 + Math.min(0, z + 40) * 0.02);
     }
     g.computeVertexNormals();
     return g;
