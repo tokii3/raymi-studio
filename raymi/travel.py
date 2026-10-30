@@ -170,8 +170,12 @@ def compose_thirds(rows: list[dict]) -> list[dict]:
         fh = 2 * float(c0["aim"].get("d", 2.0)) * math.tan(math.radians(float(c0.get("fov", 40))) / 2)
         if not COMPOSE_H[0] <= fh <= COMPOSE_H[1]:
             continue
-        r["camera"] = [dict(c, aim={**c["aim"], "shift": round(side * THIRD * fh * 16 / 9, 3)}) if isinstance(c.get("aim"), dict)
-                       else c for c in r["camera"]]
+        # the shift from EACH key's own frame width: one shift from the first (wide) key pushed her out of the frame edge
+        # when the lens pushed in (take 17 stills: the close-ups at 142 / 158 / 177 s)
+        def third(c):
+            fk = 2 * float(c["aim"].get("d", 2.0)) * math.tan(math.radians(float(c.get("fov", 40))) / 2)
+            return dict(c, aim={**c["aim"], "shift": round(side * THIRD * fk * 16 / 9, 3)})
+        r["camera"] = [third(c) if isinstance(c.get("aim"), dict) else c for c in r["camera"]]
         side = -side
     return out
 
